@@ -2491,6 +2491,30 @@ return {
 		},
 		alias = {"heroroom_thumbs_0057"}
 	},
+    hero_room_portraits_small_thumb_hero_dragon_bone_0001 = {
+        a_name = "room_hero-1.png",
+        size = {
+            110,
+            108
+        },
+        trim = {
+            0,
+            0,
+            0,
+            0
+        },
+        a_size = {
+            2048,
+            2048
+        },
+        f_quad = {
+            830,
+            1578,
+            110,
+            108
+        },
+        alias = { "heroroom_thumbs_0058" }
+    },
     heroroom_tooltip_coin = {
         a_name = "screen_map-1.png",
         size = {15, 15},
@@ -3603,6 +3627,30 @@ return {
 		},
 		alias = {"hero_portraits_0014"}
 	},
+    mapButtons_portrait_hero_0058 = {
+        a_name = "gui_portraits-6.png",
+        size = {
+            140,
+            130
+        },
+        trim = {
+            11,
+            2,
+            20,
+            6
+        },
+        a_size = {
+            2048,
+            2048
+        },
+        f_quad = {
+            6,
+            1667,
+            109,
+            122
+        },
+        alias = {}
+    },
     mapButtons_portrait_hero_points = {
         a_name = "screen_map-1.png",
         size = {52, 48},

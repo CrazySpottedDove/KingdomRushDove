@@ -12266,6 +12266,741 @@ local function heroes()
     tt.max_targets = nil
     tt.mod_mark = "mod_hero_witch_ultimate_mark"
     tt.mod_teleport = "mod_hero_witch_ultimate_teleport"
+
+    -- 五代骨龙
+    tt = E:register_t("ps_bolt_dragon_bone_basic_attack")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.name = "hero_dragon_bone_projectile_trail_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {
+        fts(8),
+        fts(8)
+    }
+    tt.particle_system.emission_rate = 20
+    tt.particle_system.emit_rotation_spread = math.pi / 2
+    tt.particle_system.z = Z_FLYING_HEROES
+    tt = E:register_t("ps_bolt_dragon_bone_burst")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.name = "hero_dragon_bone_burst_projectile_trail_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {
+        fts(14),
+        fts(14)
+    }
+    tt.particle_system.emission_rate = 50
+    tt.particle_system.emit_area_spread = vec_2(5, 0)
+    tt.particle_system.scales_y = {
+        1,
+        0.5
+    }
+    tt.particle_system.scales_x = {
+        1,
+        0.5
+    }
+
+    tt = E:register_t("fx_bolt_dragon_bone_basic_attack_hit", "fx")
+    tt.render.sprites[1].name = "hero_dragon_bone_hit_idle"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+    tt.render.sprites[1].sort_y_offset = -5
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt = E:register_t("fx_bolt_dragon_bone_basic_attack_hit_flying", "fx")
+    tt.render.sprites[1].name = "hero_dragon_bone_hit_air_idle"
+    tt.render.sprites[1].z = Z_EFFECTS
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt = E:register_t("fx_dragon_bone_plague_explosion", "fx")
+    tt.render.sprites[1].name = "hero_dragon_bone_plague_explosion_idle"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt = E:register_t("fx_bullet_dragon_bone_rain", "fx")
+    tt.render.sprites[1].name = "hero_dragon_bone_bones_fx_idle"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt = E:register_t("fx_bullet_dragon_bone_rain_vanish", "fx")
+    tt.render.sprites[1].name = "hero_dragon_bone_bones_despawn_fx_idle"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt = E:register_t("fx_dragon_bone_dog_spawn", "fx")
+    tt.render.sprites[1].name = "hero_dragon_bone_drake_spawn_fx_idle"
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.4)
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt = E:register_t("fx_dragon_bone_dog_hit", "fx")
+    tt.render.sprites[1].name = "hero_dragon_bone_drake_hit_fx_idle"
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+
+    tt = E:register_t("decal_dragon_bone_cloud", "decal_tween")
+    tt.render.sprites[1].name = "hero_dragon_bone_cloud_b"
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.render.sprites[1].z = Z_DECALS
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].prefix = "hero_dragon_bone_cloud"
+    tt.render.sprites[2].name = "idle"
+    tt.render.sprites[2].z = Z_OBJECTS
+    tt.render.sprites[2].offset = vec_2(0, 15)
+    tt.render.sprites[2].sort_y_offset = -25
+    tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(18),
+            255
+        }
+    }
+    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2].name = "alpha"
+    tt.tween.props[2].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(18),
+            255
+        }
+    }
+    tt.tween.props[2].sprite_id = 2
+    tt.tween.disabled = false
+    tt.tween.remove = false
+    tt = E:register_t("decal_bullet_dragon_bone_rain", "decal_timed")
+    tt.render.sprites[1].name = "hero_dragon_bone_bones_decal"
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].z = Z_DECALS
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.timed.duration = fts(27)
+
+    tt = E:register_t("hero_dragon_bone", "hero5")
+
+    E:add_comps(tt, "ranged", "timed_attacks", "tween")
+
+    b = balance.heroes.hero_dragon_bone
+    tt.hero.level_stats.armor = b.armor
+    tt.hero.level_stats.hp_max = b.hp_max
+    tt.hero.level_stats.melee_damage_max = {
+        1,
+        2,
+        4,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    }
+    tt.hero.level_stats.melee_damage_min = {
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    }
+    tt.hero.level_stats.regen_health = b.regen_health
+    tt.hero.level_stats.ranged_damage_min = b.basic_attack.damage_min
+    tt.hero.level_stats.ranged_damage_max = b.basic_attack.damage_max
+    tt.hero.skills.cloud = E:clone_c("hero_skill")
+    tt.hero.skills.cloud.cooldown = b.cloud.cooldown
+    tt.hero.skills.cloud.duration = b.cloud.duration
+    tt.hero.skills.cloud.xp_gain = b.cloud.xp_gain
+    tt.hero.skills.cloud.key = "CLOUD"
+    tt.hero.skills.cloud.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.nova = E:clone_c("hero_skill")
+    tt.hero.skills.nova.cooldown = b.nova.cooldown
+    tt.hero.skills.nova.damage_min = b.nova.damage_min
+    tt.hero.skills.nova.damage_max = b.nova.damage_max
+    tt.hero.skills.nova.xp_gain = b.nova.xp_gain
+    tt.hero.skills.nova.key = "NOVA"
+    tt.hero.skills.nova.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.rain = E:clone_c("hero_skill")
+    tt.hero.skills.rain.hp_max = b.rain.hp_max
+    tt.hero.skills.rain.cooldown = b.rain.cooldown
+    tt.hero.skills.rain.damage_min = b.rain.damage_min
+    tt.hero.skills.rain.damage_max = b.rain.damage_max
+    tt.hero.skills.rain.bones_count = b.rain.bones_count
+    tt.hero.skills.rain.xp_gain = b.rain.xp_gain
+    tt.hero.skills.rain.key = "RAIN"
+    tt.hero.skills.rain.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.burst = E:clone_c("hero_skill")
+    tt.hero.skills.burst.cooldown = b.burst.cooldown
+    tt.hero.skills.burst.damage_min = b.burst.damage_min
+    tt.hero.skills.burst.damage_max = b.burst.damage_max
+    tt.hero.skills.burst.proj_count = b.burst.proj_count
+    tt.hero.skills.burst.hr_available = true
+    tt.hero.skills.burst.xp_gain = b.burst.xp_gain
+    tt.hero.skills.burst.key = "BURST"
+    tt.hero.skills.burst.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.ultimate = E:clone_c("hero_skill")
+    tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
+    tt.hero.skills.ultimate.duration = b.ultimate.dog.duration
+    tt.hero.skills.ultimate.hp = b.ultimate.dog.hp
+    tt.hero.skills.ultimate.damage_min = b.ultimate.dog.melee_attack.damage_min
+    tt.hero.skills.ultimate.damage_max = b.ultimate.dog.melee_attack.damage_max
+    tt.hero.skills.ultimate.controller_name = "hero_dragon_bone_ultimate"
+    tt.hero.skills.ultimate.key = "RAISE_DRAKES"
+    tt.hero.skills.ultimate.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.team = TEAM_DARK_ARMY
+    tt.flight_height = 80
+    tt.health.dead_lifetime = 30
+    tt.health_bar.draw_order = -1
+    tt.health_bar.offset = vec_2(0, 170)
+    tt.health_bar.sort_y_offset = -171
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+    tt.health_bar.z = Z_FLYING_HEROES
+    tt.hero.fn_level_up = scripts.hero_dragon_bone.level_up
+    tt.hero.use_custom_spawn_point = true
+    tt.idle_flip.cooldown = 10
+    tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
+    tt.info.hero_portrait = "hero_portraits_0013"
+    tt.info.i18n_key = "HERO_DRAGON_BONE"
+    tt.info.portrait = "portraits_hero_0013"
+    tt.info.ultimate_icon = "0014"
+    tt.info.stat_hp = b.stats.hp
+    tt.info.stat_armor = b.stats.armor
+    tt.info.stat_damage = b.stats.damage
+    tt.info.stat_cooldown = b.stats.cooldown
+    tt.main_script.insert = scripts.hero_dragon_bone.insert
+    tt.main_script.update = scripts.hero_dragon_bone.update
+    tt.motion.max_speed = b.speed
+    tt.nav_rally.requires_node_nearby = false
+    tt.nav_grid.ignore_waypoints = true
+    tt.all_except_flying_nowalk = bor(TERRAIN_NONE, TERRAIN_LAND, TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK,
+        TERRAIN_SHALLOW, TERRAIN_FAERIE, TERRAIN_ICE)
+    tt.nav_grid.valid_terrains = tt.all_except_flying_nowalk
+    tt.nav_grid.valid_terrains_dest = tt.all_except_flying_nowalk
+    tt.drag_line_origin_offset = vec_2(0, tt.flight_height)
+    tt.regen.cooldown = 1
+    tt.render.sprites[1].offset.y = tt.flight_height
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].prefix = "hero_dragon_bone_hero"
+    tt.render.sprites[1].name = "respawn"
+    tt.render.sprites[1].angles.walk = {
+        "walk"
+    }
+    tt.render.sprites[1].z = Z_FLYING_HEROES
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].name = "hero_dragon_bone_shadow"
+    tt.render.sprites[2].offset = vec_2(0, 0)
+    tt.render.sprites[2].z = Z_DECALS + 1
+    tt.soldier.melee_slot_offset = vec_2(0, 0)
+    tt.sound_events.change_rally_point = "HeroDragonBoneTaunt"
+    tt.sound_events.death = "HeroDragonBoneDeath"
+    tt.sound_events.respawn = "HeroDragonBoneTauntIntro"
+    tt.sound_events.hero_room_select = "HeroDragonBoneTauntSelect"
+    tt.ui.click_rect = r(-37, tt.flight_height - 20, 90, 85)
+    tt.unit.hit_offset = vec_2(0, tt.flight_height + 10)
+    tt.unit.mod_offset = vec_2(0, tt.flight_height + 10)
+    tt.unit.death_animation = "death"
+    tt.unit.hide_after_death = true
+    tt.hero.tombstone_decal = nil
+    tt.hero.respawn_animation = "respawn"
+    tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET, F_POISON, F_MOD)
+    tt.vis.flags = bor(tt.vis.flags, F_FLYING)
+    tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+    tt.ranged.attacks[1].cooldown = 2
+    tt.ranged.attacks[1].animation = "attack"
+    tt.ranged.attacks[1].min_range = b.basic_attack.min_range
+    tt.ranged.attacks[1].max_range = b.basic_attack.max_range
+    tt.ranged.attacks[1].shoot_time = fts(16)
+    tt.ranged.attacks[1].bullet = "bolt_dragon_bone_basic_attack"
+    tt.ranged.attacks[1].bullet_start_offset = {
+        vec_2(46, tt.flight_height - 23),
+        vec_2(50, tt.flight_height - 23)
+    }
+    tt.ranged.attacks[1].sync_animation = true
+    tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+    tt.ranged.attacks[1].vis_flags = bor(F_RANGED, F_AREA)
+    tt.ranged.attacks[1].ignore_offset = vec_2(0, tt.flight_height + 10)
+    tt.ranged.attacks[1].radius = b.basic_attack.radius
+    tt.ranged.attacks[1].basic_attack = true
+    tt.ranged.attacks[2] = E:clone_c("aura_attack")
+    tt.ranged.attacks[2].cooldown = nil
+    tt.ranged.attacks[2].disabled = true
+    tt.ranged.attacks[2].animation = "breath"
+    tt.ranged.attacks[2].shoot_time = fts(14)
+    tt.ranged.attacks[2].min_targets = b.cloud.min_targets
+    tt.ranged.attacks[2].min_range = b.cloud.min_range
+    tt.ranged.attacks[2].max_range = b.cloud.max_range
+    tt.ranged.attacks[2].bullet = "bullet_dragon_bone_cloud"
+    tt.ranged.attacks[2].bullet_start_offset = table.deepclone(tt.ranged.attacks[1].bullet_start_offset)
+    tt.ranged.attacks[2].sync_animation = true
+    tt.ranged.attacks[2].xp_from_skill = "cloud"
+    tt.ranged.attacks[2].vis_flags = bor(F_RANGED, F_AREA)
+    tt.ranged.attacks[2].vis_bans = F_FLYING
+    tt.ranged.attacks[2].sound = "HeroDragonBonePlagueCloudCast"
+    tt.ranged.attacks[3] = E:clone_c("area_attack")
+    tt.ranged.attacks[3].cooldown = nil
+    tt.ranged.attacks[3].disabled = true
+    tt.ranged.attacks[3].animation = "nova"
+    tt.ranged.attacks[3].hit_time = fts(22)
+    tt.ranged.attacks[3].min_targets = b.nova.min_targets
+    tt.ranged.attacks[3].min_range = b.nova.min_range
+    tt.ranged.attacks[3].max_range = b.nova.max_range
+    tt.ranged.attacks[3].damage_type = b.nova.damage_type
+    tt.ranged.attacks[3].damage_radius = b.nova.damage_radius
+    tt.ranged.attacks[3].mod = "mod_dragon_bone_plague"
+    tt.ranged.attacks[3].sync_animation = true
+    tt.ranged.attacks[3].xp_from_skill = "nova"
+    tt.ranged.attacks[3].vis_flags = bor(F_AREA)
+    tt.ranged.attacks[3].vis_bans_target = F_FLYING
+    tt.ranged.attacks[3].vis_bans_damage = F_FRIEND
+    tt.ranged.attacks[3].sound = "HeroDragonBoneDiseaseNovaCast"
+    tt.ranged.attacks[4] = E:clone_c("spawn_attack")
+    tt.ranged.attacks[4].cooldown = nil
+    tt.ranged.attacks[4].disabled = true
+    tt.ranged.attacks[4].animation = "bone_rain"
+    tt.ranged.attacks[4].entity = "bullet_dragon_bone_rain"
+    tt.ranged.attacks[4].spawn_time = fts(19)
+    tt.ranged.attacks[4].vis_flags = bor(F_RANGED)
+    tt.ranged.attacks[4].vis_bans = bor(F_FLYING)
+    tt.ranged.attacks[4].min_range = b.rain.min_range
+    tt.ranged.attacks[4].max_range = b.rain.max_range
+    tt.ranged.attacks[4].bones = nil
+    tt.ranged.attacks[4].xp_from_skill = "rain"
+    tt.ranged.attacks[4].sound = "HeroDragonBoneSpineRainCast"
+    tt.ranged.attacks[5] = E:clone_c("spawn_attack")
+    tt.ranged.attacks[5].cooldown = nil
+    tt.ranged.attacks[5].disabled = true
+    tt.ranged.attacks[5].animation = "burst"
+    tt.ranged.attacks[5].bullet = "bolt_dragon_bone_burst"
+    tt.ranged.attacks[5].bullet_start_offset = vec_2(0, tt.flight_height + 25)
+    tt.ranged.attacks[5].spawn_time = fts(24)
+    tt.ranged.attacks[5].vis_flags = bor(F_RANGED)
+    tt.ranged.attacks[5].vis_bans = bor(F_FLYING)
+    tt.ranged.attacks[5].min_targets = b.burst.min_targets
+    tt.ranged.attacks[5].min_range = b.burst.min_range
+    tt.ranged.attacks[5].max_range = b.burst.max_range
+    tt.ranged.attacks[5].proj_count = nil
+    tt.ranged.attacks[5].max_dist_between_tgts = 50
+    tt.ranged.attacks[5].wait_between_shots = fts(1)
+    tt.ranged.attacks[5].node_prediction = fts(45)
+    tt.ranged.attacks[5].xp_from_skill = "burst"
+    tt.ranged.attacks[5].sound = "HeroDragonBoneSpreadingBurstCast"
+    tt.ultimate = {
+        ts = 0,
+        cooldown = 45,
+        vis_ban = F_FLYING,
+        disabled = true
+    }
+    tt.tween.disabled = true
+    tt.tween.remove = false
+    tt.tween.props[1].sprite_id = 2
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            0.5,
+            255
+        }
+    }
+    tt = E:register_t("hero_dragon_bone_ultimate")
+    b = balance.heroes.hero_dragon_bone.ultimate
+
+    E:add_comps(tt, "pos", "main_script", "sound_events")
+
+    tt.can_fire_fn = scripts.hero_dragon_bone_ultimate.can_fire_fn
+    tt.main_script.update = scripts.hero_dragon_bone_ultimate.update
+    tt.range = b.range
+    tt.spawn_delay = fts(5)
+    tt.vis_flags = bor(F_RANGED)
+    tt.vis_bans = bor(F_FLYING)
+    tt.dog = "soldier_dragon_bone_ultimate_dog"
+    tt.spawn_fx = "fx_dragon_bone_dog_spawn"
+    tt.spawn_time = fts(12)
+    tt.max_shards = b.max_shards
+    tt.prediction_nodes = fts(15)
+    tt.distance_between_shards = b.distance_between_shards
+    tt.random_ni_spread = b.random_ni_spread
+    tt.sound_events.insert = "HeroDragonBoneUltimateCast"
+    tt = E:register_t("soldier_dragon_bone_ultimate_dog", "soldier_militia")
+    b = balance.heroes.hero_dragon_bone.ultimate.dog
+
+    E:add_comps(tt, "reinforcement", "nav_grid", "tween")
+
+    tt.health.armor = b.armor
+    tt.health.hp_max = b.hp
+    tt.health_bar.offset = vec_2(0, 30)
+    tt.info.fn = scripts.soldier_reinforcement.get_info
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0048"
+    tt.info.random_name_format = nil
+    tt.info.random_name_count = nil
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.update = scripts.soldier_reinforcement.update
+    tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
+    tt.melee.attacks[1].damage_max = nil
+    tt.melee.attacks[1].damage_min = nil
+    tt.melee.attacks[1].damage_type = b.melee_attack.damage_type
+    tt.melee.attacks[1].hit_time = fts(12)
+    tt.melee.attacks[1].hit_fx = "fx_dragon_bone_dog_hit"
+    tt.melee.attacks[1].hit_offset = vec_2(20, 5)
+    tt.melee.range = 72
+    tt.motion.max_speed = b.speed
+    tt.regen.cooldown = 1
+    tt.regen.health = 0
+    tt.reinforcement.duration = b.duration
+    tt.render.sprites[1].prefix = "hero_dragon_bone_drake"
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].angles.walk = {
+        "walk"
+    }
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.soldier.melee_slot_offset = vec_2(5, 0)
+    tt.sound_events.insert = nil
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(10),
+            255
+        }
+    }
+    tt.tween.props[1].name = "alpha"
+    tt.tween.remove = false
+    tt.tween.reverse = false
+    tt.unit.hit_offset = vec_2(0, 5)
+    tt.unit.mod_offset = vec_2(0, 14)
+    tt.unit.level = 0
+    tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
+
+    tt = E:register_t("bolt_dragon_bone_basic_attack", "bolt")
+
+    E:add_comps(tt, "force_motion")
+
+    b = balance.heroes.hero_dragon_bone.basic_attack
+    tt.bullet.damage_type = b.damage_type
+    tt.bullet.hit_fx = nil
+    tt.bullet.hit_fx_floor = "fx_bolt_dragon_bone_basic_attack_hit"
+    tt.bullet.hit_fx_flying = "fx_bolt_dragon_bone_basic_attack_hit_flying"
+    tt.bullet.particles_name = "ps_bolt_dragon_bone_basic_attack"
+    tt.bullet.max_speed = 600
+    tt.bullet.align_with_trajectory = true
+    tt.bullet.min_speed = 600
+    tt.bullet.xp_gain_factor = b.xp_gain_factor
+    tt.bullet.use_unit_damage_factor = true
+    tt.bullet.ignore_hit_offset = true
+    tt.bullet.pop_chance = 0
+    tt.bullet.mod = "mod_dragon_bone_plague"
+    tt.force_motion.a_step = 5
+    tt.force_motion.max_a = 3000
+    tt.force_motion.max_v = 600
+    tt.initial_impulse = 10
+    tt.render.sprites[1].prefix = "hero_dragon_bone_projectile"
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].z = Z_FLYING_HEROES
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.main_script.update = scripts.bolt_dragon_bone_basic_attack.update
+    tt.damage_range = b.radius
+    tt.sound_events.insert = "HeroDragonBoneBasicAttackCast"
+    tt.sound_events.hit = "HeroDragonBoneBasicAttackImpact"
+    tt = E:register_t("bullet_dragon_bone_cloud", "bullet")
+    tt.bullet.damage_type = DAMAGE_NONE
+    tt.bullet.damage_min = 0
+    tt.bullet.damage_max = 0
+    tt.bullet.hit_time = fts(10)
+    tt.bullet.ignore_hit_offset = true
+    tt.bullet.hit_payload = "aura_dragon_bone_cloud"
+    tt.hit_fx_only_no_target = true
+    tt.image_width = 150
+    tt.main_script.update = scripts.bullet_dragon_bone_cloud.update
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.render.sprites[1].name = "hero_dragon_bone_breath_idle"
+    tt.render.sprites[1].loop = false
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
+    tt.track_target = false
+    tt.ray_duration = fts(42)
+    tt = E:register_t("bullet_dragon_bone_rain", "bullet")
+
+    E:add_comps(tt, "tween")
+
+    tt.main_script.insert = scripts.bullet_dragon_bone_rain.insert
+    tt.main_script.update = scripts.bullet_dragon_bone_rain.update
+    tt.bullet.damage_max = nil
+    tt.bullet.damage_min = nil
+    tt.bullet.damage_radius = 50
+    tt.bullet.damage_type = DAMAGE_TRUE
+    tt.bullet.damage_flags = F_AREA
+    tt.bullet.damage_bans = F_FRIEND
+    tt.bullet.mod = "mod_dragon_bone_rain_stun"
+    tt.bullet.hit_decal = "decal_bullet_dragon_bone_rain"
+    tt.bullet.hit_fx = "fx_bullet_dragon_bone_rain"
+    tt.bullet.vanish_fx = "fx_bullet_dragon_bone_rain_vanish"
+    tt.bullet.hit_time = fts(4)
+    tt.bullet.duration = 1
+    tt.render.sprites[1].name = "hero_dragon_bone_bones_"
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].name = "hero_dragon_bone_bones_"
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].z = Z_OBJECTS
+    tt.render.sprites[2].hidden = true
+    tt.render.sprites[2].alpha = 0
+    tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.sprite_prefix = "hero_dragon_bone_bones_"
+    tt.bone_type = "a"
+    tt.tween.remove = false
+    tt.tween.disabled = true
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            tt.bullet.hit_time,
+            255
+        }
+    }
+    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2].name = "scale"
+    tt.tween.props[2].keys = {
+        {
+            0,
+            vec_1(0.5)
+        },
+        {
+            tt.bullet.hit_time,
+            vec_1(1)
+        }
+    }
+    tt.tween.props[3] = E:clone_c("tween_prop")
+    tt.tween.props[3].name = "offset"
+    tt.tween.props[3].keys = {
+        {
+            0,
+            vec_2(-50, 100)
+        },
+        {
+            tt.bullet.hit_time,
+            vec_2(-5, 10)
+        }
+    }
+    tt.tween.props[4] = E:clone_c("tween_prop")
+    tt.tween.props[4].name = "alpha"
+    tt.tween.props[4].sprite_id = 2
+    tt.tween.props[4].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(10),
+            255
+        }
+    }
+    tt.tween.props[4].disabled = true
+    tt.tween.props[5] = E:clone_c("tween_prop")
+    tt.tween.props[5].name = "alpha"
+    tt.tween.props[5].keys = {
+        {
+            0,
+            255
+        },
+        {
+            fts(12),
+            0
+        }
+    }
+    tt.tween.props[5].disabled = true
+    tt.sound_events.insert = nil
+    tt.sound_events.hit = "HeroDragonBoneSpineRainImpact"
+    tt = E:register_t("bolt_dragon_bone_burst", "bolt")
+    b = balance.heroes.hero_dragon_bone.burst
+
+    E:add_comps(tt, "force_motion")
+
+    tt.render.sprites[1].prefix = "hero_dragon_bone_burst_projectile"
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].z = Z_BULLETS
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].name = "stage_3_HeartProy_glow"
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].z = Z_BULLETS - 1
+    tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.height_attack = 70
+    tt.initial_vel_y = 50
+    tt.transition_time = 1
+    tt.target_distance_detection = 20
+    tt.main_script.insert = scripts.bolt_dragon_bone_burst.insert
+    tt.main_script.update = scripts.bolt_dragon_bone_burst.update
+    tt.bullet.damage_type = b.damage_type
+    tt.bullet.damage_max = b.damage_max
+    tt.bullet.damage_min = b.damage_min
+    tt.bullet.acceleration_factor = 0.1
+    tt.bullet.min_speed = 30
+    tt.bullet.max_speed = 300
+    tt.bullet.particles_name = "ps_bolt_dragon_bone_burst"
+    tt.bullet.max_speed = 1800
+    tt.bullet.min_speed = 30
+    tt.bullet.hit_sound = "Stage03HeartOfTheForestBlast"
+    tt.bullet.hit_fx_floor = "fx_bolt_dragon_bone_basic_attack_hit"
+    tt.bullet.hit_fx_flying = "fx_bolt_dragon_bone_basic_attack_hit_flying"
+    tt.bullet.align_with_trajectory = true
+    tt.bullet.mod = "mod_dragon_bone_plague"
+    tt.initial_impulse = 12000
+    tt.initial_impulse_duration = 0.1
+    tt.initial_impulse_angle = math.pi / 2
+    tt.force_motion.a_step = 15
+    tt.force_motion.max_a = 1650
+    tt.force_motion.max_v = 510
+    tt.sound_events.insert = nil
+    tt.sound_events.hit = "HeroDragonBoneSpreadingBurstImpact"
+
+    tt = E:register_t("aura_dragon_bone_cloud", "aura")
+
+    E:add_comps(tt, "render", "tween")
+
+    b = balance.heroes.hero_dragon_bone.cloud
+    tt.aura.duration = nil
+    tt.aura.radius = b.radius
+    tt.aura.vis_bans = bor(F_FRIEND)
+    tt.aura.vis_flags = bor(F_AREA)
+    tt.aura.mods = {
+        "mod_dragon_bone_plague",
+        "mod_dragon_bone_cloud_slow"
+    }
+    tt.aura.cycle_time = fts(10)
+    tt.main_script.insert = scripts.aura_apply_mod.insert
+    tt.main_script.update = scripts.aura_dragon_bone_cloud.update
+    tt.render.sprites[1].prefix = "hero_dragon_bone_cloud_decal"
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].z = Z_DECAL
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].prefix = "hero_dragon_bone_cloud_b_bubbles"
+    tt.render.sprites[2].name = "idle"
+    tt.render.sprites[2].z = Z_OBJECTS
+    tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[2].offset = vec_2(0, 10)
+    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3].prefix = "hero_dragon_bone_cloud_b_bubbles"
+    tt.render.sprites[3].name = "idle"
+    tt.render.sprites[3].z = Z_OBJECTS
+    tt.render.sprites[3].flip_x = true
+    tt.render.sprites[3].offset = vec_2(0, -10)
+    tt.render.sprites[3].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(18),
+            255
+        }
+    }
+    tt.tween.props[1].sprite_id = 1
+    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2].name = "alpha"
+    tt.tween.props[2].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(18),
+            255
+        }
+    }
+    tt.tween.props[2].sprite_id = 2
+    tt.tween.props[3] = E:clone_c("tween_prop")
+    tt.tween.props[3].name = "alpha"
+    tt.tween.props[3].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(18),
+            255
+        }
+    }
+    tt.tween.props[3].sprite_id = 2
+    tt.tween.remove = false
+    tt.decal_cloud_t = "decal_dragon_bone_cloud"
+
+    tt = E:register_t("mod_dragon_bone_plague", "modifier")
+    b = balance.heroes.hero_dragon_bone.plague
+
+    E:add_comps(tt, "render", "dps")
+
+    tt.modifier.duration = b.duration
+    tt.modifier.vis_flags = F_MOD
+    tt.render.sprites[1].prefix = "hero_dragon_bone_plague_fx"
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].draw_order = 2
+    tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.dps.damage_min = b.damage_min
+    tt.dps.damage_max = b.damage_max
+    tt.dps.damage_type = DAMAGE_TRUE
+    tt.dps.damage_every = b.every
+    tt.dps.kill = true
+    tt.spread_radius = b.explotion.damage_radius
+    tt.spread_damage_min = b.explotion.damage_min
+    tt.spread_damage_max = b.explotion.damage_min
+    tt.spread_fx = "fx_dragon_bone_plague_explosion"
+    tt.main_script.insert = scripts.mod_dps.insert
+    tt.main_script.update = scripts.mod_dps.update
+    tt.main_script.remove = scripts.mod_dragon_bone_plague.remove
+    tt = E:register_t("mod_dragon_bone_cloud_slow", "mod_slow")
+    b = balance.heroes.hero_dragon_bone.cloud
+    tt.slow.factor = b.slow_factor
+    tt.modifier.duration = 0.5
+    tt = E:register_t("mod_dragon_bone_rain_stun", "mod_stun")
+    b = balance.heroes.hero_dragon_bone.rain
+    tt.modifier.duration = b.stun_time
+    tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+    tt.modifier.vis_bans = bor(F_BOSS)
 end
 
 return heroes

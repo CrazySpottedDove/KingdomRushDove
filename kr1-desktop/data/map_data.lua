@@ -1466,6 +1466,16 @@ return {
         icon = 57,
         stats = {5, 4, 5, 7},
         is_kr5 = true
+    },
+    {
+        portrait = 4,
+        thumb = 58,
+		name = "hero_dragon_bone",
+        available_level = 1,
+        starting_level = 1,
+        icon = 58,
+        stats = {6, 0, 5, 5},
+        is_kr5 = true
     }
 },
     level_data = {{
