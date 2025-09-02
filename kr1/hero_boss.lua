@@ -324,8 +324,8 @@ tt.main_script.update = function(this, store)
 
             if ready_to_attack(courage, store) and this.health.hp_max > this.health.hp and this.enemy.can_do_magic then
                 local entities
-                if store.enemies then
-                    entities = store.enemies
+                if store.enemy_spatial_index then
+                    entities = store
                 else
                     entities = store.entities
                 end

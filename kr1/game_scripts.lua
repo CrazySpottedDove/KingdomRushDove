@@ -191,9 +191,8 @@ function scripts.aura_totem.update(this, store, script)
                     queue_insert(store, new_mod)
                 end
             end
-
-            last_hit_ts = store.tick_ts
         end
+        last_hit_ts = store.tick_ts
 
         while store.tick_ts - last_hit_ts < this.aura.cycle_time do
             coroutine.yield()
@@ -20022,16 +20021,10 @@ scripts.enemy_twilight_golem = {}
 function scripts.enemy_twilight_golem.on_damage(this, store, damage)
     local m = this.motion
 
-    if not m.max_speed_initial then
-        m.max_speed_initial = m.max_speed
-        m.max_speed_factor = 1
-    end
-
-    local unaffected_speed = m.max_speed / m.max_speed_factor
     local sub_factor = (this.health.hp_max - this.health.hp) / 100 * 0.05
 
-    m.max_speed_factor = 1 - math.min(sub_factor, m.min_speed_sub_factor)
-    m.max_speed = unaffected_speed * m.max_speed_factor
+    local max_speed_factor = 1 - math.min(sub_factor, m.min_speed_sub_factor)
+    U.update_max_speed(this, m.max_speed * max_speed_factor)
 
     return true
 end
