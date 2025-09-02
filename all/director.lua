@@ -534,8 +534,8 @@ function director:queue_load_item_named(name, force_reload)
                         self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, true, "game")
                     else
                         self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
-                        self:load_sound_groups({hero})
                     end
+                    self:load_sound_groups({hero})
                 end
             end
         end
