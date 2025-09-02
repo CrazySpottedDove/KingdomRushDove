@@ -45,13 +45,13 @@ zip "$OUTPUT_ZIP" "./游玩必读说明，务必阅读.url"
 
 # tmp usage
 
-zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_tricannon-1.png"
-zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/gui_common-5.png"
-# 记录 commit hash 文件
-zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/criket_random_eff_mod.png"
-zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/cricet_random_eff.png"
-zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_stage90_bg-1.png"
-zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_stages_flag-1.png"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_tricannon-1.png"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/gui_common-5.png"
+# # 记录 commit hash 文件
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/criket_random_eff_mod.png"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/cricet_random_eff.png"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_stage90_bg-1.png"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_stages_flag-1.png"
 
 COMMIT_FILE="last_build_commit.txt"
 LOG_FILE="update_log.txt"

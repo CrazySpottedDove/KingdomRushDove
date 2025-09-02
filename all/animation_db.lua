@@ -7,6 +7,10 @@ require("klua.dump")
 
 local G = love.graphics
 local FS = love.filesystem
+local ceil = math.ceil
+local floor = math.floor
+local max = math.max
+local min = math.min
 
 require("constants")
 
@@ -132,9 +136,9 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 
         return nil
     end
-    if not a.frame_names then
-        log.error("animation %s has no frame_names", animation_name)
-    end
+    -- if not a.frame_names then
+    --     log.error("animation %s has no frame_names", animation_name)
+    -- end
     return self:fni(a, time_offset, loop, fps)
 end
 
@@ -170,13 +174,14 @@ function animation_db:generate_frames(a)
             end
         end
         a.frames = frames
-        if a.prefix then
-            a.frame_names = {}
-            for i, frame in ipairs(frames) do
-                a.frame_names[i] = string.format("%s_%04i", a.prefix, frame)
-            end
+    end
+    if a.prefix then
+        a.frame_names = {}
+        for i, frame in ipairs(frames) do
+            a.frame_names[i] = string.format("%s_%04i", a.prefix, frame)
         end
     end
+
 end
 
 function animation_db:fni(animation, time_offset, loop, fps, tick_length)
@@ -186,18 +191,18 @@ function animation_db:fni(animation, time_offset, loop, fps, tick_length)
     tick_length = tick_length or self.tick_length
 
     local frames = a.frames
-
     local eps = 1e-09
     local len = #frames
-    local elapsed_frames = math.ceil(time_offset * fps + eps)
-    local next_elapsed = math.ceil((time_offset + tick_length) * fps + eps)
-    local runs = math.max(0, math.floor((next_elapsed - 1) / len))
+    local time_in_frames_plus_eps = time_offset * fps + eps
+    local elapsed_frames = ceil(time_in_frames_plus_eps)
+    local next_elapsed = ceil(time_in_frames_plus_eps + tick_length * fps)
+    local runs = max(0, floor((next_elapsed - 1) / len))
     local idx
 
     if loop then
-        idx = math.floor(time_offset * fps + eps) % len + 1
+        idx = floor(time_in_frames_plus_eps) % len + 1
     else
-        idx = km.clamp(1, len, elapsed_frames)
+        idx = max(1, min(len, elapsed_frames))
     end
 
     return a.frame_names[idx], runs, idx
