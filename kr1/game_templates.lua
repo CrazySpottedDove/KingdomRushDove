@@ -9665,7 +9665,6 @@ tt.modifier.use_mod_offset = false
 tt.main_script.update = scripts.mod_track_target.update
 tt = E:register_t("decal_hero_raelyn_onslaught_decal", "decal_tween")
 tt.render.sprites[1].name = "hero_raelyn_onslaught_fx_idle"
-tt.render.sprites[1].scale = vec_1(0.7)
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].hide_after_runs = 1
 tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
@@ -9682,12 +9681,10 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].fps = 15
-tt.render.sprites[1].scale = vec_1(0.7)
 tt.timed.duration = fts(20)
 
 tt = E:register_t("decal_hero_venom_spike_b", "decal_hero_venom_spike_a")
 tt.render.sprites[1].prefix = "hero_venom_spike_b"
-tt.render.sprites[1].scale = vec_1(0.7)
 
 tt = E:register_t("decal_hero_venom_death", "decal_scripted")
 E:add_comps(tt, "tween")
@@ -9696,7 +9693,6 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].scale = vec_1(0.7)
 tt.main_script.update = scripts.decal_hero_venom_death.update
 tt.tween.disabled = true
 tt.tween.props[1].name = "alpha"
@@ -9736,20 +9732,17 @@ tt.render.sprites[1].prefix = "hero_evil_dragon_hero"
 tt.render.sprites[1].name = "death_crystals"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
-tt.render.sprites[1].scale = vec_1(0.7)
 tt.main_script.update = scripts.decal_hero_dragon_gem_crystal_tomb.update
 
 tt = E:register_t("decal_bullet_hero_dragon_gem_ultimate_shard", "decal_tween")
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_crystal_a_idle"
 tt.render.sprites[1].animated = true
-tt.render.sprites[1].scale = vec_1(0.7)
 tt.render.sprites[1].loop = false
 tt.tween.props[1].keys = {{0, 255}, {3, 0}}
 tt = E:register_t("decal_hero_dragon_gem_floor_decal", "decal_tween")
 tt.render.sprites[1].name = "hero_evil_dragon_decal"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
-tt.render.sprites[1].scale = vec_1(0.7)
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2, 0}}
 

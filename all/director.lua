@@ -24,7 +24,7 @@ local PP = require("privacy_policy_consent")
 local storage = require("storage")
 local services = require("platform_services")
 local director_data = require("data.director_data")
-
+local GS = require("game_settings")
 local function replace_locale(list, locale)
     local out = {}
 
@@ -317,19 +317,24 @@ function director:unload_item(item)
             game.game_gui.ref_res, "game_gui")
 
         local groups = {}
-
+        local scaled_groups = {}
         groups = table.append(groups, replace_locale(game.required_textures))
         groups = table.append(groups, replace_locale(game.store.level.required_textures))
-
+        scaled_groups = table.append(scaled_groups, replace_locale(game.scale_required_textures))
         if game.store.selected_hero then
             for _, hero in pairs(game.store.selected_hero) do
                 if hero then
-                    table.insert(groups, "go_" .. hero)
+                    if GS.heroes_require_scaled_texture[hero] then
+                        scaled_groups = table.append(scaled_groups, {"go_" .. hero})
+                    else
+                        groups = table.append(groups, {"go_" .. hero})
+                    end
                 end
             end
         end
 
         self:unload_texture_groups(groups, self.params.texture_size, game.ref_res, "game")
+        self:unload_texture_groups(scaled_groups, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, "game")
         I:unload_atlas("temp_game_texts", game.store.screen_scale)
 
         if item.required_sounds then
@@ -358,7 +363,6 @@ function director:unload_item(item)
                 S:unload_group(group)
             end
         end
-
 
         game:destroy()
 
@@ -510,6 +514,8 @@ function director:queue_load_item_named(name, force_reload)
 
         self:load_texture_groups(replace_locale(game.required_textures), self.params.texture_size, game.ref_res, true,
             "game")
+        self:load_texture_groups(replace_locale(game.scale_required_textures), self.params.texture_size,
+            game.ref_res * game.scale_required_textures_scale, true, "game")
         self:load_texture_groups(replace_locale(game.store.level.required_textures), self.params.texture_size,
             game.ref_res, true, "game")
 
@@ -524,8 +530,12 @@ function director:queue_load_item_named(name, force_reload)
             for _, hero in pairs(slot.heroes.selected) do
                 if hero then
                     local hero_textures = {"go_" .. hero}
-                    self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
-                    self:load_sound_groups({hero})
+                    if GS.heroes_require_scaled_texture[hero] then
+                        self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, true, "game")
+                    else
+                        self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
+                        self:load_sound_groups({hero})
+                    end
                 end
             end
         end
@@ -593,46 +603,24 @@ function director:load_texture_groups(groups, texture_size, ref_height, queue, i
         return
     end
     local scale = 1
+    if ref_height then
+        scale = self:get_texture_scale(item_name, ref_height)
+    end
 
     for _, group in pairs(groups) do
-        local texture_path, forced_texture_size
 
-        if KR_PATH_ASSETS_GAME_FALLBACK then
-            texture_path = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. texture_size
+        local texture_path = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. texture_size
 
-            if love.filesystem.exists(texture_path .. "/" .. group .. ".lua") then
-                -- block empty
-            else
-                for _, v in pairs(KR_PATH_ASSETS_GAME_FALLBACK) do
-                    texture_path = v.path .. "/images/" .. v.texture_size
+        if features.overrides then
+            for _, n in pairs(features.overrides) do
+                local ov_path = texture_path .. "/_ov/" .. n
 
-                    if love.filesystem.exists(texture_path .. "/" .. group .. ".lua") then
-                        log.debug("  +++ texture group %s fallback to %s", group, texture_path)
+                if love.filesystem.exists(ov_path .. "/" .. group .. ".lua") then
+                    log.debug("  +++ texture group %s overriden by %s", group, n)
 
-                        forced_texture_size = v.texture_size
-
-                        break
-                    end
+                    texture_path = ov_path
                 end
             end
-        else
-            texture_path = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. texture_size
-
-            if features.overrides then
-                for _, n in pairs(features.overrides) do
-                    local ov_path = texture_path .. "/_ov/" .. n
-
-                    if love.filesystem.exists(ov_path .. "/" .. group .. ".lua") then
-                        log.debug("  +++ texture group %s overriden by %s", group, n)
-
-                        texture_path = ov_path
-                    end
-                end
-            end
-        end
-
-        if ref_height then
-            scale = self:get_texture_scale(item_name, ref_height, forced_texture_size)
         end
 
         if queue then

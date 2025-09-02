@@ -24,10 +24,12 @@ local bit = require("bit")
 require("constants")
 
 game = {}
-game.required_textures = {"go_decals", "go_enemies_common", "go_towers","go_towers_tricannon"}
+game.required_textures = {"go_decals", "go_enemies_common", "go_towers"}
+game.scale_required_textures = {"go_towers_tricannon"}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
+game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
 game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds"}
 
 game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch","health",

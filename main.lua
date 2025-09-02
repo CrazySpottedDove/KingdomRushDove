@@ -4,6 +4,7 @@ if arg[2] == "debug" then
 end
 require("main_globals")
 
+
 if KR_TARGET == "universal" then
 	if KR_PLATFORM == "ios" then
 		local ffi = require("ffi")

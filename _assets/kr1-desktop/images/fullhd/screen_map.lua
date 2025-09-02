@@ -2203,30 +2203,6 @@ return {
 		},
 		alias = {}
 	},
-	hero_room_portraits_small_thumb_hero_dragon_bone_0001 = {
-		a_name = "room_hero-1.png",
-		size = {
-			110,
-			108
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			830,
-			1578,
-			110,
-			108
-		},
-		alias = {}
-	},
 	hero_room_portraits_small_thumb_hero_dragon_gem_0001 = {
 		a_name = "room_hero-1.png",
         size = {84, 84},
@@ -2493,16 +2469,8 @@ return {
 	},
     hero_room_portraits_small_thumb_hero_dragon_bone_0001 = {
         a_name = "room_hero-1.png",
-        size = {
-            110,
-            108
-        },
-        trim = {
-            0,
-            0,
-            0,
-            0
-        },
+        size = {84, 84},
+        trim = {18, 16, 18, 14},
         a_size = {
             2048,
             2048

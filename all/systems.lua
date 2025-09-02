@@ -128,6 +128,15 @@ function perf.generate_report(store)
 
     -- 输出排序后的结果
     table.insert(report, "\n系统开销排行 (总耗时ms/调用次数):")
+
+    -- 先打印开销总和
+    local grand_total = 0
+    for _, item in ipairs(sorted_costs) do
+        grand_total = grand_total + item.total
+    end
+    table.insert(report, string.format("总系统开销: %.4fms", grand_total))
+
+    -- 然后打印各个分项
     for i, item in ipairs(sorted_costs) do
         table.insert(report, string.format("%4d. %s: %.4fms (%d次)", i, item.name, item.total, item.calls))
 

@@ -1134,7 +1134,7 @@ local function engineer_towers()
         tt.render.sprites[i].prefix = "tricannon_tower_lvl4_tower_layer" .. i - 1
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].group = "layers"
-        tt.render.sprites[i].scale = vec_1(1.26)
+        tt.render.sprites[i].scale = vec_1(1.26 / 768 * 1024)
     end
 
     tt.ui.click_rect = r(-45, -3, 90, 78)

@@ -569,6 +569,16 @@ function image_db:load_image_file(fn, path)
 
 				return nil
 			end
+		elseif string.match(f, ".dds$") then
+			compressed = true
+
+			local supportedformats = love.graphics.getCompressedImageFormats()
+
+			if not supportedformats.DXT3 then
+				log.error("DXT3 not supported. Could not load %s", f)
+
+				return nil
+			end
 		end
 
 		local im

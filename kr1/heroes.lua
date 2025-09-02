@@ -13,6 +13,18 @@ end
 local function ady(v)
     return v - anchor_y * image_y
 end
+local function v(x, y)
+    return {
+        x = x,
+        y = y
+    }
+end
+local function vv(x)
+    return {
+        x = x,
+        y = x
+    }
+end
 local balance = require("kr1.data.balance")
 local b
 require("game_templates_utils")
@@ -9793,7 +9805,6 @@ local function heroes()
     -- tt.render.sprites[2].name = "decal_flying_shadow_hard"
     -- tt.render.sprites[2].offset = vec_2(0, 0)
     -- tt.render.sprites[2].z = Z_DECALS
-    -- tt.render.sprites[2].scale = vec_1(0.7)
     tt.tween.disabled = true
     tt.tween.remove = false
     tt.steal_fx = "fx_hero_hunter_steal"
@@ -9868,7 +9879,6 @@ local function heroes()
 
     tt = E:register_t("hero5", "hero")
     tt.is_kr5 = true
-    tt.render.sprites[1].scale = vec_1(0.7)
 
     -- 安雅
     tt = E:register_t("hero_hunter", "hero5")
@@ -10387,7 +10397,6 @@ local function heroes()
     tt.render.sprites[1].prefix = "hero_therien_reflection"
     tt.render.sprites[1].name = "idle"
     tt.render.sprites[1].angles.walk = {"ability3"}
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.unit.hit_offset = vec_2(0, 16)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health_bar.offset = vec_2(0, 38)
@@ -10452,7 +10461,6 @@ local function heroes()
     tt = E:register_t("bolt_hero_space_elf_basic_attack", "bolt")
     b = balance.heroes.hero_space_elf
     tt.render.sprites[1].prefix = "hero_therien_ranged_proyectile"
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.bullet.damage_max = nil
     tt.bullet.damage_min = nil
     tt.bullet.hit_blood_fx = nil
@@ -10579,7 +10587,6 @@ local function heroes()
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].offset.y = 13
     tt.render.sprites[1].draw_order = DO_TOWER_MODS
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.tween.props[1].name = "alpha"
     tt.tween.props[1].keys = {{0, 0}, {0.5, 255}, {3, 255}, {3.5, 0}}
     tt.fade_duration = 0.4
@@ -10608,7 +10615,6 @@ local function heroes()
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "decal_flying_shadow"
     tt.render.sprites[2].z = Z_DECALS
-    tt.render.sprites[2].scale = vec_1(0.7)
     tt.tween.remove = false
     tt.tween.props[1].keys = {{0, 0}, {fts(10), 0}, {fts(15), 255}}
     tt.tween.props[1].sprite_id = 2
@@ -10815,7 +10821,6 @@ local function heroes()
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].hide_after_runs = 1
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "hero_raelyn_unbreakable_shield_floor_glow"
@@ -10851,7 +10856,6 @@ local function heroes()
     tt.render.sprites[1].prefix = nil
     tt.render.sprites[1].name = "idle"
     tt.render.sprites[1].loop = true
-    tt.render.sprites[1].scale = vec_1(0.7)
 
     tt = E:register_t("hero_raelyn_inspire_fear_floor_decal_mod", "modifier")
     E:add_comps(tt, "render")
@@ -10861,7 +10865,6 @@ local function heroes()
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].z = Z_DECALS
     tt.render.sprites[1].hide_after_runs = 1
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.modifier.use_mod_offset = false
     tt.modifier.duration = fts(28)
 
@@ -10875,7 +10878,6 @@ local function heroes()
     tt.render.sprites[1] = E:clone_c("sprite")
     tt.render.sprites[1].name = "hero_raelyn_inspire_fear_decal"
     tt.render.sprites[1].draw_order = 20
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.modifier.use_mod_offset = false
 
     tt = E:register_t("hero_raelyn_inspire_fear_stun_mod", "mod_stun")
@@ -10935,7 +10937,6 @@ local function heroes()
     tt.render.sprites[1].prefix = "hero_raelyn_command_orders_dark_knight"
     tt.render.sprites[1].name = "idle"
     tt.render.sprites[1].draw_order = DO_SOLDIER_BIG
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.sound_events.insert = "HeroRaelynUltimateTaunt"
     tt.sound_events.death = "HeroRaelynUltimateDeath"
     tt.unit.hit_offset = vec_2(0, 16)
@@ -11018,7 +11019,6 @@ local function heroes()
     tt.render.sprites[1].prefix = "hero_venom_spike_a"
     tt.render.sprites[1].name = "in"
     tt.render.sprites[1].animated = true
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.main_script.update = scripts.decal_hero_venom_spike.update
     tt.damage_type = b.damage_type
     tt.damage_min = nil
@@ -11271,7 +11271,6 @@ local function heroes()
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].z = Z_DECALS
     tt.render.sprites[1].loop = false
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_hero_venom_ultimate.update
     tt.slow_delay = b.slow_delay
@@ -11303,13 +11302,11 @@ local function heroes()
     tt.render.sprites[1].name = "idle"
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].z = Z_EFFECTS
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].prefix = "hero_venom_heal_fx_front"
     tt.render.sprites[2].name = "idle"
     tt.render.sprites[2].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[2].z = Z_DECALS
-    tt.render.sprites[2].scale = vec_1(0.7)
     tt.tween.props[1].keys = {{0, 255}, {tt.modifier.duration - fts(10), 255}, {tt.modifier.duration, 0}}
 
     tt = E:register_t("mod_hero_venom_ultimate_slow", "mod_slow")
@@ -11332,7 +11329,6 @@ local function heroes()
     tt.render.sprites[1].prefix = "hero_evil_dragon_shards"
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = false
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.damage_min = nil
     tt.damage_max = nil
     tt.main_script.update = scripts.decal_hero_dragon_gem_floor_impact_shard.update
@@ -11349,7 +11345,6 @@ local function heroes()
     tt.render.sprites[1].name = "hero_evil_dragon_ultimate_crystal_b"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].loop = false
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.damage_min = nil
     tt.damage_max = nil
     tt.main_script.update = scripts.decal_hero_dragon_gem_ultimate_shard.update
@@ -11613,7 +11608,6 @@ local function heroes()
     tt.force_motion.max_v = 600
     tt.render.sprites[1].prefix = "hero_evil_dragon_attack_projectile"
     tt.render.sprites[1].z = Z_FLYING_HEROES
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.main_script.update = scripts.bolt_hero_dragon_gem_attack.update
     tt.damage_range = b.damage_range
     tt.sound_hit = "HeroDragonGemBasicAttackImpact"
@@ -11632,7 +11626,6 @@ local function heroes()
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].name = "hero_evil_dragon_breath_idle"
     tt.render.sprites[1].loop = false
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
     tt.track_target = false
     tt.ray_duration = fts(42)
@@ -11644,7 +11637,6 @@ local function heroes()
     tt.bullet.pop = nil
     tt.bullet.rotation_speed = nil
     tt.bullet.hit_payload = "aura_hero_dragon_gem_crystal_totem"
-    tt.render.sprites[1].scale = vec_1(0.7)
     tt.sound_events.hit = nil
     tt.sound_events.insert = nil
     tt.render.sprites[1].animated = true
@@ -11686,7 +11678,6 @@ local function heroes()
     tt.render.sprites[1].prefix = "hero_evil_dragon_conduit"
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = true
-    tt.render.sprites[1].scale = vec_2(0.7, 0.7)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_hero_dragon_gem_crystal_totem.update
     tt.damage_range = b.aura_radius
@@ -12488,7 +12479,6 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_dragon_bone.level_up
     tt.hero.use_custom_spawn_point = true
     tt.idle_flip.cooldown = 10
-    tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
     tt.info.hero_portrait = "hero_portraits_0013"
     tt.info.i18n_key = "HERO_DRAGON_BONE"
     tt.info.portrait = "portraits_hero_0013"
