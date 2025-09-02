@@ -326,7 +326,7 @@ local function engineer_towers()
     tower_dwaarp.attacks.list[2].hit_time = fts(13)
     tower_dwaarp.attacks.list[2].sound = "EarthquakeLavaSmash"
     tower_dwaarp.attacks.list[3] = E:clone_c("bullet_attack")
-    tower_dwaarp.attacks.list[3].vis_flags = bit.bor(F_DRILL, F_RANGED)
+    tower_dwaarp.attacks.list[3].vis_flags = bit.bor(F_DRILL, F_RANGED, F_INSTAKILL)
     tower_dwaarp.attacks.list[3].vis_bans = bit.bor(F_FLYING, F_CLIFF, F_BOSS)
     tower_dwaarp.attacks.list[3].bullet = "drill"
     tower_dwaarp.attacks.list[3].cooldown = 29
