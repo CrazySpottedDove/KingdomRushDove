@@ -12464,7 +12464,7 @@ local function heroes()
     }
     tt.hero.team = TEAM_DARK_ARMY
     tt.flight_height = 80
-    tt.health.dead_lifetime = 30
+    tt.health.dead_lifetime = 15
     tt.health_bar.draw_order = -1
     tt.health_bar.offset = vec_2(0, 170)
     tt.health_bar.sort_y_offset = -171

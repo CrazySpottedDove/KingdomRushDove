@@ -23483,7 +23483,7 @@ function scripts.hero_dragon_bone.update(this, store)
         if ready_to_use_skill(a, store) then
             local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range,
                 a.max_range, a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans_target, function(v, o)
-                return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
+                return GR:cell_is(v.pos.x, v.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
             end)
 
             if not target or not targets or #targets < a.min_targets then
@@ -23552,15 +23552,15 @@ function scripts.hero_dragon_bone.update(this, store)
                     table.insert(selected_targets, sel_target)
                     table.remove(targets, 1)
 
-                    for i = #targets, 1, -1 do
-                        local e = targets[i]
-                        local dz = this.danger_zones
-                        local sd2 = this.safe_dist2
+                    -- for i = #targets, 1, -1 do
+                    --     local e = targets[i]
+                    --     local dz = this.danger_zones
+                    --     local sd2 = this.safe_dist2
 
-                        if max_dist2 > V.dist2(sel_target.pos.x, sel_target.pos.y, e.pos.x, e.pos.y) then
-                            table.remove(targets, i)
-                        end
-                    end
+                    --     if max_dist2 > V.dist2(sel_target.pos.x, sel_target.pos.y, e.pos.x, e.pos.y) then
+                    --         table.remove(targets, i)
+                    --     end
+                    -- end
                 end
 
                 if #selected_targets == a.proj_count then
@@ -24252,7 +24252,6 @@ function scripts.bolt_dragon_bone_burst.update(this, store)
             d.value = math.random(dmin, dmax) * b.damage_factor
             d.source_id = this.id
             d.target_id = target.id
-
             queue_damage(store, d)
 
             is_flying = U.flag_has(target.vis.flags, F_FLYING)
