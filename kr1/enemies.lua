@@ -7080,11 +7080,11 @@ local function enemies()
     tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0057" or "info_portraits_sc_0057"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_spider_big.update
-    tt.melee.attacks[1].cooldown = 0.5
+    tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 125
     tt.melee.attacks[1].damage_min = 100
     tt.melee.attacks[1].hit_time = fts(15)
-    tt.melee.attacks[1].damage_type = DAMAGE_TRUE
+    tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
     tt.melee.attacks[1].sound = "SpiderAttack"
     tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
     tt.timed_attacks.list[1].bullet = "enemy_sarelgaz_bigger_egg"
@@ -7114,6 +7114,7 @@ local function enemies()
     tt.unit.size = UNIT_SIZE_LARGE
     tt.vis.bans = bor(F_THORN)
     tt.vis.flags = F_ENEMY
+    tt.health_judger = true
 
     tt = RT("enemy_sarelgaz_big_aura", "aura")
     tt.aura.duration = -1
@@ -7122,6 +7123,7 @@ local function enemies()
     tt.aura.track_source = true
     tt.aura.radius = 70
     tt.aura.excluded_templates = { "enemy_sarelgaz_big" }
+    tt.aura.vis_bans = bor(F_FRIEND,F_FLYING)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_apply_mod.update
 
@@ -7148,6 +7150,13 @@ local function enemies()
     tt.tween.disabled = true
     tt.tween.props[1].keys = { { 0, 255 }, { 4, 0 } }
     tt.tween.remove = true
+
+    tt = E:register_t("enemy_jungle_spider_tiny_with_gold", "enemy_jungle_spider_tiny")
+    tt.enemy.gold = 1
+
+    tt = E:register_t("enemy_spider_rotten_tiny_with_gold", "enemy_spider_rotten_tiny")
+    tt.enemy.gold = 1
+
 end
 
 return enemies

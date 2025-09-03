@@ -1,5 +1,5 @@
 return {
-    cash = 700,
+    cash = 800,
     live = 20,
     groups = {
         {    -- 第1波
@@ -59,7 +59,7 @@ return {
                     path_index = 1,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 30,
                             interval = 10.0,
@@ -73,7 +73,7 @@ return {
                     path_index = 2,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 30,
                             interval = 10.0,
@@ -323,7 +323,7 @@ return {
                     path_index = 3,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 100,
                             interval = 10.0,
@@ -337,7 +337,7 @@ return {
                     path_index = 4,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 100,
                             interval = 10.0,
@@ -392,7 +392,7 @@ return {
                             interval_next = 50.0
                         },
                         {    -- 出怪 2
-                            creep = "enemy_spider_rotten_tiny",
+                            creep = "enemy_spider_rotten_tiny_with_gold",
                             max_same = 1,
                             max = 24,
                             interval = 20.0,
@@ -414,7 +414,7 @@ return {
                             interval_next = 50.0
                         },
                         {    -- 出怪 2
-                            creep = "enemy_spider_rotten_tiny",
+                            creep = "enemy_spider_rotten_tiny_with_gold",
                             max_same = 1,
                             max = 24,
                             interval = 20.0,
@@ -433,7 +433,7 @@ return {
                     path_index = 3,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 100,
                             interval = 12.0,
@@ -447,7 +447,7 @@ return {
                     path_index = 4,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 100,
                             interval = 12.0,
@@ -552,7 +552,7 @@ return {
                     path_index = 3,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 150,
                             interval = 7.0,
@@ -566,7 +566,7 @@ return {
                     path_index = 4,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 150,
                             interval = 7.0,
@@ -621,7 +621,7 @@ return {
                     path_index = 4,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_jungle_spider_tiny",
+                            creep = "enemy_jungle_spider_tiny_with_gold",
                             max_same = 1,
                             max = 150,
                             interval = 5.0,
@@ -757,7 +757,7 @@ return {
                     path_index = 3,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_spider_rotten_tiny",
+                            creep = "enemy_spider_rotten_tiny_with_gold",
                             max_same = 1,
                             max = 100,
                             interval = 10.0,
@@ -771,7 +771,7 @@ return {
                     path_index = 4,
                     spawns = {
                         {    -- 出怪 1
-                            creep = "enemy_spider_rotten_tiny",
+                            creep = "enemy_spider_rotten_tiny_with_gold",
                             max_same = 1,
                             max = 100,
                             interval = 10.0,
