@@ -2301,8 +2301,8 @@ local function soldier_pick_melee_attack(store, this, target)
 
                 if not a.disabled and cooldown < store.tick_ts - a.ts and forced_cooldown_ok and
                     band(a.vis_flags, target.vis.bans) == 0 and band(a.vis_bans, target.vis.flags) == 0 and
-                    (not a.fn_can or a.fn_can(this, store, a, target)) and
-                    (not a.not_first or this.melee.last_attack and this.melee.last_attack.target_id == target.id) then
+                    (not a.fn_can or a.fn_can(this, store, a, target))
+                    then
                     if not a.fn_chance and math.random() >= a.chance or a.fn_chance and
                         not a.fn_chance(this, store, a, target) then
                         a.ts = store.tick_ts

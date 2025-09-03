@@ -711,7 +711,6 @@ area_attack.level = 1
 area_attack.max_range = 0
 area_attack.min_range = 0
 area_attack.mod = nil
-area_attack.not_first = nil
 area_attack.signal = nil
 area_attack.sound = nil
 area_attack.sound_args = nil

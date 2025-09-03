@@ -459,7 +459,6 @@ local function barrack_towers()
     tt.melee.attacks[2].hit_time = fts(8)
     tt.melee.attacks[2].damage_bans = bor(F_FLYING, F_FRIEND, F_HERO)
     tt.melee.attacks[2].shared_cooldown = true
-    tt.melee.attacks[2].not_first = true
     tt.melee.attacks[2].signal = "whirlwind"
     tt.melee.attacks[2].level = 0
     tt.melee.attacks[2].disabled = true

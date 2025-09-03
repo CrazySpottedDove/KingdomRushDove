@@ -7066,11 +7066,11 @@ local function enemies()
     anchor_x = 0.5
     image_y = 128
     image_x = 220
-    tt.enemy.gold = 145
+    tt.enemy.gold = 160
     tt.enemy.lives_cost = 5
     tt.enemy.melee_slot = vec_2(70, 0)
     tt.health.dead_lifetime = 8
-    tt.health.hp_max = 2900
+    tt.health.hp_max = 2700
     tt.health.magic_armor = 0.3
     tt.health.armor = 0.6
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
@@ -7112,7 +7112,8 @@ local function enemies()
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 45)
     tt.unit.size = UNIT_SIZE_LARGE
-    tt.vis.bans = bor(F_THORN)
+    tt.sound_events.death = "DeathEplosion"
+    tt.vis.bans = F_POISON
     tt.vis.flags = F_ENEMY
     tt.health_judger = true
 
@@ -7128,7 +7129,7 @@ local function enemies()
     tt.main_script.update = scripts.aura_apply_mod.update
 
     tt = RT("mod_enemy_sarelgaz_big", "mod_slow")
-    tt.slow.factor = 1.35
+    tt.slow.factor = 1.2
     tt.modifier.duration = fts(12)
 
     tt = E:register_t("enemy_sarelgaz_bigger_egg", "decal_scripted")
@@ -7138,7 +7139,7 @@ local function enemies()
     tt.render.sprites[1].scale = vec_1(1.75)
     tt.render.sprites[1].prefix = "enemy_spider_egg"
     tt.render.sprites[1].loop = false
-    tt.render.sprites[1].color = { 0, 80, 255 }
+    tt.render.sprites[1].color = { 40, 80, 255 }
     tt.spawner.count = 1
     tt.spawner.cycle_time = fts(6)
     tt.spawner.entity = "enemy_sarelgaz_small"

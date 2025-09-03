@@ -9,6 +9,7 @@ local kr1 = {
     ACHIEVEMENT_ENERGY_NETWORK_DESCRIPTION = "在任意关卡建造4个特斯拉塔。",
     ACHIEVEMENT_CANNON_FODDER_DESCRIPTION = "让 1000 名士兵慷慨就义。",
     CReload1 = "慢",
+    ENEMY_JUNGLE_SPIDER_TINY_WITH_GOLD_NAME = "幼蛛",
     ["!!!COMMENT_LOCALIZATION_SOURCE"] = "Keywords+CYUGAME",
     LEVEL_15_TITLE = "腐朽森林",
     TIP_14 = "毒伤害无视护甲。",

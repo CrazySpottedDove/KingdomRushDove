@@ -42,6 +42,9 @@ return {
             }
         },
         {
+            template = "soldier_amazona"
+        },
+        {
             template = "editor_wave_flag",
             ["editor.len"] = 240,
             ["editor.path_id"] = 2,
