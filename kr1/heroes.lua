@@ -12260,9 +12260,7 @@ local function heroes()
 
     -- 五代骨龙
     tt = E:register_t("ps_bolt_dragon_bone_basic_attack")
-
     E:add_comps(tt, "pos", "particle_system")
-
     tt.particle_system.name = "hero_dragon_bone_projectile_trail_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
@@ -12273,10 +12271,9 @@ local function heroes()
     tt.particle_system.emission_rate = 20
     tt.particle_system.emit_rotation_spread = math.pi / 2
     tt.particle_system.z = Z_FLYING_HEROES
+
     tt = E:register_t("ps_bolt_dragon_bone_burst")
-
     E:add_comps(tt, "pos", "particle_system")
-
     tt.particle_system.name = "hero_dragon_bone_burst_projectile_trail_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
@@ -12375,9 +12372,7 @@ local function heroes()
     tt.timed.duration = fts(27)
 
     tt = E:register_t("hero_dragon_bone", "hero5")
-
     E:add_comps(tt, "ranged", "timed_attacks", "tween")
-
     b = balance.heroes.hero_dragon_bone
     tt.hero.level_stats.armor = b.armor
     tt.hero.level_stats.hp_max = b.hp_max
@@ -12405,7 +12400,6 @@ local function heroes()
         9,
         10
     }
-    tt.hero.level_stats.regen_health = b.regen_health
     tt.hero.level_stats.ranged_damage_min = b.basic_attack.damage_min
     tt.hero.level_stats.ranged_damage_max = b.basic_attack.damage_max
     tt.hero.skills.cloud = E:clone_c("hero_skill")
@@ -12607,7 +12601,7 @@ local function heroes()
     tt.ranged.attacks[5].sound = "HeroDragonBoneSpreadingBurstCast"
     tt.ultimate = {
         ts = 0,
-        cooldown = 45,
+        cooldown = 36,
         vis_ban = F_FLYING,
         disabled = true
     }
@@ -12652,7 +12646,6 @@ local function heroes()
     tt.health.armor = b.armor
     tt.health.hp_max = b.hp
     tt.health_bar.offset = vec_2(0, 30)
-    tt.info.fn = scripts.soldier_reinforcement.get_info
     tt.info.portrait = "gui_bottom_info_image_soldiers_0048"
     tt.info.random_name_format = nil
     tt.info.random_name_count = nil

@@ -1654,7 +1654,7 @@ local heroes = {
         }
     },
     hero_dragon_bone = {
-        dead_lifetime = 30,
+        dead_lifetime = 15,
         speed = 130,
         regen_cooldown = 1,
         stats = {
@@ -1664,17 +1664,17 @@ local heroes = {
             damage = 10
         },
         armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        hp_max = {315, 340, 365, 390, 415, 440, 465, 490, 515, 540},
+        hp_max = {409, 442, 474, 507, 539, 572, 604, 637, 669, 702},
         regen_health = {25, 27, 29, 31, 33, 35, 37, 39, 41, 43},
         basic_attack = {
             max_range = 220,
             radius = 60,
             cooldown = 2,
-            min_range = 50,
+            min_range = 0,
             xp_gain_factor = 1.4,
             damage_type = DAMAGE_TRUE,
-            damage_max = {17, 20, 24, 27, 30, 34, 37, 40, 44, 46},
-            damage_min = {11, 13, 16, 18, 20, 22, 25, 27, 29, 32}
+            damage_max = {22, 26, 31, 35, 39, 44, 48, 52, 57, 59},
+            damage_min = {14, 16, 20, 23, 26, 28, 32, 35, 37, 41}
         },
         plague = {
             damage_min = 1,
@@ -1683,8 +1683,8 @@ local heroes = {
             damage_max = 1,
             explotion = {
                 damage_radius = 60,
-                damage_min = 10,
-                damage_max = 20,
+                damage_min = 13,
+                damage_max = 26,
                 damage_type = DAMAGE_EXPLOSION
             }
         },
@@ -1693,10 +1693,10 @@ local heroes = {
             radius = 100,
             min_targets = 3,
             slow_factor = 0.5,
-            min_range = 150,
+            min_range = 50,
             cooldown = {15, 15, 15},
             duration = {4, 6, 10},
-            xp_gain = {15, 30, 45}
+            xp_gain = {120, 240, 360}
         },
         nova = {
             max_range = 75,
@@ -1705,9 +1705,9 @@ local heroes = {
             damage_radius = 75,
             cooldown = {24, 24, 24},
             damage_type = DAMAGE_EXPLOSION,
-            damage_max = {40, 118, 156},
-            damage_min = {20, 62, 84},
-            xp_gain = {24, 48, 72}
+            damage_max = {52, 153, 202},
+            damage_min = {26, 80, 109},
+            xp_gain = {192, 384, 576}
         },
         rain = {
             max_range = 200,
@@ -1715,36 +1715,36 @@ local heroes = {
             min_range = 50,
             stun_time = 0.25,
             cooldown = {20, 20, 20},
-            damage_max = {18, 36, 54},
-            damage_min = {12, 24, 36},
+            damage_max = {23, 46, 70},
+            damage_min = {15, 31, 46},
             damage_type = DAMAGE_TRUE,
-            bones_count = {3, 5, 8},
-            xp_gain = {20, 40, 50}
+            bones_count = {4, 6, 8},
+            xp_gain = {160, 320, 400}
         },
         burst = {
             max_range = 300,
             min_targets = 5,
             min_range = 0,
             cooldown = {32, 32, 32},
-            damage_max = {36, 86, 130},
-            damage_min = {24, 58, 86},
+            damage_max = {46, 112, 169},
+            damage_min = {31, 75, 112},
             damage_type = DAMAGE_TRUE,
             proj_count = {6, 8, 10},
-            xp_gain = {30, 60, 90}
+            xp_gain = {240, 480, 720}
         },
         ultimate = {
-            cooldown = {45, 45, 45, 45},
+            cooldown = {36, 36, 36, 36},
             dog = {
                 speed = 95,
                 armor = 0,
                 cooldown = 1,
                 duration = {10, 15, 20, 25},
-                hp = {100, 120, 150, 180},
+                hp = {130, 156, 195, 234},
                 melee_attack = {
                     cooldown = 1,
                     damage_type = DAMAGE_PHYSICAL,
-                    damage_max = {14, 17, 22, 31},
-                    damage_min = {10, 11, 14, 21}
+                    damage_max = {18, 22, 28, 40},
+                    damage_min = {13, 14, 18, 27}
                 }
             }
         }

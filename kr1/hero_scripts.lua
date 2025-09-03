@@ -23198,7 +23198,7 @@ function scripts.hero_dragon_bone.level_up(this, store, initial)
         local u = this.ultimate
 
         u.disabled = nil
-        
+
         local uc = E:get_template(s.controller_name)
 
         uc.cooldown = s.cooldown[s.level]
@@ -23519,6 +23519,7 @@ function scripts.hero_dragon_bone.update(this, store)
                         this.pos.y + a.bullet_start_offset.y
                     b.bullet.from = V.vclone(b.pos)
                     b.bullet.to = e_pos
+                    b.bullet.damage_factor = this.unit.damage_factor
                     b.bullet.source_id = this.id
                     b.bullet.target_id = target.id
 
@@ -23533,7 +23534,7 @@ function scripts.hero_dragon_bone.update(this, store)
                     b.bullet.from = V.vclone(b.pos)
                     b.bullet.to = pos
                     b.bullet.source_id = this.id
-
+                    b.bullet.damage_factor = this.unit.damage_factor
                     queue_insert(store, b)
                 end
 
@@ -23684,9 +23685,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
                 b.bullet.shot_index = i
 
-                if b.bullet.use_unit_damage_factor then
-                    b.bullet.damage_factor = this.unit.damage_factor
-                end
+                b.bullet.damage_factor = this.unit.damage_factor
 
                 if upg_lf then
                     if not this._lethal_focus_deck then
