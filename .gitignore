@@ -16,6 +16,7 @@ _assets/kr1-desktop/strings/zh-Hant.lua
 _assets_new
 .vscode/
 mdbuild/
+/data/
 tmp/
 kr1-desktop/data/comics
 patches/config.lua
@@ -25,4 +26,3 @@ patches/keyset_custom.lua
 update_log.txt
 last_build_commit.txt
 args.lua
-data

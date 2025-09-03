@@ -112,8 +112,8 @@ local a = {
 		-- from = 439
         from = 500
 	},
-	hero_venom_lvlup_fx_idle = {
-		prefix = "hero_venom_lvlup_fx",
+	hero_venom_levelup_fx_idle = {
+		prefix = "hero_venom_levelup_fx",
 		to = 14,
 		from = 1
 	},

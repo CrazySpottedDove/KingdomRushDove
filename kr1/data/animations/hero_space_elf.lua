@@ -31,7 +31,7 @@ local a = {
 		to = 133,
 		from = 105
 	},
-	hero_therien_therien_lvlup = {
+	hero_therien_therien_levelup = {
 		prefix = "hero_therien_therien",
 		to = 167,
 		from = 134

@@ -6,6 +6,7 @@ return {
             interval = 0.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -28,6 +29,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 50.0,
                     path_index = 2,
                     spawns = {
@@ -55,6 +57,7 @@ return {
             interval = 600.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 300.0,
                     path_index = 1,
                     spawns = {
@@ -69,6 +72,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 300.0,
                     path_index = 2,
                     spawns = {
@@ -83,6 +87,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 400.0,
                     path_index = 1,
                     spawns = {
@@ -97,6 +102,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 500.0,
                     path_index = 2,
                     spawns = {
@@ -116,6 +122,7 @@ return {
             interval = 800.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -138,6 +145,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 2,
                     spawns = {
@@ -160,6 +168,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 150.0,
                     path_index = 1,
                     spawns = {
@@ -174,6 +183,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 150.0,
                     path_index = 2,
                     spawns = {
@@ -193,6 +203,7 @@ return {
             interval = 1000.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -215,6 +226,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 2,
                     spawns = {
@@ -242,6 +254,7 @@ return {
             interval = 1200.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 75.0,
                     path_index = 1,
                     spawns = {
@@ -264,6 +277,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 50.0,
                     path_index = 2,
                     spawns = {
@@ -286,28 +300,30 @@ return {
                     }
                 },
                 {    -- 第3组出怪
-                    delay = 100.0,
+                    some_flying = true,
+                    delay = 75.0,
                     path_index = 3,
                     spawns = {
                         {    -- 出怪 1
                             creep = "enemy_razorwing",
                             max_same = 1,
-                            max = 10,
-                            interval = 35.0,
+                            max = 8,
+                            interval = 30.0,
                             fixed_sub_path = 0,
                             interval_next = 50.0
                         }
                     }
                 },
                 {    -- 第4组出怪
-                    delay = 100.0,
+                    some_flying = true,
+                    delay = 75.0,
                     path_index = 4,
                     spawns = {
                         {    -- 出怪 1
                             creep = "enemy_razorwing",
                             max_same = 1,
-                            max = 10,
-                            interval = 35.0,
+                            max = 8,
+                            interval = 30.0,
                             fixed_sub_path = 0,
                             interval_next = 50.0
                         }
@@ -319,6 +335,7 @@ return {
             interval = 1000.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 3,
                     spawns = {
@@ -333,6 +350,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 4,
                     spawns = {
@@ -347,6 +365,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -361,6 +380,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 30.0,
                     path_index = 2,
                     spawns = {
@@ -380,6 +400,7 @@ return {
             interval = 800.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -402,6 +423,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 100.0,
                     path_index = 2,
                     spawns = {
@@ -429,6 +451,7 @@ return {
             interval = 1000.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 100.0,
                     path_index = 3,
                     spawns = {
@@ -443,6 +466,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 100.0,
                     path_index = 4,
                     spawns = {
@@ -457,6 +481,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -479,6 +504,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 75.0,
                     path_index = 2,
                     spawns = {
@@ -501,6 +527,7 @@ return {
                     }
                 },
                 {    -- 第5组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -520,6 +547,7 @@ return {
             interval = 800.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -534,6 +562,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 2,
                     spawns = {
@@ -548,6 +577,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 600.0,
                     path_index = 3,
                     spawns = {
@@ -562,6 +592,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 600.0,
                     path_index = 4,
                     spawns = {
@@ -581,6 +612,7 @@ return {
             interval = 1000.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -603,6 +635,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 3,
                     spawns = {
@@ -610,13 +643,14 @@ return {
                             creep = "enemy_quetzal",
                             max_same = 1,
                             max = 4,
-                            interval = 200.0,
+                            interval = 275.0,
                             fixed_sub_path = 0,
                             interval_next = 50.0
                         }
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 250.0,
                     path_index = 4,
                     spawns = {
@@ -636,6 +670,7 @@ return {
             interval = 1100.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -650,6 +685,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 300.0,
                     path_index = 2,
                     spawns = {
@@ -664,6 +700,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 600.0,
                     path_index = 2,
                     spawns = {
@@ -678,6 +715,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 600.0,
                     path_index = 1,
                     spawns = {
@@ -697,6 +735,7 @@ return {
             interval = 2000.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -711,6 +750,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 150.0,
                     path_index = 2,
                     spawns = {
@@ -725,6 +765,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 500.0,
                     path_index = 1,
                     spawns = {
@@ -739,6 +780,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 350.0,
                     path_index = 2,
                     spawns = {
@@ -753,6 +795,7 @@ return {
                     }
                 },
                 {    -- 第5组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 3,
                     spawns = {
@@ -767,6 +810,7 @@ return {
                     }
                 },
                 {    -- 第6组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 4,
                     spawns = {
@@ -786,6 +830,7 @@ return {
             interval = 1300.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 200.0,
                     path_index = 3,
                     spawns = {
@@ -800,6 +845,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 4,
                     spawns = {
@@ -814,6 +860,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 300.0,
                     path_index = 1,
                     spawns = {
@@ -828,6 +875,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 200.0,
                     path_index = 2,
                     spawns = {
@@ -847,6 +895,7 @@ return {
             interval = 2000.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -861,6 +910,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 400.0,
                     path_index = 2,
                     spawns = {
@@ -880,6 +930,7 @@ return {
             interval = 2500.0,
             waves = {
                 {    -- 第1组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -894,6 +945,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
+                    some_flying = false,
                     delay = 0.0,
                     path_index = 2,
                     spawns = {
@@ -908,6 +960,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
+                    some_flying = false,
                     delay = 1200.0,
                     path_index = 1,
                     spawns = {
@@ -930,6 +983,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
+                    some_flying = false,
                     delay = 1200.0,
                     path_index = 2,
                     spawns = {

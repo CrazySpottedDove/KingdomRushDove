@@ -41,7 +41,7 @@ local a = {
 		to = 326,
 		from = 289
 	},
-	hero_dragon_bone_hero_level_up = {
+	hero_dragon_bone_hero_levelup = {
 		prefix = "hero_dragon_bone_hero",
 		to = 346,
 		from = 327

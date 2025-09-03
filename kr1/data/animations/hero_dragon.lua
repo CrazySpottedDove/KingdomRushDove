@@ -41,7 +41,7 @@ local a = {
 		to = 276,
 		from = 229
 	},
-	hero_lumenir_hero_lvlup = {
+	hero_lumenir_hero_levelup = {
 		prefix = "hero_lumenir_hero",
 		to = 292,
 		from = 277
