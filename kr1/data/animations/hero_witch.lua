@@ -57,7 +57,7 @@ local a = {
 		to = 292,
 		layer_from = 1
 	},
-	hero_witch_hero_layerX_level_up = {
+	hero_witch_hero_layerX_levelup = {
 		layer_to = 3,
 		from = 293,
 		layer_prefix = "hero_witch_hero_layer%i",

@@ -11326,7 +11326,7 @@ local function heroes()
     E:add_comps(tt, "sound_events")
 
     b = balance.heroes.hero_dragon_gem.floor_impact
-    tt.render.sprites[1].prefix = "hero_evil_dragon_shards"
+    tt.render.sprites[1].prefix = "hero_dragon_gem_shards"
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = false
     tt.damage_min = nil
@@ -11342,7 +11342,7 @@ local function heroes()
     E:add_comps(tt, "tween", "sound_events")
 
     b = balance.heroes.hero_dragon_gem.ultimate
-    tt.render.sprites[1].name = "hero_evil_dragon_ultimate_crystal_b"
+    tt.render.sprites[1].name = "hero_dragon_gem_ultimate_crystal_b"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].loop = false
     tt.damage_min = nil
@@ -11447,13 +11447,13 @@ local function heroes()
     -- tt.drag_line_origin_offset = vec_2(0, tt.flight_height)
     tt.render.sprites[1].offset.y = tt.flight_height
     tt.render.sprites[1].animated = true
-    tt.render.sprites[1].prefix = "hero_evil_dragon_hero"
+    tt.render.sprites[1].prefix = "hero_dragon_gem"
     tt.render.sprites[1].name = "respawn"
     tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].z = Z_FLYING_HEROES
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].animated = false
-    tt.render.sprites[2].name = "hero_lumenir_hero_shadow"
+    tt.render.sprites[2].name = "hero_dragon_gem_shadow"
     tt.render.sprites[2].offset = vec_2(0, 0)
     tt.render.sprites[2].z = Z_DECALS + 1
     tt.soldier.melee_slot_offset = vec_2(0, 0)
@@ -11510,7 +11510,6 @@ local function heroes()
     tt.ranged.attacks[2].sound = "HeroDragonGemParalyzingBreathCast"
     tt.ranged.attacks[3] = E:clone_c("aura_attack")
     tt.ranged.attacks[3].disabled = true
-    tt.ranged.attacks[3].mod = "mod_hero_lumenir_sword_hit"
     tt.ranged.attacks[3].min_nodes = 20
     tt.ranged.attacks[3].cooldown = nil
     tt.ranged.attacks[3].fall_time = fts(24)
@@ -11606,7 +11605,7 @@ local function heroes()
     tt.force_motion.a_step = 5
     tt.force_motion.max_a = 3000
     tt.force_motion.max_v = 600
-    tt.render.sprites[1].prefix = "hero_evil_dragon_attack_projectile"
+    tt.render.sprites[1].prefix = "hero_dragon_gem_attack_projectile"
     tt.render.sprites[1].z = Z_FLYING_HEROES
     tt.main_script.update = scripts.bolt_hero_dragon_gem_attack.update
     tt.damage_range = b.damage_range
@@ -11624,7 +11623,7 @@ local function heroes()
     tt.image_width = 165.5
     tt.main_script.update = scripts.ray5_simple.update
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
-    tt.render.sprites[1].name = "hero_evil_dragon_breath_idle"
+    tt.render.sprites[1].name = "hero_dragon_gem_breath_idle"
     tt.render.sprites[1].loop = false
     tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
     tt.track_target = false
@@ -11640,7 +11639,7 @@ local function heroes()
     tt.sound_events.hit = nil
     tt.sound_events.insert = nil
     tt.render.sprites[1].animated = true
-    tt.render.sprites[1].name = "hero_evil_dragon_conduit_projectile_idle"
+    tt.render.sprites[1].name = "hero_dragon_gem_conduit_projectile_idle"
     tt.bullet.hit_decal = nil
     tt.bullet.hit_fx = nil
     tt.bullet.damage_type = DAMAGE_EXPLOSION
@@ -11652,7 +11651,7 @@ local function heroes()
     tt.main_script.update = scripts.bullet_hero_dragon_gem_ultimate_shard.update
     tt.bullet.arrive_decal = "decal_bullet_hero_dragon_gem_ultimate_shard"
     tt.bullet.max_speed = 900
-    tt.render.sprites[1].name = "hero_evil_dragon_ultimate_projectile"
+    tt.render.sprites[1].name = "hero_dragon_gem_ultimate_projectile"
     tt.render.sprites[1].animated = false
 
     tt = E:register_t("aura_hero_dragon_gem_skill_stun", "aura")
@@ -11675,7 +11674,7 @@ local function heroes()
     tt.aura.vis_flags = F_RANGED
     tt.aura.cycle_time = b.trigger_every
     tt.aura.duration = nil
-    tt.render.sprites[1].prefix = "hero_evil_dragon_conduit"
+    tt.render.sprites[1].prefix = "hero_dragon_gem_conduit"
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = true
     tt.main_script.insert = scripts.aura_apply_mod.insert
@@ -11695,7 +11694,7 @@ local function heroes()
     E:add_comps(tt, "render")
 
     tt.modifier.duration = nil
-    tt.render.sprites[1].prefix = "hero_evil_dragon_breath_crystal"
+    tt.render.sprites[1].prefix = "hero_dragon_gem_breath_crystal"
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].size_names = {"small", "medium", "big"}
     tt.render.sprites[1].draw_order = DO_MOD_FX
@@ -11712,7 +11711,7 @@ local function heroes()
     tt.main_script.remove = scripts.mod_stun.remove
     tt.explode_fx = "decal_hero_dragon_gem_floor_circle"
     tt.explode_sound = "HeroDragonGemRedDeathExplosion"
-    tt.render.sprites[1].prefix = "hero_evil_dragon_red_death_crystal"
+    tt.render.sprites[1].prefix = "hero_dragon_gem_red_death_crystal"
     tt.render.sprites[1].name = "start"
     tt.render.sprites[1].z = Z_OBJECTS
     tt.render.sprites[1].draw_order = DO_MOD_FX
@@ -11738,7 +11737,7 @@ local function heroes()
     tt.inflicted_damage_factor = b.damage_factor
     tt.modifier.duration = 1e+99
     tt.modifier.use_mod_offset = true
-    tt.render.sprites[1].prefix = "hero_evil_dragon_passive"
+    tt.render.sprites[1].prefix = "hero_dragon_gem_passive"
     tt.render.sprites[1].name = "loop"
     tt.render.sprites[1].z = Z_FLYING_HEROES + 1
 

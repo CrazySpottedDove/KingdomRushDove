@@ -286,7 +286,7 @@ local a = {
 		to = 218,
 		from = 173
 	},
-	hero_dragon_arborean_transformation_overlay_lvlup = {
+	hero_dragon_arborean_transformation_overlay_levelup = {
 		prefix = "hero_dragon_arborean_transformation_overlay",
 		to = 238,
 		from = 219
@@ -321,7 +321,7 @@ local a = {
 		to = 218,
 		from = 173
 	},
-	hero_dragon_arborean_hero_lvlup = {
+	hero_dragon_arborean_hero_levelup = {
 		prefix = "hero_dragon_arborean_hero",
 		to = 238,
 		from = 219

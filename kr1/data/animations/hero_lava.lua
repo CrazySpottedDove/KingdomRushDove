@@ -51,7 +51,7 @@ local a = {
 		to = 342,
 		from = 305
 	},
-	hero_lava_hero_level_up = {
+	hero_lava_hero_levelup = {
 		prefix = "hero_lava_hero",
 		to = 372,
 		from = 343

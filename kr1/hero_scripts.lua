@@ -17427,7 +17427,7 @@ function scripts.hero_space_elf.update(this, store)
 
         return nil
     end
-    U.y_animation_play(this, "lvlup", nil, store.tick_ts, 1)
+    U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
     U.animation_start(this, "idle", nil, store.tick_ts, true)
 
     this.health_bar.hidden = false
@@ -17450,7 +17450,7 @@ function scripts.hero_space_elf.update(this, store)
                 local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, false,
                     false, bor(F_BOSS, F_FLYING))
                 if target and valid_rally_node_nearby(target.pos) then
-                    U.y_animation_play(this, "lvlup", nil, store.tick_ts, 1)
+                    U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
                     S:queue(this.sound_events.change_rally_point)
 
                     local e = E:create_entity(this.hero.skills.ultimate.controller_name)
@@ -17807,7 +17807,7 @@ function scripts.hero_space_elf.update(this, store)
             end
 
             if SU.hero_level_up(store, this) then
-                U.y_animation_play(this, "lvlup", nil, store.tick_ts, 1)
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
             end
 
             brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
@@ -20284,7 +20284,7 @@ function scripts.hero_dragon_gem.update(this, store)
         end
 
         if SU.hero_level_up(store, this) then
-            -- block empty
+            U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
         end
 
         if ready_to_use_skill(this.ultimate, store) then
@@ -21916,13 +21916,13 @@ function scripts.hero_witch.update(this, store)
             end
 
             if SU.hero_level_up(store, this) then
-                U.y_animation_play(this, "level_up", nil, store.tick_ts, 1)
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
             end
 
             if ready_to_use_skill(this.ultimate, store) then
                 local target = U.find_teleport_moment(store, this.pos, this.ranged.attacks[1].max_range, MANY_ENEMY_COUNT)
                 if target and valid_rally_node_nearby(target.pos) then
-                    apply_ultimate(this, store, target, "level_up")
+                    apply_ultimate(this, store, target, "levelup")
                 else
                     this.ultimate.ts = this.ultimate.ts + 1
                 end
@@ -23271,7 +23271,7 @@ function scripts.hero_dragon_bone.update(this, store)
         end
 
         if SU.hero_level_up(store, this) then
-            U.y_animation_play(this, "level_up", nil, store.tick_ts, 1)
+            U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
         end
 
         a = this.ultimate
@@ -23279,7 +23279,7 @@ function scripts.hero_dragon_bone.update(this, store)
         if ready_to_use_skill(a, store) then
             local target = U.find_foremost_enemy(store, this.pos, basic_ranged.min_range, basic_ranged.max_range, nil, 0, a.vis_bans)
             if target and valid_rally_node_nearby(target.pos) then
-                apply_ultimate(this, store, target, "level_up")
+                apply_ultimate(this, store, target, "levelup")
             else
                 a.ts = a.ts + 1
             end

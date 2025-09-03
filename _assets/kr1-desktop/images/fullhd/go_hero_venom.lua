@@ -7337,7 +7337,7 @@ return {
 			"hero_venom_hit_fx_0010"
 		}
 	},
-	hero_venom_lvlup_fx_0001 = {
+	hero_venom_levelup_fx_0001 = {
 		a_name = "go_hero_venom-1.dds",
 		size = {
 			132,
@@ -7360,10 +7360,10 @@ return {
 			99
 		},
 		alias = {
-			"hero_venom_lvlup_fx_0002"
+			"hero_venom_levelup_fx_0002"
 		}
 	},
-	hero_venom_lvlup_fx_0003 = {
+	hero_venom_levelup_fx_0003 = {
 		a_name = "go_hero_venom-1.dds",
 		size = {
 			132,
@@ -7386,10 +7386,10 @@ return {
 			98
 		},
 		alias = {
-			"hero_venom_lvlup_fx_0004"
+			"hero_venom_levelup_fx_0004"
 		}
 	},
-	hero_venom_lvlup_fx_0005 = {
+	hero_venom_levelup_fx_0005 = {
 		a_name = "go_hero_venom-1.dds",
 		size = {
 			132,
@@ -7412,10 +7412,10 @@ return {
 			98
 		},
 		alias = {
-			"hero_venom_lvlup_fx_0006"
+			"hero_venom_levelup_fx_0006"
 		}
 	},
-	hero_venom_lvlup_fx_0007 = {
+	hero_venom_levelup_fx_0007 = {
 		a_name = "go_hero_venom-1.dds",
 		size = {
 			132,
@@ -7438,10 +7438,10 @@ return {
 			98
 		},
 		alias = {
-			"hero_venom_lvlup_fx_0008"
+			"hero_venom_levelup_fx_0008"
 		}
 	},
-	hero_venom_lvlup_fx_0009 = {
+	hero_venom_levelup_fx_0009 = {
 		a_name = "go_hero_venom-1.dds",
 		size = {
 			132,
@@ -7464,10 +7464,10 @@ return {
 			97
 		},
 		alias = {
-			"hero_venom_lvlup_fx_0010"
+			"hero_venom_levelup_fx_0010"
 		}
 	},
-	hero_venom_lvlup_fx_0011 = {
+	hero_venom_levelup_fx_0011 = {
 		a_name = "go_hero_venom-1.dds",
 		size = {
 			132,
@@ -7490,10 +7490,10 @@ return {
 			97
 		},
 		alias = {
-			"hero_venom_lvlup_fx_0012"
+			"hero_venom_levelup_fx_0012"
 		}
 	},
-	hero_venom_lvlup_fx_0013 = {
+	hero_venom_levelup_fx_0013 = {
 		a_name = "go_hero_venom-1.dds",
 		size = {
 			132,
@@ -7516,7 +7516,7 @@ return {
 			95
 		},
 		alias = {
-			"hero_venom_lvlup_fx_0014"
+			"hero_venom_levelup_fx_0014"
 		}
 	},
 	hero_venom_ranged_skill_tentacle_0001 = {
