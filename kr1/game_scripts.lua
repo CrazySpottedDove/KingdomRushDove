@@ -5371,7 +5371,7 @@ function scripts.aura_ranger_thorn.update(this, store)
             local targets = find_targets()
 
             if not targets or #targets < a.min_count then
-                -- block empty
+                a.ts = a.ts + fts(1)
             else
                 a.ts = store.tick_ts
 
@@ -25283,16 +25283,18 @@ function scripts.mod_blood_elves.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target then
-        log.debug("mod_blood_elves:%s cannot find target with id:%s", this.id, this.modifier.target_id)
-
         return false
     end
 
     local _, modifiers = U.has_modifier_types(store, target, this.modifier.type)
 
     if #modifiers >= this.modifier.max_of_same then
-        log.debug("%s: cannot add to id %s because exceeds maximum", this.template_name, this.modifier.target_id)
+        return false
+    end
 
+    local source_damage = this.modifier.source_damage
+
+    if not source_damage then
         return false
     end
 
@@ -25302,32 +25304,12 @@ function scripts.mod_blood_elves.insert(this, store)
         end
     end
 
-    local source_damage = this.modifier.source_damage
-
-    if not source_damage then
-        if DEBUG then
-            log.debug("mod_blood_elves: no modifier.source_damage. Using debug value")
-
-            local d = E:create_entity("damage")
-
-            d.value = 50
-            d.target_id = target.id
-            d.source_id = this.id
-            source_damage = d
-        else
-            log.error("mod_blood_elves: cannot create without modifier.source_damage", this.id)
-
-            return false
-        end
-    end
-
     local pred_damage = U.predict_damage(target, source_damage)
     local actual_damage = this.damage_factor * pred_damage
 
     this.dps.damage_min = actual_damage
     this.dps.damage_max = actual_damage
     this.modifier.damage_factor = 1
-    log.debug("mod_blood_elves:%s source_damage:%s actual_damage:%s", this.id, source_damage.value, actual_damage)
 
     return true
 end
@@ -30284,7 +30266,7 @@ function scripts.soldier_baby_ashbite.update(this, store)
             SU.soldier_idle(store, this)
             SU.soldier_regen(store, this)
         end
-        
+
         ::label_590_0::
 
         coroutine.yield()

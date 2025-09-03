@@ -61,26 +61,32 @@ end
 -- 如果不提供 mod_name，移除所有目标为 entity 的 mod
 -- 如果提供 exclude_name，不移除名称为 exclude_name 的 mod
 local function remove_modifiers(store, entity, mod_name, exclude_name)
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and (not mod_name or mod_name == v.template_name) and
-                   (not exclude_name or exclude_name ~= v.template_name)
-    end)
-
-    for _, m in pairs(mods) do
-        queue_remove(store, m)
+    if not entity._applied_mods then
+        return
+    end
+    local mods = entity._applied_mods
+    for i=1, #mods do
+        local m = mods[i]
+        if (mod_name and mod_name ~= m.template_name) or
+           (exclude_name and exclude_name == m.template_name) then
+            queue_remove(store, m)
+        end
     end
 end
 
 -- 移除所有 .modifier.type 为 mod_type，且目标为 entity 的 mod
 -- 如果提供 exclude_name，则不移除名称为 exclued_name 的 mod
 local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and v.modifier.type == mod_type and
-                   (not exclude_name or exclude_name ~= v.template_name)
-    end)
-
-    for _, m in pairs(mods) do
-        queue_remove(store, m)
+    if not entity._applied_mods then
+        return
+    end
+    local mods = entity._applied_mods
+    for i=1, #mods do
+        local m = mods[i]
+        if m.modifier.type == mod_type and
+           (not exclude_name or exclude_name ~= m.template_name) then
+            queue_remove(store, m)
+        end
     end
 end
 
@@ -97,23 +103,23 @@ end
 
 -- 隐藏目标为 entity 的 mod 的 sprites
 local function hide_modifiers(store, entity, keep, exclude_mod)
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and v ~= exclude_mod
-    end)
-
-    for _, m in pairs(mods) do
-        U.sprites_hide(m, nil, nil, keep)
+    local mods = entity._applied_mods
+    if not mods then
+        return
+    end
+    for i=1,#mods do
+        U.sprites_hide(mods[i], nil, nil, keep)
     end
 end
 
 -- 重新显示目标为 entity 的 mod 的 sprites
 local function show_modifiers(store, entity, restore, exclude_mod)
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and v ~= exclude_mod
-    end)
-
-    for _, m in pairs(mods) do
-        U.sprites_show(m, nil, nil, restore)
+    local mods = entity._applied_mods
+    if not mods then
+        return
+    end
+    for i=1, #mods do
+        U.sprites_show(mods[i], nil, nil, restore)
     end
 end
 

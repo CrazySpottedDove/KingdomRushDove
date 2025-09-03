@@ -169,17 +169,11 @@ function simulation:queue_insert_entity(e)
 end
 
 function simulation:queue_remove_entity(e)
-	if not e then
+	if not e or e.pending_removal then
 		return
 	end
 
 	local d = self.store
-
-	if e.pending_removal then
-		log.debug("prevented double remove of (%s) %s", e.id, e.template_name)
-
-		return
-	end
 
 	for _, sys in ipairs(self.systems_on_queue) do
 		sys:on_queue(e, d, false)
@@ -207,51 +201,7 @@ function simulation:insert_entity(e)
 
 	e.pending_removal = nil
 	d.entities[e.id] = e
-    if e.enemy then
-        d.enemies[e.id] = e  -- 优化分类索引
-        if not e.health.patched then
-            if d.level_difficulty == DIFFICULTY_IMPOSSIBLE and d.wave_group_number > 6 then
-                if d.wave_group_number <= 15 then
-                    e.health.hp_max = e.health.hp_max * (1 + (d.wave_group_number - 6) * 0.0167)
-                else
-                    e.health.hp_max = e.health.hp_max * 1.15
-                end
-            end
-            e.health.hp_max = d.config.enemy_health_multiplier * e.health.hp_max
-            e.health.hp = e.health.hp_max
-            e.health.patched = true
-            e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
-        end
-    elseif e.soldier and e.health then
-        d.soldiers[e.id] = e
-    elseif e.modifier then
-        d.modifiers[e.id] = e
-    elseif e.tower then
-        d.towers[e.id] = e
-    elseif e.aura then
-        d.auras[e.id] = e
-    end
-    if e.particle_system then
-        d.particle_systems[e.id] = e
-    end
-    if e.main_script then
-        if e.main_script.update then
-            d.entities_with_main_script_on_update[e.id] = e
-        end
-    end
-    if e.timed then
-        d.entities_with_timed[e.id] = e
-    end
-    if e.tween then
-        d.entities_with_tween[e.id] = e
-    end
-    if e.render then
-        d.entities_with_render[e.id] = e
-    end
 
-    if e.motion and e.motion.max_speed ~= 0 then
-        e.motion.real_speed = e.motion.max_speed
-    end
 
 	d.entity_count = d.entity_count + 1
 	d.entity_max = d.entity_count >= d.entity_max and d.entity_count or d.entity_max
@@ -276,34 +226,7 @@ function simulation:remove_entity(e)
 
 	e.pending_removal = nil
 	d.entities[e.id] = nil
-    if e.enemy then
-        d.enemies[e.id] = nil  -- 优化分类索引
-    elseif e.soldier then
-        d.soldiers[e.id] = nil
-    elseif e.modifier then
-        d.modifiers[e.id] = nil
-    elseif e.tower then
-        d.towers[e.id] = nil
-    elseif e.aura then
-        d.auras[e.id] = nil
-    end
-    if e.particle_system then
-        d.particle_systems[e.id] = nil
-    end
-    if e.main_script then
-        if e.main_script.update then
-            d.entities_with_main_script_on_update[e.id] = nil
-        end
-    end
-    if e.timed then
-        d.entities_with_timed[e.id] = nil
-    end
-    if e.tween then
-        d.entities_with_tween[e.id] = nil
-    end
-    if e.render then
-        d.entities_with_render[e.id] = nil
-    end
+    
 
 	d.entity_count = d.entity_count - 1
 

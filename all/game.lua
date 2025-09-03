@@ -32,9 +32,9 @@ game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
 game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds"}
 
-game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch","health",
+game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle","main_script",  "timed", "tween", "endless_patch","health",
                            "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade", "game_upgrades",
-                           "texts", "particle_system", "render", "sound_events", "seen_tracker","performance_monitor","spatial_index"}
+                           "texts", "particle_system", "render", "sound_events", "seen_tracker","performance_monitor","spatial_index","last_hook"}
 
 function game:init(screen_w, screen_h, done_callback)
     self.dash_start_offset = 0

@@ -786,46 +786,45 @@ sys.mod_lifecycle = {}
 sys.mod_lifecycle.name = "mod_lifecycle"
 
 function sys.mod_lifecycle:on_insert(entity, store)
-    if not entity.modifier then
+    local mdf = entity.modifier
+    if not mdf then
         return true
     end
 
     local this = entity
-    local target_id = this.modifier.target_id
-    local modifiers = table.filter(store.modifiers, function(k, v)
-        return v.modifier.target_id == target_id
-    end)
+    local target_id = mdf.target_id
+    local target = store.entities[target_id]
+    if not target then
+        return false
+    end
+    if not target._applied_mods then
+        target._applied_mods = {}
+    end
 
-    for _, m in pairs(modifiers) do
-        if m.modifier.bans and table.contains(m.modifier.bans, this.template_name) then
-            log.debug("modifier %s not allowed by %s for target entity %s", this.template_name, m.template_name,
-                this.modifier.target_id)
-
+    local modifiers = target._applied_mods
+    for i = 1, #modifiers do
+        local m = modifiers[i].modifier
+        if m.bans and table.contains(m.bans, this.template_name) then
             return false
         end
     end
 
-    if this.modifier.remove_banned then
-        for _, m in pairs(modifiers) do
-            if this.modifier.bans and table.contains(this.modifier.bans, m.template_name) then
-                m.modifier.removed_by_ban = true
-
+    if mdf.remove_banned then
+        for i = 1, #modifiers do
+            local m = modifiers[i]
+            local mm = m.modifier
+            if mdf.bans and table.contains(mdf.bans, m.template_name) then
+                mm.removed_by_ban = true
                 queue_remove(store, m)
-                log.debug("banned modifier (%s) %s removed by (%s) %s for target entity %s", m.id, m.template_name,
-                    this.id, this.template_name, this.modifier.target_id)
             end
-
-            if this.modifier.ban_types and table.contains(this.modifier.ban_types, m.modifier.type) then
-                m.modifier.removed_by_ban = true
-
+            if mdf.ban_types and table.contains(mdf.ban_types, mm.type) then
+                mm.removed_by_ban = true
                 queue_remove(store, m)
-                log.debug("banned modifier (%s) %s of type %s removed by (%s) %s for target entity %s", m.id,
-                    m.template_name, this.id, m.modifier.type, this.template_name, this.modifier.target_id)
             end
         end
     end
 
-    this.modifier.ts = store.tick_ts
+    mdf.ts = store.tick_ts
 
     if this.render then
         for i = 1, #this.render.sprites do
@@ -833,38 +832,33 @@ function sys.mod_lifecycle:on_insert(entity, store)
         end
     end
 
-    if this.modifier.allows_duplicates then
+    if mdf.allows_duplicates then
         return true
     end
+
     local duplicates = {}
-    for _, m in pairs(modifiers) do
+    for i = 1, #modifiers do
+        local m = modifiers[i]
         if m.template_name == this.template_name then
-            if this.modifier.level == m.modifier.level and this.modifier.max_duplicates then
-                this.modifier.max_duplicates = this.modifier.max_duplicates - 1
-                table.insert(duplicates, m)
-                if this.modifier.max_duplicates < 0 then
+            if mdf.level == m.modifier.level and mdf.max_duplicates then
+                mdf.max_duplicates = mdf.max_duplicates - 1
+                duplicates[#duplicates + 1] = m
+                if mdf.max_duplicates < 0 then
                     return false
                 end
-            elseif this.modifier.level > m.modifier.level and this.modifier.replaces_lower then
-                log.paranoid("replacing existing modifier (%s)-%s with (%s)-%s", m.id, m.template_name, this.id,
-                    this.template_name)
-                queue_remove(store, m)
-
+            elseif mdf.level > m.modifier.level and mdf.replaces_lower then
                 if m.render then
                     for i = 1, #this.render.sprites do
                         this.render.sprites[i].ts = m.render.sprites[i].ts
                     end
                 end
-            elseif this.modifier.level == m.modifier.level and this.modifier.resets_same then
-                log.paranoid("resetting ts for modifier (%s)-%s instead of inserting (%s)-%s", m.id, m.template_name,
-                    this.id, this.template_name)
-
+                queue_remove(store, m)
+            elseif mdf.level == m.modifier.level and mdf.resets_same then
                 m.modifier.ts = store.tick_ts
 
-                if this.modifier.resets_same_tween and m.tween then
-                    m.tween.ts = store.tick_ts - (this.modifier.resets_same_tween_offset or 0)
+                if mdf.resets_same_tween and m.tween then
+                    m.tween.ts = store.tick_ts - (mdf.resets_same_tween_offset or 0)
                 end
-
                 return false
             else
                 return false
@@ -904,12 +898,10 @@ function sys.tower_upgrade:on_update(dt, ts, store)
             end
 
             if e.tower.sell then
-                local mods = table.filter(store.modifiers, function(_, ee)
-                    return ee.modifier.target_id == e.id
-                end)
-
-                for _, mod in pairs(mods) do
-                    queue_remove(store, mod)
+                if e._applied_mods then
+                    for _, mod in pairs(e._applied_mods) do
+                        queue_remove(store, mod)
+                    end
                 end
             end
 
@@ -950,13 +942,10 @@ function sys.tower_upgrade:on_update(dt, ts, store)
             end
         elseif e.tower.upgrade_to then
             log.debug("upgrading %s to %s", e.id, e.tower.upgrade_to)
-
-            local mods = table.filter(store.modifiers, function(_, ee)
-                return ee.modifier and ee.modifier.target_id == e.id
-            end)
-
-            for _, mod in pairs(mods) do
-                queue_remove(store, mod)
+            if e._applied_mods then
+                for _, mod in pairs(e._applied_mods) do
+                    queue_remove(store, mod)
+                end
             end
 
             local ne = E:create_entity(e.tower.upgrade_to)
@@ -1198,6 +1187,7 @@ function sys.main_script:on_update(dt, ts, store)
 
         if s.co then
             -- log.error("Running update coro of entity %s (%s)", e.id, e.template_name)
+
             local success, error = coroutine.resume(s.co, e, store, s)
 
             if coroutine.status(s.co) == "dead" or error ~= nil then
@@ -2454,7 +2444,7 @@ function sys.render:on_update(dt, ts, store)
             -- elseif s.sync_flag == nil then
             --     s.sync_flag = s.frame_idx == 1
             -- else
-                s.sync_flag = last_runs ~= s.runs
+            s.sync_flag = last_runs ~= s.runs
             -- end
 
             local ss = I:s(fn)
@@ -2845,6 +2835,103 @@ function sys.spatial_index:on_update(dt, ts, store)
     -- store.enemy_spatial_index:print_debug_info()
 end
 
+sys.last_hook = {}
+sys.last_hook.name = "last_hook"
+function sys.last_hook:on_insert(e, d)
+    if e.enemy then
+        d.enemies[e.id] = e -- 优化分类索引
+        if not e.health.patched then
+            if d.level_difficulty == DIFFICULTY_IMPOSSIBLE and d.wave_group_number > 6 then
+                if d.wave_group_number <= 15 then
+                    e.health.hp_max = e.health.hp_max * (1 + (d.wave_group_number - 6) * 0.0167)
+                else
+                    e.health.hp_max = e.health.hp_max * 1.15
+                end
+            end
+            e.health.hp_max = d.config.enemy_health_multiplier * e.health.hp_max
+            e.health.hp = e.health.hp_max
+            e.health.patched = true
+            e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
+        end
+    elseif e.soldier and e.health then
+        d.soldiers[e.id] = e
+    elseif e.modifier then
+        d.modifiers[e.id] = e
+        local target = d.entities[e.modifier.target_id]
+        if target then
+            local mods = target._applied_mods
+            mods[#mods + 1] = e
+        end
+    elseif e.tower then
+        d.towers[e.id] = e
+    elseif e.aura then
+        d.auras[e.id] = e
+    end
+    if e.particle_system then
+        d.particle_systems[e.id] = e
+    end
+    if e.main_script then
+        if e.main_script.update then
+            d.entities_with_main_script_on_update[e.id] = e
+        end
+    end
+    if e.timed then
+        d.entities_with_timed[e.id] = e
+    end
+    if e.tween then
+        d.entities_with_tween[e.id] = e
+    end
+    if e.render then
+        d.entities_with_render[e.id] = e
+    end
+
+    if e.motion and e.motion.max_speed ~= 0 then
+        e.motion.real_speed = e.motion.max_speed
+    end
+    return true
+end
+function sys.last_hook:on_remove(e, d)
+    if e.enemy then
+        d.enemies[e.id] = nil -- 优化分类索引
+    elseif e.soldier then
+        d.soldiers[e.id] = nil
+    elseif e.modifier then
+        d.modifiers[e.id] = nil
+        local target = d.entities[e.modifier.target_id]
+        if target then
+            local mods = target._applied_mods
+            for i = 1, #mods do
+                if mods[i] == e then
+                    table.remove(mods, i)
+                    break
+                end
+            end
+        end
+    elseif e.tower then
+        d.towers[e.id] = nil
+    elseif e.aura then
+        d.auras[e.id] = nil
+    end
+    if e.particle_system then
+        d.particle_systems[e.id] = nil
+    end
+    if e.main_script then
+        if e.main_script.update then
+            d.entities_with_main_script_on_update[e.id] = nil
+        end
+    end
+    if e.timed then
+        d.entities_with_timed[e.id] = nil
+    end
+    if e.tween then
+        d.entities_with_tween[e.id] = nil
+    end
+    if e.render then
+        d.entities_with_render[e.id] = nil
+    end
+    return true
+end
+
 if PERFORMANCE_MONITOR_ENABLED then
     -- 需要监控的系统方法列表
     local MONITORED_METHODS = {"on_update", "on_insert", "on_remove", "on_queue", "on_dequeue"}
@@ -2915,7 +3002,6 @@ if PERFORMANCE_MONITOR_ENABLED then
     function sys.trigger_performance_report(store)
         perf.save_report(store)
     end
-
 end
 
 return sys
