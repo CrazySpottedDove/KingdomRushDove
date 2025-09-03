@@ -1951,9 +1951,7 @@ function sys.particle_system:on_update(dt, ts, store)
 
         if not s.emit then
             s.emit_ts = store.tick_ts + s.ts_offset
-        end
-
-        if s.emit and ts - s.emit_ts > 1 / s.emission_rate then
+        elseif ts - s.emit_ts > 1 / s.emission_rate then
             local count = floor((ts - s.emit_ts) * s.emission_rate)
 
             for i = 1, count do
@@ -2451,13 +2449,13 @@ function sys.render:on_update(dt, ts, store)
                 fn = s.name
             end
 
-            if s.sync_idx then
-                s.sync_flag = s.frame_idx == s.sync_idx
-            elseif s.sync_flag == nil then
-                s.sync_flag = s.frame_idx == 1
-            else
+            -- if s.sync_idx then
+            --     s.sync_flag = s.frame_idx == s.sync_idx
+            -- elseif s.sync_flag == nil then
+            --     s.sync_flag = s.frame_idx == 1
+            -- else
                 s.sync_flag = last_runs ~= s.runs
-            end
+            -- end
 
             local ss = I:s(fn)
 

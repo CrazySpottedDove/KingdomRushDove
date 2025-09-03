@@ -30284,7 +30284,7 @@ function scripts.soldier_baby_ashbite.update(this, store)
             SU.soldier_idle(store, this)
             SU.soldier_regen(store, this)
         end
-
+        
         ::label_590_0::
 
         coroutine.yield()

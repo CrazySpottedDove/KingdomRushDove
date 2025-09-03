@@ -23918,13 +23918,12 @@ function scripts.mod_dragon_bone_plague.remove(this, store)
 
                 d.source_id = this.id
                 d.target_id = t.id
-                d.value = this.spread_damage
                 d.damage_type = this.dps.damage_type
 
                 local dmin, dmax = this.spread_damage_min, this.spread_damage_max
                 local dist_factor = U.dist_factor_inside_ellipse(t.pos, target.pos, this.spread_radius)
 
-                d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+                d.value = math.floor(dmax - (dmax - dmin) * dist_factor) * this.modifier.damage_factor
 
                 queue_damage(store, d)
             end
@@ -24168,7 +24167,7 @@ function scripts.bullet_dragon_bone_rain.update(this, store)
             d.damage_type = b.damage_type
             d.source_id = this.id
             d.target_id = target.id
-            d.value = math.random(b.damage_min, b.damage_max)
+            d.value = math.random(b.damage_min, b.damage_max) * this.bullet.damage_factor
 
             queue_damage(store, d)
 
@@ -24250,7 +24249,7 @@ function scripts.bolt_dragon_bone_burst.update(this, store)
             local d = E:create_entity("damage")
 
             d.damage_type = b.damage_type
-            d.value = math.random(dmin, dmax)
+            d.value = math.random(dmin, dmax) * b.damage_factor
             d.source_id = this.id
             d.target_id = target.id
 
