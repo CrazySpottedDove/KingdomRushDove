@@ -5350,7 +5350,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 
     local function find_targets()
         local targets = U.find_enemies_in_range(store, this.pos, 0, a.radius, a.vis_flags, a.vis_bans, function(e)
-            return not e.enemy.counts[a.mod] or e.enemy.counts[a.mod] < a.max_times
+            return not e.enemy._ranger_thron_ts or store.tick_ts - e.enemy._ranger_thron_ts >= a.cooldown
         end)
 
         return targets
@@ -5360,8 +5360,6 @@ function scripts.aura_ranger_thorn.update(this, store)
         local owner = store.entities[a.source_id]
 
         if not owner then
-            -- log.error("aura_ranger_thorn has no parent tower. removing")
-
             break
         end
 
@@ -5387,6 +5385,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 
                     for i = 1, math.min(#targets, a.max_count + a.max_count_inc * owner.powers.thorn.level) do
                         local e = targets[i]
+                        e.enemy._ranger_thron_ts = store.tick_ts
                         local m = E:create_entity(a.mod)
 
                         m.modifier.target_id = e.id
@@ -6033,13 +6032,13 @@ function scripts.mod_thorn.update(this, store)
         return
     end
 
-    if this.max_times_applied then
-        if not target.enemy.counts.mod_thorn then
-            target.enemy.counts.mod_thorn = 0
-        end
+    -- if this.max_times_applied then
+    --     if not target.enemy.counts.mod_thorn then
+    --         target.enemy.counts.mod_thorn = 0
+    --     end
 
-        target.enemy.counts.mod_thorn = target.enemy.counts.mod_thorn + 1
-    end
+    --     target.enemy.counts.mod_thorn = target.enemy.counts.mod_thorn + 1
+    -- end
 
     this.pos = target.pos
 
