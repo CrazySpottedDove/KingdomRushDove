@@ -83,14 +83,6 @@ end
 --- @param exclude_name string? 排除的mod名称（可选）
 --- @return nil
 local function remove_modifiers(store, entity, mod_name, exclude_name)
-<<<<<<< HEAD
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and (not mod_name or mod_name == v.template_name) and
-                   (not exclude_name or exclude_name ~= v.template_name)
-    end)
-    for _, m in pairs(mods) do
-        queue_remove(store, m)
-=======
     if not entity._applied_mods then
         return
     end
@@ -101,7 +93,6 @@ local function remove_modifiers(store, entity, mod_name, exclude_name)
            (exclude_name and exclude_name == m.template_name) then
             queue_remove(store, m)
         end
->>>>>>> b15c0cb8a1996b42b46ab1eb144e2d1a9b52daab
     end
 end
 
@@ -112,14 +103,6 @@ end
 --- @param exclude_name string? 排除的mod名称（可选）
 --- @return nil
 local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
-<<<<<<< HEAD
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and v.modifier.type == mod_type and
-                   (not exclude_name or exclude_name ~= v.template_name)
-    end)
-    for _, m in pairs(mods) do
-        queue_remove(store, m)
-=======
     if not entity._applied_mods then
         return
     end
@@ -130,7 +113,6 @@ local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
            (not exclude_name or exclude_name ~= m.template_name) then
             queue_remove(store, m)
         end
->>>>>>> b15c0cb8a1996b42b46ab1eb144e2d1a9b52daab
     end
 end
 
@@ -154,13 +136,6 @@ end
 --- @param exclude_mod table? 排除的mod（可选）
 --- @return nil
 local function hide_modifiers(store, entity, keep, exclude_mod)
-<<<<<<< HEAD
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and v ~= exclude_mod
-    end)
-    for _, m in pairs(mods) do
-        U.sprites_hide(m, nil, nil, keep)
-=======
     local mods = entity._applied_mods
     if not mods then
         return
@@ -170,7 +145,6 @@ local function hide_modifiers(store, entity, keep, exclude_mod)
         if mod ~= exclude_mod then
             U.sprites_hide(mods[i], nil, nil, keep)
         end
->>>>>>> b15c0cb8a1996b42b46ab1eb144e2d1a9b52daab
     end
 end
 
@@ -181,13 +155,6 @@ end
 --- @param exclude_mod table? 排除的mod（可选）
 --- @return nil
 local function show_modifiers(store, entity, restore, exclude_mod)
-<<<<<<< HEAD
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier and v.modifier.target_id == entity.id and v ~= exclude_mod
-    end)
-    for _, m in pairs(mods) do
-        U.sprites_show(m, nil, nil, restore)
-=======
     local mods = entity._applied_mods
     if not mods then
         return
@@ -197,7 +164,6 @@ local function show_modifiers(store, entity, restore, exclude_mod)
         if mod ~= exclude_mod then
             U.sprites_show(mods[i], nil, nil, restore)
         end
->>>>>>> b15c0cb8a1996b42b46ab1eb144e2d1a9b52daab
     end
 end
 
@@ -2276,34 +2242,6 @@ local function soldier_pick_melee_attack(store, this, target)
         return this.dodge.counter_attack
     else
         for _, i in pairs(this.melee.order) do
-<<<<<<< HEAD
-            local a = this.melee.attacks[i]
-            local cooldown = 0
-            -- cooldown_factor: 全部近战攻击的冷却因子
-            if a.cooldown then
-                cooldown = a.cooldown * this.cooldown_factor
-            end
-            if this.melee.cooldown and a.shared_cooldown then
-                cooldown = this.melee.cooldown * this.cooldown_factor
-            end
-            local forced_cooldown_ok = true
-            if this.melee.forced_cooldown and a.forced_cooldown then
-                forced_cooldown_ok = store.tick_ts - this.melee.forced_ts > this.melee.forced_cooldown
-            end
-            if not a.disabled and cooldown < store.tick_ts - a.ts and forced_cooldown_ok and
-                band(a.vis_flags, target.vis.bans) == 0 and band(a.vis_bans, target.vis.flags) == 0 and
-                (not a.fn_can or a.fn_can(this, store, a, target)) and
-                (not a.not_first or this.melee.last_attack and this.melee.last_attack.target_id == target.id) then
-                if not a.fn_chance and math.random() >= a.chance or a.fn_chance and
-                    not a.fn_chance(this, store, a, target) then
-                    a.ts = store.tick_ts
-                else
-                    if a.min_count and a.type == "area" and a.damage_radius then
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius,
-                            a.vis_flags, a.vis_bans)
-                        if not targets or #targets < a.min_count then
-                            goto label_78_0
-=======
             do
                 local a = this.melee.attacks[i]
                 local cooldown = 0
@@ -2337,7 +2275,6 @@ local function soldier_pick_melee_attack(store, this, target)
                             if not targets or #targets < a.min_count then
                                 goto label_78_0
                             end
->>>>>>> b15c0cb8a1996b42b46ab1eb144e2d1a9b52daab
                         end
                     end
                     this.melee.last_attack = {
