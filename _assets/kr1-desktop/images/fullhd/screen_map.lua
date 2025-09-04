@@ -2259,30 +2259,6 @@ return {
 		},
 		alias = {}
 	},
-	hero_room_portraits_small_thumb_hero_lumenir_0001 = {
-		a_name = "room_hero-1.png",
-		size = {
-			110,
-			108
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			714,
-			1920,
-			110,
-			108
-		},
-		alias = {}
-	},
 	hero_room_portraits_small_thumb_hero_mecha_0001 = {
 		a_name = "room_hero-1.png",
 		size = {
@@ -2482,6 +2458,27 @@ return {
             108
         },
         alias = { "heroroom_thumbs_0058" }
+    },
+    hero_room_portraits_small_thumb_hero_lumenir_0001 = {
+        a_name = "room_hero-1.png",
+        size = {
+            84,
+            84
+        },
+        trim = {
+            18, 16, 18, 14
+        },
+        a_size = {
+            2048,
+            2048
+        },
+        f_quad = {
+            714,
+            1920,
+            110,
+            108
+        },
+        alias = { "heroroom_thumbs_0059" }
     },
     heroroom_tooltip_coin = {
         a_name = "screen_map-1.png",
@@ -3616,6 +3613,30 @@ return {
             1667,
             109,
             122
+        },
+        alias = {}
+    },
+    mapButtons_portrait_hero_0059 = {
+        a_name = "gui_portraits-6.png",
+        size = {
+            140,
+            130
+        },
+        trim = {
+            27,
+            4,
+            16,
+            11
+        },
+        a_size = {
+            2048,
+            2048
+        },
+        f_quad = {
+            475,
+            121,
+            97,
+            115
         },
         alias = {}
     },

@@ -1484,6 +1484,23 @@ local hero_room_view = {
 							scale = v(0.67, 0.67)
 						},
 						{
+							id = "portrait_hero_lumenir",
+							hidden = true,
+							class = "KView",
+							children = {
+								{
+									class = "KImageView",
+									image_name = "hero_room_portraits_big_hero_lumenir_0001"
+								}, {
+								id = "name_img",
+								image_name = "heroroom_bigportraits_name_0013",
+								class = "KImageView"
+							},
+							},
+							pos = v(220, 140),
+							scale = v(0.67, 0.67)
+						},
+						{
 							id = "portrait_hero_name_label",
 							class = "HeroNameLabel",
 							pos = v(230, 335),

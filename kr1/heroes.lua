@@ -12411,7 +12411,6 @@ local function heroes()
     tt.hero.skills.cloud.cooldown = b.cloud.cooldown
     tt.hero.skills.cloud.duration = b.cloud.duration
     tt.hero.skills.cloud.xp_gain = b.cloud.xp_gain
-    tt.hero.skills.cloud.key = "CLOUD"
     tt.hero.skills.cloud.xp_level_steps = {
         [3] = 1,
         [6] = 2,
@@ -12422,7 +12421,6 @@ local function heroes()
     tt.hero.skills.nova.damage_min = b.nova.damage_min
     tt.hero.skills.nova.damage_max = b.nova.damage_max
     tt.hero.skills.nova.xp_gain = b.nova.xp_gain
-    tt.hero.skills.nova.key = "NOVA"
     tt.hero.skills.nova.xp_level_steps = {
         [3] = 1,
         [6] = 2,
@@ -12435,7 +12433,6 @@ local function heroes()
     tt.hero.skills.rain.damage_max = b.rain.damage_max
     tt.hero.skills.rain.bones_count = b.rain.bones_count
     tt.hero.skills.rain.xp_gain = b.rain.xp_gain
-    tt.hero.skills.rain.key = "RAIN"
     tt.hero.skills.rain.xp_level_steps = {
         [3] = 1,
         [6] = 2,
@@ -12448,7 +12445,6 @@ local function heroes()
     tt.hero.skills.burst.proj_count = b.burst.proj_count
     tt.hero.skills.burst.hr_available = true
     tt.hero.skills.burst.xp_gain = b.burst.xp_gain
-    tt.hero.skills.burst.key = "BURST"
     tt.hero.skills.burst.xp_level_steps = {
         [3] = 1,
         [6] = 2,
@@ -12461,7 +12457,6 @@ local function heroes()
     tt.hero.skills.ultimate.damage_min = b.ultimate.dog.melee_attack.damage_min
     tt.hero.skills.ultimate.damage_max = b.ultimate.dog.melee_attack.damage_max
     tt.hero.skills.ultimate.controller_name = "hero_dragon_bone_ultimate"
-    tt.hero.skills.ultimate.key = "RAISE_DRAKES"
     tt.hero.skills.ultimate.xp_level_steps = {
         [3] = 1,
         [6] = 2,
@@ -12988,6 +12983,742 @@ local function heroes()
     tt = E:register_t("mod_dragon_bone_rain_stun", "mod_stun")
     b = balance.heroes.hero_dragon_bone.rain
     tt.modifier.duration = b.stun_time
+    tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+    tt.modifier.vis_bans = bor(F_BOSS)
+
+    -- 光龙
+    tt = E:register_t("ps_bolt_lumenir")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.name = "hero_lumenir_attack_projectile_trail_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {
+        fts(12),
+        fts(12)
+    }
+    tt.particle_system.emission_rate = 30
+    tt.particle_system.emit_rotation_spread = math.pi / 2
+    tt.particle_system.z = Z_FLYING_HEROES
+    tt = E:register_t("ps_bolt_lumenir_mini")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.name = "hero_lumenir_light_companion_attack_projectile_trail_particle_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {
+        fts(12),
+        fts(12)
+    }
+    tt.particle_system.emission_rate = 15
+    tt.particle_system.emit_rotation_spread = math.pi / 2
+    tt = E:register_t("ps_bolt_lumenir_wave")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.name = "hero_lumenir_light_companion_attack_projectile_trail_particle_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {
+        fts(9),
+        fts(15)
+    }
+    tt.particle_system.alphas = {
+        255,
+        0
+    }
+    tt.particle_system.emission_rate = 15
+    tt.particle_system.animation_fps = 30
+    tt.particle_system.scales_x = {
+        1.5,
+        2
+    }
+    tt.particle_system.scales_y = {
+        1.5,
+        2
+    }
+    tt.particle_system.z = Z_OBJECTS
+    tt.particle_system.emit_rotation_spread = math.pi / 4
+    tt = E:register_t("ps_bolt_lance_lumenir")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.name = "bolt_lance_lumenir_particle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {
+        fts(10),
+        fts(10)
+    }
+    tt.particle_system.emission_rate = 90
+    tt.particle_system.emit_rotation_spread = math.pi
+    tt = E:register_t("ps_soul_soldier_tower_ghost")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.name = "ghost_tower_soul_skill_projectile_particle_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {
+        fts(13),
+        fts(13)
+    }
+    tt.particle_system.emission_rate = 60
+    tt.particle_system.emit_rotation_spread = math.pi
+    tt = E:register_t("ps_bullet_liquid_fire_lumenir")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.emission_rate = 20
+    tt.particle_system.emit_duration = fts(10)
+    tt.particle_system.emit_speed = {
+        250,
+        250
+    }
+    tt.particle_system.emit_rotation_spread = math.pi / 4
+    tt.particle_system.animated = true
+    tt.particle_system.animation_fps = 18
+    tt.particle_system.loop = false
+    tt.particle_system.name = "bullet_liquid_fire_lumenir_particle"
+    tt.particle_system.particle_lifetime = {
+        fts(9),
+        fts(11)
+    }
+    tt.particle_system.alphas = {
+        255,
+        255,
+        50
+    }
+    tt.particle_system.scales_x = {
+        1,
+        1,
+        1.5
+    }
+    tt.particle_system.scales_y = {
+        1,
+        1,
+        1.5
+    }
+    tt.particle_system.spin = {
+        -math.pi / 2,
+        math.pi / 2
+    }
+    tt.particle_system.sort_y_offsets = {
+        -100,
+        0
+    }
+    tt = E:register_t("ps_minidragon_lumenir_fire", "ps_bullet_liquid_fire_lumenir")
+    tt.particle_system.emit_duration = nil
+    tt.particle_system.emit_speed = {
+        500,
+        500
+    }
+    tt.particle_system.emit_rotation_spread = math.pi / 8
+    tt = E:register_t("ps_hero_lumenir_fire_ball")
+
+    E:add_comps(tt, "pos", "particle_system")
+
+    tt.particle_system.particle_lifetime = {
+        fts(15),
+        fts(25)
+    }
+    tt.particle_system.scales_x = {
+        0.75,
+        2.5
+    }
+    tt.particle_system.scales_y = {
+        0.75,
+        2.5
+    }
+    tt.particle_system.scale_var = {
+        0.5,
+        1
+    }
+    tt.particle_system.emission_rate = 10
+    tt.particle_system.sort_y_offset = -20
+    tt.particle_system.z = Z_OBJECTS
+    tt.particle_system.name = "bolt_lance_lumenir_particle"
+    tt.particle_system.animated = true
+    tt.particle_system.particle_lifetime = {
+        0.4,
+        2
+    }
+    tt.particle_system.alphas = {
+        255,
+        0
+    }
+    tt.particle_system.scales_x = {
+        1,
+        3.5
+    }
+    tt.particle_system.scales_y = {
+        1,
+        3.5
+    }
+    tt.particle_system.scale_var = {
+        0.45,
+        0.9
+    }
+    tt.particle_system.scale_same_aspect = false
+    tt.particle_system.emit_spread = math.pi
+    tt.particle_system.emission_rate = 30
+
+    tt = E:register_t("fx_bolt_lumenir_hit", "fx")
+    tt.render.sprites[1].name = "hero_lumenir_attack_hit_fx_air"
+    tt = E:register_t("fx_bolt_lumenir_hit_mini", "fx")
+    tt.render.sprites[1].name = "hero_lumenir_light_companion_attack_fx_idle"
+
+    tt = E:register_t("decal_hero_lumenir_sword", "decal_tween")
+    tt.render.sprites[1].name = "hero_lumenir_celestial_judgement_fx_decal"
+    tt.render.sprites[1].animated = false
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {
+        {
+            0,
+            255
+        },
+        {
+            2,
+            255
+        },
+        {
+            2.5,
+            0
+        }
+    }
+    tt.render.sprites[1].z = Z_DECALS
+    tt.tween.remove = false
+
+    tt = E:register_t("hero_lumenir", "hero5")
+
+    E:add_comps(tt, "ranged", "timed_attacks", "tween")
+
+    b = balance.heroes.hero_lumenir
+    tt.hero.level_stats.armor = b.armor
+    tt.hero.level_stats.hp_max = b.hp_max
+    tt.hero.level_stats.melee_damage_max = {
+        1,
+        2,
+        4,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    }
+    tt.hero.level_stats.melee_damage_min = {
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    }
+    tt.hero.level_stats.regen_health = b.regen_health
+    tt.hero.level_stats.ranged_damage_min = b.basic_ranged_shot.damage_min
+    tt.hero.level_stats.ranged_damage_max = b.basic_ranged_shot.damage_max
+    tt.hero.level_stats.mini_dragon_death_ranged_damage_min = b.mini_dragon_death.damage_min
+    tt.hero.level_stats.mini_dragon_death_ranged_damage_max = b.mini_dragon_death.damage_max
+    tt.hero.skills.shield = E:clone_c("hero_skill")
+    tt.hero.skills.shield.spiked_armor = b.shield.spiked_armor
+    tt.hero.skills.shield.armor = b.shield.armor
+    tt.hero.skills.shield.duration = b.shield.duration
+    tt.hero.skills.shield.cooldown = b.shield.cooldown
+    tt.hero.skills.shield.xp_gain = b.shield.xp_gain
+    tt.hero.skills.shield.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.celestial_judgement = E:clone_c("hero_skill")
+    tt.hero.skills.celestial_judgement.cooldown = b.celestial_judgement.cooldown
+    tt.hero.skills.celestial_judgement.xp_gain = b.celestial_judgement.xp_gain
+    tt.hero.skills.celestial_judgement.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.mini_dragon = E:clone_c("hero_skill")
+    tt.hero.skills.mini_dragon.cooldown = b.mini_dragon.cooldown
+    tt.hero.skills.mini_dragon.duration = b.mini_dragon.dragon.duration
+    tt.hero.skills.mini_dragon.damage_min = b.mini_dragon.dragon.ranged_attack.damage_min
+    tt.hero.skills.mini_dragon.damage_max = b.mini_dragon.dragon.ranged_attack.damage_max
+    tt.hero.skills.mini_dragon.xp_gain = b.mini_dragon.xp_gain
+    tt.hero.skills.mini_dragon.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.fire_balls = E:clone_c("hero_skill")
+    tt.hero.skills.fire_balls.cooldown = b.fire_balls.cooldown
+    tt.hero.skills.fire_balls.flames_count = b.fire_balls.flames_count
+    tt.hero.skills.fire_balls.mod_damage = b.fire_balls.flame_damage
+    tt.hero.skills.fire_balls.xp_gain = b.fire_balls.xp_gain
+    tt.hero.skills.fire_balls.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.skills.ultimate = E:clone_c("hero_skill")
+    tt.hero.skills.ultimate.controller_name = "hero_lumenir_ultimate"
+    tt.hero.skills.ultimate.count = b.ultimate.soldier_count
+    tt.hero.skills.ultimate.max_attack_count = b.ultimate.max_attack_count
+    tt.hero.skills.ultimate.damage_max = b.ultimate.damage_max
+    tt.hero.skills.ultimate.damage_min = b.ultimate.damage_min
+    tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
+    tt.hero.skills.ultimate.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3,
+    }
+    tt.hero.team = TEAM_LINIREA
+    tt.health.dead_lifetime = 30
+    tt.health_bar.draw_order = -1
+    tt.health_bar.offset = v(0, 170)
+    tt.health_bar.sort_y_offset = -171
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+    tt.health_bar.z = Z_FLYING_HEROES
+    tt.hero.fn_level_up = scripts.hero_lumenir.level_up
+    tt.hero.tombstone_show_time = nil
+    tt.hero.use_custom_spawn_point = true
+    tt.idle_flip.cooldown = 10
+    tt.info.damage_icon = "magic"
+    tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
+    tt.info.hero_portrait = "hero_portraits_0007"
+    tt.info.i18n_key = "HERO_LUMENIR"
+    tt.info.portrait = "portraits_hero" .. "_0007"
+    tt.info.ultimate_icon = "0006"
+    tt.info.ultimate_pointer_style = "area"
+    tt.info.stat_hp = b.stats.hp
+    tt.info.stat_armor = b.stats.armor
+    tt.info.stat_damage = b.stats.damage
+    tt.info.stat_cooldown = b.stats.cooldown
+    tt.main_script.insert = scripts.hero_lumenir.insert
+    tt.main_script.update = scripts.hero_lumenir.update
+    tt.motion.max_speed = b.speed
+    tt.nav_rally.requires_node_nearby = false
+    tt.nav_grid.ignore_waypoints = true
+    tt.all_except_flying_nowalk = bor(TERRAIN_NONE, TERRAIN_LAND, TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK,
+        TERRAIN_SHALLOW, TERRAIN_FAERIE, TERRAIN_ICE)
+    tt.nav_grid.valid_terrains = tt.all_except_flying_nowalk
+    tt.nav_grid.valid_terrains_dest = tt.all_except_flying_nowalk
+    tt.drag_line_origin_offset = v(0, 100)
+    tt.regen.cooldown = 1
+    tt.render.sprites[1].anchor.y = 0.065
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].prefix = "hero_lumenir_hero"
+    tt.render.sprites[1].name = "respawn"
+    tt.render.sprites[1].angles.walk = {
+        "walk"
+    }
+    tt.render.sprites[1].z = Z_FLYING_HEROES
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].name = "hero_lumenir_hero_shadow"
+    tt.render.sprites[2].offset = v(0, 0)
+    tt.render.sprites[2].z = Z_DECALS + 1
+    tt.soldier.melee_slot_offset = v(0, 0)
+    tt.sound_events.change_rally_point = "HeroLumenirTaunt"
+    tt.sound_events.death = "HeroLumenirDeath"
+    tt.sound_events.respawn = "HeroLumenirTauntIntro"
+    tt.sound_events.hero_room_select = "HeroLumenirTauntSelect"
+    tt.ui.click_rect = r(-37, 68, 90, 85)
+    tt.unit.hit_offset = v(0, 110)
+    tt.unit.hide_after_death = true
+    tt.unit.mod_offset = v(0, 134)
+    tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET, F_POISON)
+    tt.vis.flags = bor(tt.vis.flags, F_FLYING)
+    tt.mini_dragon = "mini_dragon_death_hero_lumenir"
+    tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+    tt.ranged.attacks[1].bullet = "bolt_lumenir"
+    tt.ranged.attacks[1].bullet_start_offset = {
+        v(44, 80)
+    }
+    tt.ranged.attacks[1].cooldown = 1.8
+    tt.ranged.attacks[1].bullet_count = 3
+    tt.ranged.attacks[1].min_range = b.basic_ranged_shot.min_range
+    tt.ranged.attacks[1].max_range = b.basic_ranged_shot.max_range
+    tt.ranged.attacks[1].shoot_time = fts(14)
+    tt.ranged.attacks[1].sync_animation = true
+    tt.ranged.attacks[1].animation = "attack"
+    tt.ranged.attacks[1].start_fx = "fx_lumenir_start_attack"
+    tt.ranged.attacks[1].sound = "HeroLumenirBasicAttack"
+    tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+    tt.ranged.attacks[1].ignore_offset = v(0, 110)
+    tt.ranged.attacks[1].radius = 100
+    tt.ranged.attacks[1].basic_attack = true
+    tt.ranged.attacks[2] = E:clone_c("aura_attack")
+    tt.ranged.attacks[2].disabled = true
+    tt.ranged.attacks[2].mod = "mod_hero_lumenir_shield"
+    tt.ranged.attacks[2].cooldown = 25
+    tt.ranged.attacks[2].animation = "hero_lumenir_hero_blessing_of_retribution"
+    tt.ranged.attacks[2].shoot_time = fts(12)
+    tt.ranged.attacks[2].min_count = b.shield.min_targets
+    tt.ranged.attacks[2].sync_animation = true
+    tt.ranged.attacks[2].animation = "blessing_of_retribution"
+    tt.ranged.attacks[2].start_fx = "fx_lumenir_start_lance"
+    tt.ranged.attacks[2].sound = "HeroLumenirBlessingOfRetributionCast"
+    tt.ranged.attacks[2].start_sound_args = {
+        delay = fts(12)
+    }
+    tt.ranged.attacks[2].xp_from_skill = "shield"
+    tt.ranged.attacks[2].vis_flags = bor(F_RANGED, F_ENEMY, F_MOD)
+    tt.ranged.attacks[2].vis_bans = F_HERO
+    tt.ranged.attacks[2].range = b.shield.range
+    tt.ranged.attacks[3] = E:clone_c("aura_attack")
+    tt.ranged.attacks[3].disabled = true
+    tt.ranged.attacks[3].mod = "mod_hero_lumenir_sword_hit"
+    tt.ranged.attacks[3].min_nodes = 20
+    tt.ranged.attacks[3].cooldown = nil
+    tt.ranged.attacks[3].shoot_time = fts(24)
+    tt.ranged.attacks[3].sync_animation = true
+    tt.ranged.attacks[3].animation = "celestial_judgement"
+    tt.ranged.attacks[3].sound = "HeroLumenirCelestialJudgementCast"
+    tt.ranged.attacks[3].start_sound_args = {
+        delay = fts(12)
+    }
+    tt.ranged.attacks[3].estimated_flight_time = 1
+    tt.ranged.attacks[3].vis_flags = bor(F_RANGED)
+    tt.ranged.attacks[3].vis_bans = bor(F_FLYING, F_NIGHTMARE, F_CLIFF)
+    tt.ranged.attacks[3].range = b.celestial_judgement.range
+    tt.ranged.attacks[3].xp_from_skill = "celestial_judgement"
+    tt.ranged.attacks[4] = E:clone_c("aura_attack")
+    tt.ranged.attacks[4].disabled = true
+    tt.ranged.attacks[4].cooldown = nil
+    tt.ranged.attacks[4].spawn_pos_offset = v(0, 0)
+    tt.ranged.attacks[4].shoot_time = fts(4)
+    tt.ranged.attacks[4].sync_animation = true
+    tt.ranged.attacks[4].entity = "mini_dragon_hero_lumenir"
+    tt.ranged.attacks[4].animation = "blessing_of_retribution"
+    tt.ranged.attacks[4].start_fx = "fx_lumenir_start_enervation"
+    tt.ranged.attacks[4].sound = "HeroLumenirLightCompanionCast"
+    tt.ranged.attacks[4].estimated_flight_time = 0
+    tt.ranged.attacks[4].vis_flags = bor(F_RANGED, F_SPELLCASTER)
+    tt.ranged.attacks[4].vis_bans = bor(F_BOSS)
+    tt.ranged.attacks[4].xp_from_skill = "mini_dragon"
+    tt.ranged.attacks[5] = E:clone_c("spawn_attack")
+    tt.ranged.attacks[5].animation = "radiant_wave"
+    tt.ranged.attacks[5].cooldown = 20
+    tt.ranged.attacks[5].disabled = true
+    tt.ranged.attacks[5].entity = "aura_fire_balls_hero_lumenir"
+    tt.ranged.attacks[5].spawn_offset = v(43, 81)
+    tt.ranged.attacks[5].spawn_time = fts(12)
+    tt.ranged.attacks[5].vis_flags = bor(F_RANGED)
+    tt.ranged.attacks[5].vis_bans = bor(F_FLYING)
+    tt.ranged.attacks[5].range_nodes_max = 50
+    tt.ranged.attacks[5].range_nodes_min = 10
+    tt.ranged.attacks[5].sound = "HeroLumenirRadiantWaveCast"
+    tt.ranged.attacks[5].count = nil
+    tt.ranged.attacks[5].xp_from_skill = "fire_balls"
+    tt.ranged.attacks[5].min_targets = b.fire_balls.min_targets
+    tt.ultimate = {
+        ts = 0,
+        cooldown = 30,
+        vis_ban = F_FLYING,
+        disabled = true
+    }
+    tt.tween.disabled = true
+    tt.tween.remove = false
+    tt.tween.props[1].sprite_id = 2
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            0.5,
+            255
+        }
+    }
+    tt = E:register_t("mini_dragon_hero_lumenir", "decal_scripted")
+    b = balance.heroes.hero_lumenir.mini_dragon.dragon
+
+    E:add_comps(tt, "force_motion", "ranged", "tween", "idle_flip")
+
+    tt.main_script.update = scripts.mini_dragon_hero_lumenir.update
+    tt.flight_height = 60
+    tt.custom_height = {
+        hero_vesper = 60,
+        hero_dragon_gem = 40,
+        hero_lumenir = 100,
+        hero_dragon_bone = 40
+    }
+    tt.force_motion.max_a = 1200
+    tt.force_motion.max_v = 360
+    tt.force_motion.ramp_radius = 30
+    tt.force_motion.fr = 0.05
+    tt.force_motion.a_step = 20
+    tt.offset = v(0, 0)
+    tt.start_ts = nil
+    tt.render.sprites[1].prefix = "hero_lumenir_light_companion"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].offset = v(0, tt.flight_height)
+    tt.render.sprites[1].scale = v(0.75, 0.75)
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].alpha = 100
+    tt.render.sprites[2].name = "hero_lumenir_light_companion_shadow"
+    tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+    tt.ranged.attacks[1].animation = "attack"
+    tt.ranged.attacks[1].cooldown = b.cooldown
+    tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
+    tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
+    tt.ranged.attacks[1].damage_type = b.damage_type
+    tt.ranged.attacks[1].hit_time = fts(2)
+    tt.ranged.attacks[1].hit_cycles = 3
+    tt.ranged.attacks[1].bullet = "bolt_lumenir_mini"
+    tt.ranged.attacks[1].hit_delay = fts(2)
+    tt.ranged.attacks[1].search_cooldown = 0.1
+    tt.ranged.attacks[1].shoot_time = fts(11)
+    tt.ranged.attacks[1].shoot_range = 25
+    tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+    tt.ranged.attacks[1].xp_gain_factor = b.ranged_attack.xp_gain_factor
+    tt.ranged.attacks[1].basic_attack = true
+    tt.ranged.attacks[1].bullet_start_offset = v(16, -16)
+    tt.tween.disabled = true
+    tt.tween.remove = false
+    tt.tween.props[1].name = "offset"
+    tt.tween.props[1].loop = true
+    tt.tween.props[1].interp = "sine"
+    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2].sprite_id = 2
+    tt.tween.props[2].name = "alpha"
+    tt.tween.props[2].keys = {
+        {
+            1,
+            0
+        },
+        {
+            1.5,
+            255
+        }
+    }
+    tt = E:register_t("mini_dragon_death_hero_lumenir", "mini_dragon_hero_lumenir")
+    b = balance.heroes.hero_lumenir.mini_dragon_death
+    tt.ranged.attacks[1].max_range = b.max_range
+    tt.ranged.attacks[1].min_range = b.min_range
+    tt.ranged.attacks[1].cooldown = b.cooldown
+    tt.ranged.attacks[1].bullet = "bolt_lumenir_mini_death"
+    tt = E:register_t("hero_lumenir_ultimate")
+    b = balance.heroes.hero_lumenir.ultimate
+
+    E:add_comps(tt, "pos", "main_script", "sound_events")
+
+    tt.can_fire_fn = scripts.hero_lumenir_ultimate.can_fire_fn
+    tt.main_script.update = scripts.hero_lumenir_ultimate.update
+    tt.cooldown = 30
+    tt.range = b.range
+    tt.spawn_delay = 0.5
+    tt.count = 6
+    tt.vis_flags = bor(F_RANGED)
+    tt.vis_bans = bor(F_FLYING)
+    tt.entity = "soldier_lumenir_ultimate"
+    tt = E:register_t("soldier_lumenir_ultimate", "soldier")
+
+    E:add_comps(tt, "melee")
+
+    b = balance.heroes.hero_lumenir.ultimate
+    tt.health.armor = 0
+    tt.health.hp_max = 50
+    tt.health.ignore_damage = true
+    tt.health_bar.hidden = true
+    tt.info.random_name_format = nil
+    tt.min_wait = 0.1
+    tt.max_wait = 0.4
+    tt.main_script.insert = scripts.soldier_lumenir_ultimate.insert
+    tt.main_script.update = scripts.soldier_lumenir_ultimate.update
+    tt.motion.max_speed = 90
+    tt.max_attack_count = 2
+    tt.stun_range = b.stun_range
+    tt.stun_bans = bor(F_RANGED)
+    tt.stun_flags = bor(F_FLYING, F_BOSS)
+    tt.stun_duration = b.stun_duration
+    tt.sound_events.death = "HeroLumenirCallOfTriumphOut"
+    tt.regen.cooldown = 1
+    tt.regen.health = 0
+    tt.render.sprites[1].prefix = "hero_lumenir_call_of_triumph"
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].hidden = true
+    tt.render.sprites[1].sort_y_offset = -2
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].loop = false
+    tt.render.sprites[2].prefix = "hero_lumenir_call_of_triumph_spawn_fx"
+    tt.render.sprites[2].name = "idle"
+    tt.render.sprites[2].sort_y_offset = -3
+    tt.soldier.melee_slot_offset = v(5, 0)
+    tt.sound_events.insert = "HeroLumenirCallOfTriumphCast"
+    tt.ui.can_click = false
+    tt.ui.can_select = false
+    tt.unit.level = 0
+    tt.unit.mod_offset = v(0, 15)
+    tt.vis.flags = bor(F_FRIEND)
+    tt.vis.bans = bor(F_ALL)
+    tt.melee.attacks[1].damage_max = nil
+    tt.melee.attacks[1].damage_min = nil
+    tt.melee.attacks[1].hit_times = {
+        fts(7),
+        fts(15),
+        fts(24)
+    }
+    tt.melee.attacks[1].shared_cooldown = true
+    tt.melee.attacks[1].xp_gain_factor = 0
+    tt.melee.attacks[1].chance = 1
+    tt.melee.attacks[1].damage_type = b.damage_type
+    tt.melee.attacks[1].sound_hit = "MeleeSword"
+    tt.melee.cooldown = fts(15)
+    tt.melee.range = 60
+
+    tt = E:register_t("bolt_lumenir", "bullet")
+
+    E:add_comps(tt, "force_motion")
+
+    b = balance.heroes.hero_lumenir.basic_ranged_shot
+    tt.bullet.damage_type = b.damage_type
+    tt.bullet.hit_fx = "fx_bolt_lumenir_hit"
+    tt.bullet.particles_name = "ps_bolt_lumenir"
+    tt.bullet.max_speed = 600
+    tt.bullet.align_with_trajectory = true
+    tt.bullet.min_speed = 30
+    tt.bullet.xp_gain_factor = b.xp_gain_factor
+    tt.bullet.use_unit_damage_factor = true
+    tt.bullet.pop_chance = 0
+    tt.initial_impulse = 30000
+    tt.initial_impulse_duration = 10
+    tt.initial_impulse_angle = math.pi / 4
+    tt.force_motion.a_step = 5
+    tt.force_motion.max_a = 3000
+    tt.force_motion.max_v = 600
+    tt.main_script.insert = scripts.bolt_lumenir.insert
+    tt.main_script.update = scripts.bolt_lumenir.update
+    tt.render.sprites[1].name = "hero_lumenir_attack_projectile_idle"
+    tt.render.sprites[1].z = Z_FLYING_HEROES
+    tt = E:register_t("bolt_lumenir_mini", "bolt_lumenir")
+    tt.bullet.damage_type = DAMAGE_TRUE
+    tt.force_motion.max_v = 300
+    tt.bullet.hit_fx = "fx_bolt_lumenir_hit_mini"
+    tt.bullet.particles_name = "ps_bolt_lumenir_mini"
+    tt.render.sprites[1].name = "hero_lumenir_light_companion_attack_projectile_idle"
+    tt.sound_events.insert = "HeroLumenirLightCompanionBasicAttack"
+
+    tt = E:register_t("bolt_lumenir_mini_death", "bolt_lumenir_mini")
+
+    tt = E:register_t("bolt_lumenir_wave", "bolt_lumenir")
+    b = balance.heroes.hero_lumenir.fire_balls
+    tt.bullet.damage_type = b.damage_type
+    tt.bullet.hit_fx = "fx_bolt_lumenir_hit_mini"
+    tt.bullet.particles_name = "ps_bolt_lumenir_wave"
+    tt.render.sprites[1].name = "hero_lumenir_radiant_wave_projectile_idle"
+
+    tt = E:register_t("aura_fire_balls_hero_lumenir", "aura")
+
+    E:add_comps(tt, "render", "nav_path", "motion", "tween")
+
+    b = balance.heroes.hero_lumenir.fire_balls
+    tt.aura.duration = b.duration
+    tt.aura.duration_var = 0.5
+    tt.flame_damage_min = b.flame_damage_min
+    tt.flame_damage_max = b.flame_damage_max
+    tt.aura.damage_radius = b.damage_radius
+    tt.aura.damage_type = DAMAGE_TRUE
+    tt.aura.damage_cycle = b.damage_rate
+    tt.aura.damage_flags = F_AREA
+    tt.aura.damage_bans = 0
+    tt.motion.max_speed = 3.5 * FPS
+    tt.motion.max_speed_var = 0.25 * FPS
+    tt.main_script.insert = scripts.aura_fire_balls_hero_lumenir.insert
+    tt.main_script.update = scripts.aura_fire_balls_hero_lumenir.update
+    tt.render.sprites[1].name = "hero_lumenir_radiant_wave_projectile_idle"
+    tt.render.sprites[1].sort_y_offset = -21
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.tween.disabled = true
+    tt.tween.remove = true
+    tt.tween.props[1].keys = {
+        {
+            0,
+            255
+        },
+        {
+            tt.aura.duration_var,
+            0
+        }
+    }
+
+    tt = E:register_t("mod_hero_lumenir_sword_hit", "modifier")
+
+    E:add_comps(tt, "render")
+
+    b = balance.heroes.hero_lumenir.celestial_judgement
+    tt.modifier.duration = fts(39)
+    tt.render.sprites[1].name = "hero_lumenir_celestial_judgement_fx_idle"
+    tt.render.sprites[1].draw_order = 10
+    tt.render.sprites[1].loop = false
+    tt.mod_stun = "mod_hero_lumenir_stun"
+    tt.hit_decal = "decal_hero_lumenir_sword"
+    tt.decal_spawn_time = fts(25)
+    tt.time_hit = fts(22)
+    tt.damage = b.damage
+    tt.stun_duration = b.stun_duration
+    tt.damage_type = b.damage_type
+    tt.stun_range = b.stun_range
+    tt.stun_vis_flags = F_RANGED
+    tt.stun_bans = bor(F_FLYING)
+    tt.main_script.update = scripts.mod_hero_lumenir_sword_hit.update
+    tt.sound = "HeroLumenirCelestialJudgementImpact"
+    tt = E:register_t("mod_hero_lumenir_stun", "mod_stun")
+
+    E:add_comps(tt, "render")
+
+    tt.modifier.duration = fts(23)
+    tt = E:register_t("mod_hero_lumenir_shield", "modifier")
+
+    E:add_comps(tt, "render", "tween")
+
+    tt.modifier.duration = nil
+    tt.spiked_armor = nil
+    tt.armor = nil
+    tt.main_script.insert = scripts.mod_hero_lumenir_shield.insert
+    tt.main_script.update = scripts.mod_hero_lumenir_shield.update
+    tt.main_script.remove = scripts.mod_hero_lumenir_shield.remove
+    tt.render.sprites[1].prefix = "hero_lumenir_blessing_of_retribution_shield"
+    tt.render.sprites[1].size_names = {
+        "small",
+        "mid",
+        "big"
+    }
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].name = "hero_lumenir_blessing_of_retribution_shield_decal"
+    tt.render.sprites[2].size_names = {
+        "small",
+        "mid",
+        "big"
+    }
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].z = Z_DECALS
+    tt.tween.remove = false
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            0.25,
+            255
+        }
+    }
+    tt = E:register_t("mod_lumenir_ulti_stun", "mod_stun")
+    b = balance.heroes.hero_lumenir
+    tt.modifier.duration = b.ultimate.stun_target_duration
+    tt.modifier.allows_duplicates = true
     tt.modifier.vis_flags = bor(F_MOD, F_STUN)
     tt.modifier.vis_bans = bor(F_BOSS)
 end

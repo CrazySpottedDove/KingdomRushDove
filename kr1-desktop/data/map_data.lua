@@ -1476,6 +1476,16 @@ return {
         icon = 58,
         stats = {6, 0, 5, 5},
         is_kr5 = true
+    },
+	{
+        portrait = 4,
+        thumb = 59,
+		name = "hero_lumenir",
+        available_level = 1,
+        starting_level = 1,
+        icon = 59,
+        stats = {7, 0, 5, 5},
+        is_kr5 = true
     }
 },
     level_data = {{

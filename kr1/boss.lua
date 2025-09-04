@@ -249,7 +249,7 @@ local function boss()
         delay = fts(6)
     }
 
-    -- 卫兹南
+    -- 维兹南
     tt = RT("eb_veznan", "boss")
     AC(tt, "melee", "timed_attacks", "taunts")
     anchor_y = 0.17010309278350516
