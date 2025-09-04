@@ -679,55 +679,55 @@ local heroes = {
             damage = 10
         },
         armor = {0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36},
-        hp_max = {275, 300, 325, 350, 375, 400, 425, 450, 475, 500},
+        hp_max = {357, 390, 422, 455, 487, 520, 552, 585, 617, 650},
         regen_health = {22, 24, 26, 28, 30, 32, 34, 36, 38, 40},
         mini_dragon_death = {
             max_range = 150,
             cooldown = 1,
-            min_range = 68,
+            min_range = 50,
             damage_type = DAMAGE_TRUE,
-            damage_max = {12, 12, 12, 12, 24, 24, 24, 36, 36, 36},
-            damage_min = {8, 8, 8, 8, 16, 16, 16, 24, 24, 24}
+            damage_max = {15, 15, 15, 15, 31, 31, 31, 46, 46, 46},
+            damage_min = {10, 10, 10, 10, 20, 20, 20, 31, 31, 31}
         },
         basic_ranged_shot = {
             max_range = 240,
             xp_gain_factor = 1.46,
             cooldown = 2,
-            min_range = 50,
+            min_range = 0,
             damage_type = DAMAGE_TRUE,
-            damage_max = {26, 31, 36, 42, 47, 52, 57, 62, 68, 74},
-            damage_min = {14, 17, 20, 22, 25, 28, 31, 34, 36, 38}
+            damage_max = {33, 40, 46, 54, 61, 67, 74, 80, 88, 96},
+            damage_min = {18, 22, 26, 28, 32, 36, 40, 44, 46, 49}
         },
         fire_balls = {
             max_range = 250,
             damage_radius = 45,
             min_targets = 3,
             damage_rate = 0.5,
-            min_range = 50,
+            min_range = 0,
             duration = 8,
             cooldown = {20, 20, 20},
             damage_type = DAMAGE_TRUE,
-            xp_gain = {20, 40, 60},
-            flames_count = {5, 5, 5},
-            flame_damage_min = {3, 6, 10},
+            xp_gain = {160, 320, 480},
+            flames_count = {5, 6, 7},
+            flame_damage_min = {4, 6, 10},
             flame_damage_max = {5, 10, 14}
         },
         mini_dragon = {
             max_range = 150,
-            min_range = 68,
+            min_range = 50,
             cooldown = {30, 30, 30},
             damage_type = DAMAGE_TRUE,
-            xp_gain = {30, 60, 90},
+            xp_gain = {240, 480, 720},
             dragon = {
                 max_speed = 75,
                 duration = {10, 12, 15},
                 ranged_attack = {
                     max_range = 120,
                     cooldown = 1,
-                    min_range = 10,
+                    min_range = 0,
                     damage_type = DAMAGE_PHYSICAL,
-                    damage_min = {10, 16, 19},
-                    damage_max = {14, 24, 29}
+                    damage_min = {13, 20, 24},
+                    damage_max = {18, 31, 37}
                 }
             }
         },
@@ -736,9 +736,9 @@ local heroes = {
             stun_range = 40,
             stun_duration = {2, 2, 2},
             cooldown = {35, 35, 35},
-            damage = {180, 360, 540},
+            damage = {234, 468, 702},
             damage_type = DAMAGE_TRUE,
-            xp_gain = {35, 70, 105}
+            xp_gain = {280, 560, 840}
         },
         shield = {
             min_targets = 2,
@@ -747,7 +747,7 @@ local heroes = {
             armor = {0.1, 0.2, 0.3},
             duration = {8, 8, 8},
             cooldown = {20, 20, 20},
-            xp_gain = {20, 40, 60}
+            xp_gain = {160, 320, 480}
         },
         ultimate = {
             range = 200,

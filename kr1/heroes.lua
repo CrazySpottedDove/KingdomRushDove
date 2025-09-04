@@ -12416,9 +12416,9 @@ local function heroes()
     tt.hero.skills.nova.damage_max = b.nova.damage_max
     tt.hero.skills.nova.xp_gain = b.nova.xp_gain
     tt.hero.skills.nova.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [2] = 1,
+        [5] = 2,
+        [8] = 3,
     }
     tt.hero.skills.rain = E:clone_c("hero_skill")
     tt.hero.skills.rain.hp_max = b.rain.hp_max
@@ -12428,9 +12428,9 @@ local function heroes()
     tt.hero.skills.rain.bones_count = b.rain.bones_count
     tt.hero.skills.rain.xp_gain = b.rain.xp_gain
     tt.hero.skills.rain.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [2] = 1,
+        [5] = 2,
+        [8] = 3,
     }
     tt.hero.skills.burst = E:clone_c("hero_skill")
     tt.hero.skills.burst.cooldown = b.burst.cooldown
@@ -12440,9 +12440,9 @@ local function heroes()
     tt.hero.skills.burst.hr_available = true
     tt.hero.skills.burst.xp_gain = b.burst.xp_gain
     tt.hero.skills.burst.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [4] = 1,
+        [7] = 2,
+        [10] = 3,
     }
     tt.hero.skills.ultimate = E:clone_c("hero_skill")
     tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
@@ -12452,10 +12452,12 @@ local function heroes()
     tt.hero.skills.ultimate.damage_max = b.ultimate.dog.melee_attack.damage_max
     tt.hero.skills.ultimate.controller_name = "hero_dragon_bone_ultimate"
     tt.hero.skills.ultimate.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
+        [10] = 4
     }
+    tt.hero.skills.ultimate.xp_gain_factor = 36
     tt.hero.team = TEAM_DARK_ARMY
     tt.flight_height = 80
     tt.health.dead_lifetime = 15
@@ -12615,9 +12617,7 @@ local function heroes()
     }
     tt = E:register_t("hero_dragon_bone_ultimate")
     b = balance.heroes.hero_dragon_bone.ultimate
-
     E:add_comps(tt, "pos", "main_script", "sound_events")
-
     tt.can_fire_fn = scripts.hero_dragon_bone_ultimate.can_fire_fn
     tt.main_script.update = scripts.hero_dragon_bone_ultimate.update
     tt.range = b.range
@@ -12632,11 +12632,11 @@ local function heroes()
     tt.distance_between_shards = b.distance_between_shards
     tt.random_ni_spread = b.random_ni_spread
     tt.sound_events.insert = "HeroDragonBoneUltimateCast"
+
     tt = E:register_t("soldier_dragon_bone_ultimate_dog", "soldier_militia")
     b = balance.heroes.hero_dragon_bone.ultimate.dog
-
     E:add_comps(tt, "reinforcement", "nav_grid", "tween")
-
+    tt.is_kr5 = true
     tt.health.armor = b.armor
     tt.health.hp_max = b.hp
     tt.health_bar.offset = vec_2(0, 30)
@@ -12981,9 +12981,7 @@ local function heroes()
 
     -- 光龙
     tt = E:register_t("ps_bolt_lumenir")
-
     E:add_comps(tt, "pos", "particle_system")
-
     tt.particle_system.name = "hero_lumenir_attack_projectile_trail_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
@@ -12994,10 +12992,9 @@ local function heroes()
     tt.particle_system.emission_rate = 30
     tt.particle_system.emit_rotation_spread = math.pi / 2
     tt.particle_system.z = Z_FLYING_HEROES
+
     tt = E:register_t("ps_bolt_lumenir_mini")
-
     E:add_comps(tt, "pos", "particle_system")
-
     tt.particle_system.name = "hero_lumenir_light_companion_attack_projectile_trail_particle_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
@@ -13007,10 +13004,9 @@ local function heroes()
     }
     tt.particle_system.emission_rate = 15
     tt.particle_system.emit_rotation_spread = math.pi / 2
+
     tt = E:register_t("ps_bolt_lumenir_wave")
-
     E:add_comps(tt, "pos", "particle_system")
-
     tt.particle_system.name = "hero_lumenir_light_companion_attack_projectile_trail_particle_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
@@ -13185,9 +13181,7 @@ local function heroes()
     tt.tween.remove = false
 
     tt = E:register_t("hero_lumenir", "hero5")
-
     E:add_comps(tt, "ranged", "timed_attacks", "tween")
-
     b = balance.heroes.hero_lumenir
     tt.hero.level_stats.armor = b.armor
     tt.hero.level_stats.hp_max = b.hp_max
@@ -13215,7 +13209,6 @@ local function heroes()
         9,
         10
     }
-    tt.hero.level_stats.regen_health = b.regen_health
     tt.hero.level_stats.ranged_damage_min = b.basic_ranged_shot.damage_min
     tt.hero.level_stats.ranged_damage_max = b.basic_ranged_shot.damage_max
     tt.hero.level_stats.mini_dragon_death_ranged_damage_min = b.mini_dragon_death.damage_min
@@ -13235,9 +13228,9 @@ local function heroes()
     tt.hero.skills.celestial_judgement.cooldown = b.celestial_judgement.cooldown
     tt.hero.skills.celestial_judgement.xp_gain = b.celestial_judgement.xp_gain
     tt.hero.skills.celestial_judgement.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [4] = 1,
+        [7] = 2,
+        [10] = 3,
     }
     tt.hero.skills.mini_dragon = E:clone_c("hero_skill")
     tt.hero.skills.mini_dragon.cooldown = b.mini_dragon.cooldown
@@ -13246,9 +13239,9 @@ local function heroes()
     tt.hero.skills.mini_dragon.damage_max = b.mini_dragon.dragon.ranged_attack.damage_max
     tt.hero.skills.mini_dragon.xp_gain = b.mini_dragon.xp_gain
     tt.hero.skills.mini_dragon.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
     }
     tt.hero.skills.fire_balls = E:clone_c("hero_skill")
     tt.hero.skills.fire_balls.cooldown = b.fire_balls.cooldown
@@ -13256,9 +13249,9 @@ local function heroes()
     tt.hero.skills.fire_balls.mod_damage = b.fire_balls.flame_damage
     tt.hero.skills.fire_balls.xp_gain = b.fire_balls.xp_gain
     tt.hero.skills.fire_balls.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [2] = 1,
+        [5] = 2,
+        [8] = 3,
     }
     tt.hero.skills.ultimate = E:clone_c("hero_skill")
     tt.hero.skills.ultimate.controller_name = "hero_lumenir_ultimate"
@@ -13267,13 +13260,15 @@ local function heroes()
     tt.hero.skills.ultimate.damage_max = b.ultimate.damage_max
     tt.hero.skills.ultimate.damage_min = b.ultimate.damage_min
     tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
+    tt.hero.skills.ultimate.xp_gain_factor = 22
     tt.hero.skills.ultimate.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3,
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
+        [10] = 4
     }
     tt.hero.team = TEAM_LINIREA
-    tt.health.dead_lifetime = 30
+    tt.health.dead_lifetime = 15
     tt.health_bar.draw_order = -1
     tt.health_bar.offset = v(0, 170)
     tt.health_bar.sort_y_offset = -171
@@ -13284,7 +13279,6 @@ local function heroes()
     tt.hero.use_custom_spawn_point = true
     tt.idle_flip.cooldown = 10
     tt.info.damage_icon = "magic"
-    tt.info.fn = scripts.hero_basic.get_info_ranged_with_damage_factor
     tt.info.hero_portrait = "hero_portraits_0007"
     tt.info.i18n_key = "HERO_LUMENIR"
     tt.info.portrait = "portraits_hero" .. "_0007"
@@ -13414,7 +13408,7 @@ local function heroes()
     tt.ranged.attacks[5].min_targets = b.fire_balls.min_targets
     tt.ultimate = {
         ts = 0,
-        cooldown = 30,
+        cooldown = 22.5,
         vis_ban = F_FLYING,
         disabled = true
     }

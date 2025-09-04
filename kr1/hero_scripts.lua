@@ -24483,7 +24483,7 @@ function scripts.hero_lumenir.level_up(this, store, initial)
         local u = this.ultimate
 
         u.disabled = nil
-        
+
         local uc = E:get_template(s.controller_name)
 
         uc.cooldown = s.cooldown[s.level]
@@ -24521,29 +24521,13 @@ function scripts.hero_lumenir.update(this, store)
     SU.hero_spawning_set_skill_ts(this, store)
 
     local function find_hero()
-        for _, e in pairs(store.entities) do
+        for _, e in pairs(store.soldiers) do
             if e.hero and e.template_name ~= "hero_lumenir" then
                 return e
             end
         end
 
         return nil
-    end
-
-    local function find_enemy_strongest(entities, origin, min_range, max_range, min_nodes, flags, bans, filter_func)
-        local max_health = -1
-        local enemy
-
-        for _, e in pairs(entities) do
-            if e.pending_removal or not e.enemy or not e.nav_path or not U.is_inside_ellipse(e.pos, origin, max_range) or e.health and e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e) then
-                -- block empty
-            elseif max_health < e.health.hp and min_nodes < e.nav_path.ni then
-                max_health = e.health.hp
-                enemy = e
-            end
-        end
-
-        return enemy
     end
 
     local function create_mini_dragon(follow, entity_t, duration, remove_hero_death)
@@ -24669,9 +24653,7 @@ function scripts.hero_lumenir.update(this, store)
         a = celestial_judgement_attack
 
         if ready_to_use_skill(a, store) then
-            local target = find_enemy_strongest(store.entities, this.pos, 0, a.range, a.min_nodes,
-                a.vis_flags, a.vis_bans)
-
+            local target = U.find_biggest_enemy(store, this.pos, 0, a.range, nil, a.vis_flags, a.vis_bans)
             if target then
                 local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
 
@@ -24683,7 +24665,7 @@ function scripts.hero_lumenir.update(this, store)
                 U.y_wait(store, a.shoot_time)
 
                 local m = E:create_entity(a.mod)
-
+                m.modifier.damage_factor = this.unit.damage_factor
                 m.modifier.target_id = target.id
                 m.modifier.source_id = this.id
                 m.modifier.level = this.hero.skills.celestial_judgement.level
@@ -24720,7 +24702,7 @@ function scripts.hero_lumenir.update(this, store)
         a = fire_balls_attack
 
         if ready_to_use_skill(a, store) then
-            local targets_info = U.find_enemies_in_paths(store.entities, this.pos, a.range_nodes_min,
+            local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min,
                 a.range_nodes_max, nil, a.vis_flags, a.vis_bans)
 
             if not targets_info or #targets_info < a.min_targets then
@@ -24792,6 +24774,7 @@ function scripts.hero_lumenir.update(this, store)
                 e.nav_path.dir = dir
                 e.delay = delay
                 e.aura.source_id = this.id
+                e.aura.damage_factor = this.unit.damage_factor
                 e.level = this.hero.skills.fire_balls.level
 
                 queue_insert(store, e)
@@ -24809,11 +24792,9 @@ function scripts.hero_lumenir.update(this, store)
         a = basic_ranged
 
         if ready_to_use_skill(a, store) then
-            local pos_offset = v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
+            -- local pos_offset = v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
             local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                a.vis_flags, a.vis_bans, function(e)
-                return V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > a.radius * a.radius
-            end)
+                a.vis_flags, a.vis_bans)
 
             if targets then
                 local target = targets[1]
@@ -24851,26 +24832,24 @@ function scripts.hero_lumenir.update(this, store)
                 b.bullet.shot_index = 1
                 b.initial_impulse = 10
 
-                if b.bullet.use_unit_damage_factor then
-                    b.bullet.damage_factor = this.unit.damage_factor
-                end
+                b.bullet.damage_factor = this.unit.damage_factor
 
-                if upg_lf and a.basic_attack then
-                    if not this._lethal_focus_deck then
-                        this._lethal_focus_deck = SU.deck_new(upg_lf.trigger_cards, upg_lf.total_cards)
-                    end
+                -- if upg_lf and a.basic_attack then
+                --     if not this._lethal_focus_deck then
+                --         this._lethal_focus_deck = SU.deck_new(upg_lf.trigger_cards, upg_lf.total_cards)
+                --     end
 
-                    local triggered_lethal_focus = SU.deck_draw(this._lethal_focus_deck)
+                --     local triggered_lethal_focus = SU.deck_draw(this._lethal_focus_deck)
 
-                    if triggered_lethal_focus then
-                        b.bullet.damage_factor = b.bullet.damage_factor * upg_lf.damage_factor_area
-                        b.bullet.pop = {
-                            "pop_crit"
-                        }
-                        b.bullet.pop_chance = 1
-                        b.bullet.pop_conds = DR_DAMAGE
-                    end
-                end
+                --     if triggered_lethal_focus then
+                --         b.bullet.damage_factor = b.bullet.damage_factor * upg_lf.damage_factor_area
+                --         b.bullet.pop = {
+                --             "pop_crit"
+                --         }
+                --         b.bullet.pop_chance = 1
+                --         b.bullet.pop_conds = DR_DAMAGE
+                --     end
+                -- end
 
                 queue_insert(store, b)
 
@@ -25162,7 +25141,7 @@ function scripts.mod_hero_lumenir_sword_hit.update(this, store, script)
 
                 d.source_id = this.id
                 d.target_id = target.id
-                d.value = this.damage[m.level]
+                d.value = this.damage[m.level] * m.damage_factor
                 d.damage_type = this.damage_type
 
                 queue_damage(store, d)
@@ -25466,7 +25445,7 @@ end
 scripts.aura_fire_balls_hero_lumenir = {}
 
 function scripts.aura_fire_balls_hero_lumenir.insert(this, store)
-    next_pos = P:node_pos(this.nav_path)
+    local next_pos = P:node_pos(this.nav_path)
 
     if not next_pos then
         return false
@@ -25566,7 +25545,7 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 
                     d.source_id = this.id
                     d.target_id = e.id
-                    d.value = math.random(this.flame_damage_min[this.level], this.flame_damage_max[this.level])
+                    d.value = math.random(this.flame_damage_min[this.level], this.flame_damage_max[this.level]) * a.damage_factor
                     d.damage_type = a.damage_type
 
                     queue_damage(store, d)
@@ -25673,26 +25652,38 @@ function scripts.bolt_lumenir.update(this, store)
 
 	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
-		local u = UP:get_upgrade("mage_el_empowerment")
+		-- local u = UP:get_upgrade("mage_el_empowerment")
 
-		if u and not this.upgrades_disabled and math.random() < u.chance then
-			d.value = km.round(d.value * u.damage_factor)
+		-- if u and not this.upgrades_disabled and math.random() < u.chance then
+		-- 	d.value = km.round(d.value * u.damage_factor)
 
-			if b.pop_mage_el_empowerment then
-				d.pop = b.pop_mage_el_empowerment
-				d.pop_conds = DR_DAMAGE
-			end
-		end
+		-- 	if b.pop_mage_el_empowerment then
+		-- 		d.pop = b.pop_mage_el_empowerment
+		-- 		d.pop_conds = DR_DAMAGE
+		-- 	end
+		-- end
 
 		queue_damage(store, d)
+        if b.mod or b.mods then
+            local mods = b.mods or {b.mod}
 
-		if this.alter_reality_chance and UP:has_upgrade("mage_el_alter_reality") and math.random() < this.alter_reality_chance then
-			local mod = E:create_entity(this.alter_reality_mod)
+            for _, mod_name in pairs(mods) do
+                local m = E:create_entity(mod_name)
 
-			mod.modifier.target_id = target.id
+                m.modifier.target_id = b.target_id
+                m.modifier.level = b.level
 
-			queue_insert(store, mod)
-		end
+                queue_insert(store, m)
+            end
+        end
+
+		-- if this.alter_reality_chance and UP:has_upgrade("mage_el_alter_reality") and math.random() < this.alter_reality_chance then
+		-- 	local mod = E:create_entity(this.alter_reality_mod)
+
+		-- 	mod.modifier.target_id = target.id
+
+		-- 	queue_insert(store, mod)
+		-- end
 	elseif b.damage_radius and b.damage_radius > 0 then
 		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
