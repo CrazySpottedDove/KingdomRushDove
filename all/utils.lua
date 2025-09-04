@@ -1856,43 +1856,70 @@ end
 -- 获取所有目标为 entity 的 mod。
 -- 如果传入 list，排除模板名存在于 list 中的 mod。
 function U.get_modifiers(store, entity, list)
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier.target_id == entity.id and (not list or table.contains(list, v.template_name))
-    end)
-
-    return mods
+    local result = {}
+    local mods = entity._applied_mods
+    if not mods then
+        return result
+    end
+    for i=1,#mods do
+        local mod = mods[i]
+        if not list or table.contains(list, mod.template_name) then
+            result[#result+1] = mod
+        end
+    end
+    return result
 end
 
 -- return #modes > 0, mods
 -- 忽略 模板名为 mod_name 的 mod
 function U.has_modifiers(store, entity, mod_name)
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier.target_id == entity.id and (not mod_name or mod_name == v.template_name)
-    end)
+    local mods = entity._applied_mods
+    if not mods then
+        return false, {}
+    end
+    local result = {}
+    for i=1,#mods do
+        local mod = mods[i]
+        if not mod_name or mod_name == mod.template_name then
+            result[#result+1] = mod
+        end
+    end
 
-    return #mods > 0, mods
+    return #result > 0, result
 end
 
 -- 如果 list 中存在目标为 entity 的 mod 名，返回 true
 function U.has_modifier_in_list(store, entity, list)
-    for _, e in pairs(store.modifiers) do
-        if e.modifier.target_id == entity.id and table.contains(list, e.template_name) then
+    local mods = entity._applied_mods
+    if not mods then
+        return false
+    end
+    for i=1,#mods do
+        local mod = mods[i]
+        if table.contains(list, mod.template_name) then
             return true
         end
     end
-
     return false
 end
 
 -- return #mods > 0, mods
 -- mod.modifier.type 存在于 {...} 中
 function U.has_modifier_types(store, entity, ...)
+    local mods = entity._applied_mods
+    if not mods then
+        return false, {}
+    end
+    local result = {}
     local types = {...}
-    local mods = table.filter(store.modifiers, function(k, v)
-        return v.modifier.target_id == entity.id and table.contains(types, v.modifier.type)
-    end)
+    for i=1,#mods do
+        local mod = mods[i]
+        if table.contains(types, mod.modifier.type) then
+            result[#result+1] = mod
+        end
+    end
 
-    return #mods > 0, mods
+    return #result > 0, result
 end
 
 -- 计算实体的真实速度大小

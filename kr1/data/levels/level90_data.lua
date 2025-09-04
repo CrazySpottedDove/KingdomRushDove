@@ -42,6 +42,57 @@ return {
             }
         },
         {
+            template = "soldier_elf",
+            ["nav_rally.center"] = {
+                x = 528,
+                y = 710
+            },
+            ["nav_rally.pos"] = {
+                x = 528,
+                y = 710
+            },
+            ["powers.bleed.level"] = 3,
+            ["powers.cripple.level"] = 3,
+            pos = {
+                x = 528,
+                y = 710
+            }
+        },
+        {
+            template = "soldier_elf",
+            ["nav_rally.center"] = {
+                x = 513,
+                y = 694
+            },
+            ["nav_rally.pos"] = {
+                x = 513,
+                y = 694
+            },
+            ["powers.bleed.level"] = 3,
+            ["powers.cripple.level"] = 3,
+            pos = {
+                x = 513,
+                y = 694
+            }
+        },
+        {
+            template = "soldier_elf",
+            ["nav_rally.center"] = {
+                x = 543,
+                y = 694
+            },
+            ["nav_rally.pos"] = {
+                x = 543,
+                y = 694
+            },
+            ["powers.bleed.level"] = 3,
+            ["powers.cripple.level"] = 3,
+            pos = {
+                x = 543,
+                y = 694
+            }
+        },
+        {
             template = "editor_wave_flag",
             ["editor.len"] = 240,
             ["editor.path_id"] = 2,
@@ -59,6 +110,40 @@ return {
             pos = {
                 x = 545,
                 y = 53
+            }
+        },
+        {
+            template = "soldier_amazona",
+            ["nav_rally.center"] = {
+                x = 509,
+                y = 70
+            },
+            ["nav_rally.pos"] = {
+                x = 509,
+                y = 70
+            },
+            ["powers.whirlwind.level"] = 1,
+            ["powers.valkyrie.level"] = 1,
+            pos = {
+                x = 509,
+                y = 70
+            }
+        },
+        {
+            template = "soldier_amazona",
+            ["nav_rally.center"] = {
+                x = 533,
+                y = 70
+            },
+            ["nav_rally.pos"] = {
+                x = 533,
+                y = 70
+            },
+            ["powers.whirlwind.level"] = 1,
+            ["powers.valkyrie.level"] = 1,
+            pos = {
+                x = 533,
+                y = 70
             }
         },
         {

@@ -1340,7 +1340,7 @@ local function mage_towers()
     tt.attacks.list[1].vis_bans = F_FLYING
     tt.attacks.list[1].vis_flags = bor(F_RANGED)
     tt.attacks.list[1].chance = 0.9
-    tt.attacks.list[1].check_gold_bag = true
+    -- tt.attacks.list[1].check_gold_bag = true
     -- 传送
     tt.attacks.list[3] = E:clone_c("mod_attack")
     tt.attacks.list[3].animation = "attack"

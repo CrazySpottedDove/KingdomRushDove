@@ -9,6 +9,7 @@ local kr1 = {
     ACHIEVEMENT_ENERGY_NETWORK_DESCRIPTION = "在任意关卡建造4个特斯拉塔。",
     ACHIEVEMENT_CANNON_FODDER_DESCRIPTION = "让 1000 名士兵慷慨就义。",
     CReload1 = "慢",
+    ENEMY_JUNGLE_SPIDER_TINY_WITH_GOLD_NAME = "幼蛛",
     ["!!!COMMENT_LOCALIZATION_SOURCE"] = "Keywords+CYUGAME",
     LEVEL_15_TITLE = "腐朽森林",
     TIP_14 = "毒伤害无视护甲。",
@@ -1805,6 +1806,8 @@ local kr1 = {
 }
 
 local kr2 = {
+    LEVEL_90_TITLE = "林渊蛛巢",
+    LEVEL_90_HISTORY = "将军！我们的亚马孙盟友发现，雨林的蜘蛛近日异常疯狂！一些寄住的森林精灵则报道称，丛林中同时找到了北方蜘蛛和南方蜘蛛的痕迹！我可以预感到，一个巨大的阴谋正在酝酿……将军，我们需要你和你勇敢的士兵们前往林渊，一探究竟，将这些邪恶的节肢动物消灭殆尽！",
     SV_ACHIEVEMENT_FEEDMESEYMOUR_NAME = "饥渴难耐",
     SV_ACHIEVEMENT_FEARLESS_DESCRIPTION = "在一个任务中提前召唤每一波敌人。",
     ACHIEVEMENT_CANNON_FODDER_DESCRIPTION = "让 1000 名士兵慷慨就义。",

@@ -191,9 +191,8 @@ function scripts.aura_totem.update(this, store, script)
                     queue_insert(store, new_mod)
                 end
             end
-
-            last_hit_ts = store.tick_ts
         end
+        last_hit_ts = store.tick_ts
 
         while store.tick_ts - last_hit_ts < this.aura.cycle_time do
             coroutine.yield()
@@ -486,10 +485,12 @@ function scripts.necromancer_aura.update(this, store, script)
             if max_spawns < 1 then
                 -- block empty
             else
-                local dead_enemies = store.enemy_spatial_index:query_entities_in_ellipse(this.pos.x, this.pos.y, source.attacks.range, 0, function(v)
-                    return v.health.dead and band(v.health.last_damage_types, bor(DAMAGE_EAT)) == 0 and band(v.vis.bans, F_SKELETON) ==
-                               0 and store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time
-                end)
+                local dead_enemies = store.enemy_spatial_index:query_entities_in_ellipse(this.pos.x, this.pos.y,
+                    source.attacks.range, 0, function(v)
+                        return v.health.dead and band(v.health.last_damage_types, bor(DAMAGE_EAT)) == 0 and
+                                   band(v.vis.bans, F_SKELETON) == 0 and store.tick_ts - v.health.death_ts >=
+                                   v.health.dead_lifetime - this.aura.cycle_time
+                    end)
 
                 dead_enemies = table.slice(dead_enemies, 1, max_spawns)
 
@@ -5370,7 +5371,7 @@ function scripts.aura_ranger_thorn.update(this, store)
             local targets = find_targets()
 
             if not targets or #targets < a.min_count then
-                -- block empty
+                a.ts = a.ts + fts(1)
             else
                 a.ts = store.tick_ts
 
@@ -8060,12 +8061,14 @@ function scripts.enemy_shaman_necro.update(this, store, script)
         else
             if ready_to_cast() then
                 na.ts = store.tick_ts
-                local dead_enemies = store.enemy_spatial_index:query_entities_in_ellipse(this.pos.x, this.pos.y, na.max_range, 0, function(e)
-                    return e.health.dead and e.unit and not e.unit.hide_after_death and band(e.health.last_damage_types,
-                        bor(DAMAGE_EAT, DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EXPLOSION, DAMAGE_FX_EXPLODE)) ==
-                               0 and band(e.vis.bans, F_UNDEAD) == 0 and
-                               table.contains(na.allowed_templates, e.template_name)
-                end)
+                local dead_enemies = store.enemy_spatial_index:query_entities_in_ellipse(this.pos.x, this.pos.y,
+                    na.max_range, 0, function(e)
+                        return e.health.dead and e.unit and not e.unit.hide_after_death and
+                                   band(e.health.last_damage_types,
+                                bor(DAMAGE_EAT, DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EXPLOSION,
+                                    DAMAGE_FX_EXPLODE)) == 0 and band(e.vis.bans, F_UNDEAD) == 0 and
+                                   table.contains(na.allowed_templates, e.template_name)
+                    end)
 
                 if #dead_enemies == 0 then
                     -- block empty
@@ -19617,7 +19620,7 @@ function scripts.enemy_twilight_scourger.update(this, store, script)
                                     end)
 
                                 if targets then
-                                    for i=1,#targets do
+                                    for i = 1, #targets do
                                         local target = targets[i]
                                         local d = E:create_entity("damage")
 
@@ -20031,8 +20034,7 @@ function scripts.enemy_twilight_golem.on_damage(this, store, damage)
     local sub_factor = (this.health.hp_max - this.health.hp) / 100 * 0.05
 
     m.max_speed_factor = 1 - math.min(sub_factor, m.min_speed_sub_factor)
-    m.max_speed = unaffected_speed * m.max_speed_factor
-
+    U.update_max_speed(this, unaffected_speed * m.max_speed_factor)
     return true
 end
 
@@ -25281,16 +25283,18 @@ function scripts.mod_blood_elves.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target then
-        log.debug("mod_blood_elves:%s cannot find target with id:%s", this.id, this.modifier.target_id)
-
         return false
     end
 
     local _, modifiers = U.has_modifier_types(store, target, this.modifier.type)
 
     if #modifiers >= this.modifier.max_of_same then
-        log.debug("%s: cannot add to id %s because exceeds maximum", this.template_name, this.modifier.target_id)
+        return false
+    end
 
+    local source_damage = this.modifier.source_damage
+
+    if not source_damage then
         return false
     end
 
@@ -25300,32 +25304,12 @@ function scripts.mod_blood_elves.insert(this, store)
         end
     end
 
-    local source_damage = this.modifier.source_damage
-
-    if not source_damage then
-        if DEBUG then
-            log.debug("mod_blood_elves: no modifier.source_damage. Using debug value")
-
-            local d = E:create_entity("damage")
-
-            d.value = 50
-            d.target_id = target.id
-            d.source_id = this.id
-            source_damage = d
-        else
-            log.error("mod_blood_elves: cannot create without modifier.source_damage", this.id)
-
-            return false
-        end
-    end
-
     local pred_damage = U.predict_damage(target, source_damage)
     local actual_damage = this.damage_factor * pred_damage
 
     this.dps.damage_min = actual_damage
     this.dps.damage_max = actual_damage
     this.modifier.damage_factor = 1
-    log.debug("mod_blood_elves:%s source_damage:%s actual_damage:%s", this.id, source_damage.value, actual_damage)
 
     return true
 end
@@ -25754,25 +25738,29 @@ function scripts.mod_pixie_pickpocket.insert(this, store)
     local m, pp = this.modifier, this.pickpocket
     local target = store.entities[m.target_id]
 
-    if not target or not target.enemy or target.enemy.gold_bag <= 0 then
+    if not target or not target.enemy then
         return false
     end
 
-    local q = km.clamp(0, target.enemy.gold_bag, math.random(pp.steal_min[m.level], pp.steal_max[m.level]))
+    if target.enemy.gold_bag > 0 then
+        local q = km.clamp(0, target.enemy.gold_bag, math.random(pp.steal_min[m.level], pp.steal_max[m.level]))
 
-    if q > 0 then
-        target.enemy.gold_bag = target.enemy.gold_bag - q
-        store.player_gold = store.player_gold + q
+        if q > 0 then
+            target.enemy.gold_bag = target.enemy.gold_bag - q
+            store.player_gold = store.player_gold + q
+        end
+
+        local pop = SU.create_pop(store, target.pos, pp.pop)
+
+        queue_insert(store, pop)
+
+        local fx = E:create_entity(pp.fx)
+
+        fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+        fx.render.sprites[1].ts = store.tick_ts
+        queue_insert(store, fx)
+
     end
-
-    local pop = SU.create_pop(store, target.pos, pp.pop)
-
-    queue_insert(store, pop)
-
-    local fx = E:create_entity(pp.fx)
-
-    fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
-    fx.render.sprites[1].ts = store.tick_ts
 
     local damage = E:create_entity("damage")
     damage.value = math.random(m.damage_min, m.damage_max) * m.damage_factor
@@ -25781,7 +25769,6 @@ function scripts.mod_pixie_pickpocket.insert(this, store)
     damage.target_id = target.id
     queue_damage(store, damage)
 
-    queue_insert(store, fx)
     queue_remove(store, this)
     return true
 end
@@ -29555,7 +29542,7 @@ function scripts.faerie_trails.update(this, store)
         end
 
         local enemies = table.filter(store.enemies, function(_, e)
-            return  not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and
+            return not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and
                        is_inside_section(e.nav_path.pi, e.nav_path.ni)
         end)
 

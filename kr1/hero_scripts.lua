@@ -23206,7 +23206,7 @@ function scripts.hero_dragon_bone.level_up(this, store, initial)
         local u = this.ultimate
 
         u.disabled = nil
-        
+
         local uc = E:get_template(s.controller_name)
 
         uc.cooldown = s.cooldown[s.level]
@@ -23476,7 +23476,7 @@ function scripts.hero_dragon_bone.update(this, store)
         if ready_to_use_skill(a, store) then
             local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range,
                 a.max_range, a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans_target, function(v, o)
-                return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
+                return GR:cell_is(v.pos.x, v.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
             end)
 
             if not target or not targets or #targets < a.min_targets then
@@ -23512,6 +23512,7 @@ function scripts.hero_dragon_bone.update(this, store)
                         this.pos.y + a.bullet_start_offset.y
                     b.bullet.from = V.vclone(b.pos)
                     b.bullet.to = e_pos
+                    b.bullet.damage_factor = this.unit.damage_factor
                     b.bullet.source_id = this.id
                     b.bullet.target_id = target.id
 
@@ -23526,7 +23527,7 @@ function scripts.hero_dragon_bone.update(this, store)
                     b.bullet.from = V.vclone(b.pos)
                     b.bullet.to = pos
                     b.bullet.source_id = this.id
-
+                    b.bullet.damage_factor = this.unit.damage_factor
                     queue_insert(store, b)
                 end
 
@@ -23544,15 +23545,15 @@ function scripts.hero_dragon_bone.update(this, store)
                     table.insert(selected_targets, sel_target)
                     table.remove(targets, 1)
 
-                    for i = #targets, 1, -1 do
-                        local e = targets[i]
-                        local dz = this.danger_zones
-                        local sd2 = this.safe_dist2
+                    -- for i = #targets, 1, -1 do
+                    --     local e = targets[i]
+                    --     local dz = this.danger_zones
+                    --     local sd2 = this.safe_dist2
 
-                        if max_dist2 > V.dist2(sel_target.pos.x, sel_target.pos.y, e.pos.x, e.pos.y) then
-                            table.remove(targets, i)
-                        end
-                    end
+                    --     if max_dist2 > V.dist2(sel_target.pos.x, sel_target.pos.y, e.pos.x, e.pos.y) then
+                    --         table.remove(targets, i)
+                    --     end
+                    -- end
                 end
 
                 if #selected_targets == a.proj_count then
@@ -23677,9 +23678,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
                 b.bullet.shot_index = i
 
-                if b.bullet.use_unit_damage_factor then
-                    b.bullet.damage_factor = this.unit.damage_factor
-                end
+                b.bullet.damage_factor = this.unit.damage_factor
 
                 if upg_lf then
                     if not this._lethal_focus_deck then
@@ -23912,13 +23911,12 @@ function scripts.mod_dragon_bone_plague.remove(this, store)
 
                 d.source_id = this.id
                 d.target_id = t.id
-                d.value = this.spread_damage
                 d.damage_type = this.dps.damage_type
 
                 local dmin, dmax = this.spread_damage_min, this.spread_damage_max
                 local dist_factor = U.dist_factor_inside_ellipse(t.pos, target.pos, this.spread_radius)
 
-                d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+                d.value = math.floor(dmax - (dmax - dmin) * dist_factor) * this.modifier.damage_factor
 
                 queue_damage(store, d)
             end
@@ -24162,7 +24160,7 @@ function scripts.bullet_dragon_bone_rain.update(this, store)
             d.damage_type = b.damage_type
             d.source_id = this.id
             d.target_id = target.id
-            d.value = math.random(b.damage_min, b.damage_max)
+            d.value = math.random(b.damage_min, b.damage_max) * this.bullet.damage_factor
 
             queue_damage(store, d)
 
@@ -24244,10 +24242,9 @@ function scripts.bolt_dragon_bone_burst.update(this, store)
             local d = E:create_entity("damage")
 
             d.damage_type = b.damage_type
-            d.value = math.random(dmin, dmax)
+            d.value = math.random(dmin, dmax) * b.damage_factor
             d.source_id = this.id
             d.target_id = target.id
-
             queue_damage(store, d)
 
             is_flying = U.flag_has(target.vis.flags, F_FLYING)

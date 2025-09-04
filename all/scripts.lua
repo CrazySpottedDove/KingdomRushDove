@@ -4375,6 +4375,15 @@ end
 scripts.aura_unit_regen = {}
 
 function scripts.aura_unit_regen.update(this, store)
+    local target = store.entities[this.aura.source_id]
+
+    if not target or target.health.dead then
+        queue_remove(store, this)
+        return
+    end
+    local regen_cooldown = target.regen and target.regen.cooldown or this.regen.cooldown
+    local regen_health = target.regen and target.regen.health or this.regen.health
+
     while true do
         local target = store.entities[this.aura.source_id]
 
@@ -4388,16 +4397,15 @@ function scripts.aura_unit_regen.update(this, store)
             goto continue
         end
         do
-            local regen_cooldown = target.regen and target.regen.cooldown or this.regen.cooldown
-            local regen_health = target.regen and target.regen.health or this.regen.health
-
-            if (this.regen.ignore_stun or not target.unit.is_stunned) and
-                (this.regen.ignore_freeze or not U.has_modifier_types(store, target, MOD_TYPE_FREEZE)) and
-                (this.regen.ignore_mods or not U.flag_has(target.vis.bans, F_MOD)) and regen_cooldown <= store.tick_ts -
-                this.aura.ts then
+            if regen_cooldown <= store.tick_ts - this.aura.ts then
                 this.aura.ts = this.aura.ts + regen_cooldown
-                target.health.hp = target.health.hp + regen_health
-                target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+
+                if (this.regen.ignore_stun or not target.unit.is_stunned) and
+                    (this.regen.ignore_freeze or not U.has_modifier_types(store, target, MOD_TYPE_FREEZE)) and
+                    (this.regen.ignore_mods or not U.flag_has(target.vis.bans, F_MOD)) then
+                    target.health.hp = target.health.hp + regen_health
+                    target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+                end
             end
         end
         ::continue::
@@ -5785,13 +5793,11 @@ function scripts.mod_tower_remove.update(this, store, script)
         target.tower.destroy = true
 
         U.y_animation_wait(this)
-
-        local mods = table.filter(store.modifiers, function(_, ee)
-            return ee.modifier.target_id == target.id
-        end)
-
-        for _, mod in pairs(mods) do
-            queue_remove(store, mod)
+        local mods = target._applied_mods
+        if mods then
+            for i=1, #mods do
+                queue_remove(store, mods[i])
+            end
         end
     end
 
@@ -7705,9 +7711,18 @@ scripts.heal = function(this, amount)
 end
 
 scripts.find_modifiers_with_flags = function(this, store, bans)
-    return table.filter(store.modifiers, function(k, v)
-        return band(v.modifier.vis_flags, bans) ~= 0 and v.modifier.target_id == this.id
-    end)
+    local mods = this._applied_mods
+    local result = {}
+    if not mods then
+        return result
+    end
+    for i=1,#mods do
+        local m = mods[i]
+        if band(m.modifier.vis_flags, bans) ~= 0 then
+            result[#result+1] = m
+        end
+    end
+    return result
 end
 
 -- 通过复生特性来抵抗异常状态

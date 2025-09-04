@@ -459,7 +459,6 @@ local function barrack_towers()
     tt.melee.attacks[2].hit_time = fts(8)
     tt.melee.attacks[2].damage_bans = bor(F_FLYING, F_FRIEND, F_HERO)
     tt.melee.attacks[2].shared_cooldown = true
-    tt.melee.attacks[2].not_first = true
     tt.melee.attacks[2].signal = "whirlwind"
     tt.melee.attacks[2].level = 0
     tt.melee.attacks[2].disabled = true
@@ -1598,7 +1597,7 @@ local function barrack_towers()
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"idle"}
     tt.render.sprites[1].prefix = "babyAshbite"
-    tt.render.sprites[1].sync_idx = 8
+    -- tt.render.sprites[1].sync_idx = 8
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "babyAshbite_0099"
@@ -1620,7 +1619,7 @@ local function barrack_towers()
     tt.ranged.attacks[1].min_range = 0
     tt.ranged.attacks[1].max_range = 100
     tt.ranged.attacks[1].shoot_time = fts(12)
-    tt.ranged.attacks[1].sync_animation = true
+    -- tt.ranged.attacks[1].sync_animation = true
     tt.ranged.attacks[1].ignore_hit_offset = true
     tt.ranged.attacks[1].animation = "shoot"
     tt.ranged.attacks[1].sound_shoot = "ElvesAshbiteSpit"
@@ -1635,7 +1634,7 @@ local function barrack_towers()
     tt.ranged.attacks[2].min_range = 0
     tt.ranged.attacks[2].max_range = 150
     tt.ranged.attacks[2].shoot_time = fts(9)
-    tt.ranged.attacks[2].sync_animation = true
+    -- tt.ranged.attacks[2].sync_animation = true
     tt.ranged.attacks[2].animation = "special"
     tt.ranged.attacks[2].sound = "ElvesAshbiteFlameThrower"
     tt.ranged.attacks[2].vis_bans = F_FLYING
@@ -1649,7 +1648,7 @@ local function barrack_towers()
     tt.ranged.attacks[3].min_range = 0
     tt.ranged.attacks[3].max_range = 150
     tt.ranged.attacks[3].shoot_time = fts(9)
-    tt.ranged.attacks[3].sync_animation = true
+    -- tt.ranged.attacks[3].sync_animation = true
     tt.ranged.attacks[3].animation = "special"
     tt.ranged.attacks[3].vis_bans = F_FLYING
     tt.ranged.attacks[3].sound = "ElvesAshbiteSmoke"

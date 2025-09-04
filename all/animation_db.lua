@@ -193,6 +193,7 @@ function animation_db:fni(animation, time_offset, loop, fps, tick_length)
     local frames = a.frames
     local eps = 1e-09
     local len = #frames
+
     local time_in_frames_plus_eps = time_offset * fps + eps
     local elapsed_frames = ceil(time_in_frames_plus_eps)
     local next_elapsed = ceil(time_in_frames_plus_eps + tick_length * fps)
