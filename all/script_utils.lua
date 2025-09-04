@@ -108,7 +108,10 @@ local function hide_modifiers(store, entity, keep, exclude_mod)
         return
     end
     for i=1,#mods do
-        U.sprites_hide(mods[i], nil, nil, keep)
+        local mod = mods[i]
+        if mod ~= exclude_mod then
+            U.sprites_hide(mods[i], nil, nil, keep)
+        end
     end
 end
 
@@ -119,7 +122,10 @@ local function show_modifiers(store, entity, restore, exclude_mod)
         return
     end
     for i=1, #mods do
-        U.sprites_show(mods[i], nil, nil, restore)
+        local mod = mods[i]
+        if mod ~= exclude_mod then
+            U.sprites_show(mods[i], nil, nil, restore)
+        end
     end
 end
 
