@@ -12837,11 +12837,11 @@ local function heroes()
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].z = Z_BULLETS
     tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
-    tt.render.sprites[2] = E:clone_c("sprite")
-    tt.render.sprites[2].name = "stage_3_HeartProy_glow"
-    tt.render.sprites[2].animated = false
-    tt.render.sprites[2].z = Z_BULLETS - 1
-    tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
+    -- tt.render.sprites[2] = E:clone_c("sprite")
+    -- tt.render.sprites[2].name = "stage_3_HeartProy_glow"
+    -- tt.render.sprites[2].animated = false
+    -- tt.render.sprites[2].z = Z_BULLETS - 1
+    -- tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
     tt.height_attack = 70
     tt.initial_vel_y = 50
     tt.transition_time = 1

@@ -363,7 +363,7 @@ end
 function upgrades:bolts()
     local other_bolts = {"ray_arcane", "bolt_elora_freeze", "bolt_elora_slow", "bolt_magnus", "bolt_magnus_illusion",
                          "bolt_priest", "bolt_voodoo_witch", "bolt_veznan", "ray_arivan_simple", "bullet_rag",
-                         "ray_wizard", "ray_wizard_chain", "bolt_hero_space_elf_basic_attack","bullet_hero_witch_basic_1","bullet_hero_witch_basic_2", ""}
+                         "ray_wizard", "ray_wizard_chain", "bolt_hero_space_elf_basic_attack","bullet_hero_witch_basic_1","bullet_hero_witch_basic_2", "bolt_lumenir"}
     return table.append(other_bolts, self:mage_tower_bolts())
 end
 
