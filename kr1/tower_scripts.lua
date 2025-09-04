@@ -1801,7 +1801,7 @@ scripts.tower_high_elven = {
                 if ready_to_use_power(pow_s, pow_s, store) then
                     pow_s.ts = store.tick_ts
                     local existing_mods = table.filter(store.modifiers, function(_, e)
-                        return e.modifier and e.template_name == "mod_high_elven" and e.modifier.level >= pow_s.level
+                        return e.template_name == "mod_high_elven" and e.modifier.level >= pow_s.level
                     end)
                     local busy_ids = table.map(existing_mods, function(k, v)
                         return v.modifier.target_id
@@ -2114,14 +2114,7 @@ scripts.tower_arcane_wizard = {
                 queue_insert(store, mod)
                 this.decalmod_disintegrate_ready = true
             elseif this.decalmod_disintegrate_ready then
-                local mods = table.filter(store.modifiers, function(_, e)
-                    return e.modifier.source_id == this.id and e.template_name ==
-                               "decalmod_arcane_wizard_disintegrate_ready"
-                end)
-
-                for _, m in pairs(mods) do
-                    queue_remove(store, m)
-                end
+                SU.remove_modifiers(store, this, nil, "decalmod_arcane_wizard_disintegrate_ready")
                 this.decalmod_disintegrate_ready = false
             end
             if store.tick_ts - ar.ts > this.tower.long_idle_cooldown then
