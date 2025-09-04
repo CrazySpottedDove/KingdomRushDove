@@ -37,7 +37,7 @@ function simulation:init(store, system_names)
 	d.pending_inserts = {}
 	d.pending_removals = {}
 	d.entity_count = 0
-	d.entity_max = 0
+	-- d.entity_max = 0
     d.speed_factor = 1
 	self.systems_on_queue = {}
 	self.systems_on_dequeue = {}
@@ -105,22 +105,6 @@ function simulation:do_tick()
 
 	d.tick = d.tick + 1
 	d.tick_ts = d.tick_ts + TICK_LENGTH
-
-	-- while #d.pending_inserts > 0 do
-	-- 	local e = table.remove(d.pending_inserts, 1)
-
-	-- 	self:insert_entity(e)
-	-- end
-
-	-- while #d.pending_removals > 0 do
-	-- 	local e = table.remove(d.pending_removals, 1)
-
-	-- 	self:remove_entity(e)
-	-- end
-
-	-- for _, sys in ipairs(self.systems_on_update) do
-	-- 	sys:on_update(TICK_LENGTH, d.tick_ts, d)
-	-- end
 
     -- 批量插入
     local last_count = #d.pending_inserts
@@ -193,8 +177,6 @@ function simulation:insert_entity(e)
 				dqsys:on_dequeue(e, d, true)
 			end
 
-			log.debug("entity %s %s NOT added by sys %s", e.id, e.template_name, sys.name)
-
 			return
 		end
 	end
@@ -202,9 +184,8 @@ function simulation:insert_entity(e)
 	e.pending_removal = nil
 	d.entities[e.id] = e
 
-
 	d.entity_count = d.entity_count + 1
-	d.entity_max = d.entity_count >= d.entity_max and d.entity_count or d.entity_max
+	-- d.entity_max = d.entity_count >= d.entity_max and d.entity_count or d.entity_max
 
 	-- log.error("entity (%s) %s added", e.id, e.template_name)
 end
@@ -218,19 +199,14 @@ function simulation:remove_entity(e)
 				dqsys:on_dequeue(e, d, false)
 			end
 
-			log.debug("entity %s %s NOT removed by sys %s", e.id, e.template_name, sys.name)
-
 			return
 		end
 	end
 
 	e.pending_removal = nil
 	d.entities[e.id] = nil
-    
 
 	d.entity_count = d.entity_count - 1
-
-	log.debug("entity (%s) %s removed", e.id, e.template_name)
 end
 
 return simulation
