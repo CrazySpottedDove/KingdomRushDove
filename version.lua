@@ -1,4 +1,5 @@
 ﻿-- chunkname: @./version.lua
+local v
 if arg[2] == "debug" or arg[2] == "release" then
     v = "DEBUG"
 else
