@@ -89,8 +89,8 @@ local function remove_modifiers(store, entity, mod_name, exclude_name)
     local mods = entity._applied_mods
     for i = 1, #mods do
         local m = mods[i]
-        if (mod_name and mod_name ~= m.template_name) or
-           (exclude_name and exclude_name == m.template_name) then
+        if (not mod_name or mod_name == m.template_name) and
+           (not exclude_name or exclude_name == m.template_name) then
             queue_remove(store, m)
         end
     end
