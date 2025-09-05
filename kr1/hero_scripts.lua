@@ -99,9 +99,9 @@ local function upgrade_skill(this, skill_name, upgrade_func)
 end
 
 --- 判断技能/攻击可用
----@param skill_attack table 攻击或技能
----@param store table game.store
----@return bool
+--- @param skill_attack table 攻击或技能
+--- @param store table game.store
+--- @return bool
 local function ready_to_use_skill(skill_attack, store)
     return (not skill_attack.disabled) and (store.tick_ts - skill_attack.ts > skill_attack.cooldown)
 end
