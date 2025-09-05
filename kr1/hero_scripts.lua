@@ -25480,7 +25480,6 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 
     local th_dist = 25
     local turn_speed = math.pi * 1.5
-    local enemies_hit = {}
     local speed_offset = 0
     local ps = E:create_entity("ps_bolt_lumenir_wave")
 
@@ -25533,9 +25532,7 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
             hit_ts = store.tick_ts
 
             local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.damage_flags,
-                a.damage_bans, function(v)
-                return not table.contains(enemies_hit, v)
-            end)
+                a.damage_bans)
 
             if not targets then
                 -- block empty
@@ -25549,7 +25546,6 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
                     d.damage_type = a.damage_type
 
                     queue_damage(store, d)
-                    table.insert(enemies_hit, e)
                 end
             end
         end

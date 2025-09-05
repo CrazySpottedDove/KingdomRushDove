@@ -13607,9 +13607,7 @@ local function heroes()
     tt.render.sprites[1].name = "hero_lumenir_radiant_wave_projectile_idle"
 
     tt = E:register_t("aura_fire_balls_hero_lumenir", "aura")
-
     E:add_comps(tt, "render", "nav_path", "motion", "tween")
-
     b = balance.heroes.hero_lumenir.fire_balls
     tt.aura.duration = b.duration
     tt.aura.duration_var = 0.5
