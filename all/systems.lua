@@ -1187,9 +1187,11 @@ function sys.main_script:on_update(dt, ts, store)
 
         if s.co then
             -- log.error("Running update coro of entity %s (%s)", e.id, e.template_name)
-
+            -- local t1 = love.timer.getTime()
             local success, error = coroutine.resume(s.co, e, store, s)
-
+            -- local t2 = love.timer.getTime()
+            -- local delta_t = (t2 - t1) * 1000000
+            -- print(string.format("%s: %d",e.template_name, delta_t))
             if coroutine.status(s.co) == "dead" or error ~= nil then
                 if error ~= nil then
                     log.error("Error running coro: %s", debug.traceback(s.co, error))
@@ -1537,16 +1539,19 @@ function sys.tween:init(store)
     }
     self.lerp = function(a, b, t, fn)
         local ta = type(a)
-        local f = self.fns[fn or "linear"]
-        if ta == "table" then
-            return {
-                x = a.x + (b.x - a.x) * f(t),
-                y = a.y + (b.y - a.y) * f(t)
-            }
-        elseif ta == "boolean" then
+        if ta == "boolean" then
             return a
         else
-            return a + (b - a) * f(t)
+            local f = self.fns[fn or "linear"]
+            local ft = f(t)
+            if ta == "table" then
+                return {
+                    x = a.x + (b.x - a.x) * ft,
+                    y = a.y + (b.y - a.y) * ft
+                }
+            else
+                return a + (b - a) * ft
+            end
         end
     end
 end
@@ -1631,11 +1636,8 @@ function sys.tween:on_update(dt, ts, store)
 
                             if time >= ki[1] then
                                 ka = ki
-                            end
-
-                            if time <= ki[1] then
+                            else
                                 kb = ki
-
                                 break
                             end
                         end
@@ -1693,7 +1695,7 @@ function sys.goal_line:on_update(dt, ts, store)
         local end_node = P:get_end_node(e.nav_path.pi)
 
         if end_node <= node_index and not P.path_connections[e.nav_path.pi] and e.enemy.remove_at_goal_line then
-            log.debug("enemy %s reached goal", e.id)
+            -- log.debug("enemy %s reached goal", e.id)
             signal.emit("enemy-reached-goal", e)
 
             store.lives = km.clamp(-10000, 10000, store.lives - e.enemy.lives_cost)
