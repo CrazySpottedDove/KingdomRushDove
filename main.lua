@@ -112,9 +112,8 @@ require("klua.table")
 require("klua.dump")
 require("version")
 require("constants")
-if arg[2] == "debug" then
-    version.build = true
-elseif arg[2] == "monitor" then
+
+if arg[2] == "monitor" then
     PERFORMANCE_MONITOR_ENABLED = true
 end
 if version.build == "RELEASE" then
