@@ -1192,8 +1192,11 @@ function sys.main_script:on_update(dt, ts, store)
             -- local t2 = love.timer.getTime()
             -- local delta_t = (t2 - t1) * 1000000
             -- print(string.format("%s: %d",e.template_name, delta_t))
-            if coroutine.status(s.co) == "dead" or err ~= nil then
-                if err ~= nil then
+
+            -- if coroutine.status(s.co) == "dead" or err ~= nil then
+            --     if err ~= nil then
+            if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
+                if not success and err ~= nil then
                     --log.error("Error running coro: %s", debug.traceback(s.co, error))
                     error("Error running coro: " .. err .. debug.traceback(s.co))
                 end
