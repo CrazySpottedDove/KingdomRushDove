@@ -2276,12 +2276,12 @@ local function soldier_pick_melee_attack(store, this, target)
                                 goto label_78_0
                             end
                         end
+                        this.melee.last_attack = {
+                            target_id = target.id,
+                            attack = a
+                        }
+                        return a
                     end
-                    this.melee.last_attack = {
-                        target_id = target.id,
-                        attack = a
-                    }
-                    return a
                 end
             end
             ::label_78_0::
