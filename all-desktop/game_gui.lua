@@ -1070,6 +1070,27 @@ function game_gui:keypressed(key, isrepeat)
         else
             self.criketmenu:hide()
         end
+    elseif table.contains(ks.barrack_seek, key) then
+        local store = self.game.simulation.store
+        for _, t in pairs(store.towers) do
+            if t.barrack and t.barrack.soldiers then
+                local busy = true
+                for _, s in pairs(t.barrack.soldiers) do
+                    if s.health and not s.health.dead and s.soldier.target_id == nil then
+                        busy = false
+                        break
+                    end
+                end
+                if not busy then
+                    local enemy = U.find_foremost_enemy(store, t.pos, 0, t.barrack.rally_range, nil, F_BLOCK, F_FLYING)
+                    if enemy then
+                        t.barrack.rally_pos.x = enemy.pos.x
+                        t.barrack.rally_pos.y = enemy.pos.y
+                        t.barrack.rally_new = true
+                    end
+                end
+            end
+        end
     elseif table.contains(ks.endless_shop, key) and self.game.store.level_mode_override == GAME_MODE_ENDLESS and self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
         self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
         game_gui.endless_select_reward_view:show(true)
