@@ -22177,7 +22177,7 @@ function scripts.eb_spider.update(this, store, script)
             s.sort_y = this.pos.y
         end
 
-        U.y_ease_key(store, this.pos, "y", this.pos.y, this.pos.y + REF_H, 1, "quad-in")
+        U.y_ease_key(store, this.pos, "y", this.pos.y, math.max(this.pos.y + REF_H, IN_GAME_Y_MAX), 1, "quad-in")
     end
 
     local function y_jump_in(round_idx)
@@ -22283,7 +22283,7 @@ function scripts.eb_spider.update(this, store, script)
     local function y_destroy_tower()
         local a = this.timed_attacks.list[3]
         local towers = table.filter(store.towers, function(_, e)
-            return e.tower and e.tower.can_be_mod and not e.tower.blocked and
+            return e.tower.can_be_mod and not e.tower.blocked and
                        not table.contains(a.excluded_templates, e.template_name) and math.abs(e.pos.x - this.pos.x) > 45 and
                        U.is_inside_ellipse(e.pos, this.pos, a.max_range)
         end)
@@ -23917,7 +23917,7 @@ function scripts.crystal_arcane.update(this, store)
 
                         if e.barrack then
                             for _, soldier in pairs(e.barrack.soldiers) do
-                                if soldier and not soldier.health.dead then
+                                if soldier and soldier.health and not soldier.health.dead then
                                     local m = E:create_entity(aa.mod_soldier)
 
                                     m.pos.x, m.pos.y = soldier.pos.x, soldier.pos.y

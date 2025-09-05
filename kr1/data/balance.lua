@@ -709,7 +709,7 @@ local heroes = {
             damage_type = DAMAGE_TRUE,
             xp_gain = {160, 320, 480},
             flames_count = {5, 6, 7},
-            flame_damage_min = {4, 6, 10},
+            flame_damage_min = {3, 6, 10},
             flame_damage_max = {5, 10, 14}
         },
         mini_dragon = {
