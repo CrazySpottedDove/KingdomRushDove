@@ -106,7 +106,6 @@ end
 local function enemy_do_counter_attack(store, this, target)
     local ma = this.dodge.counter_attack
     ma.ts = store.tick_ts
-    this.health.ignore_damage = true
     S:queue(ma.sound, ma.sound_args)
 
     local an, af = U.animation_name_facing_point(this, ma.animation, target.pos)
@@ -139,7 +138,6 @@ local function enemy_do_counter_attack(store, this, target)
 
             while dodge_time > store.tick_ts - ma.ts do
                 if this.health.dead or this.unit.is_stunned then
-                    this.health.ignore_damage = false
                     return false
                 end
 
@@ -151,7 +149,6 @@ local function enemy_do_counter_attack(store, this, target)
 
         while hit_time > store.tick_ts - ma.ts do
             if this.health.dead or this.unit.is_stunned and not ma.ignore_stun then
-                this.health.ignore_damage = false
                 return false
             end
 
@@ -225,12 +222,10 @@ local function enemy_do_counter_attack(store, this, target)
     end
     while not U.animation_finished(this) do
         if this.health.dead or ma.ignore_stun and this.unit.is_stunned then
-            this.health.ignore_damage = false
             return false
         end
         coroutine.yield()
     end
-    this.health.ignore_damage = false
 end
 
 tt = RT("hero_boss", "enemy")
@@ -390,154 +385,6 @@ tt.main_script.update = function(this, store)
         coroutine.yield()
     end
 end
-
--- tt = RT("eb_gerald", "hero_boss")
--- AC(tt, "melee", "timed_attacks", "dodge")
--- anchor_y = 0.12
--- anchor_x = 0.5
--- image_y = 110
--- image_x = 92
--- tt.health.hp_max = 625
--- tt.health.armor = 0.7
--- tt.motion.max_speed = 3 * FPS
--- a = tt.melee.attacks[1]
--- a.cooldown = 1
--- a.hit_time = fts(5)
--- a.sound = "MeleeSword"
--- a.shared_cooldown = true
--- a.damage_type = DAMAGE_PHYSICAL
--- a.damage_max = 50
--- a.damage_min = 29
--- tt.timed_attacks.list[1] = E:clone_c("mod_attack")
--- a = tt.timed_attacks.list[1]
--- a.animation = "courage"
--- a.cooldown = 6.5 + fts(55)
--- a.mod = "mod_eb_gerald_courage"
--- a.vis_flags = F_MOD
--- a.range = 120
--- a.shoot_time = fts(17)
--- a.sound = "HeroPaladinValor"
--- a.sound_args = {
---     delay = fts(3)
--- }
--- a = tt.dodge
--- a.animation = "counter"
--- a.chance = 0.75
--- a.time_before_hit = fts(4)
--- a.counter_attack = E:clone_c("melee_attack")
--- a = a.counter_attack
--- a.animation = "counter"
--- a.cooldown = 1
--- a.damage_type = DAMAGE_TRUE
--- a.reflected_damage_factor = 2
--- a.hit_time = fts(5)
--- a.sound = "HeroPaladinDeflect"
--- tt.enemy.melee_slot = v(10, 0)
--- tt.render.sprites[1].anchor = v(0.5, 0.12)
--- tt.render.sprites[1].prefix = "hero_gerald"
--- tt.health_bar.offset = v(0, 36)
--- tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0002" or "heroPortrait_portraits_0002"
--- tt.info.i18n_key = "HERO_PALADIN"
--- tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0002" or "info_portraits_hero_0005"
--- tt.info.fn = scripts.enemy_basic.get_info
--- tt.unit.marker_offset = v(0, 0)
--- tt.unit.mod_offset = v(0, 20)
--- tt.melee.cooldown = 1
--- tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
--- a = tt.melee.attacks[2]
--- a.animation = "attack2"
--- a.chance = 0.5
--- tt.main_script.update = function(this, store)
---     this.health_bar.hidden = false
---     local courage = this.timed_attacks.list[1]
---     while true do
---         if this.health.dead then
---             SU.y_enemy_death(store, this)
---             return
---         end
---         if this.unit.is_stunned then
---             SU.y_enemy_stun(store, this)
---         else
---             if this.dodge.active then
---                 this.dodge.active = false
---                 this.dodge.counter_attack_pending = true
---                 local la = this.dodge.last_attack
---                 local ca = this.dodge.counter_attack
-
---                 if la then
---                     ca.damage_max = la.damage_max * (ca.reflected_damage_factor) * this.unit.damage_factor
---                     ca.damage_min = la.damage_min * (ca.reflected_damage_factor) * this.unit.damage_factor
---                 end
---                 goto while_end
---             end
-
---             if ready_to_attack(courage, store) and this.health.hp_max > this.health.hp and this.enemy.can_do_magic then
---                 local entities
---                 if store.enemies then
---                     entities = store.enemies
---                 else
---                     entities = store.entities
---                 end
---                 local targets = U.find_enemies_in_range(entities, this.pos, 0, courage.range, courage.vis_flags, courage.vis_bans,
---                     function(v)
---                         return not U.has_modifier_in_list(store, v, {courage.mod})
---                     end)
-
---                 if not targets then
---                     SU.delay_attack(store, courage, 0.5)
---                 else
---                     local start_ts = store.tick_ts
---                     S:queue(courage.sound)
---                     U.animation_start(this, courage.animation, nil, store.tick_ts)
---                     if y_enemy_wait(store, this, courage.shoot_time) then
---                         goto while_end
---                     end
---                     courage.ts = start_ts
---                     for _, e in pairs(targets) do
---                         local mod = E:create_entity(courage.mod)
---                         mod.modifier.target_id = e.id
---                         mod.modifier.source_id = this.id
---                         queue_insert(store, mod)
---                     end
---                     while not U.animation_finished(this) do
---                         if this.health.dead or this.unit.is_stunned then
---                             break
---                         end
---                         coroutine.yield()
---                     end
---                     goto while_end
---                 end
---             end
---             local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, function()
---                 return ready_to_attack(courage, store) and this.health.hp_max > this.health.hp and this.enemy.can_do_magic
---             end)
---             if cont then
---                 if blocker then
---                     if not SU.y_wait_for_blocker(store, this, blocker) then
---                         goto while_end
---                     end
---                     while SU.can_melee_blocker(store, this, blocker) do
---                         if this.dodge.counter_attack_pending and ready_to_attack(this.dodge.counter_attack, store) then
---                             this.dodge.counter_attack_pending = false
---                             this.melee.last_attack = {
---                                 target_id = blocker.id,
---                                 attack = this.dodge.counter_attack
---                             }
---                             local target = store.entities[blocker.id]
---                             enemy_do_counter_attack(store, this, target)
---                         end
---                         if not SU.y_enemy_melee_attacks(store, this, blocker) then
---                             goto while_end
---                         end
---                         coroutine.yield()
---                     end
---                 end
---             end
---         end
---         ::while_end::
---         coroutine.yield()
---     end
--- end
 
 tt = RT("mod_eb_gerald_courage", "modifier")
 AC(tt, "render")
