@@ -15,7 +15,10 @@ require("constants")
 
 local U = {}
 
--- 返回从 from 到 to 的随机数
+--- 返回从 from 到 to 的随机数
+--- @param from number 起始值
+--- @param to number 结束值
+--- @return number 随机数
 function U.frandom(from, to)
     return math.random() * (to - from) + from
 end
@@ -1486,7 +1489,7 @@ function U.blocker_rank(store, blocker)
 end
 
 -- 当士兵的目标(目前为唯一的) 不存在/已死亡/band(vis.bans, F_BLOCK)~= 0 时，返回 false
--- 否则，说明这个被拦截对象有效，返回 true
+-- 否则，说明这个被拦截实体有效，返回 true
 function U.is_blocked_valid(store, blocker)
     local blocked_id = blocker.soldier.target_id
     local blocked = store.entities[blocked_id]
