@@ -8,6 +8,7 @@ local i18n = require("i18n")
 
 require("constants")
 
+local scale_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
 local features = require("features")
 local anchor_y = 0
 local image_y = 0
@@ -817,15 +818,18 @@ tt.editor.r = 0
 tt.editor.len = 240
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "waveFlag_0001"
+tt.render.sprites[1].scale = vv(scale_scale)
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "waveFlag_0004"
+tt.render.sprites[2].scale = vv(scale_scale)
 tt.render.sprites[3] = E:clone_c("sprite")
 tt.render.sprites[3].animated = false
 tt.render.sprites[3].name = "line_red_dotted"
 tt.render.sprites[3].anchor.x = 0
 tt.render.sprites[3]._width = 128
 tt.render.sprites[3].z = tt.render.sprites[1].z - 1
+tt.render.sprites[3].scale = vv(scale_scale)
 tt.main_script.insert = scripts.editor_wave_flag.insert
 tt.editor_script.update = scripts.editor_wave_flag.editor_update
 tt.editor.props = {{"editor.path_id", PT_NUMBER}, {"editor.r", PT_NUMBER, math.pi / 180}, {"editor.len", PT_NUMBER}}
@@ -836,13 +840,16 @@ tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "editor_square_blue"
 tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.render.sprites[1].scale = vv(scale_scale)
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "line_blue_dotted_thin"
 tt.render.sprites[2].anchor.x = 0
+tt.render.sprites[2].scale = vv(scale_scale)
 tt.render.sprites[3] = E:clone_c("sprite")
 tt.render.sprites[3].animated = false
 tt.render.sprites[3].name = "editor_triangle_blue"
+tt.render.sprites[3].scale = vv(scale_scale)
 tt.line_image_width = 128
 
 tt = E:register_t("editor_shape_square_blue")
@@ -850,24 +857,28 @@ E:add_comps(tt, "pos", "render", "editor")
 tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "editor_square_blue"
+tt.render.sprites[1].scale = vv(scale_scale)
 
 tt = E:register_t("editor_shape_triangle_blue")
 E:add_comps(tt, "pos", "render", "editor")
 tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "editor_triangle_blue"
+tt.render.sprites[1].scale = vv(scale_scale)
 
 tt = E:register_t("editor_rally_point")
 E:add_comps(tt, "pos", "editor", "editor_script", "render")
 tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "rally_feedback_0002"
+tt.render.sprites[1].scale = vv(scale_scale)
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "line_white_dotted"
 tt.render.sprites[2].anchor.x = 0
+tt.render.sprites[2].scale = vv(scale_scale)
 tt.tower_id = nil
-tt.image_width = 128
+tt.image_width = 180
 tt.editor_script.update = scripts.editor_rally_point.update
 tt.editor_script.remove = scripts.editor_rally_point.remove
 

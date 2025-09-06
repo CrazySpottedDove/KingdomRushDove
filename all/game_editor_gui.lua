@@ -1,14 +1,10 @@
 ﻿-- chunkname: @./all/game_editor_gui.lua
-
 local log = require("klua.log"):new("game_editor_gui")
 
-log.level = log.DEBUG_LEVEL
-
+local ism
 local km = require("klua.macros")
-
 require("klua.table")
 require("klove.kui")
-
 local kui_db = require("klove.kui_db")
 local F = require("klove.font_db")
 local I = require("klove.image_db")
@@ -19,28 +15,50 @@ local U = require("utils")
 local V = require("klua.vector")
 local v = V.v
 local r = V.r
-local ism = require("input_state_machine")
 local P = require("path_db")
 local GR = require("grid_db")
 local GS = require("game_settings")
+local G = love.graphics
+require("constants")
+
+local IS_KR5 = KR_GAME == "kr5"
+
+if IS_KR5 then
+	ism = require("klove.input_state_machine")
+else
+	ism = require("input_state_machine")
+end
 
 if DEBUG then
 	package.loaded.game_editor_classes = nil
 end
-
 require("game_editor_classes")
-
-local G = love.graphics
-
-require("constants")
-
 local NODE_SELECTION_WINDOW = 8
+log.level = log.DEBUG_LEVEL
+
 local gui = {}
 
 gui.required_textures = {}
 
 local function wid(id)
 	return gui.window:get_child_by_id(id)
+end
+
+--- 计算两个坐标之差的绝对值是否小于给定值
+--- @param axi1 table 坐标1
+--- @param axi2 table 坐标2
+--- @param range number? 值（可选，默认 550）
+--- @return boolean
+function gui.are_axes_in_range(axi1, axi2, range)
+	range = range or 550
+	local vx = math.abs(axi1.x - axi2.x)
+	local vy = math.abs(axi1.y - axi2.y)
+
+	if vx < range and vy < range then
+		return true
+	elseif vx == 0 and vy == 0 then
+		return nil, "is_0"
+	end
 end
 
 function gui:init(w, h, editor)
@@ -113,6 +131,20 @@ function gui:init(w, h, editor)
 		end
 	end
 
+	wid("tg_safe_frame").on_click = function()
+		gui.editor.safe_frame_visible = not gui.editor.safe_frame_visible
+
+		if gui.editor.safe_frame_visible then
+			wid("tg_safe_frame"):activate()
+		else
+			wid("tg_safe_frame"):deactivate()
+		end
+	end
+
+	if gui.editor.safe_frame_visible then
+		wid("tg_safe_frame"):activate()
+	end
+
 	wid("cell_info").update = function(this, dt)
 		self:grid_cell_info_update(this, dt)
 	end
@@ -143,6 +175,11 @@ function gui:init(w, h, editor)
 	wid("paint_flag_ice").on_click = function()
 		self:toggle_grid_paint_flag(TERRAIN_ICE)
 	end
+
+	wid("paint_flag_flying_nw").on_click = function()
+		self:toggle_grid_paint_flag(TERRAIN_FLYING_NOWALK)
+	end
+
 	wid("brush_size_inc").on_click = function()
 		self:grid_brush_size_change(2)
 	end
@@ -257,7 +294,7 @@ function gui:init(w, h, editor)
 		gui:path_node_width_change(this)
 	end
 	wid("path_node_extend").on_click = function(this)
-		gui:path_node_modifiy(this)
+		gui:path_node_modify(this)
 	end
 	wid("path_node_subdivide").on_click = function(this)
 		gui:path_node_modify(this)
@@ -283,6 +320,9 @@ function gui:init(w, h, editor)
 		end,
 		backspace = function()
 			self:path_node_remove()
+		end,
+		v = function()
+			self:preview_path()
 		end
 	}
 	wid("nav_id_top").on_change = function(this)
@@ -302,6 +342,10 @@ function gui:init(w, h, editor)
 		gui:select_entity_nav(gui.editor.nav_entity_selected)
 	end
 	wid("nav_nearest_all").on_click = function(this)
+		if not gui.editor.nav_entity_selected then
+			return
+		end
+
 		gui.assign_nearest_all()
 		gui:select_entity_nav(gui.editor.nav_entity_selected)
 	end
@@ -387,6 +431,7 @@ end
 function gui:level_loaded(level_idx)
 	wid("tools_level_name"):set_value(level_idx)
 	self:update_grid_tool()
+	self:refresh_nav_tool()
 end
 
 function gui:pointer_pos_label_update(this, dt)
@@ -515,7 +560,7 @@ function gui:click_tool(btn, x, y)
 	elseif self.active_tool == "entities" then
 		local cb = self.select_entity
 
-		self:entities_select(wx, wy, cb)
+		self:entities_select(wx, wy, cb, 12)
 	elseif self.active_tool == "nav" then
 		local cb = self.select_entity_nav
 
@@ -611,7 +656,8 @@ function gui:toggle_grid_paint_flag(flag)
 		[TERRAIN_SHALLOW] = "shallow",
 		[TERRAIN_NOWALK] = "nowalk",
 		[TERRAIN_FAERIE] = "faerie",
-		[TERRAIN_ICE] = "ice"
+		[TERRAIN_ICE] = "ice",
+		[TERRAIN_FLYING_NOWALK] = "flying_nw"
 	}
 
 	for k, n in pairs(buttons) do
@@ -640,7 +686,7 @@ end
 
 function gui:grid_paint(wx, wy, btn)
 	local s = self.settings.grid
-	local bw = (s.brush_size - 1) * 0.5
+	local bw = (s.brush_size - 1) / 2
 	local temp_brush = s.paint
 
 	if btn == "2" then
@@ -679,11 +725,37 @@ function gui:update_grid_tool()
 	wid("grid_offset"):set_value(V.v(GR.ox, GR.oy), true)
 end
 
-function gui:entities_select(wx, wy, callback, size)
-	log.debug("")
+function gui:refresh_nav_tool()
+	local editor = self.editor
 
+	if editor.store.level_mode == 1 then
+		wid("nav_mode_override_active").on_change = nil
+
+		wid("nav_mode_override_active"):set_value(false)
+		wid("nav_mode_override_active"):disable()
+	else
+		wid("nav_mode_override_active").active_title = "mesh for mode " .. editor.store.level_mode
+		wid("nav_mode_override_active").on_change = nil
+
+		if editor.store.level.data.level_mode_overrides[editor.store.level_mode].nav_mesh then
+			wid("nav_mode_override_active"):set_value(true)
+		else
+			wid("nav_mode_override_active"):set_value(false)
+		end
+
+		wid("nav_mode_override_active").on_change = function(this)
+			gui:nav_mode_override_change(this)
+		end
+
+		wid("nav_mode_override_active"):enable()
+	end
+end
+
+function gui:entities_select(wx, wy, callback, size)
 	local e
 	local es = self.editor:entities_at_pos(wx, wy, size)
+
+	log.debug("es:%s", es and getdump(es) or "-")
 
 	if es and #es > 0 then
 		local idx = 1
@@ -700,7 +772,7 @@ function gui:entities_select(wx, wy, callback, size)
 		e = es[idx]
 	end
 
-	callback(self, e)
+	callback(self, e, es)
 end
 
 function gui:select_entity(e)
@@ -794,12 +866,25 @@ function gui:update_entity_prop(prop_view)
 	local prop_value = prop_view.value
 	local picker = wid("picker")
 
+	if not self._last_prop_value then
+		self._last_prop_value = {
+			x = prop_value.x,
+			y = prop_value.y
+		}
+	end
+
 	if prop_type == PT_COORDS then
-		if prop_value.x and prop_value.y then
+		local state, reason = self.are_axes_in_range(prop_value, self._last_prop_value)
+
+		if state then
 			self.editor:undo_push_entity(picker.tracking, e.id, prop_name .. ".x", get_prop(e, prop_name .. ".x"), prop_name .. ".y", get_prop(e, prop_name .. ".y"))
 			set_prop(e, prop_name .. ".x", prop_value.x)
 			set_prop(e, prop_name .. ".y", prop_value.y)
+
+			self._last_prop_value.x = prop_value.x
+			self._last_prop_value.y = prop_value.y
 		end
+
 	else
 		self.editor:undo_push_entity(picker.tracking, e.id, prop_name, get_prop(e, prop_name), picker.tracking)
 		set_prop(e, prop_name, prop_value)
@@ -876,7 +961,7 @@ function gui:insert_entity()
 
 	local e = E:create_entity(template)
 
-	e.pos.x, e.pos.y = REF_W * 0.5, REF_H * 0.5 - 50
+	e.pos.x, e.pos.y = REF_W / 2, REF_H / 2 - 50
 
 	LU.queue_insert(self.editor.store, e)
 end
@@ -921,7 +1006,7 @@ function gui:duplicate_entity()
 
 	local de = E:create_entity(e.template_name)
 
-	de.pos = V.v(e.pos.x, e.pos.y)
+	de.pos = V.v(e.pos.x, e.pos.y - 50)
 
 	if e.editor then
 		for _, item in pairs(e.editor.props) do
@@ -1066,7 +1151,7 @@ function gui:path_nodes_select(x, y, w, h)
 	if not w or not h then
 		multi = false
 		w, h = NODE_SELECTION_WINDOW, NODE_SELECTION_WINDOW
-		x, y = x - w * 0.5, y - h * 0.5
+		x, y = x - w / 2, y - h / 2
 	end
 
 	local r = V.r(x, y, w, h)
@@ -1346,13 +1431,46 @@ function gui:preview_path(view)
 	self.editor:preview_path_points(pi)
 end
 
-function gui:select_entity_nav(e)
+function gui:nav_mode_override_change(prop_view)
+	log.debug("prop view:%s value:%s", prop_view, prop_view.value)
+
+	local ov = self.editor.store.level.data.level_mode_overrides
+
+	if prop_view.value then
+		if not ov[self.editor.store.level_mode].nav_mesh then
+			self.editor.store.level.data._before_ov.nav_mesh = table.deepclone(self.editor.store.level.nav_mesh)
+		end
+
+		ov[self.editor.store.level_mode].nav_mesh = self.editor.store.level.nav_mesh
+	else
+		ov[self.editor.store.level_mode].nav_mesh = nil
+		self.editor.store.level.nav_mesh = self.editor.store.level.data._before_ov.nav_mesh
+
+		self.editor:sanitize_nav_mesh(self.editor.store.level.nav_mesh)
+
+		self.editor.nav_dirty = true
+	end
+end
+
+function gui:select_entity_nav(e, es)
+	if not e or not es then
+		return
+	end
+
 	local v_dir_ids = {
 		"nav_id_right",
 		"nav_id_top",
 		"nav_id_left",
 		"nav_id_bottom"
 	}
+
+	if not e or not e.ui or not e.ui.nav_mesh_id then
+		for _, ee in pairs(es) do
+			if ee and ee.ui and ee.ui.nav_mesh_id then
+				e = ee
+			end
+		end
+	end
 
 	if e and e.ui and e.ui.nav_mesh_id then
 		self.editor.nav_entity_selected = e

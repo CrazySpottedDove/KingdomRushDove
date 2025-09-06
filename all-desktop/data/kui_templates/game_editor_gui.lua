@@ -74,7 +74,7 @@ return {
 			},
 			size = {
 				x = 200,
-				y = 400
+				y = 500
 			},
 			colors = {
 				background = {
@@ -111,7 +111,7 @@ return {
 					}
 				},
 				{
-					text = "KR EDITOR",
+					text = "关卡编辑器",
 					class = "KLabel",
 					id = "tools_title",
 					text_align = "left",
@@ -154,13 +154,13 @@ return {
 						},
 						{
 							id = "tools_level_name",
-							title = "Level name",
+							title = "关卡",
 							class = "KEPropNum",
 							value = 1
 						},
 						{
 							id = "tools_game_mode",
-							title = "Game mode",
+							title = "游戏模式",
 							class = "KEPropNum",
 							value = 1
 						},
@@ -171,7 +171,7 @@ return {
 								{
 									id = "tools_save",
 									class = "KEButton",
-									title = "save",
+									title = "保存",
 									size = {
 										x = 86,
 										y = 20
@@ -180,7 +180,7 @@ return {
 								{
 									id = "tools_load",
 									class = "KEButton",
-									title = "load",
+									title = "加载",
 									size = {
 										x = 86,
 										y = 20
@@ -190,7 +190,7 @@ return {
 						},
 						{
 							id = "tools_undo",
-							title = "undo",
+							title = "撤销",
 							class = "KEButton"
 						},
 						{
@@ -199,27 +199,36 @@ return {
 						},
 						{
 							id = "tools_general",
-							title = "general",
+							title = "常规",
 							class = "KEButton"
 						},
 						{
 							id = "tools_entities",
-							title = "entities",
+							title = "实体",
 							class = "KEButton"
 						},
 						{
 							id = "tools_paths",
-							title = "paths",
+							title = "路径",
 							class = "KEButton"
 						},
 						{
 							id = "tools_grid",
-							title = "grid",
+							title = "网格",
 							class = "KEButton"
 						},
 						{
 							id = "tools_nav",
-							title = "nav",
+							title = "方向键导航",
+							class = "KEButton"
+						},
+						{
+							class = "KESep",
+							title = "Toggles"
+						},
+						{
+							id = "tg_safe_frame",
+							title = "切换安全框",
 							class = "KEButton"
 						}
 					}
@@ -273,7 +282,7 @@ return {
 					}
 				},
 				{
-					text = "GENERAL",
+					text = "常规",
 					class = "KLabel",
 					id = "general_title",
 					text_align = "left",
@@ -347,7 +356,7 @@ return {
 					}
 				},
 				{
-					text = "ENTITIES",
+					text = "实体",
 					class = "KLabel",
 					id = "entities_title",
 					text_align = "left",
@@ -383,12 +392,12 @@ return {
 					children = {
 						{
 							id = "entities_delete",
-							title = "delete",
+							title = "删除实体",
 							class = "KEButton"
 						},
 						{
 							id = "entities_duplicate",
-							title = "duplicate",
+							title = "复制实体",
 							class = "KEButton"
 						},
 						{
@@ -399,13 +408,13 @@ return {
 						},
 						{
 							id = "entities_template",
-							title = "Template",
+							title = "模板名",
 							class = "KEProp",
 							prop_name = "template_name"
 						},
 						{
 							id = "entities_pos",
-							title = "pos",
+							title = "坐标",
 							class = "KEPropCoords",
 							prop_name = "pos"
 						},
@@ -431,7 +440,7 @@ return {
 							children = {
 								{
 									id = "entities_show",
-									title = "show",
+									title = "显示实体",
 									class = "KEButton",
 									size = {
 										x = 88,
@@ -440,7 +449,7 @@ return {
 								},
 								{
 									id = "entities_hide",
-									title = "hide",
+									title = "隐藏实体",
 									class = "KEButton",
 									size = {
 										x = 88,
@@ -451,18 +460,18 @@ return {
 						},
 						{
 							id = "entities_insert",
-							title = "insert",
+							title = "插入实体",
 							class = "KEButton"
 						},
 						{
 							id = "entities_insert_template",
-							title = "Template",
+							title = "模板名",
 							class = "KEProp",
 							editable = true
 						},
 						{
 							id = "entities_search",
-							title = "search",
+							title = "搜索",
 							class = "KEButton"
 						},
 						{
@@ -520,7 +529,7 @@ return {
 					}
 				},
 				{
-					text = "PATHS",
+					text = "路径",
 					class = "KLabel",
 					id = "paths_title",
 					text_align = "left",
@@ -565,7 +574,7 @@ return {
 							children = {
 								{
 									class = "KESep",
-									title = "Paths list"
+									title = "路径列表"
 								},
 								{
 									id = "paths_list",
@@ -581,7 +590,7 @@ return {
 									children = {
 										{
 											id = "path_create",
-											title = "create",
+											title = "创建新路径",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -590,7 +599,7 @@ return {
 										},
 										{
 											id = "path_remove",
-											title = "remove",
+											title = "移除路径",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -605,7 +614,7 @@ return {
 									children = {
 										{
 											id = "path_move_up",
-											title = "move up",
+											title = "上移",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -614,7 +623,7 @@ return {
 										},
 										{
 											id = "path_move_down",
-											title = "move down",
+											title = "下移",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -629,7 +638,7 @@ return {
 									children = {
 										{
 											id = "path_duplicate",
-											title = "duplicate",
+											title = "复制路径",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -638,7 +647,7 @@ return {
 										},
 										{
 											id = "path_flip",
-											title = "flip",
+											title = "镜像",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -649,19 +658,19 @@ return {
 								},
 								{
 									id = "path_preview",
-									title = "preview points",
+									title = "查看子路径",
 									class = "KEButton"
 								},
 								{
 									id = "path_active",
 									class = "KEPropBool",
 									value = true,
-									title = "active",
+									title = "活跃的",
 									inactive_title = "inactive"
 								},
 								{
 									id = "path_connects_to",
-									title = "Connects to",
+									title = "连接到路径",
 									class = "KEPropNum",
 									value = -1
 								}
@@ -678,20 +687,20 @@ return {
 							children = {
 								{
 									class = "KESep",
-									title = "Node"
+									title = "节点"
 								},
 								{
 									id = "path_node_id",
-									title = "Node id",
+									title = "当前选择的节点",
 									class = "KEProp"
 								},
 								{
 									id = "path_node_pos",
-									title = "pos",
+									title = "坐标",
 									class = "KEPropCoords"
 								},
 								{
-									id = "path_node_width",
+									id = "路径节点宽度",
 									title = "node width",
 									class = "KEPropNum",
 									value = 20
@@ -702,7 +711,7 @@ return {
 									children = {
 										{
 											id = "path_node_subdivide",
-											title = "subdivide",
+											title = "细分路径",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -711,7 +720,7 @@ return {
 										},
 										{
 											id = "path_node_extend",
-											title = "extend",
+											title = "扩充路径",
 											class = "KEButton",
 											size = {
 												x = 88,
@@ -722,7 +731,7 @@ return {
 								},
 								{
 									id = "path_node_remove",
-									title = "remove",
+									title = "移除",
 									class = "KEButton"
 								}
 							}
@@ -741,7 +750,7 @@ return {
 			},
 			size = {
 				x = 200,
-				y = 400
+				y = 450
 			},
 			colors = {
 				background = {
@@ -778,7 +787,7 @@ return {
 					}
 				},
 				{
-					text = "GRID",
+					text = "网格",
 					class = "KLabel",
 					id = "grid_title",
 					text_align = "left",
@@ -817,7 +826,7 @@ return {
 						},
 						{
 							class = "KESep",
-							title = "Terrains"
+							title = "地形"
 						},
 						{
 							style = "horizontal",
@@ -826,7 +835,7 @@ return {
 								{
 									id = "paint_type_none",
 									class = "KEButton",
-									title = "None",
+									title = "无",
 									size = {
 										x = 88,
 										y = 20
@@ -835,7 +844,7 @@ return {
 								{
 									id = "paint_type_land",
 									class = "KEButton",
-									title = "Land",
+									title = "陆地",
 									size = {
 										x = 88,
 										y = 20
@@ -850,7 +859,7 @@ return {
 								{
 									id = "paint_type_water",
 									class = "KEButton",
-									title = "Water",
+									title = "水",
 									size = {
 										x = 88,
 										y = 20
@@ -859,7 +868,7 @@ return {
 								{
 									id = "paint_type_cliff",
 									class = "KEButton",
-									title = "Cliff",
+									title = "悬崖",
 									size = {
 										x = 88,
 										y = 20
@@ -869,7 +878,7 @@ return {
 						},
 						{
 							class = "KESep",
-							title = "Flags"
+							title = "标签"
 						},
 						{
 							style = "horizontal",
@@ -878,7 +887,7 @@ return {
 								{
 									id = "paint_flag_shallow",
 									class = "KEButton",
-									title = "shallow",
+									title = "浅滩",
 									size = {
 										x = 88,
 										y = 20
@@ -887,7 +896,7 @@ return {
 								{
 									id = "paint_flag_nowalk",
 									class = "KEButton",
-									title = "no-walk",
+									title = "无法行走",
 									size = {
 										x = 88,
 										y = 20
@@ -902,7 +911,7 @@ return {
 								{
 									id = "paint_flag_faerie",
 									class = "KEButton",
-									title = "faerie",
+									title = "仙子",
 									size = {
 										x = 88,
 										y = 20
@@ -911,7 +920,22 @@ return {
 								{
 									id = "paint_flag_ice",
 									class = "KEButton",
-									title = "ice",
+									title = "冰",
+									size = {
+										x = 88,
+										y = 20
+									}
+								}
+							}
+						},
+						{
+							style = "horizontal",
+							class = "KELayout",
+							children = {
+								{
+									id = "paint_flag_flying_nw",
+									class = "KEButton",
+									title = "飞行",
 									size = {
 										x = 88,
 										y = 20
@@ -921,7 +945,7 @@ return {
 						},
 						{
 							class = "KESep",
-							title = "Brush size"
+							title = "笔刷大小"
 						},
 						{
 							style = "horizontal",
@@ -949,7 +973,7 @@ return {
 						},
 						{
 							class = "KESep",
-							title = "Grid"
+							title = "网格"
 						},
 						{
 							style = "vertical",
@@ -959,14 +983,14 @@ return {
 									prop_name = "grid_size",
 									class = "KEPropCoords",
 									id = "grid_size",
-									title = "size (cells)",
+									title = "单元格大小",
 									step = 2
 								},
 								{
 									prop_name = "grid_offset",
 									class = "KEPropCoords",
 									id = "grid_offset",
-									title = "offset (px)",
+									title = "偏移 (px)",
 									step = 16
 								}
 							}
@@ -1022,7 +1046,7 @@ return {
 					}
 				},
 				{
-					text = "NAV MESH",
+					text = "方向键导航",
 					class = "KLabel",
 					id = "nav_title",
 					text_align = "left",
@@ -1053,20 +1077,31 @@ return {
 					pos = v(10, 30),
 					children = {
 						{
+							class = "KESep",
+							title = "模式"
+						},
+						{
+							id = "nav_mode_override_active",
+							class = "KEPropBool",
+							value = true,
+							title = "网",
+							inactive_title = "默认"
+						},
+						{
 							id = "nav_sel_id",
-							title = "selected id",
+							title = "选择的 id",
 							class = "KEProp",
 							prop_name = "nav_sel_id"
 						},
 						{
 							id = "nav_holder_id",
-							title = "holder id",
+							title = "塔位 id",
 							class = "KEProp",
 							prop_name = "nav_holder_id"
 						},
 						{
 							class = "KESep",
-							title = "top/left/right/bottom"
+							title = "上/左/右/下"
 						},
 						{
 							class = "KEEnum",
