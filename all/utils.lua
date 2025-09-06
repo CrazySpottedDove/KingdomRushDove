@@ -391,9 +391,7 @@ end
 --- @param group string 动画组名
 --- @param angle number 角度（弧度）
 --- @param idx number|nil 精灵索引（可选，默认1）
---- @return string 动画名称
---- @return boolean 是否水平翻转
---- @return number 象限索引
+--- @return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_for_angle(e, group, angle, idx)
     idx = idx or 1
 
@@ -473,9 +471,7 @@ end
 --- @param idx number|nil 精灵索引（可选）
 --- @param offset table|nil 偏移量 {x, y}（可选）
 --- @param use_path boolean|nil 是否使用路径点（可选）
---- @return string 动画名称
---- @return boolean 是否水平翻转
---- @return number 象限索引
+--- @return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
     local fx, fy
 
@@ -855,8 +851,7 @@ end
 --- @param flags number 标志位
 --- @param bans number 禁止标志位
 --- @param filter_func function|nil 过滤函数（可选）
---- @return table|nil 最近的敌人
---- @return table|nil 所有范围内的敌人
+--- @return table|nil 最近的敌人, table|nil 所有范围内的敌人
 function U.find_nearest_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
     local targets = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
 
@@ -879,8 +874,7 @@ end
 --- @param flags number 标志位
 --- @param bans number 禁止标志位
 --- @param filter_func function|nil 过滤函数（可选）
---- @return table|nil 最近的目标
---- @return table|nil 所有范围内的目标
+--- @return table|nil 最近的目标, table|nil 所有范围内的目标
 function U.find_nearest_target(entities, origin, min_range, max_range, flags, bans, filter_func)
     local targets = U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 
@@ -1022,8 +1016,7 @@ end
 --- @param flags number 标志位
 --- @param bans number 禁止标志位
 --- @param filter_func function|nil 过滤函数（可选）
---- @return table|nil 随机敌人
---- @return table|nil 敌人预测位置
+--- @return table|nil 随机敌人, table|nil 敌人预测位置
 function U.find_random_enemy_with_pos(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func)
     flags = flags or 0
     bans = bans or 0
@@ -1183,8 +1176,7 @@ end
 --- @param bans number 禁止标志位
 --- @param filter_func function|nil 过滤函数（可选）
 --- @param min_override_flags number|nil 最小覆盖标志（可选）
---- @return table|nil 血量最高的敌人
---- @return table|nil 敌人预测位置
+--- @return table|nil 血量最高的敌人, table|nil 敌人预测位置
 function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
                               min_override_flags)
     flags = flags or 0
@@ -1290,8 +1282,7 @@ end
 --- @param filter_func function|nil 过滤函数（可选）
 --- @param min_override_flags number|nil 最小覆盖标志（可选）
 --- @param cover_range number 覆盖范围
---- @return table|nil 最前面的敌人
---- @return table|nil 所有范围内的敌人
+--- @return table|nil 最前面的敌人, table|nil 所有范围内的敌人
 function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_range, prediction_time, flags, bans,
                                                  filter_func, min_override_flags, cover_range)
     flags = flags or 0
@@ -1393,8 +1384,7 @@ end
 --- @param bans number 禁止标志位
 --- @param filter_func function|nil 过滤函数（可选）
 --- @param min_override_flags number|nil 最小覆盖标志（可选）
---- @return table|nil 最前面的敌人
---- @return table|nil 所有范围内的敌人
+--- @return table|nil 最前面的敌人, table|nil 所有范围内的敌人
 function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, max_range, prediction_time, flags, bans,
                                                       filter_func, min_override_flags)
     flags = flags or 0
@@ -1445,8 +1435,7 @@ end
 --- @param bans number 禁止标志位
 --- @param filter_func function|nil 过滤函数（可选）
 --- @param min_override_flags number|nil 最小覆盖标志（可选）
---- @return table|nil 最前面的敌人
---- @return table|nil 所有范围内的敌人
+--- @return table|nil 最前面的敌人, table|nil 所有范围内的敌人
 function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
                                min_override_flags)
     flags = flags or 0
@@ -1641,8 +1630,7 @@ end
 --- @param enemy table 敌人实体
 --- @param rank number|nil 排名（可选）
 --- @param back boolean|nil 是否在后面（可选）
---- @return table|nil 士兵位置
---- @return boolean|nil 士兵是否在右侧
+--- @return table|nil 士兵位置, boolean|nil 士兵是否在右侧
 function U.melee_slot_position(soldier, enemy, rank, back)
     if not rank then
         rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
@@ -1681,8 +1669,7 @@ end
 --- @param barrack table 兵营实体
 --- @param count number|nil 总数（可选）
 --- @param angle_offset number|nil 角度偏移（可选）
---- @return table 位置坐标
---- @return table 中心点坐标
+--- @return table 位置坐标, table 中心点坐标
 function U.rally_formation_position(idx, barrack, count, angle_offset)
     local pos
 
@@ -1976,9 +1963,7 @@ end
 
 --- 计算星星数量
 --- @param slot table 存档槽位
---- @return number 战役星星数
---- @return number 英雄模式星星数
---- @return number 铁人模式星星数
+--- @return number 战役星星数, number 英雄模式星星数, number 铁人模式星星数
 function U.count_stars(slot)
     local campaign = 0
     local heroic = 0
@@ -2139,8 +2124,7 @@ end
 --- 获取英雄等级
 --- @param xp number 经验值
 --- @param thresholds table 等级阈值数组
---- @return number 等级
---- @return number 下一级进度（0-1）
+--- @return number 等级, number 下一级进度（0-1）
 function U.get_hero_level(xp, thresholds)
     local level = 1
 
@@ -2229,8 +2213,7 @@ end
 --- @param store table game.store
 --- @param entity table 实体
 --- @param ... string mod类型
---- @return boolean 是否有指定类型的mod
---- @return table mod列表
+--- @return boolean 是否有指定类型的mod, table mod列表
 function U.has_modifier_types(store, entity, ...)
     local mods = entity._applied_mods
     if not mods then
