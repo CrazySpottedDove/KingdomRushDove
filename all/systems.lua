@@ -1225,6 +1225,7 @@ function sys.main_script:on_update(dt, ts, store)
         end
     end
 end
+
 if PERFORMANCE_MONITOR_ENABLED and false then
     function sys.main_script:init(store)
         self.print_counter = 0

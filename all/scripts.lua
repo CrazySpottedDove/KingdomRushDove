@@ -3430,9 +3430,8 @@ function scripts.bolt_trace_target.update(this, store, script)
                 retarget_attempts = retarget_attempts + 1
 
                 -- 在法球当前位置周围寻找新目标
-                local search_range = 50
-                local new_enemy = U.find_foremost_enemy(store, this.pos, 0, search_range, false, b.vis_flags,
-                    b.vis_bans)
+                local search_range = 75
+                local new_enemy = U.find_first_enemy(store, this.pos, 0, search_range, b.vis_flags, b.vis_bans)
 
                 if new_enemy then
                     -- 找到新目标，更新相关数据
