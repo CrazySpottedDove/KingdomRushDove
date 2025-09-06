@@ -48,7 +48,8 @@ editor.ref_res = TEXTURE_SIZE_ALIAS.ipad
 editor.simulation_systems = {
 	"editor_overrides",
 	"editor_script",
-	"render"
+	"render",
+    "last_hook"
 }
 
 function editor:init(screen_w, screen_h, done_callback)
