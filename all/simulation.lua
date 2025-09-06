@@ -198,7 +198,7 @@ function simulation:remove_entity(e)
 			for _, dqsys in ipairs(self.systems_on_dequeue) do
 				dqsys:on_dequeue(e, d, false)
 			end
-
+            print(string.format("remove %s aborted", e.template_name))
 			return
 		end
 	end
