@@ -23,7 +23,8 @@ function U.frandom(from, to)
     return math.random() * (to - from) + from
 end
 
--- 随机 +- 1
+--- 随机返回 -1 或 1
+--- @return number 随机符号（-1 或 1）
 function U.random_sign()
     if math.random() < 0.5 then
         return -1
@@ -32,7 +33,9 @@ function U.random_sign()
     end
 end
 
--- 对于索引从 1 开始的连续的数组，返回一个随机索引
+--- 对于索引从 1 开始的连续的数组，返回一个随机索引
+--- @param list table 概率数组（元素值表示权重）
+--- @return number 随机索引
 function U.random_table_idx(list)
     local rn = math.random()
     local acc = 0
@@ -48,6 +51,15 @@ function U.random_table_idx(list)
     return #list
 end
 
+--- 协程：渐变多个键值
+--- @param store table game.store
+--- @param key_tables table 目标表数组
+--- @param key_names table 键名数组
+--- @param froms table 起始值数组
+--- @param tos table 目标值数组
+--- @param duration number 持续时间
+--- @param easings table|nil 缓动函数数组（可选）
+--- @param fn function|nil 每帧回调函数（可选）
 function U.y_ease_keys(store, key_tables, key_names, froms, tos, duration, easings, fn)
     local start_ts = store.tick_ts
     local phase
@@ -73,17 +85,33 @@ function U.y_ease_keys(store, key_tables, key_names, froms, tos, duration, easin
     until phase >= 1
 end
 
+--- 协程：渐变单个键值
+--- @param store table game.store
+--- @param key_table table 目标表
+--- @param key_name string 键名
+--- @param from number 起始值
+--- @param to number 目标值
+--- @param duration number 持续时间
+--- @param easing string|nil 缓动函数（可选）
+--- @param fn function|nil 每帧回调函数（可选）
 function U.y_ease_key(store, key_table, key_name, from, to, duration, easing, fn)
-    U.y_ease_keys(store, {key_table}, {key_name}, {from}, {to}, duration, {easing}, fn)
+    U.y_ease_keys(store, { key_table }, { key_name }, { from }, { to }, duration, { easing }, fn)
 end
 
+--- 计算缓动值
+--- @param from number 起始值
+--- @param to number 目标值
+--- @param phase number 进度（0-1）
+--- @param easing string|nil 缓动函数（可选）
+--- @return number 缓动后的值
 function U.ease_value(from, to, phase, easing)
     return from + (to - from) * U.ease_phase(phase, easing)
 end
 
--- 排序 enemies，使得按照敌人到家的距离排序
--- 如果敌人拥有 F_MOCKING，则将它放到前面
--- 飞行敌人不受 F_MOCKING 的影响
+--- 根据距离终点位置排序敌人
+--- @param enemies table 敌人数组
+--- @return nil
+--- @desc 优先处理嘲讽标志（F_MOCKING），飞行单位不受嘲讽影响
 function U.sort_foremost_enemies(enemies)
     table.sort(enemies, function(e1, e2)
         local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
@@ -104,6 +132,8 @@ function U.sort_foremost_enemies(enemies)
     end)
 end
 
+--- 根据距离终点位置排序敌人，优先处理飞行单位
+--- @param enemies table 敌人数组
 function U.sort_foremost_enemies_with_flying_preference(enemies)
     table.sort(enemies, function(e1, e2)
         local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
@@ -125,6 +155,10 @@ function U.sort_foremost_enemies_with_flying_preference(enemies)
     end)
 end
 
+--- 计算缓动进度
+--- @param phase number 原始进度（0-1）
+--- @param easing string|nil 缓动函数名（可选）
+--- @return number 缓动后的进度
 function U.ease_phase(phase, easing)
     phase = km.clamp(0, 1, phase)
     easing = easing or ""
@@ -185,13 +219,21 @@ function U.ease_phase(phase, easing)
     end
 end
 
+--- 计算悬停脉冲透明度
+--- @param t number 时间
+--- @return number 透明度值
 function U.hover_pulse_alpha(t)
     local min, max, per = HOVER_PULSE_ALPHA_MIN, HOVER_PULSE_ALPHA_MAX, HOVER_PULSE_PERIOD
 
     return min + (max - min) * 0.5 * (1 + math.sin(t * km.twopi / per))
 end
 
--- 检测 p 这个位置是否在以 center 为中心、以 radius 为长轴的椭圆内
+--- 检测点是否在椭圆内
+--- @param p table 点坐标 {x, y}
+--- @param center table 椭圆中心 {x, y}
+--- @param radius number 椭圆长轴半径
+--- @param aspect number|nil 椭圆纵横比（可选，默认0.7）
+--- @return boolean 是否在椭圆内
 function U.is_inside_ellipse(p, center, radius, aspect)
     aspect = aspect or 0.7
 
@@ -202,7 +244,12 @@ function U.is_inside_ellipse(p, center, radius, aspect)
     return x * x + y * y <= 1
 end
 
--- 返回椭圆 angle 角度对应的点位
+--- 返回椭圆上指定角度的点
+--- @param center table 椭圆中心 {x, y}
+--- @param radius number 椭圆长轴半径
+--- @param angle number|nil 角度（弧度，可选，默认0）
+--- @param aspect number|nil 椭圆纵横比（可选，默认0.7）
+--- @return table 椭圆上的点坐标 {x, y}
 function U.point_on_ellipse(center, radius, angle, aspect)
     aspect = aspect or 0.7
     angle = angle or 0
@@ -213,7 +260,13 @@ function U.point_on_ellipse(center, radius, angle, aspect)
     return V.v(center.x + a * math.cos(angle), center.y + b * math.sin(angle))
 end
 
--- 返回 center 到 p 的长度与该向量辐角对应椭圆点的半径长度的比值
+--- 计算点在椭圆内的距离因子
+--- @param p table 点坐标 {x, y}
+--- @param center table 椭圆中心 {x, y}
+--- @param radius number 椭圆长轴半径
+--- @param min_radius number|nil 最小半径（可选）
+--- @param aspect number|nil 椭圆纵横比（可选，默认0.7）
+--- @return number 距离因子（0-1）
 function U.dist_factor_inside_ellipse(p, center, radius, min_radius, aspect)
     aspect = aspect or 0.7
 
@@ -234,8 +287,11 @@ function U.dist_factor_inside_ellipse(p, center, radius, min_radius, aspect)
     end
 end
 
--- 等待 time 的时间
--- 如果传入 break_func，在满足 break_func(store, time) 的时候，提前退出
+--- 协程：等待指定时间，可提前中断
+--- @param store table game.store
+--- @param time number 等待时间
+--- @param break_func function|nil 中断函数（可选）
+--- @return boolean 是否被中断
 function U.y_wait(store, time, break_func)
     local start_ts = store.tick_ts
 
@@ -250,8 +306,14 @@ function U.y_wait(store, time, break_func)
     return false
 end
 
--- 如果提供 idx, 只开始 render.sprites[idx] 的动画
--- 如果不提供 idx，开始全部的 sprites 的动画
+--- 开始实体动画
+--- @param entity table 实体
+--- @param name string 动画名称
+--- @param flip_x boolean|nil 是否水平翻转（可选）
+--- @param ts number|nil 时间戳（可选）
+--- @param loop boolean|nil 是否循环（可选）
+--- @param idx number|nil 指定精灵索引（可选，默认所有精灵）
+--- @param force_ts boolean|nil 是否强制设置时间戳（可选）
 function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
     loop = (loop == -1 or loop == true) and true or false
 
@@ -275,7 +337,6 @@ function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
 
             a.flip_x = flip_x_i
             if a.animated then
-
                 a.loop = loop or a.loop_forced == true
 
                 if not a.loop or force_ts then
@@ -291,7 +352,11 @@ function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
     end
 end
 
--- 当 render.sprites[idx] 的动画已经进行 times/1 次时，返回 true
+--- 检查动画是否完成指定次数
+--- @param entity table 实体
+--- @param idx number|nil 精灵索引（可选，默认1）
+--- @param times number|nil 完成次数（可选，默认1）
+--- @return boolean 是否完成
 function U.animation_finished(entity, idx, times)
     idx = idx or 1
     times = times or 1
@@ -309,7 +374,10 @@ function U.animation_finished(entity, idx, times)
     end
 end
 
--- 等待 render.sprites[idx] 的动画进行 times/1 次
+--- 协程：等待动画完成指定次数
+--- @param entity table 实体
+--- @param idx number|nil 精灵索引（可选，默认1）
+--- @param times number|nil 完成次数（可选，默认1）
 function U.y_animation_wait(entity, idx, times)
     idx = idx or 1
 
@@ -318,6 +386,12 @@ function U.y_animation_wait(entity, idx, times)
     end
 end
 
+--- 根据角度获取动画名称和翻转状态
+--- @param e table 实体
+--- @param group string 动画组名
+--- @param angle number 角度（弧度）
+--- @param idx number|nil 精灵索引（可选，默认1）
+--- @return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_for_angle(e, group, angle, idx)
     idx = idx or 1
 
@@ -390,6 +464,14 @@ function U.animation_name_for_angle(e, group, angle, idx)
     end
 end
 
+--- 根据面向点获取动画名称
+--- @param e table 实体
+--- @param group string 动画组名
+--- @param point table 目标点 {x, y}
+--- @param idx number|nil 精灵索引（可选）
+--- @param offset table|nil 偏移量 {x, y}（可选）
+--- @param use_path boolean|nil 是否使用路径点（可选）
+--- @return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
     local fx, fy
 
@@ -412,7 +494,13 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
     return U.animation_name_for_angle(e, group, angle, idx)
 end
 
--- 播放 sprites[idx] 的动画 name times 次，并且一直等待动画完成
+--- 协程：播放动画并等待完成
+--- @param entity table 实体
+--- @param name string 动画名称
+--- @param flip_x boolean|nil 是否水平翻转（可选）
+--- @param ts number|nil 时间戳（可选）
+--- @param times number|nil 播放次数（可选）
+--- @param idx number|nil 精灵索引（可选）
 function U.y_animation_play(entity, name, flip_x, ts, times, idx)
     local loop = times and times > 1
 
@@ -423,6 +511,13 @@ function U.y_animation_play(entity, name, flip_x, ts, times, idx)
     end
 end
 
+--- 开始指定组的动画
+--- @param entity table 实体
+--- @param name string 动画名称
+--- @param flip_x boolean|nil 是否水平翻转（可选）
+--- @param ts number|nil 时间戳（可选）
+--- @param loop boolean|nil 是否循环（可选）
+--- @param group string|nil 组名（可选）
 function U.animation_start_group(entity, name, flip_x, ts, loop, group)
     if not group then
         U.animation_start(entity, name, flip_x, ts, loop)
@@ -439,6 +534,11 @@ function U.animation_start_group(entity, name, flip_x, ts, loop, group)
     end
 end
 
+--- 检查指定组的动画是否完成
+--- @param entity table 实体
+--- @param group string|nil 组名（可选）
+--- @param times number|nil 完成次数（可选）
+--- @return boolean 是否完成
 function U.animation_finished_group(entity, group, times)
     if not group then
         return U.animation_finished(entity, nil, times)
@@ -453,6 +553,13 @@ function U.animation_finished_group(entity, group, times)
     end
 end
 
+--- 协程：播放指定组的动画并等待完成
+--- @param entity table 实体
+--- @param name string 动画名称
+--- @param flip_x boolean|nil 是否水平翻转（可选）
+--- @param ts number|nil 时间戳（可选）
+--- @param times number|nil 播放次数（可选）
+--- @param group string|nil 组名（可选）
 function U.y_animation_play_group(entity, name, flip_x, ts, times, group)
     if not group then
         U.y_animation_play(entity, name, flip_x, ts, times)
@@ -483,6 +590,10 @@ function U.y_animation_play_group(entity, name, flip_x, ts, times, group)
     end
 end
 
+--- 协程：等待指定组的动画完成
+--- @param entity table 实体
+--- @param group string|nil 组名（可选）
+--- @param times number|nil 完成次数（可选）
 function U.y_animation_wait_group(entity, group, times)
     if not group then
         U.y_animation_wait(entity, nil, times)
@@ -501,6 +612,10 @@ function U.y_animation_wait_group(entity, group, times)
     end
 end
 
+--- 获取实体的动画时间戳
+--- @param entity table 实体
+--- @param group string|nil 组名（可选）
+--- @return number 时间戳
 function U.get_animation_ts(entity, group)
     if not group then
         return entity.render.sprites[1].ts
@@ -515,7 +630,11 @@ function U.get_animation_ts(entity, group)
     end
 end
 
--- 隐藏 from 到 to 的 sprite
+--- 隐藏指定范围的精灵
+--- @param entity table 实体
+--- @param from number|nil 起始索引（可选，默认1）
+--- @param to number|nil 结束索引（可选）
+--- @param keep boolean|nil 是否保持隐藏计数（可选）
 function U.sprites_hide(entity, from, to, keep)
     if not entity or not entity.render then
         return
@@ -543,7 +662,11 @@ function U.sprites_hide(entity, from, to, keep)
     end
 end
 
--- 显示 from 到 to 的 sprite
+--- 显示指定范围的精灵
+--- @param entity table 实体
+--- @param from number|nil 起始索引（可选，默认1）
+--- @param to number|nil 结束索引（可选）
+--- @param restore boolean|nil 是否恢复隐藏状态（可选）
 function U.sprites_show(entity, from, to, restore)
     if not entity or not entity.render then
         return
@@ -565,13 +688,17 @@ function U.sprites_show(entity, from, to, restore)
     end
 end
 
--- 设置目标，并将 motion.arrived 为 false
+--- 设置移动目标
+--- @param e table 实体
+--- @param pos table 目标位置 {x, y}
 function U.set_destination(e, pos)
     e.motion.dest = V.vclone(pos)
     e.motion.arrived = false
 end
 
--- 设置 e.heading 为朝向 dest
+--- 设置实体朝向
+--- @param e table 实体
+--- @param dest table 目标位置 {x, y}
 function U.set_heading(e, dest)
     if e.heading then
         local vx, vy = V.sub(dest.x, dest.y, e.pos.x, e.pos.y)
@@ -581,11 +708,12 @@ function U.set_heading(e, dest)
     end
 end
 
--- 如果 motion.arrived 为 true，直接返回 true
--- 如果 unsnapped 为 true，依照朝向走位，不强制停在 destination
--- 反之，如果位移足够，就直接强制停在 destination
--- 位移足够时，返回 true
--- 如果位移不足，则置 motion.arrived 为 false，并实现位移。
+--- 移动实体到目标位置
+--- @param e table 实体
+--- @param dt number 时间增量
+--- @param accel number|nil 加速度（可选）
+--- @param unsnapped boolean|nil 是否不强制停在目标点（可选）
+--- @return boolean 是否到达目标
 function U.walk(e, dt, accel, unsnapped)
     if e.motion.arrived then
         return true
@@ -635,6 +763,10 @@ function U.walk(e, dt, accel, unsnapped)
     return false
 end
 
+--- 强制移动一步
+--- @param this table 实体
+--- @param dt number 时间增量
+--- @param dest table 目标位置 {x, y}
 function U.force_motion_step(this, dt, dest)
     local fm = this.force_motion
     local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
@@ -657,6 +789,15 @@ function U.force_motion_step(this, dt, dest)
     fm.a.x, fm.a.y = V.mul(-1 * fm.fr / dt, fm.v.x, fm.v.y)
 end
 
+--- 查找最近的士兵
+--- @param entities table 实体列表
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 最近的士兵
 function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
     local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 
@@ -678,23 +819,39 @@ function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, b
     end
 end
 
--- filter_func: function(entity, origin)
+--- 查找范围内的士兵
+--- @param entities table 实体列表
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 范围内的士兵列表
 function U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
     local soldiers = table.filter(entities, function(k, v)
         return not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                   band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
-                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-                   (not filter_func or filter_func(v, origin))
+            band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
+            (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
+            (not filter_func or filter_func(v, origin))
     end)
 
     if not soldiers or #soldiers == 0 then
-
         return nil
     else
         return soldiers
     end
 end
 
+--- 查找最近的敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 最近的敌人, table|nil 所有范围内的敌人
 function U.find_nearest_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
     local targets = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
 
@@ -709,6 +866,15 @@ function U.find_nearest_enemy(store, origin, min_range, max_range, flags, bans, 
     end
 end
 
+--- 查找最近的目标
+--- @param entities table 实体列表
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 最近的目标, table|nil 所有范围内的目标
 function U.find_nearest_target(entities, origin, min_range, max_range, flags, bans, filter_func)
     local targets = U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 
@@ -723,24 +889,41 @@ function U.find_nearest_target(entities, origin, min_range, max_range, flags, ba
     end
 end
 
+--- 查找范围内的目标
+--- @param entities table 实体列表
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 范围内的目标列表
 function U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
     local targets = table.filter(entities, function(k, v)
         return not v.pending_removal and v.vis and (v.enemy or v.soldier) and v.health and not v.health.dead and
-                   band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and
-                   U.is_inside_ellipse(v.pos, origin, max_range) and
-                   (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and
-                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-                   (not filter_func or filter_func(v, origin))
+            band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and
+            U.is_inside_ellipse(v.pos, origin, max_range) and
+            (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and
+            (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
+            (not filter_func or filter_func(v, origin))
     end)
 
     if not targets or #targets == 0 then
-
         return nil
     else
         return targets
     end
 end
 
+--- 查找第一个敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 第一个敌人
 function U.find_first_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
     flags = flags or 0
     bans = bans or 0
@@ -754,23 +937,32 @@ function U.find_first_enemy(store, origin, min_range, max_range, flags, bans, fi
         return nil
     end
     return store.enemy_spatial_index:query_first_entity_in_ellipse(origin.x, origin.y, max_range, min_range, function(v)
-        return not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and (not filter_func or filter_func(v, origin))
+        return not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and
+        band(v.vis.bans, flags) == 0 and (not filter_func or filter_func(v, origin))
     end)
 end
 
+--- 随机选择一个目标
+--- @param entities table 实体列表
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 随机目标
 function U.find_random_target(entities, origin, min_range, max_range, flags, bans, filter_func)
     flags = flags or 0
     bans = bans or 0
 
     local targets = table.filter(entities, function(k, v)
         return not v.pending_removal and v.health and not v.health.dead and v.vis and band(v.vis.flags, bans) == 0 and
-                   band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
-                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-                   (not filter_func or filter_func(v, origin))
+            band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
+            (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
+            (not filter_func or filter_func(v, origin))
     end)
 
     if not targets or #targets == 0 then
-
         return nil
     else
         local idx = math.random(1, #targets)
@@ -779,6 +971,15 @@ function U.find_random_target(entities, origin, min_range, max_range, flags, ban
     end
 end
 
+--- 随机选择一个敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 随机敌人
 function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
     flags = flags or 0
     bans = bans or 0
@@ -793,12 +994,11 @@ function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, f
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
             return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                       band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-                       (not filter_func or filter_func(v, origin))
+                band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
+                (not filter_func or filter_func(v, origin))
         end)
 
     if not enemies or #enemies == 0 then
-
         return nil
     else
         local idx = math.random(1, #enemies)
@@ -807,7 +1007,16 @@ function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, f
     end
 end
 
--- return enemy, enemy_pos
+--- 查找随机敌人及其预测位置
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param prediction_time number|boolean 预测时间
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 随机敌人, table|nil 敌人预测位置
 function U.find_random_enemy_with_pos(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func)
     flags = flags or 0
     bans = bans or 0
@@ -842,8 +1051,7 @@ function U.find_random_enemy_with_pos(store, origin, min_range, max_range, predi
 
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(e)
-            if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-                filter_func and not filter_func(e, origin) then
+            if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
                 return false
             end
 
@@ -873,6 +1081,15 @@ function U.find_random_enemy_with_pos(store, origin, min_range, max_range, predi
     end
 end
 
+--- 查找范围内的敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 范围内的敌人列表
 function U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
     -- local enemies = table.filter(entities, function(k, v)
     --     return not v.pending_removal and v.nav_path and not v.health.dead and
@@ -884,8 +1101,8 @@ function U.find_enemies_in_range(store, origin, min_range, max_range, flags, ban
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
             return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                       band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-                       (not filter_func or filter_func(v, origin))
+                band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
+                (not filter_func or filter_func(v, origin))
         end)
     if #enemies == 0 then
         return nil
@@ -894,8 +1111,19 @@ function U.find_enemies_in_range(store, origin, min_range, max_range, flags, ban
     end
 end
 
+--- 查找路径上的敌人
+--- @param entities table 实体列表
+--- @param origin table 原点 {x, y}
+--- @param min_node_range number 最小节点范围
+--- @param max_node_range number 最大节点范围
+--- @param max_path_dist number|nil 最大路径距离（可选，默认30）
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param only_upstream boolean|nil 是否只查找上游（可选）
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 路径上的敌人列表
 function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_range, max_path_dist, flags, bans,
-    only_upstream, filter_func)
+                                 only_upstream, filter_func)
     max_path_dist = max_path_dist or 30
     flags = flags or 0
     bans = bans or 0
@@ -925,7 +1153,6 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
     end
 
     if not result or #result == 0 then
-
         return nil
     else
         table.sort(result, function(e1, e2)
@@ -939,8 +1166,19 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
     end
 end
 
+--- 查找血量最高的敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param prediction_time number|boolean 预测时间
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @param min_override_flags number|nil 最小覆盖标志（可选）
+--- @return table|nil 血量最高的敌人, table|nil 敌人预测位置
 function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
-    min_override_flags)
+                              min_override_flags)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
@@ -1004,7 +1242,7 @@ function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_ti
 
         return true
     end)
-    for i=1,#enemies do
+    for i = 1, #enemies do
         local e = enemies[i]
         if e.health.hp > biggest_hp then
             biggest_hp = e.health.hp
@@ -1018,6 +1256,13 @@ function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_ti
     end
 end
 
+--- 重新查找最前面的敌人
+--- @param last_enemy table 上一个敌人
+--- @param store table game.store
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @param min_override_flags number|nil 最小覆盖标志（可选）
 function U.refind_foremost_enemy(last_enemy, store, flags, bans, filter_func, min_override_flags)
     local new_enemy = U.find_foremost_enemy(store, last_enemy.pos, 0, 50, nil, flags, bans, filter_func,
         min_override_flags)
@@ -1026,9 +1271,20 @@ function U.refind_foremost_enemy(last_enemy, store, flags, bans, filter_func, mi
     end
 end
 
--- return target, targets, target_predicted_pos
+--- 查找具有最大覆盖范围的最前面敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param prediction_time number|boolean 预测时间
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @param min_override_flags number|nil 最小覆盖标志（可选）
+--- @param cover_range number 覆盖范围
+--- @return table|nil 最前面的敌人, table|nil 所有范围内的敌人
 function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_range, prediction_time, flags, bans,
-    filter_func, min_override_flags, cover_range)
+                                                 filter_func, min_override_flags, cover_range)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
@@ -1094,7 +1350,6 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
     end)
 
     if not enemies or #enemies == 0 then
-
         return nil, nil
     else
         U.sort_foremost_enemies(enemies)
@@ -1119,47 +1374,23 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
     end
 end
 
+--- 查找优先飞行单位的最前面敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param prediction_time number|boolean 预测时间
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @param min_override_flags number|nil 最小覆盖标志（可选）
+--- @return table|nil 最前面的敌人, table|nil 所有范围内的敌人
 function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, max_range, prediction_time, flags, bans,
-    filter_func, min_override_flags)
+                                                      filter_func, min_override_flags)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
 
-    -- local enemies = {}
-
-    -- for _, e in pairs(entities) do
-    --     if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-    --         filter_func and not filter_func(e, origin) then
-    --         -- block empty
-    --     else
-    --         local e_pos, e_ni
-
-    --         if prediction_time and e.motion.speed then
-    --             if e.motion.forced_waypoint then
-    --                 local dt = prediction_time == true and 1 or prediction_time
-
-    --                 e_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-    --                 e_ni = e.nav_path.ni
-    --             else
-    --                 local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-    --                 e_ni = e.nav_path.ni + node_offset
-    --                 e_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-    --             end
-    --         else
-    --             e_pos = e.pos
-    --             e_ni = e.nav_path.ni
-    --         end
-
-    --         if U.is_inside_ellipse(e_pos, origin, max_range) and P:is_node_valid(e.nav_path.pi, e_ni) and
-    --             (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-    --                 not U.is_inside_ellipse(e_pos, origin, min_range)) then
-    --             e.__ffe_pos = V.vclone(e_pos)
-
-    --             table.insert(enemies, e)
-    --         end
-    --     end
-    -- end
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, 0, function(e)
         if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
             not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
@@ -1186,7 +1417,6 @@ function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, 
     end)
 
     if not enemies or #enemies == 0 then
-
         return nil, nil
     else
         U.sort_foremost_enemies_with_flying_preference(enemies)
@@ -1195,48 +1425,22 @@ function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, 
     end
 end
 
--- 如果敌人满足了 bor(vis.flags, min_override_flags)，则无论是不是在 min_range 内，都可以索敌
+--- 查找最前面的敌人
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param prediction_time number|boolean 预测时间
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @param min_override_flags number|nil 最小覆盖标志（可选）
+--- @return table|nil 最前面的敌人, table|nil 所有范围内的敌人
 function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
-    min_override_flags)
+                               min_override_flags)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
-
-    -- local enemies = {}
-
-    -- for _, e in pairs(entities) do
-    --     if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-    --         filter_func and not filter_func(e, origin) then
-    --         -- block empty
-    --     else
-    --         local e_pos, e_ni
-
-    --         if prediction_time and e.motion.speed then
-    --             if e.motion.forced_waypoint then
-    --                 local dt = prediction_time == true and 1 or prediction_time
-
-    --                 e_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-    --                 e_ni = e.nav_path.ni
-    --             else
-    --                 local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-    --                 e_ni = e.nav_path.ni + node_offset
-    --                 e_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-    --             end
-    --         else
-    --             e_pos = e.pos
-    --             e_ni = e.nav_path.ni
-    --         end
-
-    --         if U.is_inside_ellipse(e_pos, origin, max_range) and P:is_node_valid(e.nav_path.pi, e_ni) and
-    --             (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-    --                 not U.is_inside_ellipse(e_pos, origin, min_range)) then
-    --             e.__ffe_pos = V.vclone(e_pos)
-
-    --             table.insert(enemies, e)
-    --         end
-    --     end
-    -- end
 
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, 0, function(e)
         if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
@@ -1263,7 +1467,6 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
         return true
     end)
     if not enemies or #enemies == 0 then
-
         return nil, nil
     else
         U.sort_foremost_enemies(enemies)
@@ -1272,24 +1475,34 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
     end
 end
 
+--- 查找范围内的塔
+--- @param entities table 实体列表
+--- @param origin table 原点 {x, y}
+--- @param attack table 攻击属性
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 范围内的塔列表
 function U.find_towers_in_range(entities, origin, attack, filter_func)
     local towers = table.filter(entities, function(k, v)
         return not v.pending_removal and not v.tower.blocked and
-                   (not attack.excluded_templates or not table.contains(attack.excluded_templates, v.template_name)) and
-                   U.is_inside_ellipse(v.pos, origin, attack.max_range) and
-                   (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, origin, attack.min_range)) and
-                   (not filter_func or filter_func(v, origin, attack))
+            (not attack.excluded_templates or not table.contains(attack.excluded_templates, v.template_name)) and
+            U.is_inside_ellipse(v.pos, origin, attack.max_range) and
+            (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, origin, attack.min_range)) and
+            (not filter_func or filter_func(v, origin, attack))
     end)
 
     if not towers or #towers == 0 then
-
         return nil
     else
         return towers
     end
 end
 
--- 找到在 pos 的实体
+--- 查找指定位置的实体
+--- @param entities table 实体列表
+--- @param x number X坐标
+--- @param y number Y坐标
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 找到的实体
 function U.find_entity_at_pos(entities, x, y, filter_func)
     local found = {}
 
@@ -1323,7 +1536,12 @@ function U.find_entity_at_pos(entities, x, y, filter_func)
     end
 end
 
--- 找到在 pos 的全部实体
+--- 查找指定位置的所有实体
+--- @param entities table 实体列表
+--- @param x number X坐标
+--- @param y number Y坐标
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 找到的实体列表
 function U.find_entities_at_pos(entities, x, y, filter_func)
     local found = {}
 
@@ -1343,7 +1561,12 @@ function U.find_entities_at_pos(entities, x, y, filter_func)
     return found
 end
 
--- 找到当前满足过滤条件的所有敌人的所在路径
+--- 查找有敌人的路径
+--- @param entities table 实体列表
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function|nil 过滤函数（可选）
+--- @return table|nil 有敌人的路径列表
 function U.find_paths_with_enemies(entities, flags, bans, filter_func)
     local pis = {}
 
@@ -1367,7 +1590,9 @@ function U.find_paths_with_enemies(entities, flags, bans, filter_func)
     end
 end
 
--- 概率低的优先，冷却时间长的优先
+--- 获取攻击顺序
+--- @param attacks table 攻击列表
+--- @return table 攻击顺序索引数组
 function U.attack_order(attacks)
     local order = {}
 
@@ -1400,8 +1625,12 @@ function U.attack_order(attacks)
     return out
 end
 
--- 返回计算了 melee_slot 后的士兵拦截敌人时的位置
--- return soldier_pos, soldier_on_the_right
+--- 获取近战位置
+--- @param soldier table 士兵实体
+--- @param enemy table 敌人实体
+--- @param rank number|nil 排名（可选）
+--- @param back boolean|nil 是否在后面（可选）
+--- @return table|nil 士兵位置, boolean|nil 士兵是否在右侧
 function U.melee_slot_position(soldier, enemy, rank, back)
     if not rank then
         rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
@@ -1429,13 +1658,18 @@ function U.melee_slot_position(soldier, enemy, rank, back)
     end
 
     local soldier_pos = V.v(enemy.pos.x + (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x) *
-                                (soldier_on_the_right and 1 or -1),
+        (soldier_on_the_right and 1 or -1),
         enemy.pos.y + enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
 
     return soldier_pos, soldier_on_the_right
 end
 
--- 依据 barrack.rally_pos, barrack.rally_radius，返回第 idx 个士兵依照椭圆应该在的位置
+--- 获取集结队形位置
+--- @param idx number 索引
+--- @param barrack table 兵营实体
+--- @param count number|nil 总数（可选）
+--- @param angle_offset number|nil 角度偏移（可选）
+--- @return table 位置坐标, table 中心点坐标
 function U.rally_formation_position(idx, barrack, count, angle_offset)
     local pos
 
@@ -1455,7 +1689,10 @@ function U.rally_formation_position(idx, barrack, count, angle_offset)
     return pos, center
 end
 
--- 返回敌人的第一个 blocker
+--- 获取拦截者
+--- @param store table game.store
+--- @param blocked table 被拦截实体
+--- @return table|nil 拦截者实体
 function U.get_blocker(store, blocked)
     if blocked.enemy and #blocked.enemy.blockers > 0 then
         local blocker_id = blocked.enemy.blockers[1]
@@ -1467,7 +1704,10 @@ function U.get_blocker(store, blocked)
     return nil
 end
 
--- 返回士兵拦截的敌人(目前为唯一的)
+--- 获取被拦截者
+--- @param store table game.store
+--- @param blocker table 拦截者实体
+--- @return table|nil 被拦截者实体
 function U.get_blocked(store, blocker)
     local blocked_id = blocker.soldier.target_id
     local blocked = store.entities[blocked_id]
@@ -1475,8 +1715,10 @@ function U.get_blocked(store, blocker)
     return blocked
 end
 
--- 当士兵的目标的 .enemy.blockers 中并没有士兵的 id 时，返回 nil；
--- 否则，返回士兵 id 在 blockers 中的索引。
+--- 获取拦截者排名
+--- @param store table game.store
+--- @param blocker table 拦截者实体
+--- @return number|nil 排名
 function U.blocker_rank(store, blocker)
     local blocked_id = blocker.soldier.target_id
     local blocked = store.entities[blocked_id]
@@ -1488,8 +1730,10 @@ function U.blocker_rank(store, blocker)
     return nil
 end
 
--- 当士兵的目标(目前为唯一的) 不存在/已死亡/band(vis.bans, F_BLOCK)~= 0 时，返回 false
--- 否则，说明这个被拦截实体有效，返回 true
+--- 检查被拦截者是否有效
+--- @param store table game.store
+--- @param blocker table 拦截者实体
+--- @return boolean 是否有效
 function U.is_blocked_valid(store, blocker)
     local blocked_id = blocker.soldier.target_id
     local blocked = store.entities[blocked_id]
@@ -1497,7 +1741,9 @@ function U.is_blocked_valid(store, blocker)
     return blocked and not blocked.health.dead and (not blocked.vis or bit.band(blocked.vis.bans, F_BLOCK) == 0)
 end
 
--- 清空敌人的 blockers，并将所有拦截它的士兵的 target_id 置为 nil
+--- 解除所有拦截
+--- @param store table game.store
+--- @param blocked table 被拦截实体
 function U.unblock_all(store, blocked)
     for _, blocker_id in pairs(blocked.enemy.blockers) do
         local blocker = store.entities[blocker_id]
@@ -1510,8 +1756,10 @@ function U.unblock_all(store, blocked)
     blocked.enemy.blockers = {}
 end
 
--- 安全地移除敌人的 blockers 中的一个 blocker_id
--- 请保证传入的 blocked 有效
+--- 安全移除拦截者
+--- @param store table game.store
+--- @param blocked table 被拦截实体
+--- @param blocker_id number 拦截者ID
 function U.dec_blocker(store, blocked, blocker_id)
     table.removeobject(blocked.enemy.blockers, blocker_id)
     if #blocked.enemy.blockers > 1 then
@@ -1520,7 +1768,9 @@ function U.dec_blocker(store, blocked, blocker_id)
     end
 end
 
--- 将士兵的 target_id 置为 nil, 并在对应敌人的 blockers 中移除士兵的 id
+--- 解除目标拦截
+--- @param store table game.store
+--- @param blocker table 拦截者实体
 function U.unblock_target(store, blocker)
     local blocked_id = blocker.soldier.target_id
     local blocked = store.entities[blocked_id]
@@ -1532,8 +1782,10 @@ function U.unblock_target(store, blocker)
     blocker.soldier.target_id = nil
 end
 
--- 士兵拦截敌人
--- !!TO BE DONE!!
+--- 拦截敌人
+--- @param store table game.store
+--- @param blocker table 拦截者实体
+--- @param blocked table 被拦截实体
 function U.block_enemy(store, blocker, blocked)
     -- if blocker.max_targets then
     --     -- 士兵还有空闲的拦截位
@@ -1570,11 +1822,12 @@ function U.block_enemy(store, blocker, blocked)
 
         blocker.soldier.target_id = blocked.id
     end
-
 end
 
--- 将新的士兵的 target_id 置为老的士兵的 target_id
--- 同时，更新这个目标中存着的 blocker_id
+--- 替换拦截者
+--- @param store table game.store
+--- @param old table 旧拦截者
+--- @param new table 新拦截者
 function U.replace_blocker(store, old, new)
     local blocked_id = old.soldier.target_id
     local blocked = store.entities[blocked_id]
@@ -1590,7 +1843,9 @@ function U.replace_blocker(store, old, new)
     end
 end
 
--- 清除敌人的 blockers 中无效的 blocker_id
+--- 清理无效拦截者
+--- @param store table game.store
+--- @param blocked table 被拦截实体
 function U.cleanup_blockers(store, blocked)
     local blockers = blocked.enemy.blockers
 
@@ -1608,7 +1863,10 @@ function U.cleanup_blockers(store, blocked)
     end
 end
 
--- 结算伤害的核心逻辑
+--- 预测伤害
+--- @param entity table 实体
+--- @param damage table 伤害属性
+--- @return number 实际伤害值
 function U.predict_damage(entity, damage)
     local e = entity
     local d = damage
@@ -1685,10 +1943,17 @@ function U.predict_damage(entity, damage)
     return actual_damage
 end
 
+--- 检查是否已见过
+--- @param store table game.store
+--- @param id number 实体ID
+--- @return boolean 是否已见过
 function U.is_seen(store, id)
     return store.seen[id]
 end
 
+--- 标记为已见过
+--- @param store table game.store
+--- @param id number 实体ID
 function U.mark_seen(store, id)
     if not store.seen[id] then
         store.seen[id] = true
@@ -1696,6 +1961,9 @@ function U.mark_seen(store, id)
     end
 end
 
+--- 计算星星数量
+--- @param slot table 存档槽位
+--- @return number 战役星星数, number 英雄模式星星数, number 铁人模式星星数
 function U.count_stars(slot)
     local campaign = 0
     local heroic = 0
@@ -1712,6 +1980,10 @@ function U.count_stars(slot)
     return campaign + heroic + iron, heroic, iron
 end
 
+--- 查找范围内的下一个关卡
+--- @param ranges table 关卡范围数组
+--- @param cur number 当前关卡
+--- @return number 下一个关卡
 function U.find_next_level_in_ranges(ranges, cur)
     local last_range = ranges[#ranges]
     local nex = last_range[#last_range]
@@ -1749,6 +2021,12 @@ function U.find_next_level_in_ranges(ranges, cur)
     return nex
 end
 
+--- 解锁范围内的下一个关卡
+--- @param unlock_data table 解锁数据
+--- @param levels table 关卡数据
+--- @param game_settings table 游戏设置
+--- @param generation number 世代
+--- @return boolean 是否有变化
 function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, generation)
     local level_ranges = game_settings["level_ranges" .. generation]
     local last_campaign_level = game_settings["main_campaign_levels" .. generation]
@@ -1811,28 +2089,42 @@ function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, gene
     return dirty
 end
 
--- vis 通过 vis_x 的 vis_bans 和 vis_flags 检测
+--- 检查标志是否通过
+--- @param vis table 视觉属性
+--- @param vis_x table 目标视觉属性
+--- @return boolean 是否通过
 function U.flags_pass(vis, vis_x)
     return band(vis.flags, vis_x.vis_bans) == 0 and band(vis.bans, vis_x.vis_flags) == 0
 end
 
--- 返回 value 添加了 flag 后的结果
+--- 设置标志位
+--- @param value number 原始值
+--- @param flag number 要设置的标志位
+--- @return number 设置后的值
 function U.flag_set(value, flag)
     return bor(value, flag)
 end
 
--- 返回 value 清除了 flag 后的结果
+--- 清除标志位
+--- @param value number 原始值
+--- @param flag number 要清除的标志位
+--- @return number 清除后的值
 function U.flag_clear(value, flag)
     return band(value, bnot(flag))
 end
 
--- value 与 flag 有共同位
+--- 检查是否包含标志位
+--- @param value number 原始值
+--- @param flag number 要检查的标志位
+--- @return boolean 是否包含
 function U.flag_has(value, flag)
     return band(value, flag) ~= 0
 end
 
--- 获取英雄的等级
--- return level, phase(下一级进度) \in [0, 1]
+--- 获取英雄等级
+--- @param xp number 经验值
+--- @param thresholds table 等级阈值数组
+--- @return number 等级, number 下一级进度（0-1）
 function U.get_hero_level(xp, thresholds)
     local level = 1
 
@@ -1856,48 +2148,59 @@ function U.get_hero_level(xp, thresholds)
     return level, phase
 end
 
--- 获取所有目标为 entity 的 mod。
--- 如果传入 list，排除模板名存在于 list 中的 mod。
+--- 获取所有作用于实体的mod
+--- @param store table game.store
+--- @param entity table 实体
+--- @param list table|nil 排除列表（可选）
+--- @return table mod列表
 function U.get_modifiers(store, entity, list)
     local result = {}
     local mods = entity._applied_mods
     if not mods then
         return result
     end
-    for i=1,#mods do
+    for i = 1, #mods do
         local mod = mods[i]
         if not list or table.contains(list, mod.template_name) then
-            result[#result+1] = mod
+            result[#result + 1] = mod
         end
     end
     return result
 end
 
--- return #modes > 0, mods
--- 忽略 模板名为 mod_name 的 mod
+--- 检查实体是否有指定mod
+--- @param store table game.store
+--- @param entity table 实体
+--- @param mod_name string|nil mod名称（可选）
+--- @return boolean 是否有mod
+--- @return table mod列表
 function U.has_modifiers(store, entity, mod_name)
     local mods = entity._applied_mods
     if not mods then
         return false, {}
     end
     local result = {}
-    for i=1,#mods do
+    for i = 1, #mods do
         local mod = mods[i]
         if not mod_name or mod_name == mod.template_name then
-            result[#result+1] = mod
+            result[#result + 1] = mod
         end
     end
 
     return #result > 0, result
 end
 
--- 如果 list 中存在目标为 entity 的 mod 名，返回 true
+--- 检查实体是否有列表中的mod
+--- @param store table game.store
+--- @param entity table 实体
+--- @param list table mod名称列表
+--- @return boolean 是否有列表中的mod
 function U.has_modifier_in_list(store, entity, list)
     local mods = entity._applied_mods
     if not mods then
         return false
     end
-    for i=1,#mods do
+    for i = 1, #mods do
         local mod = mods[i]
         if table.contains(list, mod.template_name) then
             return true
@@ -1906,76 +2209,113 @@ function U.has_modifier_in_list(store, entity, list)
     return false
 end
 
--- return #mods > 0, mods
--- mod.modifier.type 存在于 {...} 中
+--- 检查实体是否有指定类型的mod
+--- @param store table game.store
+--- @param entity table 实体
+--- @param ... string mod类型
+--- @return boolean 是否有指定类型的mod, table mod列表
 function U.has_modifier_types(store, entity, ...)
     local mods = entity._applied_mods
     if not mods then
         return false, {}
     end
     local result = {}
-    local types = {...}
-    for i=1,#mods do
+    local types = { ... }
+    for i = 1, #mods do
         local mod = mods[i]
         if table.contains(types, mod.modifier.type) then
-            result[#result+1] = mod
+            result[#result + 1] = mod
         end
     end
 
     return #result > 0, result
 end
 
--- 计算实体的真实速度大小
+--- 计算实体的真实最大速度
+--- @param entity table 实体
+--- @return number 真实最大速度
 function U.real_max_speed(entity)
     return km.clamp(1, 10000, (entity.motion.max_speed + entity.motion.buff) * entity.motion.factor)
 end
 
+--- 乘以速度因子
+--- @param entity table 实体
+--- @param factor number 因子
 function U.speed_mul(entity, factor)
     entity.motion.factor = entity.motion.factor * factor
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 除以速度因子
+--- @param entity table 实体
+--- @param factor number 因子
 function U.speed_div(entity, factor)
     entity.motion.factor = entity.motion.factor / factor
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 增加速度增益
+--- @param entity table 实体
+--- @param amount number 增量
 function U.speed_inc(entity, amount)
     entity.motion.buff = entity.motion.buff + amount
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 减少速度增益
+--- @param entity table 实体
+--- @param amount number 减量
 function U.speed_dec(entity, amount)
     entity.motion.buff = entity.motion.buff - amount
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 乘以自身速度
+--- @param entity table 实体
+--- @param factor number 因子
 function U.speed_mul_self(entity, factor)
     entity.motion.max_speed = entity.motion.max_speed * factor
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 除以自身速度
+--- @param entity table 实体
+--- @param factor number 因子
 function U.speed_div_self(entity, factor)
     entity.motion.max_speed = entity.motion.max_speed / factor
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 增加自身速度
+--- @param entity table 实体
+--- @param amount number 增量
 function U.speed_inc_self(entity, amount)
     entity.motion.max_speed = entity.motion.max_speed + amount
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 减少自身速度
+--- @param entity table 实体
+--- @param amount number 减量
 function U.speed_dec_self(entity, amount)
     entity.motion.max_speed = entity.motion.max_speed - amount
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
+--- 更新最大速度
+--- @param entity table 实体
+--- @param max_speed number 最大速度
 function U.update_max_speed(entity, max_speed)
     entity.motion.max_speed = max_speed
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
--- 用于传送索敌，返回传送目标
+--- 查找传送时机
+--- @param store table game.store
+--- @param center table 中心点 {x, y}
+--- @param range number 范围
+--- @param trigger_count number 触发数量
+--- @return table|nil 传送目标
 function U.find_teleport_moment(store, center, range, trigger_count)
     local enemies = U.find_enemies_in_range(store, center, 0, range, F_NONE, F_NONE)
     if not enemies then
@@ -2004,7 +2344,10 @@ function U.find_teleport_moment(store, center, range, trigger_count)
     return nil
 end
 
--- 把 f2 加在 f1 后面
+--- 函数追加
+--- @param f1 function|nil 第一个函数（可选）
+--- @param f2 function 第二个函数
+--- @return function 组合后的函数
 function U.function_append(f1, f2)
     return function(...)
         if not f1 or f1(...) then
@@ -2015,6 +2358,9 @@ function U.function_append(f1, f2)
     end
 end
 
+--- 追加mod
+--- @param entity table 实体
+--- @param mod_name string mod名称
 function U.append_mod(entity, mod_name)
     if entity.mod then
         if type(entity.mod) == "table" then
@@ -2022,7 +2368,7 @@ function U.append_mod(entity, mod_name)
             table.insert(entity.mods, mod_name)
             entity.mod = nil
         else
-            entity.mods = {entity.mod, mod_name}
+            entity.mods = { entity.mod, mod_name }
             entity.mod = nil
         end
     else
