@@ -700,8 +700,8 @@ return {
 									class = "KEPropCoords"
 								},
 								{
-									id = "路径节点宽度",
-									title = "node width",
+									id = "path_node_width",
+									title = "路径节点宽度",
 									class = "KEPropNum",
 									value = 20
 								},
