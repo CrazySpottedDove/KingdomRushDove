@@ -550,7 +550,7 @@ tt.dps.fx_with_blood_color = true
 tt.dps.fx_target_flip = true
 tt.dps.fx_tracks_target = true
 tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_dps.update
+tt.main_script.update = scripts.mod_blood.update
 
 local mod_poison = E:register_t("mod_poison", "modifier")
 E:add_comps(mod_poison, "dps", "render")

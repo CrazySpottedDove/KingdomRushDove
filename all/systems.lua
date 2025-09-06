@@ -155,6 +155,30 @@ function perf.generate_report(store)
     return table.concat(report, "\n")
 end
 
+function perf.save_store_entities(store)
+    local entities = {}
+    for _, e in pairs(store.entities) do
+        if not entities[e.template_name] then
+            entities[e.template_name] = 1
+        else
+            entities[e.template_name] = entities[e.template_name] + 1
+        end
+    end
+    local filename = string.format("perf_entities_%d.txt", os.time())
+    local file = love.filesystem.newFile(filename, "w")
+    file:open("w")
+    file:write("=== 当前实体统计 ===\n")
+    local total_count = 0
+    for name, count in pairs(entities) do
+        file:write(string.format("%s: %d\n", name, count))
+        total_count = total_count + count
+    end
+    file:write(string.format("总实体数: %d\n", total_count))
+    file:write(string.format("store 记录总实体数: %d\n", store.entity_count))
+
+    file:close()
+end
+
 function perf.save_report(store)
     local report = perf.generate_report(store)
     print(report)
@@ -1186,22 +1210,65 @@ function sys.main_script:on_update(dt, ts, store)
         end
 
         if s.co then
-            -- log.error("Running update coro of entity %s (%s)", e.id, e.template_name)
-            -- local t1 = love.timer.getTime()
             local success, err = coroutine.resume(s.co, e, store, s)
-            -- local t2 = love.timer.getTime()
-            -- local delta_t = (t2 - t1) * 1000000
-            -- print(string.format("%s: %d",e.template_name, delta_t))
 
             -- if coroutine.status(s.co) == "dead" or err ~= nil then
             --     if err ~= nil then
             if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
                 if not success and err ~= nil then
-                    --log.error("Error running coro: %s", debug.traceback(s.co, error))
+                    -- log.error("Error running coro: %s", debug.traceback(s.co, error))
                     error("Error running coro: " .. err .. debug.traceback(s.co))
                 end
 
                 s.co = nil
+            end
+        end
+    end
+end
+if PERFORMANCE_MONITOR_ENABLED and false then
+    function sys.main_script:init(store)
+        self.print_counter = 0
+        self.print_cycle = DRAW_FPS
+    end
+
+    function sys.main_script:on_update(dt, ts, store)
+        local print_enabled = false
+        self.print_counter = self.print_counter + 1
+        if self.print_counter >= self.print_cycle then
+            self.print_counter = 0
+            print_enabled = true
+            print("----------------")
+        end
+
+        local entities_with_main_script_on_update = store.entities_with_main_script_on_update
+        for _, e in pairs(store.entities_with_main_script_on_update) do
+            local s = e.main_script
+
+            if not s.co and s.runs ~= 0 then
+                s.runs = s.runs - 1
+                s.co = coroutine.create(s.update)
+            end
+
+            if s.co then
+                local t1 = love.timer.getTime()
+                local success, err = coroutine.resume(s.co, e, store, s)
+
+                if print_enabled then
+                    local t2 = love.timer.getTime()
+                    local delta_t = (t2 - t1) * 1000000
+                    print(string.format("%s: %d", e.template_name, delta_t))
+                end
+
+                -- if coroutine.status(s.co) == "dead" or err ~= nil then
+                --     if err ~= nil then
+                if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
+                    if not success and err ~= nil then
+                        -- log.error("Error running coro: %s", debug.traceback(s.co, error))
+                        error("Error running coro: " .. err .. debug.traceback(s.co))
+                    end
+
+                    s.co = nil
+                end
             end
         end
     end
@@ -2989,6 +3056,7 @@ if PERFORMANCE_MONITOR_ENABLED then
         -- 定期输出报告
         if current_time - self.last_report_time > perf.report_interval then
             perf.save_report(store)
+            -- perf.save_store_entities(store)
             self.last_report_time = current_time
         end
 

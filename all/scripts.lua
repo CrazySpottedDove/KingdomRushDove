@@ -2161,7 +2161,6 @@ function scripts.arrow.update(this, store, script)
 
     while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
         coroutine.yield()
-
         b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
         this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
 
@@ -2204,7 +2203,6 @@ function scripts.arrow.update(this, store, script)
         if V.dist2(this.pos.x, this.pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and
             not SU.unit_dodges(store, target, true) and (not b.hit_chance or math.random() < b.hit_chance) then
             hit = true
-
             local d = SU.create_bullet_damage(b, target.id, this.id)
 
             queue_damage(store, d)
@@ -2217,7 +2215,6 @@ function scripts.arrow.update(this, store, script)
             end
             if mods then
                 for _, mod_name in pairs(mods) do
-
                     local mod = E:create_entity(mod_name)
                     mod.modifier.source_id = this.id
                     mod.modifier.target_id = target.id
@@ -2227,7 +2224,6 @@ function scripts.arrow.update(this, store, script)
                     queue_insert(store, mod)
                 end
             end
-
             if b.hit_fx then
                 local fx = E:create_entity(b.hit_fx)
 
@@ -4015,25 +4011,6 @@ function scripts.bullet_illusion.update(this, store)
         end
     end
 
-    if b.hit_fx then
-        local fx = E:create_entity(b.hit_fx)
-
-        fx.pos = V.vclone(target.pos)
-
-        if target.unit.hit_offset then
-            fx.pos.x, fx.pos.y = fx.pos.x + target.unit.hit_offset.x, fx.pos.y + target.unit.hit_offset.y
-        end
-
-        fx.render.sprites[1].ts = store.tick_ts
-        fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
-
-        if target.unit.blood_color and fx.use_blood_color then
-            fx.render.sprites[1].name = target.unit.blood_color
-        end
-
-        queue_insert(store, fx)
-    end
-
     U.y_animation_wait(this)
 
     ::label_87_0::
@@ -5202,9 +5179,121 @@ function scripts.mod_dps.update(this, store, script)
                     fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
                 end
 
-                if fx.render.sprites[1].use_blood_color and target.unit.blood_color then
-                    fx.render.sprites[1].name = fx.render.sprites[1].name .. "_" .. target.unit.blood_color
+                if dps.fx_target_flip and target and target.render then
+                    fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
                 end
+
+                queue_insert(store, fx)
+            end
+        end
+
+        coroutine.yield()
+    end
+
+    log.paranoid(">>>>> id:%s - mod_dps cycles:%s total_damage:%s", this.id, cycles, total_damage)
+    queue_remove(store, this)
+end
+
+scripts.mod_blood = {}
+
+function scripts.mod_blood.update(this, store, script)
+    local cycles, total_damage = 0, 0
+    local m = this.modifier
+    local dps = this.dps
+    local dmin = dps.damage_min + m.level * dps.damage_inc
+    local dmax = dps.damage_max + m.level * dps.damage_inc
+    local fx_ts = 0
+
+    local function do_damage(target, value)
+        total_damage = total_damage + value
+
+        local d = E:create_entity("damage")
+
+        d.source_id = this.id
+        d.target_id = target.id
+        d.value = value * m.damage_factor
+        d.damage_type = dps.damage_type
+        d.pop = dps.pop
+        d.pop_chance = dps.pop_chance
+        d.pop_conds = dps.pop_conds
+
+        queue_damage(store, d)
+    end
+
+    local target = store.entities[m.target_id]
+
+    if not target then
+        queue_remove(store, this)
+        return
+    end
+
+    this.pos = target.pos
+
+    while true do
+        target = store.entities[m.target_id]
+
+        if not target or target.health.dead then
+            break
+        end
+
+        if store.tick_ts - m.ts >= m.duration - 1e-09 then
+            if dps.damage_last then
+                do_damage(target, dps.damage_last)
+            end
+
+            break
+        end
+
+        if this.render and m.use_mod_offset and target.unit.mod_offset then
+            local so = this.render.sprites[1].offset
+
+            so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+        end
+
+        if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
+            cycles = cycles + 1
+            dps.ts = dps.ts + dps.damage_every
+
+            local damage_value = math.random(dmin, dmax)
+
+            if cycles == 1 and dps.damage_first then
+                damage_value = dps.damage_first
+            end
+
+            if not dps.kill then
+                damage_value = km.clamp(0, target.health.hp - 1, damage_value)
+            end
+
+            do_damage(target, damage_value)
+
+            if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) and target.unit.blood_color then
+                fx_ts = store.tick_ts
+
+                local fx = E:create_entity(dps.fx)
+
+                if dps.fx_tracks_target then
+                    fx.pos = target.pos
+
+                    if m.use_mod_offset and target.unit.mod_offset then
+                        fx.render.sprites[1].offset.x = target.unit.mod_offset.x
+                        fx.render.sprites[1].offset.y = target.unit.mod_offset.y
+                    end
+                else
+                    fx.pos = V.vclone(this.pos)
+
+                    if m.use_mod_offset and target.unit.mod_offset then
+                        fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
+                    end
+                end
+
+                fx.render.sprites[1].ts = store.tick_ts
+                fx.render.sprites[1].runs = 0
+
+                if fx.render.sprites[1].size_names then
+                    fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
+                end
+
+                fx.render.sprites[1].name = fx.render.sprites[1].name .. "_" .. target.unit.blood_color
 
                 if dps.fx_target_flip and target and target.render then
                     fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
@@ -5220,6 +5309,7 @@ function scripts.mod_dps.update(this, store, script)
     log.paranoid(">>>>> id:%s - mod_dps cycles:%s total_damage:%s", this.id, cycles, total_damage)
     queue_remove(store, this)
 end
+
 
 scripts.mod_hps = {}
 

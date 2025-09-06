@@ -217,7 +217,7 @@ scripts.tower_ranger = {
         local aa = this.attacks.list[1]
         local pow_p = this.powers.poison
         local pow_t = this.powers.thorn
-
+        this.bullet = E:create_entity(this.attacks.list[1].bullet)
         aa.ts = store.tick_ts
 
         local function shot_animation(attack, shooter_idx, enemy)
@@ -237,8 +237,7 @@ scripts.tower_ranger = {
             local shooting_right = tpos(this).x < enemy.pos.x
             local soffset = this.render.sprites[ssid].offset
             local boffset = attack.bullet_start_offset[shooting_up and 1 or 2]
-            local b = E:create_entity(attack.bullet)
-
+            local b = E:clone_entity(this.bullet)
             b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
             b.pos.y = this.pos.y + soffset.y + boffset.y
             b.bullet.from = V.vclone(b.pos)
@@ -246,22 +245,6 @@ scripts.tower_ranger = {
             b.bullet.target_id = enemy.id
             b.bullet.level = level
             b.bullet.damage_factor = this.tower.damage_factor
-            if pow_p.level > 0 then
-                if not b.bullet.mods then
-                    b.bullet.mods = pow_p.level > 0 and pow_p.mods
-                else
-                    b.bullet.mods = table.append(b.bullet.mods, pow_p.mods)
-                end
-                if b.bullet.mod then
-                    if type(b.bullet.mod) == "table" then
-                        b.bullet.mods = table.append(b.bullet.mods, b.bullet.mod)
-                        b.bullet.mod = nil
-                    else
-                        table.insert(b.bullet.mods, b.bullet.mod)
-                        b.bullet.mod = nil
-                    end
-                end
-            end
 
             apply_precision(b)
 
@@ -275,8 +258,12 @@ scripts.tower_ranger = {
                 for k, pow in pairs(this.powers) do
                     if pow.changed then
                         pow.changed = nil
-
-                        if pow == pow_t and this.render.sprites[druid_sid].hidden then
+                        if pow == pow_p and not pow_p.applied then
+                            pow_p.applied = true
+                            for i=1,#pow_p.mods do
+                                U.append_mod(this.bullet.bullet, pow_p.mods[i])
+                            end
+                        elseif pow == pow_t and this.render.sprites[druid_sid].hidden then
                             this.render.sprites[druid_sid].hidden = false
 
                             local ta = E:create_entity(pow_t.aura)
