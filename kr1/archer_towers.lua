@@ -70,6 +70,11 @@ local function archer_towers()
     tt.attacks.list[1].bullet_start_offset = {vec_2(8, 4), vec_2(4, -5)}
     tt.sound_events.insert = "ArcherRangerTaunt"
 
+    tt = RT("arrow_ranger", "arrow")
+    tt.bullet.damage_min = 13
+    tt.bullet.damage_max = 20
+    tt.bullet.flight_time = fts(15.2)
+
     tt = RT("mod_ranger_poison", "mod_poison")
     tt.modifier.duration = 3
     tt.dps.damage_max = 0
@@ -177,7 +182,7 @@ local function archer_towers()
 
     local arrow_crossbow = E:register_t("arrow_crossbow", "arrow")
 
-    arrow_crossbow.bullet.flight_time = fts(16)
+    arrow_crossbow.bullet.flight_time = fts(15)
     arrow_crossbow.bullet.damage_min = 15
     arrow_crossbow.bullet.damage_max = 23
     arrow_crossbow.bullet.pop = {"pop_shunt_violet"}
@@ -537,7 +542,7 @@ local function archer_towers()
     tt.attacks.list[2].power_name = "barrel"
     tt.attacks.list[2].shoot_time = fts(22)
     tt.attacks.list[2].vis_bans = F_FLYING
-    tt.attacks.list[2].node_prediction = fts(22) + fts(26)
+    tt.attacks.list[2].node_prediction = fts(22) + fts(21)
     tt.attacks.range = 220
     tt.info.fn = scripts.tower_archer_dwarf.get_info
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0017"
@@ -594,7 +599,7 @@ local function archer_towers()
     tt.bullet.damage_min_inc = 35
     tt.bullet.damage_radius = 65
     tt.bullet.damage_radius_inc = 5
-    tt.bullet.flight_time = fts(26)
+    tt.bullet.flight_time = fts(21)
     tt.bullet.g = -1 / (fts(1) * fts(1))
     tt.bullet.level = 0
     tt.render.sprites[1].name = "DwarfShooter_Barril"
@@ -785,11 +790,11 @@ local function archer_towers()
     tt.bullet.hit_fx = "fx_arrow_arcane_hit"
     tt.bullet.pop = {"pop_arcane"}
     tt.render.sprites[1].name = "archer_arcane_proy2_0001-f"
-    tt.bullet.flight_time_min = fts(11)
-    tt.bullet.flight_time_factor = fts(5) * 2
+    tt.bullet.flight_time_min = fts(10)
+    tt.bullet.flight_time_factor = fts(5) * 1.8
 
     tt = E:register_t("arrow_arcane_burst", "arrow_arcane")
-    tt.bullet.flight_time_min = fts(15)
+    tt.bullet.flight_time_min = fts(14)
     tt.bullet.miss_decal = "archer_arcane_proy_decal-f"
     tt.bullet.mod = {"mod_arrow_arcane"}
     tt.bullet.particles_name = "ps_arrow_arcane_special"
@@ -816,7 +821,7 @@ local function archer_towers()
     tt = E:register_t("arrow_arcane_slumber", "arrow_arcane")
     tt.bullet.damage_max = 36
     tt.bullet.damage_min = 22
-    tt.bullet.flight_time_min = fts(15)
+    tt.bullet.flight_time_min = fts(14)
     tt.bullet.miss_decal = "archer_arcane_proy2_decal-f"
     tt.bullet.hit_fx = "fx_arcane_slumber_explosion"
     tt.bullet.mod = {"mod_arrow_arcane_slumber"}
@@ -922,8 +927,8 @@ local function archer_towers()
     tt.sound_events.insert = "ElvesArcherGoldenBowTaunt"
 
     tt = E:register_t("arrow_silver", "arrow_1")
-    tt.bullet.flight_time_min = fts(9)
-    tt.bullet.flight_time_factor = fts(0.015)
+    tt.bullet.flight_time_min = fts(8.1)
+    tt.bullet.flight_time_factor = fts(0.0135)
     tt.bullet.miss_decal = "archer_silver_proys_0002-f"
     tt.bullet.damage_max = 20
     tt.bullet.damage_min = 15
@@ -932,15 +937,15 @@ local function archer_towers()
     tt.render.sprites[1].name = "archer_silver_proys_0001-f"
     tt.sound_events.insert = "TowerGoldenBowArrowShot"
     tt = E:register_t("arrow_silver_long", "arrow_silver")
-    tt.bullet.flight_time_factor = fts(0.033)
+    tt.bullet.flight_time_factor = fts(0.0264)
     tt.bullet.damage_max = 60
     tt.bullet.damage_min = 45
     tt = E:register_t("arrow_silver_sentence", "arrow_silver")
     tt.render.sprites[1].name = "archer_silver_instaKill_bullet"
     tt.bullet.g = 0
     tt.bullet.hit_fx = "fx_arrow_silver_sentence_hit"
-    tt.bullet.flight_time_min = fts(4)
-    tt.bullet.flight_time_factor = fts(0.01)
+    tt.bullet.flight_time_min = fts(3.6)
+    tt.bullet.flight_time_factor = fts(0.009)
     tt.bullet.damage_type = bor(DAMAGE_FX_NOT_EXPLODE, DAMAGE_PHYSICAL, DAMAGE_IGNORE_SHIELD)
     tt.bullet.damage_max = 60
     tt.bullet.damage_min = 45
