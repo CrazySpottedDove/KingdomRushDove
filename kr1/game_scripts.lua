@@ -291,7 +291,6 @@ function scripts.twister.update(this, store, script)
                 if enemies then
                     for _, enemy in ipairs(enemies) do
                         if enemies_max > #picked_enemies then
-                            log.debug("^ twister %s picked up (%s)-%s", this.id, enemy.id, enemy.template_name)
                             -- AC:inc_check("FUJITA5", 1)
                             table.insert(picked_enemies, enemy)
                             SU.remove_modifiers(store, enemy)

@@ -396,6 +396,7 @@ local function mage_towers()
 
     local fx_bolt_archmage_hit = E:register_t("fx_bolt_archmage_hit", "fx")
     fx_bolt_archmage_hit.render.sprites[1].name = "bolt_archmage_hit"
+
     tt = E:register_t("bolt_archmage", "bolt")
     tt.render.sprites[1].prefix = "bolt_archmage"
     tt.bullet.mod = "mod_archmage_shatter"
@@ -407,6 +408,7 @@ local function mage_towers()
     tt.bullet.store_sort_y_offset = -65
     tt.bullet.acceleration_factor = 0.3
     tt.bullet.particles_name = "ps_bolt_archmage_trail"
+    tt.main_script.update = scripts.bolt_trace_target.update
     tt.sound_events.travel = "ArchmageBoltTravel"
     tt.sound_events.summon = "ArchmageBoltSummon"
 

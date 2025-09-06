@@ -18687,8 +18687,7 @@ function scripts.hero_raelyn.update(this, store)
                             shield_max_damage = shield_max_damage + target.health.hp_max * m.shield_per_enemy * count
                             if is_soldier then
                                 shield_max_damage = shield_max_damage * 0.6
-                                m.render.sprites[1].scale.x = 0.5
-                                m.render.sprites[1].scale.y = 0.5
+                                m.render.sprites[1].scale = v(0.71, 0.71)
                                 m.health_bar.offset.y = m.health_bar.offset.y * 0.71
                             end
                             m.modifier.source_id = this.id
