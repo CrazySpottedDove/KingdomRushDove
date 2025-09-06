@@ -17087,7 +17087,7 @@ function scripts.soldier_hero_hunter_ultimate.update(this, store, script)
 
             if this.health.dead then
                 this.reinforcement.fade = nil
-                this.tween = nil
+                -- this.tween = nil
             else
                 this.reinforcement.fade = true
             end
@@ -18982,7 +18982,7 @@ function scripts.hero_raelyn_command_orders_dark_knight.update(this, store, scri
 
             if this.health.dead then
                 this.reinforcement.fade = nil
-                this.tween = nil
+                -- this.tween = nil
             else
                 this.reinforcement.fade = true
             end
