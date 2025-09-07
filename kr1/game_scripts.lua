@@ -19683,11 +19683,10 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store, script)
     ps.particle_system.track_id = this.id
 
     queue_insert(store, ps)
-
     while true do
         if not fading and not kamikaze_target and store.tick_ts - a.ts > a.cooldown then
             local towers = table.filter(store.towers, function(_, e)
-                return e.tower and not e.tower_holder and not e.tower.blocked and e.tower.can_be_mod and
+                return not e.tower_holder and not e.tower.blocked and e.tower.can_be_mod and
                            not e._is_banshee_target and U.is_inside_ellipse(e.pos, this.pos, a.max_range) and
                            not table.contains(a.excluded_templates, e.template_name)
             end)
@@ -19701,7 +19700,6 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store, script)
                 this.motion.forced_waypoint = V.vclone(target.pos)
             end
         end
-
         if not fading and not kamikaze_target and P:nodes_to_defend_point(this.nav_path) <
             this.fade_nodes_to_defend_point then
             this.tween.disabled = nil
@@ -19712,7 +19710,6 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store, script)
         if fading then
             ps.particle_system.alphas[1] = this.render.sprites[1].alpha
         end
-
         if not SU.y_enemy_walk_step(store, this) and kamikaze_target then
             if kamikaze_target.tower and kamikaze_target.tower.upgrade_to then
                 for _, e in pairs(store.towers) do
@@ -19743,7 +19740,6 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store, script)
 
             return
         end
-
         coroutine.yield()
     end
 end

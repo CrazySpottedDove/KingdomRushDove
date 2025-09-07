@@ -47,10 +47,6 @@ local function fts(v)
     return v / FPS
 end
 
-local function mark_remove_for_frame(f)
-    f.marked_to_remove = true
-end
-
 -- 在文件开头添加性能监控模块
 local perf = {}
 perf.timers = {}
@@ -1257,7 +1253,7 @@ if PERFORMANCE_MONITOR_ENABLED and false then
                 if print_enabled then
                     local t2 = love.timer.getTime()
                     local delta_t = (t2 - t1) * 1000000
-                    print(string.format("%s: %d", e.template_name, delta_t))
+                    print(string.format("%s: %d",e.template_name, delta_t))
                 end
 
                 -- if coroutine.status(s.co) == "dead" or err ~= nil then
@@ -1851,7 +1847,7 @@ function sys.particle_system:init(store)
         p.ts = ts
         p.last_ts = ts
     end
-    self.pool = Pool:new(create_particle, reset_particle, 2048)
+    -- self.pool = Pool:new(create_particle, reset_particle, 2048)
     self.new_frame = function(draw_order, z, sort_y_offset, sort_y)
         return {
             ss = nil,
@@ -1973,8 +1969,8 @@ function sys.particle_system:on_update(dt, ts, store)
     local new_particle = self.new_particle
     local phase_interp = self.phase_interp
     local pool = self.pool
-    local get_particle = pool.get
-    local release_particle = pool.release
+    -- local get_particle = pool.get
+    -- local release_particle = pool.release
 
     local particle_systems = store.particle_systems
     for _, e in pairs(particle_systems) do
@@ -2197,7 +2193,7 @@ typedef struct{
 
 function sys.render:init(store)
     store.render_frames = {}
-    store.render_frames_ffi = ffi.new("RenderFrameFFI[8192]") -- preallocate for 8192 frames
+    store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]") -- preallocate for 8192 frames
     local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
 
     self._hb_ss = {
@@ -3057,7 +3053,7 @@ if PERFORMANCE_MONITOR_ENABLED then
         -- 定期输出报告
         if current_time - self.last_report_time > perf.report_interval then
             perf.save_report(store)
-            -- perf.save_store_entities(store)
+            perf.save_store_entities(store)
             self.last_report_time = current_time
         end
 
