@@ -12,8 +12,8 @@ function spatial_hash:new(cell_size)
         _cell_size_factor = 1.0 / cell_size,
         cols = ceil((IN_GAME_X_MAX - IN_GAME_X_MIN) / cell_size),
         rows = ceil((IN_GAME_Y_MAX - IN_GAME_Y_MIN) / cell_size),
-        col_offset = 1 - floor(IN_GAME_X_MIN / cell_size),
-        row_offset = 1 - floor(IN_GAME_Y_MIN / cell_size),
+        x_min = IN_GAME_X_MIN,
+        y_min = IN_GAME_Y_MIN,
         cells = {},
         entity_cells = {} -- entity id -> cell
     }
@@ -28,11 +28,11 @@ function spatial_hash:new(cell_size)
 end
 
 function spatial_hash:_x_to_col(x)
-    return floor(x * self._cell_size_factor) + self.col_offset
+    return floor((x - self.x_min) * self._cell_size_factor) + 1
 end
 
 function spatial_hash:_y_to_row(y)
-    return floor(y * self._cell_size_factor) + self.row_offset
+    return floor((y - self.y_min) * self._cell_size_factor) + 1
 end
 
 function spatial_hash:_get_cell(x, y)
@@ -77,13 +77,13 @@ end
 
 function spatial_hash:remove_entity(entity)
     self.entity_cells[entity.id][entity.id] = nil
+    self.entity_cells[entity.id] = nil
 end
 
 -- 必须提供 filter_fn
 -- return 符合条件的实体数组
 function spatial_hash:query_entities_in_ellipse(x, y, radius_outer, radius_inner, filter_fn)
     local result = {}
-
     local min_col = max(1, self:_x_to_col(x - radius_outer))
     local max_col = min(self.cols, self:_x_to_col(x + radius_outer))
     local b = radius_outer * aspect

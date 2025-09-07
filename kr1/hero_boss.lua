@@ -250,23 +250,71 @@ local function inherit_from_hero_template(new_template, old_template)
     t.unit.mod_offset = V.vclone(old_t.unit.mod_offset)
     if old_t.melee then
         t.melee = table.deepclone(old_t.melee)
+        for _, a in pairs(t.melee.attacks) do
+            a.disabled = nil
+        end
     end
     if old_t.ranged then
         t.ranged = table.deepclone(old_t.ranged)
+        for _, a in pairs(t.ranged.attacks) do
+            a.disabled = nil
+        end
     end
     if old_t.timed_attacks then
         t.timed_attacks = table.deepclone(old_t.timed_attacks)
+        for _, a in pairs(t.timed_attacks.list) do
+            a.disabled = nil
+        end
     end
     if old_t.dodge then
         t.dodge = table.deepclone(old_t.dodge)
     end
-    t.vis.flags = bor(t.vis.flags, U.flag_clear(old_t.vis.flags ,bor(F_HERO, F_FRIEND)))
+    t.vis.flags = bor(t.vis.flags, U.flag_clear(old_t.vis.flags, bor(F_HERO, F_FRIEND)))
     t.vis.bans = bor(t.vis.bans, old_t.vis.bans)
     t.health.hp_max = old_t.hero.level_stats.hp_max[10]
     t.health.armor = old_t.hero.level_stats.armor[10]
     if old_t.hero.level_stats.magic_armor then
         t.health.magic_armor = old_t.hero.level_stats.magic_armor[10]
     end
+    return t
+end
+
+local function inherit_from_soldier_template(new_template, old_template)
+    local t = RT(new_template, "enemy")
+    local old_t = E:get_template(old_template)
+    t.health_bar = table.deepclone(old_t.health_bar)
+    t.info = table.deepclone(old_t.info)
+    t.motion.max_speed = old_t.motion.max_speed / 1.2
+    t.render.sprites = table.deepclone(old_t.render.sprites)
+    t.enemy.melee_slot = v(old_t.soldier.melee_slot_offset.x * 2, old_t.soldier.melee_slot_offset.y)
+    t.unit.marker_offset = V.vclone(old_t.unit.marker_offset)
+    t.unit.mod_offset = V.vclone(old_t.unit.mod_offset)
+    if old_t.melee then
+        t.melee = table.deepclone(old_t.melee)
+        for _, a in pairs(t.melee.attacks) do
+            a.disabled = nil
+        end
+    end
+    if old_t.ranged then
+        t.ranged = table.deepclone(old_t.ranged)
+        for _, a in pairs(t.ranged.attacks) do
+            a.disabled = nil
+        end
+    end
+    if old_t.timed_attacks then
+        t.timed_attacks = table.deepclone(old_t.timed_attacks)
+        for _, a in pairs(t.timed_attacks.list) do
+            a.disabled = nil
+        end
+    end
+    if old_t.dodge then
+        t.dodge = table.deepclone(old_t.dodge)
+    end
+    t.health.hp_max = old_t.health.hp_max
+    t.health.armor = old_t.health.armor
+    t.health.magic_armor = old_t.health.magic_armor
+    t.vis.flags = bor(t.vis.flags, U.flag_clear(old_t.vis.flags, F_FRIEND))
+    t.vis.bans = bor(t.vis.bans, old_t.vis.bans)
     return t
 end
 
@@ -311,8 +359,10 @@ tt.main_script.update = function(this, store)
                 local ca = this.dodge.counter_attack
 
                 if la then
-                    ca.damage_max = math.max(la.damage_max * (ca.reflected_damage_factor) , this.melee.attacks[1].damage_max) * this.unit.damage_factor
-                    ca.damage_min = math.min(la.damage_min * (ca.reflected_damage_factor), this.melee.attacks[1].damage_min) * this.unit.damage_factor
+                    ca.damage_max = math.max(la.damage_max * (ca.reflected_damage_factor),
+                        this.melee.attacks[1].damage_max) * this.unit.damage_factor
+                    ca.damage_min = math.min(la.damage_min * (ca.reflected_damage_factor),
+                        this.melee.attacks[1].damage_min) * this.unit.damage_factor
                 end
                 goto while_end
             end
@@ -425,62 +475,212 @@ tt.main_script.remove = function(this, store)
 end
 tt.main_script.update = scripts.mod_track_target.update
 
--- -- boss:alleria
--- tt = RT("eb_alleria", "hero_boss")
--- AC(tt, "melee", "ranged")
--- anchor_y = 0.14
--- anchor_x = 0.5
--- image_y = 76
--- image_x = 60
--- tt.health.hp_max = 4500
--- tt.info.i18n_key = "HERO_ARCHER"
--- tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0004" or "info_portraits_hero_0001"
--- tt.sound_events.death = "HeroArcherDeath"
--- tt.sound_events.insert = "HeroArcherTaunt"
--- tt.main_script.insert = scripts.enemy_basic.insert
--- tt.motion.max_speed = 2 * FPS
--- tt.render.sprites[1].anchor = v(0.5, 0.14)
--- tt.render.sprites[1].prefix = "hero_alleria"
--- tt.enemy.melee_slot_offset = v(4, 0)
--- tt.unit.marker_offset = v(0, 0)
--- tt.unit.mod_offset = v(0, 15)
--- tt.melee.attacks[1].cooldown = 1
--- tt.melee.attacks[1].hit_time = fts(8)
--- tt.melee.attacks[1].sound = "MeleeSword"
--- tt.melee.attacks[1].damage_max = 170
--- tt.melee.attacks[1].damage_min = 105
--- tt.ranged.range_while_blocking = true
--- tt.ranged.attacks[1] = E:clone_c("bullet_attack")
--- tt.ranged.attacks[1].bullet = "arrow_hero_boss_alleria"
--- tt.ranged.attacks[1].bullet_start_offset = {v(0, 12)}
--- tt.ranged.attacks[1].max_range = 185
--- tt.ranged.attacks[1].min_range = 40
--- tt.ranged.attacks[1].shoot_time = fts(5)
--- tt.ranged.attacks[1].cooldown = 0.4
--- -- tt.ranged.attacks[2] = E:clone_c("bullet_attack")
--- -- tt.ranged.attacks[2].cooldown = 3 + fts(29)
--- -- tt.ranged.attacks[2].bullet = "arrow_multishot_hero_boss_alleria"
--- -- tt.ranged.attacks[2].bullet_start_offset = {v(0, 12)}
--- -- tt.ranged.attacks[2].max_range = 200
--- -- tt.ranged.attacks[2].min_range = 40
--- -- tt.ranged.attacks[2].node_prediction = fts(10)
--- -- tt.ranged.attacks[2].shoot_time = fts(12)
--- -- tt.ranged.attacks[2].sound = "HeroArcherShoot"
--- -- tt.ranged.attacks[2].multi_num = 3
+tt = inherit_from_hero_template("eb_alleria", "hero_alleria")
+tt.melee.cooldown = 1
+a = tt.melee.attacks[1]
+a.damage_type = DAMAGE_PHYSICAL
+a.damage_max = 34
+a.damage_min = 21
+a = tt.ranged.attacks[1]
+a.bullet = "arrow_eb_alleria"
+a = tt.ranged.attacks[2]
+a.bullet = "arrow_multishot_eb_alleria"
+a.cooldown = 2.6 + fts(29)
+a.min_range = 0
+a = tt.timed_attacks.list[1]
+a.entity = "eb_alleria_wildcat"
+tt.main_script.update = function(this, store)
+    this.health_bar.hidden = false
+    local wildcat = this.timed_attacks.list[1]
+    local multishot = this.ranged.attacks[2]
+    local function wildcat_ready()
+        return ready_to_attack(wildcat, store) and this.enemy.can_do_magic
+    end
+    local function multishot_ready()
+        return ready_to_attack(this.ranged.attacks[2], store) and this.enemy.can_do_magic
+    end
+    local function get_wildcat_pos()
+        local positions = P:get_all_valid_pos(this.pos.x, this.pos.y, wildcat.min_range, wildcat.max_range,
+            TERRAIN_LAND, nil, NF_RALLY)
 
--- tt = RT("arrow_hero_boss_alleria", "arrow")
--- tt.bullet.flight_time = fts(15)
--- tt.bullet.damage_max = 250
--- tt.bullet.damage_min = 50
+        return positions[1]
+    end
+    while true do
+        if this.health.dead then
+            SU.y_enemy_death(store, this)
+            return
+        end
+        if this.unit.is_stunned then
+            SU.y_enemy_stun(store, this)
+        else
+            if wildcat_ready() then
+                local pos = get_wildcat_pos()
+                if pos then
+                    S:queue(wildcat.sound)
+                    this.health.immune_to = F_ALL
+                    U.animation_start(this, wildcat.animation, nil, store.tick_ts)
+                    if y_enemy_wait(store, this, wildcat.spawn_time) then
+                        this.health.immune_to = F_NONE
+                        goto while_end
+                    end
 
--- -- tt = RT("arrow_multishot_hero_boss_alleria", "arrow")
--- -- tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
--- -- tt.bullet.damage_min = 75
--- -- tt.bullet.damage_max = 250
--- -- tt.bullet.damage_type = DAMAGE_TRUE
--- -- tt.bullet.prediction_error = false
--- -- tt.render.sprites[1].name = "hero_archer_arrow"
--- -- tt.bullet.flight_time = fts(5)
+                    local e = E:create_entity(wildcat.entity)
+                    e.pos = V.vclone(pos)
+                    e.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+                    wildcat.ts = store.tick_ts
+                    e.nav_path.pi = this.nav_path.pi
+                    e.nav_path.spi = this.nav_path.spi
+                    e.nav_path.ni = this.nav_path.ni
+                    queue_insert(store, e)
+                    while not U.animation_finished(this) do
+                        if this.health.dead or this.unit.is_stunned then
+                            break
+                        end
+                        coroutine.yield()
+                    end
+                    this.health.immune_to = F_NONE
+                    goto while_end
+                else
+                    SU.delay_attack(store, wildcat, 0.5)
+                end
+            end
+            if multishot_ready() then
+                local entities = store.entities
+                if store.soldiers then
+                    entities = store.soldiers
+                end
+                local target = U.find_nearest_soldier(entities, this.pos,multishot.min_range, multishot.max_range,multishot.vis_flags,
+                    multishot.vis_bans)
+                if target then
+                    multishot.ts = store.tick_ts
+                    SU.y_enemy_do_ranged_attack(store, this, target, multishot)
+                else
+                    multishot.ts = multishot.ts + 1
+                end
+            end
+            if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, wildcat_ready, function()
+                return wildcat_ready() or multishot_ready()
+            end, wildcat_ready) then
+                goto while_end
+            end
+            ::while_end::
+            coroutine.yield()
+        end
+    end
+end
+
+tt = inherit_from_soldier_template("eb_alleria_wildcat", "soldier_alleria_wildcat")
+tt.health.hp_max = 700
+a = tt.melee.attacks[1]
+a.damage_min = 14
+a.damage_max = 16
+a.vis_flags = 0
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.info.fn = scripts.enemy_basic.get_info
+
+tt = RT("arrow_eb_alleria", "arrow")
+tt.bullet.flight_time = fts(15)
+tt.bullet.damage_max = 55
+tt.bullet.damage_min = 13
+
+tt = RT("arrow_multishot_eb_alleria", "arrow")
+tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
+tt.bullet.damage_min = 15
+tt.bullet.damage_max = 50
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.extra_arrows_range = 100
+tt.extra_arrows = 10
+tt.render.sprites[1].name = "hero_archer_arrow"
+tt.main_script.insert = function(this, store)
+    if this.extra_arrows > 0 then
+        local entities = store.entities
+        if store.soldiers then
+            entities = store.soldiers
+        end
+        local targets = U.find_soldiers_in_range(entities, this.bullet.to, 0, this.extra_arrows_range, F_RANGED,
+            F_NONE)
+        if targets then
+            local rate
+            if #targets > this.extra_arrows then
+                rate = this.extra_arrows
+            else
+                rate = #targets
+            end
+            this.bullet.flight_time = fts(3 + 3 * rate)
+            local j = 1
+            local predicted_health = {}
+            for i = 1, this.extra_arrows do
+                local b = E:clone_entity(this)
+                b.extra_arrows = 0
+                local t
+                if i <= #targets then
+                    t = targets[i]
+                else
+                    while j < #targets and predicted_health[targets[j].id] <= 0 do
+                        j = j + 1
+                    end
+                    t = targets[j]
+                    b.bullet.damage_max = b.bullet.damage_max - 20
+                end
+
+                b.bullet.target_id = t.id
+                b.bullet.to = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
+                local d = SU.create_bullet_damage(b.bullet, t.id, this.id)
+                if not predicted_health[t.id] then
+                    predicted_health[t.id] = t.health.hp
+                end
+                predicted_health[t.id] = predicted_health[t.id] - U.predict_damage(t, d)
+                queue_insert(store, b)
+            end
+        else
+            if store.entities[this.bullet.target_id] then
+                for i = 1, this.extra_arrows do
+                    local b = E:clone_entity(this)
+                    b.extra_arrows = 0
+                    b.bullet.damage_max = b.bullet.damage_max - 20
+                    queue_insert(store, b)
+                end
+            end
+        end
+    end
+    return scripts.arrow.insert(this, store)
+end
+
+tt = inherit_from_soldier_template("enemy_elf", "soldier_elf")
+tt.main_script.update = scripts.enemy_mixed.update
+a = tt.melee.attacks[1]
+a.mod = "mod_enemy_elf_bleed"
+a = tt.ranged.attacks[1]
+a.bullet = "arrow_enemy_elf"
+a = tt.ranged.attacks[2]
+if a then
+    a.bullet = "arrow_enemy_elf_cripple"
+    a.chance = 0.5
+end
+
+tt = RT("arrow_enemy_elf", "arrow")
+tt.bullet.damage_min = 25
+tt.bullet.damage_max = 50
+tt.bullet.flight_time = fts(12)
+tt.bullet.reset_to_target_pos = true
+tt.bullet.damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
+tt.bullet.mod = "mod_enemy_elf_bleed"
+
+tt = RT("arrow_enemy_elf_cripple", "arrow")
+tt.bullet.damage_type = bor(DAMAGE_TRUE, DAMAGE_NO_DODGE)
+tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
+tt.bullet.reset_to_target_pos = true
+tt.bullet.mod = "mod_enemy_elf_bleed"
+tt.bullet.flight_time = fts(8)
+tt.bullet.damage_min = 95
+tt.bullet.damage_max = 95
+
+tt = RT("mod_enemy_elf_bleed", "mod_blood")
+tt.dps.damage_max = 20
+tt.dps.damage_min = 20
+tt.dps.damage_every = 1
+tt.modifier.allows_duplicate = true
 
 -- -- boss:elora
 -- tt = RT("eb_elora", "hero_boss")

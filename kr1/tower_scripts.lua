@@ -3018,7 +3018,7 @@ scripts.tower_sunray = {
                         this.user_selection.new_pos = nil
                     end
                 else
-                    target = U.find_foremost_enemy(store, tpos(this), 0, range, false, a.vis_flags, a.vis_bans)
+                    target = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, range, nil, a.vis_flags, a.vis_bans, nil, nil, splash_radius)
                 end
                 -- 攻击
                 if not target then
@@ -3913,7 +3913,6 @@ scripts.tower_entwood = {
 
                         local targets = U.find_enemies_in_range(store, tpos(this), 0, ca.damage_radius, ca.vis_flags,
                             ca.vis_bans)
-                        local stun_count = 0
 
                         if targets then
                             for i, target in ipairs(targets) do
@@ -3924,23 +3923,32 @@ scripts.tower_entwood = {
                                 d.damage_type = ca.damage_type
                                 d.value = pow_c.damage_values[pow_c.level] * this.tower.damage_factor
 
-                                queue_damage(store, d)
+                                if U.is_inside_ellipse(target.pos, tpos(this), ca.damage_radius * 0.6) then
+                                    d.value = d.value * 1.4
+                                    if band(target.vis.bans, F_STUN) == 0 and band(target.vis.flags, F_BOSS) == 0 then
+                                        local mod = E:create_entity(ca.stun_mod)
 
-                                local chance = ca.stun_chances[i] or ca.stun_chances[#ca.stun_chances]
+                                        mod.modifier.target_id = target.id
+                                        mod.modifier.duration = pow_c.stun_durations[pow_c.level]
 
-                                if band(target.vis.bans, F_STUN) == 0 and band(target.vis.flags, bor(F_BOSS, F_FLYING)) ==
-                                    0 and chance > math.random() then
-                                    local mod = E:create_entity(ca.stun_mod)
+                                        queue_insert(store, mod)
+                                    elseif band(target.vis.bans, F_MOD) == 0 then
+                                        local mod = E:create_entity(ca.slow_mod)
+
+                                        mod.modifier.target_id = target.id
+                                        mod.modifier.duration = pow_c.stun_durations[pow_c.level]
+
+                                        queue_insert(store, mod)
+                                    end
+                                elseif band(target.vis.bans, F_MOD) == 0 then
+                                    local mod = E:create_entity(ca.slow_mod)
 
                                     mod.modifier.target_id = target.id
                                     mod.modifier.duration = pow_c.stun_durations[pow_c.level]
 
                                     queue_insert(store, mod)
-
-                                    if U.predict_damage(target, d) < target.health.hp then
-                                        stun_count = stun_count + 1
-                                    end
                                 end
+                                queue_damage(store, d)
                             end
                         end
 

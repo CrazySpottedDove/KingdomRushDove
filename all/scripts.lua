@@ -672,7 +672,7 @@ function scripts.enemy_mixed.update(this, store, script)
                     end
 
                     while SU.can_melee_blocker(store, this, blocker) do
-                        if this.ranged and this.ranged.range_while_blocking then
+                        if this.ranged and this.ranged.range_while_blocking and ranged then
                             SU.y_enemy_range_attacks(store, this, ranged)
                         end
                         if not SU.y_enemy_melee_attacks(store, this, blocker) then
@@ -2432,7 +2432,7 @@ function scripts.bomb.update(this, store, script)
 
     local enemies = U.find_enemies_in_range(store, b.to, 0, dradius, b.damage_flags, b.damage_bans)
     if enemies then
-        for i=1,#enemies do
+        for i = 1, #enemies do
             local enemy = enemies[i]
             local d = E:create_entity("damage")
 
@@ -2800,7 +2800,7 @@ function scripts.missile.update(this, store, script)
         end
         local enemies = U.find_enemies_in_range(store, origin, 0, b.damage_radius, b.damage_flags, b.damage_bans)
         if enemies then
-            for i=1,#enemies do
+            for i = 1, #enemies do
                 local enemy = enemies[i]
                 local d = E:create_entity("damage")
 
@@ -3303,11 +3303,206 @@ function scripts.bolt.update(this, store, script)
 
     if target and not target.health.dead then
         local d = SU.create_bullet_damage(b, target.id, this.id)
-        local u = UP:get_upgrade("mage_spell_of_penetration")
+        -- local u = UP:get_upgrade("mage_spell_of_penetration")
 
-        if u and math.random() < u.chance then
-            d.damage_type = DAMAGE_TRUE
+        -- if u and math.random() < u.chance then
+        --     d.damage_type = DAMAGE_TRUE
+        -- end
+
+        queue_damage(store, d)
+
+        if b.mod or b.mods then
+            local mods = b.mods or {b.mod}
+
+            for _, mod_name in pairs(mods) do
+                local m = E:create_entity(mod_name)
+
+                m.modifier.target_id = b.target_id
+                m.modifier.level = b.level
+
+                queue_insert(store, m)
+            end
         end
+
+        if b.hit_payload then
+            local hp = b.hit_payload
+
+            hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
+
+            queue_insert(store, hp)
+        end
+    end
+
+    if b.payload then
+        local hp = b.payload
+
+        hp.pos.x, hp.pos.y = b.to.x, b.to.y
+
+        queue_insert(store, hp)
+    end
+
+    if b.hit_fx then
+        local sfx = E:create_entity(b.hit_fx)
+
+        sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+        sfx.render.sprites[1].ts = store.tick_ts
+        sfx.render.sprites[1].runs = 0
+
+        if target and sfx.render.sprites[1].size_names then
+            sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
+        end
+
+        queue_insert(store, sfx)
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.bolt_trace_target = {}
+function scripts.bolt_trace_target.update(this, store, script)
+    local b = this.bullet
+    local s = this.render.sprites[1]
+    local mspeed = b.min_speed
+    local target, ps
+    local new_target = false
+    local target_invalid = false
+    local retarget_attempts = 0
+    local max_retarget_attempts = 3 -- 最大重新寻找目标次数
+
+    if b.particles_name then
+        ps = E:create_entity(b.particles_name)
+        ps.particle_system.track_id = this.id
+
+        queue_insert(store, ps)
+    end
+
+    ::label_75_0::
+
+    if b.store and not b.target_id then
+        S:queue(this.sound_events.summon)
+
+        s.z = Z_OBJECTS
+        s.sort_y_offset = b.store_sort_y_offset
+
+        U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+        if ps then
+            ps.particle_system.emit = false
+        end
+    else
+        S:queue(this.sound_events.travel)
+
+        s.z = Z_BULLETS
+        s.sort_y_offset = nil
+
+        U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+
+        if ps then
+            ps.particle_system.emit = true
+        end
+    end
+
+    while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+        coroutine.yield()
+
+        if not target_invalid then
+            target = store.entities[b.target_id]
+        end
+
+        if target and not new_target then
+            local tpx, tpy = target.pos.x, target.pos.y
+
+            if not b.ignore_hit_offset then
+                tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+            end
+
+            local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+            if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
+                target_invalid = true
+                target = nil
+            end
+        end
+
+        -- 如果目标死亡或无效，尝试重新寻找目标
+        if not b.store and (not target or target.health.dead or target_invalid) then
+            if retarget_attempts < max_retarget_attempts then
+                retarget_attempts = retarget_attempts + 1
+
+                -- 在法球当前位置周围寻找新目标
+                local search_range = 80
+                local new_enemy = U.find_first_enemy(store, this.pos, 0, search_range, b.vis_flags, b.vis_bans)
+
+                if new_enemy then
+                    -- 找到新目标，更新相关数据
+                    target = new_enemy
+                    b.target_id = new_enemy.id
+                    target_invalid = false
+                    new_target = true
+
+                    -- 更新目标位置
+                    if b.ignore_hit_offset then
+                        b.to.x, b.to.y = target.pos.x, target.pos.y
+                    else
+                        b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x,
+                            target.pos.y + target.unit.hit_offset.y
+                    end
+                else
+                    -- 没找到新目标，继续寻找或放弃
+                    target = nil
+                    target_invalid = true
+                end
+            else
+                -- 超过最大重新寻找次数，放弃寻找
+                target = nil
+                target_invalid = true
+            end
+        end
+
+        if target and target.health and not target.health.dead then
+            if b.ignore_hit_offset then
+                b.to.x, b.to.y = target.pos.x, target.pos.y
+            else
+                b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+            end
+
+            new_target = false
+        end
+
+        mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+        mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+        b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+        this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+
+        if not b.ignore_rotation then
+            s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+        end
+
+        if ps then
+            ps.particle_system.emit_direction = s.r
+        end
+    end
+
+    while b.store and not b.target_id do
+        coroutine.yield()
+
+        if b.target_id then
+            mspeed = b.min_speed
+            new_target = true
+            b.store = nil -- 取消存储状态，继续前进
+            goto label_75_0
+        end
+    end
+
+    this.pos.x, this.pos.y = b.to.x, b.to.y
+
+    if target and not target.health.dead then
+        local d = SU.create_bullet_damage(b, target.id, this.id)
+        -- local u = UP:get_upgrade("mage_spell_of_penetration")
+
+        -- if u and math.random() < u.chance then
+        --     d.damage_type = DAMAGE_TRUE
+        -- end
 
         queue_damage(store, d)
 
@@ -5310,7 +5505,6 @@ function scripts.mod_blood.update(this, store, script)
     queue_remove(store, this)
 end
 
-
 scripts.mod_hps = {}
 
 function scripts.mod_hps.insert(this, store, script)
@@ -5885,7 +6079,7 @@ function scripts.mod_tower_remove.update(this, store, script)
         U.y_animation_wait(this)
         local mods = target._applied_mods
         if mods then
-            for i=1, #mods do
+            for i = 1, #mods do
                 queue_remove(store, mods[i])
             end
         end
@@ -7224,7 +7418,7 @@ function scripts.power_fireball.update(this, store, script)
     if enemies then
         local damage_value = b.damage_factor * math.random(b.damage_min, b.damage_max)
 
-        for i=1,#enemies do
+        for i = 1, #enemies do
             local enemy = enemies[i]
             local d = E:create_entity("damage")
 
@@ -7806,10 +8000,10 @@ scripts.find_modifiers_with_flags = function(this, store, bans)
     if not mods then
         return result
     end
-    for i=1,#mods do
+    for i = 1, #mods do
         local m = mods[i]
         if band(m.modifier.vis_flags, bans) ~= 0 then
-            result[#result+1] = m
+            result[#result + 1] = m
         end
     end
     return result
@@ -7933,7 +8127,7 @@ end
 scripts.mod_ban.remove = function(this, store)
     local target = store.entities[this.modifier.target_id]
     if not target or target.health.dead then
-        return
+        return true
     end
 
     target.mod_ban_count = target.mod_ban_count - 1

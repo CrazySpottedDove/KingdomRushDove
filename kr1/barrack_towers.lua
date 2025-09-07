@@ -377,7 +377,8 @@ local function barrack_towers()
     tt.bullet.reset_to_target_pos = true
     tt.bullet.mod = "mod_elf_cripple"
     tt.bullet.flight_time = fts(8)
-    tt.bullet.damage_min = 50
+    tt.bullet.damage_min = 55
+    tt.bullet.damage_max = 55
     tt.bullet.damage_inc = 15
 
     tt = RT("mod_elf_bleed", "mod_blood")
@@ -569,11 +570,11 @@ local function barrack_towers()
     tt.melee.attacks[2].chance = 0.25
     tt.melee.attacks[2].damage_max = 40
     tt.melee.attacks[2].damage_min = 30
-    tt.melee.attacks[2].damage_inc = 20
+    tt.melee.attacks[2].damage_inc = 30
     tt.melee.attacks[2].disabled = true
     tt.melee.attacks[2].damage_type = DAMAGE_RUDE
     tt.melee.attacks[2].hit_time = fts(20)
-    tt.melee.attacks[2].mod = "mod_blood"
+    tt.melee.attacks[2].mod = "mod_blood_templar"
     tt.melee.attacks[2].pop = nil
     tt.melee.attacks[2].power_name = "blood"
     tt.melee.attacks[2].shared_cooldown = true
@@ -612,6 +613,15 @@ local function barrack_towers()
     tt.soldier.melee_slot_offset = vec_2(5, 0)
     tt.unit.marker_offset = vec_2(0, ady(7))
     tt.unit.mod_offset = vec_2(0, ady(23))
+
+    tt = E:register_t("mod_blood_templar", "mod_blood")
+    E:add_comps(tt, "dps")
+    tt.modifier.level = 1
+    tt.modifier.duration = 3
+    tt.dps.damage_min = 10
+    tt.dps.damage_max = 10
+    tt.dps.damage_inc = 10
+    tt.dps.damage_every = 1
 
     local tower_assassin = E:register_t("tower_assassin", "tower_barrack_1")
     E:add_comps(tower_assassin, "powers")
@@ -1038,10 +1048,10 @@ local function barrack_towers()
     tt = E:register_t("bomb_molotov_big", "bomb_molotov")
     tt.render.sprites[1].scale = vec_2(1.5, 1.5)
     tt.bullet.rotation_speed = 30 * FPS * math.pi / 180
-    tt.bullet.damage_min = 9
-    tt.bullet.damage_max = 29
+    tt.bullet.damage_min = 10
+    tt.bullet.damage_max = 30
     tt.bullet.damage_inc = 11
-    tt.bullet.damage_radius = 40
+    tt.bullet.damage_radius = 42
     tt.bullet.damage_radius_inc = 10
     tt.bullet.flight_time = fts(30)
     tt.bullet.mod = "mod_molotov_big"

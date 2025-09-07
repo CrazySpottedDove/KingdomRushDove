@@ -17087,7 +17087,7 @@ function scripts.soldier_hero_hunter_ultimate.update(this, store, script)
 
             if this.health.dead then
                 this.reinforcement.fade = nil
-                this.tween = nil
+                -- this.tween = nil
             else
                 this.reinforcement.fade = true
             end
@@ -18687,8 +18687,7 @@ function scripts.hero_raelyn.update(this, store)
                             shield_max_damage = shield_max_damage + target.health.hp_max * m.shield_per_enemy * count
                             if is_soldier then
                                 shield_max_damage = shield_max_damage * 0.6
-                                m.render.sprites[1].scale.x = 0.5
-                                m.render.sprites[1].scale.y = 0.5
+                                m.render.sprites[1].scale = v(0.71, 0.71)
                                 m.health_bar.offset.y = m.health_bar.offset.y * 0.71
                             end
                             m.modifier.source_id = this.id
@@ -18983,7 +18982,7 @@ function scripts.hero_raelyn_command_orders_dark_knight.update(this, store, scri
 
             if this.health.dead then
                 this.reinforcement.fade = nil
-                this.tween = nil
+                -- this.tween = nil
             else
                 this.reinforcement.fade = true
             end
