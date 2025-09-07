@@ -764,7 +764,16 @@ function love.errhand(msg)
     if string.find(msg, "Error running coro", 1, true) then
         msg = msg:gsub("^[^:]+:%d+: ", "")
         local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
+
         table.insert(err, l)
+
+		for l in string.gmatch(trace, "(.-)\n") do
+			if not string.match(l, "boot.lua") then
+				l = string.gsub(l, "stack traceback:", "")
+
+				table.insert(err, l)
+			end
+		end
     else
         table.insert(err, msg .. "\n\n")
 
