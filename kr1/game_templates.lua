@@ -619,43 +619,6 @@ for i = 1, 3 do
     E:set_template("re_current_" .. i, E:get_template("re_farmer_" .. i))
 end
 
-tt = RT("soldier_alleria_wildcat", "soldier")
-E:add_comps(tt, "melee", "nav_grid")
-anchor_y = 0.28
-image_y = 42
-tt.fn_level_up = scripts.soldier_alleria_wildcat.level_up
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0007" or "info_portraits_hero_0007"
-tt.health.armor = 0
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(0, 35)
-tt.info.fn = scripts.soldier_alleria_wildcat.get_info
-tt.info.i18n_key = "HERO_ARCHER_WILDCAT"
-tt.main_script.insert = scripts.soldier_alleria_wildcat.insert
-tt.main_script.update = scripts.soldier_alleria_wildcat.update
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].hit_time = fts(9)
-tt.melee.attacks[1].vis_bans = bor(F_FLYING)
-tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].sound = "HeroArcherWildCatHit"
-tt.melee.range = 90
-tt.motion.max_speed = 4.8 * FPS
-tt.regen.cooldown = 1
-tt.render.sprites[1].anchor.y = anchor_y
-tt.render.sprites[1].name = "spawn"
-tt.render.sprites[1].prefix = "soldier_alleria"
-tt.render.sprites[1].angles = {
-    walk = {"running"}
-}
-tt.soldier.melee_slot_offset.x = 5
-tt.ui.click_rect = IS_PHONE_OR_TABLET and r(-20, -10, 40, 40) or r(-15, -5, 30, 30)
-tt.unit.hit_offset = vec_2(0, 12)
-tt.unit.mod_offset = vec_2(0, 14)
-tt.unit.hide_after_death = true
-tt.unit.explode_fx = nil
-tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
-
 tt = RT("soldier_magnus_illusion", "soldier_militia")
 AC(tt, "reinforcement", "ranged", "tween")
 image_y = 76

@@ -3018,7 +3018,7 @@ scripts.tower_sunray = {
                         this.user_selection.new_pos = nil
                     end
                 else
-                    target = U.find_foremost_enemy(store, tpos(this), 0, range, false, a.vis_flags, a.vis_bans)
+                    target = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, range, nil, a.vis_flags, a.vis_bans, nil, nil, splash_radius)
                 end
                 -- 攻击
                 if not target then

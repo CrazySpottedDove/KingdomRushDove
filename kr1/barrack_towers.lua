@@ -569,11 +569,11 @@ local function barrack_towers()
     tt.melee.attacks[2].chance = 0.25
     tt.melee.attacks[2].damage_max = 40
     tt.melee.attacks[2].damage_min = 30
-    tt.melee.attacks[2].damage_inc = 20
+    tt.melee.attacks[2].damage_inc = 30
     tt.melee.attacks[2].disabled = true
     tt.melee.attacks[2].damage_type = DAMAGE_RUDE
     tt.melee.attacks[2].hit_time = fts(20)
-    tt.melee.attacks[2].mod = "mod_blood"
+    tt.melee.attacks[2].mod = "mod_blood_templar"
     tt.melee.attacks[2].pop = nil
     tt.melee.attacks[2].power_name = "blood"
     tt.melee.attacks[2].shared_cooldown = true
@@ -612,6 +612,15 @@ local function barrack_towers()
     tt.soldier.melee_slot_offset = vec_2(5, 0)
     tt.unit.marker_offset = vec_2(0, ady(7))
     tt.unit.mod_offset = vec_2(0, ady(23))
+
+    tt = E:register_t("mod_blood_templar", "mod_blood")
+    E:add_comps(tt, "dps")
+    tt.modifier.level = 1
+    tt.modifier.duration = 3
+    tt.dps.damage_min = 10
+    tt.dps.damage_max = 10
+    tt.dps.damage_inc = 10
+    tt.dps.damage_every = 1
 
     local tower_assassin = E:register_t("tower_assassin", "tower_barrack_1")
     E:add_comps(tower_assassin, "powers")

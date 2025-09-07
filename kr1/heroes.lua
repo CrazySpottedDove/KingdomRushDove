@@ -282,6 +282,43 @@ local function heroes()
     tt.particle_system.track_rotation = true
     tt.particle_system.z = Z_BULLETS
 
+    tt = RT("soldier_alleria_wildcat", "soldier")
+    E:add_comps(tt, "melee", "nav_grid")
+    anchor_y = 0.28
+    image_y = 42
+    tt.fn_level_up = scripts.soldier_alleria_wildcat.level_up
+    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0007" or "info_portraits_hero_0007"
+    tt.health.armor = 0
+    tt.health.hp_max = nil
+    tt.health_bar.offset = vec_2(0, 35)
+    tt.info.fn = scripts.soldier_alleria_wildcat.get_info
+    tt.info.i18n_key = "HERO_ARCHER_WILDCAT"
+    tt.main_script.insert = scripts.soldier_alleria_wildcat.insert
+    tt.main_script.update = scripts.soldier_alleria_wildcat.update
+    tt.melee.attacks[1].cooldown = 1
+    tt.melee.attacks[1].damage_max = nil
+    tt.melee.attacks[1].damage_min = nil
+    tt.melee.attacks[1].hit_time = fts(9)
+    tt.melee.attacks[1].vis_bans = bor(F_FLYING)
+    tt.melee.attacks[1].vis_flags = F_BLOCK
+    tt.melee.attacks[1].sound = "HeroArcherWildCatHit"
+    tt.melee.range = 90
+    tt.motion.max_speed = 4.8 * FPS
+    tt.regen.cooldown = 1
+    tt.render.sprites[1].anchor.y = anchor_y
+    tt.render.sprites[1].name = "spawn"
+    tt.render.sprites[1].prefix = "soldier_alleria"
+    tt.render.sprites[1].angles = {
+        walk = {"running"}
+    }
+    tt.soldier.melee_slot_offset.x = 5
+    tt.ui.click_rect = IS_PHONE_OR_TABLET and r(-20, -10, 40, 40) or r(-15, -5, 30, 30)
+    tt.unit.hit_offset = vec_2(0, 12)
+    tt.unit.mod_offset = vec_2(0, 14)
+    tt.unit.hide_after_death = true
+    tt.unit.explode_fx = nil
+    tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
+
     -- 博林
     tt = RT("hero_bolin", "hero")
     AC(tt, "melee", "timed_attacks")
@@ -11850,7 +11887,7 @@ local function heroes()
     tt.hero.skills.soldiers.xp_level_steps = {
         [3] = 1,
         [6] = 2,
-        [9] = 3,
+        [9] = 3
     }
     tt.hero.skills.polymorph = E:clone_c("hero_skill")
     tt.hero.skills.polymorph.cooldown = b.skill_polymorph.cooldown
@@ -11860,7 +11897,7 @@ local function heroes()
     tt.hero.skills.polymorph.xp_level_steps = {
         [3] = 1,
         [6] = 2,
-        [9] = 3,
+        [9] = 3
     }
     tt.hero.skills.path_aoe = E:clone_c("hero_skill")
     tt.hero.skills.path_aoe.cooldown = b.skill_path_aoe.cooldown
@@ -11874,7 +11911,7 @@ local function heroes()
     tt.hero.skills.path_aoe.xp_level_steps = {
         [2] = 1,
         [5] = 2,
-        [8] = 3,
+        [8] = 3
     }
     tt.hero.skills.disengage = E:clone_c("hero_skill")
     tt.hero.skills.disengage.cooldown = b.disengage.cooldown
@@ -11888,7 +11925,7 @@ local function heroes()
     tt.hero.skills.disengage.xp_level_steps = {
         [1] = 1,
         [4] = 2,
-        [7] = 3,
+        [7] = 3
     }
     tt.hero.skills.ultimate = E:clone_c("hero_skill")
     tt.hero.skills.ultimate.controller_name = "controller_hero_witch_ultimate"
@@ -11900,7 +11937,7 @@ local function heroes()
         [1] = 1,
         [4] = 2,
         [7] = 3,
-        [10] = 4,
+        [10] = 4
     }
     tt.health.dead_lifetime = b.dead_lifetime
     tt.health_bar.offset = vec_2(0, 40)
@@ -12263,10 +12300,7 @@ local function heroes()
     tt.particle_system.name = "hero_dragon_bone_projectile_trail_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
-    tt.particle_system.particle_lifetime = {
-        fts(8),
-        fts(8)
-    }
+    tt.particle_system.particle_lifetime = {fts(8), fts(8)}
     tt.particle_system.emission_rate = 20
     tt.particle_system.emit_rotation_spread = math.pi / 2
     tt.particle_system.z = Z_FLYING_HEROES
@@ -12276,20 +12310,11 @@ local function heroes()
     tt.particle_system.name = "hero_dragon_bone_burst_projectile_trail_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
-    tt.particle_system.particle_lifetime = {
-        fts(14),
-        fts(14)
-    }
+    tt.particle_system.particle_lifetime = {fts(14), fts(14)}
     tt.particle_system.emission_rate = 50
     tt.particle_system.emit_area_spread = vec_2(5, 0)
-    tt.particle_system.scales_y = {
-        1,
-        0.5
-    }
-    tt.particle_system.scales_x = {
-        1,
-        0.5
-    }
+    tt.particle_system.scales_y = {1, 0.5}
+    tt.particle_system.scales_x = {1, 0.5}
 
     tt = E:register_t("fx_bolt_dragon_bone_basic_attack_hit", "fx")
     tt.render.sprites[1].name = "hero_dragon_bone_hit_idle"
@@ -12338,28 +12363,10 @@ local function heroes()
     tt.render.sprites[2].offset = vec_2(0, 15)
     tt.render.sprites[2].sort_y_offset = -25
     tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
-    tt.tween.props[1].keys = {
-        {
-            0,
-            0
-        },
-        {
-            fts(18),
-            255
-        }
-    }
+    tt.tween.props[1].keys = {{0, 0}, {fts(18), 255}}
     tt.tween.props[2] = E:clone_c("tween_prop")
     tt.tween.props[2].name = "alpha"
-    tt.tween.props[2].keys = {
-        {
-            0,
-            0
-        },
-        {
-            fts(18),
-            255
-        }
-    }
+    tt.tween.props[2].keys = {{0, 0}, {fts(18), 255}}
     tt.tween.props[2].sprite_id = 2
     tt.tween.disabled = false
     tt.tween.remove = false
@@ -12375,30 +12382,8 @@ local function heroes()
     b = balance.heroes.hero_dragon_bone
     tt.hero.level_stats.armor = b.armor
     tt.hero.level_stats.hp_max = b.hp_max
-    tt.hero.level_stats.melee_damage_max = {
-        1,
-        2,
-        4,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-    }
-    tt.hero.level_stats.melee_damage_min = {
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-    }
+    tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 10}
+    tt.hero.level_stats.melee_damage_min = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     tt.hero.level_stats.ranged_damage_min = b.basic_attack.damage_min
     tt.hero.level_stats.ranged_damage_max = b.basic_attack.damage_max
     tt.hero.skills.cloud = E:clone_c("hero_skill")
@@ -12408,7 +12393,7 @@ local function heroes()
     tt.hero.skills.cloud.xp_level_steps = {
         [3] = 1,
         [6] = 2,
-        [9] = 3,
+        [9] = 3
     }
     tt.hero.skills.nova = E:clone_c("hero_skill")
     tt.hero.skills.nova.cooldown = b.nova.cooldown
@@ -12418,7 +12403,7 @@ local function heroes()
     tt.hero.skills.nova.xp_level_steps = {
         [2] = 1,
         [5] = 2,
-        [8] = 3,
+        [8] = 3
     }
     tt.hero.skills.rain = E:clone_c("hero_skill")
     tt.hero.skills.rain.hp_max = b.rain.hp_max
@@ -12430,7 +12415,7 @@ local function heroes()
     tt.hero.skills.rain.xp_level_steps = {
         [2] = 1,
         [5] = 2,
-        [8] = 3,
+        [8] = 3
     }
     tt.hero.skills.burst = E:clone_c("hero_skill")
     tt.hero.skills.burst.cooldown = b.burst.cooldown
@@ -12442,7 +12427,7 @@ local function heroes()
     tt.hero.skills.burst.xp_level_steps = {
         [4] = 1,
         [7] = 2,
-        [10] = 3,
+        [10] = 3
     }
     tt.hero.skills.ultimate = E:clone_c("hero_skill")
     tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
@@ -12492,9 +12477,7 @@ local function heroes()
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].prefix = "hero_dragon_bone_hero"
     tt.render.sprites[1].name = "respawn"
-    tt.render.sprites[1].angles.walk = {
-        "walk"
-    }
+    tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].z = Z_FLYING_HEROES
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].animated = false
@@ -12522,10 +12505,7 @@ local function heroes()
     tt.ranged.attacks[1].max_range = b.basic_attack.max_range
     tt.ranged.attacks[1].shoot_time = fts(16)
     tt.ranged.attacks[1].bullet = "bolt_dragon_bone_basic_attack"
-    tt.ranged.attacks[1].bullet_start_offset = {
-        vec_2(46, tt.flight_height - 23),
-        vec_2(50, tt.flight_height - 23)
-    }
+    tt.ranged.attacks[1].bullet_start_offset = {vec_2(46, tt.flight_height - 23), vec_2(50, tt.flight_height - 23)}
     tt.ranged.attacks[1].sync_animation = true
     tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
     tt.ranged.attacks[1].vis_flags = bor(F_RANGED, F_AREA)
@@ -12605,16 +12585,7 @@ local function heroes()
     tt.tween.remove = false
     tt.tween.props[1].sprite_id = 2
     tt.tween.props[1].name = "alpha"
-    tt.tween.props[1].keys = {
-        {
-            0,
-            0
-        },
-        {
-            0.5,
-            255
-        }
-    }
+    tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
     tt = E:register_t("hero_dragon_bone_ultimate")
     b = balance.heroes.hero_dragon_bone.ultimate
     E:add_comps(tt, "pos", "main_script", "sound_events")
@@ -12659,23 +12630,12 @@ local function heroes()
     tt.reinforcement.duration = b.duration
     tt.render.sprites[1].prefix = "hero_dragon_bone_drake"
     tt.render.sprites[1].name = "idle"
-    tt.render.sprites[1].angles.walk = {
-        "walk"
-    }
+    tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
     tt.soldier.melee_slot_offset = vec_2(5, 0)
     tt.sound_events.insert = nil
-    tt.tween.props[1].keys = {
-        {
-            0,
-            0
-        },
-        {
-            fts(10),
-            255
-        }
-    }
+    tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
     tt.tween.props[1].name = "alpha"
     tt.tween.remove = false
     tt.tween.reverse = false
@@ -12764,66 +12724,21 @@ local function heroes()
     tt.bone_type = "a"
     tt.tween.remove = false
     tt.tween.disabled = true
-    tt.tween.props[1].keys = {
-        {
-            0,
-            0
-        },
-        {
-            tt.bullet.hit_time,
-            255
-        }
-    }
+    tt.tween.props[1].keys = {{0, 0}, {tt.bullet.hit_time, 255}}
     tt.tween.props[2] = E:clone_c("tween_prop")
     tt.tween.props[2].name = "scale"
-    tt.tween.props[2].keys = {
-        {
-            0,
-            vec_1(0.5)
-        },
-        {
-            tt.bullet.hit_time,
-            vec_1(1)
-        }
-    }
+    tt.tween.props[2].keys = {{0, vec_1(0.5)}, {tt.bullet.hit_time, vec_1(1)}}
     tt.tween.props[3] = E:clone_c("tween_prop")
     tt.tween.props[3].name = "offset"
-    tt.tween.props[3].keys = {
-        {
-            0,
-            vec_2(-50, 100)
-        },
-        {
-            tt.bullet.hit_time,
-            vec_2(-5, 10)
-        }
-    }
+    tt.tween.props[3].keys = {{0, vec_2(-50, 100)}, {tt.bullet.hit_time, vec_2(-5, 10)}}
     tt.tween.props[4] = E:clone_c("tween_prop")
     tt.tween.props[4].name = "alpha"
     tt.tween.props[4].sprite_id = 2
-    tt.tween.props[4].keys = {
-        {
-            0,
-            0
-        },
-        {
-            fts(10),
-            255
-        }
-    }
+    tt.tween.props[4].keys = {{0, 0}, {fts(10), 255}}
     tt.tween.props[4].disabled = true
     tt.tween.props[5] = E:clone_c("tween_prop")
     tt.tween.props[5].name = "alpha"
-    tt.tween.props[5].keys = {
-        {
-            0,
-            255
-        },
-        {
-            fts(12),
-            0
-        }
-    }
+    tt.tween.props[5].keys = {{0, 255}, {fts(12), 0}}
     tt.tween.props[5].disabled = true
     tt.sound_events.insert = nil
     tt.sound_events.hit = "HeroDragonBoneSpineRainImpact"
@@ -12880,10 +12795,7 @@ local function heroes()
     tt.aura.radius = b.radius
     tt.aura.vis_bans = bor(F_FRIEND)
     tt.aura.vis_flags = bor(F_AREA)
-    tt.aura.mods = {
-        "mod_dragon_bone_plague",
-        "mod_dragon_bone_cloud_slow"
-    }
+    tt.aura.mods = {"mod_dragon_bone_plague", "mod_dragon_bone_cloud_slow"}
     tt.aura.cycle_time = fts(10)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_dragon_bone_cloud.update
@@ -12905,42 +12817,15 @@ local function heroes()
     tt.render.sprites[3].offset = vec_2(0, -10)
     tt.render.sprites[3].scale = vec_1(KR5_SCALE_FACTOR)
     tt.tween.props[1].name = "alpha"
-    tt.tween.props[1].keys = {
-        {
-            0,
-            0
-        },
-        {
-            fts(18),
-            255
-        }
-    }
+    tt.tween.props[1].keys = {{0, 0}, {fts(18), 255}}
     tt.tween.props[1].sprite_id = 1
     tt.tween.props[2] = E:clone_c("tween_prop")
     tt.tween.props[2].name = "alpha"
-    tt.tween.props[2].keys = {
-        {
-            0,
-            0
-        },
-        {
-            fts(18),
-            255
-        }
-    }
+    tt.tween.props[2].keys = {{0, 0}, {fts(18), 255}}
     tt.tween.props[2].sprite_id = 2
     tt.tween.props[3] = E:clone_c("tween_prop")
     tt.tween.props[3].name = "alpha"
-    tt.tween.props[3].keys = {
-        {
-            0,
-            0
-        },
-        {
-            fts(18),
-            255
-        }
-    }
+    tt.tween.props[3].keys = {{0, 0}, {fts(18), 255}}
     tt.tween.props[3].sprite_id = 2
     tt.tween.remove = false
     tt.decal_cloud_t = "decal_dragon_bone_cloud"
@@ -12985,10 +12870,7 @@ local function heroes()
     tt.particle_system.name = "hero_lumenir_attack_projectile_trail_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
-    tt.particle_system.particle_lifetime = {
-        fts(12),
-        fts(12)
-    }
+    tt.particle_system.particle_lifetime = {fts(12), fts(12)}
     tt.particle_system.emission_rate = 30
     tt.particle_system.emit_rotation_spread = math.pi / 2
     tt.particle_system.z = Z_FLYING_HEROES
@@ -12998,10 +12880,7 @@ local function heroes()
     tt.particle_system.name = "hero_lumenir_light_companion_attack_projectile_trail_particle_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
-    tt.particle_system.particle_lifetime = {
-        fts(12),
-        fts(12)
-    }
+    tt.particle_system.particle_lifetime = {fts(12), fts(12)}
     tt.particle_system.emission_rate = 15
     tt.particle_system.emit_rotation_spread = math.pi / 2
 
@@ -13010,24 +12889,12 @@ local function heroes()
     tt.particle_system.name = "hero_lumenir_light_companion_attack_projectile_trail_particle_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
-    tt.particle_system.particle_lifetime = {
-        fts(9),
-        fts(15)
-    }
-    tt.particle_system.alphas = {
-        255,
-        0
-    }
+    tt.particle_system.particle_lifetime = {fts(9), fts(15)}
+    tt.particle_system.alphas = {255, 0}
     tt.particle_system.emission_rate = 15
     tt.particle_system.animation_fps = 30
-    tt.particle_system.scales_x = {
-        1.5,
-        2
-    }
-    tt.particle_system.scales_y = {
-        1.5,
-        2
-    }
+    tt.particle_system.scales_x = {1.5, 2}
+    tt.particle_system.scales_y = {1.5, 2}
     tt.particle_system.z = Z_OBJECTS
     tt.particle_system.emit_rotation_spread = math.pi / 4
     tt = E:register_t("ps_bolt_lance_lumenir")
@@ -13037,10 +12904,7 @@ local function heroes()
     tt.particle_system.name = "bolt_lance_lumenir_particle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
-    tt.particle_system.particle_lifetime = {
-        fts(10),
-        fts(10)
-    }
+    tt.particle_system.particle_lifetime = {fts(10), fts(10)}
     tt.particle_system.emission_rate = 90
     tt.particle_system.emit_rotation_spread = math.pi
     tt = E:register_t("ps_soul_soldier_tower_ghost")
@@ -13050,10 +12914,7 @@ local function heroes()
     tt.particle_system.name = "ghost_tower_soul_skill_projectile_particle_idle"
     tt.particle_system.animated = true
     tt.particle_system.loop = false
-    tt.particle_system.particle_lifetime = {
-        fts(13),
-        fts(13)
-    }
+    tt.particle_system.particle_lifetime = {fts(13), fts(13)}
     tt.particle_system.emission_rate = 60
     tt.particle_system.emit_rotation_spread = math.pi
     tt = E:register_t("ps_bullet_liquid_fire_lumenir")
@@ -13062,94 +12923,40 @@ local function heroes()
 
     tt.particle_system.emission_rate = 20
     tt.particle_system.emit_duration = fts(10)
-    tt.particle_system.emit_speed = {
-        250,
-        250
-    }
+    tt.particle_system.emit_speed = {250, 250}
     tt.particle_system.emit_rotation_spread = math.pi / 4
     tt.particle_system.animated = true
     tt.particle_system.animation_fps = 18
     tt.particle_system.loop = false
     tt.particle_system.name = "bullet_liquid_fire_lumenir_particle"
-    tt.particle_system.particle_lifetime = {
-        fts(9),
-        fts(11)
-    }
-    tt.particle_system.alphas = {
-        255,
-        255,
-        50
-    }
-    tt.particle_system.scales_x = {
-        1,
-        1,
-        1.5
-    }
-    tt.particle_system.scales_y = {
-        1,
-        1,
-        1.5
-    }
-    tt.particle_system.spin = {
-        -math.pi / 2,
-        math.pi / 2
-    }
-    tt.particle_system.sort_y_offsets = {
-        -100,
-        0
-    }
+    tt.particle_system.particle_lifetime = {fts(9), fts(11)}
+    tt.particle_system.alphas = {255, 255, 50}
+    tt.particle_system.scales_x = {1, 1, 1.5}
+    tt.particle_system.scales_y = {1, 1, 1.5}
+    tt.particle_system.spin = {-math.pi / 2, math.pi / 2}
+    tt.particle_system.sort_y_offsets = {-100, 0}
     tt = E:register_t("ps_minidragon_lumenir_fire", "ps_bullet_liquid_fire_lumenir")
     tt.particle_system.emit_duration = nil
-    tt.particle_system.emit_speed = {
-        500,
-        500
-    }
+    tt.particle_system.emit_speed = {500, 500}
     tt.particle_system.emit_rotation_spread = math.pi / 8
     tt = E:register_t("ps_hero_lumenir_fire_ball")
 
     E:add_comps(tt, "pos", "particle_system")
 
-    tt.particle_system.particle_lifetime = {
-        fts(15),
-        fts(25)
-    }
-    tt.particle_system.scales_x = {
-        0.75,
-        2.5
-    }
-    tt.particle_system.scales_y = {
-        0.75,
-        2.5
-    }
-    tt.particle_system.scale_var = {
-        0.5,
-        1
-    }
+    tt.particle_system.particle_lifetime = {fts(15), fts(25)}
+    tt.particle_system.scales_x = {0.75, 2.5}
+    tt.particle_system.scales_y = {0.75, 2.5}
+    tt.particle_system.scale_var = {0.5, 1}
     tt.particle_system.emission_rate = 10
     tt.particle_system.sort_y_offset = -20
     tt.particle_system.z = Z_OBJECTS
     tt.particle_system.name = "bolt_lance_lumenir_particle"
     tt.particle_system.animated = true
-    tt.particle_system.particle_lifetime = {
-        0.4,
-        2
-    }
-    tt.particle_system.alphas = {
-        255,
-        0
-    }
-    tt.particle_system.scales_x = {
-        1,
-        3.5
-    }
-    tt.particle_system.scales_y = {
-        1,
-        3.5
-    }
-    tt.particle_system.scale_var = {
-        0.45,
-        0.9
-    }
+    tt.particle_system.particle_lifetime = {0.4, 2}
+    tt.particle_system.alphas = {255, 0}
+    tt.particle_system.scales_x = {1, 3.5}
+    tt.particle_system.scales_y = {1, 3.5}
+    tt.particle_system.scale_var = {0.45, 0.9}
     tt.particle_system.scale_same_aspect = false
     tt.particle_system.emit_spread = math.pi
     tt.particle_system.emission_rate = 30
@@ -13163,20 +12970,7 @@ local function heroes()
     tt.render.sprites[1].name = "hero_lumenir_celestial_judgement_fx_decal"
     tt.render.sprites[1].animated = false
     tt.tween.props[1].name = "alpha"
-    tt.tween.props[1].keys = {
-        {
-            0,
-            255
-        },
-        {
-            2,
-            255
-        },
-        {
-            2.5,
-            0
-        }
-    }
+    tt.tween.props[1].keys = {{0, 255}, {2, 255}, {2.5, 0}}
     tt.render.sprites[1].z = Z_DECALS
     tt.tween.remove = false
 
@@ -13185,30 +12979,8 @@ local function heroes()
     b = balance.heroes.hero_lumenir
     tt.hero.level_stats.armor = b.armor
     tt.hero.level_stats.hp_max = b.hp_max
-    tt.hero.level_stats.melee_damage_max = {
-        1,
-        2,
-        4,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-    }
-    tt.hero.level_stats.melee_damage_min = {
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-    }
+    tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 10}
+    tt.hero.level_stats.melee_damage_min = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     tt.hero.level_stats.ranged_damage_min = b.basic_ranged_shot.damage_min
     tt.hero.level_stats.ranged_damage_max = b.basic_ranged_shot.damage_max
     tt.hero.level_stats.mini_dragon_death_ranged_damage_min = b.mini_dragon_death.damage_min
@@ -13222,7 +12994,7 @@ local function heroes()
     tt.hero.skills.shield.xp_level_steps = {
         [3] = 1,
         [6] = 2,
-        [9] = 3,
+        [9] = 3
     }
     tt.hero.skills.celestial_judgement = E:clone_c("hero_skill")
     tt.hero.skills.celestial_judgement.cooldown = b.celestial_judgement.cooldown
@@ -13230,7 +13002,7 @@ local function heroes()
     tt.hero.skills.celestial_judgement.xp_level_steps = {
         [4] = 1,
         [7] = 2,
-        [10] = 3,
+        [10] = 3
     }
     tt.hero.skills.mini_dragon = E:clone_c("hero_skill")
     tt.hero.skills.mini_dragon.cooldown = b.mini_dragon.cooldown
@@ -13241,7 +13013,7 @@ local function heroes()
     tt.hero.skills.mini_dragon.xp_level_steps = {
         [1] = 1,
         [4] = 2,
-        [7] = 3,
+        [7] = 3
     }
     tt.hero.skills.fire_balls = E:clone_c("hero_skill")
     tt.hero.skills.fire_balls.cooldown = b.fire_balls.cooldown
@@ -13251,7 +13023,7 @@ local function heroes()
     tt.hero.skills.fire_balls.xp_level_steps = {
         [2] = 1,
         [5] = 2,
-        [8] = 3,
+        [8] = 3
     }
     tt.hero.skills.ultimate = E:clone_c("hero_skill")
     tt.hero.skills.ultimate.controller_name = "hero_lumenir_ultimate"
@@ -13303,9 +13075,7 @@ local function heroes()
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].prefix = "hero_lumenir_hero"
     tt.render.sprites[1].name = "respawn"
-    tt.render.sprites[1].angles.walk = {
-        "walk"
-    }
+    tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].z = Z_FLYING_HEROES
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].animated = false
@@ -13326,9 +13096,7 @@ local function heroes()
     tt.mini_dragon = "mini_dragon_death_hero_lumenir"
     tt.ranged.attacks[1] = E:clone_c("bullet_attack")
     tt.ranged.attacks[1].bullet = "bolt_lumenir"
-    tt.ranged.attacks[1].bullet_start_offset = {
-        v(44, 80)
-    }
+    tt.ranged.attacks[1].bullet_start_offset = {v(44, 80)}
     tt.ranged.attacks[1].cooldown = 1.8
     tt.ranged.attacks[1].bullet_count = 3
     tt.ranged.attacks[1].min_range = b.basic_ranged_shot.min_range
@@ -13416,16 +13184,7 @@ local function heroes()
     tt.tween.remove = false
     tt.tween.props[1].sprite_id = 2
     tt.tween.props[1].name = "alpha"
-    tt.tween.props[1].keys = {
-        {
-            0,
-            0
-        },
-        {
-            0.5,
-            255
-        }
-    }
+    tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
     tt = E:register_t("mini_dragon_hero_lumenir", "decal_scripted")
     b = balance.heroes.hero_lumenir.mini_dragon.dragon
 
@@ -13480,16 +13239,7 @@ local function heroes()
     tt.tween.props[2] = E:clone_c("tween_prop")
     tt.tween.props[2].sprite_id = 2
     tt.tween.props[2].name = "alpha"
-    tt.tween.props[2].keys = {
-        {
-            1,
-            0
-        },
-        {
-            1.5,
-            255
-        }
-    }
+    tt.tween.props[2].keys = {{1, 0}, {1.5, 255}}
     tt = E:register_t("mini_dragon_death_hero_lumenir", "mini_dragon_hero_lumenir")
     b = balance.heroes.hero_lumenir.mini_dragon_death
     tt.ranged.attacks[1].max_range = b.max_range
@@ -13552,11 +13302,7 @@ local function heroes()
     tt.vis.bans = bor(F_ALL)
     tt.melee.attacks[1].damage_max = nil
     tt.melee.attacks[1].damage_min = nil
-    tt.melee.attacks[1].hit_times = {
-        fts(7),
-        fts(15),
-        fts(24)
-    }
+    tt.melee.attacks[1].hit_times = {fts(7), fts(15), fts(24)}
     tt.melee.attacks[1].shared_cooldown = true
     tt.melee.attacks[1].xp_gain_factor = 0
     tt.melee.attacks[1].chance = 1
@@ -13627,16 +13373,7 @@ local function heroes()
     tt.render.sprites[1].z = Z_OBJECTS
     tt.tween.disabled = true
     tt.tween.remove = true
-    tt.tween.props[1].keys = {
-        {
-            0,
-            255
-        },
-        {
-            tt.aura.duration_var,
-            0
-        }
-    }
+    tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration_var, 0}}
 
     tt = E:register_t("mod_hero_lumenir_sword_hit", "modifier")
 
@@ -13675,31 +13412,14 @@ local function heroes()
     tt.main_script.update = scripts.mod_hero_lumenir_shield.update
     tt.main_script.remove = scripts.mod_hero_lumenir_shield.remove
     tt.render.sprites[1].prefix = "hero_lumenir_blessing_of_retribution_shield"
-    tt.render.sprites[1].size_names = {
-        "small",
-        "mid",
-        "big"
-    }
+    tt.render.sprites[1].size_names = {"small", "mid", "big"}
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].name = "hero_lumenir_blessing_of_retribution_shield_decal"
-    tt.render.sprites[2].size_names = {
-        "small",
-        "mid",
-        "big"
-    }
+    tt.render.sprites[2].size_names = {"small", "mid", "big"}
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_DECALS
     tt.tween.remove = false
-    tt.tween.props[1].keys = {
-        {
-            0,
-            0
-        },
-        {
-            0.25,
-            255
-        }
-    }
+    tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
     tt = E:register_t("mod_lumenir_ulti_stun", "mod_stun")
     b = balance.heroes.hero_lumenir
     tt.modifier.duration = b.ultimate.stun_target_duration

@@ -672,7 +672,7 @@ function scripts.enemy_mixed.update(this, store, script)
                     end
 
                     while SU.can_melee_blocker(store, this, blocker) do
-                        if this.ranged and this.ranged.range_while_blocking then
+                        if this.ranged and this.ranged.range_while_blocking and ranged then
                             SU.y_enemy_range_attacks(store, this, ranged)
                         end
                         if not SU.y_enemy_melee_attacks(store, this, blocker) then
@@ -8127,7 +8127,7 @@ end
 scripts.mod_ban.remove = function(this, store)
     local target = store.entities[this.modifier.target_id]
     if not target or target.health.dead then
-        return
+        return true
     end
 
     target.mod_ban_count = target.mod_ban_count - 1
