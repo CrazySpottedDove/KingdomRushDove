@@ -681,11 +681,7 @@ function editor:level_save(idx, mode)
 	GR:save(s.level_name)
 	self:serialize_level(s)
 
-	if IS_KR5 then
-		ss = table.deepclone(s.level.data)
-	else
-		ss = s
-	end
+	ss = table.deepclone(s.level.data)
 
 	self.save_data(ss, s.level_name)
 end
