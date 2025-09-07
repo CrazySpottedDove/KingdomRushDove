@@ -6202,18 +6202,6 @@ tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
 
-
-
-tt = E:register_t("mod_clobber", "modifier")
-E:add_comps(tt, "render")
-tt.main_script.insert = scripts.mod_stun.insert
-tt.main_script.update = scripts.mod_stun.update
-tt.main_script.remove = scripts.mod_stun.remove
-tt.render.sprites[1].prefix = "stun"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].draw_order = 10
-
 tt = E:register_t("mod_plant_poison_pumpkin_slow", "mod_slow")
 tt.modifier.duration = 4
 tt.slow.factor = 0.5

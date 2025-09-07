@@ -929,9 +929,10 @@ local function engineer_towers()
     tt.attacks.list[3].min_count = 2
     tt.attacks.list[3].range = 195
     tt.attacks.list[3].sound = "TowerEntwoodClobber"
-    tt.attacks.list[3].stun_chances = {1, 1, 0.75, 0.5}
+    -- tt.attacks.list[3].stun_chances = {1, 1, 0.75, 0.5}
     tt.attacks.list[3].stun_mod = "mod_clobber"
-    tt.attacks.list[3].vis_bans = bor(F_FLYING, F_BOSS)
+    tt.attacks.list[3].slow_mod = "mod_clobber_slow"
+    tt.attacks.list[3].vis_bans = F_FLYING
     tt.attacks.list[3].vis_flags = F_RANGED
     tt.powers.clobber = E:clone_c("power")
     tt.powers.clobber.price_base = 225
@@ -963,6 +964,19 @@ local function engineer_towers()
     tt.render.sprites[11].loop = false
     tt.render.sprites[11].offset = vec_2(0, 42)
     tt.sound_events.insert = "ElvesRockEntwoodTaunt"
+
+    tt = E:register_t("mod_clobber", "modifier")
+    E:add_comps(tt, "render")
+    tt.main_script.insert = scripts.mod_stun.insert
+    tt.main_script.update = scripts.mod_stun.update
+    tt.main_script.remove = scripts.mod_stun.remove
+    tt.render.sprites[1].prefix = "stun"
+    tt.render.sprites[1].size_names = {"small", "big", "big"}
+    tt.render.sprites[1].name = "small"
+    tt.render.sprites[1].draw_order = 10
+
+    tt = E:register_t("mod_clobber_slow", "mod_slow")
+    tt.slow.factor = 0.6
 
     tt = E:register_t("rock_druid", "rock_1")
     E:add_comps(tt, "tween")
@@ -1016,6 +1030,7 @@ local function engineer_towers()
     tt.bullet.hit_payload = "aura_fiery_nut"
     tt.bullet.hit_fx = "fx_fiery_nut_explosion"
     tt.bullet.hit_decal = nil
+    tt.bullet.reduce_armor = 0.1
     tt.render.sprites[1].name = "artillery_tree_proys_0002"
     tt.sound_events.hit = "TowerEntwoodFieryExplote"
 
