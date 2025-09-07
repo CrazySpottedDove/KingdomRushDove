@@ -459,15 +459,15 @@ return {
 							interval_next = 200,
 							max = 2
 						},
-                        -- {
-						-- 	interval = 100,
-						-- 	max_same = 0,
-						-- 	fixed_sub_path = 0,
-						-- 	creep = "eb_alleria",
-						-- 	path = 1,
-						-- 	interval_next = 150,
-						-- 	max = 1
-						-- },
+                        {
+							interval = 100,
+							max_same = 0,
+							fixed_sub_path = 0,
+							creep = "eb_alleria",
+							path = 1,
+							interval_next = 150,
+							max = 1
+						},
                         {
 							interval = 205,
 							max_same = 0,
