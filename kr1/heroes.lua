@@ -10890,7 +10890,7 @@ local function heroes()
     tt.animation_start = "start"
     tt.animation_loop = "idle"
     tt.animation_end = "end"
-    tt.render.sprites[1].prefix = nil
+    tt.render.sprites[1].prefix = "hero_raelyn_unbreakable_shield_lvl1"
     tt.render.sprites[1].name = "idle"
     tt.render.sprites[1].loop = true
 
