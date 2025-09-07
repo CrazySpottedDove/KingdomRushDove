@@ -759,8 +759,28 @@ function love.errhand(msg)
 	love.graphics.origin()
 
 	local err = {}
+	local tip = {}
+	local tip_trigger_errors = {
+		err_not_have_texture = "bad argument #1 to 'draw' (Texture expected, got nil)"
+	}
+	local has_tip
 
-	table.insert(err, "Error\n")
+	table.insert(tip, "Tip\n")
+
+	for e, v in pairs(tip_trigger_errors) do
+		if e == "err_not_have_texture" and string.find(msg, v, 1, true) then
+			table.insert(tip, "提示: 贴图资源丢失，请尝试重新安装新版本\n")
+			has_tip = true
+		end
+	end
+
+	if has_tip then
+		table.insert(tip, "发生错误! 请先尝试提示，再将本界面截图并反馈，而不是仅语言描述\n")
+	else
+		table.insert(tip, "发生错误! 请将本界面截图并反馈，而不是仅语言描述\n")
+	end
+
+	table.insert(err, "\n\n\n\n\n\nError\n")
     if string.find(msg, "Error running coro", 1, true) then
         msg = msg:gsub("^[^:]+:%d+: ", "")
         local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
@@ -793,6 +813,11 @@ function love.errhand(msg)
 	table.insert(err, "\n\nLast error msgs\n")
 	table.insert(err, last_log_msg)
 
+	local pt = table.concat(tip, "\n")
+
+	pt = string.gsub(pt, "\t", "")
+	pt = string.gsub(pt, "%[string \"(.-)\"%]", "%1")
+
 	local p = table.concat(err, "\n")
 
 	p = string.gsub(p, "\t", "")
@@ -803,6 +828,12 @@ function love.errhand(msg)
 
 		love.graphics.clear(love.graphics.getBackgroundColor())
 		love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
+
+		love.graphics.setNewFont("_assets/all-desktop/fonts/msyh.ttc",
+			math.floor(love.window.toPixels(15)))
+
+		love.graphics.printf(pt, pos, pos, love.graphics.getWidth() - pos)
+		
 		love.graphics.present()
 	end
 
