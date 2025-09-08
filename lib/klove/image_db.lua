@@ -399,7 +399,7 @@ function image_db:unload_atlas(name, ref_scale)
 
 	log.debug(" removed #frames:%s #images:%s ", #remove_frames, removed_images_count)
 	self:purge_atlas()
-	collectgarbage()
+	-- collectgarbage()
 end
 
 function image_db:purge_atlas()

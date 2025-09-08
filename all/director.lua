@@ -312,10 +312,8 @@ function director:unload_item(item)
 
     if item.item_name == "game" then
         local game = item
-
         self:unload_texture_groups(replace_locale(game.game_gui.required_textures), self.params.texture_size,
             game.game_gui.ref_res, "game_gui")
-
         local groups = {}
         local scaled_groups = {}
         groups = table.append(groups, replace_locale(game.required_textures))
@@ -332,7 +330,6 @@ function director:unload_item(item)
                 end
             end
         end
-
         self:unload_texture_groups(groups, self.params.texture_size, game.ref_res, "game")
         self:unload_texture_groups(scaled_groups, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, "game")
         I:unload_atlas("temp_game_texts", game.store.screen_scale)
@@ -363,7 +360,6 @@ function director:unload_item(item)
                 S:unload_group(group)
             end
         end
-
         game:destroy()
 
         game.store = nil

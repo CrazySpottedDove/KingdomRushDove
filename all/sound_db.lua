@@ -379,69 +379,67 @@ function sound_db:unload_group(name)
 	self.sounds_uses[name] = self.sounds_uses[name] - 1
 
 	if self.sounds_uses[name] > 0 then
-		log.debug("sound group %s still in use", name)
-
 		return
 	end
 
 	local group = self.groups[name]
 
 	if group.keep then
-		log.debug("sound group %s has keep flag. skipping unload", name)
-
 		return
 	end
 
-	log.debug("unloading sound group %s", name)
-
 	self.sounds_uses[name] = nil
 
-	local files = {}
+    local sources = self.sources
+    local source_uses = self.source_uses
+    local files = group.files
+	if files then
+        for i=1,#files do
+            local f = files[i]
 
-	if group.files then
-		for _, f in pairs(group.files) do
-			table.insert(files, {
-				f,
-				group.stream or false
-			})
+            if sources[f] then
+                for _, s in pairs(sources[f]) do
+                    s:stop()
+                end
+
+                source_uses[f] = source_uses[f] - 1
+
+                if source_uses[f] < 1 then
+                    sources[f] = nil
+                    source_uses[f] = 0
+                end
+            end
+            -- collectgarbage()
 		end
 	end
+    local sounds = group.sounds
+    if sounds then
+        for i=1,#sounds do
+            local s = sounds[i]
+            local sound = self.sounds[s]
+            local sound_files = sound.files
+            for i=1,#sound_files do
+                local f = sound_files[i]
+                if sources[f] then
+                    for _, s in pairs(sources[f]) do
+                        s:stop()
+                    end
 
-	if group.sounds then
-		for _, s in pairs(self.groups[name].sounds) do
-			local sound = self.sounds[s]
+                    source_uses[f] = source_uses[f] - 1
 
-			for _, f in pairs(sound.files) do
-				table.insert(files, {
-					f,
-					sound.stream or false
-				})
-			end
-		end
-	end
-
-	for _, item in pairs(files) do
-		local fn, stream = unpack(item)
-
-		if self.sources[fn] then
-			for _, s in pairs(self.sources[fn]) do
-				s:stop()
-			end
-
-			self.source_uses[fn] = self.source_uses[fn] - 1
-
-			if self.source_uses[fn] < 1 then
-				self.sources[fn] = nil
-				self.source_uses[fn] = 0
-
-				log.paranoid("  sound source deleted: %s", fn)
-			else
-				log.debug("  sound source %s still used by %s groups", fn, self.source_uses[fn])
-			end
-		end
-	end
-
-	collectgarbage()
+                    if source_uses[f] < 1 then
+                        sources[f] = nil
+                        source_uses[f] = 0
+                    end
+                end
+            end
+            -- collectgarbage()
+        end
+    end
+    -- local t1 = love.timer.getTime()
+	-- collectgarbage()
+    -- local t2 = love.timer.getTime()
+    -- print("Sound group " .. name .. " unloaded. GC took " .. (t2 - t1) .. " seconds.")
 end
 
 sound_db.request_queue = {}

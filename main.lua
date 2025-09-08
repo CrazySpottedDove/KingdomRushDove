@@ -226,7 +226,7 @@ local function load_app_settings()
 		for _, t in pairs(settings.required_textures) do
 			I:unload_atlas(t, 1)
 		end
-
+        collectgarbage()
 		load_director()
 	end
 
@@ -833,7 +833,7 @@ function love.errhand(msg)
 			math.floor(love.window.toPixels(15)))
 
 		love.graphics.printf(pt, pos, pos, love.graphics.getWidth() - pos)
-		
+
 		love.graphics.present()
 	end
 
