@@ -1394,8 +1394,9 @@ local function barrack_towers()
 
     tt = RT("mod_life_drain_drow", "modifier")
     AC(tt, "render")
-    tt.heal_factor = 1
+    tt.heal_factor = 0.8
     tt.heal_bans = bor(F_POISON)
+    tt.heal_base = 30
     tt.main_script.insert = scripts.mod_heal_on_damage.insert
     tt.main_script.update = scripts.mod_heal_on_damage.update
     tt.modifier.use_mod_offset = false

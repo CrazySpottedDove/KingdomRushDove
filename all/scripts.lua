@@ -6139,6 +6139,9 @@ function scripts.mod_heal_on_damage.update(this, store)
 
             if actual_damage > 0 then
                 target.health.hp = target.health.hp + hf * actual_damage
+                if this.heal_base then
+                    target.health.hp = target.health.hp + this.heal_base
+                end
             end
 
             has_damaged = true
