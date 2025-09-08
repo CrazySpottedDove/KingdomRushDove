@@ -2890,6 +2890,9 @@ function scripts.missile.update(this, store, script)
             sfx.pos.x, sfx.pos.y = target.pos.x, target.pos.y
         else
             sfx.pos.x, sfx.pos.y = this.pos.x, this.pos.y
+            if target then
+                sfx.render.sprites[1].sort_y_offset = target.pos.y - this.pos.y - 2
+            end
         end
 
         sfx.render.sprites[1].ts = store.tick_ts
