@@ -169,6 +169,7 @@ function sound_db:queue_load_done()
 	end
 
 	log.debug("sound queue loaded")
+    collectgarbage()
 	self.load_queue_current = nil
 	self.progress = 1
 	self.groups_total = 0
@@ -326,7 +327,7 @@ function sound_db:load_group(name, yielding, filter)
 
 		load_threads = nil
 
-		collectgarbage("collect")
+		-- collectgarbage("collect")
 	else
 		local yield_every = 0
 
@@ -349,7 +350,7 @@ function sound_db:load_group(name, yielding, filter)
 						self.source_uses[fn] = 1
 
 						log.paranoid("Created audio source for %s", file)
-						collectgarbage()
+						-- collectgarbage()
 					end
 				end
 			end

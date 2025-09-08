@@ -293,7 +293,7 @@ function image_db:queue_load_done()
 							}
 							im = nil
 
-							collectgarbage()
+							-- collectgarbage()
 						else
 							log.paranoid(" +++ keeping image %s", im)
 
@@ -325,7 +325,7 @@ function image_db:queue_load_done()
 	end
 
 	log.info("Done loading atlas queue. | time: %s", love.timer.getTime() - self.queue_load_start_time)
-
+    collectgarbage()
 	self.queue_load_start_time = nil
 	self.progress = 1
 	self.groups_total = 0
