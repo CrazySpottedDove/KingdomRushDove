@@ -615,7 +615,6 @@ local function barrack_towers()
     tt.unit.mod_offset = vec_2(0, ady(23))
 
     tt = E:register_t("mod_blood_templar", "mod_blood")
-    E:add_comps(tt, "dps")
     tt.modifier.level = 1
     tt.modifier.duration = 3
     tt.dps.damage_min = 10

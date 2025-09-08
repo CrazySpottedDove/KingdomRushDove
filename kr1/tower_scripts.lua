@@ -5286,7 +5286,6 @@ function scripts.tower_tricannon.update(this, store, script)
                             --     ao.ts = store.tick_ts - (ao.cooldown - a.min_cooldown)
                             -- end
                         elseif aa == ao then
-                            aa.ts = store.tick_ts
                             aa.active = true
 
                             -- for _, attack in ipairs(overheateble_attacks) do
@@ -5302,6 +5301,7 @@ function scripts.tower_tricannon.update(this, store, script)
                             mod.pos = this.pos
                             queue_insert(store, mod)
                             this.decal_mod = mod
+                            aa.ts = store.tick_ts
                         end
                     end
                 end
