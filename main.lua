@@ -701,6 +701,10 @@ local function crash_report(str)
 end
 
 function love.errhand(msg)
+	local error_canvas = love.graphics.newCanvas(love.graphics.getWidth(), love.graphics.getHeight())
+	local last_canvas = love.graphics.getCanvas()
+	love.graphics.setCanvas(error_canvas)
+
 	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
 
 	msg = tostring(msg)
@@ -749,38 +753,45 @@ function love.errhand(msg)
 	love.graphics.reset()
 
 	local font = love.graphics.setNewFont(math.floor(love.window.toPixels(15)))
+	local cn_font = love.graphics.setNewFont("_assets/all-desktop/fonts/msyh.ttc",
+		math.floor(love.window.toPixels(16)))
 
 	love.graphics.setBackgroundColor(89, 157, 220)
 	love.graphics.setColor(255, 255, 255, 255)
 
 	local trace = debug.traceback()
 
-	love.graphics.clear(love.graphics.getBackgroundColor())
+	--love.graphics.clear(love.graphics.getBackgroundColor())
 	love.graphics.origin()
 
 	local err = {}
 	local tip = {}
 	local tip_trigger_errors = {
-		err_not_have_texture = "bad argument #1 to 'draw' (Texture expected, got nil)"
+		["Texture expected, got nil"] = "贴图资源丢失，请先尝试重新安装新版本\n"
 	}
 	local has_tip
 
 	table.insert(tip, "Tip\n")
 
 	for e, v in pairs(tip_trigger_errors) do
-		if e == "err_not_have_texture" and string.find(msg, v, 1, true) then
-			table.insert(tip, "提示: 贴图资源丢失，请尝试重新安装新版本\n")
+		if string.find(msg, e, 1, true) then
+			table.insert(tip, "提示: " .. v)
 			has_tip = true
 		end
 	end
 
 	if has_tip then
-		table.insert(tip, "发生错误! 请先尝试提示，再将本界面截图并反馈，而不是仅语言描述\n")
+		table.insert(tip, "oops, 发生错误! 请先尝试提示，再将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
 	else
-		table.insert(tip, "发生错误! 请将本界面截图并反馈，而不是仅语言描述\n")
+		table.insert(tip, "oops, 发生错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
 	end
 
-	table.insert(err, "\n\n\n\n\n\nError\n")
+	if has_tip then
+		table.insert(err, "\n\n\n\n\n\n\nError\n")
+	else
+		table.insert(err, "\n\n\n\n\nError\n")
+	end
+
     if string.find(msg, "Error running coro", 1, true) then
         msg = msg:gsub("^[^:]+:%d+: ", "")
         local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
@@ -823,18 +834,24 @@ function love.errhand(msg)
 	p = string.gsub(p, "\t", "")
 	p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
 
+	local pos = love.window.toPixels(70)
+
+	love.graphics.setFont(font)
+	love.graphics.clear(love.graphics.getBackgroundColor())
+	love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
+
+	love.graphics.setFont(cn_font)
+	love.graphics.printf(pt, pos, pos, love.graphics.getWidth() - pos)
+
+	love.graphics.present()
+
 	local function draw()
-		local pos = love.window.toPixels(70)
-
-		love.graphics.clear(love.graphics.getBackgroundColor())
-		love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
-
-		love.graphics.setNewFont("_assets/all-desktop/fonts/msyh.ttc",
-			math.floor(love.window.toPixels(15)))
-
-		love.graphics.printf(pt, pos, pos, love.graphics.getWidth() - pos)
-		
-		love.graphics.present()
+		if love.keyboard.isDown("z") then
+			love.graphics.present()
+			love.timer.sleep(0.4)
+		else
+			love.graphics.draw(error_canvas, 0, 0)
+		end
 	end
 
 	while true do
