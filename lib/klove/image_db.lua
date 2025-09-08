@@ -26,7 +26,34 @@ image_db.queue_load_total_images = 0
 image_db.queue_load_done_images = 0
 image_db.use_canvas = true
 
-local _MAX_THREADS = 8
+-- by dove
+image_db.supportedformats = love.graphics.getCompressedImageFormats()
+
+-- 简化版本，只基于CPU核心数
+local function calculate_thread_count()
+    local cpu_count = love.system.getProcessorCount() or 4
+
+    local thread_count
+    if cpu_count <= 1 then
+        thread_count = 2
+    elseif cpu_count <= 2 then
+        thread_count = 4
+    elseif cpu_count <= 4 then
+        thread_count = 6
+    elseif cpu_count <= 8 then
+        thread_count = 8
+    elseif cpu_count <= 16 then
+        thread_count = 12
+    else
+        thread_count = 16
+    end
+
+    return thread_count
+end
+
+local _MAX_THREADS = calculate_thread_count()
+
+-- local _MAX_THREADS = 8
 local _LOAD_IMAGE_THREAD_CODE = "local cin,cout,th_i = ...\nrequire 'love.filesystem'\nrequire 'love.image'\nrequire 'love.timer'\nlocal file_count = 0\nwhile true do\n    -- get params\n    local fn = cin:demand()\n    if fn == 'QUIT' then goto quit end\n    local path = cin:demand()\n    local f = path .. '/' .. fn\n\n    --print('TH  ' ..th_i.. ' ARGS ' .. fn .. ' ' .. path .. '\\n')\n    \n    if not love.filesystem.isFile(f) then\n        cout:push({'ERROR','Not a file',f})\n    else\n        local data\n        --local t_start = love.timer.getTime()\n        if string.match(fn, '.pkm$') or string.match(fn, '.astc$') or string.match(fn, '.dds$') then\n            data = love.image.newCompressedData(f)\n        else\n            data = love.image.newImageData(f)\n        end\n        --print('TH  ' ..th_i.. ' newXData time: ' .. (love.timer.getTime()-t_start) .. '\\n')\n        if not data then\n            cout:push({'ERROR','Image could not be loaded',f})\n        else\n            file_count = file_count + 1\n            local w,h = data:getDimensions()\n            local key = string.gsub(fn, '.png$', '')\n            key = string.gsub(key, '.jpg$', '')\n            key = string.gsub(key, '.pkm$', '')\n            key = string.gsub(key, '.astc$', '')\n            key = string.gsub(key, '.dds$', '')\n            cout:push({'OK',key,data,w,h})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
 
 function image_db:get_short_stats()
@@ -549,33 +576,27 @@ function image_db:load_image_file(fn, path)
 
 		local compressed = false
 
-		if string.match(f, ".pkm$") then
+		if string.match(f, ".dds$") then
 			compressed = true
 
-			local supportedformats = love.graphics.getCompressedImageFormats()
-
-			if not supportedformats.ETC1 then
-				log.error("ETC1 not supported. Could not load %s", f)
+			if not self.supportedformats.DXT3 then
+				log.error("DXT3 not supported. Could not load %s", f)
 
 				return nil
 			end
 		elseif string.match(f, ".astc$") then
 			compressed = true
 
-			local supportedformats = love.graphics.getCompressedImageFormats()
-
-			if not supportedformats.ASTC4x4 then
+			if not self.supportedformats.ASTC4x4 then
 				log.error("ASTC not supported. Could not load %s", f)
 
 				return nil
 			end
-		elseif string.match(f, ".dds$") then
+		elseif string.match(f, ".pkm$") then
 			compressed = true
 
-			local supportedformats = love.graphics.getCompressedImageFormats()
-
-			if not supportedformats.DXT3 then
-				log.error("DXT3 not supported. Could not load %s", f)
+			if not self.supportedformats.ETC1 then
+				log.error("ETC1 not supported. Could not load %s", f)
 
 				return nil
 			end

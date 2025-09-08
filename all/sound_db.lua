@@ -33,7 +33,32 @@ sound_db.groups_done = 0
 sound_db.sounds_uses = {}
 
 local _THREADS_ENABLED = true
-local _MAX_THREADS = 8
+
+-- 音频加载的动态线程数计算
+local function calculate_audio_thread_count()
+    local cpu_count = love.system.getProcessorCount() or 4
+
+    -- 音频加载的线程数应该比图像加载更保守
+    local thread_count
+
+    if cpu_count <= 2 then
+        thread_count = 2 -- 低端设备：2个线程
+    elseif cpu_count <= 4 then
+        thread_count = 3 -- 四核：3个线程
+    elseif cpu_count <= 8 then
+        thread_count = 4 -- 八核：4个线程
+    else
+        thread_count = 6 -- 高端CPU：最多6个线程
+    end
+
+    log.info("Audio loading: %d CPU cores -> %d threads", cpu_count, thread_count)
+
+    return thread_count
+end
+
+-- 替换固定的 _MAX_THREADS = 8
+local _MAX_THREADS = calculate_audio_thread_count()
+
 local _LOAD_AUDIO_THREAD_CODE = "local cin,cout,th_i = ...\nrequire \"love.filesystem\"\nrequire \"love.audio\"\nrequire \"love.sound\"\nlocal file_count = 0\nwhile true do\n    -- get params\n    local file = cin:demand()\n    if file == 'QUIT' then goto quit end\n    local mode = cin:demand()\n    local id = cin:demand()\n    \n    if not love.filesystem.isFile(file) then\n        cout:push({'ERROR','Not a file',file})\n    else\n        local ok, result = pcall(love.audio.newSource, file, mode)\n        collectgarbage()\n        if ok and result then\n            cout:push({'OK',result,id})\n            file_count = file_count + 1\n        else\n            cout:push({'ERROR',result,file})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
 
 function sound_db:init(path)
@@ -303,8 +328,7 @@ function sound_db:load_group(name, yielding, filter)
 
 		load_threads = nil
 
-		collectgarbage()
-		collectgarbage()
+		collectgarbage("collect")
 	else
 		local yield_every = 0
 
