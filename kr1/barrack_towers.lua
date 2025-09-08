@@ -1478,7 +1478,7 @@ local function barrack_towers()
     tt.health.armor = 0
     tt.health.armor_inc = 0.2
     tt.health.armor_power_name = "armor"
-    tt.health.dead_lifetime = 8
+    tt.health.dead_lifetime = 10
     tt.health.hp_max = 100
     tt.health_bar.offset = vec_2(0, 29)
     tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
