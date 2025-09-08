@@ -482,6 +482,7 @@ function director:queue_load_item_named(name, force_reload)
 
         self.queued_item = item
     elseif props.type == "game" then
+        -- 进入游戏的加载环节
         local game_gui = _require("game_gui")
         local game = _require("game")
 
@@ -511,21 +512,20 @@ function director:queue_load_item_named(name, force_reload)
                 true, "game")
             self:load_sound_groups(criket.required_sounds)
         end
-
         self:load_texture_groups(replace_locale(game.required_textures), self.params.texture_size, game.ref_res, true,
             "game")
         self:load_texture_groups(replace_locale(game.scale_required_textures), self.params.texture_size,
             game.ref_res * game.scale_required_textures_scale, true, "game")
         self:load_texture_groups(replace_locale(game.store.level.required_textures), self.params.texture_size,
             game.ref_res, true, "game")
-
         self:load_texture_groups(replace_locale(game_gui.required_textures), self.params.texture_size, game_gui.ref_res,
             true, "game_gui")
+
         self:load_sound_groups(game.required_sounds)
+
         self:load_sound_groups(game.store.level.required_sounds)
 
         local slot = storage:load_slot()
-
         if slot.heroes.selected then
             for _, hero in pairs(slot.heroes.selected) do
                 if hero then
@@ -539,7 +539,6 @@ function director:queue_load_item_named(name, force_reload)
                 end
             end
         end
-
         if game.store.level.show_comic_idx and game.store.level_mode == GAME_MODE_CAMPAIGN then
             local comic_idx = game.store.level.show_comic_idx
             local item = _require("screen_comics")

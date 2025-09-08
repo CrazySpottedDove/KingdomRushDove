@@ -54,7 +54,49 @@ end
 local _MAX_THREADS = calculate_thread_count()
 
 -- local _MAX_THREADS = 8
-local _LOAD_IMAGE_THREAD_CODE = "local cin,cout,th_i = ...\nrequire 'love.filesystem'\nrequire 'love.image'\nrequire 'love.timer'\nlocal file_count = 0\nwhile true do\n    -- get params\n    local fn = cin:demand()\n    if fn == 'QUIT' then goto quit end\n    local path = cin:demand()\n    local f = path .. '/' .. fn\n\n    --print('TH  ' ..th_i.. ' ARGS ' .. fn .. ' ' .. path .. '\\n')\n    \n    if not love.filesystem.isFile(f) then\n        cout:push({'ERROR','Not a file',f})\n    else\n        local data\n        --local t_start = love.timer.getTime()\n        if string.match(fn, '.pkm$') or string.match(fn, '.astc$') or string.match(fn, '.dds$') then\n            data = love.image.newCompressedData(f)\n        else\n            data = love.image.newImageData(f)\n        end\n        --print('TH  ' ..th_i.. ' newXData time: ' .. (love.timer.getTime()-t_start) .. '\\n')\n        if not data then\n            cout:push({'ERROR','Image could not be loaded',f})\n        else\n            file_count = file_count + 1\n            local w,h = data:getDimensions()\n            local key = string.gsub(fn, '.png$', '')\n            key = string.gsub(key, '.jpg$', '')\n            key = string.gsub(key, '.pkm$', '')\n            key = string.gsub(key, '.astc$', '')\n            key = string.gsub(key, '.dds$', '')\n            cout:push({'OK',key,data,w,h})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
+-- local _LOAD_IMAGE_THREAD_CODE = "local cin,cout,th_i = ...\nrequire 'love.filesystem'\nrequire 'love.image'\nrequire 'love.timer'\nlocal file_count = 0\nwhile true do\n    -- get params\n    local fn = cin:demand()\n    if fn == 'QUIT' then goto quit end\n    local path = cin:demand()\n    local f = path .. '/' .. fn\n\n    --print('TH  ' ..th_i.. ' ARGS ' .. fn .. ' ' .. path .. '\\n')\n    \n    if not love.filesystem.isFile(f) then\n        cout:push({'ERROR','Not a file',f})\n    else\n        local data\n        --local t_start = love.timer.getTime()\n        if string.match(fn, '.pkm$') or string.match(fn, '.astc$') or string.match(fn, '.dds$') then\n            data = love.image.newCompressedData(f)\n        else\n            data = love.image.newImageData(f)\n        end\n        --print('TH  ' ..th_i.. ' newXData time: ' .. (love.timer.getTime()-t_start) .. '\\n')\n        if not data then\n            cout:push({'ERROR','Image could not be loaded',f})\n        else\n            file_count = file_count + 1\n            local w,h = data:getDimensions()\n            local key = string.gsub(fn, '.png$', '')\n            key = string.gsub(key, '.jpg$', '')\n            key = string.gsub(key, '.pkm$', '')\n            key = string.gsub(key, '.astc$', '')\n            key = string.gsub(key, '.dds$', '')\n            cout:push({'OK',key,data,w,h})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
+
+local _LOAD_IMAGE_THREAD_CODE = [[
+local cin,cout,th_i = ...
+require 'love.filesystem'
+require 'love.image'
+require 'love.timer'
+
+local file_count = 0
+while true do
+    local fn = cin:demand()
+    if fn == 'QUIT' then goto quit end
+    local path = cin:demand()
+    local f = path .. '/' .. fn
+
+    if not love.filesystem.isFile(f) then
+        cout:push({'ERROR','Not a file',f})
+    else
+        local data
+        if string.match(fn, '.pkm$') or string.match(fn, '.astc$') or string.match(fn, '.dds$') then
+            data = love.image.newCompressedData(f)
+        else
+            data = love.image.newImageData(f)
+        end
+
+        if not data then
+            cout:push({'ERROR','Image could not be loaded',f})
+        else
+            file_count = file_count + 1
+            local w,h = data:getDimensions()
+            -- 使用优化的扩展名移除
+            local key = fn:match("(.+)%.[^.]*$") or fn
+            cout:push({'OK',key,data,w,h})
+        end
+    end
+end
+::quit::
+cout:supply({'DONE'})
+]]
+
+local function remove_extension_fast(filename)
+    return filename:match("(.+)%.[^.]*$") or filename
+end
 
 function image_db:get_short_stats()
 	local count_frames = 0
@@ -424,10 +466,11 @@ function image_db:preload_atlas(ref_scale, path, name)
 			image_names[v.a_name] = true
 		end
 
-		v.atlas = string.gsub(v.a_name, ".png$", "")
-		v.atlas = string.gsub(v.atlas, ".pkm$", "")
-		v.atlas = string.gsub(v.atlas, ".astc$", "")
-        v.atlas = string.gsub(v.atlas, ".dds$", "")
+		-- v.atlas = string.gsub(v.a_name, ".png$", "")
+		-- v.atlas = string.gsub(v.atlas, ".pkm$", "")
+		-- v.atlas = string.gsub(v.atlas, ".astc$", "")
+        -- v.atlas = string.gsub(v.atlas, ".dds$", "")
+        v.atlas = remove_extension_fast(v.a_name)
 		for _, a in ipairs(v.alias) do
 			unique_frames[a] = v
 		end
@@ -442,12 +485,13 @@ function image_db:preload_atlas(ref_scale, path, name)
 	self.db_atlas = table.merge(self.db_atlas, frames)
 
 	for fn in pairs(deferred_image_names) do
-		local key = string.gsub(fn, ".png$", "")
+		-- local key = string.gsub(fn, ".png$", "")
 
-		key = string.gsub(key, ".jpg$", "")
-		key = string.gsub(key, ".pkm$", "")
-		key = string.gsub(key, ".astc$", "")
-        key = string.gsub(key, ".dds$", "")
+		-- key = string.gsub(key, ".jpg$", "")
+		-- key = string.gsub(key, ".pkm$", "")
+		-- key = string.gsub(key, ".astc$", "")
+        -- key = string.gsub(key, ".dds$", "")
+        local key = remove_extension_fast(fn)
 		self.db_images[key] = {
 			[4] = fn,
 			[5] = path

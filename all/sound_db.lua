@@ -136,7 +136,6 @@ function sound_db:queue_load_done()
 
 		return true
 	end
-
 	::label_2_0::
 
 	if not self.co then
@@ -170,7 +169,6 @@ function sound_db:queue_load_done()
 	end
 
 	log.debug("sound queue loaded")
-
 	self.load_queue_current = nil
 	self.progress = 1
 	self.groups_total = 0
