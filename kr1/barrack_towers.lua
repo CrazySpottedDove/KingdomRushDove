@@ -1170,7 +1170,7 @@ local function barrack_towers()
     tt.melee.attacks[3].chance = 0.5
     tt.melee.forced_cooldown = tt.melee.attacks[1].cooldown
     tt.melee.range = 60
-    tt.motion.max_speed = 75
+    tt.motion.max_speed = 80
     tt.powers.perfect_parry = E:clone_c("power")
     tt.powers.blade_dance = E:clone_c("power")
     tt.powers.blade_dance.damage_max = {35, 47, 56}
@@ -1217,7 +1217,7 @@ local function barrack_towers()
     tt.melee.attacks[1].forced_cooldown = true
     tt.melee.forced_cooldown = tt.melee.attacks[1].cooldown
     tt.melee.range = 49.5
-    tt.motion.max_speed = 60
+    tt.motion.max_speed = 65
     tt.powers.circle = E:clone_c("power")
     tt.powers.eerie = E:clone_c("power")
     tt.powers.oak = E:clone_c("power")
