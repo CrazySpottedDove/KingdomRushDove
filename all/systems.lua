@@ -1213,7 +1213,7 @@ function sys.main_script:on_update(dt, ts, store)
             if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
                 if not success and err ~= nil then
                     -- log.error("Error running coro: %s", debug.traceback(s.co, error))
-                    error("Error running coro: " .. err .. debug.traceback(s.co))
+                    log.error("Error running coro: " .. err .. debug.traceback(s.co))
                 end
 
                 s.co = nil

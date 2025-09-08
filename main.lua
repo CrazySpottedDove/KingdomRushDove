@@ -781,22 +781,18 @@ function love.errhand(msg)
 	end
 
 	if has_tip then
-		table.insert(tip, "oops, 发生错误! 请先尝试提示，再将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
-	else
-		table.insert(tip, "oops, 发生错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
-	end
-
-	if has_tip then
 		table.insert(err, "\n\n\n\n\n\n\nError\n")
 	else
 		table.insert(err, "\n\n\n\n\nError\n")
 	end
 
-    if string.find(msg, "Error running coro", 1, true) then
-        msg = msg:gsub("^[^:]+:%d+: ", "")
-        local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
+	local error_type = "common"
 
-        table.insert(err, l)
+	if string.find(msg, "Error running coro", 1, true) then
+		msg = msg:gsub("^[^:]+:%d+: ", "")
+		local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
+
+		table.insert(err, l)
 
 		for l in string.gmatch(trace, "(.-)\n") do
 			if not string.match(l, "boot.lua") then
@@ -805,17 +801,27 @@ function love.errhand(msg)
 				table.insert(err, l)
 			end
 		end
-    else
-        table.insert(err, msg .. "\n\n")
 
-        for l in string.gmatch(trace, "(.-)\n") do
-            if not string.match(l, "boot.lua") then
-                l = string.gsub(l, "stack traceback:", "Traceback\n")
+		error_type = "coro"
+	else
+		table.insert(err, msg .. "\n\n")
 
-                table.insert(err, l)
-            end
-        end
-    end
+		for l in string.gmatch(trace, "(.-)\n") do
+			if not string.match(l, "boot.lua") then
+				l = string.gsub(l, "stack traceback:", "Traceback\n")
+
+				table.insert(err, l)
+			end
+		end
+	end
+
+	-- if error_type == "coro" then
+	-- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
+	if has_tip then
+		table.insert(tip, "oops, 发生错误! 请先尝试提示，再将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+	elseif not has_tip then
+		table.insert(tip, "oops, 发生错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+	end
 
 	if love.nx then
 		table.insert(err, "\n\nFree memory:" .. love.nx.allocGetTotalFreeSize() .. "\n")
@@ -854,6 +860,8 @@ function love.errhand(msg)
 		end
 	end
 
+	local quiterr
+
 	while true do
 		love.event.pump()
 
@@ -861,7 +869,12 @@ function love.errhand(msg)
 			if e == "quit" then
 				return
 			elseif e == "keypressed" and a == "escape" then
-				return
+				if error_type == "coro" then
+					quiterr = true
+					break
+				else
+					return
+				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()
 
@@ -885,6 +898,10 @@ function love.errhand(msg)
 
 		if love.timer then
 			love.timer.sleep(0.1)
+		end
+
+		if quiterr then
+			break
 		end
 	end
 end
