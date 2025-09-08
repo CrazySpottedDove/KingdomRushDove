@@ -304,7 +304,7 @@ local function archer_towers()
     axe_totem.bullet.damage_min = 25
     axe_totem.bullet.damage_max = 40
     axe_totem.bullet.damage_type = DAMAGE_PHYSICAL
-    axe_totem.reduce_armor = 0.1
+    axe_totem.reduce_armor = 0.2
     axe_totem.bullet.pop = {"pop_thunk"}
     axe_totem.bullet.pop_chance = 1
     axe_totem.bullet.pop_conds = DR_KILL
