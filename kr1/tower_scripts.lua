@@ -2093,16 +2093,16 @@ scripts.tower_arcane_wizard = {
             ::continue::
             if ((ad.ts <= last_ts - (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor) or
                 (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor)) and pow_d.level >
-                0 and not this.decalmod_disintegrate_ready then
+                0 and not this.decalmod_disintegrate then
                 local mod = E:create_entity("decalmod_arcane_wizard_disintegrate_ready")
                 mod.modifier.target_id = this.id
                 mod.modifier.source_id = this.id
                 mod.pos = this.pos
                 queue_insert(store, mod)
-                this.decalmod_disintegrate_ready = true
-            elseif this.decalmod_disintegrate_ready then
-                SU.remove_modifiers(store, this, nil, "decalmod_arcane_wizard_disintegrate_ready")
-                this.decalmod_disintegrate_ready = false
+                this.decalmod_disintegrate = mod
+            elseif this.decalmod_disintegrate then
+                queue_remove(store, this.decalmod_disintegrate)
+                this.decalmod_disintegrate = nil
             end
             if store.tick_ts - ar.ts > this.tower.long_idle_cooldown then
                 local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
