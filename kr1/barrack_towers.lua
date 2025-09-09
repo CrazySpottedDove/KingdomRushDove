@@ -298,7 +298,7 @@ local function barrack_towers()
     tt.render.sprites[3].prefix = "tower_elf_door"
     tt.render.door_sid = 3
     tt.sound_events.change_rally_point = "ElfTaunt"
-    tt.sound_events.insert = "GUITowerBuilding"
+    tt.sound_events.insert = "ElfTaunt"
     tt.sound_events.mute_on_level_insert = true
     tt.tower.level = 1
     tt.tower.price = 190
@@ -355,7 +355,7 @@ local function barrack_towers()
     tt.ranged.go_back_during_cooldown = true
     tt.regen.cooldown = 1
     tt.render.sprites[1].prefix = "soldier_elf"
-    tt.sound_events.insert = "ElfTaunt"
+    -- tt.sound_events.insert = "ElfTaunt"
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, ady(22))
     tt.unit.price = 100
@@ -417,7 +417,7 @@ local function barrack_towers()
     tt.main_script.insert = scripts.tower_barrack.insert
     tt.main_script.remove = scripts.tower_barrack.remove
     tt.main_script.update = scripts.tower_barrack_mercenaries.update
-    tt.sound_events.insert = "GUITowerBuilding"
+    tt.sound_events.insert = "AmazonTaunt"
     tt.sound_events.mute_on_level_insert = true
     tt.sound_events.change_rally_point = "AmazonTaunt"
     tt.powers.whirlwind = CC("power")
@@ -470,7 +470,7 @@ local function barrack_towers()
     tt.regen.cooldown = 0.5
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].prefix = "soldier_amazona"
-    tt.sound_events.insert = "AmazonTaunt"
+    -- tt.sound_events.insert = "AmazonTaunt"
     tt.sound_events.change_rally_point = "AmazonTaunt"
     tt.track_kills.mod = "amazona_heal_mod"
     tt.unit.marker_offset = vec_2(0, ady(23))
@@ -856,7 +856,7 @@ local function barrack_towers()
     tt.render.sprites[4].name = "tower_merc_camp_desert_fire"
     tt.render.sprites[4].offset = vec_2(23, 15)
     tt.render.sprites[4].ts = 0.08
-    tt.sound_events.insert = "GUITowerBuilding"
+    tt.sound_events.insert = "GenieTaunt"
     tt.sound_events.mute_on_level_insert = true
     tt.barrack.soldier_type = "soldier_djinn"
     tt.barrack.rally_range = 150
@@ -917,7 +917,7 @@ local function barrack_towers()
     tt.unit.mod_offset = vec_2(0, 30)
     tt.unit.price = 150
     tt.vis.bans = bor(tt.vis.bans, F_POISON, F_CANNIBALIZE, F_SKELETON, F_BLOOD, F_LYCAN)
-    tt.sound_events.insert = "GenieTaunt"
+    -- tt.sound_events.insert = "GenieTaunt"
     tt.sound_events.change_rally_point = "GenieTaunt"
 
     tt = E:register_t("spell_djinn", "spell")
@@ -988,6 +988,7 @@ local function barrack_towers()
     tt.barrack.soldier_type = "soldier_pirate_flamer"
     tt.barrack.rally_range = 150
     tt.barrack.respawn_offset = vec_2(0, 0)
+    tt.sound_events.insert = "PiratesTaunt"
 
     tt = E:register_t("soldier_pirate_flamer", "soldier_militia")
     E:add_comps(tt, "ranged", "powers")
@@ -1029,7 +1030,7 @@ local function barrack_towers()
     tt.ranged.attacks[2].disabled = true
     tt.ranged.attacks[2].power_name = "bigbomb"
     tt.ranged.attacks[2].node_prediction = fts(28)
-    tt.sound_events.insert = "PiratesTaunt"
+    -- tt.sound_events.insert = "PiratesTaunt"
     tt.sound_events.change_rally_point = "PiratesTaunt"
     tt.powers.bigbomb = E:clone_c("power")
     tt.powers.quickup = E:clone_c("power")
@@ -1522,7 +1523,7 @@ local function barrack_towers()
     tt.render.sprites[1].angles.walk = {"running"}
     tt.render.sprites[1].prefix = "soldier_ewok"
     tt.soldier.melee_slot_offset = vec_2(5, 0)
-    tt.sound_events.insert = "ElvesEwokTaunt"
+    -- tt.sound_events.insert = "ElvesEwokTaunt"
     tt.ui.click_rect = r(-10, -2, 20, 25)
     tt.unit.hit_offset = vec_2(0, 12)
     tt.unit.marker_offset = vec_2(0, 0)
