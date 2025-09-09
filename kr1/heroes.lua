@@ -3648,7 +3648,7 @@ local function heroes()
         [9] = 3
     }
     tt.hero.skills.reignoffire = E:clone_c("hero_skill")
-    tt.hero.skills.reignoffire.dps = {5, 8, 12}
+    tt.hero.skills.reignoffire.dps = {5, 9, 13}
     tt.hero.skills.reignoffire.xp_level_steps = {
         [1] = 1,
         [4] = 2,
