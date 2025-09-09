@@ -700,17 +700,17 @@ local heroes = {
         },
         fire_balls = {
             max_range = 250,
-            damage_radius = 45,
+            damage_radius = 55,
             min_targets = 3,
-            damage_rate = 0.5,
+            damage_rate = 0.25,
             min_range = 0,
             duration = 8,
             cooldown = {20, 20, 20},
             damage_type = DAMAGE_TRUE,
             xp_gain = {160, 320, 480},
             flames_count = {5, 6, 7},
-            flame_damage_min = {3, 6, 10},
-            flame_damage_max = {5, 10, 14}
+            flame_damage_min = {1, 2, 4},
+            flame_damage_max = {3, 6, 8}
         },
         mini_dragon = {
             max_range = 150,

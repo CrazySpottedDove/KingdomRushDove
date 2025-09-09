@@ -2093,7 +2093,7 @@ scripts.tower_arcane_wizard = {
             ::continue::
             if ((ad.ts <= last_ts - (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor) or
                 (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor)) and pow_d.level >
-                0 then
+                0 and not this.decalmod_disintegrate_ready then
                 local mod = E:create_entity("decalmod_arcane_wizard_disintegrate_ready")
                 mod.modifier.target_id = this.id
                 mod.modifier.source_id = this.id

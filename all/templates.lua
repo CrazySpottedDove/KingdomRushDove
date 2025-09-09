@@ -364,7 +364,6 @@ fx.render.sprites[1].loop = false
 fx.render.sprites[1].z = Z_EFFECTS
 
 local fx5 = E:register_t("fx5", "fx")
-fx5.render.sprites[1].scale = vv(0.7)
 
 local fx_fade = E:register_t("fx_fade")
 
@@ -1036,7 +1035,6 @@ enemy.sound_events.death_by_explosion = "DeathEplosion"
 
 local enemy_KR5 = E:register_t("enemy_KR5", "enemy")
 enemy_KR5.is_kr5 = true
-enemy_KR5.render.sprites[1].scale = vv(KR5_SCALE_FACTOR)
 
 local boss = E:register_t("boss", "unit")
 

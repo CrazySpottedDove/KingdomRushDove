@@ -11827,7 +11827,7 @@ local function heroes()
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
-    -- tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[1].scale = vec_1(1080 / 768)
     tt.soldier.melee_slot_offset = vec_2(3, 0)
     tt.tween.disabled = true
     tt.unit.hit_offset = vec_2(0, 5)
@@ -11932,7 +11932,7 @@ local function heroes()
         tt.render.sprites[i].prefix = "hero_witch_hero_layer" .. i
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].group = "layers"
-        tt.render.sprites[i].scale = vec_1(1.25)
+        tt.render.sprites[i].scale = vec_1(1.25 / 768 * 1080)
     end
 
     tt.particles_name_1 = "ps_hero_witch_spark_1"
@@ -12137,12 +12137,12 @@ local function heroes()
     tt.render.sprites[1].name = "hero_witch_skill_4_potion_decal_1"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].z = Z_DECALS
-    -- tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[1].scale = vec_1(1080 / 768)
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].name = "hero_witch_skill_4_potion_decal_2"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_DECALS
-    -- tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[2].scale = vec_1(1080 / 768)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_hero_witch_path_aoe.update
     tt.start_fx = "fx_hero_witch_skill_path_aoe_in"
@@ -12179,7 +12179,7 @@ local function heroes()
     tt.render.sprites[1].z = Z_DECALS
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
-    tt.render.sprites[1].scale = vec_1(1.25)
+    tt.render.sprites[1].scale = vec_1(1.25 / 768 * 1080)
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].prefix = "hero_witch_skill_2_stun"
     tt.render.sprites[2].name = "fx_death"
@@ -12187,7 +12187,7 @@ local function heroes()
     tt.render.sprites[2].z = Z_OBJECTS
     tt.render.sprites[2].loop = false
     tt.render.sprites[2].anchor = vec_2(0.5, 0.5)
-    tt.render.sprites[2].scale = vec_1(1.25)
+    tt.render.sprites[2].scale = vec_1(1.25 / 768 * 1080)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_apply_mod.update
 
