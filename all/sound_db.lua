@@ -72,8 +72,11 @@ function sound_db:init(path)
 	if f_settings.source_groups then
 		for gid, group in pairs(f_settings.source_groups) do
 			self.source_groups[gid] = {
-				max_sources = group.max_sources or 1
+				max_sources = group.max_sources
 			}
+            if gid ~= "MUSIC" and  gid ~= "REFCOUNTED" then
+                self.source_groups[gid].max_sources = math.floor(group.max_sources * (SOUND_POOL_SIZE_FACTOR or 1))
+            end
 			self.active_sources[gid] = self.active_sources[gid] or {}
 		end
 	end

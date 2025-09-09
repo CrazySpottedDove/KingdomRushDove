@@ -299,7 +299,7 @@ end
 function mu.apply_params(params, game_name, game_target, game_platform)
 	DRAW_FPS = tonumber(params.fps)
 	TICK_LENGTH = 1 / DRAW_FPS
-
+    SOUND_POOL_SIZE_FACTOR = params.sound_pool_size
 	if params.level or params.screen then
 		params.skip_settings_dialog = true
 	end
