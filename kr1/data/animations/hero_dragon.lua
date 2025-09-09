@@ -186,6 +186,11 @@ local a = {
 		to = 18,
 		from = 1
 	},
+    hero_lumenir_light_companion_idle = {
+        prefix = "hero_lumenir_light_companion",
+        to = 18,
+        from = 1
+    },
 	hero_lumenir_light_companion_attack = {
 		prefix = "hero_lumenir_light_companion",
 		to = 55,

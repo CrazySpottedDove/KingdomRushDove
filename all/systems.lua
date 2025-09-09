@@ -2968,6 +2968,7 @@ function sys.last_hook:on_remove(e, d)
         d.enemies[e.id] = nil -- 优化分类索引
     elseif e.soldier then
         d.soldiers[e.id] = nil
+        d.dead_soldier_count = d.dead_soldier_count + 1
     elseif e.modifier then
         d.modifiers[e.id] = nil
         local target = d.entities[e.modifier.target_id]

@@ -39,6 +39,7 @@ function simulation:init(store, system_names)
 	d.entity_count = 0
 	-- d.entity_max = 0
     d.speed_factor = 1
+    d.dead_soldier_count = 0
 	self.systems_on_queue = {}
 	self.systems_on_dequeue = {}
 	self.systems_on_insert = {}
