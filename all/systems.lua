@@ -2928,6 +2928,10 @@ function sys.last_hook:on_insert(e, d)
         d.modifiers[e.id] = e
         local target = d.entities[e.modifier.target_id]
         if target then
+            if not target._applied_mods then
+                target._applied_mods = {}
+                log.error("！如果看见这条消息，请截下来发给作者 target:",target.template_name, "mod:", e.template_name )
+            end
             local mods = target._applied_mods
             mods[#mods + 1] = e
         end
