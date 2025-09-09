@@ -1664,6 +1664,46 @@ function U.melee_slot_position(soldier, enemy, rank, back)
     return soldier_pos, soldier_on_the_right
 end
 
+--- 获取近战位置
+--- @param enemy table 敌人实体
+--- @param soldier table 士兵实体
+--- @param rank number|nil 排名（可选）
+--- @param back boolean|nil 是否在后面（可选）
+--- @return table|nil 敌人位置, boolean|nil 敌人是否在右侧
+function U.melee_slot_enemy_position(enemy, soldier, rank, back)
+    if not rank then
+        rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
+
+        if not rank then
+            return nil
+        end
+    end
+
+    local idx = km.zmod(rank, 3)
+    local x_off, y_off = 0, 0
+
+    if idx == 2 then
+        x_off = -3
+        y_off = -6
+    elseif idx == 3 then
+        x_off = -3
+        y_off = 6
+    end
+
+    local enemy_on_the_right = math.abs(km.signed_unroll(enemy.heading.angle)) > math.pi * 0.5
+
+    if back then
+        enemy_on_the_right = not enemy_on_the_right
+    end
+
+    local enemy_pos = V.v(soldier.pos.x + (soldier.soldier.melee_slot.x + x_off + enemy.enemy.melee_slot_offset.x) *
+                              (enemy_on_the_right and 1 or -1),
+        soldier.pos.y + soldier.soldier.melee_slot.y + y_off + enemy.enemy.melee_slot_offset.y)
+
+    return enemy_pos, enemy_on_the_right
+end
+
+
 --- 获取集结队形位置
 --- @param idx number 索引
 --- @param barrack table 兵营实体

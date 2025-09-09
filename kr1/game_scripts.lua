@@ -17288,7 +17288,6 @@ function scripts.soldier_blade.on_damage(this, store, damage)
     local bda = this.timed_attacks.list[1]
 
     if not this.dodge or this.dodge.chance <= 0 or this.unit.is_stunned or this.health.dead or bda.in_progress or
-        band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL))) ~= 0 or
         band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.powers[this.dodge.power_name].level < 1 or
         this.dodge.chance < math.random() then
         return true

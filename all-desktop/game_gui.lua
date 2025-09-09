@@ -4308,7 +4308,7 @@ function VictoryView:show()
         else
             lives = game_gui.game.store.lives
         end
-        self.ct.text = string.format("%s损 %.1f秒%d牺牲", tostring(lives), criket.time_cost, game_gui.game.store.dead_soldier_count)
+        self.ct.text = string.format("%s损 %.1f秒 %d牺牲", tostring(lives), criket.time_cost, game_gui.game.store.dead_soldier_count)
         self.ct.font_size = 28
         if criket.tower_name then
             local tower_icon = KImageView:new(E:get_template(criket.tower_name).info.portrait)
