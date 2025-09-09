@@ -583,6 +583,9 @@ local function barrack_towers()
     tt.melee.attacks[2].vis_flags = bor(F_BLOCK, F_BLOOD)
     tt.melee.attacks[2].side_effect = function(this, store, attack, target)
         this.revive.protect = this.revive.protect + 0.01
+        if target then
+            target.health.damage_factor = target.health.damage_factor * 1.033
+        end
     end
     tt.melee.arrived_slot_animation = "attack_wait"
     tt.melee.cooldown = 2 + fts(13)
