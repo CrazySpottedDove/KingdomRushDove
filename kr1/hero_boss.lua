@@ -276,6 +276,7 @@ local function inherit_from_hero_template(new_template, old_template)
     if old_t.hero.level_stats.magic_armor then
         t.health.magic_armor = old_t.hero.level_stats.magic_armor[10]
     end
+    t.sound_events.death = old_t.sound_events.death
     return t
 end
 
