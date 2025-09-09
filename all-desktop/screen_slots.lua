@@ -549,7 +549,7 @@ function screen:init(w, h, done_callback)
 		settings.volume_fx = km.clamp(0, 1, s_sfx.value)
 		settings.volume_music = km.clamp(0, 1, s_music.value)
 
-		storage:save_settings(settings)
+		storage:save_settings(settings, true)
 		options_view:hide()
 	end
 

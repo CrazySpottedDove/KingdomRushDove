@@ -226,7 +226,7 @@ local function load_app_settings()
 		for _, t in pairs(settings.required_textures) do
 			I:unload_atlas(t, 1)
 		end
-
+        collectgarbage()
 		load_director()
 	end
 

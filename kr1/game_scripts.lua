@@ -19686,9 +19686,10 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store, script)
     while true do
         if not fading and not kamikaze_target and store.tick_ts - a.ts > a.cooldown then
             local towers = table.filter(store.towers, function(_, e)
-                return not e.tower_holder and not e.tower.blocked and e.tower.can_be_mod and
-                           not e._is_banshee_target and U.is_inside_ellipse(e.pos, this.pos, a.max_range) and
-                           not table.contains(a.excluded_templates, e.template_name)
+                return
+                    not e.tower_holder and not e.tower.blocked and e.tower.can_be_mod and not e._is_banshee_target and
+                        U.is_inside_ellipse(e.pos, this.pos, a.max_range) and
+                        not table.contains(a.excluded_templates, e.template_name)
             end)
 
             if #towers > 0 then
@@ -22172,7 +22173,7 @@ function scripts.eb_spider.update(this, store, script)
             s.sort_y = this.pos.y
         end
 
-        U.y_ease_key(store, this.pos, "y", this.pos.y, math.max(this.pos.y + REF_H, IN_GAME_Y_MAX), 1, "quad-in")
+        U.y_ease_key(store, this.pos, "y", this.pos.y, math.min(this.pos.y + REF_H, IN_GAME_Y_MAX), 1, "quad-in")
     end
 
     local function y_jump_in(round_idx)
@@ -31216,7 +31217,9 @@ scripts.mod_dragon_reign = {
             return true
         end
 
-        local spread_targets = U.find_enemies_in_range(store, target.pos, 0, this.spread_radius, F_MOD, 0)
+        local spread_targets = U.find_enemies_in_range(store, target.pos, 0, this.spread_radius, F_MOD, 0, function(e)
+            return e.id ~= this.modifier.target_id
+        end)
 
         if spread_targets then
             for _, t in pairs(spread_targets) do

@@ -303,7 +303,8 @@ local function archer_towers()
     axe_totem.bullet.miss_decal = "TotemAxe_0002"
     axe_totem.bullet.damage_min = 25
     axe_totem.bullet.damage_max = 40
-    axe_totem.bullet.damage_type = DAMAGE_RUDE
+    axe_totem.bullet.damage_type = DAMAGE_PHYSICAL
+    axe_totem.reduce_armor = 0.2
     axe_totem.bullet.pop = {"pop_thunk"}
     axe_totem.bullet.pop_chance = 1
     axe_totem.bullet.pop_conds = DR_KILL
@@ -324,7 +325,7 @@ local function archer_towers()
     mod_silence_totem.render.sprites[1].draw_order = 2
 
     local mod_weakness_totem = E:register_t("mod_weakness_totem", "modifier")
-    E:add_comps(mod_weakness_totem, "render")
+    -- E:add_comps(mod_weakness_totem, "render")
     mod_weakness_totem.inflicted_damage_factor = 0.5
     mod_weakness_totem.received_damage_factor = 1.4
     mod_weakness_totem.modifier.duration = 3
@@ -333,11 +334,11 @@ local function archer_towers()
     mod_weakness_totem.main_script.insert = scripts.mod_damage_factors.insert
     mod_weakness_totem.main_script.remove = scripts.mod_damage_factors.remove
     mod_weakness_totem.main_script.update = scripts.mod_track_target.update
-    mod_weakness_totem.render.sprites[1].prefix = "weakness"
-    mod_weakness_totem.render.sprites[1].size_names = {"small", "big", "big"}
-    mod_weakness_totem.render.sprites[1].name = "small"
-    mod_weakness_totem.render.sprites[1].loop = true
-    mod_weakness_totem.render.sprites[1].z = Z_DECALS
+    -- mod_weakness_totem.render.sprites[1].prefix = "weakness"
+    -- mod_weakness_totem.render.sprites[1].size_names = {"small", "big", "big"}
+    -- mod_weakness_totem.render.sprites[1].name = "small"
+    -- mod_weakness_totem.render.sprites[1].loop = true
+    -- mod_weakness_totem.render.sprites[1].z = Z_DECALS
 
     local totem_silence = E:register_t("totem_silence", "aura")
     E:add_comps(totem_silence, "render", "tween")

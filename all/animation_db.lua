@@ -20,6 +20,10 @@ animation_db.db = {}
 animation_db.fps = FPS
 animation_db.tick_length = TICK_LENGTH
 animation_db.missing_animations = {}
+local number_format_cache = {}
+for i = 0, 9999 do
+    number_format_cache[i] = string.format("%04i", i)
+end
 
 function animation_db:load()
     local function load_ani_file(f)
@@ -51,8 +55,6 @@ function animation_db:load()
                 self.db[k] = v
             end
         end
-
-        log.info("Loaded animation file %s", f)
     end
 
     self.db = {}
@@ -75,7 +77,7 @@ function animation_db:load()
 
     local expanded_keys = {}
     local deleted_keys = {}
-
+    local next_deleted_index = 1
     for k, v in pairs(self.db) do
         if v.layer_from and v.layer_to and v.layer_prefix then
             for i = v.layer_from, v.layer_to do
@@ -92,19 +94,18 @@ function animation_db:load()
 
                 expanded_keys[nk] = nv
 
-                table.insert(deleted_keys, k)
+                deleted_keys[next_deleted_index] = k
+                next_deleted_index = next_deleted_index + 1
             end
-
-            -- table.insert(expanded_keys, k)
         end
+    end
+
+    for i = 1, next_deleted_index - 1 do
+        self.db[deleted_keys[i]] = nil
     end
 
     for k, v in pairs(expanded_keys) do
         self.db[k] = v
-    end
-
-    for _, k in pairs(deleted_keys) do
-        self.db[k] = nil
     end
 
     self:prebuild_frames()
@@ -112,7 +113,13 @@ end
 
 -- added: 预构建所有动画的帧数组 frames
 function animation_db:prebuild_frames()
+    self.prefix_s = {}
     for name, a in pairs(self.db) do
+        if a.prefix then
+            if not self.prefix_s[a.prefix] then
+                self.prefix_s[a.prefix] = a.prefix .. "_"
+            end
+        end
         self:generate_frames(a)
     end
 end
@@ -150,38 +157,48 @@ function animation_db:generate_frames(a)
         if a.ranges then
             for _, range in pairs(a.ranges) do
                 if #range == 2 then
-                    local from, to = unpack(range)
+                    local from = range[1]
+                    local to = range[2]
                     local inc = to < from and -1 or 1
                     for i = from, to, inc do
-                        table.insert(frames, i)
+                        frames[#frames + 1] = i
                     end
                 else
-                    table.append(frames, range)
+                    local start_idx = #frames
+                    for i = 1, #range do
+                        frames[start_idx + i] = range[i]
+                    end
                 end
             end
         else
             if a.pre then
-                table.append(frames, a.pre)
+                local start_idx = #frames
+                for i = 1, #a.pre do
+                    frames[start_idx + i] = a.pre[i]
+                end
             end
             if a.from and a.to then
                 local inc = a.from > a.to and -1 or 1
                 for i = a.from, a.to, inc do
-                    table.insert(frames, i)
+                    frames[#frames + 1] = i
                 end
             end
             if a.post then
-                table.append(frames, a.post)
+                local start_idx = #frames
+                for i = 1, #a.post do
+                    frames[start_idx + i] = a.post[i]
+                end
             end
         end
         a.frames = frames
     end
     if a.prefix then
+        local prefix_ = self.prefix_s[a.prefix]
         a.frame_names = {}
-        for i, frame in ipairs(frames) do
-            a.frame_names[i] = string.format("%s_%04i", a.prefix, frame)
+        for i=1, #frames do
+            a.frame_names[i] = prefix_ .. (number_format_cache[frames[i]] or string.format("%04i", frames[i]))
         end
     end
-
 end
 
 function animation_db:fni(animation, time_offset, loop, fps, tick_length)

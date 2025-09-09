@@ -419,7 +419,7 @@ function upgrades:patch_templates(max_level)
 
     if u then
         for _, n in pairs(self:arrows()) do
-            T(n).bullet.reduce_armor = u.reduce_armor_factor
+            T(n).bullet.reduce_armor = u.reduce_armor_factor + T(n).bullet.reduce_armor
         end
     end
 

@@ -11244,6 +11244,33 @@ function scripts.hero_arivan.insert(this, store)
     return true
 end
 
+function scripts.hero_arivan.generate_stone_effect(this, store, attack, target)
+    local a = this.timed_attacks.list[2]
+    local stone_chance = 0.2
+    if target and target.vis and band(target.vis.flags, F_BOSS) ~= 0 then
+        stone_chance = 0.1
+    end
+    if #a.aura.stones < a.aura.max_stones and math.random(0, 1) < stone_chance then
+        S:queue(a.sound)
+        local stone = E:create_entity("arivan_stone")
+        local i = #a.aura.stones + 1
+        local aura = a.aura
+        local angle = i * 2 * math.pi / aura.max_stones % (2 * math.pi)
+
+        stone.pos = U.point_on_ellipse(this.pos, aura.rot_radius, angle)
+        stone.render.sprites[1].name = string.format(stone.render.sprites[1].name, i)
+        stone.render.sprites[1].ts = store.tick_ts
+
+        queue_insert(store, stone)
+        table.insert(aura.stones, stone)
+        aura.aura.ts = store.tick_ts
+
+        this.stone_extra = #a.aura.stones * this.stone_extra_per_stone
+        this.melee.attacks[1].damage_min = this.melee_raw_min + this.stone_extra
+        this.melee.attacks[1].damage_max = this.melee_raw_max + this.stone_extra
+    end
+end
+
 function scripts.hero_arivan.update(this, store)
     local h = this.health
     local he = this.hero

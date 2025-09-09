@@ -853,6 +853,21 @@ end
 
 function game_gui:update(dt)
     timer:update(dt)
+    local e = game_gui.selected_entity
+    if e then
+        if e.melee and e.melee.range then
+            local ux, uy = game_gui:g2u(e.pos)
+            game_gui:show_melee_range(ux, uy, e.melee.range)
+        end
+        if e.ranged and e.ranged.attacks[1].max_range and not e.ranged.attacks[1].disabled then
+            local ux, uy = game_gui:g2u(e.pos)
+            game_gui:show_ranged_range(ux, uy, e.ranged.attacks[1].max_range)
+        elseif e.timed_attacks and e.timed_attacks.list[1].max_range and not e.timed_attacks.list[1].disabled then
+            local ux, uy = game_gui:g2u(e.pos)
+            game_gui:show_ranged_range(ux, uy, e.timed_attacks.list[1].max_range)
+        end
+    end
+
     self.window:update(dt)
 end
 
@@ -1091,7 +1106,8 @@ function game_gui:keypressed(key, isrepeat)
                 end
             end
         end
-    elseif table.contains(ks.endless_shop, key) and self.game.store.level_mode_override == GAME_MODE_ENDLESS and self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
+    elseif table.contains(ks.endless_shop, key) and self.game.store.level_mode_override == GAME_MODE_ENDLESS and
+        self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
         self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
         game_gui.endless_select_reward_view:show(true)
         -- elseif self.is_premium and self.bag_button and not self.bag_button:is_disabled() and
@@ -1251,8 +1267,8 @@ function game_gui:show_melee_range(x, y, range)
 
     r.range_shown = range
     r.pos.x, r.pos.y = x, y
-    r.scale = v(range * self.game.game_scale / (r.actual_radius.x * self.gui_scale),
-        range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale))
+    r.scale.x = range * self.game.game_scale / (r.actual_radius.x * self.gui_scale)
+    r.scale.y = range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale)
     r.hidden = false
 end
 
@@ -1261,8 +1277,8 @@ function game_gui:show_ranged_range(x, y, range)
 
     r.range_shown = range
     r.pos.x, r.pos.y = x, y
-    r.scale = v(range * self.game.game_scale / (r.actual_radius.x * self.gui_scale),
-        range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale))
+    r.scale.x = range * self.game.game_scale / (r.actual_radius.x * self.gui_scale)
+    r.scale.y = range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale)
     r.hidden = false
 end
 
@@ -1445,19 +1461,19 @@ function game_gui:select_entity(e)
             self.game.simulation:insert_entity(m)
             self.selected_entity_marker = m
         end
-        if not e.motion or e.motion.arrived then
-            if e.melee and e.melee.range then
-                local ux, uy = game_gui:g2u(e.pos)
-                game_gui:show_melee_range(ux, uy, e.melee.range)
-            end
-            if e.ranged and e.ranged.attacks[1].max_range and not e.ranged.attacks[1].disabled then
-                local ux, uy = game_gui:g2u(e.pos)
-                game_gui:show_ranged_range(ux, uy, e.ranged.attacks[1].max_range)
-            elseif e.timed_attacks and e.timed_attacks.list[1].max_range and not e.timed_attacks.list[1].disabled then
-                local ux, uy = game_gui:g2u(e.pos)
-                game_gui:show_ranged_range(ux, uy, e.timed_attacks.list[1].max_range)
-            end
-        end
+        -- if not e.motion or e.motion.arrived then
+        --     if e.melee and e.melee.range then
+        --         local ux, uy = game_gui:g2u(e.pos)
+        --         game_gui:show_melee_range(ux, uy, e.melee.range)
+        --     end
+        --     if e.ranged and e.ranged.attacks[1].max_range and not e.ranged.attacks[1].disabled then
+        --         local ux, uy = game_gui:g2u(e.pos)
+        --         game_gui:show_ranged_range(ux, uy, e.ranged.attacks[1].max_range)
+        --     elseif e.timed_attacks and e.timed_attacks.list[1].max_range and not e.timed_attacks.list[1].disabled then
+        --         local ux, uy = game_gui:g2u(e.pos)
+        --         game_gui:show_ranged_range(ux, uy, e.timed_attacks.list[1].max_range)
+        --     end
+        -- end
     end
 end
 
@@ -7588,7 +7604,8 @@ function WaveFlag:initialize(flying, duration, report, path_index)
         local start_angle = 3 * math.pi * 0.5
         local stop_angle = 7 * math.pi * 0.5 - bg_circle.phase * 2 * math.pi
 
-        G.arc("fill", bg_circle.size.x * 0.5, bg_circle.size.y * 0.5, bg_circle.size.x * 0.5, start_angle, stop_angle, 12)
+        G.arc("fill", bg_circle.size.x * 0.5, bg_circle.size.y * 0.5, bg_circle.size.x * 0.5, start_angle, stop_angle,
+            12)
     end
 
     self.halo = halo

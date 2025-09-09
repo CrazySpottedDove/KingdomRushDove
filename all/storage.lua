@@ -27,7 +27,7 @@ local SETTINGS_PARAMS = {"fps", "fullscreen", "height", "texture_size", "volume_
                          "key_wave_info", "key_show_noti", "key_pointer", "key_up", "key_down", "key_left", "key_right",
                          "joy_pointer_power", "joy_pointer_speed", "joy_pointer_threshold", "joy_pointer_accel",
                          "joy_pointer_accel_max", "joy_pointer_accel_timeout", "joy_rate_limit_delay",
-                         "joy_rate_limit_delay_repeat", "joy_y_axis_factor", "nav_key_step", "nav_key_step_alt"}
+                         "joy_rate_limit_delay_repeat", "joy_y_axis_factor", "nav_key_step", "nav_key_step_alt", "sound_pool_size"}
 local SLOT_ADDITIONAL_DATA = {
     gems = 0,
     bag = {}
@@ -234,10 +234,15 @@ end
 
 function storage:load_settings()
     local input = self:load_lua(self.SETTINGS_FILE)
-
+    local template = require("settings_template")
     if not input or not type(input) == "table" then
         return {}
     else
+        for k, v in pairs(template) do
+            if input[k] == nil then
+                input[k] = v
+            end
+        end
         return input
     end
 end

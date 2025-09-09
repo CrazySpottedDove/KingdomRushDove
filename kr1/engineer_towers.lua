@@ -1262,7 +1262,6 @@ local function engineer_towers()
     tt.render.sprites[1].animated = false
     tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
     tt.bullet.particles_name = "tower_tricannon_bomb_4_bombardment_trail"
-
 end
 
 return engineer_towers

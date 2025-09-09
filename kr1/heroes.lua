@@ -27,6 +27,8 @@ local function vv(x)
 end
 local balance = require("kr1.data.balance")
 local b
+local U = require("utils")
+local SU = require("script_utils")
 require("game_templates_utils")
 
 local function heroes()
@@ -3646,7 +3648,7 @@ local function heroes()
         [9] = 3
     }
     tt.hero.skills.reignoffire = E:clone_c("hero_skill")
-    tt.hero.skills.reignoffire.dps = {5, 8, 12}
+    tt.hero.skills.reignoffire.dps = {5, 9, 13}
     tt.hero.skills.reignoffire.xp_level_steps = {
         [1] = 1,
         [4] = 2,
@@ -7609,38 +7611,12 @@ local function heroes()
     tt.sound_events.hero_room_select = "ElvesHeroArivanTauntSelect"
     tt.unit.hit_offset = vec_2(0, 13)
     tt.unit.mod_offset = vec_2(0, 13)
-    local function generate_stone_effect(this, store, attack, target)
-        local a = this.timed_attacks.list[2]
-        local stone_chance = 0.2
-        if target and target.vis and band(target.vis.flags, F_BOSS) ~= 0 then
-            stone_chance = 0.1
-        end
-        if #a.aura.stones < a.aura.max_stones and math.random(0, 1) < stone_chance then
-            S:queue(a.sound)
-            local stone = E:create_entity("arivan_stone")
-            local i = #a.aura.stones + 1
-            local aura = a.aura
-            local angle = i * 2 * math.pi / aura.max_stones % (2 * math.pi)
-
-            stone.pos = U.point_on_ellipse(this.pos, aura.rot_radius, angle)
-            stone.render.sprites[1].name = string.format(stone.render.sprites[1].name, i)
-            stone.render.sprites[1].ts = store.tick_ts
-
-            queue_insert(store, stone)
-            table.insert(aura.stones, stone)
-            aura.aura.ts = store.tick_ts
-
-            this.stone_extra = #a.aura.stones * this.stone_extra_per_stone
-            this.melee.attacks[1].damage_min = this.melee_raw_min + this.stone_extra
-            this.melee.attacks[1].damage_max = this.melee_raw_max + this.stone_extra
-        end
-    end
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].hit_time = fts(15)
     tt.melee.attacks[1].xp_gain_factor = 2.1
     tt.melee.attacks[1].damage_type = DAMAGE_MAGICAL
     tt.melee.attacks[1].sound = "MeleeSword"
-    tt.melee.attacks[1].side_effect = generate_stone_effect
+    tt.melee.attacks[1].side_effect = scripts.hero_arivan.generate_stone_effect
     tt.melee.range = 50
     tt.ranged.attacks[1] = E:clone_c("bullet_attack")
     tt.ranged.attacks[1].cooldown = 1.5
@@ -7650,7 +7626,7 @@ local function heroes()
     tt.ranged.attacks[1].bullet = "ray_arivan_simple"
     tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 35)}
     tt.ranged.attacks[1].shoot_time = fts(11)
-    tt.ranged.attacks[1].side_effect = generate_stone_effect
+    tt.ranged.attacks[1].side_effect = scripts.hero_arivan.generate_stone_effect
     tt.ranged.attacks[2] = E:clone_c("bullet_attack")
     tt.ranged.attacks[2].animation = "rayShoot"
     tt.ranged.attacks[2].cooldown = 16.2
@@ -11851,7 +11827,7 @@ local function heroes()
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
-    -- tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[1].scale = vec_1(1080 / 768)
     tt.soldier.melee_slot_offset = vec_2(3, 0)
     tt.tween.disabled = true
     tt.unit.hit_offset = vec_2(0, 5)
@@ -11956,7 +11932,7 @@ local function heroes()
         tt.render.sprites[i].prefix = "hero_witch_hero_layer" .. i
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].group = "layers"
-        tt.render.sprites[i].scale = vec_1(1.25)
+        tt.render.sprites[i].scale = vec_1(1.25 / 768 * 1080)
     end
 
     tt.particles_name_1 = "ps_hero_witch_spark_1"
@@ -12161,12 +12137,12 @@ local function heroes()
     tt.render.sprites[1].name = "hero_witch_skill_4_potion_decal_1"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].z = Z_DECALS
-    -- tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[1].scale = vec_1(1080 / 768)
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].name = "hero_witch_skill_4_potion_decal_2"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_DECALS
-    -- tt.render.sprites[2].scale = vec_1(KR5_SCALE_FACTOR)
+    tt.render.sprites[2].scale = vec_1(1080 / 768)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_hero_witch_path_aoe.update
     tt.start_fx = "fx_hero_witch_skill_path_aoe_in"
@@ -12203,7 +12179,7 @@ local function heroes()
     tt.render.sprites[1].z = Z_DECALS
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
-    tt.render.sprites[1].scale = vec_1(1.25)
+    tt.render.sprites[1].scale = vec_1(1.25 / 768 * 1080)
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].prefix = "hero_witch_skill_2_stun"
     tt.render.sprites[2].name = "fx_death"
@@ -12211,7 +12187,7 @@ local function heroes()
     tt.render.sprites[2].z = Z_OBJECTS
     tt.render.sprites[2].loop = false
     tt.render.sprites[2].anchor = vec_2(0.5, 0.5)
-    tt.render.sprites[2].scale = vec_1(1.25)
+    tt.render.sprites[2].scale = vec_1(1.25 / 768 * 1080)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_apply_mod.update
 

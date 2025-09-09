@@ -55,39 +55,37 @@ function simulation:init(store, system_names)
 		end
 	end
 
-	if DEBUG then
-		-- block empty
-	end
-
 	for _, s in ipairs(systems_order) do
-		if not s then
-			log.error("system %s could not be found", s)
-		else
-			if s.init then
-				s:init(self.store)
-			end
+        if s.on_queue then
+            table.insert(self.systems_on_queue, s)
+        end
 
-			if s.on_queue then
-				table.insert(self.systems_on_queue, s)
-			end
+        if s.on_dequeue then
+            table.insert(self.systems_on_dequeue, s)
+        end
 
-			if s.on_dequeue then
-				table.insert(self.systems_on_dequeue, s)
-			end
+        if s.on_insert then
+            table.insert(self.systems_on_insert, s)
+        end
 
-			if s.on_insert then
-				table.insert(self.systems_on_insert, s)
-			end
+        if s.on_remove then
+            table.insert(self.systems_on_remove, s)
+        end
 
-			if s.on_remove then
-				table.insert(self.systems_on_remove, s)
-			end
-
-			if s.on_update then
-				table.insert(self.systems_on_update, s)
-			end
-		end
+        if s.on_update then
+            table.insert(self.systems_on_update, s)
+        end
 	end
+    self.systems_on_queue_count = #self.systems_on_queue
+    self.systems_on_dequeue_count = #self.systems_on_dequeue
+    self.systems_on_insert_count = #self.systems_on_insert
+    self.systems_on_remove_count = #self.systems_on_remove
+    self.systems_on_update_count = #self.systems_on_update
+    for _, s in ipairs(systems_order) do
+        if s.init then
+            s:init(self.store)
+        end
+    end
 end
 
 function simulation:update(dt)
@@ -131,7 +129,7 @@ function simulation:do_tick()
         d.pending_removals[i] = nil
     end
 
-    for i = 1, #self.systems_on_update do
+    for i = 1, self.systems_on_update_count do
         self.systems_on_update[i]:on_update(TICK_LENGTH, d.tick_ts, d)
     end
 end
@@ -142,10 +140,9 @@ function simulation:queue_insert_entity(e)
 	end
 
 	local d = self.store
-
-	for _, sys in ipairs(self.systems_on_queue) do
-		sys:on_queue(e, d, true)
-	end
+    for i = 1, self.systems_on_queue_count do
+        self.systems_on_queue[i]:on_queue(e, d, true)
+    end
 
 	e.pending_removal = nil
 
@@ -159,9 +156,9 @@ function simulation:queue_remove_entity(e)
 
 	local d = self.store
 
-	for _, sys in ipairs(self.systems_on_queue) do
-		sys:on_queue(e, d, false)
-	end
+    for i = 1, self.systems_on_dequeue_count do
+        self.systems_on_dequeue[i]:on_dequeue(e, d, false)
+    end
 
 	e.pending_removal = true
 
@@ -171,15 +168,15 @@ end
 function simulation:insert_entity(e)
 	local d = self.store
 
-	for _, sys in ipairs(self.systems_on_insert) do
-		if not sys:on_insert(e, d) then
-			for _, dqsys in ipairs(self.systems_on_dequeue) do
-				dqsys:on_dequeue(e, d, true)
-			end
+    for i = 1, self.systems_on_insert_count do
+        if not self.systems_on_insert[i]:on_insert(e, d) then
+            for j = 1, self.systems_on_dequeue_count do
+                self.systems_on_dequeue[j]:on_dequeue(e, d, true)
+            end
 
-			return
-		end
-	end
+            return
+        end
+    end
 
 	e.pending_removal = nil
 	d.entities[e.id] = e
@@ -193,15 +190,15 @@ end
 function simulation:remove_entity(e)
 	local d = self.store
 
-	for _, sys in ipairs(self.systems_on_remove) do
-		if not sys:on_remove(e, d) then
-			for _, dqsys in ipairs(self.systems_on_dequeue) do
-				dqsys:on_dequeue(e, d, false)
-			end
+    for i = 1, self.systems_on_remove_count do
+        if not self.systems_on_remove[i]:on_remove(e, d) then
+            for j = 1, self.systems_on_dequeue_count do
+                self.systems_on_dequeue[j]:on_dequeue(e, d, false)
+            end
             print(string.format("remove %s aborted", e.template_name))
-			return
-		end
-	end
+            return
+        end
+    end
 
 	e.pending_removal = nil
 	d.entities[e.id] = nil

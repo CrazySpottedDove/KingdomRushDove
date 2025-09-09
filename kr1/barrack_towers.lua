@@ -298,7 +298,7 @@ local function barrack_towers()
     tt.render.sprites[3].prefix = "tower_elf_door"
     tt.render.door_sid = 3
     tt.sound_events.change_rally_point = "ElfTaunt"
-    tt.sound_events.insert = "GUITowerBuilding"
+    tt.sound_events.insert = "ElfTaunt"
     tt.sound_events.mute_on_level_insert = true
     tt.tower.level = 1
     tt.tower.price = 190
@@ -355,7 +355,7 @@ local function barrack_towers()
     tt.ranged.go_back_during_cooldown = true
     tt.regen.cooldown = 1
     tt.render.sprites[1].prefix = "soldier_elf"
-    tt.sound_events.insert = "ElfTaunt"
+    -- tt.sound_events.insert = "ElfTaunt"
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, ady(22))
     tt.unit.price = 100
@@ -417,7 +417,7 @@ local function barrack_towers()
     tt.main_script.insert = scripts.tower_barrack.insert
     tt.main_script.remove = scripts.tower_barrack.remove
     tt.main_script.update = scripts.tower_barrack_mercenaries.update
-    tt.sound_events.insert = "GUITowerBuilding"
+    tt.sound_events.insert = "AmazonTaunt"
     tt.sound_events.mute_on_level_insert = true
     tt.sound_events.change_rally_point = "AmazonTaunt"
     tt.powers.whirlwind = CC("power")
@@ -470,7 +470,7 @@ local function barrack_towers()
     tt.regen.cooldown = 0.5
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].prefix = "soldier_amazona"
-    tt.sound_events.insert = "AmazonTaunt"
+    -- tt.sound_events.insert = "AmazonTaunt"
     tt.sound_events.change_rally_point = "AmazonTaunt"
     tt.track_kills.mod = "amazona_heal_mod"
     tt.unit.marker_offset = vec_2(0, ady(23))
@@ -583,6 +583,9 @@ local function barrack_towers()
     tt.melee.attacks[2].vis_flags = bor(F_BLOCK, F_BLOOD)
     tt.melee.attacks[2].side_effect = function(this, store, attack, target)
         this.revive.protect = this.revive.protect + 0.01
+        if target then
+            target.health.damage_factor = target.health.damage_factor * 1.033
+        end
     end
     tt.melee.arrived_slot_animation = "attack_wait"
     tt.melee.cooldown = 2 + fts(13)
@@ -615,7 +618,6 @@ local function barrack_towers()
     tt.unit.mod_offset = vec_2(0, ady(23))
 
     tt = E:register_t("mod_blood_templar", "mod_blood")
-    E:add_comps(tt, "dps")
     tt.modifier.level = 1
     tt.modifier.duration = 3
     tt.dps.damage_min = 10
@@ -854,7 +856,7 @@ local function barrack_towers()
     tt.render.sprites[4].name = "tower_merc_camp_desert_fire"
     tt.render.sprites[4].offset = vec_2(23, 15)
     tt.render.sprites[4].ts = 0.08
-    tt.sound_events.insert = "GUITowerBuilding"
+    tt.sound_events.insert = "GenieTaunt"
     tt.sound_events.mute_on_level_insert = true
     tt.barrack.soldier_type = "soldier_djinn"
     tt.barrack.rally_range = 150
@@ -915,7 +917,7 @@ local function barrack_towers()
     tt.unit.mod_offset = vec_2(0, 30)
     tt.unit.price = 150
     tt.vis.bans = bor(tt.vis.bans, F_POISON, F_CANNIBALIZE, F_SKELETON, F_BLOOD, F_LYCAN)
-    tt.sound_events.insert = "GenieTaunt"
+    -- tt.sound_events.insert = "GenieTaunt"
     tt.sound_events.change_rally_point = "GenieTaunt"
 
     tt = E:register_t("spell_djinn", "spell")
@@ -986,6 +988,7 @@ local function barrack_towers()
     tt.barrack.soldier_type = "soldier_pirate_flamer"
     tt.barrack.rally_range = 150
     tt.barrack.respawn_offset = vec_2(0, 0)
+    tt.sound_events.insert = "PiratesTaunt"
 
     tt = E:register_t("soldier_pirate_flamer", "soldier_militia")
     E:add_comps(tt, "ranged", "powers")
@@ -1027,7 +1030,7 @@ local function barrack_towers()
     tt.ranged.attacks[2].disabled = true
     tt.ranged.attacks[2].power_name = "bigbomb"
     tt.ranged.attacks[2].node_prediction = fts(28)
-    tt.sound_events.insert = "PiratesTaunt"
+    -- tt.sound_events.insert = "PiratesTaunt"
     tt.sound_events.change_rally_point = "PiratesTaunt"
     tt.powers.bigbomb = E:clone_c("power")
     tt.powers.quickup = E:clone_c("power")
@@ -1171,7 +1174,7 @@ local function barrack_towers()
     tt.melee.attacks[3].chance = 0.5
     tt.melee.forced_cooldown = tt.melee.attacks[1].cooldown
     tt.melee.range = 60
-    tt.motion.max_speed = 75
+    tt.motion.max_speed = 80
     tt.powers.perfect_parry = E:clone_c("power")
     tt.powers.blade_dance = E:clone_c("power")
     tt.powers.blade_dance.damage_max = {35, 47, 56}
@@ -1218,7 +1221,7 @@ local function barrack_towers()
     tt.melee.attacks[1].forced_cooldown = true
     tt.melee.forced_cooldown = tt.melee.attacks[1].cooldown
     tt.melee.range = 49.5
-    tt.motion.max_speed = 60
+    tt.motion.max_speed = 65
     tt.powers.circle = E:clone_c("power")
     tt.powers.eerie = E:clone_c("power")
     tt.powers.oak = E:clone_c("power")
@@ -1395,8 +1398,9 @@ local function barrack_towers()
 
     tt = RT("mod_life_drain_drow", "modifier")
     AC(tt, "render")
-    tt.heal_factor = 1
+    tt.heal_factor = 0.8
     tt.heal_bans = bor(F_POISON)
+    tt.heal_base = 30
     tt.main_script.insert = scripts.mod_heal_on_damage.insert
     tt.main_script.update = scripts.mod_heal_on_damage.update
     tt.modifier.use_mod_offset = false
@@ -1479,7 +1483,7 @@ local function barrack_towers()
     tt.health.armor = 0
     tt.health.armor_inc = 0.2
     tt.health.armor_power_name = "armor"
-    tt.health.dead_lifetime = 8
+    tt.health.dead_lifetime = 10
     tt.health.hp_max = 100
     tt.health_bar.offset = vec_2(0, 29)
     tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
@@ -1519,7 +1523,7 @@ local function barrack_towers()
     tt.render.sprites[1].angles.walk = {"running"}
     tt.render.sprites[1].prefix = "soldier_ewok"
     tt.soldier.melee_slot_offset = vec_2(5, 0)
-    tt.sound_events.insert = "ElvesEwokTaunt"
+    -- tt.sound_events.insert = "ElvesEwokTaunt"
     tt.ui.click_rect = r(-10, -2, 20, 25)
     tt.unit.hit_offset = vec_2(0, 12)
     tt.unit.marker_offset = vec_2(0, 0)

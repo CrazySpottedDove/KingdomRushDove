@@ -563,7 +563,7 @@ local function mage_towers()
     E:add_comps(ps_bolt_necromancer_trail, "pos", "particle_system")
     ps_bolt_necromancer_trail.particle_system.name = "proy_Necromancer_particle"
     ps_bolt_necromancer_trail.particle_system.animated = false
-    ps_bolt_necromancer_trail.particle_system.particle_lifetime = {0.4, 1.2}
+    ps_bolt_necromancer_trail.particle_system.particle_lifetime = {0.4, 1}
     ps_bolt_necromancer_trail.particle_system.alphas = {255, 0}
     ps_bolt_necromancer_trail.particle_system.scales_x = {1, 3.5}
     ps_bolt_necromancer_trail.particle_system.scales_y = {1, 3.5}
