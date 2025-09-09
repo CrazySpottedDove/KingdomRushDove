@@ -28,6 +28,7 @@ end
 local balance = require("kr1.data.balance")
 local b
 local U = require("utils")
+local SU = require("script_utils")
 require("game_templates_utils")
 
 local function heroes()

@@ -201,7 +201,6 @@ function sys.level:init(store)
         W:patch_waves(store.criket)
     end
     A:load()
-
     store.selected_hero = slot.heroes.selected
     if store.selected_hero and #store.selected_hero > 0 then
         store.selected_hero_status = slot.heroes.status[slot.heroes.selected[1]]
