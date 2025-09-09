@@ -1,9 +1,9 @@
 ﻿-- chunkname: @./main.lua
 if arg[2] == "debug" then
-    require("lldebugger").start()
+	LLDEBUGGER = require("lldebugger")
+	LLDEBUGGER.start()
 end
 require("main_globals")
-
 
 if KR_TARGET == "universal" then
 	if KR_PLATFORM == "ios" then
@@ -682,10 +682,6 @@ function love.quit()
 	close_log()
 end
 
-local function get_error_stack(msg, layer)
-	return (debug.traceback("Error: " .. tostring(msg), 1 + (layer or 1)):gsub("\n[^\n]+$", ""))
-end
-
 local function crash_report(str)
 	if KR_PLATFORM == "android" then
 		local jnia = require("jni_android")
@@ -709,7 +705,7 @@ function love.errhand(msg)
 
 	msg = tostring(msg)
 
-	local stack_msg = get_error_stack(msg, 2)
+	local stack_msg = debug.traceback("Error: " .. tostring(msg), 3):gsub("\n[^\n]+$", "")
 
 	stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
 
@@ -861,6 +857,10 @@ function love.errhand(msg)
 	end
 
 	local quiterr
+
+	if LLDEBUGGER then
+		LLDEBUGGER.start()
+	end
 
 	while true do
 		love.event.pump()
