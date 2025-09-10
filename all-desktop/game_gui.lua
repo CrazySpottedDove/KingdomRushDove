@@ -5991,12 +5991,13 @@ function PickView:update(dt)
         end
 
         local s = entity.render.sprites[1]
+        if s then
+            s._orig_name = s.name
+            s.name = s.name .. "_over"
 
-        s._orig_name = s.name
-        s.name = s.name .. "_over"
-
-        if s.hover_off_hidden then
-            s.hidden = nil
+            if s.hover_off_hidden then
+                s.hidden = nil
+            end
         end
 
         self.last_tower_hover = entity
@@ -6009,11 +6010,12 @@ function PickView:update(dt)
 
         if oe then
             local s = oe.render.sprites[1]
+            if s then
+                s.name = s._orig_name
 
-            s.name = s._orig_name
-
-            if s.hover_off_hidden then
-                s.hidden = true
+                if s.hover_off_hidden then
+                    s.hidden = true
+                end
             end
 
             self.last_tower_hover = nil

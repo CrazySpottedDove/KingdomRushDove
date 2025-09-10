@@ -72,7 +72,7 @@ editor.simulation_systems = {
 
 function editor.save_data(data, name)
 	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_data.lua"
-	
+
 	local function custom_sort(k, o)
 		local function sort_table(a, b)
 			if a == "template" then
@@ -418,8 +418,8 @@ function editor:draw()
 				G.rectangle("fill", e.pos.x - 2, e.pos.y - 8, 4, 16)
 				G.rectangle("fill", e.pos.x - 8, e.pos.y - 2, 16, 4)
 
-				if self.entities_selected and table.contains(self.entities_selected, e.id) and e.render and e.render.frames and e.render.frames[1] then
-					local f = e.render.frames[1]
+				if self.entities_selected and table.contains(self.entities_selected, e.id) and e.render and e.render.sprites and e.render.sprites[1] then
+					local f = e.render.sprites[1]
 
 					if f.ss then
 						local w, h = f.ss.size[1] * f.ss.ref_scale, f.ss.size[2] * f.ss.ref_scale
@@ -714,7 +714,7 @@ function editor:level_load(idx, mode)
 	s.level = LU.load_level(s, s.level_name, true)
 
 	director:load_texture_groups(s.level.data.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
-	
+
 	LU.insert_entities(self.store, s.level.data.entities_list, true)
 
 	if IS_KR5 then

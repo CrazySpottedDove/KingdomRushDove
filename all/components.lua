@@ -278,7 +278,6 @@ local render = E:register_c("render")
 
 render.sprites = {}
 render.sprites[1] = E:clone_c("sprite")
-render.frames = {}
 
 local text = E:register_c("text")
 

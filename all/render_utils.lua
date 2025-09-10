@@ -83,7 +83,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 		else
 			local ss = f.ss
 
-			if batch_count == BATCH_SIZE or f.shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
+			if batch_count == BATCH_SIZE or f._shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
 				if batch_count > 0 then
 					G.draw(batch)
 
@@ -114,16 +114,16 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 				batch_count = 0
 				batches_count = batches_count + 1
 
-				if f.shader ~= current_shader then
-					G.setShader(f.shader)
+				if f._shader ~= current_shader then
+					G.setShader(f._shader)
 
 					if f.shader_args then
 						for k, v in pairs(f.shader_args) do
-							f.shader:send(k, v)
+							f._shader:send(k, v)
 						end
 					end
 
-					current_shader = f.shader
+					current_shader = f._shader
 				end
 			end
 

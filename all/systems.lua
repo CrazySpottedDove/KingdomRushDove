@@ -1870,7 +1870,7 @@ function sys.particle_system:init(store)
                 x = 0,
                 y = 0
             },
-            draw_order = draw_order,
+            _draw_order = draw_order,
             z = z,
             sort_y = sort_y,
             sort_y_offset = sort_y_offset,
@@ -2261,47 +2261,21 @@ function sys.render:on_insert(entity, store)
     if entity.render then
         for i = 1, #entity.render.sprites do
             local s = entity.render.sprites[i]
-            local f = {
-                ss = nil,
-                flip_x = false,
-                flip_y = false,
-                pos = {
-                    x = 0,
-                    y = 0
-                },
-                anchor = {
-                    x = 0,
-                    y = 0
-                },
-                offset = {
-                    x = 0,
-                    y = 0
-                },
-                draw_order = 100000 * (s.draw_order or i) + entity.id,
-                z = s.z or Z_OBJECTS,
-                sort_y = s.sort_y,
-                sort_y_offset = s.sort_y_offset
-            }
 
+            s._draw_order = 100000 * (s.draw_order or i) + entity.id
             if s.random_ts then
                 s.ts = U.frandom(-1 * s.random_ts, 0)
             end
-
-            if s.color then
-                f.color = s.color
+            if not s.pos then
+                s.pos = {x = entity.pos.x, y = entity.pos.y}
+                s._track_e = true
             end
 
             if s.shader then
-                f.shader = SH:get(s.shader)
-                f.shader_args = s.shader_args
+                s._shader = SH:get(s.shader)
             end
 
-            if entity.render.frames[i] then
-                entity.render.frames[i].marked_to_remove = true
-            end
-
-            entity.render.frames[i] = f
-            render_frames[#render_frames + 1] = f
+            render_frames[#render_frames + 1] = s
         end
     end
 
@@ -2325,7 +2299,7 @@ function sys.render:on_insert(entity, store)
                 x = hb.offset.x,
                 y = hb.offset.y
             },
-            draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
+            _draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
             z = Z_OBJECTS,
             sort_y_offset = hb.sort_y_offset,
             ss = self._hb_ss,
@@ -2355,7 +2329,7 @@ function sys.render:on_insert(entity, store)
                 x = hb.offset.x,
                 y = hb.offset.y
             },
-            draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
+            _draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
             z = Z_OBJECTS,
             sort_y_offset = hb.sort_y_offset,
             ss = self._hb_ss,
@@ -2396,7 +2370,7 @@ function sys.render:on_insert(entity, store)
                     x = hb.offset.x - hbsize.x * 0.5,
                     y = hb.offset.y
                 },
-                draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
+                _draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
                 z = Z_OBJECTS,
                 sort_y_offset = hb.sort_y_offset,
                 ss = self._hb_ss,
@@ -2418,10 +2392,10 @@ end
 
 function sys.render:on_remove(entity, store)
     if entity.render then
-        for i = #entity.render.frames, 1, -1 do
-            local f = entity.render.frames[i]
-            f.marked_to_remove = true
-            entity.render.frames[i] = nil
+        for i = #entity.render.sprites, 1, -1 do
+            local s = entity.render.sprites[i]
+            s.marked_to_remove = true
+            entity.render.sprites[i] = nil
         end
     end
 
@@ -2445,12 +2419,10 @@ function sys.render:on_update(dt, ts, store)
     for _, e in pairs(entities) do
         for i = 1, #e.render.sprites do
             local s = e.render.sprites[i]
-            local f = e.render.frames[i]
-            f.hidden = s.hidden
             if s.hidden then
                 goto continue_f_update
             end
-            -- local t1 = love.timer.getTime()
+
             local last_runs = s.runs
             local fn, runs, idx
 
@@ -2477,57 +2449,29 @@ function sys.render:on_update(dt, ts, store)
                 s.frame_idx = 1
                 fn = s.name
             end
-            -- local t2 = love.timer.getTime()
-            -- T1=T1+t2-t1
-            -- if s.sync_idx then
-            --     s.sync_flag = s.frame_idx == s.sync_idx
-            -- elseif s.sync_flag == nil then
-            --     s.sync_flag = s.frame_idx == 1
-            -- else
+
             s.sync_flag = last_runs ~= s.runs
-            -- end
 
             local ss = I:s(fn)
 
-            f.ss = ss
-            -- local t3 = love.timer.getTime()
-            if s.pos then
-                f.pos.x, f.pos.y = s.pos.x, s.pos.y
-            else
-                f.pos.x, f.pos.y = e.pos.x, e.pos.y
-            end
-            f.r = s.r
-            f.alpha = s.alpha
+            s.ss = ss
 
-            if f._skip_update then
-                f._skip_update = false
-            else
-                f._skip_update = true
-                f.flip_x = s.flip_x
-                f.flip_y = s.flip_y
-
-                f.scale = s.scale
-                f.anchor.x, f.anchor.y = s.anchor.x, s.anchor.y
-                f.offset.x, f.offset.y = s.offset.x, s.offset.y
-                f.z = s.z or Z_OBJECTS
-                f.sort_y = s.sort_y
-                f.sort_y_offset = s.sort_y_offset
-                f.draw_order = 100000 * (s.draw_order or i) + e.id
-
-                if s.hide_after_runs and s.runs >= s.hide_after_runs then
-                    s.hidden = true
-                    f.hidden = true
-                    f.marked_to_remove = true
-                end
-
-                if ts < s.ts then
-                    f.hidden = true
-                end
+            if s._track_e then
+                s.pos.x, s.pos.y = e.pos.x, e.pos.y
             end
 
-            -- local t4 = love.timer.getTime()
-            -- T2=T2+t3-t2
-            -- T3=T3+t4-t3
+            if not s.z then
+                s.z = Z_OBJECTS
+            end
+            s._draw_order = 100000 * (s.draw_order or i) + e.id
+            if s.hide_after_runs and s.runs >= s.hide_after_runs then
+                s.hidden = true
+                s.marked_to_remove = true
+            end
+            if ts < s.ts then
+                s.hidden = true
+            end
+
             ::continue_f_update::
         end
 
@@ -2558,8 +2502,8 @@ function sys.render:on_update(dt, ts, store)
                 ff.offset.x, ff.offset.y = hb.offset.x - ff.bar_width * ff.ss.ref_scale * 0.5, hb.offset.y
                 fb.z = hb.z or Z_OBJECTS
                 ff.z = fb.z
-                fb.draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + e.id
-                ff.draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + e.id
+                fb._draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + e.id
+                ff._draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + e.id
                 fb.sort_y_offset = hb.sort_y_offset
                 ff.sort_y_offset = hb.sort_y_offset
 
@@ -2568,7 +2512,7 @@ function sys.render:on_update(dt, ts, store)
                     fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
                     fk.z = hb.z or Z_OBJECTS
                     fk.sort_y_offset = hb.sort_y_offset
-                    fk.draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + e.id
+                    fk._draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + e.id
                     ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
                     fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
                 else
@@ -2577,7 +2521,7 @@ function sys.render:on_update(dt, ts, store)
             end
         end
     end
-    -- print("render update T1:",T1*1000,"T2:",T2*1000,"T3:",T3*1000)
+
     -- FFI同步
     local render_frames = store.render_frames
     local render_frames_ffi = store.render_frames_ffi
@@ -2588,7 +2532,7 @@ function sys.render:on_update(dt, ts, store)
             local ffi_f = render_frames_ffi[n]
             ffi_f.z = f.z
             ffi_f.sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
-            ffi_f.draw_order = f.draw_order
+            ffi_f.draw_order = f._draw_order
             ffi_f.pos_x = f.pos.x
             ffi_f.lua_index = i
             n = n + 1
