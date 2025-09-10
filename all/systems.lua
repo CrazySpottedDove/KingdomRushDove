@@ -1213,6 +1213,9 @@ function sys.main_script:on_update(dt, ts, store)
                 if not success and err ~= nil then
                     -- log.error("Error running coro: %s", debug.traceback(s.co, error))
                     log.error("Error running coro: " .. err .. debug.traceback(s.co))
+                    if LLDEBUGGER then
+                        LLDEBUGGER.start()
+                    end
                 end
 
                 s.co = nil

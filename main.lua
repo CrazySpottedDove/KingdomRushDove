@@ -404,6 +404,10 @@ function love.draw()
 end
 
 function love.keypressed(key, scancode, isrepeat)
+	if LLDEBUGGER and key == "0" then
+		LLDEBUGGER.start()
+	end
+
 	if main.profiler then
 		if key == "f1" then
 			main.profiler.start()

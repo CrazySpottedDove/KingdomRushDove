@@ -1,17 +1,3 @@
-require("main_globals")
-local features = require("features")
-
--- 按 0 手动断点
-local l_kp = love.keypressed
-function love.keypressed(key, scancode, isrepeat)
-    l_kp(key, scancode, isrepeat)
-    if key == "0" then
-        if LLDEBUGGER then
-            LLDEBUGGER.start()
-        end
-    end
-end
-
 -- 启动参数
 local r = {
     log_level = 5,  -- 日志等级 5：调试控制台显示完整信息
