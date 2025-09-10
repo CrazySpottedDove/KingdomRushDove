@@ -6883,8 +6883,10 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
     if item.preview then
         local preview_ids = entity.tower_holder.preview_ids
         local preview_id = preview_ids[item.preview]
-
-        entity.render.sprites[preview_id].hidden = false
+        local s = entity.render.sprites[preview_id]
+        if s then
+            s.hidden = false
+        end
     end
 
     game_gui.towertooltip:show(entity, item)
@@ -6912,8 +6914,10 @@ function TowerMenu:button_exit(button, item, entity, mouse_button)
     if item.preview then
         local preview_ids = entity.tower_holder.preview_ids
         local preview_id = preview_ids[item.preview]
-
-        entity.render.sprites[preview_id].hidden = true
+        local s = entity.render.sprites[preview_id]
+        if s then
+            s.hidden = true
+        end
     end
 
     if entity.ui then

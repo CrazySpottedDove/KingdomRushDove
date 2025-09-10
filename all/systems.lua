@@ -2274,7 +2274,9 @@ function sys.render:on_insert(entity, store)
             if s.shader then
                 s._shader = SH:get(s.shader)
             end
-
+            if not s.z then
+                s.z = Z_OBJECTS
+            end
             render_frames[#render_frames + 1] = s
         end
     end
@@ -2395,7 +2397,7 @@ function sys.render:on_remove(entity, store)
         for i = #entity.render.sprites, 1, -1 do
             local s = entity.render.sprites[i]
             s.marked_to_remove = true
-            entity.render.sprites[i] = nil
+            -- entity.render.sprites[i] = nil
         end
     end
 
@@ -2413,9 +2415,7 @@ end
 function sys.render:on_update(dt, ts, store)
     local d = store
     local entities = d.entities_with_render
-    local T1=0
-    local T2=0
-    local T3=0
+
     for _, e in pairs(entities) do
         for i = 1, #e.render.sprites do
             local s = e.render.sprites[i]
@@ -2460,9 +2460,6 @@ function sys.render:on_update(dt, ts, store)
                 s.pos.x, s.pos.y = e.pos.x, e.pos.y
             end
 
-            if not s.z then
-                s.z = Z_OBJECTS
-            end
             s._draw_order = 100000 * (s.draw_order or i) + e.id
             if s.hide_after_runs and s.runs >= s.hide_after_runs then
                 s.hidden = true

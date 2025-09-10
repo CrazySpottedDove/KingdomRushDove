@@ -115,11 +115,6 @@ end
 function animation_db:prebuild_frames()
     self.prefix_s = {}
     for name, a in pairs(self.db) do
-        if a.prefix then
-            if not self.prefix_s[a.prefix] then
-                self.prefix_s[a.prefix] = a.prefix .. "_"
-            end
-        end
         self:generate_frames(a)
     end
 end
@@ -193,6 +188,10 @@ function animation_db:generate_frames(a)
         a.frames = frames
     end
     if a.prefix and not a.frame_names then
+        if not self.prefix_s[a.prefix] then
+            self.prefix_s[a.prefix] = a.prefix .. "_"
+        end
+
         local prefix_ = self.prefix_s[a.prefix]
         a.frame_names = {}
         for i=1, #frames do
