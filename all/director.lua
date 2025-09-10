@@ -770,22 +770,41 @@ function director:draw()
 end
 
 function director:limit_fps()
-    if self.active_item then
-        local ai = self.active_item
+    if not (self.active_item and self.active_item.next_frame_ts) then
+        return
+    end
 
-        if ai.next_frame_ts then
-            local current_ts = love.timer.getTime()
+    local ai = self.active_item
+    local current_ts = love.timer.getTime()
+    local deadline = ai.next_frame_ts
 
-            if current_ts >= ai.next_frame_ts then
-                ai.next_frame_ts = current_ts
+    if current_ts >= deadline then
+        -- 已经超时了，直接进入下一帧
+        ai.next_frame_ts = current_ts
+        return
+    end
 
-                return
-            end
-
-            love.timer.sleep(ai.next_frame_ts - current_ts)
+    -- 在剩余时间内推进 GC
+    while true do
+        local now = love.timer.getTime()
+        local remaining = deadline - now
+        if remaining <= 0.0015 then
+            break
         end
+
+        if collectgarbage("step") then
+            break
+        end -- 本轮 GC 已经完成
+    end
+
+    -- 最后 sleep 精确到下一帧
+    local now = love.timer.getTime()
+    local sleep_time = deadline - now
+    if sleep_time > 0 then
+        love.timer.sleep(sleep_time)
     end
 end
+
 
 function director:keypressed(key, isrepeat)
     if key == "tab" and love.window.getFullscreen() and love.system.getOS() == "OS X" and

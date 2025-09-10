@@ -17788,7 +17788,7 @@ function scripts.soldier_druid_bear.update(this, store)
         if this.health.dead then
             do_effects(false)
             SU.y_soldier_death(store, this)
-
+            this.health_bar.hidden = true
             return
         end
 

@@ -764,8 +764,9 @@ tt.main_script.update = function(this, store)
         return ready_to_attack(bda, store) and this.enemy.can_do_magic
     end
     local function break_from_melee()
-        return bda_ready() or this.dodge.active and this.enemy.can_do_magic
+        return bda_ready() or (this.dodge.active and this.enemy.can_do_magic)
     end
+    this.vis._bans = this.vis.bans
     while true do
         if this.health.dead  then
             SU.y_enemy_death(store, this)
@@ -845,7 +846,6 @@ tt.main_script.update = function(this, store)
                 bda.ts = store.tick_ts
                 bda.in_progress = true
                 this.health.ignore_damage = true
-                this.vis._bans = this.vis.bans
                 this.vis.bans = F_ALL
 
                 local initial_pos = V.vclone(this.pos)
@@ -905,7 +905,6 @@ tt.main_script.update = function(this, store)
 
                 this.health.ignore_damage = false
                 this.vis.bans = this.vis._bans
-                this.vis._bans = nil
 
                 -- AC:inc_check("BLADE_DANCE")
 

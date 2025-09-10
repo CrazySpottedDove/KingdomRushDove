@@ -249,6 +249,7 @@ function game:init_debug()
     end
 end
 
+local tick_length_limit = TICK_LENGTH * 1.1
 function game:update(dt)
     if DEBUG then
         self:update_debug(dt)
@@ -261,7 +262,9 @@ function game:update(dt)
     -- 	self.simulation:update(dt)
     -- end
     local d = self.simulation.store
-
+    if dt > tick_length_limit then
+        dt = tick_length_limit
+    end
     d.dt = dt * d.speed_factor
     d.ts = d.ts + d.dt
     d.to = d.to + d.dt
