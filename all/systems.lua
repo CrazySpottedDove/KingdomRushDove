@@ -187,7 +187,7 @@ sys.level.name = "level"
 
 function sys.level:init(store)
     local slot = storage:load_slot(nil, true)
-    
+
     UP:set_levels(slot.upgrades)
     DI:set_level(store.level_difficulty)
     GR:load(store.level_name)
@@ -410,24 +410,24 @@ function sys.level:on_update(dt, ts, store)
 
             slot.gems = (slot.gems or 0) + store.gems_collected
 
-            if store.level_mode_override == GAME_MODE_ENDLESS then
-                local slot_level = slot.levels[store.level_idx]
+            -- if store.level_mode_override == GAME_MODE_ENDLESS then
+            --     local slot_level = slot.levels[store.level_idx]
 
-                slot_level = slot_level or {}
+            --     slot_level = slot_level or {}
 
-                if not slot_level[store.level_difficulty] then
-                    slot_level[store.level_difficulty] = {
-                        waves_survived = 0,
-                        high_score = 0
-                    }
-                    slot.levels[store.level_idx] = slot_level
-                end
+            --     if not slot_level[store.level_difficulty] then
+            --         slot_level[store.level_difficulty] = {
+            --             waves_survived = 0,
+            --             high_score = 0
+            --         }
+            --         slot.levels[store.level_idx] = slot_level
+            --     end
 
-                if slot_level[store.level_difficulty].high_score < store.player_score then
-                    slot_level[store.level_difficulty].high_score = store.player_score
-                    slot_level[store.level_difficulty].waves_survived = store.wave_group_number
-                end
-            end
+            --     if slot_level[store.level_difficulty].high_score < store.player_score then
+            --         slot_level[store.level_difficulty].high_score = store.player_score
+            --         slot_level[store.level_difficulty].waves_survived = store.wave_group_number
+            --     end
+            -- end
 
             signal.emit("game-defeat", store)
             signal.emit("game-defeat-after", store)
@@ -599,8 +599,6 @@ function sys.wave_spawn:init(store)
             store.wave_group_number = store.endless.wave_group_number
         end
     else
-        -- store.gems_per_wave = floor(
-        --     GS.gems_per_level[store.level_idx] * GS.gems_factor_per_mode[store.level_mode] / W:waves_count())
         store.wave_group_total = W:groups_count()
     end
 
@@ -1255,7 +1253,7 @@ if PERFORMANCE_MONITOR_ENABLED and false then
                 if print_enabled then
                     local t2 = love.timer.getTime()
                     local delta_t = (t2 - t1) * 1000000
-                    print(string.format("%s: %d",e.template_name, delta_t))
+                    print(string.format("%s: %d", e.template_name, delta_t))
                 end
 
                 -- if coroutine.status(s.co) == "dead" or err ~= nil then
@@ -1814,7 +1812,7 @@ end
 sys.particle_system = {}
 sys.particle_system.name = "particle_system"
 
-local Pool = require("pool")
+-- local Pool = require("pool")
 
 function sys.particle_system:init(store)
     local function create_particle(ts)
@@ -2195,7 +2193,8 @@ typedef struct{
 
 function sys.render:init(store)
     store.render_frames = {}
-    store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]") -- preallocate for 8192 frames
+    store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]")
+    store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[16384]")
     local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
 
     self._hb_ss = {
@@ -2206,7 +2205,7 @@ function sys.render:init(store)
     }
     self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
     self._hb_colors = HEALTH_BAR_COLORS
-    self.ffi_cmp = function(a, b)
+    local function ffi_cmp(a, b)
         if a.z ~= b.z then
             return a.z < b.z
         end
@@ -2218,47 +2217,6 @@ function sys.render:init(store)
         end
         return a.pos_x < b.pos_x
     end
-    -- 使用快速排序（不稳定但更快）
-    local function ffi_quicksort(arr, left, right)
-        if left >= right then
-            return
-        end
-
-        -- 三数取中选择枢轴
-        local mid = floor((left + right) / 2)
-        if self.ffi_cmp(arr[right], arr[left]) then
-            arr[left], arr[right] = arr[right], arr[left]
-        end
-        if self.ffi_cmp(arr[mid], arr[left]) then
-            arr[left], arr[mid] = arr[mid], arr[left]
-        end
-        if self.ffi_cmp(arr[right], arr[mid]) then
-            arr[mid], arr[right] = arr[right], arr[mid]
-        end
-
-        local pivot = arr[mid]
-        arr[mid] = arr[right - 1]
-        arr[right - 1] = pivot
-
-        local i, j = left, right - 1
-        while true do
-            repeat
-                i = i + 1
-            until not self.ffi_cmp(arr[i], pivot)
-            repeat
-                j = j - 1
-            until not self.ffi_cmp(pivot, arr[j])
-            if i >= j then
-                break
-            end
-            arr[i], arr[j] = arr[j], arr[i]
-        end
-
-        arr[i], arr[right - 1] = arr[right - 1], arr[i]
-
-        ffi_quicksort(arr, left, i - 1)
-        ffi_quicksort(arr, i + 1, right)
-    end
 
     local function ffi_merge_sort(arr, tmp, left, right)
         if right - left <= 1 then
@@ -2268,32 +2226,34 @@ function sys.render:init(store)
         ffi_merge_sort(arr, tmp, left, mid)
         ffi_merge_sort(arr, tmp, mid, right)
         local i, j, k = left, mid, left
+        local sizeof_frame = ffi.sizeof("RenderFrameFFI")
         while i < mid and j < right do
-            if self.ffi_cmp(arr[i], arr[j]) then
-                ffi.copy(tmp + k, arr + i, ffi.sizeof("RenderFrameFFI"))
+            if ffi_cmp(arr[i], arr[j]) then
+                ffi.copy(tmp + k, arr + i, sizeof_frame)
                 i = i + 1
             else
-                ffi.copy(tmp + k, arr + j, ffi.sizeof("RenderFrameFFI"))
+                ffi.copy(tmp + k, arr + j, sizeof_frame)
                 j = j + 1
             end
             k = k + 1
         end
         while i < mid do
-            ffi.copy(tmp + k, arr + i, ffi.sizeof("RenderFrameFFI"))
+            ffi.copy(tmp + k, arr + i, sizeof_frame)
             i = i + 1
             k = k + 1
         end
         while j < right do
-            ffi.copy(tmp + k, arr + j, ffi.sizeof("RenderFrameFFI"))
+            ffi.copy(tmp + k, arr + j, sizeof_frame)
             j = j + 1
             k = k + 1
         end
         for l = left, right - 1 do
-            ffi.copy(arr + l, tmp + l, ffi.sizeof("RenderFrameFFI"))
+            ffi.copy(arr + l, tmp + l, sizeof_frame)
         end
     end
-    self.ffi_sort = ffi_merge_sort
 
+    -- 要求渲染顺序稳定，因此不可以使用快速排序
+    self.ffi_sort = ffi_merge_sort
 end
 
 function sys.render:on_insert(entity, store)
@@ -2615,9 +2575,9 @@ function sys.render:on_update(dt, ts, store)
             n = n + 1
         end
     end
-    self.ffi_sort(store.render_frames_ffi, ffi.new("RenderFrameFFI[?]", n), 0, n)
 
-    -- self.ffi_sort(render_frames_ffi, 0, render_frames_ffi_count - 1)
+    self.ffi_sort(store.render_frames_ffi, store.render_frames_ffi_tmp, 0, n)
+
     local new_frames = {}
     for i = 0, n - 1 do
         local ffi_f = render_frames_ffi[i]
@@ -2933,7 +2893,8 @@ function sys.last_hook:on_insert(e, d)
         if target then
             if not target._applied_mods then
                 target._applied_mods = {}
-                log.error("！如果看见这条消息，请截下来发给作者 target:",target.template_name, "mod:", e.template_name )
+                log.error("！如果看见这条消息，请截下来发给作者 target:", target.template_name,
+                    "mod:", e.template_name)
             end
             local mods = target._applied_mods
             mods[#mods + 1] = e

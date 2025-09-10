@@ -796,7 +796,7 @@ function love.errhand(msg)
 	}
 	local has_tip
 
-    table.insert(tip, "Tip\n")
+    table.insert(tip, string.format("Version %s: Tip\n", version.id))
 
 	for e, v in pairs(tip_trigger_errors) do
 		if string.find(msg, e, 1, true) then
