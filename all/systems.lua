@@ -2439,11 +2439,18 @@ end
 function sys.render:on_update(dt, ts, store)
     local d = store
     local entities = d.entities_with_render
-    
+    local T1=0
+    local T2=0
+    local T3=0
     for _, e in pairs(entities) do
         for i = 1, #e.render.sprites do
             local s = e.render.sprites[i]
             local f = e.render.frames[i]
+            f.hidden = s.hidden
+            if s.hidden then
+                goto continue_f_update
+            end
+            -- local t1 = love.timer.getTime()
             local last_runs = s.runs
             local fn, runs, idx
 
@@ -2470,7 +2477,8 @@ function sys.render:on_update(dt, ts, store)
                 s.frame_idx = 1
                 fn = s.name
             end
-
+            -- local t2 = love.timer.getTime()
+            -- T1=T1+t2-t1
             -- if s.sync_idx then
             --     s.sync_flag = s.frame_idx == s.sync_idx
             -- elseif s.sync_flag == nil then
@@ -2482,34 +2490,45 @@ function sys.render:on_update(dt, ts, store)
             local ss = I:s(fn)
 
             f.ss = ss
-            f.flip_x = s.flip_x
-            f.flip_y = s.flip_y
-
+            -- local t3 = love.timer.getTime()
             if s.pos then
                 f.pos.x, f.pos.y = s.pos.x, s.pos.y
             else
                 f.pos.x, f.pos.y = e.pos.x, e.pos.y
             end
-
             f.r = s.r
-            f.scale = s.scale
-            f.anchor.x, f.anchor.y = s.anchor.x, s.anchor.y
-            f.offset.x, f.offset.y = s.offset.x, s.offset.y
-            f.z = s.z or Z_OBJECTS
-            f.sort_y = s.sort_y
-            f.sort_y_offset = s.sort_y_offset
-            f.draw_order = 100000 * (s.draw_order or i) + e.id
             f.alpha = s.alpha
 
-            if s.hide_after_runs and s.runs >= s.hide_after_runs then
-                s.hidden = true
+            if f._skip_update then
+                f._skip_update = false
+            else
+                f._skip_update = true
+                f.flip_x = s.flip_x
+                f.flip_y = s.flip_y
+
+                f.scale = s.scale
+                f.anchor.x, f.anchor.y = s.anchor.x, s.anchor.y
+                f.offset.x, f.offset.y = s.offset.x, s.offset.y
+                f.z = s.z or Z_OBJECTS
+                f.sort_y = s.sort_y
+                f.sort_y_offset = s.sort_y_offset
+                f.draw_order = 100000 * (s.draw_order or i) + e.id
+
+                if s.hide_after_runs and s.runs >= s.hide_after_runs then
+                    s.hidden = true
+                    f.hidden = true
+                    f.marked_to_remove = true
+                end
+
+                if ts < s.ts then
+                    f.hidden = true
+                end
             end
 
-            f.hidden = s.hidden
-
-            if ts < s.ts then
-                f.hidden = true
-            end
+            -- local t4 = love.timer.getTime()
+            -- T2=T2+t3-t2
+            -- T3=T3+t4-t3
+            ::continue_f_update::
         end
 
         if e.health_bar and store.config.show_health_bar then
@@ -2558,7 +2577,7 @@ function sys.render:on_update(dt, ts, store)
             end
         end
     end
-
+    -- print("render update T1:",T1*1000,"T2:",T2*1000,"T3:",T3*1000)
     -- FFI同步
     local render_frames = store.render_frames
     local render_frames_ffi = store.render_frames_ffi
