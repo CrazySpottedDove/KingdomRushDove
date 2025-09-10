@@ -126,10 +126,8 @@ function game:init(screen_w, screen_h, done_callback)
     RU.init()
 
     self.store.ephemeral = {}
-    local t1 = love.timer.getTime()
     simulation:init(self.store, self.simulation_systems)
-    local t2 = love.timer.getTime()
-    print(string.format("Simulation init took %.3f sec", t2 - t1))
+
     self.simulation = simulation
 
     game_gui:init(screen_w, screen_h, self)

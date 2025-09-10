@@ -192,7 +192,7 @@ function animation_db:generate_frames(a)
         end
         a.frames = frames
     end
-    if a.prefix then
+    if a.prefix and not a.frame_names then
         local prefix_ = self.prefix_s[a.prefix]
         a.frame_names = {}
         for i=1, #frames do

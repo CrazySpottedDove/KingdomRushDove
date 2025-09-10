@@ -2305,7 +2305,7 @@ function sys.render:on_insert(entity, store)
         end
     end
 
-    if store.config and store.config.show_health_bar and entity.health_bar then
+    if entity.health_bar and store.config.show_health_bar then
         local hb = entity.health_bar
         local hbsize = self._hb_sizes[hb.type]
 
@@ -2439,7 +2439,7 @@ end
 function sys.render:on_update(dt, ts, store)
     local d = store
     local entities = d.entities_with_render
-
+    
     for _, e in pairs(entities) do
         for i = 1, #e.render.sprites do
             local s = e.render.sprites[i]
@@ -2512,7 +2512,7 @@ function sys.render:on_update(dt, ts, store)
             end
         end
 
-        if store.config and store.config.show_health_bar and e.health_bar then
+        if e.health_bar and store.config.show_health_bar then
             local hb = e.health_bar
             local fb = hb.frames[1]
             local ff = hb.frames[2]
@@ -2575,9 +2575,7 @@ function sys.render:on_update(dt, ts, store)
             n = n + 1
         end
     end
-
     self.ffi_sort(store.render_frames_ffi, store.render_frames_ffi_tmp, 0, n)
-
     local new_frames = {}
     for i = 0, n - 1 do
         local ffi_f = render_frames_ffi[i]
