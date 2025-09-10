@@ -1,6 +1,7 @@
 ﻿-- chunkname: @./main.lua
 if arg[2] == "debug" then
-    require("lldebugger").start()
+	LLDEBUGGER = require("lldebugger")
+	LLDEBUGGER.start()
 end
 require("main_globals")
 
@@ -386,18 +387,22 @@ function love.draw()
 end
 
 function love.keypressed(key, scancode, isrepeat)
-    if main.profiler then
-        if key == "f1" then
-            main.profiler.start()
-        elseif key == "f2" then
-            main.profiler.stop()
-        elseif key == "f3" then
-            main.profiler_displayed = not main.profiler_displayed
-        elseif key == "f4" then
-            main.profiler.flag_l2_shown = not main.profiler.flag_l2_shown
-            main.profiler.flag_dirty = true
-        end
-    end
+	if LLDEBUGGER and key == "0" then
+		LLDEBUGGER.start()
+	end
+
+	if main.profiler then
+		if key == "f1" then
+			main.profiler.start()
+		elseif key == "f2" then
+			main.profiler.stop()
+		elseif key == "f3" then
+			main.profiler_displayed = not main.profiler_displayed
+		elseif key == "f4" then
+			main.profiler.flag_l2_shown = not main.profiler.flag_l2_shown
+			main.profiler.flag_dirty = true
+		end
+	end
 
     if main.draw_stats and key == "f" then
         main.draw_stats_displayed = not main.draw_stats_displayed
@@ -721,11 +726,15 @@ local function crash_report(str)
 end
 
 function love.errhand(msg)
-    local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
+	local error_canvas = love.graphics.newCanvas(love.graphics.getWidth(), love.graphics.getHeight())
+	local last_canvas = love.graphics.getCanvas()
+	love.graphics.setCanvas(error_canvas)
+
+	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
 
     msg = tostring(msg)
 
-    local stack_msg = get_error_stack(msg, 2)
+	local stack_msg = debug.traceback("Error: " .. tostring(msg), 3):gsub("\n[^\n]+$", "")
 
     stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
 
@@ -768,68 +777,80 @@ function love.errhand(msg)
 
     love.graphics.reset()
 
-    local font = love.graphics.setNewFont(math.floor(love.window.toPixels(15)))
+	local font = love.graphics.setNewFont(math.floor(love.window.toPixels(15)))
+	local cn_font = love.graphics.setNewFont("_assets/all-desktop/fonts/msyh.ttc",
+		math.floor(love.window.toPixels(16)))
 
     love.graphics.setBackgroundColor(89, 157, 220)
     love.graphics.setColor(255, 255, 255, 255)
 
     local trace = debug.traceback()
 
-    love.graphics.clear(love.graphics.getBackgroundColor())
-    love.graphics.origin()
+	--love.graphics.clear(love.graphics.getBackgroundColor())
+	love.graphics.origin()
 
-    local err = {}
-    local tip = {}
-    local tip_trigger_errors = {
-        err_not_have_texture = "bad argument #1 to 'draw' (Texture expected, got nil)"
-    }
-    local has_tip
+	local err = {}
+	local tip = {}
+	local tip_trigger_errors = {
+		["Texture expected, got nil"] = "贴图资源丢失，请先尝试重新安装新版本\n"
+	}
+	local has_tip
 
     table.insert(tip, "Tip\n")
 
-    for e, v in pairs(tip_trigger_errors) do
-        if e == "err_not_have_texture" and string.find(msg, v, 1, true) then
-            table.insert(tip, "提示: 贴图资源丢失，请尝试重新安装新版本\n")
-            has_tip = true
-        end
-    end
+	for e, v in pairs(tip_trigger_errors) do
+		if string.find(msg, e, 1, true) then
+			table.insert(tip, "提示: " .. v)
+			has_tip = true
+		end
+	end
 
-    if has_tip then
-        table.insert(tip,
-            "发生错误! 请先尝试提示，再将本界面截图并结合版本号反馈，而不是仅语言描述\n")
-    else
-        table.insert(tip, "发生错误! 请将本界面截图并结合版本号反馈，而不是仅语言描述\n")
-    end
+	if has_tip then
+		table.insert(err, "\n\n\n\n\n\n\nError\n")
+	else
+		table.insert(err, "\n\n\n\n\nError\n")
+	end
 
-    table.insert(err, "\n\n\n\n\n\nError\n")
-    if string.find(msg, "Error running coro", 1, true) then
-        msg = msg:gsub("^[^:]+:%d+: ", "")
-        local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
+	local error_type = "common"
 
-        table.insert(err, l)
+	if string.find(msg, "Error running coro", 1, true) then
+		msg = msg:gsub("^[^:]+:%d+: ", "")
+		local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
+
+		table.insert(err, l)
 
         for l in string.gmatch(trace, "(.-)\n") do
             if not string.match(l, "boot.lua") then
                 l = string.gsub(l, "stack traceback:", "")
 
-                table.insert(err, l)
-            end
-        end
-    else
-        table.insert(err, msg .. "\n\n")
+				table.insert(err, l)
+			end
+		end
 
-        for l in string.gmatch(trace, "(.-)\n") do
-            if not string.match(l, "boot.lua") then
-                l = string.gsub(l, "stack traceback:", "Traceback\n")
+		error_type = "coro"
+	else
+		table.insert(err, msg .. "\n\n")
 
-                table.insert(err, l)
-            end
-        end
-    end
+		for l in string.gmatch(trace, "(.-)\n") do
+			if not string.match(l, "boot.lua") then
+				l = string.gsub(l, "stack traceback:", "Traceback\n")
 
-    if love.nx then
-        table.insert(err, "\n\nFree memory:" .. love.nx.allocGetTotalFreeSize() .. "\n")
-    end
+				table.insert(err, l)
+			end
+		end
+	end
+
+	-- if error_type == "coro" then
+	-- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
+	if has_tip then
+		table.insert(tip, "oops, 发生错误! 请先尝试提示，再将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+	elseif not has_tip then
+		table.insert(tip, "oops, 发生错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+	end
+
+	if love.nx then
+		table.insert(err, "\n\nFree memory:" .. love.nx.allocGetTotalFreeSize() .. "\n")
+	end
 
     table.insert(err, "\n\nLast error msgs\n")
     table.insert(err, last_log_msg)
@@ -844,29 +865,47 @@ function love.errhand(msg)
     p = string.gsub(p, "\t", "")
     p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
 
-    local function draw()
-        local pos = love.window.toPixels(70)
+	local pos = love.window.toPixels(70)
 
-        love.graphics.clear(love.graphics.getBackgroundColor())
-        love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
+	love.graphics.setFont(font)
+	love.graphics.clear(love.graphics.getBackgroundColor())
+	love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
 
-        love.graphics.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(love.window.toPixels(15)))
+	love.graphics.setFont(cn_font)
+	love.graphics.printf(pt, pos, pos, love.graphics.getWidth() - pos)
 
-        love.graphics.printf(pt, pos, pos, love.graphics.getWidth() - pos)
+	love.graphics.present()
 
-        love.graphics.present()
-    end
+	local function draw()
+		if love.keyboard.isDown("z") then
+			love.graphics.present()
+			love.timer.sleep(0.4)
+		else
+			love.graphics.draw(error_canvas, 0, 0)
+		end
+	end
+
+	local quiterr
+
+	if LLDEBUGGER then
+		LLDEBUGGER.start()
+	end
 
     while true do
         love.event.pump()
 
-        for e, a, b, c in love.event.poll() do
-            if e == "quit" then
-                return
-            elseif e == "keypressed" and a == "escape" then
-                return
-            elseif e == "touchpressed" then
-                local name = love.window.getTitle()
+		for e, a, b, c in love.event.poll() do
+			if e == "quit" then
+				return
+			elseif e == "keypressed" and a == "escape" then
+				if error_type == "coro" then
+					quiterr = true
+					break
+				else
+					return
+				end
+			elseif e == "touchpressed" then
+				local name = love.window.getTitle()
 
                 if #name == 0 or name == "Untitled" then
                     name = "Game"
@@ -883,8 +922,12 @@ function love.errhand(msg)
 
         draw()
 
-        if love.timer then
-            love.timer.sleep(0.1)
-        end
-    end
+		if love.timer then
+			love.timer.sleep(0.1)
+		end
+
+		if quiterr then
+			break
+		end
+	end
 end

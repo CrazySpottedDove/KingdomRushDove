@@ -79,8 +79,8 @@ end
 --- 移除指定mod
 --- @param store table game.store
 --- @param entity table 实体
---- @param mod_name string|nil mod名称（可选，默认移除所有）
---- @param exclude_name string|nil 排除的mod名称（可选）
+--- @param mod_name string? mod名称（可选，默认移除所有）
+--- @param exclude_name string? 排除的mod名称（可选）
 --- @return nil
 local function remove_modifiers(store, entity, mod_name, exclude_name)
     if not entity._applied_mods then
@@ -100,7 +100,7 @@ end
 --- @param store table game.store
 --- @param entity table 实体
 --- @param mod_type string mod类型
---- @param exclude_name string|nil 排除的mod名称（可选）
+--- @param exclude_name string? 排除的mod名称（可选）
 --- @return nil
 local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
     if not entity._applied_mods then
@@ -133,7 +133,7 @@ end
 --- @param store table game.store
 --- @param entity table 实体
 --- @param keep boolean 是否使用多层隐藏计数
---- @param exclude_mod table|nil 排除的mod（可选）
+--- @param exclude_mod table? 排除的mod（可选）
 --- @return nil
 local function hide_modifiers(store, entity, keep, exclude_mod)
     local mods = entity._applied_mods
@@ -152,7 +152,7 @@ end
 --- @param store table game.store
 --- @param entity table 实体
 --- @param restore boolean 是否恢复
---- @param exclude_mod table|nil 排除的mod（可选）
+--- @param exclude_mod table? 排除的mod（可选）
 --- @return nil
 local function show_modifiers(store, entity, restore, exclude_mod)
     local mods = entity._applied_mods
@@ -460,7 +460,7 @@ end
 --- @param name string 精灵名称
 --- @param pos table 位置
 --- @param flip_x boolean 是否翻转
---- @param ts_offset number|nil 时间偏移（可选，默认 0）
+--- @param ts_offset number? 时间偏移（可选，默认 0）
 --- @return table 精灵实体
 local function insert_sprite(store, name, pos, flip_x, ts_offset)
     local e = E:create_entity(name)
@@ -479,7 +479,7 @@ end
 --- @param store table game.store
 --- @param entity table 实体
 --- @param delay number 延迟时间
---- @param duration number|nil 持续时间（可选，默认 2）
+--- @param duration number? 持续时间（可选，默认 2）
 --- @return nil
 local function fade_out_entity(store, entity, delay, duration)
     duration = duration or 2
@@ -689,7 +689,7 @@ end
 --- 英雄按路径点移动
 --- @param store table game.store
 --- @param this table 英雄实体
---- @param animation string|nil 动画名称（可选，默认 "walk"）
+--- @param animation string? 动画名称（可选，默认 "walk"）
 --- @return boolean 是否被打断
 local function y_hero_walk_waypoints(store, this, animation)
     local animation = animation or "walk"
@@ -719,7 +719,7 @@ end
 --- 英雄新集结点处理
 --- @param store table game.store
 --- @param this table 英雄实体
---- @return boolean|nil
+--- @return boolean?
 local function y_hero_new_rally(store, this)
     local r = this.nav_rally
     if r.new then
@@ -1326,7 +1326,7 @@ end
 --- @param this table 士兵实体
 --- @param target table 目标实体
 --- @param attack table 攻击
---- @param pred_pos table|nil 预测位置（可选，默认为目标实体位置）
+--- @param pred_pos table? 预测位置（可选，默认为目标实体位置）
 --- @return boolean 是否攻击完成
 local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
     local attack_done = false
@@ -2369,7 +2369,7 @@ end
 --- 士兵待机
 --- @param store table game.store
 --- @param this table 士兵实体
---- @param force_ts number|nil 强制时间戳（可选）
+--- @param force_ts number? 强制时间戳（可选）
 --- @return nil
 local function soldier_idle(store, this, force_ts)
     U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, force_ts)
@@ -2870,7 +2870,7 @@ end
 --- 敌人行走一步
 --- @param store table game.store
 --- @param this table 敌人实体
---- @param animation_name string|nil 动画名称（可选，默认 "walk"）
+--- @param animation_name string? 动画名称（可选，默认 "walk"）
 --- @param sprite_id number 精灵ID
 --- @return boolean 是否继续行走
 local function y_enemy_walk_step(store, this, animation_name, sprite_id)
@@ -2909,7 +2909,7 @@ end
 --- @param store table game.store
 --- @param this table 敌人实体
 --- @param ignore_soldiers boolean 是否忽略士兵
---- @param func function|nil 额外判断函数（可选）
+--- @param func function? 额外判断函数（可选）
 --- @return boolean 是否继续, table 拦截者, table 远程目标
 --- @desc 无视士兵、被拦截、且没有远程目标时，敌人首先尝试远程索敌。若远程攻击是 hold_advance 的，敌人站桩攻击，停下返回 true, nil, ranged。接着，若不无视士兵，且 blockers 不为空，清除其中已经被删除的 blocker。若没有远程攻击与 blocker，敌人继续行走。否则敌人呆在原地不动。
 local function y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
@@ -3348,9 +3348,9 @@ end
 --- @param store table game.store
 --- @param this table 敌人实体
 --- @param ignore_soldiers boolean 是否忽略士兵
---- @param walk_break_fn function|nil 行走中断函数（可选）
---- @param melee_break_fn function|nil 近战中断函数（可选）
---- @param ranged_break_fn function|nil 远程中断函数（可选）
+--- @param walk_break_fn function? 行走中断函数（可选）
+--- @param melee_break_fn function? 近战中断函数（可选）
+--- @param ranged_break_fn function? 远程中断函数（可选）
 --- @return boolean 是否继续
 local function y_enemy_mixed_walk_melee_ranged(store, this, ignore_soldiers, walk_break_fn, melee_break_fn,
     ranged_break_fn)
@@ -3392,11 +3392,11 @@ end
 --- @param store table game.store
 --- @param taunts table 嘲讽配置表
 --- @param set_name string 嘲讽集合名称
---- @param index number|nil 嘲讽索引（可选，默认随机）
---- @param pos table|nil 显示位置（可选）
---- @param duration number|nil 持续时间（可选）
---- @param wait boolean|nil 是否等待显示完成（可选）
---- @param decal string|nil 使用的贴图名称（可选）
+--- @param index number? 嘲讽索引（可选，默认随机）
+--- @param pos table? 显示位置（可选）
+--- @param duration number? 持续时间（可选）
+--- @param wait boolean? 是否等待显示完成（可选）
+--- @param decal string? 使用的贴图名称（可选）
 --- @return table 创建的嘲讽实体
 local function y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait, decal)
     local set = taunts.sets[set_name]

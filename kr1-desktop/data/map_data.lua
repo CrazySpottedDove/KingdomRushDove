@@ -1357,7 +1357,7 @@ return {
         portrait = 13,
         thumb = 46,
         name = "hero_lynn",
-        available_level = 69,
+        available_level = 67,
         starting_level = 5,
         icon = 43,
         stats = {6, 6, 0, 5}
@@ -1384,7 +1384,7 @@ return {
         portrait = 16,
         thumb = 49,
         name = "hero_wilbur",
-        available_level = 67,
+        available_level = 69,
         starting_level = 5,
         icon = 46,
         stats = {6, 7, 5, 5}
@@ -1393,7 +1393,7 @@ return {
         portrait = 17,
         thumb = 50,
         name = "hero_bolverk",
-        available_level = 68,
+        available_level = 70,
         starting_level = 5,
         icon = 46,
         stats = {5, 5, 0, 6}
