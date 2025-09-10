@@ -187,7 +187,7 @@ sys.level.name = "level"
 
 function sys.level:init(store)
     local slot = storage:load_slot(nil, true)
-
+    
     UP:set_levels(slot.upgrades)
     DI:set_level(store.level_difficulty)
     GR:load(store.level_name)
@@ -196,6 +196,9 @@ function sys.level:init(store)
         P:reverse_all_paths()
     end
     E:load()
+    UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
+    DI:patch_templates()
+
     W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
     if store.criket and store.criket.on then
         W:patch_waves(store.criket)
@@ -209,9 +212,6 @@ function sys.level:init(store)
     if store.level.init then
         store.level:init(store)
     end
-
-    UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
-    DI:patch_templates()
 
     if store.level.data then
         store.level.locations = {}
