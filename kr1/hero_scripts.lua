@@ -22786,8 +22786,10 @@ function scripts.mod_hero_witch_skill_polymorph.insert(this, store)
             target.ui.can_click = false
         end
 
-        target.main_script.co = nil
-        target.main_script.runs = 0
+        if target.main_script then
+            target.main_script.co = nil
+            target.main_script.runs = 0
+        end
 
         if target.count_group then
             target.count_group.in_limbo = true
