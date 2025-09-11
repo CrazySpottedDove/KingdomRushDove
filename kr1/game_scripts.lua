@@ -457,7 +457,7 @@ scripts.necromancer_aura = {}
 function scripts.necromancer_aura.update(this, store, script)
     local last_ts = store.tick_ts
     local tower_skeletons_count = 0
-    local cg = store.count_groups[this.count_group_type]
+    local skeletons = {}
 
     while true do
         local source = store.entities[this.aura.source_id]
@@ -469,17 +469,15 @@ function scripts.necromancer_aura.update(this, store, script)
 
         if store.tick_ts - last_ts >= this.aura.cycle_time then
             last_ts = store.tick_ts
-            tower_skeletons_count = 0
-
-            for _, e in pairs(store.soldiers) do
-                if e and not e.health.dead and e.soldier.tower_id == source.id and e.template_name ~=
-                    "soldier_death_rider" then
-                    tower_skeletons_count = tower_skeletons_count + 1
+            for i=#skeletons, 1,-1 do
+                local e = skeletons[i]
+                if not e or e.health.dead then
+                    table.remove(skeletons, i)
                 end
             end
+            tower_skeletons_count = #skeletons
 
-            local max_spawns = math.min(this.max_skeletons_tower - tower_skeletons_count,
-                this.count_group_max - (cg[this.count_group_name] or 0))
+            local max_spawns = this.max_skeletons_tower - tower_skeletons_count
 
             if max_spawns < 1 then
                 -- block empty
@@ -516,7 +514,7 @@ function scripts.necromancer_aura.update(this, store, script)
                     e.nav_rally.center = V.vclone(e.pos)
                     e.nav_rally.pos = V.vclone(e.pos)
                     e.soldier.tower_id = source.id
-
+                    skeletons[#skeletons + 1] = e
                     queue_insert(store, e)
                 end
             end

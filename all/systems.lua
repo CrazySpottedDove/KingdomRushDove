@@ -2489,10 +2489,6 @@ function sys.render:on_update(dt, ts, store)
                 fb.hidden = false
                 ff.hidden = false
 
-                if fk then
-                    fk.hidden = false
-                end
-
                 fb.pos.x, fb.pos.y = floor(e.pos.x), ceil(e.pos.y)
                 ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
                 fb.offset.x, fb.offset.y = hb.offset.x - fb.bar_width * fb.ss.ref_scale * 0.5, hb.offset.y
@@ -2505,6 +2501,7 @@ function sys.render:on_update(dt, ts, store)
                 ff.sort_y_offset = hb.sort_y_offset
 
                 if fk then
+                    fk.hidden = false
                     fk.pos.x, fk.pos.y = floor(e.pos.x), floor(e.pos.y)
                     fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
                     fk.z = hb.z or Z_OBJECTS

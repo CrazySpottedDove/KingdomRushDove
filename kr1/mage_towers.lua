@@ -573,10 +573,9 @@ local function mage_towers()
     ps_bolt_necromancer_trail.particle_system.emission_rate = 30
 
     tt = E:register_t("soldier_skeleton", "soldier_militia")
-    E:add_comps(tt, "count_group")
     anchor_y = 0.18
     image_y = 38
-    tt.count_group.name = "skeletons"
+    -- tt.count_group.name = "skeletons"
     tt.health.dead_lifetime = 3
     tt.health.hp_max = 40
     tt.health_bar.offset = vec_2(0, ady(38))
@@ -598,10 +597,9 @@ local function mage_towers()
     tt.unit.mod_offset = vec_2(0, ady(18))
 
     tt = E:register_t("soldier_skeleton_knight", "soldier_skeleton")
-    E:add_comps(tt, "count_group")
     anchor_y = 0.18
     image_y = 50
-    tt.count_group.name = "skeletons"
+    -- tt.count_group.name = "skeletons"
     tt.health.armor = 0.3
     tt.health.hp_max = 80
     tt.health_bar.offset = vec_2(0, ady(47))
@@ -662,9 +660,9 @@ local function mage_towers()
     tt.aura.cycle_time = 0.5
     tt.aura.duration = -1
     tt.min_health_for_knight = 416
-    tt.count_group_name = "skeletons"
-    tt.count_group_type = COUNT_GROUP_CONCURRENT
-    tt.count_group_max = 30
+    -- tt.count_group_name = "skeletons"
+    -- tt.count_group_type = COUNT_GROUP_CONCURRENT
+    -- tt.count_group_max = 30
     tt.max_skeletons_tower = 8
 
     local death_rider_aura = E:register_t("death_rider_aura", "aura")
