@@ -71,14 +71,14 @@ end
 
 function spatial_hash:update_entity(entity)
     local id = entity.id
-    -- local new_cell = self:_get_cell(entity.pos.x, entity.pos.y)
-    -- local cells_y = self.cells[self:_y_to_row(entity.pos.y)]
-    -- if not cells_y then
-    --     print(entity.template_name," y out of bounds:",entity.pos.y)
-    --     return
-    -- end
-    -- local new_cell = cells_y[self:_x_to_col(entity.pos.x)]
-    local new_cell = self.cells[self:_y_to_row(entity.pos.y)][self:_x_to_col(entity.pos.x)]
+    local new_cell = self:_get_cell(entity.pos.x, entity.pos.y)
+    local cells_y = self.cells[self:_y_to_row(entity.pos.y)]
+    if not cells_y then
+        print(entity.template_name," y out of bounds:",entity.pos.y)
+        return
+    end
+    local new_cell = cells_y[self:_x_to_col(entity.pos.x)]
+    -- local new_cell = self.cells[self:_y_to_row(entity.pos.y)][self:_x_to_col(entity.pos.x)]
     local old_cell = self.entity_cells[id]
     if old_cell == new_cell then
         return
