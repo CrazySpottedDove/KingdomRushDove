@@ -9627,6 +9627,8 @@ function scripts.bluegale_clouds.update(this, store, script)
 
         c_dark.pos.x, c_dark.pos.y = dest.x, dest.y
         c_dark.tween.props[1].keys = {{0, 0}, {0.1, max_alpha}, {duration, max_alpha}, {duration + 0.5, 0}}
+        -- c_dark.tween.props[1].keys = {{0, max_alpha}, {0.1, max_alpha}, {duration, max_alpha}, {duration + 0.5, max_alpha}}
+
         c_dark.render.sprites[1].ts = store.tick_ts + delay
 
         queue_insert(store, c_dark)

@@ -2277,6 +2277,7 @@ function sys.render:on_insert(entity, store)
             if not s.z then
                 s.z = Z_OBJECTS
             end
+
             render_frames[#render_frames + 1] = s
         end
     end
@@ -2419,6 +2420,14 @@ function sys.render:on_update(dt, ts, store)
     for _, e in pairs(entities) do
         for i = 1, #e.render.sprites do
             local s = e.render.sprites[i]
+            if s.ts > ts then
+                s.hidden = true
+                s._wait = true
+            elseif s._wait then
+                s.hidden = false
+                s._wait = nil
+            end
+
             if s.hidden then
                 goto continue_f_update
             end
@@ -2463,10 +2472,7 @@ function sys.render:on_update(dt, ts, store)
             s._draw_order = 100000 * (s.draw_order or i) + e.id
             if s.hide_after_runs and s.runs >= s.hide_after_runs then
                 s.hidden = true
-                s.marked_to_remove = true
-            end
-            if ts < s.ts then
-                s.hidden = true
+                -- s.marked_to_remove = true
             end
 
             ::continue_f_update::
