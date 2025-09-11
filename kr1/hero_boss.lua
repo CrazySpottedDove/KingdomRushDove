@@ -1093,7 +1093,7 @@ tt.main_script.update = function(this, store)
 
         coroutine.yield()
     end
-end
+end 
 
 tt = RT("spear_enemy_forest_oak", "spear_forest_oak")
 tt.bullet.damage_max = 160

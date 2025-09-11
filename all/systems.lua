@@ -2428,10 +2428,6 @@ function sys.render:on_update(dt, ts, store)
                 s._wait = nil
             end
 
-            if s.hidden then
-                goto continue_f_update
-            end
-
             local last_runs = s.runs
             local fn, runs, idx
 
@@ -2474,8 +2470,6 @@ function sys.render:on_update(dt, ts, store)
                 s.hidden = true
                 -- s.marked_to_remove = true
             end
-
-            ::continue_f_update::
         end
 
         if e.health_bar and store.config.show_health_bar then

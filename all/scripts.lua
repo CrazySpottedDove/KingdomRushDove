@@ -1893,7 +1893,6 @@ function scripts.tower_barrack.update(this, store, script)
         if not this.tower.blocked then
             for i = 1, b.max_soldiers do
                 local s = b.soldiers[i]
-
                 if not s or s.health.dead and not store.entities[s.id] then
                     if not b.door_open then
                         S:queue("GUITowerOpenDoor")
