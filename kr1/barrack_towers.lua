@@ -1257,12 +1257,47 @@ local function barrack_towers()
     tt.timed_attacks.list[2].max_range = 110
     tt.timed_attacks.list[2].max_range_inc = 15
     tt.timed_attacks.list[2].bullet = "aura_forest_eerie"
-    tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_BOSS)
+    tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
     tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
     tt.ui.click_rect = r(-10, -2, 20, 35)
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 25)
     tt.unit.hit_offset = vec_2(0, 25)
+
+    tt = E:register_t("spear_forest", "arrow")
+    tt.bullet.damage_max = 69
+    tt.bullet.damage_min = 45
+    tt.bullet.miss_decal = "forestKeeper_proy_0002-f"
+    tt.bullet.miss_decal_anchor = vec_2(1, 0.5)
+    tt.bullet.flight_time = fts(14)
+    tt.bullet.hide_radius = 1
+    tt.bullet.reset_to_target_pos = true
+    tt.render.sprites[1].name = "forestKeeper_proy_0001-f"
+    tt.render.sprites[1].anchor.x = 0.8260869565217391
+    tt.sound_events.insert = "TowerForestKeeperNormalSpear"
+    tt = E:register_t("spear_forest_oak", "spear_forest")
+    tt.bullet.damage_max = 55
+    tt.bullet.damage_min = 55
+    tt.bullet.damage_inc = 35
+    tt.bullet.damage_type = DAMAGE_TRUE
+    tt.bullet.miss_decal = "forestKeeper_proySpecial_0002-f"
+    tt.bullet.hit_fx = "fx_spear_forest_oak_hit"
+    tt.render.sprites[1].name = "forestKeeper_proySpecial_0001-f"
+    tt.sound_events.insert = "TowerForestKeeperAncientSpear"
+
+    tt = E:register_t("aura_forest_eerie", "aura")
+    tt.aura.mods = {"mod_forest_eerie_slow", "mod_forest_eerie_dps"}
+    tt.aura.radius = 60
+    tt.aura.duration = 1.5
+    tt.aura.duration_inc = 2
+    tt.aura.cycle_time = fts(5)
+    tt.aura.vis_flags = bor(F_MOD)
+    tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+    tt.main_script.insert = scripts.aura_forest_eerie.insert
+    tt.main_script.update = scripts.aura_apply_mod.update
+    tt.roots_count = 9
+    tt.roots_count_inc = 3
+    tt.sound_events.insert = "TowerForestKeeperEerieGarden"
 
     tt = E:register_t("mod_forest_circle", "modifier")
     E:add_comps(tt, "hps", "render")

@@ -5236,26 +5236,7 @@ tt.render.sprites[1].name = "fx_paralyzing_tree_2"
 tt = RT("fx_paralyzing_tree_3", "fx_paralyzing_tree_1")
 tt.render.sprites[1].name = "fx_paralyzing_tree_3"
 
-tt = E:register_t("spear_forest", "arrow")
-tt.bullet.damage_max = 69
-tt.bullet.damage_min = 45
-tt.bullet.miss_decal = "forestKeeper_proy_0002-f"
-tt.bullet.miss_decal_anchor = vec_2(1, 0.5)
-tt.bullet.flight_time = fts(14)
-tt.bullet.hide_radius = 1
-tt.bullet.reset_to_target_pos = true
-tt.render.sprites[1].name = "forestKeeper_proy_0001-f"
-tt.render.sprites[1].anchor.x = 0.8260869565217391
-tt.sound_events.insert = "TowerForestKeeperNormalSpear"
-tt = E:register_t("spear_forest_oak", "spear_forest")
-tt.bullet.damage_max = 55
-tt.bullet.damage_min = 55
-tt.bullet.damage_inc = 35
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.miss_decal = "forestKeeper_proySpecial_0002-f"
-tt.bullet.hit_fx = "fx_spear_forest_oak_hit"
-tt.render.sprites[1].name = "forestKeeper_proySpecial_0001-f"
-tt.sound_events.insert = "TowerForestKeeperAncientSpear"
+
 
 tt = E:register_t("bolt_elves_1", "bolt_elves")
 tt.alter_reality_chance = 0.1
@@ -5682,22 +5663,6 @@ tt.main_script.update = scripts.ray_simple.update
 tt.render.sprites[1].anchor = vec_2(0, 0.5)
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "ray_crystal_arcane"
-
-
-
-tt = E:register_t("aura_forest_eerie", "aura")
-tt.aura.mods = {"mod_forest_eerie_slow", "mod_forest_eerie_dps"}
-tt.aura.radius = 60
-tt.aura.duration = 1.5
-tt.aura.duration_inc = 2
-tt.aura.cycle_time = fts(5)
-tt.aura.vis_flags = bor(F_MOD)
-tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
-tt.main_script.insert = scripts.aura_forest_eerie.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-tt.roots_count = 9
-tt.roots_count_inc = 3
-tt.sound_events.insert = "TowerForestKeeperEerieGarden"
 
 tt = E:register_t("aura_liquid_fire_flame_faustus", "aura")
 E:add_comps(tt, "render", "tween")

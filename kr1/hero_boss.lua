@@ -44,6 +44,22 @@ local function y_enemy_wait(store, this, time)
         return this.health.dead or this.unit.is_stunned
     end)
 end
+
+local function enemy_pick_target_and_do_ranged_attack(store, this, attack)
+    local entities = store.entities
+    if store.soldiers then
+        entities = store.soldiers
+    end
+    local target = U.find_nearest_soldier(entities, this.pos, attack.min_range, attack.max_range, attack.vis_flags,
+        attack.vis_bans)
+    if target then
+        attack.ts = store.tick_ts
+        SU.y_enemy_do_ranged_attack(store, this, target, attack)
+    else
+        attack.ts = attack.ts + 1
+    end
+end
+
 local bit = require("bit")
 local bor = bit.bor
 local band = bit.band
@@ -261,8 +277,9 @@ local function melee_slot_enemy_position(enemy, soldier, rank, back)
     end
 
     local enemy_pos = {
-        x= soldier.pos.x + (enemy_on_the_right and 1 or -1) * (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x),
-        y= soldier.pos.y + (enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
+        x = soldier.pos.x + (enemy_on_the_right and 1 or -1) *
+            (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x),
+        y = soldier.pos.y + (enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
     }
 
     return enemy_pos, enemy_on_the_right
@@ -768,7 +785,7 @@ tt.main_script.update = function(this, store)
     end
     this.vis._bans = this.vis.bans
     while true do
-        if this.health.dead  then
+        if this.health.dead then
             SU.y_enemy_death(store, this)
             return
         end
@@ -925,6 +942,166 @@ tt.main_script.update = function(this, store)
         coroutine.yield()
     end
 end
+
+tt = inherit_from_soldier_template("enemy_forest", "soldier_forest")
+tt.ranged.attacks[1].disabled = true
+tt.ranged.attacks[2].disabled = nil
+tt.ranged.attacks[2].bullet = "spear_enemy_forest_oak"
+tt.timed_attacks.list[1].cooldown = tt.timed_attacks.list[1].cooldown * 2
+tt.timed_attacks.list[1].vis_bans = F_FRIEND
+tt.timed_attacks.list[2].cooldown = tt.timed_attacks.list[2].cooldown * 2
+tt.timed_attacks.list[2].bullet = "aura_enemy_forest_eerie"
+tt.timed_attacks.list[2].max_range = tt.timed_attacks.list[2].max_range + 2 * tt.
+timed_attacks.list[2].max_range_inc
+tt.timed_attacks.list[2].vis_bans = bor(F_ENEMY, F_FLYING)
+tt.main_script.update = function(this, store)
+    local brk, sta
+    local ca = this.timed_attacks.list[1]
+    local ea = this.timed_attacks.list[2]
+    local entities = store.entities
+    if store.soldiers then
+        entities = store.soldiers
+    end
+
+    local function ea_ready()
+        return ready_to_attack(ea, store) and this.enemy.can_do_magic
+    end
+    local function ca_ready()
+        return ready_to_attack(ca, store) and this.enemy.can_do_magic
+    end
+    local function range_ready()
+        if not ready_to_attack(this.ranged.attacks[2], store) or not this.enemy.can_do_magic then
+            return false
+        end
+        local targets = U.find_soldiers_in_range(entities, this.pos, this.ranged.attacks[2].min_range,
+            this.ranged.attacks[2].max_range, this.ranged.attacks[2].vis_flags, this.ranged.attacks[2].vis_bans)
+        if targets then
+            return true
+        else
+            this.ranged.attacks[2].ts = this.ranged.attacks[2].ts + 1
+            return false
+        end
+    end
+    local function break_from_walk()
+        return ea_ready() or ca_ready()
+    end
+
+    local function break_from_melee()
+        return ea_ready() or ca_ready() or range_ready()
+    end
+
+    local function break_from_range()
+        return ea_ready() or ca_ready()
+    end
+
+    while true do
+        if this.health.dead then
+            SU.y_enemy_death(store, this)
+            return
+        end
+
+        if this.unit.is_stunned then
+            SU.y_enemy_stun(store, this)
+        else
+            if ea_ready() then
+                local targets = U.find_soldiers_in_range(entities, this.pos, 0, ea.max_range, ea.vis_flags,
+                    ea.vis_bans, function(s)
+                        return not s.unit.is_stunned and s.soldier and s.soldier.target_id
+                    end)
+
+                if not targets then
+                    SU.delay_attack(store, ea, fts(6))
+                else
+                    local target = targets[1]
+                    local nodes = P:nearest_nodes(target.pos.x, target.pos.y,{this.nav_path.pi},{this.nav_path.spi})
+                    local node = nodes[1]
+                    if node then
+                        this._casting_eerie = true
+                        ea.ts = store.tick_ts
+                        U.animation_start(this, ea.animation, nil, store.tick_ts)
+                        U.y_wait(store, ea.cast_time)
+
+                        local a = E:create_entity(ea.bullet)
+
+                        a.aura.source_id = this.id
+                        a.aura.level = 2
+
+                        a.pos = P:node_pos(node[1], node[2], node[3])
+                        a.pos_pi = node[1]
+                        a.pos_ni = node[3]
+                        queue_insert(store, a)
+                        U.y_animation_wait(this)
+
+                        this._casting_eerie = nil
+                    else
+                        SU.delay_attack(store, ea, fts(6))
+                    end
+                end
+            end
+
+            if ca_ready() then
+                if not (this.health.hp / this.health.hp_max < ca.trigger_hp_factor) then
+                    SU.delay_attack(store, ca, fts(6))
+                else
+                    this._casting_circle = true
+                    ca.ts = store.tick_ts
+
+                    S:queue(ca.sound)
+                    U.animation_start(this, ca.animation, nil, store.tick_ts)
+                    U.y_wait(store, ca.cast_time)
+
+                    local fx = E:create_entity("fx_forest_circle")
+
+                    fx.pos.x, fx.pos.y = this.pos.x + this.unit.mod_offset.x, this.pos.y + this.unit.mod_offset.y
+                    fx.tween.ts = store.tick_ts
+
+                    queue_insert(store, fx)
+                    local enemy_entities = store.entities
+                    if store.enemy_spatial_index then
+                        enemy_entities = store
+                    end
+                    local targets = U.find_enemies_in_range(enemy_entities, this.pos, 0, ca.max_range, ca.vis_flags,
+                        ca.vis_bans)
+
+                    if targets then
+                        for _, target in pairs(targets) do
+                            local mod = E:create_entity(ca.mod)
+                            mod.modifier.level = 3
+                            mod.modifier.source_id = this.id
+                            mod.modifier.target_id = target.id
+                            queue_insert(store, mod)
+                        end
+
+                        U.y_animation_wait(this)
+
+                        this._casting_circle = nil
+                    end
+                end
+            end
+
+            if range_ready() then
+                enemy_pick_target_and_do_ranged_attack(store, this, this.ranged.attacks[2])
+            end
+
+            if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_from_walk, break_from_melee,
+                break_from_range) then
+                goto label_56_3
+            end
+        end
+
+        ::label_56_3::
+
+        coroutine.yield()
+    end
+end
+
+tt = RT("spear_enemy_forest_oak", "spear_forest_oak")
+tt.bullet.damage_max = 160
+tt.bullet.damage_min = 160
+tt.bullet.damage_inc = 0
+
+tt = RT("aura_enemy_forest_eerie", "aura_forest_eerie")
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
 
 -- -- boss:elora
 -- tt = RT("eb_elora", "hero_boss")
