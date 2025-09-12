@@ -2330,6 +2330,15 @@ function scripts.arrow_missile.update(this, store)
     local ps
     local s = this.render.sprites[1]
     local target = store.entities[b.target_id]
+    local max_seek_angle = b.math_seek_angle or math.pi / 6
+    local rot_dir = 1
+    local retarget_range = b.retarget_range or 300
+    local turn_speed = b.turn_speed or 5 * math.pi / 3
+    local turn_helicoidal_factor = b.turn_helicoidal_factor or 1.5
+    local acceleration_factor = b.acceleration_factor or 0.12
+    local min_speed = b.min_speed or 300
+    local max_speed = b.max_speed or 500
+    local retarget_for_hit_miss = false
     if b.particles_name then
         ps = E:create_entity(b.particles_name)
         ps.particle_system.track_id = this.id
@@ -2371,24 +2380,19 @@ function scripts.arrow_missile.update(this, store)
         end
     end
 
-    if not target or target.health.dead then
-        local retarget_range = b.retarget_range or 300
-        target = U.find_first_enemy(store, this.pos, 0, retarget_range, b.vis_flags, b.vis_bans)
+    ::missile_logic::
+    if (not target or target.health.dead) or retarget_for_hit_miss then
+        if retarget_for_hit_miss then
+            retarget_for_hit_miss = false
+        else
+            target = U.find_first_enemy(store, this.pos, 0, retarget_range, b.vis_flags, b.vis_bans)
+        end
         if target then
-            local max_seek_angle = b.math_seek_angle or math.pi / 6
-            local rot_dir = 1
-            local mspeed = V.len(b.speed.x, b.speed.y)
-            local turn_speed = b.turn_speed or 5 * math.pi / 3
-            local turn_helicoidal_factor = b.turn_helicoidal_factor or 1.5
-            local acceleration_factor = b.acceleration_factor or 0.12
-            local min_speed = b.min_speed or 300
-            local max_speed = b.max_speed or 500
             b.to.x, b.to.y = target.pos.x, target.pos.y
-
             if target.unit.hit_offset then
                 b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
             end
-
+            local mspeed = V.len(b.speed.x, b.speed.y)
             while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * mspeed * store.tick_length * store.tick_length do
                 if not target or target.health and target.health.dead or band(target.vis.bans, b.vis_flags) ~= 0 then
                     local ref_pos = target and target.pos or this.pos
@@ -2444,7 +2448,6 @@ function scripts.arrow_missile.update(this, store)
     end
 
     local hit = false
-
     if target and target.health and not target.health.dead then
         local target_pos = V.vclone(target.pos)
 
@@ -2503,46 +2506,51 @@ function scripts.arrow_missile.update(this, store)
     end
 
     if not hit then
-        if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
-            if b.miss_fx_water then
-                local water_fx = E:create_entity(b.miss_fx_water)
-
-                water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
-                water_fx.render.sprites[1].ts = store.tick_ts
-
-                queue_insert(store, water_fx)
-            end
+        if target and not target.health.dead then
+            retarget_for_hit_miss = true
+            goto missile_logic
         else
-            if b.miss_fx then
-                local fx = E:create_entity(b.miss_fx)
+            if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
+                if b.miss_fx_water then
+                    local water_fx = E:create_entity(b.miss_fx_water)
 
-                fx.pos.x, fx.pos.y = b.to.x, b.to.y
-                fx.render.sprites[1].ts = store.tick_ts
+                    water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
+                    water_fx.render.sprites[1].ts = store.tick_ts
 
-                queue_insert(store, fx)
-            end
+                    queue_insert(store, water_fx)
+                end
+            else
+                if b.miss_fx then
+                    local fx = E:create_entity(b.miss_fx)
 
-            if b.miss_decal then
-                local decal = E:create_entity("decal_tween")
+                    fx.pos.x, fx.pos.y = b.to.x, b.to.y
+                    fx.render.sprites[1].ts = store.tick_ts
 
-                decal.pos = V.vclone(b.to)
-                decal.tween.props[1].keys = {{0, 255}, {2.1, 0}}
-                decal.render.sprites[1].ts = store.tick_ts
-                decal.render.sprites[1].name = b.miss_decal
-                decal.render.sprites[1].animated = false
-                decal.render.sprites[1].z = Z_DECALS
-
-                if b.rotation_speed then
-                    decal.render.sprites[1].flip_x = b.rotation_speed > 0
-                else
-                    decal.render.sprites[1].r = -math.pi * 0.5 * (1 + (0.5 - math.random()) * 0.35)
+                    queue_insert(store, fx)
                 end
 
-                if b.miss_decal_anchor then
-                    decal.render.sprites[1].anchor = b.miss_decal_anchor
-                end
+                if b.miss_decal then
+                    local decal = E:create_entity("decal_tween")
 
-                queue_insert(store, decal)
+                    decal.pos = V.vclone(b.to)
+                    decal.tween.props[1].keys = {{0, 255}, {2.1, 0}}
+                    decal.render.sprites[1].ts = store.tick_ts
+                    decal.render.sprites[1].name = b.miss_decal
+                    decal.render.sprites[1].animated = false
+                    decal.render.sprites[1].z = Z_DECALS
+
+                    if b.rotation_speed then
+                        decal.render.sprites[1].flip_x = b.rotation_speed > 0
+                    else
+                        decal.render.sprites[1].r = -math.pi * 0.5 * (1 + (0.5 - math.random()) * 0.35)
+                    end
+
+                    if b.miss_decal_anchor then
+                        decal.render.sprites[1].anchor = b.miss_decal_anchor
+                    end
+
+                    queue_insert(store, decal)
+                end
             end
         end
     end
