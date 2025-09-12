@@ -2261,7 +2261,7 @@ function sys.render:on_insert(entity, store)
     if entity.render then
         for i = 1, #entity.render.sprites do
             local s = entity.render.sprites[i]
-
+            s.marked_to_remove = nil
             s._draw_order = 100000 * (s.draw_order or i) + entity.id
             if s.random_ts then
                 s.ts = U.frandom(-1 * s.random_ts, 0)

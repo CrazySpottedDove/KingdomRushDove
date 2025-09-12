@@ -1093,7 +1093,7 @@ tt.main_script.update = function(this, store)
 
         coroutine.yield()
     end
-end 
+end
 
 tt = RT("spear_enemy_forest_oak", "spear_forest_oak")
 tt.bullet.damage_max = 160
@@ -1102,6 +1102,8 @@ tt.bullet.damage_inc = 0
 
 tt = RT("aura_enemy_forest_eerie", "aura_forest_eerie")
 tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+
+tt = inherit_from_hero_template("enemy_10yr", "hero_10yr")
 
 -- -- boss:elora
 -- tt = RT("eb_elora", "hero_boss")

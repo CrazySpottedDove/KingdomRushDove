@@ -29498,7 +29498,6 @@ end
 
 function scripts.faerie_trails.update(this, store)
     local sections = this.sections
-
     local function is_inside_section(pi, ni)
         for _, s in pairs(sections) do
             if pi == s[1] and ni >= s[2] and ni < s[3] then
