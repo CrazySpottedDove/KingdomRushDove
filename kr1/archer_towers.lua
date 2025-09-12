@@ -937,6 +937,8 @@ local function archer_towers()
     tt.bullet.pop_conds = DR_KILL
     tt.render.sprites[1].name = "archer_silver_proys_0001-f"
     tt.sound_events.insert = "TowerGoldenBowArrowShot"
+    tt.main_script.update = scripts.arrow_missile.update
+    tt.bullet.particles_name = "ps_arrow_silver"
     tt = E:register_t("arrow_silver_long", "arrow_silver")
     tt.bullet.flight_time_factor = fts(0.0264)
     tt.bullet.damage_max = 60
@@ -952,6 +954,8 @@ local function archer_towers()
     tt.bullet.damage_min = 45
     tt.bullet.pop = {"pop_headshot"}
     tt.bullet.pop_conds = DR_KILL
+    tt.main_script.update = scripts.arrow.update
+
     tt = E:register_t("arrow_silver_sentence_long", "arrow_silver_sentence")
     tt = E:register_t("arrow_silver_mark", "arrow_silver")
     tt.bullet.hit_fx = "fx_arrow_silver_mark_hit"
@@ -960,10 +964,35 @@ local function archer_towers()
     tt.bullet.miss_decal = "archer_silver_proys_0004-f"
     tt.render.sprites[1].name = "archer_silver_proys_0003-f"
     tt.sound_events.insert = nil
+
     tt = E:register_t("arrow_silver_mark_long", "arrow_silver_mark")
     tt.bullet.flight_time_factor = fts(0.033)
     tt.bullet.damage_max = 60
     tt.bullet.damage_min = 45
+
+    tt = E:register_t("ps_arrow_silver")
+    E:add_comps(tt, "pos", "particle_system")
+    tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
+    tt.particle_system.loop = false
+    tt.particle_system.cycle_names = true
+    tt.particle_system.animated = true
+    tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+    tt.particle_system.scales_y = {0.3, 0.1}
+    tt.particle_system.scales_x = {1, 0.25}
+    tt.particle_system.alphas = {255, 0}
+    tt.particle_system.emission_rate = 60
+    tt.particle_system.color = {255, 100, 100}
+
+    tt = E:register_t("ps_arrow_silver_mark")
+    E:add_comps(tt, "pos", "particle_system")
+    tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
+    tt.particle_system.loop = false
+    tt.particle_system.cycle_names = true
+    tt.particle_system.animated = true
+    tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+    tt.particle_system.scales_y = {0.85, 0.85}
+    tt.particle_system.scales_x = {0.85, 0.85}
+    tt.particle_system.emission_rate = 30
 
     tt = E:register_t("mod_arrow_silver_mark", "modifier")
     E:add_comps(tt, "tween", "render", "sound_events", "count_group")

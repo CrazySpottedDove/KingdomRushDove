@@ -2128,7 +2128,9 @@ function sys.particle_system:on_update(dt, ts, store)
                 if s.sort_y_offsets then
                     f.sort_y_offset = phase_interp(s.sort_y_offsets, phase, 1)
                 end
-
+                if s.color then
+                    f.color = s.color
+                end
                 local fn
 
                 if s.animated then

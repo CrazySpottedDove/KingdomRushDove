@@ -2150,6 +2150,7 @@ function scripts.arrow.update(this, store, script)
     local b = this.bullet
     local ps
     local s = this.render.sprites[1]
+    local target = store.entities[b.target_id]
 
     if b.particles_name then
         ps = E:create_entity(b.particles_name)
@@ -2189,7 +2190,6 @@ function scripts.arrow.update(this, store, script)
     end
 
     local hit = false
-    local target = store.entities[b.target_id]
 
     if target and target.health and not target.health.dead then
         local target_pos = V.vclone(target.pos)
@@ -2322,6 +2322,261 @@ function scripts.arrow.update(this, store, script)
     end
 
     queue_remove(store, this)
+end
+
+scripts.arrow_missile = {}
+function scripts.arrow_missile.update(this, store)
+    local b = this.bullet
+    local ps
+    local s = this.render.sprites[1]
+    local target = store.entities[b.target_id]
+    if b.particles_name then
+        ps = E:create_entity(b.particles_name)
+        ps.particle_system.track_id = this.id
+
+        queue_insert(store, ps)
+    end
+
+    while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
+        coroutine.yield()
+        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+        if b.rotation_speed then
+            s.r = s.r + b.rotation_speed * store.tick_length
+        else
+            s.r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+
+            if b.asymmetrical and math.abs(s.r) > math.pi * 0.5 then
+                s.flip_y = true
+            end
+        end
+
+        if ps then
+            ps.particle_system.emit_direction = s.r
+        end
+
+        if b.hide_radius then
+            local hide_radius_squared = b.hide_radius * b.hide_radius
+            s.hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < hide_radius_squared or
+                           V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < hide_radius_squared
+
+            if ps then
+                ps.particle_system.emit = not s.hidden
+            end
+        end
+        target = store.entities[b.target_id]
+        if not target or target.health.dead then
+            break
+        end
+    end
+
+    if not target or target.health.dead then
+        local retarget_range = b.retarget_range or 300
+        target = U.find_first_enemy(store, this.pos, 0, retarget_range, b.vis_flags, b.vis_bans)
+        if target then
+            local max_seek_angle = b.math_seek_angle or math.pi / 6
+            local rot_dir = 1
+            local mspeed = V.len(b.speed.x, b.speed.y)
+            local turn_speed = b.turn_speed or 5 * math.pi / 3
+            local turn_helicoidal_factor = b.turn_helicoidal_factor or 1.5
+            local acceleration_factor = b.acceleration_factor or 0.12
+            local min_speed = b.min_speed or 300
+            local max_speed = b.max_speed or 500
+            b.to.x, b.to.y = target.pos.x, target.pos.y
+
+            if target.unit.hit_offset then
+                b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
+            end
+
+            while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * mspeed * store.tick_length * store.tick_length do
+                if not target or target.health and target.health.dead or band(target.vis.bans, b.vis_flags) ~= 0 then
+                    local ref_pos = target and target.pos or this.pos
+                    local max_same_target_count = 3
+
+                    -- target = U.find_foremost_enemy(store, ref_pos, 0, b.retarget_range, false, b.vis_flags)
+                    target = U.find_first_enemy(store, ref_pos, 0, retarget_range, b.vis_flags, b.vis_bans, function(e)
+                        return not e._missile_count or e._missile_count < max_same_target_count
+                    end)
+
+                    if b.rot_dir_from_long_angle and target then
+                        rot_dir = target.pos.x < this.pos.x and -1 or 1
+                    end
+                end
+
+                if target then
+                    b.to.x, b.to.y = target.pos.x, target.pos.y
+
+                    if target.unit.hit_offset then
+                        b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
+                    end
+
+                    if not target._missile_count then
+                        target._missile_count = 1
+                    else
+                        target._missile_count = target._missile_count + 1
+                    end
+                end
+
+                local d_angle = V.angleTo(b.speed.x, b.speed.y, b.to.x - this.pos.x, b.to.y - this.pos.y)
+
+                if max_seek_angle < math.abs(d_angle) then
+                    local rot = turn_speed * store.tick_length * rot_dir
+                    local dir = V.angleTo(b.speed.x, b.speed.y)
+
+                    if dir > math.pi / 3 and dir < 2 * math.pi / 3 then
+                        rot = rot * turn_helicoidal_factor
+                    end
+
+                    b.speed.x, b.speed.y = V.rotate(rot, b.speed.x, b.speed.y)
+                else
+                    mspeed = mspeed + 30 * math.ceil(mspeed * 0.03333333333333333 * acceleration_factor)
+                    mspeed = km.clamp(min_speed, max_speed, mspeed)
+                    b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+                end
+
+                this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+                this.render.sprites[1].r = V.angleTo(b.speed.x, b.speed.y)
+
+                coroutine.yield()
+            end
+        end
+    end
+
+    local hit = false
+
+    if target and target.health and not target.health.dead then
+        local target_pos = V.vclone(target.pos)
+
+        if target.unit and target.unit.hit_offset and not b.ignore_hit_offset then
+            target_pos.x, target_pos.y = target_pos.x + target.unit.hit_offset.x,
+                target_pos.y + target.unit.hit_offset.y
+        end
+
+        if V.dist2(this.pos.x, this.pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and
+            not SU.unit_dodges(store, target, true) and (not b.hit_chance or math.random() < b.hit_chance) then
+            hit = true
+            local d = SU.create_bullet_damage(b, target.id, this.id)
+
+            queue_damage(store, d)
+
+            local mods
+            if b.mod then
+                mods = type(b.mod) == "table" and b.mod or {b.mod}
+            elseif b.mods then
+                mods = b.mods
+            end
+            if mods then
+                for _, mod_name in pairs(mods) do
+                    local mod = E:create_entity(mod_name)
+                    mod.modifier.source_id = this.id
+                    mod.modifier.target_id = target.id
+                    mod.modifier.level = b.level
+                    mod.modifier.source_damage = d
+                    mod.modifier.damage_factor = b.damage_factor
+                    queue_insert(store, mod)
+                end
+            end
+            if b.hit_fx then
+                local fx = E:create_entity(b.hit_fx)
+
+                fx.pos = V.vclone(target_pos)
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+            end
+
+            if b.hit_blood_fx and target.unit.blood_color ~= BLOOD_NONE then
+                local sfx = E:create_entity(b.hit_blood_fx)
+
+                sfx.pos = V.vclone(target_pos)
+                sfx.render.sprites[1].ts = store.tick_ts
+
+                if sfx.use_blood_color and target.unit.blood_color then
+                    sfx.render.sprites[1].name = target.unit.blood_color
+                    sfx.render.sprites[1].r = s.r
+                end
+
+                queue_insert(store, sfx)
+            end
+        end
+    end
+
+    if not hit then
+        if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
+            if b.miss_fx_water then
+                local water_fx = E:create_entity(b.miss_fx_water)
+
+                water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
+                water_fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, water_fx)
+            end
+        else
+            if b.miss_fx then
+                local fx = E:create_entity(b.miss_fx)
+
+                fx.pos.x, fx.pos.y = b.to.x, b.to.y
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+            end
+
+            if b.miss_decal then
+                local decal = E:create_entity("decal_tween")
+
+                decal.pos = V.vclone(b.to)
+                decal.tween.props[1].keys = {{0, 255}, {2.1, 0}}
+                decal.render.sprites[1].ts = store.tick_ts
+                decal.render.sprites[1].name = b.miss_decal
+                decal.render.sprites[1].animated = false
+                decal.render.sprites[1].z = Z_DECALS
+
+                if b.rotation_speed then
+                    decal.render.sprites[1].flip_x = b.rotation_speed > 0
+                else
+                    decal.render.sprites[1].r = -math.pi * 0.5 * (1 + (0.5 - math.random()) * 0.35)
+                end
+
+                if b.miss_decal_anchor then
+                    decal.render.sprites[1].anchor = b.miss_decal_anchor
+                end
+
+                queue_insert(store, decal)
+            end
+        end
+    end
+
+    if b.payload then
+        local p = E:create_entity(b.payload)
+
+        p.pos.x, p.pos.y = b.to.x, b.to.y
+        p.target_id = b.target_id
+        p.source_id = this.id
+
+        if p.aura then
+            p.aura.level = b.level
+            p.aura.damage_factor = b.damage_factor
+        end
+
+        if b.payload_props then
+            for k, v in pairs(b.payload_props) do
+                p[k] = v
+            end
+        end
+
+        queue_insert(store, p)
+    end
+
+    if ps and ps.particle_system.emit then
+        s.hidden = true
+        ps.particle_system.emit = false
+
+        U.y_wait(store, ps.particle_system.particle_lifetime[2])
+    end
+
+    queue_remove(store, this)
+
 end
 
 scripts.arrow_endless_multishot = {}

@@ -2949,18 +2949,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.scales_y = {1, 0}
 tt.particle_system.emission_rate = 30
-tt = E:register_t("ps_arrow_silver_mark")
 
-E:add_comps(tt, "pos", "particle_system")
-
-tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
-tt.particle_system.loop = false
-tt.particle_system.cycle_names = true
-tt.particle_system.animated = true
-tt.particle_system.particle_lifetime = {fts(10), fts(10)}
-tt.particle_system.scales_y = {0.85, 0.85}
-tt.particle_system.scales_x = {0.85, 0.85}
-tt.particle_system.emission_rate = 30
 tt = E:register_t("ps_bolt_elves_1")
 
 E:add_comps(tt, "pos", "particle_system")
