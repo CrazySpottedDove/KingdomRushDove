@@ -321,19 +321,22 @@ local function engineer_towers()
     tower_dwaarp.attacks.list[1].damage_max = 55
     tower_dwaarp.attacks.list[1].sound = "EarthquakeAttack"
     tower_dwaarp.attacks.list[2] = E:clone_c("bullet_attack")
-    tower_dwaarp.attacks.list[2].bullet = "lava"
+    tower_dwaarp.attacks.list[2].bullet = "lava_dwaarp"
     tower_dwaarp.attacks.list[2].cooldown = 15
     tower_dwaarp.attacks.list[2].hit_time = fts(13)
     tower_dwaarp.attacks.list[2].sound = "EarthquakeLavaSmash"
     tower_dwaarp.attacks.list[3] = E:clone_c("bullet_attack")
-    tower_dwaarp.attacks.list[3].vis_flags = bit.bor(F_DRILL, F_RANGED, F_INSTAKILL)
-    tower_dwaarp.attacks.list[3].vis_bans = bit.bor(F_FLYING, F_CLIFF, F_BOSS)
+    tower_dwaarp.attacks.list[3].vis_flags = bor(F_DRILL, F_RANGED, F_INSTAKILL)
+    tower_dwaarp.attacks.list[3].vis_bans = bor(F_FLYING, F_CLIFF, F_BOSS)
     tower_dwaarp.attacks.list[3].bullet = "drill"
     tower_dwaarp.attacks.list[3].cooldown = 29
     tower_dwaarp.attacks.list[3].cooldown_inc = -3
     tower_dwaarp.attacks.list[3].hit_time = fts(46)
     tower_dwaarp.attacks.list[3].sound = "EarthquakeDrillIn"
     tower_dwaarp.sound_events.insert = "EarthquakeTauntReady"
+
+    local lava = E:register_t("lava_dwaarp", "lava")
+    lava.main_script.update = scripts.lava_dwaarp.update
 
     local decal_dwaarp_smoke = E:register_t("decal_dwaarp_smoke", "decal_timed")
     decal_dwaarp_smoke.render.sprites[1].prefix = "towerdwaarp_sfx"

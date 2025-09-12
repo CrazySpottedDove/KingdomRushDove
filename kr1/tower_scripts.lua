@@ -260,7 +260,7 @@ scripts.tower_ranger = {
                         pow.changed = nil
                         if pow == pow_p and not pow_p.applied then
                             pow_p.applied = true
-                            for i=1,#pow_p.mods do
+                            for i = 1, #pow_p.mods do
                                 U.append_mod(this.bullet.bullet, pow_p.mods[i])
                             end
                         elseif pow == pow_t and this.render.sprites[druid_sid].hidden then
@@ -2094,14 +2094,14 @@ scripts.tower_arcane_wizard = {
             if ((ad.ts <= last_ts - (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor) or
                 (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor)) and pow_d.level >
                 0 then
-                    if not this.decalmod_disintegrate then
-                        local mod = E:create_entity("decalmod_arcane_wizard_disintegrate_ready")
-                        mod.modifier.target_id = this.id
-                        mod.modifier.source_id = this.id
-                        mod.pos = this.pos
-                        queue_insert(store, mod)
-                        this.decalmod_disintegrate = mod
-                    end
+                if not this.decalmod_disintegrate then
+                    local mod = E:create_entity("decalmod_arcane_wizard_disintegrate_ready")
+                    mod.modifier.target_id = this.id
+                    mod.modifier.source_id = this.id
+                    mod.pos = this.pos
+                    queue_insert(store, mod)
+                    this.decalmod_disintegrate = mod
+                end
             elseif this.decalmod_disintegrate then
                 queue_remove(store, this.decalmod_disintegrate)
                 this.decalmod_disintegrate = nil
@@ -3020,7 +3020,8 @@ scripts.tower_sunray = {
                         this.user_selection.new_pos = nil
                     end
                 else
-                    target = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, range, nil, a.vis_flags, a.vis_bans, nil, nil, splash_radius)
+                    target = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, range, nil, a.vis_flags,
+                        a.vis_bans, nil, nil, splash_radius)
                 end
                 -- 攻击
                 if not target then
@@ -3417,6 +3418,72 @@ scripts.tower_bfg = {
                 coroutine.yield()
             end
         end
+    end
+}
+scripts.lava_dwaarp = {
+    update = function(this, store)
+        local last_hit_ts = 0
+        local cycles_count = 0
+
+        if this.aura.track_source and this.aura.source_id then
+            local te = store.entities[this.aura.source_id]
+
+            if te and te.pos then
+                this.pos = te.pos
+            end
+        end
+
+        last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+        if this.aura.apply_delay then
+            last_hit_ts = last_hit_ts + this.aura.apply_delay
+        end
+
+        while true do
+            if this.interrupt then
+                last_hit_ts = 1e+99
+            end
+
+            if store.tick_ts - this.aura.ts > this.actual_duration then
+                break
+            end
+
+            local te = store.entities[this.aura.source_id]
+
+            if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
+                if this.render and this.aura.cast_resets_sprite_id then
+                    this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
+                end
+
+                last_hit_ts = store.tick_ts
+                cycles_count = cycles_count + 1
+
+                local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags,
+                    this.aura.vis_bans, function(e)
+                        return (not this.aura.allowed_templates or
+                                   table.contains(this.aura.allowed_templates, e.template_name)) and
+                                   (not this.aura.excluded_templates or
+                                       not table.contains(this.aura.excluded_templates, e.template_name)) and
+                                   (not this.aura.filter_source or this.aura.source_id ~= e.id)
+                    end)
+                if not targets then
+                    -- last_hit_ts = last_hit_ts + fts(1)
+                else
+                    for i=1,#targets do
+                        local target = targets[i]
+                        local new_mod = E:create_entity(this.aura.mod)
+                        new_mod.modifier.level = this.aura.level
+                        new_mod.modifier.target_id = target.id
+                        new_mod.modifier.source_id = this.id
+                        new_mod.modifier.damage_factor = this.aura.damage_factor
+                        new_mod.template_name = new_mod.template_name .. this.id
+                        queue_insert(store, new_mod)
+                    end
+                end
+            end
+            coroutine.yield()
+        end
+        queue_remove(store, this)
     end
 }
 -- 地震
