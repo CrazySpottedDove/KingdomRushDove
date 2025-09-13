@@ -1395,7 +1395,7 @@ local function barrack_towers()
     tt.powers.life_drain = CC("power")
     tt.powers.double_dagger = CC("power")
     tt.powers.blade_mail = CC("power")
-    tt.powers.blade_mail.spiked_armor_inc = 0.2
+    tt.powers.blade_mail.spiked_armor_inc = 0.25
     tt.ranged.range_while_blocking = true
     tt.ranged.go_back_during_cooldown = true
     tt.ranged.attacks[1].bullet = "dagger_drow"
