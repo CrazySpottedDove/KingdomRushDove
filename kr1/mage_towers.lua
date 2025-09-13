@@ -1311,29 +1311,7 @@ local function mage_towers()
 
     tt = E:register_t("tower_pixie", "tower")
     E:add_comps(tt, "powers", "attacks")
-    -- 秒杀
     tt.pixies = {}
-    tt.attacks.list[4] = E:clone_c("bullet_attack")
-    tt.attacks.list[4].animation = "shoot"
-    tt.attacks.list[4].bullet_start_offset = vec_2(10, 11)
-    tt.attacks.list[4].bullet = "bullet_pixie_instakill"
-    tt.attacks.list[4].vis_bans = bor(F_FLYING, F_BOSS)
-    tt.attacks.list[4].vis_flags = bor(F_RANGED, F_INSTAKILL)
-    tt.attacks.list[4].chance = 0
-    -- 毒素
-    tt.attacks.list[2] = table.deepclone(tt.attacks.list[4])
-    tt.attacks.list[2].animation = "shoot"
-    tt.attacks.list[2].bullet = "bullet_pixie_poison"
-    tt.attacks.list[2].vis_flags = bor(F_RANGED,F_MOD, F_POISON)
-    tt.attacks.list[2].vis_bans = F_FLYING
-    tt.attacks.list[2].chance = 0
-    -- 变形
-    tt.attacks.list[5] = E:clone_c("mod_attack")
-    tt.attacks.list[5].animation = "attack"
-    tt.attacks.list[5].mods = {"mod_pixie_polymorph"}
-    tt.attacks.list[5].vis_bans = bor(F_FLYING, F_BOSS)
-    tt.attacks.list[5].vis_flags = bor(F_RANGED, F_POLYMORPH, F_INSTAKILL)
-    tt.attacks.list[5].chance = 0.1
     -- 偷钱
     tt.attacks.list[1] = E:clone_c("mod_attack")
     tt.attacks.list[1].animation = "harvester"
@@ -1341,7 +1319,14 @@ local function mage_towers()
     tt.attacks.list[1].vis_bans = F_FLYING
     tt.attacks.list[1].vis_flags = bor(F_RANGED)
     tt.attacks.list[1].chance = 0.9
-    -- tt.attacks.list[1].check_gold_bag = true
+    -- 毒素
+    tt.attacks.list[2] = E:clone_c("bullet_attack")
+    tt.attacks.list[2].animation = "shoot"
+    tt.attacks.list[2].bullet = "bullet_pixie_poison"
+    tt.attacks.list[2].bullet_start_offset = vec_2(10, 11)
+    tt.attacks.list[2].vis_flags = bor(F_RANGED, F_MOD, F_POISON)
+    tt.attacks.list[2].vis_bans = F_FLYING
+    tt.attacks.list[2].chance = 0
     -- 传送
     tt.attacks.list[3] = E:clone_c("mod_attack")
     tt.attacks.list[3].animation = "attack"
@@ -1349,6 +1334,19 @@ local function mage_towers()
     tt.attacks.list[3].vis_bans = bor(F_FLYING, F_BOSS)
     tt.attacks.list[3].vis_flags = bor(F_TELEPORT)
     tt.attacks.list[3].chance = 0
+    -- 秒杀
+    tt.attacks.list[4] = table.deepclone(tt.attacks.list[2])
+    tt.attacks.list[4].bullet = "bullet_pixie_instakill"
+    tt.attacks.list[4].vis_bans = bor(F_FLYING, F_BOSS)
+    tt.attacks.list[4].vis_flags = bor(F_RANGED, F_INSTAKILL)
+    -- 变形
+    tt.attacks.list[5] = E:clone_c("mod_attack")
+    tt.attacks.list[5].animation = "attack"
+    tt.attacks.list[5].mods = {"mod_pixie_polymorph"}
+    tt.attacks.list[5].vis_bans = bor(F_FLYING, F_BOSS)
+    tt.attacks.list[5].vis_flags = bor(F_RANGED, F_POLYMORPH, F_INSTAKILL)
+    tt.attacks.list[5].chance = 0.1
+    -- tt.attacks.list[1].check_gold_bag = true
     -- tt.attacks.hide_range = true
     tt.attacks.range = 190
     tt.attacks.cooldown = fts(10)
@@ -1369,7 +1367,8 @@ local function mage_towers()
     tt.powers.total.price_base = 200
     tt.powers.total.price_inc = 100
     tt.powers.total.max_level = 3
-    tt.powers.total.chances = {{0.65, 0.625, 0.6}, {0.1, 0.1, 0.1},{0.1, 0.1, 0.1},{0.05, 0.075, 0.1},{0.1, 0.1, 0.1}}
+    tt.powers.total.chances =
+        {{0.65, 0.625, 0.6}, {0.1, 0.1, 0.1}, {0.1, 0.1, 0.1}, {0.05, 0.075, 0.1}, {0.1, 0.1, 0.1}}
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_mage_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
@@ -1436,8 +1435,6 @@ local function mage_towers()
     }
     tt.pickpocket.fx = "fx_coin_jump"
     tt.pickpocket.pop = {"pop_faerie_steal"}
-
-
 
 end
 
