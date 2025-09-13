@@ -518,8 +518,8 @@ local function barrack_towers()
     tower_templar.powers.holygrail.name = "HOLY"
     tower_templar.powers.holygrail.enc_icon = 25
     tower_templar.powers.extralife = E:clone_c("power")
-    tower_templar.powers.extralife.price_base = 175
-    tower_templar.powers.extralife.price_inc = 175
+    tower_templar.powers.extralife.price_base = 150
+    tower_templar.powers.extralife.price_inc = 150
     tower_templar.powers.extralife.name = "TOUGHNESS"
     tower_templar.powers.extralife.enc_icon = 27
     tower_templar.powers.blood = E:clone_c("power")
@@ -599,8 +599,8 @@ local function barrack_towers()
     tt.revive.animation = "holygrail"
     tt.revive.chance = 0.1
     tt.revive.chance_inc = 0.1
-    tt.revive.health_recover = 0.14
-    tt.revive.health_recover_inc = 0.12
+    tt.revive.health_recover = 0.15
+    tt.revive.health_recover_inc = 0.15
     tt.revive.protect = 0.25
     tt.revive.hit_time = fts(10)
     tt.revive.power_name = "holygrail"
@@ -611,6 +611,8 @@ local function barrack_towers()
         cost = 0.05,
         side_effect = function(this, store)
             scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
+            this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
+            this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
         end
     }
     tt.soldier.melee_slot_offset = vec_2(5, 0)
