@@ -3185,18 +3185,18 @@ function scripts.tower_pixie.update(this, store)
             if store.tick_ts - a.ts > a.cooldown * this.tower.cooldown_factor then
                 for _, pixie in pairs(pixies) do
                     local target, attack
-                    local rnd, acc = math.random(), 0
+                    local rnd, acc = math.random(), 1
 
                     if pixie.target or store.tick_ts - pixie.attack_ts <= a.pixie_cooldown * this.tower.cooldown_factor then
                         -- block empty
                     else
                         for ii, aa in ipairs(a.list) do
-                            if aa.chance > 0 and rnd <= aa.chance / (1 - acc) then
+                            if aa.chance > 0 and rnd <= aa.chance / acc then
                                 attack = aa
 
                                 break
                             else
-                                acc = acc + aa.chance
+                                acc = acc * (1 - aa.chance)
                             end
                         end
 
