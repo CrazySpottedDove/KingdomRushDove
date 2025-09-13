@@ -3161,7 +3161,6 @@ local function y_enemy_melee_attacks(store, this, target)
             if math.random() >= ma.chance then
                 -- block empty
             else
-                log.paranoid("attack %i selected for entity %s", i, this.template_name)
                 for _, aa in pairs(this.melee.attacks) do
                     if aa ~= ma and aa.shared_cooldown then
                         aa.ts = ma.ts

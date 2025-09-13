@@ -5829,6 +5829,11 @@ local kr1_a = {
         to = 28,
         from = 1
     },
+    hero_10yr_buffer_normal_to_buffed = {
+        prefix = "hero_10yr_normal_to_buffed",
+        to = 28,
+        from = 1
+    },
     hero_10yr_buffed_to_normal = {
         prefix = "hero_10yr_buffed_to_normal",
         -- to = 31,
