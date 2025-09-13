@@ -900,6 +900,7 @@ tt.bullet.mod = "mod_ray_sunray_hit"
 tt.bullet.damage_max = 150
 tt.bullet.damage_min = 150
 tt.bullet.damage_inc = 30
+tt.bullet.reduce_magic_armor = 0.05
 tt.image_width = 58
 tt.main_script.update = scripts.ray_simple.update
 tt.render.sprites[1].anchor = vec_2(0, 0.5)
