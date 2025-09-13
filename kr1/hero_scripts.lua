@@ -2144,8 +2144,7 @@ scripts.mod_denas_tower = {
         local target = store.entities[m.target_id]
 
         if not target or not target.tower then
-            log.error("error inserting mod_denas_tower %s", this.id)
-            return true
+            return false
         end
 
         SU.insert_tower_cooldown_buff(target, this.cooldown_factor)
@@ -2184,8 +2183,6 @@ scripts.mod_denas_tower = {
         local target = store.entities[m.target_id]
 
         if not target or not target.tower then
-            log.error("error removing mod_denas_tower %s", this.id)
-
             return true
         end
         SU.remove_tower_cooldown_buff(target, this.cooldown_factor)

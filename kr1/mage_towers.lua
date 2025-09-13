@@ -979,6 +979,7 @@ local function mage_towers()
     tt.bullet.damage_min = 20
     tt.bullet.damage_max = 34
     tt.bullet.damage_type = DAMAGE_MAGICAL
+    tt.bullet.reduce_magic_armor = 0.2
     tt.bullet.hit_time = fts(4)
     tt.sound_events.insert = "TowerHighMageSentinelShot"
 
