@@ -7194,7 +7194,7 @@ function TowerMenuTooltip:show(entity, item)
         self.desc.text = texts.tt_desc
 
         if power.level == power.max_level then
-            self.hidden = true
+            -- self.hidden = true
         end
     elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" then
         if item.tt_title then
