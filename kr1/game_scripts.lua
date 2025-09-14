@@ -17047,24 +17047,27 @@ function scripts.druid_shooter_sylvan.update(this, store)
                                not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
 
-            if enemies then
-                local foremost_enemy = enemies[1]
-                local max_hp_enemy_idx = 1
-                local max_hp = foremost_enemy.health.hp
-                for i = 2, #enemies do
-                    local e = enemies[i]
+            -- if enemies then
+            --     local foremost_enemy = enemies[1]
+            --     local max_hp_enemy_idx = 1
+            --     local max_hp = foremost_enemy.health.hp
+            --     for i = 2, #enemies do
+            --         local e = enemies[i]
 
-                    if V.dist(e.__ffe_pos.x, e.__ffe_pos.y, foremost_enemy.__ffe_pos.x, foremost_enemy.__ffe_pos.y) <=
-                        50 then
-                        if e.health.hp > max_hp then
-                            max_hp = e.health.hp
-                            max_hp_enemy_idx = i
-                        end
-                    else
-                        break
-                    end
-                end
-                target = enemies[max_hp_enemy_idx]
+            --         if V.dist(e.__ffe_pos.x, e.__ffe_pos.y, foremost_enemy.__ffe_pos.x, foremost_enemy.__ffe_pos.y) <=
+            --             50 then
+            --             if e.health.hp > max_hp then
+            --                 max_hp = e.health.hp
+            --                 max_hp_enemy_idx = i
+            --             end
+            --         else
+            --             break
+            --         end
+            --     end
+            --     target = enemies[max_hp_enemy_idx]
+            -- end
+            if enemies then
+                target = enemies[1]
             end
 
             if target and #enemies > 1 then
@@ -25693,7 +25696,7 @@ function scripts.mod_druid_sylvan.update(this, store)
                 local new_mod = E:create_entity(this.template_name)
                 new_mod.modifier.target_id = new_target.id
                 new_mod.modifier.level = this.modifier.level
-                new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts)
+                new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
                 queue_insert(store, new_mod)
             end
             queue_remove(store, this)
