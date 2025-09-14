@@ -1102,13 +1102,13 @@ tt.dodge.ranged = false
 tt.health.on_damage = function(this, store, damage)
     local bda = this.timed_attacks.list[1]
     if this.unit.is_stuuned or this.health.dead or bda.in_progress or
-        band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL))) ~= 0 or
+        band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, (DAMAGE_MIXED or 0)))) ~= 0 or
         band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.dodge.chance < math.random() then
         return true
     end
-    if #this.enemy.blockers > 0 then
+    -- if #this.enemy.blockers > 0 then
         this.dodge.active = true
-    end
+    -- end
     return false
 end
 tt.melee.cooldown = 0.8
@@ -1162,7 +1162,8 @@ tt.main_script.update = function(this, store)
                 this.vis.bans = bor(this.vis.bans, F_NET)
                 if not this.dodge.applied then
                     this.dodge.applied = true
-                    this.health.damage_factor = this.health.damage_factor * 0.05
+                    -- this.health.damage_factor = this.health.damage_factor * 0.05
+                    this.health.ignore_damage = true
                 end
                 S:queue(ca.sound)
                 U.animation_start(this, ca.animation, nil, store.tick_ts, true)
@@ -1196,7 +1197,8 @@ tt.main_script.update = function(this, store)
 
                 this.vis.bans = band(this.vis.bans, bnot(F_NET))
                 if this.dodge.applied then
-                    this.health.damage_factor = this.health.damage_factor * 20
+                    -- this.health.damage_factor = this.health.damage_factor * 20
+                    this.health.ignore_damage = false
                     this.dodge.applied = nil
                 end
 
@@ -1289,7 +1291,7 @@ tt.main_script.update = function(this, store)
 
             ::label_53_1::
 
-            if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, bda_ready, break_from_melee) then
+            if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_from_melee, break_from_melee) then
                 goto label_53_2
             end
         end

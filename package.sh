@@ -33,7 +33,8 @@ fi
 echo "打包至: $OUTPUT_ZIP"
 
 if [ $# -eq 0 ]; then
-    find . -name "*.lua" -type f ! -path "./_assets/kr1-desktop/strings/*" ! -path "./lib/*" | zip "$OUTPUT_ZIP" -@
+    # find . -name "*.lua" -type f ! -path "./_assets/kr1-desktop/strings/*" ! -path "./lib/*" | zip "$OUTPUT_ZIP" -@
+    find . -name "*.lua" -type f ! -path "./_assets/kr1-desktop/strings/*" | zip "$OUTPUT_ZIP" -@
 else
     find . -name "*.lua" -type f ! -path "./_assets/kr1-desktop/strings/*" ! -path "./lib/*" | zip "$OUTPUT_ZIP" -@
 fi
