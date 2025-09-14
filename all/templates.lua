@@ -259,6 +259,7 @@ E:add_comps(spell, "spell", "main_script")
 local bullet = E:register_t("bullet")
 E:add_comps(bullet, "bullet", "pos", "render", "sound_events", "main_script")
 bullet.render.sprites[1].z = Z_BULLETS
+bullet.bullet.vis_flags = F_RANGED
 
 local arrow = E:register_t("arrow", "bullet")
 arrow.bullet.hit_distance = 22
@@ -270,6 +271,7 @@ arrow.bullet.damage_type = DAMAGE_PHYSICAL
 arrow.bullet.pop = {"pop_shunt", "pop_oof"}
 arrow.bullet.pop_chance = 1
 arrow.bullet.pop_conds = DR_KILL
+arrow.bullet.vis_flags = F_RANGED
 arrow.render.sprites[1].name = "arrow"
 arrow.render.sprites[1].animated = false
 arrow.main_script.insert = scripts.arrow.insert
@@ -295,7 +297,7 @@ shotgun.bullet.pop_chance = 1
 shotgun.bullet.pop_conds = DR_KILL
 shotgun.bullet.max_track_distance = REF_H / 6
 shotgun.bullet.hide_radius = 25
-
+shotgun.bullet.vis_flags = F_RANGED
 local bomb = E:register_t("bomb", "bullet")
 
 E:add_comps(bomb, "sound_events")
