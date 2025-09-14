@@ -17039,9 +17039,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
         if this.owner.tower.blocked or not this.owner.tower.can_do_magic then
             -- block empty
         elseif store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
-            SU.delay_attack(store, a, 1)
-            local target
-            local _, enemies = U.find_foremost_enemy(store, this.owner.pos, 0, a.range, nil, a.vis_flags, a.vis_bans,
+            local target, enemies = U.find_foremost_enemy(store, this.owner.pos, 0, a.range, nil, a.vis_flags, a.vis_bans,
                 function(v)
                     return not table.contains(a.excluded_templates, v.template_name) and
                                not U.has_modifier(store, v, "mod_druid_sylvan")
@@ -17066,9 +17064,6 @@ function scripts.druid_shooter_sylvan.update(this, store)
             --     end
             --     target = enemies[max_hp_enemy_idx]
             -- end
-            if enemies then
-                target = enemies[1]
-            end
 
             if target and #enemies > 1 then
                 S:queue(a.sound)
@@ -17083,6 +17078,8 @@ function scripts.druid_shooter_sylvan.update(this, store)
                 mod.modifier.level = this.owner.powers.sylvan.level
 
                 queue_insert(store, mod)
+            else
+                SU.delay_attack(store, a, 1)
             end
         end
 
