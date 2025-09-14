@@ -453,8 +453,8 @@ local function barrack_towers()
     tt.melee.attacks[2] = E:clone_c("area_attack")
     tt.melee.attacks[2].animation = "attack_2"
     tt.melee.attacks[2].chance = 0.3
-    tt.melee.attacks[2].damage_max = 42
-    tt.melee.attacks[2].damage_min = 20
+    tt.melee.attacks[2].damage_max = 46
+    tt.melee.attacks[2].damage_min = 24
     tt.melee.attacks[2].damage_radius = 55
     tt.melee.attacks[2].damage_type = DAMAGE_PHYSICAL
     tt.melee.attacks[2].hit_time = fts(8)

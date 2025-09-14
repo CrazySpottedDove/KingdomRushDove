@@ -578,7 +578,7 @@ function scripts.enemy_basic.insert(this, store, script)
         end
     end
 
-    this.enemy.gold_bag = math.ceil(this.enemy.gold * 0.6)
+    this.enemy.gold_bag = this.enemy.gold
 
     if this.water and this.spawn_data and this.spawn_data.water_ignore_pi then
         this.water.ignore_pi = this.spawn_data.water_ignore_pi

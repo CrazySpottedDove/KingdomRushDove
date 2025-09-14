@@ -7187,7 +7187,7 @@ function TowerMenuTooltip:show(entity, item)
         end
 
         local power = entity.powers[item.action_arg]
-        local show_level = km.clamp(1, #item.tt_list, power.level + 1)
+        local show_level = km.clamp(1, power.max_level, power.level + 1)
         local texts = item.tt_list[show_level]
 
         self.title.text = texts.tt_title
