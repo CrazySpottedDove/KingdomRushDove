@@ -469,7 +469,7 @@ function scripts.necromancer_aura.update(this, store, script)
 
         if store.tick_ts - last_ts >= this.aura.cycle_time then
             last_ts = store.tick_ts
-            for i=#skeletons, 1,-1 do
+            for i = #skeletons, 1, -1 do
                 local e = skeletons[i]
                 if not e or e.health.dead then
                     table.remove(skeletons, i)
@@ -17038,13 +17038,13 @@ function scripts.druid_shooter_sylvan.update(this, store)
     while true do
         if this.owner.tower.blocked or not this.owner.tower.can_do_magic then
             -- block empty
-        elseif store.tick_ts - a.ts > a.cooldown then
+        elseif store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
             SU.delay_attack(store, a, 1)
             local target
             local _, enemies = U.find_foremost_enemy(store, this.owner.pos, 0, a.range, nil, a.vis_flags, a.vis_bans,
                 function(v)
                     return not table.contains(a.excluded_templates, v.template_name) and
-                               not SU.has_modifiers(store, v, "mod_druid_sylvan")
+                               not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
 
             if enemies then
@@ -25680,10 +25680,23 @@ function scripts.mod_druid_sylvan.update(this, store)
 
     while true do
         target = store.entities[m.target_id]
-
-        if not target or target.health.dead or store.tick_ts - m.ts > m.duration then
+        if store.tick_ts - m.ts > m.duration then
             queue_remove(store, this)
-
+            return
+        end
+        if not target or target.health.dead then
+            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v)
+                return not U.has_modifier(store, v, "mod_druid_sylvan")
+            end)
+            if targets then
+                local new_target = targets[1]
+                local new_mod = E:create_entity(this.template_name)
+                new_mod.modifier.target_id = new_target.id
+                new_mod.modifier.level = this.modifier.level
+                new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts)
+                queue_insert(store, new_mod)
+            end
+            queue_remove(store, this)
             return
         end
 
@@ -25696,25 +25709,26 @@ function scripts.mod_druid_sylvan.update(this, store)
         if dhp < 0 then
             last_hp = target.health.hp
 
-            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
+                function(v)
+                    return not U.has_modifier(store, v, "mod_druid_sylvan")
+                end)
 
             if targets then
                 for _, t in pairs(targets) do
-                    if t ~= target then
-                        local b = E:create_entity(a.bullet)
+                    local b = E:create_entity(a.bullet)
 
-                        b.bullet.damage_max = -1 * dhp * a.damage_factor[m.level]
-                        b.bullet.damage_min = b.bullet.damage_max
-                        b.bullet.target_id = t.id
-                        b.bullet.source_id = this.id
-                        b.bullet.from = V.v(target.pos.x + target.unit.mod_offset.x,
-                            target.pos.y + target.unit.mod_offset.y)
-                        b.bullet.to = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
-                        b.pos = V.vclone(b.bullet.from)
-                        b.render.sprites[1].hidden = store.tick_ts - ray_ts < this.ray_cooldown
+                    b.bullet.damage_max = -1 * dhp * a.damage_factor[m.level]
+                    b.bullet.damage_min = b.bullet.damage_max
+                    b.bullet.target_id = t.id
+                    b.bullet.source_id = this.id
+                    b.bullet.from = V.v(target.pos.x + target.unit.mod_offset.x,
+                        target.pos.y + target.unit.mod_offset.y)
+                    b.bullet.to = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
+                    b.pos = V.vclone(b.bullet.from)
+                    b.render.sprites[1].hidden = store.tick_ts - ray_ts < this.ray_cooldown
 
-                        queue_insert(store, b)
-                    end
+                    queue_insert(store, b)
                 end
 
                 if store.tick_ts - ray_ts > this.ray_cooldown then

@@ -2230,6 +2230,26 @@ function U.has_modifiers(store, entity, mod_name)
     return #result > 0, result
 end
 
+--- 检查实体是否有指定mod
+--- @param store table game.store
+--- @param entity table 实体
+--- @param mod_name string mod名称
+--- @return boolean 是否有指定mod
+function U.has_modifier(store, entity, mod_name)
+    local mods = entity._applied_mods
+    if not mods then
+        return false
+    end
+    for i = 1, #mods do
+        local mod = mods[i]
+        if mod_name == mod.template_name then
+            return true
+        end
+    end
+
+    return false
+end
+
 --- 检查实体是否有列表中的mod
 --- @param store table game.store
 --- @param entity table 实体

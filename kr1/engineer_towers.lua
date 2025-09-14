@@ -100,7 +100,7 @@ local function engineer_towers()
     tt.bullet.hide_radius = 2
     tt.bullet.hit_fx = "fx_explosion_air"
     tt.bullet.rotation_speed = 20 * FPS * math.pi / 180
-    tt.bullet.fragment_node_spread = 7
+    tt.bullet.fragment_node_spread = 6
     tt.bullet.fragment_pos_spread = vec_2(6, 6)
     tt.bullet.dest_pos_offset = vec_2(0, 85)
     tt.bullet.dest_prediction_time = 1
