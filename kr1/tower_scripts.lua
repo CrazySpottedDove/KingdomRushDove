@@ -4878,21 +4878,27 @@ function scripts.tower_druid.update(this, store)
 
         U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
         U.y_wait(store, fts(16))
+        local current_bullets = #this.loaded_bullets
+        local tries = ba.max_loaded_bullets - current_bullets
+        for i = 1, tries do
+            if i == 1 or math.random() < ba.multi_rate then
+                local idx = #this.loaded_bullets + 1
+                local b = E:create_entity(ba.bullet)
+                local bo = ba.storage_offsets[idx]
 
-        local idx = #this.loaded_bullets + 1
-        local b = E:create_entity(ba.bullet)
-        local bo = ba.storage_offsets[idx]
+                b.pos = V.v(this.pos.x + bo.x, this.pos.y + bo.y)
+                b.bullet.from = V.vclone(b.pos)
+                b.bullet.to = V.vclone(b.pos)
+                b.bullet.source_id = this.id
+                b.bullet.target_id = nil
+                b.bullet.damage_factor = this.tower.damage_factor
+                b.render.sprites[1].prefix = string.format(b.render.sprites[1].prefix, idx)
 
-        b.pos = V.v(this.pos.x + bo.x, this.pos.y + bo.y)
-        b.bullet.from = V.vclone(b.pos)
-        b.bullet.to = V.vclone(b.pos)
-        b.bullet.source_id = this.id
-        b.bullet.target_id = nil
-        b.bullet.damage_factor = this.tower.damage_factor
-        b.render.sprites[1].prefix = string.format(b.render.sprites[1].prefix, idx)
+                queue_insert(store, b)
+                this.loaded_bullets[idx] = b
+            end
+        end
 
-        queue_insert(store, b)
-        table.insert(this.loaded_bullets, b)
         U.y_animation_wait(this, shooter_sid)
     end
 
