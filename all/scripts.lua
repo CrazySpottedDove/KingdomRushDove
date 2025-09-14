@@ -2397,7 +2397,7 @@ function scripts.arrow_missile.update(this, store)
                 local max_id = #targets
                 for i = 1, max_id do
                     local new_target = targets[i]
-                    local d_angle = V.angleTo(b.speed.x, b.speed.y, target.pos.x - this.pos.x, target.pos.y - this.pos.y)
+                    local d_angle = V.angleTo(b.speed.x, b.speed.y, new_target.pos.x - this.pos.x, new_target.pos.y - this.pos.y)
                     if math.abs(d_angle) < d_angle or i == max_id then
                         target = new_target
                         break
