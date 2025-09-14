@@ -30,7 +30,7 @@ local function engineer_towers()
     tt.powers.missile = CC("power")
     tt.powers.missile.price_base = 200
     tt.powers.missile.price_inc = 125
-    tt.powers.missile.range_inc_factor = 0.25
+    tt.powers.missile.range_inc_factor = 0.3
     tt.powers.missile.damage_inc = 40
     tt.powers.missile.enc_icon = 17
     tt.powers.missile.cooldown_dec = 2
@@ -742,7 +742,7 @@ local function engineer_towers()
     E:add_comps(tt, "attacks", "powers", "barrack")
     tt.tower.type = "druid"
     tt.tower.level = 1
-    tt.tower.price = 325
+    tt.tower.price = 335
     tt.tower.range_offset = vec_2(0, 10)
     tt.info.enc_icon = 13
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0012"
@@ -760,7 +760,7 @@ local function engineer_towers()
     tt.attacks.list[1].vis_bans = bor(F_FLYING)
     tt.attacks.list[1].sound = "TowerDruidHengeRockThrow"
     tt.attacks.list[1].node_prediction = fts(35)
-    tt.attacks.list[1].multi_rate = 0.15
+    tt.attacks.list[1].multi_rate = 0.2
     tt.barrack.rally_range = 145
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_druid_bear"
@@ -900,7 +900,7 @@ local function engineer_towers()
     E:add_comps(tt, "attacks", "powers")
     tt.tower.type = "entwood"
     tt.tower.level = 1
-    tt.tower.price = 400
+    tt.tower.price = 390
     tt.tower.range_offset = vec_2(0, 10)
     tt.tower.size = TOWER_SIZE_LARGE
     tt.info.enc_icon = 14
@@ -946,8 +946,8 @@ local function engineer_towers()
     tt.powers.clobber.damage_values = {75, 100, 125}
     tt.powers.clobber.enc_icon = 14
     tt.powers.fiery_nuts = E:clone_c("power")
-    tt.powers.fiery_nuts.price_base = 325
-    tt.powers.fiery_nuts.price_inc = 250
+    tt.powers.fiery_nuts.price_base = 300
+    tt.powers.fiery_nuts.price_inc = 225
     tt.powers.fiery_nuts.attack_idx = 2
     tt.powers.fiery_nuts.enc_icon = 15
     tt.render.sprites[1].animated = false
@@ -1027,7 +1027,7 @@ local function engineer_towers()
 
     tt = E:register_t("rock_firey_nut", "rock_entwood")
     tt.bullet.damage_max = 106
-    tt.bullet.damage_max_inc = 71
+    tt.bullet.damage_max_inc = 72
     tt.bullet.damage_min = 106
     tt.bullet.damage_min_inc = tt.bullet.damage_max_inc
     tt.bullet.damage_radius = 65
@@ -1153,7 +1153,7 @@ local function engineer_towers()
         tt.render.sprites[i].prefix = "tricannon_tower_lvl4_tower_layer" .. i - 1
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].group = "layers"
-        tt.render.sprites[i].scale = vec_1(1.26 / 768 * 1024)
+        tt.render.sprites[i].scale = vec_1(1.3 / 768 * 1024)
     end
 
     tt.ui.click_rect = r(-45, -3, 90, 78)
