@@ -79,7 +79,7 @@ local function engineer_towers()
     tt.attacks.list[3] = table.deepclone(tt.attacks.list[1])
     tt.attacks.list[3].bullet = "bomb_bfg_cluster"
     tt.attacks.list[3].cooldown_base = 18.5
-    tt.attacks.list[3].node_prediction = fts(36)
+    tt.attacks.list[3].node_prediction = fts(40)
     tt.attacks.list[3].vis_bans = 0
 
     tt = RT("bomb_bfg", "bomb")
@@ -809,7 +809,7 @@ local function engineer_towers()
     tt.attack = E:clone_c("bullet_attack")
     tt.attack.max_range = 100
     tt.attack.bullet = "ray_druid_sylvan"
-    tt.attack.damage_factor = {0.23, 0.46, 0.66}
+    tt.attack.damage_factor = {0.23, 0.46, 0.69}
     tt.ray_cooldown = fts(15)
     tt.main_script.update = scripts.mod_druid_sylvan.update
     tt.tween.remove = false
@@ -983,8 +983,8 @@ local function engineer_towers()
 
     tt = E:register_t("rock_druid", "rock_1")
     E:add_comps(tt, "tween")
-    tt.bullet.damage_max = 50
-    tt.bullet.damage_min = 30
+    tt.bullet.damage_max = 54
+    tt.bullet.damage_min = 32
     tt.bullet.damage_radius = 50
     tt.bullet.hit_decal = "decal_rock_crater"
     tt.bullet.hit_fx = "fx_rock_explosion"
