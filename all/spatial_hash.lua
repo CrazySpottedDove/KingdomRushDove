@@ -74,7 +74,7 @@ function spatial_hash:update_entity(entity)
     local new_cell = self:_get_cell(entity.pos.x, entity.pos.y)
     local cells_y = self.cells[self:_y_to_row(entity.pos.y)]
     if not cells_y then
-        print(entity.template_name," y out of bounds:",entity.pos.y)
+        log.error(entity.template_name .. " y out of bounds:" .. entity.pos.y)
         return
     end
     local new_cell = cells_y[self:_x_to_col(entity.pos.x)]

@@ -22173,7 +22173,7 @@ function scripts.eb_spider.update(this, store, script)
             s.sort_y = this.pos.y
         end
 
-        U.y_ease_key(store, this.pos, "y", this.pos.y, math.min(this.pos.y + REF_H, IN_GAME_Y_MAX), 1, "quad-in")
+        U.y_ease_key(store, this.pos, "y", this.pos.y, math.min(this.pos.y + REF_H, IN_GAME_Y_MAX - 1), 1, "quad-in")
     end
 
     local function y_jump_in(round_idx)
