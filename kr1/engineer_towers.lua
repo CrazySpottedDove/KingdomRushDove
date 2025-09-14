@@ -79,7 +79,7 @@ local function engineer_towers()
     tt.attacks.list[3] = table.deepclone(tt.attacks.list[1])
     tt.attacks.list[3].bullet = "bomb_bfg_cluster"
     tt.attacks.list[3].cooldown_base = 18.5
-    tt.attacks.list[3].node_prediction = fts(44)
+    tt.attacks.list[3].node_prediction = fts(36)
     tt.attacks.list[3].vis_bans = 0
 
     tt = RT("bomb_bfg", "bomb")
