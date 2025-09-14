@@ -2853,7 +2853,7 @@ function scripts.enemy_troll_skater.update(this, store)
                 end
             end
 
-            if not SU.y_enemy_mixed_walk_melee_ranged(store, this, skating, ice_changed) then
+            if not SU.y_enemy_mixed_walk_melee_ranged(store, this, nil, ice_changed) then
                 -- block empty
             else
                 coroutine.yield()
