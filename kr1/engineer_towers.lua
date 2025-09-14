@@ -30,7 +30,7 @@ local function engineer_towers()
     tt.powers.missile = CC("power")
     tt.powers.missile.price_base = 200
     tt.powers.missile.price_inc = 125
-    tt.powers.missile.range_inc_factor = 0.2
+    tt.powers.missile.range_inc_factor = 0.25
     tt.powers.missile.damage_inc = 40
     tt.powers.missile.enc_icon = 17
     tt.powers.missile.cooldown_dec = 2
