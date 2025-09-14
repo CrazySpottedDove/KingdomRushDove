@@ -25667,8 +25667,20 @@ function scripts.mod_druid_sylvan.update(this, store)
     local target = store.entities[m.target_id]
 
     if not target or not target.health or target.health.dead then
+        if target then
+            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v)
+                return not U.has_modifier(store, v, "mod_druid_sylvan")
+            end)
+            if targets then
+                local new_target = targets[1]
+                local new_mod = E:create_entity(this.template_name)
+                new_mod.modifier.target_id = new_target.id
+                new_mod.modifier.level = this.modifier.level
+                new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
+                queue_insert(store, new_mod)
+            end
+        end
         queue_remove(store, this)
-
         return
     end
 
@@ -25688,16 +25700,18 @@ function scripts.mod_druid_sylvan.update(this, store)
             return
         end
         if not target or target.health.dead then
-            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v)
-                return not U.has_modifier(store, v, "mod_druid_sylvan")
-            end)
-            if targets then
-                local new_target = targets[1]
-                local new_mod = E:create_entity(this.template_name)
-                new_mod.modifier.target_id = new_target.id
-                new_mod.modifier.level = this.modifier.level
-                new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
-                queue_insert(store, new_mod)
+            if target then
+                local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v)
+                    return not U.has_modifier(store, v, "mod_druid_sylvan")
+                end)
+                if targets then
+                    local new_target = targets[1]
+                    local new_mod = E:create_entity(this.template_name)
+                    new_mod.modifier.target_id = new_target.id
+                    new_mod.modifier.level = this.modifier.level
+                    new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
+                    queue_insert(store, new_mod)
+                end
             end
             queue_remove(store, this)
             return
