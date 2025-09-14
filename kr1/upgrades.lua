@@ -606,8 +606,9 @@ function upgrades:patch_templates(max_level)
     u = self:get_upgrade("engineer_range_finder")
 
     if u then
+        log.error("1")
         for _, n in pairs(engineer_towers) do
-            if not n == "tower_mech" then
+            if n ~= "tower_mech" then
                 T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
             end
         end
@@ -618,6 +619,7 @@ function upgrades:patch_templates(max_level)
         T("tower_tesla").attacks.list[1].range = math.ceil(T("tower_tesla").attacks.list[1].range * u.range_factor)
         T("tower_tricannon_lvl4").attacks.list[1].range = math.ceil(T("tower_tricannon_lvl4").attacks.list[1].range * u.range_factor)
         T("tower_tricannon_lvl4").attacks.list[2].range = math.ceil(T("tower_tricannon_lvl4").attacks.list[2].range * u.range_factor)
+        T("tower_dwaarp").origin_range = math.ceil(T("tower_dwaarp").origin_range * u.range_factor)
     end
 
     u = self:get_upgrade("engineer_field_logistics")
