@@ -2330,7 +2330,7 @@ function scripts.arrow_missile.update(this, store)
     local ps
     local s = this.render.sprites[1]
     local target = store.entities[b.target_id]
-    local max_seek_angle = b.math_seek_angle or math.pi / 6
+    local max_seek_angle = b.max_seek_angle or math.pi / 6
     local rot_dir = 1
     local retarget_range = b.retarget_range or 300
     local turn_speed = b.turn_speed or 5 * math.pi / 3
@@ -2339,6 +2339,10 @@ function scripts.arrow_missile.update(this, store)
     local min_speed = b.min_speed or 300
     local max_speed = b.max_speed or 500
     local retarget_for_hit_miss = false
+    local retarget_for_next = false
+    local target_num = b.target_num or 1
+    local hitted_targets = {}
+    hitted_targets[b.target_id] = true
     if b.particles_name then
         ps = E:create_entity(b.particles_name)
         ps.particle_system.track_id = this.id
@@ -2365,7 +2369,7 @@ function scripts.arrow_missile.update(this, store)
             ps.particle_system.emit_direction = s.r
         end
 
-        if b.hide_radius then
+        if b.hide_radius and target_num <= 1 then
             local hide_radius_squared = b.hide_radius * b.hide_radius
             s.hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < hide_radius_squared or
                            V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < hide_radius_squared
@@ -2381,13 +2385,31 @@ function scripts.arrow_missile.update(this, store)
     end
 
     ::missile_logic::
-    if (not target or target.health.dead) or retarget_for_hit_miss then
+    if (not target or target.health.dead) or retarget_for_hit_miss or retarget_for_next then
         if retarget_for_hit_miss then
             retarget_for_hit_miss = false
+        elseif retarget_for_next then
+            retarget_for_next = false
+            local _, targets = U.find_foremost_enemy(store, this.pos, 0, retarget_range, nil, b.vis_flags, b.vis_bans, function(e)
+                return not hitted_targets[e.id]
+            end)
+            if targets then
+                local max_id = #targets
+                for i = 1, max_id do
+                    local new_target = targets[i]
+                    local d_angle = V.angleTo(b.speed.x, b.speed.y, target.pos.x - this.pos.x, target.pos.y - this.pos.y)
+                    if math.abs(d_angle) < d_angle or i == max_id then
+                        target = new_target
+                        break
+                    end
+                end
+            end
         else
             target = U.find_first_enemy(store, this.pos, 0, retarget_range, b.vis_flags, b.vis_bans)
         end
+        target_num = target_num - 1
         if target then
+            hitted_targets[target.id] = true
             b.to.x, b.to.y = target.pos.x, target.pos.y
             if target.unit.hit_offset then
                 b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
@@ -2574,6 +2596,11 @@ function scripts.arrow_missile.update(this, store)
         end
 
         queue_insert(store, p)
+    end
+
+    if target_num > 0 then
+        retarget_for_next = true
+        goto missile_logic
     end
 
     if ps and ps.particle_system.emit then

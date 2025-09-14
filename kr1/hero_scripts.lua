@@ -463,6 +463,7 @@ scripts.arrow_multishot_hero_alleria = {
         return scripts.arrow.insert(this, store)
     end
 }
+
 -- 艾莉瑞亚
 scripts.hero_alleria = {
     level_up = function(this, store)
@@ -489,6 +490,14 @@ scripts.hero_alleria = {
                 a.pet.fn_level_up(a.pet, store, s)
             end
         end)
+
+        upgrade_skill(this, "missileshot", function(this, s)
+            local a = this.ranged.attacks[3]
+            a.disabled = nil
+            local b = E:get_template(a.bullet)
+            b.bullet.target_num = s.count_base + s.count_inc * s.level
+        end)
+
         this.health.hp = this.health.hp_max
     end,
     update = function(this, store)

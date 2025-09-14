@@ -191,6 +191,17 @@ local function heroes()
         [10] = 5
     }
     tt.hero.skills.multishot.xp_gain = {20, 30, 40, 50, 60}
+    tt.hero.skills.missileshot = CC("hero_skill")
+    tt.hero.skills.missileshot.count_base = 2
+    tt.hero.skills.missileshot.count_inc = 1
+    tt.hero.skills.missileshot.xp_level_steps = {
+        [2] = 1,
+        [4] = 2,
+        [6] = 3,
+        [8] = 4,
+        [10] = 5
+    }
+    tt.hero.skills.missileshot.xp_gain = {40, 60, 80, 100, 120}
     tt.hero.skills.callofwild = CC("hero_skill")
     tt.hero.skills.callofwild.damage_max_base = 4
     tt.hero.skills.callofwild.damage_min_base = 2
@@ -249,6 +260,18 @@ local function heroes()
     tt.ranged.attacks[2].shoot_time = fts(12)
     tt.ranged.attacks[2].sound = "HeroArcherShoot"
     tt.ranged.attacks[2].xp_from_skill = "multishot"
+    tt.ranged.attacks[3] = E:clone_c("bullet_attack")
+    tt.ranged.attacks[3].animation = "multishot"
+    tt.ranged.attacks[3].bullet = "arrow_hero_alleria_missile"
+    tt.ranged.attacks[3].bullet_start_offset = {vec_2(0, 12)}
+    tt.ranged.attacks[3].cooldown = 8
+    tt.ranged.attacks[3].disabled = true
+    tt.ranged.attacks[3].max_range = 200
+    tt.ranged.attacks[3].min_range = 40
+    tt.ranged.attacks[3].node_prediction = fts(10)
+    tt.ranged.attacks[3].shoot_time = fts(12)
+    tt.ranged.attacks[3].sound = "HeroArcherShoot"
+    tt.ranged.attacks[3].xp_from_skill = "missileshot"
     tt.timed_attacks.list[1] = E:clone_c("spawn_attack")
     tt.timed_attacks.list[1].animation = "callofwild"
     tt.timed_attacks.list[1].cooldown = 12
@@ -274,6 +297,17 @@ local function heroes()
     tt.main_script.insert = scripts.arrow_multishot_hero_alleria.insert
     tt.render.sprites[1].name = "hero_archer_arrow"
 
+    tt = RT("arrow_hero_alleria_missile", "arrow")
+    tt.bullet.particles_name = "ps_arrow_hero_alleria_missile"
+    tt.render.sprites[1].name = "hero_archer_arrow"
+    tt.bullet.flight_time = fts(10)
+    tt.bullet.damage_min = 75
+    tt.bullet.damage_max = 30
+    tt.bullet.damage_type = DAMAGE_TRUE
+    tt.bullet.target_num = 5
+    tt.bullet.max_seek_angle = math.pi / 3
+    tt.main_script.update = scripts.arrow_missile.update
+
     tt = RT("ps_arrow_multishot_hero_alleria")
     AC(tt, "pos", "particle_system")
     tt.particle_system.name = "hero_archer_arrow_particle"
@@ -283,6 +317,12 @@ local function heroes()
     tt.particle_system.emission_rate = 30
     tt.particle_system.track_rotation = true
     tt.particle_system.z = Z_BULLETS
+
+    tt = RT("ps_arrow_hero_alleria_missile", "ps_arrow_multishot_hero_alleria")
+    tt.particle_system.particle_lifetime = {0.3, 0.3}
+    tt.particle_system.scales_y = {0.6, 0.2}
+    tt.particle_system.scales_x = {1.2, 0.3}
+    tt.particle_system.emission_rate = 60
 
     tt = RT("soldier_alleria_wildcat", "soldier")
     E:add_comps(tt, "melee", "nav_grid")
