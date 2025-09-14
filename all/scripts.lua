@@ -2481,6 +2481,7 @@ function scripts.arrow_missile.update(this, store)
         if V.dist2(this.pos.x, this.pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and
             not SU.unit_dodges(store, target, true) and (not b.hit_chance or math.random() < b.hit_chance) then
             hit = true
+            target_num = target_num - 1
             local d = SU.create_bullet_damage(b, target.id, this.id)
 
             queue_damage(store, d)
