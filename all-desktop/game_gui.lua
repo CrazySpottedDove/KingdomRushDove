@@ -3700,7 +3700,7 @@ function HudCountersView:update(dt)
         self.lbl_wave.text = string.format("%d", store.wave_group_number)
         -- self.lbl_score.text = string.format("%d", store.player_score)
     elseif store.criket.on then
-        self.lbl_wave.text = string.format("%d/%d", store.enemy_count, store.dead_soldier_count)
+        self.lbl_wave.text = string.format("%d/%.2f", store.enemy_count, store.config.enemy_health_multiplier)
     else
         self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), store.wave_group_number, store.wave_group_total)
     end
@@ -6459,6 +6459,7 @@ end
 
 function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
     if item.action == "tw_upgrade" then
+        local total_cost = 0
         for k, v in pairs(game_gui.game.store.towers) do
             local new_tower = E:create_entity(item.action_arg)
             game_gui.game.store.criket.tower_name = new_tower.template_name
@@ -6523,6 +6524,27 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
                     new_tower.barrack.soldiers[i].id = -1
                 end
             end
+            if table.contains(UP:archer_towers(), new_tower.template_name) then
+                total_cost = total_cost + E:get_template("tower_archer_1").tower.price + E:get_template("tower_archer_2").tower.price +
+                                 E:get_template("tower_archer_3").tower.price
+            elseif table.contains(UP:mage_towers(), new_tower.template_name) then
+                total_cost = total_cost + E:get_template("tower_mage_1").tower.price + E:get_template("tower_mage_2").tower.price +
+                                 E:get_template("tower_mage_3").tower.price
+            elseif table.contains(UP:engineer_towers(), new_tower.template_name) then
+                total_cost = total_cost + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_engineer_2").tower.price +
+                                 E:get_template("tower_engineer_3").tower.price
+            elseif table.contains(UP:towers_with_barrack(), new_tower.template_name) then
+                total_cost = total_cost + E:get_template("tower_barrack_1").tower.price + E:get_template("tower_barrack_2").tower.price +
+                                 E:get_template("tower_barrack_3").tower.price
+            end
+            total_cost = total_cost + new_tower.tower.price
+            for _, p in pairs(new_tower.powers) do
+                total_cost = total_cost + p.price_base + p.price_inc * (p.max_level - 1)
+            end
+        end
+        local store = game_gui.game.store
+        if store.criket.on and store.criket.gold_judge then
+            game_gui.game.config.enemy_health_multiplier = total_cost / game_gui.game.store.criket.gold_base
         end
     end
     self:hide()
