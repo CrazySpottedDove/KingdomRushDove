@@ -513,7 +513,7 @@ local function barrack_towers()
     tower_templar.tower.type = "templar"
     tower_templar.tower.price = 185
     tower_templar.powers.holygrail = E:clone_c("power")
-    tower_templar.powers.holygrail.price_base = 225
+    tower_templar.powers.holygrail.price_base = 200
     tower_templar.powers.holygrail.price_inc = 150
     tower_templar.powers.holygrail.name = "HOLY"
     tower_templar.powers.holygrail.enc_icon = 25
@@ -1091,7 +1091,7 @@ local function barrack_towers()
     tt.powers.blade_dance.price_inc = 250
     tt.powers.blade_dance.enc_icon = 5
     tt.powers.swirling = E:clone_c("power")
-    tt.powers.swirling.price_base = 350
+    tt.powers.swirling.price_base = 250
     tt.powers.swirling.price_inc = 150
     tt.powers.swirling.max_level = 1
     tt.powers.swirling.enc_icon = 7
@@ -1114,11 +1114,11 @@ local function barrack_towers()
     tt.barrack.rally_angle_offset = math.pi / 3
     tt.powers.circle = E:clone_c("power")
     tt.powers.circle.price_base = 225
-    tt.powers.circle.price_inc = 200
+    tt.powers.circle.price_inc = 190
     tt.powers.circle.enc_icon = 9
     tt.powers.eerie = E:clone_c("power")
-    tt.powers.eerie.price_base = 285
-    tt.powers.eerie.price_inc = 225
+    tt.powers.eerie.price_base = 250
+    tt.powers.eerie.price_inc = 200
     tt.powers.eerie.max_level = 2
     tt.powers.eerie.enc_icon = 10
     tt.powers.oak = E:clone_c("power")

@@ -6541,6 +6541,9 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
             for _, p in pairs(new_tower.powers) do
                 total_cost = total_cost + p.price_base + p.price_inc * (p.max_level - 1)
             end
+            if new_tower.mercenary then
+                total_cost = total_cost + E:get_template(new_tower.barrack.soldier_type).unit.price
+            end
         end
         local store = game_gui.game.store
         if store.criket.on and store.criket.gold_judge then
