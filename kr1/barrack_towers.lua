@@ -1588,7 +1588,7 @@ local function barrack_towers()
     tt.tower.hide_dust = true
     tt.tower.type = "baby_ashbite"
     tt.tower.level = 1
-    tt.tower.price = 300
+    tt.tower.price = 325
     tt.info.fn = scripts.tower_baby_ashbite.get_info
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr3_info_portraits_towers_") .. "0019"
     tt.info.i18n_key = "ELVES_BABY_ASHBITE_TOWER"
@@ -1617,11 +1617,11 @@ local function barrack_towers()
     tt.sound_events.insert = "ElvesAshbiteDeath"
     tt.sound_events.change_rally_point = "ElvesAshbiteConfirm"
     tt.powers.blazing_breath = E:clone_c("power")
-    tt.powers.blazing_breath.price_base = 250
-    tt.powers.blazing_breath.price_inc = 200
+    tt.powers.blazing_breath.price_base = 275
+    tt.powers.blazing_breath.price_inc = 225
     tt.powers.blazing_breath.max_level = 3
     tt.powers.fiery_mist = E:clone_c("power")
-    tt.powers.fiery_mist.price_base = 250
+    tt.powers.fiery_mist.price_base = 275
     tt.powers.fiery_mist.price_inc = 0
     tt.powers.fiery_mist.max_level = 1
 
