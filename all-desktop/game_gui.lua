@@ -3700,7 +3700,7 @@ function HudCountersView:update(dt)
         self.lbl_wave.text = string.format("%d", store.wave_group_number)
         -- self.lbl_score.text = string.format("%d", store.player_score)
     elseif store.criket.on then
-        self.lbl_wave.text = string.format("%d*%.2f", store.enemy_count, store.config.enemy_health_multiplier)
+        self.lbl_wave.text = string.format("%3d*%.2f", store.enemy_count, store.config.enemy_health_multiplier)
     else
         self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), store.wave_group_number, store.wave_group_total)
     end
