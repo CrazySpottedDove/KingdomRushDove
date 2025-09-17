@@ -1588,7 +1588,7 @@ local function barrack_towers()
     tt.tower.hide_dust = true
     tt.tower.type = "baby_ashbite"
     tt.tower.level = 1
-    tt.tower.price = 325
+    tt.tower.price = 350
     tt.info.fn = scripts.tower_baby_ashbite.get_info
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr3_info_portraits_towers_") .. "0019"
     tt.info.i18n_key = "ELVES_BABY_ASHBITE_TOWER"
