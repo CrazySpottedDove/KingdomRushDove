@@ -2826,6 +2826,10 @@ end
 
 sys.last_hook = {}
 sys.last_hook.name = "last_hook"
+function sys.last_hook:init(store)
+    store.dead_soldier_count = 0
+    store.enemy_count = 0
+end
 function sys.last_hook:on_insert(e, d)
     if e.enemy then
         d.enemies[e.id] = e -- 优化分类索引
@@ -2842,6 +2846,7 @@ function sys.last_hook:on_insert(e, d)
             e.health.patched = true
             e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
         end
+        d.enemy_count = d.enemy_count + 1
     elseif e.soldier and e.health then
         d.soldiers[e.id] = e
     elseif e.modifier then
@@ -2887,6 +2892,7 @@ end
 function sys.last_hook:on_remove(e, d)
     if e.enemy then
         d.enemies[e.id] = nil -- 优化分类索引
+        d.enemy_count = d.enemy_count - 1
     elseif e.soldier then
         d.soldiers[e.id] = nil
         d.dead_soldier_count = d.dead_soldier_count + 1
