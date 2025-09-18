@@ -2695,9 +2695,9 @@ function scripts.enemy_necromancer.update(this, store)
 
     a.ts = store.tick_ts
 
-    local function summon_count_exceeded()
-        return cg[a.count_group_name] and cg[a.count_group_name] >= a.count_group_max
-    end
+    -- local function summon_count_exceeded()
+    --     return cg[a.count_group_name] and cg[a.count_group_name] >= a.count_group_max
+    -- end
 
     local function ready_to_summon()
         if U.get_blocker(store, this) then
@@ -2705,7 +2705,7 @@ function scripts.enemy_necromancer.update(this, store)
 
             return false
         else
-            return enemy_ready_to_magic_attack(this, store, a) and not summon_count_exceeded()
+            return enemy_ready_to_magic_attack(this, store, a)
         end
     end
 
@@ -2739,9 +2739,9 @@ function scripts.enemy_necromancer.update(this, store)
                         goto label_117_0
                     end
 
-                    if i ~= 1 and summon_count_exceeded() then
-                        break
-                    end
+                    -- if i ~= 1 and summon_count_exceeded() then
+                    --     break
+                    -- end
 
                     local e_name = a.entity_names[U.random_table_idx(a.entity_chances)]
                     local e = E:create_entity(e_name)
@@ -2755,10 +2755,10 @@ function scripts.enemy_necromancer.update(this, store)
                     e.health.damage_factor = e.health.damage_factor - 0.3
                     e.health.damage_factor_source = this.id
                     e.motion.max_speed = (0.5 + math.random() * 0.2) * FPS
-                    E:add_comps(e, "count_group")
+                    -- E:add_comps(e, "count_group")
 
-                    e.count_group.name = a.count_group_name
-                    e.count_group.type = a.count_group_type
+                    -- e.count_group.name = a.count_group_name
+                    -- e.count_group.type = a.count_group_type
 
                     if P:is_node_valid(e.nav_path.pi, e.nav_path.ni) then
                         queue_insert(store, e)
