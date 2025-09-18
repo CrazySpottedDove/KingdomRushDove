@@ -9463,4412 +9463,4412 @@ return {
 			"CB_DeathKnight_buffedFx_0016"
 		}
 	},
-    CB_DeathKnight_0001 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1862,
-			43,
-			49
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0002 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1917,
-			43,
-			49
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0003 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			35,
-			47,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1486,
-			537,
-			41,
-			49
-		},
-		alias = {
-			"CB_DeathKnight_0004"
-		}
-	},
-	CB_DeathKnight_0005 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			27,
-			47,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			526,
-			1697,
-			42,
-			57
-		},
-		alias = {
-			"CB_DeathKnight_0006"
-		}
-	},
-	CB_DeathKnight_0007 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			33,
-			22,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			1478,
-			50,
-			62
-		},
-		alias = {
-			"CB_DeathKnight_0008"
-		}
-	},
-	CB_DeathKnight_0009 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			30,
-			21,
-			46,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			403,
-			52,
-			63
-		},
-		alias = {
-			"CB_DeathKnight_0010"
-		}
-	},
-	CB_DeathKnight_0011 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			36,
-			20,
-			46,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1659,
-			46,
-			64
-		},
-		alias = {
-			"CB_DeathKnight_0012"
-		}
-	},
-	CB_DeathKnight_0013 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			20,
-			28,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			802,
-			63,
-			64
-		},
-		alias = {
-			"CB_DeathKnight_0014"
-		}
-	},
-	CB_DeathKnight_0015 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			48,
-			25,
-			28,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1799,
-			335,
-			52,
-			59
-		},
-		alias = {
-			"CB_DeathKnight_0016"
-		}
-	},
-	CB_DeathKnight_0017 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			48,
-			39,
-			28,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			529,
-			52,
-			45
-		},
-		alias = {
-			"CB_DeathKnight_0018"
-		}
-	},
-	CB_DeathKnight_0019 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			48,
-			39,
-			31,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1011,
-			49,
-			45
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0020 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			48,
-			39,
-			31,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1062,
-			49,
-			45
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0021 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			47,
-			39,
-			33,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1285,
-			48,
-			45
-		},
-		alias = {
-			"CB_DeathKnight_0022"
-		}
-	},
-	CB_DeathKnight_0023 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			46,
-			38,
-			33,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			959,
-			49,
-			46
-		},
-		alias = {
-			"CB_DeathKnight_0024"
-		}
-	},
-	CB_DeathKnight_0025 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			44,
-			36,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			735,
-			452,
-			45,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0026"
-		}
-	},
-	CB_DeathKnight_0027 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			35,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			526,
-			1873,
-			42,
-			49
-		},
-		alias = {
-			"CB_DeathKnight_0028"
-		}
-	},
-	CB_DeathKnight_0029 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			35,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			526,
-			1928,
-			42,
-			49
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0030 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			32,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			818,
-			41,
-			52
-		},
-		alias = {
-			"CB_DeathKnight_0031"
-		}
-	},
-	CB_DeathKnight_0032 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			35,
-			44,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			526,
-			1983,
-			42,
-			49
-		},
-		alias = {
-			"CB_DeathKnight_0033"
-		}
-	},
-	CB_DeathKnight_0034 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			37,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			718,
-			537,
-			42,
-			47
-		},
-		alias = {
-			"CB_DeathKnight_0035"
-		}
-	},
-	CB_DeathKnight_0036 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			36,
-			44,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			622,
-			537,
-			42,
-			48
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0037 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			526,
-			1817,
-			42,
-			50
-		},
-		alias = {
-			"CB_DeathKnight_0038"
-		}
-	},
-	CB_DeathKnight_0039 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			32,
-			44,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			777,
-			44,
-			52
-		},
-		alias = {
-			"CB_DeathKnight_0040"
-		}
-	},
-	CB_DeathKnight_0041 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			33,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			720,
-			45,
-			51
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0042 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			36,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1982,
-			46,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0043"
-		}
-	},
-	CB_DeathKnight_0044 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			36,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			452,
-			46,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0045"
-		}
-	},
-	CB_DeathKnight_0046 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			38,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			837,
-			452,
-			44,
-			46
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0047 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			37,
-			44,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1386,
-			452,
-			43,
-			47
-		},
-		alias = {
-			"CB_DeathKnight_0048"
-		}
-	},
-	CB_DeathKnight_0049 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			36,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1960,
-			40,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0050"
-		}
-	},
-	CB_DeathKnight_0051 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1905,
-			40,
-			49
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0052 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1625,
-			40,
-			50
-		},
-		alias = {
-			"CB_DeathKnight_0053"
-		}
-	},
-	CB_DeathKnight_0054 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			35,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1533,
-			537,
-			41,
-			49
-		},
-		alias = {
-			"CB_DeathKnight_0055"
-		}
-	},
-	CB_DeathKnight_0056 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			38,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1627,
-			537,
-			41,
-			46
-		},
-		alias = {
-			"CB_DeathKnight_0057"
-		}
-	},
-	CB_DeathKnight_0058 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			39,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			667,
-			592,
-			40,
-			45
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0059 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			36,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			621,
-			592,
-			40,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0060"
-		}
-	},
-	CB_DeathKnight_0061 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1681,
-			40,
-			50
-		},
-		alias = {
-			"CB_DeathKnight_0062"
-		}
-	},
-	CB_DeathKnight_0063 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1737,
-			40,
-			50
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0064 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			537,
-			42,
-			49
-		},
-		alias = {
-			"CB_DeathKnight_0065"
-		}
-	},
-	CB_DeathKnight_0066 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			37,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1435,
-			452,
-			43,
-			47
-		},
-		alias = {
-			"CB_DeathKnight_0067"
-		}
-	},
-	CB_DeathKnight_0068 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			39,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1533,
-			452,
-			43,
-			45
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0069 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			39,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			958,
-			537,
-			42,
-			45
-		},
-		alias = {
-			"CB_DeathKnight_0070"
-		}
-	},
-	CB_DeathKnight_0071 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1793,
-			40,
-			50
-		},
-		alias = {
-			"CB_DeathKnight_0072"
-		}
-	},
-	CB_DeathKnight_0073 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1849,
-			40,
-			50
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0074 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			33,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1511,
-			40,
-			51
-		},
-		alias = {
-			"CB_DeathKnight_0075"
-		}
-	},
-	CB_DeathKnight_0076 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			876,
-			41,
-			50
-		},
-		alias = {
-			"CB_DeathKnight_0077"
-		}
-	},
-	CB_DeathKnight_0078 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			36,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			670,
-			537,
-			42,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0079"
-		}
-	},
-	CB_DeathKnight_0080 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			38,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1674,
-			537,
-			41,
-			46
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0081 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			34,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			932,
-			41,
-			50
-		},
-		alias = {
-			"CB_DeathKnight_0082"
-		}
-	},
-	CB_DeathKnight_0083 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			33,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1568,
-			40,
-			51
-		},
-		alias = {
-			"CB_DeathKnight_0084"
-		}
-	},
-	CB_DeathKnight_0085 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			32,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			1453,
-			40,
-			52
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0086 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			33,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			526,
-			1760,
-			42,
-			51
-		},
-		alias = {
-			"CB_DeathKnight_0087"
-		}
-	},
-	CB_DeathKnight_0088 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			36,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1337,
-			452,
-			43,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0089"
-		}
-	},
-	CB_DeathKnight_0090 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			37,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1484,
-			452,
-			43,
-			47
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0091 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			37,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			766,
-			537,
-			42,
-			47
-		},
-		alias = {
-			"CB_DeathKnight_0092"
-		}
-	},
-	CB_DeathKnight_0093 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			30,
-			47,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			574,
-			758,
-			41,
-			54
-		},
-		alias = {
-			"CB_DeathKnight_0094"
-		}
-	},
-	CB_DeathKnight_0095 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			32,
-			24,
-			43,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1622,
-			335,
-			53,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0096 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			26,
-			27,
-			41,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1343,
-			61,
-			57
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0097 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			26,
-			27,
-			41,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1406,
-			61,
-			57
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0098 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			23,
-			30,
-			38,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1514,
-			194,
-			67,
-			56
-		},
-		alias = {
-			"CB_DeathKnight_0099"
-		}
-	},
-	CB_DeathKnight_0100 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			19,
-			35,
-			37,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1117,
-			125,
-			72,
-			49
-		},
-		alias = {
-			"CB_DeathKnight_0101"
-		}
-	},
-	CB_DeathKnight_0102 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			21,
-			55,
-			37,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1502,
-			125,
-			70,
-			29
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0103 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			21,
-			55,
-			37,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1578,
-			125,
-			70,
-			29
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0104 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			21,
-			58,
-			37,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1654,
-			125,
-			70,
-			29
-		},
-		alias = {
-			"CB_DeathKnight_0105",
-			"CB_DeathKnight_0106",
-			"CB_DeathKnight_0107",
-			"CB_DeathKnight_0108",
-			"CB_DeathKnight_0109",
-			"CB_DeathKnight_0110",
-			"CB_DeathKnight_0111",
-			"CB_DeathKnight_0112",
-			"CB_DeathKnight_0113",
-			"CB_DeathKnight_0114",
-			"CB_DeathKnight_0115",
-			"CB_DeathKnight_0116",
-			"CB_DeathKnight_0117"
-		}
-	},
-	CB_DeathKnight_0118 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			20,
-			58,
-			37,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1349,
-			125,
-			71,
-			29
-		},
-		alias = {
-			"CB_DeathKnight_0119",
-			"CB_DeathKnight_0120"
-		}
-	},
-	CB_DeathKnight_0121 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			20,
-			57,
-			37,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1272,
-			125,
-			71,
-			31
-		},
-		alias = {
-			"CB_DeathKnight_0122",
-			"CB_DeathKnight_0123"
-		}
-	},
-	CB_DeathKnight_0124 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			19,
-			57,
-			37,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1907,
-			73,
-			72,
-			31
-		},
-		alias = {
-			"CB_DeathKnight_0125",
-			"CB_DeathKnight_0126"
-		}
-	},
-	CB_DeathKnight_0127 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			21,
-			51,
-			51,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			742,
-			267,
-			56,
-			35
-		},
-		alias = {
-			"CB_DeathKnight_0128",
-			"CB_DeathKnight_0129"
-		}
-	},
-	CB_DeathKnight_0130 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			20,
-			44,
-			48,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1588,
-			60,
-			40
-		},
-		alias = {
-			"CB_DeathKnight_0131",
-			"CB_DeathKnight_0132"
-		}
-	},
-	CB_DeathKnight_0133 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			25,
-			36,
-			45,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			429,
-			267,
-			58,
-			48
-		},
-		alias = {
-			"CB_DeathKnight_0134"
-		}
-	},
-	CB_DeathKnight_0135 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			28,
-			29,
-			47,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1681,
-			335,
-			53,
-			55
-		},
-		alias = {
-			"CB_DeathKnight_0136"
-		}
-	},
-	CB_DeathKnight_0137 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			30,
-			22,
-			49,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			623,
-			49,
-			62
-		},
-		alias = {
-			"CB_DeathKnight_0138"
-		}
-	},
-	CB_DeathKnight_0139 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			19,
-			48,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			591,
-			45,
-			65
-		},
-		alias = {
-			"CB_DeathKnight_0140"
-		}
-	},
-	CB_DeathKnight_0141 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			22,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1729,
-			46,
-			62
-		},
-		alias = {
-			"CB_DeathKnight_0142"
-		}
-	},
-	CB_DeathKnight_0143 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			25,
-			41,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1797,
-			46,
-			59
-		},
-		alias = {
-			"CB_DeathKnight_0144"
-		}
-	},
-	CB_DeathKnight_0145 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			42,
-			29,
-			40,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			1862,
-			46,
-			55
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0146 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			24,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1963,
-			267,
-			55,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0147 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1292,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0148 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1353,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0149 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			25,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1322,
-			335,
-			54,
-			59
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0150 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			25,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1426,
-			55,
-			59
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0151 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			24,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1096,
-			55,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0152 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			24,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1162,
-			55,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0153 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			24,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1228,
-			55,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0154 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			24,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1294,
-			55,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0155 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1414,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0156 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1475,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0157 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1536,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0158 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1597,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0159 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1658,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0160 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			35,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			422,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0161 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			22,
-			35,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1878,
-			54,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0162 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			22,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			804,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0163 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			24,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1360,
-			55,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0164 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			475,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0165 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			544,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0166 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			37,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1740,
-			54,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0167 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			37,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1809,
-			54,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0168 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			613,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0169 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			20,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			335,
-			55,
-			64
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0170 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			20,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			405,
-			55,
-			64
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0171 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			22,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			865,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0172 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			22,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			926,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0173 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			22,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			987,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0174 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			22,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1048,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0175 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			682,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0176 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			751,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0177 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			22,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1109,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0178 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			22,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1170,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0179 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			820,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0180 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			889,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0181 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			21,
-			36,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			958,
-			55,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0182 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			482,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0183 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			542,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0184 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			602,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0185 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			662,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0186 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			722,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0187 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			22,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1946,
-			54,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0188 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			22,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			335,
-			54,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0189 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			24,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			962,
-			335,
-			54,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0190 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			24,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1022,
-			335,
-			54,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0191 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			24,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			335,
-			54,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0192 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			24,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1142,
-			335,
-			54,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0193 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			782,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0194 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			842,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0195 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			24,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1202,
-			335,
-			54,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0196 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			24,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1262,
-			335,
-			54,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0197 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			902,
-			335,
-			54,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0198 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			38,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1719,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0199 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			35,
-			23,
-			38,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1780,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0200 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			23,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1841,
-			267,
-			55,
-			61
-		},
-		alias = {
-			"CB_DeathKnight_0201"
-		}
-	},
-	CB_DeathKnight_0202 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			29,
-			22,
-			41,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1984,
-			58,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0203 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			29,
-			22,
-			41,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			267,
-			58,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0204 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			28,
-			22,
-			41,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1847,
-			59,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0205 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			28,
-			21,
-			41,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1778,
-			59,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0206 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			28,
-			22,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			365,
-			267,
-			58,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0207 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			28,
-			21,
-			42,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1915,
-			58,
-			63
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0208 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			24,
-			7,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			135,
-			194,
-			80,
-			64
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0209 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			24,
-			7,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			135,
-			264,
-			80,
-			64
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0210 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			24,
-			7,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			135,
-			334,
-			80,
-			64
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0211 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			26,
-			15,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			719,
-			125,
-			74,
-			59
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0212 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			26,
-			15,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			799,
-			125,
-			74,
-			59
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0213 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			38,
-			29,
-			17,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			959,
-			125,
-			73,
-			55
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0214 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			38,
-			29,
-			17,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1038,
-			125,
-			73,
-			55
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0215 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			38,
-			8,
-			18,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			441,
-			72,
-			76
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0216 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			38,
-			7,
-			18,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			358,
-			72,
-			77
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0217 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			22,
-			23,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1805,
-			125,
-			68,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0218 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			23,
-			23,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1953,
-			125,
-			68,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0219 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			36,
-			23,
-			37,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1902,
-			267,
-			55,
-			61
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0220 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			36,
-			22,
-			37,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1231,
-			267,
-			55,
-			62
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0221 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			27,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1382,
-			335,
-			54,
-			57
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0222 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			27,
-			34,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1442,
-			335,
-			54,
-			57
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0223 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			39,
-			24,
-			34,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			301,
-			1027,
-			55,
-			63
-		},
-		alias = {
-			"CB_DeathKnight_0224"
-		}
-	},
-	CB_DeathKnight_0225 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			38,
-			21,
-			30,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1469,
-			60,
-			63
-		},
-		alias = {
-			"CB_DeathKnight_0226"
-		}
-	},
-	CB_DeathKnight_0227 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			15,
-			30,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1191,
-			61,
-			70
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0228 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			15,
-			30,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1267,
-			61,
-			70
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0229 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			36,
-			20,
-			33,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1634,
-			59,
-			66
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0230 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			36,
-			20,
-			33,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1706,
-			59,
-			66
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0231 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			37,
-			13,
-			41,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			1399,
-			50,
-			73
-		},
-		alias = {
-			"CB_DeathKnight_0232"
-		}
-	},
-	CB_DeathKnight_0233 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			12,
-			27,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			221,
-			1113,
-			61,
-			72
-		},
-		alias = {
-			"CB_DeathKnight_0234"
-		}
-	},
-	CB_DeathKnight_0235 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			5,
-			39,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			538,
-			49,
-			79
-		},
-		alias = {
-			"CB_DeathKnight_0236"
-		}
-	},
-	CB_DeathKnight_0237 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			41,
-			6,
-			38,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			420,
-			452,
-			49,
-			80
-		},
-		alias = {
-			"CB_DeathKnight_0238"
-		}
-	},
-	CB_DeathKnight_0239 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			5,
-			37,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			762,
-			51,
-			80
-		},
-		alias = {
-			"CB_DeathKnight_0240"
-		}
-	},
-	CB_DeathKnight_0241 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			2,
-			38,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			1220,
-			50,
-			84
-		},
-		alias = {
-			"CB_DeathKnight_0242"
-		}
-	},
-	CB_DeathKnight_0243 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			3,
-			38,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			1310,
-			50,
-			83
-		},
-		alias = {
-			"CB_DeathKnight_0244"
-		}
-	},
-	CB_DeathKnight_0245 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			40,
-			52,
-			38,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			2013,
-			50,
-			34
-		},
-		alias = {
-			"CB_DeathKnight_0246"
-		}
-	},
-	CB_DeathKnight_0247 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			42,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1578,
-			43,
-			51
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0248 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			42,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1635,
-			43,
-			51
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0249 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			42,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1401,
-			43,
-			53
-		},
-		alias = {
-			"CB_DeathKnight_0250"
-		}
-	},
-	CB_DeathKnight_0251 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			32,
-			42,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1280,
-			43,
-			55
-		},
-		alias = {
-			"CB_DeathKnight_0252"
-		}
-	},
-	CB_DeathKnight_0253 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			37,
-			41,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			835,
-			44,
-			50
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0254 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			37,
-			41,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			891,
-			44,
-			50
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0255 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			42,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1460,
-			43,
-			53
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0256 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			34,
-			42,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1519,
-			43,
-			53
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0257 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			36,
-			42,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1692,
-			43,
-			51
-		},
-		alias = {
-			"CB_DeathKnight_0258",
-			"CB_DeathKnight_0259",
-			"CB_DeathKnight_0260",
-			"CB_DeathKnight_0261",
-			"CB_DeathKnight_0262",
-			"CB_DeathKnight_0263",
-			"CB_DeathKnight_0264",
-			"CB_DeathKnight_0265"
-		}
-	},
-	CB_DeathKnight_0266 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			33,
-			42,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1341,
-			43,
-			54
-		},
-		alias = {
-			"CB_DeathKnight_0267"
-		}
-	},
-	CB_DeathKnight_0268 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			42,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1749,
-			43,
-			51
-		},
-		alias = {}
-	},
-	CB_DeathKnight_0269 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			128,
-			94
-		},
-		trim = {
-			43,
-			35,
-			42,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			1806,
-			43,
-			50
-		},
-		alias = {}
-	}
+    -- CB_DeathKnight_0001 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1862,
+	-- 		43,
+	-- 		49
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0002 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1917,
+	-- 		43,
+	-- 		49
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0003 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		35,
+	-- 		47,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1486,
+	-- 		537,
+	-- 		41,
+	-- 		49
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0004"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0005 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		27,
+	-- 		47,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		526,
+	-- 		1697,
+	-- 		42,
+	-- 		57
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0006"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0007 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		33,
+	-- 		22,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		1478,
+	-- 		50,
+	-- 		62
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0008"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0009 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		30,
+	-- 		21,
+	-- 		46,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		403,
+	-- 		52,
+	-- 		63
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0010"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0011 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		36,
+	-- 		20,
+	-- 		46,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1659,
+	-- 		46,
+	-- 		64
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0012"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0013 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		20,
+	-- 		28,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		802,
+	-- 		63,
+	-- 		64
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0014"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0015 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		48,
+	-- 		25,
+	-- 		28,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1799,
+	-- 		335,
+	-- 		52,
+	-- 		59
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0016"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0017 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		48,
+	-- 		39,
+	-- 		28,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		529,
+	-- 		52,
+	-- 		45
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0018"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0019 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		48,
+	-- 		39,
+	-- 		31,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1011,
+	-- 		49,
+	-- 		45
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0020 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		48,
+	-- 		39,
+	-- 		31,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1062,
+	-- 		49,
+	-- 		45
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0021 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		47,
+	-- 		39,
+	-- 		33,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1285,
+	-- 		48,
+	-- 		45
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0022"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0023 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		46,
+	-- 		38,
+	-- 		33,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		959,
+	-- 		49,
+	-- 		46
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0024"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0025 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		44,
+	-- 		36,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		735,
+	-- 		452,
+	-- 		45,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0026"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0027 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		35,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		526,
+	-- 		1873,
+	-- 		42,
+	-- 		49
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0028"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0029 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		35,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		526,
+	-- 		1928,
+	-- 		42,
+	-- 		49
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0030 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		32,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		818,
+	-- 		41,
+	-- 		52
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0031"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0032 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		35,
+	-- 		44,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		526,
+	-- 		1983,
+	-- 		42,
+	-- 		49
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0033"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0034 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		37,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		718,
+	-- 		537,
+	-- 		42,
+	-- 		47
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0035"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0036 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		36,
+	-- 		44,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		622,
+	-- 		537,
+	-- 		42,
+	-- 		48
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0037 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		526,
+	-- 		1817,
+	-- 		42,
+	-- 		50
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0038"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0039 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		32,
+	-- 		44,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		777,
+	-- 		44,
+	-- 		52
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0040"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0041 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		33,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		720,
+	-- 		45,
+	-- 		51
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0042 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		36,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1982,
+	-- 		46,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0043"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0044 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		36,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		452,
+	-- 		46,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0045"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0046 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		38,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		837,
+	-- 		452,
+	-- 		44,
+	-- 		46
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0047 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		37,
+	-- 		44,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1386,
+	-- 		452,
+	-- 		43,
+	-- 		47
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0048"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0049 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		36,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1960,
+	-- 		40,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0050"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0051 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1905,
+	-- 		40,
+	-- 		49
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0052 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1625,
+	-- 		40,
+	-- 		50
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0053"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0054 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		35,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1533,
+	-- 		537,
+	-- 		41,
+	-- 		49
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0055"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0056 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		38,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1627,
+	-- 		537,
+	-- 		41,
+	-- 		46
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0057"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0058 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		39,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		667,
+	-- 		592,
+	-- 		40,
+	-- 		45
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0059 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		36,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		621,
+	-- 		592,
+	-- 		40,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0060"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0061 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1681,
+	-- 		40,
+	-- 		50
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0062"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0063 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1737,
+	-- 		40,
+	-- 		50
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0064 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		537,
+	-- 		42,
+	-- 		49
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0065"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0066 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		37,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1435,
+	-- 		452,
+	-- 		43,
+	-- 		47
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0067"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0068 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		39,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1533,
+	-- 		452,
+	-- 		43,
+	-- 		45
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0069 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		39,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		958,
+	-- 		537,
+	-- 		42,
+	-- 		45
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0070"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0071 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1793,
+	-- 		40,
+	-- 		50
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0072"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0073 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1849,
+	-- 		40,
+	-- 		50
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0074 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		33,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1511,
+	-- 		40,
+	-- 		51
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0075"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0076 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		876,
+	-- 		41,
+	-- 		50
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0077"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0078 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		36,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		670,
+	-- 		537,
+	-- 		42,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0079"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0080 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		38,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1674,
+	-- 		537,
+	-- 		41,
+	-- 		46
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0081 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		34,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		932,
+	-- 		41,
+	-- 		50
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0082"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0083 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		33,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1568,
+	-- 		40,
+	-- 		51
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0084"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0085 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		32,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		1453,
+	-- 		40,
+	-- 		52
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0086 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		33,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		526,
+	-- 		1760,
+	-- 		42,
+	-- 		51
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0087"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0088 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		36,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1337,
+	-- 		452,
+	-- 		43,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0089"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0090 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		37,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1484,
+	-- 		452,
+	-- 		43,
+	-- 		47
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0091 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		37,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		766,
+	-- 		537,
+	-- 		42,
+	-- 		47
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0092"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0093 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		30,
+	-- 		47,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		574,
+	-- 		758,
+	-- 		41,
+	-- 		54
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0094"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0095 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		32,
+	-- 		24,
+	-- 		43,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1622,
+	-- 		335,
+	-- 		53,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0096 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		26,
+	-- 		27,
+	-- 		41,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1343,
+	-- 		61,
+	-- 		57
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0097 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		26,
+	-- 		27,
+	-- 		41,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1406,
+	-- 		61,
+	-- 		57
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0098 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		23,
+	-- 		30,
+	-- 		38,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1514,
+	-- 		194,
+	-- 		67,
+	-- 		56
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0099"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0100 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		19,
+	-- 		35,
+	-- 		37,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1117,
+	-- 		125,
+	-- 		72,
+	-- 		49
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0101"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0102 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		21,
+	-- 		55,
+	-- 		37,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1502,
+	-- 		125,
+	-- 		70,
+	-- 		29
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0103 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		21,
+	-- 		55,
+	-- 		37,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1578,
+	-- 		125,
+	-- 		70,
+	-- 		29
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0104 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		21,
+	-- 		58,
+	-- 		37,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1654,
+	-- 		125,
+	-- 		70,
+	-- 		29
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0105",
+	-- 		"CB_DeathKnight_0106",
+	-- 		"CB_DeathKnight_0107",
+	-- 		"CB_DeathKnight_0108",
+	-- 		"CB_DeathKnight_0109",
+	-- 		"CB_DeathKnight_0110",
+	-- 		"CB_DeathKnight_0111",
+	-- 		"CB_DeathKnight_0112",
+	-- 		"CB_DeathKnight_0113",
+	-- 		"CB_DeathKnight_0114",
+	-- 		"CB_DeathKnight_0115",
+	-- 		"CB_DeathKnight_0116",
+	-- 		"CB_DeathKnight_0117"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0118 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		20,
+	-- 		58,
+	-- 		37,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1349,
+	-- 		125,
+	-- 		71,
+	-- 		29
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0119",
+	-- 		"CB_DeathKnight_0120"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0121 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		20,
+	-- 		57,
+	-- 		37,
+	-- 		6
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1272,
+	-- 		125,
+	-- 		71,
+	-- 		31
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0122",
+	-- 		"CB_DeathKnight_0123"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0124 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		19,
+	-- 		57,
+	-- 		37,
+	-- 		6
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1907,
+	-- 		73,
+	-- 		72,
+	-- 		31
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0125",
+	-- 		"CB_DeathKnight_0126"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0127 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		21,
+	-- 		51,
+	-- 		51,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		742,
+	-- 		267,
+	-- 		56,
+	-- 		35
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0128",
+	-- 		"CB_DeathKnight_0129"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0130 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		20,
+	-- 		44,
+	-- 		48,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1588,
+	-- 		60,
+	-- 		40
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0131",
+	-- 		"CB_DeathKnight_0132"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0133 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		25,
+	-- 		36,
+	-- 		45,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		429,
+	-- 		267,
+	-- 		58,
+	-- 		48
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0134"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0135 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		28,
+	-- 		29,
+	-- 		47,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1681,
+	-- 		335,
+	-- 		53,
+	-- 		55
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0136"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0137 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		30,
+	-- 		22,
+	-- 		49,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		623,
+	-- 		49,
+	-- 		62
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0138"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0139 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		19,
+	-- 		48,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		591,
+	-- 		45,
+	-- 		65
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0140"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0141 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		22,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1729,
+	-- 		46,
+	-- 		62
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0142"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0143 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		25,
+	-- 		41,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1797,
+	-- 		46,
+	-- 		59
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0144"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0145 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		42,
+	-- 		29,
+	-- 		40,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		1862,
+	-- 		46,
+	-- 		55
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0146 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		24,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1963,
+	-- 		267,
+	-- 		55,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0147 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1292,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0148 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1353,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0149 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		25,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1322,
+	-- 		335,
+	-- 		54,
+	-- 		59
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0150 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		25,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1426,
+	-- 		55,
+	-- 		59
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0151 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		24,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1096,
+	-- 		55,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0152 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		24,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1162,
+	-- 		55,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0153 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		24,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1228,
+	-- 		55,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0154 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		24,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1294,
+	-- 		55,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0155 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1414,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0156 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1475,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0157 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1536,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0158 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1597,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0159 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1658,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0160 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		35,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		422,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0161 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		22,
+	-- 		35,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1878,
+	-- 		54,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0162 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		22,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		804,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0163 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		24,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1360,
+	-- 		55,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0164 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		475,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0165 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		544,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0166 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		37,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1740,
+	-- 		54,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0167 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		37,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1809,
+	-- 		54,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0168 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		613,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0169 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		20,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		335,
+	-- 		55,
+	-- 		64
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0170 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		20,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		405,
+	-- 		55,
+	-- 		64
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0171 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		22,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		865,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0172 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		22,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		926,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0173 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		22,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		987,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0174 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		22,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1048,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0175 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		682,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0176 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		751,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0177 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		22,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1109,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0178 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		22,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1170,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0179 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		820,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0180 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		889,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0181 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		21,
+	-- 		36,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		958,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0182 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		482,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0183 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		542,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0184 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		602,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0185 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		662,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0186 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		722,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0187 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		22,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1946,
+	-- 		54,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0188 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		22,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		335,
+	-- 		54,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0189 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		24,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		962,
+	-- 		335,
+	-- 		54,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0190 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		24,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1022,
+	-- 		335,
+	-- 		54,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0191 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		24,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1082,
+	-- 		335,
+	-- 		54,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0192 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		24,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1142,
+	-- 		335,
+	-- 		54,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0193 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		782,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0194 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		842,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0195 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		24,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1202,
+	-- 		335,
+	-- 		54,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0196 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		24,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1262,
+	-- 		335,
+	-- 		54,
+	-- 		60
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0197 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		902,
+	-- 		335,
+	-- 		54,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0198 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		38,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1719,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0199 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		35,
+	-- 		23,
+	-- 		38,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1780,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0200 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		23,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1841,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0201"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0202 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		29,
+	-- 		22,
+	-- 		41,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1984,
+	-- 		58,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0203 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		29,
+	-- 		22,
+	-- 		41,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		267,
+	-- 		58,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0204 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		28,
+	-- 		22,
+	-- 		41,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1847,
+	-- 		59,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0205 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		28,
+	-- 		21,
+	-- 		41,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1778,
+	-- 		59,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0206 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		28,
+	-- 		22,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		365,
+	-- 		267,
+	-- 		58,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0207 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		28,
+	-- 		21,
+	-- 		42,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1915,
+	-- 		58,
+	-- 		63
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0208 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		24,
+	-- 		7,
+	-- 		6
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		135,
+	-- 		194,
+	-- 		80,
+	-- 		64
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0209 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		24,
+	-- 		7,
+	-- 		6
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		135,
+	-- 		264,
+	-- 		80,
+	-- 		64
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0210 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		24,
+	-- 		7,
+	-- 		6
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		135,
+	-- 		334,
+	-- 		80,
+	-- 		64
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0211 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		26,
+	-- 		15,
+	-- 		9
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		719,
+	-- 		125,
+	-- 		74,
+	-- 		59
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0212 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		26,
+	-- 		15,
+	-- 		9
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		799,
+	-- 		125,
+	-- 		74,
+	-- 		59
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0213 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		38,
+	-- 		29,
+	-- 		17,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		959,
+	-- 		125,
+	-- 		73,
+	-- 		55
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0214 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		38,
+	-- 		29,
+	-- 		17,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1038,
+	-- 		125,
+	-- 		73,
+	-- 		55
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0215 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		38,
+	-- 		8,
+	-- 		18,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		441,
+	-- 		72,
+	-- 		76
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0216 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		38,
+	-- 		7,
+	-- 		18,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		358,
+	-- 		72,
+	-- 		77
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0217 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		22,
+	-- 		23,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1805,
+	-- 		125,
+	-- 		68,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0218 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		23,
+	-- 		23,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1953,
+	-- 		125,
+	-- 		68,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0219 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		36,
+	-- 		23,
+	-- 		37,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1902,
+	-- 		267,
+	-- 		55,
+	-- 		61
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0220 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		36,
+	-- 		22,
+	-- 		37,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1231,
+	-- 		267,
+	-- 		55,
+	-- 		62
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0221 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		27,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1382,
+	-- 		335,
+	-- 		54,
+	-- 		57
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0222 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		27,
+	-- 		34,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		1442,
+	-- 		335,
+	-- 		54,
+	-- 		57
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0223 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		39,
+	-- 		24,
+	-- 		34,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		301,
+	-- 		1027,
+	-- 		55,
+	-- 		63
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0224"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0225 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		38,
+	-- 		21,
+	-- 		30,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1469,
+	-- 		60,
+	-- 		63
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0226"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0227 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		15,
+	-- 		30,
+	-- 		9
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1191,
+	-- 		61,
+	-- 		70
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0228 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		15,
+	-- 		30,
+	-- 		9
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1267,
+	-- 		61,
+	-- 		70
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0229 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		36,
+	-- 		20,
+	-- 		33,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1634,
+	-- 		59,
+	-- 		66
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0230 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		36,
+	-- 		20,
+	-- 		33,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1706,
+	-- 		59,
+	-- 		66
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0231 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		37,
+	-- 		13,
+	-- 		41,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		1399,
+	-- 		50,
+	-- 		73
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0232"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0233 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		12,
+	-- 		27,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		221,
+	-- 		1113,
+	-- 		61,
+	-- 		72
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0234"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0235 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		5,
+	-- 		39,
+	-- 		10
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		538,
+	-- 		49,
+	-- 		79
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0236"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0237 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		41,
+	-- 		6,
+	-- 		38,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		420,
+	-- 		452,
+	-- 		49,
+	-- 		80
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0238"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0239 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		5,
+	-- 		37,
+	-- 		9
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		762,
+	-- 		51,
+	-- 		80
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0240"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0241 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		2,
+	-- 		38,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		1220,
+	-- 		50,
+	-- 		84
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0242"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0243 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		3,
+	-- 		38,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		1310,
+	-- 		50,
+	-- 		83
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0244"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0245 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		40,
+	-- 		52,
+	-- 		38,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		362,
+	-- 		2013,
+	-- 		50,
+	-- 		34
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0246"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0247 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		42,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1578,
+	-- 		43,
+	-- 		51
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0248 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		42,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1635,
+	-- 		43,
+	-- 		51
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0249 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		42,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1401,
+	-- 		43,
+	-- 		53
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0250"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0251 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		32,
+	-- 		42,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1280,
+	-- 		43,
+	-- 		55
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0252"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0253 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		37,
+	-- 		41,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		835,
+	-- 		44,
+	-- 		50
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0254 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		37,
+	-- 		41,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		891,
+	-- 		44,
+	-- 		50
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0255 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		42,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1460,
+	-- 		43,
+	-- 		53
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0256 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		34,
+	-- 		42,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1519,
+	-- 		43,
+	-- 		53
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0257 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		36,
+	-- 		42,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1692,
+	-- 		43,
+	-- 		51
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0258",
+	-- 		"CB_DeathKnight_0259",
+	-- 		"CB_DeathKnight_0260",
+	-- 		"CB_DeathKnight_0261",
+	-- 		"CB_DeathKnight_0262",
+	-- 		"CB_DeathKnight_0263",
+	-- 		"CB_DeathKnight_0264",
+	-- 		"CB_DeathKnight_0265"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0266 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		33,
+	-- 		42,
+	-- 		7
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1341,
+	-- 		43,
+	-- 		54
+	-- 	},
+	-- 	alias = {
+	-- 		"CB_DeathKnight_0267"
+	-- 	}
+	-- },
+	-- CB_DeathKnight_0268 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		42,
+	-- 		8
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1749,
+	-- 		43,
+	-- 		51
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- CB_DeathKnight_0269 = {
+	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	size = {
+	-- 		128,
+	-- 		94
+	-- 	},
+	-- 	trim = {
+	-- 		43,
+	-- 		35,
+	-- 		42,
+	-- 		9
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		2048
+	-- 	},
+	-- 	f_quad = {
+	-- 		475,
+	-- 		1806,
+	-- 		43,
+	-- 		50
+	-- 	},
+	-- 	alias = {}
+	-- }
 }
