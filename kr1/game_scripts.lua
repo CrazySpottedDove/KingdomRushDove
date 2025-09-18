@@ -2691,10 +2691,9 @@ scripts.enemy_necromancer = {}
 
 function scripts.enemy_necromancer.update(this, store)
     local a = this.timed_actions.list[1]
-    local cg = store.count_groups[a.count_group_type]
 
     a.ts = store.tick_ts
-
+    local skeleton_ids = {}
     -- local function summon_count_exceeded()
     --     return cg[a.count_group_name] and cg[a.count_group_name] >= a.count_group_max
     -- end
@@ -2714,9 +2713,10 @@ function scripts.enemy_necromancer.update(this, store)
     while true do
         if this.health.dead then
             -- 找到所有由此necromancer召唤的骷髅，将它们的减伤效果取消（即damage_factor置为1）
-            for _, entity in pairs(store.enemies) do
-                if entity.health.damage_factor_source and entity.health.damage_factor_source == this.id then
-                    entity.health.damage_factor = entity.health.damage_factor + 0.3
+            for _, sid in pairs(skeleton_ids) do
+                local s = store.entities[sid]
+                if s and s.health and not s.health.dead then
+                    s.health.damage_factor = s.health.damage_factor + 0.3
                 end
             end
             SU.y_enemy_death(store, this)
@@ -2728,6 +2728,16 @@ function scripts.enemy_necromancer.update(this, store)
             SU.y_enemy_stun(store, this)
         else
             if ready_to_summon() then
+                for i = 1, #skeleton_ids, -1 do
+                    local s = store.entities[skeleton_ids[i]]
+                    if not s or s.health.dead then
+                        table.remove(skeleton_ids, i)
+                    end
+                end
+                if #skeleton_ids >= 30 then
+                    a.ts = a.ts + 1
+                    goto label_117_0
+                end
                 U.animation_start(this, a.animation, nil, store.tick_ts, false)
 
                 if SU.y_enemy_wait(store, this, a.spawn_time) then
@@ -2753,7 +2763,6 @@ function scripts.enemy_necromancer.update(this, store)
                     e.render.sprites[1].name = a.spawn_animation
                     e.enemy.gold = 0
                     e.health.damage_factor = e.health.damage_factor - 0.3
-                    e.health.damage_factor_source = this.id
                     e.motion.max_speed = (0.5 + math.random() * 0.2) * FPS
                     -- E:add_comps(e, "count_group")
 
@@ -2761,6 +2770,7 @@ function scripts.enemy_necromancer.update(this, store)
                     -- e.count_group.type = a.count_group_type
 
                     if P:is_node_valid(e.nav_path.pi, e.nav_path.ni) then
+                        skeleton_ids[#skeleton_ids + 1] = e.id
                         queue_insert(store, e)
                     end
 
