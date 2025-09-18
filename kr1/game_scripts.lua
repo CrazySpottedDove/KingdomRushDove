@@ -5948,45 +5948,6 @@ end
 
 scripts.mod_thorn = {}
 
-function scripts.mod_thorn.queue(this, store, insertion)
-    local target = store.entities[this.modifier.target_id]
-
-    if not target then
-        return
-    end
-
-    if insertion then
-        log.debug("%s (%s) queue/insertion", this.template_name, this.id)
-
-        if U.flags_pass(target.vis, this.modifier) then
-            this._target_prev_bans = target.vis.bans
-            target.vis.bans = U.flag_set(target.vis.bans, F_THORN)
-        end
-    else
-        log.debug("%s (%s) queue/removal", this.template_name, this.id)
-
-        if this._target_prev_bans then
-            target.vis.bans = this._target_prev_bans
-        end
-    end
-end
-
-function scripts.mod_thorn.dequeue(this, store, insertion)
-    local target = store.entities[this.modifier.target_id]
-
-    if not target then
-        return
-    end
-
-    if insertion then
-        log.debug("%s (%s) dequeue/insertion", this.template_name, this.id)
-
-        if this._target_prev_bans then
-            target.vis.bans = this._target_prev_bans
-        end
-    end
-end
-
 function scripts.mod_thorn.insert(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
@@ -5994,8 +5955,7 @@ function scripts.mod_thorn.insert(this, store)
 
     s.ts = store.tick_ts
 
-    if target and target.health and not target.health.dead and this._target_prev_bans ~= nil and
-        (not target.enemy.counts.mod_thorn or target.enemy.counts.mod_thorn < this.max_times_applied) then
+    if target and target.health and not target.health.dead then
         SU.stun_inc(target)
 
         s.prefix = s.size_prefixes[target.unit.size]

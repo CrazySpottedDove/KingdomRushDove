@@ -987,22 +987,7 @@ tt.render.sprites[2].z = Z_DECALS
 tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
 tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 
-tt = RT("aura_ranger_thorn", "aura")
-tt.aura.mod = "mod_thorn"
-tt.aura.duration = -1
-tt.aura.radius = 200
-tt.aura.vis_flags = bor(F_THORN, F_MOD)
-tt.aura.vis_bans = bor(F_FLYING, F_BOSS)
-tt.aura.cooldown = 8 + fts(34)
--- tt.aura.max_times = 3
-tt.aura.max_count = 2
-tt.aura.max_count_inc = 2
-tt.aura.min_count = 2
-tt.aura.owner_animation = "shoot"
-tt.aura.owner_sid = 5
-tt.aura.hit_time = fts(17)
-tt.aura.hit_sound = "ThornSound"
-tt.main_script.update = scripts.aura_ranger_thorn.update
+
 
 tt = RT("aura_teleport_arcane", "aura")
 AC(tt, "render")

@@ -8511,160 +8511,352 @@ return {
 		},
 		alias = {}
 	},
-    CB_DeathKnight_aura_0001 = {
+CB_DeathKnight_aura_0001 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			38,
-			12,
-			36,
-			13
+			52,
+			18,
+			50,
+			19
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			1075,
-			73,
-			98,
-			39
+			6,
+			1338,
+			138,
+			53
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0002 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			38,
-			12,
-			36,
-			13
+			52,
+			18,
+			50,
+			19
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			1179,
-			73,
-			98,
-			39
+			6,
+			1397,
+			138,
+			53
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0003 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			38,
-			12,
-			36,
-			13
+			52,
+			18,
+			50,
+			19
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			1283,
-			73,
-			98,
-			39
+			6,
+			1456,
+			138,
+			53
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0004 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			38,
-			12,
-			36,
-			13
+			52,
+			18,
+			50,
+			19
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			1387,
-			73,
-			98,
-			39
+			6,
+			1515,
+			138,
+			53
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0005 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			38,
-			12,
-			36,
-			13
+			52,
+			18,
+			50,
+			19
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			1491,
-			73,
-			98,
-			39
+			6,
+			1574,
+			138,
+			53
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0006 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			38,
-			12,
-			36,
-			13
+			52,
+			18,
+			50,
+			19
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			1595,
-			73,
-			98,
-			39
+			6,
+			1633,
+			138,
+			53
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0007 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
+		},
+		trim = {
+			51,
+			18,
+			50,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			6,
+			1279,
+			139,
+			53
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0008 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			49,
+			18,
+			49,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			6,
+			998,
+			142,
+			53
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0009 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			47,
+			18,
+			47,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			6,
+			938,
+			146,
+			54
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0010 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			46,
+			18,
+			45,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1802,
+			97,
+			149,
+			54
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0011 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			44,
+			17,
+			43,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			97,
+			153,
+			56
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0012 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			41,
+			17,
+			41,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1479,
+			97,
+			158,
+			57
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0013 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			39,
+			16,
+			39,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1311,
+			97,
+			162,
+			59
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0014 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
 		},
 		trim = {
 			37,
-			12,
-			37,
+			15,
+			36,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1138,
+			97,
+			167,
+			60
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0015 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			35,
+			14,
+			34,
 			14
 		},
 		a_size = {
@@ -8672,23 +8864,23 @@ return {
 			2048
 		},
 		f_quad = {
-			1803,
-			73,
-			98,
-			38
+			961,
+			97,
+			171,
+			62
 		},
 		alias = {}
 	},
-	CB_DeathKnight_aura_0008 = {
+	CB_DeathKnight_aura_0016 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			36,
-			12,
-			35,
+			32,
+			14,
+			32,
 			13
 		},
 		a_size = {
@@ -8696,119 +8888,47 @@ return {
 			2048
 		},
 		f_quad = {
-			968,
-			73,
-			101,
-			39
+			779,
+			97,
+			176,
+			63
 		},
 		alias = {}
 	},
-	CB_DeathKnight_aura_0009 = {
+	CB_DeathKnight_aura_0017 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
-		},
-		trim = {
-			34,
-			13,
-			34,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			858,
-			73,
-			104,
-			38
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0010 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			33,
-			12,
-			32,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			745,
-			73,
-			107,
-			40
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0011 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			32,
-			12,
-			31,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			630,
-			73,
-			109,
-			40
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0012 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
 			30,
-			11,
+			13,
 			29,
-			11
+			12
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			511,
-			73,
-			113,
-			42
+			592,
+			97,
+			181,
+			65
 		},
 		alias = {}
 	},
-	CB_DeathKnight_aura_0013 = {
+	CB_DeathKnight_aura_0018 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			29,
-			11,
 			28,
+			12,
+			27,
 			11
 		},
 		a_size = {
@@ -8816,23 +8936,23 @@ return {
 			2048
 		},
 		f_quad = {
-			390,
-			73,
-			115,
-			42
+			401,
+			97,
+			185,
+			67
 		},
 		alias = {}
 	},
-	CB_DeathKnight_aura_0014 = {
+	CB_DeathKnight_aura_0019 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			27,
-			10,
 			26,
+			11,
+			25,
 			10
 		},
 		a_size = {
@@ -8840,143 +8960,95 @@ return {
 			2048
 		},
 		f_quad = {
-			265,
-			73,
-			119,
-			44
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0015 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			26,
-			10,
-			24,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			137,
-			73,
-			122,
-			45
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0016 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			24,
-			9,
-			23,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			6,
-			73,
-			125,
-			46
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0017 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			22,
-			9,
-			21,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1865,
-			6,
-			129,
-			47
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0018 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			21,
-			8,
-			20,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1728,
-			6,
-			131,
-			48
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0019 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			19,
-			7,
-			18,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1587,
-			6,
-			135,
-			50
+			206,
+			97,
+			189,
+			69
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0020 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
+		},
+		trim = {
+			23,
+			10,
+			23,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			6,
+			97,
+			194,
+			70
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0021 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			21,
+			10,
+			20,
+			9
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1801,
+			6,
+			199,
+			71
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0022 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			19,
+			9,
+			18,
+			8
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1592,
+			6,
+			203,
+			73
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0023 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
 		},
 		trim = {
 			17,
-			7,
-			17,
+			8,
+			16,
 			7
 		},
 		a_size = {
@@ -8984,23 +9056,23 @@ return {
 			2048
 		},
 		f_quad = {
-			1443,
+			1379,
 			6,
-			138,
-			50
+			207,
+			75
 		},
 		alias = {}
 	},
-	CB_DeathKnight_aura_0021 = {
+	CB_DeathKnight_aura_0024 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			16,
-			6,
 			15,
+			7,
+			14,
 			6
 		},
 		a_size = {
@@ -9008,95 +9080,71 @@ return {
 			2048
 		},
 		f_quad = {
-			1296,
+			1162,
 			6,
-			141,
-			52
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0022 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			14,
-			6,
-			13,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1145,
-			6,
-			145,
-			53
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0023 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			13,
-			5,
-			12,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			992,
-			6,
-			147,
-			54
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0024 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			11,
-			5,
-			10,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			835,
-			6,
-			151,
-			55
+			211,
+			77
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0025 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
+		},
+		trim = {
+			12,
+			6,
+			11,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			939,
+			6,
+			217,
+			78
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0026 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
 		},
 		trim = {
 			10,
-			4,
+			5,
 			9,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			712,
+			6,
+			221,
+			80
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0027 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			8,
+			5,
+			7,
 			4
 		},
 		a_size = {
@@ -9104,71 +9152,47 @@ return {
 			2048
 		},
 		f_quad = {
-			676,
+			481,
 			6,
-			153,
-			56
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0026 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			8,
-			3,
-			7,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			6,
-			157,
-			58
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0027 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			6,
-			3,
-			6,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			347,
-			6,
-			160,
-			58
+			225,
+			81
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0028 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			5,
-			2,
+			6,
 			4,
+			5,
+			3
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			246,
+			6,
+			229,
+			83
+		},
+		alias = {}
+	},
+	CB_DeathKnight_aura_0029 = {
+		a_name = "go_enemies_blackburn-1.png",
+		size = {
+			240,
+			90
+		},
+		trim = {
+			4,
+			3,
+			2,
 			2
 		},
 		a_size = {
@@ -9176,58 +9200,34 @@ return {
 			2048
 		},
 		f_quad = {
-			178,
-			6,
-			163,
-			60
-		},
-		alias = {}
-	},
-	CB_DeathKnight_aura_0029 = {
-		a_name = "go_enemies_blackburn-1.png",
-		size = {
-			172,
-			64
-		},
-		trim = {
-			4,
-			2,
-			2,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
 			6,
 			6,
-			166,
-			61
+			234,
+			85
 		},
 		alias = {}
 	},
 	CB_DeathKnight_aura_0030 = {
 		a_name = "go_enemies_blackburn-1.png",
 		size = {
-			172,
-			64
+			240,
+			90
 		},
 		trim = {
-			38,
-			12,
-			36,
-			13
+			52,
+			18,
+			50,
+			19
 		},
 		a_size = {
 			2048,
 			2048
 		},
 		f_quad = {
-			1699,
-			73,
-			98,
-			39
+			6,
+			1692,
+			138,
+			53
 		},
 		alias = {}
 	},
