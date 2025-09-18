@@ -1087,7 +1087,7 @@ local function barrack_towers()
     tt.powers.perfect_parry.price_inc = 200
     tt.powers.perfect_parry.enc_icon = 6
     tt.powers.blade_dance = E:clone_c("power")
-    tt.powers.blade_dance.price_base = 250
+    tt.powers.blade_dance.price_base = 225
     tt.powers.blade_dance.price_inc = 250
     tt.powers.blade_dance.enc_icon = 5
     tt.powers.swirling = E:clone_c("power")
@@ -1117,7 +1117,7 @@ local function barrack_towers()
     tt.powers.circle.price_inc = 190
     tt.powers.circle.enc_icon = 9
     tt.powers.eerie = E:clone_c("power")
-    tt.powers.eerie.price_base = 250
+    tt.powers.eerie.price_base = 225
     tt.powers.eerie.price_inc = 200
     tt.powers.eerie.max_level = 2
     tt.powers.eerie.enc_icon = 10
