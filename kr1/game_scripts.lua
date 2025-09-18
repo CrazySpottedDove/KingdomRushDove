@@ -2715,7 +2715,7 @@ function scripts.enemy_necromancer.update(this, store)
             -- 找到所有由此necromancer召唤的骷髅，将它们的减伤效果取消（即damage_factor置为1）
             for _, sid in pairs(skeleton_ids) do
                 local s = store.entities[sid]
-                if s and s.health and not s.health.dead then
+                if s and not s.health.dead then
                     s.health.damage_factor = s.health.damage_factor + 0.3
                 end
             end

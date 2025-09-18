@@ -570,8 +570,8 @@ local function archer_towers()
     tt.powers.barrel.price_inc = 125
     tt.powers.barrel.attack_idx = 2
     tt.powers.extra_damage = E:clone_c("power")
-    tt.powers.extra_damage.price_base = 175
-    tt.powers.extra_damage.price_inc = 175
+    tt.powers.extra_damage.price_base = 185
+    tt.powers.extra_damage.price_inc = 185
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_archer_%04i"
     tt.render.sprites[1].offset = vec_2(0, 9)
