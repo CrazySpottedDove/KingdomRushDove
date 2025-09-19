@@ -3879,6 +3879,7 @@ scripts.tower_entwood = {
                 b.bullet.level = pow_f.level
                 b.bullet.from = V.vclone(b.pos)
                 b.bullet.to = V.vclone(pred_pos)
+                b.bullet.target_id = target.id
                 b.bullet.source_id = this.id
                 b.bullet.damage_factor = this.tower.damage_factor
 

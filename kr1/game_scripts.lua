@@ -4461,7 +4461,9 @@ function scripts.eb_blackburn.update(this, store)
 
     while true do
         if this.health.dead then
-            LU.kill_all_enemies(store, true)
+            if store.level_idx == 26 then
+                LU.kill_all_enemies(store, true)
+            end
             S:queue(this.sound_events.death)
             U.y_animation_play(this, "death", nil, store.tick_ts)
 
@@ -4477,7 +4479,10 @@ function scripts.eb_blackburn.update(this, store)
 
             U.animation_start(this, "death_end", nil, store.tick_ts, true)
             signal.emit("boss-killed", this)
-            LU.kill_all_enemies(store, true)
+
+            if store.level_idx == 26 then
+                LU.kill_all_enemies(store, true)
+            end
 
             return
         end

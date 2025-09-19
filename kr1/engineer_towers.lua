@@ -900,7 +900,7 @@ local function engineer_towers()
     E:add_comps(tt, "attacks", "powers")
     tt.tower.type = "entwood"
     tt.tower.level = 1
-    tt.tower.price = 390
+    tt.tower.price = 400
     tt.tower.range_offset = vec_2(0, 10)
     tt.tower.size = TOWER_SIZE_LARGE
     tt.info.enc_icon = 14
@@ -946,8 +946,8 @@ local function engineer_towers()
     tt.powers.clobber.damage_values = {75, 100, 125}
     tt.powers.clobber.enc_icon = 14
     tt.powers.fiery_nuts = E:clone_c("power")
-    tt.powers.fiery_nuts.price_base = 300
-    tt.powers.fiery_nuts.price_inc = 225
+    tt.powers.fiery_nuts.price_base = 290
+    tt.powers.fiery_nuts.price_inc = 235
     tt.powers.fiery_nuts.attack_idx = 2
     tt.powers.fiery_nuts.enc_icon = 15
     tt.render.sprites[1].animated = false
@@ -1017,18 +1017,20 @@ local function engineer_towers()
     tt.bullet.track_damage = true
 
     tt = E:register_t("rock_entwood", "rock_1")
-    tt.bullet.damage_max = 106
-    tt.bullet.damage_min = 62
+    tt.bullet.damage_max = 74
+    tt.bullet.damage_min = 43
     tt.bullet.damage_radius = 55
     tt.bullet.pop = {"pop_entwood"}
     tt.render.sprites[1].name = "artillery_tree_proys_0001"
     tt.sound_events.insert = "TowerEntwoodCocoThrow"
     tt.sound_events.hit = "TowerEntwoodCocoExplosion"
+    tt.main_script.update = scripts.bomb_bouncing.update
+    tt.bounce_count = 1
 
     tt = E:register_t("rock_firey_nut", "rock_entwood")
-    tt.bullet.damage_max = 106
-    tt.bullet.damage_max_inc = 72
-    tt.bullet.damage_min = 106
+    tt.bullet.damage_max = 74
+    tt.bullet.damage_max_inc = 50
+    tt.bullet.damage_min = 74
     tt.bullet.damage_min_inc = tt.bullet.damage_max_inc
     tt.bullet.damage_radius = 65
     tt.bullet.hit_payload = "aura_fiery_nut"
