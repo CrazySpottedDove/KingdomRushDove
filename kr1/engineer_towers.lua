@@ -1017,8 +1017,8 @@ local function engineer_towers()
     tt.bullet.track_damage = true
 
     tt = E:register_t("rock_entwood", "rock_1")
-    tt.bullet.damage_max = 74
-    tt.bullet.damage_min = 43
+    tt.bullet.damage_max = 77
+    tt.bullet.damage_min = 45
     tt.bullet.damage_radius = 55
     tt.bullet.pop = {"pop_entwood"}
     tt.render.sprites[1].name = "artillery_tree_proys_0001"
@@ -1028,9 +1028,9 @@ local function engineer_towers()
     tt.bounce_count = 1
 
     tt = E:register_t("rock_firey_nut", "rock_entwood")
-    tt.bullet.damage_max = 74
-    tt.bullet.damage_max_inc = 50
-    tt.bullet.damage_min = 74
+    tt.bullet.damage_max = 77
+    tt.bullet.damage_max_inc = 52
+    tt.bullet.damage_min = 77
     tt.bullet.damage_min_inc = tt.bullet.damage_max_inc
     tt.bullet.damage_radius = 65
     tt.bullet.hit_payload = "aura_fiery_nut"
