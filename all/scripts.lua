@@ -8618,7 +8618,7 @@ function scripts.bomb_bouncing.update(this, store, script)
 
     do_hit()
 
-    local target = U.find_first_enemy(store, this.pos, 0, dradius * 2.5, bor(F_AREA, F_RANGED), F_NONE)
+    local target = U.find_first_enemy(store, this.pos, 0, dradius * 2, bor(F_AREA, F_RANGED), F_NONE)
     while target and not target.health.dead and this.bounce_count > 0 do
         b.flight_time = b.flight_time
         b.damage_factor = b.damage_factor * 0.5
