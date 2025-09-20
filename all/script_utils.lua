@@ -3594,11 +3594,14 @@ end
 
 local function change_fps(entity, factor)
     for _, s in pairs(entity.render.sprites) do
-        if not s.fps then
-            s._origin_fps = FPS
-        else
-            s._origin_fps = s.fps
+        if not s._origin_fps then
+            if not s.fps then
+                s._origin_fps = FPS
+            else
+                s._origin_fps = s.fps
+            end
         end
+
         factor = math.max(factor, 0.8)
         s.fps = s._origin_fps * factor
     end
