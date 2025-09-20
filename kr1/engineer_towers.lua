@@ -255,7 +255,7 @@ local function engineer_towers()
     tt = RT("aura_tesla_overcharge", "aura")
     tt.aura.duration = fts(22)
     tt.aura.mod = "mod_tesla_overcharge"
-    tt.aura.radius = 165
+    tt.aura.radius = 170
     tt.aura.damage_min = 0
     tt.aura.damage_max = 10
     tt.aura.damage_inc = 10
