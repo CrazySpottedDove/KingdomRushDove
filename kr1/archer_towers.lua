@@ -223,8 +223,8 @@ local function archer_towers()
     E:add_comps(mod_crossbow_eagle, "render", "tween")
     mod_crossbow_eagle.range_factor = 1.03
     mod_crossbow_eagle.range_factor_inc = 0.03
-    mod_crossbow_eagle.cooldown_factor = 0.96
-    mod_crossbow_eagle.cooldown_factor_inc = -0.02
+    mod_crossbow_eagle.cooldown_factor = 0.965
+    mod_crossbow_eagle.cooldown_factor_inc = -0.025
     mod_crossbow_eagle.main_script.insert = scripts.mod_crossbow_eagle.insert
     mod_crossbow_eagle.main_script.remove = scripts.mod_crossbow_eagle.remove
     mod_crossbow_eagle.tween.remove = false
