@@ -3602,7 +3602,7 @@ local function change_fps(entity, factor)
             end
         end
 
-        factor = math.max(factor, 0.8)
+        -- factor = math.max(factor, 0.8)
         s.fps = s._origin_fps * factor
     end
 end
