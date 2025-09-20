@@ -3344,72 +3344,125 @@ scripts.tower_bfg = {
                     end
                 end
                 SU.tower_update_silenced_powers(store, this)
-                for i, aa in pairs(attacks) do
-                    pow = pows[i]
 
-                    if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or
-                        (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts - last_ts >
-                            a.min_cooldown * this.tower.cooldown_factor) then
-                        local trigger, enemies, trigger_pos =
-                            U.find_foremost_enemy(store, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags,
-                                aa.vis_bans)
+                if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
+                    local trigger = U.find_first_enemy(store, tpos(this), 0, am.range, am.vis_flags, am.vis_bans)
+                    if not trigger then
+                        U.y_wait(store, this.tower.guard_time)
+                        -- block empty
+                    else
+                        am.ts = store.tick_ts
+                        local trigger_pos = trigger.pos
+                        U.animation_start(this, am.animation, nil, store.tick_ts, false, tower_sid)
+                        U.y_wait(store, am.shoot_time)
 
-                        if aa == ac or aa == ab then
-                            if trigger then
-                                am.cooldown = am.cooldown_mixed
-                            else
-                                am.cooldown = am.cooldown_flying
-                            end
-                        end
+                        local enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, am.range,
+                            am.node_prediction, am.vis_flags, am.vis_bans)
+                        local dest = enemy and pred_pos or trigger_pos
 
-                        if not trigger then
-                            U.y_wait(store, this.tower.guard_time)
-                            -- block empty
-                        else
-                            aa.ts = store.tick_ts
+                        local b = E:create_entity(am.bullet)
 
-                            if pow ~= pow_m then
-                                last_ts = aa.ts
-                            end
+                        b.pos.x, b.pos.y = this.pos.x + am.bullet_start_offset.x, this.pos.y + am.bullet_start_offset.y
+                        b.bullet.damage_factor = this.tower.damage_factor
+                        b.bullet.from = V.vclone(b.pos)
+                        b.bullet.to = V.v(b.pos.x + am.launch_vector.x, b.pos.y + am.launch_vector.y)
+                        b.bullet.damage_max = b.bullet.damage_max + pow_m.damage_inc * pow_m.level
+                        b.bullet.damage_min = b.bullet.damage_min + pow_m.damage_inc * pow_m.level
 
-                            U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
-                            U.y_wait(store, aa.shoot_time)
+                        AC:inc_check("ROCKETEER")
 
-                            local enemy, __, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, aa.range,
-                                aa.node_prediction, aa.vis_flags, aa.vis_bans)
-                            local dest = enemy and pred_pos or trigger_pos
+                        b.bullet.target_id = enemy and enemy.id or trigger.id
+                        b.bullet.source_id = this.id
 
-                            if V.dist(tpos(this).x, tpos(this).y, dest.x, dest.y) <= aa.range then
-                                local b = E:create_entity(aa.bullet)
+                        queue_insert(store, b)
 
-                                b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x,
-                                    this.pos.y + aa.bullet_start_offset.y
-                                b.bullet.damage_factor = this.tower.damage_factor
-                                b.bullet.from = V.vclone(b.pos)
+                        U.y_animation_wait(this, tower_sid)
+                    end
+                end
 
-                                if aa == am then
-                                    b.bullet.to = V.v(b.pos.x + am.launch_vector.x, b.pos.y + am.launch_vector.y)
-                                    b.bullet.damage_max = b.bullet.damage_max + pow_m.damage_inc * pow_m.level
-                                    b.bullet.damage_min = b.bullet.damage_min + pow_m.damage_inc * pow_m.level
+                aa = ac
+                if ready_to_use_power(pow_c, aa, store, this.tower.cooldown_factor) then
+                    local trigger = U.find_first_enemy(store, tpos(this), 0, a.range, aa.vis_flags, aa.vis_bans)
 
-                                    AC:inc_check("ROCKETEER")
-                                else
-                                    b.bullet.to = dest
+                    if trigger then
+                        am.cooldown = am.cooldown_mixed
+                    else
+                        am.cooldown = am.cooldown_flying
+                    end
 
-                                    if aa == ac then
-                                        b.bullet.fragment_count =
-                                            pow_c.fragment_count_base + pow_c.fragment_count_inc * pow_c.level
-                                    end
-                                end
+                    if not trigger then
+                        U.y_wait(store, this.tower.guard_time)
+                        -- block empty
+                    else
+                        aa.ts = store.tick_ts
+                        local trigger_pos = trigger.pos
+                        last_ts = aa.ts
 
-                                b.bullet.target_id = enemy and enemy.id or trigger.id
-                                b.bullet.source_id = this.id
+                        U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
+                        U.y_wait(store, aa.shoot_time)
 
-                                queue_insert(store, b)
-                            end
+                        local enemy, __, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range,
+                            aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                        local dest = enemy and pred_pos or trigger_pos
 
-                            U.y_animation_wait(this, tower_sid)
-                        end
+                        local b = E:create_entity(aa.bullet)
+
+                        b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
+                        b.bullet.damage_factor = this.tower.damage_factor
+                        b.bullet.from = V.vclone(b.pos)
+
+                        b.bullet.to = dest
+
+                        b.bullet.fragment_count = pow_c.fragment_count_base + pow_c.fragment_count_inc * pow_c.level
+
+                        b.bullet.target_id = enemy and enemy.id or trigger.id
+                        b.bullet.source_id = this.id
+
+                        queue_insert(store, b)
+
+                        U.y_animation_wait(this, tower_sid)
+                    end
+                end
+                aa = ab
+                if ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown *
+                    this.tower.cooldown_factor then
+                    local trigger = U.find_first_enemy(store, tpos(this), 0, a.range, aa.vis_flags, aa.vis_bans)
+
+                    if trigger then
+                        am.cooldown = am.cooldown_mixed
+                    else
+                        am.cooldown = am.cooldown_flying
+                    end
+
+                    if not trigger then
+                        U.y_wait(store, this.tower.guard_time)
+                        -- block empty
+                    else
+                        aa.ts = store.tick_ts
+                        local trigger_pos = trigger.pos
+                        last_ts = aa.ts
+
+                        U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
+                        U.y_wait(store, aa.shoot_time)
+
+                        local enemy, __, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range,
+                            aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                        local dest = enemy and pred_pos or trigger_pos
+
+                        local b = E:create_entity(aa.bullet)
+
+                        b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
+                        b.bullet.damage_factor = this.tower.damage_factor
+                        b.bullet.from = V.vclone(b.pos)
+
+                        b.bullet.to = dest
+
+                        b.bullet.target_id = enemy and enemy.id or trigger.id
+                        b.bullet.source_id = this.id
+
+                        queue_insert(store, b)
+
+                        U.y_animation_wait(this, tower_sid)
                     end
                 end
 
@@ -3468,7 +3521,7 @@ scripts.lava_dwaarp = {
                 if not targets then
                     -- last_hit_ts = last_hit_ts + fts(1)
                 else
-                    for i=1,#targets do
+                    for i = 1, #targets do
                         local target = targets[i]
                         local new_mod = E:create_entity(this.aura.mod)
                         new_mod.modifier.level = this.aura.level
@@ -3921,7 +3974,9 @@ scripts.tower_entwood = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if not loaded then
-                    if ready_to_use_power(pow_c, ca, store, this.tower.cooldown_factor) and U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, ca.min_count) then
+                    if ready_to_use_power(pow_c, ca, store, this.tower.cooldown_factor) and
+                        U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil,
+                            ca.min_count) then
                         loaded = "clobber"
                     elseif pow_f.level > 0 and not fa.silence_ts and store.tick_ts - fa.ts > aa.cooldown *
                         fa.cooldown_factor * this.tower.cooldown_factor - a.load_time then
@@ -3946,7 +4001,8 @@ scripts.tower_entwood = {
 
                     SU.delay_attack(store, ca, 1)
 
-                    if U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil, ca.min_count) then
+                    if U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil,
+                        ca.min_count) then
                         ca.ts = store.tick_ts
                         blink_ts = store.tick_ts
 

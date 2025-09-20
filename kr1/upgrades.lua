@@ -618,10 +618,10 @@ function upgrades:patch_templates(max_level)
             end
         end
 
-        T("tower_bfg").attacks.list[1].range = math.ceil(T("tower_bfg").attacks.list[1].range * u.range_factor)
+        -- T("tower_bfg").attacks.list[1].range = math.ceil(T("tower_bfg").attacks.list[1].range * u.range_factor)
         T("tower_bfg").attacks.list[2].range_base =
             math.ceil(T("tower_bfg").attacks.list[2].range_base * u.range_factor)
-        T("tower_bfg").attacks.list[3].range = math.ceil(T("tower_bfg").attacks.list[3].range * u.range_factor)
+        -- T("tower_bfg").attacks.list[3].range = math.ceil(T("tower_bfg").attacks.list[3].range * u.range_factor)
 
         T("tower_tesla").attacks.list[1].range = math.ceil(T("tower_tesla").attacks.list[1].range * u.range_factor)
         T("tower_tricannon_lvl4").attacks.list[1].range = math.ceil(
