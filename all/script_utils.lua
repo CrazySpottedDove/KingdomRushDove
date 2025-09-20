@@ -3599,16 +3599,23 @@ local fps_based_keys = {
     ["dodge_time"] = true,
 }
 
-local function scale_fps_based_keys(table, factor)
-    for k, v in pairs(table) do
+local function scale_fps_based_keys(tbl, factor, visited)
+    visited = visited or {}
+    if visited[tbl] then
+        return
+    end
+    visited[tbl] = true
+
+    for k, v in pairs(tbl) do
+        -- 跳过 _origin_xxx 字段，避免递归
         if type(v) == "table" then
-            scale_fps_based_keys(v, factor)
+            scale_fps_based_keys(v, factor, visited)
         elseif fps_based_keys[k] and type(v) == "number" then
             local _origin_key = "_origin_" .. k
-            if not table[_origin_key] then
-                table[_origin_key] = v
+            if not tbl[_origin_key] then
+                tbl[_origin_key] = v
             end
-            table[k] = table[_origin_key] * factor
+            tbl[k] = tbl[_origin_key] * factor
         end
     end
 end
