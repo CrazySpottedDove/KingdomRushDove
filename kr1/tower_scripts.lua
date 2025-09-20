@@ -3921,7 +3921,7 @@ scripts.tower_entwood = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if not loaded then
-                    if ready_to_use_power(pow_c, ca, store, this.tower.cooldown_factor) and U.has_enemy_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans) then
+                    if ready_to_use_power(pow_c, ca, store, this.tower.cooldown_factor) and U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, ca.min_count) then
                         loaded = "clobber"
                     elseif pow_f.level > 0 and not fa.silence_ts and store.tick_ts - fa.ts > aa.cooldown *
                         fa.cooldown_factor * this.tower.cooldown_factor - a.load_time then
