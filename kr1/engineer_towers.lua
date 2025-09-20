@@ -773,7 +773,7 @@ local function engineer_towers()
     tt.attacks.list[1].sound = "TowerDruidHengeRockThrow"
     tt.attacks.list[1].node_prediction = fts(35)
     tt.attacks.list[1].multi_rate = 0.2
-    tt.barrack.rally_range = 145
+    tt.barrack.rally_range = 150
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_druid_bear"
     tt.barrack.max_soldiers = 1
