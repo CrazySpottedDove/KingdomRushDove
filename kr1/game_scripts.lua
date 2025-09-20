@@ -9528,11 +9528,13 @@ function scripts.aura_damage_sprint.update(this, store, script)
 
         if this.last_sprint_hp ~= target.health.hp then
             local hp, hp_max = target.health.hp, target.health.hp_max
-            local sprint_factor = 1 + (hp_max - hp) / hp_max * target.damage_sprint_factor
+            if not this.enemy or this.enemy.can_do_magic then
+                local sprint_factor = 1 + (hp_max - hp) / hp_max * target.damage_sprint_factor
+                U.speed_mul(target, sprint_factor / this.last_sprint_factor)
+                this.last_sprint_factor = sprint_factor
+            end
 
-            U.speed_mul(target, sprint_factor / this.last_sprint_factor)
-            this.last_sprint_hp = target.health.hp
-            this.last_sprint_factor = sprint_factor
+            this.last_sprint_hp = hp
         end
 
         coroutine.yield()
