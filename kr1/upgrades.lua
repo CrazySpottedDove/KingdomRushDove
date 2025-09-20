@@ -154,7 +154,8 @@ upgrades.list = {
         icon = 33,
         price = 4,
         level = 6,
-        damage_factors = {1.1, 1.12, 1.14, 1.16, 1.18, 1.2, 1.22, 1.24, 1.26, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34, 1.35}
+        damage_factors = {1.1, 1.12, 1.14, 1.16, 1.18, 1.2, 1.22, 1.24, 1.26, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34,
+                          1.35}
     },
     engineer_concentrated_fire = {
         damage_factor = 1.25,
@@ -327,7 +328,8 @@ function upgrades:arrows()
     return {"arrow_1", "arrow_2", "arrow_3", "arrow_ranger", "shotgun_musketeer", "shotgun_musketeer_sniper",
             "arrow_crossbow", "axe_totem", "dwarf_shotgun", "pirate_watchtower_shotgun", "arrow_arcane",
             "arrow_arcane_slumber", "arrow_silver", "arrow_silver_long", "arrow_silver_sentence",
-            "arrow_silver_sentence_long", "arrow_silver_mark", "arrow_silver_mark_long", "arrow_hero_elves_archer","arrow_hero_alleria", "multishot_crossbow", "knife_catha"}
+            "arrow_silver_sentence_long", "arrow_silver_mark", "arrow_silver_mark_long", "arrow_hero_elves_archer",
+            "arrow_hero_alleria", "multishot_crossbow", "knife_catha"}
 end
 
 function upgrades:barrack_soldiers()
@@ -352,7 +354,8 @@ end
 
 function upgrades:mage_towers()
     return {"tower_mage_1", "tower_mage_2", "tower_mage_3", "tower_arcane_wizard", "tower_sorcerer", "tower_sunray",
-            "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon", "tower_pixie"}
+            "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon",
+            "tower_pixie"}
 end
 
 function upgrades:mage_tower_bolts()
@@ -363,23 +366,24 @@ end
 function upgrades:bolts()
     local other_bolts = {"ray_arcane", "bolt_elora_freeze", "bolt_elora_slow", "bolt_magnus", "bolt_magnus_illusion",
                          "bolt_priest", "bolt_voodoo_witch", "bolt_veznan", "ray_arivan_simple", "bullet_rag",
-                         "ray_wizard", "ray_wizard_chain", "bolt_hero_space_elf_basic_attack","bullet_hero_witch_basic_1","bullet_hero_witch_basic_2", "bolt_lumenir"}
+                         "ray_wizard", "ray_wizard_chain", "bolt_hero_space_elf_basic_attack",
+                         "bullet_hero_witch_basic_1", "bullet_hero_witch_basic_2", "bolt_lumenir"}
     return table.append(other_bolts, self:mage_tower_bolts())
 end
 
 function upgrades:engineer_towers()
     return {"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_tesla", "tower_dwaarp",
-            "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood","tower_tricannon_lvl4"}
+            "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood", "tower_tricannon_lvl4"}
 end
 
 function upgrades:engineer_bombs()
     return {"bomb", "bomb_dynamite", "bomb_black", "bomb_bfg", "bomb_mecha", "rock_druid", "rock_entwood",
-            "rock_firey_nut","tower_tricannon_bomb_4","tower_tricannon_bomb_overheated"}
+            "rock_firey_nut", "tower_tricannon_bomb_4", "tower_tricannon_bomb_overheated"}
 end
 
 function upgrades:engineer_advanced_towers()
     return {"tower_bfg", "tower_tesla", "tower_dwaarp", "tower_mech", "tower_frankenstein", "tower_druid",
-            "tower_entwood","tower_tricannon_lvl4"}
+            "tower_entwood", "tower_tricannon_lvl4"}
 end
 function upgrades:patch_templates(max_level)
     if max_level then
@@ -569,8 +573,10 @@ function upgrades:patch_templates(max_level)
 
         T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
         T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
-        T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
-        T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+        T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(
+            T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
+        T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(
+            T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
     end
 
     u = self:get_upgrade("mage_slow_curse")
@@ -615,11 +621,16 @@ function upgrades:patch_templates(max_level)
         T("tower_bfg").attacks.list[1].range = math.ceil(T("tower_bfg").attacks.list[1].range * u.range_factor)
         T("tower_bfg").attacks.list[2].range_base =
             math.ceil(T("tower_bfg").attacks.list[2].range_base * u.range_factor)
+        T("tower_bfg").attacks.list[3].range = math.ceil(T("tower_bfg").attacks.list[3].range * u.range_factor)
+
         T("tower_tesla").attacks.list[1].range = math.ceil(T("tower_tesla").attacks.list[1].range * u.range_factor)
-        T("tower_tricannon_lvl4").attacks.list[1].range = math.ceil(T("tower_tricannon_lvl4").attacks.list[1].range * u.range_factor)
-        T("tower_tricannon_lvl4").attacks.list[2].range = math.ceil(T("tower_tricannon_lvl4").attacks.list[2].range * u.range_factor)
+        T("tower_tricannon_lvl4").attacks.list[1].range = math.ceil(
+            T("tower_tricannon_lvl4").attacks.list[1].range * u.range_factor)
+        T("tower_tricannon_lvl4").attacks.list[2].range = math.ceil(
+            T("tower_tricannon_lvl4").attacks.list[2].range * u.range_factor)
         T("tower_dwaarp").origin_range = math.ceil(T("tower_dwaarp").origin_range * u.range_factor)
-        T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
+        T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(
+            T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
     end
 
     u = self:get_upgrade("engineer_field_logistics")
@@ -646,7 +657,8 @@ function upgrades:patch_templates(max_level)
     if u then
         for _, a in pairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3],
                            T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3],
-                        T("druid_shooter_sylvan").attacks.list[1],T("tower_entwood").attacks.list[3],T("tower_entwood").attacks.list[2]}, T("tower_dwaarp").attacks.list[3]) do
+                           T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3],
+                           T("tower_entwood").attacks.list[2]}, T("tower_dwaarp").attacks.list[3]) do
             a.cooldown = a.cooldown * u.cooldown_factor
         end
         local at
