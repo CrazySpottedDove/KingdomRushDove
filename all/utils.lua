@@ -1111,6 +1111,41 @@ function U.find_enemies_in_range(store, origin, min_range, max_range, flags, ban
     end
 end
 
+--- 检查范围内是否有敌人（开销更小）
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function? 过滤函数（可选）
+--- @return boolean 是否有敌人
+function U.has_enemy_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+    local found = store.enemy_spatial_index:query_first_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
+        function(v)
+            return not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and
+                band(v.vis.bans, flags) == 0 and (not filter_func or filter_func(v, origin))
+        end)
+    return found ~= nil
+end
+
+--- 检查范围内是否有足够数量的敌人（开销更小）
+--- @param store table game.store
+--- @param origin table 原点 {x, y}
+--- @param min_range number 最小范围
+--- @param max_range number 最大范围
+--- @param flags number 标志位
+--- @param bans number 禁止标志位
+--- @param filter_func function? 过滤函数（可选）
+--- @param count number 需要的敌人数量
+function U.has_enough_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func, count)
+    return store.enemy_spatial_index:query_enough_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
+        function(v)
+            return not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and
+                band(v.vis.bans, flags) == 0 and (not filter_func or filter_func(v, origin))
+        end, count)
+end
+
 --- 查找路径上的敌人
 --- @param entities table 实体列表
 --- @param origin table 原点 {x, y}

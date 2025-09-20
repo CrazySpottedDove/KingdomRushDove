@@ -8463,7 +8463,6 @@ function scripts.bomb_bouncing.update(this, store, script)
     local b = this.bullet
     local dmin, dmax = b.damage_min, b.damage_max
     local dradius = b.damage_radius
-    local target = store.entities[b.target_id]
 
     if b.level and b.level > 0 then
         if b.damage_radius_inc then
@@ -8613,18 +8612,13 @@ function scripts.bomb_bouncing.update(this, store, script)
         end
 
         if b.hide_radius then
-            if target and not target.health.dead then
-                b.to.x, b.to.y = target.pos.x, target.pos.y
-            end
-            this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius ^ 2 or
-                                                V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius ^ 2
+            this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius ^ 2
         end
     end
 
     do_hit()
 
-    -- while target and not target.health.dead and not U.is_inside_ellipse(target.pos, this.pos, dradius) do
-    target = U.find_first_enemy(store, this.pos, 0, dradius * 2.5, bor(F_AREA, F_RANGED), F_NONE)
+    local target = U.find_first_enemy(store, this.pos, 0, dradius * 2.5, bor(F_AREA, F_RANGED), F_NONE)
     while target and not target.health.dead and this.bounce_count > 0 do
         b.flight_time = b.flight_time
         b.damage_factor = b.damage_factor * 0.5
@@ -8647,16 +8641,12 @@ function scripts.bomb_bouncing.update(this, store, script)
             end
 
             if b.hide_radius then
-                if target and not target.health.dead then
-                    b.to.x, b.to.y = target.pos.x, target.pos.y
-                end
-                this.render.sprites[1].hidden =
-                    V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius ^ 2 or
-                        V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius ^ 2
+                this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius ^ 2
             end
         end
         do_hit()
         this.bounce_count = this.bounce_count - 1
+        target = U.find_first_enemy(store, this.pos, 0, dradius * 2.5, bor(F_AREA, F_RANGED), F_NONE)
     end
 
     queue_remove(store, this)

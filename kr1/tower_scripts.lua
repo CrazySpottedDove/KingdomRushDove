@@ -3854,10 +3854,11 @@ scripts.tower_entwood = {
 
         local function do_attack(at)
             SU.delay_attack(store, at, 0.25)
-            local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, at.node_prediction,
-                at.vis_flags, at.vis_bans, filter_faerie)
+
+            local target = U.find_first_enemy(store, tpos(this), 0, a.range, at.vis_flags, at.vis_bans, filter_faerie)
 
             if target then
+                local pred_pos = target.pos
                 at.ts = store.tick_ts
                 blink_ts = store.tick_ts
                 loaded = nil
@@ -3879,7 +3880,6 @@ scripts.tower_entwood = {
                 b.bullet.level = pow_f.level
                 b.bullet.from = V.vclone(b.pos)
                 b.bullet.to = V.vclone(pred_pos)
-                b.bullet.target_id = target.id
                 b.bullet.source_id = this.id
                 b.bullet.damage_factor = this.tower.damage_factor
 
@@ -3921,7 +3921,7 @@ scripts.tower_entwood = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if not loaded then
-                    if ready_to_use_power(pow_c, ca, store, this.tower.cooldown_factor) then
+                    if ready_to_use_power(pow_c, ca, store, this.tower.cooldown_factor) and U.has_enemy_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans) then
                         loaded = "clobber"
                     elseif pow_f.level > 0 and not fa.silence_ts and store.tick_ts - fa.ts > aa.cooldown *
                         fa.cooldown_factor * this.tower.cooldown_factor - a.load_time then
@@ -3946,9 +3946,7 @@ scripts.tower_entwood = {
 
                     SU.delay_attack(store, ca, 1)
 
-                    local triggers = U.find_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans)
-
-                    if triggers and #triggers > ca.min_count then
+                    if U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil, ca.min_count) then
                         ca.ts = store.tick_ts
                         blink_ts = store.tick_ts
 
@@ -4047,7 +4045,6 @@ scripts.tower_entwood = {
 
             coroutine.yield()
         end
-
     end
 }
 -- 特斯拉
