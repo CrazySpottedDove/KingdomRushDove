@@ -1008,18 +1008,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor.y = 0.375
 tt.sound_events.insert = "TeleporthSound"
 
-tt = RT("aura_tesla_overcharge", "aura")
-tt.aura.duration = fts(22)
-tt.aura.mod = "mod_tesla_overcharge"
-tt.aura.radius = 165
-tt.aura.damage_min = 0
-tt.aura.damage_max = 10
-tt.aura.damage_inc = 10
-tt.aura.damage_type = DAMAGE_ELECTRICAL
-tt.aura.excluded_templates = {"enemy_spectral_knight"}
-tt.main_script.update = scripts.aura_tesla_overcharge.update
-tt.particles_name = "ps_tesla_overcharge"
-
 tt = RT("aura_chill_elora", "aura")
 
 AC(tt, "render", "tween")

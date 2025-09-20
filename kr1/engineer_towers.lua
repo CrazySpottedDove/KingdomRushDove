@@ -252,6 +252,18 @@ local function engineer_towers()
     tt.main_script.insert = scripts.mod_dps.insert
     tt.main_script.update = scripts.mod_dps.update
 
+    tt = RT("aura_tesla_overcharge", "aura")
+    tt.aura.duration = fts(22)
+    tt.aura.mod = "mod_tesla_overcharge"
+    tt.aura.radius = 165
+    tt.aura.damage_min = 0
+    tt.aura.damage_max = 10
+    tt.aura.damage_inc = 10
+    tt.aura.damage_type = DAMAGE_ELECTRICAL
+    tt.aura.excluded_templates = {"enemy_spectral_knight"}
+    tt.main_script.update = scripts.aura_tesla_overcharge.update
+    tt.particles_name = "ps_tesla_overcharge"
+
     tt = RT("mod_tesla_overcharge", "modifier")
     AC(tt, "render")
     tt.modifier.duration = fts(20)
@@ -829,7 +841,7 @@ local function engineer_towers()
     tt.attacks.list[1] = E:clone_c("spell_attack")
     tt.attacks.list[1].spell = "mod_druid_sylvan"
     tt.attacks.list[1].cooldown = 12
-    tt.attacks.list[1].range = 175
+    tt.attacks.list[1].range = 190
     tt.attacks.list[1].excluded_templates = {"enemy_ogre_magi"}
     tt.attacks.list[1].cast_time = fts(20)
     tt.attacks.list[1].sound = "TowerDruidHengeSylvanCurseCast"
