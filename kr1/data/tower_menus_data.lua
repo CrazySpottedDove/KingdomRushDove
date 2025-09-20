@@ -2222,16 +2222,16 @@ return {
         place = 1,
         halo = "glow_ico_special",
         sounds = {"ElvesRockEntwoodFieryNutsTaunt"},
-        tt_phrase = _("TOWER_FIERY_NUTS_NOTE"),
+        tt_phrase = _("TOWER_ENTWOOD_FIERY_NUTS_NOTE"),
         tt_list = {{
-            tt_title = _("TOWER_FIERY_NUTS_NAME_1"),
-            tt_desc = _("TOWER_FIERY_NUTS_DESCRIPTION_1")
+            tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_1"),
+            tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_1")
         }, {
-            tt_title = _("TOWER_FIERY_NUTS_NAME_2"),
-            tt_desc = _("TOWER_FIERY_NUTS_DESCRIPTION_2")
+            tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_2"),
+            tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_2")
         }, {
-            tt_title = _("TOWER_FIERY_NUTS_NAME_3"),
-            tt_desc = _("TOWER_FIERY_NUTS_DESCRIPTION_3")
+            tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_3"),
+            tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_3")
         }},
         is_kr3 = true
     }, {
