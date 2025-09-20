@@ -3599,6 +3599,7 @@ local function change_fps(entity, factor)
         else
             s._origin_fps = s.fps
         end
+        factor = math.max(factor, 0.8)
         s.fps = s._origin_fps * factor
     end
 end
@@ -3612,12 +3613,12 @@ local function insert_tower_cooldown_buff(target, cooldown_factor)
     end
 
     target.tower.cooldown_factor = target.tower.cooldown_factor * cooldown_factor
-    change_fps(target, target.tower.cooldown_factor)
+    change_fps(target, 2 / (1 + target.tower.cooldown_factor))
     if target.barrack then
         for _, s in pairs(target.barrack.soldiers) do
             if s.unit then
                 s.cooldown_factor = s.cooldown_factor * cooldown_factor
-                change_fps(s, s.cooldown_factor)
+                change_fps(s, 2 / (1+s.cooldown_factor))
             end
         end
     end
@@ -3653,12 +3654,12 @@ local function remove_tower_cooldown_buff(target, cooldown_factor)
         return
     end
     target.tower.cooldown_factor = target.tower.cooldown_factor / cooldown_factor
-    change_fps(target, target.tower.cooldown_factor)
+    change_fps(target, 2 / (1+target.tower.cooldown_factor))
     if target.barrack then
         for _, s in pairs(target.barrack.soldiers) do
             if s.unit then
                 s.cooldown_factor = s.cooldown_factor / cooldown_factor
-                change_fps(s, s.cooldown_factor)
+                change_fps(s, 2 / (1+s.cooldown_factor))
             end
         end
     end
