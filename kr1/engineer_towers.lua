@@ -758,7 +758,7 @@ local function engineer_towers()
     tt.tower.range_offset = vec_2(0, 10)
     tt.info.enc_icon = 13
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0012"
-    tt.info.i18n_key = "TOWER_DRUID_HENGE"
+    tt.info.i18n_key = "TOWER_STONE_DRUID"
     tt.main_script.insert = scripts.tower_barrack.insert
     tt.main_script.update = scripts.tower_druid.update
     tt.main_script.remove = scripts.tower_druid.remove
@@ -867,8 +867,9 @@ local function engineer_towers()
     E:add_comps(tt, "melee", "count_group")
     tt.count_group.name = "soldier_druid_bear"
     tt.count_group.type = COUNT_GROUP_CONCURRENT
-    tt.health.armor = 0.3
-    tt.health.hp_max = 250
+    tt.health.armor = 0.2
+    tt.health.magic_armor = 0.2
+    tt.health.hp_max = 300
     tt.health_bar.offsets = {
         idle = vec_2(0, 40),
         standing = vec_2(0, 55)

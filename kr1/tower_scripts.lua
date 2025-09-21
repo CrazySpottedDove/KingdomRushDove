@@ -4913,6 +4913,147 @@ function scripts.tower_druid.remove(this, store)
     return true
 end
 
+scripts.druid_shooter_sylvan = {}
+
+function scripts.druid_shooter_sylvan.update(this, store)
+    local a = this.attacks.list[1]
+
+    a.ts = store.tick_ts
+
+    while true do
+        if this.owner.tower.blocked or not this.owner.tower.can_do_magic then
+            -- block empty
+        elseif store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
+            local target, enemies = U.find_foremost_enemy(store, this.owner.pos, 0, a.range, nil, a.vis_flags,
+                a.vis_bans, function(v)
+                    return not table.contains(a.excluded_templates, v.template_name) and
+                               not U.has_modifier(store, v, "mod_druid_sylvan")
+                end)
+
+            if target and #enemies > 1 then
+                S:queue(a.sound)
+                U.animation_start(this, a.animation, nil, store.tick_ts)
+                U.y_wait(store, a.cast_time)
+
+                a.ts = store.tick_ts
+
+                local mod = E:create_entity(a.spell)
+
+                mod.modifier.target_id = target.id
+                mod.modifier.level = this.owner.powers.sylvan.level
+
+                queue_insert(store, mod)
+            else
+                SU.delay_attack(store, a, 1)
+            end
+        end
+
+        coroutine.yield()
+    end
+end
+
+scripts.mod_druid_sylvan = {}
+
+function scripts.mod_druid_sylvan.update(this, store)
+    local m = this.modifier
+    local a = this.attack
+    local s = this.render.sprites[2]
+    local target = store.entities[m.target_id]
+
+    if not target or not target.health or target.health.dead then
+        if target then
+            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
+                function(v)
+                    return not U.has_modifier(store, v, "mod_druid_sylvan")
+                end)
+            if targets then
+                local new_target = targets[1]
+                local new_mod = E:create_entity(this.template_name)
+                new_mod.modifier.target_id = new_target.id
+                new_mod.modifier.level = this.modifier.level
+                new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
+                queue_insert(store, new_mod)
+            end
+        end
+        queue_remove(store, this)
+        return
+    end
+
+    if s.size_names then
+        s.name = s.size_names[target.unit.size]
+    end
+
+    local last_hp = target.health.hp
+    local ray_ts = 0
+
+    this.pos = target.pos
+
+    while true do
+        target = store.entities[m.target_id]
+        if store.tick_ts - m.ts > m.duration then
+            queue_remove(store, this)
+            return
+        end
+        if not target or target.health.dead then
+            if target then
+                local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
+                    function(v)
+                        return not U.has_modifier(store, v, "mod_druid_sylvan")
+                    end)
+                if targets then
+                    local new_target = targets[1]
+                    local new_mod = E:create_entity(this.template_name)
+                    new_mod.modifier.target_id = new_target.id
+                    new_mod.modifier.level = this.modifier.level
+                    new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
+                    queue_insert(store, new_mod)
+                end
+            end
+            queue_remove(store, this)
+            return
+        end
+
+        if target and target.unit and target.unit.mod_offset then
+            s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+        end
+
+        local dhp =  last_hp - target.health.hp
+
+        if dhp > 0 then
+            last_hp = target.health.hp
+
+            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
+                function(v)
+                    return not U.has_modifier(store, v, "mod_druid_sylvan")
+                end)
+
+            if targets then
+                for _, t in pairs(targets) do
+                    local b = E:create_entity(a.bullet)
+
+                    b.bullet.damage_max = dhp * a.damage_factor[m.level]
+                    b.bullet.damage_min = b.bullet.damage_max
+                    b.bullet.target_id = t.id
+                    b.bullet.source_id = this.id
+                    b.bullet.from =
+                        V.v(target.pos.x + target.unit.mod_offset.x, target.pos.y + target.unit.mod_offset.y)
+                    b.bullet.to = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
+                    b.pos = V.vclone(b.bullet.from)
+                    b.render.sprites[1].hidden = store.tick_ts - ray_ts < this.ray_cooldown
+
+                    queue_insert(store, b)
+                end
+
+                if store.tick_ts - ray_ts > this.ray_cooldown then
+                    ray_ts = store.tick_ts
+                end
+            end
+        end
+
+        coroutine.yield()
+    end
+end
+
 function scripts.tower_druid.update(this, store)
     local shooter_sid = 3
     local a = this.attacks

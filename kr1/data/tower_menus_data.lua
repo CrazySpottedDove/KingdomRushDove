@@ -265,8 +265,8 @@ return {
         halo = "glow_ico_main",
         image = "kr3_main_icons_0111",
         place = 12,
-        tt_title = _("TOWER_DRUID_HENGE_NAME"),
-        tt_desc = _("TOWER_DRUID_HENGE_DESCRIPTION"),
+        tt_title = _("TOWER_STONE_DRUID_NAME"),
+        tt_desc = _("TOWER_STONE_DRUID_DESCRIPTION"),
         is_kr3 = true
     }, {
         check = "kr3_main_icons_0019",
