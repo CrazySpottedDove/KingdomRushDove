@@ -3965,7 +3965,7 @@ function scripts.shotgun.update(this, store, script)
     if target and target.health and not target.health.dead then
         local u = UP:get_upgrade("archer_precision")
 
-        if u and math.random() < u.chance and not b.ignore_upgrades then
+        if u and math.random() < u.chance then
             b.damage_min = b.damage_min * u.damage_factor
             b.damage_max = b.damage_max * u.damage_factor
             b.pop = {"pop_crit"}

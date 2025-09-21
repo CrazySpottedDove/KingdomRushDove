@@ -425,7 +425,7 @@ local function archer_towers()
     tt.powers.sniper.attack_idx = 2
     tt.powers.sniper.price_base = 300
     tt.powers.sniper.price_inc = 250
-    tt.powers.sniper.damage_factor_inc = 0.225
+    tt.powers.sniper.damage_factor_inc = 0.2
     tt.powers.sniper.instakill_chance_inc = 0.15
     tt.powers.sniper.enc_icon = 3
     tt.powers.shrapnel = CC("power")
@@ -516,7 +516,6 @@ local function archer_towers()
     tt.sound_events.insert = "SniperSound"
     tt.bullet.damage_type = bor(DAMAGE_SHOT, DAMAGE_FX_EXPLODE, DAMAGE_NO_DODGE)
     tt.bullet.pop = nil
-    tt.bullet.ignore_upgrades = true
 
     tt = RT("shotgun_musketeer_sniper_instakill", "shotgun_musketeer_sniper")
     tt.bullet.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE, DAMAGE_NO_DODGE)
