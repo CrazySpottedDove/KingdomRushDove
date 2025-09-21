@@ -6008,6 +6008,7 @@ function CriketPanelView:initialize(sw, sh)
     self:set_key_label_map({
         on = "启用斗蛐蛐",
         fps_transformed = "请勿修改本条",
+        gold_judge = "启用金币裁判",
     })
 end
 

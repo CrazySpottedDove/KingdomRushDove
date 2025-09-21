@@ -987,22 +987,7 @@ tt.render.sprites[2].z = Z_DECALS
 tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
 tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 
-tt = RT("aura_ranger_thorn", "aura")
-tt.aura.mod = "mod_thorn"
-tt.aura.duration = -1
-tt.aura.radius = 200
-tt.aura.vis_flags = bor(F_THORN, F_MOD)
-tt.aura.vis_bans = bor(F_FLYING, F_BOSS)
-tt.aura.cooldown = 8 + fts(34)
--- tt.aura.max_times = 3
-tt.aura.max_count = 2
-tt.aura.max_count_inc = 2
-tt.aura.min_count = 2
-tt.aura.owner_animation = "shoot"
-tt.aura.owner_sid = 5
-tt.aura.hit_time = fts(17)
-tt.aura.hit_sound = "ThornSound"
-tt.main_script.update = scripts.aura_ranger_thorn.update
+
 
 tt = RT("aura_teleport_arcane", "aura")
 AC(tt, "render")
@@ -1022,18 +1007,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor.y = 0.375
 tt.sound_events.insert = "TeleporthSound"
-
-tt = RT("aura_tesla_overcharge", "aura")
-tt.aura.duration = fts(22)
-tt.aura.mod = "mod_tesla_overcharge"
-tt.aura.radius = 165
-tt.aura.damage_min = 0
-tt.aura.damage_max = 10
-tt.aura.damage_inc = 10
-tt.aura.damage_type = DAMAGE_ELECTRICAL
-tt.aura.excluded_templates = {"enemy_spectral_knight"}
-tt.main_script.update = scripts.aura_tesla_overcharge.update
-tt.particles_name = "ps_tesla_overcharge"
 
 tt = RT("aura_chill_elora", "aura")
 

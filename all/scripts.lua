@@ -2390,14 +2390,16 @@ function scripts.arrow_missile.update(this, store)
             retarget_for_hit_miss = false
         elseif retarget_for_next then
             retarget_for_next = false
-            local _, targets = U.find_foremost_enemy(store, this.pos, 0, retarget_range, nil, b.vis_flags, b.vis_bans, function(e)
-                return not hitted_targets[e.id]
-            end)
+            local _, targets = U.find_foremost_enemy(store, this.pos, 0, retarget_range, nil, b.vis_flags, b.vis_bans,
+                function(e)
+                    return not hitted_targets[e.id]
+                end)
             if targets then
                 local max_id = #targets
                 for i = 1, max_id do
                     local new_target = targets[i]
-                    local d_angle = V.angleTo(b.speed.x, b.speed.y, new_target.pos.x - this.pos.x, new_target.pos.y - this.pos.y)
+                    local d_angle = V.angleTo(b.speed.x, b.speed.y, new_target.pos.x - this.pos.x,
+                        new_target.pos.y - this.pos.y)
                     if math.abs(d_angle) < d_angle or i == max_id then
                         target = new_target
                         break
@@ -2415,7 +2417,8 @@ function scripts.arrow_missile.update(this, store)
                 b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
             end
             local mspeed = V.len(b.speed.x, b.speed.y)
-            while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * mspeed * store.tick_length * store.tick_length do
+            while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * mspeed * store.tick_length *
+                store.tick_length do
                 if not target or target.health and target.health.dead or band(target.vis.bans, b.vis_flags) ~= 0 then
                     local ref_pos = target and target.pos or this.pos
                     local max_same_target_count = 3
@@ -2461,7 +2464,8 @@ function scripts.arrow_missile.update(this, store)
                     b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
                 end
 
-                this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+                this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length,
+                    this.pos.y + b.speed.y * store.tick_length
                 this.render.sprites[1].r = V.angleTo(b.speed.x, b.speed.y)
 
                 coroutine.yield()
@@ -8432,6 +8436,220 @@ scripts.mod_ban.remove = function(this, store)
         target.mod_ban_count = 0
     end
     return true
+end
+
+scripts.bomb_bouncing = {}
+
+function scripts.bomb_bouncing.insert(this, store, script)
+    local b = this.bullet
+
+    b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
+    b.ts = store.tick_ts
+    b.last_pos = V.vclone(b.from)
+
+    if b.rotation_speed then
+        this.render.sprites[1].r = (math.random() - 0.5) * math.pi
+        b.rotation_speed = b.rotation_speed * (b.to.x > b.from.x and -1 or 1)
+    end
+
+    if b.hide_radius then
+        this.render.sprites[1].hidden = true
+    end
+
+    return true
+end
+
+function scripts.bomb_bouncing.update(this, store, script)
+    local b = this.bullet
+    local dmin, dmax = b.damage_min, b.damage_max
+    local dradius = b.damage_radius
+
+    if b.level and b.level > 0 then
+        if b.damage_radius_inc then
+            dradius = dradius + b.level * b.damage_radius_inc
+        end
+
+        if b.damage_min_inc then
+            dmin = dmin + b.level * b.damage_min_inc
+        end
+
+        if b.damage_max_inc then
+            dmax = dmax + b.level * b.damage_max_inc
+        end
+    end
+
+    local ps
+
+    if b.particles_name then
+        ps = E:create_entity(b.particles_name)
+        ps.particle_system.track_id = this.id
+
+        queue_insert(store, ps)
+    end
+
+    local function do_hit()
+        local enemies = U.find_enemies_in_range(store, b.to, 0, dradius, b.damage_flags, b.damage_bans)
+        if enemies then
+            for i = 1, #enemies do
+                local enemy = enemies[i]
+                local d = E:create_entity("damage")
+
+                d.damage_type = b.damage_type
+                d.reduce_armor = b.reduce_armor
+                d.reduce_magic_armor = b.reduce_magic_armor
+
+                if UP:get_upgrade("engineer_efficiency") then
+                    d.value = dmax
+                else
+                    local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+
+                    d.value = dmax - (dmax - dmin) * dist_factor
+                end
+
+                d.value = b.damage_factor * d.value
+                d.source_id = this.id
+                d.target_id = enemy.id
+
+                queue_damage(store, d)
+
+                -- if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and
+                --     band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() <
+                --     this.up_shock_and_awe_chance then
+                --     local mod = E:create_entity("mod_shock_and_awe")
+
+                --     mod.modifier.target_id = enemy.id
+
+                --     queue_insert(store, mod)
+                -- end
+
+                local mods
+                if b.mod then
+                    mods = type(b.mod) == "string" and {b.mod} or b.mod
+                elseif b.mods then
+                    mods = b.mods
+                end
+                if mods then
+                    for _, mod_name in pairs(mods) do
+                        local mod = E:create_entity(mod_name)
+                        mod.modifier.damage_factor = b.damage_factor
+                        mod.modifier.target_id = enemy.id
+                        mod.modifier.source_id = this.id
+                        if U.flags_pass(enemy.vis, mod.modifier) then
+                            queue_insert(store, mod)
+                        end
+                    end
+                end
+            end
+        end
+
+        local p = SU.create_bullet_pop(store, this)
+
+        queue_insert(store, p)
+
+        local cell_type = GR:cell_type(b.to.x, b.to.y)
+
+        if b.hit_fx_water and band(cell_type, TERRAIN_WATER) ~= 0 then
+            S:queue(this.sound_events.hit_water)
+
+            local water_fx = E:create_entity(b.hit_fx_water)
+
+            water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
+            water_fx.render.sprites[1].ts = store.tick_ts
+            water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
+            queue_insert(store, water_fx)
+        elseif b.hit_fx then
+            S:queue(this.sound_events.hit)
+
+            local sfx = E:create_entity(b.hit_fx)
+
+            sfx.pos = V.vclone(b.to)
+            sfx.render.sprites[1].ts = store.tick_ts
+            sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
+            queue_insert(store, sfx)
+        end
+
+        if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
+            local decal = E:create_entity(b.hit_decal)
+
+            decal.pos = V.vclone(b.to)
+            decal.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, decal)
+        end
+
+        if b.hit_payload then
+            local hp
+
+            if type(b.hit_payload) == "string" then
+                hp = E:create_entity(b.hit_payload)
+            else
+                hp = b.hit_payload
+            end
+
+            hp.pos.x, hp.pos.y = b.to.x, b.to.y
+
+            if hp.aura then
+                hp.aura.level = this.bullet.level
+            end
+
+            queue_insert(store, hp)
+        end
+
+    end
+
+    while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+        coroutine.yield()
+
+        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+        if b.align_with_trajectory then
+            this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+        elseif b.rotation_speed then
+            this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+        end
+
+        if b.hide_radius then
+            this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius ^ 2
+        end
+    end
+
+    do_hit()
+
+    local target = U.find_first_enemy(store, this.pos, 0, dradius * 2, bor(F_AREA, F_RANGED), F_NONE)
+    while target and not target.health.dead and this.bounce_count > 0 do
+        b.flight_time = b.flight_time
+        b.damage_factor = b.damage_factor * 0.5
+        b.to.x = target.pos.x
+        b.to.y = target.pos.y
+        b.from.x = this.pos.x
+        b.from.y = this.pos.y
+        b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
+        b.ts = store.tick_ts
+        while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+            coroutine.yield()
+
+            b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+            this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+            if b.align_with_trajectory then
+                this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+            elseif b.rotation_speed then
+                this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+            end
+
+            if b.hide_radius then
+                this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius ^ 2
+            end
+        end
+        do_hit()
+        this.bounce_count = this.bounce_count - 1
+        target = U.find_first_enemy(store, this.pos, 0, dradius * 2.5, bor(F_AREA, F_RANGED), F_NONE)
+    end
+
+    queue_remove(store, this)
 end
 
 return scripts

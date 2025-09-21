@@ -109,6 +109,15 @@ function storage:load_criket()
 
     if criket.on then
         local criket_template = require("patches.criket_template")
+        for k, v in pairs(criket_template) do
+            if criket[k] == nil then
+                if type(v) == "table" then
+                    criket[k] = table.deepclone(v)
+                else
+                    criket[k] = v
+                end
+            end
+        end
         if #criket.groups <= 0 then -- 若没有出怪组则使用模板的出怪组
             criket.groups = criket_template.groups
         else

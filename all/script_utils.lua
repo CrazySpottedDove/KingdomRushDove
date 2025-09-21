@@ -3592,6 +3592,50 @@ local function insert_tower_range_buff(target, range_factor, allow_barrack)
     end
 end
 
+local fps_based_keys = {
+    ["hit_time"] = true,
+    ["cast_time"] = true,
+    ["shoot_time"] = true,
+    ["dodge_time"] = true,
+}
+
+local function scale_fps_based_keys(tbl, factor, visited)
+    visited = visited or {}
+    if visited[tbl] then
+        return
+    end
+    visited[tbl] = true
+
+    for k, v in pairs(tbl) do
+        -- 跳过 _origin_xxx 字段，避免递归
+        if type(v) == "table" then
+            scale_fps_based_keys(v, factor, visited)
+        elseif fps_based_keys[k] and type(v) == "number" then
+            local _origin_key = "_origin_" .. k
+            if not tbl[_origin_key] then
+                tbl[_origin_key] = v
+            end
+            tbl[k] = tbl[_origin_key] * factor
+        end
+    end
+end
+
+local function change_fps(entity, factor)
+    for _, s in pairs(entity.render.sprites) do
+        if not s._origin_fps then
+            if not s.fps then
+                s._origin_fps = FPS
+            else
+                s._origin_fps = s.fps
+            end
+        end
+
+        -- factor = math.max(factor, 0.8)
+        s.fps = s._origin_fps * factor
+    end
+    scale_fps_based_keys(entity, 1 / factor)
+end
+
 --- 增加塔冷却缩放（乘算）
 --- @param target table 塔实体
 --- @param cooldown_factor number 冷却系数
@@ -3601,10 +3645,12 @@ local function insert_tower_cooldown_buff(target, cooldown_factor)
     end
 
     target.tower.cooldown_factor = target.tower.cooldown_factor * cooldown_factor
+    change_fps(target, 1 / (target.tower.cooldown_factor))
     if target.barrack then
         for _, s in pairs(target.barrack.soldiers) do
             if s.unit then
                 s.cooldown_factor = s.cooldown_factor * cooldown_factor
+                change_fps(s, 1 / (s.cooldown_factor))
             end
         end
     end
@@ -3640,10 +3686,12 @@ local function remove_tower_cooldown_buff(target, cooldown_factor)
         return
     end
     target.tower.cooldown_factor = target.tower.cooldown_factor / cooldown_factor
+    change_fps(target, 1 / (target.tower.cooldown_factor))
     if target.barrack then
         for _, s in pairs(target.barrack.soldiers) do
             if s.unit then
                 s.cooldown_factor = s.cooldown_factor / cooldown_factor
+                change_fps(s, 1 / (s.cooldown_factor))
             end
         end
     end

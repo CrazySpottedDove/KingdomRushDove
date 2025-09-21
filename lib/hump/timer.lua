@@ -140,6 +140,10 @@ Timer.tween = setmetatable({
 }, {
 	__call = function(tween, self, len, subject, target, method, after, ...)
 		local function tween_collect_payload(subject, target, out)
+            if type(target) ~= "table" then
+                log.error(target)
+                return {}
+            end
 			for k, v in pairs(target) do
 				local ref = subject[k]
 

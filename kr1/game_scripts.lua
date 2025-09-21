@@ -2691,13 +2691,12 @@ scripts.enemy_necromancer = {}
 
 function scripts.enemy_necromancer.update(this, store)
     local a = this.timed_actions.list[1]
-    local cg = store.count_groups[a.count_group_type]
 
     a.ts = store.tick_ts
-
-    local function summon_count_exceeded()
-        return cg[a.count_group_name] and cg[a.count_group_name] >= a.count_group_max
-    end
+    local skeleton_ids = {}
+    -- local function summon_count_exceeded()
+    --     return cg[a.count_group_name] and cg[a.count_group_name] >= a.count_group_max
+    -- end
 
     local function ready_to_summon()
         if U.get_blocker(store, this) then
@@ -2705,7 +2704,7 @@ function scripts.enemy_necromancer.update(this, store)
 
             return false
         else
-            return enemy_ready_to_magic_attack(this, store, a) and not summon_count_exceeded()
+            return enemy_ready_to_magic_attack(this, store, a)
         end
     end
 
@@ -2714,9 +2713,10 @@ function scripts.enemy_necromancer.update(this, store)
     while true do
         if this.health.dead then
             -- 找到所有由此necromancer召唤的骷髅，将它们的减伤效果取消（即damage_factor置为1）
-            for _, entity in pairs(store.enemies) do
-                if entity.health.damage_factor_source and entity.health.damage_factor_source == this.id then
-                    entity.health.damage_factor = entity.health.damage_factor + 0.3
+            for _, sid in pairs(skeleton_ids) do
+                local s = store.entities[sid]
+                if s and not s.health.dead then
+                    s.health.damage_factor = s.health.damage_factor + 0.3
                 end
             end
             SU.y_enemy_death(store, this)
@@ -2728,6 +2728,16 @@ function scripts.enemy_necromancer.update(this, store)
             SU.y_enemy_stun(store, this)
         else
             if ready_to_summon() then
+                for i = 1, #skeleton_ids, -1 do
+                    local s = store.entities[skeleton_ids[i]]
+                    if not s or s.health.dead then
+                        table.remove(skeleton_ids, i)
+                    end
+                end
+                if #skeleton_ids >= 30 then
+                    a.ts = a.ts + 1
+                    goto label_117_0
+                end
                 U.animation_start(this, a.animation, nil, store.tick_ts, false)
 
                 if SU.y_enemy_wait(store, this, a.spawn_time) then
@@ -2739,9 +2749,9 @@ function scripts.enemy_necromancer.update(this, store)
                         goto label_117_0
                     end
 
-                    if i ~= 1 and summon_count_exceeded() then
-                        break
-                    end
+                    -- if i ~= 1 and summon_count_exceeded() then
+                    --     break
+                    -- end
 
                     local e_name = a.entity_names[U.random_table_idx(a.entity_chances)]
                     local e = E:create_entity(e_name)
@@ -2753,14 +2763,14 @@ function scripts.enemy_necromancer.update(this, store)
                     e.render.sprites[1].name = a.spawn_animation
                     e.enemy.gold = 0
                     e.health.damage_factor = e.health.damage_factor - 0.3
-                    e.health.damage_factor_source = this.id
                     e.motion.max_speed = (0.5 + math.random() * 0.2) * FPS
-                    E:add_comps(e, "count_group")
+                    -- E:add_comps(e, "count_group")
 
-                    e.count_group.name = a.count_group_name
-                    e.count_group.type = a.count_group_type
+                    -- e.count_group.name = a.count_group_name
+                    -- e.count_group.type = a.count_group_type
 
                     if P:is_node_valid(e.nav_path.pi, e.nav_path.ni) then
+                        skeleton_ids[#skeleton_ids + 1] = e.id
                         queue_insert(store, e)
                     end
 
@@ -4451,7 +4461,9 @@ function scripts.eb_blackburn.update(this, store)
 
     while true do
         if this.health.dead then
-            LU.kill_all_enemies(store, true)
+            if store.level_idx == 26 then
+                LU.kill_all_enemies(store, true)
+            end
             S:queue(this.sound_events.death)
             U.y_animation_play(this, "death", nil, store.tick_ts)
 
@@ -4467,7 +4479,10 @@ function scripts.eb_blackburn.update(this, store)
 
             U.animation_start(this, "death_end", nil, store.tick_ts, true)
             signal.emit("boss-killed", this)
-            LU.kill_all_enemies(store, true)
+
+            if store.level_idx == 26 then
+                LU.kill_all_enemies(store, true)
+            end
 
             return
         end
@@ -5948,45 +5963,6 @@ end
 
 scripts.mod_thorn = {}
 
-function scripts.mod_thorn.queue(this, store, insertion)
-    local target = store.entities[this.modifier.target_id]
-
-    if not target then
-        return
-    end
-
-    if insertion then
-        log.debug("%s (%s) queue/insertion", this.template_name, this.id)
-
-        if U.flags_pass(target.vis, this.modifier) then
-            this._target_prev_bans = target.vis.bans
-            target.vis.bans = U.flag_set(target.vis.bans, F_THORN)
-        end
-    else
-        log.debug("%s (%s) queue/removal", this.template_name, this.id)
-
-        if this._target_prev_bans then
-            target.vis.bans = this._target_prev_bans
-        end
-    end
-end
-
-function scripts.mod_thorn.dequeue(this, store, insertion)
-    local target = store.entities[this.modifier.target_id]
-
-    if not target then
-        return
-    end
-
-    if insertion then
-        log.debug("%s (%s) dequeue/insertion", this.template_name, this.id)
-
-        if this._target_prev_bans then
-            target.vis.bans = this._target_prev_bans
-        end
-    end
-end
-
 function scripts.mod_thorn.insert(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
@@ -5994,8 +5970,7 @@ function scripts.mod_thorn.insert(this, store)
 
     s.ts = store.tick_ts
 
-    if target and target.health and not target.health.dead and this._target_prev_bans ~= nil and
-        (not target.enemy.counts.mod_thorn or target.enemy.counts.mod_thorn < this.max_times_applied) then
+    if target and target.health and not target.health.dead then
         SU.stun_inc(target)
 
         s.prefix = s.size_prefixes[target.unit.size]
@@ -9553,11 +9528,13 @@ function scripts.aura_damage_sprint.update(this, store, script)
 
         if this.last_sprint_hp ~= target.health.hp then
             local hp, hp_max = target.health.hp, target.health.hp_max
-            local sprint_factor = 1 + (hp_max - hp) / hp_max * target.damage_sprint_factor
+            if not this.enemy or this.enemy.can_do_magic then
+                local sprint_factor = 1 + (hp_max - hp) / hp_max * target.damage_sprint_factor
+                U.speed_mul(target, sprint_factor / this.last_sprint_factor)
+                this.last_sprint_factor = sprint_factor
+            end
 
-            U.speed_mul(target, sprint_factor / this.last_sprint_factor)
-            this.last_sprint_hp = target.health.hp
-            this.last_sprint_factor = sprint_factor
+            this.last_sprint_hp = hp
         end
 
         coroutine.yield()
@@ -17021,65 +16998,6 @@ function scripts.tower_rock_thrower.update(this, store)
                     queue_insert(store, b)
                     U.y_animation_wait(this, shooter_sid)
                 end
-            end
-        end
-
-        coroutine.yield()
-    end
-end
-
-scripts.druid_shooter_sylvan = {}
-
-function scripts.druid_shooter_sylvan.update(this, store)
-    local a = this.attacks.list[1]
-
-    a.ts = store.tick_ts
-
-    while true do
-        if this.owner.tower.blocked or not this.owner.tower.can_do_magic then
-            -- block empty
-        elseif store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
-            local target, enemies = U.find_foremost_enemy(store, this.owner.pos, 0, a.range, nil, a.vis_flags, a.vis_bans,
-                function(v)
-                    return not table.contains(a.excluded_templates, v.template_name) and
-                               not U.has_modifier(store, v, "mod_druid_sylvan")
-                end)
-
-            -- if enemies then
-            --     local foremost_enemy = enemies[1]
-            --     local max_hp_enemy_idx = 1
-            --     local max_hp = foremost_enemy.health.hp
-            --     for i = 2, #enemies do
-            --         local e = enemies[i]
-
-            --         if V.dist(e.__ffe_pos.x, e.__ffe_pos.y, foremost_enemy.__ffe_pos.x, foremost_enemy.__ffe_pos.y) <=
-            --             50 then
-            --             if e.health.hp > max_hp then
-            --                 max_hp = e.health.hp
-            --                 max_hp_enemy_idx = i
-            --             end
-            --         else
-            --             break
-            --         end
-            --     end
-            --     target = enemies[max_hp_enemy_idx]
-            -- end
-
-            if target and #enemies > 1 then
-                S:queue(a.sound)
-                U.animation_start(this, a.animation, nil, store.tick_ts)
-                U.y_wait(store, a.cast_time)
-
-                a.ts = store.tick_ts
-
-                local mod = E:create_entity(a.spell)
-
-                mod.modifier.target_id = target.id
-                mod.modifier.level = this.owner.powers.sylvan.level
-
-                queue_insert(store, mod)
-            else
-                SU.delay_attack(store, a, 1)
             end
         end
 
@@ -24825,7 +24743,7 @@ function scripts.aura_arcane_burst.update(this, store)
 
             queue_damage(store, d)
 
-            if math.random() < this.sleep_chance and band(target.vis.bans, F_STUN) == 0 then
+            if (band(target.vis.flags, F_BOSS) == 0 and 1 or 2) * math.random() < this.sleep_chance and band(target.vis.bans, F_STUN) == 0 then
                 local m = E:create_entity("mod_arrow_arcane_slumber")
                 m.modifier.target_id = target.id
                 m.modifier.source_id = this.id
@@ -25653,106 +25571,6 @@ function scripts.mod_eldritch.update(this, store)
 
     signal.emit("mod-applied", this, target)
     queue_remove(store, this)
-end
-
-scripts.mod_druid_sylvan = {}
-
-function scripts.mod_druid_sylvan.update(this, store)
-    local m = this.modifier
-    local a = this.attack
-    local s = this.render.sprites[2]
-    local target = store.entities[m.target_id]
-
-    if not target or not target.health or target.health.dead then
-        if target then
-            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v)
-                return not U.has_modifier(store, v, "mod_druid_sylvan")
-            end)
-            if targets then
-                local new_target = targets[1]
-                local new_mod = E:create_entity(this.template_name)
-                new_mod.modifier.target_id = new_target.id
-                new_mod.modifier.level = this.modifier.level
-                new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
-                queue_insert(store, new_mod)
-            end
-        end
-        queue_remove(store, this)
-        return
-    end
-
-    if s.size_names then
-        s.name = s.size_names[target.unit.size]
-    end
-
-    local last_hp = target.health.hp
-    local ray_ts = 0
-
-    this.pos = target.pos
-
-    while true do
-        target = store.entities[m.target_id]
-        if store.tick_ts - m.ts > m.duration then
-            queue_remove(store, this)
-            return
-        end
-        if not target or target.health.dead then
-            if target then
-                local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v)
-                    return not U.has_modifier(store, v, "mod_druid_sylvan")
-                end)
-                if targets then
-                    local new_target = targets[1]
-                    local new_mod = E:create_entity(this.template_name)
-                    new_mod.modifier.target_id = new_target.id
-                    new_mod.modifier.level = this.modifier.level
-                    new_mod.modifier.duration = this.modifier.duration - (store.tick_ts - m.ts) + 1
-                    queue_insert(store, new_mod)
-                end
-            end
-            queue_remove(store, this)
-            return
-        end
-
-        if target and target.unit and target.unit.mod_offset then
-            s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
-        end
-
-        local dhp = target.health.hp - last_hp
-
-        if dhp < 0 then
-            last_hp = target.health.hp
-
-            local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
-                function(v)
-                    return not U.has_modifier(store, v, "mod_druid_sylvan")
-                end)
-
-            if targets then
-                for _, t in pairs(targets) do
-                    local b = E:create_entity(a.bullet)
-
-                    b.bullet.damage_max = -1 * dhp * a.damage_factor[m.level]
-                    b.bullet.damage_min = b.bullet.damage_max
-                    b.bullet.target_id = t.id
-                    b.bullet.source_id = this.id
-                    b.bullet.from = V.v(target.pos.x + target.unit.mod_offset.x,
-                        target.pos.y + target.unit.mod_offset.y)
-                    b.bullet.to = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
-                    b.pos = V.vclone(b.bullet.from)
-                    b.render.sprites[1].hidden = store.tick_ts - ray_ts < this.ray_cooldown
-
-                    queue_insert(store, b)
-                end
-
-                if store.tick_ts - ray_ts > this.ray_cooldown then
-                    ray_ts = store.tick_ts
-                end
-            end
-        end
-
-        coroutine.yield()
-    end
 end
 
 scripts.mod_pixie_pickpocket = {}

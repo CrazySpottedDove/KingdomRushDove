@@ -165,6 +165,45 @@ function spatial_hash:query_first_entity_in_ellipse(x, y, radius_outer, radius_i
     return nil
 end
 
+function spatial_hash:query_enough_entities_in_ellipse(x, y, radius_outer, radius_inner, filter_fn, count)
+    local found = 0
+    local min_col = max(1, self:_x_to_col(x - radius_outer))
+    local max_col = min(self.cols, self:_x_to_col(x + radius_outer))
+    local b = radius_outer * aspect
+    local min_row = max(1, self:_y_to_row(y - b))
+    local max_row = min(self.rows, self:_y_to_row(y + b))
+
+    local b2_outer = radius_outer * aspect * radius_outer * aspect
+    local a2_outer = radius_outer * radius_outer
+    local r2_outer = a2_outer * b2_outer
+
+    local b2_inner = radius_inner * aspect * radius_inner * aspect
+    local a2_inner = radius_inner * radius_inner
+    local r2_inner = a2_inner * b2_inner
+
+    for row = min_row, max_row do
+        for col = min_col, max_col do
+            -- 性能敏感，避免 table.insert
+            local cell = self.cells[row][col]
+            for _, entity in pairs(cell) do
+                local r_x2 = (entity.pos.x - x) * (entity.pos.x - x)
+                local r_y2 = (entity.pos.y - y) * (entity.pos.y - y)
+
+                if r_x2 * b2_outer + r_y2 * a2_outer <= r2_outer and
+                    ((radius_inner == 0) or (r_x2 * b2_inner + r_y2 * a2_inner > r2_inner)) and filter_fn(entity) then
+                    found = found + 1
+                    if found >= count then
+                        return true
+                    end
+                end
+            end
+        end
+    end
+
+    return false
+end
+
+
 -- -- 在 spatial_hash.lua 文件末尾添加调试方法
 -- function spatial_hash:print_debug_info()
 --     print("========== Spatial Hash Debug Info ==========")

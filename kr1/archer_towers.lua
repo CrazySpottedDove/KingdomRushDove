@@ -70,6 +70,23 @@ local function archer_towers()
     tt.attacks.list[1].bullet_start_offset = {vec_2(8, 4), vec_2(4, -5)}
     tt.sound_events.insert = "ArcherRangerTaunt"
 
+    tt = RT("aura_ranger_thorn", "aura")
+    tt.aura.mod = "mod_thorn"
+    tt.aura.duration = -1
+    tt.aura.radius = 200
+    tt.aura.vis_flags = bor(F_THORN, F_MOD)
+    tt.aura.vis_bans = bor(F_FLYING, F_BOSS)
+    tt.aura.cooldown = 8 + fts(34)
+    -- tt.aura.max_times = 3
+    tt.aura.max_count = 2
+    tt.aura.max_count_inc = 2
+    tt.aura.min_count = 2
+    tt.aura.owner_animation = "shoot"
+    tt.aura.owner_sid = 5
+    tt.aura.hit_time = fts(17)
+    tt.aura.hit_sound = "ThornSound"
+    tt.main_script.update = scripts.aura_ranger_thorn.update
+
     tt = RT("arrow_ranger", "arrow")
     tt.bullet.damage_min = 13
     tt.bullet.damage_max = 20
@@ -206,8 +223,8 @@ local function archer_towers()
     E:add_comps(mod_crossbow_eagle, "render", "tween")
     mod_crossbow_eagle.range_factor = 1.03
     mod_crossbow_eagle.range_factor_inc = 0.03
-    mod_crossbow_eagle.cooldown_factor = 0.96
-    mod_crossbow_eagle.cooldown_factor_inc = -0.02
+    mod_crossbow_eagle.cooldown_factor = 0.965
+    mod_crossbow_eagle.cooldown_factor_inc = -0.025
     mod_crossbow_eagle.main_script.insert = scripts.mod_crossbow_eagle.insert
     mod_crossbow_eagle.main_script.remove = scripts.mod_crossbow_eagle.remove
     mod_crossbow_eagle.tween.remove = false
@@ -553,8 +570,8 @@ local function archer_towers()
     tt.powers.barrel.price_inc = 125
     tt.powers.barrel.attack_idx = 2
     tt.powers.extra_damage = E:clone_c("power")
-    tt.powers.extra_damage.price_base = 175
-    tt.powers.extra_damage.price_inc = 175
+    tt.powers.extra_damage.price_base = 185
+    tt.powers.extra_damage.price_inc = 185
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_archer_%04i"
     tt.render.sprites[1].offset = vec_2(0, 9)

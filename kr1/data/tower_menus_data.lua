@@ -265,8 +265,8 @@ return {
         halo = "glow_ico_main",
         image = "kr3_main_icons_0111",
         place = 12,
-        tt_title = _("TOWER_DRUID_HENGE_NAME"),
-        tt_desc = _("TOWER_DRUID_HENGE_DESCRIPTION"),
+        tt_title = _("TOWER_STONE_DRUID_NAME"),
+        tt_desc = _("TOWER_STONE_DRUID_DESCRIPTION"),
         is_kr3 = true
     }, {
         check = "kr3_main_icons_0019",
@@ -2222,16 +2222,16 @@ return {
         place = 1,
         halo = "glow_ico_special",
         sounds = {"ElvesRockEntwoodFieryNutsTaunt"},
-        tt_phrase = _("TOWER_FIERY_NUTS_NOTE"),
+        tt_phrase = _("TOWER_ENTWOOD_FIERY_NUTS_NOTE"),
         tt_list = {{
-            tt_title = _("TOWER_FIERY_NUTS_NAME_1"),
-            tt_desc = _("TOWER_FIERY_NUTS_DESCRIPTION_1")
+            tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_1"),
+            tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_1")
         }, {
-            tt_title = _("TOWER_FIERY_NUTS_NAME_2"),
-            tt_desc = _("TOWER_FIERY_NUTS_DESCRIPTION_2")
+            tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_2"),
+            tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_2")
         }, {
-            tt_title = _("TOWER_FIERY_NUTS_NAME_3"),
-            tt_desc = _("TOWER_FIERY_NUTS_DESCRIPTION_3")
+            tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_3"),
+            tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_3")
         }},
         is_kr3 = true
     }, {

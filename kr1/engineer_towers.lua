@@ -61,7 +61,7 @@ local function engineer_towers()
     tt.attacks.list[1].bullet_start_offset = vec_2(0, 64)
     tt.attacks.list[1].cooldown = 3.65
     tt.attacks.list[1].node_prediction = fts(25)
-    tt.attacks.list[1].range = 190
+    -- tt.attacks.list[1].range = 190
     tt.attacks.list[1].shoot_time = fts(23)
     tt.attacks.list[1].vis_bans = bor(F_FLYING)
     tt.attacks.list[2] = CC("bullet_attack")
@@ -251,6 +251,18 @@ local function engineer_towers()
     tt.render.sprites[1].loop = true
     tt.main_script.insert = scripts.mod_dps.insert
     tt.main_script.update = scripts.mod_dps.update
+
+    tt = RT("aura_tesla_overcharge", "aura")
+    tt.aura.duration = fts(22)
+    tt.aura.mod = "mod_tesla_overcharge"
+    tt.aura.radius = 170
+    tt.aura.damage_min = 0
+    tt.aura.damage_max = 10
+    tt.aura.damage_inc = 10
+    tt.aura.damage_type = DAMAGE_ELECTRICAL
+    tt.aura.excluded_templates = {"enemy_spectral_knight"}
+    tt.main_script.update = scripts.aura_tesla_overcharge.update
+    tt.particles_name = "ps_tesla_overcharge"
 
     tt = RT("mod_tesla_overcharge", "modifier")
     AC(tt, "render")
@@ -746,7 +758,7 @@ local function engineer_towers()
     tt.tower.range_offset = vec_2(0, 10)
     tt.info.enc_icon = 13
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0012"
-    tt.info.i18n_key = "TOWER_DRUID_HENGE"
+    tt.info.i18n_key = "TOWER_STONE_DRUID"
     tt.main_script.insert = scripts.tower_barrack.insert
     tt.main_script.update = scripts.tower_druid.update
     tt.main_script.remove = scripts.tower_druid.remove
@@ -761,7 +773,7 @@ local function engineer_towers()
     tt.attacks.list[1].sound = "TowerDruidHengeRockThrow"
     tt.attacks.list[1].node_prediction = fts(35)
     tt.attacks.list[1].multi_rate = 0.2
-    tt.barrack.rally_range = 145
+    tt.barrack.rally_range = 150
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_druid_bear"
     tt.barrack.max_soldiers = 1
@@ -812,6 +824,7 @@ local function engineer_towers()
     tt.attack.bullet = "ray_druid_sylvan"
     tt.attack.damage_factor = {0.23, 0.46, 0.69}
     tt.ray_cooldown = fts(15)
+    tt.damage = 5
     tt.main_script.update = scripts.mod_druid_sylvan.update
     tt.tween.remove = false
     tt.tween.props[1].name = "scale"
@@ -829,7 +842,7 @@ local function engineer_towers()
     tt.attacks.list[1] = E:clone_c("spell_attack")
     tt.attacks.list[1].spell = "mod_druid_sylvan"
     tt.attacks.list[1].cooldown = 12
-    tt.attacks.list[1].range = 175
+    tt.attacks.list[1].range = 190
     tt.attacks.list[1].excluded_templates = {"enemy_ogre_magi"}
     tt.attacks.list[1].cast_time = fts(20)
     tt.attacks.list[1].sound = "TowerDruidHengeSylvanCurseCast"
@@ -855,8 +868,9 @@ local function engineer_towers()
     E:add_comps(tt, "melee", "count_group")
     tt.count_group.name = "soldier_druid_bear"
     tt.count_group.type = COUNT_GROUP_CONCURRENT
-    tt.health.armor = 0.3
-    tt.health.hp_max = 250
+    tt.health.armor = 0.2
+    tt.health.magic_armor = 0.2
+    tt.health.hp_max = 300
     tt.health_bar.offsets = {
         idle = vec_2(0, 40),
         standing = vec_2(0, 55)
@@ -900,7 +914,7 @@ local function engineer_towers()
     E:add_comps(tt, "attacks", "powers")
     tt.tower.type = "entwood"
     tt.tower.level = 1
-    tt.tower.price = 390
+    tt.tower.price = 400
     tt.tower.range_offset = vec_2(0, 10)
     tt.tower.size = TOWER_SIZE_LARGE
     tt.info.enc_icon = 14
@@ -946,8 +960,8 @@ local function engineer_towers()
     tt.powers.clobber.damage_values = {75, 100, 125}
     tt.powers.clobber.enc_icon = 14
     tt.powers.fiery_nuts = E:clone_c("power")
-    tt.powers.fiery_nuts.price_base = 300
-    tt.powers.fiery_nuts.price_inc = 225
+    tt.powers.fiery_nuts.price_base = 290
+    tt.powers.fiery_nuts.price_inc = 235
     tt.powers.fiery_nuts.attack_idx = 2
     tt.powers.fiery_nuts.enc_icon = 15
     tt.render.sprites[1].animated = false
@@ -1017,18 +1031,20 @@ local function engineer_towers()
     tt.bullet.track_damage = true
 
     tt = E:register_t("rock_entwood", "rock_1")
-    tt.bullet.damage_max = 106
-    tt.bullet.damage_min = 62
+    tt.bullet.damage_max = 77
+    tt.bullet.damage_min = 45
     tt.bullet.damage_radius = 55
     tt.bullet.pop = {"pop_entwood"}
     tt.render.sprites[1].name = "artillery_tree_proys_0001"
     tt.sound_events.insert = "TowerEntwoodCocoThrow"
     tt.sound_events.hit = "TowerEntwoodCocoExplosion"
+    tt.main_script.update = scripts.bomb_bouncing.update
+    tt.bounce_count = 1
 
     tt = E:register_t("rock_firey_nut", "rock_entwood")
-    tt.bullet.damage_max = 106
-    tt.bullet.damage_max_inc = 72
-    tt.bullet.damage_min = 106
+    tt.bullet.damage_max = 77
+    tt.bullet.damage_max_inc = 52
+    tt.bullet.damage_min = 77
     tt.bullet.damage_min_inc = tt.bullet.damage_max_inc
     tt.bullet.damage_radius = 65
     tt.bullet.hit_payload = "aura_fiery_nut"
