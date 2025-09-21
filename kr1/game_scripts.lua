@@ -24743,7 +24743,7 @@ function scripts.aura_arcane_burst.update(this, store)
 
             queue_damage(store, d)
 
-            if math.random() < this.sleep_chance and band(target.vis.bans, F_STUN) == 0 then
+            if (band(target.vis.flags, F_BOSS) == 0 and 1 or 2) * math.random() < this.sleep_chance and band(target.vis.bans, F_STUN) == 0 then
                 local m = E:create_entity("mod_arrow_arcane_slumber")
                 m.modifier.target_id = target.id
                 m.modifier.source_id = this.id
