@@ -824,6 +824,7 @@ local function engineer_towers()
     tt.attack.bullet = "ray_druid_sylvan"
     tt.attack.damage_factor = {0.23, 0.46, 0.69}
     tt.ray_cooldown = fts(15)
+    tt.damage = 5
     tt.main_script.update = scripts.mod_druid_sylvan.update
     tt.tween.remove = false
     tt.tween.props[1].name = "scale"
