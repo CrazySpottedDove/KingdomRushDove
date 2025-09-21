@@ -228,7 +228,7 @@ local function mage_towers()
     tt.attacks.list[2].cooldown = 20
     tt.attacks.list[2].shoot_time = fts(9)
     tt.attacks.list[2].vis_bans = bor(F_BOSS)
-    tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED, F_POLYMORPH)
+    tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED, F_POLYMORPH, F_INSTAKILL)
 
     tt = RT("bolt_sorcerer", "bolt")
     tt.bullet.damage_max = 60
