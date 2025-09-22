@@ -4415,7 +4415,7 @@ function scripts.soldier_mecha.update(this, store, script)
                 end
             end
 
-            if store.tick_ts - ao.ts > ao.cooldown * this.owner.tower.cooldown_factor then
+            if store.tick_ts - ao.ts > ao.cooldown * this.cooldown_factor then
                 local _, targets = U.find_foremost_enemy(store, this.pos, ao.min_range, ao.max_range, true,
                     ao.vis_flags, ao.vis_bans)
 
@@ -4460,7 +4460,7 @@ function scripts.soldier_mecha.update(this, store, script)
                 end
             end
 
-            if store.tick_ts - am.ts > am.cooldown * this.owner.tower.cooldown_factor then
+            if store.tick_ts - am.ts > am.cooldown * this.cooldown_factor then
                 local target, targets = U.find_foremost_enemy(store, this.pos, am.min_range, am.max_range, false,
                     am.vis_flags, am.vis_bans)
 
