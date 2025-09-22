@@ -2430,34 +2430,31 @@ function sys.render:on_update(dt, ts, store)
                 s._wait = nil
             end
 
-            local last_runs = s.runs
-            local fn, runs, idx
-
+            -- local last_runs = s.runs
+            -- local fn, runs, idx
+            local fn
             if s.animation then
                 A:generate_frames(s.animation)
-                fn, runs, idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
-                s.runs = runs
-                s.frame_idx = idx
+                -- fn, runs, idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
+                fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
+                -- s.runs = runs
+                -- s.frame_idx = idx
             elseif s.animated then
-                local full_name
+                local full_name = s.prefix and (s.prefix .. "_" .. s.name) or s.name
 
-                if s.prefix then
-                    full_name = s.prefix .. "_" .. s.name
-                else
-                    full_name = s.name
-                end
-
-                fn, runs, idx = A:fn(full_name, ts - s.ts + s.time_offset, s.loop, s.fps)
-                s.runs = runs
-                s.frame_idx = idx
+                -- fn, runs, idx = A:fn(full_name, ts - s.ts + s.time_offset, s.loop, s.fps)
+                fn, s.runs, s.frame_idx = A:fn(full_name, ts - s.ts + s.time_offset, s.loop, s.fps)
                 s.frame_name = fn
+                -- s.runs = runs
+                -- s.frame_idx = idx
+                -- s.frame_name = fn
             else
                 s.runs = 0
                 s.frame_idx = 1
                 fn = s.name
             end
 
-            s.sync_flag = last_runs ~= s.runs
+            -- s.sync_flag = last_runs ~= s.runs
 
             local ss = I:s(fn)
 
