@@ -200,29 +200,28 @@ function animation_db:generate_frames(a)
     end
 end
 
-function animation_db:fni(animation, time_offset, loop, fps, tick_length)
+function animation_db:fni(animation, time_offset, loop, fps)
     local a = animation
 
     fps = fps or self.fps
-    tick_length = tick_length or self.tick_length
 
     local frames = a.frames
     local eps = 1e-09
     local len = #frames
 
     local time_in_frames_plus_eps = time_offset * fps + eps
-    local elapsed_frames = ceil(time_in_frames_plus_eps)
-    local next_elapsed = ceil(time_in_frames_plus_eps + tick_length * fps)
+
+    local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
     local runs = max(0, floor((next_elapsed - 1) / len))
-    local idx
 
     if loop then
-        idx = floor(time_in_frames_plus_eps) % len + 1
+        local idx = floor(time_in_frames_plus_eps) % len + 1
+        return a.frame_names[idx], runs, idx
     else
-        idx = max(1, min(len, elapsed_frames))
+        local elapsed_frames = ceil(time_in_frames_plus_eps)
+        local idx = max(1, min(len, elapsed_frames))
+        return a.frame_names[idx], runs, idx
     end
-
-    return a.frame_names[idx], runs, idx
 end
 
 function animation_db:duration(animation_name)
