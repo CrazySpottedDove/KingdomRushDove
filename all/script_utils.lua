@@ -3630,8 +3630,6 @@ local function change_fps(ts, entity, factor)
             end
         end
 
-        -- factor = math.max(factor, 0.8)
-        -- (ts - s.ts + s.time_offset) * s.fps = s.fps_next * (ts - s.ts + s.time_offset_next)
         local new_fps = s._origin_fps * factor
         local elapsed_time = ts - s.ts
         s.time_offset = (elapsed_time + s.time_offset) * s.fps / new_fps - elapsed_time
