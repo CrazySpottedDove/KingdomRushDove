@@ -1422,7 +1422,7 @@ local function soldier_pick_ranged_target_and_attack(store, this)
         local a = this.ranged.attacks[i]
         if a.disabled then
             -- block empty
-        elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+        -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
             -- block empty
         elseif a.chance and math.random() > a.chance then
             -- block empty

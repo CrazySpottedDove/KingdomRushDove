@@ -11349,7 +11349,7 @@ function scripts.eb_umbra.update(this, store, script)
     this.phase = "loop"
 
     update_cooldowns()
-
+    local force_taunt
     while true do
         if is_in_pieces then
             local callback_pieces = ap.callback_pieces[km.clamp(1, 3, death_cycles)]
@@ -11681,11 +11681,11 @@ function scripts.eb_umbra.update(this, store, script)
                         jump_node = at.nodes_battlefield[idx]
                         is_at_home = false
 
-                        if taunt.last_id and store.entities[last_id] then
-                            queue_remove(store, store.entities[last_id])
+                        -- if taunt.last_id and store.entities[last_id] then
+                        --     queue_remove(store, store.entities[last_id])
 
-                            taunt.last_id = nil
-                        end
+                        --     taunt.last_id = nil
+                        -- end
                     else
                         jump_node = home_node
                         is_at_home = true
