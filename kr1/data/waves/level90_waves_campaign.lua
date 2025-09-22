@@ -527,7 +527,7 @@ return {
                     }
                 },
                 {    -- 第5组出怪
-                    some_flying = false,
+                    some_flying = true,
                     delay = 0.0,
                     path_index = 1,
                     spawns = {
@@ -635,7 +635,7 @@ return {
                     }
                 },
                 {    -- 第2组出怪
-                    some_flying = false,
+                    some_flying = true,
                     delay = 0.0,
                     path_index = 3,
                     spawns = {
@@ -765,7 +765,7 @@ return {
                     }
                 },
                 {    -- 第3组出怪
-                    some_flying = false,
+                    some_flying = true,
                     delay = 500.0,
                     path_index = 1,
                     spawns = {
@@ -780,7 +780,7 @@ return {
                     }
                 },
                 {    -- 第4组出怪
-                    some_flying = false,
+                    some_flying = true,
                     delay = 350.0,
                     path_index = 2,
                     spawns = {
