@@ -2198,7 +2198,6 @@ scripts.mod_denas_tower = {
         SU.remove_tower_range_buff(target, this.range_factor, true)
         return true
     end
-
 }
 -- 迪纳斯
 scripts.hero_denas = {
