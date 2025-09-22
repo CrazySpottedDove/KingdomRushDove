@@ -88,8 +88,8 @@ scripts.mod_high_elven = {
             log.info("cannot insert mod_high_elven to entity %s - ", target.id, target.template_name)
             return false
         end
-        SU.insert_tower_damage_factor_buff(target, this.enhance_damage_factor + this.enhance_damage_factor_inc * m.level)
-
+        SU.insert_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
+        SU.insert_tower_cooldown_buff(store.ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
         signal.emit("mod-applied", this, target)
 
         return true
@@ -98,8 +98,8 @@ scripts.mod_high_elven = {
         local m = this.modifier
         local target = store.entities[m.target_id]
 
-        SU.remove_tower_damage_factor_buff(target, this.enhance_damage_factor + this.enhance_damage_factor_inc * m.level)
-
+        SU.remove_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
+        SU.remove_tower_cooldown_buff(store.ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
         return true
     end
 }
