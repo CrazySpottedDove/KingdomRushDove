@@ -6221,7 +6221,7 @@ function scripts.mod_tower_factors.insert(this, store)
     end
 
     if this.cooldown_factor then
-        SU.insert_tower_cooldown_buff(target, this.cooldown_factor)
+        SU.insert_tower_cooldown_buff(store.ts, target, this.cooldown_factor)
     end
 
     signal.emit("mod-applied", this, target)
@@ -6246,7 +6246,7 @@ function scripts.mod_tower_factors.remove(this, store)
     end
 
     if this.cooldown_factor then
-        SU.remove_tower_cooldown_buff(target, this.cooldown_factor)
+        SU.remove_tower_cooldown_buff(store.ts, target, this.cooldown_factor)
     end
 
     return true

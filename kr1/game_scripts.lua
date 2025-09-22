@@ -130,7 +130,7 @@ function scripts.mod_crossbow_eagle.insert(this, store, script)
         return false
     end
     SU.insert_tower_range_buff(target, range_factor, true)
-    SU.insert_tower_cooldown_buff(target, cooldown_factor)
+    SU.insert_tower_cooldown_buff(store.ts, target, cooldown_factor)
 
     signal.emit("mod-applied", this, target)
 
@@ -143,7 +143,7 @@ function scripts.mod_crossbow_eagle.remove(this, store, script)
     local range_factor = this.range_factor + m.level * this.range_factor_inc
     local cooldown_factor = this.cooldown_factor + m.level * this.cooldown_factor_inc
     SU.remove_tower_range_buff(target, range_factor, true)
-    SU.remove_tower_cooldown_buff(target, cooldown_factor)
+    SU.remove_tower_cooldown_buff(store.ts, target, cooldown_factor)
     return true
 end
 
