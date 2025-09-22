@@ -3631,8 +3631,8 @@ local function change_fps(ts, entity, factor)
         end
 
         local new_fps = s._origin_fps * factor
-        local elapsed_time = ts - s.ts
-        s.time_offset = (elapsed_time + s.time_offset) * (s.fps or s._origin_fps) / new_fps - elapsed_time
+        -- local t = ts + s.time_offset
+        -- s.ts = t - (t - s.ts) * (s.fps or s._origin_fps) / new_fps
         s.fps = new_fps
     end
     scale_fps_based_keys(entity, 1 / factor)
@@ -3653,8 +3653,8 @@ local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
         for _, s in pairs(target.barrack.soldiers) do
             if s.unit then
                 s.cooldown_factor = s.cooldown_factor * cooldown_factor
-                change_fps(ts, s, 1 / (s.cooldown_factor))
             end
+            change_fps(ts, s, 1 / (s.cooldown_factor))
         end
     end
 end
@@ -3695,8 +3695,8 @@ local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
         for _, s in pairs(target.barrack.soldiers) do
             if s.unit then
                 s.cooldown_factor = s.cooldown_factor / cooldown_factor
-                change_fps(ts, s, 1 / (s.cooldown_factor))
             end
+            change_fps(ts, s, 1 / (s.cooldown_factor))
         end
     end
 end
