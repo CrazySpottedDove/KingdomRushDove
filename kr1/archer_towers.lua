@@ -1158,6 +1158,7 @@ local function archer_towers()
     tt = RT("soldier_tower_dark_elf", "soldier_militia")
     AC(tt, "nav_grid", "dodge")
     b = balance.towers.dark_elf.soldier
+    tt.is_kr5 = true
     tt.info.portrait = "gui_bottom_info_image_soldiers_0045"
     tt.info.random_name_count = 9
     tt.info.random_name_format = "SOLDIER_TOWER_DARK_ELF_%i_NAME"

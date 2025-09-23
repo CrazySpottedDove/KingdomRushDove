@@ -5759,28 +5759,28 @@ function scripts.tower_dark_elf.update(this, store)
 
         if a1 <= angle_deg and angle_deg < a2 then
             o_name, o_flip, o_idx = angles[1], false, 1
-            quadrant = 1
+            -- quadrant = 1
         elseif a2 <= angle_deg and angle_deg < a3 then
             o_name, o_flip, o_idx = angles[2], false, 2
-            quadrant = 2
+            -- quadrant = 2
         elseif a3 <= angle_deg and angle_deg < a4 then
             o_name, o_flip, o_idx = angles[2], true, 2
-            quadrant = 3
+            -- quadrant = 3
         elseif a4 <= angle_deg and angle_deg < a5 then
             o_name, o_flip, o_idx = angles[1], true, 1
-            quadrant = 4
+            -- quadrant = 4
         elseif a5 <= angle_deg and angle_deg < a6 then
             o_name, o_flip, o_idx = angles[4], true, 4
-            quadrant = 5
+            -- quadrant = 5
         elseif a6 <= angle_deg and angle_deg < a7 then
             o_name, o_flip, o_idx = angles[3], true, 3
-            quadrant = 6
+            -- quadrant = 6
         elseif a7 <= angle_deg and angle_deg < a8 then
             o_name, o_flip, o_idx = angles[3], false, 3
-            quadrant = 7
+            -- quadrant = 7
         else
             o_name, o_flip, o_idx = angles[4], false, 4
-            quadrant = 8
+            -- quadrant = 8
         end
 
         return o_name, o_flip, o_idx
@@ -6080,18 +6080,27 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 
     local function hit_target()
         if target then
-            if b.mod then
-                local mod = E:create_entity(b.mod)
-
-                mod.modifier.target_id = target.id
-                mod.modifier.source_id = source.id
-
-                queue_insert(store, mod)
-            end
-
             local d = SU.create_bullet_damage(b, target.id, this.id)
 
             queue_damage(store, d)
+
+            local mods
+            if b.mod then
+                mods = type(b.mod) == "table" and b.mod or {b.mod}
+            elseif b.mods then
+                mods = b.mods
+            end
+            if mods then
+                for _, mod_name in pairs(mods) do
+                    local mod = E:create_entity(mod_name)
+                    mod.modifier.source_id = this.id
+                    mod.modifier.target_id = target.id
+                    mod.modifier.level = b.level
+                    mod.modifier.source_damage = d
+                    mod.modifier.damage_factor = b.damage_factor
+                    queue_insert(store, mod)
+                end
+            end
 
             local fx = E:create_entity(b.hit_fx)
 
