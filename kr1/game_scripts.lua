@@ -17214,8 +17214,6 @@ end
 scripts.soldier_blade = {}
 
 function scripts.soldier_blade.on_damage(this, store, damage)
-    log.debug(" SOLDIER_BLADE DAMAGE:%s type:%x", damage.value, damage.damage_type)
-
     local bda = this.timed_attacks.list[1]
 
     if not this.dodge or this.dodge.chance <= 0 or this.unit.is_stunned or this.health.dead or bda.in_progress or
@@ -17223,8 +17221,6 @@ function scripts.soldier_blade.on_damage(this, store, damage)
         this.dodge.chance < math.random() then
         return true
     end
-
-    log.debug("(%s)soldier_blade dodged damage %s of type %s", this.id, damage.value, damage.damage_type)
 
     this.dodge.active = true
 
