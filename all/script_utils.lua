@@ -3639,7 +3639,7 @@ local function change_fps(ts, entity, factor)
 end
 
 ---增加塔冷却缩放（乘算）
----@param store.ts 当前时间(暂时留着，后续拓展，目前没用)
+---@param ts number 当前时间
 ---@param target table 塔实体
 ---@param cooldown_factor number 冷却系数
 local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
@@ -3692,7 +3692,7 @@ local function remove_tower_range_buff(target, range_factor, allow_barrack)
 end
 
 ---移除塔冷却缩放（乘算逆操作）
----@param ts 当前时间
+---@param ts number 当前时间
 ---@param target table 塔实体
 ---@param cooldown_factor number 冷却系数
 local function remove_tower_cooldown_buff(ts, target, cooldown_factor)

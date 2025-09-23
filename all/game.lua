@@ -30,7 +30,7 @@ game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
-game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds"}
+game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon"}
 
 game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle","main_script",  "timed", "tween", "endless_patch","health",
                            "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade", "game_upgrades",
