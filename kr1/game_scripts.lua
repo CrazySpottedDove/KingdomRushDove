@@ -17199,7 +17199,7 @@ scripts.holygrail = {
         local mod = E:create_entity("mod_holygrail")
         mod.modifier.source_id = this.id
         mod.modifier.target_id = this.id
-        queue_insert(mod)
+        queue_insert(store, mod)
     end
 }
 
