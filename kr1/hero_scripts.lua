@@ -3752,6 +3752,7 @@ scripts.mod_priest_consecrate = {
         this.tween.reverse = true
         this.tween.ts = store.tick_ts
         this.tween.remove = true
+        queue_remove(store, this)
     end
 }
 -- 德得尔
@@ -3997,7 +3998,6 @@ scripts.hero_priest = {
                 if ready_to_use_skill(a, store) then
                     local towers = table.filter(store.towers, function(_, e)
                         return e.tower and e.tower.can_be_mod and not e.tower.blocked and
-                                   not table.contains(a.excluded_templates, e.template_name) and
                                    V.dist(e.pos.x, e.pos.y, this.pos.x, this.pos.y) < a.range
                     end)
 
@@ -4020,9 +4020,7 @@ scripts.hero_priest = {
                         end
 
                         local towers = table.filter(store.towers, function(_, e)
-                            return e.tower.can_be_mod and not e.tower.blocked and
-                                       not table.contains(a.excluded_templates, e.template_name) and
-                                       V.dist(e.pos.x, e.pos.y, this.pos.x, this.pos.y) < a.range
+                            return e.tower.can_be_mod and not e.tower.blocked and V.dist(e.pos.x, e.pos.y, this.pos.x, this.pos.y) < a.range
                         end)
 
                         table.sort(towers, function(e1, e2)

@@ -2946,7 +2946,6 @@ local function heroes()
     tt.timed_attacks.list[2].disabled = true
     tt.timed_attacks.list[2].animation = "consecrate"
     tt.timed_attacks.list[2].cooldown = 8
-    tt.timed_attacks.list[2].excluded_templates = {}
     tt.timed_attacks.list[2].mod = "mod_priest_consecrate"
     tt.timed_attacks.list[2].range = 160
     tt.timed_attacks.list[2].shoot_time = fts(15)
