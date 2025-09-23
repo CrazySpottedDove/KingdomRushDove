@@ -376,15 +376,5 @@ return {
         tt_title = _("ELVES_TOWER_PIXIE_NAME"),
         tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION"),
         is_kr3 = true
-    }, {
-        check = "main_icons_0019",
-        action_arg = "tower_dark_elf_lvl4",
-        action = "tw_upgrade",
-        halo = "glow_ico_main",
-        image = "kr5_main_icons_0032",
-        tt_title = _("暮光长弓"),
-        tt_desc = _("TOWER_DARK_ELF_1_DESCRIPTION"),
-        place = 16,
-        is_kr3 = true
     }
 }
