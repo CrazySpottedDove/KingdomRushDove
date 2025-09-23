@@ -6292,6 +6292,8 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 
                     s.melee.attacks[1].damage_min = power_data.damage_min[this.pow_level]
                     s.melee.attacks[1].damage_max = power_data.damage_max[this.pow_level]
+                    s.melee.attacks[2].damage_min = power_data.damage_min[this.pow_level]
+                    s.melee.attacks[2].damage_max = power_data.damage_max[this.pow_level]
                     s.dodge.chance = power_data.dodge_chance[this.pow_level]
 
                     queue_insert(store, s)
