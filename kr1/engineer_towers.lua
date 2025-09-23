@@ -446,6 +446,7 @@ local function engineer_towers()
 
     tt = E:register_t("soldier_mecha")
     E:add_comps(tt, "pos", "render", "motion", "nav_rally", "main_script", "vis", "idle_flip", "attacks", "powers")
+    tt.cooldown_factor = 1
     tt.powers.missile = E:clone_c("power")
     tt.powers.oil = E:clone_c("power")
     tt.idle_flip.cooldown = 5

@@ -272,7 +272,7 @@ sprite.ts = 0
 sprite.runs = 0
 sprite.frame_idx = 1
 sprite.frame_name = nil
-sprite.sync_flag = nil
+-- sprite.sync_flag = nil
 
 local render = E:register_c("render")
 

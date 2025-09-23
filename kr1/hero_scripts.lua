@@ -2156,7 +2156,7 @@ scripts.mod_denas_tower = {
             return false
         end
 
-        SU.insert_tower_cooldown_buff(target, this.cooldown_factor)
+        SU.insert_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
         SU.insert_tower_range_buff(target, this.range_factor, true)
 
         for i = 1, #this.render.sprites do
@@ -2194,11 +2194,10 @@ scripts.mod_denas_tower = {
         if not target or not target.tower then
             return true
         end
-        SU.remove_tower_cooldown_buff(target, this.cooldown_factor)
+        SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
         SU.remove_tower_range_buff(target, this.range_factor, true)
         return true
     end
-
 }
 -- 迪纳斯
 scripts.hero_denas = {
@@ -5194,7 +5193,7 @@ function scripts.hero_dracolich.update(this, store)
 
             if a.disabled then
                 -- block empty
-            elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+            -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
             elseif store.tick_ts - a.ts < a.cooldown then
                 -- block empty
@@ -13745,7 +13744,7 @@ function scripts.hero_faustus.update(this, store)
 
             if a.disabled then
                 -- block empty
-            elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+            -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
             elseif store.tick_ts - a.ts < a.cooldown then
                 -- block empty
@@ -15082,7 +15081,7 @@ function scripts.hero_dragon.update(this, store)
 
             if a.disabled then
                 -- block empty
-            elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+            -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
             elseif ready_to_attack(a, store, this.cooldown_factor) then
                 local origin = V.v(this.pos.x, this.pos.y + a.bullet_start_offset[1].y)
@@ -20349,7 +20348,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
                 if a.disabled then
                     -- block empty
-                elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+                -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                     -- block empty
                 elseif store.tick_ts - a.ts < a.cooldown then
                     -- block empty

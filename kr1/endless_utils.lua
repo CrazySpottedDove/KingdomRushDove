@@ -969,7 +969,7 @@ function EU.patch_upgrade_in_game(key, store, endless)
         endless.tower_damage_factor = endless.tower_damage_factor + friend_buff.tower_damage_factor
     elseif key == "tower_cooldown" then
         for _, t in pairs(store.towers) do
-            SU.insert_tower_cooldown_buff(t, friend_buff.tower_cooldown_factor)
+            SU.insert_tower_cooldown_buff(store.tick_ts, t, friend_buff.tower_cooldown_factor)
         end
         endless.tower_cooldown_factor = endless.tower_cooldown_factor * friend_buff.tower_cooldown_factor
     elseif key == "hero_damage" then

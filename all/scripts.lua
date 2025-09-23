@@ -3965,7 +3965,7 @@ function scripts.shotgun.update(this, store, script)
     if target and target.health and not target.health.dead then
         local u = UP:get_upgrade("archer_precision")
 
-        if u and math.random() < u.chance and not b.ignore_upgrades then
+        if u and math.random() < u.chance then
             b.damage_min = b.damage_min * u.damage_factor
             b.damage_max = b.damage_max * u.damage_factor
             b.pop = {"pop_crit"}
@@ -6221,7 +6221,7 @@ function scripts.mod_tower_factors.insert(this, store)
     end
 
     if this.cooldown_factor then
-        SU.insert_tower_cooldown_buff(target, this.cooldown_factor)
+        SU.insert_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
     end
 
     signal.emit("mod-applied", this, target)
@@ -6246,7 +6246,7 @@ function scripts.mod_tower_factors.remove(this, store)
     end
 
     if this.cooldown_factor then
-        SU.remove_tower_cooldown_buff(target, this.cooldown_factor)
+        SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
     end
 
     return true
@@ -8651,5 +8651,26 @@ function scripts.bomb_bouncing.update(this, store, script)
 
     queue_remove(store, this)
 end
+
+scripts.mod_soldier_cooldown = {
+    insert = function(this, store)
+        local target = store.entities[this.modifier.target_id]
+        SU.insert_soldier_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
+        this.modifier.ts = store.tick_ts
+        return true
+    end,
+    update = function(this, store)
+        while store.tick_ts - this.modifier.ts < this.modifier.duration do
+            coroutine.yield()
+        end
+        queue_remove(store, this)
+        return
+    end,
+    remove = function(this, store)
+        local target = store.entities[this.modifier.target_id]
+        SU.remove_soldier_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
+        return true
+    end
+}
 
 return scripts

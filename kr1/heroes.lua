@@ -957,15 +957,16 @@ local function heroes()
     }
     tt.hero.skills.tower_buff.xp_gain = {75, 125, 175}
     tt.hero.skills.catapult = CC("hero_skill")
-    tt.hero.skills.catapult.count = {5, 7, 9}
-    tt.hero.skills.catapult.damage_min = {15, 18, 21}
-    tt.hero.skills.catapult.damage_max = {30, 36, 42}
+    tt.hero.skills.catapult.count = {4, 6, 8, 10}
+    tt.hero.skills.catapult.damage_min = {15, 17, 19, 21}
+    tt.hero.skills.catapult.damage_max = {30, 34, 38, 42}
     tt.hero.skills.catapult.xp_level_steps = {
-        [4] = 1,
-        [7] = 2,
-        [10] = 3
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
+        [10] = 4
     }
-    tt.hero.skills.catapult.xp_gain = {100, 200, 300}
+    tt.hero.skills.catapult.xp_gain = {50 ,100, 200, 300}
     tt.health.dead_lifetime = 15
     tt.health_bar.offset = vec_2(0, 60)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM

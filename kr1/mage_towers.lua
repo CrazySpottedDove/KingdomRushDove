@@ -228,7 +228,7 @@ local function mage_towers()
     tt.attacks.list[2].cooldown = 20
     tt.attacks.list[2].shoot_time = fts(9)
     tt.attacks.list[2].vis_bans = bor(F_BOSS)
-    tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED, F_POLYMORPH)
+    tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED, F_POLYMORPH, F_INSTAKILL)
 
     tt = RT("bolt_sorcerer", "bolt")
     tt.bullet.damage_max = 60
@@ -869,8 +869,10 @@ local function mage_towers()
 
     tt = E:register_t("mod_high_elven", "modifier")
     E:add_comps(tt, "render", "tween")
-    tt.enhance_damage_factor = 0.1
-    tt.enhance_damage_factor_inc = 0.05
+    tt.damage_factor = 0.06
+    tt.damage_factor_inc = 0.03
+    tt.cooldown_factor = 0.97
+    tt.cooldown_factor_inc = -0.02
     tt.main_script.insert = scripts.mod_high_elven.insert
     tt.main_script.remove = scripts.mod_high_elven.remove
     tt.render.sprites[1].draw_order = 10

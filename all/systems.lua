@@ -1977,10 +1977,10 @@ function sys.particle_system:on_update(dt, ts, store)
         local s = e.particle_system
         local tl = store.tick_length
         local to_remove = {}
-        local target, target_rot
+        local target_rot
 
         if s.track_id then
-            target = store.entities[s.track_id]
+            local target = store.entities[s.track_id]
 
             if target then
                 s.last_pos.x, s.last_pos.y = e.pos.x, e.pos.y
@@ -2033,10 +2033,9 @@ function sys.particle_system:on_update(dt, ts, store)
                 p.lifetime = U.frandom(s.particle_lifetime[1], s.particle_lifetime[2])
 
                 if s.track_id then
-                    local stepx = (e.pos.x - s.last_pos.x) / count
-                    local stepy = (e.pos.y - s.last_pos.y) / count
-
-                    p.pos.x, p.pos.y = s.last_pos.x + stepx * (i - 1), s.last_pos.y + stepy * (i - 1)
+                    local factor = (i - 1) / count
+                    p.pos.x, p.pos.y = s.last_pos.x + (e.pos.x - s.last_pos.x) * factor,
+                        s.last_pos.y + (e.pos.y - s.last_pos.y) * factor
                 else
                     p.pos.x, p.pos.y = e.pos.x, e.pos.y
                 end
@@ -2073,7 +2072,10 @@ function sys.particle_system:on_update(dt, ts, store)
                 if s.scale_var then
                     local factor = U.frandom(s.scale_var[1], s.scale_var[2])
 
-                    p.scale_factor = V.v(factor, factor)
+                    p.scale_factor = {
+                        x = factor,
+                        y = factor
+                    }
 
                     if not s.scale_same_aspect then
                         p.scale_factor.y = U.frandom(s.scale_var[1], s.scale_var[2])
@@ -2263,13 +2265,16 @@ function sys.render:on_insert(entity, store)
     if entity.render then
         for i = 1, #entity.render.sprites do
             local s = entity.render.sprites[i]
-            s.marked_to_remove = nil
+            s.marked_to_remove = false
             s._draw_order = 100000 * (s.draw_order or i) + entity.id
             if s.random_ts then
                 s.ts = U.frandom(-1 * s.random_ts, 0)
             end
             if not s.pos then
-                s.pos = {x = entity.pos.x, y = entity.pos.y}
+                s.pos = {
+                    x = entity.pos.x,
+                    y = entity.pos.y
+                }
                 s._track_e = true
             end
 
@@ -2427,37 +2432,33 @@ function sys.render:on_update(dt, ts, store)
                 s._wait = true
             elseif s._wait then
                 s.hidden = false
-                s._wait = nil
+                s._wait = false
             end
 
-            local last_runs = s.runs
-            local fn, runs, idx
-
+            -- local last_runs = s.runs
+            -- local fn, runs, idx
+            local fn
             if s.animation then
                 A:generate_frames(s.animation)
-                fn, runs, idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
-                s.runs = runs
-                s.frame_idx = idx
+                -- fn, runs, idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
+                fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
+                -- s.runs = runs
+                -- s.frame_idx = idx
             elseif s.animated then
-                local full_name
-
-                if s.prefix then
-                    full_name = s.prefix .. "_" .. s.name
-                else
-                    full_name = s.name
-                end
-
-                fn, runs, idx = A:fn(full_name, ts - s.ts + s.time_offset, s.loop, s.fps)
-                s.runs = runs
-                s.frame_idx = idx
+                -- fn, runs, idx = A:fn(full_name, ts - s.ts + s.time_offset, s.loop, s.fps)
+                fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name,
+                    ts - s.ts + s.time_offset, s.loop, s.fps)
                 s.frame_name = fn
+                -- s.runs = runs
+                -- s.frame_idx = idx
+                -- s.frame_name = fn
             else
                 s.runs = 0
                 s.frame_idx = 1
                 fn = s.name
             end
 
-            s.sync_flag = last_runs ~= s.runs
+            -- s.sync_flag = last_runs ~= s.runs
 
             local ss = I:s(fn)
 

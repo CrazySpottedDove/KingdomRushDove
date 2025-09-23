@@ -1294,3 +1294,10 @@ tt.bullet.damage_radius = 45
 tt.bullet.flight_time = fts(21)
 tt.bullet.g = -1.4 / (fts(1) * fts(1))
 
+tt = E:register_t("mod_soldier_cooldown", "modifier")
+tt.main_script.insert = scripts.mod_soldier_cooldown.insert
+tt.main_script.remove = scripts.mod_soldier_cooldown.remove
+tt.main_script.update = scripts.mod_soldier_cooldown.update
+tt.modifier.vis_flags = F_MOD
+tt.modifier.duration = 10
+tt.cooldown_factor = 0.9

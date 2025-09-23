@@ -514,7 +514,7 @@ local function barrack_towers()
     tower_templar.tower.price = 185
     tower_templar.powers.holygrail = E:clone_c("power")
     tower_templar.powers.holygrail.price_base = 200
-    tower_templar.powers.holygrail.price_inc = 150
+    tower_templar.powers.holygrail.price_inc = 135
     tower_templar.powers.holygrail.name = "HOLY"
     tower_templar.powers.holygrail.enc_icon = 25
     tower_templar.powers.extralife = E:clone_c("power")
@@ -572,7 +572,7 @@ local function barrack_towers()
     tt.melee.attacks[2].damage_min = 30
     tt.melee.attacks[2].damage_inc = 30
     tt.melee.attacks[2].disabled = true
-    tt.melee.attacks[2].damage_type = DAMAGE_RUDE
+    tt.melee.attacks[2].damage_type = bor(DAMAGE_RUDE, DAMAGE_NO_DODGE, DAMAGE_IGNORE_SHIELD)
     tt.melee.attacks[2].hit_time = fts(20)
     tt.melee.attacks[2].mod = "mod_blood_templar"
     tt.melee.attacks[2].pop = nil
@@ -609,15 +609,15 @@ local function barrack_towers()
         bans = bor(F_STUN, F_POISON, F_BURN, F_BLOOD),
         duration = 8,
         cost = 0.05,
-        side_effect = function(this, store)
-            scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
-            this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
-            this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
-        end
+        side_effect = scripts.holygrail.side_effect
     }
     tt.soldier.melee_slot_offset = vec_2(5, 0)
     tt.unit.marker_offset = vec_2(0, ady(7))
     tt.unit.mod_offset = vec_2(0, ady(23))
+
+    tt = E:register_t("mod_holygrail", "mod_soldier_cooldown")
+    tt.cooldown_factor = 0.7
+    tt.modifier.duration = 8
 
     tt = E:register_t("mod_blood_templar", "mod_blood")
     tt.modifier.level = 1

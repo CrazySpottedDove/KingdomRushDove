@@ -1422,7 +1422,7 @@ local function soldier_pick_ranged_target_and_attack(store, this)
         local a = this.ranged.attacks[i]
         if a.disabled then
             -- block empty
-        elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+        -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
             -- block empty
         elseif a.chance and math.random() > a.chance then
             -- block empty
@@ -3620,7 +3620,7 @@ local function scale_fps_based_keys(tbl, factor, visited)
     end
 end
 
-local function change_fps(entity, factor)
+local function change_fps(ts, entity, factor)
     for _, s in pairs(entity.render.sprites) do
         if not s._origin_fps then
             if not s.fps then
@@ -3630,36 +3630,63 @@ local function change_fps(entity, factor)
             end
         end
 
-        -- factor = math.max(factor, 0.8)
-        s.fps = s._origin_fps * factor
+        local new_fps = s._origin_fps * factor
+        local t = ts + s.time_offset
+        s.ts = t - (t - s.ts) * (s.fps or s._origin_fps) / new_fps
+        s.fps = new_fps
     end
     scale_fps_based_keys(entity, 1 / factor)
 end
 
+<<<<<<< HEAD
 ---增加塔冷却缩放（乘算）
 ---@param target table 塔实体
 ---@param cooldown_factor number 冷却系数
 local function insert_tower_cooldown_buff(target, cooldown_factor)
+=======
+--- 增加塔冷却缩放（乘算）
+--- @param store.ts 当前时间(暂时留着，后续拓展，目前没用)
+--- @param target table 塔实体
+--- @param cooldown_factor number 冷却系数
+local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
+>>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
     if not target then
         return
     end
 
     target.tower.cooldown_factor = target.tower.cooldown_factor * cooldown_factor
-    change_fps(target, 1 / (target.tower.cooldown_factor))
+    change_fps(ts , target, 1 / (target.tower.cooldown_factor))
     if target.barrack then
         for _, s in pairs(target.barrack.soldiers) do
-            if s.unit then
+            if s.cooldown_factor then
                 s.cooldown_factor = s.cooldown_factor * cooldown_factor
-                change_fps(s, 1 / (s.cooldown_factor))
+                change_fps(ts, s, 1 / (s.cooldown_factor))
             end
         end
     end
 end
 
+<<<<<<< HEAD
 ---移除塔攻击范围加成（乘算逆操作）
 ---@param target table 塔实体
 ---@param range_factor number 范围系数
 ---@param allow_barrack boolean 是否允许兵营范围加成
+=======
+local function insert_soldier_cooldown_buff(ts, target, cooldown_factor)
+    if not target then
+        return
+    end
+    if target.cooldown_factor then
+        target.cooldown_factor = target.cooldown_factor * cooldown_factor
+        change_fps(ts, target, 1 / (target.cooldown_factor))
+    end
+end
+
+--- 移除塔攻击范围加成（乘算逆操作）
+--- @param target table 塔实体
+--- @param range_factor number 范围系数
+--- @param allow_barrack boolean 是否允许兵营范围加成
+>>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
 local function remove_tower_range_buff(target, range_factor, allow_barrack)
     if not target then
         return
@@ -3678,28 +3705,52 @@ local function remove_tower_range_buff(target, range_factor, allow_barrack)
     end
 end
 
+<<<<<<< HEAD
 ---移除塔冷却缩放（乘算逆操作）
 ---@param target table 塔实体
 ---@param cooldown_factor number 冷却系数
 local function remove_tower_cooldown_buff(target, cooldown_factor)
+=======
+--- 移除塔冷却缩放（乘算逆操作）
+--- @param ts 当前时间
+--- @param target table 塔实体
+--- @param cooldown_factor number 冷却系数
+local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
+>>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
     if not target then
         return
     end
     target.tower.cooldown_factor = target.tower.cooldown_factor / cooldown_factor
-    change_fps(target, 1 / (target.tower.cooldown_factor))
+    change_fps(ts, target, 1 / (target.tower.cooldown_factor))
     if target.barrack then
         for _, s in pairs(target.barrack.soldiers) do
-            if s.unit then
+            if s.cooldown_factor then
                 s.cooldown_factor = s.cooldown_factor / cooldown_factor
-                change_fps(s, 1 / (s.cooldown_factor))
+                change_fps(ts, s, 1 / (s.cooldown_factor))
             end
         end
     end
 end
 
+<<<<<<< HEAD
 ---增加塔伤害加成（加法）
 ---@param target table 塔实体
 ---@param damage_factor number 伤害加成值
+=======
+local function remove_soldier_cooldown_buff(ts, target, cooldown_factor)
+    if not target then
+        return
+    end
+    if target.cooldown_factor then
+        target.cooldown_factor = target.cooldown_factor / cooldown_factor
+        change_fps(ts, target, 1 / (target.cooldown_factor))
+    end
+end
+
+--- 增加塔伤害加成（加法）
+--- @param target table 塔实体
+--- @param damage_factor number 伤害加成值
+>>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
 local function insert_tower_damage_factor_buff(target, damage_factor)
     if not target then
         return
@@ -3936,6 +3987,8 @@ local SU = {
     update_on_damage = update_on_damage,
     hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
     towers_swaped = towers_swaped
+    insert_soldier_cooldown_buff = insert_soldier_cooldown_buff,
+    remove_soldier_cooldown_buff = remove_soldier_cooldown_buff,
 }
 
 return SU

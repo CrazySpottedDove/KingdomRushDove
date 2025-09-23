@@ -88,8 +88,8 @@ scripts.mod_high_elven = {
             log.info("cannot insert mod_high_elven to entity %s - ", target.id, target.template_name)
             return false
         end
-        SU.insert_tower_damage_factor_buff(target, this.enhance_damage_factor + this.enhance_damage_factor_inc * m.level)
-
+        SU.insert_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
+        SU.insert_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
         signal.emit("mod-applied", this, target)
 
         return true
@@ -98,8 +98,8 @@ scripts.mod_high_elven = {
         local m = this.modifier
         local target = store.entities[m.target_id]
 
-        SU.remove_tower_damage_factor_buff(target, this.enhance_damage_factor + this.enhance_damage_factor_inc * m.level)
-
+        SU.remove_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
+        SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
         return true
     end
 }
@@ -130,7 +130,7 @@ function scripts.mod_crossbow_eagle.insert(this, store, script)
         return false
     end
     SU.insert_tower_range_buff(target, range_factor, true)
-    SU.insert_tower_cooldown_buff(target, cooldown_factor)
+    SU.insert_tower_cooldown_buff(store.tick_ts, target, cooldown_factor)
 
     signal.emit("mod-applied", this, target)
 
@@ -143,7 +143,7 @@ function scripts.mod_crossbow_eagle.remove(this, store, script)
     local range_factor = this.range_factor + m.level * this.range_factor_inc
     local cooldown_factor = this.cooldown_factor + m.level * this.cooldown_factor_inc
     SU.remove_tower_range_buff(target, range_factor, true)
-    SU.remove_tower_cooldown_buff(target, cooldown_factor)
+    SU.remove_tower_cooldown_buff(store.tick_ts, target, cooldown_factor)
     return true
 end
 
@@ -11349,7 +11349,7 @@ function scripts.eb_umbra.update(this, store, script)
     this.phase = "loop"
 
     update_cooldowns()
-
+    local force_taunt
     while true do
         if is_in_pieces then
             local callback_pieces = ap.callback_pieces[km.clamp(1, 3, death_cycles)]
@@ -11681,11 +11681,11 @@ function scripts.eb_umbra.update(this, store, script)
                         jump_node = at.nodes_battlefield[idx]
                         is_at_home = false
 
-                        if taunt.last_id and store.entities[last_id] then
-                            queue_remove(store, store.entities[last_id])
+                        -- if taunt.last_id and store.entities[last_id] then
+                        --     queue_remove(store, store.entities[last_id])
 
-                            taunt.last_id = nil
-                        end
+                        --     taunt.last_id = nil
+                        -- end
                     else
                         jump_node = home_node
                         is_at_home = true
@@ -17191,6 +17191,18 @@ function scripts.tower_bastion.update(this, store)
     end
 end
 
+scripts.holygrail = {
+    side_effect = function(this, store)
+        scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
+        this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
+        this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
+        local mod = E:create_entity("mod_holygrail")
+        mod.modifier.source_id = this.id
+        mod.modifier.target_id = this.id
+        queue_insert(store, mod)
+    end
+}
+
 scripts.aura_razor_edge = {}
 
 function scripts.aura_razor_edge.insert(this, store)
@@ -17202,8 +17214,6 @@ end
 scripts.soldier_blade = {}
 
 function scripts.soldier_blade.on_damage(this, store, damage)
-    log.debug(" SOLDIER_BLADE DAMAGE:%s type:%x", damage.value, damage.damage_type)
-
     local bda = this.timed_attacks.list[1]
 
     if not this.dodge or this.dodge.chance <= 0 or this.unit.is_stunned or this.health.dead or bda.in_progress or
@@ -17211,8 +17221,6 @@ function scripts.soldier_blade.on_damage(this, store, damage)
         this.dodge.chance < math.random() then
         return true
     end
-
-    log.debug("(%s)soldier_blade dodged damage %s of type %s", this.id, damage.value, damage.damage_type)
 
     this.dodge.active = true
 
@@ -24743,7 +24751,8 @@ function scripts.aura_arcane_burst.update(this, store)
 
             queue_damage(store, d)
 
-            if (band(target.vis.flags, F_BOSS) == 0 and 1 or 2) * math.random() < this.sleep_chance and band(target.vis.bans, F_STUN) == 0 then
+            if (band(target.vis.flags, F_BOSS) == 0 and 1 or 2) * math.random() < this.sleep_chance and
+                band(target.vis.bans, F_STUN) == 0 then
                 local m = E:create_entity("mod_arrow_arcane_slumber")
                 m.modifier.target_id = target.id
                 m.modifier.source_id = this.id
