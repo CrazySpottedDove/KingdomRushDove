@@ -3512,9 +3512,9 @@ local towers = {
                 0.25
             },
             hp = {
-                60,
-                90,
-                120
+                78,
+                117,
+                156
             },
             regen_hp = {
                 6,
@@ -3525,14 +3525,14 @@ local towers = {
                 range = 70,
                 cooldown = 1,
                 damage_min = {
-                    12,
-                    16,
-                    22
+                    15,
+                    20,
+                    28
                 },
                 damage_max = {
-                    16,
-                    24,
-                    34
+                    20,
+                    31,
+                    44
                 },
                 damage_type = DAMAGE_PHYSICAL
             },

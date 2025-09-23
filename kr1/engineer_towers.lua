@@ -779,8 +779,8 @@ local function engineer_towers()
     tt.barrack.soldier_type = "soldier_druid_bear"
     tt.barrack.max_soldiers = 1
     tt.powers.nature = E:clone_c("power")
-    tt.powers.nature.price_base = 350
-    tt.powers.nature.price_inc = 350
+    tt.powers.nature.price_base = 320
+    tt.powers.nature.price_inc = 320
     tt.powers.nature.max_level = 2
     tt.powers.nature.entity = "druid_shooter_nature"
     tt.powers.nature.enc_icon = 12

@@ -1111,7 +1111,7 @@ local function archer_towers()
     tt.attacks.list[1] = E:clone_c("bullet_attack")
     tt.attacks.list[1].cooldown = b.basic_attack.cooldown
     -- tt.attacks.list[1].shoot_time = fts(13)
-    tt.attacks.list[1].cooldown = fts(65 / 6)
+    tt.attacks.list[1].shoot_time = fts(65 / 6)
     tt.attacks.list[1].vis_flags = bor(F_RANGED)
     tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
     tt.attacks.list[1].node_prediction_prepare = fts(60)
@@ -1130,8 +1130,8 @@ local function archer_towers()
     tt.tower_upgrade_persistent_data.souls_extra_damage_min = 0
     tt.tower_upgrade_persistent_data.souls_extra_damage_max = 0
     tt.powers.skill_soldiers = E:clone_c("power")
-    tt.powers.skill_soldiers.price_base = 150
-    tt.powers.skill_soldiers.price_inc = 150
+    tt.powers.skill_soldiers.price_base = 225
+    tt.powers.skill_soldiers.price_inc = 100
     tt.powers.skill_soldiers.cooldown = b.skill_soldiers.cooldown
     tt.powers.skill_soldiers.hp = b.soldier.hp
     tt.powers.skill_soldiers.damage_min = b.soldier.basic_attack.damage_min
