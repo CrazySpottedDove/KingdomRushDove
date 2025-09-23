@@ -1110,6 +1110,7 @@ local function archer_towers()
     tt.attacks.range = b.basic_attack.range[4]
     tt.attacks.list[1] = E:clone_c("bullet_attack")
     tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+    -- exactly, cooldown only based on the animation time 3.38 * 5 / 6 = 2.8166, bigger than this cooldown assigned
     -- tt.attacks.list[1].shoot_time = fts(13)
     tt.attacks.list[1].shoot_time = fts(65 / 6)
     tt.attacks.list[1].vis_flags = bor(F_RANGED)
