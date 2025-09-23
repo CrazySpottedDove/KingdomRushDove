@@ -1105,11 +1105,13 @@ local function archer_towers()
         "transition"
     }
     tt.render.sprites[3].offset = vec_2(0, 48)
+    tt.render.sprites[3].fps = 36
     tt.render.sid_archer = 3
     tt.attacks.range = b.basic_attack.range[4]
     tt.attacks.list[1] = E:clone_c("bullet_attack")
     tt.attacks.list[1].cooldown = b.basic_attack.cooldown
-    tt.attacks.list[1].shoot_time = fts(13)
+    -- tt.attacks.list[1].shoot_time = fts(13)
+    tt.attacks.list[1].cooldown = fts(65 / 6)
     tt.attacks.list[1].vis_flags = bor(F_RANGED)
     tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
     tt.attacks.list[1].node_prediction_prepare = fts(60)

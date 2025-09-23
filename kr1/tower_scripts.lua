@@ -5916,7 +5916,7 @@ function scripts.tower_dark_elf.update(this, store)
 
                 bullet.pos = V.vclone(this.pos)
 
-                local offset_x = af and -attack.bullet_start_offset[angle_idx].x or
+                local offset_x = af and - attack.bullet_start_offset[angle_idx].x or
                 attack.bullet_start_offset[angle_idx].x
                 local offset_y = attack.bullet_start_offset[angle_idx].y
 
@@ -5964,8 +5964,6 @@ function scripts.tower_dark_elf.update(this, store)
                 local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos,
                     this.render.sid_archer)
                     U.animation_start(this, an, af, store.tick_ts, -1, this.render.sid_archer)
-                -- U.animation_start(this, "idle", false, store.tick_ts, -1, this.render.sid_archer)
-
                 this.attacks._last_target_pos = vec_2(REF_W, 0)
             end
 
