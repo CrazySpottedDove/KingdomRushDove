@@ -5034,9 +5034,10 @@ function scripts.mod_druid_sylvan.update(this, store)
             ray_ts = store.tick_ts
         end
         if target.health.dead then
-            local new_target = U.find_first_enemy(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v)
-                return not U.has_modifier(store, v, "mod_druid_sylvan")
-            end)
+            local new_target = U.find_first_enemy(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
+                function(v)
+                    return not U.has_modifier(store, v, "mod_druid_sylvan")
+                end)
             if new_target then
                 local new_mod = E:create_entity(this.template_name)
                 new_mod.modifier.target_id = new_target.id
@@ -5719,13 +5720,13 @@ function scripts.tower_dark_elf.update(this, store)
 
     local function find_target(attack, node_prediction)
         if current_mode == MODE_FIND_FOREMOST then
-            local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range,
-                node_prediction, attack.vis_flags, attack.vis_bans)
+            local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range, node_prediction,
+                attack.vis_flags, attack.vis_bans)
 
             return target, pred_pos
         elseif current_mode == MODE_FIND_MAXHP then
-            local target, pred_pos = U.find_biggest_enemy(store, tpos(this), 0, this.attacks.range,
-                node_prediction, attack.vis_flags, attack.vis_bans)
+            local target, pred_pos = U.find_biggest_enemy(store, tpos(this), 0, this.attacks.range, node_prediction,
+                attack.vis_flags, attack.vis_bans)
 
             if target then
                 create_mod(target, true)
@@ -5852,7 +5853,7 @@ function scripts.tower_dark_elf.update(this, store)
             check_change_mode()
             SU.towers_swaped(store, this, this.attacks.list)
 
-            if store.tick_ts - attack.ts > attack.cooldown then
+            if store.tick_ts - attack.ts > attack.cooldown * this.tower.cooldown_factor then
                 target, pred_pos = find_target(attack, attack.node_prediction_prepare + attack.node_prediction)
 
                 if not target then
@@ -5901,7 +5902,8 @@ function scripts.tower_dark_elf.update(this, store)
                         local e_ni = old_target.nav_path.ni + node_offset
                         local e_pos = P:node_pos(old_target.nav_path.pi, old_target.nav_path.spi, e_ni)
 
-                        if V.dist2(e_pos.x, e_pos.y, this.pos.x, this.pos.y) < this.attacks.range * this.attacks.range * 1.3 then
+                        if V.dist2(e_pos.x, e_pos.y, this.pos.x, this.pos.y) < this.attacks.range * this.attacks.range *
+                            1.3 then
                             target = old_target
                         end
                     end
@@ -5918,8 +5920,8 @@ function scripts.tower_dark_elf.update(this, store)
 
                 bullet.pos = V.vclone(this.pos)
 
-                local offset_x = af and - attack.bullet_start_offset[angle_idx].x or
-                attack.bullet_start_offset[angle_idx].x
+                local offset_x = af and -attack.bullet_start_offset[angle_idx].x or
+                                     attack.bullet_start_offset[angle_idx].x
                 local offset_y = attack.bullet_start_offset[angle_idx].y
 
                 bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
@@ -5967,7 +5969,7 @@ function scripts.tower_dark_elf.update(this, store)
             if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
                 local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos,
                     this.render.sid_archer)
-                    U.animation_start(this, an, af, store.tick_ts, -1, this.render.sid_archer)
+                U.animation_start(this, an, af, store.tick_ts, -1, this.render.sid_archer)
                 this.attacks._last_target_pos = vec_2(REF_W, 0)
             end
 
@@ -6015,7 +6017,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store, script)
         end
 
         this.render.sprites[1].hidden = not target or target.health.dead or
-        source.tower_upgrade_persistent_data.current_mode == 0
+                                            source.tower_upgrade_persistent_data.current_mode == 0
 
         if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
             queue_remove(store, this)
@@ -6393,7 +6395,9 @@ function scripts.bullet_tower_dark_elf_skill_buff.insert(this, store)
         local towers = U.find_towers_in_range(store.towers, tower.pos, {
             min_range = 1,
             max_range = 180
-        })
+        }, function(t)
+            return t.tower.can_be_mod
+        end)
         if towers then
             local other_tower = towers[math.random(1, #towers)]
             local new_bullet = E:clone_entity(this)
@@ -6541,9 +6545,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
         end
 
         if b.mod or b.mods then
-            local mods = b.mods or {
-                b.mod
-            }
+            local mods = b.mods or {b.mod}
 
             for _, mod_name in pairs(mods) do
                 local m = E:create_entity(mod_name)
