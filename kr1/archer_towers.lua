@@ -1275,7 +1275,7 @@ local function archer_towers()
     AC(tt, "render", "main_script", "pos")
     tt.render.sprites[1].prefix = "Tower_lvl4_door"
     tt.render.sprites[1].name = "idle"
-    tt.render.sprites[1].offset = vec_2(2, 11)
+    tt.render.sprites[1].offset = vec_2(0, 0)
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].sort_y_offset = 10
     tt.main_script.update = scripts.controller_tower_dark_elf_soldiers.update
