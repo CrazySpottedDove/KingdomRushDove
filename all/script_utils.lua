@@ -3638,18 +3638,11 @@ local function change_fps(ts, entity, factor)
     scale_fps_based_keys(entity, 1 / factor)
 end
 
-<<<<<<< HEAD
 ---增加塔冷却缩放（乘算）
+---@param store.ts 当前时间(暂时留着，后续拓展，目前没用)
 ---@param target table 塔实体
 ---@param cooldown_factor number 冷却系数
-local function insert_tower_cooldown_buff(target, cooldown_factor)
-=======
---- 增加塔冷却缩放（乘算）
---- @param store.ts 当前时间(暂时留着，后续拓展，目前没用)
---- @param target table 塔实体
---- @param cooldown_factor number 冷却系数
 local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
->>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
     if not target then
         return
     end
@@ -3666,12 +3659,6 @@ local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
-<<<<<<< HEAD
----移除塔攻击范围加成（乘算逆操作）
----@param target table 塔实体
----@param range_factor number 范围系数
----@param allow_barrack boolean 是否允许兵营范围加成
-=======
 local function insert_soldier_cooldown_buff(ts, target, cooldown_factor)
     if not target then
         return
@@ -3682,11 +3669,10 @@ local function insert_soldier_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
---- 移除塔攻击范围加成（乘算逆操作）
---- @param target table 塔实体
---- @param range_factor number 范围系数
---- @param allow_barrack boolean 是否允许兵营范围加成
->>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
+---移除塔攻击范围加成（乘算逆操作）
+---@param target table 塔实体
+---@param range_factor number 范围系数
+---@param allow_barrack boolean 是否允许兵营范围加成
 local function remove_tower_range_buff(target, range_factor, allow_barrack)
     if not target then
         return
@@ -3705,18 +3691,11 @@ local function remove_tower_range_buff(target, range_factor, allow_barrack)
     end
 end
 
-<<<<<<< HEAD
 ---移除塔冷却缩放（乘算逆操作）
+---@param ts 当前时间
 ---@param target table 塔实体
 ---@param cooldown_factor number 冷却系数
-local function remove_tower_cooldown_buff(target, cooldown_factor)
-=======
---- 移除塔冷却缩放（乘算逆操作）
---- @param ts 当前时间
---- @param target table 塔实体
---- @param cooldown_factor number 冷却系数
 local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
->>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
     if not target then
         return
     end
@@ -3732,11 +3711,6 @@ local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
-<<<<<<< HEAD
----增加塔伤害加成（加法）
----@param target table 塔实体
----@param damage_factor number 伤害加成值
-=======
 local function remove_soldier_cooldown_buff(ts, target, cooldown_factor)
     if not target then
         return
@@ -3747,10 +3721,9 @@ local function remove_soldier_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
---- 增加塔伤害加成（加法）
---- @param target table 塔实体
---- @param damage_factor number 伤害加成值
->>>>>>> e038ebf4386c26d24401bc97a24f0a8ac7288edf
+---增加塔伤害加成（加法）
+---@param target table 塔实体
+---@param damage_factor number 伤害加成值
 local function insert_tower_damage_factor_buff(target, damage_factor)
     if not target then
         return
@@ -3986,7 +3959,7 @@ local SU = {
     y_controable_new_rally = y_controable_new_rally,
     update_on_damage = update_on_damage,
     hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
-    towers_swaped = towers_swaped
+    towers_swaped = towers_swaped,
     insert_soldier_cooldown_buff = insert_soldier_cooldown_buff,
     remove_soldier_cooldown_buff = remove_soldier_cooldown_buff,
 }
