@@ -8668,7 +8668,7 @@ scripts.mod_soldier_cooldown = {
     end,
     remove = function(this, store)
         local target = store.entities[this.modifier.target_id]
-        SU.remove_soldier_cooldown_buff(target, this.cooldown_factor)
+        SU.remove_soldier_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
         return true
     end
 }
