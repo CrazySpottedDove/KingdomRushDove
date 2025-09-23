@@ -3659,6 +3659,10 @@ local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
+local function insert_soldier_cooldown_buff()
+    
+end
+
 --- 移除塔攻击范围加成（乘算逆操作）
 --- @param target table 塔实体
 --- @param range_factor number 范围系数
