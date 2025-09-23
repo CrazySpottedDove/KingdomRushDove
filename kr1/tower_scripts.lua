@@ -5941,6 +5941,8 @@ function scripts.tower_dark_elf.update(this, store)
                     bullet.bullet.damage_max = bullet.bullet.damage_max + soulsDamageMax
                 end
 
+                apply_precision(bullet)
+
                 queue_insert(store, bullet)
 
                 while not U.animation_finished(this, this.render.sid_archer, 1) do
