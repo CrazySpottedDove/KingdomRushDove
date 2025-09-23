@@ -5690,12 +5690,9 @@ function scripts.tower_dark_elf.get_info(this)
 end
 
 function scripts.tower_dark_elf.insert(this, store)
-    log.info(tostring(this.barrack))
-
     if this.barrack and not this.barrack.rally_pos and this.tower.default_rally_pos then
         this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
     end
-
     return true
 end
 
@@ -5804,24 +5801,22 @@ function scripts.tower_dark_elf.update(this, store)
     end
 
     local function check_upgrades_purchase()
-        if this.powers then
-            for k, pow in pairs(this.powers) do
-                if pow.changed then
-                    pow.changed = nil
+        for k, pow in pairs(this.powers) do
+            if pow.changed then
+                pow.changed = nil
 
-                    if pow == pow_soldiers then
-                        if not this.controller_soldiers then
-                            this.controller_soldiers = E:create_entity(this.controller_soldiers_template)
-                            this.controller_soldiers.tower_ref = this
-                            this.controller_soldiers.pos = this.pos
+                if pow == pow_soldiers then
+                    if not this.controller_soldiers then
+                        this.controller_soldiers = E:create_entity(this.controller_soldiers_template)
+                        this.controller_soldiers.tower_ref = this
+                        this.controller_soldiers.pos = this.pos
 
-                            queue_insert(store, this.controller_soldiers)
-                        end
-
-                        this.controller_soldiers.pow_level = pow.level
-                    else
-                        SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
+                        queue_insert(store, this.controller_soldiers)
                     end
+
+                    this.controller_soldiers.pow_level = pow.level
+                else
+                    SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
                 end
             end
         end
@@ -5857,8 +5852,7 @@ function scripts.tower_dark_elf.update(this, store)
                 target, pred_pos = find_target(attack, attack.node_prediction_prepare + attack.node_prediction)
 
                 if not target then
-                    SU.delay_attack(store, attack, fts(10))
-
+                    attack.ts = attack.ts + fts(5)
                     goto label_995_0
                 end
 
