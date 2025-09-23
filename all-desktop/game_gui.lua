@@ -7185,8 +7185,8 @@ function TowerMenuTooltip:show(entity, item)
     self.phrase_label.hidden = true
 
     if item.action == "tw_upgrade" then
-        self.title.text = item.tt_title or _(item.action_arg)
-        self.desc.text = item.tt_desc or ""
+        self.title.text = item.tt_title or U.balance_format(_(item.action_arg))
+        self.desc.text = U.balance_format(item.tt_desc) or ""
 
         local te
 
@@ -7239,7 +7239,7 @@ function TowerMenuTooltip:show(entity, item)
         local texts = item.tt_list[show_level]
 
         self.title.text = texts.tt_title
-        self.desc.text = texts.tt_desc
+        self.desc.text = U.balance_format(texts.tt_desc)
 
         if power.level == power.max_level then
             -- self.hidden = true
@@ -7250,7 +7250,7 @@ function TowerMenuTooltip:show(entity, item)
         end
 
         if item.tt_desc then
-            self.desc.text = item.tt_desc
+            self.desc.text = U.balance_format(item.tt_desc)
         end
     elseif item.action == "tw_sell" then
         self.title.text = _("Sell Tower")
