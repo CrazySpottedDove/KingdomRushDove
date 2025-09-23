@@ -1044,7 +1044,6 @@ local function archer_towers()
 
     -- 暮光长弓
     local balance = require("kr1.data.balance")
-
     tt = RT("tower_build_dark_elf", "tower_build")
     tt.build_name = "tower_dark_elf_lvl1"
     tt.render.sprites[1].name = "terrains_%04i"
@@ -1053,7 +1052,7 @@ local function archer_towers()
     tt.render.sprites[2].offset = vec_2(0, 10)
     tt.render.sprites[3].offset.y = 75
     tt.render.sprites[4].offset.y = 75
-
+    
     tt = RT("tower_dark_elf_lvl4", "tower")
     AC(tt, "powers", "barrack", "attacks")
     local b = balance.towers.dark_elf

@@ -7343,13 +7343,21 @@ function TowerMenuButton:initialize(item, entity)
     self.entity = entity
 
     local b = KImageView:new(item.image)
+    b.pos = v(0, 0)
     if item.is_kr5 then
         local kr5_scale = 56.177 / 42.667
         b.size.x = b.size.x * kr5_scale
         b.size.y = b.size.y * kr5_scale
         b.image_scale = kr5_scale * b.image_scale
+    elseif item.is_kr5_change_mode then
+        local scale = 48 / 42.667
+        b.size.x = b.size.x * scale
+        b.size.y = b.size.y * scale
+        b.image_scale = scale * b.image_scale
+        b.pos.x = -6
+        b.pos.y = -6
     end
-    b.pos = v(0, 0)
+
     b.propagate_on_click = true
     b.disabled_tint_color = nil
     self.button = b

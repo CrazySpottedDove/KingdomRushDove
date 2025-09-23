@@ -2870,7 +2870,7 @@ return {
                 tt_title_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NAME"),
                 tt_desc_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_DESCRIPTION"),
                 tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
-                -- is_kr5 = true
+                is_kr5_change_mode = true
             },
             {
                 check = "kr5_special_icons_0020",
@@ -2897,7 +2897,8 @@ return {
                         tt_desc = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_3_DESCRIPTION")
                     }
                 },
-                is_kr5 = true
+                is_kr5 = true,
+                is_kr3 = true
             },
             {
                 check = "kr5_special_icons_0020",
@@ -2924,7 +2925,8 @@ return {
                         tt_desc = _("TOWER_DARK_ELF_4_SKILL_BUFF_3_DESCRIPTION")
                     }
                 },
-                is_kr5 = true
+                is_kr5 = true,
+                is_kr3 = true
             },
             {
                 halo = "glow_ico_sub",
