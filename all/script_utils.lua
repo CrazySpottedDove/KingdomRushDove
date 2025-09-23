@@ -22,41 +22,41 @@ local bor = bit.bor
 local bnot = bit.bnot
 
 require("i18n")
---- 将实体插入到实体队列中
---- @param store table game.store
---- @param e table 实体
---- @return nil
+---将实体插入到实体队列中
+---@param store table game.store
+---@param e table 实体
+---@return nil
 local function queue_insert(store, e)
     simulation:queue_insert_entity(e)
 end
 
---- 将实体插入移除队列
---- @param store table game.store
---- @param e table 实体
---- @return nil
+---将实体插入移除队列
+---@param store table game.store
+---@param e table 实体
+---@return nil
 local function queue_remove(store, e)
     simulation:queue_remove_entity(e)
 end
 
---- 将伤害插入伤害队列
---- @param store table game.store
---- @param damage table 伤害实体
---- @return nil
+---将伤害插入伤害队列
+---@param store table game.store
+---@param damage table 伤害实体
+---@return nil
 local function queue_damage(store, damage)
     store.damage_queue[#store.damage_queue + 1] = damage
 end
 
---- 帧转秒
---- @param v number 帧数
---- @return number 秒数
+---帧转秒
+---@param v number 帧数
+---@return number 秒数
 local function fts(v)
     return v / FPS
 end
 
---- 添加UI点击代理
---- @param proxy table 代理实体
---- @param dest table 目标实体
---- @return nil
+---添加UI点击代理
+---@param proxy table 代理实体
+---@param dest table 目标实体
+---@return nil
 local function ui_click_proxy_add(proxy, dest)
     if not proxy.ui then
         log.error("cannot proxy. entity has no ui component: (%s)%s", proxy.id, proxy.template_name)
@@ -66,22 +66,22 @@ local function ui_click_proxy_add(proxy, dest)
     table.insert(proxy.ui.click_proxies, dest)
 end
 
---- 移除UI点击代理
---- @param proxy table 代理实体
---- @param dest table 目标实体
---- @return nil
+---移除UI点击代理
+---@param proxy table 代理实体
+---@param dest table 目标实体
+---@return nil
 local function ui_click_proxy_remove(proxy, dest)
     if proxy.ui and proxy.ui.click_proxies then
         table.removeobject(proxy.ui.click_proxies, dest)
     end
 end
 
---- 移除指定mod
---- @param store table game.store
---- @param entity table 实体
---- @param mod_name string? mod名称（可选，默认移除所有）
---- @param exclude_name string? 排除的mod名称（可选）
---- @return nil
+---移除指定mod
+---@param store table game.store
+---@param entity table 实体
+---@param mod_name string? mod名称（可选，默认移除所有）
+---@param exclude_name string? 排除的mod名称（可选）
+---@return nil
 local function remove_modifiers(store, entity, mod_name, exclude_name)
     if not entity._applied_mods then
         return
@@ -96,12 +96,12 @@ local function remove_modifiers(store, entity, mod_name, exclude_name)
     end
 end
 
---- 按类型移除mod
---- @param store table game.store
---- @param entity table 实体
---- @param mod_type string mod类型
---- @param exclude_name string? 排除的mod名称（可选）
---- @return nil
+---按类型移除mod
+---@param store table game.store
+---@param entity table 实体
+---@param mod_type string mod类型
+---@param exclude_name string? 排除的mod名称（可选）
+---@return nil
 local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
     if not entity._applied_mods then
         return
@@ -116,10 +116,10 @@ local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
     end
 end
 
---- 移除实体的所有光环
---- @param store table game.store
---- @param entity table 实体
---- @return nil
+---移除实体的所有光环
+---@param store table game.store
+---@param entity table 实体
+---@return nil
 local function remove_auras(store, entity)
     local auras = table.filter(store.auras, function(k, v)
         return v.aura.track_source and v.aura.source_id == entity.id
@@ -129,12 +129,12 @@ local function remove_auras(store, entity)
     end
 end
 
---- 隐藏目标为entity的mod的精灵
---- @param store table game.store
---- @param entity table 实体
---- @param keep boolean 是否使用多层隐藏计数
---- @param exclude_mod table? 排除的mod（可选）
---- @return nil
+---隐藏目标为entity的mod的精灵
+---@param store table game.store
+---@param entity table 实体
+---@param keep boolean 是否使用多层隐藏计数
+---@param exclude_mod table? 排除的mod（可选）
+---@return nil
 local function hide_modifiers(store, entity, keep, exclude_mod)
     local mods = entity._applied_mods
     if not mods then
@@ -148,12 +148,12 @@ local function hide_modifiers(store, entity, keep, exclude_mod)
     end
 end
 
---- 显示目标为entity的mod的精灵
---- @param store table game.store
---- @param entity table 实体
---- @param restore boolean 是否恢复
---- @param exclude_mod table? 排除的mod（可选）
---- @return nil
+---显示目标为entity的mod的精灵
+---@param store table game.store
+---@param entity table 实体
+---@param restore boolean 是否恢复
+---@param exclude_mod table? 排除的mod（可选）
+---@return nil
 local function show_modifiers(store, entity, restore, exclude_mod)
     local mods = entity._applied_mods
     if not mods then
@@ -167,11 +167,11 @@ local function show_modifiers(store, entity, restore, exclude_mod)
     end
 end
 
---- 隐藏所有源为entity的光环的精灵
---- @param store table game.store
---- @param entity table 实体
---- @param keep boolean 是否保留
---- @return nil
+---隐藏所有源为entity的光环的精灵
+---@param store table game.store
+---@param entity table 实体
+---@param keep boolean 是否保留
+---@return nil
 local function hide_auras(store, entity, keep)
     local auras = table.filter(store.auras, function(k, v)
         return v.aura.track_source and v.aura.source_id == entity.id
@@ -181,11 +181,11 @@ local function hide_auras(store, entity, keep)
     end
 end
 
---- 显示所有源为entity的光环的精灵
---- @param store table game.store
---- @param entity table 实体
---- @param restore boolean 是否恢复
---- @return nil
+---显示所有源为entity的光环的精灵
+---@param store table game.store
+---@param entity table 实体
+---@param restore boolean 是否恢复
+---@return nil
 local function show_auras(store, entity, restore)
     local auras = table.filter(store.auras, function(k, v)
         return v.aura.track_source and v.aura.source_id == entity.id
@@ -195,13 +195,13 @@ local function show_auras(store, entity, restore)
     end
 end
 
---- 判断单位是否闪避攻击
---- @param store table game.store
---- @param this table 单位实体
---- @param ranged_attack boolean 是否远程攻击
---- @param attack table 攻击
---- @param source table 来源实体
---- @return boolean 是否闪避
+---判断单位是否闪避攻击
+---@param store table game.store
+---@param this table 单位实体
+---@param ranged_attack boolean 是否远程攻击
+---@param attack table 攻击
+---@param source table 来源实体
+---@return boolean 是否闪避
 local function unit_dodges(store, this, ranged_attack, attack, source)
     if not this.dodge then
         return false
@@ -228,9 +228,9 @@ local function unit_dodges(store, this, ranged_attack, attack, source)
     return false
 end
 
---- 增加眩晕计数
---- @param this table 单位实体
---- @return nil
+---增加眩晕计数
+---@param this table 单位实体
+---@return nil
 local function stun_inc(this)
     if this and this.unit and not this.unit.ignore_stun then
         local u = this.unit
@@ -241,10 +241,10 @@ local function stun_inc(this)
     end
 end
 
---- 减少眩晕计数
---- @param this table 单位实体
---- @param remove_all boolean 是否全部移除
---- @return nil
+---减少眩晕计数
+---@param this table 单位实体
+---@param remove_all boolean 是否全部移除
+---@return nil
 local function stun_dec(this, remove_all)
     if this and this.unit and not this.unit.ignore_stun then
         local u = this.unit
@@ -256,9 +256,9 @@ local function stun_dec(this, remove_all)
     end
 end
 
---- 更新护甲
---- @param this table 单位实体
---- @return nil
+---更新护甲
+---@param this table 单位实体
+---@return nil
 local function update_armor(this)
     if not this.health.raw_armor then
         this.health.raw_armor = this.health.armor
@@ -266,9 +266,9 @@ local function update_armor(this)
     this.health.armor = km.clamp(0, 1, this.health.raw_armor + this.health.armor_buff)
 end
 
---- 更新魔法护甲
---- @param this table 单位实体
---- @return nil
+---更新魔法护甲
+---@param this table 单位实体
+---@return nil
 local function update_magic_armor(this)
     if not this.health.raw_magic_armor then
         this.health.raw_magic_armor = this.health.magic_armor
@@ -276,60 +276,60 @@ local function update_magic_armor(this)
     this.health.magic_armor = km.clamp(0, 1, this.health.raw_magic_armor + this.health.magic_armor_buff)
 end
 
---- 增加护甲buff
---- @param this table 单位实体
---- @param value number 增加值
---- @return nil
+---增加护甲buff
+---@param this table 单位实体
+---@param value number 增加值
+---@return nil
 local function armor_inc(this, value)
     this.health.armor_buff = this.health.armor_buff + value
     update_armor(this)
 end
 
---- 减少护甲buff
---- @param this table 单位实体
---- @param value number 减少值
---- @return nil
+---减少护甲buff
+---@param this table 单位实体
+---@param value number 减少值
+---@return nil
 local function armor_dec(this, value)
     armor_inc(this, -1 * value)
 end
 
---- 增加魔法护甲buff
---- @param this table 单位实体
---- @param value number 增加值
---- @return nil
+---增加魔法护甲buff
+---@param this table 单位实体
+---@param value number 增加值
+---@return nil
 local function magic_armor_inc(this, value)
     this.health.magic_armor_buff = this.health.magic_armor_buff + value
     update_magic_armor(this)
 end
 
---- 减少魔法护甲buff
---- @param this table 单位实体
---- @param value number 减少值
---- @return nil
+---减少魔法护甲buff
+---@param this table 单位实体
+---@param value number 减少值
+---@return nil
 local function magic_armor_dec(this, value)
     magic_armor_inc(this, -1 * value)
 end
 
---- 增加伤害buff
---- @param this table 单位实体
---- @param value number 增加值
---- @return nil
+---增加伤害buff
+---@param this table 单位实体
+---@param value number 增加值
+---@return nil
 local function damage_inc(this, value)
     this.damage_buff = this.damage_buff + value
 end
 
---- 减少伤害buff
---- @param this table 单位实体
---- @param value number 减少值
---- @return nil
+---减少伤害buff
+---@param this table 单位实体
+---@param value number 减少值
+---@return nil
 local function damage_dec(this, value)
     this.damage_buff = this.damage_buff - value
 end
 
---- 增加反伤甲
---- @param this table 单位实体
---- @param value number 增加值
---- @return nil
+---增加反伤甲
+---@param this table 单位实体
+---@param value number 增加值
+---@return nil
 local function spiked_armor_inc(this, value)
     if not this.health.raw_spiked_armor then
         this.health.raw_spiked_armor = this.health.spiked_armor
@@ -338,17 +338,17 @@ local function spiked_armor_inc(this, value)
     this.health.spiked_armor = km.clamp(0, 1, this.health.raw_spiked_armor)
 end
 
---- 减少反伤甲
---- @param this table 单位实体
---- @param value number 减少值
---- @return nil
+---减少反伤甲
+---@param this table 单位实体
+---@param value number 减少值
+---@return nil
 local function spiked_armor_dec(this, value)
     spiked_armor_inc(this, -1 * value)
 end
 
---- 增加防御塔block计数
---- @param this table 塔实体
---- @return nil
+---增加防御塔block计数
+---@param this table 塔实体
+---@return nil
 local function tower_block_inc(this)
     if this and this.tower and not this.tower_holder then
         local t = this.tower
@@ -362,10 +362,10 @@ local function tower_block_inc(this)
     end
 end
 
---- 减少防御塔block计数
---- @param this table 塔实体
---- @param remove_all boolean 是否全部移除
---- @return nil
+---减少防御塔block计数
+---@param this table 塔实体
+---@param remove_all boolean 是否全部移除
+---@return nil
 local function tower_block_dec(this, remove_all)
     if this and this.tower and not this.tower_holder then
         local t = this.tower
@@ -380,10 +380,10 @@ local function tower_block_dec(this, remove_all)
     end
 end
 
---- 更新沉默塔技能冷却
---- @param store table game.store
---- @param this table 塔实体
---- @return nil
+---更新沉默塔技能冷却
+---@param store table game.store
+---@param this table 塔实体
+---@return nil
 local function tower_update_silenced_powers(store, this)
     for k, pow in pairs(this.powers) do
         if pow.attack_idx then
@@ -400,10 +400,10 @@ local function tower_update_silenced_powers(store, this)
     end
 end
 
---- 召唤死亡生成物
---- @param store table game.store
---- @param this table 实体
---- @return nil
+---召唤死亡生成物
+---@param store table game.store
+---@param this table 实体
+---@return nil
 local function do_death_spawns(store, this)
     if this.death_spawns.fx then
         local fx = E:create_entity(this.death_spawns.fx)
@@ -446,22 +446,22 @@ local function do_death_spawns(store, this)
     end
 end
 
---- 延迟攻击
---- @param store table game.store
---- @param attack table 攻击
---- @param time number 延迟时间
---- @return nil
+---延迟攻击
+---@param store table game.store
+---@param attack table 攻击
+---@param time number 延迟时间
+---@return nil
 local function delay_attack(store, attack, time)
     attack.ts = store.tick_ts - attack.cooldown + time - 1e-06
 end
 
---- 插入精灵
---- @param store table game.store
---- @param name string 精灵名称
---- @param pos table 位置
---- @param flip_x boolean 是否翻转
---- @param ts_offset number? 时间偏移（可选，默认 0）
---- @return table 精灵实体
+---插入精灵
+---@param store table game.store
+---@param name string 精灵名称
+---@param pos table 位置
+---@param flip_x boolean 是否翻转
+---@param ts_offset number? 时间偏移（可选，默认 0）
+---@return table 精灵实体
 local function insert_sprite(store, name, pos, flip_x, ts_offset)
     local e = E:create_entity(name)
     e.pos.x, e.pos.y = pos.x, pos.y
@@ -475,12 +475,12 @@ local function insert_sprite(store, name, pos, flip_x, ts_offset)
     return e
 end
 
---- 实体淡出
---- @param store table game.store
---- @param entity table 实体
---- @param delay number 延迟时间
---- @param duration number? 持续时间（可选，默认 2）
---- @return nil
+---实体淡出
+---@param store table game.store
+---@param entity table 实体
+---@param delay number 延迟时间
+---@param duration number? 持续时间（可选，默认 2）
+---@return nil
 local function fade_out_entity(store, entity, delay, duration)
     duration = duration or 2
     if entity.tween then
@@ -499,11 +499,11 @@ local function fade_out_entity(store, entity, delay, duration)
     end
 end
 
---- 创建弹出效果
---- @param store table game.store
---- @param pos table 位置
---- @param pop table 弹出效果列表
---- @return table 弹出实体
+---创建弹出效果
+---@param store table game.store
+---@param pos table 位置
+---@param pop table 弹出效果列表
+---@return table 弹出实体
 local function create_pop(store, pos, pop)
     local name = pop[math.random(1, #pop)]
     local e = E:create_entity(name)
@@ -513,10 +513,10 @@ local function create_pop(store, pos, pop)
     return e
 end
 
---- 创建弹道弹出效果
---- @param store table game.store
---- @param this table 弹道实体
---- @return table 弹出实体
+---创建弹道弹出效果
+---@param store table game.store
+---@param this table 弹道实体
+---@return table 弹出实体
 local function create_bullet_pop(store, this)
     local b = this.bullet
     if b.pop then
@@ -524,11 +524,11 @@ local function create_bullet_pop(store, this)
     end
 end
 
---- 创建弹道伤害
---- @param bullet table 子弹实体
---- @param target_id number 目标ID
---- @param source_id number 来源ID
---- @return table 伤害实体
+---创建弹道伤害
+---@param bullet table 子弹实体
+---@param target_id number 目标ID
+---@param source_id number 来源ID
+---@return table 伤害实体
 local function create_bullet_damage(bullet, target_id, source_id)
     local d = E:create_entity("damage")
     d.damage_type = bullet.damage_type
@@ -560,11 +560,11 @@ local function create_bullet_damage(bullet, target_id, source_id)
     return d
 end
 
---- 创建攻击伤害
---- @param a table 攻击
---- @param target_id number 目标ID
---- @param this table 攻击者实体
---- @return table 伤害实体
+---创建攻击伤害
+---@param a table 攻击
+---@param target_id number 目标ID
+---@param this table 攻击者实体
+---@return table 伤害实体
 local function create_attack_damage(a, target_id, this)
     local vmax, vmin = a.damage_max, a.damage_min
     if a.level and a.level > 0 then
@@ -593,34 +593,34 @@ local function create_attack_damage(a, target_id, this)
     return d
 end
 
---- 抛物线初速度
---- @param from table 起点
---- @param to table 终点
---- @param time number 时间
---- @param g number 重力加速度
---- @return table 速度向量
+---抛物线初速度
+---@param from table 起点
+---@param to table 终点
+---@param time number 时间
+---@param g number 重力加速度
+---@return table 速度向量
 local function initial_parabola_speed(from, to, time, g)
     return V.v((to.x - from.x) / time, (to.y - from.y - 0.5 * g * time * time) / time)
 end
 
---- 抛物线位置
---- @param t number 时间
---- @param from table 起点
---- @param speed table 速度向量
---- @param g number 重力加速度
---- @return number x坐标, number y坐标
+---抛物线位置
+---@param t number 时间
+---@param from table 起点
+---@param speed table 速度向量
+---@param g number 重力加速度
+---@return number x坐标, number y坐标
 local function position_in_parabola(t, from, speed, g)
     local x = speed.x * t + from.x
     local y = g * t * t * 0.5 + speed.y * t + from.y
     return x, y
 end
 
---- 抛物线y坐标
---- @param phase number 阶段
---- @param from_y number 起点y
---- @param to_y number 终点y
---- @param max_y number 最大y
---- @return number y坐标
+---抛物线y坐标
+---@param phase number 阶段
+---@param from_y number 起点y
+---@param to_y number 终点y
+---@param max_y number 最大y
+---@return number y坐标
 local function parabola_y(phase, from_y, to_y, max_y)
     local max_y = math.max(max_y, from_y, to_y)
     local reverse = to_y < from_y
@@ -635,27 +635,27 @@ local function parabola_y(phase, from_y, to_y, max_y)
     return y + offset
 end
 
---- 判断士兵是否被打断
---- @param this table 士兵实体
---- @return boolean 是否被打断
+---判断士兵是否被打断
+---@param this table 士兵实体
+---@return boolean 是否被打断
 local function soldier_interrupted(this)
     return this.nav_rally.new or this.health.dead or this.unit.is_stunned
 end
 
---- 士兵等待
---- @param store table game.store
---- @param this table 士兵实体
---- @param time number 等待时间
---- @return boolean 是否提前结束
+---士兵等待
+---@param store table game.store
+---@param this table 士兵实体
+---@param time number 等待时间
+---@return boolean 是否提前结束
 local function y_soldier_wait(store, this, time)
     return U.y_wait(store, time, function(store, time)
         return soldier_interrupted(this)
     end)
 end
 
---- 士兵动画等待
---- @param this table 士兵实体
---- @return boolean 是否提前结束
+---士兵动画等待
+---@param this table 士兵实体
+---@return boolean 是否提前结束
 local function y_soldier_animation_wait(this)
     while not U.animation_finished(this) do
         if soldier_interrupted(this) then
@@ -666,31 +666,31 @@ local function y_soldier_animation_wait(this)
     return false
 end
 
---- 判断英雄是否会传送
---- @param this table 英雄实体
---- @param new_rally_pos table 新集结点位置
---- @return boolean 是否会传送
+---判断英雄是否会传送
+---@param this table 英雄实体
+---@param new_rally_pos table 新集结点位置
+---@return boolean 是否会传送
 local function hero_will_teleport(this, new_rally_pos)
     local tp = this.teleport
     local r = new_rally_pos
     return tp and not tp.disabled and V.dist2(r.x, r.y, this.pos.x, this.pos.y) > tp.min_distance * tp.min_distance
 end
 
---- 判断英雄是否会变形
---- @param this table 英雄实体
---- @param new_rally_pos table 新集结点位置
---- @return boolean 是否会变形
+---判断英雄是否会变形
+---@param this table 英雄实体
+---@param new_rally_pos table 新集结点位置
+---@return boolean 是否会变形
 local function hero_will_transfer(this, new_rally_pos)
     local tr = this.transfer
     local r = new_rally_pos
     return tr and not tr.disabled and V.dist2(r.x, r.y, this.pos.x, this.pos.y) > tr.min_distance * tr.min_distance
 end
 
---- 英雄按路径点移动
---- @param store table game.store
---- @param this table 英雄实体
---- @param animation string? 动画名称（可选，默认 "walk"）
---- @return boolean 是否被打断
+---英雄按路径点移动
+---@param store table game.store
+---@param this table 英雄实体
+---@param animation string? 动画名称（可选，默认 "walk"）
+---@return boolean 是否被打断
 local function y_hero_walk_waypoints(store, this, animation)
     local animation = animation or "walk"
     local r = this.nav_rally
@@ -716,10 +716,10 @@ local function y_hero_walk_waypoints(store, this, animation)
     end
 end
 
---- 英雄新集结点处理
---- @param store table game.store
---- @param this table 英雄实体
---- @return boolean?
+---英雄新集结点处理
+---@param store table game.store
+---@param this table 英雄实体
+---@return boolean?
 local function y_hero_new_rally(store, this)
     local r = this.nav_rally
     if r.new then
@@ -825,10 +825,10 @@ local function y_hero_new_rally(store, this)
     end
 end
 
---- 英雄技能获得经验
---- @param this table 英雄实体
---- @param skill table 技能实体
---- @return nil
+---英雄技能获得经验
+---@param this table 英雄实体
+---@param skill table 技能实体
+---@return nil
 local function hero_gain_xp_from_skill(this, skill)
     if skill.level then
         local amount
@@ -852,20 +852,20 @@ local function hero_gain_xp_from_skill(this, skill)
     end
 end
 
---- 英雄获得经验
---- @param this table 英雄实体
---- @param value number 经验值
---- @param desc string 来源描述
---- @return nil
+---英雄获得经验
+---@param this table 英雄实体
+---@param value number 经验值
+---@param desc string 来源描述
+---@return nil
 local function hero_gain_xp(this, value, desc)
     this.hero.xp_queued = this.hero.xp_queued + value
     log_xp.debug("XP QUEUE MANUAL: (%s)%s xp:%.2f from:%s", this.id, this.template_name, value, desc)
 end
 
---- 英雄升级
---- @param store table game.store
---- @param this table 英雄实体
---- @return boolean 是否升级
+---英雄升级
+---@param store table game.store
+---@param this table 英雄实体
+---@return boolean 是否升级
 local function hero_level_up(store, this)
     local h = this.hero
     if h.xp_queued == 0 then
@@ -897,10 +897,10 @@ local function hero_level_up(store, this)
     return true
 end
 
---- 英雄死亡与复活
---- @param store table game.store
---- @param this table 英雄实体
---- @return nil
+---英雄死亡与复活
+---@param store table game.store
+---@param this table 英雄实体
+---@return nil
 local function y_hero_death_and_respawn(store, this)
     local h = this.health
     local he = this.hero
@@ -1051,19 +1051,19 @@ local function y_hero_death_and_respawn(store, this)
     h.ignore_damage = false
     this.force_respawn = false
 end
---- 士兵援军淡入
---- @param store table game.store
---- @param this table 士兵实体
---- @return nil
+---士兵援军淡入
+---@param store table game.store
+---@param this table 士兵实体
+---@return nil
 local function y_reinforcement_fade_in(store, this)
     U.y_wait(store, fts(10))
     this.tween.disabled = true
 end
 
---- 士兵援军淡出
---- @param store table game.store
---- @param this table 士兵实体
---- @return nil
+---士兵援军淡出
+---@param store table game.store
+---@param this table 士兵实体
+---@return nil
 local function y_reinforcement_fade_out(store, this)
     this.render.sprites[1].ts = store.tick_ts
     local offset = 50
@@ -1084,10 +1084,10 @@ local function y_reinforcement_fade_out(store, this)
     end
 end
 
---- 士兵新集结点处理
---- @param store table game.store
---- @param this table 士兵实体
---- @return boolean 是否被打断
+---士兵新集结点处理
+---@param store table game.store
+---@param this table 士兵实体
+---@return boolean 是否被打断
 local function y_soldier_new_rally(store, this)
     local r = this.nav_rally
     local out = false
@@ -1120,10 +1120,10 @@ local function y_soldier_new_rally(store, this)
     return out
 end
 
---- 士兵复活
---- @param store table game.store
---- @param this table 士兵实体
---- @return boolean 是否复活成功
+---士兵复活
+---@param store table game.store
+---@param this table 士兵实体
+---@return boolean 是否复活成功
 local function y_soldier_revive(store, this)
     if not this.revive or this.revive.disabled or this.unit.is_stunned or
         band(this.health.last_damage_types, bor(DAMAGE_DISINTEGRATE, DAMAGE_EAT)) ~= 0 then
@@ -1190,10 +1190,10 @@ local function y_soldier_revive(store, this)
     return false
 end
 
---- 士兵死亡
---- @param store table game.store
---- @param this table 士兵实体
---- @return nil
+---士兵死亡
+---@param store table game.store
+---@param this table 士兵实体
+---@return nil
 local function y_soldier_death(store, this)
     U.unblock_target(store, this)
     local h = this.health
@@ -1239,12 +1239,12 @@ local function y_soldier_death(store, this)
     end
 end
 
---- 士兵循环远程攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @param target table 目标实体
---- @param attack table 攻击
---- @return boolean 是否攻击完成
+---士兵循环远程攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@param target table 目标实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
 local function y_soldier_do_loopable_ranged_attack(store, this, target, attack)
     local attack_done = false
     local start_ts = store.tick_ts
@@ -1321,13 +1321,13 @@ local function y_soldier_do_loopable_ranged_attack(store, this, target, attack)
     return attack_done
 end
 
---- 士兵远程攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @param target table 目标实体
---- @param attack table 攻击
---- @param pred_pos table? 预测位置（可选，默认为目标实体位置）
---- @return boolean 是否攻击完成
+---士兵远程攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@param target table 目标实体
+---@param attack table 攻击
+---@param pred_pos table? 预测位置（可选，默认为目标实体位置）
+---@return boolean 是否攻击完成
 local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
     local attack_done = false
     local start_ts = store.tick_ts
@@ -1411,10 +1411,10 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
     return attack_done
 end
 
---- 士兵选择远程攻击目标和攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @return table 目标, table 攻击, table 预测位置
+---士兵选择远程攻击目标和攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@return table 目标, table 攻击, table 预测位置
 local function soldier_pick_ranged_target_and_attack(store, this)
     local in_range = false
     local awaiting_target
@@ -1451,11 +1451,11 @@ local function soldier_pick_ranged_target_and_attack(store, this)
     return awaiting_target, nil
 end
 
---- 士兵远程攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @return boolean 是否提前结束, number 状态码
---- @desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
+---士兵远程攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@return boolean 是否提前结束, number 状态码
+---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 local function y_soldier_ranged_attacks(store, this)
     local target, attack, pred_pos = soldier_pick_ranged_target_and_attack(store, this)
     if not target then
@@ -1495,11 +1495,11 @@ local function y_soldier_ranged_attacks(store, this)
     end
 end
 
---- 士兵执行特殊动作
---- @param store table game.store
---- @param this table 士兵实体
---- @param action table 动作
---- @return boolean 是否动作完成
+---士兵执行特殊动作
+---@param store table game.store
+---@param this table 士兵实体
+---@param action table 动作
+---@return boolean 是否动作完成
 local function y_soldier_do_timed_action(store, this, action)
     local action_done = false
     local start_ts = store.tick_ts
@@ -1530,11 +1530,11 @@ local function y_soldier_do_timed_action(store, this, action)
     return action_done
 end
 
---- 士兵特殊动作
---- @param store table game.store
---- @param this table 士兵实体
---- @return boolean 是否提前结束, number 状态码
---- @desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
+---士兵特殊动作
+---@param store table game.store
+---@param this table 士兵实体
+---@return boolean 是否提前结束, number 状态码
+---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 local function y_soldier_timed_actions(store, this)
     for _, a in pairs(this.timed_actions.list) do
         if a.disabled or store.tick_ts - a.ts < a.cooldown then
@@ -1555,12 +1555,12 @@ local function y_soldier_timed_actions(store, this)
     return false, A_IN_COOLDOWN
 end
 
---- 士兵特殊攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @param target table 目标实体
---- @param attack table 攻击
---- @return boolean 是否攻击完成
+---士兵特殊攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@param target table 目标实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
 local function y_soldier_do_timed_attack(store, this, target, attack)
     local attack_done = false
     local start_ts = store.tick_ts
@@ -1594,11 +1594,11 @@ local function y_soldier_do_timed_attack(store, this, target, attack)
     return attack_done
 end
 
---- 士兵特殊攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @return boolean 是否提前结束, number 状态码
---- @desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
+---士兵特殊攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@return boolean 是否提前结束, number 状态码
+---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 local function y_soldier_timed_attacks(store, this)
     for _, a in pairs(this.timed_attacks.list) do
         if a.disabled or store.tick_ts - a.ts < a.cooldown then
@@ -1623,21 +1623,21 @@ local function y_soldier_timed_attacks(store, this)
     return false, A_IN_COOLDOWN
 end
 
---- 攻击是否被打断
---- @param this table 士兵实体
---- @param attack table 攻击
---- @return boolean 是否被打断
+---攻击是否被打断
+---@param this table 士兵实体
+---@param attack table 攻击
+---@return boolean 是否被打断
 local function attack_interrupted(this, attack)
     return this.health.dead or this.unit.is_stunned or
         (this.dodge and this.dodge.active and not (this.dodge.silent or attack.never_interrupt))
 end
 
---- 士兵单次范围攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @param target table 目标实体
---- @param attack table 攻击
---- @return boolean 是否攻击完成
+---士兵单次范围攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@param target table 目标实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
 local function y_soldier_do_single_area_attack(store, this, target, attack)
     local attack_done = false
     local start_ts = store.tick_ts
@@ -1748,12 +1748,12 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
     return attack_done
 end
 
---- 士兵循环近战攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @param target table 目标实体
---- @param attack table 攻击
---- @return boolean 是否攻击完成
+---士兵循环近战攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@param target table 目标实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
 local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
     local attack_done = false
     local start_ts = store.tick_ts
@@ -1935,19 +1935,19 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
     return attack_done
 end
---- 判断士兵是否处于闪避状态
---- @param this table 士兵实体
---- @return boolean 是否闪避激活
+---判断士兵是否处于闪避状态
+---@param this table 士兵实体
+---@return boolean 是否闪避激活
 local function dodge_active(this)
     return this.dodge and this.dodge.active
 end
 
---- 士兵执行单次近战攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @param target table 目标实体
---- @param attack table 攻击
---- @return boolean 是否攻击完成
+---士兵执行单次近战攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@param target table 目标实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
 local function y_soldier_do_single_melee_attack(store, this, target, attack)
     local attack_done = false
     local start_ts = store.tick_ts
@@ -2144,10 +2144,10 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
     end
     return attack_done
 end
---- 士兵选择近战目标
---- @param store table game.store
---- @param this table 士兵实体
---- @return table 目标实体
+---士兵选择近战目标
+---@param store table game.store
+---@param this table 士兵实体
+---@return table 目标实体
 local function soldier_pick_melee_target(store, this)
     local target
 
@@ -2194,11 +2194,11 @@ local function soldier_pick_melee_target(store, this)
     return target
 end
 
---- 士兵 block 目标，并移动到 melee_slot 对应位置
---- @param store table game.store
---- @param this table 士兵实体
---- @param target table 目标实体
---- @return boolean 是否还在移动
+---士兵 block 目标，并移动到 melee_slot 对应位置
+---@param store table game.store
+---@param this table 士兵实体
+---@param target table 目标实体
+---@return boolean 是否还在移动
 local function soldier_move_to_slot_step(store, this, target)
     U.block_enemy(store, this, target)
 
@@ -2231,10 +2231,10 @@ local function soldier_move_to_slot_step(store, this, target)
     end
 end
 
---- 士兵近战攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @return table 攻击
+---士兵近战攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@return table 攻击
 local function soldier_pick_melee_attack(store, this, target)
     if this.dodge and this.dodge.counter_attack_pending then
         this.dodge.counter_attack_pending = false
@@ -2293,10 +2293,10 @@ local function soldier_pick_melee_attack(store, this, target)
     return nil
 end
 
---- 敌人吸引源更新
---- @param store table game.store
---- @param this table 敌人实体
---- @return nil
+---敌人吸引源更新
+---@param store table game.store
+---@param this table 敌人实体
+---@return nil
 local function y_enemy_update_attract_source(store, this)
     if this.enemy.attract_source_id then
         local attract_source = store.entities[this.enemy.attract_source_id]
@@ -2307,11 +2307,11 @@ local function y_enemy_update_attract_source(store, this)
     end
 end
 
---- 士兵近战拦截与攻击
---- @param store table game.store
---- @param this table 士兵实体
---- @return boolean 是否提前结束, number 状态码
---- @desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
+---士兵近战拦截与攻击
+---@param store table game.store
+---@param this table 士兵实体
+---@return boolean 是否提前结束, number 状态码
+---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 local function y_soldier_melee_block_and_attacks(store, this)
     local target = soldier_pick_melee_target(store, this)
     if not target then
@@ -2345,10 +2345,10 @@ local function y_soldier_melee_block_and_attacks(store, this)
     end
 end
 
---- 士兵返回集结点
---- @param store table game.store
---- @param this table 士兵实体
---- @return boolean 是否还在移动
+---士兵返回集结点
+---@param store table game.store
+---@param this table 士兵实体
+---@return boolean 是否还在移动
 local function soldier_go_back_step(store, this)
     local dest = this.nav_rally.pos
     if not (this.teleport and this.teleport.pending) and V.veq(this.pos, dest) then
@@ -2366,11 +2366,11 @@ local function soldier_go_back_step(store, this)
     end
 end
 
---- 士兵待机
---- @param store table game.store
---- @param this table 士兵实体
---- @param force_ts number? 强制时间戳（可选）
---- @return nil
+---士兵待机
+---@param store table game.store
+---@param this table 士兵实体
+---@param force_ts number? 强制时间戳（可选）
+---@return nil
 local function soldier_idle(store, this, force_ts)
     U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, force_ts)
     if this.unit.is_stunned then
@@ -2392,10 +2392,10 @@ local function soldier_idle(store, this, force_ts)
     end
 end
 
---- 士兵回血
---- @param store table game.store
---- @param this table 士兵实体
---- @return nil
+---士兵回血
+---@param store table game.store
+---@param this table 士兵实体
+---@return nil
 local function soldier_regen(store, this)
     if not this.regen then
         return
@@ -2415,10 +2415,10 @@ local function soldier_regen(store, this)
     end
 end
 
---- 士兵技能升级
---- @param this table 士兵实体
---- @param power_name string 技能名称
---- @return nil
+---士兵技能升级
+---@param this table 士兵实体
+---@param power_name string 技能名称
+---@return nil
 local function soldier_power_upgrade(this, power_name)
     local pn = power_name
     local pow = this.powers and this.powers[pn]
@@ -2540,10 +2540,10 @@ local function soldier_power_upgrade(this, power_name)
     end
 end
 
---- 士兵勇气升级
---- @param store table game.store
---- @param this table 士兵实体
---- @return nil
+---士兵勇气升级
+---@param store table game.store
+---@param this table 士兵实体
+---@return nil
 local function soldier_courage_upgrade(store, this)
     local upg = UP:get_upgrade("barrack_courage")
     if upg and this.soldier and this.health and store.tick_ts - this.soldier.courage_ts > upg.regen_cooldown then
@@ -2553,21 +2553,21 @@ local function soldier_courage_upgrade(store, this)
     end
 end
 
---- 判断敌人是否可被近战拦截
---- @param store table game.store
---- @param this table 敌人实体
---- @param blocker table 士兵实体
---- @return boolean 是否可拦截
+---判断敌人是否可被近战拦截
+---@param store table game.store
+---@param this table 敌人实体
+---@param blocker table 士兵实体
+---@return boolean 是否可拦截
 local function can_melee_blocker(store, this, blocker)
     return not this.health.dead and not this.unit.is_stunned and blocker and not blocker.health.dead and
         table.contains(this.enemy.blockers, blocker.id) and store.entities[blocker.id]
 end
 
---- 判断敌人是否可被远程士兵攻击
---- @param store table game.store
---- @param this table 敌人实体
---- @param soldier table 士兵实体
---- @return boolean 是否可攻击
+---判断敌人是否可被远程士兵攻击
+---@param store table game.store
+---@param this table 敌人实体
+---@param soldier table 士兵实体
+---@return boolean 是否可攻击
 local function can_range_soldier(store, this, soldier)
     for _, ar in pairs(this.ranged.attacks) do
         if (ar.hold_advance or store.tick_ts - ar.ts > ar.cooldown) and not this.health.dead and
@@ -2582,27 +2582,27 @@ local function can_range_soldier(store, this, soldier)
     return false
 end
 
---- 判断敌人是否被打断
---- @param this table 敌人实体
---- @return boolean 是否被打断
+---判断敌人是否被打断
+---@param this table 敌人实体
+---@return boolean 是否被打断
 local function enemy_interrupted(this)
     return this.health.dead or this.unit.is_stunned
 end
 
---- 敌人等待
---- @param store table game.store
---- @param this table 敌人实体
---- @param time number 等待时间
---- @return boolean 是否提前结束
+---敌人等待
+---@param store table game.store
+---@param this table 敌人实体
+---@param time number 等待时间
+---@return boolean 是否提前结束
 local function y_enemy_wait(store, this, time)
     return U.y_wait(store, time, function(store, time)
         return enemy_interrupted(this)
     end)
 end
 
---- 敌人动画等待
---- @param this table 敌人实体
---- @return boolean 是否提前结束
+---敌人动画等待
+---@param this table 敌人实体
+---@return boolean 是否提前结束
 local function y_enemy_animation_wait(this)
     while not U.animation_finished(this) do
         if enemy_interrupted(this) then
@@ -2613,10 +2613,10 @@ local function y_enemy_animation_wait(this)
     return false
 end
 
---- 敌人水域变化处理
---- @param store table game.store
---- @param this table 敌人实体
---- @return number 地形类型
+---敌人水域变化处理
+---@param store table game.store
+---@param this table 敌人实体
+---@return number 地形类型
 local function enemy_water_change(store, this)
     local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
     local w = this.water
@@ -2708,10 +2708,10 @@ local function enemy_water_change(store, this)
     return terrain_type
 end
 
---- 敌人悬崖变化处理
---- @param store table game.store
---- @param this table 敌人实体
---- @return number 地形类型
+---敌人悬崖变化处理
+---@param store table game.store
+---@param this table 敌人实体
+---@return number 地形类型
 local function enemy_cliff_change(store, this)
     local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
     local c = this.cliff
@@ -2767,10 +2767,10 @@ local function enemy_cliff_change(store, this)
     return terrain_type
 end
 
---- 敌人死亡
---- @param store table game.store
---- @param this table 敌人实体
---- @return nil
+---敌人死亡
+---@param store table game.store
+---@param this table 敌人实体
+---@return nil
 local function y_enemy_death(store, this)
     local function show_blood_pool(e, terrain_type)
         if e.unit.show_blood_pool and e.unit.blood_color ~= BLOOD_NONE and band(terrain_type, TERRAIN_WATER) == 0 then
@@ -2867,12 +2867,12 @@ local function y_enemy_death(store, this)
     end
 end
 
---- 敌人行走一步
---- @param store table game.store
---- @param this table 敌人实体
---- @param animation_name string? 动画名称（可选，默认 "walk"）
---- @param sprite_id number 精灵ID
---- @return boolean 是否继续行走
+---敌人行走一步
+---@param store table game.store
+---@param this table 敌人实体
+---@param animation_name string? 动画名称（可选，默认 "walk"）
+---@param sprite_id number 精灵ID
+---@return boolean 是否继续行走
 local function y_enemy_walk_step(store, this, animation_name, sprite_id)
     animation_name = animation_name or "walk"
     local next, new, use_path
@@ -2905,13 +2905,13 @@ local function y_enemy_walk_step(store, this, animation_name, sprite_id)
     return true
 end
 
---- 敌人行走直到被拦截
---- @param store table game.store
---- @param this table 敌人实体
---- @param ignore_soldiers boolean 是否忽略士兵
---- @param func function? 额外判断函数（可选）
---- @return boolean 是否继续, table 拦截者, table 远程目标
---- @desc 无视士兵、被拦截、且没有远程目标时，敌人首先尝试远程索敌。若远程攻击是 hold_advance 的，敌人站桩攻击，停下返回 true, nil, ranged。接着，若不无视士兵，且 blockers 不为空，清除其中已经被删除的 blocker。若没有远程攻击与 blocker，敌人继续行走。否则敌人呆在原地不动。
+---敌人行走直到被拦截
+---@param store table game.store
+---@param this table 敌人实体
+---@param ignore_soldiers boolean 是否忽略士兵
+---@param func function? 额外判断函数（可选）
+---@return boolean 是否继续, table 拦截者, table 远程目标
+---@desc 无视士兵、被拦截、且没有远程目标时，敌人首先尝试远程索敌。若远程攻击是 hold_advance 的，敌人站桩攻击，停下返回 true, nil, ranged。接着，若不无视士兵，且 blockers 不为空，清除其中已经被删除的 blocker。若没有远程攻击与 blocker，敌人继续行走。否则敌人呆在原地不动。
 local function y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
     local ranged, blocker
     local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND))
@@ -2955,11 +2955,11 @@ local function y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
     return true, blocker, ranged
 end
 
---- 士兵等待拦截者
---- @param store table game.store
---- @param this table 士兵实体
---- @param blocker table 拦截者
---- @return boolean 是否等待成功
+---士兵等待拦截者
+---@param store table game.store
+---@param this table 士兵实体
+---@param blocker table 拦截者
+---@return boolean 是否等待成功
 local function y_wait_for_blocker(store, this, blocker)
     local pos = blocker.motion.arrived and blocker.pos or blocker.motion.dest
     local an, af = U.animation_name_facing_point(this, "idle", pos)
@@ -2979,12 +2979,12 @@ local function y_wait_for_blocker(store, this, blocker)
     return true
 end
 
---- 敌人远程攻击
---- @param store table game.store
---- @param this table 敌人实体
---- @param target table 士兵实体
---- @param attack table 攻击
---- @return boolean 是否攻击完成
+---敌人远程攻击
+---@param store table game.store
+---@param this table 敌人实体
+---@param target table 士兵实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
 local function y_enemy_do_ranged_attack(store, this, target, attack)
     local an, af, ai = U.animation_name_facing_point(this, attack.animation, target.pos)
     U.animation_start(this, an, af, store.tick_ts, false)
@@ -3042,12 +3042,12 @@ local function y_enemy_do_ranged_attack(store, this, target, attack)
     return true
 end
 
---- 敌人循环远程攻击
---- @param store table game.store
---- @param this table 敌人实体
---- @param target table 士兵实体
---- @param attack table 攻击
---- @return boolean 是否攻击完成
+---敌人循环远程攻击
+---@param store table game.store
+---@param this table 敌人实体
+---@param target table 士兵实体
+---@param attack table 攻击
+---@return boolean 是否攻击完成
 local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
     local attack_done = false
     local b
@@ -3107,11 +3107,11 @@ local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
     return attack_done
 end
 
---- 敌人远程攻击
---- @param store table game.store
---- @param this table 敌人实体
---- @param target table 士兵实体
---- @return boolean 是否攻击完成
+---敌人远程攻击
+---@param store table game.store
+---@param this table 敌人实体
+---@param target table 士兵实体
+---@return boolean 是否攻击完成
 local function y_enemy_range_attacks(store, this, target)
     for _, i in ipairs(this.ranged.order) do
         local ar = this.ranged.attacks[i]
@@ -3143,11 +3143,11 @@ local function y_enemy_range_attacks(store, this, target)
     return true
 end
 
---- 敌人近战攻击
---- @param store table game.store
---- @param this table 敌人实体
---- @param target table 士兵实体
---- @return boolean 是否攻击完成
+---敌人近战攻击
+---@param store table game.store
+---@param this table 敌人实体
+---@param target table 士兵实体
+---@return boolean 是否攻击完成
 local function y_enemy_melee_attacks(store, this, target)
     for _, i in ipairs(this.melee.order) do
         local ma = this.melee.attacks[i]
@@ -3332,10 +3332,10 @@ local function y_enemy_melee_attacks(store, this, target)
     return true
 end
 
---- 敌人眩晕
---- @param store table game.store
---- @param this table 敌人实体
---- @return nil
+---敌人眩晕
+---@param store table game.store
+---@param this table 敌人实体
+---@return nil
 local function y_enemy_stun(store, this)
     local flip_x = this.motion and this.motion.dest.x < this.pos.x or nil
 
@@ -3343,14 +3343,14 @@ local function y_enemy_stun(store, this)
     coroutine.yield()
 end
 
---- 敌人混合行走、近战、远程攻击
---- @param store table game.store
---- @param this table 敌人实体
---- @param ignore_soldiers boolean 是否忽略士兵
---- @param walk_break_fn function? 行走中断函数（可选）
---- @param melee_break_fn function? 近战中断函数（可选）
---- @param ranged_break_fn function? 远程中断函数（可选）
---- @return boolean 是否继续
+---敌人混合行走、近战、远程攻击
+---@param store table game.store
+---@param this table 敌人实体
+---@param ignore_soldiers boolean 是否忽略士兵
+---@param walk_break_fn function? 行走中断函数（可选）
+---@param melee_break_fn function? 近战中断函数（可选）
+---@param ranged_break_fn function? 远程中断函数（可选）
+---@return boolean 是否继续
 local function y_enemy_mixed_walk_melee_ranged(store, this, ignore_soldiers, walk_break_fn, melee_break_fn,
     ranged_break_fn)
     ranged_break_fn = ranged_break_fn or melee_break_fn
@@ -3387,16 +3387,16 @@ local function y_enemy_mixed_walk_melee_ranged(store, this, ignore_soldiers, wal
     return true
 end
 
---- 显示嘲讽文本集合
---- @param store table game.store
---- @param taunts table 嘲讽配置表
---- @param set_name string 嘲讽集合名称
---- @param index number? 嘲讽索引（可选，默认随机）
---- @param pos table? 显示位置（可选）
---- @param duration number? 持续时间（可选）
---- @param wait boolean? 是否等待显示完成（可选）
---- @param decal string? 使用的贴图名称（可选）
---- @return table 创建的嘲讽实体
+---显示嘲讽文本集合
+---@param store table game.store
+---@param taunts table 嘲讽配置表
+---@param set_name string 嘲讽集合名称
+---@param index number? 嘲讽索引（可选，默认随机）
+---@param pos table? 显示位置（可选）
+---@param duration number? 持续时间（可选）
+---@param wait boolean? 是否等待显示完成（可选）
+---@param decal string? 使用的贴图名称（可选）
+---@return table 创建的嘲讽实体
 local function y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait, decal)
     local set = taunts.sets[set_name]
 
@@ -3422,11 +3422,11 @@ local function y_show_taunt_set(store, taunts, set_name, index, pos, duration, w
     return t
 end
 
---- 生成刷怪器单位
---- @param store table game.store
---- @param this table 当前刷怪器实体
---- @return boolean 是否被中断
---- @return table 生成的单位列表
+---生成刷怪器单位
+---@param store table game.store
+---@param this table 当前刷怪器实体
+---@return boolean 是否被中断
+---@return table 生成的单位列表
 local function y_spawner_spawn(store, this)
     local sp = this.spawner
 
@@ -3498,10 +3498,10 @@ local function y_spawner_spawn(store, this)
     return false, spawns
 end
 
---- 合并两个表（递归合并，数组去重合并）
---- @param t1 table 表1
---- @param t2 table 表2
---- @return table 合并后的新表
+---合并两个表（递归合并，数组去重合并）
+---@param t1 table 表1
+---@param t2 table 表2
+---@return table 合并后的新表
 local function merge_tables(t1, t2)
     local merged = {}
 
@@ -3547,10 +3547,10 @@ local function merge_tables(t1, t2)
     return merged
 end
 
---- 合并两个表（仅添加 t2 中 t1 没有的键）
---- @param t1 table 表1
---- @param t2 table 表2
---- @return table 合并后的新表
+---合并两个表（仅添加 t2 中 t1 没有的键）
+---@param t1 table 表1
+---@param t2 table 表2
+---@return table 合并后的新表
 local function merge_conflict_tables(t1, t2)
     local merged = {}
 
@@ -3569,10 +3569,10 @@ local function merge_conflict_tables(t1, t2)
     return merged
 end
 
---- 增加塔攻击范围（乘算）
---- @param target table 塔实体
---- @param range_factor number 范围系数
---- @param allow_barrack boolean 是否允许兵营范围加成
+---增加塔攻击范围（乘算）
+---@param target table 塔实体
+---@param range_factor number 范围系数
+---@param allow_barrack boolean 是否允许兵营范围加成
 local function insert_tower_range_buff(target, range_factor, allow_barrack)
     if not target then
         return
@@ -3636,9 +3636,9 @@ local function change_fps(entity, factor)
     scale_fps_based_keys(entity, 1 / factor)
 end
 
---- 增加塔冷却缩放（乘算）
---- @param target table 塔实体
---- @param cooldown_factor number 冷却系数
+---增加塔冷却缩放（乘算）
+---@param target table 塔实体
+---@param cooldown_factor number 冷却系数
 local function insert_tower_cooldown_buff(target, cooldown_factor)
     if not target then
         return
@@ -3656,10 +3656,10 @@ local function insert_tower_cooldown_buff(target, cooldown_factor)
     end
 end
 
---- 移除塔攻击范围加成（乘算逆操作）
---- @param target table 塔实体
---- @param range_factor number 范围系数
---- @param allow_barrack boolean 是否允许兵营范围加成
+---移除塔攻击范围加成（乘算逆操作）
+---@param target table 塔实体
+---@param range_factor number 范围系数
+---@param allow_barrack boolean 是否允许兵营范围加成
 local function remove_tower_range_buff(target, range_factor, allow_barrack)
     if not target then
         return
@@ -3678,9 +3678,9 @@ local function remove_tower_range_buff(target, range_factor, allow_barrack)
     end
 end
 
---- 移除塔冷却缩放（乘算逆操作）
---- @param target table 塔实体
---- @param cooldown_factor number 冷却系数
+---移除塔冷却缩放（乘算逆操作）
+---@param target table 塔实体
+---@param cooldown_factor number 冷却系数
 local function remove_tower_cooldown_buff(target, cooldown_factor)
     if not target then
         return
@@ -3697,9 +3697,9 @@ local function remove_tower_cooldown_buff(target, cooldown_factor)
     end
 end
 
---- 增加塔伤害加成（加法）
---- @param target table 塔实体
---- @param damage_factor number 伤害加成值
+---增加塔伤害加成（加法）
+---@param target table 塔实体
+---@param damage_factor number 伤害加成值
 local function insert_tower_damage_factor_buff(target, damage_factor)
     if not target then
         return
@@ -3714,9 +3714,9 @@ local function insert_tower_damage_factor_buff(target, damage_factor)
     end
 end
 
---- 移除塔伤害加成（加法逆操作）
---- @param target table 塔实体
---- @param damage_factor number 伤害加成值
+---移除塔伤害加成（加法逆操作）
+---@param target table 塔实体
+---@param damage_factor number 伤害加成值
 local function remove_tower_damage_factor_buff(target, damage_factor)
     if not target then
         return
@@ -3731,10 +3731,10 @@ local function remove_tower_damage_factor_buff(target, damage_factor)
     end
 end
 
---- 处理可控单位新的集结点
---- @param store table game.store
---- @param this table 当前单位实体
---- @return any 处理结果
+---处理可控单位新的集结点
+---@param store table game.store
+---@param this table 当前单位实体
+---@return any 处理结果
 local function y_controable_new_rally(store, this)
     local r = this.nav_rally
 
@@ -3764,8 +3764,8 @@ local function y_controable_new_rally(store, this)
     end
 end
 
---- 更新实体受伤回调
---- @param entity table 实体
+---更新实体受伤回调
+---@param entity table 实体
 local function update_on_damage(entity)
     entity.health.on_damage = function(this, store, damage)
         if #entity.health.on_damages == 0 then
@@ -3782,10 +3782,10 @@ local function update_on_damage(entity)
     end
 end
 
---- 开局重置英雄的技能冷却时间
---- @param this table 实体
---- @param store game.store
---- @return nil
+---开局重置英雄的技能冷却时间
+---@param this table 实体
+---@param store game.store
+---@return nil
 local function hero_spawning_set_skill_ts(this, store)
     if this.melee then
         for _, v in ipairs(this.melee.attacks) do
@@ -3807,6 +3807,24 @@ local function hero_spawning_set_skill_ts(this, store)
                 v.ts = store.tick_ts - v.cooldown
             end
         end
+    end
+end
+
+local function towers_swaped(store, this, attacks)
+    if this.tower_upgrade_persistent_data.swaped then
+        for _, a in pairs(attacks) do
+            a.ts = store.tick_ts
+        end
+
+        if this.powers then
+            for _, pow in pairs(this.powers) do
+                if pow.level > 0 and pow.show_rally then
+                    this.tower.show_rally = true
+                end
+            end
+        end
+
+        this.tower_upgrade_persistent_data.swaped = nil
     end
 end
 
@@ -3917,6 +3935,7 @@ local SU = {
     y_controable_new_rally = y_controable_new_rally,
     update_on_damage = update_on_damage,
     hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
+    towers_swaped = towers_swaped
 }
 
 return SU

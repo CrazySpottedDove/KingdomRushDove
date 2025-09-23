@@ -497,6 +497,10 @@ tower_holder.unblock_price = 0
 tower_holder.preview_ids = {}
 tower_holder.custom = nil
 
+local tower_upgrade_persistent_data = E:register_c("tower_upgrade_persistent_data")
+tower_upgrade_persistent_data.current_mode = 0
+tower_upgrade_persistent_data.max_current_mode = 0
+
 local enemy = E:register_c("enemy")
 
 enemy.name = nil

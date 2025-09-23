@@ -6803,6 +6803,14 @@ function TowerMenu:update(dt)
                     pt.text = tostring(price)
                     pt.hidden = false
                 end
+            elseif e and c.item_props.action == "tw_change_mode" then
+                local current_mode = e.tower_upgrade_persistent_data.current_mode
+
+                if current_mode ~= 0 then
+                    c.button:set_image(U.str_increment_leading_zero(c.item_image, current_mode))
+                else
+                    c.button:set_image(c.item_image)
+                end
             end
         end
     end
@@ -6946,9 +6954,9 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 
     local inhibit_sounds = false
 
-    if item.action == "tw_rally" then
-        local e = game_gui.selected_entity
+    local e = game_gui.selected_entity
 
+    if item.action == "tw_rally" then
         game_gui:set_mode(GUI_MODE_RALLY_TOWER)
 
         local ux, uy = game_gui:g2u(V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y)))
@@ -6956,8 +6964,6 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
         game_gui:show_rally_range(ux, uy, e.barrack.rally_range)
         self:hide()
     elseif item.action == "tw_point" then
-        local e = game_gui.selected_entity
-
         if e.user_selection then
             e.user_selection.in_progress = true
             e.user_selection.new_pos = nil
@@ -7023,8 +7029,6 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 
         game_gui:deselect_entity()
     elseif item.action == "tw_buy_attack" then
-        local e = game_gui.selected_entity
-
         if e.user_selection then
             if e.user_selection.ignore_point then
                 e.user_selection.arg = item.action_arg
@@ -7040,6 +7044,20 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
             end
         else
             game_gui:deselect_entity()
+        end
+    elseif item.action == "tw_change_mode" then
+        if e.tower then
+            local current_mode = e.tower_upgrade_persistent_data.current_mode
+            local max_current_mode = e.tower_upgrade_persistent_data.max_current_mode
+            e.change_mode = true
+
+            game_gui:deselect_entity()
+
+            if current_mode >= max_current_mode then
+                e.tower_upgrade_persistent_data.current_mode = 0
+            else
+                e.tower_upgrade_persistent_data.current_mode = current_mode + 1
+            end
         end
     end
 
@@ -7241,6 +7259,11 @@ function TowerMenuTooltip:show(entity, item)
                            km.round(entity.tower.refund_factor * entity.tower.spent)
 
         self.desc.text = string.format(_("Sell this tower and get a %s GP refund."), refund)
+    elseif item.action == "tw_change_mode" then
+        local current_mode = entity.tower_upgrade_persistent_data.current_mode
+
+        self.title.text = item["tt_title_mode" .. current_mode]
+        self.desc.text = item["tt_desc_mode" .. current_mode]
     else
         self.hidden = true
     end
@@ -7301,12 +7324,14 @@ end
 function TowerMenuButton:disable()
     self.click_disabled = true
 
-    self.button:set_image(self.item_image .. "_disabled")
+    if self.item.action ~= "tw_change_mode" and self.item.action ~= "tw_swap_mode" then
+        self.button:set_image(self.item_image .. "_disabled")
 
-    if self.price_tag then
-        self.price_tag:set_image("price_tag_disabled")
+        if self.price_tag then
+            self.price_tag:set_image("price_tag_disabled")
 
-        self.price_tag.colors.text = {156, 146, 132}
+            self.price_tag.colors.text = {156, 146, 132}
+        end
     end
 end
 
@@ -7314,6 +7339,8 @@ function TowerMenuButton:initialize(item, entity)
     TowerMenuButton.super.initialize(self)
 
     self.item_image = item.image
+    self.item = item
+    self.entity = entity
 
     local b = KImageView:new(item.image)
     if item.is_kr5 then

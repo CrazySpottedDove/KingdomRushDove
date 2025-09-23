@@ -601,12 +601,12 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
     return true
 end
 
---- 获取近战位置
---- @param enemy table 敌人实体
---- @param soldier table 士兵实体
---- @param rank number|nil 排名（可选）
---- @param back boolean|nil 是否在后面（可选）
---- @return table|nil 敌人位置, boolean|nil 敌人是否在右侧
+---获取近战位置
+---@param enemy table 敌人实体
+---@param soldier table 士兵实体
+---@param rank number|nil 排名（可选）
+---@param back boolean|nil 是否在后面（可选）
+---@return table|nil 敌人位置, boolean|nil 敌人是否在右侧
 local function melee_slot_enemy_position(enemy, soldier, rank, back)
     if not rank then
         rank = table.keyforobject(enemy.enemy.blockers, soldier.id)

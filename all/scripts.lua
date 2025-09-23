@@ -3480,7 +3480,7 @@ function scripts.bolt.insert(this, store, script)
     if b.target_id then
         local target = store.entities[b.target_id]
 
-        if not target or band(target.vis.bans, F_RANGED) ~= 0 then
+        if not target or target.vis and band(target.vis.bans, F_RANGED) ~= 0 then
             return false
         end
     end

@@ -405,6 +405,16 @@ return {
         tt_title = _("TOWER_SILVER_NAME"),
         tt_desc = _("TOWER_SILVER_DESCRIPTION"),
         is_kr3 = true
+    }, {
+        check = "main_icons_0019",
+        action_arg = "tower_dark_elf_lvl4",
+        action = "tw_upgrade",
+        halo = "glow_ico_main",
+        image = "kr5_main_icons_0032",
+        tt_title = _("暮光长弓"),
+        tt_desc = _("TOWER_DARK_ELF_1_DESCRIPTION"),
+        place = 15,
+        is_kr3 = true
     }}},
     barrack = {{{
         check = "main_icons_0019",
@@ -2838,5 +2848,90 @@ return {
                 place = 9
             }
 		}
+    },
+    dark_elf = {
+        {
+            {
+                check = "ico_sell_0002",
+                action = "tw_sell",
+                halo = "glow_ico_sell",
+                image = "ico_sell_0001",
+                place = 9
+            },
+            {
+                check = "kr5_quickmenu_action_icons_0003",
+                action = "tw_change_mode",
+                image = "kr5_quickmenu_action_icons_0005",
+                place = 3,
+                halo = "kr5_quickmenu_action_icons_0001_hover",
+                tt_title_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NAME"),
+                tt_desc_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_DESCRIPTION"),
+                tt_phrase_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NOTE"),
+                tt_title_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NAME"),
+                tt_desc_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_DESCRIPTION"),
+                tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
+                is_kr5 = true
+            },
+            {
+                check = "kr5_special_icons_0020",
+                action_arg = "skill_soldiers",
+                action = "upgrade_power",
+                image = "kr5_special_icons_0032",
+                place = 6,
+                halo = "glow_ico_special",
+                sounds = {
+                    "TowerDarkElfSkillATaunt"
+                },
+                tt_phrase = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_NOTE"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_1_NAME"),
+                        tt_desc = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_2_NAME"),
+                        tt_desc = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_2_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_3_NAME"),
+                        tt_desc = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_3_DESCRIPTION")
+                    }
+                },
+                is_kr5 = true
+            },
+            {
+                check = "kr5_special_icons_0020",
+                action_arg = "skill_buff",
+                action = "upgrade_power",
+                image = "kr5_special_icons_0033",
+                place = 7,
+                halo = "glow_ico_special",
+                sounds = {
+                    "TowerDarkElfSkillBTaunt"
+                },
+                tt_phrase = _("TOWER_DARK_ELF_4_SKILL_BUFF_NOTE"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_DARK_ELF_4_SKILL_BUFF_1_NAME"),
+                        tt_desc = _("TOWER_DARK_ELF_4_SKILL_BUFF_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_DARK_ELF_4_SKILL_BUFF_2_NAME"),
+                        tt_desc = _("TOWER_DARK_ELF_4_SKILL_BUFF_2_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_DARK_ELF_4_SKILL_BUFF_3_NAME"),
+                        tt_desc = _("TOWER_DARK_ELF_4_SKILL_BUFF_3_DESCRIPTION")
+                    }
+                },
+                is_kr5 = true
+            },
+            {
+                halo = "glow_ico_sub",
+                image = "sub_icons_0001",
+                action = "tw_rally",
+                place = 8
+            },
+        }
     }
 }

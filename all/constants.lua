@@ -461,3 +461,7 @@ SGN_FULLADS_WORKFLOW_ICON_TOUCHED = "fullads-workflow-icon-touched"
 SGN_FULLADS_SHOW_MESSAGE = "fullads-show-message"
 SGN_FULLADS_REWARDS_SHOWN = "fullads-rewards-shown"
 SGN_FULLADS_REWARDS_HIDDEN = "fullads-rewards-hidden"
+
+-- 索敌模式
+MODE_FIND_FOREMOST = 0
+MODE_FIND_MAXHP = 1

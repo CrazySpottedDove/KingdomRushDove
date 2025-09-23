@@ -915,7 +915,8 @@ tt.ui.can_select = false
 tt.sound_events.insert = "GUITowerBuilding"
 
 local tower = E:register_t("tower")
-E:add_comps(tower, "tower", "pos", "render", "main_script", "ui", "info", "sound_events", "editor", "editor_script")
+E:add_comps(tower, "tower", "pos", "render", "main_script", "ui", "info", "sound_events", "editor", "editor_script",
+"vis", "tower_upgrade_persistent_data")
 tower.tower.level = 1
 tower.render.sprites[1].z = Z_TOWER_BASES
 tower.ui.click_rect = r(-40, -12, 80, 70)

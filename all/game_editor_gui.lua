@@ -44,11 +44,11 @@ local function wid(id)
 	return gui.window:get_child_by_id(id)
 end
 
---- 计算两个坐标之差的绝对值是否小于给定值
---- @param axi1 table 坐标1
---- @param axi2 table 坐标2
---- @param range number? 值（可选，默认 550）
---- @return boolean
+---计算两个坐标之差的绝对值是否小于给定值
+---@param axi1 table 坐标1
+---@param axi2 table 坐标2
+---@param range number? 值（可选，默认 550）
+---@return boolean
 function gui.are_axes_in_range(axi1, axi2, range)
 	range = range or 550
 	local vx = math.abs(axi1.x - axi2.x)

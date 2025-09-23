@@ -1043,6 +1043,243 @@ local function archer_towers()
     tt.tween.props[4].sprite_id = 1
     tt.sound_events.insert = "TowerGoldenBowFlareHit"
 
+    -- 暮光长弓
+    local balance = require("kr1.data.balance")
+
+    tt = RT("tower_build_dark_elf", "tower_build")
+    tt.build_name = "tower_dark_elf_lvl1"
+    tt.render.sprites[1].name = "terrains_%04i"
+    tt.render.sprites[1].offset = vec_2(0, 15)
+    tt.render.sprites[2].name = "Tower_construction"
+    tt.render.sprites[2].offset = vec_2(0, 10)
+    tt.render.sprites[3].offset.y = 75
+    tt.render.sprites[4].offset.y = 75
+
+    tt = RT("tower_dark_elf_lvl4", "tower")
+    AC(tt, "powers", "barrack", "attacks")
+    local b = balance.towers.dark_elf
+    tt.is_kr5 = true
+    tt.tower.level = 1
+    tt.tower.type = "dark_elf"
+    tt.tower.price = b.price[4]
+    tt.info.i18n_key = "TOWER_DARK_ELF_4"
+    tt.info.fn = scripts.tower_dark_elf.get_info
+    tt.info.portrait = "portraits_towers_0020"
+    tt.info.enc_icon = 1
+    tt.info.tower_portrait = "tower_room_portraits_big_tower_dark_elf_0001"
+    tt.info.room_portrait = "quickmenu_main_icons_main_icons_0018_0001"
+    tt.info.stat_damage = b.stats.damage
+    tt.info.stat_cooldown = b.stats.cooldown
+    tt.info.stat_range = b.stats.range
+    tt.main_script.update = scripts.tower_dark_elf.update
+    tt.main_script.remove = scripts.tower_dark_elf.remove
+    tt.main_script.insert = scripts.tower_dark_elf.insert
+    tt.ui.click_rect = r(-35, 0, 70, 75)
+    tt.ui.click_rect_offset_y = -10
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].name = "terrain_artillery_%04i"
+    tt.render.sprites[1].offset = vec_2(0, 15)
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].name = "Tower_lvl4"
+    tt.render.sprites[2].offset = vec_2(0, 0)
+    tt.render.sprites[2].sort_y_offset = 11
+    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3].prefix = "Archer_lvl4"
+    tt.render.sprites[3].name = "idle"
+    tt.render.sprites[3].angles = {}
+    tt.render.sprites[3].angles.idle = {
+        "idleback",
+        "idle"
+    }
+    tt.render.sprites[3].angles.shot_prepare = {
+        "shootbackstart",
+        "shootstart"
+    }
+    tt.render.sprites[3].angles.shot = {
+        "shootbackhigher",
+        "shootbackhigher",
+        "shootlower",
+        "shoothigher"
+    }
+    tt.render.sprites[3].angles.shot_end = {
+        "transitionback",
+        "transition"
+    }
+    tt.render.sprites[3].offset = vec_2(0, 48)
+    tt.render.sid_archer = 3
+    tt.attacks.range = b.basic_attack.range[4]
+    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+    tt.attacks.list[1].shoot_time = fts(13)
+    tt.attacks.list[1].vis_flags = bor(F_RANGED)
+    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+    tt.attacks.list[1].node_prediction_prepare = fts(60)
+    tt.attacks.list[1].node_prediction = fts(15)
+    tt.attacks.list[1].bullet = "bullet_tower_dark_elf_lvl4"
+    tt.attacks.list[1].bullet_start_offset = {
+        vec_2(18, 97),
+        vec_2(18, 97),
+        vec_2(18, 97),
+        vec_2(18, 97)
+    }
+    tt.attacks.list[1].first_cooldown = 2
+    tt.attacks.list[1].mod_target = "mod_tower_dark_elf_big_target"
+    tt.tower_upgrade_persistent_data.current_mode = 0
+    tt.tower_upgrade_persistent_data.max_current_mode = 1
+    tt.tower_upgrade_persistent_data.souls_extra_damage_min = 0
+    tt.tower_upgrade_persistent_data.souls_extra_damage_max = 0
+    tt.powers.skill_soldiers = E:clone_c("power")
+    tt.powers.skill_soldiers.price_base = 150
+    tt.powers.skill_soldiers.price_inc = 150
+    tt.powers.skill_soldiers.cooldown = b.skill_soldiers.cooldown
+    tt.powers.skill_soldiers.hp = b.soldier.hp
+    tt.powers.skill_soldiers.damage_min = b.soldier.basic_attack.damage_min
+    tt.powers.skill_soldiers.damage_max = b.soldier.basic_attack.damage_max
+    tt.powers.skill_soldiers.dodge_chance = b.soldier.dodge_chance
+    tt.powers.skill_soldiers.enc_icon = 31
+    tt.powers.skill_soldiers.show_rally = true
+    tt.powers.skill_buff = E:clone_c("power")
+    tt.powers.skill_buff.price_base = 200
+    tt.powers.skill_buff.enc_icon = 32
+    tt.powers.skill_buff.damage_min = b.skill_buff.extra_damage_min
+    tt.powers.skill_buff.damage_max = b.skill_buff.extra_damage_max
+    tt.powers.skill_buff.max_level = 1
+    tt.barrack.rally_range = b.rally_range
+    tt.barrack.rally_radius = 25
+    tt.barrack.soldier_type = "soldier_tower_dark_elf"
+    tt.barrack.max_soldiers = 2
+    tt.barrack.respawn_offset = vec_2(0, 12)
+    tt.attacks.list[2] = E:clone_c("custom_attack")
+    tt.attacks.list[2].disabled = true
+    tt.attacks.list[2].spawn_delay = 1
+    tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"
+    tt.sound_events.change_rally_point = "TowerDarkElfUnitTaunt"
+
+    tt = RT("soldier_tower_dark_elf", "soldier_militia")
+    AC(tt, "nav_grid", "dodge")
+    b = balance.towers.dark_elf.soldier
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0045"
+    tt.info.random_name_count = 9
+    tt.info.random_name_format = "SOLDIER_TOWER_DARK_ELF_%i_NAME"
+    tt.main_script.update = scripts.soldier_barrack.update
+    tt.main_script.insert = scripts.soldier_barrack.insert
+    tt.render.sprites[1].prefix = "harrasser"
+    tt.render.sprites[1].angles.walk = {
+        "run"
+    }
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.unit.hit_offset = vec_2(0, 12)
+    tt.unit.marker_offset = vec_2(0, 0)
+    tt.unit.mod_offset = vec_2(0, 13)
+    tt.health.hp_max = b.hp[1]
+    tt.health.armor = b.armor[1]
+    tt.health_bar.offset = vec_2(0, 30)
+    tt.health.dead_lifetime = b.dead_lifetime
+    tt.regen.health = b.regen_hp[1]
+    tt.motion.max_speed = b.speed
+    tt.melee.range = b.basic_attack.range
+    tt.melee.cooldown = b.basic_attack.cooldown
+    tt.melee.attacks[1].animation = "attack"
+    tt.melee.attacks[1].damage_min = b.basic_attack.damage_min[1]
+    tt.melee.attacks[1].damage_max = b.basic_attack.damage_max[1]
+    tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+    tt.melee.attacks[1].hit_time = fts(17)
+    tt.melee.attacks[1].shared_cooldown = true
+    tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+    tt.melee.attacks[2].animation = "attack2"
+    tt.melee.attacks[2].shared_cooldown = true
+    tt.melee.attacks[2].chance = 0.5
+    tt.soldier.melee_slot_spread = vec_2(-8, -8)
+    tt.dodge.chance = b.dodge_chance[1]
+    tt.dodge.animation = "evade"
+    tt.dodge.time_before_hit = fts(5)
+    tt.dodge.sound = "HeroVesperDisengageCast"
+    tt.ui.click_rect = r(-10, -2, 20, 25)
+
+    tt = RT("bullet_tower_dark_elf", "bullet")
+    b = balance.towers.dark_elf.basic_attack
+    tt.bullet.hit_fx = "fx_bullet_tower_dark_elf_hit"
+    tt.bullet.flight_time = fts(23)
+    tt.bullet.hit_time = fts(1)
+    tt.bullet.damage_type = b.damage_type
+    tt.bullet.level = 1
+    tt.main_script.update = scripts.bullet_tower_dark_elf.update
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.render.sprites[1].name = "shot_run"
+    tt.render.sprites[1].loop = false
+    tt.image_width = 170
+    tt.ray_duration = fts(23)
+    tt.hit_delay = fts(1)
+    tt.sound_events.insert = "TowerDarkElfBasicAttackCast"
+
+    tt = RT("bullet_tower_dark_elf_lvl4", "bullet_tower_dark_elf")
+    b = balance.towers.dark_elf.basic_attack
+    tt.bullet.damage_max = b.damage_max[4]
+    tt.bullet.damage_min = b.damage_min[4]
+    tt.skill_buff_mod = "mod_tower_dark_elf_skill_buff"
+
+    tt = RT("fx_bullet_tower_dark_elf_hit", "fx")
+    tt.render.sprites[1].name = "shotexplosion_run"
+
+    tt = RT("bullet_tower_dark_elf_skill_buff", "bullet")
+    AC(tt, "tween")
+    tt.main_script.insert = scripts.bolt.insert
+    tt.main_script.update = scripts.bullet_tower_dark_elf_skill_buff.update
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.render.sprites[1].loop = false
+    tt.bullet.acceleration_factor = 0.1
+    tt.bullet.min_speed = 25
+    tt.bullet.max_speed = 450
+    tt.bullet.ignore_hit_offset = true
+    tt.bullet.ignore_rotation = true
+    tt.bullet.hit_fx = "fx_tower_dark_elf_skill_buff"
+    tt.tween.props[1].keys = {
+        {
+            0,
+            255
+        },
+        {
+            fts(7),
+            0
+        }
+    }
+    tt.tween.remove = true
+    tt.tween.reverse = false
+    tt.tween.disabled = true
+    tt.sound_start = "TowerDarkElfThrillOfTheHuntCast"
+
+    tt = RT("fx_tower_dark_elf_skill_buff", "fx")
+    tt.render.sprites[1].name = "souldrain_run"
+    tt.render.sprites[1].offset.y = 25
+
+    tt = RT("mod_tower_dark_elf_skill_buff", "modifier")
+    tt.modifier.duration = fts(3)
+    tt.main_script.update = scripts.mod_track_target.update
+    tt.main_script.remove = scripts.mod_tower_dark_elf_skill_buff.remove
+    tt.skill_buff_bullet = "bullet_tower_dark_elf_skill_buff"
+    tt.tower_offset = vec_2(0, 35)
+
+    tt = RT("mod_tower_dark_elf_big_target", "modifier")
+    AC(tt, "render")
+    tt.main_script.update = scripts.mod_tower_dark_elf_big_target.update
+    tt.modifier.use_mod_offset = true
+    tt.modifier.duration = fts(60) + fts(13) + fts(2)
+    tt.render.sprites[1].prefix = "twilight_longbows_tower_mira"
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+
+    tt = RT("controller_tower_dark_elf_soldiers")
+    AC(tt, "render", "main_script", "pos")
+    tt.render.sprites[1].prefix = "Tower_lvl4_door"
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].offset = vec_2(2, 11)
+    tt.render.sprites[1].hidden = true
+    tt.render.sprites[1].sort_y_offset = 10
+    tt.main_script.update = scripts.controller_tower_dark_elf_soldiers.update
+    tt.main_script.remove = scripts.controller_tower_dark_elf_soldiers.remove
+    tt.spawn_delay = 1
+    tt.check_soldiers_cooldown = fts(10)
+    tt.sound_open = "TowerDarkElfSupportBladesSpawn"
 end
 
 return archer_towers

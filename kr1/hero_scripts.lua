@@ -98,10 +98,10 @@ local function upgrade_skill(this, skill_name, upgrade_func)
     end
 end
 
---- 判断技能/攻击可用
---- @param skill_attack table 攻击或技能
---- @param store table game.store
---- @return bool
+---判断技能/攻击可用
+---@param skill_attack table 攻击或技能
+---@param store table game.store
+---@return bool
 local function ready_to_use_skill(skill_attack, store)
     return (not skill_attack.disabled) and (store.tick_ts - skill_attack.ts > skill_attack.cooldown)
 end
@@ -116,7 +116,7 @@ local function inc_magic_armor_by_skill(this, amount)
     this.health.raw_magic_armor = this.health.raw_magic_armor + amount
     this.health.magic_armor = km.clamp(0, 1, this.health.magic_armor + amount)
 end
---- 升级基础属性
+---升级基础属性
 ---@param this table 实体
 ---@return 英雄等级 hl, 英雄等级属性表 ls
 local function level_up_basic(this)
