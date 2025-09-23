@@ -2156,7 +2156,7 @@ scripts.mod_denas_tower = {
             return false
         end
 
-        SU.insert_tower_cooldown_buff(store.ts, target, this.cooldown_factor)
+        SU.insert_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
         SU.insert_tower_range_buff(target, this.range_factor, true)
 
         for i = 1, #this.render.sprites do
@@ -2194,7 +2194,7 @@ scripts.mod_denas_tower = {
         if not target or not target.tower then
             return true
         end
-        SU.remove_tower_cooldown_buff(store.ts, target, this.cooldown_factor)
+        SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
         SU.remove_tower_range_buff(target, this.range_factor, true)
         return true
     end

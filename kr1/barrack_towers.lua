@@ -609,15 +609,15 @@ local function barrack_towers()
         bans = bor(F_STUN, F_POISON, F_BURN, F_BLOOD),
         duration = 8,
         cost = 0.05,
-        side_effect = function(this, store)
-            scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
-            this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
-            this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
-        end
+        side_effect = scripts.holygrail.side_effect
     }
     tt.soldier.melee_slot_offset = vec_2(5, 0)
     tt.unit.marker_offset = vec_2(0, ady(7))
     tt.unit.mod_offset = vec_2(0, ady(23))
+
+    tt = E:register_t("mod_holygrail", "mod_soldier_cooldown")
+    tt.cooldown_factor = 0.7
+    tt.modifier.duration = 8
 
     tt = E:register_t("mod_blood_templar", "mod_blood")
     tt.modifier.level = 1

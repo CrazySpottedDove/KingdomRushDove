@@ -89,7 +89,7 @@ scripts.mod_high_elven = {
             return false
         end
         SU.insert_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
-        SU.insert_tower_cooldown_buff(store.ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
+        SU.insert_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
         signal.emit("mod-applied", this, target)
 
         return true
@@ -99,7 +99,7 @@ scripts.mod_high_elven = {
         local target = store.entities[m.target_id]
 
         SU.remove_tower_damage_factor_buff(target, this.damage_factor + this.damage_factor_inc * m.level)
-        SU.remove_tower_cooldown_buff(store.ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
+        SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor + m.level * this.cooldown_factor_inc)
         return true
     end
 }
@@ -130,7 +130,7 @@ function scripts.mod_crossbow_eagle.insert(this, store, script)
         return false
     end
     SU.insert_tower_range_buff(target, range_factor, true)
-    SU.insert_tower_cooldown_buff(store.ts, target, cooldown_factor)
+    SU.insert_tower_cooldown_buff(store.tick_ts, target, cooldown_factor)
 
     signal.emit("mod-applied", this, target)
 
@@ -143,7 +143,7 @@ function scripts.mod_crossbow_eagle.remove(this, store, script)
     local range_factor = this.range_factor + m.level * this.range_factor_inc
     local cooldown_factor = this.cooldown_factor + m.level * this.cooldown_factor_inc
     SU.remove_tower_range_buff(target, range_factor, true)
-    SU.remove_tower_cooldown_buff(store.ts, target, cooldown_factor)
+    SU.remove_tower_cooldown_buff(store.tick_ts, target, cooldown_factor)
     return true
 end
 
@@ -17191,6 +17191,18 @@ function scripts.tower_bastion.update(this, store)
     end
 end
 
+scripts.holygrail = {
+    side_effect = function(this, store)
+        scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
+        this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
+        this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
+        local mod = E:create_entity("mod_holygrail")
+        mod.modifier.source_id = this.id
+        mod.modifier.target_id = this.id
+        queue_insert(mod)
+    end
+}
+
 scripts.aura_razor_edge = {}
 
 function scripts.aura_razor_edge.insert(this, store)
@@ -24743,7 +24755,8 @@ function scripts.aura_arcane_burst.update(this, store)
 
             queue_damage(store, d)
 
-            if (band(target.vis.flags, F_BOSS) == 0 and 1 or 2) * math.random() < this.sleep_chance and band(target.vis.bans, F_STUN) == 0 then
+            if (band(target.vis.flags, F_BOSS) == 0 and 1 or 2) * math.random() < this.sleep_chance and
+                band(target.vis.bans, F_STUN) == 0 then
                 local m = E:create_entity("mod_arrow_arcane_slumber")
                 m.modifier.target_id = target.id
                 m.modifier.source_id = this.id

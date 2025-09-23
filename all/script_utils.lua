@@ -3631,15 +3631,15 @@ local function change_fps(ts, entity, factor)
         end
 
         local new_fps = s._origin_fps * factor
-        -- local t = ts + s.time_offset
-        -- s.ts = t - (t - s.ts) * (s.fps or s._origin_fps) / new_fps
+        local t = ts + s.time_offset
+        s.ts = t - (t - s.ts) * (s.fps or s._origin_fps) / new_fps
         s.fps = new_fps
     end
     scale_fps_based_keys(entity, 1 / factor)
 end
 
 --- 增加塔冷却缩放（乘算）
---- @param store.ts 当前时间
+--- @param store.ts 当前时间(暂时留着，后续拓展，目前没用)
 --- @param target table 塔实体
 --- @param cooldown_factor number 冷却系数
 local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
@@ -3659,8 +3659,14 @@ local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
-local function insert_soldier_cooldown_buff()
-    
+local function insert_soldier_cooldown_buff(ts, target, cooldown_factor)
+    if not target then
+        return
+    end
+    if target.cooldown_factor then
+        target.cooldown_factor = target.cooldown_factor * cooldown_factor
+        change_fps(ts, target, 1 / (target.cooldown_factor))
+    end
 end
 
 --- 移除塔攻击范围加成（乘算逆操作）
@@ -3702,6 +3708,16 @@ local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
                 change_fps(ts, s, 1 / (s.cooldown_factor))
             end
         end
+    end
+end
+
+local function remove_soldier_cooldown_buff(ts, target, cooldown_factor)
+    if not target then
+        return
+    end
+    if target.cooldown_factor then
+        target.cooldown_factor = target.cooldown_factor / cooldown_factor
+        change_fps(ts, target, 1 / (target.cooldown_factor))
     end
 end
 
@@ -3925,6 +3941,8 @@ local SU = {
     y_controable_new_rally = y_controable_new_rally,
     update_on_damage = update_on_damage,
     hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
+    insert_soldier_cooldown_buff = insert_soldier_cooldown_buff,
+    remove_soldier_cooldown_buff = remove_soldier_cooldown_buff,
 }
 
 return SU
