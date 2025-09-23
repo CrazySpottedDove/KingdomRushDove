@@ -2931,7 +2931,7 @@ return {
                 image = "sub_icons_0001",
                 action = "tw_rally",
                 place = 8
-            },
+            }
         }
     }
 }
