@@ -514,7 +514,7 @@ local function barrack_towers()
     tower_templar.tower.price = 185
     tower_templar.powers.holygrail = E:clone_c("power")
     tower_templar.powers.holygrail.price_base = 200
-    tower_templar.powers.holygrail.price_inc = 150
+    tower_templar.powers.holygrail.price_inc = 135
     tower_templar.powers.holygrail.name = "HOLY"
     tower_templar.powers.holygrail.enc_icon = 25
     tower_templar.powers.extralife = E:clone_c("power")
