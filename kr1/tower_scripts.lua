@@ -5720,7 +5720,7 @@ function scripts.tower_dark_elf.update(this, store)
 
     local function find_target(attack, node_prediction)
         if current_mode == MODE_FIND_FOREMOST then
-            local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range, node_prediction,
+            local target, _, pred_pos = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, this.attacks.range, node_prediction,
                 attack.vis_flags, attack.vis_bans)
 
             return target, pred_pos
