@@ -2870,7 +2870,7 @@ return {
                 tt_title_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NAME"),
                 tt_desc_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_DESCRIPTION"),
                 tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
-                is_kr5 = true
+                -- is_kr5 = true
             },
             {
                 check = "kr5_special_icons_0020",
