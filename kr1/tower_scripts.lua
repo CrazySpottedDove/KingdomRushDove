@@ -5704,8 +5704,8 @@ function scripts.tower_dark_elf.update(this, store)
     local attack = this.attacks.list[1]
     local attack_soldiers = this.attacks.list[2]
     local b = this.barrack
-    local pow_soldiers = this.powers and this.powers.skill_soldiers or nil
-    local pow_buff = this.powers and this.powers.skill_buff or nil
+    local pow_soldiers = this.powers.skill_soldiers
+    local pow_buff = this.powers.skill_buff
     local current_mode = this.tower_upgrade_persistent_data.current_mode
 
     local function create_mod(target, hidden_sprite)
@@ -5933,7 +5933,7 @@ function scripts.tower_dark_elf.update(this, store)
                 bullet.bullet.source_id = this.id
                 bullet.bullet.damage_factor = this.tower.damage_factor
 
-                if pow_buff and pow_buff.level > 0 then
+                if pow_buff.level > 0 then
                     local soulsDamageMin = this.tower_upgrade_persistent_data.souls_extra_damage_min or 0
                     local soulsDamageMax = this.tower_upgrade_persistent_data.souls_extra_damage_max or 0
 

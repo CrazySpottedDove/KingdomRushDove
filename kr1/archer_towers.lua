@@ -1052,7 +1052,7 @@ local function archer_towers()
     tt.render.sprites[2].offset = vec_2(0, 10)
     tt.render.sprites[3].offset.y = 75
     tt.render.sprites[4].offset.y = 75
-    
+
     tt = RT("tower_dark_elf_lvl4", "tower")
     AC(tt, "powers", "barrack", "attacks")
     local b = balance.towers.dark_elf
@@ -1175,7 +1175,6 @@ local function archer_towers()
     tt.health.armor = b.armor[1]
     tt.health_bar.offset = vec_2(0, 30)
     tt.health.dead_lifetime = b.dead_lifetime
-    tt.regen.health = b.regen_hp[1]
     tt.motion.max_speed = b.speed
     tt.melee.range = b.basic_attack.range
     tt.melee.cooldown = b.basic_attack.cooldown
@@ -1185,6 +1184,7 @@ local function archer_towers()
     tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
     tt.melee.attacks[1].hit_time = fts(17)
     tt.melee.attacks[1].shared_cooldown = true
+    tt.melee.attacks[1].never_interrupt = true
     tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
     tt.melee.attacks[2].animation = "attack2"
     tt.melee.attacks[2].shared_cooldown = true
@@ -1210,6 +1210,7 @@ local function archer_towers()
     tt.image_width = 170
     tt.ray_duration = fts(23)
     tt.hit_delay = fts(1)
+    tt.bullet.reduce_armor = 0.1
     tt.sound_events.insert = "TowerDarkElfBasicAttackCast"
 
     tt = RT("bullet_tower_dark_elf_lvl4", "bullet_tower_dark_elf")
