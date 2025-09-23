@@ -241,8 +241,8 @@ function EU.init_endless(level_name, groups)
         local total_spawns = 0
         for _, wave in pairs(waves) do
             for _, spawn in pairs(wave.spawns) do
-                endless.avg_interval = endless.avg_interval + spawn.interval or 0
-                endless.avg_interval_next = endless.avg_interval_next + spawn.interval_next or 0
+                endless.avg_interval = endless.avg_interval + (spawn.interval or 0)
+                endless.avg_interval_next = endless.avg_interval_next + (spawn.interval_next or 0)
                 total_spawns = total_spawns + 1
                 endless.total_enemy_weight = endless.total_enemy_weight + get_enemy_weight(spawn.creep) * spawn.max
             end

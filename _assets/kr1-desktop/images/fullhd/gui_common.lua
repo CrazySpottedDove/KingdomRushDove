@@ -21717,7 +21717,7 @@ local origin_kr5 = {
 			56
 		},
 		alias = {
-			"main_icons_0015"
+			-- "main_icons_0015"
 		}
 	},
 	main_icons_00020_disabled = {
@@ -21743,7 +21743,7 @@ local origin_kr5 = {
 			56
 		},
 		alias = {
-			"main_icons_0015_disabled"
+			-- "main_icons_0015_disabled"
 		}
 	},
 	main_icons_00020_disabled_turn_off = {
@@ -21769,7 +21769,7 @@ local origin_kr5 = {
 			56
 		},
 		alias = {
-			"main_icons_0015_disabled_turn_off"
+			-- "main_icons_0015_disabled_turn_off"
 		}
 	},
 	main_icons_0002_disabled = {
@@ -23019,7 +23019,7 @@ local origin_kr5 = {
 			56
 		},
 		alias = {
-			"main_icons_0020_turn_off"
+			-- "main_icons_0020_turn_off"
 		}
 	},
 	main_icons_0016 = {
