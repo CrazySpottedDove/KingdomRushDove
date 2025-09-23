@@ -1141,7 +1141,7 @@ local function archer_towers()
     tt.powers.skill_soldiers.enc_icon = 31
     tt.powers.skill_soldiers.show_rally = true
     tt.powers.skill_buff = E:clone_c("power")
-    tt.powers.skill_buff.price_base = 200
+    tt.powers.skill_buff.price_base = 250
     tt.powers.skill_buff.enc_icon = 32
     tt.powers.skill_buff.damage_min = b.skill_buff.extra_damage_min
     tt.powers.skill_buff.damage_max = b.skill_buff.extra_damage_max
@@ -1227,7 +1227,7 @@ local function archer_towers()
 
     tt = RT("bullet_tower_dark_elf_skill_buff", "bullet")
     AC(tt, "tween")
-    tt.main_script.insert = scripts.bolt.insert
+    tt.main_script.insert = scripts.bullet_tower_dark_elf_skill_buff.insert
     tt.main_script.update = scripts.bullet_tower_dark_elf_skill_buff.update
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].loop = false
@@ -1251,6 +1251,7 @@ local function archer_towers()
     tt.tween.reverse = false
     tt.tween.disabled = true
     tt.sound_start = "TowerDarkElfThrillOfTheHuntCast"
+    tt._parent = true
 
     tt = RT("fx_tower_dark_elf_skill_buff", "fx")
     tt.render.sprites[1].name = "souldrain_run"

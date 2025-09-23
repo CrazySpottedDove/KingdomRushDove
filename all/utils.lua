@@ -1513,7 +1513,7 @@ end
 ---查找范围内的塔
 ---@param entities table 实体列表
 ---@param origin table 原点 {x, y}
----@param attack table 攻击属性
+---@param attack table {min_range, max_range, (excluded_templates)}
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 范围内的塔列表
 function U.find_towers_in_range(entities, origin, attack, filter_func)

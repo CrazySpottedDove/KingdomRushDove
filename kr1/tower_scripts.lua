@@ -5818,6 +5818,8 @@ function scripts.tower_dark_elf.update(this, store)
                         end
 
                         this.controller_soldiers.pow_level = pow.level
+                    else
+                        SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
                     end
                 end
             end
@@ -6379,6 +6381,41 @@ end
 
 scripts.bullet_tower_dark_elf_skill_buff = {}
 
+function scripts.bullet_tower_dark_elf_skill_buff.insert(this, store)
+    local b = this.bullet
+    local tower = store.entities[b.target_id]
+    if not tower then
+        return false
+    end
+    if this._parent then
+        local towers = U.find_towers_in_range(store.towers, tower.pos, {
+            min_range = 1,
+            max_range = 180
+        })
+        if towers then
+            local other_tower = towers[math.random(1, #towers)]
+            local new_bullet = E:clone_entity(this)
+            new_bullet.bullet.to.x = other_tower.pos.x + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.x
+            new_bullet.bullet.to.y = other_tower.pos.y + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.y
+            new_bullet.bullet.target_id = other_tower.id
+            new_bullet._parent = false
+            queue_insert(store, new_bullet)
+        end
+    end
+
+    b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
+
+    local s = this.render.sprites[1]
+
+    if not b.ignore_rotation then
+        s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+    end
+
+    U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+
+    return true
+end
+
 function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
@@ -6454,16 +6491,6 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
             end
         end
 
-        if target and target.health and not target.health.dead then
-            if b.ignore_hit_offset then
-                b.to.x, b.to.y = target.pos.x, target.pos.y
-            else
-                b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
-            end
-
-            new_target = false
-        end
-
         mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
         mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
         b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
@@ -6507,7 +6534,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
     this.pos.x, this.pos.y = b.to.x, b.to.y
 
     if target then
-        if tower and tower.powers and tower.powers.skill_buff then
+        if this._parent then
             if not tower.tower_upgrade_persistent_data.souls_extra_damage_min then
                 tower.tower_upgrade_persistent_data.souls_extra_damage_min = 0
             end
@@ -6519,10 +6546,16 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
             local increaseDamageMin = tower.powers.skill_buff.damage_min[tower.powers.skill_buff.level]
             local increaseDamageMax = tower.powers.skill_buff.damage_max[tower.powers.skill_buff.level]
 
-            tower.tower_upgrade_persistent_data.souls_extra_damage_min = tower.tower_upgrade_persistent_data
-            .souls_extra_damage_min + increaseDamageMin
-            tower.tower_upgrade_persistent_data.souls_extra_damage_max = tower.tower_upgrade_persistent_data
-            .souls_extra_damage_max + increaseDamageMax
+            tower.tower_upgrade_persistent_data.souls_extra_damage_min =
+                tower.tower_upgrade_persistent_data.souls_extra_damage_min + increaseDamageMin
+            tower.tower_upgrade_persistent_data.souls_extra_damage_max =
+                tower.tower_upgrade_persistent_data.souls_extra_damage_max + increaseDamageMax
+
+            if tower.render.sprites[3].fps < 45 then
+                SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)
+            end
+        else
+            SU.insert_tower_damage_factor_buff(tower, 0.01)
         end
 
         if b.mod or b.mods then
