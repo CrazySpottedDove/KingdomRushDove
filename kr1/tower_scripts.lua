@@ -6424,7 +6424,6 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
     local mspeed = b.min_speed
     local target, ps
     local new_target = false
-    local target_invalid = false
 
     if b.particles_name then
         ps = E:create_entity(b.particles_name)
@@ -6473,26 +6472,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 
     while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
         coroutine.yield()
-
-        if not target_invalid then
-            target = store.entities[b.target_id]
-        end
-
-        if target and not new_target then
-            local tpx, tpy = target.pos.x, target.pos.y
-
-            if not b.ignore_hit_offset then
-                tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
-            end
-
-            local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
-
-            if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
-                target_invalid = true
-                target = nil
-            end
-        end
-
+        target = store.entities[b.target_id]
         mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
         mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
         b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
