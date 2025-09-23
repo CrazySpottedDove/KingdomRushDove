@@ -5961,7 +5961,10 @@ function scripts.tower_dark_elf.update(this, store)
             this.tower_upgrade_persistent_data.last_ts = last_ts
 
             if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
-                U.animation_start(this, "idle", false, store.tick_ts, -1, this.render.sid_archer)
+                local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos,
+                    this.render.sid_archer)
+                    U.animation_start(this, an, af, store.tick_ts, -1, this.render.sid_archer)
+                -- U.animation_start(this, "idle", false, store.tick_ts, -1, this.render.sid_archer)
 
                 this.attacks._last_target_pos = vec_2(REF_W, 0)
             end
