@@ -1731,6 +1731,7 @@ local function enemies()
     tt.aura.radius = 100
     tt.aura.track_source = true
     tt.aura.use_mod_offset = false
+    tt.aura.vis_bans = F_FRIEND
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_skeleton_big.update
     tt.render.sprites[1].alpha = 0
@@ -2244,6 +2245,7 @@ local function enemies()
     tt.aura.requires_magic = true
     tt.aura.track_source = true
     tt.aura.use_mod_offset = false
+    tt.aura.vis_bans = F_FRIEND
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_spectral_knight.update
     tt.render.sprites[1].alpha = 0
@@ -2441,6 +2443,7 @@ local function enemies()
     tt.aura.radius = 120
     tt.aura.track_source = true
     tt.aura.use_mod_offset = false
+    tt.aura.vis_bans = F_FRIEND
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_abomination.update
     tt.render.sprites[1].alpha = 0
