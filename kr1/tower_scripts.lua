@@ -5714,7 +5714,13 @@ function scripts.tower_dark_elf.update(this, store)
     local function can_be_target_to_kill(target)
         local d = E:create_entity("damage")
         local bullet = E:get_template(attack.bullet)
-        d.value = math.max(1, this.tower.damage_factor * bullet.damage_min)
+        if pow_buff.level > 0 and this.tower_upgrade_persistent_data.souls_extra_damage_min then
+            d.value = math.max(1, this.tower.damage_factor * (bullet.damage_min +
+                this.tower_upgrade_persistent_data.souls_extra_damage_min))
+        else
+            d.value = math.max(1, this.tower.damage_factor * bullet.damage_min)
+        end
+
         d.damage_type = bullet.damage_type
         d.target_id = target.id
         d.reduce_armor = bullet.reduce_armor
@@ -6132,14 +6138,18 @@ function scripts.bullet_tower_dark_elf.update(this, store)
             queue_insert(store, fx)
 
             local tower = store.entities[source.id]
-            if tower and tower.powers.skill_buff and tower.powers.skill_buff.level > 0 then
-                if target.health.dead or U.predict_damage(target, d) >= target.health.hp then
-                    local soul_mod = E:create_entity(this.skill_buff_mod)
-                    soul_mod.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
-                    soul_mod.modifier.source_id = this.id
-                    soul_mod.modifier.target_id = target.id
-                    soul_mod.tower_id = tower.id
-                    queue_insert(store, soul_mod)
+            if tower then
+                local skill_buff = tower.powers.skill_buff
+                if skill_buff and skill_buff.level > 0 and skill_buff.times < skill_buff.max_times then
+                    if target.health.dead or U.predict_damage(target, d) >= target.health.hp then
+                        local soul_mod = E:create_entity(this.skill_buff_mod)
+                        soul_mod.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+                        soul_mod.modifier.source_id = this.id
+                        soul_mod.modifier.target_id = target.id
+                        soul_mod.tower_id = tower.id
+                        queue_insert(store, soul_mod)
+                        skill_buff.times = skill_buff.times + 1
+                    end
                 end
             end
         elseif this.missed_shot and GR:cell_is_only(this.pos.x, this.pos.y, TERRAIN_LAND) then
