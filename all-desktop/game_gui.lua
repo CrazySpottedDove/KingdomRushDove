@@ -6807,7 +6807,7 @@ function TowerMenu:update(dt)
                 local current_mode = e.tower_upgrade_persistent_data.current_mode
 
                 if current_mode ~= 0 then
-                    c.button:set_image(U.str_increment_leading_zero(c.item_image, current_mode))
+                    c.button:set_image(U.str_reset_leading_zero(c.item_image, current_mode))
                 else
                     c.button:set_image(c.item_image)
                 end

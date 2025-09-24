@@ -1072,15 +1072,13 @@ local function archer_towers()
     tt.main_script.update = scripts.tower_dark_elf.update
     tt.main_script.remove = scripts.tower_dark_elf.remove
     tt.main_script.insert = scripts.tower_dark_elf.insert
-    tt.ui.click_rect = r(-35, 0, 70, 75)
-    tt.ui.click_rect_offset_y = -10
+    tt.ui.click_rect = r(-38, -10, 70, 60)
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_artillery_%04i"
-    tt.render.sprites[1].offset = vec_2(0, 15)
+    tt.render.sprites[1].offset = vec_2(0, 10)
     tt.render.sprites[2] = E:clone_c("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "Tower_lvl4"
-    tt.render.sprites[2].offset = vec_2(0, 0)
     tt.render.sprites[2].sort_y_offset = 11
     tt.render.sprites[3] = E:clone_c("sprite")
     tt.render.sprites[3].prefix = "Archer_lvl4"
@@ -1119,10 +1117,10 @@ local function archer_towers()
     tt.attacks.list[1].node_prediction = fts(15)
     tt.attacks.list[1].bullet = "bullet_tower_dark_elf_lvl4"
     tt.attacks.list[1].bullet_start_offset = {
-        vec_2(18, 97),
-        vec_2(18, 97),
-        vec_2(18, 97),
-        vec_2(18, 97)
+        vec_2(18, 86),
+        vec_2(18, 86),
+        vec_2(18, 76),
+        vec_2(18, 86)
     }
     tt.attacks.list[1].first_cooldown = 2
     tt.attacks.list[1].mod_target = "mod_tower_dark_elf_big_target"
@@ -1150,7 +1148,7 @@ local function archer_towers()
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_tower_dark_elf"
     tt.barrack.max_soldiers = 2
-    tt.barrack.respawn_offset = vec_2(0, 12)
+    tt.barrack.respawn_offset = vec_2(0, 0)
     tt.attacks.list[2] = E:clone_c("custom_attack")
     tt.attacks.list[2].disabled = true
     tt.attacks.list[2].spawn_delay = 1
@@ -1276,7 +1274,6 @@ local function archer_towers()
     AC(tt, "render", "main_script", "pos")
     tt.render.sprites[1].prefix = "Tower_lvl4_door"
     tt.render.sprites[1].name = "idle"
-    tt.render.sprites[1].offset = vec_2(0, 0)
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].sort_y_offset = 10
     tt.main_script.update = scripts.controller_tower_dark_elf_soldiers.update

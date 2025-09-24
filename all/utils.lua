@@ -2478,7 +2478,7 @@ end
 ---@param subtract? integer 减法模式，减数
 ---@param num? integer 替换模式，替换为指定数
 ---@return string 处理后的字符串
-function U.str_increment_leading_zero(str, add, subtract, num)
+function U.str_reset_leading_zero(str, add, subtract, num)
     local str_num = string.match(str, "%d+$")
 
     if str_num then
@@ -2499,6 +2499,7 @@ function U.str_increment_leading_zero(str, add, subtract, num)
 
     return str
 end
+
 local function get_value(obj, path)
     local p = {}
 
