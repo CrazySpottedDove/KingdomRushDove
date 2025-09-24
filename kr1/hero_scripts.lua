@@ -5191,7 +5191,7 @@ function scripts.hero_dracolich.update(this, store)
 
             if a.disabled then
                 -- block empty
-            -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+            elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
             elseif store.tick_ts - a.ts < a.cooldown then
                 -- block empty
@@ -13742,7 +13742,7 @@ function scripts.hero_faustus.update(this, store)
 
             if a.disabled then
                 -- block empty
-            -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+            elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
             elseif store.tick_ts - a.ts < a.cooldown then
                 -- block empty
@@ -15079,7 +15079,7 @@ function scripts.hero_dragon.update(this, store)
 
             if a.disabled then
                 -- block empty
-            -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+            elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
             elseif ready_to_attack(a, store, this.cooldown_factor) then
                 local origin = V.v(this.pos.x, this.pos.y + a.bullet_start_offset[1].y)
@@ -20346,7 +20346,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
                 if a.disabled then
                     -- block empty
-                -- elseif a.sync_animation and not this.render.sprites[1].sync_flag then
+                elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                     -- block empty
                 elseif store.tick_ts - a.ts < a.cooldown then
                     -- block empty
