@@ -1148,6 +1148,7 @@ local function archer_towers()
     tt.powers.skill_buff.damage_max = b.skill_buff.extra_damage_max
     tt.powers.skill_buff.max_level = 3
     tt.powers.skill_buff.max_times = 0
+    tt.powers.skill_buff.max_times_table = b.skill_buff.max_times
     tt.powers.skill_buff.times = 0
     tt._pow_buff_upgraded = false
     tt.barrack.rally_range = b.rally_range

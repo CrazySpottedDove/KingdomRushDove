@@ -5857,6 +5857,7 @@ function scripts.tower_dark_elf.update(this, store)
                         SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
                         this._pow_buff_upgraded = true
                     end
+                    pow_buff.max_times = pow_buff.max_times_table[pow_buff.level]
                 end
             end
         end
