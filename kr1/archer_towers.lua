@@ -1149,6 +1149,7 @@ local function archer_towers()
     tt.powers.skill_buff.max_level = 3
     tt.powers.skill_buff.max_times = 0
     tt.powers.skill_buff.times = 0
+    tt._pow_buff_upgraded = false
     tt.barrack.rally_range = b.rally_range
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_tower_dark_elf"

@@ -5853,7 +5853,10 @@ function scripts.tower_dark_elf.update(this, store)
 
                     this.controller_soldiers.pow_level = pow.level
                 else
-                    SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
+                    if not this._pow_buff_upgraded then
+                        SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
+                        this._pow_buff_upgraded = true
+                    end
                 end
             end
         end
