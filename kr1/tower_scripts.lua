@@ -5741,6 +5741,50 @@ function scripts.tower_dark_elf.update(this, store)
         end
     end
 
+    local function can_be_target_to_kill(bullet, target)
+        local d = E:create_entity("damage")
+        d.value = math.max(1, bullet.damage_factor * bullet.damage_min)
+        d.damage_type = bullet.damage_type
+        d.target_id = target.id
+        d.reduce_armor = bullet.reduce_armor
+        local damage_value = U.predict_damage(target, d)
+        return damage_value >= target.health.hp
+    end
+
+    -- 找到范围内生命最高的、且一定能被一发子弹击杀的敌人
+    local function find_target_to_kill(bullet)
+        local targets = U.find_enemies_in_range(store, tpos(this), 0, this.attacks.range, attack.vis_flags,
+            attack.vis_bans)
+        local target_to_kill
+        local target_to_kill_hp = 0
+        local target_to_kill_flying = false
+        if targets then
+            for _, t in pairs(targets) do
+                if can_be_target_to_kill(bullet, t) then
+                    if t.health.hp > target_to_kill_hp then
+                        local flying = band(t.vis.flags, F_FLYING) ~= 0
+                        if flying or not target_to_kill_flying then
+                            target_to_kill = t
+                            target_to_kill_hp = t.health.hp
+                            target_to_kill_flying = flying
+                        end
+                    end
+                end
+            end
+        end
+
+        return target_to_kill
+    end
+
+    local function try_retarget_to_find_biggest_enemy_to_kill(bullet)
+        local target_to_kill = find_target_to_kill(bullet)
+        if target_to_kill then
+            target = target_to_kill
+            this.attacks._last_target_pos = pred_pos
+            pred_pos = V.v(target.pos.x, target.pos.y)
+        end
+    end
+
     local function animation_name_facing_angle_dark_elf(group, source_pos, dest_pos)
         local vx, vy = V.sub(dest_pos.x, dest_pos.y, source_pos.x, source_pos.y)
         local v_angle = V.angleTo(vx, vy)
@@ -5887,17 +5931,6 @@ function scripts.tower_dark_elf.update(this, store)
                 end
 
                 if not pred_pos then
-                    if not old_target.health.dead then
-                        local node_offset = P:predict_enemy_node_advance(old_target, attack.shoot_time)
-                        local e_ni = old_target.nav_path.ni + node_offset
-                        local e_pos = P:node_pos(old_target.nav_path.pi, old_target.nav_path.spi, e_ni)
-
-                        if V.dist2(e_pos.x, e_pos.y, this.pos.x, this.pos.y) < this.attacks.range * this.attacks.range *
-                            1.3 then
-                            target = old_target
-                        end
-                    end
-
                     pred_pos = this.attacks._last_target_pos
                 end
 
@@ -5916,14 +5949,6 @@ function scripts.tower_dark_elf.update(this, store)
 
                 bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
                 bullet.bullet.from = V.vclone(bullet.pos)
-                bullet.bullet.to = V.vclone(pred_pos)
-
-                if target then
-                    bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x,
-                        target.pos.y + target.unit.hit_offset.y)
-                end
-
-                bullet.bullet.target_id = target and target.id or nil
                 bullet.bullet.source_id = this.id
                 bullet.bullet.damage_factor = this.tower.damage_factor
 
@@ -5936,6 +5961,18 @@ function scripts.tower_dark_elf.update(this, store)
                 end
 
                 apply_precision(bullet)
+
+                if current_mode == MODE_FIND_FOREMOST then
+                    try_retarget_to_find_biggest_enemy_to_kill(bullet.bullet)
+                end
+
+                if target then
+                    bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+                    bullet.bullet.target_id = target.id
+                else
+                    bullet.bullet.to = V.vclone(pred_pos)
+                    bullet.bullet.target_id = nil
+                end
 
                 queue_insert(store, bullet)
 
