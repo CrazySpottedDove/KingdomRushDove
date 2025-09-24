@@ -1917,8 +1917,7 @@ function scripts.tower_barrack.update(this, store, script)
                             s.powers[pn].level = p.level
                         end
                     end
-                    s.unit.damage_factor = this.tower.damage_factor
-                    s.cooldown_factor = this.tower.cooldown_factor
+                    U.soldier_inherit_tower_buff_factor(s, this)
                     queue_insert(store, s)
 
                     b.soldiers[i] = s
@@ -2003,7 +2002,7 @@ function scripts.tower_barrack_mercenaries.update(this, store, script)
                 s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
                 s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b)
                 s.nav_rally.new = true
-                s.unit.damage_factor = this.tower.damage_factor
+                U.soldier_inherit_tower_buff_factor(s, this)
                 s.cooldown_factor = this.tower.cooldown_factor
                 if this.powers then
                     for pn, p in pairs(this.powers) do

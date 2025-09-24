@@ -2186,7 +2186,7 @@ scripts.tower_sorcerer = {
                         ns.unit.level = pow_e.level
                         ns.health.armor = ns.health.armor + ns.health.armor_inc * ns.unit.level
                         ns.health.hp_max = ns.health.hp_max + ns.health.hp_inc * ns.unit.level
-
+                        U.soldier_inherit_tower_buff_factor(ns, this)
                         local ma = ns.melee.attacks[1]
 
                         ma.damage_min = ma.damage_min + ma.damage_inc * ns.unit.level
@@ -2609,7 +2609,7 @@ scripts.tower_necromancer = {
                                                             s.unit.level
                         s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + s.melee.attacks[1].damage_inc *
                                                             s.unit.level
-
+                        U.soldier_inherit_tower_buff_factor(s, this)
                         queue_insert(store, s)
 
                         b.soldiers[1] = s
@@ -4718,8 +4718,7 @@ scripts.tower_frankenstein = {
                             local s = E:create_entity(b.soldier_type)
 
                             s.soldier.tower_id = this.id
-                            s.unit.damage_factor = this.tower.damage_factor
-                            s.cooldown_factor = this.tower.cooldown_factor
+                            U.soldier_inherit_tower_buff_factor(s, this)
                             s.pos = V.v(this.pos.x + 2, this.pos.y - 10)
                             s.nav_rally.pos = V.v(b.rally_pos.x, b.rally_pos.y)
                             s.nav_rally.center = V.vclone(b.rally_pos)
@@ -4779,8 +4778,7 @@ scripts.tower_frankenstein = {
                         s.nav_rally.center = V.vclone(b.rally_pos)
                         s.nav_rally.new = true
                         s.unit.level = l
-                        s.unit.damage_factor = this.tower.damage_factor
-                        s.cooldown_factor = this.tower.cooldown_factor
+                        U.soldier_inherit_tower_buff_factor(s, this)
                         s.health.armor = s.health.armor_lvls[l]
                         s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min_lvls[l]
                         s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max_lvls[l]
@@ -5243,8 +5241,7 @@ function scripts.tower_baby_ashbite.update(this, store)
                 s.powers[pn].level = p.level
             end
         end
-        s.unit.damage_factor = this.tower.damage_factor
-        s.cooldown_factor = this.tower.cooldown_factor
+        U.soldier_inherit_tower_buff_factor(s, this)
         queue_insert(store, s)
         table.insert(b.soldiers, s)
         signal.emit("tower-spawn", this, s)
@@ -5280,8 +5277,7 @@ function scripts.tower_baby_ashbite.update(this, store)
                             s.powers[pn].level = p.level
                         end
                     end
-                    s.unit.damage_factor = this.tower.damage_factor
-                    s.cooldown_factor = this.tower.cooldown_factor
+                    U.soldier_inherit_tower_buff_factor(s, this)
                     queue_insert(store, s)
 
                     b.soldiers[i] = s
@@ -6273,6 +6269,7 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
                     U.animation_start(this, "idle", false, store.tick_ts)
 
                     s = E:create_entity(b.soldier_type)
+                    U.soldier_inherit_tower_buff_factor(s, this.tower_ref)
                     s.soldier.tower_id = this.tower_ref.id
                     s.soldier.tower_soldier_idx = i
                     s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))

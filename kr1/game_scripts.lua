@@ -17034,7 +17034,7 @@ function scripts.druid_shooter_nature.update(this, store)
                         formation_offset)
                     s.pos = V.vclone(s.nav_rally.pos)
                     s.nav_rally.new = true
-
+                    U.soldier_inherit_tower_buff_factor(s, this.owner)
                     queue_insert(store, s)
 
                     b.soldiers[i] = s
