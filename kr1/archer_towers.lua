@@ -1149,10 +1149,15 @@ local function archer_towers()
     tt.powers.skill_soldiers.show_rally = true
     tt.powers.skill_buff = CC("power")
     tt.powers.skill_buff.price_base = 250
+    tt.powers.skill_buff.price_inc = 125
     tt.powers.skill_buff.enc_icon = 32
     tt.powers.skill_buff.damage_min = b.skill_buff.extra_damage_min
     tt.powers.skill_buff.damage_max = b.skill_buff.extra_damage_max
-    tt.powers.skill_buff.max_level = 1
+    tt.powers.skill_buff.max_level = 3
+    tt.powers.skill_buff.max_times = 0
+    tt.powers.skill_buff.max_times_table = b.skill_buff.max_times
+    tt.powers.skill_buff.times = 0
+    tt._pow_buff_upgraded = false
     tt.barrack.rally_range = b.rally_range
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_tower_dark_elf"
@@ -1160,6 +1165,7 @@ local function archer_towers()
     tt.barrack.respawn_offset = vec_2(0, 0)
     tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"
     tt.sound_events.change_rally_point = "TowerDarkElfUnitTaunt"
+    tt.sound_events.insert = "TowerDarkElfTaunt"
 
     tt = RT("soldier_tower_dark_elf", "soldier_militia")
     AC(tt, "nav_grid", "dodge")

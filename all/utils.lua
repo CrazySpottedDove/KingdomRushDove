@@ -2440,13 +2440,13 @@ function U.find_teleport_moment(store, center, range, trigger_count)
 end
 
 ---函数追加
----@param f1 function? 第一个函数（可选）
----@param f2 function 第二个函数
+---@param f1 function? 第一个函数
+---@param f2 function? 第二个函数
 ---@return function 组合后的函数
 function U.function_append(f1, f2)
     return function(...)
         if not f1 or f1(...) then
-            return f2(...)
+            return not f2 or f2(...)
         else
             return false
         end
@@ -2560,6 +2560,11 @@ function U.balance_format(s)
     until not i or not f
 
     return s
+end
+
+function U.soldier_inherit_tower_buff_factor(soldier, tower)
+    soldier.unit.damage_factor = soldier.unit.damage_factor * tower.tower.damage_factor
+    soldier.cooldown_factor = soldier.cooldown_factor * tower.tower.cooldown_factor
 end
 
 return U

@@ -2186,7 +2186,7 @@ scripts.tower_sorcerer = {
                         ns.unit.level = pow_e.level
                         ns.health.armor = ns.health.armor + ns.health.armor_inc * ns.unit.level
                         ns.health.hp_max = ns.health.hp_max + ns.health.hp_inc * ns.unit.level
-
+                        U.soldier_inherit_tower_buff_factor(ns, this)
                         local ma = ns.melee.attacks[1]
 
                         ma.damage_min = ma.damage_min + ma.damage_inc * ns.unit.level
@@ -2609,7 +2609,7 @@ scripts.tower_necromancer = {
                                                             s.unit.level
                         s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + s.melee.attacks[1].damage_inc *
                                                             s.unit.level
-
+                        U.soldier_inherit_tower_buff_factor(s, this)
                         queue_insert(store, s)
 
                         b.soldiers[1] = s
@@ -4718,8 +4718,7 @@ scripts.tower_frankenstein = {
                             local s = E:create_entity(b.soldier_type)
 
                             s.soldier.tower_id = this.id
-                            s.unit.damage_factor = this.tower.damage_factor
-                            s.cooldown_factor = this.tower.cooldown_factor
+                            U.soldier_inherit_tower_buff_factor(s, this)
                             s.pos = V.v(this.pos.x + 2, this.pos.y - 10)
                             s.nav_rally.pos = V.v(b.rally_pos.x, b.rally_pos.y)
                             s.nav_rally.center = V.vclone(b.rally_pos)
@@ -4779,8 +4778,7 @@ scripts.tower_frankenstein = {
                         s.nav_rally.center = V.vclone(b.rally_pos)
                         s.nav_rally.new = true
                         s.unit.level = l
-                        s.unit.damage_factor = this.tower.damage_factor
-                        s.cooldown_factor = this.tower.cooldown_factor
+                        U.soldier_inherit_tower_buff_factor(s, this)
                         s.health.armor = s.health.armor_lvls[l]
                         s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min_lvls[l]
                         s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max_lvls[l]
@@ -5243,8 +5241,7 @@ function scripts.tower_baby_ashbite.update(this, store)
                 s.powers[pn].level = p.level
             end
         end
-        s.unit.damage_factor = this.tower.damage_factor
-        s.cooldown_factor = this.tower.cooldown_factor
+        U.soldier_inherit_tower_buff_factor(s, this)
         queue_insert(store, s)
         table.insert(b.soldiers, s)
         signal.emit("tower-spawn", this, s)
@@ -5280,8 +5277,7 @@ function scripts.tower_baby_ashbite.update(this, store)
                             s.powers[pn].level = p.level
                         end
                     end
-                    s.unit.damage_factor = this.tower.damage_factor
-                    s.cooldown_factor = this.tower.cooldown_factor
+                    U.soldier_inherit_tower_buff_factor(s, this)
                     queue_insert(store, s)
 
                     b.soldiers[i] = s
@@ -5716,12 +5712,53 @@ function scripts.tower_dark_elf.update(this, store)
         queue_insert(store, m)
     end
 
+    local function can_be_target_to_kill(target)
+        local d = E:create_entity("damage")
+        local bullet = E:get_template(attack.bullet).bullet
+        if pow_buff.level > 0 and this.tower_upgrade_persistent_data.souls_extra_damage_min then
+            d.value = math.max(1, this.tower.damage_factor * (bullet.damage_min +
+                this.tower_upgrade_persistent_data.souls_extra_damage_min))
+        else
+            d.value = math.max(1, this.tower.damage_factor * bullet.damage_min)
+        end
+
+        d.damage_type = bullet.damage_type
+        d.target_id = target.id
+        d.reduce_armor = bullet.reduce_armor
+        local damage_value = U.predict_damage(target, d)
+        return damage_value >= target.health.hp
+    end
+
+    -- 找到范围内生命最高的、且一定能被一发子弹击杀的敌人
+    local function find_target_to_kill(node_prediction)
+        local target_to_kill, targets, pred_pos = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0,
+            this.attacks.range, node_prediction, attack.vis_flags, attack.vis_bans)
+
+        if targets then
+            local target_to_kill_hp = target_to_kill.health.hp
+            local target_to_kill_flying = band(target_to_kill.vis.flags, F_FLYING) ~= 0
+            for i = 2, #targets do
+                local t = targets[i]
+                if can_be_target_to_kill(t) then
+                    if t.health.hp > target_to_kill_hp then
+                        local flying = band(t.vis.flags, F_FLYING) ~= 0
+                        if flying or not target_to_kill_flying then
+                            target_to_kill = t
+                            target_to_kill_hp = t.health.hp
+                            target_to_kill_flying = flying
+                            pred_pos = t.__ffe_pos
+                        end
+                    end
+                end
+            end
+        end
+
+        return target_to_kill, pred_pos
+    end
+
     local function find_target(attack, node_prediction)
         if current_mode == MODE_FIND_FOREMOST then
-            local target, _, pred_pos = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, this.attacks.range, node_prediction,
-                attack.vis_flags, attack.vis_bans)
-
-            return target, pred_pos
+            return find_target_to_kill(node_prediction)
         elseif current_mode == MODE_FIND_MAXHP then
             local target, pred_pos = U.find_biggest_enemy(store, tpos(this), 0, this.attacks.range, node_prediction,
                 attack.vis_flags, attack.vis_bans)
@@ -5817,7 +5854,11 @@ function scripts.tower_dark_elf.update(this, store)
 
                     this.controller_soldiers.pow_level = pow.level
                 else
-                    SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
+                    if not this._pow_buff_upgraded then
+                        SU.insert_tower_cooldown_buff(store.tick_ts, this, 0.9)
+                        this._pow_buff_upgraded = true
+                    end
+                    pow_buff.max_times = pow_buff.max_times_table[pow_buff.level]
                 end
             end
         end
@@ -5892,17 +5933,6 @@ function scripts.tower_dark_elf.update(this, store)
                 end
 
                 if not pred_pos then
-                    if not old_target.health.dead then
-                        local node_offset = P:predict_enemy_node_advance(old_target, attack.shoot_time)
-                        local e_ni = old_target.nav_path.ni + node_offset
-                        local e_pos = P:node_pos(old_target.nav_path.pi, old_target.nav_path.spi, e_ni)
-
-                        if V.dist2(e_pos.x, e_pos.y, this.pos.x, this.pos.y) < this.attacks.range * this.attacks.range *
-                            1.3 then
-                            target = old_target
-                        end
-                    end
-
                     pred_pos = this.attacks._last_target_pos
                 end
 
@@ -5921,14 +5951,6 @@ function scripts.tower_dark_elf.update(this, store)
 
                 bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
                 bullet.bullet.from = V.vclone(bullet.pos)
-                bullet.bullet.to = V.vclone(pred_pos)
-
-                if target then
-                    bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x,
-                        target.pos.y + target.unit.hit_offset.y)
-                end
-
-                bullet.bullet.target_id = target and target.id or nil
                 bullet.bullet.source_id = this.id
                 bullet.bullet.damage_factor = this.tower.damage_factor
 
@@ -5941,6 +5963,14 @@ function scripts.tower_dark_elf.update(this, store)
                 end
 
                 apply_precision(bullet)
+
+                if target then
+                    bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+                    bullet.bullet.target_id = target.id
+                else
+                    bullet.bullet.to = V.vclone(pred_pos)
+                    bullet.bullet.target_id = nil
+                end
 
                 queue_insert(store, bullet)
 
@@ -6112,26 +6142,18 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 
             queue_insert(store, fx)
 
-            if target.health and not target.health.dead and store.entities[source.id] then
-                local tower = store.entities[source.id]
-
-                if tower.powers then
-                    for _, pow in pairs(tower.powers) do
-                        if pow == tower.powers.skill_buff and pow.level > 0 then
-                            local will_kill = U.predict_damage(target, d) >= target.health.hp
-
-                            if will_kill then
-                                local soul_mod = E:create_entity(this.skill_buff_mod)
-
-                                soul_mod.pos = V.v(target.pos.x + target.unit.hit_offset.x,
-                                    target.pos.y + target.unit.hit_offset.y)
-                                soul_mod.modifier.source_id = this.id
-                                soul_mod.modifier.target_id = target.id
-                                soul_mod.tower_id = tower.id
-
-                                queue_insert(store, soul_mod)
-                            end
-                        end
+            local tower = store.entities[source.id]
+            if tower then
+                local skill_buff = tower.powers.skill_buff
+                if skill_buff and skill_buff.level > 0 and skill_buff.times < skill_buff.max_times then
+                    if target.health.dead or U.predict_damage(target, d) >= target.health.hp then
+                        local soul_mod = E:create_entity(this.skill_buff_mod)
+                        soul_mod.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+                        soul_mod.modifier.source_id = this.id
+                        soul_mod.modifier.target_id = target.id
+                        soul_mod.tower_id = tower.id
+                        queue_insert(store, soul_mod)
+                        skill_buff.times = skill_buff.times + 1
                     end
                 end
             end
@@ -6274,6 +6296,7 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
                     U.animation_start(this, "idle", false, store.tick_ts)
 
                     s = E:create_entity(b.soldier_type)
+                    U.soldier_inherit_tower_buff_factor(s, this.tower_ref)
                     s.soldier.tower_id = this.tower_ref.id
                     s.soldier.tower_soldier_idx = i
                     s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
@@ -6389,19 +6412,19 @@ function scripts.bullet_tower_dark_elf_skill_buff.insert(this, store)
     if this._parent then
         local towers = U.find_towers_in_range(store.towers, tower.pos, {
             min_range = 1,
-            max_range = 180
+            max_range = 225
         }, function(t)
             return t.tower.can_be_mod
         end)
-        if towers then
-            local other_tower = towers[math.random(1, #towers)]
-            local new_bullet = E:clone_entity(this)
-            new_bullet.bullet.to.x = other_tower.pos.x + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.x
-            new_bullet.bullet.to.y = other_tower.pos.y + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.y
-            new_bullet.bullet.target_id = other_tower.id
-            new_bullet._parent = false
-            queue_insert(store, new_bullet)
-        end
+
+        local other_tower = towers and towers[math.random(1, #towers)] or tower
+
+        local new_bullet = E:clone_entity(this)
+        new_bullet.bullet.to.x = other_tower.pos.x + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.x
+        new_bullet.bullet.to.y = other_tower.pos.y + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.y
+        new_bullet.bullet.target_id = other_tower.id
+        new_bullet._parent = false
+        queue_insert(store, new_bullet)
     end
 
     b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
@@ -6515,7 +6538,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
     this.pos.x, this.pos.y = b.to.x, b.to.y
 
     if target then
-        if this._parent then
+        if this._parent or tower.template_name == "tower_dark_elf_lvl4" then
             if not tower.tower_upgrade_persistent_data.souls_extra_damage_min then
                 tower.tower_upgrade_persistent_data.souls_extra_damage_min = 0
             end
@@ -6536,7 +6559,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
                 SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)
             end
         else
-            SU.insert_tower_damage_factor_buff(tower, 0.01)
+            SU.insert_tower_damage_factor_buff(tower, 0.008)
         end
 
         if b.mod or b.mods then

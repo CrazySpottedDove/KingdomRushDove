@@ -3546,7 +3546,7 @@ local towers = {
             90,
             130,
             180,
-            270
+            275
         },
         basic_attack = {
             cooldown = 2,
@@ -3583,16 +3583,24 @@ local towers = {
             }
         },
         skill_buff = {
-            price = {
-                200
-            },
             extra_damage_min = {
+                1,
+                1,
                 1
             },
             extra_damage_max = {
-                2
+                1,
+                1,
+                1
+            },
+            max_times = {
+                20,
+                50,
+                999999
             },
             s_extra_damage_total = {
+                1,
+                1,
                 1
             }
         }
