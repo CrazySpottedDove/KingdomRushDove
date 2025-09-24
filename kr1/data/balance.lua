@@ -3590,7 +3590,7 @@ local towers = {
                 1
             },
             extra_damage_max = {
-                2
+                1
             },
             s_extra_damage_total = {
                 1
