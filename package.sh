@@ -46,7 +46,7 @@ zip "$OUTPUT_ZIP" "./游玩必读说明，务必阅读.url"
 
 # tmp usage
 zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_dark_elf-1.dds"
-# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_tricannon-1.png"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_tricannon-1.dds"
 # zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/gui_common-5.png"
 # # 记录 commit hash 文件
 # zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/criket_random_eff_mod.png"

@@ -2,7 +2,7 @@
 
 return {
 	tower_preview_tricannon = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			120,
 			190
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	tricannon_tower_build = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			122,
 			98
@@ -52,7 +52,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_decal = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			69,
 			54
@@ -76,7 +76,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0001 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -100,7 +100,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -124,7 +124,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0003 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -148,7 +148,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0004 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -172,7 +172,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0005 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -196,7 +196,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0006 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -220,7 +220,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0007 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -244,7 +244,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0008 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -268,7 +268,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0009 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -292,7 +292,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0010 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			53,
 			42
@@ -316,7 +316,7 @@ return {
 		alias = {}
 	},
 	-- tricannon_tower_lvl1_bomb = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		38,
 	-- 		36
@@ -340,7 +340,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer1_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -421,7 +421,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0001 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -492,7 +492,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -529,7 +529,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -555,7 +555,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -583,7 +583,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -611,7 +611,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -639,7 +639,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -667,7 +667,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0016 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -695,7 +695,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -721,7 +721,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -747,7 +747,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -773,7 +773,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -799,7 +799,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -825,7 +825,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -851,7 +851,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -877,7 +877,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -903,7 +903,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -931,7 +931,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer2_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -957,7 +957,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1006,7 +1006,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1032,7 +1032,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1058,7 +1058,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1084,7 +1084,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1110,7 +1110,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1136,7 +1136,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1162,7 +1162,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1188,7 +1188,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1214,7 +1214,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1240,7 +1240,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1266,7 +1266,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1292,7 +1292,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1318,7 +1318,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1344,7 +1344,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1370,7 +1370,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0052 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1396,7 +1396,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer3_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1422,7 +1422,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1448,7 +1448,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0004 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1474,7 +1474,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1500,7 +1500,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1528,7 +1528,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1556,7 +1556,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1584,7 +1584,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1612,7 +1612,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0016 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1640,7 +1640,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1666,7 +1666,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1692,7 +1692,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1718,7 +1718,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1746,7 +1746,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1772,7 +1772,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1798,7 +1798,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1824,7 +1824,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1850,7 +1850,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1876,7 +1876,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1902,7 +1902,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1930,7 +1930,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1956,7 +1956,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer4_0056 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -1983,7 +1983,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2012,7 +2012,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0004 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2038,7 +2038,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2066,7 +2066,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2092,7 +2092,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2118,7 +2118,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2144,7 +2144,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2170,7 +2170,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0018 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2196,7 +2196,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0020 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2222,7 +2222,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0022 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2248,7 +2248,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2274,7 +2274,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2300,7 +2300,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2326,7 +2326,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2352,7 +2352,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2378,7 +2378,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2404,7 +2404,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2430,7 +2430,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2458,7 +2458,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2484,7 +2484,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2510,7 +2510,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2536,7 +2536,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2566,7 +2566,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2590,7 +2590,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer5_0055 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2614,7 +2614,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2665,7 +2665,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0018 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2691,7 +2691,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0020 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2717,7 +2717,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0022 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2743,7 +2743,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2769,7 +2769,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2795,7 +2795,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2821,7 +2821,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2847,7 +2847,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2873,7 +2873,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2899,7 +2899,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2925,7 +2925,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2951,7 +2951,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -2977,7 +2977,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3003,7 +3003,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3029,7 +3029,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer6_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3055,7 +3055,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3081,7 +3081,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3107,7 +3107,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3133,7 +3133,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3159,7 +3159,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3185,7 +3185,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0052 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3209,7 +3209,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0053 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3233,7 +3233,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3257,7 +3257,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0055 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3281,7 +3281,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0056 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3305,7 +3305,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl1_tower_layer7_0057 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		190
@@ -3329,7 +3329,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_bomb = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		38,
 	-- 		36
@@ -3353,7 +3353,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer1_0001 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3377,7 +3377,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer1_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3458,7 +3458,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0001 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3529,7 +3529,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3570,7 +3570,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3596,7 +3596,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3624,7 +3624,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3652,7 +3652,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3680,7 +3680,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3708,7 +3708,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0016 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3736,7 +3736,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3762,7 +3762,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3788,7 +3788,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3814,7 +3814,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3840,7 +3840,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3866,7 +3866,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3892,7 +3892,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3918,7 +3918,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3944,7 +3944,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer2_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -3970,7 +3970,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4019,7 +4019,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4045,7 +4045,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4071,7 +4071,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4097,7 +4097,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4123,7 +4123,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4149,7 +4149,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4175,7 +4175,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4201,7 +4201,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4227,7 +4227,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4253,7 +4253,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4279,7 +4279,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4305,7 +4305,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4331,7 +4331,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4357,7 +4357,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4383,7 +4383,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0052 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4409,7 +4409,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer3_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4435,7 +4435,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4461,7 +4461,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0004 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4487,7 +4487,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4513,7 +4513,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4541,7 +4541,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4569,7 +4569,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4597,7 +4597,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4625,7 +4625,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0016 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4653,7 +4653,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4679,7 +4679,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4705,7 +4705,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4731,7 +4731,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4759,7 +4759,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4785,7 +4785,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4811,7 +4811,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4837,7 +4837,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4863,7 +4863,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4889,7 +4889,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4915,7 +4915,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4943,7 +4943,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4969,7 +4969,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer4_0056 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -4996,7 +4996,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5025,7 +5025,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0004 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5051,7 +5051,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5079,7 +5079,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5105,7 +5105,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5131,7 +5131,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5157,7 +5157,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5183,7 +5183,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0018 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5209,7 +5209,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0020 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5235,7 +5235,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0022 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5261,7 +5261,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5287,7 +5287,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5313,7 +5313,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5339,7 +5339,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5365,7 +5365,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5391,7 +5391,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5417,7 +5417,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5443,7 +5443,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5471,7 +5471,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5497,7 +5497,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5523,7 +5523,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5549,7 +5549,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5579,7 +5579,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5603,7 +5603,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer5_0055 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5627,7 +5627,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5678,7 +5678,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0018 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5704,7 +5704,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0020 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5730,7 +5730,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0022 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5756,7 +5756,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5782,7 +5782,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5808,7 +5808,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5834,7 +5834,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5860,7 +5860,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5886,7 +5886,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5912,7 +5912,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5938,7 +5938,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5964,7 +5964,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -5990,7 +5990,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6016,7 +6016,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6042,7 +6042,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer6_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6068,7 +6068,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6094,7 +6094,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6120,7 +6120,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6146,7 +6146,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6172,7 +6172,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6198,7 +6198,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0052 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6222,7 +6222,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0053 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6246,7 +6246,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6270,7 +6270,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0055 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6294,7 +6294,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0056 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6318,7 +6318,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl2_tower_layer7_0057 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		120,
 	-- 		202
@@ -6342,7 +6342,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_bomb = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		42,
 	-- 		38
@@ -6366,7 +6366,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer1_0001 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6390,7 +6390,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer1_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6471,7 +6471,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0001 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6542,7 +6542,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6583,7 +6583,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6609,7 +6609,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6637,7 +6637,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6665,7 +6665,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6693,7 +6693,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6721,7 +6721,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0016 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6749,7 +6749,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6775,7 +6775,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6801,7 +6801,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6827,7 +6827,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6853,7 +6853,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6879,7 +6879,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6905,7 +6905,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6931,7 +6931,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6957,7 +6957,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer2_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -6983,7 +6983,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7029,7 +7029,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7055,7 +7055,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7081,7 +7081,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7107,7 +7107,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7133,7 +7133,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7159,7 +7159,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7185,7 +7185,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7211,7 +7211,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7237,7 +7237,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7263,7 +7263,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7289,7 +7289,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7315,7 +7315,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7341,7 +7341,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7367,7 +7367,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7393,7 +7393,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0052 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7419,7 +7419,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7445,7 +7445,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer3_0056 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7472,7 +7472,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7498,7 +7498,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0004 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7524,7 +7524,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7550,7 +7550,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7578,7 +7578,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7606,7 +7606,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7634,7 +7634,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7662,7 +7662,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0016 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7690,7 +7690,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7716,7 +7716,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7742,7 +7742,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7768,7 +7768,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7796,7 +7796,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7822,7 +7822,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7848,7 +7848,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7874,7 +7874,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7900,7 +7900,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7926,7 +7926,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7952,7 +7952,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -7980,7 +7980,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8006,7 +8006,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer4_0056 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8033,7 +8033,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8062,7 +8062,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0004 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8088,7 +8088,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0006 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8116,7 +8116,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0008 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8142,7 +8142,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0010 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8168,7 +8168,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0012 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8194,7 +8194,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0014 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8220,7 +8220,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0018 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8246,7 +8246,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0020 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8272,7 +8272,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0022 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8298,7 +8298,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8324,7 +8324,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8350,7 +8350,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8376,7 +8376,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8402,7 +8402,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8428,7 +8428,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8454,7 +8454,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8480,7 +8480,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8508,7 +8508,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8534,7 +8534,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8560,7 +8560,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8586,7 +8586,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8616,7 +8616,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8640,7 +8640,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer5_0055 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8664,7 +8664,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0002 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8715,7 +8715,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0018 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8741,7 +8741,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0020 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8767,7 +8767,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0022 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8793,7 +8793,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0024 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8819,7 +8819,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0026 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8845,7 +8845,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0028 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8871,7 +8871,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0030 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8897,7 +8897,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0032 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8923,7 +8923,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0034 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8949,7 +8949,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0036 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -8975,7 +8975,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0038 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9001,7 +9001,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0040 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9027,7 +9027,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9053,7 +9053,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9079,7 +9079,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer6_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9105,7 +9105,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0042 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9131,7 +9131,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0044 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9157,7 +9157,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0046 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9183,7 +9183,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0048 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9209,7 +9209,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0050 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9235,7 +9235,7 @@ return {
 	-- 	}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0052 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9259,7 +9259,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0053 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9283,7 +9283,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0054 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9307,7 +9307,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0055 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9331,7 +9331,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0056 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9355,7 +9355,7 @@ return {
 	-- 	alias = {}
 	-- },
 	-- tricannon_tower_lvl3_tower_layer7_0057 = {
-	-- 	a_name = "go_towers_tricannon-1.png",
+	-- 	a_name = "go_towers_tricannon-1.dds",
 	-- 	size = {
 	-- 		126,
 	-- 		218
@@ -9379,7 +9379,7 @@ return {
 	-- 	alias = {}
 	-- },
 	tricannon_tower_lvl4_bomb = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			42,
 			34
@@ -9403,7 +9403,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_bomb_overheat = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			42,
 			34
@@ -9427,7 +9427,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0001 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9451,7 +9451,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9475,7 +9475,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0003 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9499,7 +9499,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0004 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9523,7 +9523,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0005 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9547,7 +9547,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0006 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9573,7 +9573,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_particle_overheat_0001 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9599,7 +9599,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_particle_overheat_0003 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9625,7 +9625,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_particle_overheat_0005 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9651,7 +9651,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_particle_overheat_0007 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9677,7 +9677,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_particle_overheat_0009 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9703,7 +9703,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_particle_overheat_0011 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9729,7 +9729,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_particle_overheat_0013 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			34,
 			34
@@ -9755,7 +9755,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer10_0001 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -10619,7 +10619,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer10_0213 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -10724,7 +10724,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer1_0001 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -10770,7 +10770,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer1_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11062,7 +11062,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11194,7 +11194,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0023 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11224,7 +11224,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0025 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11254,7 +11254,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0027 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11284,7 +11284,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0029 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11340,7 +11340,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0031 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11369,7 +11369,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0048 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11397,7 +11397,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0050 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11425,7 +11425,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0052 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11453,7 +11453,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0054 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11481,7 +11481,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0056 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11509,7 +11509,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0062 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11537,7 +11537,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0103 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11561,7 +11561,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0104 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11591,7 +11591,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0110 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11620,7 +11620,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0117 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11646,7 +11646,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0119 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11672,7 +11672,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0121 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11698,7 +11698,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0123 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11724,7 +11724,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0125 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11750,7 +11750,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0143 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11810,7 +11810,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0179 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11836,7 +11836,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0181 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11862,7 +11862,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0183 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11888,7 +11888,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0185 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11912,7 +11912,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0186 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11936,7 +11936,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0187 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11960,7 +11960,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0188 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -11984,7 +11984,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0189 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12008,7 +12008,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0190 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12032,7 +12032,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0191 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12056,7 +12056,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0192 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12080,7 +12080,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0193 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12104,7 +12104,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0194 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12128,7 +12128,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0195 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12152,7 +12152,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0196 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12176,7 +12176,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0197 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12200,7 +12200,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0198 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12224,7 +12224,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0199 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12248,7 +12248,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0200 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12274,7 +12274,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0202 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12311,7 +12311,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0204 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12347,7 +12347,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0206 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12377,7 +12377,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0207 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12413,7 +12413,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0209 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12449,7 +12449,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0211 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12485,7 +12485,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0281 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12509,7 +12509,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0282 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12535,7 +12535,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0284 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12561,7 +12561,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0286 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12587,7 +12587,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0288 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12613,7 +12613,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer2_0290 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12637,7 +12637,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12794,7 +12794,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0013 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12830,7 +12830,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0015 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12860,7 +12860,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0017 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12890,7 +12890,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0021 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12920,7 +12920,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0048 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12948,7 +12948,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0050 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -12976,7 +12976,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0052 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13004,7 +13004,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0054 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13032,7 +13032,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0056 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13060,7 +13060,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0062 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13088,7 +13088,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0103 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13119,7 +13119,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0110 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13148,7 +13148,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0117 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13174,7 +13174,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0119 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13200,7 +13200,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0121 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13226,7 +13226,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0123 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13252,7 +13252,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0125 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13278,7 +13278,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0143 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13414,7 +13414,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0151 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13446,7 +13446,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0153 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13478,7 +13478,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0155 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13552,7 +13552,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0157 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13584,7 +13584,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0163 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13612,7 +13612,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0165 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13640,7 +13640,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0167 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13668,7 +13668,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0169 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13696,7 +13696,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0179 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13722,7 +13722,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0181 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13748,7 +13748,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0183 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13774,7 +13774,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0187 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13800,7 +13800,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer3_0282 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13824,7 +13824,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0283 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13848,7 +13848,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0284 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13872,7 +13872,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0285 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13896,7 +13896,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0286 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13920,7 +13920,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0287 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13944,7 +13944,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0288 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -13968,7 +13968,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14109,7 +14109,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0032 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14137,7 +14137,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0034 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14165,7 +14165,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0036 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14193,7 +14193,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0038 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14221,7 +14221,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0040 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14249,7 +14249,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0042 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14277,7 +14277,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0044 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14305,7 +14305,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0046 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14333,7 +14333,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0048 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14361,7 +14361,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0050 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14389,7 +14389,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0052 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14415,7 +14415,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0054 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14441,7 +14441,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0056 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14467,7 +14467,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0058 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14493,7 +14493,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0060 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14519,7 +14519,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0062 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14547,7 +14547,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0103 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14574,7 +14574,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0106 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14600,7 +14600,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0108 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14626,7 +14626,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0110 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14655,7 +14655,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0115 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14681,7 +14681,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0117 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14707,7 +14707,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0119 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14731,7 +14731,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0120 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14755,7 +14755,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0121 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14779,7 +14779,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0122 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14803,7 +14803,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0123 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14827,7 +14827,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0124 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14851,7 +14851,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0125 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14875,7 +14875,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0126 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14899,7 +14899,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0127 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14925,7 +14925,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0131 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14951,7 +14951,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0163 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -14977,7 +14977,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0165 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15001,7 +15001,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0166 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15025,7 +15025,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0167 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15049,7 +15049,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0168 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15073,7 +15073,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0169 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15097,7 +15097,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0170 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15123,7 +15123,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0172 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15149,7 +15149,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0174 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15175,7 +15175,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0176 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15199,7 +15199,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0177 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15223,7 +15223,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0178 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15247,7 +15247,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0179 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15271,7 +15271,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0180 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15295,7 +15295,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0181 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15319,7 +15319,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0182 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15343,7 +15343,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0183 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15367,7 +15367,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0184 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15393,7 +15393,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0186 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15417,7 +15417,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0187 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15443,7 +15443,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0189 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15467,7 +15467,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0190 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15491,7 +15491,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0191 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15515,7 +15515,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0192 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15541,7 +15541,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0194 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15567,7 +15567,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0196 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15593,7 +15593,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0198 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15619,7 +15619,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0263 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15645,7 +15645,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0265 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15671,7 +15671,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0267 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15697,7 +15697,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0269 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15723,7 +15723,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer4_0271 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15749,7 +15749,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0042 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15777,7 +15777,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0044 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15805,7 +15805,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0046 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15833,7 +15833,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0048 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15861,7 +15861,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0050 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15889,7 +15889,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0052 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15917,7 +15917,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0054 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15945,7 +15945,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0056 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -15973,7 +15973,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0062 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16001,7 +16001,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0103 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16035,7 +16035,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0113 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16061,7 +16061,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0115 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16087,7 +16087,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0117 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16113,7 +16113,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0119 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16139,7 +16139,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0123 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16165,7 +16165,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0125 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16191,7 +16191,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0143 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16217,7 +16217,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0145 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16243,7 +16243,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0147 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16269,7 +16269,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0149 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16295,7 +16295,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0151 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16321,7 +16321,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0153 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16349,7 +16349,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0155 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16375,7 +16375,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0157 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16401,7 +16401,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0159 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16427,7 +16427,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0161 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16453,7 +16453,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0163 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16481,7 +16481,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0165 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16507,7 +16507,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0167 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16533,7 +16533,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0169 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16561,7 +16561,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0173 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16587,7 +16587,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0175 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16613,7 +16613,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0179 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16639,7 +16639,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0181 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16665,7 +16665,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0185 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16691,7 +16691,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0187 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16717,7 +16717,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0189 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16743,7 +16743,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0191 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16769,7 +16769,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0193 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16795,7 +16795,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer5_0195 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16826,7 +16826,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16869,7 +16869,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0004 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16899,7 +16899,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0006 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16929,7 +16929,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0008 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16957,7 +16957,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0010 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -16987,7 +16987,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0012 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17015,7 +17015,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0014 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17043,7 +17043,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0016 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17071,7 +17071,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0018 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17099,7 +17099,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0020 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17127,7 +17127,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0022 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17155,7 +17155,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0024 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17187,7 +17187,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0028 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17217,7 +17217,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0030 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17245,7 +17245,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0032 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17273,7 +17273,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0034 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17301,7 +17301,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0036 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17349,7 +17349,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0048 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17377,7 +17377,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0050 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17405,7 +17405,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0052 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17433,7 +17433,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0054 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17461,7 +17461,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0056 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17489,7 +17489,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0058 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17521,7 +17521,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0062 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17549,7 +17549,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0064 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17575,7 +17575,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0065 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17601,7 +17601,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0079 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17627,7 +17627,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0083 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17653,7 +17653,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0085 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17679,7 +17679,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0087 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17705,7 +17705,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0089 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17731,7 +17731,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0091 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17757,7 +17757,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0093 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17789,7 +17789,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0103 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17815,7 +17815,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0105 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17841,7 +17841,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0107 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17867,7 +17867,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0109 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17893,7 +17893,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0111 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17921,7 +17921,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0115 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17956,7 +17956,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0117 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -17982,7 +17982,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0119 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18008,7 +18008,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0121 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18034,7 +18034,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0123 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18060,7 +18060,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0125 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18086,7 +18086,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer6_0136 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18110,7 +18110,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0137 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18134,7 +18134,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0138 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18158,7 +18158,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0139 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18182,7 +18182,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0140 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18206,7 +18206,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0143 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18289,7 +18289,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0002 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18405,7 +18405,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0022 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18435,7 +18435,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0024 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18465,7 +18465,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0026 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18495,7 +18495,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0028 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18525,7 +18525,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0030 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18555,7 +18555,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0032 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18583,7 +18583,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0034 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18611,7 +18611,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0036 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18639,7 +18639,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0038 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18667,7 +18667,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0040 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18695,7 +18695,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0042 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18723,7 +18723,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0044 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18753,7 +18753,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0048 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18781,7 +18781,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0050 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18809,7 +18809,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0052 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18837,7 +18837,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0054 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18865,7 +18865,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0056 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18893,7 +18893,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0062 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18921,7 +18921,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0066 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18956,7 +18956,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0103 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -18984,7 +18984,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0107 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19010,7 +19010,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0109 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19036,7 +19036,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0111 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19062,7 +19062,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0113 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19088,7 +19088,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0117 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19114,7 +19114,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0119 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19140,7 +19140,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0121 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19166,7 +19166,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0123 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19192,7 +19192,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0125 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19218,7 +19218,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer7_0185 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19242,7 +19242,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0186 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19266,7 +19266,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0187 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19290,7 +19290,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0188 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19314,7 +19314,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0189 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19338,7 +19338,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0190 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19362,7 +19362,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0191 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19386,7 +19386,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0192 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19410,7 +19410,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0193 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19434,7 +19434,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0194 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19458,7 +19458,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0195 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19482,7 +19482,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0196 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19506,7 +19506,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0197 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19530,7 +19530,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0198 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19554,7 +19554,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0199 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19578,7 +19578,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0200 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19602,7 +19602,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0046 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19630,7 +19630,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0048 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19658,7 +19658,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0050 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19686,7 +19686,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0052 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19712,7 +19712,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0054 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19738,7 +19738,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0056 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19764,7 +19764,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0058 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19788,7 +19788,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0059 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19812,7 +19812,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0060 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19836,7 +19836,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0061 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19860,7 +19860,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0062 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19884,7 +19884,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0063 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19908,7 +19908,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0064 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19932,7 +19932,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0065 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19956,7 +19956,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0066 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -19980,7 +19980,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0067 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20004,7 +20004,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0068 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20030,7 +20030,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0069 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20054,7 +20054,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0070 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20081,7 +20081,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0263 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20107,7 +20107,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0265 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20133,7 +20133,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0267 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20159,7 +20159,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer8_0269 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20183,7 +20183,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0270 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20207,7 +20207,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0271 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20231,7 +20231,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0272 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20255,7 +20255,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0273 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20279,7 +20279,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0274 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20303,7 +20303,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0275 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20327,7 +20327,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0276 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20351,7 +20351,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0277 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20375,7 +20375,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0278 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20399,7 +20399,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0259 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20425,7 +20425,7 @@ return {
 		}
 	},
 	tricannon_tower_lvl4_tower_layer9_0261 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20449,7 +20449,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0262 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20473,7 +20473,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0263 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20497,7 +20497,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0264 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20521,7 +20521,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0265 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20545,7 +20545,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0266 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20569,7 +20569,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0267 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20593,7 +20593,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0268 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
@@ -20617,7 +20617,7 @@ return {
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0273 = {
-		a_name = "go_towers_tricannon-1.png",
+		a_name = "go_towers_tricannon-1.dds",
 		size = {
 			148,
 			242
