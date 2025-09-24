@@ -1087,8 +1087,16 @@ local function engineer_towers()
     tt.render.sprites[1].size_names = {"small", "medium", "large"}
     tt.render.sprites[1].draw_order = 10
 
+    --[[
+        五代
+    --]]
     local balance = require("kr1.data.balance")
-    local b = balance.towers.tricannon
+    local b
+
+    -- 三管加农炮_START
+
+    b = balance.towers.tricannon
+
     tt = RT("tower_tricannon_lvl4", "tower")
     AC(tt, "attacks", "powers")
     image_y = 120
@@ -1164,7 +1172,6 @@ local function engineer_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_artillery_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-
     for i = 2, 11 do
         tt.render.sprites[i] = CC("sprite")
         tt.render.sprites[i].prefix = "tricannon_tower_lvl4_tower_layer" .. i - 1
@@ -1172,7 +1179,6 @@ local function engineer_towers()
         tt.render.sprites[i].group = "layers"
         tt.render.sprites[i].scale = vec_1(1.3 / 768 * 1024)
     end
-
     tt.ui.click_rect = r(-45, -3, 90, 78)
 
     tt = RT("decalmod_tricannon_overheat", "modifier")
@@ -1183,7 +1189,6 @@ local function engineer_towers()
     tt.tween.props[1].name = "scale"
     tt.tween.props[1].loop = true
     tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.5, vec_2(1, 1)}, {1, vec_2(1, 1)}}
-
     for i, p in ipairs({vec_2(22, 45), vec_2(31, 40), vec_2(40, 35), vec_2(49, 32.5), vec_2(58, 30), vec_2(67.5, 32.5),
                         vec_2(77, 35), vec_2(86, 40), vec_2(95, 45)}) do
         tt.render.sprites[i] = CC("sprite")
@@ -1193,7 +1198,6 @@ local function engineer_towers()
         tt.render.sprites[i].offset = vec_2(p.x - 58, p.y - 27)
         tt.render.sprites[i].ts = math.random()
     end
-
     -- tt.render.sprites[1].offset = vec_1(0)
     for _, sprite in ipairs(tt.render.sprites) do
         sprite.offset.y = sprite.offset.y + 5 -- 向上平移 10 单位
@@ -1244,9 +1248,6 @@ local function engineer_towers()
     tt.main_script.update = scripts.mod_dps.update
 
     tt = RT("tower_tricannon_bomb", "bomb")
-
-    local b = balance.towers.tricannon
-
     tt.bullet.damage_max = nil
     tt.bullet.damage_min = nil
     tt.bullet.damage_radius = b.basic_attack.damage_radius
@@ -1287,7 +1288,12 @@ local function engineer_towers()
     tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
     tt.bullet.particles_name = "tower_tricannon_bomb_4_bombardment_trail"
 
-    -- 恶魔澡坑
+    -- 三管加农炮_END
+
+    -- 恶魔澡坑_START
+
+    b = balance.towers.demon_pit
+
     tt = RT("tower_demon_pit_demon_trail")
     AC(tt, "pos", "particle_system")
     tt.particle_system.name = "demon_pit_tower_demon_projectile_particle_idle"
@@ -1301,6 +1307,282 @@ local function engineer_towers()
     tt.particle_system.emit_rotation_spread = math.pi * 2
     tt.particle_system.emit_area_spread = vec_2(10, 10)
     tt.particle_system.z = Z_BULLET_PARTICLES
+
+    tt = RT("decal_tower_demon_pit_reload", "decal_scripted")
+    tt.render.sprites[1].name = nil
+    tt.render.sprites[1].z = Z_TOWER_BASES + 1
+    tt.main_script.update = scripts.decal_tower_demon_pit_reload.update
+
+    tt = RT("decal_tower_demon_pit_demon_explosion_decal", "decal_tween")
+    AC(tt, "render", "tween")
+    tt.render.sprites[1].name = "demon_pit_tower_demon_minion_explosion_decal"
+    tt.render.sprites[1].animated = false
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {
+        {
+            1,
+            255
+        },
+        {
+            2.5,
+            0
+        }
+    }
+    tt.tween.remove = true
+
+    tt = RT("tower_build_demon_pit", "tower_build")
+    tt.build_name = "tower_demon_pit_lvl1"
+    tt.render.sprites[1].name = "terrains_%04i"
+    tt.render.sprites[1].offset = vec_2(0, 10)
+    tt.render.sprites[2].name = "demon_pit_tower_build"
+    tt.render.sprites[2].offset = vec_2(0, 10)
+    tt.render.sprites[3].offset.y = 66
+    tt.render.sprites[4].offset.y = 66
+
+    tt = RT("tower_demon_pit_lvl4", "tower")
+    AC(tt, "attacks", "powers")
+    tt.is_kr5 = true
+    tt.tower.type = "demon_pit"
+    tt.tower.level = 1
+    tt.tower.price = b.price[4]
+    tt.tower.menu_offset = vec_2(0, 25)
+    tt.info.i18n_key = "TOWER_DEMON_PIT_4"
+    tt.info.portrait = "portraits_towers_0006"
+    tt.info.stat_damage = b.stats.damage
+    tt.info.stat_hp = b.stats.hp
+    tt.info.stat_armor = b.stats.armor
+    tt.info.enc_icon = 4
+    tt.info.fn = scripts.tower_demon_pit.get_info
+    tt.info.tower_portrait = "towerselect_portraits_big_0004"
+    tt.main_script.update = scripts.tower_demon_pit.update
+    tt.ui.click_rect = r(-30, 0, 60, 60)
+    tt.sound_events.insert = "TowerDemonPitTaunt"
+    tt.sound_events.tower_room_select = "TowerDemonPitTauntSelect"
+    tt.attacks.range = b.basic_attack.range[1]
+    tt.attacks.attack_delay_on_spawn = fts(5)
+    tt.attacks.list[1] = CC("custom_attack")
+    tt.attacks.list[1].bullet = "bullet_tower_demon_pit_basic_attack_lvl4"
+    tt.attacks.list[1].cooldown = b.basic_attack.cooldown[4]
+    tt.attacks.list[1].shoot_time = fts(33)
+    tt.attacks.list[1].bullet_start_offset = vec_2(-7, 100)
+    tt.attacks.list[1].max_range = b.basic_attack.range[4]
+    tt.attacks.list[1].node_prediction = fts(60)
+    tt.attacks.list[1].animation = "attack"
+    tt.attacks.list[1].animation_reload = "reload_2"
+    tt.attacks.list[1].vis_flags = bor(F_RANGED)
+    tt.attacks.list[1].vis_bans = bor(F_FLYING, F_CLIFF)
+    tt.attacks.list[2] = CC("custom_attack")
+    tt.attacks.list[2].bullet = "bullet_tower_demon_pit_big_guy_lvl4"
+    tt.attacks.list[2].cooldown = b.big_guy.cooldown[1]
+    tt.attacks.list[2].shoot_time = fts(43)
+    tt.attacks.list[2].bullet_start_offset = vec_2(-7, 70)
+    tt.attacks.list[2].max_range = b.big_guy.max_range
+    tt.attacks.list[2].node_prediction = fts(80)
+    tt.attacks.list[2].animation = "big_guy_spawn"
+    tt.attacks.list[2].animation_reload = "big_guy_reload_big_guy"
+    tt.attacks.list[2].vis_flags = bor(F_RANGED)
+    tt.attacks.list[2].vis_bans = bor(F_FLYING)
+    tt.attacks.range = b.basic_attack.range[4]
+    tt.demons_sid = 4
+    tt.decal_reload = "decal_tower_demon_pit_reload"
+    tt.animation_reload = "demon_pit_tower_lvl4_tower_demon_reload_reload_1"
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].name = "terrain_artillery_%04i"
+    tt.render.sprites[1].offset = vec_2(0, 10)
+    tt.render.sprites[2] = CC("sprite")
+    tt.render.sprites[2].prefix = "demon_pit_tower_lvl4_tower_base"
+    tt.render.sprites[2].offset = vec_2(0, 10)
+    tt.render.sprites[3] = CC("sprite")
+    tt.render.sprites[3].prefix = "demon_pit_tower_lvl4_tower_bubbles"
+    tt.render.sprites[3].offset = vec_2(0, 10)
+    tt.render.sprites[3].animated = true
+    tt.render.sprites[4] = CC("sprite")
+    tt.render.sprites[4].prefix = "demon_pit_tower_lvl4_tower_demons"
+    tt.render.sprites[4].offset = vec_2(0, 10)
+    tt.render.sprites[5] = CC("sprite")
+    tt.render.sprites[5].prefix = "demon_pit_tower_lvl4_tower_front"
+    tt.render.sprites[5].offset = vec_2(0, 10)
+    tt.powers.master_exploders = CC("power")
+    tt.powers.master_exploders.price_base = b.master_exploders.price[1]
+    tt.powers.master_exploders.price_inc = b.master_exploders.price[2]
+    tt.powers.master_exploders.enc_icon = 11
+    tt.powers.master_exploders.explosion_damage_factor = b.master_exploders.explosion_damage_factor
+    tt.powers.master_exploders.burning_duration = b.master_exploders.burning_duration
+    tt.powers.master_exploders.burning_damage_min = b.master_exploders.burning_damage_min
+    tt.powers.master_exploders.burning_damage_max = b.master_exploders.burning_damage_max
+    tt.powers.master_exploders.mod = "mod_tower_demon_pit_master_explosion_burning"
+    tt.powers.master_exploders.sound = "TowerDemonPitDemonExplosion"
+    tt.powers.big_guy = CC("power")
+    tt.powers.big_guy.price_base = b.big_guy.price[1]
+    tt.powers.big_guy.price_inc = b.big_guy.price[2]
+    tt.powers.big_guy.enc_icon = 12
+    tt.powers.big_guy.damage_max = 2
+    tt.powers.big_guy.damage_min = 2
+    tt.powers.big_guy.cooldown = b.big_guy.cooldown
+    tt.powers.big_guy.key = "BIG_DEMON"
+
+    tt = RT("soldier_tower_demon_pit_basic_attack_lvl4", "soldier_militia")
+    AC(tt, "reinforcement", "tween")
+    tt.level = 1
+    tt.health.hp_max = b.basic_attack.hp_max[4]
+    tt.health.armor = b.basic_attack.armor
+    tt.health_bar.offset = vec_2(0, 27)
+    tt.health.dead_lifetime = 5
+    tt.info.fn = scripts.soldier_reinforcement.get_info
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0007"
+    tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER"
+    tt.info.random_name_format = false
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.update = scripts.soldier_tower_demon_pit.update
+    tt.melee.attacks[1].hit_time = fts(10)
+    tt.melee.range = b.basic_attack.melee_attack.range
+    tt.motion.max_speed = b.basic_attack.max_speed
+    tt.regen.cooldown = 1
+    tt.regen.health = b.basic_attack.regen_health
+    tt.reinforcement.duration = b.basic_attack.duration
+    tt.render.sprites[1].prefix = "demon_pit_tower_demon_minion"
+    tt.render.sprites[1].name = "raise"
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.soldier.melee_slot_offset = vec_2(2, 0)
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(5),
+            255
+        }
+    }
+    tt.tween.props[1].name = "alpha"
+    tt.tween.disabled = true
+    tt.tween.remove = false
+    tt.tween.reverse = false
+    tt.unit.hit_offset = vec_2(0, 5)
+    tt.unit.mod_offset = vec_2(0, 14)
+    tt.unit.level = 0
+    tt.ui.click_rect = r(-15, 0, 30, 28)
+    tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
+    tt.decal_on_explosion = "decal_tower_demon_pit_demon_explosion_decal"
+    tt.melee.attacks[1].cooldown = b.basic_attack.melee_attack.cooldown[4]
+    tt.melee.attacks[1].damage_max = b.basic_attack.melee_attack.damage_max[4]
+    tt.melee.attacks[1].damage_min = b.basic_attack.melee_attack.damage_min[4]
+    tt.explosion_sound = "TowerDemonPitDemonExplosion"
+    tt.explosion_range = b.demon_explosion.range
+    tt.explosion_damage_min = b.demon_explosion.damage_min
+    tt.explosion_damage_max = b.demon_explosion.damage_max
+    tt.explosion_damage_type = b.demon_explosion.damage_type
+    tt.explosion_mod_stun = "mod_soldier_tower_demon_pit_explosion"
+    tt.explosion_mod_stun_duration = b.demon_explosion.stun_duration
+    tt.patrol_pos_offset = vec_2(15, 10)
+    tt.patrol_min_cd = 3
+    tt.patrol_max_cd = 6
+
+    tt = RT("big_guy_tower_demon_pit_lvl4", "soldier_militia")
+    AC(tt, "reinforcement", "tween")
+    tt.health.armor = b.big_guy.armor
+    tt.health_bar.offset = vec_2(0, 42)
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+    tt.health_level = b.big_guy.hp_max
+    tt.explosion_damage = b.big_guy.explosion_damage
+    tt.explosion_range = b.big_guy.explosion_range
+    tt.explosion_damage_type = b.big_guy.explosion_damage_type
+    tt.explosion_sound = "TowerDemonPitDemonExplosion"
+    tt.info.fn = scripts.soldier_reinforcement.get_info
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0006"
+    tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER_BIG_GUY"
+    tt.info.random_name_format = false
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.update = scripts.big_guy_tower_demon_pit.update
+    tt.melee.attacks[1].hit_time = fts(5)
+    tt.melee.attacks[1].sound = "TowerDemonPitBigGuyBasicAttack"
+    tt.damage_max = b.big_guy.melee_attack.damage_max
+    tt.damage_min = b.big_guy.melee_attack.damage_min
+    tt.melee.range = b.big_guy.melee_attack.range
+    tt.motion.max_speed = b.big_guy.max_speed
+    tt.regen.cooldown = 1
+    tt.regen.health = b.big_guy.regen_health
+    tt.reinforcement.duration = b.big_guy.duration
+    tt.render.sprites[1].prefix = "demon_pit_tower_demon_big_guy"
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.soldier.melee_slot_offset = vec_2(15, 0)
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(10),
+            255
+        }
+    }
+    tt.tween.props[1].name = "alpha"
+    tt.tween.disabled = true
+    tt.tween.remove = false
+    tt.tween.reverse = false
+    tt.unit.hit_offset = vec_2(0, 5)
+    tt.unit.mod_offset = vec_2(0, 14)
+    tt.unit.level = 0
+    tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
+
+    tt = RT("bullet_tower_demon_pit_basic_attack_lvl4", "bomb")
+    tt.bullet.flight_time = fts(31)
+    tt.bullet.hit_payload = "soldier_tower_demon_pit_basic_attack_lvl1"
+    tt.sound_events.hit_water = nil
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].name = "demon_pit_tower_demon_projectile_idle"
+    tt.bullet.hit_fx = nil
+    tt.bullet.hit_decal = nil
+    tt.bullet.hit_payload = "soldier_tower_demon_pit_basic_attack_lvl4"
+    tt.bullet.rotation_speed = 5
+    tt.bullet.pop = nil
+    tt.bullet.particles_name = "tower_demon_pit_demon_trail"
+    tt.bullet.damage_min = 0
+    tt.bullet.damage_max = 0
+    tt.sound_events.insert = "TowerDemonPitBasicAttack"
+
+    tt = RT("bullet_tower_demon_pit_big_guy_lvl4", "bullet")
+    AC(tt, "main_script")
+    tt.bullet.flight_time = fts(31)
+    tt.bullet.hit_payload = "big_guy_tower_demon_pit_lvl4"
+    tt.sound_events.hit_water = nil
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].prefix = "demon_pit_tower_demon_big_guy_projectile"
+    tt.bullet.hit_fx = nil
+    tt.bullet.hit_decal = nil
+    tt.bullet.rotation_speed = 0
+    tt.bullet.pop = nil
+    tt.bullet.damage_min = 0
+    tt.bullet.damage_max = 0
+    tt.sound_events.insert = "TowerDemonPitBasicAttack"
+    tt.main_script.update = scripts.projecticle_big_guy_tower_demon_pit.update
+
+    tt = RT("mod_soldier_tower_demon_pit_explosion", "mod_stun")
+    tt.modifier.duration = nil
+    tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+    tt.modifier.vis_bans = bor(F_BOSS)
+
+    tt = RT("mod_tower_demon_pit_master_explosion_burning", "modifier")
+    b = balance.towers.demon_pit.master_exploders
+    AC(tt, "dps", "render")
+    tt.modifier.duration = nil
+    tt.dps.damage_min = nil
+    tt.dps.damage_max = nil
+    tt.dps.damage_type = b.damage_type
+    tt.dps.damage_every = b.damage_every
+    tt.main_script.insert = scripts.mod_dps.insert
+    tt.main_script.update = scripts.mod_dps.update
+    tt.render.sprites[1].size_names = {
+        "small",
+        "medium",
+        "large"
+    }
+    tt.render.sprites[1].prefix = "fire"
+    tt.render.sprites[1].name = "small"
+    tt.render.sprites[1].draw_order = 2
+    tt.render.sprites[1].loop = true
+
+    -- 恶魔澡坑_END
 end
 
 return engineer_towers

@@ -1042,12 +1042,20 @@ local function archer_towers()
     tt.tween.props[4].sprite_id = 1
     tt.sound_events.insert = "TowerGoldenBowFlareHit"
 
-    -- 暮光长弓
+    --[[
+        五代
+    --]]
     local balance = require("kr1.data.balance")
+    local b
+
+    -- 暮光长弓_START
+
+    b = balance.towers.dark_elf
+
     tt = RT("tower_build_dark_elf", "tower_build")
     tt.build_name = "tower_dark_elf_lvl1"
     tt.render.sprites[1].name = "terrains_%04i"
-    tt.render.sprites[1].offset = vec_2(0, 15)
+    tt.render.sprites[1].offset = vec_2(0, 10)
     tt.render.sprites[2].name = "Tower_construction"
     tt.render.sprites[2].offset = vec_2(0, 10)
     tt.render.sprites[3].offset.y = 75
@@ -1055,7 +1063,6 @@ local function archer_towers()
 
     tt = RT("tower_dark_elf_lvl4", "tower")
     AC(tt, "powers", "barrack", "attacks")
-    local b = balance.towers.dark_elf
     tt.is_kr5 = true
     tt.tower.level = 1
     tt.tower.type = "dark_elf"
@@ -1082,7 +1089,6 @@ local function archer_towers()
     tt.render.sprites[2].sort_y_offset = 11
     tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "Archer_lvl4"
-    tt.render.sprites[3].name = "idle"
     tt.render.sprites[3].angles = {}
     tt.render.sprites[3].angles.idle = {
         "idleback",
@@ -1124,6 +1130,9 @@ local function archer_towers()
     }
     tt.attacks.list[1].first_cooldown = 2
     tt.attacks.list[1].mod_target = "mod_tower_dark_elf_big_target"
+    tt.attacks.list[2] = CC("custom_attack")
+    tt.attacks.list[2].disabled = true
+    tt.attacks.list[2].spawn_delay = 1
     tt.tower_upgrade_persistent_data.current_mode = 0
     tt.tower_upgrade_persistent_data.max_current_mode = 1
     tt.tower_upgrade_persistent_data.souls_extra_damage_min = 0
@@ -1149,9 +1158,6 @@ local function archer_towers()
     tt.barrack.soldier_type = "soldier_tower_dark_elf"
     tt.barrack.max_soldiers = 2
     tt.barrack.respawn_offset = vec_2(0, 0)
-    tt.attacks.list[2] = CC("custom_attack")
-    tt.attacks.list[2].disabled = true
-    tt.attacks.list[2].spawn_delay = 1
     tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"
     tt.sound_events.change_rally_point = "TowerDarkElfUnitTaunt"
 
@@ -1273,7 +1279,6 @@ local function archer_towers()
     tt = RT("controller_tower_dark_elf_soldiers")
     AC(tt, "render", "main_script", "pos")
     tt.render.sprites[1].prefix = "Tower_lvl4_door"
-    tt.render.sprites[1].name = "idle"
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].sort_y_offset = 10
     tt.main_script.update = scripts.controller_tower_dark_elf_soldiers.update
@@ -1281,6 +1286,8 @@ local function archer_towers()
     tt.spawn_delay = 1
     tt.check_soldiers_cooldown = fts(10)
     tt.sound_open = "TowerDarkElfSupportBladesSpawn"
+
+    -- 暮光长弓_END
 end
 
 return archer_towers

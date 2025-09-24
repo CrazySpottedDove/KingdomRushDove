@@ -5646,7 +5646,8 @@ function scripts.mod_tricannon_overheat_dps.insert(this, store, script)
     return true
 end
 
--- 暮光长弓
+-- 暮光长弓_START
+
 scripts.tower_dark_elf = {}
 
 function scripts.tower_dark_elf.get_info(this)
@@ -6584,5 +6585,588 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 
     queue_remove(store, this)
 end
+
+-- 暮光长弓_END
+
+-- 恶魔澡坑_START
+
+scripts.tower_demon_pit = {}
+
+function scripts.tower_demon_pit.get_info(this)
+    local b = E:create_entity(this.attacks.list[1].bullet)
+    local d = E:create_entity(b.bullet.hit_payload)
+
+    if this.powers then
+        for pn, p in pairs(this.powers) do
+            for i = 1, p.level do
+                SU.soldier_power_upgrade(d, pn)
+            end
+        end
+    end
+
+    local s_info = d.info.fn(d)
+    local attacks
+
+    if d.melee and d.melee.attacks then
+        attacks = d.melee.attacks
+    elseif d.ranged and d.ranged.attacks then
+        attacks = d.ranged.attacks
+    end
+
+    local min, max
+
+    for _, a in pairs(attacks) do
+        if a.damage_min then
+            local damage_factor = this.tower.damage_factor
+
+            min, max = a.damage_min * damage_factor, a.damage_max * damage_factor
+
+            break
+        end
+    end
+
+    if min and max then
+        min, max = math.ceil(min), math.ceil(max)
+    end
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = d.health.hp_max,
+        damage_min = min,
+        damage_max = max,
+        armor = d.health.armor,
+        respawn = d.health.dead_lifetime
+    }
+end
+
+function scripts.tower_demon_pit.update(this, store, script)
+    local a = this.attacks
+    local ab = a.list[1]
+    local ag = a.list[2]
+    local last_ts = store.tick_ts - ab.cooldown
+
+    ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
+
+    local attacks = {
+        ag,
+        ab
+    }
+    local pows = {}
+    local pow_g, pow_m
+
+    if this.powers then
+        pows[1] = this.powers.big_guy
+        pow_g = this.powers.big_guy
+        pow_m = this.powers.master_exploders
+    end
+
+    local function shoot_bullet(attack, enemy, dest, pow)
+        local b = E:create_entity(attack.bullet)
+        local bullet_start_offset = attack.bullet_start_offset
+
+        b.pos.x, b.pos.y = this.pos.x + bullet_start_offset.x, this.pos.y + bullet_start_offset.y
+        b.bullet.from = V.vclone(b.pos)
+        b.bullet.to = V.vclone(dest)
+        b.bullet.to.x = b.bullet.to.x + math.random(-10, 10)
+        b.bullet.to.y = b.bullet.to.y + math.random(-10, 10)
+        b.bullet.level = pow and pow.level or 1
+        b.bullet.pow_level = pow and pow.level or nil
+        b.bullet.target_id = enemy and enemy.id
+        b.bullet.source_id = this.id
+
+        queue_insert(store, b)
+
+        return b
+    end
+
+    while true do
+        if this.tower.blocked then
+            coroutine.yield()
+        else
+            if this.powers then
+                for _, pow in pairs(this.powers) do
+                    if pow.changed then
+                        pow.changed = nil
+
+                        if pow == pow_g then
+                            if pow.level == 1 then
+                                ag.ts = store.tick_ts
+                                ab.animation = "big_guy_attack"
+                                ab.animation_reload = "big_guy_reload_2"
+
+                                U.animation_start(this, "big_guy_buy", nil, store.tick_ts, false, this.demons_sid)
+                                U.y_animation_wait(this, this.demons_sid)
+                            end
+
+                            ag.cooldown = pow.cooldown[pow.level]
+                            ag.ts = store.tick_ts - ag.cooldown
+                        end
+                    end
+                end
+            end
+
+            SU.towers_swaped(store, this, this.attacks.list)
+
+            for i, aa in pairs(attacks) do
+                local pow = pows[i]
+
+                if aa and (not pow or pow.level > 0) and aa.cooldown and store.tick_ts - aa.ts > aa.cooldown and (not a.min_cooldown or store.tick_ts - last_ts > a.min_cooldown) then
+                    local trigger, _, shoot_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.max_range * 1.2,
+                        aa.node_prediction, aa.vis_flags, aa.vis_bans)
+
+                    if not trigger then
+                        SU.delay_attack(store, aa, fts(10))
+                    elseif aa == ag then
+                        last_ts = store.tick_ts
+
+                        U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
+                        U.y_wait(store, aa.shoot_time)
+
+                        local _, enemies, enemy_pos = U.find_foremost_enemy(store.entities, tpos(this), 0,
+                            aa.max_range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
+
+                        if enemies and #enemies > 0 then
+                            shoot_pos = enemy_pos
+                        end
+
+                        local b = shoot_bullet(aa, nil, shoot_pos, pow)
+
+                        U.y_animation_wait(this, this.demons_sid)
+                        U.animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.demons_sid)
+                        U.y_animation_wait(this, this.demons_sid)
+
+                        aa.ts = last_ts
+                    elseif aa == ab then
+                        last_ts = store.tick_ts
+
+                        local d = E:create_entity(this.decal_reload)
+
+                        d.render.sprites[1].name = this.animation_reload
+                        d.pos = V.vclone(this.pos)
+
+                        queue_insert(store, d)
+                        U.y_animation_wait(d)
+                        U.animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.demons_sid)
+                        U.y_animation_wait(this, this.demons_sid)
+                        U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
+                        U.y_wait(store, aa.shoot_time)
+
+                        local _, enemies, enemy_pos = U.find_foremost_enemy(store.entities, tpos(this), 0,
+                            aa.max_range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                        local found_unblocked = false
+
+                        if enemies and #enemies > 0 then
+                            for _, e in ipairs(enemies) do
+                                if #e.enemy.blockers == 0 then
+                                    shoot_pos = e.__ffe_pos
+                                    found_unblocked = true
+
+                                    break
+                                end
+                            end
+
+                            if not found_unblocked then
+                                shoot_pos = enemy_pos
+                            end
+                        end
+
+                        shoot_bullet(aa, nil, shoot_pos, pow_m)
+                        U.y_animation_wait(this, this.demons_sid)
+
+                        aa.ts = last_ts
+                    end
+                end
+            end
+
+            coroutine.yield()
+        end
+    end
+end
+
+scripts.decal_tower_demon_pit_reload = {}
+
+function scripts.decal_tower_demon_pit_reload.update(this, store, script)
+    this.render.sprites[1].ts = store.tick_ts
+
+    U.y_animation_wait(this)
+
+    this.render.sprites[1].hidden = true
+
+    queue_remove(store, this)
+end
+
+scripts.soldier_tower_demon_pit = {}
+
+function scripts.soldier_tower_demon_pit.update(this, store, script)
+    local brk, stam
+
+    this.reinforcement.ts = store.tick_ts
+    this.render.sprites[1].ts = store.tick_ts
+    this.nav_rally.center = nil
+    this.nav_rally.pos = V.vclone(this.pos)
+
+    local tower = store.entities[this.source_id]
+    local damage_factor = 1
+    local pow_master_exploders
+
+    if tower and tower.powers and tower.powers.master_exploders.level > 0 then
+        local level = tower.powers.master_exploders.level
+
+        damage_factor = tower.powers.master_exploders.explosion_damage_factor[level]
+        pow_master_exploders = tower.powers.master_exploders
+    end
+
+    local function explosion(r, damage_min, damage_max, dty)
+        local targets = U.find_enemies_in_range(store.entities, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
+
+        if targets then
+            for _, target in pairs(targets) do
+                local d = E:create_entity("damage")
+
+                damage_min = damage_min * damage_factor
+                damage_max = damage_max * damage_factor
+                d.value = math.random(damage_min, damage_max)
+                d.damage_type = dty
+                d.target_id = target.id
+                d.source_id = this.id
+
+                queue_damage(store, d)
+
+                local m = E:create_entity(this.explosion_mod_stun)
+
+                m.modifier.source_id = this.id
+                m.modifier.target_id = target.id
+                m.modifier.duration = this.explosion_mod_stun_duration[this.level]
+
+                queue_insert(store, m)
+
+                if pow_master_exploders then
+                    m = E:create_entity(pow_master_exploders.mod)
+                    m.modifier.source_id = this.id
+                    m.modifier.target_id = target.id
+                    m.modifier.duration = pow_master_exploders.burning_duration[pow_master_exploders.level]
+                    m.dps.damage_min = pow_master_exploders.burning_damage_min[pow_master_exploders.level]
+                    m.dps.damage_max = pow_master_exploders.burning_damage_max[pow_master_exploders.level]
+
+                    queue_insert(store, m)
+                end
+            end
+        end
+    end
+
+    local function check_tower_damage_factor()
+        if store.entities[this.source_id] then
+            for _, a in ipairs(this.melee.attacks) do
+                if not a._original_damage_min then
+                    a._original_damage_min = a.damage_min
+                end
+
+                if not a._original_damage_max then
+                    a._original_damage_max = a.damage_max
+                end
+
+                a.damage_min = a._original_damage_min * store.entities[this.source_id].tower.damage_factor
+                a.damage_max = a._original_damage_max * store.entities[this.source_id].tower.damage_factor
+            end
+        end
+    end
+
+    if this.sound_events and this.sound_events.raise then
+        S:queue(this.sound_events.raise)
+    end
+
+    this.health_bar.hidden = true
+
+    U.y_animation_play(this, "landing", nil, store.tick_ts, 1)
+
+    if not this.health.dead then
+        this.health_bar.hidden = nil
+    end
+
+    local starting_pos = V.vclone(this.pos)
+
+    this.nav_rally.pos = starting_pos
+
+    local patrol_pos = V.vclone(this.pos)
+
+    patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
+
+    local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
+    local pi, spi, ni = unpack(nearest_node)
+    local npos = P:node_pos(pi, spi, ni)
+    local patrol_pos_2 = V.vclone(this.pos)
+
+    patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset
+    .y
+
+    local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
+    local pi, spi, ni = unpack(nearest_node)
+    local npos_2 = P:node_pos(pi, spi, ni)
+
+    if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
+        patrol_pos = V.vclone(patrol_pos_2)
+    end
+
+    local idle_ts = store.tick_ts
+    local patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+
+    while true do
+        if this.health.dead or this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
+            if this.health.hp > 0 then
+                this.reinforcement.hp_before_timeout = this.health.hp
+            end
+
+            this.health.hp = 0
+
+            U.animation_start(this, "the_expendables", nil, store.tick_ts, false, 1)
+            U.unblock_target(store, this)
+            U.y_wait(store, fts(20))
+            S:queue(this.explosion_sound)
+            explosion(this.explosion_range[this.level], this.explosion_damage_min[this.level],
+                this.explosion_damage_max[this.level], this.explosion_damage_type)
+
+            local decal = E:create_entity(this.decal_on_explosion)
+
+            decal.pos = V.vclone(this.pos)
+            decal.tween.ts = store.tick_ts
+
+            queue_insert(store, decal)
+            U.y_animation_wait(this, 1)
+            queue_remove(store, this)
+
+            return
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+
+            idle_ts = store.tick_ts
+            patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+        else
+            check_tower_damage_factor()
+
+            if this.melee then
+                brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+
+                if brk or stam == A_DONE or stam == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then
+                    idle_ts = store.tick_ts
+                    patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+
+                    goto label_833_0
+                end
+            end
+
+            if SU.soldier_go_back_step(store, this) then
+                -- block empty
+            else
+                SU.soldier_idle(store, this)
+                SU.soldier_regen(store, this)
+
+                if patrol_cd < store.tick_ts - idle_ts then
+                    if this.nav_rally.pos == starting_pos then
+                        this.nav_rally.pos = patrol_pos
+                    else
+                        this.nav_rally.pos = starting_pos
+                    end
+
+                    idle_ts = store.tick_ts
+                    patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+                end
+            end
+        end
+
+        ::label_833_0::
+
+        coroutine.yield()
+    end
+end
+
+scripts.projecticle_big_guy_tower_demon_pit = {}
+
+function scripts.projecticle_big_guy_tower_demon_pit.update(this, store, script)
+    local jumping = true
+    local b = this.bullet
+    local bullet_fly = true
+    local last_y = this.pos.y
+    local flip_x = b.to.x - b.from.x < 0
+
+    U.animation_start(this, "idle_1", flip_x, store.tick_ts, 40)
+
+    local target = store.entities[b.target_id]
+
+    b.ts = store.tick_ts
+    b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
+
+    while bullet_fly do
+        coroutine.yield()
+
+        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+        if jumping and last_y > this.pos.y then
+            U.animation_start(this, "idle_2", flip_x, store.tick_ts, false, 1)
+
+            b.g = b.g * 0.95
+            jumping = false
+        end
+
+        last_y = this.pos.y
+
+        if b.flight_time < store.tick_ts - b.ts then
+            bullet_fly = false
+        end
+    end
+
+    if b.hit_payload then
+        local hp
+
+        if type(b.hit_payload) == "string" then
+            hp = E:create_entity(b.hit_payload)
+        else
+            hp = b.hit_payload
+        end
+
+        hp.pos.x, hp.pos.y = b.to.x, b.to.y
+        hp.level = b.level
+
+        if hp.aura then
+            hp.aura.level = this.bullet.level
+        end
+
+        queue_insert(store, hp)
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.big_guy_tower_demon_pit = {}
+
+function scripts.big_guy_tower_demon_pit.update(this, store, script)
+    this.health.hp_max = this.health_level[this.level]
+    this.health.hp = this.health.hp_max
+
+    local brk, stam
+
+    this.reinforcement.ts = store.tick_ts
+    this.render.sprites[1].ts = store.tick_ts
+    this.melee.attacks[1].damage_max = this.damage_max[this.level]
+    this.melee.attacks[1].damage_min = this.damage_min[this.level]
+    this.nav_rally.center = nil
+    this.nav_rally.pos = V.vclone(this.pos)
+
+    if this.sound_events and this.sound_events.raise then
+        S:queue(this.sound_events.raise)
+    end
+
+    this.health_bar.hidden = true
+
+    U.y_animation_play(this, "landing", nil, store.tick_ts, 1)
+
+    if not this.health.dead then
+        this.health_bar.hidden = nil
+    end
+
+    local function explosion(r, damage, dty)
+        local targets = U.find_enemies_in_range(store.entities, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
+
+        if targets then
+            for _, target in pairs(targets) do
+                local d = E:create_entity("damage")
+
+                d.value = damage
+                d.damage_type = dty
+                d.target_id = target.id
+                d.source_id = this.id
+
+                queue_damage(store, d)
+            end
+        end
+    end
+
+    local path_ni = 1
+    local path_spi = 1
+    local path_pi = 1
+    local node_pos
+    local available_paths = {}
+
+    for k, v in pairs(P.paths) do
+        table.insert(available_paths, k)
+    end
+
+    if store.level.ignore_walk_backwards_paths then
+        available_paths = table.filter(available_paths, function(k, v)
+            return not table.contains(store.level.ignore_walk_backwards_paths, v)
+        end)
+    end
+
+    local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths)
+
+    if #nearest > 0 then
+        path_pi, path_spi, path_ni = unpack(nearest[1])
+    end
+
+    path_spi = 1
+    path_ni = path_ni - 3
+
+    local distance = 0
+    local target
+
+    while true do
+        if this.health.dead or band(GR:cell_type(this.pos.x, this.pos.y, TERRAIN_TYPES_MASK), TERRAIN_WATER) ~= 0 then
+            if this.health.hp > 0 then
+                this.reinforcement.hp_before_timeout = this.health.hp
+            end
+
+            this.health.hp = 0
+
+            U.animation_start(this, "death", nil, store.tick_ts, false, 1)
+            U.y_wait(store, fts(20))
+            S:queue(this.explosion_sound)
+            explosion(this.explosion_range[this.level], this.explosion_damage[this.level], this.explosion_damage_type)
+            U.y_animation_wait(this, 1)
+            queue_remove(store, this)
+            queue_remove(store, this)
+
+            return
+        end
+
+        if path_ni < -20 then
+            SU.y_soldier_death(store, this)
+
+            return
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            if this.melee then
+                brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+
+                if brk or stam == A_DONE or stam == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then
+                    goto label_837_0
+                end
+            end
+
+            node_pos = this.nav_rally.pos
+            distance = V.dist2(node_pos.x, node_pos.y, this.pos.x, this.pos.y)
+
+            if distance < 25 then
+                path_ni = path_ni - 3
+                this.nav_rally.pos = P:node_pos(path_pi, path_spi, path_ni)
+            end
+
+            if SU.soldier_go_back_step(store, this) then
+                -- block empty
+            else
+                SU.soldier_regen(store, this)
+            end
+        end
+
+        ::label_837_0::
+
+        coroutine.yield()
+    end
+end
+
+-- 恶魔澡坑_END
 
 return scripts
