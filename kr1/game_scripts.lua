@@ -2375,7 +2375,7 @@ function scripts.enemy_demon_legion.update(this, store)
 
                 e._summoned = true
                 e.health.hp = this.health.hp
-                e.health.hp_max = this.health.hp_max
+                e.health.hp_max = e.health.hp
                 e.enemy.gold = 0
                 e.render.sprites[1].name = "raise"
                 e.timed_attacks.list[1].generation = a.generation - 1
