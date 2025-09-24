@@ -7787,7 +7787,6 @@ local kr5 = {
     ["HERO_DRAGON_BONE_BURST_DESCRIPTION_2"] = "发射%$heroes.hero_dragon_bone.burst.proj_count[2]%$颗魔法弹幕, 每颗造成%$heroes.hero_dragon_bone.burst.damage_min[2]%$-%$heroes.hero_dragon_bone.burst.damage_max[2]%$点真实伤害并施加瘟疫效果。",
     ["deals area damage"] = "造成范围伤害",
     ["TIP_1"] = "切记要点击敌人，阅读提示，好了解怎么对付他们。",
-    ["TOWER_DARK_ELF_1_NAME"] = "暮光长弓I",
     ["TAUNT_STAGE26_BOSS_GRYMBEARD_PREPARATION_0001"] = "诡须的耐心已经耗尽。",
     ["TIP_11"] = "你可以用商店里的那些强力道具帮你作战。它们能帮助扭转整个战局！",
     ["TIP_2"] = "魔法伤害对有护甲的敌人有奇效。",
