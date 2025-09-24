@@ -29,17 +29,17 @@ image_db.use_canvas = true
 -- by dove
 image_db.supportedformats = love.graphics.getCompressedImageFormats()
 
-local upscaled_assets = {
-    ["screen_map-1.png"] = true,
-}
+-- local upscaled_assets = {
+--     ["screen_map-1.png"] = true,
+-- }
 
-local function dynamic_upscale(v)
-    if upscaled_assets[v.a_name] and not v._dynamic_upscaled then
-        v.a_size[1] = v.a_size[1] * 2
-        v.a_size[2] = v.a_size[2] * 2
-        v._dynamic_upscaled = true
-    end
-end
+-- local function dynamic_upscale(v)
+    -- if upscaled_assets[v.a_name] and not v._dynamic_upscaled then
+    --     v.a_size[1] = v.a_size[1] * 2
+    --     v.a_size[2] = v.a_size[2] * 2
+    --     v._dynamic_upscaled = true
+    -- end
+-- end
 
 -- 简化版本，只基于CPU核心数
 local function calculate_thread_count()
@@ -468,7 +468,7 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 	for k, v in pairs(frames) do
 		log.paranoid("loading atlas-frame: %s - %s", v.a_name, k)
-        dynamic_upscale(v)
+        -- dynamic_upscale(v)
 		v.group = name_scale
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 
@@ -596,7 +596,7 @@ function image_db:load(ref_scale, custom_paths)
 				local queue = {}
 
 				for k, v in pairs(frames) do
-                    dynamic_upscale(v)
+                    -- dynamic_upscale(v)
 					v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 					v.atlas = string.gsub(v.a_name, ".png$", "")
 
