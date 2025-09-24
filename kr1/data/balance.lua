@@ -3546,7 +3546,7 @@ local towers = {
             90,
             130,
             180,
-            270
+            275
         },
         basic_attack = {
             cooldown = 2,
