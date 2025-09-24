@@ -6557,7 +6557,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
                 SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)
             end
         else
-            SU.insert_tower_damage_factor_buff(tower, 0.01)
+            SU.insert_tower_damage_factor_buff(tower, 0.008)
         end
 
         if b.mod or b.mods then
