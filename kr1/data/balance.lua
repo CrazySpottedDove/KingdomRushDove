@@ -3583,14 +3583,16 @@ local towers = {
             }
         },
         skill_buff = {
-            price = {
-                200
-            },
             extra_damage_min = {
                 1
             },
             extra_damage_max = {
                 1
+            },
+            max_times = {
+                20,
+                50,
+                999999
             },
             s_extra_damage_total = {
                 1

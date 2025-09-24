@@ -1142,10 +1142,13 @@ local function archer_towers()
     tt.powers.skill_soldiers.show_rally = true
     tt.powers.skill_buff = E:clone_c("power")
     tt.powers.skill_buff.price_base = 250
+    tt.powers.skill_buff.price_inc = 125
     tt.powers.skill_buff.enc_icon = 32
     tt.powers.skill_buff.damage_min = b.skill_buff.extra_damage_min
     tt.powers.skill_buff.damage_max = b.skill_buff.extra_damage_max
-    tt.powers.skill_buff.max_level = 1
+    tt.powers.skill_buff.max_level = 3
+    tt.powers.skill_buff.max_times = 0
+    tt.powers.skill_buff.times = 0
     tt.barrack.rally_range = b.rally_range
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_tower_dark_elf"

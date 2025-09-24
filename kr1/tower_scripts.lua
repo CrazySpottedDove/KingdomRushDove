@@ -5711,12 +5711,47 @@ function scripts.tower_dark_elf.update(this, store)
         queue_insert(store, m)
     end
 
+    local function can_be_target_to_kill(target)
+        local d = E:create_entity("damage")
+        local bullet = E:get_template(attack.bullet)
+        d.value = math.max(1, this.tower.damage_factor * bullet.damage_min)
+        d.damage_type = bullet.damage_type
+        d.target_id = target.id
+        d.reduce_armor = bullet.reduce_armor
+        local damage_value = U.predict_damage(target, d)
+        return damage_value >= target.health.hp
+    end
+
+    -- 找到范围内生命最高的、且一定能被一发子弹击杀的敌人
+    local function find_target_to_kill(node_prediction)
+        local target_to_kill, targets, pred_pos = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0,
+            this.attacks.range, node_prediction, attack.vis_flags, attack.vis_bans)
+
+        if targets then
+            local target_to_kill_hp = target_to_kill.health.hp
+            local target_to_kill_flying = band(target_to_kill.vis.flags, F_FLYING) ~= 0
+            for i = 2, #targets do
+                local t = targets[i]
+                if can_be_target_to_kill(t) then
+                    if t.health.hp > target_to_kill_hp then
+                        local flying = band(t.vis.flags, F_FLYING) ~= 0
+                        if flying or not target_to_kill_flying then
+                            target_to_kill = t
+                            target_to_kill_hp = t.health.hp
+                            target_to_kill_flying = flying
+                            pred_pos = t.__ffe_pos
+                        end
+                    end
+                end
+            end
+        end
+
+        return target_to_kill, pred_pos
+    end
+
     local function find_target(attack, node_prediction)
         if current_mode == MODE_FIND_FOREMOST then
-            local target, _, pred_pos = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, this.attacks.range, node_prediction,
-                attack.vis_flags, attack.vis_bans)
-
-            return target, pred_pos
+            return find_target_to_kill(node_prediction)
         elseif current_mode == MODE_FIND_MAXHP then
             local target, pred_pos = U.find_biggest_enemy(store, tpos(this), 0, this.attacks.range, node_prediction,
                 attack.vis_flags, attack.vis_bans)
@@ -5738,50 +5773,6 @@ function scripts.tower_dark_elf.update(this, store)
             return retarget, new_pos
         else
             target = nil
-        end
-    end
-
-    local function can_be_target_to_kill(bullet, target)
-        local d = E:create_entity("damage")
-        d.value = math.max(1, bullet.damage_factor * bullet.damage_min)
-        d.damage_type = bullet.damage_type
-        d.target_id = target.id
-        d.reduce_armor = bullet.reduce_armor
-        local damage_value = U.predict_damage(target, d)
-        return damage_value >= target.health.hp
-    end
-
-    -- 找到范围内生命最高的、且一定能被一发子弹击杀的敌人
-    local function find_target_to_kill(bullet)
-        local targets = U.find_enemies_in_range(store, tpos(this), 0, this.attacks.range, attack.vis_flags,
-            attack.vis_bans)
-        local target_to_kill
-        local target_to_kill_hp = 0
-        local target_to_kill_flying = false
-        if targets then
-            for _, t in pairs(targets) do
-                if can_be_target_to_kill(bullet, t) then
-                    if t.health.hp > target_to_kill_hp then
-                        local flying = band(t.vis.flags, F_FLYING) ~= 0
-                        if flying or not target_to_kill_flying then
-                            target_to_kill = t
-                            target_to_kill_hp = t.health.hp
-                            target_to_kill_flying = flying
-                        end
-                    end
-                end
-            end
-        end
-
-        return target_to_kill
-    end
-
-    local function try_retarget_to_find_biggest_enemy_to_kill(bullet)
-        local target_to_kill = find_target_to_kill(bullet)
-        if target_to_kill then
-            target = target_to_kill
-            this.attacks._last_target_pos = pred_pos
-            pred_pos = V.v(target.pos.x, target.pos.y)
         end
     end
 
@@ -5961,10 +5952,6 @@ function scripts.tower_dark_elf.update(this, store)
                 end
 
                 apply_precision(bullet)
-
-                if current_mode == MODE_FIND_FOREMOST then
-                    try_retarget_to_find_biggest_enemy_to_kill(bullet.bullet)
-                end
 
                 if target then
                     bullet.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
