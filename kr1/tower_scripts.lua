@@ -6388,7 +6388,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.insert(this, store)
     if this._parent then
         local towers = U.find_towers_in_range(store.towers, tower.pos, {
             min_range = 1,
-            max_range = 180
+            max_range = 225
         }, function(t)
             return t.tower.can_be_mod
         end)
