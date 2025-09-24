@@ -6392,15 +6392,15 @@ function scripts.bullet_tower_dark_elf_skill_buff.insert(this, store)
         }, function(t)
             return t.tower.can_be_mod
         end)
-        if towers then
-            local other_tower = towers[math.random(1, #towers)]
-            local new_bullet = E:clone_entity(this)
-            new_bullet.bullet.to.x = other_tower.pos.x + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.x
-            new_bullet.bullet.to.y = other_tower.pos.y + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.y
-            new_bullet.bullet.target_id = other_tower.id
-            new_bullet._parent = false
-            queue_insert(store, new_bullet)
-        end
+
+        local other_tower = towers and towers[math.random(1, #towers)] or tower
+
+        local new_bullet = E:clone_entity(this)
+        new_bullet.bullet.to.x = other_tower.pos.x + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.x
+        new_bullet.bullet.to.y = other_tower.pos.y + E:get_template("mod_tower_dark_elf_skill_buff").tower_offset.y
+        new_bullet.bullet.target_id = other_tower.id
+        new_bullet._parent = false
+        queue_insert(store, new_bullet)
     end
 
     b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
