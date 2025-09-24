@@ -1008,6 +1008,44 @@ end
 
 scripts.soldier_reinforcement = {}
 
+function scripts.soldier_reinforcement.get_info(this)
+    local attacks
+
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+    elseif this.ranged and this.ranged.attacks then
+        attacks = this.ranged.attacks
+    end
+
+    local min, max
+
+    for _, a in pairs(attacks) do
+        if a.damage_min then
+            min, max = a.damage_min, a.damage_max
+
+            break
+        end
+    end
+
+    if this.unit and min then
+        min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+    end
+
+    if min and max then
+        min, max = math.ceil(min), math.ceil(max)
+    end
+
+    return {
+        type = STATS_TYPE_SOLDIER,
+        hp = this.health.hp,
+        hp_max = this.health.hp_max,
+        damage_min = min,
+        damage_max = max,
+        damage_icon = this.info.damage_icon,
+        armor = this.health.armor
+    }
+end
+
 function scripts.soldier_reinforcement.insert(this, store, script)
     if this.melee then
         this.melee.order = U.attack_order(this.melee.attacks)
@@ -2824,6 +2862,7 @@ function scripts.bomb.update(this, store, script)
         end
 
         hp.pos.x, hp.pos.y = b.to.x, b.to.y
+        hp.source_id = b.source_id
 
         if hp.aura then
             hp.aura.level = this.bullet.level

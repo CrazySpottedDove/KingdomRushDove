@@ -1385,7 +1385,7 @@ local function engineer_towers()
     tt.attacks.range = b.basic_attack.range[4]
     tt.demons_sid = 4
     tt.decal_reload = "decal_tower_demon_pit_reload"
-    tt.animation_reload = "demon_pit_tower_lvl4_tower_demon_reload_reload_1"
+    tt.animation_reload = "demon_pit_tower_lvl4_tower_reload_reload_1"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_artillery_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
@@ -1423,7 +1423,7 @@ local function engineer_towers()
 
     tt = RT("soldier_tower_demon_pit_basic_attack_lvl4", "soldier_militia")
     AC(tt, "reinforcement", "tween")
-    tt.level = 1
+    tt.level = 4
     tt.health.hp_max = b.basic_attack.hp_max[4]
     tt.health.armor = b.basic_attack.armor
     tt.health_bar.offset = vec_2(0, 27)
@@ -1526,11 +1526,10 @@ local function engineer_towers()
     tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 
     tt = RT("bullet_tower_demon_pit_basic_attack_lvl4", "bomb")
-    tt.bullet.flight_time = fts(31)
-    tt.bullet.hit_payload = "soldier_tower_demon_pit_basic_attack_lvl1"
     tt.sound_events.hit_water = nil
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].name = "demon_pit_tower_demon_projectile_idle"
+    tt.bullet.flight_time = fts(31)
     tt.bullet.hit_fx = nil
     tt.bullet.hit_decal = nil
     tt.bullet.hit_payload = "soldier_tower_demon_pit_basic_attack_lvl4"

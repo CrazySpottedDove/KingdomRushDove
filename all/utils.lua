@@ -789,7 +789,7 @@ function U.force_motion_step(this, dt, dest)
     fm.a.x, fm.a.y = V.mul(-1 * fm.fr / dt, fm.v.x, fm.v.y)
 end
 
----查找最近的士兵
+---搜索最近的士兵
 ---@param entities table 实体列表
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -819,7 +819,7 @@ function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, b
     end
 end
 
----查找范围内的士兵
+---搜索范围内的士兵
 ---@param entities table 实体列表
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -843,7 +843,7 @@ function U.find_soldiers_in_range(entities, origin, min_range, max_range, flags,
     end
 end
 
----查找最近的敌人
+---搜索最近的敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -866,7 +866,7 @@ function U.find_nearest_enemy(store, origin, min_range, max_range, flags, bans, 
     end
 end
 
----查找最近的目标
+---搜索最近的目标
 ---@param entities table 实体列表
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -889,7 +889,7 @@ function U.find_nearest_target(entities, origin, min_range, max_range, flags, ba
     end
 end
 
----查找范围内的目标
+---搜索范围内的目标
 ---@param entities table 实体列表
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -915,7 +915,7 @@ function U.find_targets_in_range(entities, origin, min_range, max_range, flags, 
     end
 end
 
----查找第一个敌人
+---搜索第一个敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -1007,7 +1007,7 @@ function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, f
     end
 end
 
----查找随机敌人及其预测位置
+---搜索随机敌人及其预测位置
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -1081,7 +1081,7 @@ function U.find_random_enemy_with_pos(store, origin, min_range, max_range, predi
     end
 end
 
----查找范围内的敌人
+---搜索范围内的敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -1146,7 +1146,7 @@ function U.has_enough_enemies_in_range(store, origin, min_range, max_range, flag
         end, count)
 end
 
----查找路径上的敌人
+---搜索路径上的敌人
 ---@param entities table 实体列表
 ---@param origin table 原点 {x, y}
 ---@param min_node_range number 最小节点范围
@@ -1154,7 +1154,7 @@ end
 ---@param max_path_dist number? 最大路径距离（可选，默认30）
 ---@param flags number 标志位
 ---@param bans number 禁止标志位
----@param only_upstream boolean? 是否只查找上游（可选）
+---@param only_upstream boolean? 是否只搜索上游（可选）
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 路径上的敌人列表
 function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_range, max_path_dist, flags, bans,
@@ -1201,7 +1201,7 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
     end
 end
 
----查找血量最高的敌人
+---搜索血量最高的敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -1291,7 +1291,7 @@ function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_ti
     end
 end
 
----重新查找最前面的敌人
+---重新搜索最前面的敌人
 ---@param last_enemy table 上一个敌人
 ---@param store table game.store
 ---@param flags number 标志位
@@ -1306,7 +1306,7 @@ function U.refind_foremost_enemy(last_enemy, store, flags, bans, filter_func, mi
     end
 end
 
----查找具有最大覆盖范围的最前面敌人
+---搜索具有最大覆盖范围的最前面敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -1409,7 +1409,7 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
     end
 end
 
----查找优先飞行单位的最前面敌人
+---搜索优先飞行单位的最前面敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -1460,7 +1460,7 @@ function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, 
     end
 end
 
----查找最前面的敌人
+---搜索最前面的敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
 ---@param min_range number 最小范围
@@ -1510,7 +1510,7 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
     end
 end
 
----查找范围内的塔
+---搜索范围内的塔
 ---@param entities table 实体列表
 ---@param origin table 原点 {x, y}
 ---@param attack table {min_range, max_range, (excluded_templates)}
@@ -1532,7 +1532,7 @@ function U.find_towers_in_range(entities, origin, attack, filter_func)
     end
 end
 
----查找指定位置的实体
+---搜索指定位置的实体
 ---@param entities table 实体列表
 ---@param x number X坐标
 ---@param y number Y坐标
@@ -1571,7 +1571,7 @@ function U.find_entity_at_pos(entities, x, y, filter_func)
     end
 end
 
----查找指定位置的所有实体
+---搜索指定位置的所有实体
 ---@param entities table 实体列表
 ---@param x number X坐标
 ---@param y number Y坐标
@@ -1596,7 +1596,7 @@ function U.find_entities_at_pos(entities, x, y, filter_func)
     return found
 end
 
----查找有敌人的路径
+---搜索有敌人的路径
 ---@param entities table 实体列表
 ---@param flags number 标志位
 ---@param bans number 禁止标志位
@@ -2055,7 +2055,7 @@ function U.count_stars(slot)
     return campaign + heroic + iron, heroic, iron
 end
 
----查找范围内的下一个关卡
+---搜索范围内的下一个关卡
 ---@param ranges table 关卡范围数组
 ---@param cur number 当前关卡
 ---@return number 下一个关卡
@@ -2405,7 +2405,7 @@ function U.update_max_speed(entity, max_speed)
     entity.motion.real_speed = U.real_max_speed(entity)
 end
 
----查找传送时机
+---搜索传送时机
 ---@param store table game.store
 ---@param center table 中心点 {x, y}
 ---@param range number 范围

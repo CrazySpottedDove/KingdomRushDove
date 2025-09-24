@@ -6734,7 +6734,7 @@ function scripts.tower_demon_pit.update(this, store, script)
                 local pow = pows[i]
 
                 if aa and (not pow or pow.level > 0) and aa.cooldown and store.tick_ts - aa.ts > aa.cooldown and (not a.min_cooldown or store.tick_ts - last_ts > a.min_cooldown) then
-                    local trigger, _, shoot_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.max_range * 1.2,
+                    local trigger, _, shoot_pos = U.find_foremost_enemy(store, tpos(this), 0, aa.max_range * 1.2,
                         aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
                     if not trigger then
@@ -6745,7 +6745,7 @@ function scripts.tower_demon_pit.update(this, store, script)
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local _, enemies, enemy_pos = U.find_foremost_enemy(store.entities, tpos(this), 0,
+                        local _, enemies, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0,
                             aa.max_range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
                         if enemies and #enemies > 0 then
@@ -6774,7 +6774,7 @@ function scripts.tower_demon_pit.update(this, store, script)
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local _, enemies, enemy_pos = U.find_foremost_enemy(store.entities, tpos(this), 0,
+                        local _, enemies, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0,
                             aa.max_range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
                         local found_unblocked = false
 
@@ -6840,7 +6840,7 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
     end
 
     local function explosion(r, damage_min, damage_max, dty)
-        local targets = U.find_enemies_in_range(store.entities, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
+        local targets = U.find_enemies_in_range(store, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
 
         if targets then
             for _, target in pairs(targets) do
@@ -7089,7 +7089,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store, script)
     end
 
     local function explosion(r, damage, dty)
-        local targets = U.find_enemies_in_range(store.entities, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
+        local targets = U.find_enemies_in_range(store, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
 
         if targets then
             for _, target in pairs(targets) do
