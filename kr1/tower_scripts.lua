@@ -6536,7 +6536,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
     this.pos.x, this.pos.y = b.to.x, b.to.y
 
     if target then
-        if this._parent then
+        if this._parent or tower.template_name == "tower_dark_elf_lvl4" then
             if not tower.tower_upgrade_persistent_data.souls_extra_damage_min then
                 tower.tower_upgrade_persistent_data.souls_extra_damage_min = 0
             end
