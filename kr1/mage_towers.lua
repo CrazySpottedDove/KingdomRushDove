@@ -135,7 +135,7 @@ local function mage_towers()
     tt.damage_base = 25
 
     tt = RT("decalmod_arcane_wizard_disintegrate_ready", "modifier")
-    E:add_comps(tt, "render", "tween")
+    AC(tt, "render", "tween")
     tt.main_script.insert = scripts.mod_tower_decal.insert
     tt.main_script.remove = scripts.mod_tower_decal.remove
     tt.tween.remove = false
@@ -145,7 +145,7 @@ local function mage_towers()
 
     for i, p in ipairs({vec_2(22, 45), vec_2(31, 40), vec_2(40, 35), vec_2(49, 32.5), vec_2(58, 30), vec_2(67.5, 32.5),
                         vec_2(77, 35), vec_2(86, 40), vec_2(95, 45)}) do
-        tt.render.sprites[i] = E:clone_c("sprite")
+        tt.render.sprites[i] = CC("sprite")
         tt.render.sprites[i].prefix = "crossbow_eagle_buff"
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].anchor.y = 0.21
@@ -333,20 +333,20 @@ local function mage_towers()
     tt.vis.bans = bor(F_LYCAN, F_BLOOD, F_POISON)
     tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
 
-    local tower_archmage = E:register_t("tower_archmage", "tower")
-    E:add_comps(tower_archmage, "attacks", "powers")
+    local tower_archmage = RT("tower_archmage", "tower")
+    AC(tower_archmage, "attacks", "powers")
     tower_archmage.tower.type = "archmage"
     tower_archmage.tower.level = 1
     tower_archmage.tower.price = 300
     tower_archmage.info.fn = scripts.tower_mage.get_info
     tower_archmage.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0006"
     tower_archmage.info.enc_icon = 16
-    tower_archmage.powers.twister = E:clone_c("power")
+    tower_archmage.powers.twister = CC("power")
     tower_archmage.powers.twister.price_base = 300
     tower_archmage.powers.twister.price_inc = 225
     tower_archmage.powers.twister.enc_icon = 32
     tower_archmage.powers.twister.attack_idx = 2
-    tower_archmage.powers.blast = E:clone_c("power")
+    tower_archmage.powers.blast = CC("power")
     tower_archmage.powers.blast.price_base = 200
     tower_archmage.powers.blast.price_inc = 200
     tower_archmage.powers.blast.name = "CRITICAL"
@@ -357,11 +357,11 @@ local function mage_towers()
     tower_archmage.render.sprites[1].animated = false
     tower_archmage.render.sprites[1].name = "terrain_mage_%04i"
     tower_archmage.render.sprites[1].offset = vec_2(0, 11)
-    tower_archmage.render.sprites[2] = E:clone_c("sprite")
+    tower_archmage.render.sprites[2] = CC("sprite")
     tower_archmage.render.sprites[2].animated = false
     tower_archmage.render.sprites[2].name = "ArchMageTower"
     tower_archmage.render.sprites[2].offset = vec_2(0, 31)
-    tower_archmage.render.sprites[3] = E:clone_c("sprite")
+    tower_archmage.render.sprites[3] = CC("sprite")
     tower_archmage.render.sprites[3].prefix = "shooterarchmage"
     tower_archmage.render.sprites[3].name = "idleDown"
     tower_archmage.render.sprites[3].angles = {}
@@ -371,7 +371,7 @@ local function mage_towers()
     tower_archmage.render.sprites[3].angles.multiple = {"multipleUp", "multipleDown"}
     tower_archmage.render.sprites[3].offset = vec_2(2, 61)
     tower_archmage.attacks.range = 200
-    tower_archmage.attacks.list[1] = E:clone_c("bullet_attack")
+    tower_archmage.attacks.list[1] = CC("bullet_attack")
     tower_archmage.attacks.list[1].animation = "shoot"
     tower_archmage.attacks.list[1].bullet_start_offset = {vec_2(13, 72), vec_2(-9, 70)}
     tower_archmage.attacks.list[1].bullet = "bolt_archmage"
@@ -384,7 +384,7 @@ local function mage_towers()
     tower_archmage.attacks.list[1].payload_bullet = "bolt_blast"
     tower_archmage.attacks.list[1].repetition_rate = 0.27
     tower_archmage.attacks.list[1].repetition_rate_inc = 0.03
-    tower_archmage.attacks.list[2] = E:clone_c("bullet_attack")
+    tower_archmage.attacks.list[2] = CC("bullet_attack")
     tower_archmage.attacks.list[2].vis_flags = bor(F_RANGED, F_TWISTER)
     tower_archmage.attacks.list[2].vis_bans = bor(F_FLYING, F_CLIFF, F_BOSS)
     tower_archmage.attacks.list[2].animation = "twister"
@@ -394,10 +394,10 @@ local function mage_towers()
     tower_archmage.attacks.list[2].nodes_limit = 30
     tower_archmage.sound_events.insert = "ArchmageTauntReady"
 
-    local fx_bolt_archmage_hit = E:register_t("fx_bolt_archmage_hit", "fx")
+    local fx_bolt_archmage_hit = RT("fx_bolt_archmage_hit", "fx")
     fx_bolt_archmage_hit.render.sprites[1].name = "bolt_archmage_hit"
 
-    tt = E:register_t("bolt_archmage", "bolt")
+    tt = RT("bolt_archmage", "bolt")
     tt.render.sprites[1].prefix = "bolt_archmage"
     tt.bullet.mod = "mod_archmage_shatter"
     tt.bullet.damage_min = 44
@@ -412,7 +412,7 @@ local function mage_towers()
     tt.sound_events.travel = "ArchmageBoltTravel"
     tt.sound_events.summon = "ArchmageBoltSummon"
 
-    tt = E:register_t("bolt_blast", "bullet")
+    tt = RT("bolt_blast", "bullet")
     tt.main_script.insert = scripts.bolt_blast.insert
     tt.main_script.update = scripts.bolt_blast.update
     tt.render.sprites[1].prefix = "bolt_blast"
@@ -426,8 +426,8 @@ local function mage_towers()
     tt.bullet.damage_flags = F_AREA
     tt.sound_events.insert = "ArchmageCriticalExplosion"
 
-    local twister = E:register_t("twister", "aura")
-    E:add_comps(twister, "nav_path", "motion", "render")
+    local twister = RT("twister", "aura")
+    AC(twister, "nav_path", "motion", "render")
     twister.main_script.insert = scripts.twister.insert
     twister.main_script.update = scripts.twister.update
     twister.after_mod = "mod_twister"
@@ -450,11 +450,11 @@ local function mage_towers()
     twister.aura.vis_flags = bor(F_RANGED, F_TWISTER)
     twister.aura.vis_bans = bor(F_CLIFF, F_BOSS, F_WATER)
 
-    local mod_twister = E:register_t("mod_twister", "mod_slow")
+    local mod_twister = RT("mod_twister", "mod_slow")
     mod_twister.modifier.duration = 1
 
-    local ps_bolt_archmage_trail = E:register_t("ps_bolt_archmage_trail")
-    E:add_comps(ps_bolt_archmage_trail, "pos", "particle_system")
+    local ps_bolt_archmage_trail = RT("ps_bolt_archmage_trail")
+    AC(ps_bolt_archmage_trail, "pos", "particle_system")
     ps_bolt_archmage_trail.particle_system.name = "proy_archbolt_particle"
     ps_bolt_archmage_trail.particle_system.animated = false
     ps_bolt_archmage_trail.particle_system.particle_lifetime = {0.2, 0.2}
@@ -467,20 +467,20 @@ local function mage_towers()
     archmage_shatter.damage_max = 0.035
     archmage_shatter.damage_type = bor(DAMAGE_MAGICAL_ARMOR, DAMAGE_NO_SHIELD_HIT)
 
-    local tower_necromancer = E:register_t("tower_necromancer", "tower")
-    E:add_comps(tower_necromancer, "barrack", "attacks", "powers", "auras", "tween")
+    local tower_necromancer = RT("tower_necromancer", "tower")
+    AC(tower_necromancer, "barrack", "attacks", "powers", "auras", "tween")
     tower_necromancer.tower.type = "necromancer"
     tower_necromancer.tower.level = 1
     tower_necromancer.tower.price = 275
     tower_necromancer.info.fn = scripts.tower_mage.get_info
     tower_necromancer.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0005"
     tower_necromancer.info.enc_icon = 15
-    tower_necromancer.powers.pestilence = E:clone_c("power")
+    tower_necromancer.powers.pestilence = CC("power")
     tower_necromancer.powers.pestilence.price_base = 200
     tower_necromancer.powers.pestilence.price_inc = 200
     tower_necromancer.powers.pestilence.enc_icon = 35
     tower_necromancer.powers.pestilence.attack_idx = 2
-    tower_necromancer.powers.rider = E:clone_c("power")
+    tower_necromancer.powers.rider = CC("power")
     tower_necromancer.powers.rider.price_base = 275
     tower_necromancer.powers.rider.price_inc = 150
     tower_necromancer.powers.rider.enc_icon = 34
@@ -490,28 +490,28 @@ local function mage_towers()
     tower_necromancer.barrack.soldier_type = "soldier_death_rider"
     tower_necromancer.barrack.rally_range = 180
     tower_necromancer.attacks.range = 200
-    tower_necromancer.attacks.list[1] = E:clone_c("bullet_attack")
+    tower_necromancer.attacks.list[1] = CC("bullet_attack")
     tower_necromancer.attacks.list[1].bullet = "bolt_necromancer_tower"
     tower_necromancer.attacks.list[1].cooldown = 1
     tower_necromancer.attacks.list[1].shoot_time = fts(3)
     tower_necromancer.attacks.list[1].bullet_start_offset = {vec_2(9, 71), vec_2(-9, 71)}
-    tower_necromancer.attacks.list[2] = E:clone_c("bullet_attack")
+    tower_necromancer.attacks.list[2] = CC("bullet_attack")
     tower_necromancer.attacks.list[2].bullet = "pestilence"
     tower_necromancer.attacks.list[2].cooldown = 12
     tower_necromancer.attacks.list[2].shoot_time = fts(6)
     tower_necromancer.attacks.list[2].vis_bans = bor(F_FLYING, F_CLIFF, F_BOSS)
     tower_necromancer.attacks.list[2].vis_flags = bor(F_RANGED, F_POISON)
-    tower_necromancer.auras.list[1] = E:clone_c("aura_attack")
+    tower_necromancer.auras.list[1] = CC("aura_attack")
     tower_necromancer.auras.list[1].name = "necromancer_aura"
     tower_necromancer.auras.list[1].cooldown = 0
     tower_necromancer.render.sprites[1].name = "terrain_mage_%04i"
     tower_necromancer.render.sprites[1].animated = false
     tower_necromancer.render.sprites[1].offset = vec_2(0, 9)
-    tower_necromancer.render.sprites[2] = E:clone_c("sprite")
+    tower_necromancer.render.sprites[2] = CC("sprite")
     tower_necromancer.render.sprites[2].name = "NecromancerTower"
     tower_necromancer.render.sprites[2].animated = false
     tower_necromancer.render.sprites[2].offset = vec_2(0, 30)
-    tower_necromancer.render.sprites[3] = E:clone_c("sprite")
+    tower_necromancer.render.sprites[3] = CC("sprite")
     tower_necromancer.render.sprites[3].prefix = "shooternecromancer"
     tower_necromancer.render.sprites[3].angles = {}
     tower_necromancer.render.sprites[3].angles.idle = {"idleUp", "idleDown"}
@@ -520,12 +520,12 @@ local function mage_towers()
     tower_necromancer.render.sprites[3].angles.shoot_end = {"shootEndUp", "shootEndDown"}
     tower_necromancer.render.sprites[3].angles.pestilence = {"pestilenceUp", "pestilenceDown"}
     tower_necromancer.render.sprites[3].offset = vec_2(0, 60)
-    tower_necromancer.render.sprites[4] = E:clone_c("sprite")
+    tower_necromancer.render.sprites[4] = CC("sprite")
     tower_necromancer.render.sprites[4].animated = false
     tower_necromancer.render.sprites[4].name = "NecromancerTowerGlow"
     tower_necromancer.render.sprites[4].offset = vec_2(0, 34)
     tower_necromancer.render.sprites[4].hidden = true
-    tower_necromancer.render.sprites[5] = E:clone_c("sprite")
+    tower_necromancer.render.sprites[5] = CC("sprite")
     tower_necromancer.render.sprites[5].name = "towernecromancer_fx"
     tower_necromancer.render.sprites[5].offset = vec_2(0, 52)
     tower_necromancer.render.sprites[5].hidden = true
@@ -538,7 +538,7 @@ local function mage_towers()
     tower_necromancer.sound_events.insert = "NecromancerTauntReady"
     tower_necromancer.sound_events.change_rally_point = "DeathKnightTaunt"
 
-    tt = E:register_t("bolt_necromancer_tower", "bolt")
+    tt = RT("bolt_necromancer_tower", "bolt")
     tt.render.sprites[1].prefix = "bolt_necromancer"
     tt.bullet.damage_min = 20
     tt.bullet.damage_max = 70
@@ -547,7 +547,7 @@ local function mage_towers()
     tt.bullet.pop = {"pop_sishh"}
     tt.sound_events.insert = "NecromancerBolt"
 
-    local pestilence = E:register_t("pestilence", "aura")
+    local pestilence = RT("pestilence", "aura")
     pestilence.aura.mod = "mod_pestilence"
     pestilence.aura.duration = 3
     pestilence.aura.duration_inc = 1
@@ -559,8 +559,8 @@ local function mage_towers()
     pestilence.main_script.update = scripts.aura_apply_mod.update
     pestilence.sound_events.insert = "NecromancerPestilence"
 
-    local ps_bolt_necromancer_trail = E:register_t("ps_bolt_necromancer_trail")
-    E:add_comps(ps_bolt_necromancer_trail, "pos", "particle_system")
+    local ps_bolt_necromancer_trail = RT("ps_bolt_necromancer_trail")
+    AC(ps_bolt_necromancer_trail, "pos", "particle_system")
     ps_bolt_necromancer_trail.particle_system.name = "proy_Necromancer_particle"
     ps_bolt_necromancer_trail.particle_system.animated = false
     ps_bolt_necromancer_trail.particle_system.particle_lifetime = {0.4, 1}
@@ -572,7 +572,7 @@ local function mage_towers()
     ps_bolt_necromancer_trail.particle_system.emit_spread = math.pi
     ps_bolt_necromancer_trail.particle_system.emission_rate = 30
 
-    tt = E:register_t("soldier_skeleton", "soldier_militia")
+    tt = RT("soldier_skeleton", "soldier_militia")
     anchor_y = 0.18
     image_y = 38
     -- tt.count_group.name = "skeletons"
@@ -596,7 +596,7 @@ local function mage_towers()
     tt.unit.marker_offset = vec_2(0, ady(7))
     tt.unit.mod_offset = vec_2(0, ady(18))
 
-    tt = E:register_t("soldier_skeleton_knight", "soldier_skeleton")
+    tt = RT("soldier_skeleton_knight", "soldier_skeleton")
     anchor_y = 0.18
     image_y = 50
     -- tt.count_group.name = "skeletons"
@@ -615,9 +615,9 @@ local function mage_towers()
     tt.render.sprites[1].prefix = "soldier_skeleton_knight"
     tt.sound_events.insert = "NecromancerSummon"
 
-    tt = E:register_t("soldier_death_rider", "soldier")
-    E:add_comps(tt, "melee", "auras")
-    tt.auras.list[1] = E:clone_c("aura_attack")
+    tt = RT("soldier_death_rider", "soldier")
+    AC(tt, "melee", "auras")
+    tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].cooldown = 0
     tt.auras.list[1].name = "death_rider_aura"
     tt.health.armor = 0.3
@@ -642,7 +642,7 @@ local function mage_towers()
     tt.melee.range = 76.8
     tt.motion.max_speed = 75
     tt.regen.cooldown = 1
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = 0.18
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"running"}
@@ -655,7 +655,7 @@ local function mage_towers()
     tt.unit.size = UNIT_SIZE_MEDIUM
     tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE, F_SKELETON)
 
-    tt = E:register_t("necromancer_aura", "aura")
+    tt = RT("necromancer_aura", "aura")
     tt.main_script.update = scripts.necromancer_aura.update
     tt.aura.cycle_time = 0.5
     tt.aura.duration = -1
@@ -665,8 +665,8 @@ local function mage_towers()
     -- tt.count_group_max = 30
     tt.max_skeletons_tower = 8
 
-    local death_rider_aura = E:register_t("death_rider_aura", "aura")
-    E:add_comps(death_rider_aura, "render")
+    local death_rider_aura = RT("death_rider_aura", "aura")
+    AC(death_rider_aura, "render")
     death_rider_aura.aura.mod = "mod_death_rider"
     death_rider_aura.aura.cycle_time = 1
     death_rider_aura.aura.duration = -1
@@ -682,8 +682,8 @@ local function mage_towers()
     death_rider_aura.render.sprites[1].loop = true
     death_rider_aura.render.sprites[1].z = Z_DECALS
 
-    local mod_death_rider = E:register_t("mod_death_rider", "modifier")
-    E:add_comps(mod_death_rider, "render")
+    local mod_death_rider = RT("mod_death_rider", "modifier")
+    AC(mod_death_rider, "render")
     mod_death_rider.inflicted_damage_factor = 1.1
     mod_death_rider.inflicted_damage_factor_inc = 0.2
     mod_death_rider.extra_armor = 0.2
@@ -708,17 +708,17 @@ local function mage_towers()
     tt.info.fn = scripts.tower_sunray.get_info
     tt.info.i18n_key = "SPECIAL_SUNRAY"
     tt.ui.click_rect = r(-41.25, -17.5, 82.5, 97.5)
-    tt.powers.ray = E:clone_c("power")
+    tt.powers.ray = CC("power")
     tt.powers.ray.level = 1
     tt.powers.ray.max_level = 4
     tt.powers.ray.price_base = 0
     tt.powers.ray.price_inc = 100
     tt.powers.ray.changed = true
-    tt.powers.manual = E:clone_c("power")
+    tt.powers.manual = CC("power")
     tt.powers.manual.max_level = 1
     tt.powers.manual.price_base = 0
     tt.powers.manual.level = 1
-    tt.powers.auto = E:clone_c("power")
+    tt.powers.auto = CC("power")
     tt.powers.auto.max_level = 1
     tt.powers.auto.price_base = 0
     tt.main_script.update = scripts.tower_sunray.update
@@ -756,7 +756,7 @@ local function mage_towers()
     tt.sound_events.mute_on_level_insert = true
     tt.user_selection.can_select_point_fn = scripts.tower_sunray.can_select_point
     tt.user_selection.custom_pointer_name = "sunray_tower"
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].bullet = "ray_sunray"
     tt.attacks.list[1].cooldown = 13
     tt.attacks.list[1].cooldown_base = 14
@@ -766,8 +766,8 @@ local function mage_towers()
     tt.attacks.list[1].shoot_time = fts(3)
     tt.attacks.range = 425
 
-    tt = E:register_t("bolt_elves", "bullet")
-    E:add_comps(tt, "force_motion")
+    tt = RT("bolt_elves", "bullet")
+    AC(tt, "force_motion")
     tt.bullet.damage_type = DAMAGE_MAGICAL
     tt.bullet.hit_fx = "fx_bolt_elves_hit"
     tt.bullet.max_speed = 300
@@ -785,14 +785,14 @@ local function mage_towers()
     tt.main_script.update = scripts.bolt_elves.update
     tt.render.sprites[1].prefix = "bolt_elves"
     tt.render.sprites[1].name = "travel"
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "decal_flying_shadow"
     tt.render.sprites[2].offset.y = -20
     tt.render.sprites[2].animated = false
     tt.sound_events.insert = "TowerWizardBasicBolt"
 
-    tt = E:register_t("tower_high_elven", "tower")
-    E:add_comps(tt, "attacks", "powers", "tween")
+    tt = RT("tower_high_elven", "tower")
+    AC(tt, "attacks", "powers", "tween")
     tt.info.enc_icon = 15
     tt.info.fn = scripts.tower_high_elven.get_info
     tt.info.i18n_key = "TOWER_MAGE_HIGH_ELVEN"
@@ -805,7 +805,7 @@ local function mage_towers()
     tt.tower.price = 260
     tt.tower.size = TOWER_SIZE_LARGE
     tt.attacks.range = 210
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animation = "shoot"
     tt.attacks.list[1].bullet = "bolt_high_elven_strong"
     tt.attacks.list[1].bullets = {"bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_high_elven_weak",
@@ -813,7 +813,7 @@ local function mage_towers()
     tt.attacks.list[1].bullet_start_offset = vec_2(0, 75)
     tt.attacks.list[1].cooldown = 1.5
     tt.attacks.list[1].shoot_time = fts(30)
-    tt.attacks.list[2] = E:clone_c("spell_attack")
+    tt.attacks.list[2] = CC("spell_attack")
     tt.attacks.list[2].animation = "timelapse"
     tt.attacks.list[2].spell = "mod_timelapse"
     tt.attacks.list[2].cooldown = 16
@@ -821,13 +821,13 @@ local function mage_towers()
     tt.attacks.list[2].vis_flags = bor(F_RANGED)
     tt.attacks.list[2].vis_bans = bor(F_BOSS)
     tt.attacks.list[2].sound = "TowerHighMageTimecast"
-    tt.powers.timelapse = E:clone_c("power")
+    tt.powers.timelapse = CC("power")
     tt.powers.timelapse.attack_idx = 2
     tt.powers.timelapse.price_base = 225
     tt.powers.timelapse.price_inc = 125
     tt.powers.timelapse.target_count = {2, 3, 4}
     tt.powers.timelapse.enc_icon = 18
-    tt.powers.sentinel = E:clone_c("power")
+    tt.powers.sentinel = CC("power")
     tt.powers.sentinel.max_level = 3
     tt.powers.sentinel.price_base = 250
     tt.powers.sentinel.price_inc = 200
@@ -841,11 +841,11 @@ local function mage_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_mage_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "mage_towers_layer1_0098"
     tt.render.sprites[2].offset = vec_2(0, 36)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "tower_high_elven_shooter"
     tt.render.sprites[3].name = "idleDown"
     tt.render.sprites[3].angles = {}
@@ -855,7 +855,7 @@ local function mage_towers()
     tt.render.sprites[3].anchor.y = 0
     tt.render.sprites[3].offset = vec_2(0, -5)
     tt.render.sprites[3].draw_order = 5
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].name = "mage_highElven_glow"
     tt.render.sprites[4].animated = false
     tt.render.sprites[4].offset = tt.render.sprites[2].offset
@@ -867,8 +867,8 @@ local function mage_towers()
     tt.sentinels = {}
     tt.max_sentinels = 1
 
-    tt = E:register_t("mod_high_elven", "modifier")
-    E:add_comps(tt, "render", "tween")
+    tt = RT("mod_high_elven", "modifier")
+    AC(tt, "render", "tween")
     tt.damage_factor = 0.06
     tt.damage_factor_inc = 0.03
     tt.cooldown_factor = 0.97
@@ -886,7 +886,7 @@ local function mage_towers()
     tt.tween.props[1].keys = {{0, 0}, {fts(10), 150}}
     tt.render.sprites[1].color = {0, 255, 255}
 
-    local decal_high_elven_sentinel_preview = E:register_t("decal_high_elven_sentinel_preview", "decal_tween")
+    local decal_high_elven_sentinel_preview = RT("decal_high_elven_sentinel_preview", "decal_tween")
     decal_high_elven_sentinel_preview.render.sprites[1].name = "CrossbowHunterDecalDotted"
     decal_high_elven_sentinel_preview.render.sprites[1].animated = false
     decal_high_elven_sentinel_preview.render.sprites[1].anchor = vec_2(0.5, 0.32)
@@ -898,8 +898,8 @@ local function mage_towers()
     decal_high_elven_sentinel_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(1.15, 1.15)},
                                                              {0.5, vec_2(1, 1)}}
 
-    tt = E:register_t("high_elven_sentinel", "decal_scripted")
-    E:add_comps(tt, "force_motion", "ranged", "tween")
+    tt = RT("high_elven_sentinel", "decal_scripted")
+    AC(tt, "force_motion", "ranged", "tween")
     tt.charge_time = 4
     tt.flight_height = 50
     tt.force_motion.max_a = 135000
@@ -932,18 +932,18 @@ local function mage_towers()
     tt.render.sprites[1].z = Z_BULLETS
     tt.render.sprites[1].offset = vec_2(0, tt.flight_height)
     tt.render.sprites[1].draw_order = 4
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "decal_flying_shadow"
     tt.render.sprites[2].offset = vec_2(0, 0)
     tt.render.sprites[2].hidden = true
     tt.tween.remove = false
     tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
-    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2] = CC("tween_prop")
     tt.tween.props[2].keys = {{0, vec_2(0.75, 1)}, {fts(10), vec_2(1, 1)}}
     tt.tween.props[2].name = "scale"
 
-    tt = E:register_t("bolt_high_elven_weak", "bolt_elves")
+    tt = RT("bolt_high_elven_weak", "bolt_elves")
     tt.alter_reality_chance = 0.03
     tt.alter_reality_mod = "mod_teleport_high_elven"
     tt.bullet.damage_max = 5
@@ -956,7 +956,7 @@ local function mage_towers()
     tt.render.sprites[1].prefix = "bolt_high_elven_weak"
     tt.render.sprites[1].scale = vec_2(0.8, 0.8)
 
-    tt = E:register_t("bolt_high_elven_strong", "bolt_elves")
+    tt = RT("bolt_high_elven_strong", "bolt_elves")
     tt.alter_reality_chance = 0.03
     tt.alter_reality_mod = "mod_teleport_high_elven"
     tt.bullet.align_with_trajectory = true
@@ -971,7 +971,7 @@ local function mage_towers()
     tt.render.sprites[1].prefix = "bolt_high_elven_strong"
     tt.sound_events.insert = "TowerHighMageBoltCast"
 
-    tt = E:register_t("ray_high_elven_sentinel", "bullet")
+    tt = RT("ray_high_elven_sentinel", "bullet")
     tt.image_width = 72
     tt.main_script.update = scripts.ray_simple.update
     tt.render.sprites[1].name = "ray_high_elven_sentinel"
@@ -985,8 +985,8 @@ local function mage_towers()
     tt.bullet.hit_time = fts(4)
     tt.sound_events.insert = "TowerHighMageSentinelShot"
 
-    tt = E:register_t("mod_timelapse", "modifier")
-    E:add_comps(tt, "render", "tween")
+    tt = RT("mod_timelapse", "modifier")
+    AC(tt, "render", "tween")
     tt.modifier.remove_banned = true
     tt.modifier.bans = {"mod_faerie_dragon_l0", "mod_faerie_dragon_l1", "mod_faerie_dragon_l2", "mod_arivan_freeze",
                         "mod_arivan_ultimate_freeze", "mod_crystal_arcane_freeze", "mod_blood_elves",
@@ -998,7 +998,7 @@ local function mage_towers()
     tt.render.sprites[1].name = "start"
     tt.render.sprites[1].sort_y_offset = -1
     tt.render.sprites[1].z = Z_OBJECTS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "mage_highElven_energyBall_shadow"
     tt.render.sprites[2].z = Z_DECALS
@@ -1015,19 +1015,19 @@ local function mage_towers()
     tt.damage_type = bor(DAMAGE_MAGICAL, DAMAGE_NO_SPAWNS)
     tt.modifier.duration = 5
 
-    tt = E:register_t("timelapse_enemy_decal", "decal_tween")
+    tt = RT("timelapse_enemy_decal", "decal_tween")
     tt.tween.remove = false
     tt.tween.disabled = true
     tt.tween.props[1].keys = {{0, 255}, {0.13, 0}}
 
-    tt = E:register_t("mod_ray_high_elven_sentinel_hit", "mod_track_target_fx")
+    tt = RT("mod_ray_high_elven_sentinel_hit", "mod_track_target_fx")
     tt.render.sprites[1].name = "fx_ray_high_elven_sentinel_hit"
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].hide_after_runs = 1
     tt.modifier.duration = fts(11)
 
-    tt = E:register_t("tower_wild_magus", "tower")
-    E:add_comps(tt, "attacks", "powers", "tween")
+    tt = RT("tower_wild_magus", "tower")
+    AC(tt, "attacks", "powers", "tween")
     tt.info.enc_icon = 16
     tt.info.i18n_key = "TOWER_MAGE_WILD_MAGUS"
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0007"
@@ -1038,13 +1038,13 @@ local function mage_towers()
     tt.tower.price = 325
     tt.tower.size = TOWER_SIZE_LARGE
     tt.attacks.range = 190
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animations = {"shoot_rh", "shoot_lh"}
     tt.attacks.list[1].bullet = "bolt_wild_magus"
     tt.attacks.list[1].bullet_start_offset = {{vec_2(10, 42), vec_2(4, 24)}, {vec_2(-6, 38), vec_2(12, 26)}}
     tt.attacks.list[1].cooldown = 0.3
     tt.attacks.list[1].shoot_time = fts(4)
-    tt.attacks.list[2] = E:clone_c("bullet_attack")
+    tt.attacks.list[2] = CC("bullet_attack")
     tt.attacks.list[2].animation = "ray"
     tt.attacks.list[2].bullet = "ray_wild_magus"
     tt.attacks.list[2].bullet_start_offset = {vec_2(0, 38), vec_2(0, 32)}
@@ -1053,7 +1053,7 @@ local function mage_towers()
     tt.attacks.list[2].sound = "TowerWildMagusDoomCast"
     tt.attacks.list[2].vis_flags = bor(F_MOD, F_INSTAKILL, F_EAT)
     tt.attacks.list[2].vis_bans = bor(F_BOSS)
-    tt.attacks.list[3] = E:clone_c("spell_attack")
+    tt.attacks.list[3] = CC("spell_attack")
     tt.attacks.list[3].cooldown = 10
     tt.attacks.list[3].spell = "mod_ward"
     tt.attacks.list[3].animation = "ward"
@@ -1061,13 +1061,13 @@ local function mage_towers()
     tt.attacks.list[3].vis_bans = bor(F_CLIFF)
     tt.attacks.list[3].vis_flags = bor(F_RANGED)
     tt.attacks.list[3].sound = "TowerWildMagusDisruptionCast"
-    tt.powers.eldritch = E:clone_c("power")
+    tt.powers.eldritch = CC("power")
     tt.powers.eldritch.attack_idx = 2
     tt.powers.eldritch.price_base = 325
     tt.powers.eldritch.price_inc = 185
     tt.powers.eldritch.cooldowns = {28, 24, 20}
     tt.powers.eldritch.enc_icon = 16
-    tt.powers.ward = E:clone_c("power")
+    tt.powers.ward = CC("power")
     tt.powers.ward.attack_idx = 3
     tt.powers.ward.price_base = 100
     tt.powers.ward.price_inc = 150
@@ -1076,15 +1076,15 @@ local function mage_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_mage_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "mage_towers_layer1_0097"
     tt.render.sprites[2].offset = vec_2(0, 36)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].animated = false
     tt.render.sprites[3].name = "mage_towers_layer2_0097"
     tt.render.sprites[3].offset = vec_2(0, 36)
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].prefix = "tower_wild_magus_shooter"
     tt.render.sprites[4].name = "idleDown"
     tt.render.sprites[4].angles = {}
@@ -1095,7 +1095,7 @@ local function mage_towers()
     tt.render.sprites[4].angles.ward = {"wardUp", "wardDown"}
     tt.render.sprites[4].anchor.y = 0
     tt.render.sprites[4].offset = vec_2(2, 22)
-    tt.render.sprites[5] = E:clone_c("sprite")
+    tt.render.sprites[5] = CC("sprite")
     tt.render.sprites[5].name = "mage_wild_shooter_0167"
     tt.render.sprites[5].animated = false
     tt.render.sprites[5].anchor.y = 0
@@ -1103,7 +1103,7 @@ local function mage_towers()
     tt.render.sprites[5].offset = vec_2(0, 22)
     tt.render.sprites[6] = table.deepclone(tt.render.sprites[5])
     tt.render.sprites[6].name = "mage_wild_shooter_0168"
-    tt.render.sprites[7] = E:clone_c("sprite")
+    tt.render.sprites[7] = CC("sprite")
     tt.render.sprites[7].name = "tower_wild_magus_ward_rune"
     tt.render.sprites[7].anchor.y = 0
     tt.render.sprites[7].animated = true
@@ -1111,7 +1111,7 @@ local function mage_towers()
     tt.render.sprites[7].hidden = true
 
     for i = 1, 10 do
-        local s = E:clone_c("sprite")
+        local s = CC("sprite")
 
         s.name = string.format("mage_wild_stones_%04i", i)
         s.animated = false
@@ -1130,7 +1130,7 @@ local function mage_towers()
     tt.tween.props[1].sprite_id = 3
     tt.tween.props[1].loop = true
     tt.tween.props[1].ts = 0
-    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2] = CC("tween_prop")
     tt.tween.props[2].name = "offset"
     tt.tween.props[2].keys = {{0, vec_2(0, 19)}, {1, vec_2(0, 21)}, {2, vec_2(0, 19)}}
     tt.tween.props[2].sprite_id = 4
@@ -1142,14 +1142,14 @@ local function mage_towers()
     tt.tween.props[4].sprite_id = 6
     tt.tween.props[5] = table.deepclone(tt.tween.props[2])
     tt.tween.props[5].sprite_id = 7
-    tt.tween.props[6] = E:clone_c("tween_prop")
+    tt.tween.props[6] = CC("tween_prop")
     tt.tween.props[6].keys = {{0, 0}, {fts(2), 0}, {fts(16), 255}, {fts(25), 255}, {fts(30), 0}}
     tt.tween.props[6].sprite_id = 5
     tt.tween.props[7] = table.deepclone(tt.tween.props[6])
     tt.tween.props[7].sprite_id = 6
 
     for i = 1, 10 do
-        local t = E:clone_c("tween_prop")
+        local t = CC("tween_prop")
         t.sprite_id = tt.render.sid_rune + i
         t.name = "offset"
         t.keys = {{0, vec_2(0, 35)}, {1, vec_2(0, 37)}, {2, vec_2(0, 35)}}
@@ -1158,8 +1158,8 @@ local function mage_towers()
         tt.tween.props[#tt.tween.props + 1] = t
     end
 
-    tt = E:register_t("bolt_wild_magus", "bolt")
-    E:add_comps(tt, "tween")
+    tt = RT("bolt_wild_magus", "bolt")
+    AC(tt, "tween")
     tt.alter_reality_chance = 0.01
     tt.alter_reality_mod = "mod_teleport_wild_magus"
     tt.render.sprites[1].prefix = "bolt_wild_magus"
@@ -1176,7 +1176,7 @@ local function mage_towers()
     tt.tween.remove = false
     tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 
-    tt = E:register_t("ray_wild_magus", "bullet")
+    tt = RT("ray_wild_magus", "bullet")
     tt.image_width = 144
     tt.main_script.update = scripts.ray_simple.update
     tt.render.sprites[1].name = "ray_wild_magus"
@@ -1188,9 +1188,9 @@ local function mage_towers()
     tt.bullet.hit_time = fts(2)
     tt.track_target = true
 
-    tt = E:register_t("tower_faerie_dragon", "tower")
-    E:add_comps(tt, "powers", "attacks")
-    tt.attacks.list[1] = E:clone_c("custom_attack")
+    tt = RT("tower_faerie_dragon", "tower")
+    AC(tt, "powers", "attacks")
+    tt.attacks.list[1] = CC("custom_attack")
     tt.attacks.list[1].cooldown = 3
     tt.attacks.list[1].vis_flags = bor(F_RANGED)
     tt.attacks.list[1].vis_bans = 0
@@ -1201,29 +1201,29 @@ local function mage_towers()
     tt.main_script.update = scripts.tower_faerie_dragon.update
     tt.main_script.insert = scripts.tower_faerie_dragon.insert
     tt.main_script.remove = scripts.tower_faerie_dragon.remove
-    tt.powers.more_dragons = E:clone_c("power")
+    tt.powers.more_dragons = CC("power")
     tt.powers.more_dragons.price_base = 200
     tt.powers.more_dragons.price_inc = 200
     tt.powers.more_dragons.level = 1
     tt.powers.more_dragons.changed = true
     tt.powers.more_dragons.max_level = 3
     tt.powers.more_dragons.idle_offsets = {vec_2(14, 3), vec_2(-12, 7), vec_2(28, -3)}
-    tt.powers.improve_shot = E:clone_c("power")
+    tt.powers.improve_shot = CC("power")
     tt.powers.improve_shot.price_base = 200
     tt.powers.improve_shot.price_inc = 200
     tt.powers.improve_shot.max_level = 2
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_mage_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "fairy_dragon_tower"
     tt.render.sprites[2].offset = vec_2(0, 36)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "tower_faerie_dragon_egg"
     tt.render.sprites[3].offset = vec_2(-19, 50)
     tt.render.sprites[3].r = d2r(15)
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].prefix = "tower_faerie_dragon_egg"
     tt.render.sprites[4].offset = vec_2(25, 41)
     tt.render.sprites[4].r = d2r(-6)
@@ -1238,15 +1238,15 @@ local function mage_towers()
     tt.sound_events.insert = "ElvesFaeryDragonDragonBuy"
     tt.dragons = {}
 
-    tt = E:register_t("aura_tower_faerie_dragon", "aura")
+    tt = RT("aura_tower_faerie_dragon", "aura")
     tt.main_script.update = scripts.aura_tower_faerie_dragon.update
     tt.aura.duration = -1
     tt.aura.mod = "mod_faerie_dragon_l0"
     tt.aura.damage_type = DAMAGE_MAGICAL_EXPLOSION
     tt.aura.damage = 11
 
-    tt = E:register_t("faerie_dragon", "decal_scripted")
-    E:add_comps(tt, "force_motion", "custom_attack")
+    tt = RT("faerie_dragon", "decal_scripted")
+    AC(tt, "force_motion", "custom_attack")
     anchor_y = 0.5
     image_y = 30
     tt.flight_height = 80
@@ -1256,7 +1256,7 @@ local function mage_towers()
     tt.ramp_dist_busy = 80
     tt.idle_pos = nil
     tt.main_script.update = scripts.faerie_dragon.update
-    tt.custom_attack = E:clone_c("bullet_attack")
+    tt.custom_attack = CC("bullet_attack")
     tt.custom_attack.bullet = "bolt_faerie_dragon"
     tt.custom_attack.shoot_time = fts(12)
     tt.custom_attack.bullet_start_offset = {vec_2(13, -30)}
@@ -1267,13 +1267,13 @@ local function mage_towers()
     tt.render.sprites[1].draw_order = 2
     tt.render.sprites[1].loop_forced = true
     tt.render.sprites[1].sort_y_offset = -12
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "decal_flying_shadow"
     tt.render.sprites[2].offset = vec_2(0, 0)
     tt.owner = nil
 
-    tt = E:register_t("bolt_faerie_dragon", "bolt")
+    tt = RT("bolt_faerie_dragon", "bolt")
     tt.render.sprites[1].prefix = "faerie_dragon_proy"
     tt.bullet.damage_type = DAMAGE_MAGICAL
     tt.bullet.acceleration_factor = 0.25
@@ -1285,12 +1285,12 @@ local function mage_towers()
     tt.bullet.mod = "mod_faerie_dragon"
     tt.sound_events.insert = "ElvesFaeryDragonAttack"
 
-    tt = E:register_t("fx_bolt_faerie_dragon", "fx")
+    tt = RT("fx_bolt_faerie_dragon", "fx")
     tt.render.sprites[1].name = "faerie_dragon_proy_hit"
-    tt = E:register_t("fx_faerie_dragon_shoot", "fx")
+    tt = RT("fx_faerie_dragon_shoot", "fx")
     tt.render.sprites[1].name = "faerie_dragon_shoot_fx"
-    tt = E:register_t("mod_faerie_dragon", "mod_freeze")
-    E:add_comps(tt, "render")
+    tt = RT("mod_faerie_dragon", "mod_freeze")
+    AC(tt, "render")
     tt.modifier.duration = 0.9
     tt.modifier.vis_bans = F_BOSS
     tt.modifier.vis_flags = bor(F_STUN, F_MOD)
@@ -1304,25 +1304,25 @@ local function mage_towers()
     tt.freeze_decal_name = "decal_faerie_dragon_freeze_enemy"
     tt.sound_events.insert = "ElvesFaeryDragonAttackCristalization"
 
-    tt = E:register_t("mod_faerie_dragon_l0", "mod_faerie_dragon")
+    tt = RT("mod_faerie_dragon_l0", "mod_faerie_dragon")
     tt.modifier.duration = 0.9
-    tt = E:register_t("mod_faerie_dragon_l1", "mod_faerie_dragon")
+    tt = RT("mod_faerie_dragon_l1", "mod_faerie_dragon")
     tt.modifier.duration = 1.25
-    tt = E:register_t("mod_faerie_dragon_l2", "mod_faerie_dragon")
+    tt = RT("mod_faerie_dragon_l2", "mod_faerie_dragon")
     tt.modifier.duration = 1.5
 
-    tt = E:register_t("tower_pixie", "tower")
-    E:add_comps(tt, "powers", "attacks")
+    tt = RT("tower_pixie", "tower")
+    AC(tt, "powers", "attacks")
     tt.pixies = {}
     -- 偷钱
-    tt.attacks.list[1] = E:clone_c("mod_attack")
+    tt.attacks.list[1] = CC("mod_attack")
     tt.attacks.list[1].animation = "harvester"
     tt.attacks.list[1].mods = {"mod_pixie_pickpocket"}
     tt.attacks.list[1].vis_bans = F_FLYING
     tt.attacks.list[1].vis_flags = bor(F_RANGED)
     tt.attacks.list[1].chance = 0.9
     -- 毒素
-    tt.attacks.list[2] = E:clone_c("bullet_attack")
+    tt.attacks.list[2] = CC("bullet_attack")
     tt.attacks.list[2].animation = "shoot"
     tt.attacks.list[2].bullet = "bullet_pixie_poison"
     tt.attacks.list[2].bullet_start_offset = vec_2(10, 11)
@@ -1330,7 +1330,7 @@ local function mage_towers()
     tt.attacks.list[2].vis_bans = F_FLYING
     tt.attacks.list[2].chance = 0
     -- 传送
-    tt.attacks.list[3] = E:clone_c("mod_attack")
+    tt.attacks.list[3] = CC("mod_attack")
     tt.attacks.list[3].animation = "attack"
     tt.attacks.list[3].mods = {"mod_pixie_teleport"}
     tt.attacks.list[3].vis_bans = bor(F_FLYING, F_BOSS)
@@ -1342,7 +1342,7 @@ local function mage_towers()
     tt.attacks.list[4].vis_bans = bor(F_FLYING, F_BOSS)
     tt.attacks.list[4].vis_flags = bor(F_RANGED, F_INSTAKILL)
     -- 变形
-    tt.attacks.list[5] = E:clone_c("mod_attack")
+    tt.attacks.list[5] = CC("mod_attack")
     tt.attacks.list[5].animation = "attack"
     tt.attacks.list[5].mods = {"mod_pixie_polymorph"}
     tt.attacks.list[5].vis_bans = bor(F_FLYING, F_BOSS)
@@ -1360,12 +1360,12 @@ local function mage_towers()
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr3_info_portraits_towers_") .. "0017"
     tt.main_script.update = scripts.tower_pixie.update
     tt.main_script.remove = scripts.tower_pixie.remove
-    tt.powers.cream = E:clone_c("power")
+    tt.powers.cream = CC("power")
     tt.powers.cream.price_base = 250
     tt.powers.cream.price_inc = 250
     tt.powers.cream.max_level = 2
     tt.powers.cream.idle_offsets = {vec_2(-18, -1), vec_2(21, -3), vec_2(5, -9)}
-    tt.powers.total = E:clone_c("power")
+    tt.powers.total = CC("power")
     tt.powers.total.price_base = 200
     tt.powers.total.price_inc = 100
     tt.powers.total.max_level = 3
@@ -1374,7 +1374,7 @@ local function mage_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_mage_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "pixie_tower"
     tt.render.sprites[2].offset = vec_2(0, 28)
@@ -1384,7 +1384,7 @@ local function mage_towers()
     tt.tower.price = 250
     tt.tower.type = "pixie"
 
-    tt = E:register_t("bullet_pixie_instakill", "arrow")
+    tt = RT("bullet_pixie_instakill", "arrow")
     tt.bullet.flight_time = fts(12)
     tt.bullet.rotation_speed = 45 * FPS * math.pi / 180
     tt.bullet.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
@@ -1396,14 +1396,14 @@ local function mage_towers()
     tt.render.sprites[1].animated = false
     tt.sound_events.insert = "ElvesGnomeDesintegrate"
 
-    tt = E:register_t("bullet_pixie_poison", "bullet_pixie_instakill")
+    tt = RT("bullet_pixie_poison", "bullet_pixie_instakill")
     tt.bullet.mod = "mod_pixie_poison"
     tt.bullet.damage_type = DAMAGE_NONE
     tt.bullet.hit_fx = "fx_bullet_pixie_poison_hit_"
     tt.render.sprites[1].name = "pixie_bottle"
     tt.sound_events.insert = nil
 
-    tt = E:register_t("mod_pixie_poison", "mod_poison")
+    tt = RT("mod_pixie_poison", "mod_poison")
     tt.dps.damage_every = fts(8)
     tt.dps.damage_max = 10
     tt.dps.damage_min = 10
@@ -1411,13 +1411,13 @@ local function mage_towers()
     tt.modifier.duration = 3
     tt.allows_duplicates = true
 
-    tt = E:register_t("mod_pixie_polymorph", "mod_polymorph")
+    tt = RT("mod_pixie_polymorph", "mod_polymorph")
     tt.polymorph.custom_entity_names.default = "enemy_rabbit"
     tt.polymorph.hit_fx_sizes = {"fx_mod_pixie_polymorph_small", "fx_mod_pixie_polymorph_big",
                                  "fx_mod_pixie_polymorph_big"}
 
-    tt = E:register_t("mod_pixie_pickpocket", "modifier")
-    E:add_comps(tt, "pickpocket")
+    tt = RT("mod_pixie_pickpocket", "modifier")
+    AC(tt, "pickpocket")
     tt.modifier.damage_max = 100
     tt.modifier.damage_min = 80
     tt.modifier.level = 0

@@ -23,16 +23,16 @@ local function barrack_towers()
     tt.info.i18n_key = "TOWER_PALADINS"
     tt.tower.type = "paladin"
     tt.tower.price = 185
-    tt.powers.healing = E:clone_c("power")
+    tt.powers.healing = CC("power")
     tt.powers.healing.price_base = 150
     tt.powers.healing.price_inc = 100
     tt.powers.healing.enc_icon = 6
-    tt.powers.shield = E:clone_c("power")
+    tt.powers.shield = CC("power")
     tt.powers.shield.price_base = 175
     tt.powers.shield.price_inc = 100
     tt.powers.shield.max_level = 1
     tt.powers.shield.enc_icon = 7
-    tt.powers.holystrike = E:clone_c("power")
+    tt.powers.holystrike = CC("power")
     tt.powers.holystrike.price_base = 200
     tt.powers.holystrike.price_inc = 150
     tt.powers.holystrike.enc_icon = 5
@@ -45,14 +45,14 @@ local function barrack_towers()
     tt.render.sprites[2].offset = vec_2(0, 39)
     tt.render.sprites[3].prefix = "towerbarracklvl4_paladin_door"
     tt.render.sprites[3].offset = vec_2(0, 39)
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].name = "tower_paladin_flag"
     tt.render.sprites[4].offset = vec_2(7, 72)
     tt.sound_events.insert = "BarrackPaladinTaunt"
     tt.sound_events.change_rally_point = "BarrackPaladinTaunt"
 
     tt = RT("soldier_paladin", "soldier_militia")
-    E:add_comps(tt, "powers", "timed_actions")
+    AC(tt, "powers", "timed_actions")
     anchor_y = 0.17
     image_y = 42
     tt.health.armor = 0.45
@@ -71,7 +71,7 @@ local function barrack_towers()
     tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
     tt.melee.attacks[2].animation = "attack2"
     tt.melee.attacks[2].chance = 0.5
-    tt.melee.attacks[3] = E:clone_c("area_attack")
+    tt.melee.attacks[3] = CC("area_attack")
     tt.melee.attacks[3].animation = "holystrike"
     tt.melee.attacks[3].chance = 0.12
     tt.melee.attacks[3].damage_max = 0
@@ -95,9 +95,9 @@ local function barrack_towers()
     tt.melee.cooldown = 1 + fts(13)
     tt.melee.range = 60
     tt.motion.max_speed = 75
-    tt.powers.healing = E:clone_c("power")
-    tt.powers.shield = E:clone_c("power")
-    tt.powers.holystrike = E:clone_c("power")
+    tt.powers.healing = CC("power")
+    tt.powers.shield = CC("power")
+    tt.powers.holystrike = CC("power")
     tt.render.sprites[1].prefix = "soldier_paladin"
     tt.render.sprites[1].anchor.y = anchor_y
     tt.soldier.melee_slot_offset = vec_2(5, 0)
@@ -128,8 +128,8 @@ local function barrack_towers()
     tt.modifier.ban_types = {MOD_TYPE_POISON}
     tt.modifier.remove_banned = true
 
-    tt = E:register_t("mod_paladin_silence", "modifier")
-    E:add_comps(tt, "render")
+    tt = RT("mod_paladin_silence", "modifier")
+    AC(tt, "render")
     tt.modifier.duration = 4
     tt.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal"}
     tt.modifier.remove_banned = true
@@ -149,16 +149,16 @@ local function barrack_towers()
     tt.info.i18n_key = "TOWER_BARBARIANS"
     tt.tower.type = "barbarian"
     tt.tower.price = 195
-    tt.powers.dual = E:clone_c("power")
+    tt.powers.dual = CC("power")
     tt.powers.dual.price_base = 250
     tt.powers.dual.price_inc = 100
     tt.powers.dual.enc_icon = 12
     tt.powers.dual.name = "DOUBLE_AXE"
-    tt.powers.twister = E:clone_c("power")
+    tt.powers.twister = CC("power")
     tt.powers.twister.price_base = 150
     tt.powers.twister.price_inc = 100
     tt.powers.twister.enc_icon = 13
-    tt.powers.throwing = E:clone_c("power")
+    tt.powers.throwing = CC("power")
     tt.powers.throwing.price_base = 150
     tt.powers.throwing.price_inc = 100
     tt.powers.throwing.enc_icon = 14
@@ -176,7 +176,7 @@ local function barrack_towers()
     tt.sound_events.change_rally_point = "BarrackBarbarianTaunt"
 
     tt = RT("soldier_barbarian", "soldier_militia")
-    E:add_comps(tt, "powers", "ranged")
+    AC(tt, "powers", "ranged")
     anchor_y = 0.3
     image_y = 62
     tt.health.armor = 0
@@ -187,10 +187,10 @@ local function barrack_towers()
     tt.info.random_name_count = 20
     tt.info.random_name_format = "SOLDIER_BARBARIAN_RANDOM_%i_NAME"
     tt.motion.max_speed = 90
-    tt.powers.dual = E:clone_c("power")
+    tt.powers.dual = CC("power")
     tt.powers.dual.on_power_upgrade = scripts.soldier_barbarian.on_power_upgrade
-    tt.powers.twister = E:clone_c("power")
-    tt.powers.throwing = E:clone_c("power")
+    tt.powers.twister = CC("power")
+    tt.powers.throwing = CC("power")
     tt.render.sprites[1].prefix = "soldier_barbarian"
     tt.render.sprites[1].anchor.y = anchor_y
     tt.soldier.melee_slot_offset = vec_2(5, 0)
@@ -201,7 +201,7 @@ local function barrack_towers()
     tt.melee.attacks[1].damage_min = 16
     tt.melee.attacks[1].power_name = "dual"
     tt.melee.attacks[1].shared_cooldown = true
-    tt.melee.attacks[2] = E:clone_c("area_attack")
+    tt.melee.attacks[2] = CC("area_attack")
     tt.melee.attacks[2].animation = "twister"
     tt.melee.attacks[2].chance = 0.1
     tt.melee.attacks[2].chance_inc = 0.05
@@ -259,7 +259,7 @@ local function barrack_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 2)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "elfTower_layer1_0026"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].offset = vec_2(0, 20)
@@ -287,11 +287,11 @@ local function barrack_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 2)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "elfTower_layer1_0001"
     tt.render.sprites[2].offset = vec_2(0, 20)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].loop = false
     tt.render.sprites[3].name = "close"
     tt.render.sprites[3].offset = vec_2(0, 20)
@@ -305,19 +305,19 @@ local function barrack_towers()
     tt.tower.terrain_style = nil
     tt.tower.type = "elf"
     tt.ui.click_rect = r(-40, -10, 80, 90)
-    tt.powers.bleed = E:clone_c("power")
+    tt.powers.bleed = CC("power")
     tt.powers.bleed.price_base = 100
     tt.powers.bleed.price_inc = 100
     tt.powers.bleed.enc_icon = 19
     tt.powers.bleed.name = "BLEEDING"
-    tt.powers.cripple = E:clone_c("power")
+    tt.powers.cripple = CC("power")
     tt.powers.cripple.price_base = 200
     tt.powers.cripple.price_inc = 125
     tt.powers.cripple.enc_icon = 24
     tt.powers.cripple.name = "CRIPPLE"
 
     tt = RT("soldier_elf", "soldier_militia")
-    E:add_comps(tt, "powers", "ranged")
+    AC(tt, "powers", "ranged")
     AC(tt, "ranged")
     image_y = 32
     anchor_y = 0.19
@@ -359,9 +359,9 @@ local function barrack_towers()
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, ady(22))
     tt.unit.price = 100
-    tt.powers.bleed = E:clone_c("power")
+    tt.powers.bleed = CC("power")
     tt.powers.bleed.on_power_upgrade = scripts.soldier_elf.on_power_upgrade
-    tt.powers.cripple = E:clone_c("power")
+    tt.powers.cripple = CC("power")
 
     tt = RT("arrow_elf", "arrow")
     tt.bullet.damage_min = 25
@@ -400,7 +400,7 @@ local function barrack_towers()
     tt.barrack.max_soldiers = 4
     tt.mercenary = true
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0015"
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "idle"
     tt.render.sprites[2].offset = vec_2(0, 35)
     tt.render.sprites[2].prefix = "tower_merc_camp_amazonas"
@@ -431,8 +431,8 @@ local function barrack_towers()
     tt.powers.valkyrie.enc_icon = 19
     tt.powers.valkyrie.name = "VALKYRIE"
 
-    tt = E:register_t("soldier_amazona", "soldier_militia")
-    E:add_comps(tt, "track_kills", "auras", "powers")
+    tt = RT("soldier_amazona", "soldier_militia")
+    AC(tt, "track_kills", "auras", "powers")
     anchor_y = 0.35
     image_y = 70
     tt.health.armor = 0
@@ -450,7 +450,7 @@ local function barrack_towers()
     tt.melee.attacks[1].shared_cooldown = true
     tt.melee.attacks[1].power_name = "valkyrie"
     tt.melee.attacks[1].damage_inc = 10
-    tt.melee.attacks[2] = E:clone_c("area_attack")
+    tt.melee.attacks[2] = CC("area_attack")
     tt.melee.attacks[2].animation = "attack_2"
     tt.melee.attacks[2].chance = 0.3
     tt.melee.attacks[2].damage_max = 46
@@ -483,8 +483,8 @@ local function barrack_towers()
         this.track_kills.mod = "amazona_gain_mod"
     end
 
-    tt = E:register_t("amazona_heal_mod", "modifier")
-    E:add_comps(tt, "render", "heal_on_kill")
+    tt = RT("amazona_heal_mod", "modifier")
+    AC(tt, "render", "heal_on_kill")
     tt.main_script.insert = scripts.mod_heal_on_kill.insert
     tt.main_script.update = scripts.mod_heal_on_kill.update
     tt.heal_on_kill.hp = 60
@@ -506,23 +506,23 @@ local function barrack_towers()
     tt.main_script.insert = scripts.mod_gain_on_kill.insert
     tt.main_script.update = scripts.amazona_gain_mod.update
 
-    local tower_templar = E:register_t("tower_templar", "tower_barrack_1")
-    E:add_comps(tower_templar, "powers")
+    local tower_templar = RT("tower_templar", "tower_barrack_1")
+    AC(tower_templar, "powers")
     tower_templar.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0007"
     tower_templar.info.enc_icon = 19
     tower_templar.tower.type = "templar"
     tower_templar.tower.price = 185
-    tower_templar.powers.holygrail = E:clone_c("power")
+    tower_templar.powers.holygrail = CC("power")
     tower_templar.powers.holygrail.price_base = 200
     tower_templar.powers.holygrail.price_inc = 135
     tower_templar.powers.holygrail.name = "HOLY"
     tower_templar.powers.holygrail.enc_icon = 25
-    tower_templar.powers.extralife = E:clone_c("power")
+    tower_templar.powers.extralife = CC("power")
     tower_templar.powers.extralife.price_base = 150
     tower_templar.powers.extralife.price_inc = 150
     tower_templar.powers.extralife.name = "TOUGHNESS"
     tower_templar.powers.extralife.enc_icon = 27
-    tower_templar.powers.blood = E:clone_c("power")
+    tower_templar.powers.blood = CC("power")
     tower_templar.powers.blood.price_base = 225
     tower_templar.powers.blood.price_inc = 150
     tower_templar.powers.blood.name = "ARTERIAL"
@@ -535,18 +535,18 @@ local function barrack_towers()
     tower_templar.render.sprites[2].offset = vec_2(0, 34)
     tower_templar.render.sprites[3].prefix = "towertemplar_door"
     tower_templar.render.sprites[3].offset = vec_2(0, 34)
-    tower_templar.render.sprites[4] = E:clone_c("sprite")
+    tower_templar.render.sprites[4] = CC("sprite")
     tower_templar.render.sprites[4].prefix = "towertemplar_fire"
     tower_templar.render.sprites[4].offset = vec_2(-17, 19)
-    tower_templar.render.sprites[5] = E:clone_c("sprite")
+    tower_templar.render.sprites[5] = CC("sprite")
     tower_templar.render.sprites[5].prefix = "towertemplar_fire"
     tower_templar.render.sprites[5].offset = vec_2(18, 19)
     tower_templar.render.sprites[5].ts = 0.08
     tower_templar.sound_events.insert = "TemplarTauntReady"
     tower_templar.sound_events.change_rally_point = "TemplarTaunt"
 
-    tt = E:register_t("soldier_templar", "soldier_militia")
-    E:add_comps(tt, "revive", "powers")
+    tt = RT("soldier_templar", "soldier_militia")
+    AC(tt, "revive", "powers")
     anchor_y = 0.19
     image_y = 42
     tt.health.armor = 0.5
@@ -565,7 +565,7 @@ local function barrack_towers()
     tt.melee.attacks[1].side_effect = function(this, store, attack, target)
         this.revive.protect = this.revive.protect + 0.01
     end
-    tt.melee.attacks[2] = E:clone_c("melee_attack")
+    tt.melee.attacks[2] = CC("melee_attack")
     tt.melee.attacks[2].animation = "blood"
     tt.melee.attacks[2].chance = 0.25
     tt.melee.attacks[2].damage_max = 40
@@ -591,9 +591,9 @@ local function barrack_towers()
     tt.melee.cooldown = 2 + fts(13)
     tt.melee.range = 64
     tt.motion.max_speed = 75
-    tt.powers.blood = E:clone_c("power")
-    tt.powers.extralife = E:clone_c("power")
-    tt.powers.holygrail = E:clone_c("power")
+    tt.powers.blood = CC("power")
+    tt.powers.extralife = CC("power")
+    tt.powers.holygrail = CC("power")
     tt.render.sprites[1].prefix = "soldiertemplar"
     tt.render.sprites[1].anchor.y = anchor_y
     tt.revive.animation = "holygrail"
@@ -615,11 +615,11 @@ local function barrack_towers()
     tt.unit.marker_offset = vec_2(0, ady(7))
     tt.unit.mod_offset = vec_2(0, ady(23))
 
-    tt = E:register_t("mod_holygrail", "mod_soldier_cooldown")
+    tt = RT("mod_holygrail", "mod_soldier_cooldown")
     tt.cooldown_factor = 0.7
     tt.modifier.duration = 8
 
-    tt = E:register_t("mod_blood_templar", "mod_blood")
+    tt = RT("mod_blood_templar", "mod_blood")
     tt.modifier.level = 1
     tt.modifier.duration = 3
     tt.dps.damage_min = 10
@@ -627,23 +627,23 @@ local function barrack_towers()
     tt.dps.damage_inc = 10
     tt.dps.damage_every = 1
 
-    local tower_assassin = E:register_t("tower_assassin", "tower_barrack_1")
-    E:add_comps(tower_assassin, "powers")
+    local tower_assassin = RT("tower_assassin", "tower_barrack_1")
+    AC(tower_assassin, "powers")
     tower_assassin.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0008"
     tower_assassin.info.enc_icon = 20
     tower_assassin.tower.type = "assassin"
     tower_assassin.tower.price = 185
-    tower_assassin.powers.sneak = E:clone_c("power")
+    tower_assassin.powers.sneak = CC("power")
     tower_assassin.powers.sneak.price_base = 225
     tower_assassin.powers.sneak.price_inc = 150
     tower_assassin.powers.sneak.enc_icon = 24
-    tower_assassin.powers.pickpocket = E:clone_c("power")
+    tower_assassin.powers.pickpocket = CC("power")
     tower_assassin.powers.pickpocket.price_base = 100
     tower_assassin.powers.pickpocket.price_inc = 75
     tower_assassin.powers.pickpocket.max_level = 3
     tower_assassin.powers.pickpocket.name = "PICK"
     tower_assassin.powers.pickpocket.enc_icon = 22
-    tower_assassin.powers.counter = E:clone_c("power")
+    tower_assassin.powers.counter = CC("power")
     tower_assassin.powers.counter.price_base = 125
     tower_assassin.powers.counter.price_inc = 125
     tower_assassin.powers.counter.enc_icon = 23
@@ -658,8 +658,8 @@ local function barrack_towers()
     tower_assassin.sound_events.insert = "AssassinTauntReady"
     tower_assassin.sound_events.change_rally_point = "AssassinTaunt"
 
-    tt = E:register_t("soldier_assassin", "soldier_militia")
-    E:add_comps(tt, "powers", "dodge", "cloak", "pickpocket")
+    tt = RT("soldier_assassin", "soldier_militia")
+    AC(tt, "powers", "dodge", "cloak", "pickpocket")
     anchor_y = 0.19
     image_y = 42
     tt.cloak.alpha = 154
@@ -667,7 +667,7 @@ local function barrack_towers()
     tt.dodge.animation = "dodge"
     tt.dodge.chance = 0.4
     tt.dodge.chance_inc = 0.1
-    tt.dodge.counter_attack = E:clone_c("melee_attack")
+    tt.dodge.counter_attack = CC("melee_attack")
     tt.dodge.counter_attack.animation = "counter"
     tt.dodge.counter_attack.cooldown = 0
     tt.dodge.counter_attack.damage_inc = 10
@@ -689,7 +689,7 @@ local function barrack_towers()
     tt.melee.attacks[1].damage_max = 14
     tt.melee.attacks[1].damage_min = 10
     tt.melee.attacks[1].forced_cooldown = true
-    tt.melee.attacks[2] = E:clone_c("melee_attack")
+    tt.melee.attacks[2] = CC("melee_attack")
     tt.melee.attacks[2].animation = "sneak"
     tt.melee.attacks[2].chance = 0.05
     tt.melee.attacks[2].chance_inc = 0.05
@@ -706,7 +706,7 @@ local function barrack_towers()
     tt.melee.attacks[2].vis_bans = bor(F_FLYING, F_CLIFF)
     tt.melee.attacks[2].vis_flags = F_BLOCK
     tt.melee.attacks[2].never_interrupt = true
-    tt.melee.attacks[3] = E:clone_c("melee_attack")
+    tt.melee.attacks[3] = CC("melee_attack")
     tt.melee.attacks[3].animation = "sneak"
     tt.melee.attacks[3].chance = 0.02
     tt.melee.attacks[3].chance_inc = 0.01
@@ -734,29 +734,29 @@ local function barrack_towers()
     tt.pickpocket.sound = "AssassinGold"
     tt.pickpocket.steal_max = 3
     tt.pickpocket.steal_min = 1
-    tt.powers.counter = E:clone_c("power")
-    tt.powers.pickpocket = E:clone_c("power")
-    tt.powers.sneak = E:clone_c("power")
+    tt.powers.counter = CC("power")
+    tt.powers.pickpocket = CC("power")
+    tt.powers.sneak = CC("power")
     tt.render.sprites[1].prefix = "soldierassassin"
     tt.render.sprites[1].anchor.y = anchor_y
     tt.soldier.melee_slot_offset = vec_2(5, 0)
     tt.unit.marker_offset = vec_2(0, ady(8))
     tt.unit.mod_offset = vec_2(0, ady(23))
 
-    tt = E:register_t("tower_barrack_dwarf", "tower_barrack_1")
-    E:add_comps(tt, "powers")
+    tt = RT("tower_barrack_dwarf", "tower_barrack_1")
+    AC(tt, "powers")
     tt.barrack.rally_range = 180
     tt.barrack.soldier_type = "soldier_dwarf"
     tt.barrack.max_soldiers = 4
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0018"
-    tt.powers.armor = E:clone_c("power")
+    tt.powers.armor = CC("power")
     tt.powers.armor.max_level = 2
     tt.powers.armor.price_base = 125
     tt.powers.armor.price_inc = 125
-    tt.powers.beer = E:clone_c("power")
+    tt.powers.beer = CC("power")
     tt.powers.beer.price_base = 160
     tt.powers.beer.price_inc = 140
-    tt.powers.hammer = E:clone_c("power")
+    tt.powers.hammer = CC("power")
     tt.powers.hammer.price_base = 100
     tt.powers.hammer.price_inc = 100
     tt.render.sprites[1].name = "terrain_barrack_%04i"
@@ -771,10 +771,10 @@ local function barrack_towers()
     tt.tower.price = 185
     tt.tower.type = "barrack_dwarf"
 
-    tt = E:register_t("soldier_dwarf", "soldier_militia")
+    tt = RT("soldier_dwarf", "soldier_militia")
     image_y = 42
     anchor_y = 0.21428571428571427
-    E:add_comps(tt, "powers")
+    AC(tt, "powers")
     tt.beer = {}
     tt.beer.animation = "beer"
     tt.beer.cooldown = 12
@@ -802,15 +802,15 @@ local function barrack_towers()
     end
     tt.melee.range = 64
     tt.motion.max_speed = 2.5 * FPS
-    tt.powers.armor = E:clone_c("power")
-    tt.powers.beer = E:clone_c("power")
-    tt.powers.hammer = E:clone_c("power")
+    tt.powers.armor = CC("power")
+    tt.powers.beer = CC("power")
+    tt.powers.hammer = CC("power")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].prefix = "soldierdwarf"
     tt.unit.marker_offset = vec_2(0, ady(9))
 
-    tt = E:register_t("mod_dwarf_beer", "modifier")
-    E:add_comps(tt, "hps", "render")
+    tt = RT("mod_dwarf_beer", "modifier")
+    AC(tt, "hps", "render")
     tt.hps.heal_min = 20
     tt.hps.heal_max = 20
     tt.hps.heal_every = 1
@@ -820,7 +820,7 @@ local function barrack_towers()
     tt.render.sprites[1].name = "dwarf_beer_aura"
     tt.render.sprites[1].loop = true
     tt.render.sprites[1].z = Z_DECALS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "dwarf_beer_bubbles"
     tt.render.sprites[2].loop = true
     tt.render.sprites[2].offset.y = 10
@@ -829,8 +829,8 @@ local function barrack_towers()
     tt.main_script.update = scripts.mod_hps.update
     tt.main_script.remove = scripts.mod_dwarf_beer.remove
 
-    tt = E:register_t("tower_barrack_mercenaries", "tower_barrack_1")
-    E:add_comps(tt, "powers")
+    tt = RT("tower_barrack_mercenaries", "tower_barrack_1")
+    AC(tt, "powers")
     tt.tower.type = "mercenaries_desert"
     tt.tower.level = 1
     tt.tower.price = 185
@@ -847,14 +847,14 @@ local function barrack_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "idle"
     tt.render.sprites[2].offset = vec_2(0, 35)
     tt.render.sprites[2].prefix = "tower_merc_camp_desert"
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].name = "tower_merc_camp_desert_fire"
     tt.render.sprites[3].offset = vec_2(-23, 15)
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].name = "tower_merc_camp_desert_fire"
     tt.render.sprites[4].offset = vec_2(23, 15)
     tt.render.sprites[4].ts = 0.08
@@ -863,17 +863,17 @@ local function barrack_towers()
     tt.barrack.soldier_type = "soldier_djinn"
     tt.barrack.rally_range = 150
     tt.barrack.respawn_offset = vec_2(0, 0)
-    tt.powers.djspell = E:clone_c("power")
+    tt.powers.djspell = CC("power")
     tt.powers.djspell.price_base = 300
     tt.powers.djspell.price_inc = 200
-    tt.powers.djshock = E:clone_c("power")
+    tt.powers.djshock = CC("power")
     tt.powers.djshock.price_base = 150
     tt.powers.djshock.price_inc = 100
 
-    tt = E:register_t("soldier_djinn", "soldier_militia")
+    tt = RT("soldier_djinn", "soldier_militia")
     anchor_y = 0.14
     image_y = 54
-    E:add_comps(tt, "timed_attacks", "powers")
+    AC(tt, "timed_attacks", "powers")
     tt.health.armor = 0
     tt.health.magic_armor = 0.3
     tt.health.dead_lifetime = 12
@@ -892,9 +892,9 @@ local function barrack_towers()
     tt.render.sprites[1].prefix = "soldierdjinn"
     tt.render.sprites[1].anchor.y = anchor_y
     tt.soldier.melee_slot_offset = vec_2(10, 0)
-    tt.powers.djspell = E:clone_c("power")
-    tt.powers.djshock = E:clone_c("power")
-    tt.timed_attacks.list[1] = E:clone_c("spell_attack")
+    tt.powers.djspell = CC("power")
+    tt.powers.djshock = CC("power")
+    tt.timed_attacks.list[1] = CC("spell_attack")
     tt.timed_attacks.list[1].spell = "spell_djinn"
     tt.timed_attacks.list[1].max_range = 160
     tt.timed_attacks.list[1].cooldown = 16
@@ -904,7 +904,7 @@ local function barrack_towers()
     tt.timed_attacks.list[1].power_name = "djspell"
     tt.timed_attacks.list[1].disabled = true
     tt.timed_attacks.list[1].level = 0
-    tt.timed_attacks.list[2] = E:clone_c("spell_attack")
+    tt.timed_attacks.list[2] = CC("spell_attack")
     tt.timed_attacks.list[2].spell = "shock_djinn"
     tt.timed_attacks.list[2].max_range = 160
     tt.timed_attacks.list[2].cooldown = 10
@@ -922,44 +922,44 @@ local function barrack_towers()
     -- tt.sound_events.insert = "GenieTaunt"
     tt.sound_events.change_rally_point = "GenieTaunt"
 
-    tt = E:register_t("spell_djinn", "spell")
+    tt = RT("spell_djinn", "spell")
     tt.main_script.insert = scripts.spell_djinn.insert
     tt.fx_options = {"fx_djinn_frog", "fx_djinn_chest", "fx_djinn_harp"}
     tt.spell.damage_base = 250
     tt.spell.damage_inc = 250
     tt.invalid_rate = 0.2
 
-    tt = E:register_t("fx_djinn_frog", "fx")
+    tt = RT("fx_djinn_frog", "fx")
     tt.render.sprites[1].name = "fx_djinn_frog"
     tt.render.sprites[1].anchor.y = 0.16
     tt.render.sprites[1].z = Z_OBJECTS
 
-    tt = E:register_t("fx_djinn_chest", "decal_timed")
+    tt = RT("fx_djinn_chest", "decal_timed")
     tt.render.sprites[1].name = "soldier_djinn_polyshapes_0001"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].anchor.y = 0.16
     tt.timed.duration = 4
 
-    tt = E:register_t("fx_djinn_harp", "decal_timed")
+    tt = RT("fx_djinn_harp", "decal_timed")
     tt.render.sprites[1].name = "soldier_djinn_polyshapes_0002"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].anchor.y = 0.16
     tt.timed.duration = 4
 
-    tt = E:register_t("shock_djinn", "spell")
+    tt = RT("shock_djinn", "spell")
     tt.main_script.insert = scripts.shock_djinn.insert
     tt.spell.damage_base = 50
     tt.spell.damage_inc = 25
     tt.mod = "mod_djinn_shock"
 
-    tt = E:register_t("mod_djinn_shock", "mod_stun")
+    tt = RT("mod_djinn_shock", "mod_stun")
     tt.modifier.vis_flags = bor(F_MOD, F_STUN)
     tt.modifier.vis_bans = bor(F_BOSS)
     tt.duration_inc = 1
     tt.duration_base = 1
 
-    tt = E:register_t("tower_barrack_pirates", "tower")
-    E:add_comps(tt, "barrack", "powers")
+    tt = RT("tower_barrack_pirates", "tower")
+    AC(tt, "barrack", "powers")
     tt.tower.type = "mercenaries_pirates"
     tt.tower.level = 1
     tt.tower.price = 195
@@ -972,18 +972,18 @@ local function barrack_towers()
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0014"
     tt.main_script.update = scripts.tower_barrack_mercenaries.update
     tt.main_script.remove = scripts.tower_barrack.remove
-    tt.powers.bigbomb = E:clone_c("power")
+    tt.powers.bigbomb = CC("power")
     tt.powers.bigbomb.price_base = 225
     tt.powers.bigbomb.price_inc = 125
     tt.powers.bigbomb.enc_icon = 18
-    tt.powers.quickup = E:clone_c("power")
+    tt.powers.quickup = CC("power")
     tt.powers.quickup.price_base = 110
     tt.powers.quickup.price_inc = 110
     tt.powers.quickup.max_level = 2
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].prefix = "tower_merc_camp_pirates"
     tt.render.sprites[2].name = "idle"
     tt.render.sprites[2].offset = vec_2(0, 35)
@@ -992,8 +992,8 @@ local function barrack_towers()
     tt.barrack.respawn_offset = vec_2(0, 0)
     tt.sound_events.insert = "PiratesTaunt"
 
-    tt = E:register_t("soldier_pirate_flamer", "soldier_militia")
-    E:add_comps(tt, "ranged", "powers")
+    tt = RT("soldier_pirate_flamer", "soldier_militia")
+    AC(tt, "ranged", "powers")
     anchor_y = 0.16
     image_y = 36
     tt.health.armor = 0
@@ -1034,10 +1034,10 @@ local function barrack_towers()
     tt.ranged.attacks[2].node_prediction = fts(28)
     -- tt.sound_events.insert = "PiratesTaunt"
     tt.sound_events.change_rally_point = "PiratesTaunt"
-    tt.powers.bigbomb = E:clone_c("power")
-    tt.powers.quickup = E:clone_c("power")
+    tt.powers.bigbomb = CC("power")
+    tt.powers.quickup = CC("power")
 
-    tt = E:register_t("bomb_molotov", "bomb")
+    tt = RT("bomb_molotov", "bomb")
     tt.render.sprites[1].name = "proy_molotov"
     tt.bullet.flight_time = fts(18)
     tt.bullet.damage_min = 9
@@ -1046,11 +1046,11 @@ local function barrack_towers()
     tt.bullet.hit_fx = "fx_explosion_molotov"
     tt.sound_events.insert = "AxeSound"
 
-    tt = E:register_t("fx_explosion_molotov", "fx")
+    tt = RT("fx_explosion_molotov", "fx")
     tt.render.sprites[1].name = "explosion_molotov"
     tt.render.sprites[1].anchor.y = 0.18
 
-    tt = E:register_t("bomb_molotov_big", "bomb_molotov")
+    tt = RT("bomb_molotov_big", "bomb_molotov")
     tt.render.sprites[1].scale = vec_2(1.5, 1.5)
     tt.bullet.rotation_speed = 30 * FPS * math.pi / 180
     tt.bullet.damage_min = 10
@@ -1062,10 +1062,10 @@ local function barrack_towers()
     tt.bullet.mod = "mod_molotov_big"
     tt.bullet.hit_fx = "fx_explosion_molotov_big"
 
-    tt = E:register_t("fx_explosion_molotov_big", "fx_explosion_molotov")
+    tt = RT("fx_explosion_molotov_big", "fx_explosion_molotov")
     tt.render.sprites[1].scale = vec_2(1.2, 1.2)
 
-    tt = E:register_t("mod_molotov_big", "mod_lava")
+    tt = RT("mod_molotov_big", "mod_lava")
     tt.modifier.duration = 2
     tt.dps.damage_min = 6
     tt.dps.damage_max = 6
@@ -1076,21 +1076,21 @@ local function barrack_towers()
     tt.render.sprites[1].name = "small"
     tt.render.sprites[1].size_names = {"small", "big", "big"}
 
-    tt = E:register_t("tower_blade", "tower_barrack_1")
-    E:add_comps(tt, "powers")
+    tt = RT("tower_blade", "tower_barrack_1")
+    AC(tt, "powers")
     tt.info.enc_icon = 20
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0005"
     tt.barrack.soldier_type = "soldier_blade"
     tt.barrack.rally_range = 160
-    tt.powers.perfect_parry = E:clone_c("power")
+    tt.powers.perfect_parry = CC("power")
     tt.powers.perfect_parry.price_base = 200
     tt.powers.perfect_parry.price_inc = 200
     tt.powers.perfect_parry.enc_icon = 6
-    tt.powers.blade_dance = E:clone_c("power")
+    tt.powers.blade_dance = CC("power")
     tt.powers.blade_dance.price_base = 225
     tt.powers.blade_dance.price_inc = 250
     tt.powers.blade_dance.enc_icon = 5
-    tt.powers.swirling = E:clone_c("power")
+    tt.powers.swirling = CC("power")
     tt.powers.swirling.price_base = 250
     tt.powers.swirling.price_inc = 150
     tt.powers.swirling.max_level = 1
@@ -1103,8 +1103,8 @@ local function barrack_towers()
     tt.tower.price = 185
     tt.tower.type = "blade"
 
-    tt = E:register_t("tower_forest", "tower_barrack_1")
-    E:add_comps(tt, "powers")
+    tt = RT("tower_forest", "tower_barrack_1")
+    AC(tt, "powers")
     tt.barrack.rally_range = 165
     tt.info.enc_icon = 19
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0006"
@@ -1112,16 +1112,16 @@ local function barrack_towers()
     tt.barrack.max_soldiers = 2
     tt.barrack.soldier_type = "soldier_forest"
     tt.barrack.rally_angle_offset = math.pi / 3
-    tt.powers.circle = E:clone_c("power")
+    tt.powers.circle = CC("power")
     tt.powers.circle.price_base = 225
     tt.powers.circle.price_inc = 190
     tt.powers.circle.enc_icon = 9
-    tt.powers.eerie = E:clone_c("power")
+    tt.powers.eerie = CC("power")
     tt.powers.eerie.price_base = 225
     tt.powers.eerie.price_inc = 200
     tt.powers.eerie.max_level = 2
     tt.powers.eerie.enc_icon = 10
-    tt.powers.oak = E:clone_c("power")
+    tt.powers.oak = CC("power")
     tt.powers.oak.price_base = 275
     tt.powers.oak.price_inc = 250
     tt.powers.oak.enc_icon = 11
@@ -1133,14 +1133,14 @@ local function barrack_towers()
     tt.tower.price = 185
     tt.tower.type = "forest"
 
-    tt = E:register_t("soldier_blade", "soldier_barrack_1")
-    E:add_comps(tt, "powers", "dodge", "timed_attacks")
+    tt = RT("soldier_blade", "soldier_barrack_1")
+    AC(tt, "powers", "dodge", "timed_attacks")
     image_y = 68
     anchor_y = 15 / image_y
     tt.dodge.animation = "dodge"
     tt.dodge.chance = 0
     tt.dodge.chance_inc = 0.1
-    tt.dodge.counter_attack = E:clone_c("area_attack")
+    tt.dodge.counter_attack = CC("area_attack")
     tt.dodge.counter_attack.animation = "perfect_parry"
     tt.dodge.counter_attack.duration = 2
     tt.dodge.counter_attack.damage_every = fts(5)
@@ -1177,16 +1177,16 @@ local function barrack_towers()
     tt.melee.forced_cooldown = tt.melee.attacks[1].cooldown
     tt.melee.range = 60
     tt.motion.max_speed = 80
-    tt.powers.perfect_parry = E:clone_c("power")
-    tt.powers.blade_dance = E:clone_c("power")
+    tt.powers.perfect_parry = CC("power")
+    tt.powers.blade_dance = CC("power")
     tt.powers.blade_dance.damage_max = {35, 47, 56}
     tt.powers.blade_dance.damage_min = {25, 35, 40}
     tt.powers.blade_dance.hits = {2, 3, 4}
-    tt.powers.swirling = E:clone_c("power")
+    tt.powers.swirling = CC("power")
     tt.render.sprites[1].prefix = "soldier_blade"
     tt.render.sprites[1].anchor.y = anchor_y
     tt.soldier.melee_slot_offset = vec_2(5, 0)
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].cooldown = 9
     tt.timed_attacks.list[1].damage_max = nil
     tt.timed_attacks.list[1].damage_min = nil
@@ -1202,8 +1202,8 @@ local function barrack_towers()
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 14)
 
-    tt = E:register_t("soldier_forest", "soldier_barrack_1")
-    E:add_comps(tt, "powers", "timed_attacks", "ranged")
+    tt = RT("soldier_forest", "soldier_barrack_1")
+    AC(tt, "powers", "timed_attacks", "ranged")
     image_y = 114
     anchor_y = 31 / image_y
     tt.health.armor = 0
@@ -1224,9 +1224,9 @@ local function barrack_towers()
     tt.melee.forced_cooldown = tt.melee.attacks[1].cooldown
     tt.melee.range = 49.5
     tt.motion.max_speed = 65
-    tt.powers.circle = E:clone_c("power")
-    tt.powers.eerie = E:clone_c("power")
-    tt.powers.oak = E:clone_c("power")
+    tt.powers.circle = CC("power")
+    tt.powers.eerie = CC("power")
+    tt.powers.oak = CC("power")
     tt.ranged.attacks[1].animation = "ranged_attack"
     tt.ranged.attacks[1].bullet = "spear_forest"
     tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 35)}
@@ -1242,7 +1242,7 @@ local function barrack_towers()
     tt.render.sprites[1].prefix = "soldier_forest"
     tt.render.sprites[1].anchor.y = anchor_y
     tt.soldier.melee_slot_offset = vec_2(5, 0)
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animation = "circle"
     tt.timed_attacks.list[1].cast_time = fts(15)
     tt.timed_attacks.list[1].cooldown = 10
@@ -1252,7 +1252,7 @@ local function barrack_towers()
     tt.timed_attacks.list[1].trigger_hp_factor = 0.8
     tt.timed_attacks.list[1].vis_bans = bor(F_ENEMY)
     tt.timed_attacks.list[1].vis_flags = bor(F_MOD)
-    tt.timed_attacks.list[2] = E:clone_c("aura_attack")
+    tt.timed_attacks.list[2] = CC("aura_attack")
     tt.timed_attacks.list[2].animation = "eerie"
     tt.timed_attacks.list[2].cast_time = fts(20)
     tt.timed_attacks.list[2].cooldown = 16
@@ -1266,7 +1266,7 @@ local function barrack_towers()
     tt.unit.mod_offset = vec_2(0, 25)
     tt.unit.hit_offset = vec_2(0, 25)
 
-    tt = E:register_t("spear_forest", "arrow")
+    tt = RT("spear_forest", "arrow")
     tt.bullet.damage_max = 69
     tt.bullet.damage_min = 45
     tt.bullet.miss_decal = "forestKeeper_proy_0002-f"
@@ -1277,7 +1277,7 @@ local function barrack_towers()
     tt.render.sprites[1].name = "forestKeeper_proy_0001-f"
     tt.render.sprites[1].anchor.x = 0.8260869565217391
     tt.sound_events.insert = "TowerForestKeeperNormalSpear"
-    tt = E:register_t("spear_forest_oak", "spear_forest")
+    tt = RT("spear_forest_oak", "spear_forest")
     tt.bullet.damage_max = 55
     tt.bullet.damage_min = 55
     tt.bullet.damage_inc = 35
@@ -1287,7 +1287,7 @@ local function barrack_towers()
     tt.render.sprites[1].name = "forestKeeper_proySpecial_0001-f"
     tt.sound_events.insert = "TowerForestKeeperAncientSpear"
 
-    tt = E:register_t("aura_forest_eerie", "aura")
+    tt = RT("aura_forest_eerie", "aura")
     tt.aura.mods = {"mod_forest_eerie_slow", "mod_forest_eerie_dps"}
     tt.aura.radius = 60
     tt.aura.duration = 1.5
@@ -1301,11 +1301,11 @@ local function barrack_towers()
     tt.roots_count_inc = 3
     tt.sound_events.insert = "TowerForestKeeperEerieGarden"
 
-    tt = E:register_t("mod_forest_circle", "modifier")
-    E:add_comps(tt, "hps", "render")
+    tt = RT("mod_forest_circle", "modifier")
+    AC(tt, "hps", "render")
     tt.render.sprites[1].name = "decal_mod_forest_circle"
     tt.render.sprites[1].z = Z_DECALS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "forestKeeper_soldierBuff"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].sort_y_offset = -1
@@ -1321,12 +1321,12 @@ local function barrack_towers()
     tt.main_script.insert = scripts.mod_hps.insert
     tt.main_script.update = scripts.mod_hps.update
 
-    tt = E:register_t("mod_forest_eerie_slow", "mod_slow")
+    tt = RT("mod_forest_eerie_slow", "mod_slow")
     tt.modifier.duration = 0.5
     tt.slow.factor = 0.5
 
-    tt = E:register_t("mod_forest_eerie_dps", "modifier")
-    E:add_comps(tt, "dps")
+    tt = RT("mod_forest_eerie_dps", "modifier")
+    AC(tt, "dps")
     tt.dps.damage_max = 2
     tt.dps.damage_min = 2
     tt.dps.damage_inc = 1
@@ -1447,8 +1447,8 @@ local function barrack_towers()
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].hide_after_runs = 1
 
-    tt = E:register_t("tower_ewok", "tower_barrack_1")
-    E:add_comps(tt, "powers")
+    tt = RT("tower_ewok", "tower_barrack_1")
+    AC(tt, "powers")
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0013"
     tt.barrack.max_soldiers = 4
     tt.barrack.rally_range = 175
@@ -1459,11 +1459,11 @@ local function barrack_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "ewok_hut_0002"
     tt.render.sprites[2].offset = vec_2(0, 32)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].loop = false
     tt.render.sprites[3].name = "close"
     tt.render.sprites[3].offset = vec_2(0, 32)
@@ -1477,26 +1477,26 @@ local function barrack_towers()
     tt.tower.terrain_style = nil
     tt.tower.type = "ewok"
     tt.ui.click_rect = r(-40, -10, 80, 90)
-    tt.powers.armor = E:clone_c("power")
+    tt.powers.armor = CC("power")
     tt.powers.armor.max_level = 3
     tt.powers.armor.price_base = 100
     tt.powers.armor.price_inc = 100
-    tt.powers.tear = E:clone_c("power")
+    tt.powers.tear = CC("power")
     tt.powers.tear.max_level = 3
     tt.powers.tear.price_base = 200
     tt.powers.tear.price_inc = 100
-    tt.powers.shield = E:clone_c("power")
+    tt.powers.shield = CC("power")
     tt.powers.shield.max_level = 2
     tt.powers.shield.price_base = 150
     tt.powers.shield.price_inc = 150
 
-    tt = E:register_t("soldier_ewok", "soldier_militia")
-    E:add_comps(tt, "dodge", "ranged", "powers")
+    tt = RT("soldier_ewok", "soldier_militia")
+    AC(tt, "dodge", "ranged", "powers")
     image_y = 36
     anchor_y = 7 / image_y
-    tt.powers.armor = E:clone_c("power")
-    tt.powers.shield = E:clone_c("power")
-    tt.powers.tear = E:clone_c("power")
+    tt.powers.armor = CC("power")
+    tt.powers.shield = CC("power")
+    tt.powers.tear = CC("power")
     tt.powers.shield.on_power_upgrade = function(this, power_name, power)
         this.dodge.duration = this.dodge.duration + 1
         this.dodge.heal = this.dodge.heal + 25
@@ -1554,7 +1554,7 @@ local function barrack_towers()
         this.ranged.attacks[1].mod = "mod_ewok_tear"
     end
     tt.regen.cooldown = 0.5
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"running"}
@@ -1566,7 +1566,7 @@ local function barrack_towers()
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 10)
 
-    tt = E:register_t("bullet_soldier_ewok", "arrow")
+    tt = RT("bullet_soldier_ewok", "arrow")
     tt.bullet.damage_max = 24
     tt.bullet.damage_min = 17
     tt.bullet.damage_inc = 10
@@ -1577,14 +1577,14 @@ local function barrack_towers()
     tt.render.sprites[1].name = "bullet_soldier_ewok"
     tt.render.sprites[1].animated = true
 
-    tt = E:register_t("mod_ewok_tear", "mod_damage")
+    tt = RT("mod_ewok_tear", "mod_damage")
     tt.damage_min = 0.01
     tt.damage_max = 0.01
     tt.damage_type = DAMAGE_ARMOR
     tt.damage_inc = 0.01
 
-    tt = E:register_t("tower_baby_ashbite", "tower")
-    E:add_comps(tt, "barrack", "powers")
+    tt = RT("tower_baby_ashbite", "tower")
+    AC(tt, "barrack", "powers")
     tt.tower.hide_dust = true
     tt.tower.type = "baby_ashbite"
     tt.tower.level = 1
@@ -1598,11 +1598,11 @@ local function barrack_towers()
     tt.render.sprites[1].offset = vec_2(0, 26)
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].hover_off_hidden = true
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "babyAshbite_tower_layer1_0001"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].offset = vec_2(0, 26)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].name = "babyAshbite_tower_layer2_0005"
     tt.render.sprites[3].animated = false
     tt.render.sprites[3].offset = vec_2(0, 26)
@@ -1616,17 +1616,17 @@ local function barrack_towers()
     tt.main_script.remove = scripts.tower_barrack.remove
     tt.sound_events.insert = "ElvesAshbiteDeath"
     tt.sound_events.change_rally_point = "ElvesAshbiteConfirm"
-    tt.powers.blazing_breath = E:clone_c("power")
+    tt.powers.blazing_breath = CC("power")
     tt.powers.blazing_breath.price_base = 275
     tt.powers.blazing_breath.price_inc = 225
     tt.powers.blazing_breath.max_level = 3
-    tt.powers.fiery_mist = E:clone_c("power")
+    tt.powers.fiery_mist = CC("power")
     tt.powers.fiery_mist.price_base = 275
     tt.powers.fiery_mist.price_inc = 0
     tt.powers.fiery_mist.max_level = 1
 
-    tt = E:register_t("soldier_baby_ashbite", "soldier")
-    E:add_comps(tt, "ranged", "powers")
+    tt = RT("soldier_baby_ashbite", "soldier")
+    AC(tt, "ranged", "powers")
     tt.health.armor = 0.5
     tt.health.dead_lifetime = 10
     tt.health.hp_max = 450
@@ -1643,13 +1643,13 @@ local function barrack_towers()
     tt.main_script.update = scripts.soldier_baby_ashbite.update
     tt.motion.max_speed = 90
     tt.regen.cooldown = 1
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = 0.0625
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"idle"}
     tt.render.sprites[1].prefix = "babyAshbite"
     -- tt.render.sprites[1].sync_idx = 8
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "babyAshbite_0099"
     tt.render.sprites[2].anchor.y = 0.0625
@@ -1661,9 +1661,9 @@ local function barrack_towers()
     tt.unit.mod_offset = vec_2(0, ady(25))
     tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET, F_POISON)
     tt.vis.flags = bor(tt.vis.flags, F_HERO, F_FLYING)
-    tt.powers.blazing_breath = E:clone_c("power")
-    tt.powers.fiery_mist = E:clone_c("power")
-    tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+    tt.powers.blazing_breath = CC("power")
+    tt.powers.fiery_mist = CC("power")
+    tt.ranged.attacks[1] = CC("bullet_attack")
     tt.ranged.attacks[1].bullet = "fireball_baby_ashbite"
     tt.ranged.attacks[1].bullet_start_offset = {vec_2(28, 70)}
     tt.ranged.attacks[1].cooldown = 1.3 + fts(28)
@@ -1675,7 +1675,7 @@ local function barrack_towers()
     tt.ranged.attacks[1].animation = "shoot"
     tt.ranged.attacks[1].sound_shoot = "ElvesAshbiteSpit"
     tt.ranged.attacks[1].node_prediction = nil
-    tt.ranged.attacks[2] = E:clone_c("bullet_attack")
+    tt.ranged.attacks[2] = CC("bullet_attack")
     tt.ranged.attacks[2].level = 0
     tt.ranged.attacks[2].power_name = "blazing_breath"
     tt.ranged.attacks[2].disabled = true
@@ -1689,7 +1689,7 @@ local function barrack_towers()
     tt.ranged.attacks[2].animation = "special"
     tt.ranged.attacks[2].sound = "ElvesAshbiteFlameThrower"
     tt.ranged.attacks[2].vis_bans = F_FLYING
-    tt.ranged.attacks[3] = E:clone_c("bullet_attack")
+    tt.ranged.attacks[3] = CC("bullet_attack")
     tt.ranged.attacks[3].level = 0
     tt.ranged.attacks[3].power_name = "fiery_mist"
     tt.ranged.attacks[3].disabled = true
@@ -1704,7 +1704,7 @@ local function barrack_towers()
     tt.ranged.attacks[3].vis_bans = F_FLYING
     tt.ranged.attacks[3].sound = "ElvesAshbiteSmoke"
 
-    tt = E:register_t("fireball_baby_ashbite", "bullet")
+    tt = RT("fireball_baby_ashbite", "bullet")
     tt.render.sprites[1].name = "fireball_baby_ashbite"
     tt.render.sprites[1].z = Z_BULLETS
     tt.bullet.damage_min = 83
@@ -1721,14 +1721,14 @@ local function barrack_towers()
     tt.main_script.update = scripts.fireball.update
     tt.sound_events.hit = "ElvesAshbiteFireball"
 
-    tt = E:register_t("fx_fireball_baby_ashbite_hit", "fx")
+    tt = RT("fx_fireball_baby_ashbite_hit", "fx")
     tt.render.sprites[1].name = "fx_fireball_baby_ashbite_hit"
     tt.render.sprites[1].anchor.y = 0.24
-    tt = E:register_t("fx_fireball_baby_ashbite_hit_air", "fx")
+    tt = RT("fx_fireball_baby_ashbite_hit_air", "fx")
     tt.render.sprites[1].name = "fx_fireball_baby_ashbite_hit_air"
     tt.render.sprites[1].anchor.y = 0.24
 
-    tt = E:register_t("breath_baby_ashbite", "bullet")
+    tt = RT("breath_baby_ashbite", "bullet")
     tt.render = nil
     tt.bullet.damage_type = DAMAGE_NONE
     tt.bullet.min_speed = 240
@@ -1741,7 +1741,7 @@ local function barrack_towers()
     tt.bullet.hit_decal = "aura_breath_baby_ashbite"
     tt.main_script.update = scripts.fireball.update
 
-    tt = E:register_t("decal_emit_breath_baby_ashbite", "decal_scripted")
+    tt = RT("decal_emit_breath_baby_ashbite", "decal_scripted")
     tt.duration = fts(18)
     tt.render.sprites[1].name = "babyAshbite_0158"
     tt.render.sprites[1].animated = false
@@ -1750,12 +1750,12 @@ local function barrack_towers()
     tt.emit_ps = "ps_emit_breath_baby_ashbite"
     tt.main_script.update = scripts.decal_emit_breath_baby_ashbite.update
     tt.flight_time = nil
-    tt = E:register_t("fx_breath_baby_ashbite_hit", "fx")
+    tt = RT("fx_breath_baby_ashbite_hit", "fx")
     tt.render.sprites[1].name = "baby_ashbite_breath_fire"
     tt.render.sprites[1].anchor.y = 0.35714285714285715
 
-    tt = E:register_t("aura_breath_baby_ashbite", "aura")
-    E:add_comps(tt, "tween", "render")
+    tt = RT("aura_breath_baby_ashbite", "aura")
+    AC(tt, "tween", "render")
     tt.main_script.update = scripts.aura_apply_damage.update
     tt.aura.duration = fts(30)
     tt.aura.damage_inc = 16.666666666666668
@@ -1769,7 +1769,7 @@ local function barrack_towers()
     tt.render.sprites[1].anchor.y = 0.38095238095238093
     tt.render.sprites[1].z = Z_DECALS
     tt.render.sprites[1].loop = false
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "babyAshbite_specialFire_decal"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_DECALS
@@ -1777,17 +1777,17 @@ local function barrack_towers()
     tt.tween.props[1].sprite_id = 2
     tt.tween.props[1].keys = {{0, 255}, {fts(20), 0}}
 
-    tt = E:register_t("fierymist_baby_ashbite", "breath_baby_ashbite")
+    tt = RT("fierymist_baby_ashbite", "breath_baby_ashbite")
     tt.bullet.emit_decal = "decal_emit_fiery_mist_baby_ashbite"
     tt.bullet.hit_decal = "aura_fiery_mist_baby_ashbite"
     tt.bullet.hit_fx = nil
 
-    tt = E:register_t("decal_emit_fiery_mist_baby_ashbite", "decal_emit_breath_baby_ashbite")
+    tt = RT("decal_emit_fiery_mist_baby_ashbite", "decal_emit_breath_baby_ashbite")
     tt.duration = fts(18)
     tt.render.sprites[1].hidden = true
     tt.emit_ps = "ps_emit_fiery_mist_baby_ashbite"
 
-    tt = E:register_t("aura_fiery_mist_baby_ashbite", "aura")
+    tt = RT("aura_fiery_mist_baby_ashbite", "aura")
     tt.main_script.update = scripts.aura_fiery_mist_baby_ashbite.update
     tt.fx = "decal_fiery_mist_baby_ashbite"
     tt.aura.duration = 2.5
@@ -1800,11 +1800,11 @@ local function barrack_towers()
     tt.aura.radius = 50
     tt.aura.vis_bans = bor(F_FRIEND)
 
-    tt = E:register_t("mod_slow_baby_ashbite", "mod_slow")
+    tt = RT("mod_slow_baby_ashbite", "mod_slow")
     tt.slow.factor = 0.3
     tt.slow.factor_inc = 0.1
 
-    tt = E:register_t("decal_fiery_mist_baby_ashbite", "decal_tween")
+    tt = RT("decal_fiery_mist_baby_ashbite", "decal_tween")
     tt.render.sprites[1].name = "baby_ashbite_fierymist_decal"
     tt.render.sprites[1].loop = true
     tt.render.sprites[1].anchor.y = 0.25

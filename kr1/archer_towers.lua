@@ -101,7 +101,7 @@ local function archer_towers()
     tt.dps.kill = true
     tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
 
-    tt = E:register_t("mod_ranger_slow", "mod_slow")
+    tt = RT("mod_ranger_slow", "mod_slow")
     tt.modifier.duration = 3
     tt.slow.factor = 0.9
 
@@ -131,19 +131,19 @@ local function archer_towers()
     tt.main_script.remove = scripts.mod_thorn.remove
 
 
-    local tower_crossbow = E:register_t("tower_crossbow", "tower_archer_1")
-    E:add_comps(tower_crossbow, "attacks", "powers")
+    local tower_crossbow = RT("tower_crossbow", "tower_archer_1")
+    AC(tower_crossbow, "attacks", "powers")
     tower_crossbow.info.portrait = (IS_PHONE_OR_TABLET and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0009"
     tower_crossbow.info.enc_icon = 17
     tower_crossbow.tower.type = "crossbow"
     tower_crossbow.tower.price = 230
-    tower_crossbow.powers.multishot = E:clone_c("power")
+    tower_crossbow.powers.multishot = CC("power")
     tower_crossbow.powers.multishot.price_base = 250
     tower_crossbow.powers.multishot.price_inc = 150
     tower_crossbow.powers.multishot.name = "BARRAGE"
     tower_crossbow.powers.multishot.enc_icon = 28
     tower_crossbow.powers.multishot.attack_idx = 2
-    tower_crossbow.powers.eagle = E:clone_c("power")
+    tower_crossbow.powers.eagle = CC("power")
     tower_crossbow.powers.eagle.price_base = 225
     tower_crossbow.powers.eagle.price_inc = 200
     tower_crossbow.powers.eagle.name = "FALCONER"
@@ -151,14 +151,14 @@ local function archer_towers()
     tower_crossbow.main_script.update = scripts.tower_crossbow.update
     tower_crossbow.main_script.remove = scripts.tower_crossbow.remove
     tower_crossbow.attacks.range = 200
-    tower_crossbow.attacks.list[1] = E:clone_c("bullet_attack")
+    tower_crossbow.attacks.list[1] = CC("bullet_attack")
     tower_crossbow.attacks.list[1].bullet = "arrow_crossbow"
     tower_crossbow.attacks.list[1].cooldown = 0.5
     tower_crossbow.attacks.list[1].shoot_time = fts(8)
     tower_crossbow.attacks.list[1].bullet_start_offset = {vec_2(-11, 60), vec_2(11, 60)}
     tower_crossbow.attacks.list[1].critical_chance = 0.12
     tower_crossbow.attacks.list[1].critical_chance_inc = 0.06
-    tower_crossbow.attacks.list[2] = E:clone_c("bullet_attack")
+    tower_crossbow.attacks.list[2] = CC("bullet_attack")
     tower_crossbow.attacks.list[2].bullet = "multishot_crossbow"
     tower_crossbow.attacks.list[2].cooldown = 6
     tower_crossbow.attacks.list[2].shoot_time = fts(1)
@@ -169,7 +169,7 @@ local function archer_towers()
     tower_crossbow.attacks.list[2].near_range_base = 35
     tower_crossbow.attacks.list[2].near_range_inc = 35
     tower_crossbow.attacks.list[2].bullet_start_offset = {vec_2(-11, 60), vec_2(11, 60)}
-    tower_crossbow.attacks.list[3] = E:clone_c("mod_attack")
+    tower_crossbow.attacks.list[3] = CC("mod_attack")
     tower_crossbow.attacks.list[3].mod = "mod_crossbow_eagle"
     tower_crossbow.attacks.list[3].cooldown = 1
     tower_crossbow.attacks.list[3].fly_cooldown = 10
@@ -189,7 +189,7 @@ local function archer_towers()
     tower_crossbow.render.sprites[4].angles.multishot_start = {"multishotStartUp", "multishotStartDown"}
     tower_crossbow.render.sprites[4].angles.multishot_loop = {"multishotLoopUp", "multishotLoopDown"}
     tower_crossbow.render.sprites[4].angles.multishot_end = {"multishotEndUp", "multishotEndDown"}
-    tower_crossbow.render.sprites[5] = E:clone_c("sprite")
+    tower_crossbow.render.sprites[5] = CC("sprite")
     tower_crossbow.render.sprites[5].prefix = "crossbow_eagle"
     tower_crossbow.render.sprites[5].name = "idle"
     tower_crossbow.render.sprites[5].offset = vec_2(2, 53)
@@ -197,14 +197,14 @@ local function archer_towers()
     tower_crossbow.render.sprites[5].draw_order = 6
     tower_crossbow.sound_events.insert = "CrossbowTauntReady"
 
-    local arrow_crossbow = E:register_t("arrow_crossbow", "arrow")
+    local arrow_crossbow = RT("arrow_crossbow", "arrow")
 
     arrow_crossbow.bullet.flight_time = fts(15)
     arrow_crossbow.bullet.damage_min = 15
     arrow_crossbow.bullet.damage_max = 23
     arrow_crossbow.bullet.pop = {"pop_shunt_violet"}
 
-    local multishot_crossbow = E:register_t("multishot_crossbow", "shotgun")
+    local multishot_crossbow = RT("multishot_crossbow", "shotgun")
 
     multishot_crossbow.bullet.damage_type = DAMAGE_SHOT
     multishot_crossbow.bullet.min_speed = 20 * FPS
@@ -219,8 +219,8 @@ local function archer_towers()
     multishot_crossbow.render.sprites[1].animated = false
     multishot_crossbow.sound_events.insert = "ArrowSound"
 
-    local mod_crossbow_eagle = E:register_t("mod_crossbow_eagle", "modifier")
-    E:add_comps(mod_crossbow_eagle, "render", "tween")
+    local mod_crossbow_eagle = RT("mod_crossbow_eagle", "modifier")
+    AC(mod_crossbow_eagle, "render", "tween")
     mod_crossbow_eagle.range_factor = 1.03
     mod_crossbow_eagle.range_factor_inc = 0.03
     mod_crossbow_eagle.cooldown_factor = 0.965
@@ -237,7 +237,7 @@ local function archer_towers()
     mod_crossbow_eagle.render.sprites[1].z = Z_TOWER_BASES + 1
 
     for i, p in ipairs({vec_2(22, 45), vec_2(40, 35), vec_2(58, 30), vec_2(77, 35), vec_2(95, 45)}) do
-        mod_crossbow_eagle.render.sprites[i + 1] = E:clone_c("sprite")
+        mod_crossbow_eagle.render.sprites[i + 1] = CC("sprite")
         mod_crossbow_eagle.render.sprites[i + 1].prefix = "crossbow_eagle_buff"
         mod_crossbow_eagle.render.sprites[i + 1].name = "idle"
         mod_crossbow_eagle.render.sprites[i + 1].anchor.y = 0.21
@@ -245,7 +245,7 @@ local function archer_towers()
         mod_crossbow_eagle.render.sprites[i + 1].ts = math.random()
     end
 
-    local decal_crossbow_eagle_preview = E:register_t("decal_crossbow_eagle_preview", "decal_tween")
+    local decal_crossbow_eagle_preview = RT("decal_crossbow_eagle_preview", "decal_tween")
 
     decal_crossbow_eagle_preview.render.sprites[1].name = "CrossbowHunterDecalDotted"
     decal_crossbow_eagle_preview.render.sprites[1].animated = false
@@ -256,18 +256,18 @@ local function archer_towers()
     decal_crossbow_eagle_preview.tween.props[1].loop = true
     decal_crossbow_eagle_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(1.15, 1.15)}, {0.5, vec_2(1, 1)}}
 
-    local tower_totem = E:register_t("tower_totem", "tower_archer_1")
-    E:add_comps(tower_totem, "powers")
+    local tower_totem = RT("tower_totem", "tower_archer_1")
+    AC(tower_totem, "powers")
     tower_totem.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0010"
     tower_totem.info.enc_icon = 18
     tower_totem.tower.type = "totem"
     tower_totem.tower.price = 215
-    tower_totem.powers.weakness = E:clone_c("power")
+    tower_totem.powers.weakness = CC("power")
     tower_totem.powers.weakness.price_base = 200
     tower_totem.powers.weakness.price_inc = 200
     tower_totem.powers.weakness.enc_icon = 30
     tower_totem.powers.weakness.attack_idx = 2
-    tower_totem.powers.silence = E:clone_c("power")
+    tower_totem.powers.silence = CC("power")
     tower_totem.powers.silence.price_base = 145
     tower_totem.powers.silence.price_inc = 145
     tower_totem.powers.silence.name = "SPIRITS"
@@ -279,11 +279,11 @@ local function archer_towers()
     tower_totem.attacks.list[1].cooldown = 0.8
     tower_totem.attacks.list[1].shoot_time = fts(8)
     tower_totem.attacks.list[1].bullet_start_offset = {vec_2(-12, 72), vec_2(12, 72)}
-    tower_totem.attacks.list[2] = E:clone_c("bullet_attack")
+    tower_totem.attacks.list[2] = CC("bullet_attack")
     tower_totem.attacks.list[2].bullet = "totem_weakness"
     tower_totem.attacks.list[2].cooldown = 9.5
     tower_totem.attacks.list[2].vis_bans = bor(F_CLIFF)
-    tower_totem.attacks.list[3] = E:clone_c("bullet_attack")
+    tower_totem.attacks.list[3] = CC("bullet_attack")
     tower_totem.attacks.list[3].bullet = "totem_silence"
     tower_totem.attacks.list[3].cooldown = 8
     tower_totem.attacks.list[3].vis_bans = bor(F_CLIFF)
@@ -295,25 +295,25 @@ local function archer_towers()
     tower_totem.render.sprites[3].offset = vec_2(-10, 58)
     tower_totem.render.sprites[4].prefix = "shootertotem"
     tower_totem.render.sprites[4].offset = vec_2(10, 58)
-    tower_totem.render.sprites[5] = E:clone_c("sprite")
+    tower_totem.render.sprites[5] = CC("sprite")
     tower_totem.render.sprites[5].name = "totem_fire"
     tower_totem.render.sprites[5].offset = vec_2(-25, 10)
-    tower_totem.render.sprites[6] = E:clone_c("sprite")
+    tower_totem.render.sprites[6] = CC("sprite")
     tower_totem.render.sprites[6].name = "totem_fire"
     tower_totem.render.sprites[6].offset = vec_2(25, 10)
-    tower_totem.render.sprites[7] = E:clone_c("sprite")
+    tower_totem.render.sprites[7] = CC("sprite")
     tower_totem.render.sprites[7].name = "totem_eyes_lower"
     tower_totem.render.sprites[7].offset = vec_2(0, 17)
     tower_totem.render.sprites[7].hidden = true
     tower_totem.render.sprites[7].loop = false
-    tower_totem.render.sprites[8] = E:clone_c("sprite")
+    tower_totem.render.sprites[8] = CC("sprite")
     tower_totem.render.sprites[8].name = "totem_eyes_upper"
     tower_totem.render.sprites[8].offset = vec_2(0, 41)
     tower_totem.render.sprites[8].hidden = true
     tower_totem.render.sprites[8].loop = false
     tower_totem.sound_events.insert = "TotemTauntReady"
 
-    local axe_totem = E:register_t("axe_totem", "arrow")
+    local axe_totem = RT("axe_totem", "arrow")
     axe_totem.render.sprites[1].name = "TotemAxe_0001"
     axe_totem.render.sprites[1].animated = false
     axe_totem.bullet.rotation_speed = 30 * FPS * math.pi / 180
@@ -327,8 +327,8 @@ local function archer_towers()
     axe_totem.bullet.pop_conds = DR_KILL
     axe_totem.sound_events.insert = "AxeSound"
 
-    local mod_silence_totem = E:register_t("mod_silence_totem", "modifier")
-    E:add_comps(mod_silence_totem, "render")
+    local mod_silence_totem = RT("mod_silence_totem", "modifier")
+    AC(mod_silence_totem, "render")
     mod_silence_totem.modifier.duration = 3
     mod_silence_totem.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal", "mod_shaman_rage"}
     mod_silence_totem.modifier.remove_banned = true
@@ -341,8 +341,8 @@ local function archer_towers()
     mod_silence_totem.render.sprites[1].loop = true
     mod_silence_totem.render.sprites[1].draw_order = 2
 
-    local mod_weakness_totem = E:register_t("mod_weakness_totem", "modifier")
-    -- E:add_comps(mod_weakness_totem, "render")
+    local mod_weakness_totem = RT("mod_weakness_totem", "modifier")
+    -- AC(mod_weakness_totem, "render")
     mod_weakness_totem.inflicted_damage_factor = 0.5
     mod_weakness_totem.received_damage_factor = 1.4
     mod_weakness_totem.modifier.duration = 3
@@ -357,8 +357,8 @@ local function archer_towers()
     -- mod_weakness_totem.render.sprites[1].loop = true
     -- mod_weakness_totem.render.sprites[1].z = Z_DECALS
 
-    local totem_silence = E:register_t("totem_silence", "aura")
-    E:add_comps(totem_silence, "render", "tween")
+    local totem_silence = RT("totem_silence", "aura")
+    AC(totem_silence, "render", "tween")
     totem_silence.aura.mod = "mod_silence_totem"
     totem_silence.aura.cycle_time = 0.3
     totem_silence.aura.duration = 2
@@ -371,11 +371,11 @@ local function archer_towers()
     totem_silence.render.sprites[1].scale = vec_2(0.64, 0.64)
     totem_silence.render.sprites[1].alpha = 50
     totem_silence.render.sprites[1].z = Z_DECALS
-    totem_silence.render.sprites[2] = E:clone_c("sprite")
+    totem_silence.render.sprites[2] = CC("sprite")
     totem_silence.render.sprites[2].name = "TotemTower_GroundEffect-Violet_0001"
     totem_silence.render.sprites[2].animated = false
     totem_silence.render.sprites[2].z = Z_DECALS
-    totem_silence.render.sprites[3] = E:clone_c("sprite")
+    totem_silence.render.sprites[3] = CC("sprite")
     totem_silence.render.sprites[3].prefix = "totem_violet"
     totem_silence.render.sprites[3].name = "start"
     totem_silence.render.sprites[3].loop = false
@@ -386,11 +386,11 @@ local function archer_towers()
     totem_silence.tween.props[1].name = "scale"
     totem_silence.tween.props[1].keys = {{0, vec_2(0.64, 0.64)}, {fts(15), vec_2(1, 1)}, {fts(30), vec_2(1.6, 1.6)}}
     totem_silence.tween.props[1].loop = true
-    totem_silence.tween.props[2] = E:clone_c("tween_prop")
+    totem_silence.tween.props[2] = CC("tween_prop")
     totem_silence.tween.props[2].keys = {{0, 50}, {fts(10), 255}, {fts(20), 255}, {fts(30), 0}}
     totem_silence.tween.props[2].loop = true
 
-    local totem_weakness = E:register_t("totem_weakness", "totem_silence")
+    local totem_weakness = RT("totem_weakness", "totem_silence")
     totem_weakness.aura.mods = {"mod_weakness_totem", "mod_totem_fire"}
     totem_weakness.aura.duration = 0
     totem_weakness.aura.duration_inc = 3
@@ -401,7 +401,7 @@ local function archer_towers()
     totem_weakness.render.sprites[3].anchor = vec_2(0.45, 0.17)
     totem_weakness.sound_events.insert = "TotemWeakness"
 
-    tt = E:register_t("mod_totem_fire", "mod_lava")
+    tt = RT("mod_totem_fire", "mod_lava")
     tt.modifier.duration = 3
     tt.dps.damage_min = 1
     tt.dps.damage_max = 1
@@ -542,15 +542,15 @@ local function archer_towers()
     tt.render.sprites[1].prefix = "explosion"
     tt.render.sprites[1].name = "shrapnel"
 
-    tt = E:register_t("tower_archer_dwarf", "tower_archer_1")
-    E:add_comps(tt, "powers")
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt = RT("tower_archer_dwarf", "tower_archer_1")
+    AC(tt, "powers")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animation = "shoot"
     tt.attacks.list[1].bullet = "dwarf_shotgun"
     tt.attacks.list[1].bullet_start_offset = {vec_2(-15, 55), vec_2(15, 55)}
     tt.attacks.list[1].cooldown = 1.5
     tt.attacks.list[1].shoot_time = fts(14)
-    tt.attacks.list[2] = E:clone_c("bullet_attack")
+    tt.attacks.list[2] = CC("bullet_attack")
     tt.attacks.list[2].animation = "shoot_barrel"
     tt.attacks.list[2].bullet = "dwarf_barrel"
     tt.attacks.list[2].bullet_start_offset = {vec_2(-15, 68), vec_2(15, 68)}
@@ -564,21 +564,21 @@ local function archer_towers()
     tt.info.fn = scripts.tower_archer_dwarf.get_info
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0017"
     tt.main_script.update = scripts.tower_archer_dwarf.update
-    tt.powers.barrel = E:clone_c("power")
+    tt.powers.barrel = CC("power")
     tt.powers.barrel.price_base = 225
     tt.powers.barrel.price_inc = 125
     tt.powers.barrel.attack_idx = 2
-    tt.powers.extra_damage = E:clone_c("power")
+    tt.powers.extra_damage = CC("power")
     tt.powers.extra_damage.price_base = 185
     tt.powers.extra_damage.price_inc = 185
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_archer_%04i"
     tt.render.sprites[1].offset = vec_2(0, 9)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "DwarfRiflemen"
     tt.render.sprites[2].offset = vec_2(0, 31)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].angles = {}
     tt.render.sprites[3].angles.idle = {"idleUp", "idleDown"}
     tt.render.sprites[3].angles.shoot = {"shootingUp", "shootingDown"}
@@ -588,7 +588,7 @@ local function archer_towers()
     tt.render.sprites[3].prefix = "shooterarcherdwarf"
     tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
     tt.render.sprites[4].offset = vec_2(12, 58)
-    tt.render.sprites[5] = E:clone_c("sprite")
+    tt.render.sprites[5] = CC("sprite")
     tt.render.sprites[5].animated = false
     tt.render.sprites[5].name = "DwarfRiflemenTop"
     tt.render.sprites[5].offset = vec_2(0, 31)
@@ -596,7 +596,7 @@ local function archer_towers()
     tt.tower.price = 230
     tt.tower.type = "archer_dwarf"
 
-    tt = E:register_t("dwarf_shotgun", "shotgun")
+    tt = RT("dwarf_shotgun", "shotgun")
     tt.bullet.level = 0
     tt.bullet.damage_min = 40
     tt.bullet.damage_max = 70
@@ -609,7 +609,7 @@ local function archer_towers()
     tt.bullet.damage_type = DAMAGE_SHOT
     tt.sound_events.insert = "ShotgunSound"
 
-    tt = E:register_t("dwarf_barrel", "bomb")
+    tt = RT("dwarf_barrel", "bomb")
     tt.bullet.damage_max = 45
     tt.bullet.damage_max_inc = 65
     tt.bullet.damage_min = 45
@@ -622,9 +622,9 @@ local function archer_towers()
     tt.render.sprites[1].name = "DwarfShooter_Barril"
     tt.sound_events.insert = "AxeSound"
 
-    tt = E:register_t("tower_pirate_watchtower", "tower_archer_1")
-    E:add_comps(tt, "powers")
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt = RT("tower_pirate_watchtower", "tower_archer_1")
+    AC(tt, "powers")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animation = "shoot"
     tt.attacks.list[1].bullet = "pirate_watchtower_shotgun"
     tt.attacks.list[1].bullet_start_offset = {vec_2(0, 73)}
@@ -636,11 +636,11 @@ local function archer_towers()
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0020"
     tt.main_script.update = scripts.tower_pirate_watchtower.update
     tt.main_script.remove = scripts.tower_pirate_watchtower.remove
-    tt.powers.reduce_cooldown = E:clone_c("power")
+    tt.powers.reduce_cooldown = CC("power")
     tt.powers.reduce_cooldown.price_base = 40
     tt.powers.reduce_cooldown.price_inc = 40
     tt.powers.reduce_cooldown.values = {2.2, 1.5, 1}
-    tt.powers.parrot = E:clone_c("power")
+    tt.powers.parrot = CC("power")
     tt.powers.parrot.price_base = 250
     tt.powers.parrot.price_inc = 250
     tt.powers.parrot.max_level = 3
@@ -649,25 +649,25 @@ local function archer_towers()
     tt.render.sprites[1].offset = vec_2(0, 23)
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].hover_off_hidden = true
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "pirateTower"
     tt.render.sprites[2].offset = vec_2(0, 50)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].angles = {}
     tt.render.sprites[3].angles.idle = {"idleUp", "idleDown"}
     tt.render.sprites[3].angles.shoot = {"shootingUp", "shootingDown"}
     tt.render.sprites[3].name = "idleDown"
     tt.render.sprites[3].offset = vec_2(0, 71)
     tt.render.sprites[3].prefix = "pirate_watchtower_shooter"
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].name = "pirate_watchtower_flag"
     tt.render.sprites[4].offset = vec_2(0, 50)
     tt.sound_events.insert = "PirateTowerTaunt2"
     tt.tower.price = 170
     tt.tower.type = "pirate_watchtower"
 
-    tt = E:register_t("pirate_watchtower_shotgun", "shotgun")
+    tt = RT("pirate_watchtower_shotgun", "shotgun")
     tt.bullet.level = 0
     tt.bullet.damage_min = 45
     tt.bullet.damage_max = 65
@@ -681,8 +681,8 @@ local function archer_towers()
     tt.bullet.start_fx = "fx_rifle_smoke"
     tt.sound_events.insert = "ShotgunSound"
 
-    tt = E:register_t("pirate_watchtower_parrot", "decal_scripted")
-    E:add_comps(tt, "force_motion", "custom_attack")
+    tt = RT("pirate_watchtower_parrot", "decal_scripted")
+    AC(tt, "force_motion", "custom_attack")
     anchor_y = 0.5
     image_y = 30
     tt.flight_height = 60
@@ -693,7 +693,7 @@ local function archer_towers()
     tt.bombs_pos = nil
     tt.idle_pos = nil
     tt.main_script.update = scripts.pirate_watchtower_parrot.update
-    tt.custom_attack = E:clone_c("custom_attack")
+    tt.custom_attack = CC("custom_attack")
     tt.custom_attack.min_range = 20
     tt.custom_attack.max_range = 40
     tt.custom_attack.bullet = "pirate_watchtower_bomb"
@@ -707,13 +707,13 @@ local function archer_towers()
     tt.render.sprites[1].draw_order = 2
     tt.render.sprites[1].loop_forced = true
     tt.render.sprites[1].sort_y_offset = -12
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "decal_flying_shadow"
     tt.render.sprites[2].offset = vec_2(0, 0)
     tt.owner = nil
 
-    tt = E:register_t("pirate_watchtower_bomb", "bomb")
+    tt = RT("pirate_watchtower_bomb", "bomb")
     tt.bullet.flight_time = fts(10)
     tt.bullet.rotation_speed = 0
     tt.bullet.damage_max = 40
@@ -723,11 +723,11 @@ local function archer_towers()
     tt.render.sprites[1].name = "pirateTower_bomb"
     tt.sound_events.insert = nil
 
-    tt = E:register_t("mod_pirate_watchtower_bomb", "mod_stun")
+    tt = RT("mod_pirate_watchtower_bomb", "mod_stun")
     tt.modifier.duration = 0.3
 
-    tt = E:register_t("tower_arcane", "tower")
-    E:add_comps(tt, "attacks", "powers")
+    tt = RT("tower_arcane", "tower")
+    AC(tt, "attacks", "powers")
     image_y = 90
     tt.tower.type = "arcane"
     tt.tower.level = 1
@@ -737,23 +737,23 @@ local function archer_towers()
     tt.info.fn = scripts.tower_arcane.get_info
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0009"
     tt.info.i18n_key = "TOWER_ARCANE_ARCHER"
-    tt.powers.burst = E:clone_c("power")
+    tt.powers.burst = CC("power")
     tt.powers.burst.price_base = 180
     tt.powers.burst.price_inc = 180
     tt.powers.burst.attack_idx = 2
     tt.powers.burst.enc_icon = 2
-    tt.powers.slumber = E:clone_c("power")
+    tt.powers.slumber = CC("power")
     tt.powers.slumber.price_base = 225
     tt.powers.slumber.price_inc = 75
     tt.powers.slumber.enc_icon = 1
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_archer_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "archer_towers_0004"
     tt.render.sprites[2].offset = vec_2(0, 33)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "tower_arcane_shooter"
     tt.render.sprites[3].name = "idleDown"
     tt.render.sprites[3].angles = {}
@@ -763,11 +763,11 @@ local function archer_towers()
     tt.render.sprites[3].offset = vec_2(-9, 57)
     tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
     tt.render.sprites[4].offset.x = 9
-    tt.render.sprites[5] = E:clone_c("sprite")
+    tt.render.sprites[5] = CC("sprite")
     tt.render.sprites[5].animated = false
     tt.render.sprites[5].name = "archer_arcane_top"
     tt.render.sprites[5].offset = vec_2(0, 33)
-    tt.render.sprites[6] = E:clone_c("sprite")
+    tt.render.sprites[6] = CC("sprite")
     tt.render.sprites[6].name = "tower_arcane_bubbles"
     tt.render.sprites[6].offset = vec_2(-15, 17)
     tt.render.sprites[7] = table.deepclone(tt.render.sprites[6])
@@ -775,7 +775,7 @@ local function archer_towers()
     tt.render.sprites[7].ts = fts(15)
     tt.main_script.update = scripts.tower_arcane.update
     tt.attacks.range = 200
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animation = "shoot"
     tt.attacks.list[1].bullet = "arrow_arcane"
     tt.attacks.list[1].cooldown = 0.8
@@ -798,7 +798,7 @@ local function archer_towers()
     tt.attacks.list[3].vis_flags = bor(F_STUN)
     tt.sound_events.insert = "ElvesArcherArcaneTaunt"
 
-    tt = E:register_t("arrow_arcane", "arrow_1")
+    tt = RT("arrow_arcane", "arrow_1")
     tt.bullet.damage_max = 18
     tt.bullet.damage_min = 11
     tt.bullet.damage_type = DAMAGE_MIXED
@@ -810,7 +810,7 @@ local function archer_towers()
     tt.bullet.flight_time_min = fts(10)
     tt.bullet.flight_time_factor = fts(5) * 1.8
 
-    tt = E:register_t("arrow_arcane_burst", "arrow_arcane")
+    tt = RT("arrow_arcane_burst", "arrow_arcane")
     tt.bullet.flight_time_min = fts(14)
     tt.bullet.miss_decal = "archer_arcane_proy_decal-f"
     tt.bullet.mod = {"mod_arrow_arcane"}
@@ -823,8 +823,8 @@ local function archer_towers()
     tt.render.sprites[1].name = "archer_arcane_proy_0001-f"
     tt.sound_events.insert = "TowerArcanePreloadAndTravel"
 
-    tt = E:register_t("aura_arcane_burst", "aura")
-    E:add_comps(tt, "render")
+    tt = RT("aura_arcane_burst", "aura")
+    AC(tt, "render")
     tt.aura.damage_inc = 80
     tt.aura.damage_type = DAMAGE_MAGICAL_EXPLOSION
     tt.aura.radius = 57.5
@@ -835,7 +835,7 @@ local function archer_towers()
     tt.render.sprites[1].z = Z_EFFECTS
     tt.sound_events.insert = "TowerArcaneExplotion"
 
-    tt = E:register_t("arrow_arcane_slumber", "arrow_arcane")
+    tt = RT("arrow_arcane_slumber", "arrow_arcane")
     tt.bullet.damage_max = 36
     tt.bullet.damage_min = 22
     tt.bullet.flight_time_min = fts(14)
@@ -846,13 +846,13 @@ local function archer_towers()
     tt.render.sprites[1].name = "archer_arcane_proy_0001-f"
     tt.sound_events.insert = "TowerArcanePreloadAndTravel"
 
-    tt = E:register_t("mod_arrow_arcane", "mod_damage")
+    tt = RT("mod_arrow_arcane", "mod_damage")
     tt.damage_min = 0.035
     tt.damage_max = 0.035
     tt.damage_type = DAMAGE_MAGICAL_ARMOR
 
-    tt = E:register_t("mod_arrow_arcane_slumber", "modifier")
-    E:add_comps(tt, "render")
+    tt = RT("mod_arrow_arcane_slumber", "modifier")
+    AC(tt, "render")
     tt.main_script.insert = scripts.mod_arrow_arcane_slumber.insert
     tt.main_script.update = scripts.mod_stun.update
     tt.main_script.remove = scripts.mod_stun.remove
@@ -860,12 +860,12 @@ local function archer_towers()
     tt.modifier.duration = 2
     tt.render.sprites[1].prefix = "arcane_slumber_bubbles"
     tt.render.sprites[1].loop = true
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].prefix = "arcane_slumber_z"
     tt.render.sprites[2].loop = true
 
-    tt = E:register_t("tower_silver", "tower")
-    E:add_comps(tt, "attacks", "powers")
+    tt = RT("tower_silver", "tower")
+    AC(tt, "attacks", "powers")
     image_y = 90
     tt.info.enc_icon = 18
     tt.tower.type = "silver"
@@ -874,7 +874,7 @@ local function archer_towers()
     tt.tower.size = TOWER_SIZE_LARGE
     tt.attacks.range = 300
     tt.attacks.short_range = 162.5
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animations = {"shoot", "shoot_long"}
     tt.attacks.list[1].bullet = "arrow_silver_long"
     tt.attacks.list[1].bullets = {"arrow_silver", "arrow_silver_long"}
@@ -884,7 +884,7 @@ local function archer_towers()
     tt.attacks.list[1].shoot_times = {fts(6), fts(15)}
     tt.attacks.list[1].bullet_start_offsets = {{vec_2(9, 4), vec_2(6, -5)}, {vec_2(9, 4), vec_2(6, -5)}}
     -- tt.attacks.list[1].use_obsidian_upgrade = true
-    tt.attacks.list[2] = E:clone_c("bullet_attack")
+    tt.attacks.list[2] = CC("bullet_attack")
     tt.attacks.list[2].animations = {"sentence", "sentence"}
     tt.attacks.list[2].bullets = {"arrow_silver_sentence", "arrow_silver_sentence_long"}
     tt.attacks.list[2].chance = 0
@@ -897,7 +897,7 @@ local function archer_towers()
     tt.attacks.list[2].shot_fx = "fx_arrow_silver_sentence_shot"
     tt.attacks.list[2].sound = "TowerGoldenBowInstakillArrowShot"
     -- tt.attacks.list[2].use_obsidian_upgrade = true
-    tt.attacks.list[3] = E:clone_c("bullet_attack")
+    tt.attacks.list[3] = CC("bullet_attack")
     tt.attacks.list[3].animations = {"mark", "mark_long"}
     tt.attacks.list[3].cooldown = 13
     tt.attacks.list[3].cooldown_inc = -1
@@ -910,13 +910,13 @@ local function archer_towers()
     }
     tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0010"
     tt.info.fn = scripts.tower_silver.get_info
-    tt.powers.sentence = E:clone_c("power")
+    tt.powers.sentence = CC("power")
     tt.powers.sentence.attack_idx = 2
     tt.powers.sentence.price_base = 250
     tt.powers.sentence.price_inc = 250
     tt.powers.sentence.chances = {{0.04, 0.07, 0.1}, {0.08, 0.14, 0.2}}
     tt.powers.sentence.enc_icon = 3
-    tt.powers.mark = E:clone_c("power")
+    tt.powers.mark = CC("power")
     tt.powers.mark.attack_idx = 3
     tt.powers.mark.price_base = 225
     tt.powers.mark.price_inc = 150
@@ -924,11 +924,11 @@ local function archer_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_archer_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "archer_towers_0005"
     tt.render.sprites[2].offset = vec_2(0, 33)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "tower_silver_shooter"
     tt.render.sprites[3].name = "idleDown"
     tt.render.sprites[3].angles = {}
@@ -942,7 +942,7 @@ local function archer_towers()
     tt.main_script.update = scripts.tower_silver.update
     tt.sound_events.insert = "ElvesArcherGoldenBowTaunt"
 
-    tt = E:register_t("arrow_silver", "arrow_1")
+    tt = RT("arrow_silver", "arrow_1")
     tt.bullet.flight_time_min = fts(8.1)
     tt.bullet.flight_time_factor = fts(0.0135)
     tt.bullet.miss_decal = "archer_silver_proys_0002-f"
@@ -954,11 +954,11 @@ local function archer_towers()
     tt.sound_events.insert = "TowerGoldenBowArrowShot"
     tt.main_script.update = scripts.arrow_missile.update
     tt.bullet.particles_name = "ps_arrow_silver"
-    tt = E:register_t("arrow_silver_long", "arrow_silver")
+    tt = RT("arrow_silver_long", "arrow_silver")
     tt.bullet.flight_time_factor = fts(0.0264)
     tt.bullet.damage_max = 60
     tt.bullet.damage_min = 45
-    tt = E:register_t("arrow_silver_sentence", "arrow_silver")
+    tt = RT("arrow_silver_sentence", "arrow_silver")
     tt.render.sprites[1].name = "archer_silver_instaKill_bullet"
     tt.bullet.g = 0
     tt.bullet.hit_fx = "fx_arrow_silver_sentence_hit"
@@ -971,8 +971,8 @@ local function archer_towers()
     tt.bullet.pop_conds = DR_KILL
     tt.main_script.update = scripts.arrow.update
 
-    tt = E:register_t("arrow_silver_sentence_long", "arrow_silver_sentence")
-    tt = E:register_t("arrow_silver_mark", "arrow_silver")
+    tt = RT("arrow_silver_sentence_long", "arrow_silver_sentence")
+    tt = RT("arrow_silver_mark", "arrow_silver")
     tt.bullet.hit_fx = "fx_arrow_silver_mark_hit"
     tt.bullet.mod = "mod_arrow_silver_mark"
     tt.bullet.particles_name = "ps_arrow_silver_mark"
@@ -980,13 +980,13 @@ local function archer_towers()
     tt.render.sprites[1].name = "archer_silver_proys_0003-f"
     tt.sound_events.insert = nil
 
-    tt = E:register_t("arrow_silver_mark_long", "arrow_silver_mark")
+    tt = RT("arrow_silver_mark_long", "arrow_silver_mark")
     tt.bullet.flight_time_factor = fts(0.033)
     tt.bullet.damage_max = 60
     tt.bullet.damage_min = 45
 
-    tt = E:register_t("ps_arrow_silver")
-    E:add_comps(tt, "pos", "particle_system")
+    tt = RT("ps_arrow_silver")
+    AC(tt, "pos", "particle_system")
     tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
     tt.particle_system.loop = false
     tt.particle_system.cycle_names = true
@@ -998,8 +998,8 @@ local function archer_towers()
     tt.particle_system.emission_rate = 60
     tt.particle_system.color = {255, 100, 100}
 
-    tt = E:register_t("ps_arrow_silver_mark")
-    E:add_comps(tt, "pos", "particle_system")
+    tt = RT("ps_arrow_silver_mark")
+    AC(tt, "pos", "particle_system")
     tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
     tt.particle_system.loop = false
     tt.particle_system.cycle_names = true
@@ -1009,8 +1009,8 @@ local function archer_towers()
     tt.particle_system.scales_x = {0.85, 0.85}
     tt.particle_system.emission_rate = 30
 
-    tt = E:register_t("mod_arrow_silver_mark", "modifier")
-    E:add_comps(tt, "tween", "render", "sound_events", "count_group")
+    tt = RT("mod_arrow_silver_mark", "modifier")
+    AC(tt, "tween", "render", "sound_events", "count_group")
     tt.count_group.name = "mod_arrow_silver_mark"
     tt.count_group.type = COUNT_GROUP_CONCURRENT
     tt.received_damage_factor = 2
@@ -1022,7 +1022,7 @@ local function archer_towers()
     tt.render.sprites[1].name = "archer_silver_mark_effect_below"
     tt.render.sprites[1].sort_y_offset = 1
     tt.render.sprites[1].anchor.y = 0.08823529411764706
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "archer_silver_mark_effect_over"
     tt.render.sprites[2].anchor.y = 0.08823529411764706
@@ -1034,7 +1034,7 @@ local function archer_towers()
     tt.tween.props[1].loop = true
     tt.tween.props[2] = table.deepclone(tt.tween.props[1])
     tt.tween.props[2].sprite_id = 2
-    tt.tween.props[3] = E:clone_c("tween_prop")
+    tt.tween.props[3] = CC("tween_prop")
     tt.tween.props[3].disabled = true
     tt.tween.props[3].sprite_id = 1
     tt.tween.props[3].keys = {{0, 255}, {0.25, 0}}
@@ -1076,11 +1076,11 @@ local function archer_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_artillery_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "Tower_lvl4"
     tt.render.sprites[2].sort_y_offset = 11
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "Archer_lvl4"
     tt.render.sprites[3].name = "idle"
     tt.render.sprites[3].angles = {}
@@ -1106,7 +1106,7 @@ local function archer_towers()
     tt.render.sprites[3].fps = 36
     tt.render.sid_archer = 3
     tt.attacks.range = b.basic_attack.range[4]
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].cooldown = b.basic_attack.cooldown
     -- exactly, cooldown only based on the animation time 3.38 * 5 / 6 = 2.8166, bigger than this cooldown assigned
     -- tt.attacks.list[1].shoot_time = fts(13)
@@ -1128,7 +1128,7 @@ local function archer_towers()
     tt.tower_upgrade_persistent_data.max_current_mode = 1
     tt.tower_upgrade_persistent_data.souls_extra_damage_min = 0
     tt.tower_upgrade_persistent_data.souls_extra_damage_max = 0
-    tt.powers.skill_soldiers = E:clone_c("power")
+    tt.powers.skill_soldiers = CC("power")
     tt.powers.skill_soldiers.price_base = 225
     tt.powers.skill_soldiers.price_inc = 100
     tt.powers.skill_soldiers.cooldown = b.skill_soldiers.cooldown
@@ -1138,7 +1138,7 @@ local function archer_towers()
     tt.powers.skill_soldiers.dodge_chance = b.soldier.dodge_chance
     tt.powers.skill_soldiers.enc_icon = 31
     tt.powers.skill_soldiers.show_rally = true
-    tt.powers.skill_buff = E:clone_c("power")
+    tt.powers.skill_buff = CC("power")
     tt.powers.skill_buff.price_base = 250
     tt.powers.skill_buff.enc_icon = 32
     tt.powers.skill_buff.damage_min = b.skill_buff.extra_damage_min
@@ -1149,7 +1149,7 @@ local function archer_towers()
     tt.barrack.soldier_type = "soldier_tower_dark_elf"
     tt.barrack.max_soldiers = 2
     tt.barrack.respawn_offset = vec_2(0, 0)
-    tt.attacks.list[2] = E:clone_c("custom_attack")
+    tt.attacks.list[2] = CC("custom_attack")
     tt.attacks.list[2].disabled = true
     tt.attacks.list[2].spawn_delay = 1
     tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"

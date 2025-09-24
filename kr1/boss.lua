@@ -64,7 +64,7 @@ local function boss()
     tt.melee.attacks[1].hit_offset = tt.enemy.melee_slot
     tt.melee.attacks[1].hit_fx = "fx_juggernaut_smoke"
     tt.melee.attacks[1].sound_hit = "juggernaut_punch"
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animation = "shoot"
     tt.timed_attacks.list[1].bullet = "missile_juggernaut"
     tt.timed_attacks.list[1].bullet_start_offset = vec_2(-30, 82)
@@ -95,7 +95,7 @@ local function boss()
     tt.sound_events.hit = "BombExplosionSound"
 
     tt = RT("juggernaut_bomb_spawner", "decal_scripted")
-    E:add_comps(tt, "render", "spawner", "tween")
+    AC(tt, "render", "spawner", "tween")
     tt.main_script.update = scripts.enemies_spawner.update
     tt.render.sprites[1].anchor.y = 0.22
     tt.render.sprites[1].prefix = "bomb_juggernaut_spawner"
@@ -175,7 +175,7 @@ local function boss()
     anchor_x = 0.5
     image_y = 200
     image_x = 260
-    tt.auras.list[1] = E:clone_c("aura_attack")
+    tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "jt_spawner_aura"
     tt.auras.list[1].cooldown = 0
     tt.enemy.gold = 0
@@ -419,7 +419,7 @@ local function boss()
     tt.melee.attacks[1].hit_time = fts(15)
     tt.melee.attacks[1].damage_type = DAMAGE_EAT
     tt.melee.attacks[1].sound = "SpiderAttack"
-    tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
+    tt.timed_attacks.list[1] = CC("bullet_attack")
     tt.timed_attacks.list[1].bullet = "enemy_sarelgaz_egg"
     tt.timed_attacks.list[1].max_cooldown = 12
     tt.timed_attacks.list[1].max_count = 100
@@ -449,8 +449,8 @@ local function boss()
     tt.vis.flags = bor(F_ENEMY, F_BOSS)
     tt.health_judger = true
 
-    tt = E:register_t("enemy_sarelgaz_egg", "decal_scripted")
-    E:add_comps(tt, "render", "spawner", "tween")
+    tt = RT("enemy_sarelgaz_egg", "decal_scripted")
+    AC(tt, "render", "spawner", "tween")
     tt.main_script.update = scripts.enemies_spawner.update
     tt.render.sprites[1].anchor.y = 0.22
     tt.render.sprites[1].scale = vec_2(2, 2)
@@ -518,7 +518,7 @@ local function boss()
     tt.unit.size = UNIT_SIZE_LARGE
     tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
     tt.vis.flags = bor(F_ENEMY, F_BOSS)
-    tt.timed_attacks.list[1] = E:clone_c("mod_attack")
+    tt.timed_attacks.list[1] = CC("mod_attack")
     tt.timed_attacks.list[1].animation = "heal"
     tt.timed_attacks.list[1].cast_time = fts(14)
     tt.timed_attacks.list[1].cooldown = 8
@@ -578,7 +578,7 @@ local function boss()
     tt.melee.attacks[1].count = 10
     tt.melee.attacks[1].hit_time = fts(10)
     tt.melee.attacks[1].hit_offset = tt.enemy.melee_slot
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animation = "shoot"
     tt.timed_attacks.list[1].bullet = "bomb_greenmuck"
     tt.timed_attacks.list[1].count = 7
@@ -595,7 +595,7 @@ local function boss()
     anchor_x = 0.5
     image_y = 204
     image_x = 218
-    tt.auras.list[1] = E:clone_c("aura_attack")
+    tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "kingpin_damage_aura"
     tt.auras.list[1].cooldown = 0
     tt.enemy.gold = 0
@@ -642,7 +642,7 @@ local function boss()
     tt.melee.attacks[1].hit_time = fts(15)
     tt.melee.attacks[1].hit_offset = tt.enemy.melee_slot
     tt.melee.attacks[1].hit_fx = "fx_juggernaut_smoke"
-    tt.timed_attacks.list[1] = E:clone_c("mod_attack")
+    tt.timed_attacks.list[1] = CC("mod_attack")
     tt.timed_attacks.list[1].animation = "eat"
     tt.timed_attacks.list[1].cast_time = fts(14)
     tt.timed_attacks.list[1].cooldown = 5
@@ -664,7 +664,7 @@ local function boss()
     anchor_x = 0.5
     image_y = 150
     image_x = 240
-    tt.auras.list[1] = E:clone_c("aura_attack")
+    tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "aura_ulgukhai_regen"
     tt.auras.list[1].cooldown = 0
     tt.enemy.gold = 0
@@ -832,7 +832,7 @@ local function boss()
     tt.melee.attacks[1].damage_max = 350
     tt.melee.attacks[1].damage_min = 150
     tt.melee.attacks[1].hit_time = fts(9)
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animation = "spores"
     tt.timed_attacks.list[1].cooldown = 5
     tt.timed_attacks.list[1].final_wait = fts(20)
@@ -886,7 +886,7 @@ local function boss()
     tt.unit.size = UNIT_SIZE_LARGE
     tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
     tt.vis.flags = bor(F_ENEMY, F_BOSS)
-    tt.auras.list[1] = E:clone_c("aura_attack")
+    tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "blackburn_aura"
     tt.auras.list[1].cooldown = 0
     tt.melee.attacks[1] = CC("area_attack")
@@ -923,25 +923,25 @@ local function boss()
     tt.timed_attacks.list[1].vis_flags = bor(F_MOD)
 
     -- unknown
-    tt = E:register_t("eb_elder_shaman", "decal_scripted")
-    E:add_comps(tt, "attacks")
+    tt = RT("eb_elder_shaman", "decal_scripted")
+    AC(tt, "attacks")
     tt.attacks.animation = "cast"
     tt.attacks.delay = {0.6, 0.9}
-    tt.attacks.list[1] = E:clone_c("aura_attack")
+    tt.attacks.list[1] = CC("aura_attack")
     tt.attacks.list[1].aura = "aura_elder_shaman_healing"
     tt.attacks.list[1].node_offset = {10, 30}
     tt.attacks.list[1].path_margins = {40, 10}
     tt.attacks.list[1].power_name = "healing"
     tt.attacks.list[1].vis_bans = bor(F_FLYING, F_BOSS, F_FRIEND)
     tt.attacks.list[1].vis_flags = bor(F_MOD)
-    tt.attacks.list[2] = E:clone_c("aura_attack")
+    tt.attacks.list[2] = CC("aura_attack")
     tt.attacks.list[2].aura = "aura_elder_shaman_damage"
     tt.attacks.list[2].power_name = "damage"
     tt.attacks.list[2].vis_bans = bor(F_FLYING, F_BOSS, F_ENEMY)
     tt.attacks.list[2].vis_flags = bor(F_MOD)
     tt.attacks.list[2].enemy_vis_bans = bor(F_FLYING, F_BOSS)
     tt.attacks.list[2].enemy_vis_flags = bor(F_MOD)
-    tt.attacks.list[3] = E:clone_c("aura_attack")
+    tt.attacks.list[3] = CC("aura_attack")
     tt.attacks.list[3].aura = "aura_elder_shaman_speed"
     tt.attacks.list[3].node_offset = {10, 30}
     tt.attacks.list[3].path_margins = {25, 40}
@@ -988,7 +988,7 @@ local function boss()
     tt.render.sprites[1].name = "HalloweenBoss_tauntBox"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].z = Z_BULLETS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_BULLETS
     tt.render.sprites[2].offset = vec_2(0, -9)
@@ -1006,7 +1006,7 @@ local function boss()
     tt.tween.props[1].loop = true
     tt.tween.props[2] = table.deepclone(tt.tween.props[1])
     tt.tween.props[2].sprite_id = 2
-    tt.tween.props[3] = E:clone_c("tween_prop")
+    tt.tween.props[3] = CC("tween_prop")
     tt.tween.props[3].keys = {{0, 0}, {0.25, 255}}
     tt.tween.props[3].sprite_id = 1
     tt.tween.props[4] = table.deepclone(tt.tween.props[3])
@@ -1014,32 +1014,32 @@ local function boss()
     tt.tween.remove = false
 
     -- 纳泽鲁
-    tt = E:register_t("eb_efreeti", "boss")
-    E:add_comps(tt, "attacks", "tween")
+    tt = RT("eb_efreeti", "boss")
+    AC(tt, "attacks", "tween")
     anchor_y = 0.1
     image_y = 198
     tt.attacks.cooldown = 7
-    tt.attacks.list[1] = E:clone_c("custom_attack")
+    tt.attacks.list[1] = CC("custom_attack")
     tt.attacks.list[1].animation = "attack"
     tt.attacks.list[1].chance = 0.2
     tt.attacks.list[1].hit_time = fts(13)
     tt.attacks.list[1].max_count = 3
     tt.attacks.list[1].max_range = 320
     tt.attacks.list[1].min_range = 76.8
-    tt.attacks.list[2] = E:clone_c("custom_attack")
+    tt.attacks.list[2] = CC("custom_attack")
     tt.attacks.list[2].animation = "attack"
     tt.attacks.list[2].hit_time = fts(13)
     tt.attacks.list[2].max_count = 10
     tt.attacks.list[2].max_range = 96
     tt.attacks.list[2].min_range = 0
-    tt.attacks.list[3] = E:clone_c("mod_attack")
+    tt.attacks.list[3] = CC("mod_attack")
     tt.attacks.list[3].animation = "attack_sand"
     tt.attacks.list[3].chance = 0.3
     tt.attacks.list[3].max_count = 3
     tt.attacks.list[3].max_range = 192
     tt.attacks.list[3].mod = "mod_efreeti"
     tt.attacks.list[3].shoot_time = fts(19)
-    tt.attacks.list[4] = E:clone_c("spawn_attack")
+    tt.attacks.list[4] = CC("spawn_attack")
     tt.attacks.list[4].animation = "attack"
     tt.attacks.list[4].coords = {vec_2(816, 430), vec_2(415, 490), vec_2(270, 340), vec_2(690, 290)}
     tt.attacks.list[4].entity = "enemy_efreeti_small"
@@ -1059,18 +1059,18 @@ local function boss()
     tt.main_script.insert = scripts.eb_efreeti.insert
     tt.main_script.update = scripts.eb_efreeti.update
     tt.motion.max_speed = 0.375 * FPS
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
     tt.render.sprites[1].loop_forced = true
     tt.render.sprites[1].prefix = "eb_efreeti_legs"
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].anchor.y = anchor_y
     tt.render.sprites[2].angles = {}
     tt.render.sprites[2].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
     tt.render.sprites[2].prefix = "eb_efreeti"
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].anchor.y = anchor_y
     tt.render.sprites[3].angles = {}
     tt.render.sprites[3].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
@@ -1078,10 +1078,10 @@ local function boss()
     tt.render.sprites[3].prefix = "eb_efreeti_belt"
     tt.tween.props[1].keys = {{0, 0}, {1.5, 255}}
     tt.tween.props[1].sprite_id = 1
-    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2] = CC("tween_prop")
     tt.tween.props[2].keys = {{0, 0}, {1.5, 255}}
     tt.tween.props[2].sprite_id = 2
-    tt.tween.props[3] = E:clone_c("tween_prop")
+    tt.tween.props[3] = CC("tween_prop")
     tt.tween.props[3].keys = {{0, 0}, {1.5, 255}}
     tt.tween.props[3].sprite_id = 3
     tt.tween.remove = false
@@ -1103,8 +1103,8 @@ local function boss()
     tt.sound_events.spawn = "BossEfreetiSnap"
     tt.sound_events.sand = "BossEfreetiClap"
 
-    tt = E:register_t("mod_efreeti", "modifier")
-    E:add_comps(tt, "render")
+    tt = RT("mod_efreeti", "modifier")
+    AC(tt, "render")
     tt.main_script.update = scripts.mod_tower_block.update
     tt.modifier.duration = 10
     tt.modifier.hide_tower = true
@@ -1115,8 +1115,8 @@ local function boss()
     tt.render.sprites[1].prefix = "efreeti_sandblock_tower"
     tt.sound_events.finish = "BossEfreetiTowerReleased"
 
-    tt = E:register_t("eb_gorilla", "boss")
-    E:add_comps(tt, "melee", "attacks", "idle_flip")
+    tt = RT("eb_gorilla", "boss")
+    AC(tt, "melee", "attacks", "idle_flip")
     anchor_y = 0.21
     image_y = 172
     tt.jump_down_advance_nodes = 10
@@ -1124,18 +1124,18 @@ local function boss()
     tt.on_tower_time = 9
     tt.tower_pos_left = nil
     tt.tower_pos_right = nil
-    tt.attacks.list[1] = E:clone_c("spawn_attack")
+    tt.attacks.list[1] = CC("spawn_attack")
     tt.attacks.list[1].animation = "call"
     tt.attacks.list[1].cooldown = 8
     tt.attacks.list[1].entity = "gorilla_small_liana"
     tt.attacks.list[1].max_count = 8
     tt.attacks.list[1].sound = "BossMonkeyChestPounding"
     tt.attacks.list[1].spawn_node_ranges = {{{62, 113}, {130, 150}}, {{60, 105}, {120, 140}}}
-    tt.attacks.list[2] = E:clone_c("custom_attack")
+    tt.attacks.list[2] = CC("custom_attack")
     tt.attacks.list[2].cooldown = 10
     tt.attacks.list[2].points = 500
     tt.attacks.list[2].sound = "EnemyHealing"
-    tt.attacks.list[3] = E:clone_c("bullet_attack")
+    tt.attacks.list[3] = CC("bullet_attack")
     tt.attacks.list[3].animation = "throw_barrel"
     tt.attacks.list[3].bullet = "gorilla_boss_barrel"
     tt.attacks.list[3].bullet_start_offset = {vec_2(60, 70)}
@@ -1158,7 +1158,7 @@ local function boss()
     tt.info.enc_icon = 38
     tt.main_script.insert = scripts.eb_gorilla.insert
     tt.main_script.update = scripts.eb_gorilla.update
-    tt.melee.attacks[1] = E:clone_c("area_attack")
+    tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 2
     tt.melee.attacks[1].count = 10
     tt.melee.attacks[1].damage_max = 500
@@ -1171,7 +1171,7 @@ local function boss()
     tt.melee.attacks[1].hit_time = fts(17)
     tt.melee.attacks[1].sound = "BossMonkeySmashGround"
     tt.motion.max_speed = 0.534 * FPS
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
@@ -1188,15 +1188,15 @@ local function boss()
     tt.vis.bans = bor(F_SKELETON, F_BLOOD)
     tt.vis.flags = bor(F_ENEMY, F_BOSS)
 
-    tt = E:register_t("fx_gorilla_boss_heal", "fx")
+    tt = RT("fx_gorilla_boss_heal", "fx")
     tt.render.sprites[1].name = "fx_gorilla_boss_heal"
     tt.render.sprites[1].anchor.y = 0.21
 
-    tt = E:register_t("fx_gorilla_boss_jump_smoke", "fx")
+    tt = RT("fx_gorilla_boss_jump_smoke", "fx")
     tt.render.sprites[1].name = "fx_gorilla_boss_jump_smoke"
     tt.render.sprites[1].anchor.y = 0.12
 
-    tt = E:register_t("gorilla_boss_barrel", "bomb")
+    tt = RT("gorilla_boss_barrel", "bomb")
     tt.bullet.flight_time_base = fts(30)
     tt.bullet.flight_time_factor = fts(0.025)
     tt.bullet.g = -0.85 / (fts(1) * fts(1))
@@ -1212,8 +1212,8 @@ local function boss()
     tt.main_script.insert = scripts.enemy_bomb.insert
     tt.main_script.update = scripts.enemy_bomb.update
 
-    tt = E:register_t("enemy_gorilla_small", "enemy")
-    E:add_comps(tt, "melee")
+    tt = RT("enemy_gorilla_small", "enemy")
+    AC(tt, "melee")
     anchor_y = 0.21
     image_y = 68
     tt.enemy.gold = 50
@@ -1246,8 +1246,8 @@ local function boss()
     tt.unit.size = UNIT_SIZE_MEDIUM
     tt.sound_events.death = "DeathBig"
 
-    tt = E:register_t("gorilla_small_liana", "decal_scripted")
-    E:add_comps(tt, "sound_events")
+    tt = RT("gorilla_small_liana", "decal_scripted")
+    AC(tt, "sound_events")
     tt.main_script.update = scripts.gorilla_small_liana.update
     tt.render.sprites[1].flip_x = true
     tt.render.sprites[1].name = "gorilla_small_liana"
@@ -1257,7 +1257,7 @@ local function boss()
     tt.spawn_dest = nil
     tt.sound_events.insert = "BossMonkeyMonkeysScreams"
 
-    tt = E:register_t("gorilla_small_falling", "bomb")
+    tt = RT("gorilla_small_falling", "bomb")
     tt.render.sprites[1].name = "CanibalBoos_Offspring_0030"
     tt.bullet.flight_time = fts(27)
     tt.bullet.vis_bans = F_ALL
@@ -1270,11 +1270,11 @@ local function boss()
     tt.sound_events.hit = nil
     tt.sound_events.hit_water = nil
 
-    tt = E:register_t("eb_umbra", "boss")
-    E:add_comps(tt, "melee", "attacks")
+    tt = RT("eb_umbra", "boss")
+    AC(tt, "melee", "attacks")
     anchor_y = 0.18
     image_y = 176
-    tt.attacks.list[1] = E:clone_c("spawn_attack")
+    tt.attacks.list[1] = CC("spawn_attack")
     tt.attacks.list[1].animation = "open_portals"
     tt.attacks.list[1].cooldowns = {}
     tt.attacks.list[1].cooldowns.at_home = {3, 3, 1, 1, 0, 0, 0, 2, 2, 2}
@@ -1285,14 +1285,14 @@ local function boss()
     tt.attacks.list[1].nodes_right = {{np(3, 1, 26), np(4, 1, 24)}, {np(3, 1, 68), np(4, 1, 69)}}
     tt.attacks.list[1].count_min = 3
     tt.attacks.list[1].add_per_missing_piece = 0.4
-    tt.attacks.list[2] = E:clone_c("custom_attack")
+    tt.attacks.list[2] = CC("custom_attack")
     tt.attacks.list[2].cooldowns = {}
     tt.attacks.list[2].cooldowns.at_home = {7, 7, 7, 7, 8, 8, 8, 8, 8, 8}
     tt.attacks.list[2].cooldowns.on_battlefield = {6, 6, 6, 6, 8, 8, 8, 8, 8, 8}
     tt.attacks.list[2].cooldown = nil
     tt.attacks.list[2].max_side_jumps = 3
     tt.attacks.list[2].nodes_battlefield = {np(5, 1, 48), np(2, 1, 69), np(3, 1, 51)}
-    tt.attacks.list[3] = E:clone_c("bullet_attack")
+    tt.attacks.list[3] = CC("bullet_attack")
     tt.attacks.list[3].animation = "eyes"
     tt.attacks.list[3].bullet = "ray_umbra"
     tt.attacks.list[3].bullet_start_offset = {vec_2(-9, ady(109)), vec_2(9, ady(109))}
@@ -1309,7 +1309,7 @@ local function boss()
     tt.attacks.list[4].cooldowns.on_battlefield = {1, 2, 2, 2, 0, 0, 0, 0, 0, 0}
     tt.attacks.list[4].bullet = "ray_umbra_tower"
     tt.attacks.list[4].sound = "FrontiersFinalBossRayTower"
-    tt.attacks.list[5] = E:clone_c("spawn_attack")
+    tt.attacks.list[5] = CC("spawn_attack")
     tt.attacks.list[5].entity = "enemy_umbra_piece_flying"
     tt.attacks.list[5].payload_entity = "enemy_umbra_piece"
     tt.attacks.list[5].start_offset_x = {-20, 20}
@@ -1334,10 +1334,10 @@ local function boss()
     tt.main_script.insert = scripts.eb_umbra.insert
     tt.main_script.update = scripts.eb_umbra.update
     tt.motion.max_speed = 0.534 * FPS
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].prefix = "eb_umbra"
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].prefix = "eb_umbra"
     tt.render.sprites[2].name = "eyes"
     tt.render.sprites[2].hidden = true
@@ -1363,12 +1363,12 @@ local function boss()
     tt.vis.bans = tt.vis.bans_at_home
     tt.vis.flags = bor(F_ENEMY, F_BOSS)
 
-    tt = E:register_t("decal_umbra_shoutbox", "decal_tween")
-    E:add_comps(tt, "texts", "timed")
+    tt = RT("decal_umbra_shoutbox", "decal_tween")
+    AC(tt, "texts", "timed")
     tt.render.sprites[1].name = "finalBoss_tauntBox"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].z = Z_BULLETS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_BULLETS
     tt.render.sprites[2].offset = vec_2(20, 2)
@@ -1388,7 +1388,7 @@ local function boss()
     tt.tween.props[2].sprite_id = 2
     tt.tween.remove = false
 
-    tt = E:register_t("ray_umbra", "bullet")
+    tt = RT("ray_umbra", "bullet")
     tt.image_width = 190
     tt.main_script.update = scripts.ray_enemy.update
     tt.render.sprites[1].name = "ray_umbra"
@@ -1403,33 +1403,33 @@ local function boss()
     tt.bullet.hit_time = fts(7)
     tt.bullet.hit_fx = "fx_ray_umbra_explosion"
 
-    tt = E:register_t("ray_umbra_tower", "ray_umbra")
+    tt = RT("ray_umbra_tower", "ray_umbra")
     tt.bullet.damage_radius = 0
     tt.bullet.damage_type = DAMAGE_NONE
     tt.bullet.hit_fx = nil
     tt.bullet.mod = "mod_umbra"
 
-    tt = E:register_t("fx_ray_umbra_explosion", "fx")
+    tt = RT("fx_ray_umbra_explosion", "fx")
     tt.render.sprites[1].name = "ray_umbra_explosion"
 
-    tt = E:register_t("fx_ray_umbra_explosion_smoke", "fx")
+    tt = RT("fx_ray_umbra_explosion_smoke", "fx")
     tt.render.sprites[1].name = "ray_umbra_explosion_smoke"
 
-    tt = E:register_t("fx_umbra_death_blast", "fx")
+    tt = RT("fx_umbra_death_blast", "fx")
     tt.render.sprites[1].prefix = "umbra_death_blast"
     tt.render.sprites[1].name = "short"
     tt.render.sprites[1].anchor.y = 0.18
 
-    tt = E:register_t("mod_umbra", "modifier")
-    E:add_comps(tt, "render")
+    tt = RT("mod_umbra", "modifier")
+    AC(tt, "render")
     tt.main_script.update = scripts.mod_tower_remove.update
     tt.modifier.hide_time = fts(22)
     tt.render.sprites[1].anchor.y = 0.19
     tt.render.sprites[1].z = Z_OBJECTS + 1
     tt.render.sprites[1].name = "umbra_tower_remove"
 
-    tt = E:register_t("umbra_portal", "decal_scripted")
-    E:add_comps(tt, "render", "spawner")
+    tt = RT("umbra_portal", "decal_scripted")
+    AC(tt, "render", "spawner")
     tt.main_script.update = scripts.umbra_portal.update
     tt.render.sprites[1].prefix = "umbra_portal"
     tt.render.sprites[1].z = Z_DECALS
@@ -1442,12 +1442,12 @@ local function boss()
     tt.spawner.ni_var = 3
     tt.spawner.spawn_fx = "fx_umbra_minion_spawn"
 
-    tt = E:register_t("fx_umbra_minion_spawn", "fx")
+    tt = RT("fx_umbra_minion_spawn", "fx")
     tt.render.sprites[1].name = "umbra_minion_spawn"
     tt.render.sprites[1].anchor.y = 0.19
 
-    tt = E:register_t("enemy_umbra_minion", "enemy")
-    E:add_comps(tt, "melee")
+    tt = RT("enemy_umbra_minion", "enemy")
+    AC(tt, "melee")
     anchor_y = 0.19
     image_y = 66
     tt.enemy.gold = 6
@@ -1480,8 +1480,8 @@ local function boss()
     tt.unit.size = UNIT_SIZE_MEDIUM
     tt.vis.bans = bor(F_SKELETON)
 
-    tt = E:register_t("enemy_umbra_piece", "enemy")
-    E:add_comps(tt, "melee", "timed")
+    tt = RT("enemy_umbra_piece", "enemy")
+    AC(tt, "melee", "timed")
     anchor_y = 0.21
     image_y = 70
     tt.enemy.gold = 90
@@ -1520,7 +1520,7 @@ local function boss()
     tt.piece_respawn_delay = fts(35) + 3
     tt.piece_respawn_delay_repeating = fts(35)
 
-    tt = E:register_t("enemy_umbra_piece_flying", "bomb")
+    tt = RT("enemy_umbra_piece_flying", "bomb")
     tt.render.sprites[1].name = "enemy_umbra_piece_flying"
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = false
@@ -1536,7 +1536,7 @@ local function boss()
     tt.sound_events.hit = nil
     tt.sound_events.hit_water = nil
 
-    tt = E:register_t("fx_umbra_white_circle", "decal_tween")
+    tt = RT("fx_umbra_white_circle", "decal_tween")
     tt.render.sprites[1].name = "white_explosion"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].loop = false
@@ -1545,12 +1545,12 @@ local function boss()
     tt.tween.props[1].name = "scale"
     tt.tween.props[1].keys = {{0, vec_2(0.3, 0.3)}, {0.6, vec_2(20, 20)}}
 
-    tt = E:register_t("umbra_crystals", "decal_scripted")
+    tt = RT("umbra_crystals", "decal_scripted")
     tt.render.sprites[1].prefix = "umbra_crystals"
     tt.render.sprites[1].name = "idle"
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].z = Z_OBJECTS - 1
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "umbra_crystals_crack1"
     tt.render.sprites[2].hidden = true
     tt.render.sprites[2].loop = false
@@ -1560,22 +1560,22 @@ local function boss()
     tt.render.sprites[4].name = "umbra_crystals_crack3"
     tt.main_script.update = scripts.decal_umbra_crystals.update
 
-    tt = E:register_t("umbra_crystals_broken", "decal")
+    tt = RT("umbra_crystals_broken", "decal")
     tt.render.sprites[1].name = "finalBoss_spawn_0108"
     tt.render.sprites[1].animated = false
 
-    tt = E:register_t("umbra_crystals_piece", "decal_tween")
+    tt = RT("umbra_crystals_piece", "decal_tween")
     tt.render.sprites[1].name = "umbra_crystals_piece"
     tt.render.sprites[1].loop = false
     tt.render.sprites[1].z = Z_OBJECTS
     tt.tween.props[1].name = "alpha"
     tt.tween.props[1].keys = {{0, 255}, {fts(21), 255}, {fts(21) + 1, 0}}
 
-    tt = E:register_t("umbra_guy", "decal_scripted")
-    E:add_comps(tt, "attacks")
+    tt = RT("umbra_guy", "decal_scripted")
+    AC(tt, "attacks")
     tt.main_script.update = scripts.umbra_guy.update
     tt.render.sprites[1].prefix = "umbra_guy"
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].bullet = "ray_umbra_guy"
     tt.attacks.list[1].cooldown = 40
     tt.attacks.list[1].vis_bans = bor(F_FLYING, F_ENEMY)
@@ -1595,7 +1595,7 @@ local function boss()
     tt.taunt.shoutbox = "decal_umbra_guy_shoutbox"
     tt.taunt.ts = 0
 
-    tt = E:register_t("umbra_guy_force_field", "decal_tween")
+    tt = RT("umbra_guy_force_field", "decal_tween")
     tt.render.sprites[1].name = "finalBoss_guy_forceShield_0013"
     tt.render.sprites[1].animated = false
     tt.tween.remove = false
@@ -1603,7 +1603,7 @@ local function boss()
     tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(0.92, 0.92)}, {0.5, vec_2(1, 1)}}
     tt.tween.props[1].loop = true
 
-    tt = E:register_t("ray_umbra_guy", "bullet")
+    tt = RT("ray_umbra_guy", "bullet")
     tt.image_width = 238
     tt.main_script.update = scripts.ray_enemy.update
     tt.render.sprites[1].name = "ray_umbra_guy"
@@ -1619,15 +1619,15 @@ local function boss()
     tt.bullet.hit_fx = "fx_ray_umbra_guy_explosion"
     tt.sound_events.insert = "TeslaAttack"
 
-    tt = E:register_t("fx_ray_umbra_guy_explosion", "fx")
+    tt = RT("fx_ray_umbra_guy_explosion", "fx")
     tt.render.sprites[1].name = "ray_umbra_guy_explosion"
 
-    tt = E:register_t("decal_umbra_guy_shoutbox", "decal_tween")
-    E:add_comps(tt, "texts", "timed")
+    tt = RT("decal_umbra_guy_shoutbox", "decal_tween")
+    AC(tt, "texts", "timed")
     tt.render.sprites[1].name = "finalBoss_GuyTauntBox"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].z = Z_BULLETS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_BULLETS
     tt.render.sprites[2].offset = vec_2(7, 15)
@@ -1647,11 +1647,11 @@ local function boss()
     tt.tween.props[2].sprite_id = 2
     tt.tween.remove = false
 
-    tt = E:register_t("eb_leviathan", "boss")
-    E:add_comps(tt, "attacks")
+    tt = RT("eb_leviathan", "boss")
+    AC(tt, "attacks")
     anchor_y = 0.15254237288135594
     image_y = 118
-    tt.attacks.list[1] = E:clone_c("custom_attack")
+    tt.attacks.list[1] = CC("custom_attack")
     tt.attacks.list[1].cooldown = 12
     tt.enemy.gold = 0
     tt.enemy.lives_cost = 20
@@ -1666,13 +1666,13 @@ local function boss()
     tt.main_script.insert = scripts.eb_leviathan.insert
     tt.main_script.update = scripts.eb_leviathan.update
     tt.motion.max_speed = 0.384 * FPS
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].prefix = "eb_leviathan_water"
     tt.render.sprites[1].name = "spawn"
     tt.render.sprites[1].loop_forced = true
     tt.render.sprites[1].hidden = true
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].anchor.y = anchor_y
     tt.render.sprites[2].prefix = "eb_leviathan"
     tt.render.sprites[2].name = "spawn"
@@ -1691,12 +1691,12 @@ local function boss()
     tt.sound_events.spawn = "RTBossSpawn"
     tt.sound_events.death = "RTBossDeath"
 
-    tt = E:register_t("leviathan_head", "decal")
+    tt = RT("leviathan_head", "decal")
     tt.render.sprites[1].prefix = "leviathan_head"
     tt.render.sprites[1].name = "show"
     tt.render.sprites[1].anchor.y = 0.4830508474576271
 
-    tt = E:register_t("leviathan_tentacle", "decal_scripted")
+    tt = RT("leviathan_tentacle", "decal_scripted")
     tt.render.sprites[1].prefix = "leviathan_tentacle"
     tt.render.sprites[1].name = "show"
     tt.render.sprites[1].anchor.y = 0.23076923076923078
@@ -1708,11 +1708,11 @@ local function boss()
     tt.interrupt = nil
     tt.flip = nil
 
-    tt = E:register_t("fx_leviathan_incoming", "decal_tween")
+    tt = RT("fx_leviathan_incoming", "decal_tween")
     tt.tween.remove = true
     tt.tween.props[1].name = "alpha"
     tt.tween.props[1].keys = {{0, 0}, {1, 255}, {3, 255}}
-    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2] = CC("tween_prop")
     tt.tween.props[2].name = "scale"
     tt.tween.props[2].keys = {{0, vec_2(0.35, 0.35)}, {3, vec_2(1, 1)}}
     tt.render.sprites[1].name = "fx_leviathan_bubbles"
@@ -1720,8 +1720,8 @@ local function boss()
     tt.render.sprites[1].loop = true
     tt.render.sprites[1].anchor.y = 0.15254237288135594
 
-    tt = E:register_t("eb_dracula", "boss")
-    E:add_comps(tt, "melee")
+    tt = RT("eb_dracula", "boss")
+    AC(tt, "melee")
     image_y = 80
     anchor_y = 0.1375
     tt.enemy.gold = 0
@@ -1740,7 +1740,7 @@ local function boss()
     tt.melee.attacks[1].damage_max = 200
     tt.melee.attacks[1].damage_min = 150
     tt.melee.attacks[1].hit_time = fts(19)
-    tt.melee.attacks[2] = E:clone_c("melee_attack")
+    tt.melee.attacks[2] = CC("melee_attack")
     tt.melee.attacks[2].mod = "mod_dracula_lifesteal"
     tt.melee.attacks[2].cooldown = 5
     tt.melee.attacks[2].animation = "lifesteal"
@@ -1750,7 +1750,7 @@ local function boss()
     tt.motion.max_speed_bat = 2.56 * FPS
     tt.motion.max_speed_default = 0.427 * FPS
     tt.motion.max_speed_angry = 0.747 * FPS
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
@@ -1766,7 +1766,7 @@ local function boss()
     tt.sound_events.insert = "MusicBossFight"
     tt.sound_events.death = "HWBossVampireDeath"
 
-    tt = E:register_t("mod_dracula_lifesteal", "modifier")
+    tt = RT("mod_dracula_lifesteal", "modifier")
     tt.modifier.duration = fts(50)
     tt.cycle_time = fts(2)
     tt.heal_hp = 25
@@ -1774,8 +1774,8 @@ local function boss()
     tt.main_script.update = scripts.mod_dracula_lifesteal.update
     tt.sound_events.insert = "HWBossVampireLifesteal"
 
-    tt = E:register_t("dracula_damage_aura", "aura")
-    E:add_comps(tt, "render")
+    tt = RT("dracula_damage_aura", "aura")
+    AC(tt, "render")
     tt.aura.cycle_time = fts(2)
     tt.aura.duration = -1
     tt.aura.radius = 128
@@ -1792,8 +1792,8 @@ local function boss()
     tt.render.sprites[1].anchor = vec_2(0.5289855072463768, 0.48484848484848486)
     tt.render.sprites[1].z = Z_DECALS
 
-    tt = E:register_t("eb_saurian_king", "boss")
-    E:add_comps(tt, "melee", "timed_attacks")
+    tt = RT("eb_saurian_king", "boss")
+    AC(tt, "melee", "timed_attacks")
     image_y = 150
     anchor_y = 0.16666666666666666
     tt.enemy.gold = 0
@@ -1810,7 +1810,7 @@ local function boss()
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_saurian_king.update
     tt.motion.max_speed = 1.494 * FPS
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].angles_stickiness = {
         walk = 10
@@ -1828,7 +1828,7 @@ local function boss()
     tt.vis.flags = bor(F_ENEMY, F_BOSS)
     tt.sound_events.insert = "MusicBossFight"
     tt.sound_events.death = "SaurianKingBossDeath"
-    tt.melee.attacks[1] = E:clone_c("area_attack")
+    tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 2
     tt.melee.attacks[1].damage_max = 0
     tt.melee.attacks[1].damage_min = 0
@@ -1837,7 +1837,7 @@ local function boss()
     tt.melee.attacks[1].hit_offset = tt.enemy.melee_slot
     tt.melee.attacks[1].mod = "mod_saurian_king_tongue"
     tt.melee.attacks[1].sound = "SaurianKingBossTongue"
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animations = {"hammer_start", "hammer_loop"}
     tt.timed_attacks.list[1].cooldown = 5
     tt.timed_attacks.list[1].damage_radius = 500
@@ -1851,11 +1851,11 @@ local function boss()
     tt.timed_attacks.list[1].vis_flags = F_RANGED
     tt.timed_attacks.list[1].fx_offsets = {vec_2(48, -11), vec_2(62, 1)}
 
-    tt = E:register_t("decal_saurian_king_hammer", "fx")
+    tt = RT("decal_saurian_king_hammer", "fx")
     tt.render.sprites[1].name = "decal_saurian_king_hammer"
     tt.render.sprites[1].z = Z_DECALS
 
-    tt = E:register_t("mod_saurian_king_tongue", "modifier")
+    tt = RT("mod_saurian_king_tongue", "modifier")
     tt.main_script.insert = scripts.mod_saurian_king_tongue.insert
     tt.modifier.damage_radius = 25
     tt.modifier.damage_max = 150
@@ -1863,9 +1863,9 @@ local function boss()
     tt.modifier.vis_flags = F_MOD
     tt.modifier.vis_bans = bor(F_ENEMY, F_FLYING)
 
-    tt = E:register_t("eb_gnoll", "boss")
-    E:add_comps(tt, "melee", "timed_attacks", "auras")
-    tt.auras.list[1] = E:clone_c("aura_attack")
+    tt = RT("eb_gnoll", "boss")
+    AC(tt, "melee", "timed_attacks", "auras")
+    tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "gnoll_boss_aura"
     tt.auras.list[1].cooldown = 0
     tt.enemy.gold = 1
@@ -1900,7 +1900,7 @@ local function boss()
     tt.melee.attacks[1].damage_min = 70
     tt.melee.attacks[1].hit_time = fts(22)
     tt.melee.attacks[1].uninterruptible = true
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].cooldown = {7, 7, 7, 5}
     tt.timed_attacks.list[1].hit_time = fts(55)
     tt.timed_attacks.list[1].animation = "specialAttack"
@@ -1912,15 +1912,15 @@ local function boss()
     tt.timed_attacks.list[1].damage_min_hero = 100
     tt.timed_attacks.list[1].damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
     tt.timed_attacks.list[1].sound = "ElvesHyenaStomp"
-    tt.timed_attacks.list[2] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[2] = CC("custom_attack")
     tt.timed_attacks.list[2].animation = "scream"
     tt.timed_attacks.list[2].nis = {85, 135, 180}
     tt.timed_attacks.list[2].wave_names = {"Boss_Path_1", "Boss_Path_2", "Boss_Path_3", "Boss_Path_4"}
     tt.timed_attacks.list[2].hit_time = fts(8)
     tt.timed_attacks.list[2].sound = "ElvesHyenaGrowl"
 
-    tt = E:register_t("gnoll_boss_aura", "aura")
-    E:add_comps(tt, "render", "tween")
+    tt = RT("gnoll_boss_aura", "aura")
+    AC(tt, "render", "tween")
     tt.aura.cycle_time = fts(5)
     tt.aura.duration = -1
     tt.aura.filter_source = true
@@ -1934,7 +1934,7 @@ local function boss()
     tt.render.sprites[1].name = "bossHiena_aura_base"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].z = Z_DECALS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "bossHiena_aura_ring"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_DECALS
@@ -1942,14 +1942,14 @@ local function boss()
     tt.tween.props[1].keys = {{0, 102}, {fts(9), 173}, {fts(21), 20}, {fts(30), 20}}
     tt.tween.props[1].sprite_id = 2
     tt.tween.props[1].loop = true
-    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2] = CC("tween_prop")
     tt.tween.props[2].keys = {{0, vec_2(0.65, 0.65)}, {fts(30), vec_2(1.57, 1.57)}}
     tt.tween.props[2].name = "scale"
     tt.tween.props[2].sprite_id = 2
     tt.tween.props[2].loop = true
 
-    tt = E:register_t("mod_gnoll_boss", "modifier")
-    E:add_comps(tt, "render")
+    tt = RT("mod_gnoll_boss", "modifier")
+    AC(tt, "render")
     tt.render.sprites[1].name = "bossHiena_creepFx"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].z = Z_DECALS
@@ -1961,8 +1961,8 @@ local function boss()
     tt.extra_health_factor = 0.5
     tt.inflicted_damage_factor = 1.5
 
-    tt = E:register_t("eb_drow_queen", "boss")
-    E:add_comps(tt, "melee", "taunts", "tween")
+    tt = RT("eb_drow_queen", "boss")
+    AC(tt, "melee", "taunts", "tween")
     tt.info.enc_icon = 27
     tt.info.i18n_key = "EB_DROW_QUEEN"
     tt.info.portrait = "kr3_portraits_sc_0062"
@@ -1978,7 +1978,7 @@ local function boss()
     tt.health_bar.sort_y_offset = -2
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.main_script.update = scripts.eb_drow_queen.update
-    tt.melee.attacks[1] = E:clone_c("area_attack")
+    tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 1.2
     tt.melee.attacks[1].damage_radius = 30
     tt.melee.attacks[1].damage_max = {120, 120, 120, 500}
@@ -1992,13 +1992,13 @@ local function boss()
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].prefix = "s11_malicia"
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "malicia_glow_0001"
     tt.render.sprites[2].anchor.y = 0.058823529411764705
     tt.render.sprites[2].draw_order = 2
     tt.render.sprites[2].alpha = 0
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].animated = false
     tt.render.sprites[3].name = "malicia_glow_0002"
     tt.render.sprites[3].anchor.y = 0.058823529411764705
@@ -2009,7 +2009,7 @@ local function boss()
     tt.tween.disabled = true
     tt.tween.props[1].keys = {{0, 255}, {fts(16), 0}}
     tt.tween.props[1].disabled = true
-    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2] = CC("tween_prop")
     tt.tween.props[2].keys = {{0, 255}, {0.3, 0}}
     tt.tween.props[2].sprite_id = 2
     tt.tween.props[3] = table.deepclone(tt.tween.props[2])
@@ -2061,16 +2061,16 @@ local function boss()
     tt.taunts.offset = vec_2(0, 0)
     tt.taunts.pos = vec_2(870, 376)
 
-    tt = E:register_t("decal_drow_queen_shoutbox", "decal_tween")
-    E:add_comps(tt, "texts")
+    tt = RT("decal_drow_queen_shoutbox", "decal_tween")
+    AC(tt, "texts")
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "malicia_taunt_0001"
     tt.render.sprites[1].z = Z_BULLETS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "malicia_taunt_0002"
     tt.render.sprites[2].z = Z_BULLETS
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].animated = false
     tt.render.sprites[3].z = Z_BULLETS
     tt.render.sprites[3].offset = vec_2(0, 1)
@@ -2088,7 +2088,7 @@ local function boss()
     tt.tween.props[2].sprite_id = 2
     tt.tween.props[3] = table.deepclone(tt.tween.props[1])
     tt.tween.props[3].sprite_id = 3
-    tt.tween.props[4] = E:clone_c("tween_prop")
+    tt.tween.props[4] = CC("tween_prop")
     tt.tween.props[4].name = "scale"
     tt.tween.props[4].keys = {{0, vec_2(1.01, 1.01)}, {0.4, vec_2(0.99, 0.99)}, {0.8, vec_2(1.01, 1.01)}}
     tt.tween.props[4].sprite_id = 1
@@ -2098,16 +2098,16 @@ local function boss()
     tt.tween.props[6] = table.deepclone(tt.tween.props[4])
     tt.tween.props[6].sprite_id = 3
     tt.tween.remove = true
-    tt = E:register_t("decal_drow_queen_shoutbox_casting", "decal_drow_queen_shoutbox")
+    tt = RT("decal_drow_queen_shoutbox_casting", "decal_drow_queen_shoutbox")
     tt.render.sprites[2].name = "malicia_taunt_0003"
-    tt = E:register_t("decal_drow_queen_flying", "decal")
+    tt = RT("decal_drow_queen_flying", "decal")
     tt.render.sprites[1].name = "s11_malicia_teleportLoop"
     tt.render.sprites[1].anchor.y = 0.35384615384615387
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].sort_y_offset = -24
 
-    tt = E:register_t("decal_drow_queen_shield", "decal_scripted")
-    E:add_comps(tt, "tween", "health_bar", "health")
+    tt = RT("decal_drow_queen_shield", "decal_scripted")
+    AC(tt, "tween", "health_bar", "health")
     tt.health.hp = 0
     tt.health_bar.hidden = true
     tt.health_bar.offset = vec_2(0, 52)
@@ -2129,23 +2129,23 @@ local function boss()
     tt.tween.props[1].keys = {{0, vec_1(1)}, {fts(10), vec_1(1.1)}, {fts(20), vec_1(1)}}
     tt.tween.props[1].loop = true
     tt.tween.props[1].ignore_reverse = true
-    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2] = CC("tween_prop")
     tt.tween.props[2].keys = {{0, 0}, {fts(11), 153}}
     tt.shield_hp = 0
 
-    tt = E:register_t("fx_drow_queen_shield_break", "fx")
-    E:add_comps(tt, "sound_events")
+    tt = RT("fx_drow_queen_shield_break", "fx")
+    AC(tt, "sound_events")
     tt.render.sprites[1].name = "s11_malicia_shield_break"
     tt.render.sprites[1].anchor.y = 0.15384615384615385
     tt.render.sprites[1].offset.x = -5
     tt.sound_events.insert = "ElvesMaliciaShieldBreak"
 
-    tt = E:register_t("fx_drow_queen_cast", "fx")
+    tt = RT("fx_drow_queen_cast", "fx")
     tt.render.sprites[1].name = "s11_malicia_castFx"
     tt.render.sprites[1].anchor.y = 0.15384615384615385
 
-    tt = E:register_t("mod_drow_queen_tower_block", "modifier")
-    E:add_comps(tt, "render", "tween")
+    tt = RT("mod_drow_queen_tower_block", "modifier")
+    AC(tt, "render", "tween")
     tt.main_script.update = scripts.mod_tower_block.update
     tt.modifier.duration = 8
     tt.render.sprites[1].anchor.y = 0.2
@@ -2154,7 +2154,7 @@ local function boss()
     tt.render.sprites[1].z = Z_OBJECTS
     tt.render.sprites[1].name = "start"
     tt.render.sprites[1].prefix = "malicia_tower_block"
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "malicia_towerNet_decal"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].z = Z_DECALS
@@ -2189,7 +2189,7 @@ local function boss()
     tt.motion.max_speed = 0.83 * FPS
 
     for i = 1, 6 do
-        local s = E:clone_c("sprite")
+        local s = CC("sprite")
 
         s.prefix = "eb_spider_layer" .. i
         s.name = "idle"
@@ -2418,7 +2418,7 @@ local function boss()
     tt.melee.attacks[1].fn_can = function(t, s, a, target)
         return band(target.vis.flags, F_HERO) ~= 0
     end
-    tt.melee.attacks[2] = E:clone_c("melee_attack")
+    tt.melee.attacks[2] = CC("melee_attack")
     tt.melee.attacks[2].animation = "attack"
     tt.melee.attacks[2].damage_type = bor(DAMAGE_NONE, DAMAGE_NO_DODGE)
     tt.melee.attacks[2].hit_time = fts(11)
@@ -2458,13 +2458,13 @@ local function boss()
     tt.taunts.sets.prebattle.format = "BOSS_BRAM_TAUNT_PREBATTLE_%04d"
     tt.taunts.sets.prebattle.end_idx = 3
 
-    tt = E:register_t("mod_bram_slap", "modifier")
+    tt = RT("mod_bram_slap", "modifier")
     tt.main_script.queue = scripts.mod_bram_slap.queue
     tt.main_script.update = scripts.mod_bram_slap.update
     tt.custom_anchors = {}
     tt.custom_anchors.default = vec_2(0.5, 0.45)
 
-    tt = E:register_t("decal_bram_enemy_clone", "decal_bravebark_branchball_enemy_clone")
+    tt = RT("decal_bram_enemy_clone", "decal_bravebark_branchball_enemy_clone")
 
     tt = RT("eb_bajnimen", "boss")
     AC(tt, "melee", "ranged", "timed_attacks")
@@ -2512,7 +2512,7 @@ local function boss()
     tt.ranged.attacks[1].max_range = 125
     tt.ranged.attacks[1].min_range = 20
     tt.ranged.attacks[1].bullet_start_offset = {vec_2(30, 135)}
-    tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animations = {"shadowStorm_start", "shadowStorm_loop", "shadowStorm_end"}
     tt.timed_attacks.list[1].vis_bans = bor(F_ENEMY, F_BOSS)
     tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
@@ -2521,7 +2521,7 @@ local function boss()
     tt.timed_attacks.list[1].cooldown = 4
     tt.timed_attacks.list[1].max_range = 9e+99
     tt.timed_attacks.list[1].bullet = "meteor_bajnimen"
-    tt.timed_attacks.list[2] = E:clone_c("custom_attack")
+    tt.timed_attacks.list[2] = CC("custom_attack")
     tt.timed_attacks.list[2].animations = {"charge_start", "charge_loop", "charge_end"}
     tt.timed_attacks.list[2].current_step = 1
     tt.timed_attacks.list[2].active = false

@@ -33,7 +33,7 @@ local function foundamental_towers()
     tt.render.sprites[1].name = "build_terrain_%04i"
     tt.render.sprites[1].offset = vec_2(0, 17)
     tt.render.sprites[1].z = Z_DECALS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "tower_preview_archer"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].hidden = true
@@ -92,7 +92,7 @@ local function foundamental_towers()
     tt.main_script.insert = scripts.tower_mage.insert
     tt.main_script.update = scripts.tower_mage.update
     tt.attacks.range = 140
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animation = "shoot"
     tt.attacks.list[1].bullet = "bolt_1"
     tt.attacks.list[1].cooldown = 1.5
@@ -101,11 +101,11 @@ local function foundamental_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_mage_%04i"
     tt.render.sprites[1].offset = vec_2(0, 15)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].prefix = "towermagelvl1"
     tt.render.sprites[2].name = "idle"
     tt.render.sprites[2].offset = vec_2(0, 30)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "shootermage"
     tt.render.sprites[3].name = "idleDown"
     tt.render.sprites[3].angles = {
@@ -155,7 +155,7 @@ local function foundamental_towers()
     tt.main_script.insert = scripts.tower_engineer.insert
     tt.main_script.update = scripts.tower_engineer.update
     tt.attacks.range = 160
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].bullet = "bomb"
     tt.attacks.list[1].cooldown = 3
     tt.attacks.list[1].shoot_time = fts(12)
@@ -167,7 +167,7 @@ local function foundamental_towers()
     tt.render.sprites[1].offset = vec_2(0, 15)
 
     for i = 2, 8 do
-        tt.render.sprites[i] = E:clone_c("sprite")
+        tt.render.sprites[i] = CC("sprite")
         tt.render.sprites[i].prefix = "towerengineerlvl1_layer" .. i - 1
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].offset = vec_2(0, 41)
@@ -184,7 +184,7 @@ local function foundamental_towers()
     tt.attacks.list[1].bullet_start_offset = vec_2(0, 53)
 
     for i = 2, 8 do
-        tt.render.sprites[i] = E:clone_c("sprite")
+        tt.render.sprites[i] = CC("sprite")
         tt.render.sprites[i].prefix = "towerengineerlvl2_layer" .. i - 1
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].offset = vec_2(0, 42)
@@ -201,7 +201,7 @@ local function foundamental_towers()
     tt.attacks.list[1].bullet_start_offset = vec_2(0, 57)
 
     for i = 2, 8 do
-        tt.render.sprites[i] = E:clone_c("sprite")
+        tt.render.sprites[i] = CC("sprite")
         tt.render.sprites[i].prefix = "towerengineerlvl3_layer" .. i - 1
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].offset = vec_2(0, 43)
@@ -219,11 +219,11 @@ local function foundamental_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_archer_%04i"
     tt.render.sprites[1].offset = vec_2(0, 12)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "archer_tower_0001"
     tt.render.sprites[2].offset = vec_2(0, 37)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "shooterarcherlvl1"
     tt.render.sprites[3].name = "idleDown"
     tt.render.sprites[3].angles = {
@@ -231,7 +231,7 @@ local function foundamental_towers()
         shoot = {"shootingUp", "shootingDown"}
     }
     tt.render.sprites[3].offset = vec_2(-9, 51)
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].prefix = "shooterarcherlvl1"
     tt.render.sprites[4].name = "idleDown"
     tt.render.sprites[4].angles = {
@@ -243,7 +243,7 @@ local function foundamental_towers()
     tt.main_script.update = scripts.tower_archer.update
     tt.main_script.remove = scripts.tower_archer.remove
     tt.attacks.range = 140
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].bullet = "arrow_1"
     tt.attacks.list[1].cooldown = 0.8
     tt.attacks.list[1].shoot_time = fts(5)
@@ -299,11 +299,11 @@ local function foundamental_towers()
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 13)
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].name = "tower_barracks_lvl1_layer1_0001"
     tt.render.sprites[2].offset = vec_2(0, 38)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].prefix = "towerbarracklvl1_door"
     tt.render.sprites[3].name = "close"
     tt.render.sprites[3].loop = false
@@ -333,8 +333,8 @@ local function foundamental_towers()
     tt.barrack.soldier_type = "soldier_knight"
     tt.barrack.rally_range = 155
 
-    tt = E:register_t("tower_neptune_holder")
-    E:add_comps(tt, "tower", "tower_holder", "pos", "render", "ui", "info")
+    tt = RT("tower_neptune_holder")
+    AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info")
     tt.tower.level = 1
     tt.tower.type = "holder_neptune"
     tt.tower.can_be_mod = false
@@ -345,14 +345,14 @@ local function foundamental_towers()
     tt.render.sprites[1].offset = vec_2(0, 7)
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].hover_off_hidden = true
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "neptuno_0001"
     tt.render.sprites[2].animated = false
     tt.render.sprites[2].offset = vec_2(0, 39)
     tt.ui.click_rect = r(-40, -10, 80, 90)
 
-    tt = E:register_t("tower_neptune", "tower")
-    E:add_comps(tt, "powers", "user_selection", "attacks")
+    tt = RT("tower_neptune", "tower")
+    AC(tt, "powers", "user_selection", "attacks")
     tt.tower.level = 1
     tt.tower.type = "neptune"
     tt.tower.price = 500
@@ -361,7 +361,7 @@ local function foundamental_towers()
     tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0021"
     tt.info.fn = scripts.tower_neptune.get_info
     tt.ui.click_rect = r(-40, -10, 80, 90)
-    tt.powers.ray = E:clone_c("power")
+    tt.powers.ray = CC("power")
     tt.powers.ray.level = 1
     tt.powers.ray.max_level = 3
     tt.powers.ray.price_inc = 500
@@ -372,57 +372,57 @@ local function foundamental_towers()
     tt.render.sprites[1].offset = vec_2(0, 7)
     tt.render.sprites[1].hidden = true
     tt.render.sprites[1].hover_off_hidden = true
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "towerneptune_trident_glow"
     tt.render.sprites[2].offset = vec_2(0, 39)
-    tt.render.sprites[3] = E:clone_c("sprite")
+    tt.render.sprites[3] = CC("sprite")
     tt.render.sprites[3].name = "neptuno_0002"
     tt.render.sprites[3].animated = false
     tt.render.sprites[3].offset = vec_2(0, 39)
-    tt.render.sprites[4] = E:clone_c("sprite")
+    tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].prefix = "towerneptune"
     tt.render.sprites[4].name = "charged"
     tt.render.sprites[4].offset = vec_2(0, 39)
-    tt.render.sprites[5] = E:clone_c("sprite")
+    tt.render.sprites[5] = CC("sprite")
     tt.render.sprites[5].prefix = "towerneptune_gems_3"
     tt.render.sprites[5].name = "ready"
     tt.render.sprites[5].offset = vec_2(0, 39)
     tt.render.sprites[5].fps = 15
-    tt.render.sprites[6] = E:clone_c("sprite")
+    tt.render.sprites[6] = CC("sprite")
     tt.render.sprites[6].prefix = "towerneptune_gems_1"
     tt.render.sprites[6].name = "empty"
     tt.render.sprites[6].offset = vec_2(0, 39)
     tt.render.sprites[6].fps = 15
     tt.render.sprites[6].hidden = true
-    tt.render.sprites[7] = E:clone_c("sprite")
+    tt.render.sprites[7] = CC("sprite")
     tt.render.sprites[7].prefix = "towerneptune_gems_2"
     tt.render.sprites[7].name = "empty"
     tt.render.sprites[7].offset = vec_2(0, 39)
     tt.render.sprites[7].fps = 15
     tt.render.sprites[7].hidden = true
-    tt.render.sprites[8] = E:clone_c("sprite")
+    tt.render.sprites[8] = CC("sprite")
     tt.render.sprites[8].prefix = "towerneptune_gems_eyes"
     tt.render.sprites[8].name = "empty"
     tt.render.sprites[8].offset = vec_2(0, 39)
     tt.render.sprites[8].loop = false
-    tt.render.sprites[9] = E:clone_c("sprite")
+    tt.render.sprites[9] = CC("sprite")
     tt.render.sprites[9].prefix = "towerneptune_gems_trident"
     tt.render.sprites[9].name = "empty"
     tt.render.sprites[9].offset = vec_2(0, 39)
     tt.render.sprites[9].loop = false
-    tt.render.sprites[10] = E:clone_c("sprite")
+    tt.render.sprites[10] = CC("sprite")
     tt.render.sprites[10].prefix = "towerneptune_tip_glow"
     tt.render.sprites[10].name = "pick"
     tt.render.sprites[10].offset = vec_2(17, 105)
     tt.render.sprites[10].hidden = true
     tt.sound_events.insert = "GUITowerBuilding"
     tt.sound_events.mute_on_level_insert = true
-    tt.attacks.list[1] = E:clone_c("bullet_attack")
+    tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].bullet = "ray_neptune"
     tt.attacks.list[1].cooldown = 30
     tt.attacks.list[1].bullet_start_offset = vec_2(17, 105)
 
-    tt = E:register_t("ray_neptune", "bullet")
+    tt = RT("ray_neptune", "bullet")
     tt.image_width = 358
     tt.main_script.update = scripts.ray_neptune.update
     tt.render.sprites[1].name = "ray_neptune"
@@ -435,12 +435,12 @@ local function foundamental_towers()
     tt.bullet.damage_rect = r(-40, -2, 80, 50)
     tt.bullet.hit_fx = "fx_ray_neptune_explosion"
     tt.sound_events.insert = "PolymorphSound"
-    tt = E:register_t("fx_ray_neptune_explosion", "decal_timed")
+    tt = RT("fx_ray_neptune_explosion", "decal_timed")
     tt.render.sprites[1].name = "ray_neptune_explosion"
     tt.render.sprites[1].anchor.y = 0.24444444444444444
     tt.render.sprites[1].z = Z_BULLETS
 
-    tt = E:register_t("rock_1", "bomb")
+    tt = RT("rock_1", "bomb")
     tt.bullet.flight_time = fts(28)
     tt.bullet.damage_radius = 60
     tt.bullet.damage_max = 12
@@ -454,18 +454,18 @@ local function foundamental_towers()
     tt.sound_events.hit = "TowerStoneDruidBoulderExplote"
     tt.sound_events.hit_water = "RTWaterExplosion"
 
-    tt = E:register_t("rock_2", "rock_1")
+    tt = RT("rock_2", "rock_1")
     tt.bullet.damage_max = 30
     tt.bullet.damage_min = 18
-    tt = E:register_t("rock_3", "rock_1")
+    tt = RT("rock_3", "rock_1")
     tt.bullet.damage_max = 50
     tt.bullet.damage_min = 30
 
-    tt = E:register_t("mod_rock_slow", "mod_slow")
+    tt = RT("mod_rock_slow", "mod_slow")
     tt.modifier.duration = 0.75
 
-    tt = E:register_t("soldier_barrack_1", "soldier_militia")
-    E:add_comps(tt, "revive")
+    tt = RT("soldier_barrack_1", "soldier_militia")
+    AC(tt, "revive")
     image_y = 46
     anchor_y = 11 / image_y
     tt.health.armor = 0.3
@@ -493,7 +493,7 @@ local function foundamental_towers()
     tt.melee.range = 60
     tt.motion.max_speed = 75
     tt.regen.cooldown = 1
-    tt.render.sprites[1] = E:clone_c("sprite")
+    tt.render.sprites[1] = CC("sprite")
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].angles = {}
     tt.render.sprites[1].angles.walk = {"running"}
@@ -507,9 +507,9 @@ local function foundamental_towers()
     tt.unit.hit_offset = vec_2(0, 12)
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 10)
-    tt = E:register_t("soldier_barrack_2", "soldier_barrack_1")
+    tt = RT("soldier_barrack_2", "soldier_barrack_1")
 
-    E:add_comps(tt, "ranged")
+    AC(tt, "ranged")
 
     image_y = 46
     anchor_y = 11 / image_y
@@ -527,7 +527,7 @@ local function foundamental_towers()
     tt.ranged.attacks[1].min_range = 25
     tt.ranged.attacks[1].shoot_time = fts(5)
     tt.render.sprites[1].prefix = "soldier_barrack_2"
-    tt = E:register_t("soldier_barrack_3", "soldier_barrack_2")
+    tt = RT("soldier_barrack_3", "soldier_barrack_2")
     image_y = 46
     anchor_y = 11 / image_y
     tt.health.armor = 0.5
