@@ -5713,7 +5713,7 @@ function scripts.tower_dark_elf.update(this, store)
 
     local function can_be_target_to_kill(target)
         local d = E:create_entity("damage")
-        local bullet = E:get_template(attack.bullet)
+        local bullet = E:get_template(attack.bullet).bullet
         if pow_buff.level > 0 and this.tower_upgrade_persistent_data.souls_extra_damage_min then
             d.value = math.max(1, this.tower.damage_factor * (bullet.damage_min +
                 this.tower_upgrade_persistent_data.souls_extra_damage_min))
