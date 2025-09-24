@@ -3584,9 +3584,13 @@ local towers = {
         },
         skill_buff = {
             extra_damage_min = {
+                1,
+                1,
                 1
             },
             extra_damage_max = {
+                1,
+                1,
                 1
             },
             max_times = {
@@ -3595,6 +3599,8 @@ local towers = {
                 999999
             },
             s_extra_damage_total = {
+                1,
+                1,
                 1
             }
         }
