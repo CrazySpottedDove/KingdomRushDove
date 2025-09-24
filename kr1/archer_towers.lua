@@ -1156,6 +1156,7 @@ local function archer_towers()
     tt.attacks.list[2].spawn_delay = 1
     tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"
     tt.sound_events.change_rally_point = "TowerDarkElfUnitTaunt"
+    tt.sound_events.insert = "TowerDarkElfTaunt"
 
     tt = RT("soldier_tower_dark_elf", "soldier_militia")
     AC(tt, "nav_grid", "dodge")
