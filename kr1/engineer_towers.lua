@@ -1562,13 +1562,13 @@ local function engineer_towers()
     tt.modifier.vis_bans = bor(F_BOSS)
 
     tt = RT("mod_tower_demon_pit_master_explosion_burning", "modifier")
-    b = balance.towers.demon_pit.master_exploders
+    local master_exploders = b.master_exploders
     AC(tt, "dps", "render")
     tt.modifier.duration = nil
     tt.dps.damage_min = nil
     tt.dps.damage_max = nil
-    tt.dps.damage_type = b.damage_type
-    tt.dps.damage_every = b.damage_every
+    tt.dps.damage_type = master_exploders.damage_type
+    tt.dps.damage_every = master_exploders.damage_every
     tt.main_script.insert = scripts.mod_dps.insert
     tt.main_script.update = scripts.mod_dps.update
     tt.render.sprites[1].size_names = {

@@ -264,3 +264,15 @@ function table.random_order(t)
 
 	return o
 end
+
+function table.safe_index(t, index)
+	local size = #t
+
+	if not t or size < 1 then
+		return nil
+	else
+		local idx = math.min(index, size)
+
+		return t[idx], idx
+	end
+end

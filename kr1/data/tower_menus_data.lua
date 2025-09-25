@@ -200,8 +200,19 @@ return {
                 tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION"),
                 is_kr3 = true
             },
+            {
+                check = "main_icons_0019",
+                action_arg = "tower_necromancer_lvl4",
+                action = "tw_upgrade",
+                image = "kr5_main_icons_0011",
+                place = 16,
+                halo = "glow_ico_main",
+                tt_title = _("TOWER_NECROMANCER_NAME"),
+                tt_desc = _("TOWER_NECROMANCER_1_DESCRIPTION"),
+                is_kr3 = true
+            },
             templates.sell
-        }
+        },
     },
     engineer = {
         {
@@ -3380,5 +3391,66 @@ return {
             },
             templates.sell
         },
+    },
+    necromancer = {
+        {
+            {
+                check = "special_icons_0020",
+                action_arg = "skill_debuff",
+                action = "upgrade_power",
+                image = "kr5_special_icons_0017",
+                place = 6,
+                halo = "glow_ico_special",
+                sounds = {
+                    "TowerNecromancerSkillATaunt"
+                },
+                tt_phrase = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_NOTE"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_1_NAME"),
+                        tt_desc = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_2_NAME"),
+                        tt_desc = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_2_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_3_NAME"),
+                        tt_desc = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_3_DESCRIPTION")
+                    }
+                },
+                is_kr5 = true,
+                is_kr3 = true
+            },
+            {
+                check = "special_icons_0020",
+                action_arg = "skill_rider",
+                action = "upgrade_power",
+                image = "kr5_special_icons_0018",
+                place = 7,
+                halo = "glow_ico_special",
+                sounds = {
+                    "TowerNecromancerSkillBTaunt"
+                },
+                tt_phrase = _("TOWER_NECROMANCER_4_SKILL_RIDER_NOTE"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_NECROMANCER_4_SKILL_RIDER_1_NAME"),
+                        tt_desc = _("TOWER_NECROMANCER_4_SKILL_RIDER_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_NECROMANCER_4_SKILL_RIDER_2_NAME"),
+                        tt_desc = _("TOWER_NECROMANCER_4_SKILL_RIDER_2_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_NECROMANCER_4_SKILL_RIDER_3_NAME"),
+                        tt_desc = _("TOWER_NECROMANCER_4_SKILL_RIDER_3_DESCRIPTION")
+                    }
+                },
+                is_kr5 = true,
+                is_kr3 = true
+            },
+            templates.sell
+        }
     },
 }

@@ -25,13 +25,14 @@ require("constants")
 
 game = {}
 game.required_textures = {"go_decals", "go_enemies_common", "go_towers"}
-game.scale_required_textures = { "go_towers_tricannon", "go_towers_dark_elf", "go_towers_demon_pit" }
+game.scale_required_textures = { "go_towers_tricannon", "go_towers_dark_elf", "go_towers_demon_pit",
+"go_towers_necromancer" }
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
 game.required_sounds = { "common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
-    "tower_demon_pit" }
+    "tower_demon_pit", "tower_necromancer" }
 
 game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle","main_script",  "timed", "tween", "endless_patch","health",
                            "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade", "game_upgrades",
