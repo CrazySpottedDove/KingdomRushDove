@@ -15868,7 +15868,7 @@ return {
 			"necromancer_tower_lvl4_necromancer_0232"
 		}
 	},
-	necromancer_tower_lvl4_tower = {
+	necromancer_tower_lvl4_tower_0001 = {
 		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			236,

@@ -18,8 +18,11 @@ _examine_dir_map:
 	fi
 
 sync:
-	@echo -e "\033[1;36m=== sync changed files to: $(WINDOWS_DIR) ===\033[0m"
-	@git ls-files --modified --others --exclude-standard | xargs -I{} cp --parents "{}" "$(WINDOWS_DIR)"
+	@echo -e "\033[1;36m=== sync changed & uncommitted files to: $(WINDOWS_DIR) ===\033[0m"
+	@{ \
+		git diff --name-only HEAD; \
+		git ls-files --others --exclude-standard; \
+	} | sort | uniq | xargs -I{} cp --parents "{}" "$(WINDOWS_DIR)"
 
 debug: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" debug

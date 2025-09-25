@@ -7269,10 +7269,6 @@ function scripts.tower_necromancer_lvl4.update(this, store)
     end
 
     local function check_skill_rider()
-        if not this.powers then
-            return
-        end
-
         local power = this.powers.skill_rider
         local attack = this.attacks.list[3]
 
