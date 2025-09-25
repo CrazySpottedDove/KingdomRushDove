@@ -6745,7 +6745,7 @@ function scripts.tower_demon_pit.update(this, store, script)
                             enemy_pos = P:node_pos(nearest_nodes[1][1], nearest_nodes[1][2], nearest_nodes[1][3])
                         end
 
-                        local b = shoot_bullet(aa, enemy_pos)
+                        local b = shoot_bullet(aa, enemy_pos, pow_g)
 
                         U.y_animation_wait(this, this.demons_sid)
                         U.animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.demons_sid)

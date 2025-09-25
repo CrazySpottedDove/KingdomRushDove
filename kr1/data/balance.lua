@@ -3015,7 +3015,7 @@ local towers = {
         }
     },
     demon_pit = {
-        price = { 80, 140, 220, 200 },
+        price = { 80, 140, 220, 280 },
         stats = {
             damage = 4,
             armor = 1,
