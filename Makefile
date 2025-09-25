@@ -8,6 +8,7 @@ examine_windows_dir:
 		echo "错误: 目录 $(WINDOWS_DIR) 不存在，请创建该目录或修改 .windows_kr_dove_dir 文件中的路径。"; \
 		exit 1; \
 	fi
-sync:
-    @echo "同步变动的 lua 文件到 $(WINDOWS_DIR)"
-    @git status --porcelain | grep '\.lua$$' | awk '{print $$2}' | xargs -I{} cp --parents {} $(WINDOWS_DIR)
+
+sync: examine_windows_dir
+	@echo "\033[1;36m========== sync git changes to: $(WINDOWS_DIR) ==========\033[0m"
+	@git status --porcelain | awk '{print $$2}' | xargs -I{} cp --parents {} $(WINDOWS_DIR)
