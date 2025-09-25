@@ -3015,7 +3015,7 @@ local towers = {
         }
     },
     demon_pit = {
-        price = { 80, 140, 220, 280 },
+        price = { 80, 140, 220, 300 },
         stats = {
             damage = 4,
             armor = 1,
@@ -3041,11 +3041,11 @@ local towers = {
             regen_health = 1,
             max_speed = 20,
             armor = 0,
-            duration = 30,
-            price = { 200, 100, 100 },
-            cooldown = { 40, 40, 40 },
+            duration = 50,
+            price = { 225, 125, 125 },
+            cooldown = { 36, 36, 36 },
             hp_max = { 100, 150, 200 },
-            explosion_damage = { 100, 150, 250 },
+            explosion_damage = { 100, 175, 250 },
             explosion_range = { 60, 60, 60 },
             explosion_damage_type = DAMAGE_EXPLOSION,
             melee_attack = {
@@ -3057,10 +3057,10 @@ local towers = {
         },
         master_exploders = {
             damage_every = 0.25,
-            price = { 150, 150, 150 },
+            price = { 150, 200, 200 },
             explosion_damage_factor = { 1.2, 1.4, 1.6 },
             s_damage_increase = { 0.2, 0.4, 0.6 },
-            burning_duration = { 2.75, 3.75, 4.75 },
+            burning_duration = { 3, 4, 5 },
             s_burning_duration = { 3, 4, 5 },
             burning_damage_min = { 2, 4, 6 },
             burning_damage_max = { 4, 6, 10 },

@@ -6670,6 +6670,7 @@ function scripts.tower_demon_pit.update(this, store, script)
     local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
     ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
     local nodes_update_ts = store.tick_ts
+    local nodes_limit = #nearest_nodes > 5 and 5 or #nearest_nodes
     local attacks = {
         ag,
         ab
@@ -6706,6 +6707,7 @@ function scripts.tower_demon_pit.update(this, store, script)
             if store.tick_ts - nodes_update_ts > 30 then
                 nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
                 nodes_update_ts = store.tick_ts
+                nodes_limit = #nearest_nodes > 5 and 5 or #nearest_nodes
             end
             if pow_m.changed then
                 pow_m.changed = nil
@@ -6742,7 +6744,8 @@ function scripts.tower_demon_pit.update(this, store, script)
                             a.range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
                         if not enemy_pos then
-                            enemy_pos = P:node_pos(nearest_nodes[1][1], nearest_nodes[1][2], nearest_nodes[1][3])
+                            local idx = math.random(1, nodes_limit)
+                            enemy_pos = P:node_pos(nearest_nodes[idx][1], nearest_nodes[idx][2], nearest_nodes[idx][3])
                         end
 
                         local b = shoot_bullet(aa, enemy_pos, pow_g)
@@ -6771,7 +6774,8 @@ function scripts.tower_demon_pit.update(this, store, script)
                             a.range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
                         if not enemy_pos then
-                            enemy_pos = P:node_pos(nearest_nodes[1][1], nearest_nodes[1][2], nearest_nodes[1][3])
+                            local idx = math.random(1, nodes_limit)
+                            enemy_pos = P:node_pos(nearest_nodes[idx][1], nearest_nodes[idx][2], nearest_nodes[idx][3])
                         end
 
                         shoot_bullet(aa, enemy_pos, pow_m)
