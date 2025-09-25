@@ -60,7 +60,7 @@ local function engineer_towers()
     tt.attacks.list[1].bullet = "bomb_bfg"
     tt.attacks.list[1].bullet_start_offset = vec_2(0, 64)
     tt.attacks.list[1].cooldown = 3.65
-    tt.attacks.list[1].node_prediction = fts(34)
+    tt.attacks.list[1].node_prediction = fts(25)
     -- tt.attacks.list[1].range = 190
     tt.attacks.list[1].shoot_time = fts(23)
     tt.attacks.list[1].vis_bans = bor(F_FLYING)
@@ -1535,7 +1535,7 @@ local function engineer_towers()
     tt.bullet.hit_fx = nil
     tt.bullet.hit_decal = "decal_bomb_crater"
     tt.bullet.hit_payload = "soldier_tower_demon_pit_basic_attack_lvl4"
-    tt.bullet.rotation_speed = 8
+    tt.bullet.rotation_speed = 40
     tt.bullet.pop = nil
     tt.bullet.particles_name = "tower_demon_pit_demon_trail"
     tt.bullet.damage_min = 20
