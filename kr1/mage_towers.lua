@@ -1616,6 +1616,7 @@ local function mage_towers()
     tt.render.sprites[6].animated = true
     tt.render.sprites[6].loop = true
     tt.render.sprites[6].prefix = "necromancer_tower_lvl4_tower"
+    tt.render.sprites[6].name = "smoke"
     tt.render.sprites[6].scale = vec_2(0.9, 0.9)
     tt.render.sid_tower = 2
     tt.render.sid_mage = 3

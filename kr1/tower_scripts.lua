@@ -7318,10 +7318,6 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 
     local had_target = false
 
-    if this.tower.level == 4 then
-        U.animation_start(this, "smoke", nil, store.tick_ts, true, 6)
-    end
-
     ::label_895_0::
 
     while true do

@@ -206,7 +206,7 @@ local a = {
 		to = 131,
 		from = 84
 	},
-	necromancer_tower_lvl4_tower_idle = {
+	necromancer_tower_lvl4_tower = {
 		prefix = "necromancer_tower_lvl4_tower",
 		to = 1,
 		from = 1
