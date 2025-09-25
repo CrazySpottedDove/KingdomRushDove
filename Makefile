@@ -5,7 +5,7 @@ WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 .PHONY: all debug package repackage sync
 
 all: _examine_dir_map sync
-	$(LOVE) "$(WINDOWS_DIR_WIN)" --console
+	$(LOVE) "$(WINDOWS_DIR_WIN)"
 
 _examine_dir_map:
 	@if [ ! -d "$(WINDOWS_DIR)" ]; then \
