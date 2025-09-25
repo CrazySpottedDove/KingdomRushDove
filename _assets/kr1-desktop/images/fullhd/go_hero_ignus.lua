@@ -2,7 +2,7 @@
 
 return {
 	hero_elemental_0001 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0002 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	hero_elemental_0004 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	hero_elemental_0006 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	hero_elemental_0008 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	hero_elemental_0010 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	hero_elemental_0012 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	hero_elemental_0014 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	hero_elemental_0016 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	hero_elemental_0018 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -260,7 +260,7 @@ return {
 		}
 	},
 	hero_elemental_0020 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -286,7 +286,7 @@ return {
 		}
 	},
 	hero_elemental_0022 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -312,7 +312,7 @@ return {
 		}
 	},
 	hero_elemental_0024 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -338,7 +338,7 @@ return {
 		}
 	},
 	hero_elemental_0026 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -364,7 +364,7 @@ return {
 		}
 	},
 	hero_elemental_0028 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -390,7 +390,7 @@ return {
 		}
 	},
 	hero_elemental_0030 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -416,7 +416,7 @@ return {
 		}
 	},
 	hero_elemental_0032 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -440,7 +440,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0033 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -468,7 +468,7 @@ return {
 		}
 	},
 	hero_elemental_0035 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -494,7 +494,7 @@ return {
 		}
 	},
 	hero_elemental_0037 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -520,7 +520,7 @@ return {
 		}
 	},
 	hero_elemental_0039 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -546,7 +546,7 @@ return {
 		}
 	},
 	hero_elemental_0041 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -570,7 +570,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0042 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -594,7 +594,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0043 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -618,7 +618,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0044 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -642,7 +642,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0045 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -666,7 +666,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0046 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -690,7 +690,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0047 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -714,7 +714,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0048 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -738,7 +738,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0049 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -762,7 +762,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0050 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -786,7 +786,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0051 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -812,7 +812,7 @@ return {
 		}
 	},
 	hero_elemental_0053 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -839,7 +839,7 @@ return {
 		}
 	},
 	hero_elemental_0056 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -863,7 +863,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0059 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -889,7 +889,7 @@ return {
 		}
 	},
 	hero_elemental_0061 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -915,7 +915,7 @@ return {
 		}
 	},
 	hero_elemental_0063 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -941,7 +941,7 @@ return {
 		}
 	},
 	hero_elemental_0065 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -965,7 +965,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0066 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -989,7 +989,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0067 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1013,7 +1013,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0068 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1037,7 +1037,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0069 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1061,7 +1061,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0070 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1085,7 +1085,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0071 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1109,7 +1109,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0072 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1133,7 +1133,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0073 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1157,7 +1157,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0074 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1181,7 +1181,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0075 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1205,7 +1205,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0076 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1229,7 +1229,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0077 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1253,7 +1253,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0078 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1279,7 +1279,7 @@ return {
 		}
 	},
 	hero_elemental_0080 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1303,7 +1303,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0081 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1330,7 +1330,7 @@ return {
 		}
 	},
 	hero_elemental_0083 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1356,7 +1356,7 @@ return {
 		}
 	},
 	hero_elemental_0085 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1380,7 +1380,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0086 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1406,7 +1406,7 @@ return {
 		}
 	},
 	hero_elemental_0088 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1430,7 +1430,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0089 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1454,7 +1454,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0090 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1480,7 +1480,7 @@ return {
 		}
 	},
 	hero_elemental_0092 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1506,7 +1506,7 @@ return {
 		}
 	},
 	hero_elemental_0095 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1530,7 +1530,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0096 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1556,7 +1556,7 @@ return {
 		}
 	},
 	hero_elemental_0098 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1580,7 +1580,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0099 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1604,7 +1604,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_0100 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1630,7 +1630,7 @@ return {
 		}
 	},
 	hero_elemental_0102 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1656,7 +1656,7 @@ return {
 		}
 	},
 	hero_elemental_0104 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1682,7 +1682,7 @@ return {
 		}
 	},
 	hero_elemental_0106 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1708,7 +1708,7 @@ return {
 		}
 	},
 	hero_elemental_0108 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			86,
 			102
@@ -1735,7 +1735,7 @@ return {
 		}
 	},
 	hero_elemental_blast_0001 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			126,
 			68
@@ -1759,7 +1759,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_blast_0002 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			126,
 			68
@@ -1783,7 +1783,7 @@ return {
 		alias = {}
 	},
 	hero_elemental_blast_0003 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			126,
 			68
@@ -1809,7 +1809,7 @@ return {
 		}
 	},
 	hero_elemental_blast_0005 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			126,
 			68
@@ -1835,7 +1835,7 @@ return {
 		}
 	},
 	hero_elemental_blast_0007 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			126,
 			68
@@ -1861,7 +1861,7 @@ return {
 		}
 	},
 	hero_elemental_blast_0009 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			126,
 			68
@@ -1887,7 +1887,7 @@ return {
 		}
 	},
 	hero_elemental_blast_0011 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			126,
 			68
@@ -1913,7 +1913,7 @@ return {
 		}
 	},
 	hero_elemental_particle_0001 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			26,
 			18
@@ -1939,7 +1939,7 @@ return {
 		}
 	},
 	hero_elemental_particle_0003 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			26,
 			18
@@ -1965,7 +1965,7 @@ return {
 		}
 	},
 	hero_elemental_particle_0005 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			26,
 			18
@@ -1991,7 +1991,7 @@ return {
 		}
 	},
 	hero_elemental_particle_0007 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			26,
 			18
@@ -2017,7 +2017,7 @@ return {
 		}
 	},
 	hero_elemental_particle_0009 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			26,
 			18
@@ -2043,7 +2043,7 @@ return {
 		}
 	},
 	hero_elemental_particle_0011 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			26,
 			18
@@ -2069,7 +2069,7 @@ return {
 		}
 	},
 	hero_elemental_particle_0013 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			26,
 			18
@@ -2095,7 +2095,7 @@ return {
 		}
 	},
 	hero_elemental_particle_idle_0001 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			8,
 			16
@@ -2122,7 +2122,7 @@ return {
 		}
 	},
 	hero_elemental_particle_idle_0004 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			8,
 			16
@@ -2148,7 +2148,7 @@ return {
 		}
 	},
 	hero_elemental_particle_idle_0006 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			8,
 			16
@@ -2174,7 +2174,7 @@ return {
 		}
 	},
 	hero_elemental_particle_idle_0008 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			8,
 			16
@@ -2200,7 +2200,7 @@ return {
 		}
 	},
 	hero_elemental_particle_idle_0010 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			8,
 			16
@@ -2226,7 +2226,7 @@ return {
 		}
 	},
 	hero_elemental_particle_idle_0012 = {
-		a_name = "go_hero_ignus-1.png",
+		a_name = "go_hero_ignus-1.dds",
 		size = {
 			8,
 			16

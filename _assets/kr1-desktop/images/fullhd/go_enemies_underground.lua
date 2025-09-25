@@ -2,7 +2,7 @@
 
 return {
 	QuetzalEgg_0001 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			59,
 			90
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	QuetzalEgg_0003 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			59,
 			90
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	QuetzalEgg_0005 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			59,
 			90
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	QuetzalEgg_0007 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			59,
 			90
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	QuetzalEgg_0009 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			59,
 			90
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	QuetzalEgg_0011 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			59,
 			90
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	QuetzalEgg_0013 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			59,
 			90
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	QuetzalEgg_0015 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			59,
 			90
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	QuetzalEgg_0017 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			59,
 			90
@@ -234,7 +234,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0001 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -260,7 +260,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0003 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -286,7 +286,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0005 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -312,7 +312,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0007 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0008 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0010 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -388,7 +388,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0012 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -414,7 +414,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0014 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -440,7 +440,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0016 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -466,7 +466,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0018 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -490,7 +490,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0019 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -516,7 +516,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0021 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -542,7 +542,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0023 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -568,7 +568,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0025 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -594,7 +594,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0027 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -620,7 +620,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0029 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -644,7 +644,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0030 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -670,7 +670,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0032 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -696,7 +696,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0034 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -722,7 +722,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0036 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -748,7 +748,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0038 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -774,7 +774,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0040 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -798,7 +798,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0041 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -824,7 +824,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0043 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -850,7 +850,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0045 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -876,7 +876,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0047 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -902,7 +902,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0049 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -928,7 +928,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0051 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -952,7 +952,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0052 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -978,7 +978,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0054 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1004,7 +1004,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0056 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1030,7 +1030,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0058 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1056,7 +1056,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0060 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1082,7 +1082,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0062 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0063 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1132,7 +1132,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0065 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1158,7 +1158,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0067 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1193,7 +1193,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0070 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1219,7 +1219,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0072 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1245,7 +1245,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0074 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1271,7 +1271,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0076 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1297,7 +1297,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0078 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1323,7 +1323,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0080 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1349,7 +1349,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0082 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1375,7 +1375,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0084 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1401,7 +1401,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0086 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1428,7 +1428,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0089 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1454,7 +1454,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0091 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1480,7 +1480,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0093 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1506,7 +1506,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0095 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1532,7 +1532,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0097 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1558,7 +1558,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0102 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1584,7 +1584,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0104 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1610,7 +1610,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0106 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1636,7 +1636,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0108 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1662,7 +1662,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0110 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1688,7 +1688,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0112 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1714,7 +1714,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0114 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1745,7 +1745,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0121 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1771,7 +1771,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0123 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1797,7 +1797,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0125 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1823,7 +1823,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0127 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1849,7 +1849,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0129 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -1875,7 +1875,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0131 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1901,7 +1901,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0137 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1927,7 +1927,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0139 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1953,7 +1953,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0141 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -1979,7 +1979,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0143 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -2005,7 +2005,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0145 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -2031,7 +2031,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0147 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -2057,7 +2057,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0149 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -2083,7 +2083,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0151 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -2109,7 +2109,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0153 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2136,7 +2136,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0156 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			124,
 			82
@@ -2162,7 +2162,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0158 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2188,7 +2188,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0160 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2214,7 +2214,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0162 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2240,7 +2240,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0164 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2266,7 +2266,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0166 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2292,7 +2292,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0169 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2319,7 +2319,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0171 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2345,7 +2345,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0173 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2371,7 +2371,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0175 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2397,7 +2397,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0177 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2423,7 +2423,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0179 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2449,7 +2449,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0181 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2478,7 +2478,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0187 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2504,7 +2504,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0189 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2530,7 +2530,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0191 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2556,7 +2556,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0193 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2580,7 +2580,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0194 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2604,7 +2604,7 @@ return {
 		alias = {}
 	},
 	SaurianBlazefang_0195 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2630,7 +2630,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0197 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2656,7 +2656,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0199 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2682,7 +2682,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0201 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			124,
 			82
@@ -2708,7 +2708,7 @@ return {
 		}
 	},
 	SaurianBlazefang_0203 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			124,
 			82
@@ -2734,7 +2734,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0001 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2760,7 +2760,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0003 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2786,7 +2786,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0005 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2812,7 +2812,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0007 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2836,7 +2836,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0008 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2862,7 +2862,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0010 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2888,7 +2888,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0012 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2914,7 +2914,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0014 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2940,7 +2940,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0016 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2966,7 +2966,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0018 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -2990,7 +2990,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0019 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3016,7 +3016,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0021 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3042,7 +3042,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0023 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3068,7 +3068,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0025 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3094,7 +3094,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0027 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3120,7 +3120,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0029 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3144,7 +3144,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0030 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3170,7 +3170,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0032 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3196,7 +3196,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0034 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3222,7 +3222,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0036 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3248,7 +3248,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0038 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3274,7 +3274,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0040 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3298,7 +3298,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0041 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3324,7 +3324,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0043 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3350,7 +3350,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0045 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3376,7 +3376,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0047 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3402,7 +3402,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0049 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3428,7 +3428,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0051 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3452,7 +3452,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0052 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3478,7 +3478,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0054 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3504,7 +3504,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0056 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3530,7 +3530,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0058 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3556,7 +3556,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0060 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3582,7 +3582,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0062 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3606,7 +3606,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0063 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3632,7 +3632,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0065 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3658,7 +3658,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0067 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			96,
 			59
@@ -3682,7 +3682,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0068 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3708,7 +3708,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0070 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3734,7 +3734,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0072 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3760,7 +3760,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0074 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3786,7 +3786,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0076 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -3812,7 +3812,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0078 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -3838,7 +3838,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0080 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -3866,7 +3866,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0084 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3890,7 +3890,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0085 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3916,7 +3916,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0087 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3942,7 +3942,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0089 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3968,7 +3968,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0091 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -3994,7 +3994,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0093 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -4020,7 +4020,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0095 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -4046,7 +4046,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0097 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -4070,7 +4070,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0098 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -4094,7 +4094,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0099 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -4118,7 +4118,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0100 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -4142,7 +4142,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0101 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -4166,7 +4166,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0102 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -4190,7 +4190,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0103 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -4216,7 +4216,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0105 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -4242,7 +4242,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0107 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			59
@@ -4266,7 +4266,7 @@ return {
 		alias = {}
 	},
 	SaurianBroodguard_0108 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -4292,7 +4292,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0110 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -4318,7 +4318,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0112 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			96,
 			59
@@ -4344,7 +4344,7 @@ return {
 		}
 	},
 	SaurianBroodguard_0114 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			59
@@ -4370,7 +4370,7 @@ return {
 		}
 	},
 	SaurianDarter_0001 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4396,7 +4396,7 @@ return {
 		}
 	},
 	SaurianDarter_0003 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4422,7 +4422,7 @@ return {
 		}
 	},
 	SaurianDarter_0005 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4448,7 +4448,7 @@ return {
 		}
 	},
 	SaurianDarter_0007 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4472,7 +4472,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0008 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4498,7 +4498,7 @@ return {
 		}
 	},
 	SaurianDarter_0010 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4524,7 +4524,7 @@ return {
 		}
 	},
 	SaurianDarter_0012 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4550,7 +4550,7 @@ return {
 		}
 	},
 	SaurianDarter_0014 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4576,7 +4576,7 @@ return {
 		}
 	},
 	SaurianDarter_0016 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4602,7 +4602,7 @@ return {
 		}
 	},
 	SaurianDarter_0018 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4626,7 +4626,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0019 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4652,7 +4652,7 @@ return {
 		}
 	},
 	SaurianDarter_0021 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4678,7 +4678,7 @@ return {
 		}
 	},
 	SaurianDarter_0023 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4704,7 +4704,7 @@ return {
 		}
 	},
 	SaurianDarter_0025 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4730,7 +4730,7 @@ return {
 		}
 	},
 	SaurianDarter_0027 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4756,7 +4756,7 @@ return {
 		}
 	},
 	SaurianDarter_0029 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4780,7 +4780,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0030 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4806,7 +4806,7 @@ return {
 		}
 	},
 	SaurianDarter_0032 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4832,7 +4832,7 @@ return {
 		}
 	},
 	SaurianDarter_0034 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4858,7 +4858,7 @@ return {
 		}
 	},
 	SaurianDarter_0036 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4884,7 +4884,7 @@ return {
 		}
 	},
 	SaurianDarter_0038 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4910,7 +4910,7 @@ return {
 		}
 	},
 	SaurianDarter_0040 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4934,7 +4934,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0041 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4960,7 +4960,7 @@ return {
 		}
 	},
 	SaurianDarter_0043 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -4986,7 +4986,7 @@ return {
 		}
 	},
 	SaurianDarter_0045 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5012,7 +5012,7 @@ return {
 		}
 	},
 	SaurianDarter_0047 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5038,7 +5038,7 @@ return {
 		}
 	},
 	SaurianDarter_0049 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5062,7 +5062,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0050 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5086,7 +5086,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0051 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5110,7 +5110,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0052 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5136,7 +5136,7 @@ return {
 		}
 	},
 	SaurianDarter_0054 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5162,7 +5162,7 @@ return {
 		}
 	},
 	SaurianDarter_0056 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5188,7 +5188,7 @@ return {
 		}
 	},
 	SaurianDarter_0058 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5214,7 +5214,7 @@ return {
 		}
 	},
 	SaurianDarter_0060 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5238,7 +5238,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0061 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5262,7 +5262,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0062 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5286,7 +5286,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0063 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5312,7 +5312,7 @@ return {
 		}
 	},
 	SaurianDarter_0065 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5338,7 +5338,7 @@ return {
 		}
 	},
 	SaurianDarter_0067 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			76,
 			51
@@ -5364,7 +5364,7 @@ return {
 		}
 	},
 	SaurianDarter_0068 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5391,7 +5391,7 @@ return {
 		}
 	},
 	SaurianDarter_0070 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5417,7 +5417,7 @@ return {
 		}
 	},
 	SaurianDarter_0072 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5443,7 +5443,7 @@ return {
 		}
 	},
 	SaurianDarter_0074 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5470,7 +5470,7 @@ return {
 		}
 	},
 	SaurianDarter_0077 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5496,7 +5496,7 @@ return {
 		}
 	},
 	SaurianDarter_0079 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5522,7 +5522,7 @@ return {
 		}
 	},
 	SaurianDarter_0081 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5549,7 +5549,7 @@ return {
 		}
 	},
 	SaurianDarter_0085 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5577,7 +5577,7 @@ return {
 		}
 	},
 	SaurianDarter_0087 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5605,7 +5605,7 @@ return {
 		}
 	},
 	SaurianDarter_0089 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5633,7 +5633,7 @@ return {
 		}
 	},
 	SaurianDarter_0091 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5661,7 +5661,7 @@ return {
 		}
 	},
 	SaurianDarter_0093 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5687,7 +5687,7 @@ return {
 		}
 	},
 	SaurianDarter_0095 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5713,7 +5713,7 @@ return {
 		}
 	},
 	SaurianDarter_0105 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5739,7 +5739,7 @@ return {
 		}
 	},
 	SaurianDarter_0107 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5765,7 +5765,7 @@ return {
 		}
 	},
 	SaurianDarter_0109 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			76,
 			51
@@ -5789,7 +5789,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0110 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5815,7 +5815,7 @@ return {
 		}
 	},
 	SaurianDarter_0112 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			76,
 			51
@@ -5841,7 +5841,7 @@ return {
 		}
 	},
 	SaurianDarter_0114 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			76,
 			51
@@ -5867,7 +5867,7 @@ return {
 		}
 	},
 	SaurianDarter_0116 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			76,
 			51
@@ -5896,7 +5896,7 @@ return {
 		}
 	},
 	SaurianDarter_0122 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5920,7 +5920,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0123 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5944,7 +5944,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0124 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			76,
 			51
@@ -5968,7 +5968,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0125 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			76,
 			51
@@ -5992,7 +5992,7 @@ return {
 		alias = {}
 	},
 	SaurianDarter_0126 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			76,
 			51
@@ -6018,7 +6018,7 @@ return {
 		}
 	},
 	SaurianDarter_0128 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			76,
 			51
@@ -6044,7 +6044,7 @@ return {
 		}
 	},
 	SaurianElite_0001 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6070,7 +6070,7 @@ return {
 		}
 	},
 	SaurianElite_0003 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6096,7 +6096,7 @@ return {
 		}
 	},
 	SaurianElite_0005 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6122,7 +6122,7 @@ return {
 		}
 	},
 	SaurianElite_0007 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6146,7 +6146,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0008 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6172,7 +6172,7 @@ return {
 		}
 	},
 	SaurianElite_0010 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6198,7 +6198,7 @@ return {
 		}
 	},
 	SaurianElite_0012 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6224,7 +6224,7 @@ return {
 		}
 	},
 	SaurianElite_0014 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6250,7 +6250,7 @@ return {
 		}
 	},
 	SaurianElite_0016 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6276,7 +6276,7 @@ return {
 		}
 	},
 	SaurianElite_0018 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6300,7 +6300,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0019 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6326,7 +6326,7 @@ return {
 		}
 	},
 	SaurianElite_0021 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6352,7 +6352,7 @@ return {
 		}
 	},
 	SaurianElite_0023 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6378,7 +6378,7 @@ return {
 		}
 	},
 	SaurianElite_0025 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6404,7 +6404,7 @@ return {
 		}
 	},
 	SaurianElite_0027 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6430,7 +6430,7 @@ return {
 		}
 	},
 	SaurianElite_0029 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6454,7 +6454,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0030 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6480,7 +6480,7 @@ return {
 		}
 	},
 	SaurianElite_0032 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6506,7 +6506,7 @@ return {
 		}
 	},
 	SaurianElite_0034 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6532,7 +6532,7 @@ return {
 		}
 	},
 	SaurianElite_0036 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6558,7 +6558,7 @@ return {
 		}
 	},
 	SaurianElite_0038 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6584,7 +6584,7 @@ return {
 		}
 	},
 	SaurianElite_0040 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6608,7 +6608,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0041 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6634,7 +6634,7 @@ return {
 		}
 	},
 	SaurianElite_0043 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6660,7 +6660,7 @@ return {
 		}
 	},
 	SaurianElite_0045 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6686,7 +6686,7 @@ return {
 		}
 	},
 	SaurianElite_0047 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6712,7 +6712,7 @@ return {
 		}
 	},
 	SaurianElite_0049 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6738,7 +6738,7 @@ return {
 		}
 	},
 	SaurianElite_0051 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6762,7 +6762,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0052 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6788,7 +6788,7 @@ return {
 		}
 	},
 	SaurianElite_0054 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6814,7 +6814,7 @@ return {
 		}
 	},
 	SaurianElite_0056 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6840,7 +6840,7 @@ return {
 		}
 	},
 	SaurianElite_0058 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6866,7 +6866,7 @@ return {
 		}
 	},
 	SaurianElite_0060 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6892,7 +6892,7 @@ return {
 		}
 	},
 	SaurianElite_0062 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6916,7 +6916,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0063 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6942,7 +6942,7 @@ return {
 		}
 	},
 	SaurianElite_0065 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -6968,7 +6968,7 @@ return {
 		}
 	},
 	SaurianElite_0067 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -6992,7 +6992,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0068 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7018,7 +7018,7 @@ return {
 		}
 	},
 	SaurianElite_0070 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7044,7 +7044,7 @@ return {
 		}
 	},
 	SaurianElite_0072 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7070,7 +7070,7 @@ return {
 		}
 	},
 	SaurianElite_0074 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7096,7 +7096,7 @@ return {
 		}
 	},
 	SaurianElite_0076 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7122,7 +7122,7 @@ return {
 		}
 	},
 	SaurianElite_0078 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7148,7 +7148,7 @@ return {
 		}
 	},
 	SaurianElite_0080 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7174,7 +7174,7 @@ return {
 		}
 	},
 	SaurianElite_0082 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7200,7 +7200,7 @@ return {
 		}
 	},
 	SaurianElite_0084 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7226,7 +7226,7 @@ return {
 		}
 	},
 	SaurianElite_0086 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7250,7 +7250,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0087 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7276,7 +7276,7 @@ return {
 		}
 	},
 	SaurianElite_0089 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7302,7 +7302,7 @@ return {
 		}
 	},
 	SaurianElite_0091 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7328,7 +7328,7 @@ return {
 		}
 	},
 	SaurianElite_0093 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7354,7 +7354,7 @@ return {
 		}
 	},
 	SaurianElite_0095 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7380,7 +7380,7 @@ return {
 		}
 	},
 	SaurianElite_0097 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7406,7 +7406,7 @@ return {
 		}
 	},
 	SaurianElite_0099 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7432,7 +7432,7 @@ return {
 		}
 	},
 	SaurianElite_0101 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7458,7 +7458,7 @@ return {
 		}
 	},
 	SaurianElite_0103 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7484,7 +7484,7 @@ return {
 		}
 	},
 	SaurianElite_0105 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7512,7 +7512,7 @@ return {
 		}
 	},
 	SaurianElite_0107 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7538,7 +7538,7 @@ return {
 		}
 	},
 	SaurianElite_0109 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7564,7 +7564,7 @@ return {
 		}
 	},
 	SaurianElite_0111 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7590,7 +7590,7 @@ return {
 		}
 	},
 	SaurianElite_0113 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7616,7 +7616,7 @@ return {
 		}
 	},
 	SaurianElite_0117 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7642,7 +7642,7 @@ return {
 		}
 	},
 	SaurianElite_0119 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7668,7 +7668,7 @@ return {
 		}
 	},
 	SaurianElite_0121 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7694,7 +7694,7 @@ return {
 		}
 	},
 	SaurianElite_0123 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7720,7 +7720,7 @@ return {
 		}
 	},
 	SaurianElite_0125 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7744,7 +7744,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0126 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -7770,7 +7770,7 @@ return {
 		}
 	},
 	SaurianElite_0128 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			174,
 			124
@@ -7796,7 +7796,7 @@ return {
 		}
 	},
 	SaurianElite_0130 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7822,7 +7822,7 @@ return {
 		}
 	},
 	SaurianElite_0132 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7850,7 +7850,7 @@ return {
 		}
 	},
 	SaurianElite_0136 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7874,7 +7874,7 @@ return {
 		alias = {}
 	},
 	SaurianElite_0137 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7900,7 +7900,7 @@ return {
 		}
 	},
 	SaurianElite_0139 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7926,7 +7926,7 @@ return {
 		}
 	},
 	SaurianElite_0141 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7952,7 +7952,7 @@ return {
 		}
 	},
 	SaurianElite_0143 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			174,
 			124
@@ -7978,7 +7978,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0001 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8004,7 +8004,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0003 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8030,7 +8030,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0005 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8056,7 +8056,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0007 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8080,7 +8080,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0008 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8104,7 +8104,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0009 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8128,7 +8128,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0010 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8154,7 +8154,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0012 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8180,7 +8180,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0014 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8206,7 +8206,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0016 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8232,7 +8232,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0018 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8256,7 +8256,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0019 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8282,7 +8282,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0021 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8308,7 +8308,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0023 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8334,7 +8334,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0025 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8360,7 +8360,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0027 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8386,7 +8386,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0029 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8410,7 +8410,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0030 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8436,7 +8436,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0032 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8462,7 +8462,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0034 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8488,7 +8488,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0036 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8514,7 +8514,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0038 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8540,7 +8540,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0040 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8564,7 +8564,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0041 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8590,7 +8590,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0043 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8616,7 +8616,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0045 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8642,7 +8642,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0047 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8668,7 +8668,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0049 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8694,7 +8694,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0051 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8718,7 +8718,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0052 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8744,7 +8744,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0054 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8770,7 +8770,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0056 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8796,7 +8796,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0058 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8822,7 +8822,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0060 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8848,7 +8848,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0062 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8872,7 +8872,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0063 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8898,7 +8898,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0065 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8924,7 +8924,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0067 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8948,7 +8948,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0068 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -8978,7 +8978,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0070 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9004,7 +9004,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0072 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9030,7 +9030,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0074 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9057,7 +9057,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0077 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9083,7 +9083,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0079 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9109,7 +9109,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0081 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9135,7 +9135,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0083 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9161,7 +9161,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0085 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9185,7 +9185,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0087 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9211,7 +9211,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0089 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9237,7 +9237,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0091 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9263,7 +9263,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0093 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9289,7 +9289,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0095 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9315,7 +9315,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0097 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9339,7 +9339,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0098 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9365,7 +9365,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0100 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9391,7 +9391,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0102 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9417,7 +9417,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0104 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9441,7 +9441,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0107 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9467,7 +9467,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0109 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9493,7 +9493,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0111 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			87
@@ -9519,7 +9519,7 @@ return {
 		}
 	},
 	SaurianMyrmidon_0113 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9543,7 +9543,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0114 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9567,7 +9567,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0115 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9591,7 +9591,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0116 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9615,7 +9615,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0117 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9639,7 +9639,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0118 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9663,7 +9663,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0119 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9687,7 +9687,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0120 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9711,7 +9711,7 @@ return {
 		alias = {}
 	},
 	SaurianMyrmidon_0121 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			87
@@ -9735,7 +9735,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0001 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9761,7 +9761,7 @@ return {
 		}
 	},
 	SaurianNightscale_0003 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9787,7 +9787,7 @@ return {
 		}
 	},
 	SaurianNightscale_0005 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9813,7 +9813,7 @@ return {
 		}
 	},
 	SaurianNightscale_0007 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9837,7 +9837,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0008 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9863,7 +9863,7 @@ return {
 		}
 	},
 	SaurianNightscale_0010 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9889,7 +9889,7 @@ return {
 		}
 	},
 	SaurianNightscale_0012 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9915,7 +9915,7 @@ return {
 		}
 	},
 	SaurianNightscale_0014 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9941,7 +9941,7 @@ return {
 		}
 	},
 	SaurianNightscale_0016 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9967,7 +9967,7 @@ return {
 		}
 	},
 	SaurianNightscale_0018 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -9991,7 +9991,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0019 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10017,7 +10017,7 @@ return {
 		}
 	},
 	SaurianNightscale_0021 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10043,7 +10043,7 @@ return {
 		}
 	},
 	SaurianNightscale_0023 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10069,7 +10069,7 @@ return {
 		}
 	},
 	SaurianNightscale_0025 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10095,7 +10095,7 @@ return {
 		}
 	},
 	SaurianNightscale_0027 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10121,7 +10121,7 @@ return {
 		}
 	},
 	SaurianNightscale_0029 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10145,7 +10145,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0030 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10171,7 +10171,7 @@ return {
 		}
 	},
 	SaurianNightscale_0032 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10197,7 +10197,7 @@ return {
 		}
 	},
 	SaurianNightscale_0034 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10223,7 +10223,7 @@ return {
 		}
 	},
 	SaurianNightscale_0036 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10249,7 +10249,7 @@ return {
 		}
 	},
 	SaurianNightscale_0038 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10275,7 +10275,7 @@ return {
 		}
 	},
 	SaurianNightscale_0040 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10299,7 +10299,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0041 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10325,7 +10325,7 @@ return {
 		}
 	},
 	SaurianNightscale_0043 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10351,7 +10351,7 @@ return {
 		}
 	},
 	SaurianNightscale_0045 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10377,7 +10377,7 @@ return {
 		}
 	},
 	SaurianNightscale_0047 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10403,7 +10403,7 @@ return {
 		}
 	},
 	SaurianNightscale_0049 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10429,7 +10429,7 @@ return {
 		}
 	},
 	SaurianNightscale_0051 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10453,7 +10453,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0052 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10479,7 +10479,7 @@ return {
 		}
 	},
 	SaurianNightscale_0054 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10505,7 +10505,7 @@ return {
 		}
 	},
 	SaurianNightscale_0056 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10531,7 +10531,7 @@ return {
 		}
 	},
 	SaurianNightscale_0058 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10557,7 +10557,7 @@ return {
 		}
 	},
 	SaurianNightscale_0060 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10583,7 +10583,7 @@ return {
 		}
 	},
 	SaurianNightscale_0062 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10607,7 +10607,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0063 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10633,7 +10633,7 @@ return {
 		}
 	},
 	SaurianNightscale_0065 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10659,7 +10659,7 @@ return {
 		}
 	},
 	SaurianNightscale_0067 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10683,7 +10683,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0068 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10711,7 +10711,7 @@ return {
 		}
 	},
 	SaurianNightscale_0070 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10737,7 +10737,7 @@ return {
 		}
 	},
 	SaurianNightscale_0072 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10763,7 +10763,7 @@ return {
 		}
 	},
 	SaurianNightscale_0074 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -10789,7 +10789,7 @@ return {
 		}
 	},
 	SaurianNightscale_0076 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -10815,7 +10815,7 @@ return {
 		}
 	},
 	SaurianNightscale_0078 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10839,7 +10839,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0079 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10865,7 +10865,7 @@ return {
 		}
 	},
 	SaurianNightscale_0081 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -10891,7 +10891,7 @@ return {
 		}
 	},
 	SaurianNightscale_0083 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -10917,7 +10917,7 @@ return {
 		}
 	},
 	SaurianNightscale_0085 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10943,7 +10943,7 @@ return {
 		}
 	},
 	SaurianNightscale_0088 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10970,7 +10970,7 @@ return {
 		}
 	},
 	SaurianNightscale_0090 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -10996,7 +10996,7 @@ return {
 		}
 	},
 	SaurianNightscale_0092 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11022,7 +11022,7 @@ return {
 		}
 	},
 	SaurianNightscale_0094 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11048,7 +11048,7 @@ return {
 		}
 	},
 	SaurianNightscale_0096 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11074,7 +11074,7 @@ return {
 		}
 	},
 	SaurianNightscale_0098 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11100,7 +11100,7 @@ return {
 		}
 	},
 	SaurianNightscale_0102 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11126,7 +11126,7 @@ return {
 		}
 	},
 	SaurianNightscale_0104 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11152,7 +11152,7 @@ return {
 		}
 	},
 	SaurianNightscale_0106 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11178,7 +11178,7 @@ return {
 		}
 	},
 	SaurianNightscale_0108 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11204,7 +11204,7 @@ return {
 		}
 	},
 	SaurianNightscale_0110 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			96,
 			68
@@ -11230,7 +11230,7 @@ return {
 		}
 	},
 	SaurianNightscale_0112 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11254,7 +11254,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0113 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11278,7 +11278,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0114 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11302,7 +11302,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0115 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11326,7 +11326,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0116 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11350,7 +11350,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0117 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11374,7 +11374,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0118 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11398,7 +11398,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0119 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11422,7 +11422,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0120 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11448,7 +11448,7 @@ return {
 		}
 	},
 	SaurianNightscale_0122 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11474,7 +11474,7 @@ return {
 		}
 	},
 	SaurianNightscale_0124 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11498,7 +11498,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0125 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			96,
 			68
@@ -11522,7 +11522,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0126 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11546,7 +11546,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0127 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11570,7 +11570,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0128 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11594,7 +11594,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0129 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11618,7 +11618,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0130 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11644,7 +11644,7 @@ return {
 		}
 	},
 	SaurianNightscale_0132 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11668,7 +11668,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0133 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11694,7 +11694,7 @@ return {
 		}
 	},
 	SaurianNightscale_0135 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			96,
 			68
@@ -11720,7 +11720,7 @@ return {
 		}
 	},
 	SaurianNightscale_0137 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11744,7 +11744,7 @@ return {
 		alias = {}
 	},
 	SaurianNightscale_0138 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11770,7 +11770,7 @@ return {
 		}
 	},
 	SaurianNightscale_0140 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11796,7 +11796,7 @@ return {
 		}
 	},
 	SaurianNightscale_0142 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11822,7 +11822,7 @@ return {
 		}
 	},
 	SaurianNightscale_0144 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			96,
 			68
@@ -11848,7 +11848,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0001 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -11874,7 +11874,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0003 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -11900,7 +11900,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0005 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -11926,7 +11926,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0007 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -11952,7 +11952,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0009 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -11978,7 +11978,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0011 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12004,7 +12004,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0013 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12030,7 +12030,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0015 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12056,7 +12056,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0017 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12082,7 +12082,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0019 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12108,7 +12108,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0021 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12134,7 +12134,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0023 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12160,7 +12160,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0025 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12186,7 +12186,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0027 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12212,7 +12212,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0029 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12238,7 +12238,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0031 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12264,7 +12264,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0033 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12290,7 +12290,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0035 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12316,7 +12316,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0037 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12342,7 +12342,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0039 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			132,
 			160
@@ -12368,7 +12368,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0041 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12394,7 +12394,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0043 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12420,7 +12420,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0045 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12446,7 +12446,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0047 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12472,7 +12472,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0049 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12498,7 +12498,7 @@ return {
 		}
 	},
 	SaurianQuetzalBig_0051 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			132,
 			160
@@ -12524,7 +12524,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0001 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12550,7 +12550,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0003 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12576,7 +12576,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0005 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12602,7 +12602,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0007 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12628,7 +12628,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0009 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12654,7 +12654,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0011 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12680,7 +12680,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0013 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12706,7 +12706,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0015 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			84,
 			124
@@ -12732,7 +12732,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0017 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			84,
 			124
@@ -12758,7 +12758,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0019 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12784,7 +12784,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0021 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12810,7 +12810,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0023 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12836,7 +12836,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0025 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12862,7 +12862,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0027 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12888,7 +12888,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0029 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			84,
 			124
@@ -12914,7 +12914,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0031 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			84,
 			124
@@ -12940,7 +12940,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0033 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12966,7 +12966,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0035 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -12992,7 +12992,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0037 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13018,7 +13018,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0039 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13044,7 +13044,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0041 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13070,7 +13070,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0043 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13096,7 +13096,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0045 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13122,7 +13122,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0047 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13148,7 +13148,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0049 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13174,7 +13174,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0051 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13200,7 +13200,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0053 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13226,7 +13226,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0055 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13252,7 +13252,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0057 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13278,7 +13278,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0059 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13304,7 +13304,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0061 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13330,7 +13330,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0063 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13356,7 +13356,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0065 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13382,7 +13382,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0067 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13408,7 +13408,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0069 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13434,7 +13434,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0071 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13460,7 +13460,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0073 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13486,7 +13486,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0075 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13512,7 +13512,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0077 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13538,7 +13538,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0079 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			84,
 			124
@@ -13564,7 +13564,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0081 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			84,
 			124
@@ -13590,7 +13590,7 @@ return {
 		}
 	},
 	SaurianQuetzal_0083 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			84,
 			124
@@ -13616,7 +13616,7 @@ return {
 		}
 	},
 	SaurianSavant_0001 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13642,7 +13642,7 @@ return {
 		}
 	},
 	SaurianSavant_0003 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13668,7 +13668,7 @@ return {
 		}
 	},
 	SaurianSavant_0005 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13694,7 +13694,7 @@ return {
 		}
 	},
 	SaurianSavant_0007 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13718,7 +13718,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0008 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -13744,7 +13744,7 @@ return {
 		}
 	},
 	SaurianSavant_0010 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13770,7 +13770,7 @@ return {
 		}
 	},
 	SaurianSavant_0012 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -13796,7 +13796,7 @@ return {
 		}
 	},
 	SaurianSavant_0014 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13822,7 +13822,7 @@ return {
 		}
 	},
 	SaurianSavant_0016 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13848,7 +13848,7 @@ return {
 		}
 	},
 	SaurianSavant_0018 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13872,7 +13872,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0019 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13898,7 +13898,7 @@ return {
 		}
 	},
 	SaurianSavant_0021 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -13924,7 +13924,7 @@ return {
 		}
 	},
 	SaurianSavant_0023 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -13950,7 +13950,7 @@ return {
 		}
 	},
 	SaurianSavant_0025 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -13976,7 +13976,7 @@ return {
 		}
 	},
 	SaurianSavant_0027 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14002,7 +14002,7 @@ return {
 		}
 	},
 	SaurianSavant_0029 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14026,7 +14026,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0030 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14052,7 +14052,7 @@ return {
 		}
 	},
 	SaurianSavant_0032 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14078,7 +14078,7 @@ return {
 		}
 	},
 	SaurianSavant_0034 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14104,7 +14104,7 @@ return {
 		}
 	},
 	SaurianSavant_0036 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14130,7 +14130,7 @@ return {
 		}
 	},
 	SaurianSavant_0038 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14156,7 +14156,7 @@ return {
 		}
 	},
 	SaurianSavant_0040 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14180,7 +14180,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0041 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14206,7 +14206,7 @@ return {
 		}
 	},
 	SaurianSavant_0043 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14232,7 +14232,7 @@ return {
 		}
 	},
 	SaurianSavant_0045 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14258,7 +14258,7 @@ return {
 		}
 	},
 	SaurianSavant_0047 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14284,7 +14284,7 @@ return {
 		}
 	},
 	SaurianSavant_0049 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14310,7 +14310,7 @@ return {
 		}
 	},
 	SaurianSavant_0051 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14334,7 +14334,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0052 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14360,7 +14360,7 @@ return {
 		}
 	},
 	SaurianSavant_0054 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14386,7 +14386,7 @@ return {
 		}
 	},
 	SaurianSavant_0056 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14412,7 +14412,7 @@ return {
 		}
 	},
 	SaurianSavant_0058 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14438,7 +14438,7 @@ return {
 		}
 	},
 	SaurianSavant_0060 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14464,7 +14464,7 @@ return {
 		}
 	},
 	SaurianSavant_0062 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14488,7 +14488,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0063 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14514,7 +14514,7 @@ return {
 		}
 	},
 	SaurianSavant_0065 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14540,7 +14540,7 @@ return {
 		}
 	},
 	SaurianSavant_0067 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14564,7 +14564,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0068 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14592,7 +14592,7 @@ return {
 		}
 	},
 	SaurianSavant_0070 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14618,7 +14618,7 @@ return {
 		}
 	},
 	SaurianSavant_0072 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14644,7 +14644,7 @@ return {
 		}
 	},
 	SaurianSavant_0074 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14670,7 +14670,7 @@ return {
 		}
 	},
 	SaurianSavant_0076 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -14697,7 +14697,7 @@ return {
 		}
 	},
 	SaurianSavant_0079 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14723,7 +14723,7 @@ return {
 		}
 	},
 	SaurianSavant_0081 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14749,7 +14749,7 @@ return {
 		}
 	},
 	SaurianSavant_0083 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14775,7 +14775,7 @@ return {
 		}
 	},
 	SaurianSavant_0085 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14801,7 +14801,7 @@ return {
 		}
 	},
 	SaurianSavant_0087 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14827,7 +14827,7 @@ return {
 		}
 	},
 	SaurianSavant_0089 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14853,7 +14853,7 @@ return {
 		}
 	},
 	SaurianSavant_0091 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14877,7 +14877,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0092 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14904,7 +14904,7 @@ return {
 		}
 	},
 	SaurianSavant_0095 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14930,7 +14930,7 @@ return {
 		}
 	},
 	SaurianSavant_0097 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14954,7 +14954,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0098 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -14978,7 +14978,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0101 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15004,7 +15004,7 @@ return {
 		}
 	},
 	SaurianSavant_0103 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15030,7 +15030,7 @@ return {
 		}
 	},
 	SaurianSavant_0105 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15057,7 +15057,7 @@ return {
 		}
 	},
 	SaurianSavant_0108 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15083,7 +15083,7 @@ return {
 		}
 	},
 	SaurianSavant_0110 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15109,7 +15109,7 @@ return {
 		}
 	},
 	SaurianSavant_0112 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			59
@@ -15135,7 +15135,7 @@ return {
 		}
 	},
 	SaurianSavant_0114 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15161,7 +15161,7 @@ return {
 		}
 	},
 	SaurianSavant_0116 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15187,7 +15187,7 @@ return {
 		}
 	},
 	SaurianSavant_0118 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15213,7 +15213,7 @@ return {
 		}
 	},
 	SaurianSavant_0120 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15239,7 +15239,7 @@ return {
 		}
 	},
 	SaurianSavant_0122 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -15266,7 +15266,7 @@ return {
 		}
 	},
 	SaurianSavant_0125 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15292,7 +15292,7 @@ return {
 		}
 	},
 	SaurianSavant_0127 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15318,7 +15318,7 @@ return {
 		}
 	},
 	SaurianSavant_0129 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15344,7 +15344,7 @@ return {
 		}
 	},
 	SaurianSavant_0131 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15370,7 +15370,7 @@ return {
 		}
 	},
 	SaurianSavant_0133 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15396,7 +15396,7 @@ return {
 		}
 	},
 	SaurianSavant_0135 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15420,7 +15420,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0136 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15444,7 +15444,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0137 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -15468,7 +15468,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0138 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -15492,7 +15492,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0139 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -15516,7 +15516,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0140 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			110,
 			59
@@ -15540,7 +15540,7 @@ return {
 		alias = {}
 	},
 	SaurianSavant_0141 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15566,7 +15566,7 @@ return {
 		}
 	},
 	SaurianSavant_0143 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			59
@@ -15592,7 +15592,7 @@ return {
 		}
 	},
 	SavantPortal_0001 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			110,
 			68
@@ -15618,7 +15618,7 @@ return {
 		}
 	},
 	SavantPortal_0003 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15644,7 +15644,7 @@ return {
 		}
 	},
 	SavantPortal_0005 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15670,7 +15670,7 @@ return {
 		}
 	},
 	SavantPortal_0007 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15694,7 +15694,7 @@ return {
 		alias = {}
 	},
 	SavantPortal_0008 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15718,7 +15718,7 @@ return {
 		alias = {}
 	},
 	SavantPortal_0009 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15744,7 +15744,7 @@ return {
 		}
 	},
 	SavantPortal_0011 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15770,7 +15770,7 @@ return {
 		}
 	},
 	SavantPortal_0013 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15796,7 +15796,7 @@ return {
 		}
 	},
 	SavantPortal_0015 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15822,7 +15822,7 @@ return {
 		}
 	},
 	SavantPortal_0017 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			110,
 			68
@@ -15848,7 +15848,7 @@ return {
 		}
 	},
 	saurianSniper_0001 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -15874,7 +15874,7 @@ return {
 		}
 	},
 	saurianSniper_0003 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -15900,7 +15900,7 @@ return {
 		}
 	},
 	saurianSniper_0005 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -15926,7 +15926,7 @@ return {
 		}
 	},
 	saurianSniper_0007 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -15950,7 +15950,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0008 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -15976,7 +15976,7 @@ return {
 		}
 	},
 	saurianSniper_0010 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16002,7 +16002,7 @@ return {
 		}
 	},
 	saurianSniper_0012 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16028,7 +16028,7 @@ return {
 		}
 	},
 	saurianSniper_0014 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16054,7 +16054,7 @@ return {
 		}
 	},
 	saurianSniper_0016 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16080,7 +16080,7 @@ return {
 		}
 	},
 	saurianSniper_0018 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16104,7 +16104,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0019 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16130,7 +16130,7 @@ return {
 		}
 	},
 	saurianSniper_0021 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16156,7 +16156,7 @@ return {
 		}
 	},
 	saurianSniper_0023 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16182,7 +16182,7 @@ return {
 		}
 	},
 	saurianSniper_0025 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16208,7 +16208,7 @@ return {
 		}
 	},
 	saurianSniper_0027 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			87,
 			59
@@ -16234,7 +16234,7 @@ return {
 		}
 	},
 	saurianSniper_0029 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			87,
 			59
@@ -16258,7 +16258,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0030 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16284,7 +16284,7 @@ return {
 		}
 	},
 	saurianSniper_0032 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16310,7 +16310,7 @@ return {
 		}
 	},
 	saurianSniper_0034 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16336,7 +16336,7 @@ return {
 		}
 	},
 	saurianSniper_0036 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16362,7 +16362,7 @@ return {
 		}
 	},
 	saurianSniper_0038 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16388,7 +16388,7 @@ return {
 		}
 	},
 	saurianSniper_0040 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16412,7 +16412,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0041 = {
-		a_name = "go_enemies_underground-1.png",
+		a_name = "go_enemies_underground-1.dds",
 		size = {
 			87,
 			59
@@ -16438,7 +16438,7 @@ return {
 		}
 	},
 	saurianSniper_0043 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16464,7 +16464,7 @@ return {
 		}
 	},
 	saurianSniper_0045 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16490,7 +16490,7 @@ return {
 		}
 	},
 	saurianSniper_0047 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16516,7 +16516,7 @@ return {
 		}
 	},
 	saurianSniper_0049 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16542,7 +16542,7 @@ return {
 		}
 	},
 	saurianSniper_0051 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16566,7 +16566,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0052 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16592,7 +16592,7 @@ return {
 		}
 	},
 	saurianSniper_0054 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16618,7 +16618,7 @@ return {
 		}
 	},
 	saurianSniper_0056 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16644,7 +16644,7 @@ return {
 		}
 	},
 	saurianSniper_0058 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16670,7 +16670,7 @@ return {
 		}
 	},
 	saurianSniper_0060 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16696,7 +16696,7 @@ return {
 		}
 	},
 	saurianSniper_0062 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16720,7 +16720,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0063 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16746,7 +16746,7 @@ return {
 		}
 	},
 	saurianSniper_0065 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16772,7 +16772,7 @@ return {
 		}
 	},
 	saurianSniper_0067 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -16800,7 +16800,7 @@ return {
 		}
 	},
 	saurianSniper_0070 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -16826,7 +16826,7 @@ return {
 		}
 	},
 	saurianSniper_0072 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -16852,7 +16852,7 @@ return {
 		}
 	},
 	saurianSniper_0074 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -16878,7 +16878,7 @@ return {
 		}
 	},
 	saurianSniper_0076 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -16904,7 +16904,7 @@ return {
 		}
 	},
 	saurianSniper_0078 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -16930,7 +16930,7 @@ return {
 		}
 	},
 	saurianSniper_0080 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -16956,7 +16956,7 @@ return {
 		}
 	},
 	saurianSniper_0083 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -16982,7 +16982,7 @@ return {
 		}
 	},
 	saurianSniper_0085 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17008,7 +17008,7 @@ return {
 		}
 	},
 	saurianSniper_0087 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17034,7 +17034,7 @@ return {
 		}
 	},
 	saurianSniper_0089 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17064,7 +17064,7 @@ return {
 		}
 	},
 	saurianSniper_0095 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17090,7 +17090,7 @@ return {
 		}
 	},
 	saurianSniper_0097 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17116,7 +17116,7 @@ return {
 		}
 	},
 	saurianSniper_0099 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17142,7 +17142,7 @@ return {
 		}
 	},
 	saurianSniper_0101 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17170,7 +17170,7 @@ return {
 		}
 	},
 	saurianSniper_0105 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17196,7 +17196,7 @@ return {
 		}
 	},
 	saurianSniper_0107 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17222,7 +17222,7 @@ return {
 		}
 	},
 	saurianSniper_0109 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17248,7 +17248,7 @@ return {
 		}
 	},
 	saurianSniper_0111 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17274,7 +17274,7 @@ return {
 		}
 	},
 	saurianSniper_0113 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17298,7 +17298,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0114 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17326,7 +17326,7 @@ return {
 		}
 	},
 	saurianSniper_0116 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17352,7 +17352,7 @@ return {
 		}
 	},
 	saurianSniper_0118 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17378,7 +17378,7 @@ return {
 		}
 	},
 	saurianSniper_0120 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17408,7 +17408,7 @@ return {
 		}
 	},
 	saurianSniper_0126 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17434,7 +17434,7 @@ return {
 		}
 	},
 	saurianSniper_0128 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17460,7 +17460,7 @@ return {
 		}
 	},
 	saurianSniper_0130 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17486,7 +17486,7 @@ return {
 		}
 	},
 	saurianSniper_0132 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17514,7 +17514,7 @@ return {
 		}
 	},
 	saurianSniper_0136 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17540,7 +17540,7 @@ return {
 		}
 	},
 	saurianSniper_0138 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17566,7 +17566,7 @@ return {
 		}
 	},
 	saurianSniper_0140 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17592,7 +17592,7 @@ return {
 		}
 	},
 	saurianSniper_0142 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17618,7 +17618,7 @@ return {
 		}
 	},
 	saurianSniper_0144 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17642,7 +17642,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0147 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17668,7 +17668,7 @@ return {
 		}
 	},
 	saurianSniper_0149 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17694,7 +17694,7 @@ return {
 		}
 	},
 	saurianSniper_0151 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17725,7 +17725,7 @@ return {
 		}
 	},
 	saurianSniper_0157 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17751,7 +17751,7 @@ return {
 		}
 	},
 	saurianSniper_0159 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17777,7 +17777,7 @@ return {
 		}
 	},
 	saurianSniper_0161 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17803,7 +17803,7 @@ return {
 		}
 	},
 	saurianSniper_0163 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17831,7 +17831,7 @@ return {
 		}
 	},
 	saurianSniper_0167 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17857,7 +17857,7 @@ return {
 		}
 	},
 	saurianSniper_0169 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17883,7 +17883,7 @@ return {
 		}
 	},
 	saurianSniper_0171 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17909,7 +17909,7 @@ return {
 		}
 	},
 	saurianSniper_0173 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17935,7 +17935,7 @@ return {
 		}
 	},
 	saurianSniper_0176 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -17959,7 +17959,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0177 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -17983,7 +17983,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0178 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -18007,7 +18007,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0179 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59
@@ -18031,7 +18031,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0180 = {
-		a_name = "go_enemies_underground-3.png",
+		a_name = "go_enemies_underground-3.dds",
 		size = {
 			87,
 			59
@@ -18055,7 +18055,7 @@ return {
 		alias = {}
 	},
 	saurianSniper_0181 = {
-		a_name = "go_enemies_underground-2.png",
+		a_name = "go_enemies_underground-2.dds",
 		size = {
 			87,
 			59

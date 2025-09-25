@@ -1,7 +1,7 @@
 -- chunkname: @./kr2-desktop/assets/images/fullhd/go_hero_van_helsing.lua
 return {
     Halloween_hero_vhelsing_0001 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 53, 102, 36},
         a_size = {1024, 1024},
@@ -19,7 +19,7 @@ return {
                  "Halloween_hero_vhelsing_0556", "Halloween_hero_vhelsing_0622", "Halloween_hero_vhelsing_0623"}
     },
     Halloween_hero_vhelsing_0002 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 53, 102, 36},
         a_size = {1024, 1024},
@@ -27,7 +27,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0003 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 51, 103, 36},
         a_size = {1024, 1024},
@@ -35,7 +35,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0004 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 50, 103, 36},
         a_size = {1024, 1024},
@@ -43,7 +43,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0005 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 54, 103, 36},
         a_size = {1024, 1024},
@@ -51,7 +51,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0007 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 55, 91, 36},
         a_size = {1024, 1024},
@@ -60,7 +60,7 @@ return {
                  "Halloween_hero_vhelsing_0011", "Halloween_hero_vhelsing_0012"}
     },
     Halloween_hero_vhelsing_0013 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 55, 84, 36},
         a_size = {1024, 1024},
@@ -68,7 +68,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0014 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 48, 77, 36},
         a_size = {1024, 1024},
@@ -76,7 +76,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0015 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 48, 67, 36},
         a_size = {1024, 1024},
@@ -84,7 +84,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0016 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 47, 65, 36},
         a_size = {1024, 1024},
@@ -92,7 +92,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0017 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 47, 65, 36},
         a_size = {1024, 1024},
@@ -100,7 +100,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0018 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {96, 51, 66, 36},
         a_size = {1024, 1024},
@@ -108,7 +108,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0019 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {96, 51, 65, 36},
         a_size = {1024, 1024},
@@ -116,7 +116,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0020 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {97, 53, 81, 36},
         a_size = {1024, 1024},
@@ -124,7 +124,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0021"}
     },
     Halloween_hero_vhelsing_0022 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 55, 104, 36},
         a_size = {1024, 1024},
@@ -132,7 +132,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0023", "Halloween_hero_vhelsing_0044"}
     },
     Halloween_hero_vhelsing_0024 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 53, 104, 36},
         a_size = {1024, 1024},
@@ -140,7 +140,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0025", "Halloween_hero_vhelsing_0045", "Halloween_hero_vhelsing_0046"}
     },
     Halloween_hero_vhelsing_0028 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 55, 96, 36},
         a_size = {1024, 1024},
@@ -149,7 +149,7 @@ return {
                  "Halloween_hero_vhelsing_0032"}
     },
     Halloween_hero_vhelsing_0033 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 55, 88, 33},
         a_size = {1024, 1024},
@@ -157,7 +157,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0034 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 55, 88, 33},
         a_size = {1024, 1024},
@@ -165,7 +165,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0035 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 48, 87, 32},
         a_size = {1024, 1024},
@@ -173,7 +173,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0036"}
     },
     Halloween_hero_vhelsing_0037 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 50, 78, 21},
         a_size = {1024, 1024},
@@ -181,7 +181,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0038"}
     },
     Halloween_hero_vhelsing_0039 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {96, 48, 76, 19},
         a_size = {1024, 1024},
@@ -189,7 +189,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0040"}
     },
     Halloween_hero_vhelsing_0041 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {97, 49, 75, 19},
         a_size = {1024, 1024},
@@ -197,7 +197,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0042"}
     },
     Halloween_hero_vhelsing_0043 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 55, 76, 18},
         a_size = {1024, 1024},
@@ -205,7 +205,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0051 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 53, 98, 33},
         a_size = {1024, 1024},
@@ -214,7 +214,7 @@ return {
                  "Halloween_hero_vhelsing_0055"}
     },
     Halloween_hero_vhelsing_0056 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 42, 88, 33},
         a_size = {1024, 1024},
@@ -222,7 +222,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0057 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 42, 88, 33},
         a_size = {1024, 1024},
@@ -230,7 +230,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0058 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {95, 41, 88, 33},
         a_size = {1024, 1024},
@@ -238,7 +238,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0059"}
     },
     Halloween_hero_vhelsing_0060 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {93, 27, 80, 32},
         a_size = {1024, 1024},
@@ -246,7 +246,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0061"}
     },
     Halloween_hero_vhelsing_0062 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {96, 25, 77, 33},
         a_size = {1024, 1024},
@@ -254,7 +254,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0063"}
     },
     Halloween_hero_vhelsing_0064 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 25, 77, 35},
         a_size = {1024, 1024},
@@ -262,7 +262,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0065"}
     },
     Halloween_hero_vhelsing_0066 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 55, 98, 33},
         a_size = {1024, 1024},
@@ -270,7 +270,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0067"}
     },
     Halloween_hero_vhelsing_0068 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 55, 98, 33},
         a_size = {1024, 1024},
@@ -278,7 +278,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0069"}
     },
     Halloween_hero_vhelsing_0070 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 53, 102, 36},
         a_size = {1024, 1024},
@@ -286,7 +286,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0073 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {92, 55, 104, 36},
         a_size = {1024, 1024},
@@ -294,7 +294,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0074"}
     },
     Halloween_hero_vhelsing_0075 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {81, 56, 102, 36},
         a_size = {1024, 1024},
@@ -302,7 +302,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0076"}
     },
     Halloween_hero_vhelsing_0077 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {80, 44, 103, 36},
         a_size = {1024, 1024},
@@ -310,7 +310,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0078"}
     },
     Halloween_hero_vhelsing_0079 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 50, 90, 36},
         a_size = {1024, 1024},
@@ -318,7 +318,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0080"}
     },
     Halloween_hero_vhelsing_0081 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {105, 61, 98, 35},
         a_size = {1024, 1024},
@@ -326,7 +326,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0082"}
     },
     Halloween_hero_vhelsing_0083 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {107, 56, 98, 36},
         a_size = {1024, 1024},
@@ -334,7 +334,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0084"}
     },
     Halloween_hero_vhelsing_0085 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {106, 57, 99, 36},
         a_size = {1024, 1024},
@@ -342,7 +342,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0086", "Halloween_hero_vhelsing_0087"}
     },
     Halloween_hero_vhelsing_0088 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {106, 56, 102, 35},
         a_size = {1024, 1024},
@@ -350,7 +350,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0089"}
     },
     Halloween_hero_vhelsing_0090 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 53, 102, 36},
         a_size = {1024, 1024},
@@ -358,7 +358,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0094 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 53, 102, 36},
         a_size = {1024, 1024},
@@ -366,7 +366,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0095", "Halloween_hero_vhelsing_0167", "Halloween_hero_vhelsing_0168"}
     },
     Halloween_hero_vhelsing_0096 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 54, 106, 36},
         a_size = {1024, 1024},
@@ -377,7 +377,7 @@ return {
                  "Halloween_hero_vhelsing_0299", "Halloween_hero_vhelsing_0300", "Halloween_hero_vhelsing_0301"}
     },
     Halloween_hero_vhelsing_0098 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 57, 105, 36},
         a_size = {1024, 1024},
@@ -385,7 +385,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0099", "Halloween_hero_vhelsing_0171", "Halloween_hero_vhelsing_0172"}
     },
     Halloween_hero_vhelsing_0100 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 55, 108, 36},
         a_size = {1024, 1024},
@@ -393,7 +393,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0101", "Halloween_hero_vhelsing_0173", "Halloween_hero_vhelsing_0174"}
     },
     Halloween_hero_vhelsing_0102 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {104, 55, 108, 36},
         a_size = {1024, 1024},
@@ -401,7 +401,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0103", "Halloween_hero_vhelsing_0175", "Halloween_hero_vhelsing_0176"}
     },
     Halloween_hero_vhelsing_0104 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {105, 55, 107, 36},
         a_size = {1024, 1024},
@@ -409,7 +409,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0105", "Halloween_hero_vhelsing_0177", "Halloween_hero_vhelsing_0178"}
     },
     Halloween_hero_vhelsing_0106 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 54, 107, 36},
         a_size = {1024, 1024},
@@ -417,7 +417,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0107", "Halloween_hero_vhelsing_0179", "Halloween_hero_vhelsing_0180"}
     },
     Halloween_hero_vhelsing_0108 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {100, 55, 105, 36},
         a_size = {1024, 1024},
@@ -425,7 +425,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0109", "Halloween_hero_vhelsing_0181", "Halloween_hero_vhelsing_0182"}
     },
     Halloween_hero_vhelsing_0110 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 53, 101, 36},
         a_size = {1024, 1024},
@@ -433,7 +433,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0111", "Halloween_hero_vhelsing_0183", "Halloween_hero_vhelsing_0184"}
     },
     Halloween_hero_vhelsing_0112 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 54, 100, 36},
         a_size = {1024, 1024},
@@ -441,7 +441,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0113", "Halloween_hero_vhelsing_0185", "Halloween_hero_vhelsing_0186"}
     },
     Halloween_hero_vhelsing_0114 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 56, 102, 36},
         a_size = {1024, 1024},
@@ -449,7 +449,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0115", "Halloween_hero_vhelsing_0187", "Halloween_hero_vhelsing_0188"}
     },
     Halloween_hero_vhelsing_0116 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 55, 100, 36},
         a_size = {1024, 1024},
@@ -457,7 +457,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0117", "Halloween_hero_vhelsing_0189", "Halloween_hero_vhelsing_0190"}
     },
     Halloween_hero_vhelsing_0118 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 55, 101, 36},
         a_size = {1024, 1024},
@@ -465,7 +465,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0119"}
     },
     Halloween_hero_vhelsing_0120 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 55, 103, 36},
         a_size = {1024, 1024},
@@ -473,7 +473,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0121"}
     },
     Halloween_hero_vhelsing_0122 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 55, 91, 36},
         a_size = {1024, 1024},
@@ -483,7 +483,7 @@ return {
                  "Halloween_hero_vhelsing_0129", "Halloween_hero_vhelsing_0212"}
     },
     Halloween_hero_vhelsing_0130 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 55, 83, 36},
         a_size = {1024, 1024},
@@ -491,7 +491,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0131 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 55, 70, 36},
         a_size = {1024, 1024},
@@ -499,7 +499,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0132 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 41, 76, 36},
         a_size = {1024, 1024},
@@ -507,7 +507,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0133 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 41, 65, 36},
         a_size = {1024, 1024},
@@ -515,7 +515,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0134 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 41, 64, 36},
         a_size = {1024, 1024},
@@ -523,7 +523,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0135 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 41, 64, 36},
         a_size = {1024, 1024},
@@ -531,7 +531,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0136 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 45, 64, 36},
         a_size = {1024, 1024},
@@ -539,7 +539,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0137 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 45, 64, 36},
         a_size = {1024, 1024},
@@ -547,7 +547,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0138 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 46, 76, 36},
         a_size = {1024, 1024},
@@ -555,7 +555,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0139 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 46, 77, 36},
         a_size = {1024, 1024},
@@ -563,7 +563,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0140 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 55, 76, 36},
         a_size = {1024, 1024},
@@ -571,7 +571,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0141 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 55, 91, 36},
         a_size = {1024, 1024},
@@ -579,7 +579,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0283"}
     },
     Halloween_hero_vhelsing_0142 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 53, 101, 36},
         a_size = {1024, 1024},
@@ -588,7 +588,7 @@ return {
                  "Halloween_hero_vhelsing_0284", "Halloween_hero_vhelsing_0285"}
     },
     Halloween_hero_vhelsing_0144 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {100, 55, 105, 36},
         a_size = {1024, 1024},
@@ -597,7 +597,7 @@ return {
                  "Halloween_hero_vhelsing_0286", "Halloween_hero_vhelsing_0287"}
     },
     Halloween_hero_vhelsing_0146 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 54, 107, 36},
         a_size = {1024, 1024},
@@ -606,7 +606,7 @@ return {
                  "Halloween_hero_vhelsing_0288", "Halloween_hero_vhelsing_0289"}
     },
     Halloween_hero_vhelsing_0148 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {105, 55, 107, 36},
         a_size = {1024, 1024},
@@ -615,7 +615,7 @@ return {
                  "Halloween_hero_vhelsing_0290", "Halloween_hero_vhelsing_0291"}
     },
     Halloween_hero_vhelsing_0150 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {104, 55, 108, 36},
         a_size = {1024, 1024},
@@ -624,7 +624,7 @@ return {
                  "Halloween_hero_vhelsing_0292", "Halloween_hero_vhelsing_0293"}
     },
     Halloween_hero_vhelsing_0152 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 55, 108, 36},
         a_size = {1024, 1024},
@@ -634,7 +634,7 @@ return {
                  "Halloween_hero_vhelsing_0295", "Halloween_hero_vhelsing_0296"}
     },
     Halloween_hero_vhelsing_0155 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 57, 105, 36},
         a_size = {1024, 1024},
@@ -643,7 +643,7 @@ return {
                  "Halloween_hero_vhelsing_0297", "Halloween_hero_vhelsing_0298"}
     },
     Halloween_hero_vhelsing_0160 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 53, 102, 36},
         a_size = {1024, 1024},
@@ -652,7 +652,7 @@ return {
                  "Halloween_hero_vhelsing_0302", "Halloween_hero_vhelsing_0303"}
     },
     Halloween_hero_vhelsing_0162 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 52, 103, 36},
         a_size = {1024, 1024},
@@ -661,7 +661,7 @@ return {
                  "Halloween_hero_vhelsing_0304", "Halloween_hero_vhelsing_0305"}
     },
     Halloween_hero_vhelsing_0164 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 53, 102, 36},
         a_size = {1024, 1024},
@@ -669,7 +669,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0235", "Halloween_hero_vhelsing_0306"}
     },
     Halloween_hero_vhelsing_0165 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 53, 102, 36},
         a_size = {1024, 1024},
@@ -677,7 +677,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0166", "Halloween_hero_vhelsing_0236", "Halloween_hero_vhelsing_0237"}
     },
     Halloween_hero_vhelsing_0191 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 55, 101, 36},
         a_size = {1024, 1024},
@@ -685,7 +685,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0192"}
     },
     Halloween_hero_vhelsing_0193 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 55, 96, 36},
         a_size = {1024, 1024},
@@ -695,7 +695,7 @@ return {
                  "Halloween_hero_vhelsing_0200"}
     },
     Halloween_hero_vhelsing_0201 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 55, 88, 32},
         a_size = {1024, 1024},
@@ -703,7 +703,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0202"}
     },
     Halloween_hero_vhelsing_0203 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 49, 87, 31},
         a_size = {1024, 1024},
@@ -711,7 +711,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0204 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 49, 87, 28},
         a_size = {1024, 1024},
@@ -719,7 +719,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0205 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 51, 78, 20},
         a_size = {1024, 1024},
@@ -727,7 +727,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0206 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 51, 78, 20},
         a_size = {1024, 1024},
@@ -735,7 +735,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0207 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 51, 76, 18},
         a_size = {1024, 1024},
@@ -743,7 +743,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0208 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {104, 51, 76, 17},
         a_size = {1024, 1024},
@@ -751,7 +751,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0209 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {104, 47, 75, 17},
         a_size = {1024, 1024},
@@ -759,7 +759,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0210 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 47, 75, 14},
         a_size = {1024, 1024},
@@ -767,7 +767,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0211 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 54, 76, 14},
         a_size = {1024, 1024},
@@ -775,7 +775,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0238 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 53, 102, 36},
         a_size = {1024, 1024},
@@ -783,7 +783,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0239"}
     },
     Halloween_hero_vhelsing_0240 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 54, 106, 36},
         a_size = {1024, 1024},
@@ -791,7 +791,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0241"}
     },
     Halloween_hero_vhelsing_0242 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 57, 105, 36},
         a_size = {1024, 1024},
@@ -799,7 +799,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0243"}
     },
     Halloween_hero_vhelsing_0244 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 55, 108, 36},
         a_size = {1024, 1024},
@@ -807,7 +807,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0245"}
     },
     Halloween_hero_vhelsing_0246 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {104, 55, 108, 36},
         a_size = {1024, 1024},
@@ -815,7 +815,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0247"}
     },
     Halloween_hero_vhelsing_0248 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {105, 55, 107, 36},
         a_size = {1024, 1024},
@@ -823,7 +823,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0249"}
     },
     Halloween_hero_vhelsing_0250 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 54, 107, 36},
         a_size = {1024, 1024},
@@ -831,7 +831,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0251"}
     },
     Halloween_hero_vhelsing_0252 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {100, 55, 105, 36},
         a_size = {1024, 1024},
@@ -839,7 +839,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0253"}
     },
     Halloween_hero_vhelsing_0254 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 53, 101, 36},
         a_size = {1024, 1024},
@@ -847,7 +847,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0255"}
     },
     Halloween_hero_vhelsing_0256 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 54, 100, 36},
         a_size = {1024, 1024},
@@ -855,7 +855,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0257"}
     },
     Halloween_hero_vhelsing_0258 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 56, 102, 36},
         a_size = {1024, 1024},
@@ -863,7 +863,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0259"}
     },
     Halloween_hero_vhelsing_0260 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 55, 100, 36},
         a_size = {1024, 1024},
@@ -871,7 +871,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0261"}
     },
     Halloween_hero_vhelsing_0262 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 55, 101, 36},
         a_size = {1024, 1024},
@@ -879,7 +879,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0263"}
     },
     Halloween_hero_vhelsing_0264 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {104, 46, 96, 33},
         a_size = {1024, 1024},
@@ -889,7 +889,7 @@ return {
                  "Halloween_hero_vhelsing_0271", "Halloween_hero_vhelsing_0272"}
     },
     Halloween_hero_vhelsing_0273 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {104, 40, 96, 33},
         a_size = {1024, 1024},
@@ -897,7 +897,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0274 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {105, 35, 97, 33},
         a_size = {1024, 1024},
@@ -905,7 +905,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0275"}
     },
     Halloween_hero_vhelsing_0276 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {105, 30, 92, 33},
         a_size = {1024, 1024},
@@ -913,7 +913,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0277 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {104, 30, 83, 35},
         a_size = {1024, 1024},
@@ -921,7 +921,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0278 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {104, 28, 83, 35},
         a_size = {1024, 1024},
@@ -929,7 +929,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0279 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 28, 82, 34},
         a_size = {1024, 1024},
@@ -937,7 +937,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0280 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 28, 82, 34},
         a_size = {1024, 1024},
@@ -945,7 +945,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0281 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 28, 81, 35},
         a_size = {1024, 1024},
@@ -953,7 +953,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0282 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 28, 81, 35},
         a_size = {1024, 1024},
@@ -961,7 +961,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0309 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {96, 55, 109, 36},
         a_size = {1024, 1024},
@@ -971,7 +971,7 @@ return {
                  "Halloween_hero_vhelsing_0422", "Halloween_hero_vhelsing_0426", "Halloween_hero_vhelsing_0427"}
     },
     Halloween_hero_vhelsing_0311 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {90, 58, 110, 36},
         a_size = {1024, 1024},
@@ -980,7 +980,7 @@ return {
                  "Halloween_hero_vhelsing_0428", "Halloween_hero_vhelsing_0429"}
     },
     Halloween_hero_vhelsing_0313 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 60, 110, 36},
         a_size = {1024, 1024},
@@ -989,7 +989,7 @@ return {
                  "Halloween_hero_vhelsing_0430", "Halloween_hero_vhelsing_0431"}
     },
     Halloween_hero_vhelsing_0315 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {96, 35, 110, 36},
         a_size = {1024, 1024},
@@ -997,7 +997,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0316"}
     },
     Halloween_hero_vhelsing_0317 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 55, 93, 36},
         a_size = {1024, 1024},
@@ -1005,7 +1005,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0318"}
     },
     Halloween_hero_vhelsing_0319 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 61, 88, 36},
         a_size = {1024, 1024},
@@ -1013,7 +1013,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0320"}
     },
     Halloween_hero_vhelsing_0321 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 63, 88, 36},
         a_size = {1024, 1024},
@@ -1021,7 +1021,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0322"}
     },
     Halloween_hero_vhelsing_0323 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 61, 88, 36},
         a_size = {1024, 1024},
@@ -1030,7 +1030,7 @@ return {
                  "Halloween_hero_vhelsing_0327", "Halloween_hero_vhelsing_0328", "Halloween_hero_vhelsing_0329"}
     },
     Halloween_hero_vhelsing_0330 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 61, 71, 36},
         a_size = {1024, 1024},
@@ -1038,7 +1038,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0331 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 61, 56, 36},
         a_size = {1024, 1024},
@@ -1046,7 +1046,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0332 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {97, 34, 48, 36},
         a_size = {1024, 1024},
@@ -1054,7 +1054,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0333 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {97, 34, 48, 36},
         a_size = {1024, 1024},
@@ -1062,7 +1062,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0334 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {96, 31, 49, 36},
         a_size = {1024, 1024},
@@ -1070,7 +1070,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0335 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {96, 31, 48, 36},
         a_size = {1024, 1024},
@@ -1078,7 +1078,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0336 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {97, 40, 60, 36},
         a_size = {1024, 1024},
@@ -1086,7 +1086,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0337"}
     },
     Halloween_hero_vhelsing_0338 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 41, 57, 36},
         a_size = {1024, 1024},
@@ -1094,7 +1094,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0339"}
     },
     Halloween_hero_vhelsing_0340 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 42, 55, 36},
         a_size = {1024, 1024},
@@ -1102,7 +1102,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0341"}
     },
     Halloween_hero_vhelsing_0342 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 42, 55, 36},
         a_size = {1024, 1024},
@@ -1110,7 +1110,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0343"}
     },
     Halloween_hero_vhelsing_0344 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 61, 88, 36},
         a_size = {1024, 1024},
@@ -1119,7 +1119,7 @@ return {
                  "Halloween_hero_vhelsing_0348", "Halloween_hero_vhelsing_0349", "Halloween_hero_vhelsing_0350"}
     },
     Halloween_hero_vhelsing_0351 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 63, 88, 36},
         a_size = {1024, 1024},
@@ -1127,7 +1127,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0352 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 61, 88, 36},
         a_size = {1024, 1024},
@@ -1135,7 +1135,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0353"}
     },
     Halloween_hero_vhelsing_0354 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 55, 93, 36},
         a_size = {1024, 1024},
@@ -1143,7 +1143,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0355"}
     },
     Halloween_hero_vhelsing_0356 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {95, 39, 110, 36},
         a_size = {1024, 1024},
@@ -1151,7 +1151,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0357"}
     },
     Halloween_hero_vhelsing_0358 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {100, 54, 110, 36},
         a_size = {1024, 1024},
@@ -1159,7 +1159,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0359", "Halloween_hero_vhelsing_0417", "Halloween_hero_vhelsing_0418"}
     },
     Halloween_hero_vhelsing_0360 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {95, 54, 110, 36},
         a_size = {1024, 1024},
@@ -1167,7 +1167,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0361", "Halloween_hero_vhelsing_0419", "Halloween_hero_vhelsing_0420"}
     },
     Halloween_hero_vhelsing_0374 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {96, 35, 110, 36},
         a_size = {1024, 1024},
@@ -1175,7 +1175,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0375"}
     },
     Halloween_hero_vhelsing_0376 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 61, 92, 26},
         a_size = {1024, 1024},
@@ -1183,7 +1183,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0377"}
     },
     Halloween_hero_vhelsing_0378 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {102, 65, 103, 25},
         a_size = {1024, 1024},
@@ -1191,7 +1191,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0379"}
     },
     Halloween_hero_vhelsing_0380 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {102, 65, 103, 27},
         a_size = {1024, 1024},
@@ -1199,7 +1199,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0381"}
     },
     Halloween_hero_vhelsing_0382 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {102, 63, 103, 27},
         a_size = {1024, 1024},
@@ -1208,7 +1208,7 @@ return {
                  "Halloween_hero_vhelsing_0386", "Halloween_hero_vhelsing_0387", "Halloween_hero_vhelsing_0388"}
     },
     Halloween_hero_vhelsing_0389 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 63, 93, 17},
         a_size = {1024, 1024},
@@ -1216,7 +1216,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0390 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 63, 82, 14},
         a_size = {1024, 1024},
@@ -1224,7 +1224,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0391 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 39, 73, 11},
         a_size = {1024, 1024},
@@ -1232,7 +1232,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0392 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 39, 72, 11},
         a_size = {1024, 1024},
@@ -1240,7 +1240,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0393 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 43, 73, 6},
         a_size = {1024, 1024},
@@ -1248,7 +1248,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0394 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 43, 73, 6},
         a_size = {1024, 1024},
@@ -1256,7 +1256,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0395 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {104, 48, 76, 7},
         a_size = {1024, 1024},
@@ -1264,7 +1264,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0396"}
     },
     Halloween_hero_vhelsing_0397 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {105, 55, 68, 10},
         a_size = {1024, 1024},
@@ -1272,7 +1272,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0398"}
     },
     Halloween_hero_vhelsing_0399 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 61, 64, 16},
         a_size = {1024, 1024},
@@ -1280,7 +1280,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0400"}
     },
     Halloween_hero_vhelsing_0401 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 61, 95, 31},
         a_size = {1024, 1024},
@@ -1288,7 +1288,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0402"}
     },
     Halloween_hero_vhelsing_0403 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 63, 103, 26},
         a_size = {1024, 1024},
@@ -1297,7 +1297,7 @@ return {
                  "Halloween_hero_vhelsing_0407", "Halloween_hero_vhelsing_0408", "Halloween_hero_vhelsing_0409"}
     },
     Halloween_hero_vhelsing_0410 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {102, 65, 103, 26},
         a_size = {1024, 1024},
@@ -1305,7 +1305,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0411 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {102, 63, 103, 27},
         a_size = {1024, 1024},
@@ -1313,7 +1313,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0412"}
     },
     Halloween_hero_vhelsing_0413 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 55, 93, 36},
         a_size = {1024, 1024},
@@ -1321,7 +1321,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0414"}
     },
     Halloween_hero_vhelsing_0415 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {102, 48, 98, 36},
         a_size = {1024, 1024},
@@ -1329,7 +1329,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0416"}
     },
     Halloween_hero_vhelsing_0432 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 37, 110, 36},
         a_size = {1024, 1024},
@@ -1337,7 +1337,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0433"}
     },
     Halloween_hero_vhelsing_0434 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 51, 93, 36},
         a_size = {1024, 1024},
@@ -1345,7 +1345,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0435"}
     },
     Halloween_hero_vhelsing_0436 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {106, 54, 94, 36},
         a_size = {1024, 1024},
@@ -1353,7 +1353,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0437"}
     },
     Halloween_hero_vhelsing_0438 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {106, 56, 95, 36},
         a_size = {1024, 1024},
@@ -1361,7 +1361,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0439"}
     },
     Halloween_hero_vhelsing_0440 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {106, 54, 94, 36},
         a_size = {1024, 1024},
@@ -1370,7 +1370,7 @@ return {
                  "Halloween_hero_vhelsing_0444", "Halloween_hero_vhelsing_0445", "Halloween_hero_vhelsing_0446"}
     },
     Halloween_hero_vhelsing_0447 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 35, 76, 36},
         a_size = {1024, 1024},
@@ -1378,7 +1378,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0448 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 32, 71, 36},
         a_size = {1024, 1024},
@@ -1386,7 +1386,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0449 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {95, 23, 67, 36},
         a_size = {1024, 1024},
@@ -1394,7 +1394,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0450 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {95, 23, 66, 36},
         a_size = {1024, 1024},
@@ -1402,7 +1402,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0451 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 23, 64, 36},
         a_size = {1024, 1024},
@@ -1410,7 +1410,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0452 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 23, 64, 36},
         a_size = {1024, 1024},
@@ -1418,7 +1418,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0453 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 25, 63, 36},
         a_size = {1024, 1024},
@@ -1426,7 +1426,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0454"}
     },
     Halloween_hero_vhelsing_0455 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 19, 58, 36},
         a_size = {1024, 1024},
@@ -1434,7 +1434,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0456"}
     },
     Halloween_hero_vhelsing_0457 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 12, 58, 36},
         a_size = {1024, 1024},
@@ -1442,7 +1442,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0458"}
     },
     Halloween_hero_vhelsing_0459 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 12, 58, 36},
         a_size = {1024, 1024},
@@ -1450,7 +1450,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0460"}
     },
     Halloween_hero_vhelsing_0461 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 51, 93, 36},
         a_size = {1024, 1024},
@@ -1459,7 +1459,7 @@ return {
                  "Halloween_hero_vhelsing_0465"}
     },
     Halloween_hero_vhelsing_0466 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 53, 93, 36},
         a_size = {1024, 1024},
@@ -1467,7 +1467,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0467 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {106, 51, 93, 36},
         a_size = {1024, 1024},
@@ -1475,7 +1475,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0468"}
     },
     Halloween_hero_vhelsing_0469 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {104, 52, 97, 36},
         a_size = {1024, 1024},
@@ -1483,7 +1483,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0470 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {103, 50, 100, 36},
         a_size = {1024, 1024},
@@ -1491,7 +1491,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0471"}
     },
     Halloween_hero_vhelsing_0472 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 48, 106, 36},
         a_size = {1024, 1024},
@@ -1499,7 +1499,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0473"}
     },
     Halloween_hero_vhelsing_0474 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 37, 110, 36},
         a_size = {1024, 1024},
@@ -1507,7 +1507,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0475"}
     },
     Halloween_hero_vhelsing_0476 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 60, 110, 36},
         a_size = {1024, 1024},
@@ -1515,7 +1515,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0477"}
     },
     Halloween_hero_vhelsing_0478 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {90, 58, 110, 36},
         a_size = {1024, 1024},
@@ -1523,7 +1523,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0479"}
     },
     Halloween_hero_vhelsing_0480 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 55, 105, 36},
         a_size = {1024, 1024},
@@ -1531,7 +1531,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0481"}
     },
     Halloween_hero_vhelsing_0485 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 53, 102, 36},
         a_size = {1024, 1024},
@@ -1539,7 +1539,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0486"}
     },
     Halloween_hero_vhelsing_0487 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 54, 106, 36},
         a_size = {1024, 1024},
@@ -1547,7 +1547,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0488"}
     },
     Halloween_hero_vhelsing_0489 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {103, 55, 108, 36},
         a_size = {1024, 1024},
@@ -1555,7 +1555,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0490"}
     },
     Halloween_hero_vhelsing_0491 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {105, 55, 107, 36},
         a_size = {1024, 1024},
@@ -1563,7 +1563,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0492"}
     },
     Halloween_hero_vhelsing_0493 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {91, 58, 108, 36},
         a_size = {1024, 1024},
@@ -1571,7 +1571,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0494"}
     },
     Halloween_hero_vhelsing_0495 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {90, 58, 110, 36},
         a_size = {1024, 1024},
@@ -1579,7 +1579,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0496"}
     },
     Halloween_hero_vhelsing_0497 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {89, 58, 110, 36},
         a_size = {1024, 1024},
@@ -1587,7 +1587,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0498"}
     },
     Halloween_hero_vhelsing_0499 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {109, 57, 102, 36},
         a_size = {1024, 1024},
@@ -1595,7 +1595,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0500"}
     },
     Halloween_hero_vhelsing_0501 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {111, 56, 98, 36},
         a_size = {1024, 1024},
@@ -1603,7 +1603,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0502"}
     },
     Halloween_hero_vhelsing_0503 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {111, 60, 98, 36},
         a_size = {1024, 1024},
@@ -1611,7 +1611,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0504"}
     },
     Halloween_hero_vhelsing_0505 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {111, 58, 97, 36},
         a_size = {1024, 1024},
@@ -1619,7 +1619,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0506"}
     },
     Halloween_hero_vhelsing_0507 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {105, 57, 100, 36},
         a_size = {1024, 1024},
@@ -1627,7 +1627,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0508"}
     },
     Halloween_hero_vhelsing_0513 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 53, 104, 36},
         a_size = {1024, 1024},
@@ -1635,7 +1635,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0514", "Halloween_hero_vhelsing_0552", "Halloween_hero_vhelsing_0553"}
     },
     Halloween_hero_vhelsing_0515 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {96, 54, 110, 36},
         a_size = {1024, 1024},
@@ -1643,7 +1643,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0516"}
     },
     Halloween_hero_vhelsing_0517 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 56, 110, 36},
         a_size = {1024, 1024},
@@ -1651,7 +1651,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0518", "Halloween_hero_vhelsing_0548", "Halloween_hero_vhelsing_0549"}
     },
     Halloween_hero_vhelsing_0519 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 60, 110, 36},
         a_size = {1024, 1024},
@@ -1659,7 +1659,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0520"}
     },
     Halloween_hero_vhelsing_0521 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 61, 110, 36},
         a_size = {1024, 1024},
@@ -1667,7 +1667,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0522", "Halloween_hero_vhelsing_0544", "Halloween_hero_vhelsing_0545"}
     },
     Halloween_hero_vhelsing_0523 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 45, 82, 36},
         a_size = {1024, 1024},
@@ -1675,7 +1675,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0524"}
     },
     Halloween_hero_vhelsing_0525 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 37, 78, 36},
         a_size = {1024, 1024},
@@ -1683,7 +1683,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0526"}
     },
     Halloween_hero_vhelsing_0527 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {100, 32, 70, 36},
         a_size = {1024, 1024},
@@ -1691,7 +1691,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0528"}
     },
     Halloween_hero_vhelsing_0529 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 27, 55, 36},
         a_size = {1024, 1024},
@@ -1699,7 +1699,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0530"}
     },
     Halloween_hero_vhelsing_0531 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 25, 48, 34},
         a_size = {1024, 1024},
@@ -1707,7 +1707,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0532"}
     },
     Halloween_hero_vhelsing_0533 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {99, 48, 95, 36},
         a_size = {1024, 1024},
@@ -1716,7 +1716,7 @@ return {
                  "Halloween_hero_vhelsing_0537", "Halloween_hero_vhelsing_0538", "Halloween_hero_vhelsing_0539"}
     },
     Halloween_hero_vhelsing_0540 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {98, 51, 101, 36},
         a_size = {1024, 1024},
@@ -1724,7 +1724,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0541"}
     },
     Halloween_hero_vhelsing_0542 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {98, 53, 103, 36},
         a_size = {1024, 1024},
@@ -1732,7 +1732,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0543"}
     },
     Halloween_hero_vhelsing_0546 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {99, 60, 110, 36},
         a_size = {1024, 1024},
@@ -1740,7 +1740,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0547"}
     },
     Halloween_hero_vhelsing_0550 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {96, 54, 110, 36},
         a_size = {1024, 1024},
@@ -1748,7 +1748,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0551"}
     },
     Halloween_hero_vhelsing_0557 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {90, 46, 110, 36},
         a_size = {1024, 1024},
@@ -1756,7 +1756,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0558"}
     },
     Halloween_hero_vhelsing_0559 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {89, 34, 108, 36},
         a_size = {1024, 1024},
@@ -1764,7 +1764,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0560"}
     },
     Halloween_hero_vhelsing_0561 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {82, 32, 105, 36},
         a_size = {1024, 1024},
@@ -1772,7 +1772,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0562"}
     },
     Halloween_hero_vhelsing_0563 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {82, 32, 103, 36},
         a_size = {1024, 1024},
@@ -1780,7 +1780,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0564"}
     },
     Halloween_hero_vhelsing_0565 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {81, 39, 103, 36},
         a_size = {1024, 1024},
@@ -1788,7 +1788,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0566"}
     },
     Halloween_hero_vhelsing_0567 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {82, 41, 103, 36},
         a_size = {1024, 1024},
@@ -1796,7 +1796,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0568"}
     },
     Halloween_hero_vhelsing_0569 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {86, 45, 97, 32},
         a_size = {1024, 1024},
@@ -1804,7 +1804,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0570"}
     },
     Halloween_hero_vhelsing_0571 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 44, 96, 30},
         a_size = {1024, 1024},
@@ -1812,7 +1812,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0572"}
     },
     Halloween_hero_vhelsing_0573 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 44, 96, 31},
         a_size = {1024, 1024},
@@ -1820,7 +1820,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0574"}
     },
     Halloween_hero_vhelsing_0575 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 44, 96, 31},
         a_size = {1024, 1024},
@@ -1828,7 +1828,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0576"}
     },
     Halloween_hero_vhelsing_0577 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 44, 96, 32},
         a_size = {1024, 1024},
@@ -1836,7 +1836,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0578"}
     },
     Halloween_hero_vhelsing_0579 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 43, 96, 32},
         a_size = {1024, 1024},
@@ -1844,7 +1844,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0580"}
     },
     Halloween_hero_vhelsing_0581 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 43, 96, 32},
         a_size = {1024, 1024},
@@ -1852,7 +1852,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0582"}
     },
     Halloween_hero_vhelsing_0583 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 43, 96, 32},
         a_size = {1024, 1024},
@@ -1860,7 +1860,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0584"}
     },
     Halloween_hero_vhelsing_0585 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 44, 96, 31},
         a_size = {1024, 1024},
@@ -1868,7 +1868,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0586"}
     },
     Halloween_hero_vhelsing_0587 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 44, 96, 31},
         a_size = {1024, 1024},
@@ -1876,7 +1876,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0588"}
     },
     Halloween_hero_vhelsing_0589 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 44, 96, 30},
         a_size = {1024, 1024},
@@ -1884,7 +1884,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0590"}
     },
     Halloween_hero_vhelsing_0591 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 45, 96, 30},
         a_size = {1024, 1024},
@@ -1892,7 +1892,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0592"}
     },
     Halloween_hero_vhelsing_0593 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 45, 96, 30},
         a_size = {1024, 1024},
@@ -1900,7 +1900,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0594"}
     },
     Halloween_hero_vhelsing_0595 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 46, 96, 30},
         a_size = {1024, 1024},
@@ -1908,7 +1908,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0596"}
     },
     Halloween_hero_vhelsing_0597 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 46, 96, 29},
         a_size = {1024, 1024},
@@ -1916,7 +1916,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0598"}
     },
     Halloween_hero_vhelsing_0599 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 45, 96, 30},
         a_size = {1024, 1024},
@@ -1924,7 +1924,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0600"}
     },
     Halloween_hero_vhelsing_0601 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {94, 45, 96, 30},
         a_size = {1024, 1024},
@@ -1932,7 +1932,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0602"}
     },
     Halloween_hero_vhelsing_0603 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 18, 102, 35},
         a_size = {1024, 1024},
@@ -1940,7 +1940,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0604"}
     },
     Halloween_hero_vhelsing_0605 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 18, 103, 35},
         a_size = {1024, 1024},
@@ -1948,7 +1948,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0606"}
     },
     Halloween_hero_vhelsing_0607 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 18, 104, 35},
         a_size = {1024, 1024},
@@ -1956,7 +1956,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0608"}
     },
     Halloween_hero_vhelsing_0609 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 18, 103, 36},
         a_size = {1024, 1024},
@@ -1964,7 +1964,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0610"}
     },
     Halloween_hero_vhelsing_0611 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 18, 103, 36},
         a_size = {1024, 1024},
@@ -1972,7 +1972,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0612"}
     },
     Halloween_hero_vhelsing_0613 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 19, 102, 36},
         a_size = {1024, 1024},
@@ -1980,7 +1980,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0614"}
     },
     Halloween_hero_vhelsing_0615 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {101, 43, 100, 34},
         a_size = {1024, 1024},
@@ -1988,7 +1988,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0616"}
     },
     Halloween_hero_vhelsing_0617 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {101, 43, 105, 36},
         a_size = {1024, 1024},
@@ -1996,7 +1996,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0618 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {100, 57, 104, 36},
         a_size = {1024, 1024},
@@ -2004,7 +2004,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0619"}
     },
     Halloween_hero_vhelsing_0620 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {100, 56, 102, 36},
         a_size = {1024, 1024},
@@ -2012,7 +2012,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0621"}
     },
     Halloween_hero_vhelsing_0624 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {94, 55, 113, 37},
         a_size = {1024, 1024},
@@ -2020,7 +2020,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0625 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {91, 54, 116, 37},
         a_size = {1024, 1024},
@@ -2028,7 +2028,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0626 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {89, 56, 119, 37},
         a_size = {1024, 1024},
@@ -2036,7 +2036,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0627 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {253, 138},
         trim = {87, 75, 122, 26},
         a_size = {1024, 1024},
@@ -2044,7 +2044,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_0628 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {86, 81, 123, 27},
         a_size = {1024, 1024},
@@ -2052,7 +2052,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0629"}
     },
     Halloween_hero_vhelsing_0630 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {253, 138},
         trim = {84, 77, 122, 26},
         a_size = {1024, 1024},
@@ -2060,7 +2060,7 @@ return {
         alias = {"Halloween_hero_vhelsing_0631"}
     },
     Halloween_hero_vhelsing_buffeffect = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {48, 17},
         trim = {2, 1, 1, 0},
         a_size = {1024, 1024},
@@ -2068,7 +2068,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {20, 7, 20, 3},
         a_size = {1024, 1024},
@@ -2076,7 +2076,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0002 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {62, 34},
         trim = {20, 7, 20, 2},
         a_size = {1024, 1024},
@@ -2084,7 +2084,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0003 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {62, 34},
         trim = {20, 6, 19, 2},
         a_size = {1024, 1024},
@@ -2092,7 +2092,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0004 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {19, 6, 19, 1},
         a_size = {1024, 1024},
@@ -2103,7 +2103,7 @@ return {
                  "Halloween_hero_vhelsing_shield_0011"}
     },
     Halloween_hero_vhelsing_shield_0012 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {19, 6, 19, 1},
         a_size = {1024, 1024},
@@ -2111,7 +2111,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0013 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {19, 6, 19, 1},
         a_size = {1024, 1024},
@@ -2119,7 +2119,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0014 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {19, 6, 19, 1},
         a_size = {1024, 1024},
@@ -2127,7 +2127,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0015 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {62, 34},
         trim = {19, 6, 19, 1},
         a_size = {1024, 1024},
@@ -2135,7 +2135,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0016 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {62, 34},
         trim = {19, 6, 19, 1},
         a_size = {1024, 1024},
@@ -2143,7 +2143,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0017 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {14, 1, 13, 2},
         a_size = {1024, 1024},
@@ -2151,7 +2151,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_shield_0018 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {62, 34},
         trim = {11, 0, 9, 2},
         a_size = {1024, 1024},
@@ -2159,7 +2159,7 @@ return {
         alias = {"Halloween_hero_vhelsing_shield_0019"}
     },
     Halloween_hero_vhelsing_shield_0020 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {9, 1, 6, 1},
         a_size = {1024, 1024},
@@ -2167,7 +2167,7 @@ return {
         alias = {"Halloween_hero_vhelsing_shield_0021"}
     },
     Halloween_hero_vhelsing_shield_0022 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {62, 34},
         trim = {6, 2, 1, 0},
         a_size = {1024, 1024},
@@ -2175,7 +2175,7 @@ return {
         alias = {"Halloween_hero_vhelsing_shield_0023"}
     },
     Halloween_hero_vhelsing_sniper_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {9, 10, 9, 9},
         a_size = {1024, 1024},
@@ -2183,7 +2183,7 @@ return {
         alias = {"Halloween_hero_vhelsing_sniper_0002"}
     },
     Halloween_hero_vhelsing_sniper_0003 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {13, 14, 13, 13},
         a_size = {1024, 1024},
@@ -2191,7 +2191,7 @@ return {
         alias = {"Halloween_hero_vhelsing_sniper_0004"}
     },
     Halloween_hero_vhelsing_sniper_0005 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {19, 20, 19, 19},
         a_size = {1024, 1024},
@@ -2199,7 +2199,7 @@ return {
         alias = {"Halloween_hero_vhelsing_sniper_0006"}
     },
     Halloween_hero_vhelsing_sniper_0007 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {23, 24, 23, 23},
         a_size = {1024, 1024},
@@ -2207,7 +2207,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0008 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {27, 28, 27, 27},
         a_size = {1024, 1024},
@@ -2215,7 +2215,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0009 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {29, 29, 28, 28},
         a_size = {1024, 1024},
@@ -2223,7 +2223,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0010 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {29, 30, 30, 30},
         a_size = {1024, 1024},
@@ -2231,7 +2231,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0011 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {30, 31, 30, 30},
         a_size = {1024, 1024},
@@ -2239,7 +2239,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0012 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {30, 30, 30, 30},
         a_size = {1024, 1024},
@@ -2247,7 +2247,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0013 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {29, 29, 28, 28},
         a_size = {1024, 1024},
@@ -2255,7 +2255,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0014 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {27, 28, 27, 27},
         a_size = {1024, 1024},
@@ -2263,7 +2263,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0015 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {28, 29, 28, 28},
         a_size = {1024, 1024},
@@ -2271,7 +2271,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0016 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {29, 30, 29, 29},
         a_size = {1024, 1024},
@@ -2279,7 +2279,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_water = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {20, 20},
         trim = {3, 1, 2, 1},
         a_size = {1024, 1024},
@@ -2287,7 +2287,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterExplosion_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {34, 39, 32, 32},
         a_size = {1024, 1024},
@@ -2295,7 +2295,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterExplosion_0002 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {87, 90},
         trim = {21, 31, 22, 26},
         a_size = {1024, 1024},
@@ -2303,7 +2303,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterExplosion_0003 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {15, 23, 16, 20},
         a_size = {1024, 1024},
@@ -2311,7 +2311,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0004"}
     },
     Halloween_hero_vhelsing_waterExplosion_0005 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {10, 20, 13, 14},
         a_size = {1024, 1024},
@@ -2319,7 +2319,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0006"}
     },
     Halloween_hero_vhelsing_waterExplosion_0007 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {8, 15, 9, 10},
         a_size = {1024, 1024},
@@ -2327,7 +2327,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0008"}
     },
     Halloween_hero_vhelsing_waterExplosion_0009 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {6, 14, 6, 8},
         a_size = {1024, 1024},
@@ -2335,7 +2335,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0010"}
     },
     Halloween_hero_vhelsing_waterExplosion_0011 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {6, 14, 5, 9},
         a_size = {1024, 1024},
@@ -2343,7 +2343,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0012"}
     },
     Halloween_hero_vhelsing_waterExplosion_0013 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {7, 14, 5, 9},
         a_size = {1024, 1024},
@@ -2351,7 +2351,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0014"}
     },
     Halloween_hero_vhelsing_waterExplosion_0015 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {8, 13, 6, 28},
         a_size = {1024, 1024},
@@ -2359,7 +2359,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0016"}
     },
     Halloween_hero_vhelsing_waterExplosion_0017 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {87, 90},
         trim = {18, 18, 22, 31},
         a_size = {1024, 1024},
@@ -2367,7 +2367,7 @@ return {
         alias = {"Halloween_hero_vhelsing_waterExplosion_0018"}
     },
     Halloween_hero_vhelsing_waterFx_big_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2375,7 +2375,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0002 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2383,7 +2383,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0003 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 16, 8, 6},
         a_size = {1024, 1024},
@@ -2391,7 +2391,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0004 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 16, 8, 6},
         a_size = {1024, 1024},
@@ -2399,7 +2399,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0005 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2407,7 +2407,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0006 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2415,7 +2415,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0007 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2423,7 +2423,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0008 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2431,7 +2431,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0009 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2439,7 +2439,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0010 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2447,7 +2447,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0011 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2455,7 +2455,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0012 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2463,7 +2463,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0013 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2471,7 +2471,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0014 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2479,7 +2479,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0015 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 15, 8, 6},
         a_size = {1024, 1024},
@@ -2487,7 +2487,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0016 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 15, 8, 6},
         a_size = {1024, 1024},
@@ -2495,7 +2495,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0017 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2503,7 +2503,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0018 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -2511,7 +2511,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2519,7 +2519,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0002 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2527,7 +2527,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0003 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2535,7 +2535,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0004 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2543,7 +2543,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0005 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2551,7 +2551,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0006 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2559,7 +2559,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0007 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2567,7 +2567,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0008 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2575,7 +2575,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0009 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2583,7 +2583,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0010 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2591,7 +2591,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0011 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2599,7 +2599,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0012 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2607,7 +2607,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0013 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2615,7 +2615,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0014 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2623,7 +2623,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0015 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2631,7 +2631,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0016 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2639,7 +2639,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0017 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -2647,7 +2647,7 @@ return {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0018 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},

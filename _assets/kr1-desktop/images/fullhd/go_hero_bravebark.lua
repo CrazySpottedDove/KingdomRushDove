@@ -2,7 +2,7 @@
 
 return {
 	bravebark_hero_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -39,7 +39,7 @@ return {
 		}
 	},
 	bravebark_hero_0002 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -65,7 +65,7 @@ return {
 		}
 	},
 	bravebark_hero_0004 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -91,7 +91,7 @@ return {
 		}
 	},
 	bravebark_hero_0006 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -117,7 +117,7 @@ return {
 		}
 	},
 	bravebark_hero_0008 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -143,7 +143,7 @@ return {
 		}
 	},
 	bravebark_hero_0010 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -169,7 +169,7 @@ return {
 		}
 	},
 	bravebark_hero_0012 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -195,7 +195,7 @@ return {
 		}
 	},
 	bravebark_hero_0014 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -221,7 +221,7 @@ return {
 		}
 	},
 	bravebark_hero_0016 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -247,7 +247,7 @@ return {
 		}
 	},
 	bravebark_hero_0018 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -273,7 +273,7 @@ return {
 		}
 	},
 	bravebark_hero_0020 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -299,7 +299,7 @@ return {
 		}
 	},
 	bravebark_hero_0022 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -325,7 +325,7 @@ return {
 		}
 	},
 	bravebark_hero_0024 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -351,7 +351,7 @@ return {
 		}
 	},
 	bravebark_hero_0026 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -375,7 +375,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_0027 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -401,7 +401,7 @@ return {
 		}
 	},
 	bravebark_hero_0028 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -427,7 +427,7 @@ return {
 		}
 	},
 	bravebark_hero_0029 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -453,7 +453,7 @@ return {
 		}
 	},
 	bravebark_hero_0030 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -479,7 +479,7 @@ return {
 		}
 	},
 	bravebark_hero_0031 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -505,7 +505,7 @@ return {
 		}
 	},
 	bravebark_hero_0032 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -531,7 +531,7 @@ return {
 		}
 	},
 	bravebark_hero_0033 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -557,7 +557,7 @@ return {
 		}
 	},
 	bravebark_hero_0034 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -583,7 +583,7 @@ return {
 		}
 	},
 	bravebark_hero_0035 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -609,7 +609,7 @@ return {
 		}
 	},
 	bravebark_hero_0036 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -635,7 +635,7 @@ return {
 		}
 	},
 	bravebark_hero_0037 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -661,7 +661,7 @@ return {
 		}
 	},
 	bravebark_hero_0038 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -683,11 +683,11 @@ return {
 			34
 		},
 		alias = {
-			
+
 		}
 	},
 	bravebark_hero_0051 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -712,7 +712,7 @@ return {
 		}
 	},
 	bravebark_hero_0052 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -738,7 +738,7 @@ return {
 		}
 	},
 	bravebark_hero_0053 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -764,7 +764,7 @@ return {
 		}
 	},
 	bravebark_hero_0054 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -790,7 +790,7 @@ return {
 		}
 	},
 	bravebark_hero_0055 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -816,7 +816,7 @@ return {
 		}
 	},
 	bravebark_hero_0056 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -842,7 +842,7 @@ return {
 		}
 	},
 	bravebark_hero_0057 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -868,7 +868,7 @@ return {
 		}
 	},
 	bravebark_hero_0058 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -894,7 +894,7 @@ return {
 		}
 	},
 	bravebark_hero_0059 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -920,7 +920,7 @@ return {
 		}
 	},
 	bravebark_hero_0060 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -946,7 +946,7 @@ return {
 		}
 	},
 	bravebark_hero_0061 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -972,7 +972,7 @@ return {
 		}
 	},
 	bravebark_hero_0062 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -998,7 +998,7 @@ return {
 		}
 	},
 	bravebark_hero_0063 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1024,7 +1024,7 @@ return {
 		}
 	},
 	bravebark_hero_0064 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1050,7 +1050,7 @@ return {
 		}
 	},
 	bravebark_hero_0065 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1076,7 +1076,7 @@ return {
 		}
 	},
 	bravebark_hero_0066 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1102,7 +1102,7 @@ return {
 		}
 	},
 	bravebark_hero_0085 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1130,7 +1130,7 @@ return {
 		}
 	},
 	bravebark_hero_0087 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1158,7 +1158,7 @@ return {
 		}
 	},
 	bravebark_hero_0089 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1186,7 +1186,7 @@ return {
 		}
 	},
 	bravebark_hero_0091 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1212,7 +1212,7 @@ return {
 		}
 	},
 	bravebark_hero_0093 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1238,7 +1238,7 @@ return {
 		}
 	},
 	bravebark_hero_0095 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1264,7 +1264,7 @@ return {
 		}
 	},
 	bravebark_hero_0097 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1290,7 +1290,7 @@ return {
 		}
 	},
 	bravebark_hero_0099 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1316,7 +1316,7 @@ return {
 		}
 	},
 	bravebark_hero_0101 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1344,7 +1344,7 @@ return {
 		}
 	},
 	bravebark_hero_0103 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1372,7 +1372,7 @@ return {
 		}
 	},
 	bravebark_hero_0105 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1416,7 +1416,7 @@ return {
 		}
 	},
 	bravebark_hero_0115 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1442,7 +1442,7 @@ return {
 		}
 	},
 	bravebark_hero_0117 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1468,7 +1468,7 @@ return {
 		}
 	},
 	bravebark_hero_0121 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1494,7 +1494,7 @@ return {
 		}
 	},
 	bravebark_hero_0123 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1520,7 +1520,7 @@ return {
 		}
 	},
 	bravebark_hero_0125 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1546,7 +1546,7 @@ return {
 		}
 	},
 	bravebark_hero_0127 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1572,7 +1572,7 @@ return {
 		}
 	},
 	bravebark_hero_0129 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	bravebark_hero_0131 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1624,7 +1624,7 @@ return {
 		}
 	},
 	bravebark_hero_0133 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	bravebark_hero_0135 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1676,7 +1676,7 @@ return {
 		}
 	},
 	bravebark_hero_0137 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1702,7 +1702,7 @@ return {
 		}
 	},
 	bravebark_hero_0147 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1728,7 +1728,7 @@ return {
 		}
 	},
 	bravebark_hero_0149 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1754,7 +1754,7 @@ return {
 		}
 	},
 	bravebark_hero_0151 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1780,7 +1780,7 @@ return {
 		}
 	},
 	bravebark_hero_0153 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1806,7 +1806,7 @@ return {
 		}
 	},
 	bravebark_hero_0155 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1832,7 +1832,7 @@ return {
 		}
 	},
 	bravebark_hero_0171 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1858,7 +1858,7 @@ return {
 		}
 	},
 	bravebark_hero_0173 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1884,7 +1884,7 @@ return {
 		}
 	},
 	bravebark_hero_0175 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1910,7 +1910,7 @@ return {
 		}
 	},
 	bravebark_hero_0177 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1936,7 +1936,7 @@ return {
 		}
 	},
 	bravebark_hero_0179 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1962,7 +1962,7 @@ return {
 		}
 	},
 	bravebark_hero_0181 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -1988,7 +1988,7 @@ return {
 		}
 	},
 	bravebark_hero_0183 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2014,7 +2014,7 @@ return {
 		}
 	},
 	bravebark_hero_0185 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2038,7 +2038,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_0187 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2064,7 +2064,7 @@ return {
 		}
 	},
 	bravebark_hero_0189 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2090,7 +2090,7 @@ return {
 		}
 	},
 	bravebark_hero_0191 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2120,7 +2120,7 @@ return {
 		}
 	},
 	bravebark_hero_0193 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2146,7 +2146,7 @@ return {
 		}
 	},
 	bravebark_hero_0195 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2172,7 +2172,7 @@ return {
 		}
 	},
 	bravebark_hero_0197 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2198,7 +2198,7 @@ return {
 		}
 	},
 	bravebark_hero_0199 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2224,7 +2224,7 @@ return {
 		}
 	},
 	bravebark_hero_0201 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2250,7 +2250,7 @@ return {
 		}
 	},
 	bravebark_hero_0203 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2276,7 +2276,7 @@ return {
 		}
 	},
 	bravebark_hero_0205 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2302,7 +2302,7 @@ return {
 		}
 	},
 	bravebark_hero_0207 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2328,7 +2328,7 @@ return {
 		}
 	},
 	bravebark_hero_0209 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2354,7 +2354,7 @@ return {
 		}
 	},
 	bravebark_hero_0211 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2380,7 +2380,7 @@ return {
 		}
 	},
 	bravebark_hero_0213 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2406,7 +2406,7 @@ return {
 		}
 	},
 	bravebark_hero_0215 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2432,7 +2432,7 @@ return {
 		}
 	},
 	bravebark_hero_0221 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2458,7 +2458,7 @@ return {
 		}
 	},
 	bravebark_hero_0223 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2484,7 +2484,7 @@ return {
 		}
 	},
 	bravebark_hero_0225 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2510,7 +2510,7 @@ return {
 		}
 	},
 	bravebark_hero_0227 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2536,7 +2536,7 @@ return {
 		}
 	},
 	bravebark_hero_0229 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2562,7 +2562,7 @@ return {
 		}
 	},
 	bravebark_hero_0231 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2588,7 +2588,7 @@ return {
 		}
 	},
 	bravebark_hero_0233 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2614,7 +2614,7 @@ return {
 		}
 	},
 	bravebark_hero_0235 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2640,7 +2640,7 @@ return {
 		}
 	},
 	bravebark_hero_0237 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2666,7 +2666,7 @@ return {
 		}
 	},
 	bravebark_hero_0241 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2692,7 +2692,7 @@ return {
 		}
 	},
 	bravebark_hero_0243 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2718,7 +2718,7 @@ return {
 		}
 	},
 	bravebark_hero_0245 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2745,7 +2745,7 @@ return {
 		}
 	},
 	bravebark_hero_0248 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2775,7 +2775,7 @@ return {
 		}
 	},
 	bravebark_hero_0254 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2801,7 +2801,7 @@ return {
 		}
 	},
 	bravebark_hero_0256 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2827,7 +2827,7 @@ return {
 		}
 	},
 	bravebark_hero_0258 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2853,7 +2853,7 @@ return {
 		}
 	},
 	bravebark_hero_0260 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2879,7 +2879,7 @@ return {
 		}
 	},
 	bravebark_hero_0262 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2905,7 +2905,7 @@ return {
 		}
 	},
 	bravebark_hero_0266 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2931,7 +2931,7 @@ return {
 		}
 	},
 	bravebark_hero_0268 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2957,7 +2957,7 @@ return {
 		}
 	},
 	bravebark_hero_0270 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -2983,7 +2983,7 @@ return {
 		}
 	},
 	bravebark_hero_0272 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3009,7 +3009,7 @@ return {
 		}
 	},
 	bravebark_hero_0274 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3035,7 +3035,7 @@ return {
 		}
 	},
 	bravebark_hero_0278 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3061,7 +3061,7 @@ return {
 		}
 	},
 	bravebark_hero_0280 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3087,7 +3087,7 @@ return {
 		}
 	},
 	bravebark_hero_0282 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3113,7 +3113,7 @@ return {
 		}
 	},
 	bravebark_hero_0284 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3139,7 +3139,7 @@ return {
 		}
 	},
 	bravebark_hero_0286 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3165,7 +3165,7 @@ return {
 		}
 	},
 	bravebark_hero_0288 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3191,7 +3191,7 @@ return {
 		}
 	},
 	bravebark_hero_0290 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3217,7 +3217,7 @@ return {
 		}
 	},
 	bravebark_hero_0292 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3243,7 +3243,7 @@ return {
 		}
 	},
 	bravebark_hero_0294 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3269,7 +3269,7 @@ return {
 		}
 	},
 	bravebark_hero_0296 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3295,7 +3295,7 @@ return {
 		}
 	},
 	bravebark_hero_0298 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3321,7 +3321,7 @@ return {
 		}
 	},
 	bravebark_hero_0300 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3347,7 +3347,7 @@ return {
 		}
 	},
 	bravebark_hero_0302 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3373,7 +3373,7 @@ return {
 		}
 	},
 	bravebark_hero_0304 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3399,7 +3399,7 @@ return {
 		}
 	},
 	bravebark_hero_0306 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3425,7 +3425,7 @@ return {
 		}
 	},
 	bravebark_hero_0308 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3451,7 +3451,7 @@ return {
 		}
 	},
 	bravebark_hero_0310 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3477,7 +3477,7 @@ return {
 		}
 	},
 	bravebark_hero_0312 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3501,7 +3501,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_0313 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3527,7 +3527,7 @@ return {
 		}
 	},
 	bravebark_hero_0315 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3553,7 +3553,7 @@ return {
 		}
 	},
 	bravebark_hero_0317 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3579,7 +3579,7 @@ return {
 		}
 	},
 	bravebark_hero_0319 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3605,7 +3605,7 @@ return {
 		}
 	},
 	bravebark_hero_0321 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3631,7 +3631,7 @@ return {
 		}
 	},
 	bravebark_hero_0323 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3657,7 +3657,7 @@ return {
 		}
 	},
 	bravebark_hero_0325 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3683,7 +3683,7 @@ return {
 		}
 	},
 	bravebark_hero_0327 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3709,7 +3709,7 @@ return {
 		}
 	},
 	bravebark_hero_0329 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3735,7 +3735,7 @@ return {
 		}
 	},
 	bravebark_hero_0331 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -3759,7 +3759,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_handDecal = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			53,
 			31
@@ -3783,7 +3783,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_healFx = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			34,
 			28
@@ -3807,7 +3807,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_hitSmoke_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -3833,7 +3833,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -3859,7 +3859,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -3885,7 +3885,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0007 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -3911,7 +3911,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0009 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -3937,7 +3937,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0011 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -3963,7 +3963,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0013 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -3989,7 +3989,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0015 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -4015,7 +4015,7 @@ return {
 		}
 	},
 	bravebark_hero_hitSmoke_0017 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			51,
 			56
@@ -4041,7 +4041,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4084,7 +4084,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0004 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4110,7 +4110,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0006 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4136,7 +4136,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0008 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4162,7 +4162,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0010 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4188,7 +4188,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0012 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4214,7 +4214,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0014 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4240,7 +4240,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0016 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4266,7 +4266,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0018 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4292,7 +4292,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0020 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4318,7 +4318,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0022 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4344,7 +4344,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0024 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4370,7 +4370,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0026 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4396,7 +4396,7 @@ return {
 		}
 	},
 	bravebark_hero_levelUpLeaves_0028 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -4422,7 +4422,7 @@ return {
 		}
 	},
 	bravebark_hero_mignonSeed = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			17,
 			17
@@ -4446,7 +4446,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4470,7 +4470,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0002 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4494,7 +4494,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4518,7 +4518,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0004 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4542,7 +4542,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4566,7 +4566,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0006 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4590,7 +4590,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0007 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4614,7 +4614,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0008 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4638,7 +4638,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0009 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4662,7 +4662,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0010 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4686,7 +4686,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0011 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4712,7 +4712,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0013 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4736,7 +4736,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0014 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4762,7 +4762,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0016 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4788,7 +4788,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0018 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4812,7 +4812,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_mignon_0019 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4838,7 +4838,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0020 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4864,7 +4864,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0022 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4890,7 +4890,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0024 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4916,7 +4916,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0026 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4942,7 +4942,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0028 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4968,7 +4968,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0030 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -4994,7 +4994,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0032 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5020,7 +5020,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0034 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5046,7 +5046,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0036 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5072,7 +5072,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0039 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5098,7 +5098,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0041 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5124,7 +5124,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0043 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5150,7 +5150,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0045 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5176,7 +5176,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0047 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5202,7 +5202,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0049 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5228,7 +5228,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0051 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5254,7 +5254,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0053 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5280,7 +5280,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0055 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5306,7 +5306,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0057 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5332,7 +5332,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0059 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5358,7 +5358,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0061 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5384,7 +5384,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0063 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5410,7 +5410,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0065 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5436,7 +5436,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0067 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5462,7 +5462,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0069 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5488,7 +5488,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0071 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5514,7 +5514,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0073 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5540,7 +5540,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0075 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5566,7 +5566,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0077 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5592,7 +5592,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0079 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5618,7 +5618,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0081 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5644,7 +5644,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0083 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5670,7 +5670,7 @@ return {
 		}
 	},
 	bravebark_hero_mignon_0085 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			90,
 			82
@@ -5694,7 +5694,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_paralyzeRoots_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5718,7 +5718,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_paralyzeRoots_0002 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5742,7 +5742,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_paralyzeRoots_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5768,7 +5768,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5794,7 +5794,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0007 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5820,7 +5820,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0009 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5846,7 +5846,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0011 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5878,7 +5878,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0019 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5904,7 +5904,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0021 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5930,7 +5930,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0023 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5956,7 +5956,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0025 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -5982,7 +5982,7 @@ return {
 		}
 	},
 	bravebark_hero_paralyzeRoots_0027 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -6008,7 +6008,7 @@ return {
 		}
 	},
 	bravebark_hero_spikeDecal = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			34,
 			28
@@ -6034,7 +6034,7 @@ return {
 		}
 	},
 	bravebark_hero_spike_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6058,7 +6058,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spike_0002 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6082,7 +6082,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spike_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6108,7 +6108,7 @@ return {
 		}
 	},
 	bravebark_hero_spike_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6134,7 +6134,7 @@ return {
 		}
 	},
 	bravebark_hero_spike_0007 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6160,7 +6160,7 @@ return {
 		}
 	},
 	bravebark_hero_spike_0009 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6186,7 +6186,7 @@ return {
 		}
 	},
 	bravebark_hero_spike_0011 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6212,7 +6212,7 @@ return {
 		}
 	},
 	bravebark_hero_spike_0013 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6236,7 +6236,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spike_0014 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			39,
 			56
@@ -6260,7 +6260,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots1_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6284,7 +6284,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots1_0002 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6308,7 +6308,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots1_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6350,7 +6350,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots1_0021 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6376,7 +6376,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots1_0023 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6402,7 +6402,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots1_0025 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6428,7 +6428,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots1_0027 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6452,7 +6452,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots1_0028 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			101,
 			93
@@ -6476,7 +6476,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots2_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6500,7 +6500,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots2_0002 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6524,7 +6524,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots2_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6550,7 +6550,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots2_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6588,7 +6588,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots2_0019 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6614,7 +6614,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots2_0021 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6640,7 +6640,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots2_0023 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6666,7 +6666,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots2_0025 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6692,7 +6692,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots2_0027 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			113,
 			84
@@ -6716,7 +6716,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots3_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6742,7 +6742,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots3_0002 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6766,7 +6766,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots3_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6804,7 +6804,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots3_0017 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6830,7 +6830,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots3_0019 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6856,7 +6856,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots3_0021 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6880,7 +6880,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots3_0022 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6904,7 +6904,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots3_0023 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			84,
 			65
@@ -6928,7 +6928,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRootsDecal = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			53,
 			28
@@ -6952,7 +6952,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_spikedRoots_spawnFx_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			104,
 			68
@@ -6978,7 +6978,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots_spawnFx_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			104,
 			68
@@ -7004,7 +7004,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots_spawnFx_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			104,
 			68
@@ -7030,7 +7030,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots_spawnFx_0007 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			104,
 			68
@@ -7056,7 +7056,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots_spawnFx_0009 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			104,
 			68
@@ -7082,7 +7082,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots_spawnFx_0011 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			104,
 			68
@@ -7108,7 +7108,7 @@ return {
 		}
 	},
 	bravebark_hero_spikedRoots_spawnFx_0013 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			104,
 			68
@@ -7144,7 +7144,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7170,7 +7170,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7196,7 +7196,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7222,7 +7222,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0007 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7248,7 +7248,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0009 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7274,7 +7274,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0011 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7300,7 +7300,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0013 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7326,7 +7326,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapBubbles_0015 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7352,7 +7352,7 @@ return {
 		}
 	},
 	bravebark_hero_springSapDecal = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			141,
 			62
@@ -7376,7 +7376,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_superHit_0001 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			53,
 			53
@@ -7402,7 +7402,7 @@ return {
 		}
 	},
 	bravebark_hero_superHit_0003 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			53,
 			53
@@ -7428,7 +7428,7 @@ return {
 		}
 	},
 	bravebark_hero_superHit_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			53,
 			53
@@ -7454,7 +7454,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportDecal = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			62,
 			31
@@ -7478,7 +7478,7 @@ return {
 		alias = {}
 	},
 	bravebark_hero_teleportInFx_0005 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7504,7 +7504,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0007 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7530,7 +7530,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0009 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7556,7 +7556,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0011 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7582,7 +7582,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0013 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7608,7 +7608,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0015 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7634,7 +7634,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0017 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7660,7 +7660,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0019 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7686,7 +7686,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0021 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7712,7 +7712,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0023 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7738,7 +7738,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0025 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7764,7 +7764,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0027 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7790,7 +7790,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0029 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7816,7 +7816,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0031 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7842,7 +7842,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0033 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7868,7 +7868,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0035 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7894,7 +7894,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0037 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7920,7 +7920,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0039 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7946,7 +7946,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0041 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7972,7 +7972,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportInFx_0043 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -7998,7 +7998,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0013 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8024,7 +8024,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0015 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8050,7 +8050,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0017 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8076,7 +8076,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0019 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8102,7 +8102,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0021 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8128,7 +8128,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0023 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8154,7 +8154,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0025 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8180,7 +8180,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0027 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8206,7 +8206,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0029 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8232,7 +8232,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0031 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8258,7 +8258,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0033 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8284,7 +8284,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0035 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8310,7 +8310,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0037 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8336,7 +8336,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0039 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8362,7 +8362,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0041 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163
@@ -8388,7 +8388,7 @@ return {
 		}
 	},
 	bravebark_hero_teleportOutFx_0043 = {
-		a_name = "go_hero_bravebark-1.png",
+		a_name = "go_hero_bravebark-1.dds",
 		size = {
 			295,
 			163

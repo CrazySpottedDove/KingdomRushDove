@@ -2,7 +2,7 @@
 
 return {
 	hero_artillery_0001 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -33,7 +33,7 @@ return {
 		}
 	},
 	hero_artillery_0002 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -57,7 +57,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0003 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -81,7 +81,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0004 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -105,7 +105,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0005 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -129,7 +129,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0006 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -153,7 +153,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0007 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -190,7 +190,7 @@ return {
 		}
 	},
 	hero_artillery_0009 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -216,7 +216,7 @@ return {
 		}
 	},
 	hero_artillery_0011 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -242,7 +242,7 @@ return {
 		}
 	},
 	hero_artillery_0013 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -273,7 +273,7 @@ return {
 		}
 	},
 	hero_artillery_0020 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -299,7 +299,7 @@ return {
 		}
 	},
 	hero_artillery_0022 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -325,7 +325,7 @@ return {
 		}
 	},
 	hero_artillery_0024 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -351,7 +351,7 @@ return {
 		}
 	},
 	hero_artillery_0026 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -377,7 +377,7 @@ return {
 		}
 	},
 	hero_artillery_0028 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -403,7 +403,7 @@ return {
 		}
 	},
 	hero_artillery_0030 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -427,7 +427,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0034 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -453,7 +453,7 @@ return {
 		}
 	},
 	hero_artillery_0036 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -479,7 +479,7 @@ return {
 		}
 	},
 	hero_artillery_0038 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -510,7 +510,7 @@ return {
 		}
 	},
 	hero_artillery_0045 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -536,7 +536,7 @@ return {
 		}
 	},
 	hero_artillery_0047 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -562,7 +562,7 @@ return {
 		}
 	},
 	hero_artillery_0049 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -588,7 +588,7 @@ return {
 		}
 	},
 	hero_artillery_0051 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -614,7 +614,7 @@ return {
 		}
 	},
 	hero_artillery_0053 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -640,7 +640,7 @@ return {
 		}
 	},
 	hero_artillery_0055 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -664,7 +664,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0056 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -688,7 +688,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0059 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -714,7 +714,7 @@ return {
 		}
 	},
 	hero_artillery_0061 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -740,7 +740,7 @@ return {
 		}
 	},
 	hero_artillery_0063 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -771,7 +771,7 @@ return {
 		}
 	},
 	hero_artillery_0070 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -797,7 +797,7 @@ return {
 		}
 	},
 	hero_artillery_0072 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -823,7 +823,7 @@ return {
 		}
 	},
 	hero_artillery_0074 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -849,7 +849,7 @@ return {
 		}
 	},
 	hero_artillery_0076 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -875,7 +875,7 @@ return {
 		}
 	},
 	hero_artillery_0078 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -901,7 +901,7 @@ return {
 		}
 	},
 	hero_artillery_0082 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -929,7 +929,7 @@ return {
 		}
 	},
 	hero_artillery_0084 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -957,7 +957,7 @@ return {
 		}
 	},
 	hero_artillery_0086 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -985,7 +985,7 @@ return {
 		}
 	},
 	hero_artillery_0088 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1011,7 +1011,7 @@ return {
 		}
 	},
 	hero_artillery_0090 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1037,7 +1037,7 @@ return {
 		}
 	},
 	hero_artillery_0092 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1065,7 +1065,7 @@ return {
 		}
 	},
 	hero_artillery_0094 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1093,7 +1093,7 @@ return {
 		}
 	},
 	hero_artillery_0096 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1121,7 +1121,7 @@ return {
 		}
 	},
 	hero_artillery_0098 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1149,7 +1149,7 @@ return {
 		}
 	},
 	hero_artillery_0100 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1176,7 +1176,7 @@ return {
 		}
 	},
 	hero_artillery_0105 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1202,7 +1202,7 @@ return {
 		}
 	},
 	hero_artillery_0107 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1228,7 +1228,7 @@ return {
 		}
 	},
 	hero_artillery_0109 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1252,7 +1252,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0110 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1276,7 +1276,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0111 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1300,7 +1300,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0112 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1324,7 +1324,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0113 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1348,7 +1348,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0114 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1372,7 +1372,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0115 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1396,7 +1396,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0116 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1420,7 +1420,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0117 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1444,7 +1444,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0118 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1468,7 +1468,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0119 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1492,7 +1492,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0120 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1516,7 +1516,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0121 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1540,7 +1540,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0122 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1566,7 +1566,7 @@ return {
 		}
 	},
 	hero_artillery_0133 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1592,7 +1592,7 @@ return {
 		}
 	},
 	hero_artillery_0135 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1618,7 +1618,7 @@ return {
 		}
 	},
 	hero_artillery_0137 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1644,7 +1644,7 @@ return {
 		}
 	},
 	hero_artillery_0148 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1668,7 +1668,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0149 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1694,7 +1694,7 @@ return {
 		}
 	},
 	hero_artillery_0151 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1720,7 +1720,7 @@ return {
 		}
 	},
 	hero_artillery_0153 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1751,7 +1751,7 @@ return {
 		}
 	},
 	hero_artillery_0160 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1777,7 +1777,7 @@ return {
 		}
 	},
 	hero_artillery_0162 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1803,7 +1803,7 @@ return {
 		}
 	},
 	hero_artillery_0164 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1829,7 +1829,7 @@ return {
 		}
 	},
 	hero_artillery_0166 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1855,7 +1855,7 @@ return {
 		}
 	},
 	hero_artillery_0168 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1881,7 +1881,7 @@ return {
 		}
 	},
 	hero_artillery_0170 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1907,7 +1907,7 @@ return {
 		}
 	},
 	hero_artillery_0173 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1933,7 +1933,7 @@ return {
 		}
 	},
 	hero_artillery_0175 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1959,7 +1959,7 @@ return {
 		}
 	},
 	hero_artillery_0177 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -1983,7 +1983,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0178 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2009,7 +2009,7 @@ return {
 		}
 	},
 	hero_artillery_0180 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2035,7 +2035,7 @@ return {
 		}
 	},
 	hero_artillery_0182 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2066,7 +2066,7 @@ return {
 		}
 	},
 	hero_artillery_0191 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2092,7 +2092,7 @@ return {
 		}
 	},
 	hero_artillery_0193 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2118,7 +2118,7 @@ return {
 		}
 	},
 	hero_artillery_0195 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2142,7 +2142,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0196 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2168,7 +2168,7 @@ return {
 		}
 	},
 	hero_artillery_0198 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2194,7 +2194,7 @@ return {
 		}
 	},
 	hero_artillery_0200 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2220,7 +2220,7 @@ return {
 		}
 	},
 	hero_artillery_0202 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2248,7 +2248,7 @@ return {
 		}
 	},
 	hero_artillery_0207 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2272,7 +2272,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0208 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2296,7 +2296,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0209 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2320,7 +2320,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0210 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2344,7 +2344,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_0211 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2370,7 +2370,7 @@ return {
 		}
 	},
 	hero_artillery_0213 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			130,
 			116
@@ -2396,7 +2396,7 @@ return {
 		}
 	},
 	hero_artillery_brea_decal_0001 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2420,7 +2420,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0002 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2444,7 +2444,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0003 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2470,7 +2470,7 @@ return {
 		}
 	},
 	hero_artillery_brea_decal_0005 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2496,7 +2496,7 @@ return {
 		}
 	},
 	hero_artillery_brea_decal_0007 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2522,7 +2522,7 @@ return {
 		}
 	},
 	hero_artillery_brea_decal_0009 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2548,7 +2548,7 @@ return {
 		}
 	},
 	hero_artillery_brea_decal_0011 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2572,7 +2572,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0012 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2596,7 +2596,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0013 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2620,7 +2620,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0014 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2644,7 +2644,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0015 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2668,7 +2668,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0016 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2692,7 +2692,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_decal_0017 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			162,
 			86
@@ -2716,7 +2716,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_brea_shot = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			24,
 			18
@@ -2740,7 +2740,7 @@ return {
 		alias = {}
 	},
 	hero_artillery_mine_0001 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			24,
 			16
@@ -2778,7 +2778,7 @@ return {
 		}
 	},
 	hero_artillery_mine_0015 = {
-		a_name = "go_hero_bolin-1.png",
+		a_name = "go_hero_bolin-1.dds",
 		size = {
 			24,
 			16

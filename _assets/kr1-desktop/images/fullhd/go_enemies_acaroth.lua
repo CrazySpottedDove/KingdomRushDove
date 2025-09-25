@@ -2,7 +2,7 @@
 
 return {
 	forest_troll_0001 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	forest_troll_0003 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -52,7 +52,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0004 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	forest_troll_0006 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -102,7 +102,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0007 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -128,7 +128,7 @@ return {
 		}
 	},
 	forest_troll_0009 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -152,7 +152,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0010 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -178,7 +178,7 @@ return {
 		}
 	},
 	forest_troll_0012 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -202,7 +202,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0013 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -228,7 +228,7 @@ return {
 		}
 	},
 	forest_troll_0015 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -252,7 +252,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0016 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -278,7 +278,7 @@ return {
 		}
 	},
 	forest_troll_0018 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -302,7 +302,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0019 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -328,7 +328,7 @@ return {
 		}
 	},
 	forest_troll_0021 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -352,7 +352,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0022 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -378,7 +378,7 @@ return {
 		}
 	},
 	forest_troll_0024 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -402,7 +402,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0025 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -426,7 +426,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0026 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -452,7 +452,7 @@ return {
 		}
 	},
 	forest_troll_0028 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -478,7 +478,7 @@ return {
 		}
 	},
 	forest_troll_0030 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -504,7 +504,7 @@ return {
 		}
 	},
 	forest_troll_0032 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -530,7 +530,7 @@ return {
 		}
 	},
 	forest_troll_0034 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -556,7 +556,7 @@ return {
 		}
 	},
 	forest_troll_0036 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -582,7 +582,7 @@ return {
 		}
 	},
 	forest_troll_0038 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -608,7 +608,7 @@ return {
 		}
 	},
 	forest_troll_0040 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -634,7 +634,7 @@ return {
 		}
 	},
 	forest_troll_0042 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -660,7 +660,7 @@ return {
 		}
 	},
 	forest_troll_0044 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -686,7 +686,7 @@ return {
 		}
 	},
 	forest_troll_0046 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -712,7 +712,7 @@ return {
 		}
 	},
 	forest_troll_0048 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -738,7 +738,7 @@ return {
 		}
 	},
 	forest_troll_0050 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -764,7 +764,7 @@ return {
 		}
 	},
 	forest_troll_0052 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -790,7 +790,7 @@ return {
 		}
 	},
 	forest_troll_0054 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -816,7 +816,7 @@ return {
 		}
 	},
 	forest_troll_0056 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -842,7 +842,7 @@ return {
 		}
 	},
 	forest_troll_0058 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -868,7 +868,7 @@ return {
 		}
 	},
 	forest_troll_0060 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -894,7 +894,7 @@ return {
 		}
 	},
 	forest_troll_0062 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -920,7 +920,7 @@ return {
 		}
 	},
 	forest_troll_0064 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -946,7 +946,7 @@ return {
 		}
 	},
 	forest_troll_0066 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -972,7 +972,7 @@ return {
 		}
 	},
 	forest_troll_0068 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -998,7 +998,7 @@ return {
 		}
 	},
 	forest_troll_0070 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1024,7 +1024,7 @@ return {
 		}
 	},
 	forest_troll_0072 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1048,7 +1048,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0073 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1072,7 +1072,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0074 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1098,7 +1098,7 @@ return {
 		}
 	},
 	forest_troll_0076 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1122,7 +1122,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0077 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1146,7 +1146,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0078 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1170,7 +1170,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0079 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1196,7 +1196,7 @@ return {
 		}
 	},
 	forest_troll_0081 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1222,7 +1222,7 @@ return {
 		}
 	},
 	forest_troll_0083 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1248,7 +1248,7 @@ return {
 		}
 	},
 	forest_troll_0085 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1274,7 +1274,7 @@ return {
 		}
 	},
 	forest_troll_0087 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1300,7 +1300,7 @@ return {
 		}
 	},
 	forest_troll_0089 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1326,7 +1326,7 @@ return {
 		}
 	},
 	forest_troll_0091 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1352,7 +1352,7 @@ return {
 		}
 	},
 	forest_troll_0093 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1383,7 +1383,7 @@ return {
 		}
 	},
 	forest_troll_0100 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1409,7 +1409,7 @@ return {
 		}
 	},
 	forest_troll_0102 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1433,7 +1433,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0103 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1457,7 +1457,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0104 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1481,7 +1481,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0105 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1507,7 +1507,7 @@ return {
 		}
 	},
 	forest_troll_0107 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1533,7 +1533,7 @@ return {
 		}
 	},
 	forest_troll_0109 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1557,7 +1557,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0110 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1581,7 +1581,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0111 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1605,7 +1605,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0112 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1629,7 +1629,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0113 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1662,7 +1662,7 @@ return {
 		}
 	},
 	forest_troll_0122 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1688,7 +1688,7 @@ return {
 		}
 	},
 	forest_troll_0124 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1712,7 +1712,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0125 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1736,7 +1736,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0126 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1762,7 +1762,7 @@ return {
 		}
 	},
 	forest_troll_0128 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1786,7 +1786,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0129 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1810,7 +1810,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0130 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1834,7 +1834,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0131 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1858,7 +1858,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0132 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1884,7 +1884,7 @@ return {
 		}
 	},
 	forest_troll_0134 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1910,7 +1910,7 @@ return {
 		}
 	},
 	forest_troll_0136 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1936,7 +1936,7 @@ return {
 		}
 	},
 	forest_troll_0138 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1960,7 +1960,7 @@ return {
 		alias = {}
 	},
 	forest_troll_0139 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -1986,7 +1986,7 @@ return {
 		}
 	},
 	forest_troll_0141 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2012,7 +2012,7 @@ return {
 		}
 	},
 	forest_troll_0143 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2038,7 +2038,7 @@ return {
 		}
 	},
 	forest_troll_0145 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2064,7 +2064,7 @@ return {
 		}
 	},
 	forest_troll_0147 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2090,7 +2090,7 @@ return {
 		}
 	},
 	forest_troll_0149 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2116,7 +2116,7 @@ return {
 		}
 	},
 	forest_troll_0151 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2142,7 +2142,7 @@ return {
 		}
 	},
 	forest_troll_0153 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2168,7 +2168,7 @@ return {
 		}
 	},
 	forest_troll_0155 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			220,
 			142
@@ -2198,7 +2198,7 @@ return {
 		}
 	},
 	goblin_zapper_0001 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2224,7 +2224,7 @@ return {
 		}
 	},
 	goblin_zapper_0003 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2250,7 +2250,7 @@ return {
 		}
 	},
 	goblin_zapper_0005 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2276,7 +2276,7 @@ return {
 		}
 	},
 	goblin_zapper_0007 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2300,7 +2300,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0008 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2326,7 +2326,7 @@ return {
 		}
 	},
 	goblin_zapper_0010 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2352,7 +2352,7 @@ return {
 		}
 	},
 	goblin_zapper_0012 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2378,7 +2378,7 @@ return {
 		}
 	},
 	goblin_zapper_0014 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2404,7 +2404,7 @@ return {
 		}
 	},
 	goblin_zapper_0016 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2430,7 +2430,7 @@ return {
 		}
 	},
 	goblin_zapper_0018 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2454,7 +2454,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0019 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2480,7 +2480,7 @@ return {
 		}
 	},
 	goblin_zapper_0021 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2506,7 +2506,7 @@ return {
 		}
 	},
 	goblin_zapper_0023 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2532,7 +2532,7 @@ return {
 		}
 	},
 	goblin_zapper_0025 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2558,7 +2558,7 @@ return {
 		}
 	},
 	goblin_zapper_0027 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2584,7 +2584,7 @@ return {
 		}
 	},
 	goblin_zapper_0029 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2608,7 +2608,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0030 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2634,7 +2634,7 @@ return {
 		}
 	},
 	goblin_zapper_0032 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2660,7 +2660,7 @@ return {
 		}
 	},
 	goblin_zapper_0034 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2686,7 +2686,7 @@ return {
 		}
 	},
 	goblin_zapper_0036 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2712,7 +2712,7 @@ return {
 		}
 	},
 	goblin_zapper_0038 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			74,
 			82
@@ -2738,7 +2738,7 @@ return {
 		}
 	},
 	goblin_zapper_0040 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2762,7 +2762,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0041 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2788,7 +2788,7 @@ return {
 		}
 	},
 	goblin_zapper_0043 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2814,7 +2814,7 @@ return {
 		}
 	},
 	goblin_zapper_0045 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2840,7 +2840,7 @@ return {
 		}
 	},
 	goblin_zapper_0047 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2866,7 +2866,7 @@ return {
 		}
 	},
 	goblin_zapper_0049 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2892,7 +2892,7 @@ return {
 		}
 	},
 	goblin_zapper_0051 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2916,7 +2916,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0052 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2942,7 +2942,7 @@ return {
 		}
 	},
 	goblin_zapper_0054 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2968,7 +2968,7 @@ return {
 		}
 	},
 	goblin_zapper_0056 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -2994,7 +2994,7 @@ return {
 		}
 	},
 	goblin_zapper_0058 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3020,7 +3020,7 @@ return {
 		}
 	},
 	goblin_zapper_0060 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3046,7 +3046,7 @@ return {
 		}
 	},
 	goblin_zapper_0062 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3070,7 +3070,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0063 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3096,7 +3096,7 @@ return {
 		}
 	},
 	goblin_zapper_0065 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3122,7 +3122,7 @@ return {
 		}
 	},
 	goblin_zapper_0067 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3148,7 +3148,7 @@ return {
 		}
 	},
 	goblin_zapper_0068 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3174,7 +3174,7 @@ return {
 		}
 	},
 	goblin_zapper_0070 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3200,7 +3200,7 @@ return {
 		}
 	},
 	goblin_zapper_0072 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3224,7 +3224,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0073 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3250,7 +3250,7 @@ return {
 		}
 	},
 	goblin_zapper_0075 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3276,7 +3276,7 @@ return {
 		}
 	},
 	goblin_zapper_0077 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3302,7 +3302,7 @@ return {
 		}
 	},
 	goblin_zapper_0079 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3328,7 +3328,7 @@ return {
 		}
 	},
 	goblin_zapper_0082 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3354,7 +3354,7 @@ return {
 		}
 	},
 	goblin_zapper_0084 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3380,7 +3380,7 @@ return {
 		}
 	},
 	goblin_zapper_0086 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3406,7 +3406,7 @@ return {
 		}
 	},
 	goblin_zapper_0088 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			74,
 			82
@@ -3432,7 +3432,7 @@ return {
 		}
 	},
 	goblin_zapper_0090 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3458,7 +3458,7 @@ return {
 		}
 	},
 	goblin_zapper_0092 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3484,7 +3484,7 @@ return {
 		}
 	},
 	goblin_zapper_0094 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3516,7 +3516,7 @@ return {
 		}
 	},
 	goblin_zapper_0102 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3540,7 +3540,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0103 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3564,7 +3564,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0104 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3590,7 +3590,7 @@ return {
 		}
 	},
 	goblin_zapper_0106 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3616,7 +3616,7 @@ return {
 		}
 	},
 	goblin_zapper_0108 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			74,
 			82
@@ -3640,7 +3640,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0109 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3664,7 +3664,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0110 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3688,7 +3688,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0111 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3712,7 +3712,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0112 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3745,7 +3745,7 @@ return {
 		}
 	},
 	goblin_zapper_0121 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3771,7 +3771,7 @@ return {
 		}
 	},
 	goblin_zapper_0123 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3795,7 +3795,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0124 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			74,
 			82
@@ -3819,7 +3819,7 @@ return {
 		alias = {}
 	},
 	goblin_zapper_0125 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3845,7 +3845,7 @@ return {
 		}
 	},
 	goblin_zapper_0127 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3871,7 +3871,7 @@ return {
 		}
 	},
 	goblin_zapper_0129 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3897,7 +3897,7 @@ return {
 		}
 	},
 	goblin_zapper_0131 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3923,7 +3923,7 @@ return {
 		}
 	},
 	goblin_zapper_0133 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -3949,7 +3949,7 @@ return {
 		}
 	},
 	goblin_zapper_0135 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			74,
 			82
@@ -3975,7 +3975,7 @@ return {
 		}
 	},
 	goblin_zapper_0137 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -4001,7 +4001,7 @@ return {
 		}
 	},
 	goblin_zapper_0139 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -4027,7 +4027,7 @@ return {
 		}
 	},
 	goblin_zapper_0141 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			74,
 			82
@@ -4053,7 +4053,7 @@ return {
 		}
 	},
 	orc_armored_0001 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4079,7 +4079,7 @@ return {
 		}
 	},
 	orc_armored_0003 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4105,7 +4105,7 @@ return {
 		}
 	},
 	orc_armored_0005 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -4131,7 +4131,7 @@ return {
 		}
 	},
 	orc_armored_0007 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -4155,7 +4155,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0008 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4181,7 +4181,7 @@ return {
 		}
 	},
 	orc_armored_0010 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4207,7 +4207,7 @@ return {
 		}
 	},
 	orc_armored_0012 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4233,7 +4233,7 @@ return {
 		}
 	},
 	orc_armored_0014 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4259,7 +4259,7 @@ return {
 		}
 	},
 	orc_armored_0016 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4285,7 +4285,7 @@ return {
 		}
 	},
 	orc_armored_0018 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4309,7 +4309,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0019 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4335,7 +4335,7 @@ return {
 		}
 	},
 	orc_armored_0021 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4361,7 +4361,7 @@ return {
 		}
 	},
 	orc_armored_0023 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4387,7 +4387,7 @@ return {
 		}
 	},
 	orc_armored_0025 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4413,7 +4413,7 @@ return {
 		}
 	},
 	orc_armored_0027 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4439,7 +4439,7 @@ return {
 		}
 	},
 	orc_armored_0029 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4463,7 +4463,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0030 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4489,7 +4489,7 @@ return {
 		}
 	},
 	orc_armored_0032 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4515,7 +4515,7 @@ return {
 		}
 	},
 	orc_armored_0034 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4541,7 +4541,7 @@ return {
 		}
 	},
 	orc_armored_0036 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4567,7 +4567,7 @@ return {
 		}
 	},
 	orc_armored_0038 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4593,7 +4593,7 @@ return {
 		}
 	},
 	orc_armored_0040 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4617,7 +4617,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0041 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4643,7 +4643,7 @@ return {
 		}
 	},
 	orc_armored_0043 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4669,7 +4669,7 @@ return {
 		}
 	},
 	orc_armored_0045 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4695,7 +4695,7 @@ return {
 		}
 	},
 	orc_armored_0047 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4721,7 +4721,7 @@ return {
 		}
 	},
 	orc_armored_0049 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4747,7 +4747,7 @@ return {
 		}
 	},
 	orc_armored_0051 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4771,7 +4771,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0052 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4797,7 +4797,7 @@ return {
 		}
 	},
 	orc_armored_0054 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4823,7 +4823,7 @@ return {
 		}
 	},
 	orc_armored_0056 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4849,7 +4849,7 @@ return {
 		}
 	},
 	orc_armored_0058 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4875,7 +4875,7 @@ return {
 		}
 	},
 	orc_armored_0060 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -4901,7 +4901,7 @@ return {
 		}
 	},
 	orc_armored_0062 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -4925,7 +4925,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0063 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4951,7 +4951,7 @@ return {
 		}
 	},
 	orc_armored_0065 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -4977,7 +4977,7 @@ return {
 		}
 	},
 	orc_armored_0067 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5001,7 +5001,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0068 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5027,7 +5027,7 @@ return {
 		}
 	},
 	orc_armored_0070 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -5053,7 +5053,7 @@ return {
 		}
 	},
 	orc_armored_0072 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -5079,7 +5079,7 @@ return {
 		}
 	},
 	orc_armored_0074 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -5105,7 +5105,7 @@ return {
 		}
 	},
 	orc_armored_0076 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5131,7 +5131,7 @@ return {
 		}
 	},
 	orc_armored_0078 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5155,7 +5155,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0079 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5179,7 +5179,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0080 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5205,7 +5205,7 @@ return {
 		}
 	},
 	orc_armored_0082 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -5231,7 +5231,7 @@ return {
 		}
 	},
 	orc_armored_0084 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5255,7 +5255,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0085 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5279,7 +5279,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0086 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5303,7 +5303,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0087 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5327,7 +5327,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0088 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5360,7 +5360,7 @@ return {
 		}
 	},
 	orc_armored_0097 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5386,7 +5386,7 @@ return {
 		}
 	},
 	orc_armored_0099 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5410,7 +5410,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0100 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5434,7 +5434,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0101 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5458,7 +5458,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0102 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5482,7 +5482,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0103 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5506,7 +5506,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0104 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5530,7 +5530,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0105 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -5554,7 +5554,7 @@ return {
 		alias = {}
 	},
 	orc_armored_0106 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			100,
 			68
@@ -5580,7 +5580,7 @@ return {
 		}
 	},
 	orc_armored_0108 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			100,
 			68
@@ -5612,7 +5612,7 @@ return {
 		}
 	},
 	orc_wolfrider_0001 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5638,7 +5638,7 @@ return {
 		}
 	},
 	orc_wolfrider_0003 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5662,7 +5662,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0004 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5686,7 +5686,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0005 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5710,7 +5710,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0006 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5734,7 +5734,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0007 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5758,7 +5758,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0008 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5782,7 +5782,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0009 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5806,7 +5806,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0010 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5830,7 +5830,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0011 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5856,7 +5856,7 @@ return {
 		}
 	},
 	orc_wolfrider_0013 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5882,7 +5882,7 @@ return {
 		}
 	},
 	orc_wolfrider_0015 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5908,7 +5908,7 @@ return {
 		}
 	},
 	orc_wolfrider_0017 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5934,7 +5934,7 @@ return {
 		}
 	},
 	orc_wolfrider_0019 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5960,7 +5960,7 @@ return {
 		}
 	},
 	orc_wolfrider_0021 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -5986,7 +5986,7 @@ return {
 		}
 	},
 	orc_wolfrider_0023 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6012,7 +6012,7 @@ return {
 		}
 	},
 	orc_wolfrider_0025 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6038,7 +6038,7 @@ return {
 		}
 	},
 	orc_wolfrider_0027 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6064,7 +6064,7 @@ return {
 		}
 	},
 	orc_wolfrider_0029 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6090,7 +6090,7 @@ return {
 		}
 	},
 	orc_wolfrider_0031 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6117,7 +6117,7 @@ return {
 		}
 	},
 	orc_wolfrider_0032 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			88,
 			88
@@ -6141,7 +6141,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0033 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			88,
 			88
@@ -6165,7 +6165,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0034 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6191,7 +6191,7 @@ return {
 		}
 	},
 	orc_wolfrider_0036 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			88,
 			88
@@ -6217,7 +6217,7 @@ return {
 		}
 	},
 	orc_wolfrider_0038 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			88,
 			88
@@ -6241,7 +6241,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0039 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6267,7 +6267,7 @@ return {
 		}
 	},
 	orc_wolfrider_0041 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6293,7 +6293,7 @@ return {
 		}
 	},
 	orc_wolfrider_0043 = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			88,
 			88
@@ -6317,7 +6317,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0046 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6341,7 +6341,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0047 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6365,7 +6365,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0048 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6391,7 +6391,7 @@ return {
 		}
 	},
 	orc_wolfrider_0050 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6417,7 +6417,7 @@ return {
 		}
 	},
 	orc_wolfrider_0052 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6441,7 +6441,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0053 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6465,7 +6465,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0054 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6489,7 +6489,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0055 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6513,7 +6513,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0056 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6546,7 +6546,7 @@ return {
 		}
 	},
 	orc_wolfrider_0065 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6572,7 +6572,7 @@ return {
 		}
 	},
 	orc_wolfrider_0067 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6596,7 +6596,7 @@ return {
 		alias = {}
 	},
 	orc_wolfrider_0068 = {
-		a_name = "go_enemies_acaroth-2.png",
+		a_name = "go_enemies_acaroth-2.dds",
 		size = {
 			88,
 			88
@@ -6620,7 +6620,7 @@ return {
 		alias = {}
 	},
 	zapperbomb = {
-		a_name = "go_enemies_acaroth-1.png",
+		a_name = "go_enemies_acaroth-1.dds",
 		size = {
 			26,
 			26

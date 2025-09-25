@@ -2,7 +2,7 @@
 
 return {
 	bruce_hero_0001 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -30,7 +30,7 @@ return {
 		}
 	},
 	bruce_hero_0002 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	bruce_hero_0004 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -82,7 +82,7 @@ return {
 		}
 	},
 	bruce_hero_0006 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -108,7 +108,7 @@ return {
 		}
 	},
 	bruce_hero_0008 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -134,7 +134,7 @@ return {
 		}
 	},
 	bruce_hero_0010 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -160,7 +160,7 @@ return {
 		}
 	},
 	bruce_hero_0012 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -186,7 +186,7 @@ return {
 		}
 	},
 	bruce_hero_0014 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -212,7 +212,7 @@ return {
 		}
 	},
 	bruce_hero_0016 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -238,7 +238,7 @@ return {
 		}
 	},
 	bruce_hero_0018 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -276,7 +276,7 @@ return {
 		}
 	},
 	bruce_hero_0020 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -302,7 +302,7 @@ return {
 		}
 	},
 	bruce_hero_0022 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -330,7 +330,7 @@ return {
 		}
 	},
 	bruce_hero_0026 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -356,7 +356,7 @@ return {
 		}
 	},
 	bruce_hero_0028 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -382,7 +382,7 @@ return {
 		}
 	},
 	bruce_hero_0030 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -408,7 +408,7 @@ return {
 		}
 	},
 	bruce_hero_0032 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -436,7 +436,7 @@ return {
 		}
 	},
 	bruce_hero_0036 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -462,7 +462,7 @@ return {
 		}
 	},
 	bruce_hero_0038 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -488,7 +488,7 @@ return {
 		}
 	},
 	bruce_hero_0040 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -512,7 +512,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0043 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -538,7 +538,7 @@ return {
 		}
 	},
 	bruce_hero_0045 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -566,7 +566,7 @@ return {
 		}
 	},
 	bruce_hero_0047 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -594,7 +594,7 @@ return {
 		}
 	},
 	bruce_hero_0049 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -620,7 +620,7 @@ return {
 		}
 	},
 	bruce_hero_0051 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -646,7 +646,7 @@ return {
 		}
 	},
 	bruce_hero_0053 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -672,7 +672,7 @@ return {
 		}
 	},
 	bruce_hero_0055 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -698,7 +698,7 @@ return {
 		}
 	},
 	bruce_hero_0060 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -724,7 +724,7 @@ return {
 		}
 	},
 	bruce_hero_0066 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -750,7 +750,7 @@ return {
 		}
 	},
 	bruce_hero_0068 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -776,7 +776,7 @@ return {
 		}
 	},
 	bruce_hero_0070 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -802,7 +802,7 @@ return {
 		}
 	},
 	bruce_hero_0072 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -828,7 +828,7 @@ return {
 		}
 	},
 	bruce_hero_0077 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -854,7 +854,7 @@ return {
 		}
 	},
 	bruce_hero_0079 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -880,7 +880,7 @@ return {
 		}
 	},
 	bruce_hero_0081 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -906,7 +906,7 @@ return {
 		}
 	},
 	bruce_hero_0083 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -932,7 +932,7 @@ return {
 		}
 	},
 	bruce_hero_0085 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -958,7 +958,7 @@ return {
 		}
 	},
 	bruce_hero_0087 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -982,7 +982,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0088 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1006,7 +1006,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0089 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1032,7 +1032,7 @@ return {
 		}
 	},
 	bruce_hero_0091 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1058,7 +1058,7 @@ return {
 		}
 	},
 	bruce_hero_0093 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1084,7 +1084,7 @@ return {
 		}
 	},
 	bruce_hero_0095 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1110,7 +1110,7 @@ return {
 		}
 	},
 	bruce_hero_0097 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1136,7 +1136,7 @@ return {
 		}
 	},
 	bruce_hero_0099 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1160,7 +1160,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0100 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1184,7 +1184,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0101 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1208,7 +1208,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0102 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1232,7 +1232,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0103 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1256,7 +1256,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0104 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1280,7 +1280,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0105 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1304,7 +1304,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0106 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1328,7 +1328,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0107 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1352,7 +1352,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0108 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1378,7 +1378,7 @@ return {
 		}
 	},
 	bruce_hero_0110 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1402,7 +1402,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0113 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1428,7 +1428,7 @@ return {
 		}
 	},
 	bruce_hero_0115 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1454,7 +1454,7 @@ return {
 		}
 	},
 	bruce_hero_0117 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1480,7 +1480,7 @@ return {
 		}
 	},
 	bruce_hero_0119 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1506,7 +1506,7 @@ return {
 		}
 	},
 	bruce_hero_0121 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1530,7 +1530,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0122 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1554,7 +1554,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0123 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1578,7 +1578,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0124 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1602,7 +1602,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0125 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1626,7 +1626,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0126 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1650,7 +1650,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0127 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1674,7 +1674,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0128 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1698,7 +1698,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0129 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1722,7 +1722,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0130 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1746,7 +1746,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0131 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1770,7 +1770,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0132 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1794,7 +1794,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0133 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1818,7 +1818,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0134 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1842,7 +1842,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0135 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1868,7 +1868,7 @@ return {
 		}
 	},
 	bruce_hero_0137 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1894,7 +1894,7 @@ return {
 		}
 	},
 	bruce_hero_0139 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1920,7 +1920,7 @@ return {
 		}
 	},
 	bruce_hero_0141 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1944,7 +1944,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0144 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1970,7 +1970,7 @@ return {
 		}
 	},
 	bruce_hero_0146 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -1996,7 +1996,7 @@ return {
 		}
 	},
 	bruce_hero_0148 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2026,7 +2026,7 @@ return {
 		}
 	},
 	bruce_hero_0150 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2054,7 +2054,7 @@ return {
 		}
 	},
 	bruce_hero_0158 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2080,7 +2080,7 @@ return {
 		}
 	},
 	bruce_hero_0160 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2106,7 +2106,7 @@ return {
 		}
 	},
 	bruce_hero_0162 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2132,7 +2132,7 @@ return {
 		}
 	},
 	bruce_hero_0164 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2158,7 +2158,7 @@ return {
 		}
 	},
 	bruce_hero_0166 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2184,7 +2184,7 @@ return {
 		}
 	},
 	bruce_hero_0168 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2210,7 +2210,7 @@ return {
 		}
 	},
 	bruce_hero_0170 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2236,7 +2236,7 @@ return {
 		}
 	},
 	bruce_hero_0172 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2262,7 +2262,7 @@ return {
 		}
 	},
 	bruce_hero_0174 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2288,7 +2288,7 @@ return {
 		}
 	},
 	bruce_hero_0176 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2314,7 +2314,7 @@ return {
 		}
 	},
 	bruce_hero_0178 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2340,7 +2340,7 @@ return {
 		}
 	},
 	bruce_hero_0180 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2366,7 +2366,7 @@ return {
 		}
 	},
 	bruce_hero_0182 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2392,7 +2392,7 @@ return {
 		}
 	},
 	bruce_hero_0184 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2416,7 +2416,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0185 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2440,7 +2440,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0186 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2464,7 +2464,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0187 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2488,7 +2488,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0188 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2512,7 +2512,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0189 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2536,7 +2536,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0190 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2560,7 +2560,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0191 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2584,7 +2584,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0192 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2608,7 +2608,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0193 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2632,7 +2632,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0194 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2656,7 +2656,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0195 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2680,7 +2680,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0196 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2704,7 +2704,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0197 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2728,7 +2728,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_0198 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2754,7 +2754,7 @@ return {
 		}
 	},
 	bruce_hero_0200 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2780,7 +2780,7 @@ return {
 		}
 	},
 	bruce_hero_0202 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			138,
 			141
@@ -2807,7 +2807,7 @@ return {
 		}
 	},
 	bruce_hero_stars_0001 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			56,
 			39
@@ -2833,7 +2833,7 @@ return {
 		}
 	},
 	bruce_hero_stars_0003 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			56,
 			39
@@ -2859,7 +2859,7 @@ return {
 		}
 	},
 	bruce_hero_stars_0005 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			56,
 			39
@@ -2885,7 +2885,7 @@ return {
 		}
 	},
 	bruce_hero_stars_0007 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			56,
 			39
@@ -2911,7 +2911,7 @@ return {
 		}
 	},
 	bruce_hero_stars_0009 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			56,
 			39
@@ -2937,7 +2937,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_0001 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -2961,7 +2961,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0002 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -2985,7 +2985,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0003 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3009,7 +3009,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0004 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3033,7 +3033,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0005 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3057,7 +3057,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0006 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3081,7 +3081,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0007 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3105,7 +3105,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0008 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3129,7 +3129,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0009 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3155,7 +3155,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_0011 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3179,7 +3179,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0012 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3203,7 +3203,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0013 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3227,7 +3227,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0014 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3251,7 +3251,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0015 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3275,7 +3275,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0016 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3299,7 +3299,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0017 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3326,7 +3326,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_0019 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3350,7 +3350,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0020 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3374,7 +3374,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0021 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3398,7 +3398,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0022 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3422,7 +3422,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0023 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3446,7 +3446,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0025 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3470,7 +3470,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0026 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3494,7 +3494,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0027 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3518,7 +3518,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0028 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3542,7 +3542,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0029 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3566,7 +3566,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0030 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3590,7 +3590,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0031 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3614,7 +3614,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0032 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3638,7 +3638,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0033 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3662,7 +3662,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0034 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3686,7 +3686,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0035 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3710,7 +3710,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0036 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3734,7 +3734,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0037 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3758,7 +3758,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0038 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3782,7 +3782,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_0039 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3808,7 +3808,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_0041 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			98,
 			96
@@ -3832,7 +3832,7 @@ return {
 		alias = {}
 	},
 	bruce_hero_ultimate_twister_0001 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -3858,7 +3858,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0003 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -3884,7 +3884,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0005 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -3910,7 +3910,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0007 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -3936,7 +3936,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0009 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -3962,7 +3962,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0011 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -3988,7 +3988,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0013 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -4014,7 +4014,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0015 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -4040,7 +4040,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0017 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -4066,7 +4066,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0019 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -4092,7 +4092,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0021 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115
@@ -4118,7 +4118,7 @@ return {
 		}
 	},
 	bruce_hero_ultimate_twister_0023 = {
-		a_name = "go_hero_bruce-1.png",
+		a_name = "go_hero_bruce-1.dds",
 		size = {
 			124,
 			115

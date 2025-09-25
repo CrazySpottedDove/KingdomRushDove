@@ -2,7 +2,7 @@
 
 return {
 	bloodServant_0001 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0002 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0003 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0004 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0005 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0006 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0007 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0008 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0009 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	bloodServant_0010 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -244,7 +244,7 @@ return {
 		}
 	},
 	bloodServant_0012 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -270,7 +270,7 @@ return {
 		}
 	},
 	bloodServant_0014 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -296,7 +296,7 @@ return {
 		}
 	},
 	bloodServant_0016 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -322,7 +322,7 @@ return {
 		}
 	},
 	bloodServant_0018 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -348,7 +348,7 @@ return {
 		}
 	},
 	bloodServant_0020 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -374,7 +374,7 @@ return {
 		}
 	},
 	bloodServant_0022 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -400,7 +400,7 @@ return {
 		}
 	},
 	bloodServant_0024 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -426,7 +426,7 @@ return {
 		}
 	},
 	bloodServant_0026 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -452,7 +452,7 @@ return {
 		}
 	},
 	bloodServant_0028 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -478,7 +478,7 @@ return {
 		}
 	},
 	bloodServant_0030 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -504,7 +504,7 @@ return {
 		}
 	},
 	bloodServant_0032 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -533,7 +533,7 @@ return {
 		}
 	},
 	bloodServant_0033 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -559,7 +559,7 @@ return {
 		}
 	},
 	bloodServant_0035 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -585,7 +585,7 @@ return {
 		}
 	},
 	bloodServant_0037 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -611,7 +611,7 @@ return {
 		}
 	},
 	bloodServant_0039 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -637,7 +637,7 @@ return {
 		}
 	},
 	bloodServant_0041 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -663,7 +663,7 @@ return {
 		}
 	},
 	bloodServant_0043 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -689,7 +689,7 @@ return {
 		}
 	},
 	bloodServant_0049 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -715,7 +715,7 @@ return {
 		}
 	},
 	bloodServant_0051 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -741,7 +741,7 @@ return {
 		}
 	},
 	bloodServant_0053 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -767,7 +767,7 @@ return {
 		}
 	},
 	bloodServant_0055 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -793,7 +793,7 @@ return {
 		}
 	},
 	bloodServant_0057 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -819,7 +819,7 @@ return {
 		}
 	},
 	bloodServant_0059 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -845,7 +845,7 @@ return {
 		}
 	},
 	bloodServant_0061 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -871,7 +871,7 @@ return {
 		}
 	},
 	bloodServant_0063 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -897,7 +897,7 @@ return {
 		}
 	},
 	bloodServant_0065 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -923,7 +923,7 @@ return {
 		}
 	},
 	bloodServant_0067 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -949,7 +949,7 @@ return {
 		}
 	},
 	bloodServant_0069 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			98,
 			76
@@ -976,7 +976,7 @@ return {
 		}
 	},
 	mountedAvenger_0001 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1000,7 +1000,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0002 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1024,7 +1024,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0003 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1048,7 +1048,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0004 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1072,7 +1072,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0005 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1096,7 +1096,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0006 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1120,7 +1120,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0007 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1144,7 +1144,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0008 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1168,7 +1168,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0009 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1192,7 +1192,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0010 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1216,7 +1216,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0011 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1240,7 +1240,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0012 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1264,7 +1264,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0013 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1288,7 +1288,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0014 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1312,7 +1312,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0015 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1336,7 +1336,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0016 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1360,7 +1360,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0017 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1384,7 +1384,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0018 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1408,7 +1408,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0019 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1432,7 +1432,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0020 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1456,7 +1456,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0021 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1480,7 +1480,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0022 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1504,7 +1504,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0023 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1528,7 +1528,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0024 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1552,7 +1552,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0025 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1576,7 +1576,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0026 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1600,7 +1600,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0027 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1624,7 +1624,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0028 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1648,7 +1648,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0029 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1674,7 +1674,7 @@ return {
 		}
 	},
 	mountedAvenger_0031 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1700,7 +1700,7 @@ return {
 		}
 	},
 	mountedAvenger_0033 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1724,7 +1724,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0034 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1748,7 +1748,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0035 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1774,7 +1774,7 @@ return {
 		}
 	},
 	mountedAvenger_0037 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1800,7 +1800,7 @@ return {
 		}
 	},
 	mountedAvenger_0039 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1826,7 +1826,7 @@ return {
 		}
 	},
 	mountedAvenger_0041 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1852,7 +1852,7 @@ return {
 		}
 	},
 	mountedAvenger_0043 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1878,7 +1878,7 @@ return {
 		}
 	},
 	mountedAvenger_0045 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1902,7 +1902,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0046 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1928,7 +1928,7 @@ return {
 		}
 	},
 	mountedAvenger_0048 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1954,7 +1954,7 @@ return {
 		}
 	},
 	mountedAvenger_0050 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -1980,7 +1980,7 @@ return {
 		}
 	},
 	mountedAvenger_0052 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2006,7 +2006,7 @@ return {
 		}
 	},
 	mountedAvenger_0054 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2030,7 +2030,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0055 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2054,7 +2054,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0056 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2078,7 +2078,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0057 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2102,7 +2102,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0058 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2126,7 +2126,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0059 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2150,7 +2150,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0060 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2174,7 +2174,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0061 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2198,7 +2198,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0062 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2222,7 +2222,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0063 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2246,7 +2246,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0064 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2270,7 +2270,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0065 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2294,7 +2294,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0066 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2318,7 +2318,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0067 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2342,7 +2342,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0068 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2366,7 +2366,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0069 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2390,7 +2390,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0070 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2414,7 +2414,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0071 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2438,7 +2438,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0072 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2462,7 +2462,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0073 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2486,7 +2486,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0074 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2510,7 +2510,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0075 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2534,7 +2534,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0076 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2558,7 +2558,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0077 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2582,7 +2582,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0078 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2608,7 +2608,7 @@ return {
 		}
 	},
 	mountedAvenger_0080 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2634,7 +2634,7 @@ return {
 		}
 	},
 	mountedAvenger_0082 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2664,7 +2664,7 @@ return {
 		}
 	},
 	mountedAvenger_0088 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2688,7 +2688,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0089 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2712,7 +2712,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0090 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2736,7 +2736,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0091 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2760,7 +2760,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0092 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2784,7 +2784,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0093 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135
@@ -2808,7 +2808,7 @@ return {
 		alias = {}
 	},
 	mountedAvenger_0094 = {
-		a_name = "go_enemies_bittering_rancor-1.png",
+		a_name = "go_enemies_bittering_rancor-1.dds",
 		size = {
 			135,
 			135

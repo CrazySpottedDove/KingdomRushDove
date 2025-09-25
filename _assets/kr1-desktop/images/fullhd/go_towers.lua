@@ -39659,7 +39659,7 @@ local kr1_data = {
 		alias = {}
 	},
         sunrayTower_layer1_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -39683,7 +39683,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer1_0068 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -39707,7 +39707,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer1_0068_over = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			273,
 			308
@@ -39731,7 +39731,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0001 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39755,7 +39755,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0002 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39779,7 +39779,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0003 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39803,7 +39803,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0004 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39827,7 +39827,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0005 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39851,7 +39851,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0006 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39875,7 +39875,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0007 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39899,7 +39899,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0008 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39923,7 +39923,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0009 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39947,7 +39947,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0010 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39971,7 +39971,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0011 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -39995,7 +39995,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0012 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40019,7 +40019,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0013 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40043,7 +40043,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0014 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40067,7 +40067,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0015 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40091,7 +40091,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0016 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40115,7 +40115,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0017 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40139,7 +40139,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0018 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40163,7 +40163,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0019 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40187,7 +40187,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0020 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40211,7 +40211,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0021 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40235,7 +40235,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0022 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40259,7 +40259,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0023 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40283,7 +40283,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0024 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40307,7 +40307,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0025 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40331,7 +40331,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0026 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40355,7 +40355,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0027 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40379,7 +40379,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0028 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40403,7 +40403,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0029 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40427,7 +40427,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0030 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40451,7 +40451,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0031 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40475,7 +40475,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0032 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40499,7 +40499,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0033 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40523,7 +40523,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0034 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40547,7 +40547,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0035 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40571,7 +40571,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0036 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40595,7 +40595,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0037 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40619,7 +40619,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0038 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40643,7 +40643,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0039 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40667,7 +40667,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0040 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40691,7 +40691,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0041 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40715,7 +40715,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0042 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40739,7 +40739,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0043 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40763,7 +40763,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0044 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40787,7 +40787,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0045 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40811,7 +40811,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0046 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40835,7 +40835,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0047 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40859,7 +40859,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0048 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40883,7 +40883,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0049 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40907,7 +40907,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0050 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40931,7 +40931,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0051 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40955,7 +40955,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0052 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -40979,7 +40979,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0053 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41003,7 +41003,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0054 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41027,7 +41027,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0055 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41051,7 +41051,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0056 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41075,7 +41075,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0057 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41099,7 +41099,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0058 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41123,7 +41123,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0059 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41147,7 +41147,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0060 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41171,7 +41171,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0061 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41195,7 +41195,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0062 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41219,7 +41219,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0063 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41243,7 +41243,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0064 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41267,7 +41267,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0065 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41291,7 +41291,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0066 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41315,7 +41315,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0067 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			204,
 			230
@@ -41339,7 +41339,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer2_0068 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41363,7 +41363,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41387,7 +41387,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0002 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41413,7 +41413,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41439,7 +41439,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0004 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41465,7 +41465,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0005 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41491,7 +41491,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0006 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41517,7 +41517,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0007 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41543,7 +41543,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0008 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41569,7 +41569,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0009 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41595,7 +41595,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0010 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41621,7 +41621,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0020 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41647,7 +41647,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0022 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41671,7 +41671,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0023 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41695,7 +41695,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0024 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41719,7 +41719,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0025 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41743,7 +41743,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0026 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41767,7 +41767,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0027 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41791,7 +41791,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0028 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41815,7 +41815,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0029 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41839,7 +41839,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0030 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41863,7 +41863,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0031 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41887,7 +41887,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0032 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41913,7 +41913,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0033 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41937,7 +41937,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0034 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41961,7 +41961,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0035 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -41985,7 +41985,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0036 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42009,7 +42009,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0037 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42033,7 +42033,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0038 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42057,7 +42057,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0039 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42081,7 +42081,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0040 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42105,7 +42105,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0041 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42129,7 +42129,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0042 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42153,7 +42153,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0043 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42177,7 +42177,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0044 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42201,7 +42201,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0045 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42225,7 +42225,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0046 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42249,7 +42249,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0047 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42273,7 +42273,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0048 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42297,7 +42297,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0049 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42321,7 +42321,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0050 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42345,7 +42345,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0052 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42369,7 +42369,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0053 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42393,7 +42393,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0054 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42417,7 +42417,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0055 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42441,7 +42441,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0056 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42465,7 +42465,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0057 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42489,7 +42489,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0058 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42513,7 +42513,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0059 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42539,7 +42539,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer3_0061 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42563,7 +42563,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0062 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42587,7 +42587,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0063 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42611,7 +42611,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0064 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42635,7 +42635,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0065 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42659,7 +42659,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0066 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42683,7 +42683,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0067 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42707,7 +42707,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer3_0068 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42731,7 +42731,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42759,7 +42759,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0002 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42785,7 +42785,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42811,7 +42811,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0004 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42837,7 +42837,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0005 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42863,7 +42863,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0006 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42889,7 +42889,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0007 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42915,7 +42915,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0008 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42941,7 +42941,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0009 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42967,7 +42967,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0010 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -42993,7 +42993,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0022 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43017,7 +43017,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0023 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43041,7 +43041,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0024 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43065,7 +43065,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0025 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43089,7 +43089,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0026 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43113,7 +43113,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0027 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43137,7 +43137,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0028 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43161,7 +43161,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0029 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43185,7 +43185,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0030 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43209,7 +43209,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0031 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43233,7 +43233,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0032 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43259,7 +43259,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0033 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43283,7 +43283,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0034 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43307,7 +43307,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0035 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43331,7 +43331,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0036 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43355,7 +43355,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0037 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43379,7 +43379,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0038 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43403,7 +43403,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0039 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43427,7 +43427,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0040 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43451,7 +43451,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0041 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43475,7 +43475,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0042 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43499,7 +43499,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0043 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43523,7 +43523,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0044 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43547,7 +43547,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0045 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43571,7 +43571,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0046 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43595,7 +43595,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0047 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43619,7 +43619,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0048 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43643,7 +43643,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0049 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43667,7 +43667,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0050 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43691,7 +43691,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0052 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43715,7 +43715,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0053 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43739,7 +43739,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0054 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43763,7 +43763,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0055 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43787,7 +43787,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0056 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43811,7 +43811,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0057 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43835,7 +43835,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0058 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43859,7 +43859,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0059 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43885,7 +43885,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer4_0061 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43909,7 +43909,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0062 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43933,7 +43933,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0063 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43957,7 +43957,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0064 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -43981,7 +43981,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0065 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44005,7 +44005,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0066 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44029,7 +44029,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer4_0068 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44053,7 +44053,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44081,7 +44081,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0002 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44107,7 +44107,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44133,7 +44133,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0004 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44159,7 +44159,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0005 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44185,7 +44185,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0006 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44211,7 +44211,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0007 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44237,7 +44237,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0008 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44263,7 +44263,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0009 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44289,7 +44289,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0010 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44315,7 +44315,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0022 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44339,7 +44339,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0023 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44363,7 +44363,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0024 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44387,7 +44387,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0025 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44411,7 +44411,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0026 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44435,7 +44435,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0027 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44459,7 +44459,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0028 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44483,7 +44483,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0029 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44507,7 +44507,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0030 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44531,7 +44531,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0031 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44555,7 +44555,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0032 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44581,7 +44581,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0033 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44605,7 +44605,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0034 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44629,7 +44629,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0035 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44653,7 +44653,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0036 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44677,7 +44677,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0037 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44701,7 +44701,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0038 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44725,7 +44725,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0039 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44749,7 +44749,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0040 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44773,7 +44773,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0041 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44797,7 +44797,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0042 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44821,7 +44821,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0043 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44845,7 +44845,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0044 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44869,7 +44869,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0045 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44893,7 +44893,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0046 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44917,7 +44917,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0047 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44941,7 +44941,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0048 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44965,7 +44965,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0049 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -44989,7 +44989,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0050 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45013,7 +45013,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0052 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45037,7 +45037,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0053 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45061,7 +45061,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0054 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45085,7 +45085,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0055 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45109,7 +45109,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0056 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45133,7 +45133,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0057 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45157,7 +45157,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0058 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45181,7 +45181,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0059 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45207,7 +45207,7 @@ local kr1_data = {
 		}
 	},
 	sunrayTower_layer5_0061 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45231,7 +45231,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0062 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45255,7 +45255,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0063 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45279,7 +45279,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0064 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45303,7 +45303,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0065 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45327,7 +45327,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0066 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45351,7 +45351,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunrayTower_layer5_0068 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			204,
 			230
@@ -45375,7 +45375,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45399,7 +45399,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0002 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45423,7 +45423,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45447,7 +45447,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0004 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45471,7 +45471,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0005 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45495,7 +45495,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0006 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45519,7 +45519,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0007 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45543,7 +45543,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0008 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45567,7 +45567,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0009 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45591,7 +45591,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0010 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45615,7 +45615,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0011 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45639,7 +45639,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0012 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45663,7 +45663,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0013 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45687,7 +45687,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0014 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45711,7 +45711,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0015 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45735,7 +45735,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0016 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45759,7 +45759,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0017 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45783,7 +45783,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0018 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45807,7 +45807,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0019 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45831,7 +45831,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0020 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45855,7 +45855,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0021 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45879,7 +45879,7 @@ local kr1_data = {
 		alias = {}
 	},
 	sunray_RayHit_0022 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			40,
 			40
@@ -45903,7 +45903,7 @@ local kr1_data = {
 		alias = {}
 	},
     CB_Boss_towerDebuff_0001 = {
-		a_name = "go_stage26-2.png",
+		a_name = "go_stage26-2.dds",
 		size = {
 			158,
 			140
@@ -45927,7 +45927,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0002 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -45951,7 +45951,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0003 = {
-		a_name = "go_stage26-2.png",
+		a_name = "go_stage26-2.dds",
 		size = {
 			158,
 			140
@@ -45975,7 +45975,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0004 = {
-		a_name = "go_stage26-2.png",
+		a_name = "go_stage26-2.dds",
 		size = {
 			158,
 			140
@@ -45999,7 +45999,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0005 = {
-		a_name = "go_stage26-2.png",
+		a_name = "go_stage26-2.dds",
 		size = {
 			158,
 			140
@@ -46023,7 +46023,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0006 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46047,7 +46047,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0007 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46071,7 +46071,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0008 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46095,7 +46095,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0009 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46119,7 +46119,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0010 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46143,7 +46143,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0011 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46167,7 +46167,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0012 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46191,7 +46191,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0013 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46215,7 +46215,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0014 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46239,7 +46239,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0015 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46263,7 +46263,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0016 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46287,7 +46287,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0017 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46311,7 +46311,7 @@ local kr1_data = {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0018 = {
-		a_name = "go_stage26-3.png",
+		a_name = "go_stage26-3.dds",
 		size = {
 			158,
 			140
@@ -46335,7 +46335,7 @@ local kr1_data = {
 		alias = {}
 	},
     Halloween_hero_vhelsing_sniper_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {9, 10, 9, 9},
         a_size = {1024, 1024},
@@ -46343,7 +46343,7 @@ local kr1_data = {
         alias = {"Halloween_hero_vhelsing_sniper_0002"}
     },
     Halloween_hero_vhelsing_sniper_0003 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {13, 14, 13, 13},
         a_size = {1024, 1024},
@@ -46351,7 +46351,7 @@ local kr1_data = {
         alias = {"Halloween_hero_vhelsing_sniper_0004"}
     },
     Halloween_hero_vhelsing_sniper_0005 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {19, 20, 19, 19},
         a_size = {1024, 1024},
@@ -46359,7 +46359,7 @@ local kr1_data = {
         alias = {"Halloween_hero_vhelsing_sniper_0006"}
     },
     Halloween_hero_vhelsing_sniper_0007 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {23, 24, 23, 23},
         a_size = {1024, 1024},
@@ -46367,7 +46367,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0008 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {27, 28, 27, 27},
         a_size = {1024, 1024},
@@ -46375,7 +46375,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0009 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {29, 29, 28, 28},
         a_size = {1024, 1024},
@@ -46383,7 +46383,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0010 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {29, 30, 30, 30},
         a_size = {1024, 1024},
@@ -46391,7 +46391,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0011 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {30, 31, 30, 30},
         a_size = {1024, 1024},
@@ -46399,7 +46399,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0012 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {30, 30, 30, 30},
         a_size = {1024, 1024},
@@ -46407,7 +46407,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0013 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {107, 107},
         trim = {29, 29, 28, 28},
         a_size = {1024, 1024},
@@ -46415,7 +46415,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0014 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {27, 28, 27, 27},
         a_size = {1024, 1024},
@@ -46423,7 +46423,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0015 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {28, 29, 28, 28},
         a_size = {1024, 1024},
@@ -46431,7 +46431,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_sniper_0016 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {107, 107},
         trim = {29, 30, 29, 29},
         a_size = {1024, 1024},
@@ -46439,7 +46439,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46447,7 +46447,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0002 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46455,7 +46455,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0003 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 16, 8, 6},
         a_size = {1024, 1024},
@@ -46463,7 +46463,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0004 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 16, 8, 6},
         a_size = {1024, 1024},
@@ -46471,7 +46471,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0005 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46479,7 +46479,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0006 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46487,7 +46487,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0007 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46495,7 +46495,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0008 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46503,7 +46503,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0009 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46511,7 +46511,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0010 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46519,7 +46519,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0011 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46527,7 +46527,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0012 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46535,7 +46535,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0013 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46543,7 +46543,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0014 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46551,7 +46551,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0015 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 15, 8, 6},
         a_size = {1024, 1024},
@@ -46559,7 +46559,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0016 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 15, 8, 6},
         a_size = {1024, 1024},
@@ -46567,7 +46567,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0017 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46575,7 +46575,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_big_0018 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {87, 90},
         trim = {3, 18, 8, 6},
         a_size = {1024, 1024},
@@ -46583,7 +46583,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0001 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46591,7 +46591,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0002 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46599,7 +46599,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0003 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46607,7 +46607,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0004 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46615,7 +46615,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0005 = {
-        a_name = "go_hero_van_helsing-1.png",
+        a_name = "go_hero_van_helsing-1.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46623,7 +46623,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0006 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46631,7 +46631,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0007 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46639,7 +46639,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0008 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46647,7 +46647,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0009 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46655,7 +46655,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0010 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46663,7 +46663,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0011 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46671,7 +46671,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0012 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46679,7 +46679,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0013 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46687,7 +46687,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0014 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46695,7 +46695,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0015 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46703,7 +46703,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0016 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46711,7 +46711,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0017 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -46719,7 +46719,7 @@ local kr1_data = {
         alias = {}
     },
     Halloween_hero_vhelsing_waterFx_small_0018 = {
-        a_name = "go_hero_van_helsing-2.png",
+        a_name = "go_hero_van_helsing-2.dds",
         size = {56, 45},
         trim = {4, 6, 8, 0},
         a_size = {1024, 1024},
@@ -93923,7 +93923,7 @@ local kr2_data = {
 		}
 	},
     DwarfHall_0001 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			160,
 			107
@@ -93949,7 +93949,7 @@ local kr2_data = {
 		}
 	},
 	DwarfHall_0002 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			160,
 			107
@@ -93975,7 +93975,7 @@ local kr2_data = {
 		}
 	},
 	DwarfHall_0003 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			160,
 			107
@@ -94001,7 +94001,7 @@ local kr2_data = {
 		}
 	},
 	DwarfHall_0004 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			160,
 			107
@@ -94025,7 +94025,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfRiflemen = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			152,
 			115
@@ -94049,7 +94049,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfRiflemenTop = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			152,
 			115
@@ -94073,7 +94073,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfShooter_0001 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94099,7 +94099,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0003 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94125,7 +94125,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0005 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94151,7 +94151,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0007 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94182,7 +94182,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0014 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94208,7 +94208,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0016 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94234,7 +94234,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0018 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94260,7 +94260,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0020 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94286,7 +94286,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0022 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94312,7 +94312,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0024 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94338,7 +94338,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0026 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94364,7 +94364,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0028 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94390,7 +94390,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0030 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94416,7 +94416,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0032 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94442,7 +94442,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0034 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94473,7 +94473,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0041 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94499,7 +94499,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0043 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94525,7 +94525,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0045 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94551,7 +94551,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0047 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94577,7 +94577,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0049 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94603,7 +94603,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0051 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94627,7 +94627,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfShooter_0052 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94651,7 +94651,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfShooter_0053 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94680,7 +94680,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0058 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94706,7 +94706,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0060 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94732,7 +94732,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0062 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94758,7 +94758,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0064 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94784,7 +94784,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0066 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94810,7 +94810,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0068 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94836,7 +94836,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0070 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94866,7 +94866,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0076 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94892,7 +94892,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0078 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94918,7 +94918,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0080 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94944,7 +94944,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0082 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94972,7 +94972,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0086 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -94996,7 +94996,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfShooter_0087 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95026,7 +95026,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0092 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95052,7 +95052,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0094 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95078,7 +95078,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0096 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95104,7 +95104,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0098 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95130,7 +95130,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0100 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95156,7 +95156,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0102 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95182,7 +95182,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0104 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95212,7 +95212,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0110 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95238,7 +95238,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0112 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95264,7 +95264,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0114 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95290,7 +95290,7 @@ local kr2_data = {
 		}
 	},
 	DwarfShooter_0116 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			53,
 			48
@@ -95318,7 +95318,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0001 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95342,7 +95342,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0002 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95366,7 +95366,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0003 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95390,7 +95390,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0004 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95414,7 +95414,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0005 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95438,7 +95438,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0006 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95462,7 +95462,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0007 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95488,7 +95488,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0009 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95514,7 +95514,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0011 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95540,7 +95540,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0013 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95566,7 +95566,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0015 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95592,7 +95592,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0017 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95616,7 +95616,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0018 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95640,7 +95640,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0019 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95666,7 +95666,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0021 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95693,7 +95693,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0023 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95719,7 +95719,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0025 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95745,7 +95745,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0027 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95771,7 +95771,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0029 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95797,7 +95797,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0031 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95823,7 +95823,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0033 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95849,7 +95849,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0035 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95875,7 +95875,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0037 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95901,7 +95901,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0039 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95927,7 +95927,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0041 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95953,7 +95953,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0043 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -95979,7 +95979,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0045 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96005,7 +96005,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0047 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96031,7 +96031,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0049 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96057,7 +96057,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0051 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96083,7 +96083,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0053 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96109,7 +96109,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0056 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96133,7 +96133,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0057 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96157,7 +96157,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0058 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96181,7 +96181,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0059 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96205,7 +96205,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0060 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96229,7 +96229,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_0061 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96255,7 +96255,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_0063 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96281,7 +96281,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_Aura_0001 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96307,7 +96307,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_Aura_0002 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96331,7 +96331,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0003 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96355,7 +96355,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0004 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96379,7 +96379,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0005 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96403,7 +96403,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0006 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96427,7 +96427,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0007 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96451,7 +96451,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0008 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96475,7 +96475,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0009 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96501,7 +96501,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_Aura_0010 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96525,7 +96525,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0011 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96549,7 +96549,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0012 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96573,7 +96573,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0013 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96599,7 +96599,7 @@ local kr2_data = {
 		}
 	},
 	DwarfWarrior_Aura_0014 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96623,7 +96623,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0015 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96647,7 +96647,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0017 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96671,7 +96671,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0018 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96695,7 +96695,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0019 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96719,7 +96719,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0020 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96743,7 +96743,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0021 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96767,7 +96767,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0022 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96791,7 +96791,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0023 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96815,7 +96815,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0025 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96839,7 +96839,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0026 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96863,7 +96863,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0027 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96887,7 +96887,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0029 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96911,7 +96911,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0030 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			124,
 			45
@@ -96935,7 +96935,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0001 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96959,7 +96959,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0002 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -96983,7 +96983,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0003 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97007,7 +97007,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0004 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97031,7 +97031,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0005 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97055,7 +97055,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0006 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97079,7 +97079,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0007 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97103,7 +97103,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0008 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97127,7 +97127,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0009 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97151,7 +97151,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0010 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97175,7 +97175,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0011 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97199,7 +97199,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0012 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97223,7 +97223,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0013 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97247,7 +97247,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0014 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97271,7 +97271,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0015 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97295,7 +97295,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0016 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97319,7 +97319,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0017 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97343,7 +97343,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0018 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97367,7 +97367,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0019 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97391,7 +97391,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0020 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97415,7 +97415,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0021 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97439,7 +97439,7 @@ local kr2_data = {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0022 = {
-		a_name = "go_stages_underground-1.png",
+		a_name = "go_stages_underground-1.dds",
 		size = {
 			90,
 			59
@@ -97463,7 +97463,7 @@ local kr2_data = {
 		alias = {}
 	},
 AmazonGirl_healFx_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97487,7 +97487,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97511,7 +97511,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0003 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97535,7 +97535,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97559,7 +97559,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0005 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97583,7 +97583,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0006 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97607,7 +97607,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0007 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97631,7 +97631,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0008 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97655,7 +97655,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0009 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97679,7 +97679,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0010 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97703,7 +97703,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0011 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97727,7 +97727,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0012 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97751,7 +97751,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0013 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97775,7 +97775,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0014 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97799,7 +97799,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0015 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97823,7 +97823,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0016 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97847,7 +97847,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0017 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97871,7 +97871,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0018 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97895,7 +97895,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0019 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97919,7 +97919,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0020 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97943,7 +97943,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0021 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97967,7 +97967,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0022 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -97991,7 +97991,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0023 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -98015,7 +98015,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0024 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -98039,7 +98039,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonGirl_healFx_0025 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -98063,7 +98063,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonTower_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -98087,7 +98087,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonTower_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -98111,7 +98111,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonTower_0003 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -98135,7 +98135,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonTower_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -98159,7 +98159,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98191,7 +98191,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98215,7 +98215,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0003 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98239,7 +98239,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98263,7 +98263,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0005 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98287,7 +98287,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0006 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98311,7 +98311,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0009 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98337,7 +98337,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0011 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98363,7 +98363,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0013 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98387,7 +98387,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0014 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98413,7 +98413,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0016 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98439,7 +98439,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0018 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98466,7 +98466,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0024 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98492,7 +98492,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0026 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98518,7 +98518,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0028 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98544,7 +98544,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0030 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98570,7 +98570,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0032 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98596,7 +98596,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0034 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98622,7 +98622,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0036 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98648,7 +98648,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0040 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98672,7 +98672,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0041 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98696,7 +98696,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0042 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98720,7 +98720,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0043 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98744,7 +98744,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	AmazonianGirl_0044 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98770,7 +98770,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	AmazonianGirl_0046 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -98794,7 +98794,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
     merc_camp_desert_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -98818,7 +98818,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	merc_camp_desert_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -98842,7 +98842,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	merc_camp_desert_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -98866,7 +98866,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	merc_camp_desert_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -98890,7 +98890,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	merc_camp_desert_fire_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -98916,7 +98916,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	merc_camp_desert_fire_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -98942,7 +98942,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	merc_camp_desert_fire_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -98968,7 +98968,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	merc_camp_desert_fire_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -98994,7 +98994,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	merc_camp_desert_fire_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -99020,7 +99020,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	merc_camp_desert_fire_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -99046,7 +99046,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99074,7 +99074,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99102,7 +99102,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99130,7 +99130,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99158,7 +99158,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99186,7 +99186,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99214,7 +99214,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0025 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99240,7 +99240,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0027 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99266,7 +99266,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0029 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99292,7 +99292,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0031 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99316,7 +99316,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0032 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99340,7 +99340,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0033 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99364,7 +99364,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0034 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99388,7 +99388,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0035 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99412,7 +99412,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0036 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99436,7 +99436,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0037 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99460,7 +99460,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0038 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99484,7 +99484,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0039 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99508,7 +99508,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0040 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99532,7 +99532,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0041 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99556,7 +99556,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0042 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99580,7 +99580,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0043 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99604,7 +99604,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0044 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99630,7 +99630,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0046 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99656,7 +99656,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0048 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99682,7 +99682,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0050 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99708,7 +99708,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0052 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99732,7 +99732,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0053 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99756,7 +99756,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0054 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99780,7 +99780,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0055 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99804,7 +99804,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0056 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99828,7 +99828,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0057 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99852,7 +99852,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0058 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99876,7 +99876,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0059 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99900,7 +99900,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0060 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99924,7 +99924,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0061 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99948,7 +99948,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0062 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99972,7 +99972,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0063 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -99996,7 +99996,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_0064 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -100022,7 +100022,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0066 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -100048,7 +100048,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0068 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -100074,7 +100074,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0070 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -100100,7 +100100,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0072 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -100126,7 +100126,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0074 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -100152,7 +100152,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_0076 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -100178,7 +100178,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100202,7 +100202,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100226,7 +100226,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100250,7 +100250,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100277,7 +100277,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100305,7 +100305,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100332,7 +100332,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100360,7 +100360,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0018 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100387,7 +100387,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0021 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100415,7 +100415,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0025 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100442,7 +100442,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0028 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100470,7 +100470,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0032 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100497,7 +100497,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0035 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100525,7 +100525,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0039 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100552,7 +100552,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0042 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100576,7 +100576,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0043 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100602,7 +100602,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0045 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100628,7 +100628,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0047 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100654,7 +100654,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0049 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100680,7 +100680,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0051 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100706,7 +100706,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0053 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100732,7 +100732,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polyshapes_0055 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -100758,7 +100758,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polysmoke_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -100784,7 +100784,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polysmoke_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -100810,7 +100810,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polysmoke_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -100836,7 +100836,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polysmoke_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -100862,7 +100862,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polysmoke_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -100888,7 +100888,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polysmoke_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -100914,7 +100914,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_djinn_polysmoke_0013 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -100940,7 +100940,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_legionnaire_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -100966,7 +100966,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_legionnaire_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -100990,7 +100990,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101014,7 +101014,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101038,7 +101038,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101062,7 +101062,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0006 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101086,7 +101086,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101112,7 +101112,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_legionnaire_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101138,7 +101138,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_legionnaire_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101164,7 +101164,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_legionnaire_0013 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101188,7 +101188,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101215,7 +101215,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_legionnaire_0018 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101239,7 +101239,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0019 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101263,7 +101263,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0020 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101287,7 +101287,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0021 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101311,7 +101311,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	soldier_legionnaire_0022 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -101337,7 +101337,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	soldier_legionnaire_0024 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -102351,7 +102351,7 @@ AmazonGirl_healFx_0001 = {
         alias = {}
     },
     HalloweenTesla_DrCrazy_layer1_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -102377,7 +102377,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0002 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -102405,7 +102405,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0004 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -102431,7 +102431,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0006 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -102465,7 +102465,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0008 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -102497,7 +102497,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0001 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102523,7 +102523,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0002 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102549,7 +102549,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0004 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102576,7 +102576,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0007 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102602,7 +102602,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0009 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102628,7 +102628,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0011 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102656,7 +102656,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0013 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102682,7 +102682,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0015 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102708,7 +102708,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0017 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102797,7 +102797,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0084 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102823,7 +102823,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0086 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102849,7 +102849,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0088 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102875,7 +102875,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -102919,7 +102919,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0012 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -102945,7 +102945,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0014 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102971,7 +102971,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0016 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -102997,7 +102997,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0018 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103023,7 +103023,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0020 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103049,7 +103049,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0022 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103075,7 +103075,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0024 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103101,7 +103101,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0026 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103129,7 +103129,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0028 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103157,7 +103157,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0030 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103185,7 +103185,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0032 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103213,7 +103213,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0034 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103241,7 +103241,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0036 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103269,7 +103269,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0038 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103297,7 +103297,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0054 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103323,7 +103323,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0056 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103349,7 +103349,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0058 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103375,7 +103375,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0060 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103401,7 +103401,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0062 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103427,7 +103427,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0064 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103453,7 +103453,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0066 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103479,7 +103479,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0077 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103517,7 +103517,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103553,7 +103553,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0002 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103579,7 +103579,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0004 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103605,7 +103605,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0006 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103631,7 +103631,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0008 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103657,7 +103657,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0010 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103683,7 +103683,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0012 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103709,7 +103709,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0020 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103735,7 +103735,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0022 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103761,7 +103761,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0024 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103787,7 +103787,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0026 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103813,7 +103813,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0028 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103839,7 +103839,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0030 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103865,7 +103865,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0032 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103891,7 +103891,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0034 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -103917,7 +103917,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0036 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103943,7 +103943,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103967,7 +103967,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_chargeLoop_layer2_0002 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -103993,7 +103993,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0004 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104019,7 +104019,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0006 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104045,7 +104045,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0008 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104071,7 +104071,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0010 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104097,7 +104097,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0012 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104123,7 +104123,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0014 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104149,7 +104149,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0016 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104175,7 +104175,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0018 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104201,7 +104201,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0020 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104231,7 +104231,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0026 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104257,7 +104257,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0028 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104283,7 +104283,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0030 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104309,7 +104309,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0032 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104335,7 +104335,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0034 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104361,7 +104361,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0036 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104387,7 +104387,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0038 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104413,7 +104413,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0040 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104439,7 +104439,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0042 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104463,7 +104463,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer1_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104530,7 +104530,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104554,7 +104554,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer2_0002 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104580,7 +104580,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0004 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104606,7 +104606,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0006 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104632,7 +104632,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0008 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104658,7 +104658,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0010 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104684,7 +104684,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0012 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104710,7 +104710,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0014 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104736,7 +104736,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0016 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104768,7 +104768,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0024 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104794,7 +104794,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0026 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104820,7 +104820,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer2_0028 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104860,7 +104860,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer3_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104904,7 +104904,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer3_0010 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104928,7 +104928,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0011 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -104952,7 +104952,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0012 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -104976,7 +104976,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0013 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105000,7 +105000,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0014 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105024,7 +105024,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0015 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105048,7 +105048,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0016 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105075,7 +105075,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer3_0019 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105099,7 +105099,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0020 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105123,7 +105123,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0021 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105147,7 +105147,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0022 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105171,7 +105171,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0023 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105195,7 +105195,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0024 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105219,7 +105219,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0025 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105243,7 +105243,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0026 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105267,7 +105267,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0027 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105297,7 +105297,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer4_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105341,7 +105341,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer4_0010 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105365,7 +105365,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0011 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105389,7 +105389,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0012 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105413,7 +105413,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0013 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105437,7 +105437,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0014 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105461,7 +105461,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0015 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105485,7 +105485,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0016 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105512,7 +105512,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer4_0019 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105536,7 +105536,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0020 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105560,7 +105560,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0021 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105584,7 +105584,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0022 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105608,7 +105608,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0023 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105632,7 +105632,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0024 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105656,7 +105656,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0025 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105680,7 +105680,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0026 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			163,
 			158
@@ -105704,7 +105704,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0027 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105734,7 +105734,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105773,7 +105773,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0015 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105799,7 +105799,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0017 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105825,7 +105825,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0019 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105851,7 +105851,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0021 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105877,7 +105877,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0023 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105903,7 +105903,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0025 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105929,7 +105929,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0027 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105955,7 +105955,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0029 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -105981,7 +105981,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0031 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -106007,7 +106007,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0033 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -106033,7 +106033,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0035 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -106059,7 +106059,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0037 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -106085,7 +106085,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0039 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -106111,7 +106111,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_layer5_0041 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			163,
 			158
@@ -106137,7 +106137,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_ray_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106163,7 +106163,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_ray_0003 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106189,7 +106189,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_ray_0005 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106215,7 +106215,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_ray_0007 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106239,7 +106239,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_ray_0008 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106263,7 +106263,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_ray_0009 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106287,7 +106287,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	HalloweenTesla_ray_0010 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106313,7 +106313,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	HalloweenTesla_ray_0012 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			149,
 			48
@@ -106339,7 +106339,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_PunchDecal_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106363,7 +106363,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0002 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106387,7 +106387,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0003 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106411,7 +106411,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0004 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106435,7 +106435,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0005 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106459,7 +106459,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0006 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106483,7 +106483,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0007 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106507,7 +106507,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0008 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106531,7 +106531,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0009 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106555,7 +106555,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0010 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106579,7 +106579,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0011 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106603,7 +106603,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0012 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106627,7 +106627,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0013 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -106651,7 +106651,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_PunchFx_0001 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			70,
 			37
@@ -106679,7 +106679,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_PunchFx_0003 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			70,
 			37
@@ -106707,7 +106707,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_PunchFx_0005 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			70,
 			37
@@ -106733,7 +106733,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_PunchFx_0007 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			70,
 			37
@@ -106761,7 +106761,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_PunchFx_0009 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			70,
 			37
@@ -106787,7 +106787,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_PunchFx_0015 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			70,
 			37
@@ -106813,7 +106813,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_PunchFx_0019 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			70,
 			37
@@ -106839,7 +106839,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0001 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -106865,7 +106865,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0003 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -106891,7 +106891,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0005 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -106917,7 +106917,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0007 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -106943,7 +106943,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0009 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -106969,7 +106969,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0011 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -106995,7 +106995,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0013 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107021,7 +107021,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0015 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107047,7 +107047,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0017 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107073,7 +107073,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0019 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107099,7 +107099,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0021 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107125,7 +107125,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0023 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107158,7 +107158,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0025 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107184,7 +107184,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0027 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107210,7 +107210,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0029 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107236,7 +107236,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0031 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107262,7 +107262,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0033 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107288,7 +107288,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0035 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107317,7 +107317,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0040 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107343,7 +107343,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0042 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107369,7 +107369,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0044 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107395,7 +107395,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0052 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -107422,7 +107422,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0055 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107448,7 +107448,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0057 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107474,7 +107474,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0059 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107500,7 +107500,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0061 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107526,7 +107526,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0063 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107552,7 +107552,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0065 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107578,7 +107578,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0067 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107604,7 +107604,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0069 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107630,7 +107630,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0071 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107656,7 +107656,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0073 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107682,7 +107682,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0075 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107708,7 +107708,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0077 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107734,7 +107734,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0079 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107760,7 +107760,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0081 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107784,7 +107784,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl1_0082 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -107810,7 +107810,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0084 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107836,7 +107836,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0086 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107862,7 +107862,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0088 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107888,7 +107888,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0090 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107914,7 +107914,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0092 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107940,7 +107940,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0094 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107964,7 +107964,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl1_0095 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -107988,7 +107988,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl1_0096 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108014,7 +108014,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0098 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108040,7 +108040,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0100 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108066,7 +108066,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0102 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108092,7 +108092,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0104 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108118,7 +108118,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0106 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108144,7 +108144,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0108 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108170,7 +108170,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0110 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108196,7 +108196,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl1_0112 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108222,7 +108222,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0001 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108248,7 +108248,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0003 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108274,7 +108274,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0005 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108300,7 +108300,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0007 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108326,7 +108326,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0009 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108352,7 +108352,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0011 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108378,7 +108378,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0013 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108404,7 +108404,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0015 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108430,7 +108430,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0017 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108456,7 +108456,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0019 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108482,7 +108482,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0021 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108508,7 +108508,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0023 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108535,7 +108535,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0025 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108561,7 +108561,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0027 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108587,7 +108587,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0029 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108613,7 +108613,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0031 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108639,7 +108639,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0033 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108665,7 +108665,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0035 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108691,7 +108691,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0037 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108717,7 +108717,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0039 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -108743,7 +108743,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0041 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -108769,7 +108769,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0043 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -108795,7 +108795,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0045 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108821,7 +108821,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0047 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108847,7 +108847,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0049 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108873,7 +108873,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0052 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108900,7 +108900,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0055 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108926,7 +108926,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0057 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108950,7 +108950,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0058 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -108974,7 +108974,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0059 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109000,7 +109000,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0061 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109026,7 +109026,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0063 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109052,7 +109052,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0065 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109078,7 +109078,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0067 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109104,7 +109104,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0069 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109130,7 +109130,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0071 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109156,7 +109156,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0073 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109182,7 +109182,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0075 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109208,7 +109208,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0077 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109234,7 +109234,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0079 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109260,7 +109260,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0081 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109284,7 +109284,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0082 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109310,7 +109310,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0084 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109336,7 +109336,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0086 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109362,7 +109362,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0088 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -109388,7 +109388,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0090 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109414,7 +109414,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0092 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109440,7 +109440,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0094 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109464,7 +109464,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0095 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109488,7 +109488,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0096 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109514,7 +109514,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0098 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109540,7 +109540,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0100 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109564,7 +109564,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0101 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109588,7 +109588,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0102 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109614,7 +109614,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0104 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109640,7 +109640,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0106 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109666,7 +109666,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0108 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109692,7 +109692,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0110 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109718,7 +109718,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0112 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109744,7 +109744,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl2_0114 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109768,7 +109768,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0001 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109794,7 +109794,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0003 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109820,7 +109820,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0005 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109846,7 +109846,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0007 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109872,7 +109872,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0009 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109898,7 +109898,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0011 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109924,7 +109924,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0013 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109950,7 +109950,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0015 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -109976,7 +109976,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0017 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110002,7 +110002,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0019 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110028,7 +110028,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0021 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110054,7 +110054,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0023 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110081,7 +110081,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0025 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110107,7 +110107,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0027 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110133,7 +110133,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0029 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110159,7 +110159,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0031 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110185,7 +110185,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0033 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110211,7 +110211,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0035 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110237,7 +110237,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0037 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110263,7 +110263,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0039 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110289,7 +110289,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0041 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110315,7 +110315,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0043 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110341,7 +110341,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0045 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110367,7 +110367,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0047 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110393,7 +110393,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0049 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110419,7 +110419,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0052 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110450,7 +110450,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0057 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110476,7 +110476,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0059 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110502,7 +110502,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0061 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110526,7 +110526,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0062 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110550,7 +110550,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0063 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110574,7 +110574,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0064 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110598,7 +110598,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0065 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110622,7 +110622,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0066 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110646,7 +110646,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0067 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110670,7 +110670,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0068 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110694,7 +110694,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0069 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110718,7 +110718,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0070 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110744,7 +110744,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0072 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110770,7 +110770,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0074 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110794,7 +110794,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0075 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -110818,7 +110818,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0076 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110842,7 +110842,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0077 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110866,7 +110866,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0078 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110890,7 +110890,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0079 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110914,7 +110914,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0080 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110938,7 +110938,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0081 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110962,7 +110962,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0082 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -110986,7 +110986,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0083 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111010,7 +111010,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0084 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111034,7 +111034,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0085 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111058,7 +111058,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0086 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111082,7 +111082,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0087 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111106,7 +111106,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0088 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111130,7 +111130,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0089 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111156,7 +111156,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0091 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111182,7 +111182,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0095 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111209,7 +111209,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0098 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111235,7 +111235,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0100 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111259,7 +111259,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0101 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111283,7 +111283,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0102 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111309,7 +111309,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0104 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111335,7 +111335,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0106 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111361,7 +111361,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0108 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111387,7 +111387,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0110 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111413,7 +111413,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0112 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111439,7 +111439,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0114 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111465,7 +111465,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0116 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111491,7 +111491,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0118 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111517,7 +111517,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0120 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111543,7 +111543,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0122 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111569,7 +111569,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0124 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111593,7 +111593,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0125 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111619,7 +111619,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0127 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111645,7 +111645,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0129 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111671,7 +111671,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0131 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111697,7 +111697,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0133 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			127,
 			127
@@ -111723,7 +111723,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0135 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111749,7 +111749,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0137 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111773,7 +111773,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0138 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111797,7 +111797,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0139 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111823,7 +111823,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0141 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111849,7 +111849,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0143 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111873,7 +111873,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0144 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111897,7 +111897,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0145 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111923,7 +111923,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0147 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111949,7 +111949,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0149 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -111975,7 +111975,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0151 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -112001,7 +112001,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0153 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -112027,7 +112027,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0155 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -112053,7 +112053,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	Halloween_Frankie_lvl3_0157 = {
-		a_name = "go_stages_halloween-2.png",
+		a_name = "go_stages_halloween-2.dds",
 		size = {
 			127,
 			127
@@ -112077,7 +112077,7 @@ AmazonGirl_healFx_0001 = {
 		alias = {}
 	},
     TowerHalloween_lightning_hit_0001 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			56,
 			45
@@ -112103,7 +112103,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	TowerHalloween_lightning_hit_0003 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			56,
 			45
@@ -112129,7 +112129,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	TowerHalloween_lightning_hit_0005 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			56,
 			45
@@ -112159,7 +112159,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	TowerHalloween_lightning_hit_0007 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			56,
 			45
@@ -112187,7 +112187,7 @@ AmazonGirl_healFx_0001 = {
 		}
 	},
 	TowerHalloween_lightning_hit_0009 = {
-		a_name = "go_stages_halloween-1.png",
+		a_name = "go_stages_halloween-1.dds",
 		size = {
 			56,
 			45
@@ -171948,7 +171948,7 @@ local kr3_data = {
 		}
 	},
     fairy_dragon_0001 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -171974,7 +171974,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0003 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172002,7 +172002,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0005 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172030,7 +172030,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172058,7 +172058,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172086,7 +172086,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0011 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172114,7 +172114,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0013 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172142,7 +172142,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0015 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172170,7 +172170,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0017 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172198,7 +172198,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0019 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172222,7 +172222,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_0020 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172248,7 +172248,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0022 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172274,7 +172274,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0024 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172300,7 +172300,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0026 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172326,7 +172326,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0028 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172352,7 +172352,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0030 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172378,7 +172378,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0032 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -172404,7 +172404,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0034 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172430,7 +172430,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0036 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172456,7 +172456,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0038 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172482,7 +172482,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0040 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172508,7 +172508,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0042 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172534,7 +172534,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0044 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172560,7 +172560,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0046 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172586,7 +172586,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0048 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172612,7 +172612,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0050 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172638,7 +172638,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0052 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172664,7 +172664,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0054 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -172688,7 +172688,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_0055 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -172714,7 +172714,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0057 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172740,7 +172740,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0059 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172766,7 +172766,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0061 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -172792,7 +172792,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0079 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -172837,7 +172837,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0090 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172863,7 +172863,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0092 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -172889,7 +172889,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0094 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172915,7 +172915,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0096 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -172941,7 +172941,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0098 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -172967,7 +172967,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0100 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -172993,7 +172993,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_0102 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -173019,7 +173019,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0001 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -173043,7 +173043,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_egg_0002 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -173069,7 +173069,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0004 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -173095,7 +173095,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0006 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			56
@@ -173121,7 +173121,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0008 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -173147,7 +173147,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0010 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -173173,7 +173173,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0012 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -173199,7 +173199,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0014 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -173225,7 +173225,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_egg_0016 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			56
@@ -173249,7 +173249,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -173275,7 +173275,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_freeze_0003 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -173299,7 +173299,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0004 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173323,7 +173323,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0005 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173347,7 +173347,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0006 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173371,7 +173371,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0007 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -173395,7 +173395,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0008 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -173419,7 +173419,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0009 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -173443,7 +173443,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0010 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173467,7 +173467,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0011 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173491,7 +173491,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0012 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173515,7 +173515,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0013 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173539,7 +173539,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0014 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -173563,7 +173563,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0015 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173587,7 +173587,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0016 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173611,7 +173611,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0017 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173635,7 +173635,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0018 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173659,7 +173659,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0019 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173683,7 +173683,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0020 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173707,7 +173707,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0021 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173731,7 +173731,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0022 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -173755,7 +173755,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_0023 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -173779,7 +173779,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -173805,7 +173805,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_freeze_flying_0003 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -173831,7 +173831,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_freeze_flying_0005 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -173855,7 +173855,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0006 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -173879,7 +173879,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -173903,7 +173903,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0008 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -173927,7 +173927,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0009 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -173951,7 +173951,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0010 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -173975,7 +173975,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0011 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -173999,7 +173999,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0012 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -174023,7 +174023,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0013 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -174047,7 +174047,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0014 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -174071,7 +174071,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0015 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -174095,7 +174095,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0016 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -174119,7 +174119,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0017 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -174143,7 +174143,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0018 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -174167,7 +174167,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0019 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -174191,7 +174191,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0020 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -174215,7 +174215,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0021 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -174239,7 +174239,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_proy_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			28,
 			28
@@ -174263,7 +174263,7 @@ local kr3_data = {
 		alias = {}
 	},
 	fairy_dragon_proy_0002 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -174289,7 +174289,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_proy_0004 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -174315,7 +174315,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_proy_0006 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -174341,7 +174341,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_proy_0008 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -174367,7 +174367,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_proy_particle_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			17,
 			11
@@ -174393,7 +174393,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_proy_particle_0003 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			17,
 			11
@@ -174419,7 +174419,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_proy_particle_0005 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			17,
 			11
@@ -174445,7 +174445,7 @@ local kr3_data = {
 		}
 	},
 	fairy_dragon_tower = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			141,
 			118
@@ -174469,7 +174469,7 @@ local kr3_data = {
 		alias = {}
 	},
     ewok_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174498,7 +174498,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174524,7 +174524,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174550,7 +174550,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174576,7 +174576,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0008 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174602,7 +174602,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174628,7 +174628,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0012 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174654,7 +174654,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0014 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174680,7 +174680,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174706,7 +174706,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0018 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174730,7 +174730,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174754,7 +174754,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0020 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174778,7 +174778,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0021 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174804,7 +174804,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0023 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174830,7 +174830,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174856,7 +174856,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0027 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174882,7 +174882,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0031 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174908,7 +174908,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0033 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174934,7 +174934,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0035 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174960,7 +174960,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0037 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -174986,7 +174986,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0039 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175018,7 +175018,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0043 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175044,7 +175044,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0045 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175070,7 +175070,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0047 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175096,7 +175096,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0053 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175122,7 +175122,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0056 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175146,7 +175146,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0057 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175170,7 +175170,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0058 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175194,7 +175194,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0059 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175218,7 +175218,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0060 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175242,7 +175242,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0061 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175266,7 +175266,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0062 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175290,7 +175290,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0063 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175314,7 +175314,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0064 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175338,7 +175338,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0065 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175362,7 +175362,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0066 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175388,7 +175388,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0068 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175414,7 +175414,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0070 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175440,7 +175440,7 @@ local kr3_data = {
 		}
 	},
 	ewok_0073 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175464,7 +175464,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0074 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175488,7 +175488,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0075 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175512,7 +175512,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0076 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175536,7 +175536,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0077 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175560,7 +175560,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0078 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175584,7 +175584,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0079 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175608,7 +175608,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_0080 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -175632,7 +175632,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_hut_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175656,7 +175656,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_hut_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175680,7 +175680,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_hut_0003 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175706,7 +175706,7 @@ local kr3_data = {
 		}
 	},
 	ewok_hut_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175730,7 +175730,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_hut_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175754,7 +175754,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_hut_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175797,7 +175797,7 @@ local kr3_data = {
 		}
 	},
 	ewok_hut_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175821,7 +175821,7 @@ local kr3_data = {
 		alias = {}
 	},
 	ewok_hut_0026 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -175845,7 +175845,7 @@ local kr3_data = {
 		alias = {}
 	},
     babyAshbite_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -175871,7 +175871,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -175897,7 +175897,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -175923,7 +175923,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0007 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -175949,7 +175949,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0009 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -175975,7 +175975,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0011 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176001,7 +176001,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0013 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176027,7 +176027,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0015 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176053,7 +176053,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0017 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176079,7 +176079,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0019 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176105,7 +176105,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0021 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176131,7 +176131,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0023 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176157,7 +176157,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0025 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176183,7 +176183,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0027 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176209,7 +176209,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0029 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176235,7 +176235,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0031 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176261,7 +176261,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0033 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176287,7 +176287,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0035 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176313,7 +176313,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0037 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176339,7 +176339,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0039 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176367,7 +176367,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0041 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176395,7 +176395,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0043 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176423,7 +176423,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0045 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176450,7 +176450,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0047 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176476,7 +176476,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0049 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176502,7 +176502,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0051 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176528,7 +176528,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0053 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176554,7 +176554,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0055 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176580,7 +176580,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0057 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176606,7 +176606,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0059 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176632,7 +176632,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0061 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176658,7 +176658,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0063 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176682,7 +176682,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0064 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176730,7 +176730,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0065 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176756,7 +176756,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0067 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176782,7 +176782,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0069 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176808,7 +176808,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0071 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176834,7 +176834,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0073 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176860,7 +176860,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0075 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176884,7 +176884,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0076 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176908,7 +176908,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0077 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176932,7 +176932,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0078 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176956,7 +176956,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0079 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -176982,7 +176982,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0081 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177008,7 +177008,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0083 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177034,7 +177034,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0085 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177060,7 +177060,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0087 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177086,7 +177086,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0089 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177112,7 +177112,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0091 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177138,7 +177138,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0093 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177162,7 +177162,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0094 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177186,7 +177186,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0095 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177210,7 +177210,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0096 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177234,7 +177234,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0097 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177258,7 +177258,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0098 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177282,7 +177282,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0099 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177306,7 +177306,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_0100 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177332,7 +177332,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0102 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177358,7 +177358,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0104 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177384,7 +177384,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0106 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177410,7 +177410,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0108 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177436,7 +177436,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0110 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177462,7 +177462,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0112 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177498,7 +177498,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0114 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177524,7 +177524,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0118 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177557,7 +177557,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0135 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177583,7 +177583,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0137 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177609,7 +177609,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_0158 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			155,
 			203
@@ -177656,7 +177656,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_fireDecal_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177680,7 +177680,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0002 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177704,7 +177704,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177728,7 +177728,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0004 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177752,7 +177752,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177776,7 +177776,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0006 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177800,7 +177800,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0007 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177824,7 +177824,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0008 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177848,7 +177848,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0009 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177872,7 +177872,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0010 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177896,7 +177896,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0011 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177920,7 +177920,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0012 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177944,7 +177944,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0013 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177968,7 +177968,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0014 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -177992,7 +177992,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0015 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178016,7 +178016,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0016 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178040,7 +178040,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0017 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178064,7 +178064,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0018 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178088,7 +178088,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0019 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178112,7 +178112,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0020 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178136,7 +178136,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0021 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178160,7 +178160,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0022 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178184,7 +178184,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0023 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178208,7 +178208,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0024 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178232,7 +178232,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0025 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178256,7 +178256,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0026 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178280,7 +178280,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0027 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178304,7 +178304,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0028 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178328,7 +178328,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0029 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178352,7 +178352,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0030 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178376,7 +178376,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0031 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178400,7 +178400,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_fireDecal_0032 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			93,
 			59
@@ -178424,7 +178424,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_proyHitAir_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178448,7 +178448,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_proyHitAir_0002 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178472,7 +178472,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_proyHitAir_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178498,7 +178498,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHitAir_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178524,7 +178524,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHitAir_0007 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178550,7 +178550,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHitAir_0009 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178576,7 +178576,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHitAir_0011 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178602,7 +178602,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHitAir_0013 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178628,7 +178628,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHit_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178652,7 +178652,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_proyHit_0002 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178678,7 +178678,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHit_0004 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178704,7 +178704,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHit_0006 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178730,7 +178730,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHit_0008 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178756,7 +178756,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHit_0010 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178782,7 +178782,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHit_0012 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178808,7 +178808,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proyHit_0014 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			62,
 			56
@@ -178834,7 +178834,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proy_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			31
@@ -178860,7 +178860,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proy_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			31
@@ -178886,7 +178886,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proy_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			31
@@ -178912,7 +178912,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proy_0007 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			31
@@ -178938,7 +178938,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_proy_0009 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			31
@@ -178964,7 +178964,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -178991,7 +178991,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0004 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179018,7 +179018,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0007 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179045,7 +179045,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0010 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179072,7 +179072,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0013 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179099,7 +179099,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0016 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179126,7 +179126,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0019 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179153,7 +179153,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0022 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179180,7 +179180,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeDecal_0025 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179207,7 +179207,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeParticle_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179231,7 +179231,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_smokeParticle_0002 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179255,7 +179255,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_smokeParticle_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179281,7 +179281,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeParticle_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179307,7 +179307,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeParticle_0007 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179333,7 +179333,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_smokeParticle_0009 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			68,
 			51
@@ -179359,7 +179359,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_decal = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			76
@@ -179383,7 +179383,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_specialFire_fire_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179409,7 +179409,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179435,7 +179435,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179461,7 +179461,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0007 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179487,7 +179487,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0009 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179513,7 +179513,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0011 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179539,7 +179539,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0013 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179565,7 +179565,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0015 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179591,7 +179591,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_fire_0017 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			118,
 			79
@@ -179617,7 +179617,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_specialFire_particle_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			42,
 			42
@@ -179641,7 +179641,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_specialFire_particle_0002 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			42,
 			42
@@ -179665,7 +179665,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_specialFire_particle_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			42,
 			42
@@ -179689,7 +179689,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_specialFire_particle_0004 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			42,
 			42
@@ -179713,7 +179713,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_specialFire_particle_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			42,
 			42
@@ -179737,7 +179737,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_specialFire_particle_0006 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			42,
 			42
@@ -179761,7 +179761,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_tower_layer1_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			127,
 			155
@@ -179785,7 +179785,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_tower_layer1_0001_over = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			173,
 			211
@@ -179809,7 +179809,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_tower_layer2_0001 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			127,
 			155
@@ -179833,7 +179833,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_tower_layer2_0002 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			127,
 			155
@@ -179857,7 +179857,7 @@ local kr3_data = {
 		alias = {}
 	},
 	babyAshbite_tower_layer2_0003 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			127,
 			155
@@ -179883,7 +179883,7 @@ local kr3_data = {
 		}
 	},
 	babyAshbite_tower_layer2_0005 = {
-		a_name = "go_stage61-1.png",
+		a_name = "go_stage61-1.dds",
 		size = {
 			127,
 			155
@@ -179907,7 +179907,7 @@ local kr3_data = {
 		alias = {}
 	},
     	pixie_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -179935,7 +179935,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0003 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -179961,7 +179961,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0004 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -179985,7 +179985,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0005 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180015,7 +180015,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0007 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180045,7 +180045,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0017 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180069,7 +180069,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0018 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180093,7 +180093,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0019 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180120,7 +180120,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0021 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180146,7 +180146,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0022 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180172,7 +180172,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0024 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180199,7 +180199,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0027 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180228,7 +180228,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0030 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180258,7 +180258,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0038 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180282,7 +180282,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0039 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180306,7 +180306,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0041 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180330,7 +180330,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0042 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180360,7 +180360,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0043 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180384,7 +180384,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0044 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180411,7 +180411,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0047 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180435,7 +180435,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0048 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180461,7 +180461,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0050 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180487,7 +180487,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0052 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180513,7 +180513,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0054 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180537,7 +180537,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0055 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180561,7 +180561,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0063 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180585,7 +180585,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0064 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180609,7 +180609,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0065 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180633,7 +180633,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0066 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180657,7 +180657,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0067 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180681,7 +180681,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0068 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180705,7 +180705,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0069 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180729,7 +180729,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0070 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180753,7 +180753,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0071 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180777,7 +180777,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0072 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180801,7 +180801,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0073 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180825,7 +180825,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0074 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180849,7 +180849,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0075 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180873,7 +180873,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0076 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180897,7 +180897,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0077 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180921,7 +180921,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0078 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180945,7 +180945,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0079 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180969,7 +180969,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0080 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -180993,7 +180993,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0081 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181017,7 +181017,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0082 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181041,7 +181041,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0083 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181065,7 +181065,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0084 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181089,7 +181089,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0085 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181113,7 +181113,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0086 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181137,7 +181137,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0088 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181163,7 +181163,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0090 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181190,7 +181190,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0093 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181214,7 +181214,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0094 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181240,7 +181240,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0096 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181266,7 +181266,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0098 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181292,7 +181292,7 @@ local kr3_data = {
 		}
 	},
 	pixie_0101 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181316,7 +181316,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0102 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181340,7 +181340,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0103 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181364,7 +181364,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0104 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181388,7 +181388,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0105 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181412,7 +181412,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_0106 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			62,
 			62
@@ -181438,7 +181438,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottle = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			11,
 			14
@@ -181462,7 +181462,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_bottleHit_big_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181488,7 +181488,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_big_0003 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181514,7 +181514,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_big_0005 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181540,7 +181540,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_big_0007 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181566,7 +181566,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_big_0009 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181592,7 +181592,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_big_0011 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181618,7 +181618,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_big_0013 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181644,7 +181644,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_big_0015 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			59,
 			59
@@ -181670,7 +181670,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181696,7 +181696,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0003 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181722,7 +181722,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0005 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181748,7 +181748,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0007 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181774,7 +181774,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0009 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181800,7 +181800,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0011 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181826,7 +181826,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0013 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181852,7 +181852,7 @@ local kr3_data = {
 		}
 	},
 	pixie_bottleHit_small_0015 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			48,
 			48
@@ -181878,7 +181878,7 @@ local kr3_data = {
 		}
 	},
 	pixie_hitFx_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			28,
 			28
@@ -181904,7 +181904,7 @@ local kr3_data = {
 		}
 	},
 	pixie_hitFx_0003 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			28,
 			28
@@ -181930,7 +181930,7 @@ local kr3_data = {
 		}
 	},
 	pixie_hitFx_0005 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			28,
 			28
@@ -181956,7 +181956,7 @@ local kr3_data = {
 		}
 	},
 	pixie_hitFx_0007 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			28,
 			28
@@ -181982,7 +181982,7 @@ local kr3_data = {
 		}
 	},
 	pixie_hitFx_0009 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			28,
 			28
@@ -182008,7 +182008,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroom = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			20,
 			20
@@ -182032,7 +182032,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_mushroomHit_big_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182056,7 +182056,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_mushroomHit_big_0002 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182082,7 +182082,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroomHit_big_0004 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182108,7 +182108,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroomHit_big_0006 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182134,7 +182134,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroomHit_big_0008 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182160,7 +182160,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroomHit_big_0010 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182186,7 +182186,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroomHit_big_0012 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182212,7 +182212,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroomHit_big_0014 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182238,7 +182238,7 @@ local kr3_data = {
 		}
 	},
 	pixie_mushroomHit_big_0016 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182262,7 +182262,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_mushroomHit_big_0017 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			115,
 			96
@@ -182286,7 +182286,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_polymorph_smoke_big_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182310,7 +182310,7 @@ local kr3_data = {
 		alias = {}
 	},
 	pixie_polymorph_smoke_big_0002 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182336,7 +182336,7 @@ local kr3_data = {
 		}
 	},
 	pixie_polymorph_smoke_big_0004 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182362,7 +182362,7 @@ local kr3_data = {
 		}
 	},
 	pixie_polymorph_smoke_big_0006 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182388,7 +182388,7 @@ local kr3_data = {
 		}
 	},
 	pixie_polymorph_smoke_big_0008 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182414,7 +182414,7 @@ local kr3_data = {
 		}
 	},
 	pixie_polymorph_smoke_big_0010 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182440,7 +182440,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_big_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182466,7 +182466,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_big_0003 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182492,7 +182492,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_big_0005 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182518,7 +182518,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_big_0007 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182544,7 +182544,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_big_0009 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			124,
 			98
@@ -182570,7 +182570,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_small_0001 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			87,
 			65
@@ -182596,7 +182596,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_small_0003 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			87,
 			65
@@ -182622,7 +182622,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_small_0005 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			87,
 			65
@@ -182648,7 +182648,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_small_0007 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			87,
 			65
@@ -182674,7 +182674,7 @@ local kr3_data = {
 		}
 	},
 	pixie_teleport_small_0009 = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			87,
 			65
@@ -182700,7 +182700,7 @@ local kr3_data = {
 		}
 	},
     pixie_tower = {
-		a_name = "go_stage59-1.png",
+		a_name = "go_stage59-1.dds",
 		size = {
 			127,
 			113

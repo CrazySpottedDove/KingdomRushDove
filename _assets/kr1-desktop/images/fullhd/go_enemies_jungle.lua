@@ -2,7 +2,7 @@
 
 return {
 	AlienBreeder_0001 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0002 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0003 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0004 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0005 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0006 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0007 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			56
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0008 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0009 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0010 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0011 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0012 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0013 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0015 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0017 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0018 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0019 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0020 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0021 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0022 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -556,7 +556,7 @@ return {
 		}
 	},
 	AlienBreeder_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -580,7 +580,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0026 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			70,
 			56
@@ -604,7 +604,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -628,7 +628,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0028 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -652,7 +652,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0029 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -676,7 +676,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -700,7 +700,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0031 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -724,7 +724,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -748,7 +748,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0033 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			70,
 			56
@@ -772,7 +772,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0034 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -796,7 +796,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0035 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -820,7 +820,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0036 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -844,7 +844,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0037 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -868,7 +868,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0038 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -892,7 +892,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0039 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -916,7 +916,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0040 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -940,7 +940,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0041 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -964,7 +964,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0042 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			70,
 			56
@@ -988,7 +988,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0043 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1012,7 +1012,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0044 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1036,7 +1036,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0045 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1060,7 +1060,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0046 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1084,7 +1084,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0047 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1108,7 +1108,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0048 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1132,7 +1132,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0049 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1156,7 +1156,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0050 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1180,7 +1180,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0051 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1204,7 +1204,7 @@ return {
 		alias = {}
 	},
 	AlienBreeder_0052 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			70,
 			56
@@ -1228,7 +1228,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0001 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1261,7 +1261,7 @@ return {
 		}
 	},
 	AlienEgg_0003 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1285,7 +1285,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0004 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1311,7 +1311,7 @@ return {
 		}
 	},
 	AlienEgg_0006 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1335,7 +1335,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0007 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1361,7 +1361,7 @@ return {
 		}
 	},
 	AlienEgg_0009 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1385,7 +1385,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0010 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1409,7 +1409,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0011 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1433,7 +1433,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0012 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1457,7 +1457,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0013 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1481,7 +1481,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0014 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1505,7 +1505,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0015 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1529,7 +1529,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0016 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1555,7 +1555,7 @@ return {
 		}
 	},
 	AlienEgg_0018 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1579,7 +1579,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0019 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			70,
 			48
@@ -1605,7 +1605,7 @@ return {
 		}
 	},
 	AlienEgg_0021 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1631,7 +1631,7 @@ return {
 		}
 	},
 	AlienEgg_0023 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			70,
 			48
@@ -1657,7 +1657,7 @@ return {
 		}
 	},
 	AlienEgg_0025 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1681,7 +1681,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0026 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1707,7 +1707,7 @@ return {
 		}
 	},
 	AlienEgg_0028 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1733,7 +1733,7 @@ return {
 		}
 	},
 	AlienEgg_0037 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1759,7 +1759,7 @@ return {
 		}
 	},
 	AlienEgg_0039 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1785,7 +1785,7 @@ return {
 		}
 	},
 	AlienEgg_0041 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			70,
 			48
@@ -1811,7 +1811,7 @@ return {
 		}
 	},
 	AlienEgg_0043 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1835,7 +1835,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0044 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1859,7 +1859,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0045 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1883,7 +1883,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0046 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1907,7 +1907,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0047 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1931,7 +1931,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0048 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			70,
 			48
@@ -1955,7 +1955,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0049 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -1979,7 +1979,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0050 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -2003,7 +2003,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0051 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -2027,7 +2027,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0052 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			70,
 			48
@@ -2051,7 +2051,7 @@ return {
 		alias = {}
 	},
 	AlienEgg_0053 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			70,
 			48
@@ -2090,7 +2090,7 @@ return {
 		}
 	},
 	CanibalHunter_0001 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2116,7 +2116,7 @@ return {
 		}
 	},
 	CanibalHunter_0003 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2142,7 +2142,7 @@ return {
 		}
 	},
 	CanibalHunter_0005 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2168,7 +2168,7 @@ return {
 		}
 	},
 	CanibalHunter_0007 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2192,7 +2192,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0008 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2218,7 +2218,7 @@ return {
 		}
 	},
 	CanibalHunter_0010 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2244,7 +2244,7 @@ return {
 		}
 	},
 	CanibalHunter_0012 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2270,7 +2270,7 @@ return {
 		}
 	},
 	CanibalHunter_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2296,7 +2296,7 @@ return {
 		}
 	},
 	CanibalHunter_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2322,7 +2322,7 @@ return {
 		}
 	},
 	CanibalHunter_0018 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2346,7 +2346,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0019 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2372,7 +2372,7 @@ return {
 		}
 	},
 	CanibalHunter_0021 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2398,7 +2398,7 @@ return {
 		}
 	},
 	CanibalHunter_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2424,7 +2424,7 @@ return {
 		}
 	},
 	CanibalHunter_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2450,7 +2450,7 @@ return {
 		}
 	},
 	CanibalHunter_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2476,7 +2476,7 @@ return {
 		}
 	},
 	CanibalHunter_0029 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2500,7 +2500,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2526,7 +2526,7 @@ return {
 		}
 	},
 	CanibalHunter_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2552,7 +2552,7 @@ return {
 		}
 	},
 	CanibalHunter_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2578,7 +2578,7 @@ return {
 		}
 	},
 	CanibalHunter_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2604,7 +2604,7 @@ return {
 		}
 	},
 	CanibalHunter_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2630,7 +2630,7 @@ return {
 		}
 	},
 	CanibalHunter_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2654,7 +2654,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0041 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2680,7 +2680,7 @@ return {
 		}
 	},
 	CanibalHunter_0043 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2706,7 +2706,7 @@ return {
 		}
 	},
 	CanibalHunter_0045 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2732,7 +2732,7 @@ return {
 		}
 	},
 	CanibalHunter_0047 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2758,7 +2758,7 @@ return {
 		}
 	},
 	CanibalHunter_0049 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2784,7 +2784,7 @@ return {
 		}
 	},
 	CanibalHunter_0051 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2808,7 +2808,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0052 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2834,7 +2834,7 @@ return {
 		}
 	},
 	CanibalHunter_0054 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2860,7 +2860,7 @@ return {
 		}
 	},
 	CanibalHunter_0056 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2886,7 +2886,7 @@ return {
 		}
 	},
 	CanibalHunter_0058 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2912,7 +2912,7 @@ return {
 		}
 	},
 	CanibalHunter_0060 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2938,7 +2938,7 @@ return {
 		}
 	},
 	CanibalHunter_0062 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2962,7 +2962,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0063 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -2988,7 +2988,7 @@ return {
 		}
 	},
 	CanibalHunter_0065 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3014,7 +3014,7 @@ return {
 		}
 	},
 	CanibalHunter_0067 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3043,7 +3043,7 @@ return {
 		}
 	},
 	CanibalHunter_0070 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3069,7 +3069,7 @@ return {
 		}
 	},
 	CanibalHunter_0072 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3095,7 +3095,7 @@ return {
 		}
 	},
 	CanibalHunter_0074 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3122,7 +3122,7 @@ return {
 		}
 	},
 	CanibalHunter_0077 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3148,7 +3148,7 @@ return {
 		}
 	},
 	CanibalHunter_0079 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3174,7 +3174,7 @@ return {
 		}
 	},
 	CanibalHunter_0081 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3200,7 +3200,7 @@ return {
 		}
 	},
 	CanibalHunter_0083 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3228,7 +3228,7 @@ return {
 		}
 	},
 	CanibalHunter_0088 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3254,7 +3254,7 @@ return {
 		}
 	},
 	CanibalHunter_0090 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			62
@@ -3280,7 +3280,7 @@ return {
 		}
 	},
 	CanibalHunter_0092 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3306,7 +3306,7 @@ return {
 		}
 	},
 	CanibalHunter_0094 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3332,7 +3332,7 @@ return {
 		}
 	},
 	CanibalHunter_0096 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3358,7 +3358,7 @@ return {
 		}
 	},
 	CanibalHunter_0098 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3384,7 +3384,7 @@ return {
 		}
 	},
 	CanibalHunter_0100 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3410,7 +3410,7 @@ return {
 		}
 	},
 	CanibalHunter_0102 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3438,7 +3438,7 @@ return {
 		}
 	},
 	CanibalHunter_0106 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3464,7 +3464,7 @@ return {
 		}
 	},
 	CanibalHunter_0108 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3488,7 +3488,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0109 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3512,7 +3512,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0110 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3538,7 +3538,7 @@ return {
 		}
 	},
 	CanibalHunter_0112 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3564,7 +3564,7 @@ return {
 		}
 	},
 	CanibalHunter_0114 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3588,7 +3588,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0115 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3612,7 +3612,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0116 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3636,7 +3636,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0117 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3660,7 +3660,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0118 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3693,7 +3693,7 @@ return {
 		}
 	},
 	CanibalHunter_0127 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3719,7 +3719,7 @@ return {
 		}
 	},
 	CanibalHunter_0129 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3743,7 +3743,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0130 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			62
@@ -3767,7 +3767,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0132 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3791,7 +3791,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0133 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3815,7 +3815,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0134 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3839,7 +3839,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0135 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3863,7 +3863,7 @@ return {
 		alias = {}
 	},
 	CanibalHunter_0136 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			62
@@ -3889,7 +3889,7 @@ return {
 		}
 	},
 	CanibalHunter_0138 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			62
@@ -3921,7 +3921,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0001 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -3947,7 +3947,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0003 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -3973,7 +3973,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0005 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -3999,7 +3999,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0007 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4023,7 +4023,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0008 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4049,7 +4049,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0010 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4075,7 +4075,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0012 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4101,7 +4101,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4127,7 +4127,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4153,7 +4153,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0018 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4177,7 +4177,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0019 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4203,7 +4203,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0021 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4229,7 +4229,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4255,7 +4255,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4281,7 +4281,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4307,7 +4307,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0029 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4331,7 +4331,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4357,7 +4357,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4383,7 +4383,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4409,7 +4409,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4435,7 +4435,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4461,7 +4461,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4485,7 +4485,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0041 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4511,7 +4511,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0043 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4537,7 +4537,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0045 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4563,7 +4563,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0047 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4589,7 +4589,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0049 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4615,7 +4615,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0051 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4639,7 +4639,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0052 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4665,7 +4665,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0054 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4691,7 +4691,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0056 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4717,7 +4717,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0058 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4743,7 +4743,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0060 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4769,7 +4769,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0062 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4793,7 +4793,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0063 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4819,7 +4819,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0065 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4845,7 +4845,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0067 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4871,7 +4871,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0068 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4899,7 +4899,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0070 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4927,7 +4927,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0072 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -4955,7 +4955,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0074 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -4985,7 +4985,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0077 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -5009,7 +5009,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0078 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -5033,7 +5033,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0079 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5057,7 +5057,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0080 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5081,7 +5081,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0081 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5105,7 +5105,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0082 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5129,7 +5129,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0083 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5153,7 +5153,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0084 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5177,7 +5177,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0085 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5201,7 +5201,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0086 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5225,7 +5225,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0087 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5249,7 +5249,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0088 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5273,7 +5273,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0089 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5297,7 +5297,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0090 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5321,7 +5321,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0091 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5345,7 +5345,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0092 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5369,7 +5369,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0093 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5393,7 +5393,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0094 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5417,7 +5417,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0095 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5441,7 +5441,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0096 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5465,7 +5465,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0097 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5489,7 +5489,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0098 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5513,7 +5513,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0099 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5537,7 +5537,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0100 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5561,7 +5561,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0110 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -5587,7 +5587,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0112 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5613,7 +5613,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0114 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5639,7 +5639,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0116 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5665,7 +5665,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0118 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5692,7 +5692,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0121 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -5718,7 +5718,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0123 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -5744,7 +5744,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0125 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -5768,7 +5768,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0126 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -5792,7 +5792,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0127 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5820,7 +5820,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0129 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5846,7 +5846,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0131 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5872,7 +5872,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0133 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5902,7 +5902,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0139 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -5928,7 +5928,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0141 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -5954,7 +5954,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0143 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -5980,7 +5980,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0147 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6004,7 +6004,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0148 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6028,7 +6028,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0149 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -6054,7 +6054,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0151 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6080,7 +6080,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0153 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6104,7 +6104,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0154 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6128,7 +6128,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0155 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6152,7 +6152,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0156 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -6176,7 +6176,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0157 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -6209,7 +6209,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0166 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -6235,7 +6235,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0168 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6259,7 +6259,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0169 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6283,7 +6283,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0171 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6307,7 +6307,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0172 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6331,7 +6331,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0173 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -6355,7 +6355,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0174 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -6379,7 +6379,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanMagic_0175 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -6405,7 +6405,7 @@ return {
 		}
 	},
 	CanibalShamanMagic_0177 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -6429,7 +6429,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0001 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6455,7 +6455,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0003 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6481,7 +6481,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0005 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6507,7 +6507,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0007 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6531,7 +6531,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0008 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6557,7 +6557,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0010 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6583,7 +6583,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0012 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6609,7 +6609,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6635,7 +6635,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6661,7 +6661,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0018 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6685,7 +6685,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0019 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6711,7 +6711,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0021 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -6737,7 +6737,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6763,7 +6763,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6789,7 +6789,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6815,7 +6815,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0029 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6839,7 +6839,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6865,7 +6865,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6891,7 +6891,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6917,7 +6917,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6943,7 +6943,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6969,7 +6969,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -6993,7 +6993,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0041 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -7019,7 +7019,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0043 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -7045,7 +7045,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0045 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7071,7 +7071,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0047 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7097,7 +7097,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0049 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7123,7 +7123,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0051 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7147,7 +7147,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0052 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7173,7 +7173,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0054 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7199,7 +7199,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0056 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7225,7 +7225,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0058 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7251,7 +7251,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0060 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7277,7 +7277,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0062 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7301,7 +7301,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0063 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7327,7 +7327,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0065 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7353,7 +7353,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0067 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7386,7 +7386,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0070 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7412,7 +7412,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0072 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -7438,7 +7438,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0074 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7464,7 +7464,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0076 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7490,7 +7490,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0078 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7516,7 +7516,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0080 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7542,7 +7542,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0082 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7568,7 +7568,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0084 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7594,7 +7594,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0086 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7620,7 +7620,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0088 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7646,7 +7646,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0090 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7672,7 +7672,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0092 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7698,7 +7698,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0094 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7724,7 +7724,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0096 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7750,7 +7750,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0103 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7776,7 +7776,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0105 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7802,7 +7802,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0107 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7829,7 +7829,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0110 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7855,7 +7855,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0112 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7881,7 +7881,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0114 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7907,7 +7907,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0116 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7933,7 +7933,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0118 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7960,7 +7960,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0121 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -7986,7 +7986,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0123 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -8012,7 +8012,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0125 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -8036,7 +8036,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0126 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			107,
 			82
@@ -8060,7 +8060,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0127 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8088,7 +8088,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0129 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8114,7 +8114,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0131 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8140,7 +8140,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0133 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8170,7 +8170,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0139 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			107,
 			82
@@ -8196,7 +8196,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0141 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			107,
 			82
@@ -8222,7 +8222,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0143 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8248,7 +8248,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0147 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8272,7 +8272,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0148 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8296,7 +8296,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0149 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8322,7 +8322,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0151 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8348,7 +8348,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0153 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8372,7 +8372,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0154 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8396,7 +8396,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0155 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8420,7 +8420,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0156 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8444,7 +8444,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0157 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8477,7 +8477,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0166 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8503,7 +8503,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0168 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8527,7 +8527,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0169 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8551,7 +8551,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0171 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8575,7 +8575,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0172 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8599,7 +8599,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0173 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			107,
 			82
@@ -8623,7 +8623,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0174 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			107,
 			82
@@ -8647,7 +8647,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanNecro_0175 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			107,
 			82
@@ -8673,7 +8673,7 @@ return {
 		}
 	},
 	CanibalShamanNecro_0177 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			107,
 			82
@@ -8697,7 +8697,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0001 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -8723,7 +8723,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0003 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -8749,7 +8749,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0005 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -8775,7 +8775,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0007 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -8799,7 +8799,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0008 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -8825,7 +8825,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0010 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -8851,7 +8851,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0012 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -8877,7 +8877,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -8903,7 +8903,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -8929,7 +8929,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0018 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -8953,7 +8953,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0019 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -8979,7 +8979,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0021 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9005,7 +9005,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9031,7 +9031,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9057,7 +9057,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9083,7 +9083,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0029 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9107,7 +9107,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9133,7 +9133,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9159,7 +9159,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9185,7 +9185,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9211,7 +9211,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9237,7 +9237,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9261,7 +9261,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0041 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9287,7 +9287,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0043 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9313,7 +9313,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0045 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9339,7 +9339,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0047 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9365,7 +9365,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0049 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9391,7 +9391,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0051 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9415,7 +9415,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0052 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9441,7 +9441,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0054 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9467,7 +9467,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0056 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9493,7 +9493,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0058 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9519,7 +9519,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0060 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9545,7 +9545,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0062 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9569,7 +9569,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0063 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9595,7 +9595,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0065 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9621,7 +9621,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0067 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9647,7 +9647,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0068 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9680,7 +9680,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0070 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9708,7 +9708,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0072 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9736,7 +9736,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0074 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9766,7 +9766,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0077 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9790,7 +9790,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0078 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9814,7 +9814,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0079 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9838,7 +9838,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0080 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9862,7 +9862,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0081 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9886,7 +9886,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0082 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -9910,7 +9910,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0083 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9934,7 +9934,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0084 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9958,7 +9958,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0085 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -9982,7 +9982,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0086 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10006,7 +10006,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0087 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10030,7 +10030,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0088 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10054,7 +10054,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0089 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10078,7 +10078,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0090 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10102,7 +10102,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0091 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10126,7 +10126,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0092 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10150,7 +10150,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0093 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10174,7 +10174,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0094 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10198,7 +10198,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0095 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10222,7 +10222,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0096 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10246,7 +10246,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0097 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10270,7 +10270,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0107 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10296,7 +10296,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0109 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10322,7 +10322,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0111 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10348,7 +10348,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0113 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10374,7 +10374,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0115 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10401,7 +10401,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0118 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10427,7 +10427,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0120 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10453,7 +10453,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0122 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10477,7 +10477,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0123 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10503,7 +10503,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0128 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10529,7 +10529,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0130 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10555,7 +10555,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0132 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10585,7 +10585,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0138 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -10611,7 +10611,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0140 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10637,7 +10637,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0142 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10663,7 +10663,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0146 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10687,7 +10687,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0147 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10711,7 +10711,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0148 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10737,7 +10737,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0150 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10763,7 +10763,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0152 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10787,7 +10787,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0153 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10811,7 +10811,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0154 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10835,7 +10835,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0155 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10859,7 +10859,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0156 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10892,7 +10892,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0165 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			101,
 			87
@@ -10918,7 +10918,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0167 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10942,7 +10942,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0168 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10966,7 +10966,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0170 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -10990,7 +10990,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0171 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -11014,7 +11014,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0172 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			101,
 			87
@@ -11038,7 +11038,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0173 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -11062,7 +11062,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanPriest_0174 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -11088,7 +11088,7 @@ return {
 		}
 	},
 	CanibalShamanPriest_0176 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			101,
 			87
@@ -11114,7 +11114,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0001 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11140,7 +11140,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0003 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11166,7 +11166,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0005 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11192,7 +11192,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0007 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11216,7 +11216,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0008 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11242,7 +11242,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0010 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11268,7 +11268,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0012 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11294,7 +11294,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11320,7 +11320,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11346,7 +11346,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0018 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11370,7 +11370,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0019 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11396,7 +11396,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0021 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -11422,7 +11422,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11448,7 +11448,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11474,7 +11474,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11500,7 +11500,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0029 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11524,7 +11524,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11550,7 +11550,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11576,7 +11576,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11602,7 +11602,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11628,7 +11628,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11654,7 +11654,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11678,7 +11678,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0041 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11704,7 +11704,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0043 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11730,7 +11730,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0045 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11756,7 +11756,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0047 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11782,7 +11782,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0049 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11808,7 +11808,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0051 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11832,7 +11832,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0052 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11858,7 +11858,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0054 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11884,7 +11884,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0056 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11910,7 +11910,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0058 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11936,7 +11936,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0060 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11962,7 +11962,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0062 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -11986,7 +11986,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0063 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12012,7 +12012,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0065 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12038,7 +12038,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0067 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12064,7 +12064,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0068 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12092,7 +12092,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0070 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12118,7 +12118,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0072 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12144,7 +12144,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0074 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12174,7 +12174,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0080 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			98,
 			87
@@ -12200,7 +12200,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0082 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			98,
 			87
@@ -12226,7 +12226,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0084 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12252,7 +12252,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0088 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12276,7 +12276,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0089 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12300,7 +12300,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0090 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12326,7 +12326,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0092 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12352,7 +12352,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0094 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12376,7 +12376,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0095 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12400,7 +12400,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0096 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12424,7 +12424,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0097 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12448,7 +12448,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0098 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12481,7 +12481,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0107 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			98,
 			87
@@ -12507,7 +12507,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0109 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12531,7 +12531,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0110 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12555,7 +12555,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0112 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12579,7 +12579,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0113 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12603,7 +12603,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0114 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12627,7 +12627,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0115 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			98,
 			87
@@ -12651,7 +12651,7 @@ return {
 		alias = {}
 	},
 	CanibalShamanShield_0116 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			98,
 			87
@@ -12677,7 +12677,7 @@ return {
 		}
 	},
 	CanibalShamanShield_0118 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			98,
 			87
@@ -12701,7 +12701,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0001 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12727,7 +12727,7 @@ return {
 		}
 	},
 	CanibalWingRiderDeath_0003 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12753,7 +12753,7 @@ return {
 		}
 	},
 	CanibalWingRiderDeath_0005 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12777,7 +12777,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0006 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12801,7 +12801,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0007 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12825,7 +12825,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0008 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12849,7 +12849,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0009 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12873,7 +12873,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0010 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12897,7 +12897,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0011 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12921,7 +12921,7 @@ return {
 		alias = {}
 	},
 	CanibalWingRiderDeath_0012 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -12947,7 +12947,7 @@ return {
 		}
 	},
 	CanibalWingRiderDeath_0014 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			113,
 			158
@@ -12973,7 +12973,7 @@ return {
 		}
 	},
 	CanibalWingRiderDeath_0016 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13000,7 +13000,7 @@ return {
 		}
 	},
 	CanibalWingRider_0001 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13026,7 +13026,7 @@ return {
 		}
 	},
 	CanibalWingRider_0003 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13052,7 +13052,7 @@ return {
 		}
 	},
 	CanibalWingRider_0005 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13078,7 +13078,7 @@ return {
 		}
 	},
 	CanibalWingRider_0007 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13104,7 +13104,7 @@ return {
 		}
 	},
 	CanibalWingRider_0009 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13130,7 +13130,7 @@ return {
 		}
 	},
 	CanibalWingRider_0011 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13156,7 +13156,7 @@ return {
 		}
 	},
 	CanibalWingRider_0013 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13184,7 +13184,7 @@ return {
 		}
 	},
 	CanibalWingRider_0015 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13210,7 +13210,7 @@ return {
 		}
 	},
 	CanibalWingRider_0017 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13236,7 +13236,7 @@ return {
 		}
 	},
 	CanibalWingRider_0019 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13262,7 +13262,7 @@ return {
 		}
 	},
 	CanibalWingRider_0021 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13288,7 +13288,7 @@ return {
 		}
 	},
 	CanibalWingRider_0023 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13314,7 +13314,7 @@ return {
 		}
 	},
 	CanibalWingRider_0025 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13340,7 +13340,7 @@ return {
 		}
 	},
 	CanibalWingRider_0027 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13366,7 +13366,7 @@ return {
 		}
 	},
 	CanibalWingRider_0029 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13392,7 +13392,7 @@ return {
 		}
 	},
 	CanibalWingRider_0031 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13418,7 +13418,7 @@ return {
 		}
 	},
 	CanibalWingRider_0033 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13444,7 +13444,7 @@ return {
 		}
 	},
 	CanibalWingRider_0035 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13470,7 +13470,7 @@ return {
 		}
 	},
 	CanibalWingRider_0037 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13496,7 +13496,7 @@ return {
 		}
 	},
 	CanibalWingRider_0039 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13522,7 +13522,7 @@ return {
 		}
 	},
 	CanibalWingRider_0041 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13548,7 +13548,7 @@ return {
 		}
 	},
 	CanibalWingRider_0043 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13574,7 +13574,7 @@ return {
 		}
 	},
 	CanibalWingRider_0045 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13600,7 +13600,7 @@ return {
 		}
 	},
 	CanibalWingRider_0047 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13626,7 +13626,7 @@ return {
 		}
 	},
 	CanibalWingRider_0049 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13652,7 +13652,7 @@ return {
 		}
 	},
 	CanibalWingRider_0051 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13678,7 +13678,7 @@ return {
 		}
 	},
 	CanibalWingRider_0053 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13704,7 +13704,7 @@ return {
 		}
 	},
 	CanibalWingRider_0057 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13732,7 +13732,7 @@ return {
 		}
 	},
 	CanibalWingRider_0059 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13760,7 +13760,7 @@ return {
 		}
 	},
 	CanibalWingRider_0061 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13788,7 +13788,7 @@ return {
 		}
 	},
 	CanibalWingRider_0063 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -13816,7 +13816,7 @@ return {
 		}
 	},
 	CanibalWingRider_0065 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			113,
 			158
@@ -13844,7 +13844,7 @@ return {
 		}
 	},
 	CanibalWingRider_0067 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			113,
 			158
@@ -13872,7 +13872,7 @@ return {
 		}
 	},
 	CanibalWingRider_0069 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -13896,7 +13896,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0001 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -13922,7 +13922,7 @@ return {
 		}
 	},
 	CanibalZombie_0003 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -13948,7 +13948,7 @@ return {
 		}
 	},
 	CanibalZombie_0005 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -13974,7 +13974,7 @@ return {
 		}
 	},
 	CanibalZombie_0007 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14000,7 +14000,7 @@ return {
 		}
 	},
 	CanibalZombie_0009 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14026,7 +14026,7 @@ return {
 		}
 	},
 	CanibalZombie_0011 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14052,7 +14052,7 @@ return {
 		}
 	},
 	CanibalZombie_0013 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14078,7 +14078,7 @@ return {
 		}
 	},
 	CanibalZombie_0015 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14104,7 +14104,7 @@ return {
 		}
 	},
 	CanibalZombie_0017 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -14130,7 +14130,7 @@ return {
 		}
 	},
 	CanibalZombie_0019 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14156,7 +14156,7 @@ return {
 		}
 	},
 	CanibalZombie_0021 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14182,7 +14182,7 @@ return {
 		}
 	},
 	CanibalZombie_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14206,7 +14206,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0024 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14232,7 +14232,7 @@ return {
 		}
 	},
 	CanibalZombie_0026 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14258,7 +14258,7 @@ return {
 		}
 	},
 	CanibalZombie_0028 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14284,7 +14284,7 @@ return {
 		}
 	},
 	CanibalZombie_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14310,7 +14310,7 @@ return {
 		}
 	},
 	CanibalZombie_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14336,7 +14336,7 @@ return {
 		}
 	},
 	CanibalZombie_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14362,7 +14362,7 @@ return {
 		}
 	},
 	CanibalZombie_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14388,7 +14388,7 @@ return {
 		}
 	},
 	CanibalZombie_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14414,7 +14414,7 @@ return {
 		}
 	},
 	CanibalZombie_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14440,7 +14440,7 @@ return {
 		}
 	},
 	CanibalZombie_0042 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14466,7 +14466,7 @@ return {
 		}
 	},
 	CanibalZombie_0044 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14492,7 +14492,7 @@ return {
 		}
 	},
 	CanibalZombie_0046 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14518,7 +14518,7 @@ return {
 		}
 	},
 	CanibalZombie_0048 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14544,7 +14544,7 @@ return {
 		}
 	},
 	CanibalZombie_0050 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14570,7 +14570,7 @@ return {
 		}
 	},
 	CanibalZombie_0052 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14596,7 +14596,7 @@ return {
 		}
 	},
 	CanibalZombie_0054 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14622,7 +14622,7 @@ return {
 		}
 	},
 	CanibalZombie_0056 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14648,7 +14648,7 @@ return {
 		}
 	},
 	CanibalZombie_0058 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14674,7 +14674,7 @@ return {
 		}
 	},
 	CanibalZombie_0060 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14700,7 +14700,7 @@ return {
 		}
 	},
 	CanibalZombie_0062 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14726,7 +14726,7 @@ return {
 		}
 	},
 	CanibalZombie_0064 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14752,7 +14752,7 @@ return {
 		}
 	},
 	CanibalZombie_0066 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14778,7 +14778,7 @@ return {
 		}
 	},
 	CanibalZombie_0068 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14804,7 +14804,7 @@ return {
 		}
 	},
 	CanibalZombie_0070 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14830,7 +14830,7 @@ return {
 		}
 	},
 	CanibalZombie_0072 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14859,7 +14859,7 @@ return {
 		}
 	},
 	CanibalZombie_0074 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14885,7 +14885,7 @@ return {
 		}
 	},
 	CanibalZombie_0076 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14911,7 +14911,7 @@ return {
 		}
 	},
 	CanibalZombie_0078 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14939,7 +14939,7 @@ return {
 		}
 	},
 	CanibalZombie_0082 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14965,7 +14965,7 @@ return {
 		}
 	},
 	CanibalZombie_0084 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -14989,7 +14989,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0085 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15013,7 +15013,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0086 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15037,7 +15037,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0087 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15064,7 +15064,7 @@ return {
 		}
 	},
 	CanibalZombie_0090 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15090,7 +15090,7 @@ return {
 		}
 	},
 	CanibalZombie_0094 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15114,7 +15114,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0095 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15138,7 +15138,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0096 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15164,7 +15164,7 @@ return {
 		}
 	},
 	CanibalZombie_0098 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15190,7 +15190,7 @@ return {
 		}
 	},
 	CanibalZombie_0100 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15214,7 +15214,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0101 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15238,7 +15238,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0102 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			90,
 			68
@@ -15262,7 +15262,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0103 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15286,7 +15286,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0104 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15319,7 +15319,7 @@ return {
 		}
 	},
 	CanibalZombie_0113 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15345,7 +15345,7 @@ return {
 		}
 	},
 	CanibalZombie_0115 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15369,7 +15369,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0116 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15393,7 +15393,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0117 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15417,7 +15417,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0118 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15441,7 +15441,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0119 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15465,7 +15465,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0120 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15489,7 +15489,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0121 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15513,7 +15513,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0122 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15537,7 +15537,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0123 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15561,7 +15561,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0124 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15585,7 +15585,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0125 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -15609,7 +15609,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0126 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15633,7 +15633,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0127 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15657,7 +15657,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0128 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15683,7 +15683,7 @@ return {
 		}
 	},
 	CanibalZombie_0130 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15709,7 +15709,7 @@ return {
 		}
 	},
 	CanibalZombie_0132 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -15739,7 +15739,7 @@ return {
 		}
 	},
 	CanibalZombie_0138 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15765,7 +15765,7 @@ return {
 		}
 	},
 	CanibalZombie_0140 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			90,
 			68
@@ -15791,7 +15791,7 @@ return {
 		}
 	},
 	CanibalZombie_0142 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			90,
 			68
@@ -15815,7 +15815,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0143 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15839,7 +15839,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0144 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15863,7 +15863,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0145 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15887,7 +15887,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0146 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15911,7 +15911,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0147 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15935,7 +15935,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0148 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			90,
 			68
@@ -15959,7 +15959,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0149 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -15983,7 +15983,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0150 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -16007,7 +16007,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0151 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			90,
 			68
@@ -16031,7 +16031,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0152 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16055,7 +16055,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0153 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16079,7 +16079,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0154 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16103,7 +16103,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0155 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16127,7 +16127,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0156 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16151,7 +16151,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0157 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16175,7 +16175,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0158 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16199,7 +16199,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0159 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16223,7 +16223,7 @@ return {
 		alias = {}
 	},
 	CanibalZombie_0160 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16249,7 +16249,7 @@ return {
 		}
 	},
 	CanibalZombie_0162 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			90,
 			68
@@ -16275,7 +16275,7 @@ return {
 		}
 	},
 	CanibalZombie_0164 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			90,
 			68
@@ -16301,7 +16301,7 @@ return {
 		}
 	},
 	Canibal_0001 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16327,7 +16327,7 @@ return {
 		}
 	},
 	Canibal_0003 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16353,7 +16353,7 @@ return {
 		}
 	},
 	Canibal_0005 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16379,7 +16379,7 @@ return {
 		}
 	},
 	Canibal_0007 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16403,7 +16403,7 @@ return {
 		alias = {}
 	},
 	Canibal_0008 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16429,7 +16429,7 @@ return {
 		}
 	},
 	Canibal_0010 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16455,7 +16455,7 @@ return {
 		}
 	},
 	Canibal_0012 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16481,7 +16481,7 @@ return {
 		}
 	},
 	Canibal_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16507,7 +16507,7 @@ return {
 		}
 	},
 	Canibal_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16533,7 +16533,7 @@ return {
 		}
 	},
 	Canibal_0018 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16557,7 +16557,7 @@ return {
 		alias = {}
 	},
 	Canibal_0019 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16583,7 +16583,7 @@ return {
 		}
 	},
 	Canibal_0021 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -16609,7 +16609,7 @@ return {
 		}
 	},
 	Canibal_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16635,7 +16635,7 @@ return {
 		}
 	},
 	Canibal_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16661,7 +16661,7 @@ return {
 		}
 	},
 	Canibal_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16687,7 +16687,7 @@ return {
 		}
 	},
 	Canibal_0029 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16711,7 +16711,7 @@ return {
 		alias = {}
 	},
 	Canibal_0030 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16737,7 +16737,7 @@ return {
 		}
 	},
 	Canibal_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16763,7 +16763,7 @@ return {
 		}
 	},
 	Canibal_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16789,7 +16789,7 @@ return {
 		}
 	},
 	Canibal_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16815,7 +16815,7 @@ return {
 		}
 	},
 	Canibal_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16841,7 +16841,7 @@ return {
 		}
 	},
 	Canibal_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16865,7 +16865,7 @@ return {
 		alias = {}
 	},
 	Canibal_0041 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16891,7 +16891,7 @@ return {
 		}
 	},
 	Canibal_0043 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16917,7 +16917,7 @@ return {
 		}
 	},
 	Canibal_0045 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16943,7 +16943,7 @@ return {
 		}
 	},
 	Canibal_0047 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16969,7 +16969,7 @@ return {
 		}
 	},
 	Canibal_0049 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -16995,7 +16995,7 @@ return {
 		}
 	},
 	Canibal_0051 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17019,7 +17019,7 @@ return {
 		alias = {}
 	},
 	Canibal_0052 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17045,7 +17045,7 @@ return {
 		}
 	},
 	Canibal_0054 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17071,7 +17071,7 @@ return {
 		}
 	},
 	Canibal_0056 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17097,7 +17097,7 @@ return {
 		}
 	},
 	Canibal_0058 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17123,7 +17123,7 @@ return {
 		}
 	},
 	Canibal_0060 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17149,7 +17149,7 @@ return {
 		}
 	},
 	Canibal_0062 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17173,7 +17173,7 @@ return {
 		alias = {}
 	},
 	Canibal_0063 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17199,7 +17199,7 @@ return {
 		}
 	},
 	Canibal_0065 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17225,7 +17225,7 @@ return {
 		}
 	},
 	Canibal_0067 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17252,7 +17252,7 @@ return {
 		}
 	},
 	Canibal_0068 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17281,7 +17281,7 @@ return {
 		}
 	},
 	Canibal_0073 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			93,
 			59
@@ -17308,7 +17308,7 @@ return {
 		}
 	},
 	Canibal_0077 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17335,7 +17335,7 @@ return {
 		}
 	},
 	Canibal_0078 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17361,7 +17361,7 @@ return {
 		}
 	},
 	Canibal_0079 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -17385,7 +17385,7 @@ return {
 		alias = {}
 	},
 	Canibal_0080 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -17409,7 +17409,7 @@ return {
 		alias = {}
 	},
 	Canibal_0081 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17435,7 +17435,7 @@ return {
 		}
 	},
 	Canibal_0083 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17461,7 +17461,7 @@ return {
 		}
 	},
 	Canibal_0085 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17485,7 +17485,7 @@ return {
 		alias = {}
 	},
 	Canibal_0086 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17509,7 +17509,7 @@ return {
 		alias = {}
 	},
 	Canibal_0087 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17536,7 +17536,7 @@ return {
 		}
 	},
 	Canibal_0089 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -17560,7 +17560,7 @@ return {
 		alias = {}
 	},
 	Canibal_0090 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -17584,7 +17584,7 @@ return {
 		alias = {}
 	},
 	Canibal_0091 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17610,7 +17610,7 @@ return {
 		}
 	},
 	Canibal_0093 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17636,7 +17636,7 @@ return {
 		}
 	},
 	Canibal_0095 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17660,7 +17660,7 @@ return {
 		alias = {}
 	},
 	Canibal_0100 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17684,7 +17684,7 @@ return {
 		alias = {}
 	},
 	Canibal_0101 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17708,7 +17708,7 @@ return {
 		alias = {}
 	},
 	Canibal_0102 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17734,7 +17734,7 @@ return {
 		}
 	},
 	Canibal_0104 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17760,7 +17760,7 @@ return {
 		}
 	},
 	Canibal_0106 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17784,7 +17784,7 @@ return {
 		alias = {}
 	},
 	Canibal_0107 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -17808,7 +17808,7 @@ return {
 		alias = {}
 	},
 	Canibal_0108 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -17832,7 +17832,7 @@ return {
 		alias = {}
 	},
 	Canibal_0109 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17856,7 +17856,7 @@ return {
 		alias = {}
 	},
 	Canibal_0110 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17889,7 +17889,7 @@ return {
 		}
 	},
 	Canibal_0119 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17915,7 +17915,7 @@ return {
 		}
 	},
 	Canibal_0121 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17939,7 +17939,7 @@ return {
 		alias = {}
 	},
 	Canibal_0122 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			93,
 			59
@@ -17963,7 +17963,7 @@ return {
 		alias = {}
 	},
 	Canibal_0124 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -17987,7 +17987,7 @@ return {
 		alias = {}
 	},
 	Canibal_0125 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -18011,7 +18011,7 @@ return {
 		alias = {}
 	},
 	Canibal_0126 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -18035,7 +18035,7 @@ return {
 		alias = {}
 	},
 	Canibal_0127 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -18059,7 +18059,7 @@ return {
 		alias = {}
 	},
 	Canibal_0128 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			93,
 			59
@@ -18085,7 +18085,7 @@ return {
 		}
 	},
 	Canibal_0130 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			93,
 			59
@@ -18109,7 +18109,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0001 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18135,7 +18135,7 @@ return {
 		}
 	},
 	Gorilla_0003 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18159,7 +18159,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0004 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18185,7 +18185,7 @@ return {
 		}
 	},
 	Gorilla_0006 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18209,7 +18209,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0007 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -18235,7 +18235,7 @@ return {
 		}
 	},
 	Gorilla_0009 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -18259,7 +18259,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0010 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -18285,7 +18285,7 @@ return {
 		}
 	},
 	Gorilla_0012 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -18309,7 +18309,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0013 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -18335,7 +18335,7 @@ return {
 		}
 	},
 	Gorilla_0015 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -18359,7 +18359,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0016 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18385,7 +18385,7 @@ return {
 		}
 	},
 	Gorilla_0018 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18409,7 +18409,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0019 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18435,7 +18435,7 @@ return {
 		}
 	},
 	Gorilla_0021 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18459,7 +18459,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0022 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18485,7 +18485,7 @@ return {
 		}
 	},
 	Gorilla_0024 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18509,7 +18509,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0025 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18533,7 +18533,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0026 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18559,7 +18559,7 @@ return {
 		}
 	},
 	Gorilla_0028 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18585,7 +18585,7 @@ return {
 		}
 	},
 	Gorilla_0030 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18611,7 +18611,7 @@ return {
 		}
 	},
 	Gorilla_0032 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18637,7 +18637,7 @@ return {
 		}
 	},
 	Gorilla_0034 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18663,7 +18663,7 @@ return {
 		}
 	},
 	Gorilla_0036 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18689,7 +18689,7 @@ return {
 		}
 	},
 	Gorilla_0038 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18715,7 +18715,7 @@ return {
 		}
 	},
 	Gorilla_0040 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18741,7 +18741,7 @@ return {
 		}
 	},
 	Gorilla_0042 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18767,7 +18767,7 @@ return {
 		}
 	},
 	Gorilla_0044 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18793,7 +18793,7 @@ return {
 		}
 	},
 	Gorilla_0046 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18819,7 +18819,7 @@ return {
 		}
 	},
 	Gorilla_0048 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18845,7 +18845,7 @@ return {
 		}
 	},
 	Gorilla_0050 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -18871,7 +18871,7 @@ return {
 		}
 	},
 	Gorilla_0052 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18897,7 +18897,7 @@ return {
 		}
 	},
 	Gorilla_0054 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18923,7 +18923,7 @@ return {
 		}
 	},
 	Gorilla_0056 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18949,7 +18949,7 @@ return {
 		}
 	},
 	Gorilla_0058 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -18975,7 +18975,7 @@ return {
 		}
 	},
 	Gorilla_0060 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19001,7 +19001,7 @@ return {
 		}
 	},
 	Gorilla_0062 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19027,7 +19027,7 @@ return {
 		}
 	},
 	Gorilla_0064 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19053,7 +19053,7 @@ return {
 		}
 	},
 	Gorilla_0066 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19079,7 +19079,7 @@ return {
 		}
 	},
 	Gorilla_0068 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19105,7 +19105,7 @@ return {
 		}
 	},
 	Gorilla_0070 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19131,7 +19131,7 @@ return {
 		}
 	},
 	Gorilla_0072 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19155,7 +19155,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0073 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19179,7 +19179,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0074 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19205,7 +19205,7 @@ return {
 		}
 	},
 	Gorilla_0076 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19229,7 +19229,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0077 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19253,7 +19253,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0078 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19277,7 +19277,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0079 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19303,7 +19303,7 @@ return {
 		}
 	},
 	Gorilla_0081 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19329,7 +19329,7 @@ return {
 		}
 	},
 	Gorilla_0083 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19355,7 +19355,7 @@ return {
 		}
 	},
 	Gorilla_0085 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19381,7 +19381,7 @@ return {
 		}
 	},
 	Gorilla_0087 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19407,7 +19407,7 @@ return {
 		}
 	},
 	Gorilla_0089 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19433,7 +19433,7 @@ return {
 		}
 	},
 	Gorilla_0091 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19459,7 +19459,7 @@ return {
 		}
 	},
 	Gorilla_0093 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19485,7 +19485,7 @@ return {
 		}
 	},
 	Gorilla_0095 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19511,7 +19511,7 @@ return {
 		}
 	},
 	Gorilla_0097 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19537,7 +19537,7 @@ return {
 		}
 	},
 	Gorilla_0099 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19561,7 +19561,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0100 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19587,7 +19587,7 @@ return {
 		}
 	},
 	Gorilla_0102 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19611,7 +19611,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0103 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19635,7 +19635,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0104 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19659,7 +19659,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0105 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19685,7 +19685,7 @@ return {
 		}
 	},
 	Gorilla_0107 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19711,7 +19711,7 @@ return {
 		}
 	},
 	Gorilla_0109 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19735,7 +19735,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0110 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19759,7 +19759,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0111 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19783,7 +19783,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0112 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19807,7 +19807,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0113 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19840,7 +19840,7 @@ return {
 		}
 	},
 	Gorilla_0122 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19866,7 +19866,7 @@ return {
 		}
 	},
 	Gorilla_0124 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19890,7 +19890,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0125 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19914,7 +19914,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0126 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			228,
 			152
@@ -19940,7 +19940,7 @@ return {
 		}
 	},
 	Gorilla_0128 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19964,7 +19964,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0129 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -19990,7 +19990,7 @@ return {
 		}
 	},
 	Gorilla_0131 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20014,7 +20014,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0132 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20040,7 +20040,7 @@ return {
 		}
 	},
 	Gorilla_0134 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20066,7 +20066,7 @@ return {
 		}
 	},
 	Gorilla_0136 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20101,7 +20101,7 @@ return {
 		}
 	},
 	Gorilla_0147 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20125,7 +20125,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0148 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20149,7 +20149,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0149 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20173,7 +20173,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0150 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20197,7 +20197,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0151 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20221,7 +20221,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0152 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20245,7 +20245,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0153 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20269,7 +20269,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0154 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20293,7 +20293,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0155 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20317,7 +20317,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0156 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20341,7 +20341,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0157 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20365,7 +20365,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0158 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20389,7 +20389,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0159 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20413,7 +20413,7 @@ return {
 		alias = {}
 	},
 	Gorilla_0160 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			228,
 			152
@@ -20437,7 +20437,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0001 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20461,7 +20461,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0002 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20485,7 +20485,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0003 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20509,7 +20509,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0004 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20533,7 +20533,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0005 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20557,7 +20557,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0006 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20581,7 +20581,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0007 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20605,7 +20605,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0008 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20629,7 +20629,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0009 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20653,7 +20653,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0010 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20677,7 +20677,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0011 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20701,7 +20701,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0012 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20725,7 +20725,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0013 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20749,7 +20749,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0014 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20773,7 +20773,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0015 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20797,7 +20797,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0016 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20821,7 +20821,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0017 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20845,7 +20845,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0018 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20869,7 +20869,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0019 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20893,7 +20893,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0020 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20917,7 +20917,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0021 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20941,7 +20941,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0022 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20965,7 +20965,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0023 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -20989,7 +20989,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0024 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21013,7 +21013,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0025 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21037,7 +21037,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0026 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21061,7 +21061,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0027 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21085,7 +21085,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0028 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21113,7 +21113,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0031 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21139,7 +21139,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0033 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21165,7 +21165,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0035 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21192,7 +21192,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0038 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21216,7 +21216,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0039 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21240,7 +21240,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0040 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21266,7 +21266,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0042 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21292,7 +21292,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0044 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21318,7 +21318,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0047 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21342,7 +21342,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0048 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21366,7 +21366,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0049 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21392,7 +21392,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0051 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21418,7 +21418,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0053 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21442,7 +21442,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0054 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21466,7 +21466,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0055 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21490,7 +21490,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0056 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21514,7 +21514,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0057 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21547,7 +21547,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0066 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21573,7 +21573,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0068 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21597,7 +21597,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0069 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21621,7 +21621,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0070 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21645,7 +21645,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0071 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21669,7 +21669,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0072 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21693,7 +21693,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0073 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21717,7 +21717,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0074 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21741,7 +21741,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0075 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21765,7 +21765,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0076 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			96,
 			70
@@ -21789,7 +21789,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderMatriarch_0077 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21815,7 +21815,7 @@ return {
 		}
 	},
 	JungleSpiderMatriarch_0079 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			96,
 			70
@@ -21845,7 +21845,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0001 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			45,
 			45
@@ -21869,7 +21869,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0002 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -21893,7 +21893,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0003 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -21917,7 +21917,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0004 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -21941,7 +21941,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0005 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -21965,7 +21965,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0006 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -21989,7 +21989,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0007 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22013,7 +22013,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0008 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22037,7 +22037,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0009 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -22061,7 +22061,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0010 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22085,7 +22085,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0011 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22109,7 +22109,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0012 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22133,7 +22133,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0013 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22157,7 +22157,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22181,7 +22181,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0015 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22205,7 +22205,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22229,7 +22229,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0017 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22253,7 +22253,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0018 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22277,7 +22277,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0019 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22301,7 +22301,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0020 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22325,7 +22325,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0021 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22349,7 +22349,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0022 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22373,7 +22373,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22397,7 +22397,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0024 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22421,7 +22421,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22445,7 +22445,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0026 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22469,7 +22469,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22493,7 +22493,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0028 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22521,7 +22521,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0031 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -22547,7 +22547,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0033 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -22573,7 +22573,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0035 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -22600,7 +22600,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0038 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			45,
 			45
@@ -22624,7 +22624,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0039 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			45,
 			45
@@ -22648,7 +22648,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0040 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			45,
 			45
@@ -22674,7 +22674,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0042 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -22700,7 +22700,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0044 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -22726,7 +22726,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0047 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			45,
 			45
@@ -22750,7 +22750,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0048 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -22774,7 +22774,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0049 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -22800,7 +22800,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0051 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -22826,7 +22826,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0053 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -22850,7 +22850,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0054 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -22874,7 +22874,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0055 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			45,
 			45
@@ -22898,7 +22898,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0056 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22922,7 +22922,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0057 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22955,7 +22955,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0066 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -22981,7 +22981,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0068 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -23005,7 +23005,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0069 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -23029,7 +23029,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0070 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -23053,7 +23053,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0071 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -23077,7 +23077,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0072 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			45,
 			45
@@ -23101,7 +23101,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0073 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -23125,7 +23125,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0074 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -23149,7 +23149,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0075 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -23173,7 +23173,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0076 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -23197,7 +23197,7 @@ return {
 		alias = {}
 	},
 	JungleSpiderTiny_0077 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			45,
 			45
@@ -23223,7 +23223,7 @@ return {
 		}
 	},
 	JungleSpiderTiny_0079 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			45,
 			45
@@ -23253,7 +23253,7 @@ return {
 		}
 	},
 	JungleSpider_0001 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23277,7 +23277,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0002 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23301,7 +23301,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0003 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23325,7 +23325,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0004 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23349,7 +23349,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0005 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23373,7 +23373,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0006 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23397,7 +23397,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0007 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23421,7 +23421,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0008 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23445,7 +23445,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0009 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23469,7 +23469,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0010 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23493,7 +23493,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0011 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23517,7 +23517,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0012 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23541,7 +23541,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0013 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23565,7 +23565,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0014 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23589,7 +23589,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0015 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23613,7 +23613,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0016 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23637,7 +23637,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0017 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23661,7 +23661,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0018 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23685,7 +23685,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0019 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23709,7 +23709,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0020 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23733,7 +23733,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0021 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23757,7 +23757,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0022 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23781,7 +23781,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0023 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23805,7 +23805,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0024 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23829,7 +23829,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0025 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23853,7 +23853,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0026 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23877,7 +23877,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0027 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23901,7 +23901,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0028 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23929,7 +23929,7 @@ return {
 		}
 	},
 	JungleSpider_0031 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23955,7 +23955,7 @@ return {
 		}
 	},
 	JungleSpider_0033 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -23981,7 +23981,7 @@ return {
 		}
 	},
 	JungleSpider_0035 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24008,7 +24008,7 @@ return {
 		}
 	},
 	JungleSpider_0038 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24032,7 +24032,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0039 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24056,7 +24056,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0040 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24082,7 +24082,7 @@ return {
 		}
 	},
 	JungleSpider_0042 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24108,7 +24108,7 @@ return {
 		}
 	},
 	JungleSpider_0044 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24134,7 +24134,7 @@ return {
 		}
 	},
 	JungleSpider_0047 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24158,7 +24158,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0048 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24182,7 +24182,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0049 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24208,7 +24208,7 @@ return {
 		}
 	},
 	JungleSpider_0051 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24234,7 +24234,7 @@ return {
 		}
 	},
 	JungleSpider_0053 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24258,7 +24258,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0054 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24282,7 +24282,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0055 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24306,7 +24306,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0056 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24330,7 +24330,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0057 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24363,7 +24363,7 @@ return {
 		}
 	},
 	JungleSpider_0066 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24389,7 +24389,7 @@ return {
 		}
 	},
 	JungleSpider_0068 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24413,7 +24413,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0069 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			62,
 			48
@@ -24437,7 +24437,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0070 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24461,7 +24461,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0071 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24485,7 +24485,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0072 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24509,7 +24509,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0073 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24533,7 +24533,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0074 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24557,7 +24557,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0075 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24581,7 +24581,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0076 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24605,7 +24605,7 @@ return {
 		alias = {}
 	},
 	JungleSpider_0077 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			62,
 			48
@@ -24631,7 +24631,7 @@ return {
 		}
 	},
 	JungleSpider_0079 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			62,
 			48
@@ -24661,7 +24661,7 @@ return {
 		}
 	},
 	SavageBird_0001 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24687,7 +24687,7 @@ return {
 		}
 	},
 	SavageBird_0003 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -24713,7 +24713,7 @@ return {
 		}
 	},
 	SavageBird_0005 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24739,7 +24739,7 @@ return {
 		}
 	},
 	SavageBird_0007 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24765,7 +24765,7 @@ return {
 		}
 	},
 	SavageBird_0009 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24791,7 +24791,7 @@ return {
 		}
 	},
 	SavageBird_0011 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24817,7 +24817,7 @@ return {
 		}
 	},
 	SavageBird_0013 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24843,7 +24843,7 @@ return {
 		}
 	},
 	SavageBird_0015 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24869,7 +24869,7 @@ return {
 		}
 	},
 	SavageBird_0017 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24895,7 +24895,7 @@ return {
 		}
 	},
 	SavageBird_0019 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -24921,7 +24921,7 @@ return {
 		}
 	},
 	SavageBird_0021 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -24947,7 +24947,7 @@ return {
 		}
 	},
 	SavageBird_0023 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24973,7 +24973,7 @@ return {
 		}
 	},
 	SavageBird_0025 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -24999,7 +24999,7 @@ return {
 		}
 	},
 	SavageBird_0027 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -25025,7 +25025,7 @@ return {
 		}
 	},
 	SavageBird_0029 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -25051,7 +25051,7 @@ return {
 		}
 	},
 	SavageBird_0031 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -25077,7 +25077,7 @@ return {
 		}
 	},
 	SavageBird_0033 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -25103,7 +25103,7 @@ return {
 		}
 	},
 	SavageBird_0035 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -25129,7 +25129,7 @@ return {
 		}
 	},
 	SavageBird_0037 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -25155,7 +25155,7 @@ return {
 		}
 	},
 	SavageBird_0039 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			113,
 			158
@@ -25181,7 +25181,7 @@ return {
 		}
 	},
 	SavageBird_0041 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			113,
 			158
@@ -25207,7 +25207,7 @@ return {
 		}
 	},
 	alienReaper_0001 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25231,7 +25231,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0002 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25255,7 +25255,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0003 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25279,7 +25279,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0004 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25303,7 +25303,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0005 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25327,7 +25327,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0006 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25351,7 +25351,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0007 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25375,7 +25375,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0008 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25399,7 +25399,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0009 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25423,7 +25423,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0010 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25447,7 +25447,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0011 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25471,7 +25471,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0012 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25495,7 +25495,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0013 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25519,7 +25519,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0014 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25543,7 +25543,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0015 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25567,7 +25567,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0016 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25591,7 +25591,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0017 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25615,7 +25615,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0018 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25639,7 +25639,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0019 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25663,7 +25663,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0020 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25687,7 +25687,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0021 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25711,7 +25711,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0022 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25735,7 +25735,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0023 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25759,7 +25759,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0024 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25783,7 +25783,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0025 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25807,7 +25807,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0026 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25831,7 +25831,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0027 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25855,7 +25855,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0028 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -25883,7 +25883,7 @@ return {
 		}
 	},
 	alienReaper_0031 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25909,7 +25909,7 @@ return {
 		}
 	},
 	alienReaper_0033 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25933,7 +25933,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0034 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -25957,7 +25957,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0035 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			84,
 			70
@@ -25983,7 +25983,7 @@ return {
 		}
 	},
 	alienReaper_0037 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26009,7 +26009,7 @@ return {
 		}
 	},
 	alienReaper_0039 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26033,7 +26033,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0040 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26059,7 +26059,7 @@ return {
 		}
 	},
 	alienReaper_0042 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26083,7 +26083,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0043 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26107,7 +26107,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0044 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26133,7 +26133,7 @@ return {
 		}
 	},
 	alienReaper_0046 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26159,7 +26159,7 @@ return {
 		}
 	},
 	alienReaper_0048 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26183,7 +26183,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0050 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26207,7 +26207,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0051 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26231,7 +26231,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0052 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26257,7 +26257,7 @@ return {
 		}
 	},
 	alienReaper_0054 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26283,7 +26283,7 @@ return {
 		}
 	},
 	alienReaper_0056 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26307,7 +26307,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0057 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26331,7 +26331,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0058 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26355,7 +26355,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0059 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26379,7 +26379,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0060 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26412,7 +26412,7 @@ return {
 		}
 	},
 	alienReaper_0069 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26438,7 +26438,7 @@ return {
 		}
 	},
 	alienReaper_0071 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26462,7 +26462,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0072 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26486,7 +26486,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0073 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26510,7 +26510,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0074 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			84,
 			70
@@ -26534,7 +26534,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0075 = {
-		a_name = "go_enemies_jungle-2.png",
+		a_name = "go_enemies_jungle-2.dds",
 		size = {
 			84,
 			70
@@ -26558,7 +26558,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0076 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26582,7 +26582,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0077 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26606,7 +26606,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0078 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26630,7 +26630,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0079 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26654,7 +26654,7 @@ return {
 		alias = {}
 	},
 	alienReaper_0080 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26680,7 +26680,7 @@ return {
 		}
 	},
 	alienReaper_0082 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			84,
 			70
@@ -26706,7 +26706,7 @@ return {
 		}
 	},
 	spider_egg_0001 = {
-		a_name = "go_enemies_jungle-1.png",
+		a_name = "go_enemies_jungle-1.dds",
 		size = {
 			44,
 			44
@@ -26730,7 +26730,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0002 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26754,7 +26754,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0003 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26778,7 +26778,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0004 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26802,7 +26802,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0005 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26826,7 +26826,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0006 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26850,7 +26850,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0007 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26874,7 +26874,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0008 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26898,7 +26898,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0009 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26922,7 +26922,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0010 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26946,7 +26946,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0011 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -26970,7 +26970,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0012 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -26994,7 +26994,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0013 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27018,7 +27018,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0014 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27042,7 +27042,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0015 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27066,7 +27066,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0016 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27090,7 +27090,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0017 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27114,7 +27114,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0018 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27138,7 +27138,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0019 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27162,7 +27162,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0020 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27186,7 +27186,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0021 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27210,7 +27210,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0022 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27234,7 +27234,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0023 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27258,7 +27258,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0024 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27282,7 +27282,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0025 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27306,7 +27306,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0026 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27330,7 +27330,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0027 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27354,7 +27354,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0028 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27378,7 +27378,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0029 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27402,7 +27402,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0030 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -27426,7 +27426,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0031 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27450,7 +27450,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0032 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27474,7 +27474,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0033 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27498,7 +27498,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0034 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27522,7 +27522,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0035 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27546,7 +27546,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0036 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27570,7 +27570,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0037 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27594,7 +27594,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0038 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27618,7 +27618,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0039 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27642,7 +27642,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0040 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27666,7 +27666,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0041 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27690,7 +27690,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0042 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27714,7 +27714,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0043 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27738,7 +27738,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0044 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27762,7 +27762,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0045 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27786,7 +27786,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0046 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27810,7 +27810,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0047 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27834,7 +27834,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0048 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27858,7 +27858,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0049 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27882,7 +27882,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0050 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27906,7 +27906,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0051 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27930,7 +27930,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0052 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27954,7 +27954,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0053 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -27978,7 +27978,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0054 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28002,7 +28002,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0055 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28026,7 +28026,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0056 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28050,7 +28050,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0057 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28074,7 +28074,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0058 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28098,7 +28098,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0059 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28122,7 +28122,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0060 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28146,7 +28146,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0061 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28170,7 +28170,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0062 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28194,7 +28194,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0063 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28218,7 +28218,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0064 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28242,7 +28242,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0065 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28266,7 +28266,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0066 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28290,7 +28290,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0067 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28314,7 +28314,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0068 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28338,7 +28338,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0069 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28362,7 +28362,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0070 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28386,7 +28386,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0071 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28410,7 +28410,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0072 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28434,7 +28434,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0073 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28458,7 +28458,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0074 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28482,7 +28482,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0075 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28508,7 +28508,7 @@ return {
 		}
 	},
 	spider_egg_0077 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28532,7 +28532,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0078 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -28556,7 +28556,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0079 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -28580,7 +28580,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0080 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28604,7 +28604,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0081 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -28628,7 +28628,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0082 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -28652,7 +28652,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0083 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -28676,7 +28676,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0084 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44
@@ -28700,7 +28700,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0085 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28724,7 +28724,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0086 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28748,7 +28748,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0087 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28772,7 +28772,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0088 = {
-		a_name = "go_enemies_jungle-4.png",
+		a_name = "go_enemies_jungle-4.dds",
 		size = {
 			44,
 			44
@@ -28796,7 +28796,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0089 = {
-		a_name = "go_enemies_jungle-3.png",
+		a_name = "go_enemies_jungle-3.dds",
 		size = {
 			44,
 			44

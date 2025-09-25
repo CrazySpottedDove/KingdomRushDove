@@ -2,7 +2,7 @@
 
 return {
 	lynn_explosion_0001 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	lynn_explosion_0003 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -52,7 +52,7 @@ return {
 		alias = {}
 	},
 	lynn_explosion_0004 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	lynn_explosion_0006 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -102,7 +102,7 @@ return {
 		alias = {}
 	},
 	lynn_explosion_0007 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -126,7 +126,7 @@ return {
 		alias = {}
 	},
 	lynn_explosion_0008 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -152,7 +152,7 @@ return {
 		}
 	},
 	lynn_explosion_0010 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -178,7 +178,7 @@ return {
 		}
 	},
 	lynn_explosion_0012 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -204,7 +204,7 @@ return {
 		}
 	},
 	lynn_explosion_0014 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -230,7 +230,7 @@ return {
 		}
 	},
 	lynn_explosion_0016 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -256,7 +256,7 @@ return {
 		}
 	},
 	lynn_explosion_0018 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -282,7 +282,7 @@ return {
 		}
 	},
 	lynn_explosion_0020 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			208,
 			163
@@ -308,7 +308,7 @@ return {
 		}
 	},
 	lynn_hero_0001 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -332,7 +332,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0002 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -356,7 +356,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0003 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -380,7 +380,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0004 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -404,7 +404,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0005 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -428,7 +428,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0006 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -452,7 +452,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0007 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -483,7 +483,7 @@ return {
 		}
 	},
 	lynn_hero_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -509,7 +509,7 @@ return {
 		}
 	},
 	lynn_hero_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -535,7 +535,7 @@ return {
 		}
 	},
 	lynn_hero_0013 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -561,7 +561,7 @@ return {
 		}
 	},
 	lynn_hero_0015 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -587,7 +587,7 @@ return {
 		}
 	},
 	lynn_hero_0017 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -613,7 +613,7 @@ return {
 		}
 	},
 	lynn_hero_0019 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -639,7 +639,7 @@ return {
 		}
 	},
 	lynn_hero_0021 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -665,7 +665,7 @@ return {
 		}
 	},
 	lynn_hero_0023 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -691,7 +691,7 @@ return {
 		}
 	},
 	lynn_hero_0025 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -717,7 +717,7 @@ return {
 		}
 	},
 	lynn_hero_0027 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -743,7 +743,7 @@ return {
 		}
 	},
 	lynn_hero_0029 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -769,7 +769,7 @@ return {
 		}
 	},
 	lynn_hero_0031 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -795,7 +795,7 @@ return {
 		}
 	},
 	lynn_hero_0033 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -821,7 +821,7 @@ return {
 		}
 	},
 	lynn_hero_0038 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -848,7 +848,7 @@ return {
 		}
 	},
 	lynn_hero_0041 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -874,7 +874,7 @@ return {
 		}
 	},
 	lynn_hero_0043 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -900,7 +900,7 @@ return {
 		}
 	},
 	lynn_hero_0045 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -926,7 +926,7 @@ return {
 		}
 	},
 	lynn_hero_0047 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -952,7 +952,7 @@ return {
 		}
 	},
 	lynn_hero_0049 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -978,7 +978,7 @@ return {
 		}
 	},
 	lynn_hero_0051 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1004,7 +1004,7 @@ return {
 		}
 	},
 	lynn_hero_0053 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1030,7 +1030,7 @@ return {
 		}
 	},
 	lynn_hero_0055 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1056,7 +1056,7 @@ return {
 		}
 	},
 	lynn_hero_0057 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1097,7 +1097,7 @@ return {
 		}
 	},
 	lynn_hero_0060 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1123,7 +1123,7 @@ return {
 		}
 	},
 	lynn_hero_0062 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1149,7 +1149,7 @@ return {
 		}
 	},
 	lynn_hero_0064 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1175,7 +1175,7 @@ return {
 		}
 	},
 	lynn_hero_0066 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1201,7 +1201,7 @@ return {
 		}
 	},
 	lynn_hero_0068 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1227,7 +1227,7 @@ return {
 		}
 	},
 	lynn_hero_0070 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1253,7 +1253,7 @@ return {
 		}
 	},
 	lynn_hero_0072 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1279,7 +1279,7 @@ return {
 		}
 	},
 	lynn_hero_0082 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1305,7 +1305,7 @@ return {
 		}
 	},
 	lynn_hero_0084 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1331,7 +1331,7 @@ return {
 		}
 	},
 	lynn_hero_0086 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1357,7 +1357,7 @@ return {
 		}
 	},
 	lynn_hero_0088 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1393,7 +1393,7 @@ return {
 		}
 	},
 	lynn_hero_0100 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1419,7 +1419,7 @@ return {
 		}
 	},
 	lynn_hero_0102 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1445,7 +1445,7 @@ return {
 		}
 	},
 	lynn_hero_0104 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1471,7 +1471,7 @@ return {
 		}
 	},
 	lynn_hero_0106 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1497,7 +1497,7 @@ return {
 		}
 	},
 	lynn_hero_0108 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1523,7 +1523,7 @@ return {
 		}
 	},
 	lynn_hero_0110 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1549,7 +1549,7 @@ return {
 		}
 	},
 	lynn_hero_0112 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1575,7 +1575,7 @@ return {
 		}
 	},
 	lynn_hero_0114 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1601,7 +1601,7 @@ return {
 		}
 	},
 	lynn_hero_0116 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1627,7 +1627,7 @@ return {
 		}
 	},
 	lynn_hero_0118 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1653,7 +1653,7 @@ return {
 		}
 	},
 	lynn_hero_0120 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1679,7 +1679,7 @@ return {
 		}
 	},
 	lynn_hero_0122 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1705,7 +1705,7 @@ return {
 		}
 	},
 	lynn_hero_0124 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1729,7 +1729,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0125 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1753,7 +1753,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0126 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1777,7 +1777,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0127 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1801,7 +1801,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0128 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1825,7 +1825,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0129 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1849,7 +1849,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0130 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1873,7 +1873,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0131 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1897,7 +1897,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0132 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1921,7 +1921,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0133 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1945,7 +1945,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0134 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1969,7 +1969,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0135 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -1999,7 +1999,7 @@ return {
 		}
 	},
 	lynn_hero_0141 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2025,7 +2025,7 @@ return {
 		}
 	},
 	lynn_hero_0147 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2049,7 +2049,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0148 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2073,7 +2073,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0149 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2097,7 +2097,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0150 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2121,7 +2121,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0151 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2147,7 +2147,7 @@ return {
 		}
 	},
 	lynn_hero_0153 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2173,7 +2173,7 @@ return {
 		}
 	},
 	lynn_hero_0155 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2199,7 +2199,7 @@ return {
 		}
 	},
 	lynn_hero_0157 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2225,7 +2225,7 @@ return {
 		}
 	},
 	lynn_hero_0159 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2251,7 +2251,7 @@ return {
 		}
 	},
 	lynn_hero_0161 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2275,7 +2275,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0162 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2299,7 +2299,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0163 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2323,7 +2323,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0164 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2347,7 +2347,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0165 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2371,7 +2371,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0166 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2395,7 +2395,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0167 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2419,7 +2419,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0168 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2443,7 +2443,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0169 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2467,7 +2467,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0170 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2491,7 +2491,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0171 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2515,7 +2515,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0172 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2539,7 +2539,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0173 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2563,7 +2563,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0174 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2587,7 +2587,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0175 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2611,7 +2611,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0176 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2635,7 +2635,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0177 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2659,7 +2659,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0178 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2683,7 +2683,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0179 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2727,7 +2727,7 @@ return {
 		}
 	},
 	lynn_hero_0189 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2757,7 +2757,7 @@ return {
 		}
 	},
 	lynn_hero_0195 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2781,7 +2781,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0196 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2805,7 +2805,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0197 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2829,7 +2829,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0198 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2853,7 +2853,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0199 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2879,7 +2879,7 @@ return {
 		}
 	},
 	lynn_hero_0201 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2905,7 +2905,7 @@ return {
 		}
 	},
 	lynn_hero_0203 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2931,7 +2931,7 @@ return {
 		}
 	},
 	lynn_hero_0205 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2957,7 +2957,7 @@ return {
 		}
 	},
 	lynn_hero_0207 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -2983,7 +2983,7 @@ return {
 		}
 	},
 	lynn_hero_0209 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3007,7 +3007,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0210 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3031,7 +3031,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0211 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3055,7 +3055,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0212 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3079,7 +3079,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0213 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3103,7 +3103,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0214 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3127,7 +3127,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0215 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3151,7 +3151,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0216 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3175,7 +3175,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0217 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3199,7 +3199,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0218 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3223,7 +3223,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0219 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3247,7 +3247,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0220 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3271,7 +3271,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0221 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3295,7 +3295,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0222 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3319,7 +3319,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0223 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3343,7 +3343,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0224 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3367,7 +3367,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0225 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3391,7 +3391,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_0226 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
 			141
@@ -3415,7 +3415,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0001 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3441,7 +3441,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0002 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3467,7 +3467,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0003 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3493,7 +3493,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0004 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3519,7 +3519,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0005 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3545,7 +3545,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0006 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3569,7 +3569,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0007 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3595,7 +3595,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0008 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3619,7 +3619,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3645,7 +3645,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0010 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3669,7 +3669,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3695,7 +3695,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0012 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3721,7 +3721,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_above_0013 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3745,7 +3745,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0016 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3769,7 +3769,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0018 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3793,7 +3793,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0020 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3817,7 +3817,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_above_0021 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -3841,7 +3841,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_despair_fx_decal_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -3867,7 +3867,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -3893,7 +3893,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0013 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -3919,7 +3919,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0015 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -3945,7 +3945,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0017 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -3971,7 +3971,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0019 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -3997,7 +3997,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0021 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4023,7 +4023,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0023 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4049,7 +4049,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0025 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4075,7 +4075,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0027 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4101,7 +4101,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0029 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4127,7 +4127,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0031 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4153,7 +4153,7 @@ return {
 		}
 	},
 	lynn_hero_despair_fx_decal_0033 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4179,7 +4179,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0001 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4206,7 +4206,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0003 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4232,7 +4232,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0004 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4259,7 +4259,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0006 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4285,7 +4285,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0007 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4311,7 +4311,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0008 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4338,7 +4338,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4365,7 +4365,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4391,7 +4391,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0012 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4417,7 +4417,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0013 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4443,7 +4443,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0014 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4469,7 +4469,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_above_0015 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4493,7 +4493,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_above_0028 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			42,
 			28
@@ -4517,7 +4517,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_decal_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4543,7 +4543,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4569,7 +4569,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0013 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4595,7 +4595,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0015 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4621,7 +4621,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0017 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4647,7 +4647,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0019 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4673,7 +4673,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0021 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4699,7 +4699,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0023 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4725,7 +4725,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0025 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4751,7 +4751,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0027 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4777,7 +4777,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0029 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4803,7 +4803,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0031 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4829,7 +4829,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_decal_0033 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -4855,7 +4855,7 @@ return {
 		}
 	},
 	lynn_hero_ultimate_fx_over_0001 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -4879,7 +4879,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0002 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -4903,7 +4903,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0003 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -4927,7 +4927,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0004 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -4951,7 +4951,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0005 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -4975,7 +4975,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0006 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -4999,7 +4999,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0007 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -5023,7 +5023,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0008 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -5047,7 +5047,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -5071,7 +5071,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0010 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -5095,7 +5095,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -5119,7 +5119,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_ultimate_fx_over_0012 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			84,
 			65
@@ -5143,7 +5143,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0001 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5167,7 +5167,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0002 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5193,7 +5193,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0003 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5219,7 +5219,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0004 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5245,7 +5245,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0005 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5271,7 +5271,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0006 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5297,7 +5297,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0007 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5321,7 +5321,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0008 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5347,7 +5347,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5371,7 +5371,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0010 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5397,7 +5397,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5421,7 +5421,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0012 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5447,7 +5447,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0013 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5473,7 +5473,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_above_0014 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5497,7 +5497,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0017 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5521,7 +5521,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0019 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5545,7 +5545,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0021 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5569,7 +5569,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_above_0026 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			56,
 			56
@@ -5593,7 +5593,7 @@ return {
 		alias = {}
 	},
 	lynn_hero_weakening_fx_decal_0009 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5619,7 +5619,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0011 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5645,7 +5645,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0013 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5671,7 +5671,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0015 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5697,7 +5697,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0017 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5723,7 +5723,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0019 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5749,7 +5749,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0021 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5775,7 +5775,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0023 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5801,7 +5801,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0025 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5827,7 +5827,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0027 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5853,7 +5853,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0029 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5879,7 +5879,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0031 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70
@@ -5905,7 +5905,7 @@ return {
 		}
 	},
 	lynn_hero_weakening_fx_decal_0033 = {
-		a_name = "go_hero_lynn-1.png",
+		a_name = "go_hero_lynn-1.dds",
 		size = {
 			113,
 			70

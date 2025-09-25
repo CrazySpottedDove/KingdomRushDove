@@ -2,7 +2,7 @@
 
 return {
 	hero_witch_cat_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -32,7 +32,7 @@ return {
 		}
 	},
 	hero_witch_cat_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -58,7 +58,7 @@ return {
 		}
 	},
 	hero_witch_cat_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -84,7 +84,7 @@ return {
 		}
 	},
 	hero_witch_cat_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -110,7 +110,7 @@ return {
 		}
 	},
 	hero_witch_cat_0008 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -136,7 +136,7 @@ return {
 		}
 	},
 	hero_witch_cat_0010 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -162,7 +162,7 @@ return {
 		}
 	},
 	hero_witch_cat_0012 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -188,7 +188,7 @@ return {
 		}
 	},
 	hero_witch_cat_0014 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -214,7 +214,7 @@ return {
 		}
 	},
 	hero_witch_cat_0016 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -240,7 +240,7 @@ return {
 		}
 	},
 	hero_witch_cat_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -266,7 +266,7 @@ return {
 		}
 	},
 	hero_witch_cat_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -292,7 +292,7 @@ return {
 		}
 	},
 	hero_witch_cat_0023 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -318,7 +318,7 @@ return {
 		}
 	},
 	hero_witch_cat_0025 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -344,7 +344,7 @@ return {
 		}
 	},
 	hero_witch_cat_0027 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -370,7 +370,7 @@ return {
 		}
 	},
 	hero_witch_cat_0029 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -396,7 +396,7 @@ return {
 		}
 	},
 	hero_witch_cat_0031 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -422,7 +422,7 @@ return {
 		}
 	},
 	hero_witch_cat_0035 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -448,7 +448,7 @@ return {
 		}
 	},
 	hero_witch_cat_0037 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -474,7 +474,7 @@ return {
 		}
 	},
 	hero_witch_cat_0039 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -500,7 +500,7 @@ return {
 		}
 	},
 	hero_witch_cat_0041 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -526,7 +526,7 @@ return {
 		}
 	},
 	hero_witch_cat_0043 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -552,7 +552,7 @@ return {
 		}
 	},
 	hero_witch_cat_0045 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -578,7 +578,7 @@ return {
 		}
 	},
 	hero_witch_cat_0047 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -604,7 +604,7 @@ return {
 		}
 	},
 	hero_witch_cat_0049 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -630,7 +630,7 @@ return {
 		}
 	},
 	hero_witch_cat_0051 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -656,7 +656,7 @@ return {
 		}
 	},
 	hero_witch_cat_0053 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -682,7 +682,7 @@ return {
 		}
 	},
 	hero_witch_cat_0055 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -708,7 +708,7 @@ return {
 		}
 	},
 	hero_witch_cat_0057 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -734,7 +734,7 @@ return {
 		}
 	},
 	hero_witch_cat_0061 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -760,7 +760,7 @@ return {
 		}
 	},
 	hero_witch_cat_0063 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -786,7 +786,7 @@ return {
 		}
 	},
 	hero_witch_cat_0065 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -812,7 +812,7 @@ return {
 		}
 	},
 	hero_witch_cat_0067 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -838,7 +838,7 @@ return {
 		}
 	},
 	hero_witch_cat_0069 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -864,7 +864,7 @@ return {
 		}
 	},
 	hero_witch_cat_0071 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -890,7 +890,7 @@ return {
 		}
 	},
 	hero_witch_cat_0073 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -916,7 +916,7 @@ return {
 		}
 	},
 	hero_witch_cat_0075 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	hero_witch_cat_0077 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			92,
 			102
@@ -966,7 +966,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -990,7 +990,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1016,7 +1016,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1042,7 +1042,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1068,7 +1068,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0008 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1094,7 +1094,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0010 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1120,7 +1120,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0012 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1146,7 +1146,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0014 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1172,7 +1172,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0016 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1198,7 +1198,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0018 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1224,7 +1224,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0020 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1255,7 +1255,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1279,7 +1279,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0022 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1303,7 +1303,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0023 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1329,7 +1329,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0025 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1353,7 +1353,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0026 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1377,7 +1377,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0027 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1403,7 +1403,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0029 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1427,7 +1427,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0030 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0031 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1477,7 +1477,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0033 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1501,7 +1501,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0034 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1525,7 +1525,7 @@ return {
 		alias = {}
 	},
 	hero_witch_decoy_0035 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1551,7 +1551,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0039 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1577,7 +1577,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0041 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1603,7 +1603,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0043 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1629,7 +1629,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0045 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1655,7 +1655,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0047 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1681,7 +1681,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0049 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1707,7 +1707,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0051 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1733,7 +1733,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0053 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1761,7 +1761,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0057 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1787,7 +1787,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0059 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1813,7 +1813,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0061 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1839,7 +1839,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0067 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1865,7 +1865,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0069 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1891,7 +1891,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0071 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1917,7 +1917,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0073 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1943,7 +1943,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0075 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1969,7 +1969,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0077 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -1995,7 +1995,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0079 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -2021,7 +2021,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0081 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -2047,7 +2047,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0083 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -2073,7 +2073,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0085 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -2099,7 +2099,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0087 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -2125,7 +2125,7 @@ return {
 		}
 	},
 	hero_witch_decoy_0089 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			104
@@ -2149,7 +2149,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2175,7 +2175,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2201,7 +2201,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2227,7 +2227,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2253,7 +2253,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2279,7 +2279,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2305,7 +2305,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2331,7 +2331,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2357,7 +2357,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2383,7 +2383,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2409,7 +2409,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2435,7 +2435,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0023 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2461,7 +2461,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0025 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2487,7 +2487,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0027 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2513,7 +2513,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0029 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2539,7 +2539,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0031 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2565,7 +2565,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0033 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2591,7 +2591,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0035 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2617,7 +2617,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0037 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2643,7 +2643,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0039 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2669,7 +2669,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0041 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2698,7 +2698,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0043 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2724,7 +2724,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0045 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2750,7 +2750,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0047 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2776,7 +2776,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0049 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2802,7 +2802,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0051 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2826,7 +2826,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0052 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2852,7 +2852,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0054 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2878,7 +2878,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0056 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2904,7 +2904,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0058 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2930,7 +2930,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0060 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2956,7 +2956,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0062 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -2982,7 +2982,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0064 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3008,7 +3008,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0066 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3034,7 +3034,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0068 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3060,7 +3060,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0070 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3086,7 +3086,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0072 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3112,7 +3112,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0074 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3138,7 +3138,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0077 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3350,7 +3350,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0165 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3376,7 +3376,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0167 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3402,7 +3402,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0169 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3428,7 +3428,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0171 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -3454,7 +3454,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0173 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4104,7 +4104,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0175 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4130,7 +4130,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0177 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4156,7 +4156,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0179 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4182,7 +4182,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0181 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4208,7 +4208,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0183 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4234,7 +4234,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0185 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4260,7 +4260,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0187 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4286,7 +4286,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0189 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4312,7 +4312,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0241 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4338,7 +4338,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0243 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4364,7 +4364,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0245 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4392,7 +4392,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0247 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4418,7 +4418,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0249 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4444,7 +4444,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0253 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4468,7 +4468,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0254 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4492,7 +4492,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0255 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4516,7 +4516,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0256 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4540,7 +4540,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0257 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4564,7 +4564,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0258 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4588,7 +4588,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0259 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4612,7 +4612,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0260 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4636,7 +4636,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0261 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4660,7 +4660,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0262 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4684,7 +4684,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0263 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4708,7 +4708,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0264 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4732,7 +4732,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer1_0265 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4758,7 +4758,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0267 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4784,7 +4784,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0293 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4810,7 +4810,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0295 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4836,7 +4836,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0297 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4862,7 +4862,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0299 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4888,7 +4888,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0301 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4914,7 +4914,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0303 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4940,7 +4940,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0305 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4966,7 +4966,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0307 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -4992,7 +4992,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0309 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5018,7 +5018,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0311 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5044,7 +5044,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0313 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5070,7 +5070,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0315 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5096,7 +5096,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0317 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5122,7 +5122,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0319 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5148,7 +5148,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0321 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5174,7 +5174,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0323 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5200,7 +5200,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0325 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5226,7 +5226,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0327 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5256,7 +5256,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0329 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5284,7 +5284,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0331 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5312,7 +5312,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0333 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5338,7 +5338,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0335 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5364,7 +5364,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0337 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5390,7 +5390,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0339 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5416,7 +5416,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0341 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5442,7 +5442,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0343 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5468,7 +5468,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0345 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5494,7 +5494,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0347 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5520,7 +5520,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0349 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5546,7 +5546,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0351 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5572,7 +5572,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0353 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5598,7 +5598,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0355 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5624,7 +5624,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0357 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5650,7 +5650,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0359 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5676,7 +5676,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0361 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5702,7 +5702,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0363 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5728,7 +5728,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0369 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5754,7 +5754,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0371 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5780,7 +5780,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0373 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5806,7 +5806,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0375 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5832,7 +5832,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0377 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5858,7 +5858,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0379 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5884,7 +5884,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0381 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5910,7 +5910,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0383 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5936,7 +5936,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0385 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5962,7 +5962,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0387 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -5988,7 +5988,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0389 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6014,7 +6014,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0391 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6040,7 +6040,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0393 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6066,7 +6066,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0395 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6092,7 +6092,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0397 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6118,7 +6118,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0399 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6144,7 +6144,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0401 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6170,7 +6170,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0403 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6196,7 +6196,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0405 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6222,7 +6222,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0407 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6248,7 +6248,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0409 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6274,7 +6274,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0411 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6300,7 +6300,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0413 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6326,7 +6326,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer1_0415 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6352,7 +6352,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0077 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6378,7 +6378,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0079 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6404,7 +6404,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0081 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6430,7 +6430,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0083 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6456,7 +6456,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0085 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6482,7 +6482,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0087 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6508,7 +6508,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0089 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6534,7 +6534,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0091 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6560,7 +6560,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0093 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6586,7 +6586,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0095 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6612,7 +6612,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0097 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6638,7 +6638,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0099 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6664,7 +6664,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0101 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6690,7 +6690,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0103 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6716,7 +6716,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0105 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6742,7 +6742,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0107 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6768,7 +6768,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0109 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6798,7 +6798,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0113 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6824,7 +6824,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0115 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6850,7 +6850,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0117 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6876,7 +6876,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0119 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6902,7 +6902,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0121 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6928,7 +6928,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0123 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6954,7 +6954,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0125 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -6980,7 +6980,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0127 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7006,7 +7006,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0129 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7032,7 +7032,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0131 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7058,7 +7058,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0133 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7084,7 +7084,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0135 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7110,7 +7110,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0137 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7136,7 +7136,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0139 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7162,7 +7162,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0141 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7188,7 +7188,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0143 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7214,7 +7214,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0145 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7240,7 +7240,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0147 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7266,7 +7266,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0149 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7292,7 +7292,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0151 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7318,7 +7318,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0153 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7344,7 +7344,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0155 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7370,7 +7370,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0157 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7396,7 +7396,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0159 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7422,7 +7422,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0191 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7452,7 +7452,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0193 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7478,7 +7478,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0195 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7504,7 +7504,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0197 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7530,7 +7530,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0199 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7556,7 +7556,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0201 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7582,7 +7582,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0203 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7608,7 +7608,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0205 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7634,7 +7634,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0207 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7660,7 +7660,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0209 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7686,7 +7686,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0211 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7712,7 +7712,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0213 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7738,7 +7738,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0215 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7764,7 +7764,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0217 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7790,7 +7790,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0219 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7816,7 +7816,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0221 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7842,7 +7842,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0223 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7868,7 +7868,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0225 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7894,7 +7894,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0227 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7920,7 +7920,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0229 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7946,7 +7946,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0231 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7972,7 +7972,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0233 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -7998,7 +7998,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer2_0235 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8024,7 +8024,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0239 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8050,7 +8050,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0241 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8076,7 +8076,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0243 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8102,7 +8102,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0245 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8128,7 +8128,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0247 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8154,7 +8154,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0249 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8180,7 +8180,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0251 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8206,7 +8206,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0253 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8232,7 +8232,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0255 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8258,7 +8258,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0257 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8284,7 +8284,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0259 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8310,7 +8310,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0261 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8334,7 +8334,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer3_0262 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8358,7 +8358,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer3_0263 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8382,7 +8382,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer3_0264 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8406,7 +8406,7 @@ return {
 		alias = {}
 	},
 	hero_witch_hero_layer3_0265 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8432,7 +8432,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0267 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8458,7 +8458,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0269 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8484,7 +8484,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0271 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8510,7 +8510,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0273 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8536,7 +8536,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0275 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8562,7 +8562,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0277 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8588,7 +8588,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0279 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8614,7 +8614,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0281 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8640,7 +8640,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0283 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8666,7 +8666,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0285 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8692,7 +8692,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0287 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8718,7 +8718,7 @@ return {
 		}
 	},
 	hero_witch_hero_layer3_0289 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			142,
 			194
@@ -8744,7 +8744,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8768,7 +8768,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8794,7 +8794,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8820,7 +8820,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8846,7 +8846,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0008 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8872,7 +8872,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0010 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8898,7 +8898,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0012 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8924,7 +8924,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0014 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8950,7 +8950,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0016 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -8976,7 +8976,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0018 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9002,7 +9002,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0020 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9028,7 +9028,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0022 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9054,7 +9054,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0024 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9080,7 +9080,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0026 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9106,7 +9106,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0028 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9132,7 +9132,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0030 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9158,7 +9158,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0032 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9184,7 +9184,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0034 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9210,7 +9210,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0036 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9236,7 +9236,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0038 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9262,7 +9262,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0040 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9288,7 +9288,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0042 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9314,7 +9314,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0044 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9340,7 +9340,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0046 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9366,7 +9366,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0048 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9392,7 +9392,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0050 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9418,7 +9418,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0052 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9442,7 +9442,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_0053 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9466,7 +9466,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_0054 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9492,7 +9492,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0056 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9518,7 +9518,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0058 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9544,7 +9544,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0060 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9570,7 +9570,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0062 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9596,7 +9596,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_0064 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			60,
 			76
@@ -9622,7 +9622,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9650,7 +9650,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9678,7 +9678,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9706,7 +9706,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9734,7 +9734,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9762,7 +9762,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9790,7 +9790,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9818,7 +9818,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9846,7 +9846,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0033 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9872,7 +9872,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0035 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9898,7 +9898,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0037 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9924,7 +9924,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0039 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9950,7 +9950,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0041 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -9976,7 +9976,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0043 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10002,7 +10002,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0045 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10028,7 +10028,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0047 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10054,7 +10054,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0049 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10080,7 +10080,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0051 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10106,7 +10106,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0053 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10132,7 +10132,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0055 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10158,7 +10158,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0057 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10184,7 +10184,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0059 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10210,7 +10210,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0061 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10236,7 +10236,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0063 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10262,7 +10262,7 @@ return {
 		}
 	},
 	hero_witch_pumpkling_flying_0065 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10286,7 +10286,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0066 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10310,7 +10310,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0067 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10334,7 +10334,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0068 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10358,7 +10358,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0069 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10382,7 +10382,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0070 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10406,7 +10406,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0071 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10430,7 +10430,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0072 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10454,7 +10454,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0073 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10478,7 +10478,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0074 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10502,7 +10502,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0075 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10526,7 +10526,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0076 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10550,7 +10550,7 @@ return {
 		alias = {}
 	},
 	hero_witch_pumpkling_flying_0077 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			68,
 			76
@@ -10574,7 +10574,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_hit_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			98,
 			94
@@ -10600,7 +10600,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_hit_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			98,
 			94
@@ -10626,7 +10626,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_hit_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			98,
 			94
@@ -10652,7 +10652,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_hit_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			98,
 			94
@@ -10678,7 +10678,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_hit_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			98,
 			94
@@ -10702,7 +10702,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_particle_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -10726,7 +10726,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_particle_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -10750,7 +10750,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_particle_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -10774,7 +10774,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_particle_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -10798,7 +10798,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_particle_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -10822,7 +10822,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_particle_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -10846,7 +10846,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ranged_attack_particle_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -10872,7 +10872,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_projectile_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			48,
 			48
@@ -10898,7 +10898,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_projectile_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			48,
 			48
@@ -10924,7 +10924,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_projectile_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			48,
 			48
@@ -10950,7 +10950,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_projectile_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			48,
 			48
@@ -10976,7 +10976,7 @@ return {
 		}
 	},
 	hero_witch_ranged_attack_projectile_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			48,
 			48
@@ -11002,7 +11002,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_hit_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11026,7 +11026,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_hit_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11050,7 +11050,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_hit_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11076,7 +11076,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_hit_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11102,7 +11102,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_hit_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11128,7 +11128,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_hit_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11154,7 +11154,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_hit_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11180,7 +11180,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_hit_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11206,7 +11206,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_hit_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			136,
 			116
@@ -11232,7 +11232,7 @@ return {
 		}
 	},
 	hero_witch_skill_1_particle_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11256,7 +11256,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_particle_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11280,7 +11280,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_particle_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11304,7 +11304,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_particle_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11328,7 +11328,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_particle_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11352,7 +11352,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_particle_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11376,7 +11376,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_particle_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11400,7 +11400,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_1_particle_0008 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			52,
 			52
@@ -11424,7 +11424,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_2_stun_decal_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11459,7 +11459,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_decal_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11485,7 +11485,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_decal_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11511,7 +11511,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_decal_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11537,7 +11537,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_decal_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11563,7 +11563,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_decal_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11589,7 +11589,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_decal_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11615,7 +11615,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_decal_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			80,
 			56
@@ -11641,7 +11641,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_fx_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11672,7 +11672,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_fx_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11698,7 +11698,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_fx_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11722,7 +11722,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_2_stun_fx_0010 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11746,7 +11746,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_2_stun_fx_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11770,7 +11770,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_2_stun_fx_0012 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11794,7 +11794,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_2_stun_fx_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11818,7 +11818,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_2_stun_fx_0014 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11842,7 +11842,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_2_stun_fx_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11868,7 +11868,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_fx_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11894,7 +11894,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_fx_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11920,7 +11920,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_fx_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11946,7 +11946,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_fx_0023 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			84,
 			92
@@ -11972,7 +11972,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -11998,7 +11998,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12024,7 +12024,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12050,7 +12050,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12076,7 +12076,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12102,7 +12102,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12128,7 +12128,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12154,7 +12154,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12180,7 +12180,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12206,7 +12206,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12232,7 +12232,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12258,7 +12258,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0023 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12284,7 +12284,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0025 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12310,7 +12310,7 @@ return {
 		}
 	},
 	hero_witch_skill_2_stun_mod_0027 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			60
@@ -12336,7 +12336,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_decal_1 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			154,
 			116
@@ -12360,7 +12360,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_decal_2 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			114,
 			72
@@ -12384,7 +12384,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12408,7 +12408,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12432,7 +12432,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12456,7 +12456,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12480,7 +12480,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12511,7 +12511,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer1_0012 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12535,7 +12535,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12559,7 +12559,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0014 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12583,7 +12583,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12607,7 +12607,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer1_0016 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12655,7 +12655,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12679,7 +12679,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12703,7 +12703,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12727,7 +12727,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12751,7 +12751,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12775,7 +12775,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12799,7 +12799,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12825,7 +12825,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12851,7 +12851,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12875,7 +12875,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0012 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12899,7 +12899,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12923,7 +12923,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0014 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12947,7 +12947,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12971,7 +12971,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0016 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -12995,7 +12995,7 @@ return {
 		alias = {}
 	},
 	hero_witch_skill_4_potion_in_layer2_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13021,7 +13021,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13047,7 +13047,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13073,7 +13073,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0023 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13099,7 +13099,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0025 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13125,7 +13125,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0027 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13151,7 +13151,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0029 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13177,7 +13177,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0031 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13203,7 +13203,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0033 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13229,7 +13229,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0035 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13255,7 +13255,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0037 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13281,7 +13281,7 @@ return {
 		}
 	},
 	hero_witch_skill_4_potion_in_layer2_0039 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			120,
 			260
@@ -13305,7 +13305,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_fx_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13331,7 +13331,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13357,7 +13357,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13383,7 +13383,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13409,7 +13409,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13435,7 +13435,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13461,7 +13461,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13487,7 +13487,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13513,7 +13513,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13539,7 +13539,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13565,7 +13565,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13591,7 +13591,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0023 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13617,7 +13617,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0025 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13643,7 +13643,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0027 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13669,7 +13669,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0029 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13695,7 +13695,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0031 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13721,7 +13721,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0033 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13747,7 +13747,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0035 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13773,7 +13773,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0037 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13799,7 +13799,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0039 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13825,7 +13825,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_fx_0041 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			62,
 			104
@@ -13851,7 +13851,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_sleep_particles_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -13875,7 +13875,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -13899,7 +13899,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -13923,7 +13923,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -13947,7 +13947,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -13971,7 +13971,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -13995,7 +13995,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14019,7 +14019,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0008 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14043,7 +14043,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14067,7 +14067,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0010 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14091,7 +14091,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14115,7 +14115,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0012 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14139,7 +14139,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14163,7 +14163,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0014 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14187,7 +14187,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14211,7 +14211,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0016 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14235,7 +14235,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14259,7 +14259,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0018 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14283,7 +14283,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14307,7 +14307,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0020 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14331,7 +14331,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_sleep_particles_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			62
@@ -14355,7 +14355,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_teleport_decal_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14381,7 +14381,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14407,7 +14407,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14433,7 +14433,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14459,7 +14459,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14485,7 +14485,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14511,7 +14511,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14537,7 +14537,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14563,7 +14563,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0017 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14589,7 +14589,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0019 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14615,7 +14615,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_decal_0021 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			148,
 			132
@@ -14639,7 +14639,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_teleport_fx_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14663,7 +14663,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_teleport_fx_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14687,7 +14687,7 @@ return {
 		alias = {}
 	},
 	hero_witch_ultimate_teleport_fx_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14713,7 +14713,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_fx_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14739,7 +14739,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_fx_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14765,7 +14765,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_fx_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14791,7 +14791,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_fx_0011 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14817,7 +14817,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_fx_0013 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14843,7 +14843,7 @@ return {
 		}
 	},
 	hero_witch_ultimate_teleport_fx_0015 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			100,
 			98
@@ -14869,7 +14869,7 @@ return {
 		}
 	},
 	hero_witch_walk_particle_0001 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -14895,7 +14895,7 @@ return {
 		}
 	},
 	hero_witch_walk_particle_0002 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -14919,7 +14919,7 @@ return {
 		alias = {}
 	},
 	hero_witch_walk_particle_0003 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -14943,7 +14943,7 @@ return {
 		alias = {}
 	},
 	hero_witch_walk_particle_0004 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -14967,7 +14967,7 @@ return {
 		alias = {}
 	},
 	hero_witch_walk_particle_0005 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -14991,7 +14991,7 @@ return {
 		alias = {}
 	},
 	hero_witch_walk_particle_0006 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -15015,7 +15015,7 @@ return {
 		alias = {}
 	},
 	hero_witch_walk_particle_0007 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -15039,7 +15039,7 @@ return {
 		alias = {}
 	},
 	hero_witch_walk_particle_0008 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52
@@ -15063,7 +15063,7 @@ return {
 		alias = {}
 	},
 	hero_witch_walk_particle_0009 = {
-		a_name = "go_hero_witch-1.png",
+		a_name = "go_hero_witch-1.dds",
 		size = {
 			58,
 			52

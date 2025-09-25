@@ -2,7 +2,7 @@
 
 return {
 	hero_dragon_arborean_arborean_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0031 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0033 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0035 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0037 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0039 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0041 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0043 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0045 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -605,7 +605,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0048 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -631,7 +631,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0050 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -657,7 +657,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0052 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -683,7 +683,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0054 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -709,7 +709,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0056 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -735,7 +735,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0058 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -761,7 +761,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0060 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -787,7 +787,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0062 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -813,7 +813,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0064 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -839,7 +839,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0066 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -865,7 +865,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0068 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -891,7 +891,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0070 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -917,7 +917,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0072 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -943,7 +943,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0074 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -969,7 +969,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0076 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -995,7 +995,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0078 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1021,7 +1021,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0080 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1047,7 +1047,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0082 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1073,7 +1073,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0086 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1099,7 +1099,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0088 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1125,7 +1125,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0090 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1151,7 +1151,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0092 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1177,7 +1177,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0094 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1203,7 +1203,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0096 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1229,7 +1229,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0098 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1255,7 +1255,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0100 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1281,7 +1281,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0102 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1307,7 +1307,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0104 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1333,7 +1333,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_0106 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			150,
 			132
@@ -1359,7 +1359,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1385,7 +1385,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1411,7 +1411,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1437,7 +1437,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1463,7 +1463,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1489,7 +1489,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1515,7 +1515,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1541,7 +1541,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_back_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			146
@@ -1567,7 +1567,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1593,7 +1593,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1619,7 +1619,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1645,7 +1645,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1671,7 +1671,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1697,7 +1697,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1727,7 +1727,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1753,7 +1753,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1779,7 +1779,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1805,7 +1805,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1831,7 +1831,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1859,7 +1859,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1887,7 +1887,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1915,7 +1915,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1943,7 +1943,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0031 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1971,7 +1971,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0033 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -1999,7 +1999,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0035 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2027,7 +2027,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0037 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2055,7 +2055,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0039 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2083,7 +2083,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0061 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2109,7 +2109,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0063 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2135,7 +2135,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0065 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2161,7 +2161,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0067 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2187,7 +2187,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0069 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2213,7 +2213,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0071 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2239,7 +2239,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0073 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2265,7 +2265,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0075 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2291,7 +2291,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0077 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2317,7 +2317,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0079 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2343,7 +2343,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0081 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2369,7 +2369,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_arborean_powered_fx_front_0083 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			74,
 			106
@@ -2395,7 +2395,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2421,7 +2421,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2447,7 +2447,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2473,7 +2473,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2499,7 +2499,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2525,7 +2525,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2551,7 +2551,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2577,7 +2577,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2603,7 +2603,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2629,7 +2629,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2655,7 +2655,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2681,7 +2681,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2707,7 +2707,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2733,7 +2733,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_breath_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2757,7 +2757,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_breath_0028 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2781,7 +2781,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_breath_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			340,
 			102
@@ -2807,7 +2807,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -2835,7 +2835,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -2863,7 +2863,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -2891,7 +2891,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -2919,7 +2919,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -2947,7 +2947,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -2975,7 +2975,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3003,7 +3003,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3031,7 +3031,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3059,7 +3059,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3087,7 +3087,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3115,7 +3115,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3143,7 +3143,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3176,7 +3176,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0030 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3202,7 +3202,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0032 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3228,7 +3228,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0034 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3254,7 +3254,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0036 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3280,7 +3280,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0038 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3306,7 +3306,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0040 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3332,7 +3332,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_0042 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			120
@@ -3358,7 +3358,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_projectile = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			46,
 			36
@@ -3382,7 +3382,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_flower_projectile_hit_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			40,
 			40
@@ -3408,7 +3408,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_projectile_hit_fx_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			40,
 			40
@@ -3434,7 +3434,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_projectile_hit_fx_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			40,
 			40
@@ -3460,7 +3460,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_projectile_hit_fx_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			40,
 			40
@@ -3486,7 +3486,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_flower_projectile_trail = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			32,
 			28
@@ -3510,7 +3510,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_heal_back_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3536,7 +3536,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3562,7 +3562,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3588,7 +3588,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3614,7 +3614,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3638,7 +3638,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_heal_back_0010 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3690,7 +3690,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0038 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3716,7 +3716,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0040 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3742,7 +3742,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0042 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3768,7 +3768,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_back_0044 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			128
@@ -3792,7 +3792,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_heal_front_a_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			60,
 			72
@@ -3853,7 +3853,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_a_0038 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			60,
 			72
@@ -3879,7 +3879,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_a_0040 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			60,
 			72
@@ -3905,7 +3905,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_a_0042 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			60,
 			72
@@ -3931,7 +3931,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_a_0044 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			60,
 			72
@@ -3955,7 +3955,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_heal_front_b_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -3983,7 +3983,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4011,7 +4011,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4039,7 +4039,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4065,7 +4065,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4091,7 +4091,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4117,7 +4117,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4143,7 +4143,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4169,7 +4169,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4195,7 +4195,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4221,7 +4221,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4247,7 +4247,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4273,7 +4273,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4299,7 +4299,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4325,7 +4325,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4351,7 +4351,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0037 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4377,7 +4377,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0039 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4403,7 +4403,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_heal_front_b_0041 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			66,
 			140
@@ -4429,7 +4429,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4461,7 +4461,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4487,7 +4487,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4513,7 +4513,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4539,7 +4539,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4565,7 +4565,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4591,7 +4591,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4617,7 +4617,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4643,7 +4643,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4671,7 +4671,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4707,7 +4707,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4735,7 +4735,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4763,7 +4763,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4791,7 +4791,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4819,7 +4819,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0031 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4847,7 +4847,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0033 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4875,7 +4875,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0035 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4903,7 +4903,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0037 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4931,7 +4931,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0039 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4959,7 +4959,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0041 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -4987,7 +4987,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0043 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5015,7 +5015,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0045 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5043,7 +5043,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0047 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5071,7 +5071,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0049 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5099,7 +5099,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0055 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5125,7 +5125,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0057 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5151,7 +5151,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0059 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5177,7 +5177,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0061 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5203,7 +5203,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0063 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5229,7 +5229,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0065 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5255,7 +5255,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0067 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5281,7 +5281,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0069 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5307,7 +5307,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0071 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5333,7 +5333,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0073 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5359,7 +5359,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0075 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5385,7 +5385,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0077 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5411,7 +5411,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0079 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5437,7 +5437,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0081 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5463,7 +5463,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0083 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5489,7 +5489,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0085 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5515,7 +5515,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0087 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5541,7 +5541,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0089 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5567,7 +5567,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0091 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5593,7 +5593,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0093 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5619,7 +5619,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0095 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5645,7 +5645,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0097 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5671,7 +5671,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0099 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5697,7 +5697,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0101 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5723,7 +5723,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0103 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5749,7 +5749,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0105 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5775,7 +5775,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0107 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5801,7 +5801,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0109 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5827,7 +5827,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0111 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5853,7 +5853,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0113 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5879,7 +5879,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0115 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5905,7 +5905,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0117 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5931,7 +5931,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0119 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5957,7 +5957,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0121 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -5983,7 +5983,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0123 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6009,7 +6009,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0125 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6035,7 +6035,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0127 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6061,7 +6061,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0129 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6087,7 +6087,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0131 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6113,7 +6113,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0133 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6139,7 +6139,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0135 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6165,7 +6165,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0137 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6191,7 +6191,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0173 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6217,7 +6217,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0175 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6243,7 +6243,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0177 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6269,7 +6269,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0179 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6295,7 +6295,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0181 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6321,7 +6321,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0183 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6347,7 +6347,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0185 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6373,7 +6373,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0187 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6399,7 +6399,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0189 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6425,7 +6425,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0191 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6451,7 +6451,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0193 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6477,7 +6477,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0195 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6503,7 +6503,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0197 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6529,7 +6529,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0199 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6555,7 +6555,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0201 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6581,7 +6581,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0203 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6607,7 +6607,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0205 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6633,7 +6633,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0207 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6659,7 +6659,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0209 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6685,7 +6685,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0211 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6711,7 +6711,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0213 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6737,7 +6737,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0215 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6763,7 +6763,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0219 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6789,7 +6789,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0221 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6815,7 +6815,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0223 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6841,7 +6841,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0225 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6867,7 +6867,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0227 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6893,7 +6893,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0229 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6919,7 +6919,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0231 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6945,7 +6945,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0233 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6971,7 +6971,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0235 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -6997,7 +6997,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0237 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7023,7 +7023,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0239 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7049,7 +7049,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0241 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7075,7 +7075,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0243 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7101,7 +7101,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0245 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7127,7 +7127,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0247 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7153,7 +7153,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0249 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7179,7 +7179,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0251 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7205,7 +7205,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0253 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7231,7 +7231,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0255 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7257,7 +7257,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0257 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7283,7 +7283,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0259 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7309,7 +7309,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0261 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7335,7 +7335,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0263 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7361,7 +7361,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0265 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7387,7 +7387,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0267 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7413,7 +7413,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0269 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7439,7 +7439,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0271 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7465,7 +7465,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0273 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7491,7 +7491,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0275 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7515,7 +7515,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_hero_0276 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7541,7 +7541,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0278 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7567,7 +7567,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0280 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7593,7 +7593,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0282 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7619,7 +7619,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0284 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7645,7 +7645,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0286 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7671,7 +7671,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0288 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7697,7 +7697,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0290 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7723,7 +7723,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0292 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7749,7 +7749,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0294 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7775,7 +7775,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0296 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7801,7 +7801,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0298 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7827,7 +7827,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0300 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7853,7 +7853,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0302 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7879,7 +7879,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0304 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7905,7 +7905,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0306 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7931,7 +7931,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0308 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7957,7 +7957,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0310 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -7983,7 +7983,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0312 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -8009,7 +8009,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0314 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -8035,7 +8035,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0316 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -8061,7 +8061,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hero_0318 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			244,
 			298
@@ -8087,7 +8087,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8113,7 +8113,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8139,7 +8139,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8165,7 +8165,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8191,7 +8191,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8217,7 +8217,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8243,7 +8243,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8269,7 +8269,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_hit_fx_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			136,
 			148
@@ -8295,7 +8295,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			54,
 			44
@@ -8319,7 +8319,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8345,7 +8345,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8371,7 +8371,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8397,7 +8397,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8423,7 +8423,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8449,7 +8449,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8475,7 +8475,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8501,7 +8501,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_leaf_projectile_spawn_fx_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			92,
 			66
@@ -8527,7 +8527,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8555,7 +8555,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8583,7 +8583,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8611,7 +8611,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8639,7 +8639,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8667,7 +8667,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8695,7 +8695,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8723,7 +8723,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8751,7 +8751,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8779,7 +8779,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8809,7 +8809,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8838,7 +8838,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0026 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8864,7 +8864,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0028 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8894,7 +8894,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0034 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8920,7 +8920,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0036 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8946,7 +8946,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0038 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8972,7 +8972,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0040 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -8998,7 +8998,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0042 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9024,7 +9024,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0044 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9050,7 +9050,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0046 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9076,7 +9076,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0048 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9102,7 +9102,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0050 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9128,7 +9128,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0052 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9154,7 +9154,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0054 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9180,7 +9180,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0056 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9206,7 +9206,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0058 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9232,7 +9232,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0060 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9258,7 +9258,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0062 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9284,7 +9284,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0064 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9310,7 +9310,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0066 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9336,7 +9336,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0068 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9362,7 +9362,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0070 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9388,7 +9388,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0072 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9414,7 +9414,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_mushroom_0074 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			188,
 			202
@@ -9440,7 +9440,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9464,7 +9464,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0002 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9488,7 +9488,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9512,7 +9512,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0004 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9536,7 +9536,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9560,7 +9560,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0006 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9584,7 +9584,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9608,7 +9608,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0008 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9632,7 +9632,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9656,7 +9656,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0010 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9680,7 +9680,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9704,7 +9704,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0012 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9728,7 +9728,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9752,7 +9752,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0014 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9776,7 +9776,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9802,7 +9802,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9828,7 +9828,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9854,7 +9854,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9880,7 +9880,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9906,7 +9906,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9932,7 +9932,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9958,7 +9958,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root1_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -9982,7 +9982,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0030 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -10006,7 +10006,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0031 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -10030,7 +10030,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0032 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -10054,7 +10054,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0033 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -10078,7 +10078,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0034 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -10102,7 +10102,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0035 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -10126,7 +10126,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root1_0036 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			100,
 			78
@@ -10155,7 +10155,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10179,7 +10179,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0002 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10203,7 +10203,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10227,7 +10227,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0004 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10251,7 +10251,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10275,7 +10275,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0006 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10299,7 +10299,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10323,7 +10323,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0008 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10347,7 +10347,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10371,7 +10371,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0010 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10395,7 +10395,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10419,7 +10419,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0012 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10443,7 +10443,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10467,7 +10467,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0014 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10491,7 +10491,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10517,7 +10517,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10543,7 +10543,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10569,7 +10569,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10595,7 +10595,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10621,7 +10621,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10647,7 +10647,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10673,7 +10673,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root2_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10697,7 +10697,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0030 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10721,7 +10721,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0031 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10745,7 +10745,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0032 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10769,7 +10769,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0033 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10793,7 +10793,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0034 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10817,7 +10817,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0035 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10841,7 +10841,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0036 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10865,7 +10865,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root2_0037 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			84,
 			68
@@ -10893,7 +10893,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root3_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -10917,7 +10917,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0002 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -10941,7 +10941,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -10965,7 +10965,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0004 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -10989,7 +10989,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11013,7 +11013,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0006 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11037,7 +11037,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11061,7 +11061,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0008 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11085,7 +11085,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11109,7 +11109,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0010 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11133,7 +11133,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11157,7 +11157,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0012 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11181,7 +11181,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11205,7 +11205,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0014 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11229,7 +11229,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11253,7 +11253,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0016 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11277,7 +11277,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11301,7 +11301,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0018 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11327,7 +11327,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root3_0020 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11353,7 +11353,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root3_0022 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11379,7 +11379,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root3_0024 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11405,7 +11405,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root3_0026 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11431,7 +11431,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_passive_root3_0028 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11455,7 +11455,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11479,7 +11479,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0030 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11503,7 +11503,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0031 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11527,7 +11527,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0032 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11551,7 +11551,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0033 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11575,7 +11575,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0034 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11599,7 +11599,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0035 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11623,7 +11623,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0036 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11647,7 +11647,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0037 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11671,7 +11671,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_passive_root3_0038 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			90,
 			74
@@ -11698,7 +11698,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_powered_hit_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			162,
 			152
@@ -11722,7 +11722,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_powered_hit_fx_0002 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			162,
 			152
@@ -11748,7 +11748,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_powered_hit_fx_0004 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			162,
 			152
@@ -11774,7 +11774,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_powered_hit_fx_0006 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			162,
 			152
@@ -11800,7 +11800,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_powered_hit_fx_0008 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			162,
 			152
@@ -11826,7 +11826,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_powered_hit_fx_0010 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			162,
 			152
@@ -11852,7 +11852,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_powered_hit_fx_0012 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			162,
 			152
@@ -11876,7 +11876,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_rune_projectile = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			50,
 			52
@@ -11900,7 +11900,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_shadow = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			56,
 			28
@@ -11924,7 +11924,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_spikes_mouth_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			62
@@ -11950,7 +11950,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_mouth_fx_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			62
@@ -11976,7 +11976,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_mouth_fx_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			62
@@ -12002,7 +12002,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_mouth_fx_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			62
@@ -12028,7 +12028,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			58,
 			54
@@ -12052,7 +12052,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12078,7 +12078,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12104,7 +12104,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12130,7 +12130,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12156,7 +12156,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12182,7 +12182,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12208,7 +12208,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12234,7 +12234,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_hit_fx_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			182,
 			200
@@ -12260,7 +12260,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_trail_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			80,
 			80
@@ -12286,7 +12286,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_trail_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			80,
 			80
@@ -12312,7 +12312,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_trail_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			80,
 			80
@@ -12338,7 +12338,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_trail_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			80,
 			80
@@ -12364,7 +12364,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_spikes_projectile_trail_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			80,
 			80
@@ -12390,7 +12390,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_decal = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			54,
 			34
@@ -12414,7 +12414,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_splinter_ground_a_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12440,7 +12440,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12466,7 +12466,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12492,7 +12492,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12518,7 +12518,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12544,7 +12544,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12585,7 +12585,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0028 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12611,7 +12611,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0030 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12637,7 +12637,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0032 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12663,7 +12663,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_a_0034 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12689,7 +12689,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12715,7 +12715,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12741,7 +12741,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12767,7 +12767,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12793,7 +12793,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12819,7 +12819,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12860,7 +12860,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0028 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12886,7 +12886,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0030 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12912,7 +12912,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_ground_b_0032 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			68,
 			66
@@ -12938,7 +12938,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_splinter_projectile = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			50,
 			36
@@ -12962,7 +12962,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_tower_fx_a_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -12988,7 +12988,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13014,7 +13014,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13040,7 +13040,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13067,7 +13067,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0010 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13093,7 +13093,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0012 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13119,7 +13119,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0014 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13145,7 +13145,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0016 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13171,7 +13171,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0018 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13197,7 +13197,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0020 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13223,7 +13223,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0022 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13249,7 +13249,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0024 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13275,7 +13275,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0026 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13301,7 +13301,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0028 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13327,7 +13327,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0030 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13353,7 +13353,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0032 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13379,7 +13379,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0034 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13405,7 +13405,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_a_0036 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			86
@@ -13431,7 +13431,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13457,7 +13457,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13483,7 +13483,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13509,7 +13509,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13535,7 +13535,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13561,7 +13561,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13587,7 +13587,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13613,7 +13613,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13639,7 +13639,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13665,7 +13665,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0019 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13691,7 +13691,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0021 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13717,7 +13717,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0023 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13743,7 +13743,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0025 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13769,7 +13769,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0027 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13795,7 +13795,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0029 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13821,7 +13821,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0031 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13847,7 +13847,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0033 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13873,7 +13873,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0035 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13899,7 +13899,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0037 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13925,7 +13925,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0039 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13951,7 +13951,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0041 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -13977,7 +13977,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0043 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14003,7 +14003,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0045 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14029,7 +14029,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0047 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14055,7 +14055,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0049 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14081,7 +14081,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0051 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14107,7 +14107,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0053 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14133,7 +14133,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0055 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14159,7 +14159,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0057 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14185,7 +14185,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0059 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14211,7 +14211,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0061 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14237,7 +14237,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0063 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14263,7 +14263,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0065 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14289,7 +14289,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0067 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14315,7 +14315,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0069 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14341,7 +14341,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0071 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14367,7 +14367,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0073 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14393,7 +14393,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0075 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14419,7 +14419,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0077 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14445,7 +14445,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0079 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14471,7 +14471,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0081 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14497,7 +14497,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0083 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14523,7 +14523,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0085 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14549,7 +14549,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0087 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14575,7 +14575,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0089 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14601,7 +14601,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0091 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14627,7 +14627,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0093 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14653,7 +14653,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0095 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14679,7 +14679,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0097 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14705,7 +14705,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0099 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14731,7 +14731,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_tower_fx_b_0101 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			108,
 			98
@@ -14757,7 +14757,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0001 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14781,7 +14781,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_transformation_fx_0002 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14807,7 +14807,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0004 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14833,7 +14833,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0006 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14859,7 +14859,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0008 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14885,7 +14885,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0010 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14911,7 +14911,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0012 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14937,7 +14937,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0014 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14963,7 +14963,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0016 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -14989,7 +14989,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0018 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -15015,7 +15015,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_fx_0020 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			184,
 			392
@@ -15041,7 +15041,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0001 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15067,7 +15067,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0003 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15093,7 +15093,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0005 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15119,7 +15119,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0007 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15145,7 +15145,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0009 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15171,7 +15171,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0011 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15197,7 +15197,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0013 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15223,7 +15223,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0015 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15249,7 +15249,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0017 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15275,7 +15275,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0019 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15301,7 +15301,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0021 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15335,7 +15335,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0023 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15363,7 +15363,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0025 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15391,7 +15391,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0027 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15419,7 +15419,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0029 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15447,7 +15447,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0031 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15475,7 +15475,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0033 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15503,7 +15503,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0035 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15531,7 +15531,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0037 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15559,7 +15559,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0039 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15587,7 +15587,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0041 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15615,7 +15615,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0043 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15643,7 +15643,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0045 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15671,7 +15671,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0047 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15699,7 +15699,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0049 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15727,7 +15727,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0051 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15755,7 +15755,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0055 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15781,7 +15781,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0057 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15807,7 +15807,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0059 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15833,7 +15833,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0061 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15859,7 +15859,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0063 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15885,7 +15885,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0065 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15911,7 +15911,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0067 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15937,7 +15937,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0069 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15963,7 +15963,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0071 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -15989,7 +15989,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0073 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16015,7 +16015,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0075 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16041,7 +16041,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0077 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16067,7 +16067,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0079 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16093,7 +16093,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0081 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16119,7 +16119,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0083 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16145,7 +16145,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0085 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16171,7 +16171,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0087 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16197,7 +16197,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0089 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16223,7 +16223,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0091 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16249,7 +16249,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0093 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16275,7 +16275,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0097 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16301,7 +16301,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0099 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16327,7 +16327,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0101 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16353,7 +16353,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0103 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16379,7 +16379,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0105 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16405,7 +16405,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0107 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16431,7 +16431,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0109 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16457,7 +16457,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0111 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16483,7 +16483,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0113 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16509,7 +16509,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0115 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16535,7 +16535,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0117 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16561,7 +16561,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0119 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16587,7 +16587,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0121 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16613,7 +16613,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0123 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16639,7 +16639,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0125 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16665,7 +16665,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0127 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16691,7 +16691,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0129 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16717,7 +16717,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0131 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16743,7 +16743,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0133 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16769,7 +16769,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0135 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16795,7 +16795,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0137 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16821,7 +16821,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0139 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16849,7 +16849,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0175 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16875,7 +16875,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0177 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16901,7 +16901,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0179 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16927,7 +16927,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0181 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16953,7 +16953,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0183 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -16979,7 +16979,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0185 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17005,7 +17005,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0187 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17031,7 +17031,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0189 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17057,7 +17057,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0191 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17083,7 +17083,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0193 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17109,7 +17109,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0195 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17135,7 +17135,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0197 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17161,7 +17161,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0199 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17187,7 +17187,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0201 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17213,7 +17213,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0203 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17239,7 +17239,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0205 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17265,7 +17265,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0207 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17291,7 +17291,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0209 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17317,7 +17317,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0211 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17343,7 +17343,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0213 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17369,7 +17369,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0215 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17395,7 +17395,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0219 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17421,7 +17421,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0221 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17447,7 +17447,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0223 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17473,7 +17473,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0225 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17499,7 +17499,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0227 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17525,7 +17525,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0229 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17551,7 +17551,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0231 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17577,7 +17577,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0233 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17603,7 +17603,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0235 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17629,7 +17629,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_transformation_overlay_0237 = {
-		a_name = "go_hero_dragon_arb_transformation-1.png",
+		a_name = "go_hero_dragon_arb_transformation-1.dds",
 		size = {
 			176,
 			222
@@ -17655,7 +17655,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17681,7 +17681,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17707,7 +17707,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17735,7 +17735,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17761,7 +17761,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0011 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17787,7 +17787,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0013 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17813,7 +17813,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0015 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17839,7 +17839,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_ground_fx_0017 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			146,
 			104
@@ -17865,7 +17865,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_hit_fx_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			88
@@ -17891,7 +17891,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_hit_fx_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			88
@@ -17917,7 +17917,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_hit_fx_0005 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			88
@@ -17943,7 +17943,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_hit_fx_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			88
@@ -17969,7 +17969,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_hit_fx_0009 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			110,
 			88
@@ -17995,7 +17995,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_projectile_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			52
@@ -18023,7 +18023,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_projectile_0003 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			52
@@ -18049,7 +18049,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_projectile_0007 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			52,
 			52
@@ -18075,7 +18075,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_projectile_trail_0001 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			54,
 			54
@@ -18099,7 +18099,7 @@ return {
 		alias = {}
 	},
 	hero_dragon_arborean_water_projectile_trail_0002 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			54,
 			54
@@ -18125,7 +18125,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_projectile_trail_0004 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			54,
 			54
@@ -18151,7 +18151,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_projectile_trail_0006 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			54,
 			54
@@ -18177,7 +18177,7 @@ return {
 		}
 	},
 	hero_dragon_arborean_water_projectile_trail_0008 = {
-		a_name = "go_hero_dragon_arb-1.png",
+		a_name = "go_hero_dragon_arb-1.dds",
 		size = {
 			54,
 			54

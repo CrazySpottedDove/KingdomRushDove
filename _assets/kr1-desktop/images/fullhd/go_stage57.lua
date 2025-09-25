@@ -2,7 +2,7 @@
 
 return {
 	Stage09_0002 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage09_0003 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			1980,
 			1080
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Stage09_0004 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			1980,
 			1080
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0001 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -100,7 +100,7 @@ return {
 		}
 	},
 	crystalSerpent_0003 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -126,7 +126,7 @@ return {
 		}
 	},
 	crystalSerpent_0005 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -152,7 +152,7 @@ return {
 		}
 	},
 	crystalSerpent_0007 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -178,7 +178,7 @@ return {
 		}
 	},
 	crystalSerpent_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -204,7 +204,7 @@ return {
 		}
 	},
 	crystalSerpent_0011 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -230,7 +230,7 @@ return {
 		}
 	},
 	crystalSerpent_0013 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	crystalSerpent_0015 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -294,7 +294,7 @@ return {
 		}
 	},
 	crystalSerpent_0017 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -326,7 +326,7 @@ return {
 		}
 	},
 	crystalSerpent_0019 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -358,7 +358,7 @@ return {
 		}
 	},
 	crystalSerpent_0021 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -390,7 +390,7 @@ return {
 		}
 	},
 	crystalSerpent_0023 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -422,7 +422,7 @@ return {
 		}
 	},
 	crystalSerpent_0025 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -454,7 +454,7 @@ return {
 		}
 	},
 	crystalSerpent_0069 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -482,7 +482,7 @@ return {
 		}
 	},
 	crystalSerpent_0071 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -510,7 +510,7 @@ return {
 		}
 	},
 	crystalSerpent_0073 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -538,7 +538,7 @@ return {
 		}
 	},
 	crystalSerpent_0075 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -566,7 +566,7 @@ return {
 		}
 	},
 	crystalSerpent_0077 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -594,7 +594,7 @@ return {
 		}
 	},
 	crystalSerpent_0079 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -620,7 +620,7 @@ return {
 		}
 	},
 	crystalSerpent_0081 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -646,7 +646,7 @@ return {
 		}
 	},
 	crystalSerpent_0083 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	crystalSerpent_0085 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	crystalSerpent_0087 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -730,7 +730,7 @@ return {
 		}
 	},
 	crystalSerpent_0089 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -756,7 +756,7 @@ return {
 		}
 	},
 	crystalSerpent_0090 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -782,7 +782,7 @@ return {
 		}
 	},
 	crystalSerpent_0091 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -808,7 +808,7 @@ return {
 		}
 	},
 	crystalSerpent_0092 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -834,7 +834,7 @@ return {
 		}
 	},
 	crystalSerpent_0093 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -860,7 +860,7 @@ return {
 		}
 	},
 	crystalSerpent_0094 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -886,7 +886,7 @@ return {
 		}
 	},
 	crystalSerpent_0095 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -912,7 +912,7 @@ return {
 		}
 	},
 	crystalSerpent_0096 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -938,7 +938,7 @@ return {
 		}
 	},
 	crystalSerpent_0097 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -964,7 +964,7 @@ return {
 		}
 	},
 	crystalSerpent_0098 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -990,7 +990,7 @@ return {
 		}
 	},
 	crystalSerpent_0099 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1016,7 +1016,7 @@ return {
 		}
 	},
 	crystalSerpent_0100 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1042,7 +1042,7 @@ return {
 		}
 	},
 	crystalSerpent_0101 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1068,7 +1068,7 @@ return {
 		}
 	},
 	crystalSerpent_0102 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1094,7 +1094,7 @@ return {
 		}
 	},
 	crystalSerpent_0103 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1122,7 +1122,7 @@ return {
 		}
 	},
 	crystalSerpent_0105 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -1150,7 +1150,7 @@ return {
 		}
 	},
 	crystalSerpent_0107 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -1178,7 +1178,7 @@ return {
 		}
 	},
 	crystalSerpent_0109 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -1206,7 +1206,7 @@ return {
 		}
 	},
 	crystalSerpent_0111 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1234,7 +1234,7 @@ return {
 		}
 	},
 	crystalSerpent_0113 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1262,7 +1262,7 @@ return {
 		}
 	},
 	crystalSerpent_0115 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -1288,7 +1288,7 @@ return {
 		}
 	},
 	crystalSerpent_0117 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1314,7 +1314,7 @@ return {
 		}
 	},
 	crystalSerpent_0119 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1340,7 +1340,7 @@ return {
 		}
 	},
 	crystalSerpent_0121 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1366,7 +1366,7 @@ return {
 		}
 	},
 	crystalSerpent_0123 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1392,7 +1392,7 @@ return {
 		}
 	},
 	crystalSerpent_0125 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1418,7 +1418,7 @@ return {
 		}
 	},
 	crystalSerpent_0127 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1444,7 +1444,7 @@ return {
 		}
 	},
 	crystalSerpent_0129 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1470,7 +1470,7 @@ return {
 		}
 	},
 	crystalSerpent_0131 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1496,7 +1496,7 @@ return {
 		}
 	},
 	crystalSerpent_0133 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1522,7 +1522,7 @@ return {
 		}
 	},
 	crystalSerpent_0135 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1548,7 +1548,7 @@ return {
 		}
 	},
 	crystalSerpent_0137 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1574,7 +1574,7 @@ return {
 		}
 	},
 	crystalSerpent_0139 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1600,7 +1600,7 @@ return {
 		}
 	},
 	crystalSerpent_0141 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1626,7 +1626,7 @@ return {
 		}
 	},
 	crystalSerpent_0143 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1652,7 +1652,7 @@ return {
 		}
 	},
 	crystalSerpent_0145 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1678,7 +1678,7 @@ return {
 		}
 	},
 	crystalSerpent_0147 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1704,7 +1704,7 @@ return {
 		}
 	},
 	crystalSerpent_0149 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1730,7 +1730,7 @@ return {
 		}
 	},
 	crystalSerpent_0151 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1756,7 +1756,7 @@ return {
 		}
 	},
 	crystalSerpent_0152 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1780,7 +1780,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0153 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1804,7 +1804,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0154 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1828,7 +1828,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0155 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1852,7 +1852,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0156 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -1876,7 +1876,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0157 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1900,7 +1900,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0158 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1924,7 +1924,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0159 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1948,7 +1948,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0160 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1972,7 +1972,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0161 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -1996,7 +1996,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0162 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2020,7 +2020,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0163 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2044,7 +2044,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0164 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2068,7 +2068,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0165 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2092,7 +2092,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0166 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2116,7 +2116,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0167 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2140,7 +2140,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0168 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2164,7 +2164,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0169 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2188,7 +2188,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0170 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2212,7 +2212,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0171 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2236,7 +2236,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0172 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2260,7 +2260,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0173 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2284,7 +2284,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0174 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2308,7 +2308,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0176 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2336,7 +2336,7 @@ return {
 		}
 	},
 	crystalSerpent_0178 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2364,7 +2364,7 @@ return {
 		}
 	},
 	crystalSerpent_0180 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2392,7 +2392,7 @@ return {
 		}
 	},
 	crystalSerpent_0182 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2420,7 +2420,7 @@ return {
 		}
 	},
 	crystalSerpent_0184 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2448,7 +2448,7 @@ return {
 		}
 	},
 	crystalSerpent_0186 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2476,7 +2476,7 @@ return {
 		}
 	},
 	crystalSerpent_0188 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2504,7 +2504,7 @@ return {
 		}
 	},
 	crystalSerpent_0190 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2532,7 +2532,7 @@ return {
 		}
 	},
 	crystalSerpent_0192 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2560,7 +2560,7 @@ return {
 		}
 	},
 	crystalSerpent_0194 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2604,7 +2604,7 @@ return {
 		}
 	},
 	crystalSerpent_0196 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2644,7 +2644,7 @@ return {
 		}
 	},
 	crystalSerpent_0204 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2672,7 +2672,7 @@ return {
 		}
 	},
 	crystalSerpent_0206 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2700,7 +2700,7 @@ return {
 		}
 	},
 	crystalSerpent_0208 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -2728,7 +2728,7 @@ return {
 		}
 	},
 	crystalSerpent_0210 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2758,7 +2758,7 @@ return {
 		}
 	},
 	crystalSerpent_0212 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2786,7 +2786,7 @@ return {
 		}
 	},
 	crystalSerpent_0214 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2814,7 +2814,7 @@ return {
 		}
 	},
 	crystalSerpent_0274 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2840,7 +2840,7 @@ return {
 		}
 	},
 	crystalSerpent_0276 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2866,7 +2866,7 @@ return {
 		}
 	},
 	crystalSerpent_0278 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2892,7 +2892,7 @@ return {
 		}
 	},
 	crystalSerpent_0280 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2918,7 +2918,7 @@ return {
 		}
 	},
 	crystalSerpent_0282 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2944,7 +2944,7 @@ return {
 		}
 	},
 	crystalSerpent_0284 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2970,7 +2970,7 @@ return {
 		}
 	},
 	crystalSerpent_0286 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -2996,7 +2996,7 @@ return {
 		}
 	},
 	crystalSerpent_0288 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -3022,7 +3022,7 @@ return {
 		}
 	},
 	crystalSerpent_0290 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -3048,7 +3048,7 @@ return {
 		}
 	},
 	crystalSerpent_0292 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3074,7 +3074,7 @@ return {
 		}
 	},
 	crystalSerpent_0294 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3100,7 +3100,7 @@ return {
 		}
 	},
 	crystalSerpent_0296 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3126,7 +3126,7 @@ return {
 		}
 	},
 	crystalSerpent_0308 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3152,7 +3152,7 @@ return {
 		}
 	},
 	crystalSerpent_0342 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3191,7 +3191,7 @@ return {
 		}
 	},
 	crystalSerpent_0350 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3217,7 +3217,7 @@ return {
 		}
 	},
 	crystalSerpent_0352 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			338,
 			211
@@ -3243,7 +3243,7 @@ return {
 		}
 	},
 	crystalSerpent_0354 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3269,7 +3269,7 @@ return {
 		}
 	},
 	crystalSerpent_0356 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3310,7 +3310,7 @@ return {
 		}
 	},
 	crystalSerpent_0358 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3348,7 +3348,7 @@ return {
 		}
 	},
 	crystalSerpent_0387 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3372,7 +3372,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0388 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3396,7 +3396,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0389 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3420,7 +3420,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0390 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3444,7 +3444,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_0391 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			338,
 			211
@@ -3470,7 +3470,7 @@ return {
 		}
 	},
 	crystalSerpent_0400 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3498,7 +3498,7 @@ return {
 		}
 	},
 	crystalSerpent_0404 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3526,7 +3526,7 @@ return {
 		}
 	},
 	crystalSerpent_0408 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3554,7 +3554,7 @@ return {
 		}
 	},
 	crystalSerpent_0412 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			338,
 			211
@@ -3582,7 +3582,7 @@ return {
 		}
 	},
 	crystalSerpent_smokeParticle = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			45,
 			45
@@ -3606,7 +3606,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_smokeParticleHit = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			82,
 			79
@@ -3630,7 +3630,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0001 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			195,
 			180
@@ -3654,7 +3654,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0002 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			195,
 			180
@@ -3678,7 +3678,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0003 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			195,
 			180
@@ -3702,7 +3702,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0004 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			195,
 			180
@@ -3726,7 +3726,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0005 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			195,
 			180
@@ -3750,7 +3750,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0006 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			195,
 			180
@@ -3774,7 +3774,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0007 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			195,
 			180
@@ -3798,7 +3798,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0008 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			195,
 			180
@@ -3822,7 +3822,7 @@ return {
 		alias = {}
 	},
 	crystalSerpent_towerFreeze_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			195,
 			180
@@ -3846,7 +3846,7 @@ return {
 		alias = {}
 	},
 	crystal_water_waves2_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			76,
 			17
@@ -3873,7 +3873,7 @@ return {
 		}
 	},
 	crystal_water_waves2_0004 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			76,
 			17
@@ -3900,7 +3900,7 @@ return {
 		}
 	},
 	crystal_water_waves2_0007 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			76,
 			17
@@ -3927,7 +3927,7 @@ return {
 		}
 	},
 	crystal_water_waves2_0010 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			76,
 			17
@@ -3954,7 +3954,7 @@ return {
 		}
 	},
 	crystal_water_waves2_0013 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			76,
 			17
@@ -3981,7 +3981,7 @@ return {
 		}
 	},
 	fairy_dragon_0001 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4007,7 +4007,7 @@ return {
 		}
 	},
 	fairy_dragon_0003 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4035,7 +4035,7 @@ return {
 		}
 	},
 	fairy_dragon_0005 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4063,7 +4063,7 @@ return {
 		}
 	},
 	fairy_dragon_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4091,7 +4091,7 @@ return {
 		}
 	},
 	fairy_dragon_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4119,7 +4119,7 @@ return {
 		}
 	},
 	fairy_dragon_0011 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4147,7 +4147,7 @@ return {
 		}
 	},
 	fairy_dragon_0013 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4175,7 +4175,7 @@ return {
 		}
 	},
 	fairy_dragon_0015 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4203,7 +4203,7 @@ return {
 		}
 	},
 	fairy_dragon_0017 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4231,7 +4231,7 @@ return {
 		}
 	},
 	fairy_dragon_0019 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4255,7 +4255,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_0020 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4281,7 +4281,7 @@ return {
 		}
 	},
 	fairy_dragon_0022 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4307,7 +4307,7 @@ return {
 		}
 	},
 	fairy_dragon_0024 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4333,7 +4333,7 @@ return {
 		}
 	},
 	fairy_dragon_0026 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4359,7 +4359,7 @@ return {
 		}
 	},
 	fairy_dragon_0028 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4385,7 +4385,7 @@ return {
 		}
 	},
 	fairy_dragon_0030 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4411,7 +4411,7 @@ return {
 		}
 	},
 	fairy_dragon_0032 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -4437,7 +4437,7 @@ return {
 		}
 	},
 	fairy_dragon_0034 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4463,7 +4463,7 @@ return {
 		}
 	},
 	fairy_dragon_0036 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4489,7 +4489,7 @@ return {
 		}
 	},
 	fairy_dragon_0038 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4515,7 +4515,7 @@ return {
 		}
 	},
 	fairy_dragon_0040 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4541,7 +4541,7 @@ return {
 		}
 	},
 	fairy_dragon_0042 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4567,7 +4567,7 @@ return {
 		}
 	},
 	fairy_dragon_0044 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4593,7 +4593,7 @@ return {
 		}
 	},
 	fairy_dragon_0046 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4619,7 +4619,7 @@ return {
 		}
 	},
 	fairy_dragon_0048 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4645,7 +4645,7 @@ return {
 		}
 	},
 	fairy_dragon_0050 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4671,7 +4671,7 @@ return {
 		}
 	},
 	fairy_dragon_0052 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4697,7 +4697,7 @@ return {
 		}
 	},
 	fairy_dragon_0054 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -4721,7 +4721,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_0055 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -4747,7 +4747,7 @@ return {
 		}
 	},
 	fairy_dragon_0057 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4773,7 +4773,7 @@ return {
 		}
 	},
 	fairy_dragon_0059 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4799,7 +4799,7 @@ return {
 		}
 	},
 	fairy_dragon_0061 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			84,
 			138
@@ -4825,7 +4825,7 @@ return {
 		}
 	},
 	fairy_dragon_0079 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -4870,7 +4870,7 @@ return {
 		}
 	},
 	fairy_dragon_0090 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4896,7 +4896,7 @@ return {
 		}
 	},
 	fairy_dragon_0092 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -4922,7 +4922,7 @@ return {
 		}
 	},
 	fairy_dragon_0094 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4948,7 +4948,7 @@ return {
 		}
 	},
 	fairy_dragon_0096 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			138
@@ -4974,7 +4974,7 @@ return {
 		}
 	},
 	fairy_dragon_0098 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -5000,7 +5000,7 @@ return {
 		}
 	},
 	fairy_dragon_0100 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -5026,7 +5026,7 @@ return {
 		}
 	},
 	fairy_dragon_0102 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			138
@@ -5052,7 +5052,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0001 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -5076,7 +5076,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_egg_0002 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -5102,7 +5102,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0004 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -5128,7 +5128,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0006 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			56
@@ -5154,7 +5154,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0008 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -5180,7 +5180,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0010 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -5206,7 +5206,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0012 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -5232,7 +5232,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0014 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			56
@@ -5258,7 +5258,7 @@ return {
 		}
 	},
 	fairy_dragon_egg_0016 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			56
@@ -5282,7 +5282,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -5308,7 +5308,7 @@ return {
 		}
 	},
 	fairy_dragon_freeze_0003 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -5332,7 +5332,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0004 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5356,7 +5356,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0005 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5380,7 +5380,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0006 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5404,7 +5404,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0007 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -5428,7 +5428,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0008 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -5452,7 +5452,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0009 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -5476,7 +5476,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0010 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5500,7 +5500,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0011 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5524,7 +5524,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0012 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5548,7 +5548,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0013 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5572,7 +5572,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0014 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -5596,7 +5596,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0015 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5620,7 +5620,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0016 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5644,7 +5644,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0017 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5668,7 +5668,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0018 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5692,7 +5692,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0019 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5716,7 +5716,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0020 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5740,7 +5740,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0021 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5764,7 +5764,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0022 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			84,
 			34
@@ -5788,7 +5788,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_0023 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			84,
 			34
@@ -5812,7 +5812,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -5838,7 +5838,7 @@ return {
 		}
 	},
 	fairy_dragon_freeze_flying_0003 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -5864,7 +5864,7 @@ return {
 		}
 	},
 	fairy_dragon_freeze_flying_0005 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -5888,7 +5888,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0006 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -5912,7 +5912,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -5936,7 +5936,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0008 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -5960,7 +5960,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0009 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -5984,7 +5984,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0010 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -6008,7 +6008,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0011 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -6032,7 +6032,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0012 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -6056,7 +6056,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0013 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -6080,7 +6080,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0014 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -6104,7 +6104,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0015 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -6128,7 +6128,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0016 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			73,
 			79
@@ -6152,7 +6152,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0017 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -6176,7 +6176,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0018 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -6200,7 +6200,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0019 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -6224,7 +6224,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0020 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			73,
 			79
@@ -6248,7 +6248,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_freeze_flying_0021 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			73,
 			79
@@ -6272,7 +6272,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_proy_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			28,
 			28
@@ -6296,7 +6296,7 @@ return {
 		alias = {}
 	},
 	fairy_dragon_proy_0002 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -6322,7 +6322,7 @@ return {
 		}
 	},
 	fairy_dragon_proy_0004 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -6348,7 +6348,7 @@ return {
 		}
 	},
 	fairy_dragon_proy_0006 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -6374,7 +6374,7 @@ return {
 		}
 	},
 	fairy_dragon_proy_0008 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			28,
 			28
@@ -6400,7 +6400,7 @@ return {
 		}
 	},
 	fairy_dragon_proy_particle_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			17,
 			11
@@ -6426,7 +6426,7 @@ return {
 		}
 	},
 	fairy_dragon_proy_particle_0003 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			17,
 			11
@@ -6452,7 +6452,7 @@ return {
 		}
 	},
 	fairy_dragon_proy_particle_0005 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			17,
 			11
@@ -6478,7 +6478,7 @@ return {
 		}
 	},
 	fairy_dragon_tower = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			141,
 			118
@@ -6502,7 +6502,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals1_layer_0001 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -6528,7 +6528,7 @@ return {
 		}
 	},
 	stage9_crystals1_layer_0003 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -6554,7 +6554,7 @@ return {
 		}
 	},
 	stage9_crystals1_layer_0005 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -6580,7 +6580,7 @@ return {
 		}
 	},
 	stage9_crystals1_layer_0007 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -6604,7 +6604,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals1_layer_0008 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -6628,7 +6628,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals1_layer_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -6654,7 +6654,7 @@ return {
 		}
 	},
 	stage9_crystals1_layer_0011 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			290,
 			239
@@ -6680,7 +6680,7 @@ return {
 		}
 	},
 	stage9_crystals1_layer_0013 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			290,
 			239
@@ -6706,7 +6706,7 @@ return {
 		}
 	},
 	stage9_crystals1_layer_0015 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			290,
 			239
@@ -6732,7 +6732,7 @@ return {
 		}
 	},
 	stage9_crystals2_layer_0001 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			293,
 			239
@@ -6758,7 +6758,7 @@ return {
 		}
 	},
 	stage9_crystals2_layer_0003 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			293,
 			239
@@ -6784,7 +6784,7 @@ return {
 		}
 	},
 	stage9_crystals2_layer_0005 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			293,
 			239
@@ -6810,7 +6810,7 @@ return {
 		}
 	},
 	stage9_crystals2_layer_0007 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			293,
 			239
@@ -6834,7 +6834,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals2_layer_0008 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			293,
 			239
@@ -6858,7 +6858,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals2_layer_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			293,
 			239
@@ -6884,7 +6884,7 @@ return {
 		}
 	},
 	stage9_crystals2_layer_0011 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			293,
 			239
@@ -6910,7 +6910,7 @@ return {
 		}
 	},
 	stage9_crystals2_layer_0013 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			293,
 			239
@@ -6936,7 +6936,7 @@ return {
 		}
 	},
 	stage9_crystals2_layer_0015 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			293,
 			239
@@ -6962,7 +6962,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0001 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			323,
 			239
@@ -6988,7 +6988,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0003 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			323,
 			239
@@ -7014,7 +7014,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0005 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			323,
 			239
@@ -7040,7 +7040,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			323,
 			239
@@ -7064,7 +7064,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals3_layer_0008 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			323,
 			239
@@ -7088,7 +7088,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals3_layer_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			323,
 			239
@@ -7114,7 +7114,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0011 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			323,
 			239
@@ -7140,7 +7140,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0013 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			323,
 			239
@@ -7166,7 +7166,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0015 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			323,
 			239
@@ -7192,7 +7192,7 @@ return {
 		}
 	},
 	stage9_crystals3_layer_0017 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			323,
 			239
@@ -7218,7 +7218,7 @@ return {
 		}
 	},
 	stage9_crystals4_layer_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			231,
 			239
@@ -7244,7 +7244,7 @@ return {
 		}
 	},
 	stage9_crystals4_layer_0003 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			231,
 			239
@@ -7270,7 +7270,7 @@ return {
 		}
 	},
 	stage9_crystals4_layer_0005 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			231,
 			239
@@ -7296,7 +7296,7 @@ return {
 		}
 	},
 	stage9_crystals4_layer_0007 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			231,
 			239
@@ -7320,7 +7320,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals4_layer_0008 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			231,
 			239
@@ -7344,7 +7344,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals4_layer_0009 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			231,
 			239
@@ -7370,7 +7370,7 @@ return {
 		}
 	},
 	stage9_crystals4_layer_0011 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			231,
 			239
@@ -7396,7 +7396,7 @@ return {
 		}
 	},
 	stage9_crystals4_layer_0013 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			231,
 			239
@@ -7422,7 +7422,7 @@ return {
 		}
 	},
 	stage9_crystals4_layer_0015 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			231,
 			239
@@ -7448,7 +7448,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0001 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			290,
 			239
@@ -7474,7 +7474,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0003 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7500,7 +7500,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0005 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7526,7 +7526,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7552,7 +7552,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0009 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7578,7 +7578,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0011 = {
-		a_name = "go_stage57-1.png",
+		a_name = "go_stage57-1.dds",
 		size = {
 			290,
 			239
@@ -7604,7 +7604,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0013 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7630,7 +7630,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0015 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7656,7 +7656,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0017 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7682,7 +7682,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0019 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -7708,7 +7708,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0021 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7734,7 +7734,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0023 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7760,7 +7760,7 @@ return {
 		}
 	},
 	stage9_crystals_rocks_0025 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			290,
 			239
@@ -7784,7 +7784,7 @@ return {
 		alias = {}
 	},
 	stage9_crystals_smoke = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			290,
 			239
@@ -7808,7 +7808,7 @@ return {
 		alias = {}
 	},
 	stage9_waterfall_bottom_0001 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -7835,7 +7835,7 @@ return {
 		}
 	},
 	stage9_waterfall_bottom_0004 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -7862,7 +7862,7 @@ return {
 		}
 	},
 	stage9_waterfall_bottom_0007 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			174,
 			245
@@ -7889,7 +7889,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines2_0001 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			174,
 			245
@@ -7916,7 +7916,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines2_0004 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			174,
 			245
@@ -7943,7 +7943,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines2_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -7970,7 +7970,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines2_0010 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -7997,7 +7997,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines2_0013 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -8024,7 +8024,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines_0001 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -8051,7 +8051,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines_0004 = {
-		a_name = "go_stage57-2.png",
+		a_name = "go_stage57-2.dds",
 		size = {
 			174,
 			245
@@ -8078,7 +8078,7 @@ return {
 		}
 	},
 	stage9_waterfall_lines_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -8105,7 +8105,7 @@ return {
 		}
 	},
 	stage9_waterfall_top_0001 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -8132,7 +8132,7 @@ return {
 		}
 	},
 	stage9_waterfall_top_0004 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245
@@ -8159,7 +8159,7 @@ return {
 		}
 	},
 	stage9_waterfall_top_0007 = {
-		a_name = "go_stage57-3.png",
+		a_name = "go_stage57-3.dds",
 		size = {
 			174,
 			245

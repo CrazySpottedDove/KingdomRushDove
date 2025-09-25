@@ -2,7 +2,7 @@
 
 return {
 	rage_small_0001 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	rage_small_0002 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	rage_small_0003 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	rage_small_0004 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	rage_small_0005 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	rage_small_0006 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	rage_small_0007 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	rage_small_0008 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	rage_small_0009 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	rage_small_0010 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	rage_small_0011 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	rage_small_0012 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	rage_small_0013 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	rage_small_0014 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	rage_small_0015 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	rage_small_0016 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	rage_small_0017 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	rage_small_0018 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	rage_small_0019 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	rage_small_0020 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	rage_small_0021 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	rage_small_0022 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	rage_small_0023 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	rage_small_0024 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	rage_small_0025 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			58,
 			46
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	rage_small_0026 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	rage_small_0027 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			58,
 			46
@@ -652,7 +652,7 @@ return {
 		}
 	},
 	troll_0001 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -678,7 +678,7 @@ return {
 		}
 	},
 	troll_0003 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -704,7 +704,7 @@ return {
 		}
 	},
 	troll_0005 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -730,7 +730,7 @@ return {
 		}
 	},
 	troll_0007 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -754,7 +754,7 @@ return {
 		alias = {}
 	},
 	troll_0008 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -780,7 +780,7 @@ return {
 		}
 	},
 	troll_0010 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -806,7 +806,7 @@ return {
 		}
 	},
 	troll_0012 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -832,7 +832,7 @@ return {
 		}
 	},
 	troll_0014 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -858,7 +858,7 @@ return {
 		}
 	},
 	troll_0016 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -884,7 +884,7 @@ return {
 		}
 	},
 	troll_0018 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -908,7 +908,7 @@ return {
 		alias = {}
 	},
 	troll_0019 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -934,7 +934,7 @@ return {
 		}
 	},
 	troll_0021 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -960,7 +960,7 @@ return {
 		}
 	},
 	troll_0023 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -986,7 +986,7 @@ return {
 		}
 	},
 	troll_0025 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1012,7 +1012,7 @@ return {
 		}
 	},
 	troll_0027 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1038,7 +1038,7 @@ return {
 		}
 	},
 	troll_0029 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1062,7 +1062,7 @@ return {
 		alias = {}
 	},
 	troll_0030 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1088,7 +1088,7 @@ return {
 		}
 	},
 	troll_0032 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1114,7 +1114,7 @@ return {
 		}
 	},
 	troll_0034 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1140,7 +1140,7 @@ return {
 		}
 	},
 	troll_0036 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1166,7 +1166,7 @@ return {
 		}
 	},
 	troll_0038 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1192,7 +1192,7 @@ return {
 		}
 	},
 	troll_0040 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1216,7 +1216,7 @@ return {
 		alias = {}
 	},
 	troll_0041 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			62
@@ -1242,7 +1242,7 @@ return {
 		}
 	},
 	troll_0043 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1268,7 +1268,7 @@ return {
 		}
 	},
 	troll_0045 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1294,7 +1294,7 @@ return {
 		}
 	},
 	troll_0047 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			62
@@ -1320,7 +1320,7 @@ return {
 		}
 	},
 	troll_0049 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1346,7 +1346,7 @@ return {
 		}
 	},
 	troll_0051 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1370,7 +1370,7 @@ return {
 		alias = {}
 	},
 	troll_0052 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1396,7 +1396,7 @@ return {
 		}
 	},
 	troll_0054 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1422,7 +1422,7 @@ return {
 		}
 	},
 	troll_0056 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1448,7 +1448,7 @@ return {
 		}
 	},
 	troll_0058 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			62
@@ -1474,7 +1474,7 @@ return {
 		}
 	},
 	troll_0060 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1500,7 +1500,7 @@ return {
 		}
 	},
 	troll_0062 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			62
@@ -1524,7 +1524,7 @@ return {
 		alias = {}
 	},
 	troll_0063 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1550,7 +1550,7 @@ return {
 		}
 	},
 	troll_0065 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1576,7 +1576,7 @@ return {
 		}
 	},
 	troll_0067 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1603,7 +1603,7 @@ return {
 		}
 	},
 	troll_0068 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1632,7 +1632,7 @@ return {
 		}
 	},
 	troll_0073 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			62
@@ -1659,7 +1659,7 @@ return {
 		}
 	},
 	troll_0077 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1683,7 +1683,7 @@ return {
 		alias = {}
 	},
 	troll_0078 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1707,7 +1707,7 @@ return {
 		alias = {}
 	},
 	troll_0079 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1733,7 +1733,7 @@ return {
 		}
 	},
 	troll_0081 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1759,7 +1759,7 @@ return {
 		}
 	},
 	troll_0083 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1783,7 +1783,7 @@ return {
 		alias = {}
 	},
 	troll_0084 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1807,7 +1807,7 @@ return {
 		alias = {}
 	},
 	troll_0085 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1831,7 +1831,7 @@ return {
 		alias = {}
 	},
 	troll_0086 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1855,7 +1855,7 @@ return {
 		alias = {}
 	},
 	troll_0087 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1888,7 +1888,7 @@ return {
 		}
 	},
 	troll_0096 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1914,7 +1914,7 @@ return {
 		}
 	},
 	troll_0098 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1938,7 +1938,7 @@ return {
 		alias = {}
 	},
 	troll_0099 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1962,7 +1962,7 @@ return {
 		alias = {}
 	},
 	troll_0101 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -1986,7 +1986,7 @@ return {
 		alias = {}
 	},
 	troll_0102 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -2010,7 +2010,7 @@ return {
 		alias = {}
 	},
 	troll_0103 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -2034,7 +2034,7 @@ return {
 		alias = {}
 	},
 	troll_0104 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			62
@@ -2058,7 +2058,7 @@ return {
 		alias = {}
 	},
 	troll_0105 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			62
@@ -2084,7 +2084,7 @@ return {
 		}
 	},
 	troll_axethrower_proyectiles_0001 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			26,
 			20
@@ -2108,7 +2108,7 @@ return {
 		alias = {}
 	},
 	troll_axethrower_proyectiles_0002 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			26,
 			20
@@ -2132,7 +2132,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0001 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2158,7 +2158,7 @@ return {
 		}
 	},
 	troll_chieftain_0003 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2184,7 +2184,7 @@ return {
 		}
 	},
 	troll_chieftain_0005 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2210,7 +2210,7 @@ return {
 		}
 	},
 	troll_chieftain_0007 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2236,7 +2236,7 @@ return {
 		}
 	},
 	troll_chieftain_0009 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2262,7 +2262,7 @@ return {
 		}
 	},
 	troll_chieftain_0011 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2288,7 +2288,7 @@ return {
 		}
 	},
 	troll_chieftain_0013 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2314,7 +2314,7 @@ return {
 		}
 	},
 	troll_chieftain_0015 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2340,7 +2340,7 @@ return {
 		}
 	},
 	troll_chieftain_0017 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2366,7 +2366,7 @@ return {
 		}
 	},
 	troll_chieftain_0019 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2392,7 +2392,7 @@ return {
 		}
 	},
 	troll_chieftain_0021 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2418,7 +2418,7 @@ return {
 		}
 	},
 	troll_chieftain_0023 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2444,7 +2444,7 @@ return {
 		}
 	},
 	troll_chieftain_0025 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2470,7 +2470,7 @@ return {
 		}
 	},
 	troll_chieftain_0027 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2496,7 +2496,7 @@ return {
 		}
 	},
 	troll_chieftain_0029 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2522,7 +2522,7 @@ return {
 		}
 	},
 	troll_chieftain_0031 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2548,7 +2548,7 @@ return {
 		}
 	},
 	troll_chieftain_0033 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2574,7 +2574,7 @@ return {
 		}
 	},
 	troll_chieftain_0035 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2600,7 +2600,7 @@ return {
 		}
 	},
 	troll_chieftain_0037 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2626,7 +2626,7 @@ return {
 		}
 	},
 	troll_chieftain_0039 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2652,7 +2652,7 @@ return {
 		}
 	},
 	troll_chieftain_0041 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2678,7 +2678,7 @@ return {
 		}
 	},
 	troll_chieftain_0043 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2704,7 +2704,7 @@ return {
 		}
 	},
 	troll_chieftain_0045 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2730,7 +2730,7 @@ return {
 		}
 	},
 	troll_chieftain_0047 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2756,7 +2756,7 @@ return {
 		}
 	},
 	troll_chieftain_0049 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2782,7 +2782,7 @@ return {
 		}
 	},
 	troll_chieftain_0051 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2808,7 +2808,7 @@ return {
 		}
 	},
 	troll_chieftain_0053 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2834,7 +2834,7 @@ return {
 		}
 	},
 	troll_chieftain_0055 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2860,7 +2860,7 @@ return {
 		}
 	},
 	troll_chieftain_0057 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2886,7 +2886,7 @@ return {
 		}
 	},
 	troll_chieftain_0059 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2912,7 +2912,7 @@ return {
 		}
 	},
 	troll_chieftain_0061 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -2938,7 +2938,7 @@ return {
 		}
 	},
 	troll_chieftain_0063 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2964,7 +2964,7 @@ return {
 		}
 	},
 	troll_chieftain_0065 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -2990,7 +2990,7 @@ return {
 		}
 	},
 	troll_chieftain_0067 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3016,7 +3016,7 @@ return {
 		}
 	},
 	troll_chieftain_0069 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3042,7 +3042,7 @@ return {
 		}
 	},
 	troll_chieftain_0071 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3068,7 +3068,7 @@ return {
 		}
 	},
 	troll_chieftain_0073 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3094,7 +3094,7 @@ return {
 		}
 	},
 	troll_chieftain_0075 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3120,7 +3120,7 @@ return {
 		}
 	},
 	troll_chieftain_0077 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3146,7 +3146,7 @@ return {
 		}
 	},
 	troll_chieftain_0079 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3172,7 +3172,7 @@ return {
 		}
 	},
 	troll_chieftain_0081 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3198,7 +3198,7 @@ return {
 		}
 	},
 	troll_chieftain_0083 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3224,7 +3224,7 @@ return {
 		}
 	},
 	troll_chieftain_0085 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3250,7 +3250,7 @@ return {
 		}
 	},
 	troll_chieftain_0087 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3276,7 +3276,7 @@ return {
 		}
 	},
 	troll_chieftain_0089 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3302,7 +3302,7 @@ return {
 		}
 	},
 	troll_chieftain_0091 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3329,7 +3329,7 @@ return {
 		}
 	},
 	troll_chieftain_0094 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3355,7 +3355,7 @@ return {
 		}
 	},
 	troll_chieftain_0096 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3381,7 +3381,7 @@ return {
 		}
 	},
 	troll_chieftain_0098 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3407,7 +3407,7 @@ return {
 		}
 	},
 	troll_chieftain_0100 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3434,7 +3434,7 @@ return {
 		}
 	},
 	troll_chieftain_0103 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3460,7 +3460,7 @@ return {
 		}
 	},
 	troll_chieftain_0105 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3486,7 +3486,7 @@ return {
 		}
 	},
 	troll_chieftain_0107 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3513,7 +3513,7 @@ return {
 		}
 	},
 	troll_chieftain_0108 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3539,7 +3539,7 @@ return {
 		}
 	},
 	troll_chieftain_0110 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3565,7 +3565,7 @@ return {
 		}
 	},
 	troll_chieftain_0112 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3591,7 +3591,7 @@ return {
 		}
 	},
 	troll_chieftain_0114 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3617,7 +3617,7 @@ return {
 		}
 	},
 	troll_chieftain_0116 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3643,7 +3643,7 @@ return {
 		}
 	},
 	troll_chieftain_0118 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3669,7 +3669,7 @@ return {
 		}
 	},
 	troll_chieftain_0122 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3693,7 +3693,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0123 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3717,7 +3717,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0124 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3743,7 +3743,7 @@ return {
 		}
 	},
 	troll_chieftain_0126 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3769,7 +3769,7 @@ return {
 		}
 	},
 	troll_chieftain_0128 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3793,7 +3793,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0129 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3817,7 +3817,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0130 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3841,7 +3841,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0131 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3865,7 +3865,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0132 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3898,7 +3898,7 @@ return {
 		}
 	},
 	troll_chieftain_0141 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3924,7 +3924,7 @@ return {
 		}
 	},
 	troll_chieftain_0143 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3948,7 +3948,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0144 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -3972,7 +3972,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0145 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -3998,7 +3998,7 @@ return {
 		}
 	},
 	troll_chieftain_0147 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -4024,7 +4024,7 @@ return {
 		}
 	},
 	troll_chieftain_0149 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -4050,7 +4050,7 @@ return {
 		}
 	},
 	troll_chieftain_0151 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -4078,7 +4078,7 @@ return {
 		}
 	},
 	troll_chieftain_0155 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			110,
 			82
@@ -4102,7 +4102,7 @@ return {
 		alias = {}
 	},
 	troll_chieftain_0156 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -4128,7 +4128,7 @@ return {
 		}
 	},
 	troll_chieftain_0158 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -4154,7 +4154,7 @@ return {
 		}
 	},
 	troll_chieftain_0160 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -4180,7 +4180,7 @@ return {
 		}
 	},
 	troll_chieftain_0162 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			110,
 			82
@@ -4206,7 +4206,7 @@ return {
 		}
 	},
 	troll_thrower_0001 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4232,7 +4232,7 @@ return {
 		}
 	},
 	troll_thrower_0003 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4258,7 +4258,7 @@ return {
 		}
 	},
 	troll_thrower_0005 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4284,7 +4284,7 @@ return {
 		}
 	},
 	troll_thrower_0007 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4308,7 +4308,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0008 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4334,7 +4334,7 @@ return {
 		}
 	},
 	troll_thrower_0010 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4360,7 +4360,7 @@ return {
 		}
 	},
 	troll_thrower_0012 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4386,7 +4386,7 @@ return {
 		}
 	},
 	troll_thrower_0014 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4412,7 +4412,7 @@ return {
 		}
 	},
 	troll_thrower_0016 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4438,7 +4438,7 @@ return {
 		}
 	},
 	troll_thrower_0018 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4462,7 +4462,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0019 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4488,7 +4488,7 @@ return {
 		}
 	},
 	troll_thrower_0021 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -4514,7 +4514,7 @@ return {
 		}
 	},
 	troll_thrower_0023 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4540,7 +4540,7 @@ return {
 		}
 	},
 	troll_thrower_0025 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4566,7 +4566,7 @@ return {
 		}
 	},
 	troll_thrower_0027 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4592,7 +4592,7 @@ return {
 		}
 	},
 	troll_thrower_0029 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4616,7 +4616,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0030 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4642,7 +4642,7 @@ return {
 		}
 	},
 	troll_thrower_0032 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4668,7 +4668,7 @@ return {
 		}
 	},
 	troll_thrower_0034 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4694,7 +4694,7 @@ return {
 		}
 	},
 	troll_thrower_0036 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4720,7 +4720,7 @@ return {
 		}
 	},
 	troll_thrower_0038 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4746,7 +4746,7 @@ return {
 		}
 	},
 	troll_thrower_0040 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4770,7 +4770,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0041 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4796,7 +4796,7 @@ return {
 		}
 	},
 	troll_thrower_0043 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4822,7 +4822,7 @@ return {
 		}
 	},
 	troll_thrower_0045 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4848,7 +4848,7 @@ return {
 		}
 	},
 	troll_thrower_0047 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4874,7 +4874,7 @@ return {
 		}
 	},
 	troll_thrower_0049 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4900,7 +4900,7 @@ return {
 		}
 	},
 	troll_thrower_0051 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4924,7 +4924,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0052 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4950,7 +4950,7 @@ return {
 		}
 	},
 	troll_thrower_0054 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -4976,7 +4976,7 @@ return {
 		}
 	},
 	troll_thrower_0056 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5002,7 +5002,7 @@ return {
 		}
 	},
 	troll_thrower_0058 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5028,7 +5028,7 @@ return {
 		}
 	},
 	troll_thrower_0060 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5054,7 +5054,7 @@ return {
 		}
 	},
 	troll_thrower_0062 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5078,7 +5078,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0063 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5104,7 +5104,7 @@ return {
 		}
 	},
 	troll_thrower_0065 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5130,7 +5130,7 @@ return {
 		}
 	},
 	troll_thrower_0067 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5160,7 +5160,7 @@ return {
 		}
 	},
 	troll_thrower_0068 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5186,7 +5186,7 @@ return {
 		}
 	},
 	troll_thrower_0070 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5212,7 +5212,7 @@ return {
 		}
 	},
 	troll_thrower_0072 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5238,7 +5238,7 @@ return {
 		}
 	},
 	troll_thrower_0074 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5264,7 +5264,7 @@ return {
 		}
 	},
 	troll_thrower_0076 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5288,7 +5288,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0077 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5314,7 +5314,7 @@ return {
 		}
 	},
 	troll_thrower_0079 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5341,7 +5341,7 @@ return {
 		}
 	},
 	troll_thrower_0083 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5367,7 +5367,7 @@ return {
 		}
 	},
 	troll_thrower_0085 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5393,7 +5393,7 @@ return {
 		}
 	},
 	troll_thrower_0087 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5419,7 +5419,7 @@ return {
 		}
 	},
 	troll_thrower_0089 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5445,7 +5445,7 @@ return {
 		}
 	},
 	troll_thrower_0091 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5469,7 +5469,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0092 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5493,7 +5493,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0093 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5517,7 +5517,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0094 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5541,7 +5541,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0095 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5567,7 +5567,7 @@ return {
 		}
 	},
 	troll_thrower_0101 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5591,7 +5591,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0102 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5615,7 +5615,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0103 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5641,7 +5641,7 @@ return {
 		}
 	},
 	troll_thrower_0105 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5667,7 +5667,7 @@ return {
 		}
 	},
 	troll_thrower_0107 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5691,7 +5691,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0108 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5715,7 +5715,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0109 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -5739,7 +5739,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0110 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5763,7 +5763,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0111 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5796,7 +5796,7 @@ return {
 		}
 	},
 	troll_thrower_0120 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5822,7 +5822,7 @@ return {
 		}
 	},
 	troll_thrower_0122 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5846,7 +5846,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0123 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5870,7 +5870,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0124 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5896,7 +5896,7 @@ return {
 		}
 	},
 	troll_thrower_0126 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5922,7 +5922,7 @@ return {
 		}
 	},
 	troll_thrower_0128 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5948,7 +5948,7 @@ return {
 		}
 	},
 	troll_thrower_0130 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -5976,7 +5976,7 @@ return {
 		}
 	},
 	troll_thrower_0134 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			86,
 			72
@@ -6000,7 +6000,7 @@ return {
 		alias = {}
 	},
 	troll_thrower_0135 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -6026,7 +6026,7 @@ return {
 		}
 	},
 	troll_thrower_0137 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -6052,7 +6052,7 @@ return {
 		}
 	},
 	troll_thrower_0139 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			86,
 			72
@@ -6078,7 +6078,7 @@ return {
 		}
 	},
 	winterwolf_0001 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6104,7 +6104,7 @@ return {
 		}
 	},
 	winterwolf_0003 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6128,7 +6128,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0004 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6152,7 +6152,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0005 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6176,7 +6176,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0006 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6200,7 +6200,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0007 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6224,7 +6224,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0008 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6248,7 +6248,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0009 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6272,7 +6272,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0010 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6296,7 +6296,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0011 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6322,7 +6322,7 @@ return {
 		}
 	},
 	winterwolf_0013 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6348,7 +6348,7 @@ return {
 		}
 	},
 	winterwolf_0015 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6374,7 +6374,7 @@ return {
 		}
 	},
 	winterwolf_0017 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6400,7 +6400,7 @@ return {
 		}
 	},
 	winterwolf_0019 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6426,7 +6426,7 @@ return {
 		}
 	},
 	winterwolf_0021 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6452,7 +6452,7 @@ return {
 		}
 	},
 	winterwolf_0023 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6478,7 +6478,7 @@ return {
 		}
 	},
 	winterwolf_0025 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6504,7 +6504,7 @@ return {
 		}
 	},
 	winterwolf_0027 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6530,7 +6530,7 @@ return {
 		}
 	},
 	winterwolf_0029 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6556,7 +6556,7 @@ return {
 		}
 	},
 	winterwolf_0031 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6580,7 +6580,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0032 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6604,7 +6604,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0033 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6628,7 +6628,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0034 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6654,7 +6654,7 @@ return {
 		}
 	},
 	winterwolf_0036 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6680,7 +6680,7 @@ return {
 		}
 	},
 	winterwolf_0038 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6704,7 +6704,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0039 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6730,7 +6730,7 @@ return {
 		}
 	},
 	winterwolf_0041 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6756,7 +6756,7 @@ return {
 		}
 	},
 	winterwolf_0043 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6780,7 +6780,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0044 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6806,7 +6806,7 @@ return {
 		}
 	},
 	winterwolf_0046 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6830,7 +6830,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0047 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -6854,7 +6854,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0048 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6880,7 +6880,7 @@ return {
 		}
 	},
 	winterwolf_0050 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6906,7 +6906,7 @@ return {
 		}
 	},
 	winterwolf_0052 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6930,7 +6930,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0053 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6954,7 +6954,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0054 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -6978,7 +6978,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0055 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -7002,7 +7002,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0056 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -7035,7 +7035,7 @@ return {
 		}
 	},
 	winterwolf_0065 = {
-		a_name = "go_enemies_ice-2.png",
+		a_name = "go_enemies_ice-2.dds",
 		size = {
 			92,
 			82
@@ -7061,7 +7061,7 @@ return {
 		}
 	},
 	winterwolf_0067 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7085,7 +7085,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0068 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7109,7 +7109,7 @@ return {
 		alias = {}
 	},
 	winterwolf_0069 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7135,7 +7135,7 @@ return {
 		}
 	},
 	winterwolf_0071 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7161,7 +7161,7 @@ return {
 		}
 	},
 	winterwolf_0073 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7187,7 +7187,7 @@ return {
 		}
 	},
 	winterwolf_0075 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7213,7 +7213,7 @@ return {
 		}
 	},
 	winterwolf_0077 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7239,7 +7239,7 @@ return {
 		}
 	},
 	winterwolf_0079 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7265,7 +7265,7 @@ return {
 		}
 	},
 	winterwolf_0081 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7291,7 +7291,7 @@ return {
 		}
 	},
 	winterwolf_0083 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			92,
 			82
@@ -7317,7 +7317,7 @@ return {
 		}
 	},
 	yeti_0001 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7343,7 +7343,7 @@ return {
 		}
 	},
 	yeti_0003 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7367,7 +7367,7 @@ return {
 		alias = {}
 	},
 	yeti_0004 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7393,7 +7393,7 @@ return {
 		}
 	},
 	yeti_0006 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7417,7 +7417,7 @@ return {
 		alias = {}
 	},
 	yeti_0007 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7443,7 +7443,7 @@ return {
 		}
 	},
 	yeti_0009 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7467,7 +7467,7 @@ return {
 		alias = {}
 	},
 	yeti_0010 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7493,7 +7493,7 @@ return {
 		}
 	},
 	yeti_0012 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7517,7 +7517,7 @@ return {
 		alias = {}
 	},
 	yeti_0013 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7543,7 +7543,7 @@ return {
 		}
 	},
 	yeti_0015 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7567,7 +7567,7 @@ return {
 		alias = {}
 	},
 	yeti_0016 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7593,7 +7593,7 @@ return {
 		}
 	},
 	yeti_0018 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7617,7 +7617,7 @@ return {
 		alias = {}
 	},
 	yeti_0019 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7643,7 +7643,7 @@ return {
 		}
 	},
 	yeti_0021 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7667,7 +7667,7 @@ return {
 		alias = {}
 	},
 	yeti_0022 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7693,7 +7693,7 @@ return {
 		}
 	},
 	yeti_0024 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7717,7 +7717,7 @@ return {
 		alias = {}
 	},
 	yeti_0025 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7741,7 +7741,7 @@ return {
 		alias = {}
 	},
 	yeti_0026 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7767,7 +7767,7 @@ return {
 		}
 	},
 	yeti_0028 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7793,7 +7793,7 @@ return {
 		}
 	},
 	yeti_0030 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7819,7 +7819,7 @@ return {
 		}
 	},
 	yeti_0032 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7845,7 +7845,7 @@ return {
 		}
 	},
 	yeti_0034 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7871,7 +7871,7 @@ return {
 		}
 	},
 	yeti_0036 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7897,7 +7897,7 @@ return {
 		}
 	},
 	yeti_0038 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7923,7 +7923,7 @@ return {
 		}
 	},
 	yeti_0040 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7949,7 +7949,7 @@ return {
 		}
 	},
 	yeti_0042 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -7975,7 +7975,7 @@ return {
 		}
 	},
 	yeti_0044 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8001,7 +8001,7 @@ return {
 		}
 	},
 	yeti_0046 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8027,7 +8027,7 @@ return {
 		}
 	},
 	yeti_0048 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8053,7 +8053,7 @@ return {
 		}
 	},
 	yeti_0050 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8079,7 +8079,7 @@ return {
 		}
 	},
 	yeti_0052 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8105,7 +8105,7 @@ return {
 		}
 	},
 	yeti_0054 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8131,7 +8131,7 @@ return {
 		}
 	},
 	yeti_0056 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8157,7 +8157,7 @@ return {
 		}
 	},
 	yeti_0058 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8183,7 +8183,7 @@ return {
 		}
 	},
 	yeti_0060 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8209,7 +8209,7 @@ return {
 		}
 	},
 	yeti_0062 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8235,7 +8235,7 @@ return {
 		}
 	},
 	yeti_0064 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8261,7 +8261,7 @@ return {
 		}
 	},
 	yeti_0066 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8287,7 +8287,7 @@ return {
 		}
 	},
 	yeti_0068 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8313,7 +8313,7 @@ return {
 		}
 	},
 	yeti_0070 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8339,7 +8339,7 @@ return {
 		}
 	},
 	yeti_0072 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8363,7 +8363,7 @@ return {
 		alias = {}
 	},
 	yeti_0073 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8391,7 +8391,7 @@ return {
 		}
 	},
 	yeti_0074 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8415,7 +8415,7 @@ return {
 		alias = {}
 	},
 	yeti_0075 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8439,7 +8439,7 @@ return {
 		alias = {}
 	},
 	yeti_0076 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8463,7 +8463,7 @@ return {
 		alias = {}
 	},
 	yeti_0077 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8489,7 +8489,7 @@ return {
 		}
 	},
 	yeti_0079 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8515,7 +8515,7 @@ return {
 		}
 	},
 	yeti_0081 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8541,7 +8541,7 @@ return {
 		}
 	},
 	yeti_0083 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8567,7 +8567,7 @@ return {
 		}
 	},
 	yeti_0085 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8593,7 +8593,7 @@ return {
 		}
 	},
 	yeti_0087 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8619,7 +8619,7 @@ return {
 		}
 	},
 	yeti_0089 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8645,7 +8645,7 @@ return {
 		}
 	},
 	yeti_0091 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8676,7 +8676,7 @@ return {
 		}
 	},
 	yeti_0098 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8702,7 +8702,7 @@ return {
 		}
 	},
 	yeti_0103 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8726,7 +8726,7 @@ return {
 		alias = {}
 	},
 	yeti_0104 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8750,7 +8750,7 @@ return {
 		alias = {}
 	},
 	yeti_0105 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8776,7 +8776,7 @@ return {
 		}
 	},
 	yeti_0107 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8802,7 +8802,7 @@ return {
 		}
 	},
 	yeti_0109 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8826,7 +8826,7 @@ return {
 		alias = {}
 	},
 	yeti_0110 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8850,7 +8850,7 @@ return {
 		alias = {}
 	},
 	yeti_0111 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8874,7 +8874,7 @@ return {
 		alias = {}
 	},
 	yeti_0112 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8898,7 +8898,7 @@ return {
 		alias = {}
 	},
 	yeti_0113 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8931,7 +8931,7 @@ return {
 		}
 	},
 	yeti_0122 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8957,7 +8957,7 @@ return {
 		}
 	},
 	yeti_0124 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -8981,7 +8981,7 @@ return {
 		alias = {}
 	},
 	yeti_0125 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9005,7 +9005,7 @@ return {
 		alias = {}
 	},
 	yeti_0126 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9031,7 +9031,7 @@ return {
 		}
 	},
 	yeti_0128 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9055,7 +9055,7 @@ return {
 		alias = {}
 	},
 	yeti_0129 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9081,7 +9081,7 @@ return {
 		}
 	},
 	yeti_0131 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9105,7 +9105,7 @@ return {
 		alias = {}
 	},
 	yeti_0132 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9131,7 +9131,7 @@ return {
 		}
 	},
 	yeti_0134 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9157,7 +9157,7 @@ return {
 		}
 	},
 	yeti_0136 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9192,7 +9192,7 @@ return {
 		}
 	},
 	yeti_0147 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9218,7 +9218,7 @@ return {
 		}
 	},
 	yeti_0149 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9244,7 +9244,7 @@ return {
 		}
 	},
 	yeti_0151 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9270,7 +9270,7 @@ return {
 		}
 	},
 	yeti_0153 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
@@ -9296,7 +9296,7 @@ return {
 		}
 	},
 	yeti_0155 = {
-		a_name = "go_enemies_ice-1.png",
+		a_name = "go_enemies_ice-1.dds",
 		size = {
 			142,
 			114
