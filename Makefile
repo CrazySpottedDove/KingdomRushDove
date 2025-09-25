@@ -10,5 +10,5 @@ examine_windows_dir:
 	fi
 
 sync: examine_windows_dir
-	@echo "\033[1;36m========== sync git changes to: $(WINDOWS_DIR) ==========\033[0m"
+	@echo -e "\033[1;36m========== sync git changes to: $(WINDOWS_DIR) ==========\033[0m"
 	@git status --porcelain | awk '{print $$2}' | xargs -I{} cp --parents {} $(WINDOWS_DIR)
