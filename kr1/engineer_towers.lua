@@ -1365,7 +1365,7 @@ local function engineer_towers()
     tt.attacks.list[1].cooldown = b.basic_attack.cooldown[4]
     tt.attacks.list[1].shoot_time = fts(33)
     tt.attacks.list[1].bullet_start_offset = vec_2(-7, 100)
-    tt.attacks.list[1].max_range = b.basic_attack.range[4]
+    -- tt.attacks.list[1].max_range = b.basic_attack.range[4]
     tt.attacks.list[1].node_prediction = fts(60)
     tt.attacks.list[1].animation = "attack"
     tt.attacks.list[1].animation_reload = "reload_2"
@@ -1376,7 +1376,7 @@ local function engineer_towers()
     tt.attacks.list[2].cooldown = b.big_guy.cooldown[1]
     tt.attacks.list[2].shoot_time = fts(43)
     tt.attacks.list[2].bullet_start_offset = vec_2(-7, 70)
-    tt.attacks.list[2].max_range = b.big_guy.max_range
+    -- tt.attacks.list[2].max_range = b.big_guy.max_range
     tt.attacks.list[2].node_prediction = fts(80)
     tt.attacks.list[2].animation = "big_guy_spawn"
     tt.attacks.list[2].animation_reload = "big_guy_reload_big_guy"

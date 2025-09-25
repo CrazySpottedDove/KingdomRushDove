@@ -337,7 +337,7 @@ function upgrades:barrack_soldiers()
             "soldier_elf", "soldier_elemental", "soldier_skeleton", "soldier_skeleton_knight", "soldier_death_rider",
             "soldier_templar", "soldier_assassin", "soldier_dwarf", "soldier_amazona", "soldier_djinn",
             "soldier_pirate_flamer", "soldier_frankenstein", "soldier_blade", "soldier_forest", "soldier_druid_bear",
-            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite"}
+            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4"}
 end
 
 function upgrades:towers_with_barrack()
@@ -373,17 +373,17 @@ end
 
 function upgrades:engineer_towers()
     return {"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_tesla", "tower_dwaarp",
-            "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood", "tower_tricannon_lvl4"}
+            "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood", "tower_tricannon_lvl4","tower_demon_pit_lvl4"}
 end
 
 function upgrades:engineer_bombs()
     return {"bomb", "bomb_dynamite", "bomb_black", "bomb_bfg", "bomb_mecha", "rock_druid", "rock_entwood",
-            "rock_firey_nut", "tower_tricannon_bomb_4", "tower_tricannon_bomb_overheated"}
+            "rock_firey_nut", "tower_tricannon_bomb_4", "tower_tricannon_bomb_overheated","bullet_tower_demon_pit_basic_attack_lvl4","bullet_tower_demon_pit_guy_lvl4"}
 end
 
 function upgrades:engineer_advanced_towers()
     return {"tower_bfg", "tower_tesla", "tower_dwaarp", "tower_mech", "tower_frankenstein", "tower_druid",
-            "tower_entwood", "tower_tricannon_lvl4"}
+            "tower_entwood", "tower_tricannon_lvl4","tower_demon_pit_lvl4"}
 end
 function upgrades:patch_templates(max_level)
     if max_level then
@@ -691,6 +691,10 @@ function upgrades:patch_templates(max_level)
         at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
         at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
         at = T("tower_tricannon_lvl4").powers.overheat
+        at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
+        at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
+        at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
+        at = T("tower_demon_pit_lvl4").powers.big_guy
         at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
         at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
         at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
