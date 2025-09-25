@@ -1,14 +1,31 @@
 WINDOWS_DIR:=$(shell cat ./.windows_kr_dove_dir)
+LOVE:=$(shell cat ./.love_dir)
+WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 
-.PHONY: examine_windows_dir  sync
+.PHONY: all debug package repackage 
 
-examine_windows_dir:
-# 	如果 WINDOWS_DIR 目录不存在，提示用户创建
+all: _examine_dir_map _sync
+	$(LOVE) "$(WINDOWS_DIR_WIN)" --console
+
+_examine_dir_map:
 	@if [ ! -d "$(WINDOWS_DIR)" ]; then \
 		echo "错误: 目录 $(WINDOWS_DIR) 不存在，请创建该目录或修改 .windows_kr_dove_dir 文件中的路径。"; \
 		exit 1; \
 	fi
+	@if [ ! -f "$(LOVE)" ]; then \
+		echo "错误: LOVE 可执行文件 $(LOVE) 不存在，请检查 .love_dir 文件中的路径。"; \
+		exit 1; \
+	fi
 
-sync: examine_windows_dir
-	@echo -e "\033[1;36m========== sync git changes to: $(WINDOWS_DIR) ==========\033[0m"
-	@git status --porcelain | awk '{print $$2}' | xargs -I{} cp --parents {} $(WINDOWS_DIR)
+_sync:
+	@echo -e "\033[1;36m=== sync changed files to: $(WINDOWS_DIR) ===\033[0m"
+	@git ls-files --modified --others --exclude-standard | xargs -I{} cp --parents "{}" "$(WINDOWS_DIR)"
+
+debug: _examine_dir_map _sync
+	$(LOVE) "$(WINDOWS_DIR_WIN)" debug
+
+monitor: _examine_dir_map _sync
+	$(LOVE) "$(WINDOWS_DIR_WIN)" monitor
+
+package:
+	bash ./package.sh

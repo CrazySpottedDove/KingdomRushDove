@@ -1,3 +1,4 @@
+#!/bin/bash
 VERSION_FILE="./version.lua"
 
 # 读取当前 id
@@ -23,7 +24,8 @@ fi
 new_id="$major.$minor.$patch"
 
 # 压缩包名用新 id
-OUTPUT_ZIP="../Kingdom Rush_${current_id}.zip"
+mkdir -p ./.versions
+OUTPUT_ZIP="./.versions/Kingdom Rush_${current_id}.zip"
 
 if [ -f "../Kingdom Rush.zip" ]; then
     echo "已存在 Kingdom Rush.zip，正在删除..."
