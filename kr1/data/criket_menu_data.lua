@@ -383,4 +383,14 @@ return {{
     tt_title = _("ELVES_TOWER_PIXIE_NAME"),
     tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION"),
     is_kr3 = true
+}, {
+    check = "main_icons_0019",
+    action_arg = "tower_necromancer_lvl4",
+    action = "tw_upgrade",
+    image = "kr5_main_icons_0011",
+    place = 16,
+    halo = "glow_ico_main",
+    tt_title = _("TOWER_NECROMANCER_NAME"),
+    tt_desc = _("TOWER_NECROMANCER_1_DESCRIPTION"),
+    is_kr3 = true
 }}

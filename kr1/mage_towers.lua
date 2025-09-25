@@ -1526,7 +1526,7 @@ local function mage_towers()
     tt = RT("tower_necromancer_lvl4", "tower")
     AC(tt, "attacks", "tower_upgrade_persistent_data", "tween", "powers")
     tt.is_kr5 = true
-    tt.tower.type = "necromancer"
+    tt.tower.type = "necromancer_lvl4"
     tt.tower.kind = TOWER_KIND_MAGE
     tt.tower.team = TEAM_DARK_ARMY
     tt.tower.level = 1

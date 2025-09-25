@@ -3392,7 +3392,7 @@ return {
             templates.sell
         },
     },
-    necromancer = {
+    necromancer_lvl4 = {
         {
             {
                 check = "special_icons_0020",
