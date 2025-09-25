@@ -1543,8 +1543,8 @@ local function mage_towers()
     tt.info.fn = scripts.tower_mage.get_info
     tt.info.tower_portrait = "towerselect_portraits_big_0010"
     tt.main_script.insert = scripts.tower_mage.insert
-    tt.main_script.update = scripts.tower_necromancer.update
-    tt.main_script.remove = scripts.tower_necromancer.remove
+    tt.main_script.update = scripts.tower_necromancer_lvl4.update
+    tt.main_script.remove = scripts.tower_necromancer_lvl4.remove
     tt.attacks.min_cooldown = b.shared_min_cooldown
     tt.attacks.range = b.basic_attack.range[4]
     tt.attacks.attack_delay_on_spawn = fts(5)
@@ -1655,7 +1655,7 @@ local function mage_towers()
     tt.max_golems = b.curse.max_golems
     tt.ui.click_rect = r(-40, 0, 80, 90)
     tt.ui.click_rect_offset_y = -10
-    
+
 
     tt = RT("soldier_tower_necromancer_skeleton_lvl4", "soldier_militia")
     local skeleton = b.skeleton
@@ -1703,6 +1703,7 @@ local function mage_towers()
     tt.patrol_pos_offset = vec_2(15, 10)
     tt.patrol_min_cd = 5
     tt.patrol_max_cd = 10
+    tt.is_kr5 = true
 
     tt = RT("soldier_tower_necromancer_skeleton_golem_lvl4", "soldier_tower_necromancer_skeleton_lvl4")
     local skeleton_golem = b.skeleton_golem
@@ -1894,7 +1895,7 @@ local function mage_towers()
     tt.excluded_templates_golem = {
         ""
     }
-    
+
     tt = RT("mod_tower_necromancer_skill_debuff", "modifier")
     tt.main_script.insert = scripts.mod_track_target.insert
     tt.modifier.duration = nil

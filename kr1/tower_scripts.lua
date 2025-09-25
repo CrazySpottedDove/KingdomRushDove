@@ -7167,9 +7167,9 @@ end
 
 -- 死灵法师_STARE
 
-scripts.tower_necromancer = {}
+scripts.tower_necromancer_lvl4 = {}
 
-function scripts.tower_necromancer.update(this, store)
+function scripts.tower_necromancer_lvl4.update(this, store)
     local tower_sid = this.render.sid_tower
     local last_ts = store.tick_ts - this.attacks.list[1].cooldown
     local last_ts_shared = store.tick_ts - this.attacks.min_cooldown
@@ -7463,7 +7463,7 @@ function scripts.tower_necromancer.update(this, store)
     end
 end
 
-function scripts.tower_necromancer.remove(this, store)
+function scripts.tower_necromancer_lvl4.remove(this, store)
     if this.tower_upgrade_persistent_data.skulls_ref and not this.tower.upgrade_to then
         for _, skull in pairs(this.tower_upgrade_persistent_data.skulls_ref) do
             if skull then
