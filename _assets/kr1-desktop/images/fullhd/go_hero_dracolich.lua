@@ -1,7 +1,7 @@
 -- chunkname: @./kr2-desktop/assets/images/fullhd/go_hero_dracolich.lua
 return {
     Halloween_hero_bones_attackDecal = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {59, 37},
         trim = {0, 11, 1, 4},
         a_size = {1024, 1024},
@@ -9,7 +9,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0001 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {123, 5, 0, 144},
         a_size = {1024, 1024},
@@ -17,7 +17,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0002 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {89, 57, 9, 58},
         a_size = {1024, 1024},
@@ -25,7 +25,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0003 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {68, 124, 36, 18},
         a_size = {1024, 1024},
@@ -33,7 +33,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0004 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {65, 134, 38, 15},
         a_size = {1024, 1024},
@@ -41,7 +41,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0005"}
     },
     Halloween_hero_bones_attack_0006 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {55, 134, 38, 18},
         a_size = {1024, 1024},
@@ -49,7 +49,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0007"}
     },
     Halloween_hero_bones_attack_0008 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {54, 134, 38, 17},
         a_size = {1024, 1024},
@@ -57,7 +57,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0009"}
     },
     Halloween_hero_bones_attack_0010 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {52, 135, 38, 13},
         a_size = {1024, 1024},
@@ -65,7 +65,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0011"}
     },
     Halloween_hero_bones_attack_0012 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {50, 135, 39, 9},
         a_size = {1024, 1024},
@@ -73,7 +73,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0013"}
     },
     Halloween_hero_bones_attack_0014 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {48, 137, 40, 11},
         a_size = {1024, 1024},
@@ -81,7 +81,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0015"}
     },
     Halloween_hero_bones_attack_0016 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {44, 141, 42, 17},
         a_size = {1024, 1024},
@@ -89,7 +89,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0017"}
     },
     Halloween_hero_bones_attack_0018 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {42, 141, 40, 13},
         a_size = {1024, 1024},
@@ -97,7 +97,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0019"}
     },
     Halloween_hero_bones_attack_0020 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {40, 141, 38, 14},
         a_size = {1024, 1024},
@@ -105,7 +105,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0021"}
     },
     Halloween_hero_bones_attack_0022 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {70, 141, 44, 18},
         a_size = {1024, 1024},
@@ -116,7 +116,7 @@ return {
                  "Halloween_hero_bones_attack_0029", "Halloween_hero_bones_attack_0030"}
     },
     Halloween_hero_bones_attack_0031 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {68, 134, 38, 18},
         a_size = {1024, 1024},
@@ -126,7 +126,7 @@ return {
                  "Halloween_hero_bones_attack_0128"}
     },
     Halloween_hero_bones_attack_0033 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {68, 130, 38, 18},
         a_size = {1024, 1024},
@@ -136,7 +136,7 @@ return {
                  "Halloween_hero_bones_attack_0130"}
     },
     Halloween_hero_bones_attack_0035 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {68, 128, 38, 18},
         a_size = {1024, 1024},
@@ -146,7 +146,7 @@ return {
                  "Halloween_hero_bones_attack_0132"}
     },
     Halloween_hero_bones_attack_0037 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {68, 125, 38, 18},
         a_size = {1024, 1024},
@@ -156,7 +156,7 @@ return {
                  "Halloween_hero_bones_attack_0134"}
     },
     Halloween_hero_bones_attack_0039 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {68, 124, 39, 18},
         a_size = {1024, 1024},
@@ -166,7 +166,7 @@ return {
                  "Halloween_hero_bones_attack_0136"}
     },
     Halloween_hero_bones_attack_0041 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {69, 123, 40, 18},
         a_size = {1024, 1024},
@@ -176,7 +176,7 @@ return {
                  "Halloween_hero_bones_attack_0138"}
     },
     Halloween_hero_bones_attack_0043 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {69, 122, 53, 44},
         a_size = {1024, 1024},
@@ -186,7 +186,7 @@ return {
                  "Halloween_hero_bones_attack_0140"}
     },
     Halloween_hero_bones_attack_0045 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {69, 123, 53, 46},
         a_size = {1024, 1024},
@@ -194,7 +194,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0093", "Halloween_hero_bones_attack_0141"}
     },
     Halloween_hero_bones_attack_0046 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {71, 123, 53, 57},
         a_size = {1024, 1024},
@@ -202,7 +202,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0094", "Halloween_hero_bones_attack_0142"}
     },
     Halloween_hero_bones_attack_0047 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {72, 123, 56, 59},
         a_size = {1024, 1024},
@@ -212,7 +212,7 @@ return {
                  "Halloween_hero_bones_attack_0144"}
     },
     Halloween_hero_bones_attack_0049 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {122, 3, 4, 146},
         a_size = {1024, 1024},
@@ -220,7 +220,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0050 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {88, 57, 25, 63},
         a_size = {1024, 1024},
@@ -228,7 +228,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0051 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {68, 121, 51, 18},
         a_size = {1024, 1024},
@@ -236,7 +236,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0052 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {65, 134, 53, 15},
         a_size = {1024, 1024},
@@ -244,7 +244,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0053"}
     },
     Halloween_hero_bones_attack_0054 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {55, 134, 53, 18},
         a_size = {1024, 1024},
@@ -252,7 +252,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0055"}
     },
     Halloween_hero_bones_attack_0056 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {54, 134, 53, 17},
         a_size = {1024, 1024},
@@ -260,7 +260,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0057"}
     },
     Halloween_hero_bones_attack_0058 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {52, 135, 53, 13},
         a_size = {1024, 1024},
@@ -268,7 +268,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0059"}
     },
     Halloween_hero_bones_attack_0060 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {50, 136, 51, 9},
         a_size = {1024, 1024},
@@ -276,7 +276,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0061"}
     },
     Halloween_hero_bones_attack_0062 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {48, 138, 49, 11},
         a_size = {1024, 1024},
@@ -284,7 +284,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0063"}
     },
     Halloween_hero_bones_attack_0064 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {44, 141, 45, 17},
         a_size = {1024, 1024},
@@ -292,7 +292,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0065"}
     },
     Halloween_hero_bones_attack_0066 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {42, 141, 43, 13},
         a_size = {1024, 1024},
@@ -300,7 +300,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0067"}
     },
     Halloween_hero_bones_attack_0068 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {40, 141, 42, 14},
         a_size = {1024, 1024},
@@ -308,7 +308,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0069"}
     },
     Halloween_hero_bones_attack_0070 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {70, 141, 60, 18},
         a_size = {1024, 1024},
@@ -319,7 +319,7 @@ return {
                  "Halloween_hero_bones_attack_0077", "Halloween_hero_bones_attack_0078"}
     },
     Halloween_hero_bones_attack_0097 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {124, 17, 9, 151},
         a_size = {1024, 1024},
@@ -327,7 +327,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0098 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {94, 86, 38, 80},
         a_size = {1024, 1024},
@@ -335,7 +335,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0099 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {69, 150, 63, 18},
         a_size = {1024, 1024},
@@ -343,7 +343,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_attack_0100 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {67, 162, 63, 11},
         a_size = {1024, 1024},
@@ -351,7 +351,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0101"}
     },
     Halloween_hero_bones_attack_0102 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {60, 162, 61, 15},
         a_size = {1024, 1024},
@@ -359,7 +359,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0103"}
     },
     Halloween_hero_bones_attack_0104 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {58, 162, 60, 13},
         a_size = {1024, 1024},
@@ -367,7 +367,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0105"}
     },
     Halloween_hero_bones_attack_0106 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {57, 162, 58, 10},
         a_size = {1024, 1024},
@@ -375,7 +375,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0107"}
     },
     Halloween_hero_bones_attack_0108 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {55, 162, 57, 7},
         a_size = {1024, 1024},
@@ -383,7 +383,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0109"}
     },
     Halloween_hero_bones_attack_0110 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {163, 211},
         trim = {53, 164, 55, 8},
         a_size = {1024, 1024},
@@ -391,7 +391,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0111"}
     },
     Halloween_hero_bones_attack_0112 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {50, 167, 52, 13},
         a_size = {1024, 1024},
@@ -399,7 +399,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0113"}
     },
     Halloween_hero_bones_attack_0114 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {49, 167, 50, 9},
         a_size = {1024, 1024},
@@ -407,7 +407,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0115"}
     },
     Halloween_hero_bones_attack_0116 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {163, 211},
         trim = {47, 167, 49, 11},
         a_size = {1024, 1024},
@@ -415,7 +415,7 @@ return {
         alias = {"Halloween_hero_bones_attack_0117"}
     },
     Halloween_hero_bones_attack_0118 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {163, 211},
         trim = {72, 167, 69, 18},
         a_size = {1024, 1024},
@@ -426,7 +426,7 @@ return {
                  "Halloween_hero_bones_attack_0125", "Halloween_hero_bones_attack_0126"}
     },
     Halloween_hero_bones_disease_big_0001 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {84, 70},
         trim = {9, 11, 13, 9},
         a_size = {1024, 1024},
@@ -434,7 +434,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0002", "Halloween_hero_bones_disease_big_0003"}
     },
     Halloween_hero_bones_disease_big_0004 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {84, 70},
         trim = {13, 8, 14, 10},
         a_size = {1024, 1024},
@@ -442,7 +442,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0005", "Halloween_hero_bones_disease_big_0006"}
     },
     Halloween_hero_bones_disease_big_0007 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {84, 70},
         trim = {14, 8, 11, 10},
         a_size = {1024, 1024},
@@ -450,7 +450,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0008", "Halloween_hero_bones_disease_big_0009"}
     },
     Halloween_hero_bones_disease_big_0010 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {84, 70},
         trim = {15, 11, 13, 23},
         a_size = {1024, 1024},
@@ -458,7 +458,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0011", "Halloween_hero_bones_disease_big_0012"}
     },
     Halloween_hero_bones_disease_big_0013 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {84, 70},
         trim = {20, 16, 10, 26},
         a_size = {1024, 1024},
@@ -466,7 +466,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0014"}
     },
     Halloween_hero_bones_disease_big_0015 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {84, 70},
         trim = {20, 16, 7, 24},
         a_size = {1024, 1024},
@@ -474,7 +474,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_big_0016 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {84, 70},
         trim = {11, 14, 7, 24},
         a_size = {1024, 1024},
@@ -482,7 +482,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0017"}
     },
     Halloween_hero_bones_disease_big_0018 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {84, 70},
         trim = {7, 14, 7, 26},
         a_size = {1024, 1024},
@@ -490,7 +490,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_big_0019 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {84, 70},
         trim = {7, 13, 7, 26},
         a_size = {1024, 1024},
@@ -498,7 +498,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0020"}
     },
     Halloween_hero_bones_disease_big_0021 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {84, 70},
         trim = {7, 13, 7, 18},
         a_size = {1024, 1024},
@@ -506,7 +506,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_big_0022 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {84, 70},
         trim = {7, 14, 8, 18},
         a_size = {1024, 1024},
@@ -514,7 +514,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0023"}
     },
     Halloween_hero_bones_disease_big_0024 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {84, 70},
         trim = {7, 14, 10, 9},
         a_size = {1024, 1024},
@@ -522,7 +522,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_big_0025 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {84, 70},
         trim = {7, 10, 10, 9},
         a_size = {1024, 1024},
@@ -530,7 +530,7 @@ return {
         alias = {"Halloween_hero_bones_disease_big_0026"}
     },
     Halloween_hero_bones_disease_explotion_0001 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {113, 98},
         trim = {42, 28, 36, 42},
         a_size = {1024, 1024},
@@ -538,7 +538,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_explotion_0002 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {113, 98},
         trim = {35, 16, 28, 32},
         a_size = {1024, 1024},
@@ -546,7 +546,7 @@ return {
         alias = {"Halloween_hero_bones_disease_explotion_0003"}
     },
     Halloween_hero_bones_disease_explotion_0004 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {113, 98},
         trim = {29, 13, 23, 26},
         a_size = {1024, 1024},
@@ -554,7 +554,7 @@ return {
         alias = {"Halloween_hero_bones_disease_explotion_0005"}
     },
     Halloween_hero_bones_disease_explotion_0006 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {113, 98},
         trim = {22, 11, 18, 20},
         a_size = {1024, 1024},
@@ -562,7 +562,7 @@ return {
         alias = {"Halloween_hero_bones_disease_explotion_0007"}
     },
     Halloween_hero_bones_disease_explotion_0008 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {113, 98},
         trim = {13, 11, 13, 14},
         a_size = {1024, 1024},
@@ -570,7 +570,7 @@ return {
         alias = {"Halloween_hero_bones_disease_explotion_0009"}
     },
     Halloween_hero_bones_disease_explotion_0010 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {113, 98},
         trim = {10, 15, 12, 13},
         a_size = {1024, 1024},
@@ -578,7 +578,7 @@ return {
         alias = {"Halloween_hero_bones_disease_explotion_0011"}
     },
     Halloween_hero_bones_disease_explotion_0012 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {113, 98},
         trim = {11, 15, 11, 11},
         a_size = {1024, 1024},
@@ -586,7 +586,7 @@ return {
         alias = {"Halloween_hero_bones_disease_explotion_0013"}
     },
     Halloween_hero_bones_disease_explotion_0014 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {113, 98},
         trim = {11, 17, 10, 11},
         a_size = {1024, 1024},
@@ -594,7 +594,7 @@ return {
         alias = {"Halloween_hero_bones_disease_explotion_0015"}
     },
     Halloween_hero_bones_disease_small_0001 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {56, 42},
         trim = {6, 5, 8, 4},
         a_size = {1024, 1024},
@@ -602,7 +602,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0002", "Halloween_hero_bones_disease_small_0003"}
     },
     Halloween_hero_bones_disease_small_0004 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {56, 42},
         trim = {9, 3, 9, 4},
         a_size = {1024, 1024},
@@ -610,7 +610,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0005", "Halloween_hero_bones_disease_small_0006"}
     },
     Halloween_hero_bones_disease_small_0007 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {56, 42},
         trim = {10, 3, 7, 4},
         a_size = {1024, 1024},
@@ -618,7 +618,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0008", "Halloween_hero_bones_disease_small_0009"}
     },
     Halloween_hero_bones_disease_small_0010 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {56, 42},
         trim = {11, 5, 8, 13},
         a_size = {1024, 1024},
@@ -626,7 +626,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0011", "Halloween_hero_bones_disease_small_0012"}
     },
     Halloween_hero_bones_disease_small_0013 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {56, 42},
         trim = {13, 8, 6, 15},
         a_size = {1024, 1024},
@@ -634,7 +634,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0014"}
     },
     Halloween_hero_bones_disease_small_0015 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {56, 42},
         trim = {13, 8, 4, 14},
         a_size = {1024, 1024},
@@ -642,7 +642,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_small_0016 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {56, 42},
         trim = {7, 7, 4, 14},
         a_size = {1024, 1024},
@@ -650,7 +650,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0017"}
     },
     Halloween_hero_bones_disease_small_0018 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {56, 42},
         trim = {5, 7, 4, 15},
         a_size = {1024, 1024},
@@ -658,7 +658,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_small_0019 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {56, 42},
         trim = {5, 6, 5, 15},
         a_size = {1024, 1024},
@@ -666,7 +666,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0020"}
     },
     Halloween_hero_bones_disease_small_0021 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {56, 42},
         trim = {5, 6, 4, 10},
         a_size = {1024, 1024},
@@ -674,7 +674,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_small_0022 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {56, 42},
         trim = {5, 6, 5, 10},
         a_size = {1024, 1024},
@@ -682,7 +682,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0023"}
     },
     Halloween_hero_bones_disease_small_0024 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {56, 42},
         trim = {5, 6, 6, 4},
         a_size = {1024, 1024},
@@ -690,7 +690,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_disease_small_0025 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {56, 42},
         trim = {5, 4, 6, 4},
         a_size = {1024, 1024},
@@ -698,7 +698,7 @@ return {
         alias = {"Halloween_hero_bones_disease_small_0026"}
     },
     Halloween_hero_bones_explosion_0001 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {225, 197},
         trim = {61, 40, 71, 24},
         a_size = {1024, 1024},
@@ -706,7 +706,7 @@ return {
         alias = {"Halloween_hero_bones_explosion_0002"}
     },
     Halloween_hero_bones_explosion_0003 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {225, 197},
         trim = {44, 28, 57, 19},
         a_size = {1024, 1024},
@@ -714,7 +714,7 @@ return {
         alias = {"Halloween_hero_bones_explosion_0004"}
     },
     Halloween_hero_bones_explosion_0005 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {225, 197},
         trim = {24, 25, 29, 11},
         a_size = {1024, 1024},
@@ -722,7 +722,7 @@ return {
         alias = {"Halloween_hero_bones_explosion_0006"}
     },
     Halloween_hero_bones_explosion_0007 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {225, 197},
         trim = {14, 19, 20, 1},
         a_size = {1024, 1024},
@@ -730,7 +730,7 @@ return {
         alias = {"Halloween_hero_bones_explosion_0008"}
     },
     Halloween_hero_bones_explosion_0009 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {225, 197},
         trim = {7, 15, 11, 11},
         a_size = {1024, 1024},
@@ -738,7 +738,7 @@ return {
         alias = {"Halloween_hero_bones_explosion_0010"}
     },
     Halloween_hero_bones_explosion_0011 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {225, 197},
         trim = {34, 14, 7, 20},
         a_size = {1024, 1024},
@@ -746,7 +746,7 @@ return {
         alias = {"Halloween_hero_bones_explosion_0012"}
     },
     Halloween_hero_bones_explosion_0013 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {225, 197},
         trim = {30, 12, 38, 39},
         a_size = {1024, 1024},
@@ -754,7 +754,7 @@ return {
         alias = {"Halloween_hero_bones_explosion_0014"}
     },
     Halloween_hero_bones_explosion_decal = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {127, 59},
         trim = {3, 0, 2, 0},
         a_size = {1024, 1024},
@@ -762,7 +762,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0001 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {17, 18, 14, 10},
         a_size = {1024, 1024},
@@ -770,7 +770,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0002 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {26, 13, 14, 10},
         a_size = {1024, 1024},
@@ -778,7 +778,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0003"}
     },
     Halloween_hero_bones_golem_0004 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {98, 68},
         trim = {22, 12, 13, 10},
         a_size = {1024, 1024},
@@ -786,7 +786,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0005"}
     },
     Halloween_hero_bones_golem_0006 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {20, 14, 12, 10},
         a_size = {1024, 1024},
@@ -794,7 +794,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0007 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {17, 18, 12, 10},
         a_size = {1024, 1024},
@@ -802,7 +802,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0008"}
     },
     Halloween_hero_bones_golem_0009 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {17, 15, 12, 10},
         a_size = {1024, 1024},
@@ -810,7 +810,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0010"}
     },
     Halloween_hero_bones_golem_0011 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {98, 68},
         trim = {22, 13, 13, 10},
         a_size = {1024, 1024},
@@ -818,7 +818,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0012 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {15, 18, 21, 10},
         a_size = {1024, 1024},
@@ -826,7 +826,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0013"}
     },
     Halloween_hero_bones_golem_0014 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {17, 18, 23, 10},
         a_size = {1024, 1024},
@@ -834,7 +834,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0015", "Halloween_hero_bones_golem_0016"}
     },
     Halloween_hero_bones_golem_0017 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {21, 14, 10, 10},
         a_size = {1024, 1024},
@@ -842,7 +842,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0018"}
     },
     Halloween_hero_bones_golem_0019 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {25, 18, 2, 10},
         a_size = {1024, 1024},
@@ -850,7 +850,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0020"}
     },
     Halloween_hero_bones_golem_0021 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {26, 19, 1, 10},
         a_size = {1024, 1024},
@@ -858,7 +858,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0022 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {23, 19, 8, 10},
         a_size = {1024, 1024},
@@ -866,7 +866,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0023"}
     },
     Halloween_hero_bones_golem_0024 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {17, 18, 14, 10},
         a_size = {1024, 1024},
@@ -874,7 +874,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0025"}
     },
     Halloween_hero_bones_golem_0026 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {22, 16, 7, 16},
         a_size = {1024, 1024},
@@ -882,7 +882,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0027"}
     },
     Halloween_hero_bones_golem_0028 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {26, 11, 17, 3},
         a_size = {1024, 1024},
@@ -890,7 +890,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0029"}
     },
     Halloween_hero_bones_golem_0030 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {34, 11, 27, 4},
         a_size = {1024, 1024},
@@ -898,7 +898,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0031"}
     },
     Halloween_hero_bones_golem_0032 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {31, 15, 20, 6},
         a_size = {1024, 1024},
@@ -906,7 +906,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0033"}
     },
     Halloween_hero_bones_golem_0034 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {23, 1, 21, 6},
         a_size = {1024, 1024},
@@ -914,7 +914,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0035"}
     },
     Halloween_hero_bones_golem_0036 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {25, 4, 22, 9},
         a_size = {1024, 1024},
@@ -922,7 +922,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0037"}
     },
     Halloween_hero_bones_golem_0038 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {27, 15, 20, 6},
         a_size = {1024, 1024},
@@ -930,7 +930,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0039 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {17, 15, 14, 6},
         a_size = {1024, 1024},
@@ -938,7 +938,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0040 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {17, 13, 14, 6},
         a_size = {1024, 1024},
@@ -946,7 +946,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0041"}
     },
     Halloween_hero_bones_golem_0042 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {17, 13, 14, 7},
         a_size = {1024, 1024},
@@ -954,7 +954,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0043"}
     },
     Halloween_hero_bones_golem_0044 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {17, 13, 14, 7},
         a_size = {1024, 1024},
@@ -962,7 +962,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0045"}
     },
     Halloween_hero_bones_golem_0046 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {17, 13, 14, 9},
         a_size = {1024, 1024},
@@ -970,7 +970,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0047"}
     },
     Halloween_hero_bones_golem_0048 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {17, 18, 14, 10},
         a_size = {1024, 1024},
@@ -978,7 +978,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0049"}
     },
     Halloween_hero_bones_golem_0050 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {98, 68},
         trim = {17, 15, 13, 10},
         a_size = {1024, 1024},
@@ -986,7 +986,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0052"}
     },
     Halloween_hero_bones_golem_0051 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {17, 15, 15, 10},
         a_size = {1024, 1024},
@@ -994,7 +994,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0053"}
     },
     Halloween_hero_bones_golem_0054 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {17, 15, 14, 10},
         a_size = {1024, 1024},
@@ -1004,7 +1004,7 @@ return {
                  "Halloween_hero_bones_golem_0059", "Halloween_hero_bones_golem_0060"}
     },
     Halloween_hero_bones_golem_0061 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {20, 16, 16, 10},
         a_size = {1024, 1024},
@@ -1012,7 +1012,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0062"}
     },
     Halloween_hero_bones_golem_0063 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {23, 18, 16, 10},
         a_size = {1024, 1024},
@@ -1020,7 +1020,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0064"}
     },
     Halloween_hero_bones_golem_0065 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {25, 15, 18, 10},
         a_size = {1024, 1024},
@@ -1028,7 +1028,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0066"}
     },
     Halloween_hero_bones_golem_0067 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {25, 13, 17, 10},
         a_size = {1024, 1024},
@@ -1036,7 +1036,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0068 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {25, 12, 17, 10},
         a_size = {1024, 1024},
@@ -1044,7 +1044,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0069 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {25, 12, 18, 10},
         a_size = {1024, 1024},
@@ -1052,7 +1052,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_golem_0070 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {98, 68},
         trim = {25, 12, 18, 10},
         a_size = {1024, 1024},
@@ -1060,7 +1060,7 @@ return {
         alias = {"Halloween_hero_bones_golem_0071"}
     },
     Halloween_hero_bones_golem_0072 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {98, 68},
         trim = {25, 33, 18, 10},
         a_size = {1024, 1024},
@@ -1068,7 +1068,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_layer1_0001 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {42, 207, 56, 88},
         a_size = {1024, 1024},
@@ -1076,7 +1076,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0002"}
     },
     Halloween_hero_bones_layer1_0003 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {48, 203, 57, 107},
         a_size = {1024, 1024},
@@ -1084,7 +1084,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0004"}
     },
     Halloween_hero_bones_layer1_0005 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {61, 199, 57, 140},
         a_size = {1024, 1024},
@@ -1092,7 +1092,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0006"}
     },
     Halloween_hero_bones_layer1_0007 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {55, 188, 56, 143},
         a_size = {1024, 1024},
@@ -1100,7 +1100,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0008"}
     },
     Halloween_hero_bones_layer1_0009 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {48, 180, 53, 143},
         a_size = {1024, 1024},
@@ -1108,7 +1108,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0010"}
     },
     Halloween_hero_bones_layer1_0011 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {41, 135, 52, 145},
         a_size = {1024, 1024},
@@ -1116,7 +1116,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0012"}
     },
     Halloween_hero_bones_layer1_0013 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {41, 126, 51, 146},
         a_size = {1024, 1024},
@@ -1124,7 +1124,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0014"}
     },
     Halloween_hero_bones_layer1_0015 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {49, 133, 52, 143},
         a_size = {1024, 1024},
@@ -1132,7 +1132,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0016"}
     },
     Halloween_hero_bones_layer1_0017 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {44, 164, 53, 135},
         a_size = {1024, 1024},
@@ -1140,7 +1140,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0018"}
     },
     Halloween_hero_bones_layer1_0019 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {42, 207, 56, 88},
         a_size = {1024, 1024},
@@ -1149,7 +1149,7 @@ return {
                  "Halloween_hero_bones_layer1_0044", "Halloween_hero_bones_layer1_0077"}
     },
     Halloween_hero_bones_layer1_0021 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {55, 196, 60, 110},
         a_size = {1024, 1024},
@@ -1157,7 +1157,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0022"}
     },
     Halloween_hero_bones_layer1_0023 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {70, 191, 63, 139},
         a_size = {1024, 1024},
@@ -1166,7 +1166,7 @@ return {
                  "Halloween_hero_bones_layer1_0046"}
     },
     Halloween_hero_bones_layer1_0025 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {63, 177, 68, 141},
         a_size = {1024, 1024},
@@ -1174,7 +1174,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0026"}
     },
     Halloween_hero_bones_layer1_0027 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {52, 165, 69, 142},
         a_size = {1024, 1024},
@@ -1183,7 +1183,7 @@ return {
                  "Halloween_hero_bones_layer1_0048"}
     },
     Halloween_hero_bones_layer1_0029 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {18, 135, 71, 143},
         a_size = {1024, 1024},
@@ -1191,7 +1191,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0030"}
     },
     Halloween_hero_bones_layer1_0031 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {4, 134, 71, 145},
         a_size = {1024, 1024},
@@ -1199,7 +1199,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0032"}
     },
     Halloween_hero_bones_layer1_0033 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {6, 131, 71, 144},
         a_size = {1024, 1024},
@@ -1207,7 +1207,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0034"}
     },
     Halloween_hero_bones_layer1_0035 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {8, 133, 67, 140},
         a_size = {1024, 1024},
@@ -1215,7 +1215,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0036"}
     },
     Halloween_hero_bones_layer1_0037 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {26, 126, 66, 139},
         a_size = {1024, 1024},
@@ -1223,7 +1223,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0038"}
     },
     Halloween_hero_bones_layer1_0039 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {37, 126, 62, 134},
         a_size = {1024, 1024},
@@ -1231,7 +1231,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0040"}
     },
     Halloween_hero_bones_layer1_0041 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {43, 161, 57, 133},
         a_size = {1024, 1024},
@@ -1239,7 +1239,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0042"}
     },
     Halloween_hero_bones_layer1_0049 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {18, 135, 71, 143},
         a_size = {1024, 1024},
@@ -1247,7 +1247,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0050"}
     },
     Halloween_hero_bones_layer1_0051 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {6, 131, 71, 144},
         a_size = {1024, 1024},
@@ -1255,7 +1255,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0052"}
     },
     Halloween_hero_bones_layer1_0053 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {52, 110, 64, 152},
         a_size = {1024, 1024},
@@ -1263,7 +1263,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0054"}
     },
     Halloween_hero_bones_layer1_0055 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {48, 143, 59, 156},
         a_size = {1024, 1024},
@@ -1271,7 +1271,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0056"}
     },
     Halloween_hero_bones_layer1_0057 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {51, 193, 55, 117},
         a_size = {1024, 1024},
@@ -1279,7 +1279,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0058"}
     },
     Halloween_hero_bones_layer1_0059 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {52, 194, 53, 122},
         a_size = {1024, 1024},
@@ -1287,7 +1287,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0060"}
     },
     Halloween_hero_bones_layer1_0061 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {53, 189, 51, 133},
         a_size = {1024, 1024},
@@ -1295,7 +1295,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0062"}
     },
     Halloween_hero_bones_layer1_0063 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {54, 190, 51, 145},
         a_size = {1024, 1024},
@@ -1303,7 +1303,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0064"}
     },
     Halloween_hero_bones_layer1_0065 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {55, 183, 50, 144},
         a_size = {1024, 1024},
@@ -1311,7 +1311,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0066"}
     },
     Halloween_hero_bones_layer1_0067 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {53, 173, 51, 143},
         a_size = {1024, 1024},
@@ -1319,7 +1319,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0068"}
     },
     Halloween_hero_bones_layer1_0069 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {51, 124, 50, 142},
         a_size = {1024, 1024},
@@ -1327,7 +1327,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0070"}
     },
     Halloween_hero_bones_layer1_0071 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {54, 115, 53, 160},
         a_size = {1024, 1024},
@@ -1335,7 +1335,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0072"}
     },
     Halloween_hero_bones_layer1_0073 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {54, 119, 54, 163},
         a_size = {1024, 1024},
@@ -1343,7 +1343,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0074"}
     },
     Halloween_hero_bones_layer1_0075 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {45, 155, 56, 149},
         a_size = {1024, 1024},
@@ -1351,7 +1351,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0076"}
     },
     Halloween_hero_bones_layer1_0078 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {39, 189, 47, 145},
         a_size = {1024, 1024},
@@ -1359,7 +1359,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0079"}
     },
     Halloween_hero_bones_layer1_0080 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {75, 183, 71, 163},
         a_size = {1024, 1024},
@@ -1367,7 +1367,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0081"}
     },
     Halloween_hero_bones_layer1_0082 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {69, 176, 67, 153},
         a_size = {1024, 1024},
@@ -1375,7 +1375,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0083"}
     },
     Halloween_hero_bones_layer1_0084 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {63, 169, 60, 150},
         a_size = {1024, 1024},
@@ -1383,7 +1383,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0085"}
     },
     Halloween_hero_bones_layer1_0086 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {58, 172, 59, 145},
         a_size = {1024, 1024},
@@ -1391,7 +1391,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0087"}
     },
     Halloween_hero_bones_layer1_0088 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {56, 174, 56, 149},
         a_size = {1024, 1024},
@@ -1399,7 +1399,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0089"}
     },
     Halloween_hero_bones_layer1_0090 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {54, 178, 53, 149},
         a_size = {1024, 1024},
@@ -1407,7 +1407,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0091"}
     },
     Halloween_hero_bones_layer1_0092 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {51, 181, 50, 153},
         a_size = {1024, 1024},
@@ -1415,7 +1415,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0093"}
     },
     Halloween_hero_bones_layer1_0094 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {49, 193, 48, 159},
         a_size = {1024, 1024},
@@ -1423,7 +1423,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0095"}
     },
     Halloween_hero_bones_layer1_0096 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {49, 196, 48, 148},
         a_size = {1024, 1024},
@@ -1431,7 +1431,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0097"}
     },
     Halloween_hero_bones_layer1_0098 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {63, 169, 33, 151},
         a_size = {1024, 1024},
@@ -1439,7 +1439,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0099"}
     },
     Halloween_hero_bones_layer1_0100 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {62, 153, 34, 137},
         a_size = {1024, 1024},
@@ -1447,7 +1447,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0101"}
     },
     Halloween_hero_bones_layer1_0102 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {80, 169, 44, 149},
         a_size = {1024, 1024},
@@ -1455,7 +1455,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0103"}
     },
     Halloween_hero_bones_layer1_0104 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {83, 171, 53, 161},
         a_size = {1024, 1024},
@@ -1463,7 +1463,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0105"}
     },
     Halloween_hero_bones_layer1_0106 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {88, 184, 68, 172},
         a_size = {1024, 1024},
@@ -1471,7 +1471,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0107"}
     },
     Halloween_hero_bones_layer1_0108 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {95, 196, 80, 177},
         a_size = {1024, 1024},
@@ -1479,7 +1479,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0109"}
     },
     Halloween_hero_bones_layer1_0110 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {74, 168, 49, 143},
         a_size = {1024, 1024},
@@ -1487,7 +1487,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0111"}
     },
     Halloween_hero_bones_layer1_0112 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {53, 122, 37, 131},
         a_size = {1024, 1024},
@@ -1495,7 +1495,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0113"}
     },
     Halloween_hero_bones_layer1_0114 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {43, 100, 28, 123},
         a_size = {1024, 1024},
@@ -1503,7 +1503,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0115"}
     },
     Halloween_hero_bones_layer1_0116 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {37, 112, 57, 155},
         a_size = {1024, 1024},
@@ -1511,7 +1511,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0117"}
     },
     Halloween_hero_bones_layer1_0118 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {46, 166, 56, 151},
         a_size = {1024, 1024},
@@ -1519,7 +1519,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0119"}
     },
     Halloween_hero_bones_layer1_0120 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {58, 179, 59, 148},
         a_size = {1024, 1024},
@@ -1527,7 +1527,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0121"}
     },
     Halloween_hero_bones_layer1_0122 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {61, 205, 57, 106},
         a_size = {1024, 1024},
@@ -1535,7 +1535,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0123"}
     },
     Halloween_hero_bones_layer1_0124 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {61, 169, 56, 126},
         a_size = {1024, 1024},
@@ -1543,7 +1543,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0125"}
     },
     Halloween_hero_bones_layer1_0126 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {65, 139, 60, 167},
         a_size = {1024, 1024},
@@ -1551,7 +1551,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0127"}
     },
     Halloween_hero_bones_layer1_0128 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {65, 122, 60, 217},
         a_size = {1024, 1024},
@@ -1559,7 +1559,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0129"}
     },
     Halloween_hero_bones_layer1_0130 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {58, 109, 59, 233},
         a_size = {1024, 1024},
@@ -1567,7 +1567,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0131"}
     },
     Halloween_hero_bones_layer1_0132 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {46, 82, 56, 235},
         a_size = {1024, 1024},
@@ -1575,7 +1575,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0133"}
     },
     Halloween_hero_bones_layer1_0134 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {37, 27, 57, 240},
         a_size = {1024, 1024},
@@ -1583,7 +1583,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0135"}
     },
     Halloween_hero_bones_layer1_0136 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {43, 15, 57, 241},
         a_size = {1024, 1024},
@@ -1591,7 +1591,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0137"}
     },
     Halloween_hero_bones_layer1_0138 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {51, 18, 57, 236},
         a_size = {1024, 1024},
@@ -1599,7 +1599,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0139"}
     },
     Halloween_hero_bones_layer1_0140 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {41, 102, 53, 207},
         a_size = {1024, 1024},
@@ -1607,7 +1607,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0141"}
     },
     Halloween_hero_bones_layer1_0142 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {84, 119, 73, 141},
         a_size = {1024, 1024},
@@ -1615,7 +1615,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0143"}
     },
     Halloween_hero_bones_layer1_0144 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {86, 164, 76, 37},
         a_size = {1024, 1024},
@@ -1623,7 +1623,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0145"}
     },
     Halloween_hero_bones_layer1_0146 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {242, 433},
         trim = {110, 184, 99, 124},
         a_size = {1024, 1024},
@@ -1631,7 +1631,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0147"}
     },
     Halloween_hero_bones_layer1_0148 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {113, 242, 115, 155},
         a_size = {1024, 1024},
@@ -1639,7 +1639,7 @@ return {
         alias = {"Halloween_hero_bones_layer1_0149"}
     },
     Halloween_hero_bones_layer1_0160 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {99, 371, 99, 47},
         a_size = {1024, 1024},
@@ -1647,7 +1647,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_layer2_0001 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {112, 236, 127, 195},
         a_size = {1024, 1024},
@@ -1666,7 +1666,7 @@ return {
                  "Halloween_hero_bones_layer2_0024"}
     },
     Halloween_hero_bones_layer2_0025 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {111, 208, 96, 195},
         a_size = {1024, 1024},
@@ -1674,7 +1674,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0026"}
     },
     Halloween_hero_bones_layer2_0027 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {242, 433},
         trim = {100, 200, 86, 189},
         a_size = {1024, 1024},
@@ -1682,7 +1682,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0028"}
     },
     Halloween_hero_bones_layer2_0029 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {242, 433},
         trim = {81, 191, 80, 183},
         a_size = {1024, 1024},
@@ -1690,7 +1690,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0030"}
     },
     Halloween_hero_bones_layer2_0031 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {69, 167, 76, 179},
         a_size = {1024, 1024},
@@ -1698,7 +1698,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0032"}
     },
     Halloween_hero_bones_layer2_0033 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {64, 161, 71, 175},
         a_size = {1024, 1024},
@@ -1706,7 +1706,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0034"}
     },
     Halloween_hero_bones_layer2_0035 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {49, 156, 70, 174},
         a_size = {1024, 1024},
@@ -1714,7 +1714,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0036"}
     },
     Halloween_hero_bones_layer2_0037 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {48, 162, 127, 195},
         a_size = {1024, 1024},
@@ -1722,7 +1722,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0038"}
     },
     Halloween_hero_bones_layer2_0039 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {242, 433},
         trim = {45, 146, 119, 194},
         a_size = {1024, 1024},
@@ -1730,7 +1730,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0040"}
     },
     Halloween_hero_bones_layer2_0041 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {242, 433},
         trim = {53, 170, 127, 169},
         a_size = {1024, 1024},
@@ -1738,7 +1738,7 @@ return {
         alias = {"Halloween_hero_bones_layer2_0042"}
     },
     Halloween_hero_bones_particle = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {107, 84},
         trim = {4, 3, 4, 3},
         a_size = {1024, 1024},
@@ -1746,7 +1746,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proy = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {34, 34},
         trim = {0, 6, 3, 5},
         a_size = {1024, 1024},
@@ -1754,7 +1754,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0001 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {132, 110},
         trim = {45, 52, 43, 19},
         a_size = {1024, 1024},
@@ -1762,7 +1762,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplosion_0002"}
     },
     Halloween_hero_bones_proyExplosion_0003 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {132, 110},
         trim = {42, 41, 41, 14},
         a_size = {1024, 1024},
@@ -1770,7 +1770,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0004 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {132, 110},
         trim = {35, 27, 36, 10},
         a_size = {1024, 1024},
@@ -1778,7 +1778,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplosion_0005"}
     },
     Halloween_hero_bones_proyExplosion_0006 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {30, 22, 29, 9},
         a_size = {1024, 1024},
@@ -1786,7 +1786,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplosion_0007"}
     },
     Halloween_hero_bones_proyExplosion_0008 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {27, 20, 27, 8},
         a_size = {1024, 1024},
@@ -1794,7 +1794,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0009 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {27, 18, 27, 8},
         a_size = {1024, 1024},
@@ -1802,7 +1802,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0010 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {28, 16, 25, 6},
         a_size = {1024, 1024},
@@ -1810,7 +1810,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0011 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {28, 11, 25, 6},
         a_size = {1024, 1024},
@@ -1818,7 +1818,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0012 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {29, 11, 26, 14},
         a_size = {1024, 1024},
@@ -1826,7 +1826,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0013 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {28, 8, 26, 14},
         a_size = {1024, 1024},
@@ -1834,7 +1834,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0014 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {28, 8, 26, 13},
         a_size = {1024, 1024},
@@ -1842,7 +1842,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0015 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {29, 7, 26, 13},
         a_size = {1024, 1024},
@@ -1850,7 +1850,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0016 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {29, 7, 28, 37},
         a_size = {1024, 1024},
@@ -1858,7 +1858,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_0017 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {132, 110},
         trim = {29, 7, 28, 37},
         a_size = {1024, 1024},
@@ -1866,7 +1866,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplosion_decal = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {39, 17},
         trim = {0, 0, 0, 0},
         a_size = {1024, 1024},
@@ -1874,7 +1874,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplotionAir_0001 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {90, 79},
         trim = {33, 30, 32, 27},
         a_size = {1024, 1024},
@@ -1882,7 +1882,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplotionAir_0002 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {90, 79},
         trim = {19, 21, 21, 20},
         a_size = {1024, 1024},
@@ -1890,7 +1890,7 @@ return {
         alias = {}
     },
     Halloween_hero_bones_proyExplotionAir_0003 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {90, 79},
         trim = {11, 13, 15, 13},
         a_size = {1024, 1024},
@@ -1898,7 +1898,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0004"}
     },
     Halloween_hero_bones_proyExplotionAir_0005 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {90, 79},
         trim = {7, 9, 10, 7},
         a_size = {1024, 1024},
@@ -1906,7 +1906,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0006"}
     },
     Halloween_hero_bones_proyExplotionAir_0007 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {90, 79},
         trim = {3, 3, 6, 2},
         a_size = {1024, 1024},
@@ -1914,7 +1914,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0008"}
     },
     Halloween_hero_bones_proyExplotionAir_0009 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {90, 79},
         trim = {1, 1, 2, 0},
         a_size = {1024, 1024},
@@ -1922,7 +1922,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0010"}
     },
     Halloween_hero_bones_proyExplotionAir_0011 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {90, 79},
         trim = {1, 1, 1, 1},
         a_size = {1024, 1024},
@@ -1930,7 +1930,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0012"}
     },
     Halloween_hero_bones_proyExplotionAir_0013 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {90, 79},
         trim = {3, 1, 2, 1},
         a_size = {1024, 1024},
@@ -1938,7 +1938,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0014"}
     },
     Halloween_hero_bones_proyExplotionAir_0015 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {90, 79},
         trim = {4, 0, 2, 23},
         a_size = {1024, 1024},
@@ -1946,7 +1946,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0016"}
     },
     Halloween_hero_bones_proyExplotionAir_0017 = {
-        a_name = "go_hero_dracolich-3.png",
+        a_name = "go_hero_dracolich-3.dds",
         size = {90, 79},
         trim = {16, 7, 21, 26},
         a_size = {1024, 1024},
@@ -1954,7 +1954,7 @@ return {
         alias = {"Halloween_hero_bones_proyExplotionAir_0018"}
     },
     Halloween_hero_bones_proyParticle_0001 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {31, 23},
         trim = {2, 2, 1, 1},
         a_size = {1024, 1024},
@@ -1962,7 +1962,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0002"}
     },
     Halloween_hero_bones_proyParticle_0003 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {31, 23},
         trim = {2, 2, 1, 1},
         a_size = {1024, 1024},
@@ -1970,7 +1970,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0004"}
     },
     Halloween_hero_bones_proyParticle_0005 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {31, 23},
         trim = {2, 2, 1, 1},
         a_size = {1024, 1024},
@@ -1978,7 +1978,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0006"}
     },
     Halloween_hero_bones_proyParticle_0007 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {31, 23},
         trim = {3, 2, 2, 1},
         a_size = {1024, 1024},
@@ -1986,7 +1986,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0008"}
     },
     Halloween_hero_bones_proyParticle_0009 = {
-        a_name = "go_hero_dracolich-1.png",
+        a_name = "go_hero_dracolich-1.dds",
         size = {31, 23},
         trim = {2, 2, 1, 1},
         a_size = {1024, 1024},
@@ -1994,7 +1994,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0010"}
     },
     Halloween_hero_bones_proyParticle_0011 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {31, 23},
         trim = {2, 2, 1, 1},
         a_size = {1024, 1024},
@@ -2002,7 +2002,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0012"}
     },
     Halloween_hero_bones_proyParticle_0013 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {31, 23},
         trim = {2, 2, 1, 1},
         a_size = {1024, 1024},
@@ -2010,7 +2010,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0014"}
     },
     Halloween_hero_bones_proyParticle_0015 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {31, 23},
         trim = {3, 2, 2, 1},
         a_size = {1024, 1024},
@@ -2018,7 +2018,7 @@ return {
         alias = {"Halloween_hero_bones_proyParticle_0016"}
     },
     Halloween_hero_bones_soul_0001 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {42, 23},
         trim = {5, 2, 5, 1},
         a_size = {1024, 1024},
@@ -2026,7 +2026,7 @@ return {
         alias = {"Halloween_hero_bones_soul_0002"}
     },
     Halloween_hero_bones_soul_0003 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {42, 23},
         trim = {5, 2, 4, 1},
         a_size = {1024, 1024},
@@ -2034,7 +2034,7 @@ return {
         alias = {"Halloween_hero_bones_soul_0004"}
     },
     Halloween_hero_bones_soul_0005 = {
-        a_name = "go_hero_dracolich-2.png",
+        a_name = "go_hero_dracolich-2.dds",
         size = {42, 23},
         trim = {5, 2, 4, 1},
         a_size = {1024, 1024},

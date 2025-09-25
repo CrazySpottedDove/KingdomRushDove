@@ -6661,9 +6661,10 @@ function scripts.tower_demon_pit.update(this, store, script)
     local ab = a.list[1]
     local ag = a.list[2]
     local last_ts = store.tick_ts - ab.cooldown
-
+    local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
     ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
-
+    local nodes_update_ts = store.tick_ts
+    local nodes_limit = #nearest_nodes > 5 and 5 or #nearest_nodes
     local attacks = {
         ag,
         ab
@@ -6677,20 +6678,17 @@ function scripts.tower_demon_pit.update(this, store, script)
         pow_m = this.powers.master_exploders
     end
 
-    local function shoot_bullet(attack, enemy, dest, pow)
+    local function shoot_bullet(attack, dest, pow)
         local b = E:create_entity(attack.bullet)
         local bullet_start_offset = attack.bullet_start_offset
 
         b.pos.x, b.pos.y = this.pos.x + bullet_start_offset.x, this.pos.y + bullet_start_offset.y
         b.bullet.from = V.vclone(b.pos)
         b.bullet.to = V.vclone(dest)
-        b.bullet.to.x = b.bullet.to.x + math.random(-10, 10)
-        b.bullet.to.y = b.bullet.to.y + math.random(-10, 10)
         b.bullet.level = pow and pow.level or 1
         b.bullet.pow_level = pow and pow.level or nil
-        b.bullet.target_id = enemy and enemy.id
         b.bullet.source_id = this.id
-
+        b.bullet.damage_factor = this.tower.damage_factor
         queue_insert(store, b)
 
         return b
@@ -6700,26 +6698,25 @@ function scripts.tower_demon_pit.update(this, store, script)
         if this.tower.blocked then
             coroutine.yield()
         else
-            if this.powers then
-                for _, pow in pairs(this.powers) do
-                    if pow.changed then
-                        pow.changed = nil
-
-                        if pow == pow_g then
-                            if pow.level == 1 then
-                                ag.ts = store.tick_ts
-                                ab.animation = "big_guy_attack"
-                                ab.animation_reload = "big_guy_reload_2"
-
-                                U.animation_start(this, "big_guy_buy", nil, store.tick_ts, false, this.demons_sid)
-                                U.y_animation_wait(this, this.demons_sid)
-                            end
-
-                            ag.cooldown = pow.cooldown[pow.level]
-                            ag.ts = store.tick_ts - ag.cooldown
-                        end
-                    end
+            if store.tick_ts - nodes_update_ts > 30 then
+                nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
+                nodes_update_ts = store.tick_ts
+                nodes_limit = #nearest_nodes > 5 and 5 or #nearest_nodes
+            end
+            if pow_m.changed then
+                pow_m.changed = nil
+            end
+            if pow_g.changed then
+                pow_g.changed = nil
+                ab.animation = "big_guy_attack"
+                ab.animation_reload = "big_guy_reload_2"
+                if pow_g.level == 1 then
+                    ag.ts = store.tick_ts
+                    U.animation_start(this, "big_guy_buy", nil, store.tick_ts, false, this.demons_sid)
+                    U.y_animation_wait(this, this.demons_sid)
                 end
+                ag.cooldown = pow_g.cooldown[pow_g.level]
+                ag.ts = store.tick_ts - ag.cooldown
             end
 
             SU.towers_swaped(store, this, this.attacks.list)
@@ -6727,26 +6724,25 @@ function scripts.tower_demon_pit.update(this, store, script)
             for i, aa in pairs(attacks) do
                 local pow = pows[i]
 
-                if aa and (not pow or pow.level > 0) and aa.cooldown and store.tick_ts - aa.ts > aa.cooldown and (not a.min_cooldown or store.tick_ts - last_ts > a.min_cooldown) then
-                    local trigger, _, shoot_pos = U.find_foremost_enemy(store, tpos(this), 0, aa.max_range * 1.2,
-                        aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                if (not pow or pow.level > 0) and ready_to_attack(aa, store, this.tower.cooldown_factor) then
+                    local is_idle_shoot = U.has_enemy_in_range(store, tpos(this), 0, a.range * 1.2,
+                        aa.vis_flags, aa.vis_bans)
 
-                    if not trigger then
-                        SU.delay_attack(store, aa, fts(10))
-                    elseif aa == ag then
+                    if aa == ag then
                         last_ts = store.tick_ts
 
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local _, enemies, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0,
-                            aa.max_range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                        local _, _, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0,
+                            a.range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
-                        if enemies and #enemies > 0 then
-                            shoot_pos = enemy_pos
+                        if not enemy_pos then
+                            local idx = math.random(1, nodes_limit)
+                            enemy_pos = P:node_pos(nearest_nodes[idx][1], nearest_nodes[idx][2], nearest_nodes[idx][3])
                         end
 
-                        local b = shoot_bullet(aa, nil, shoot_pos, pow)
+                        local b = shoot_bullet(aa, enemy_pos, pow_g)
 
                         U.y_animation_wait(this, this.demons_sid)
                         U.animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.demons_sid)
@@ -6768,29 +6764,18 @@ function scripts.tower_demon_pit.update(this, store, script)
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local _, enemies, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0,
-                            aa.max_range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-                        local found_unblocked = false
+                        local _, _, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0,
+                            a.range * 1.2, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
-                        if enemies and #enemies > 0 then
-                            for _, e in ipairs(enemies) do
-                                if #e.enemy.blockers == 0 then
-                                    shoot_pos = e.__ffe_pos
-                                    found_unblocked = true
-
-                                    break
-                                end
-                            end
-
-                            if not found_unblocked then
-                                shoot_pos = enemy_pos
-                            end
+                        if not enemy_pos then
+                            local idx = math.random(1, nodes_limit)
+                            enemy_pos = P:node_pos(nearest_nodes[idx][1], nearest_nodes[idx][2], nearest_nodes[idx][3])
                         end
 
-                        shoot_bullet(aa, nil, shoot_pos, pow_m)
+                        shoot_bullet(aa, enemy_pos, pow_m)
                         U.y_animation_wait(this, this.demons_sid)
 
-                        aa.ts = last_ts
+                        aa.ts = is_idle_shoot and last_ts or store.tick_ts
                     end
                 end
             end
@@ -6816,7 +6801,7 @@ scripts.soldier_tower_demon_pit = {}
 
 function scripts.soldier_tower_demon_pit.update(this, store, script)
     local brk, stam
-
+    local u = UP:get_upgrade("engineer_efficiency")
     this.reinforcement.ts = store.tick_ts
     this.render.sprites[1].ts = store.tick_ts
     this.nav_rally.center = nil
@@ -6835,14 +6820,11 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
 
     local function explosion(r, damage_min, damage_max, dty)
         local targets = U.find_enemies_in_range(store, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
-
+        local factor = damage_factor * this.unit.damage_factor
         if targets then
             for _, target in pairs(targets) do
                 local d = E:create_entity("damage")
-
-                damage_min = damage_min * damage_factor
-                damage_max = damage_max * damage_factor
-                d.value = math.random(damage_min, damage_max)
+                d.value = (u and damage_max or math.random(damage_min, damage_max)) * factor
                 d.damage_type = dty
                 d.target_id = target.id
                 d.source_id = this.id
@@ -6861,29 +6843,13 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
                     m = E:create_entity(pow_master_exploders.mod)
                     m.modifier.source_id = this.id
                     m.modifier.target_id = target.id
+                    m.modifier.damage_factor = this.unit.damage_factor
                     m.modifier.duration = pow_master_exploders.burning_duration[pow_master_exploders.level]
                     m.dps.damage_min = pow_master_exploders.burning_damage_min[pow_master_exploders.level]
                     m.dps.damage_max = pow_master_exploders.burning_damage_max[pow_master_exploders.level]
 
                     queue_insert(store, m)
                 end
-            end
-        end
-    end
-
-    local function check_tower_damage_factor()
-        if store.entities[this.source_id] then
-            for _, a in ipairs(this.melee.attacks) do
-                if not a._original_damage_min then
-                    a._original_damage_min = a.damage_min
-                end
-
-                if not a._original_damage_max then
-                    a._original_damage_max = a.damage_max
-                end
-
-                a.damage_min = a._original_damage_min * store.entities[this.source_id].tower.damage_factor
-                a.damage_max = a._original_damage_max * store.entities[this.source_id].tower.damage_factor
             end
         end
     end
@@ -6960,8 +6926,6 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
             idle_ts = store.tick_ts
             patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
         else
-            check_tower_damage_factor()
-
             if this.melee then
                 brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
 
@@ -7138,7 +7102,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store, script)
             U.animation_start(this, "death", nil, store.tick_ts, false, 1)
             U.y_wait(store, fts(20))
             S:queue(this.explosion_sound)
-            explosion(this.explosion_range[this.level], this.explosion_damage[this.level], this.explosion_damage_type)
+            explosion(this.explosion_range[this.level], this.explosion_damage[this.level] * this.unit.damage_factor, this.explosion_damage_type)
             U.y_animation_wait(this, 1)
             queue_remove(store, this)
             queue_remove(store, this)

@@ -868,7 +868,7 @@ tt.main_script.insert = function(this, store)
     if not target or target.health.dead or not target.unit then
         return false
     end
-    local heal = target.health.hp_max * buff.hp
+    local heal = math.min(target.health.hp_max * buff.hp, 750)
     SU.armor_inc(target, buff.armor)
     target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + heal)
 
@@ -902,6 +902,8 @@ a = tt.ranged.attacks[2]
 a.bullet = "arrow_multishot_eb_alleria"
 a.cooldown = 2.6 + fts(29)
 a.min_range = 0
+a = tt.ranged.attacks[3]
+a.disabled = true
 a = tt.timed_attacks.list[1]
 a.entity = "eb_alleria_wildcat"
 tt.main_script.update = function(this, store)

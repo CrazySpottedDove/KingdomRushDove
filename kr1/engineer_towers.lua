@@ -1365,7 +1365,7 @@ local function engineer_towers()
     tt.attacks.list[1].cooldown = b.basic_attack.cooldown[4]
     tt.attacks.list[1].shoot_time = fts(33)
     tt.attacks.list[1].bullet_start_offset = vec_2(-7, 100)
-    tt.attacks.list[1].max_range = b.basic_attack.range[4]
+    -- tt.attacks.list[1].max_range = b.basic_attack.range[4]
     tt.attacks.list[1].node_prediction = fts(60)
     tt.attacks.list[1].animation = "attack"
     tt.attacks.list[1].animation_reload = "reload_2"
@@ -1376,7 +1376,7 @@ local function engineer_towers()
     tt.attacks.list[2].cooldown = b.big_guy.cooldown[1]
     tt.attacks.list[2].shoot_time = fts(43)
     tt.attacks.list[2].bullet_start_offset = vec_2(-7, 70)
-    tt.attacks.list[2].max_range = b.big_guy.max_range
+    -- tt.attacks.list[2].max_range = b.big_guy.max_range
     tt.attacks.list[2].node_prediction = fts(80)
     tt.attacks.list[2].animation = "big_guy_spawn"
     tt.attacks.list[2].animation_reload = "big_guy_reload_big_guy"
@@ -1423,6 +1423,7 @@ local function engineer_towers()
 
     tt = RT("soldier_tower_demon_pit_basic_attack_lvl4", "soldier_militia")
     AC(tt, "reinforcement", "tween")
+    tt.is_kr5 = true
     tt.level = 4
     tt.health.hp_max = b.basic_attack.hp_max[4]
     tt.health.armor = b.basic_attack.armor
@@ -1480,6 +1481,7 @@ local function engineer_towers()
 
     tt = RT("big_guy_tower_demon_pit_lvl4", "soldier_militia")
     AC(tt, "reinforcement", "tween")
+    tt.is_kr5 = true
     tt.health.armor = b.big_guy.armor
     tt.health_bar.offset = vec_2(0, 42)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -1529,15 +1531,15 @@ local function engineer_towers()
     tt.sound_events.hit_water = nil
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].name = "demon_pit_tower_demon_projectile_idle"
-    tt.bullet.flight_time = fts(31)
+    tt.bullet.flight_time = fts(40)
     tt.bullet.hit_fx = nil
-    tt.bullet.hit_decal = nil
+    tt.bullet.hit_decal = "decal_bomb_crater"
     tt.bullet.hit_payload = "soldier_tower_demon_pit_basic_attack_lvl4"
-    tt.bullet.rotation_speed = 5
+    tt.bullet.rotation_speed = 40
     tt.bullet.pop = nil
     tt.bullet.particles_name = "tower_demon_pit_demon_trail"
-    tt.bullet.damage_min = 0
-    tt.bullet.damage_max = 0
+    tt.bullet.damage_min = 20
+    tt.bullet.damage_max = 30
     tt.sound_events.insert = "TowerDemonPitBasicAttack"
 
     tt = RT("bullet_tower_demon_pit_big_guy_lvl4", "bullet")

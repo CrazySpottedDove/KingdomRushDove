@@ -2,7 +2,7 @@
 
 return {
 	["10yr_bomb_rocks_0001"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0002"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0003"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -76,7 +76,7 @@ return {
 		}
 	},
 	["10yr_bomb_rocks_0005"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	["10yr_bomb_rocks_0007"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -128,7 +128,7 @@ return {
 		}
 	},
 	["10yr_bomb_rocks_0009"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -154,7 +154,7 @@ return {
 		}
 	},
 	["10yr_bomb_rocks_0011"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -178,7 +178,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0012"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -202,7 +202,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0013"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -226,7 +226,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0014"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -250,7 +250,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0015"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -274,7 +274,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0016"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -298,7 +298,7 @@ return {
 		alias = {}
 	},
 	["10yr_bomb_rocks_0017"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			98,
 			92
@@ -322,7 +322,7 @@ return {
 		alias = {}
 	},
 	["10yr_particle_fire_0001"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			7,
 			13
@@ -349,7 +349,7 @@ return {
 		}
 	},
 	["10yr_particle_fire_0004"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			7,
 			13
@@ -375,7 +375,7 @@ return {
 		}
 	},
 	["10yr_particle_fire_0006"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			7,
 			13
@@ -401,7 +401,7 @@ return {
 		}
 	},
 	["10yr_particle_fire_0008"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			7,
 			13
@@ -427,7 +427,7 @@ return {
 		}
 	},
 	["10yr_particle_fire_0010"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			7,
 			13
@@ -453,7 +453,7 @@ return {
 		}
 	},
 	["10yr_particle_fire_0012"] = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			7,
 			13
@@ -479,7 +479,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -503,7 +503,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack2_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -529,7 +529,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -555,7 +555,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -581,7 +581,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -605,7 +605,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack2_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -629,7 +629,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack2_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -653,7 +653,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack2_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -677,7 +677,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack2_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -703,7 +703,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -729,7 +729,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -755,7 +755,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -781,7 +781,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0020 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -807,7 +807,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0022 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -833,7 +833,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0024 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -859,7 +859,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0026 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -885,7 +885,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0028 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -911,7 +911,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0030 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -937,7 +937,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0032 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -963,7 +963,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0034 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -989,7 +989,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0036 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1015,7 +1015,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0038 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1041,7 +1041,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0040 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1067,7 +1067,7 @@ return {
 		}
 	},
 	hero_10yr_attack2_0042 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1091,7 +1091,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1115,7 +1115,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1141,7 +1141,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1167,7 +1167,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1193,7 +1193,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1219,7 +1219,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1245,7 +1245,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1269,7 +1269,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1293,7 +1293,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1317,7 +1317,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0015 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1341,7 +1341,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1367,7 +1367,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1391,7 +1391,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0019 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1415,7 +1415,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0020 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1441,7 +1441,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0022 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1465,7 +1465,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0023 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1489,7 +1489,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0024 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1513,7 +1513,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0025 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1537,7 +1537,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0026 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1561,7 +1561,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0027 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1585,7 +1585,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0028 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1609,7 +1609,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0029 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1633,7 +1633,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0030 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1657,7 +1657,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0031 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1681,7 +1681,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0032 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1705,7 +1705,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0033 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1729,7 +1729,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0034 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1753,7 +1753,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0035 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1777,7 +1777,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_attack_0036 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1803,7 +1803,7 @@ return {
 		}
 	},
 	hero_10yr_attack_0038 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1829,7 +1829,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1853,7 +1853,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1879,7 +1879,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1905,7 +1905,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1931,7 +1931,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1957,7 +1957,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -1983,7 +1983,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2009,7 +2009,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2035,7 +2035,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2059,7 +2059,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0017 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2083,7 +2083,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2107,7 +2107,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0019 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2131,7 +2131,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0020 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2155,7 +2155,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0021 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2179,7 +2179,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0022 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2203,7 +2203,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0023 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2227,7 +2227,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0024 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2251,7 +2251,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0025 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2275,7 +2275,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0026 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2299,7 +2299,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0027 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2323,7 +2323,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0028 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2347,7 +2347,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0029 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2371,7 +2371,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0030 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2395,7 +2395,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0031 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2419,7 +2419,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0032 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2443,7 +2443,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0033 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2467,7 +2467,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0034 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2491,7 +2491,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0035 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2515,7 +2515,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0036 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2539,7 +2539,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0037 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2563,7 +2563,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0038 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2587,7 +2587,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0039 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2611,7 +2611,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0040 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2635,7 +2635,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0041 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2659,7 +2659,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0042 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2685,7 +2685,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_bomb_0044 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2709,7 +2709,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0045 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2733,7 +2733,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0046 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2757,7 +2757,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_bomb_0047 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2781,7 +2781,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_idle_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2805,7 +2805,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_running_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2829,7 +2829,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_running_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2855,7 +2855,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2881,7 +2881,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2905,7 +2905,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_running_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2929,7 +2929,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_running_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2955,7 +2955,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -2981,7 +2981,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3007,7 +3007,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3033,7 +3033,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3059,7 +3059,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3085,7 +3085,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0020 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3111,7 +3111,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0022 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3137,7 +3137,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_running_0024 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3161,7 +3161,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_end_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3187,7 +3187,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3213,7 +3213,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3239,7 +3239,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3265,7 +3265,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3291,7 +3291,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3317,7 +3317,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3343,7 +3343,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0015 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3369,7 +3369,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0017 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3395,7 +3395,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0019 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3421,7 +3421,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_end_0021 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3445,7 +3445,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_end_0022 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3469,7 +3469,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_loop_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3493,7 +3493,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_loop_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3517,7 +3517,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_loop_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3543,7 +3543,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_loop_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3567,7 +3567,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_loop_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3591,7 +3591,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_loop_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3617,7 +3617,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_start_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3641,7 +3641,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_start_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3665,7 +3665,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_start_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3691,7 +3691,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_start_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3717,7 +3717,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_start_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3743,7 +3743,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_start_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3769,7 +3769,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_start_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3795,7 +3795,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_start_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3821,7 +3821,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_spin_start_0015 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3845,7 +3845,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_spin_start_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3869,7 +3869,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3893,7 +3893,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3917,7 +3917,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3941,7 +3941,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3965,7 +3965,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -3989,7 +3989,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4013,7 +4013,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4037,7 +4037,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4061,7 +4061,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4085,7 +4085,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4109,7 +4109,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4133,7 +4133,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4157,7 +4157,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4181,7 +4181,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4205,7 +4205,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0015 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4229,7 +4229,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4253,7 +4253,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0017 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4277,7 +4277,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4301,7 +4301,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0019 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4325,7 +4325,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0020 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4349,7 +4349,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0021 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4373,7 +4373,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0022 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4397,7 +4397,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0023 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4421,7 +4421,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_buffed_to_normal_0024 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4447,7 +4447,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_to_normal_0026 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4473,7 +4473,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_to_normal_0028 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4499,7 +4499,7 @@ return {
 		}
 	},
 	hero_10yr_buffed_to_normal_0030 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4525,7 +4525,7 @@ return {
 		}
 	},
 	hero_10yr_death_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4551,7 +4551,7 @@ return {
 		}
 	},
 	hero_10yr_death_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4577,7 +4577,7 @@ return {
 		}
 	},
 	hero_10yr_death_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4603,7 +4603,7 @@ return {
 		}
 	},
 	hero_10yr_death_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4629,7 +4629,7 @@ return {
 		}
 	},
 	hero_10yr_death_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4675,7 +4675,7 @@ return {
 		}
 	},
 	hero_10yr_death_0031 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4699,7 +4699,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0032 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4723,7 +4723,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0033 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4747,7 +4747,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0034 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4771,7 +4771,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0035 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4795,7 +4795,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0036 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4819,7 +4819,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0037 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4843,7 +4843,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0038 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4867,7 +4867,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0039 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4891,7 +4891,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0040 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4915,7 +4915,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0041 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4939,7 +4939,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0042 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4963,7 +4963,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0043 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -4987,7 +4987,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0044 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5011,7 +5011,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0045 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5035,7 +5035,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0046 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5059,7 +5059,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0047 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5083,7 +5083,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_death_0048 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5109,7 +5109,7 @@ return {
 		}
 	},
 	hero_10yr_death_0050 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5135,7 +5135,7 @@ return {
 		}
 	},
 	hero_10yr_death_0052 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5161,7 +5161,7 @@ return {
 		}
 	},
 	hero_10yr_death_0054 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5187,7 +5187,7 @@ return {
 		}
 	},
 	hero_10yr_death_0056 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5213,7 +5213,7 @@ return {
 		}
 	},
 	hero_10yr_death_0058 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5237,7 +5237,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_idle_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5261,7 +5261,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5285,7 +5285,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5309,7 +5309,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5333,7 +5333,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5357,7 +5357,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5381,7 +5381,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5405,7 +5405,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5429,7 +5429,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5453,7 +5453,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5477,7 +5477,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5501,7 +5501,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5525,7 +5525,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5549,7 +5549,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_levelup_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5575,7 +5575,7 @@ return {
 		}
 	},
 	hero_10yr_normal_to_buffed_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5599,7 +5599,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5623,7 +5623,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5647,7 +5647,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5671,7 +5671,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5695,7 +5695,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5719,7 +5719,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5743,7 +5743,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5767,7 +5767,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5791,7 +5791,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5815,7 +5815,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5839,7 +5839,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5863,7 +5863,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5887,7 +5887,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5911,7 +5911,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0015 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5935,7 +5935,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5959,7 +5959,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0017 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -5983,7 +5983,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6007,7 +6007,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0019 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6031,7 +6031,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0020 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6055,7 +6055,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0021 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6079,7 +6079,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0022 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6103,7 +6103,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0023 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6127,7 +6127,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0024 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6151,7 +6151,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0025 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6175,7 +6175,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0026 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6199,7 +6199,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0027 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6223,7 +6223,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_normal_to_buffed_0028 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6247,7 +6247,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6271,7 +6271,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6295,7 +6295,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6319,7 +6319,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6343,7 +6343,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6367,7 +6367,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6391,7 +6391,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6415,7 +6415,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6439,7 +6439,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6463,7 +6463,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6487,7 +6487,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6511,7 +6511,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6535,7 +6535,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6559,7 +6559,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6583,7 +6583,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0015 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6607,7 +6607,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6631,7 +6631,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0017 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6655,7 +6655,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6679,7 +6679,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0019 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6703,7 +6703,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0020 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6727,7 +6727,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_end_0021 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6751,7 +6751,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6775,7 +6775,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6799,7 +6799,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6823,7 +6823,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6847,7 +6847,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6871,7 +6871,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6895,7 +6895,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6919,7 +6919,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6943,7 +6943,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6967,7 +6967,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -6991,7 +6991,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7015,7 +7015,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_loop_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7041,7 +7041,7 @@ return {
 		}
 	},
 	hero_10yr_power_rain_loop_0014 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7065,7 +7065,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_start_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7092,7 +7092,7 @@ return {
 		}
 	},
 	hero_10yr_power_rain_start_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7118,7 +7118,7 @@ return {
 		}
 	},
 	hero_10yr_power_rain_start_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7144,7 +7144,7 @@ return {
 		}
 	},
 	hero_10yr_power_rain_start_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7170,7 +7170,7 @@ return {
 		}
 	},
 	hero_10yr_power_rain_start_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7198,7 +7198,7 @@ return {
 		}
 	},
 	hero_10yr_power_rain_start_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7224,7 +7224,7 @@ return {
 		}
 	},
 	hero_10yr_power_rain_start_0016 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7248,7 +7248,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_start_0017 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7272,7 +7272,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_power_rain_start_0018 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7296,7 +7296,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_running_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7322,7 +7322,7 @@ return {
 		}
 	},
 	hero_10yr_running_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7348,7 +7348,7 @@ return {
 		}
 	},
 	hero_10yr_running_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7374,7 +7374,7 @@ return {
 		}
 	},
 	hero_10yr_running_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7400,7 +7400,7 @@ return {
 		}
 	},
 	hero_10yr_running_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7426,7 +7426,7 @@ return {
 		}
 	},
 	hero_10yr_running_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7452,7 +7452,7 @@ return {
 		}
 	},
 	hero_10yr_running_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7478,7 +7478,7 @@ return {
 		}
 	},
 	hero_10yr_teleport_in_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7504,7 +7504,7 @@ return {
 		}
 	},
 	hero_10yr_teleport_in_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7530,7 +7530,7 @@ return {
 		}
 	},
 	hero_10yr_teleport_in_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7556,7 +7556,7 @@ return {
 		}
 	},
 	hero_10yr_teleport_in_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7580,7 +7580,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_in_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7604,7 +7604,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_in_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7628,7 +7628,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_in_0010 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7652,7 +7652,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_in_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7676,7 +7676,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_in_0012 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7700,7 +7700,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_in_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7726,7 +7726,7 @@ return {
 		}
 	},
 	hero_10yr_teleport_out_0001 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7750,7 +7750,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0002 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7774,7 +7774,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0003 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7798,7 +7798,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0004 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7822,7 +7822,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0005 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7846,7 +7846,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0006 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7870,7 +7870,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0007 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7894,7 +7894,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0008 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7918,7 +7918,7 @@ return {
 		alias = {}
 	},
 	hero_10yr_teleport_out_0009 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7944,7 +7944,7 @@ return {
 		}
 	},
 	hero_10yr_teleport_out_0011 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124
@@ -7970,7 +7970,7 @@ return {
 		}
 	},
 	hero_10yr_teleport_out_0013 = {
-		a_name = "go_hero_10yr-1.png",
+		a_name = "go_hero_10yr-1.dds",
 		size = {
 			164,
 			124

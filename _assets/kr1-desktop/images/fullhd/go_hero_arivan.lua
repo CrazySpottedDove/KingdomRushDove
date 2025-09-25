@@ -2,7 +2,7 @@
 
 return {
 	arivan_hero_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0002 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	arivan_hero_0004 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	arivan_hero_0006 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	arivan_hero_0008 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	arivan_hero_0010 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	arivan_hero_0012 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	arivan_hero_0014 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	arivan_hero_0016 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	arivan_hero_0018 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -260,7 +260,7 @@ return {
 		}
 	},
 	arivan_hero_0020 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -286,7 +286,7 @@ return {
 		}
 	},
 	arivan_hero_0022 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -312,7 +312,7 @@ return {
 		}
 	},
 	arivan_hero_0024 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -338,7 +338,7 @@ return {
 		}
 	},
 	arivan_hero_0026 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -364,7 +364,7 @@ return {
 		}
 	},
 	arivan_hero_0028 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -390,7 +390,7 @@ return {
 		}
 	},
 	arivan_hero_0030 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -416,7 +416,7 @@ return {
 		}
 	},
 	arivan_hero_0032 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -442,7 +442,7 @@ return {
 		}
 	},
 	arivan_hero_0034 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -468,7 +468,7 @@ return {
 		}
 	},
 	arivan_hero_0036 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -494,7 +494,7 @@ return {
 		}
 	},
 	arivan_hero_0038 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -520,7 +520,7 @@ return {
 		}
 	},
 	arivan_hero_0040 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -546,7 +546,7 @@ return {
 		}
 	},
 	arivan_hero_0042 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -578,7 +578,7 @@ return {
 		}
 	},
 	arivan_hero_0044 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -604,7 +604,7 @@ return {
 		}
 	},
 	arivan_hero_0046 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -630,7 +630,7 @@ return {
 		}
 	},
 	arivan_hero_0048 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -656,7 +656,7 @@ return {
 		}
 	},
 	arivan_hero_0050 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -682,7 +682,7 @@ return {
 		}
 	},
 	arivan_hero_0052 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -708,7 +708,7 @@ return {
 		}
 	},
 	arivan_hero_0054 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -734,7 +734,7 @@ return {
 		}
 	},
 	arivan_hero_0056 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -760,7 +760,7 @@ return {
 		}
 	},
 	arivan_hero_0058 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -786,7 +786,7 @@ return {
 		}
 	},
 	arivan_hero_0060 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -812,7 +812,7 @@ return {
 		}
 	},
 	arivan_hero_0062 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -838,7 +838,7 @@ return {
 		}
 	},
 	arivan_hero_0064 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -864,7 +864,7 @@ return {
 		}
 	},
 	arivan_hero_0066 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -890,7 +890,7 @@ return {
 		}
 	},
 	arivan_hero_0068 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -916,7 +916,7 @@ return {
 		}
 	},
 	arivan_hero_0070 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	arivan_hero_0072 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -968,7 +968,7 @@ return {
 		}
 	},
 	arivan_hero_0076 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -994,7 +994,7 @@ return {
 		}
 	},
 	arivan_hero_0078 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1020,7 +1020,7 @@ return {
 		}
 	},
 	arivan_hero_0080 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1044,7 +1044,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0081 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1068,7 +1068,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0082 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1092,7 +1092,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0083 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1116,7 +1116,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0084 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1140,7 +1140,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0085 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1164,7 +1164,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0086 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1188,7 +1188,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0087 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1212,7 +1212,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0088 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1238,7 +1238,7 @@ return {
 		}
 	},
 	arivan_hero_0090 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1264,7 +1264,7 @@ return {
 		}
 	},
 	arivan_hero_0092 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1290,7 +1290,7 @@ return {
 		}
 	},
 	arivan_hero_0094 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1314,7 +1314,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0095 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1338,7 +1338,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0096 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1362,7 +1362,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0097 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1386,7 +1386,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0098 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1410,7 +1410,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0099 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1434,7 +1434,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0100 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1458,7 +1458,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0101 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1482,7 +1482,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0102 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1508,7 +1508,7 @@ return {
 		}
 	},
 	arivan_hero_0104 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1534,7 +1534,7 @@ return {
 		}
 	},
 	arivan_hero_0106 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1560,7 +1560,7 @@ return {
 		}
 	},
 	arivan_hero_0108 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1584,7 +1584,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0109 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1613,7 +1613,7 @@ return {
 		}
 	},
 	arivan_hero_0110 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1639,7 +1639,7 @@ return {
 		}
 	},
 	arivan_hero_0112 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1665,7 +1665,7 @@ return {
 		}
 	},
 	arivan_hero_0114 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1689,7 +1689,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0115 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1713,7 +1713,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0116 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1737,7 +1737,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0117 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1761,7 +1761,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0118 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1785,7 +1785,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0119 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1809,7 +1809,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0120 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1833,7 +1833,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0121 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1857,7 +1857,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0122 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1881,7 +1881,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0123 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1905,7 +1905,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0124 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1929,7 +1929,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0125 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1953,7 +1953,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0126 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -1977,7 +1977,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0127 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2001,7 +2001,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0128 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2025,7 +2025,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0129 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2049,7 +2049,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0130 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2073,7 +2073,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0131 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2097,7 +2097,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0132 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2121,7 +2121,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0133 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2145,7 +2145,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0134 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2169,7 +2169,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0135 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2193,7 +2193,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0136 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2219,7 +2219,7 @@ return {
 		}
 	},
 	arivan_hero_0138 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2245,7 +2245,7 @@ return {
 		}
 	},
 	arivan_hero_0140 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2271,7 +2271,7 @@ return {
 		}
 	},
 	arivan_hero_0142 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2297,7 +2297,7 @@ return {
 		}
 	},
 	arivan_hero_0144 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2321,7 +2321,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0145 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2345,7 +2345,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0146 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2369,7 +2369,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0147 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2393,7 +2393,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0148 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2417,7 +2417,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0149 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2441,7 +2441,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_0150 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2467,7 +2467,7 @@ return {
 		}
 	},
 	arivan_hero_0152 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2493,7 +2493,7 @@ return {
 		}
 	},
 	arivan_hero_0154 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2519,7 +2519,7 @@ return {
 		}
 	},
 	arivan_hero_0158 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2545,7 +2545,7 @@ return {
 		}
 	},
 	arivan_hero_0160 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2571,7 +2571,7 @@ return {
 		}
 	},
 	arivan_hero_0162 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2601,7 +2601,7 @@ return {
 		}
 	},
 	arivan_hero_0168 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2627,7 +2627,7 @@ return {
 		}
 	},
 	arivan_hero_0170 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2653,7 +2653,7 @@ return {
 		}
 	},
 	arivan_hero_0172 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2679,7 +2679,7 @@ return {
 		}
 	},
 	arivan_hero_0174 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2705,7 +2705,7 @@ return {
 		}
 	},
 	arivan_hero_0176 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2733,7 +2733,7 @@ return {
 		}
 	},
 	arivan_hero_0180 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2759,7 +2759,7 @@ return {
 		}
 	},
 	arivan_hero_0182 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2785,7 +2785,7 @@ return {
 		}
 	},
 	arivan_hero_0184 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2811,7 +2811,7 @@ return {
 		}
 	},
 	arivan_hero_0186 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2837,7 +2837,7 @@ return {
 		}
 	},
 	arivan_hero_0190 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2863,7 +2863,7 @@ return {
 		}
 	},
 	arivan_hero_0194 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2889,7 +2889,7 @@ return {
 		}
 	},
 	arivan_hero_0196 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2915,7 +2915,7 @@ return {
 		}
 	},
 	arivan_hero_0198 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2941,7 +2941,7 @@ return {
 		}
 	},
 	arivan_hero_0200 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2967,7 +2967,7 @@ return {
 		}
 	},
 	arivan_hero_0202 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -2993,7 +2993,7 @@ return {
 		}
 	},
 	arivan_hero_0204 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3019,7 +3019,7 @@ return {
 		}
 	},
 	arivan_hero_0206 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3045,7 +3045,7 @@ return {
 		}
 	},
 	arivan_hero_0208 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3071,7 +3071,7 @@ return {
 		}
 	},
 	arivan_hero_0210 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3097,7 +3097,7 @@ return {
 		}
 	},
 	arivan_hero_0212 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3123,7 +3123,7 @@ return {
 		}
 	},
 	arivan_hero_0214 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3149,7 +3149,7 @@ return {
 		}
 	},
 	arivan_hero_0218 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3175,7 +3175,7 @@ return {
 		}
 	},
 	arivan_hero_0220 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3201,7 +3201,7 @@ return {
 		}
 	},
 	arivan_hero_0222 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3227,7 +3227,7 @@ return {
 		}
 	},
 	arivan_hero_0224 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3253,7 +3253,7 @@ return {
 		}
 	},
 	arivan_hero_0226 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3279,7 +3279,7 @@ return {
 		}
 	},
 	arivan_hero_0228 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3305,7 +3305,7 @@ return {
 		}
 	},
 	arivan_hero_0230 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3331,7 +3331,7 @@ return {
 		}
 	},
 	arivan_hero_0232 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3357,7 +3357,7 @@ return {
 		}
 	},
 	arivan_hero_0234 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3383,7 +3383,7 @@ return {
 		}
 	},
 	arivan_hero_0236 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3409,7 +3409,7 @@ return {
 		}
 	},
 	arivan_hero_0238 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3435,7 +3435,7 @@ return {
 		}
 	},
 	arivan_hero_0240 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3461,7 +3461,7 @@ return {
 		}
 	},
 	arivan_hero_0242 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3487,7 +3487,7 @@ return {
 		}
 	},
 	arivan_hero_0244 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3513,7 +3513,7 @@ return {
 		}
 	},
 	arivan_hero_0246 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3539,7 +3539,7 @@ return {
 		}
 	},
 	arivan_hero_0248 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3565,7 +3565,7 @@ return {
 		}
 	},
 	arivan_hero_0250 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3591,7 +3591,7 @@ return {
 		}
 	},
 	arivan_hero_0252 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3617,7 +3617,7 @@ return {
 		}
 	},
 	arivan_hero_0254 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3643,7 +3643,7 @@ return {
 		}
 	},
 	arivan_hero_0256 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3669,7 +3669,7 @@ return {
 		}
 	},
 	arivan_hero_0258 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3695,7 +3695,7 @@ return {
 		}
 	},
 	arivan_hero_0260 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3721,7 +3721,7 @@ return {
 		}
 	},
 	arivan_hero_0262 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3747,7 +3747,7 @@ return {
 		}
 	},
 	arivan_hero_0264 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3773,7 +3773,7 @@ return {
 		}
 	},
 	arivan_hero_0266 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3799,7 +3799,7 @@ return {
 		}
 	},
 	arivan_hero_0268 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -3823,7 +3823,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -3849,7 +3849,7 @@ return {
 		}
 	},
 	arivan_hero_fire_explosion_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -3873,7 +3873,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0004 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -3897,7 +3897,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -3921,7 +3921,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0006 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -3945,7 +3945,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -3969,7 +3969,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0008 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -3993,7 +3993,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0009 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -4017,7 +4017,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0010 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -4041,7 +4041,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0011 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -4065,7 +4065,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0012 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -4089,7 +4089,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0013 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			104,
 			121
@@ -4115,7 +4115,7 @@ return {
 		}
 	},
 	arivan_hero_shield_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -4141,7 +4141,7 @@ return {
 		}
 	},
 	arivan_hero_shield_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -4167,7 +4167,7 @@ return {
 		}
 	},
 	arivan_hero_shield_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -4193,7 +4193,7 @@ return {
 		}
 	},
 	arivan_hero_shield_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			96,
 			101
@@ -4219,7 +4219,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4245,7 +4245,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4271,7 +4271,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4297,7 +4297,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4323,7 +4323,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0009 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4349,7 +4349,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0011 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4375,7 +4375,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0013 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4401,7 +4401,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0015 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4427,7 +4427,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0017 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4453,7 +4453,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0019 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4479,7 +4479,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0021 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4505,7 +4505,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0023 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4531,7 +4531,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0025 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4557,7 +4557,7 @@ return {
 		}
 	},
 	arivan_hero_twister_0027 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			124,
 			115
@@ -4583,7 +4583,7 @@ return {
 		}
 	},
 	arivan_hero_twister_creepFx_big_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			70,
 			70
@@ -4609,7 +4609,7 @@ return {
 		}
 	},
 	arivan_hero_twister_creepFx_big_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			70,
 			70
@@ -4635,7 +4635,7 @@ return {
 		}
 	},
 	arivan_hero_twister_creepFx_big_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			70,
 			70
@@ -4661,7 +4661,7 @@ return {
 		}
 	},
 	arivan_hero_twister_ray_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			56,
 			76
@@ -4687,7 +4687,7 @@ return {
 		}
 	},
 	arivan_hero_twister_ray_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			56,
 			76
@@ -4713,7 +4713,7 @@ return {
 		}
 	},
 	arivan_hero_twister_ray_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			56,
 			76
@@ -4739,7 +4739,7 @@ return {
 		}
 	},
 	arivan_hero_twister_ray_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			56,
 			76
@@ -4765,7 +4765,7 @@ return {
 		}
 	},
 	arivan_hero_twister_ray_0009 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			56,
 			76
@@ -4791,7 +4791,7 @@ return {
 		}
 	},
 	arivan_stone_1_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4817,7 +4817,7 @@ return {
 		}
 	},
 	arivan_stone_1_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4843,7 +4843,7 @@ return {
 		}
 	},
 	arivan_stone_1_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4869,7 +4869,7 @@ return {
 		}
 	},
 	arivan_stone_1_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4895,7 +4895,7 @@ return {
 		}
 	},
 	arivan_stone_1_0009 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4921,7 +4921,7 @@ return {
 		}
 	},
 	arivan_stone_1_0011 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4947,7 +4947,7 @@ return {
 		}
 	},
 	arivan_stone_1_0013 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4971,7 +4971,7 @@ return {
 		alias = {}
 	},
 	arivan_stone_1_0014 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -4995,7 +4995,7 @@ return {
 		alias = {}
 	},
 	arivan_stone_2_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5021,7 +5021,7 @@ return {
 		}
 	},
 	arivan_stone_2_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5047,7 +5047,7 @@ return {
 		}
 	},
 	arivan_stone_2_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5073,7 +5073,7 @@ return {
 		}
 	},
 	arivan_stone_2_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5099,7 +5099,7 @@ return {
 		}
 	},
 	arivan_stone_2_0009 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5125,7 +5125,7 @@ return {
 		}
 	},
 	arivan_stone_2_0011 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5151,7 +5151,7 @@ return {
 		}
 	},
 	arivan_stone_2_0013 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5175,7 +5175,7 @@ return {
 		alias = {}
 	},
 	arivan_stone_2_0014 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5201,7 +5201,7 @@ return {
 		}
 	},
 	arivan_stone_3_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5227,7 +5227,7 @@ return {
 		}
 	},
 	arivan_stone_3_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5253,7 +5253,7 @@ return {
 		}
 	},
 	arivan_stone_3_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5279,7 +5279,7 @@ return {
 		}
 	},
 	arivan_stone_3_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5305,7 +5305,7 @@ return {
 		}
 	},
 	arivan_stone_3_0009 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5331,7 +5331,7 @@ return {
 		}
 	},
 	arivan_stone_3_0011 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5357,7 +5357,7 @@ return {
 		}
 	},
 	arivan_stone_3_0013 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5381,7 +5381,7 @@ return {
 		alias = {}
 	},
 	arivan_stone_explosion_0001 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5407,7 +5407,7 @@ return {
 		}
 	},
 	arivan_stone_explosion_0003 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5433,7 +5433,7 @@ return {
 		}
 	},
 	arivan_stone_explosion_0005 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5459,7 +5459,7 @@ return {
 		}
 	},
 	arivan_stone_explosion_0007 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5485,7 +5485,7 @@ return {
 		}
 	},
 	arivan_stone_explosion_0009 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84
@@ -5511,7 +5511,7 @@ return {
 		}
 	},
 	arivan_stone_explosion_0011 = {
-		a_name = "go_hero_arivan-1.png",
+		a_name = "go_hero_arivan-1.dds",
 		size = {
 			45,
 			84

@@ -2,7 +2,7 @@
 
 return {
 	demonDeath_big_0001 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			78,
 			66
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0002 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			78,
 			66
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0003 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0004 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0005 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0006 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0007 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0008 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0009 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0010 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			78,
 			66
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0011 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			78,
 			66
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	demonDeath_big_0012 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			78,
 			66
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0001 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0002 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0003 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			58,
 			48
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0004 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0005 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0006 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0007 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0008 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0009 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0010 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			58,
 			48
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0011 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			48
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	demonDeath_small_0012 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			58,
 			48
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0001 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -604,7 +604,7 @@ return {
 		}
 	},
 	demonEvil_0003 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -630,7 +630,7 @@ return {
 		}
 	},
 	demonEvil_0005 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -656,7 +656,7 @@ return {
 		}
 	},
 	demonEvil_0007 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			62,
 			54
@@ -680,7 +680,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0008 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -706,7 +706,7 @@ return {
 		}
 	},
 	demonEvil_0010 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -732,7 +732,7 @@ return {
 		}
 	},
 	demonEvil_0012 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			62,
 			54
@@ -758,7 +758,7 @@ return {
 		}
 	},
 	demonEvil_0014 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -784,7 +784,7 @@ return {
 		}
 	},
 	demonEvil_0016 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -810,7 +810,7 @@ return {
 		}
 	},
 	demonEvil_0018 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -834,7 +834,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0019 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -860,7 +860,7 @@ return {
 		}
 	},
 	demonEvil_0021 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -886,7 +886,7 @@ return {
 		}
 	},
 	demonEvil_0023 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -912,7 +912,7 @@ return {
 		}
 	},
 	demonEvil_0025 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -938,7 +938,7 @@ return {
 		}
 	},
 	demonEvil_0027 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -964,7 +964,7 @@ return {
 		}
 	},
 	demonEvil_0029 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -988,7 +988,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0030 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1014,7 +1014,7 @@ return {
 		}
 	},
 	demonEvil_0032 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1040,7 +1040,7 @@ return {
 		}
 	},
 	demonEvil_0034 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1066,7 +1066,7 @@ return {
 		}
 	},
 	demonEvil_0036 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1092,7 +1092,7 @@ return {
 		}
 	},
 	demonEvil_0038 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1118,7 +1118,7 @@ return {
 		}
 	},
 	demonEvil_0040 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1142,7 +1142,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0041 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1168,7 +1168,7 @@ return {
 		}
 	},
 	demonEvil_0043 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1194,7 +1194,7 @@ return {
 		}
 	},
 	demonEvil_0045 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1220,7 +1220,7 @@ return {
 		}
 	},
 	demonEvil_0047 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1246,7 +1246,7 @@ return {
 		}
 	},
 	demonEvil_0049 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1272,7 +1272,7 @@ return {
 		}
 	},
 	demonEvil_0051 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1296,7 +1296,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0052 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1322,7 +1322,7 @@ return {
 		}
 	},
 	demonEvil_0054 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			62,
 			54
@@ -1348,7 +1348,7 @@ return {
 		}
 	},
 	demonEvil_0056 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1374,7 +1374,7 @@ return {
 		}
 	},
 	demonEvil_0058 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1400,7 +1400,7 @@ return {
 		}
 	},
 	demonEvil_0060 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1426,7 +1426,7 @@ return {
 		}
 	},
 	demonEvil_0062 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1450,7 +1450,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0063 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1476,7 +1476,7 @@ return {
 		}
 	},
 	demonEvil_0065 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1502,7 +1502,7 @@ return {
 		}
 	},
 	demonEvil_0067 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1528,7 +1528,7 @@ return {
 		}
 	},
 	demonEvil_0069 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1556,7 +1556,7 @@ return {
 		}
 	},
 	demonEvil_0073 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1584,7 +1584,7 @@ return {
 		}
 	},
 	demonEvil_0077 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1608,7 +1608,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0078 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			62,
 			54
@@ -1632,7 +1632,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0079 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1658,7 +1658,7 @@ return {
 		}
 	},
 	demonEvil_0081 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1684,7 +1684,7 @@ return {
 		}
 	},
 	demonEvil_0083 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1708,7 +1708,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0084 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1732,7 +1732,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0085 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1756,7 +1756,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0086 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			62,
 			54
@@ -1780,7 +1780,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0087 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1813,7 +1813,7 @@ return {
 		}
 	},
 	demonEvil_0096 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			62,
 			54
@@ -1839,7 +1839,7 @@ return {
 		}
 	},
 	demonEvil_0098 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			62,
 			54
@@ -1863,7 +1863,7 @@ return {
 		alias = {}
 	},
 	demonEvil_0099 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			62,
 			54
@@ -1887,7 +1887,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0001 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -1913,7 +1913,7 @@ return {
 		}
 	},
 	demonFlying_0003 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -1939,7 +1939,7 @@ return {
 		}
 	},
 	demonFlying_0005 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -1965,7 +1965,7 @@ return {
 		}
 	},
 	demonFlying_0007 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -1991,7 +1991,7 @@ return {
 		}
 	},
 	demonFlying_0009 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2017,7 +2017,7 @@ return {
 		}
 	},
 	demonFlying_0011 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2043,7 +2043,7 @@ return {
 		}
 	},
 	demonFlying_0013 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2069,7 +2069,7 @@ return {
 		}
 	},
 	demonFlying_0015 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2095,7 +2095,7 @@ return {
 		}
 	},
 	demonFlying_0017 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2121,7 +2121,7 @@ return {
 		}
 	},
 	demonFlying_0019 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2147,7 +2147,7 @@ return {
 		}
 	},
 	demonFlying_0021 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2173,7 +2173,7 @@ return {
 		}
 	},
 	demonFlying_0023 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2199,7 +2199,7 @@ return {
 		}
 	},
 	demonFlying_0025 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2225,7 +2225,7 @@ return {
 		}
 	},
 	demonFlying_0027 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2251,7 +2251,7 @@ return {
 		}
 	},
 	demonFlying_0029 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2277,7 +2277,7 @@ return {
 		}
 	},
 	demonFlying_0031 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2303,7 +2303,7 @@ return {
 		}
 	},
 	demonFlying_0033 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2329,7 +2329,7 @@ return {
 		}
 	},
 	demonFlying_0035 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2355,7 +2355,7 @@ return {
 		}
 	},
 	demonFlying_0037 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2381,7 +2381,7 @@ return {
 		}
 	},
 	demonFlying_0039 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2407,7 +2407,7 @@ return {
 		}
 	},
 	demonFlying_0041 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2433,7 +2433,7 @@ return {
 		}
 	},
 	demonFlying_0043 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2457,7 +2457,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0044 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2481,7 +2481,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0045 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2505,7 +2505,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0046 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2529,7 +2529,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0047 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2553,7 +2553,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0048 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2577,7 +2577,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0049 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2601,7 +2601,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0050 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2625,7 +2625,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0051 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2649,7 +2649,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0052 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			110,
 			136
@@ -2673,7 +2673,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0053 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2697,7 +2697,7 @@ return {
 		alias = {}
 	},
 	demonFlying_0054 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			110,
 			136
@@ -2721,7 +2721,7 @@ return {
 		alias = {}
 	},
 	demonMage_0001 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2747,7 +2747,7 @@ return {
 		}
 	},
 	demonMage_0003 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2773,7 +2773,7 @@ return {
 		}
 	},
 	demonMage_0005 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2799,7 +2799,7 @@ return {
 		}
 	},
 	demonMage_0007 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2823,7 +2823,7 @@ return {
 		alias = {}
 	},
 	demonMage_0008 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2849,7 +2849,7 @@ return {
 		}
 	},
 	demonMage_0010 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2875,7 +2875,7 @@ return {
 		}
 	},
 	demonMage_0012 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2901,7 +2901,7 @@ return {
 		}
 	},
 	demonMage_0014 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2927,7 +2927,7 @@ return {
 		}
 	},
 	demonMage_0016 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2953,7 +2953,7 @@ return {
 		}
 	},
 	demonMage_0018 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -2977,7 +2977,7 @@ return {
 		alias = {}
 	},
 	demonMage_0019 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3003,7 +3003,7 @@ return {
 		}
 	},
 	demonMage_0021 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3029,7 +3029,7 @@ return {
 		}
 	},
 	demonMage_0023 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3055,7 +3055,7 @@ return {
 		}
 	},
 	demonMage_0025 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3081,7 +3081,7 @@ return {
 		}
 	},
 	demonMage_0027 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3107,7 +3107,7 @@ return {
 		}
 	},
 	demonMage_0029 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3131,7 +3131,7 @@ return {
 		alias = {}
 	},
 	demonMage_0030 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3157,7 +3157,7 @@ return {
 		}
 	},
 	demonMage_0032 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3183,7 +3183,7 @@ return {
 		}
 	},
 	demonMage_0034 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3209,7 +3209,7 @@ return {
 		}
 	},
 	demonMage_0036 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3235,7 +3235,7 @@ return {
 		}
 	},
 	demonMage_0038 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3261,7 +3261,7 @@ return {
 		}
 	},
 	demonMage_0040 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3285,7 +3285,7 @@ return {
 		alias = {}
 	},
 	demonMage_0041 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3311,7 +3311,7 @@ return {
 		}
 	},
 	demonMage_0043 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3337,7 +3337,7 @@ return {
 		}
 	},
 	demonMage_0045 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3363,7 +3363,7 @@ return {
 		}
 	},
 	demonMage_0047 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3389,7 +3389,7 @@ return {
 		}
 	},
 	demonMage_0049 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3415,7 +3415,7 @@ return {
 		}
 	},
 	demonMage_0051 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3439,7 +3439,7 @@ return {
 		alias = {}
 	},
 	demonMage_0052 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3465,7 +3465,7 @@ return {
 		}
 	},
 	demonMage_0054 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3491,7 +3491,7 @@ return {
 		}
 	},
 	demonMage_0056 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3517,7 +3517,7 @@ return {
 		}
 	},
 	demonMage_0058 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3543,7 +3543,7 @@ return {
 		}
 	},
 	demonMage_0060 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3569,7 +3569,7 @@ return {
 		}
 	},
 	demonMage_0062 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3593,7 +3593,7 @@ return {
 		alias = {}
 	},
 	demonMage_0063 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3619,7 +3619,7 @@ return {
 		}
 	},
 	demonMage_0065 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3645,7 +3645,7 @@ return {
 		}
 	},
 	demonMage_0067 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3677,7 +3677,7 @@ return {
 		}
 	},
 	demonMage_0070 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3703,7 +3703,7 @@ return {
 		}
 	},
 	demonMage_0072 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3729,7 +3729,7 @@ return {
 		}
 	},
 	demonMage_0074 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3755,7 +3755,7 @@ return {
 		}
 	},
 	demonMage_0076 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3779,7 +3779,7 @@ return {
 		alias = {}
 	},
 	demonMage_0077 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3803,7 +3803,7 @@ return {
 		alias = {}
 	},
 	demonMage_0078 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3827,7 +3827,7 @@ return {
 		alias = {}
 	},
 	demonMage_0079 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3851,7 +3851,7 @@ return {
 		alias = {}
 	},
 	demonMage_0080 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3875,7 +3875,7 @@ return {
 		alias = {}
 	},
 	demonMage_0081 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3899,7 +3899,7 @@ return {
 		alias = {}
 	},
 	demonMage_0082 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3923,7 +3923,7 @@ return {
 		alias = {}
 	},
 	demonMage_0083 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3947,7 +3947,7 @@ return {
 		alias = {}
 	},
 	demonMage_0084 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3971,7 +3971,7 @@ return {
 		alias = {}
 	},
 	demonMage_0085 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -3995,7 +3995,7 @@ return {
 		alias = {}
 	},
 	demonMage_0090 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4021,7 +4021,7 @@ return {
 		}
 	},
 	demonMage_0092 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4047,7 +4047,7 @@ return {
 		}
 	},
 	demonMage_0094 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4073,7 +4073,7 @@ return {
 		}
 	},
 	demonMage_0096 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4099,7 +4099,7 @@ return {
 		}
 	},
 	demonMage_0098 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4123,7 +4123,7 @@ return {
 		alias = {}
 	},
 	demonMage_0099 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4147,7 +4147,7 @@ return {
 		alias = {}
 	},
 	demonMage_0100 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4171,7 +4171,7 @@ return {
 		alias = {}
 	},
 	demonMage_0101 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4195,7 +4195,7 @@ return {
 		alias = {}
 	},
 	demonMage_0102 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4219,7 +4219,7 @@ return {
 		alias = {}
 	},
 	demonMage_0103 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4243,7 +4243,7 @@ return {
 		alias = {}
 	},
 	demonMage_0104 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4267,7 +4267,7 @@ return {
 		alias = {}
 	},
 	demonMage_0105 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4291,7 +4291,7 @@ return {
 		alias = {}
 	},
 	demonMage_0106 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4315,7 +4315,7 @@ return {
 		alias = {}
 	},
 	demonMage_0107 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4339,7 +4339,7 @@ return {
 		alias = {}
 	},
 	demonMage_0108 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4363,7 +4363,7 @@ return {
 		alias = {}
 	},
 	demonMage_0109 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4387,7 +4387,7 @@ return {
 		alias = {}
 	},
 	demonMage_0110 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			80
@@ -4411,7 +4411,7 @@ return {
 		alias = {}
 	},
 	demonMage_0111 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4435,7 +4435,7 @@ return {
 		alias = {}
 	},
 	demonMage_0112 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4459,7 +4459,7 @@ return {
 		alias = {}
 	},
 	demonMage_0113 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4483,7 +4483,7 @@ return {
 		alias = {}
 	},
 	demonMage_0115 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4507,7 +4507,7 @@ return {
 		alias = {}
 	},
 	demonMage_0116 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4531,7 +4531,7 @@ return {
 		alias = {}
 	},
 	demonMage_0117 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4557,7 +4557,7 @@ return {
 		}
 	},
 	demonMage_0119 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4583,7 +4583,7 @@ return {
 		}
 	},
 	demonMage_0121 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4607,7 +4607,7 @@ return {
 		alias = {}
 	},
 	demonMage_0122 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			80
@@ -4631,7 +4631,7 @@ return {
 		alias = {}
 	},
 	demonMage_0123 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			80
@@ -4655,7 +4655,7 @@ return {
 		alias = {}
 	},
 	demonMage_0124 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4679,7 +4679,7 @@ return {
 		alias = {}
 	},
 	demonMage_0125 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4712,7 +4712,7 @@ return {
 		}
 	},
 	demonMage_0134 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4738,7 +4738,7 @@ return {
 		}
 	},
 	demonMage_0136 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4762,7 +4762,7 @@ return {
 		alias = {}
 	},
 	demonMage_0137 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			80
@@ -4786,7 +4786,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0001 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4812,7 +4812,7 @@ return {
 		}
 	},
 	demonWolf_0003 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4836,7 +4836,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0004 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4860,7 +4860,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0005 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4884,7 +4884,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0006 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4908,7 +4908,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0007 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4932,7 +4932,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0008 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4956,7 +4956,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0009 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -4980,7 +4980,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0010 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5004,7 +5004,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0011 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5030,7 +5030,7 @@ return {
 		}
 	},
 	demonWolf_0013 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5056,7 +5056,7 @@ return {
 		}
 	},
 	demonWolf_0015 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5082,7 +5082,7 @@ return {
 		}
 	},
 	demonWolf_0017 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5108,7 +5108,7 @@ return {
 		}
 	},
 	demonWolf_0019 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5134,7 +5134,7 @@ return {
 		}
 	},
 	demonWolf_0021 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5160,7 +5160,7 @@ return {
 		}
 	},
 	demonWolf_0023 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5186,7 +5186,7 @@ return {
 		}
 	},
 	demonWolf_0025 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5212,7 +5212,7 @@ return {
 		}
 	},
 	demonWolf_0027 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5238,7 +5238,7 @@ return {
 		}
 	},
 	demonWolf_0029 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5264,7 +5264,7 @@ return {
 		}
 	},
 	demonWolf_0031 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5288,7 +5288,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0032 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5312,7 +5312,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0033 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5336,7 +5336,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0034 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5362,7 +5362,7 @@ return {
 		}
 	},
 	demonWolf_0036 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5388,7 +5388,7 @@ return {
 		}
 	},
 	demonWolf_0038 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5412,7 +5412,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0039 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5438,7 +5438,7 @@ return {
 		}
 	},
 	demonWolf_0041 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5464,7 +5464,7 @@ return {
 		}
 	},
 	demonWolf_0043 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5488,7 +5488,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0044 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5514,7 +5514,7 @@ return {
 		}
 	},
 	demonWolf_0046 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			82,
 			58
@@ -5538,7 +5538,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0047 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5562,7 +5562,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0048 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5588,7 +5588,7 @@ return {
 		}
 	},
 	demonWolf_0050 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5614,7 +5614,7 @@ return {
 		}
 	},
 	demonWolf_0052 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5638,7 +5638,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0053 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5662,7 +5662,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0054 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5686,7 +5686,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0055 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5710,7 +5710,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0056 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5743,7 +5743,7 @@ return {
 		}
 	},
 	demonWolf_0065 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5769,7 +5769,7 @@ return {
 		}
 	},
 	demonWolf_0067 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5793,7 +5793,7 @@ return {
 		alias = {}
 	},
 	demonWolf_0068 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			82,
 			58
@@ -5817,7 +5817,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0001 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -5843,7 +5843,7 @@ return {
 		}
 	},
 	lavaElemental_0003 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -5867,7 +5867,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0004 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -5893,7 +5893,7 @@ return {
 		}
 	},
 	lavaElemental_0006 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -5917,7 +5917,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0007 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -5943,7 +5943,7 @@ return {
 		}
 	},
 	lavaElemental_0009 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -5967,7 +5967,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0010 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -5993,7 +5993,7 @@ return {
 		}
 	},
 	lavaElemental_0012 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6017,7 +6017,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0013 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6043,7 +6043,7 @@ return {
 		}
 	},
 	lavaElemental_0015 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6067,7 +6067,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0016 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6093,7 +6093,7 @@ return {
 		}
 	},
 	lavaElemental_0018 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6117,7 +6117,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0019 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6143,7 +6143,7 @@ return {
 		}
 	},
 	lavaElemental_0021 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6167,7 +6167,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0022 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6193,7 +6193,7 @@ return {
 		}
 	},
 	lavaElemental_0024 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6217,7 +6217,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0025 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6241,7 +6241,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0026 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6267,7 +6267,7 @@ return {
 		}
 	},
 	lavaElemental_0028 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6293,7 +6293,7 @@ return {
 		}
 	},
 	lavaElemental_0030 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6319,7 +6319,7 @@ return {
 		}
 	},
 	lavaElemental_0032 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6345,7 +6345,7 @@ return {
 		}
 	},
 	lavaElemental_0034 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6371,7 +6371,7 @@ return {
 		}
 	},
 	lavaElemental_0036 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6397,7 +6397,7 @@ return {
 		}
 	},
 	lavaElemental_0038 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6423,7 +6423,7 @@ return {
 		}
 	},
 	lavaElemental_0040 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6449,7 +6449,7 @@ return {
 		}
 	},
 	lavaElemental_0042 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6475,7 +6475,7 @@ return {
 		}
 	},
 	lavaElemental_0044 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6501,7 +6501,7 @@ return {
 		}
 	},
 	lavaElemental_0046 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6527,7 +6527,7 @@ return {
 		}
 	},
 	lavaElemental_0048 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6553,7 +6553,7 @@ return {
 		}
 	},
 	lavaElemental_0050 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6579,7 +6579,7 @@ return {
 		}
 	},
 	lavaElemental_0052 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6605,7 +6605,7 @@ return {
 		}
 	},
 	lavaElemental_0054 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6631,7 +6631,7 @@ return {
 		}
 	},
 	lavaElemental_0056 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6657,7 +6657,7 @@ return {
 		}
 	},
 	lavaElemental_0058 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6683,7 +6683,7 @@ return {
 		}
 	},
 	lavaElemental_0060 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6709,7 +6709,7 @@ return {
 		}
 	},
 	lavaElemental_0062 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6735,7 +6735,7 @@ return {
 		}
 	},
 	lavaElemental_0064 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6761,7 +6761,7 @@ return {
 		}
 	},
 	lavaElemental_0066 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6787,7 +6787,7 @@ return {
 		}
 	},
 	lavaElemental_0068 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6813,7 +6813,7 @@ return {
 		}
 	},
 	lavaElemental_0070 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6839,7 +6839,7 @@ return {
 		}
 	},
 	lavaElemental_0072 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6863,7 +6863,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0073 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6892,7 +6892,7 @@ return {
 		}
 	},
 	lavaElemental_0076 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6916,7 +6916,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0077 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6940,7 +6940,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0078 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6964,7 +6964,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0079 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -6990,7 +6990,7 @@ return {
 		}
 	},
 	lavaElemental_0081 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7016,7 +7016,7 @@ return {
 		}
 	},
 	lavaElemental_0083 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7042,7 +7042,7 @@ return {
 		}
 	},
 	lavaElemental_0085 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7068,7 +7068,7 @@ return {
 		}
 	},
 	lavaElemental_0087 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7094,7 +7094,7 @@ return {
 		}
 	},
 	lavaElemental_0089 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7120,7 +7120,7 @@ return {
 		}
 	},
 	lavaElemental_0091 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7146,7 +7146,7 @@ return {
 		}
 	},
 	lavaElemental_0093 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7177,7 +7177,7 @@ return {
 		}
 	},
 	lavaElemental_0100 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7203,7 +7203,7 @@ return {
 		}
 	},
 	lavaElemental_0103 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7227,7 +7227,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0104 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7253,7 +7253,7 @@ return {
 		}
 	},
 	lavaElemental_0105 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7279,7 +7279,7 @@ return {
 		}
 	},
 	lavaElemental_0107 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7305,7 +7305,7 @@ return {
 		}
 	},
 	lavaElemental_0109 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7331,7 +7331,7 @@ return {
 		}
 	},
 	lavaElemental_0111 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7357,7 +7357,7 @@ return {
 		}
 	},
 	lavaElemental_0113 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7390,7 +7390,7 @@ return {
 		}
 	},
 	lavaElemental_0122 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7416,7 +7416,7 @@ return {
 		}
 	},
 	lavaElemental_0126 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7440,7 +7440,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0127 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7464,7 +7464,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0128 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7488,7 +7488,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0129 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7512,7 +7512,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0130 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7536,7 +7536,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0131 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7560,7 +7560,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0132 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7584,7 +7584,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0133 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7608,7 +7608,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0134 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7632,7 +7632,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0135 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7656,7 +7656,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0136 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7680,7 +7680,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0137 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7704,7 +7704,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0138 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7728,7 +7728,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0139 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7752,7 +7752,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0140 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7776,7 +7776,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0141 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7800,7 +7800,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0142 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7824,7 +7824,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0143 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7848,7 +7848,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0144 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7872,7 +7872,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0145 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7896,7 +7896,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0146 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7920,7 +7920,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0147 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7953,7 +7953,7 @@ return {
 		}
 	},
 	lavaElemental_0156 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -7977,7 +7977,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0157 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8003,7 +8003,7 @@ return {
 		}
 	},
 	lavaElemental_0159 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8029,7 +8029,7 @@ return {
 		}
 	},
 	lavaElemental_0161 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			154,
 			120
@@ -8055,7 +8055,7 @@ return {
 		}
 	},
 	lavaElemental_0163 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			154,
 			120
@@ -8081,7 +8081,7 @@ return {
 		}
 	},
 	lavaElemental_0165 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			154,
 			120
@@ -8107,7 +8107,7 @@ return {
 		}
 	},
 	lavaElemental_0167 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			154,
 			120
@@ -8133,7 +8133,7 @@ return {
 		}
 	},
 	lavaElemental_0169 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8159,7 +8159,7 @@ return {
 		}
 	},
 	lavaElemental_0171 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8185,7 +8185,7 @@ return {
 		}
 	},
 	lavaElemental_0173 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8211,7 +8211,7 @@ return {
 		}
 	},
 	lavaElemental_0175 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8235,7 +8235,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0176 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8259,7 +8259,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0177 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8283,7 +8283,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0178 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8307,7 +8307,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0179 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8331,7 +8331,7 @@ return {
 		alias = {}
 	},
 	lavaElemental_0180 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			154,
 			120
@@ -8358,7 +8358,7 @@ return {
 		}
 	},
 	shield_small_0001 = {
-		a_name = "go_enemies_wastelands-1.png",
+		a_name = "go_enemies_wastelands-1.dds",
 		size = {
 			58,
 			46
@@ -8384,7 +8384,7 @@ return {
 		}
 	},
 	shield_small_0002 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			46
@@ -8410,7 +8410,7 @@ return {
 		}
 	},
 	shield_small_0003 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			46
@@ -8436,7 +8436,7 @@ return {
 		}
 	},
 	shield_small_0004 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			46
@@ -8462,7 +8462,7 @@ return {
 		}
 	},
 	shield_small_0005 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			46
@@ -8488,7 +8488,7 @@ return {
 		}
 	},
 	shield_small_0006 = {
-		a_name = "go_enemies_wastelands-2.png",
+		a_name = "go_enemies_wastelands-2.dds",
 		size = {
 			58,
 			46
@@ -8512,7 +8512,7 @@ return {
 		alias = {}
 	},
 CB_DeathKnight_aura_0001 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8536,7 +8536,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0002 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8560,7 +8560,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0003 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8584,7 +8584,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0004 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8608,7 +8608,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0005 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8632,7 +8632,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0006 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8656,7 +8656,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0007 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8680,7 +8680,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0008 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8704,7 +8704,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0009 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8728,7 +8728,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0010 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8752,7 +8752,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0011 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8776,7 +8776,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0012 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8800,7 +8800,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0013 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8824,7 +8824,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0014 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8848,7 +8848,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0015 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8872,7 +8872,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0016 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8896,7 +8896,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0017 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8920,7 +8920,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0018 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8944,7 +8944,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0019 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8968,7 +8968,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0020 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -8992,7 +8992,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0021 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9016,7 +9016,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0022 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9040,7 +9040,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0023 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9064,7 +9064,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0024 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9088,7 +9088,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0025 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9112,7 +9112,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0026 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9136,7 +9136,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0027 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9160,7 +9160,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0028 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9184,7 +9184,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0029 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9208,7 +9208,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0030 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			240,
 			90
@@ -9232,7 +9232,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
     CB_DeathKnight_buffed = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			66,
 			22
@@ -9256,7 +9256,7 @@ CB_DeathKnight_aura_0001 = {
 		alias = {}
 	},
 	CB_DeathKnight_buffedFx_0001 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9282,7 +9282,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
 	CB_DeathKnight_buffedFx_0003 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9308,7 +9308,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
 	CB_DeathKnight_buffedFx_0005 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9334,7 +9334,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
 	CB_DeathKnight_buffedFx_0007 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9360,7 +9360,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
 	CB_DeathKnight_buffedFx_0009 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9386,7 +9386,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
 	CB_DeathKnight_buffedFx_0011 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9412,7 +9412,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
 	CB_DeathKnight_buffedFx_0013 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9438,7 +9438,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
 	CB_DeathKnight_buffedFx_0015 = {
-		a_name = "go_enemies_blackburn-1.png",
+		a_name = "go_enemies_blackburn-1.dds",
 		size = {
 			178,
 			130
@@ -9464,7 +9464,7 @@ CB_DeathKnight_aura_0001 = {
 		}
 	},
     -- CB_DeathKnight_0001 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9488,7 +9488,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0002 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9512,7 +9512,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0003 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9538,7 +9538,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0005 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9564,7 +9564,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0007 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9590,7 +9590,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0009 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9616,7 +9616,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0011 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9642,7 +9642,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0013 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9668,7 +9668,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0015 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9694,7 +9694,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0017 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9720,7 +9720,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0019 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9744,7 +9744,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0020 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9768,7 +9768,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0021 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9794,7 +9794,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0023 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9820,7 +9820,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0025 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9846,7 +9846,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0027 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9872,7 +9872,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0029 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9896,7 +9896,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0030 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9922,7 +9922,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0032 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9948,7 +9948,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0034 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9974,7 +9974,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0036 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -9998,7 +9998,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0037 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10024,7 +10024,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0039 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10050,7 +10050,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0041 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10074,7 +10074,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0042 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10100,7 +10100,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0044 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10126,7 +10126,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0046 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10150,7 +10150,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0047 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10176,7 +10176,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0049 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10202,7 +10202,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0051 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10226,7 +10226,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0052 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10252,7 +10252,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0054 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10278,7 +10278,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0056 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10304,7 +10304,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0058 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10328,7 +10328,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0059 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10354,7 +10354,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0061 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10380,7 +10380,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0063 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10404,7 +10404,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0064 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10430,7 +10430,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0066 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10456,7 +10456,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0068 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10480,7 +10480,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0069 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10506,7 +10506,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0071 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10532,7 +10532,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0073 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10556,7 +10556,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0074 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10582,7 +10582,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0076 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10608,7 +10608,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0078 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10634,7 +10634,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0080 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10658,7 +10658,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0081 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10684,7 +10684,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0083 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10710,7 +10710,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0085 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10734,7 +10734,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0086 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10760,7 +10760,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0088 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10786,7 +10786,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0090 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10810,7 +10810,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0091 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10836,7 +10836,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0093 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10862,7 +10862,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0095 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10886,7 +10886,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0096 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10910,7 +10910,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0097 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10934,7 +10934,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0098 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10960,7 +10960,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0100 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -10986,7 +10986,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0102 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11010,7 +11010,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0103 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11034,7 +11034,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0104 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11072,7 +11072,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0118 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11099,7 +11099,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0121 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11126,7 +11126,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0124 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11153,7 +11153,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0127 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11180,7 +11180,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0130 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11207,7 +11207,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0133 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11233,7 +11233,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0135 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11259,7 +11259,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0137 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11285,7 +11285,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0139 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11311,7 +11311,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0141 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11337,7 +11337,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0143 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11363,7 +11363,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0145 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11387,7 +11387,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0146 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11411,7 +11411,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0147 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11435,7 +11435,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0148 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11459,7 +11459,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0149 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11483,7 +11483,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0150 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11507,7 +11507,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0151 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11531,7 +11531,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0152 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11555,7 +11555,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0153 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11579,7 +11579,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0154 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11603,7 +11603,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0155 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11627,7 +11627,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0156 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11651,7 +11651,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0157 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11675,7 +11675,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0158 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11699,7 +11699,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0159 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11723,7 +11723,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0160 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11747,7 +11747,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0161 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11771,7 +11771,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0162 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11795,7 +11795,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0163 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11819,7 +11819,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0164 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11843,7 +11843,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0165 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11867,7 +11867,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0166 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11891,7 +11891,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0167 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11915,7 +11915,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0168 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11939,7 +11939,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0169 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11963,7 +11963,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0170 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -11987,7 +11987,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0171 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12011,7 +12011,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0172 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12035,7 +12035,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0173 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12059,7 +12059,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0174 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12083,7 +12083,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0175 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12107,7 +12107,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0176 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12131,7 +12131,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0177 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12155,7 +12155,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0178 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12179,7 +12179,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0179 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12203,7 +12203,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0180 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12227,7 +12227,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0181 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12251,7 +12251,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0182 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12275,7 +12275,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0183 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12299,7 +12299,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0184 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12323,7 +12323,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0185 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12347,7 +12347,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0186 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12371,7 +12371,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0187 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12395,7 +12395,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0188 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12419,7 +12419,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0189 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12443,7 +12443,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0190 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12467,7 +12467,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0191 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12491,7 +12491,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0192 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12515,7 +12515,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0193 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12539,7 +12539,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0194 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12563,7 +12563,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0195 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12587,7 +12587,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0196 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12611,7 +12611,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0197 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12635,7 +12635,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0198 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12659,7 +12659,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0199 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12683,7 +12683,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0200 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12709,7 +12709,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0202 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12733,7 +12733,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0203 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12757,7 +12757,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0204 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12781,7 +12781,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0205 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12805,7 +12805,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0206 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12829,7 +12829,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0207 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12853,7 +12853,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0208 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12877,7 +12877,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0209 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12901,7 +12901,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0210 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12925,7 +12925,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0211 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12949,7 +12949,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0212 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12973,7 +12973,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0213 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -12997,7 +12997,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0214 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13021,7 +13021,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0215 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13045,7 +13045,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0216 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13069,7 +13069,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0217 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13093,7 +13093,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0218 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13117,7 +13117,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0219 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13141,7 +13141,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0220 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13165,7 +13165,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0221 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13189,7 +13189,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0222 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13213,7 +13213,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0223 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13239,7 +13239,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0225 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13265,7 +13265,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0227 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13289,7 +13289,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0228 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13313,7 +13313,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0229 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13337,7 +13337,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0230 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13361,7 +13361,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0231 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13387,7 +13387,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0233 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13413,7 +13413,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0235 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13439,7 +13439,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0237 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13465,7 +13465,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0239 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13491,7 +13491,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0241 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13517,7 +13517,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0243 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13543,7 +13543,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0245 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13569,7 +13569,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0247 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13593,7 +13593,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0248 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13617,7 +13617,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0249 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13643,7 +13643,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0251 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13669,7 +13669,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0253 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13693,7 +13693,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0254 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13717,7 +13717,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0255 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13741,7 +13741,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0256 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13765,7 +13765,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0257 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13798,7 +13798,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0266 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13824,7 +13824,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	}
 	-- },
 	-- CB_DeathKnight_0268 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94
@@ -13848,7 +13848,7 @@ CB_DeathKnight_aura_0001 = {
 	-- 	alias = {}
 	-- },
 	-- CB_DeathKnight_0269 = {
-	-- 	a_name = "go_enemies_blackburn-1.png",
+	-- 	a_name = "go_enemies_blackburn-1.dds",
 	-- 	size = {
 	-- 		128,
 	-- 		94

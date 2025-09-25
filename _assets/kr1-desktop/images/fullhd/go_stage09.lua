@@ -2,7 +2,7 @@
 
 return {
 	boss_JT_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	boss_JT_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	boss_JT_0005 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	boss_JT_0007 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	boss_JT_0009 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	boss_JT_0011 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	boss_JT_0013 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	boss_JT_0015 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	boss_JT_0017 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	boss_JT_0019 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	boss_JT_0021 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	boss_JT_0023 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	boss_JT_0025 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	boss_JT_0027 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	boss_JT_0029 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	boss_JT_0031 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	boss_JT_0033 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -442,7 +442,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0034 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -468,7 +468,7 @@ return {
 		}
 	},
 	boss_JT_0036 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -492,7 +492,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0037 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -519,7 +519,7 @@ return {
 		}
 	},
 	boss_JT_0040 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -545,7 +545,7 @@ return {
 		}
 	},
 	boss_JT_0042 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -572,7 +572,7 @@ return {
 		}
 	},
 	boss_JT_0045 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -598,7 +598,7 @@ return {
 		}
 	},
 	boss_JT_0047 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -625,7 +625,7 @@ return {
 		}
 	},
 	boss_JT_0050 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -651,7 +651,7 @@ return {
 		}
 	},
 	boss_JT_0052 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -675,7 +675,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0053 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	boss_JT_0056 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -728,7 +728,7 @@ return {
 		}
 	},
 	boss_JT_0058 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -755,7 +755,7 @@ return {
 		}
 	},
 	boss_JT_0061 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -781,7 +781,7 @@ return {
 		}
 	},
 	boss_JT_0063 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -808,7 +808,7 @@ return {
 		}
 	},
 	boss_JT_0066 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -836,7 +836,7 @@ return {
 		}
 	},
 	boss_JT_0069 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -862,7 +862,7 @@ return {
 		}
 	},
 	boss_JT_0071 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -888,7 +888,7 @@ return {
 		}
 	},
 	boss_JT_0073 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -916,7 +916,7 @@ return {
 		}
 	},
 	boss_JT_0077 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	boss_JT_0079 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -968,7 +968,7 @@ return {
 		}
 	},
 	boss_JT_0081 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -994,7 +994,7 @@ return {
 		}
 	},
 	boss_JT_0083 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1020,7 +1020,7 @@ return {
 		}
 	},
 	boss_JT_0085 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1046,7 +1046,7 @@ return {
 		}
 	},
 	boss_JT_0087 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1072,7 +1072,7 @@ return {
 		}
 	},
 	boss_JT_0089 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1096,7 +1096,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0090 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1122,7 +1122,7 @@ return {
 		}
 	},
 	boss_JT_0092 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1148,7 +1148,7 @@ return {
 		}
 	},
 	boss_JT_0094 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1174,7 +1174,7 @@ return {
 		}
 	},
 	boss_JT_0096 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1201,7 +1201,7 @@ return {
 		}
 	},
 	boss_JT_0099 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1227,7 +1227,7 @@ return {
 		}
 	},
 	boss_JT_0101 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1251,7 +1251,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0102 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1278,7 +1278,7 @@ return {
 		}
 	},
 	boss_JT_0106 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1304,7 +1304,7 @@ return {
 		}
 	},
 	boss_JT_0108 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1328,7 +1328,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0109 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1352,7 +1352,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0110 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1376,7 +1376,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0111 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1402,7 +1402,7 @@ return {
 		}
 	},
 	boss_JT_0113 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1428,7 +1428,7 @@ return {
 		}
 	},
 	boss_JT_0115 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1454,7 +1454,7 @@ return {
 		}
 	},
 	boss_JT_0117 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1482,7 +1482,7 @@ return {
 		}
 	},
 	boss_JT_0121 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1508,7 +1508,7 @@ return {
 		}
 	},
 	boss_JT_0123 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1534,7 +1534,7 @@ return {
 		}
 	},
 	boss_JT_0125 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1560,7 +1560,7 @@ return {
 		}
 	},
 	boss_JT_0127 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1591,7 +1591,7 @@ return {
 		}
 	},
 	boss_JT_0134 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1617,7 +1617,7 @@ return {
 		}
 	},
 	boss_JT_0136 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1641,7 +1641,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0137 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1668,7 +1668,7 @@ return {
 		}
 	},
 	boss_JT_0140 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1695,7 +1695,7 @@ return {
 		}
 	},
 	boss_JT_0143 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1722,7 +1722,7 @@ return {
 		}
 	},
 	boss_JT_0146 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1751,7 +1751,7 @@ return {
 		}
 	},
 	boss_JT_0151 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1778,7 +1778,7 @@ return {
 		}
 	},
 	boss_JT_0154 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1805,7 +1805,7 @@ return {
 		}
 	},
 	boss_JT_0157 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1832,7 +1832,7 @@ return {
 		}
 	},
 	boss_JT_0160 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -1858,7 +1858,7 @@ return {
 		}
 	},
 	boss_JT_0162 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1887,7 +1887,7 @@ return {
 		}
 	},
 	boss_JT_0167 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1913,7 +1913,7 @@ return {
 		}
 	},
 	boss_JT_0169 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1937,7 +1937,7 @@ return {
 		alias = {}
 	},
 	boss_JT_0170 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1963,7 +1963,7 @@ return {
 		}
 	},
 	boss_JT_0172 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -1989,7 +1989,7 @@ return {
 		}
 	},
 	boss_JT_0174 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -2031,7 +2031,7 @@ return {
 		}
 	},
 	boss_JT_0192 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -2057,7 +2057,7 @@ return {
 		}
 	},
 	boss_JT_0194 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -2083,7 +2083,7 @@ return {
 		}
 	},
 	boss_JT_0196 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -2109,7 +2109,7 @@ return {
 		}
 	},
 	boss_JT_0198 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -2135,7 +2135,7 @@ return {
 		}
 	},
 	boss_JT_0200 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2161,7 +2161,7 @@ return {
 		}
 	},
 	boss_JT_0202 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2187,7 +2187,7 @@ return {
 		}
 	},
 	boss_JT_0204 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2213,7 +2213,7 @@ return {
 		}
 	},
 	boss_JT_0206 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2239,7 +2239,7 @@ return {
 		}
 	},
 	boss_JT_0208 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2265,7 +2265,7 @@ return {
 		}
 	},
 	boss_JT_0210 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2313,7 +2313,7 @@ return {
 		}
 	},
 	boss_JT_0234 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -2339,7 +2339,7 @@ return {
 		}
 	},
 	boss_JT_0236 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			368,
 			284
@@ -2365,7 +2365,7 @@ return {
 		}
 	},
 	boss_JT_0238 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2391,7 +2391,7 @@ return {
 		}
 	},
 	boss_JT_0240 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2417,7 +2417,7 @@ return {
 		}
 	},
 	boss_JT_0242 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2443,7 +2443,7 @@ return {
 		}
 	},
 	boss_JT_0244 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2469,7 +2469,7 @@ return {
 		}
 	},
 	boss_JT_0246 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2495,7 +2495,7 @@ return {
 		}
 	},
 	boss_JT_0248 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2521,7 +2521,7 @@ return {
 		}
 	},
 	boss_JT_0250 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2547,7 +2547,7 @@ return {
 		}
 	},
 	boss_JT_0252 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2573,7 +2573,7 @@ return {
 		}
 	},
 	boss_JT_0254 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2599,7 +2599,7 @@ return {
 		}
 	},
 	boss_JT_0256 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2625,7 +2625,7 @@ return {
 		}
 	},
 	boss_JT_0258 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			368,
 			284
@@ -2653,7 +2653,7 @@ return {
 		}
 	},
 	boss_JT_hitground_decal_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			212,
 			108
@@ -2679,7 +2679,7 @@ return {
 		}
 	},
 	boss_JT_hitground_decal_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			212,
 			108
@@ -2705,7 +2705,7 @@ return {
 		}
 	},
 	boss_JT_hitground_decal_0005 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			212,
 			108
@@ -2731,7 +2731,7 @@ return {
 		}
 	},
 	boss_JT_hitground_decal_0007 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			212,
 			108
@@ -2757,7 +2757,7 @@ return {
 		}
 	},
 	boss_JT_hitground_decal_0009 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			212,
 			108
@@ -2783,7 +2783,7 @@ return {
 		}
 	},
 	boss_JT_hitground_decal_0011 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			212,
 			108
@@ -2809,7 +2809,7 @@ return {
 		}
 	},
 	boss_JT_hitground_smoke_0001 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			134
@@ -2833,7 +2833,7 @@ return {
 		alias = {}
 	},
 	boss_JT_hitground_smoke_0002 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			134
@@ -2857,7 +2857,7 @@ return {
 		alias = {}
 	},
 	boss_JT_hitground_smoke_0003 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			134
@@ -2883,7 +2883,7 @@ return {
 		}
 	},
 	boss_JT_hitground_smoke_0005 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			134
@@ -2909,7 +2909,7 @@ return {
 		}
 	},
 	boss_JT_hitground_smoke_0007 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			134
@@ -2935,7 +2935,7 @@ return {
 		}
 	},
 	boss_JT_hitground_smoke_0009 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			134
@@ -2961,7 +2961,7 @@ return {
 		}
 	},
 	boss_JT_hitground_smoke_0011 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			150,
 			134
@@ -2987,7 +2987,7 @@ return {
 		}
 	},
 	boss_JT_hitground_smoke_0013 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			150,
 			134
@@ -3013,7 +3013,7 @@ return {
 		}
 	},
 	boss_JT_tapFeedback_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3037,7 +3037,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0002 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3061,7 +3061,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3085,7 +3085,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0004 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3109,7 +3109,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0005 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3133,7 +3133,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0006 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3157,7 +3157,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0007 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3181,7 +3181,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0008 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3205,7 +3205,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0009 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3229,7 +3229,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tapFeedback_0010 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			132,
 			100
@@ -3253,7 +3253,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tap_notxt_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			92,
 			122
@@ -3279,7 +3279,7 @@ return {
 		}
 	},
 	boss_JT_tap_notxt_0003 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			92,
 			122
@@ -3303,7 +3303,7 @@ return {
 		alias = {}
 	},
 	boss_JT_tap_notxt_0004 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			92,
 			122
@@ -3329,7 +3329,7 @@ return {
 		}
 	},
 	boss_JT_tap_notxt_0006 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			92,
 			122
@@ -3355,7 +3355,7 @@ return {
 		}
 	},
 	boss_jt_tower_freeze_0001 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			150,
 			150
@@ -3379,7 +3379,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0002 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3403,7 +3403,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0003 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3427,7 +3427,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0004 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3451,7 +3451,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0005 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3475,7 +3475,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0006 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3499,7 +3499,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0007 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3523,7 +3523,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0008 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3547,7 +3547,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_freeze_0009 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			150,
 			150
@@ -3573,7 +3573,7 @@ return {
 		}
 	},
 	boss_jt_tower_unfreeze_0001 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3597,7 +3597,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0002 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3621,7 +3621,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0003 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3645,7 +3645,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0004 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3669,7 +3669,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0005 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3693,7 +3693,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0006 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3717,7 +3717,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0007 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3741,7 +3741,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0008 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3765,7 +3765,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0009 = {
-		a_name = "go_stage09-2.png",
+		a_name = "go_stage09-2.dds",
 		size = {
 			238,
 			202
@@ -3789,7 +3789,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0010 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3813,7 +3813,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0011 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3837,7 +3837,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0012 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3861,7 +3861,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0013 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3885,7 +3885,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0014 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3909,7 +3909,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0015 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3933,7 +3933,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0016 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3957,7 +3957,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0017 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -3981,7 +3981,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0018 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4005,7 +4005,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0019 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4029,7 +4029,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0020 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4053,7 +4053,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0021 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4077,7 +4077,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0022 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4101,7 +4101,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0023 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4136,7 +4136,7 @@ return {
 		}
 	},
 	boss_jt_tower_unfreeze_0034 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4160,7 +4160,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0035 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4184,7 +4184,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0036 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4208,7 +4208,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0037 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4232,7 +4232,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0038 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4256,7 +4256,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0039 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4280,7 +4280,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0040 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4304,7 +4304,7 @@ return {
 		alias = {}
 	},
 	boss_jt_tower_unfreeze_0041 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			238,
 			202
@@ -4328,7 +4328,7 @@ return {
 		alias = {}
 	},
 	stage9_boss_corpse = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			218,
 			164
@@ -4352,7 +4352,7 @@ return {
 		alias = {}
 	},
 	stage9_cave1 = {
-		a_name = "go_stage09-1.png",
+		a_name = "go_stage09-1.dds",
 		size = {
 			266,
 			294

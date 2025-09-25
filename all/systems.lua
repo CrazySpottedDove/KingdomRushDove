@@ -2435,7 +2435,7 @@ function sys.render:on_update(dt, ts, store)
                 s._wait = false
             end
 
-            -- local last_runs = s.runs
+            local last_runs = s.runs
             -- local fn, runs, idx
             local fn
             if s.animation then
@@ -2458,7 +2458,7 @@ function sys.render:on_update(dt, ts, store)
                 fn = s.name
             end
 
-            -- s.sync_flag = last_runs ~= s.runs
+            s.sync_flag = last_runs ~= s.runs
 
             local ss = I:s(fn)
 

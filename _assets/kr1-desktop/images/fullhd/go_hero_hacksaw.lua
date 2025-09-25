@@ -2,7 +2,7 @@
 
 return {
 	Inferno_hero_Lumberjack_0001 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -36,7 +36,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0004 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -62,7 +62,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0006 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -88,7 +88,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0008 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -114,7 +114,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0010 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -140,7 +140,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0012 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -166,7 +166,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0014 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -192,7 +192,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0016 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -218,7 +218,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0018 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -244,7 +244,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0020 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -270,7 +270,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0024 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -296,7 +296,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0026 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -322,7 +322,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0028 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -348,7 +348,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0030 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -374,7 +374,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0032 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -400,7 +400,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0034 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -426,7 +426,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0036 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -452,7 +452,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0038 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -478,7 +478,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0040 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -504,7 +504,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0042 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -530,7 +530,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0044 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -556,7 +556,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0046 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -582,7 +582,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0048 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -608,7 +608,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0050 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -634,7 +634,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0052 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -658,7 +658,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0055 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -684,7 +684,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0057 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -710,7 +710,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0059 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -736,7 +736,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0061 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -762,7 +762,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0063 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -790,7 +790,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0067 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -814,7 +814,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0068 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -838,7 +838,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0069 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -864,7 +864,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0071 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -890,7 +890,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0073 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -916,7 +916,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0075 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0077 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -968,7 +968,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0079 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -992,7 +992,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0080 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1018,7 +1018,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0082 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1044,7 +1044,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0084 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1068,7 +1068,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0087 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1094,7 +1094,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0089 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1120,7 +1120,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0091 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1146,7 +1146,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0093 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1172,7 +1172,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0095 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1198,7 +1198,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0097 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1230,7 +1230,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0099 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1262,7 +1262,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0113 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1288,7 +1288,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0115 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1314,7 +1314,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0117 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1340,7 +1340,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0120 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1364,7 +1364,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0121 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1388,7 +1388,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0122 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1412,7 +1412,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0123 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1436,7 +1436,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0124 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1460,7 +1460,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0125 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1484,7 +1484,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0126 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1508,7 +1508,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0127 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1532,7 +1532,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0128 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1556,7 +1556,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0129 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1580,7 +1580,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0130 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1604,7 +1604,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0131 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1628,7 +1628,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0132 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1652,7 +1652,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0133 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1676,7 +1676,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0134 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1702,7 +1702,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0136 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1726,7 +1726,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0137 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1750,7 +1750,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0138 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1774,7 +1774,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0139 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1798,7 +1798,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0140 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1822,7 +1822,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_0141 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1848,7 +1848,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0143 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1874,7 +1874,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0145 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1900,7 +1900,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0147 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1926,7 +1926,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0149 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1952,7 +1952,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0151 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -1978,7 +1978,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0153 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -2004,7 +2004,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0155 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -2030,7 +2030,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_0157 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			128,
 			156
@@ -2054,7 +2054,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyHit_0001 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			52,
 			58
@@ -2081,7 +2081,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_proyHit_0004 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			52,
 			58
@@ -2107,7 +2107,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_proyHit_0006 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			52,
 			58
@@ -2133,7 +2133,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0001 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2157,7 +2157,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0002 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2181,7 +2181,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0003 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2205,7 +2205,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0004 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2229,7 +2229,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0005 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2253,7 +2253,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0006 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2277,7 +2277,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0007 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2301,7 +2301,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0008 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2325,7 +2325,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0009 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2349,7 +2349,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0010 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2373,7 +2373,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0011 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2397,7 +2397,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proyParticle_0012 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			20,
 			12
@@ -2421,7 +2421,7 @@ return {
 		alias = {}
 	},
 	Inferno_hero_Lumberjack_proy_0001 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			32,
 			16
@@ -2447,7 +2447,7 @@ return {
 		}
 	},
 	Inferno_hero_Lumberjack_proy_0003 = {
-		a_name = "go_hero_hacksaw-1.png",
+		a_name = "go_hero_hacksaw-1.dds",
 		size = {
 			32,
 			16

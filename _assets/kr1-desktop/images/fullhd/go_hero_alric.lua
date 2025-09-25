@@ -1,7 +1,7 @@
 -- chunkname: @./kr2-desktop/assets/images/fullhd/go_hero_alric.lua
 return {
     hero_hammerhold_0001 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 72, 37, 8},
         a_size = {1024, 1024},
@@ -9,7 +9,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0002 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 73, 38, 8},
         a_size = {1024, 1024},
@@ -17,7 +17,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0003 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 70, 36, 8},
         a_size = {1024, 1024},
@@ -25,7 +25,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0004 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 69, 36, 8},
         a_size = {1024, 1024},
@@ -33,7 +33,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0005 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 71, 37, 8},
         a_size = {1024, 1024},
@@ -41,7 +41,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0006 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 75, 37, 8},
         a_size = {1024, 1024},
@@ -49,7 +49,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0007 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 72, 37, 8},
         a_size = {1024, 1024},
@@ -58,7 +58,7 @@ return {
                  "hero_hammerhold_0039", "hero_hammerhold_0040", "hero_hammerhold_0041", "hero_hammerhold_0069"}
     },
     hero_hammerhold_0009 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {29, 68, 40, 8},
         a_size = {1024, 1024},
@@ -66,7 +66,7 @@ return {
         alias = {"hero_hammerhold_0010"}
     },
     hero_hammerhold_0011 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {29, 68, 41, 8},
         a_size = {1024, 1024},
@@ -74,7 +74,7 @@ return {
         alias = {"hero_hammerhold_0012"}
     },
     hero_hammerhold_0013 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {28, 68, 42, 8},
         a_size = {1024, 1024},
@@ -82,7 +82,7 @@ return {
         alias = {"hero_hammerhold_0014"}
     },
     hero_hammerhold_0015 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {32, 73, 24, 8},
         a_size = {1024, 1024},
@@ -90,7 +90,7 @@ return {
         alias = {"hero_hammerhold_0016"}
     },
     hero_hammerhold_0017 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {42, 77, 24, 8},
         a_size = {1024, 1024},
@@ -98,7 +98,7 @@ return {
         alias = {"hero_hammerhold_0018"}
     },
     hero_hammerhold_0019 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {42, 77, 24, 8},
         a_size = {1024, 1024},
@@ -106,7 +106,7 @@ return {
         alias = {"hero_hammerhold_0020"}
     },
     hero_hammerhold_0021 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {42, 80, 35, 8},
         a_size = {1024, 1024},
@@ -114,7 +114,7 @@ return {
         alias = {"hero_hammerhold_0022"}
     },
     hero_hammerhold_0026 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 72, 41, 8},
         a_size = {1024, 1024},
@@ -122,7 +122,7 @@ return {
         alias = {"hero_hammerhold_0027"}
     },
     hero_hammerhold_0028 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {35, 73, 42, 8},
         a_size = {1024, 1024},
@@ -130,7 +130,7 @@ return {
         alias = {"hero_hammerhold_0029"}
     },
     hero_hammerhold_0030 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 75, 20, 5},
         a_size = {1024, 1024},
@@ -138,7 +138,7 @@ return {
         alias = {"hero_hammerhold_0031"}
     },
     hero_hammerhold_0032 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 83, 20, 5},
         a_size = {1024, 1024},
@@ -146,7 +146,7 @@ return {
         alias = {"hero_hammerhold_0033"}
     },
     hero_hammerhold_0034 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {34, 81, 20, 5},
         a_size = {1024, 1024},
@@ -154,7 +154,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0035 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {34, 81, 39, 6},
         a_size = {1024, 1024},
@@ -163,7 +163,7 @@ return {
                  "hero_hammerhold_0068"}
     },
     hero_hammerhold_0042 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {32, 66, 42, 8},
         a_size = {1024, 1024},
@@ -171,7 +171,7 @@ return {
         alias = {"hero_hammerhold_0043"}
     },
     hero_hammerhold_0044 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 68, 42, 8},
         a_size = {1024, 1024},
@@ -179,7 +179,7 @@ return {
         alias = {"hero_hammerhold_0045"}
     },
     hero_hammerhold_0046 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 68, 42, 8},
         a_size = {1024, 1024},
@@ -187,7 +187,7 @@ return {
         alias = {"hero_hammerhold_0047"}
     },
     hero_hammerhold_0048 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 68, 42, 8},
         a_size = {1024, 1024},
@@ -195,7 +195,7 @@ return {
         alias = {"hero_hammerhold_0049"}
     },
     hero_hammerhold_0050 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {29, 67, 42, 8},
         a_size = {1024, 1024},
@@ -203,7 +203,7 @@ return {
         alias = {"hero_hammerhold_0051", "hero_hammerhold_0052"}
     },
     hero_hammerhold_0053 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 64, 4, 8},
         a_size = {1024, 1024},
@@ -211,7 +211,7 @@ return {
         alias = {"hero_hammerhold_0054"}
     },
     hero_hammerhold_0055 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {42, 66, 9, 8},
         a_size = {1024, 1024},
@@ -219,7 +219,7 @@ return {
         alias = {"hero_hammerhold_0056"}
     },
     hero_hammerhold_0057 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {42, 80, 9, 8},
         a_size = {1024, 1024},
@@ -227,7 +227,7 @@ return {
         alias = {"hero_hammerhold_0058"}
     },
     hero_hammerhold_0059 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 65, 1, 2},
         a_size = {1024, 1024},
@@ -235,7 +235,7 @@ return {
         alias = {"hero_hammerhold_0060"}
     },
     hero_hammerhold_0061 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {35, 76, 6, 3},
         a_size = {1024, 1024},
@@ -243,7 +243,7 @@ return {
         alias = {"hero_hammerhold_0062"}
     },
     hero_hammerhold_0063 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {33, 81, 6, 5},
         a_size = {1024, 1024},
@@ -251,7 +251,7 @@ return {
         alias = {"hero_hammerhold_0064"}
     },
     hero_hammerhold_0065 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {33, 81, 39, 5},
         a_size = {1024, 1024},
@@ -259,7 +259,7 @@ return {
         alias = {"hero_hammerhold_0066"}
     },
     hero_hammerhold_0070 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 72, 37, 8},
         a_size = {1024, 1024},
@@ -267,7 +267,7 @@ return {
         alias = {"hero_hammerhold_0071"}
     },
     hero_hammerhold_0072 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 74, 37, 8},
         a_size = {1024, 1024},
@@ -275,7 +275,7 @@ return {
         alias = {"hero_hammerhold_0073"}
     },
     hero_hammerhold_0074 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 75, 37, 8},
         a_size = {1024, 1024},
@@ -283,7 +283,7 @@ return {
         alias = {"hero_hammerhold_0075"}
     },
     hero_hammerhold_0076 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {38, 71, 28, 7},
         a_size = {1024, 1024},
@@ -291,7 +291,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0077 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {38, 71, 28, 6},
         a_size = {1024, 1024},
@@ -299,7 +299,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0078 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {37, 71, 30, 5},
         a_size = {1024, 1024},
@@ -307,7 +307,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0079 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {37, 71, 30, 5},
         a_size = {1024, 1024},
@@ -315,7 +315,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0080 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 70, 31, 6},
         a_size = {1024, 1024},
@@ -323,7 +323,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0081 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 70, 31, 6},
         a_size = {1024, 1024},
@@ -331,7 +331,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0082 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {35, 70, 30, 6},
         a_size = {1024, 1024},
@@ -339,7 +339,7 @@ return {
         alias = {"hero_hammerhold_0083"}
     },
     hero_hammerhold_0084 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {35, 70, 30, 6},
         a_size = {1024, 1024},
@@ -349,7 +349,7 @@ return {
                  "hero_hammerhold_0093", "hero_hammerhold_0094", "hero_hammerhold_0095", "hero_hammerhold_0096"}
     },
     hero_hammerhold_0097 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 70, 31, 6},
         a_size = {1024, 1024},
@@ -357,7 +357,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0098 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {36, 70, 31, 6},
         a_size = {1024, 1024},
@@ -365,7 +365,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0099 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {37, 71, 30, 5},
         a_size = {1024, 1024},
@@ -373,7 +373,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0100 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {37, 71, 30, 5},
         a_size = {1024, 1024},
@@ -381,7 +381,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0101 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {38, 71, 28, 7},
         a_size = {1024, 1024},
@@ -389,7 +389,7 @@ return {
         alias = {"hero_hammerhold_0102"}
     },
     hero_hammerhold_0103 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 72, 37, 8},
         a_size = {1024, 1024},
@@ -397,7 +397,7 @@ return {
         alias = {"hero_hammerhold_0104"}
     },
     hero_hammerhold_0105 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {32, 73, 43, 8},
         a_size = {1024, 1024},
@@ -405,7 +405,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0106 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {29, 71, 46, 8},
         a_size = {1024, 1024},
@@ -413,7 +413,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0107 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {25, 74, 49, 8},
         a_size = {1024, 1024},
@@ -421,7 +421,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0108 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {21, 92, 50, 0},
         a_size = {1024, 1024},
@@ -429,7 +429,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0109 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {20, 99, 50, 2},
         a_size = {1024, 1024},
@@ -437,7 +437,7 @@ return {
         alias = {"hero_hammerhold_0110"}
     },
     hero_hammerhold_0111 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {18, 96, 50, 0},
         a_size = {1024, 1024},
@@ -446,7 +446,7 @@ return {
                  "hero_hammerhold_0116", "hero_hammerhold_0117"}
     },
     hero_hammerhold_0118 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {28, 4, 24, 4},
         a_size = {1024, 1024},
@@ -454,7 +454,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0119 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 4, 26, 4},
         a_size = {1024, 1024},
@@ -462,7 +462,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0120 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 4, 26, 4},
         a_size = {1024, 1024},
@@ -470,7 +470,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0121 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 4, 26, 4},
         a_size = {1024, 1024},
@@ -478,7 +478,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0122 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 4, 26, 4},
         a_size = {1024, 1024},
@@ -486,7 +486,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0123 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 4, 25, 4},
         a_size = {1024, 1024},
@@ -494,7 +494,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0124 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {30, 4, 25, 4},
         a_size = {1024, 1024},
@@ -502,7 +502,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0125 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {29, 4, 25, 5},
         a_size = {1024, 1024},
@@ -510,7 +510,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0126 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {29, 4, 25, 5},
         a_size = {1024, 1024},
@@ -518,7 +518,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0127 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {28, 5, 25, 5},
         a_size = {1024, 1024},
@@ -526,7 +526,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0128 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {27, 5, 24, 5},
         a_size = {1024, 1024},
@@ -534,7 +534,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0129 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {26, 6, 23, 4},
         a_size = {1024, 1024},
@@ -542,7 +542,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0130 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {25, 41, 21, 4},
         a_size = {1024, 1024},
@@ -550,7 +550,7 @@ return {
         alias = {}
     },
     hero_hammerhold_0131 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {38, 52, 38, 11},
         a_size = {1024, 1024},
@@ -558,7 +558,7 @@ return {
         alias = {"hero_hammerhold_0132", "hero_hammerhold_0133"}
     },
     hero_hammerhold_0134 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {42, 58, 38, 11},
         a_size = {1024, 1024},
@@ -566,7 +566,7 @@ return {
         alias = {"hero_hammerhold_0135"}
     },
     hero_hammerhold_0136 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {115, 127},
         trim = {39, 72, 37, 8},
         a_size = {1024, 1024},
@@ -574,7 +574,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0001 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {0, 0, 0, 0},
         a_size = {1024, 1024},
@@ -582,7 +582,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0002 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {0, 0, 0, 0},
         a_size = {1024, 1024},
@@ -590,7 +590,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0003 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {13, 37, 13, 3},
         a_size = {1024, 1024},
@@ -598,7 +598,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0004 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {10, 36, 10, 2},
         a_size = {1024, 1024},
@@ -606,7 +606,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0005 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {7, 35, 8, 2},
         a_size = {1024, 1024},
@@ -614,7 +614,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0006 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 36, 9, 2},
         a_size = {1024, 1024},
@@ -622,7 +622,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0007 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 28, 11, 2},
         a_size = {1024, 1024},
@@ -630,7 +630,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0008"}
     },
     hero_hammerhold_sandWarrior_0009 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 23, 11, 2},
         a_size = {1024, 1024},
@@ -638,7 +638,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0010"}
     },
     hero_hammerhold_sandWarrior_0011 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 17, 11, 2},
         a_size = {1024, 1024},
@@ -646,7 +646,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0012"}
     },
     hero_hammerhold_sandWarrior_0013 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 12, 11, 2},
         a_size = {1024, 1024},
@@ -654,7 +654,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0014"}
     },
     hero_hammerhold_sandWarrior_0015 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 10, 11, 2},
         a_size = {1024, 1024},
@@ -662,7 +662,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0016"}
     },
     hero_hammerhold_sandWarrior_0017 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 7, 11, 2},
         a_size = {1024, 1024},
@@ -670,7 +670,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0018"}
     },
     hero_hammerhold_sandWarrior_0019 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 7, 10, 2},
         a_size = {1024, 1024},
@@ -678,7 +678,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0020 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 7, 10, 3},
         a_size = {1024, 1024},
@@ -686,7 +686,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0021 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 6, 9, 3},
         a_size = {1024, 1024},
@@ -694,7 +694,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0022 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {15, 6, 9, 7},
         a_size = {1024, 1024},
@@ -702,7 +702,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0023 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {15, 7, 9, 6},
         a_size = {1024, 1024},
@@ -710,7 +710,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0024"}
     },
     hero_hammerhold_sandWarrior_0025 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {14, 7, 12, 6},
         a_size = {1024, 1024},
@@ -718,7 +718,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0026"}
     },
     hero_hammerhold_sandWarrior_0027 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {12, 6, 10, 5},
         a_size = {1024, 1024},
@@ -726,7 +726,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0028"}
     },
     hero_hammerhold_sandWarrior_0029 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 7, 3},
         a_size = {1024, 1024},
@@ -734,7 +734,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0030"}
     },
     hero_hammerhold_sandWarrior_0031 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {11, 4, 8, 3},
         a_size = {1024, 1024},
@@ -742,7 +742,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0032"}
     },
     hero_hammerhold_sandWarrior_0033 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {10, 3, 8, 3},
         a_size = {1024, 1024},
@@ -750,7 +750,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0034"}
     },
     hero_hammerhold_sandWarrior_0035 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 7, 3},
         a_size = {1024, 1024},
@@ -758,7 +758,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0036"}
     },
     hero_hammerhold_sandWarrior_0037 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 6, 3},
         a_size = {1024, 1024},
@@ -766,7 +766,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0038"}
     },
     hero_hammerhold_sandWarrior_0039 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 6, 3},
         a_size = {1024, 1024},
@@ -774,7 +774,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0040"}
     },
     hero_hammerhold_sandWarrior_0041 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 6, 2},
         a_size = {1024, 1024},
@@ -782,7 +782,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0042"}
     },
     hero_hammerhold_sandWarrior_0043 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 7, 6},
         a_size = {1024, 1024},
@@ -790,7 +790,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0044"}
     },
     hero_hammerhold_sandWarrior_0045 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {15, 7, 9, 7},
         a_size = {1024, 1024},
@@ -798,7 +798,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0046 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {14, 7, 9, 7},
         a_size = {1024, 1024},
@@ -807,7 +807,7 @@ return {
                  "hero_hammerhold_sandWarrior_0063"}
     },
     hero_hammerhold_sandWarrior_0048 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 7, 17, 7},
         a_size = {1024, 1024},
@@ -815,7 +815,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0049"}
     },
     hero_hammerhold_sandWarrior_0050 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 7, 17, 7},
         a_size = {1024, 1024},
@@ -823,7 +823,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0051"}
     },
     hero_hammerhold_sandWarrior_0052 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 7, 17, 7},
         a_size = {1024, 1024},
@@ -831,7 +831,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0053"}
     },
     hero_hammerhold_sandWarrior_0054 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {16, 7, 3, 7},
         a_size = {1024, 1024},
@@ -839,7 +839,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0055"}
     },
     hero_hammerhold_sandWarrior_0056 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {16, 8, 2, 7},
         a_size = {1024, 1024},
@@ -847,7 +847,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0057"}
     },
     hero_hammerhold_sandWarrior_0058 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {16, 7, 3, 7},
         a_size = {1024, 1024},
@@ -855,7 +855,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0059", "hero_hammerhold_sandWarrior_0060"}
     },
     hero_hammerhold_sandWarrior_0061 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {14, 7, 9, 7},
         a_size = {1024, 1024},
@@ -863,7 +863,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0064 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {15, 8, 10, 7},
         a_size = {1024, 1024},
@@ -871,7 +871,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0065"}
     },
     hero_hammerhold_sandWarrior_0066 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {15, 8, 10, 7},
         a_size = {1024, 1024},
@@ -879,7 +879,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0067"}
     },
     hero_hammerhold_sandWarrior_0068 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {14, 9, 11, 7},
         a_size = {1024, 1024},
@@ -887,7 +887,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0069"}
     },
     hero_hammerhold_sandWarrior_0070 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {15, 11, 14, 7},
         a_size = {1024, 1024},
@@ -895,7 +895,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0071"}
     },
     hero_hammerhold_sandWarrior_0072 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {15, 21, 15, 7},
         a_size = {1024, 1024},
@@ -903,7 +903,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0073"}
     },
     hero_hammerhold_sandWarrior_0074 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {0, 0, 0, 0},
         a_size = {1024, 1024},
@@ -911,7 +911,7 @@ return {
         alias = {}
     },
     hero_hammerhold_sandWarrior_0075 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 6, 3},
         a_size = {1024, 1024},
@@ -919,7 +919,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0076"}
     },
     hero_hammerhold_sandWarrior_0077 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 6, 3},
         a_size = {1024, 1024},
@@ -927,7 +927,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0078"}
     },
     hero_hammerhold_sandWarrior_0079 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 6, 2},
         a_size = {1024, 1024},
@@ -935,7 +935,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0080"}
     },
     hero_hammerhold_sandWarrior_0081 = {
-        a_name = "go_hero_alric-1.png",
+        a_name = "go_hero_alric-1.dds",
         size = {59, 51},
         trim = {9, 4, 7, 6},
         a_size = {1024, 1024},
@@ -943,7 +943,7 @@ return {
         alias = {"hero_hammerhold_sandWarrior_0082"}
     },
     regson_hero_soulFx_0001 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -969,7 +969,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0003 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -995,7 +995,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0005 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -1021,7 +1021,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0007 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -1047,7 +1047,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0009 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -1073,7 +1073,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0011 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -1099,7 +1099,7 @@ return {
 		}
 	},
 	regson_hero_soulHeal_0001 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1123,7 +1123,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0002 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1147,7 +1147,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0003 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1171,7 +1171,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0004 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1195,7 +1195,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0005 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1219,7 +1219,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0006 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1243,7 +1243,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0007 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1267,7 +1267,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0008 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1291,7 +1291,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0009 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1315,7 +1315,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0010 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1339,7 +1339,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0011 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1363,7 +1363,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0012 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1387,7 +1387,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0013 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1411,7 +1411,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0014 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1435,7 +1435,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0015 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1459,7 +1459,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0016 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1483,7 +1483,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0017 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1507,7 +1507,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0018 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1531,7 +1531,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0019 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1555,7 +1555,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0020 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1579,7 +1579,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0021 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1603,7 +1603,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0022 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1627,7 +1627,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0023 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1651,7 +1651,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0024 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -1675,7 +1675,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0025 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70

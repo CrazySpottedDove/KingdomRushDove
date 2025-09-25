@@ -1,3 +1,4 @@
+#!/bin/bash
 VERSION_FILE="./version.lua"
 
 # 读取当前 id
@@ -23,7 +24,8 @@ fi
 new_id="$major.$minor.$patch"
 
 # 压缩包名用新 id
-OUTPUT_ZIP="../Kingdom Rush_${current_id}.zip"
+mkdir -p ./.versions
+OUTPUT_ZIP="./.versions/Kingdom Rush_${current_id}.zip"
 
 if [ -f "../Kingdom Rush.zip" ]; then
     echo "已存在 Kingdom Rush.zip，正在删除..."
@@ -45,8 +47,8 @@ zip "$OUTPUT_ZIP" "./存档位置.lnk"
 zip "$OUTPUT_ZIP" "./游玩必读说明，务必阅读.url"
 
 # tmp usage
-zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_dark_elf-1.dds"
-# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_tricannon-1.png"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_dark_elf-1.dds"
+# zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/go_towers_tricannon-1.dds"
 # zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/gui_common-5.png"
 # # 记录 commit hash 文件
 # zip "$OUTPUT_ZIP" "./_assets/kr1-desktop/images/fullhd/criket_random_eff_mod.png"

@@ -326,6 +326,14 @@ function path_db:point_within_distance(x, y, dist)
 	return false
 end
 
+--- 查找距离指定点 (x, y) 最近的路径节点列表（可筛选路径、子路径、有效性等）。
+---@param x number 目标点的x坐标
+---@param y number 目标点的y坐标
+---@param path_indexes table|nil 可选，只在这些路径索引中查找（如 {1,2,3}），nil表示全部路径
+---@param subpath_indexes table|nil 可选，只在这些子路径索引中查找（如 {1,2,3}），nil表示只查找第1条子路径
+---@param valid_only boolean|nil 可选，true时只查找激活且有效的路径节点
+---@param flags number|nil 可选，节点有效性判定时用到的标志位
+---@return table nodes 按距离升序排列的最近节点列表，每个元素为 {pi, spi, ni, dist}
 function path_db:nearest_nodes(x, y, path_indexes, subpath_indexes, valid_only, flags)
 	local nodes = {}
 

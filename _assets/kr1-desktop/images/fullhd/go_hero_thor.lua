@@ -2,7 +2,7 @@
 
 return {
 	HalloweenTesla_ray_0001 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0003 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0005 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0007 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -104,7 +104,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_ray_0008 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -128,7 +128,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_ray_0009 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -152,7 +152,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_ray_0010 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -178,7 +178,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0012 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			149,
 			48
@@ -204,7 +204,7 @@ return {
 		}
 	},
 	thor_0001 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -228,7 +228,7 @@ return {
 		alias = {}
 	},
 	thor_0002 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -252,7 +252,7 @@ return {
 		alias = {}
 	},
 	thor_0003 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -276,7 +276,7 @@ return {
 		alias = {}
 	},
 	thor_0004 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -302,7 +302,7 @@ return {
 		}
 	},
 	thor_0006 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -326,7 +326,7 @@ return {
 		alias = {}
 	},
 	thor_0007 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -350,7 +350,7 @@ return {
 		alias = {}
 	},
 	thor_0008 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -376,7 +376,7 @@ return {
 		}
 	},
 	thor_0010 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -402,7 +402,7 @@ return {
 		}
 	},
 	thor_0012 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -428,7 +428,7 @@ return {
 		}
 	},
 	thor_0014 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -452,7 +452,7 @@ return {
 		alias = {}
 	},
 	thor_0015 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -476,7 +476,7 @@ return {
 		alias = {}
 	},
 	thor_0016 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -500,7 +500,7 @@ return {
 		alias = {}
 	},
 	thor_0017 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -524,7 +524,7 @@ return {
 		alias = {}
 	},
 	thor_0018 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -548,7 +548,7 @@ return {
 		alias = {}
 	},
 	thor_0019 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -572,7 +572,7 @@ return {
 		alias = {}
 	},
 	thor_0020 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -596,7 +596,7 @@ return {
 		alias = {}
 	},
 	thor_0021 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -620,7 +620,7 @@ return {
 		alias = {}
 	},
 	thor_0022 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -644,7 +644,7 @@ return {
 		alias = {}
 	},
 	thor_0023 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -668,7 +668,7 @@ return {
 		alias = {}
 	},
 	thor_0024 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -692,7 +692,7 @@ return {
 		alias = {}
 	},
 	thor_0025 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -716,7 +716,7 @@ return {
 		alias = {}
 	},
 	thor_0026 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -740,7 +740,7 @@ return {
 		alias = {}
 	},
 	thor_0027 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -764,7 +764,7 @@ return {
 		alias = {}
 	},
 	thor_0028 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -788,7 +788,7 @@ return {
 		alias = {}
 	},
 	thor_0029 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -812,7 +812,7 @@ return {
 		alias = {}
 	},
 	thor_0030 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -836,7 +836,7 @@ return {
 		alias = {}
 	},
 	thor_0031 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -860,7 +860,7 @@ return {
 		alias = {}
 	},
 	thor_0032 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -884,7 +884,7 @@ return {
 		alias = {}
 	},
 	thor_0033 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -908,7 +908,7 @@ return {
 		alias = {}
 	},
 	thor_0034 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -932,7 +932,7 @@ return {
 		alias = {}
 	},
 	thor_0035 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -956,7 +956,7 @@ return {
 		alias = {}
 	},
 	thor_0036 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -980,7 +980,7 @@ return {
 		alias = {}
 	},
 	thor_0037 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -1006,7 +1006,7 @@ return {
 		}
 	},
 	thor_0039 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -1032,7 +1032,7 @@ return {
 		}
 	},
 	thor_0041 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -1058,7 +1058,7 @@ return {
 		}
 	},
 	thor_0043 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1093,7 +1093,7 @@ return {
 		}
 	},
 	thor_0045 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -1119,7 +1119,7 @@ return {
 		}
 	},
 	thor_0047 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1145,7 +1145,7 @@ return {
 		}
 	},
 	thor_0049 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -1171,7 +1171,7 @@ return {
 		}
 	},
 	thor_0051 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1197,7 +1197,7 @@ return {
 		}
 	},
 	thor_0053 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1223,7 +1223,7 @@ return {
 		}
 	},
 	thor_0055 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1249,7 +1249,7 @@ return {
 		}
 	},
 	thor_0057 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1275,7 +1275,7 @@ return {
 		}
 	},
 	thor_0059 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1301,7 +1301,7 @@ return {
 		}
 	},
 	thor_0061 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1327,7 +1327,7 @@ return {
 		}
 	},
 	thor_0063 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1353,7 +1353,7 @@ return {
 		}
 	},
 	thor_0065 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1379,7 +1379,7 @@ return {
 		}
 	},
 	thor_0071 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1405,7 +1405,7 @@ return {
 		}
 	},
 	thor_0073 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1431,7 +1431,7 @@ return {
 		}
 	},
 	thor_0075 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1458,7 +1458,7 @@ return {
 		}
 	},
 	thor_0078 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1485,7 +1485,7 @@ return {
 		}
 	},
 	thor_0081 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1512,7 +1512,7 @@ return {
 		}
 	},
 	thor_0084 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1536,7 +1536,7 @@ return {
 		alias = {}
 	},
 	thor_0085 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1560,7 +1560,7 @@ return {
 		alias = {}
 	},
 	thor_0086 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -1584,7 +1584,7 @@ return {
 		alias = {}
 	},
 	thor_0087 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1608,7 +1608,7 @@ return {
 		alias = {}
 	},
 	thor_0088 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1632,7 +1632,7 @@ return {
 		alias = {}
 	},
 	thor_0089 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1656,7 +1656,7 @@ return {
 		alias = {}
 	},
 	thor_0090 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1680,7 +1680,7 @@ return {
 		alias = {}
 	},
 	thor_0091 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1704,7 +1704,7 @@ return {
 		alias = {}
 	},
 	thor_0092 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			136
@@ -1728,7 +1728,7 @@ return {
 		alias = {}
 	},
 	thor_0093 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1752,7 +1752,7 @@ return {
 		alias = {}
 	},
 	thor_0094 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1776,7 +1776,7 @@ return {
 		alias = {}
 	},
 	thor_0095 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1800,7 +1800,7 @@ return {
 		alias = {}
 	},
 	thor_0096 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1824,7 +1824,7 @@ return {
 		alias = {}
 	},
 	thor_0097 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1848,7 +1848,7 @@ return {
 		alias = {}
 	},
 	thor_0103 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1876,7 +1876,7 @@ return {
 		}
 	},
 	thor_0105 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1902,7 +1902,7 @@ return {
 		}
 	},
 	thor_0107 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1928,7 +1928,7 @@ return {
 		}
 	},
 	thor_0109 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1955,7 +1955,7 @@ return {
 		}
 	},
 	thor_0112 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -1982,7 +1982,7 @@ return {
 		}
 	},
 	thor_0115 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2006,7 +2006,7 @@ return {
 		alias = {}
 	},
 	thor_0116 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2030,7 +2030,7 @@ return {
 		alias = {}
 	},
 	thor_0117 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2057,7 +2057,7 @@ return {
 		}
 	},
 	thor_0120 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2084,7 +2084,7 @@ return {
 		}
 	},
 	thor_0123 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2110,7 +2110,7 @@ return {
 		}
 	},
 	thor_0125 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2136,7 +2136,7 @@ return {
 		}
 	},
 	thor_0127 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2162,7 +2162,7 @@ return {
 		}
 	},
 	thor_0131 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2188,7 +2188,7 @@ return {
 		}
 	},
 	thor_0133 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2214,7 +2214,7 @@ return {
 		}
 	},
 	thor_0135 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2240,7 +2240,7 @@ return {
 		}
 	},
 	thor_0137 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2266,7 +2266,7 @@ return {
 		}
 	},
 	thor_0139 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2292,7 +2292,7 @@ return {
 		}
 	},
 	thor_0141 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2318,7 +2318,7 @@ return {
 		}
 	},
 	thor_0143 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2344,7 +2344,7 @@ return {
 		}
 	},
 	thor_0145 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2370,7 +2370,7 @@ return {
 		}
 	},
 	thor_0147 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			136
@@ -2394,7 +2394,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer0_0001 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2437,7 +2437,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0003 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2463,7 +2463,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0005 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2489,7 +2489,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0007 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2513,7 +2513,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer0_0008 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2537,7 +2537,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer0_0009 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2561,7 +2561,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer0_0010 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2587,7 +2587,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0012 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2611,7 +2611,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer0_0013 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2637,7 +2637,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0015 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2663,7 +2663,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0017 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2689,7 +2689,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0019 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2715,7 +2715,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0021 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2741,7 +2741,7 @@ return {
 		}
 	},
 	thor_lightening_layer0_0023 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			425
@@ -2767,7 +2767,7 @@ return {
 		}
 	},
 	thor_lightening_layer1_0001 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2793,7 +2793,7 @@ return {
 		}
 	},
 	thor_lightening_layer1_0003 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -2819,7 +2819,7 @@ return {
 		}
 	},
 	thor_lightening_layer1_0005 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -2845,7 +2845,7 @@ return {
 		}
 	},
 	thor_lightening_layer1_0007 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2871,7 +2871,7 @@ return {
 		}
 	},
 	thor_lightening_layer1_0009 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2895,7 +2895,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer1_0010 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2919,7 +2919,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer1_0011 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2945,7 +2945,7 @@ return {
 		}
 	},
 	thor_lightening_layer1_0013 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2969,7 +2969,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer1_0014 = {
-		a_name = "go_hero_thor-1.png",
+		a_name = "go_hero_thor-1.dds",
 		size = {
 			170,
 			424
@@ -2993,7 +2993,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer1_0015 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3019,7 +3019,7 @@ return {
 		}
 	},
 	thor_lightening_layer1_0017 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3045,7 +3045,7 @@ return {
 		}
 	},
 	thor_lightening_layer2_0001 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3071,7 +3071,7 @@ return {
 		}
 	},
 	thor_lightening_layer2_0003 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3097,7 +3097,7 @@ return {
 		}
 	},
 	thor_lightening_layer2_0005 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3123,7 +3123,7 @@ return {
 		}
 	},
 	thor_lightening_layer2_0007 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3147,7 +3147,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer2_0008 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3171,7 +3171,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer2_0009 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3195,7 +3195,7 @@ return {
 		alias = {}
 	},
 	thor_lightening_layer2_0010 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
@@ -3221,7 +3221,7 @@ return {
 		}
 	},
 	thor_lightening_layer2_0012 = {
-		a_name = "go_hero_thor-2.png",
+		a_name = "go_hero_thor-2.dds",
 		size = {
 			170,
 			424
