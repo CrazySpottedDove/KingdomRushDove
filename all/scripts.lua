@@ -2863,9 +2863,12 @@ function scripts.bomb.update(this, store, script)
 
         hp.pos.x, hp.pos.y = b.to.x, b.to.y
         hp.source_id = b.source_id
-
+        if hp.unit then
+            hp.unit.damage_factor = this.bullet.damage_factor * hp.unit.damage_factor
+        end
         if hp.aura then
             hp.aura.level = this.bullet.level
+            hp.aura.damage_factor = this.bullet.damage_factor * hp.aura.damage_factor
         end
 
         queue_insert(store, hp)

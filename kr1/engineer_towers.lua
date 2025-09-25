@@ -1423,6 +1423,7 @@ local function engineer_towers()
 
     tt = RT("soldier_tower_demon_pit_basic_attack_lvl4", "soldier_militia")
     AC(tt, "reinforcement", "tween")
+    tt.is_kr5 = true
     tt.level = 4
     tt.health.hp_max = b.basic_attack.hp_max[4]
     tt.health.armor = b.basic_attack.armor
@@ -1480,6 +1481,7 @@ local function engineer_towers()
 
     tt = RT("big_guy_tower_demon_pit_lvl4", "soldier_militia")
     AC(tt, "reinforcement", "tween")
+    tt.is_kr5 = true
     tt.health.armor = b.big_guy.armor
     tt.health_bar.offset = vec_2(0, 42)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM

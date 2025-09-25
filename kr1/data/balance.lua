@@ -3047,7 +3047,7 @@ local towers = {
             hp_max = { 100, 150, 200 },
             explosion_damage = { 100, 150, 250 },
             explosion_range = { 60, 60, 60 },
-            explosion_damage_type = DAMAGE_PHYSICAL,
+            explosion_damage_type = DAMAGE_EXPLOSION,
             melee_attack = {
                 range = 40,
                 cooldown = { 1 },
@@ -3066,13 +3066,13 @@ local towers = {
             burning_damage_max = { 4, 6, 10 },
             s_total_burning_damage_min = { 8, 16, 24 },
             s_total_burning_damage_max = { 16, 24, 40 },
-            damage_type = DAMAGE_PHYSICAL
+            damage_type = DAMAGE_EXPLOSION
         },
         demon_explosion = {
             damage_min = { 2, 5, 8, 12 },
             damage_max = { 4, 8, 12, 18 },
             range = { 40, 40, 40, 40 },
-            damage_type = DAMAGE_PHYSICAL,
+            damage_type = DAMAGE_EXPLOSION,
             stun_duration = { 0.25, 0.4, 0.6, 0.8 }
         }
     },
