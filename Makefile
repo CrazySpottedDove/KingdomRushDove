@@ -2,9 +2,9 @@ WINDOWS_DIR:=$(shell cat ./.windows_kr_dove_dir)
 LOVE:=$(shell cat ./.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 
-.PHONY: all debug package repackage 
+.PHONY: all debug package repackage sync
 
-all: _examine_dir_map _sync
+all: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" --console
 
 _examine_dir_map:
@@ -17,14 +17,14 @@ _examine_dir_map:
 		exit 1; \
 	fi
 
-_sync:
+sync:
 	@echo -e "\033[1;36m=== sync changed files to: $(WINDOWS_DIR) ===\033[0m"
 	@git ls-files --modified --others --exclude-standard | xargs -I{} cp --parents "{}" "$(WINDOWS_DIR)"
 
-debug: _examine_dir_map _sync
+debug: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" debug
 
-monitor: _examine_dir_map _sync
+monitor: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" monitor
 
 package:
