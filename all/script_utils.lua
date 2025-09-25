@@ -579,6 +579,7 @@ local function create_attack_damage(a, target_id, this)
             vmin = vmin + a.damage_inc * a.level
         end
     end
+
     local d = E:create_entity("damage")
     d.value = U.frandom(vmin, vmax)
     if this.damage_buff then
@@ -590,6 +591,7 @@ local function create_attack_damage(a, target_id, this)
     d.damage_type = a.damage_type
     d.target_id = target_id
     d.source_id = this.id
+    
     return d
 end
 

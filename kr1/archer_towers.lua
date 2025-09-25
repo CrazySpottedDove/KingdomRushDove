@@ -1169,7 +1169,7 @@ local function archer_towers()
 
     tt = RT("soldier_tower_dark_elf", "soldier_militia")
     AC(tt, "nav_grid", "dodge")
-    b = balance.towers.dark_elf.soldier
+    local soldier = b.soldier
     tt.is_kr5 = true
     tt.info.portrait = "gui_bottom_info_image_soldiers_0045"
     tt.info.random_name_count = 9
@@ -1184,13 +1184,13 @@ local function archer_towers()
     tt.unit.hit_offset = vec_2(0, 12)
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 13)
-    tt.health.hp_max = b.hp[1]
-    tt.health.armor = b.armor[1]
+    tt.health.hp_max = soldier.hp[1]
+    tt.health.armor = soldier.armor[1]
     tt.health_bar.offset = vec_2(0, 30)
-    tt.health.dead_lifetime = b.dead_lifetime
-    tt.motion.max_speed = b.speed
-    tt.melee.range = b.basic_attack.range
-    tt.melee.cooldown = b.basic_attack.cooldown
+    tt.health.dead_lifetime = soldier.dead_lifetime
+    tt.motion.max_speed = soldier.speed
+    tt.melee.range = soldier.basic_attack.range
+    tt.melee.cooldown = soldier.basic_attack.cooldown
     tt.melee.attacks[1].animation = "attack"
     tt.melee.attacks[1].damage_min = b.basic_attack.damage_min[1]
     tt.melee.attacks[1].damage_max = b.basic_attack.damage_max[1]
@@ -1203,18 +1203,18 @@ local function archer_towers()
     tt.melee.attacks[2].shared_cooldown = true
     tt.melee.attacks[2].chance = 0.5
     tt.soldier.melee_slot_spread = vec_2(-8, -8)
-    tt.dodge.chance = b.dodge_chance[1]
+    tt.dodge.chance = soldier.dodge_chance[1]
     tt.dodge.animation = "evade"
     tt.dodge.time_before_hit = fts(5)
     tt.dodge.sound = "HeroVesperDisengageCast"
     tt.ui.click_rect = r(-10, -2, 20, 25)
 
     tt = RT("bullet_tower_dark_elf", "bullet")
-    b = balance.towers.dark_elf.basic_attack
+    local basic_attack = b.basic_attack
     tt.bullet.hit_fx = "fx_bullet_tower_dark_elf_hit"
     tt.bullet.flight_time = fts(23)
     tt.bullet.hit_time = fts(1)
-    tt.bullet.damage_type = b.damage_type
+    tt.bullet.damage_type = basic_attack.damage_type
     tt.bullet.level = 1
     tt.main_script.update = scripts.bullet_tower_dark_elf.update
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
@@ -1227,9 +1227,9 @@ local function archer_towers()
     tt.sound_events.insert = "TowerDarkElfBasicAttackCast"
 
     tt = RT("bullet_tower_dark_elf_lvl4", "bullet_tower_dark_elf")
-    b = balance.towers.dark_elf.basic_attack
-    tt.bullet.damage_max = b.damage_max[4]
-    tt.bullet.damage_min = b.damage_min[4]
+    local basic_attack = b.basic_attack
+    tt.bullet.damage_max = basic_attack.damage_max[4]
+    tt.bullet.damage_min = basic_attack.damage_min[4]
     tt.skill_buff_mod = "mod_tower_dark_elf_skill_buff"
 
     tt = RT("fx_bullet_tower_dark_elf_hit", "fx")

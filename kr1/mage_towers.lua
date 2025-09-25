@@ -1438,6 +1438,484 @@ local function mage_towers()
     tt.pickpocket.fx = "fx_coin_jump"
     tt.pickpocket.pop = {"pop_faerie_steal"}
 
+    --[[
+        五代
+    --]]
+    local balance = require("kr1.data.balance")
+    local b
+
+    -- 死灵法师_START
+
+    b = balance.towers.necromancer
+
+    tt = RT("ps_tower_necromancer_skull_trail")
+    AC(tt, "pos", "particle_system")
+    tt.particle_system.name = "necromancer_tower_skull_projectile_particle_trail_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.emission_rate = 60
+    tt.particle_system.emit_rotation_spread = math.pi * 2
+    tt.particle_system.emit_area_spread = vec_2(8, 8)
+    tt.particle_system.scales_y = {
+        1,
+        1.5
+    }
+    tt.particle_system.scales_x = {
+        1,
+        1.5
+    }
+    tt.particle_system.anchor = vec_2(0.5, 0.5)
+    tt.particle_system.emit_offset = vec_2(0, 0)
+    tt.particle_system.z = Z_BULLET_PARTICLES
+    tt.particle_system.particle_lifetime = {
+        fts(11),
+        fts(11)
+    }
+    tt.emit_offset_relative = vec_2(-15, 0)
+
+    tt = RT("ps_tower_necromancer_rider_trail_A")
+    AC(tt, "pos", "particle_system")
+    tt.particle_system.name = "necromancer_tower_death_rider_trial_particle_A_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.emission_rate = 6
+    tt.particle_system.emit_area_spread = vec_2(15, 15)
+    tt.particle_system.anchor = vec_2(0.5, 0.5)
+    tt.particle_system.z = Z_OBJECTS
+    tt.particle_system.particle_lifetime = {
+        fts(13),
+        fts(13)
+    }
+    tt.particle_system.emit_offset = vec_2(0, 0)
+    tt.emit_offset_relative = vec_2(-10, 0)
+
+    tt = RT("ps_tower_necromancer_rider_trail_B")
+    AC(tt, "pos", "particle_system")
+    tt.particle_system.name = "necromancer_tower_death_rider_trial_particle_B_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.emission_rate = 8
+    tt.particle_system.emit_area_spread = vec_2(15, 15)
+    tt.particle_system.anchor = vec_2(0.5, 0.5)
+    tt.particle_system.z = Z_OBJECTS + 1
+    tt.particle_system.particle_lifetime = {
+        fts(9),
+        fts(9)
+    }
+    tt.particle_system.emit_offset = vec_2(0, 0)
+    tt.emit_offset_relative = vec_2(-10, 0)
+
+    tt = RT("fx_soldier_tower_necromancer_skeleton_spawn", "fx")
+    tt.render.sprites[1].name = "necromancer_tower_revive_idle"
+
+    tt = RT("fx_soldier_tower_necromancer_skeleton_golem_spawn", "fx")
+    tt.render.sprites[1].name = "necromancer_tower_revive_big_idle"
+
+    tt = RT("fx_tower_necromancer_rider_hit", "fx")
+    tt.render.sprites[1].name = "necromancer_tower_skull_projectile_hit_FX_idle"
+
+    tt = RT("fx_tower_necromancer_rider_spawn_side", "fx")
+    tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_side_idle"
+
+    tt = RT("fx_tower_necromancer_rider_spawn_front", "fx")
+    tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_front_idle"
+
+    tt = RT("fx_tower_necromancer_rider_spawn_back", "fx")
+    tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_back_idle"
+
+    tt = RT("tower_necromancer_lvl4", "tower")
+    AC(tt, "attacks", "tower_upgrade_persistent_data", "tween", "powers")
+    tt.is_kr5 = true
+    tt.tower.type = "necromancer"
+    tt.tower.kind = TOWER_KIND_MAGE
+    tt.tower.team = TEAM_DARK_ARMY
+    tt.tower.level = 1
+    tt.tower.price = b.price[4]
+    tt.tower.menu_offset = vec_2(0, 34)
+    tt.info.enc_icon = 3
+    tt.info.i18n_key = "TOWER_NECROMANCER_4"
+    tt.info.stat_damage = b.stats.damage
+    tt.info.stat_range = b.stats.range
+    tt.info.stat_cooldown = b.stats.cooldown
+    tt.info.damage_icon = "magic"
+    tt.info.portrait = "portraits_towers_0011"
+    tt.info.room_portrait = "quickmenu_main_icons_main_icons_0011_0001"
+    tt.info.fn = scripts.tower_mage.get_info
+    tt.info.tower_portrait = "towerselect_portraits_big_0010"
+    tt.main_script.insert = scripts.tower_mage.insert
+    tt.main_script.update = scripts.tower_necromancer.update
+    tt.main_script.remove = scripts.tower_necromancer.remove
+    tt.attacks.min_cooldown = b.shared_min_cooldown
+    tt.attacks.range = b.basic_attack.range[4]
+    tt.attacks.attack_delay_on_spawn = fts(5)
+    tt.attacks.list[1] = CC("bullet_attack")
+    tt.attacks.list[1].animation = "attack"
+    tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+    tt.attacks.list[1].shoot_time = fts(10)
+    tt.attacks.list[1].bullet_start_offset = vec_2(-15, 75)
+    tt.attacks.list[1].ignore_out_of_range_check = 1
+    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+    tt.attacks.list[1].node_prediction = fts(11)
+    tt.attacks.list[1].bullet = "bullet_tower_necromancer_lvl4"
+    tt.attacks.list[1].bullet_spawn_offset = {
+        vec_2(20, 95),
+        vec_2(-20, 95),
+        vec_2(-36, 75),
+        vec_2(36, 75)
+    }
+    tt.attacks.list[1].bullet_start_offset = vec_2(-15, 105)
+    tt.attacks.list[2] = CC("custom_attack")
+    tt.attacks.list[2].animation = "mark_of_silence"
+    tt.attacks.list[2].cooldown = nil
+    tt.attacks.list[2].entity = "aura_tower_necromancer_skill_debuff"
+    tt.attacks.list[2].max_range = b.skill_debuff.range
+    tt.attacks.list[2].cast_time = fts(27)
+    tt.attacks.list[2].node_prediction = fts(60)
+    tt.attacks.list[2].min_cooldown = 2
+    tt.attacks.list[2].min_targets = b.skill_debuff.min_targets
+    tt.attacks.list[3] = CC("custom_attack")
+    tt.attacks.list[3].animation = "call_death_rider"
+    tt.attacks.list[3].cooldown = nil
+    tt.attacks.list[3].entity = "aura_tower_necromancer_skill_rider"
+    tt.attacks.list[3].max_range = b.skill_rider.range
+    tt.attacks.list[3].cast_time = fts(27)
+    tt.attacks.list[3].node_prediction = fts(60)
+    tt.attacks.list[3].min_cooldown = 2
+    tt.attacks.list[3].min_targets = b.skill_rider.min_targets
+    tt.attacks.list[3].vis_bans = bor(F_FLYING, F_NIGHTMARE)
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].name = "terrain_artillery_%04i"
+    tt.render.sprites[1].offset = vec_2(0, 13)
+    tt.render.sprites[2] = CC("sprite")
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].offset = vec_2(0, 14)
+    tt.render.sprites[2].sort_y_offset = 10
+    tt.render.sprites[2].name = "necromancer_tower_lvl4_tower"
+    tt.render.sprites[2].scale = vec_2(0.9, 0.9)
+    tt.render.sprites[3] = CC("sprite")
+    tt.render.sprites[3].animated = true
+    tt.render.sprites[3].offset = tt.render.sprites[2].offset
+    tt.render.sprites[3].prefix = "necromancer_tower_lvl4_necromancer"
+    tt.render.sprites[3].anchor = vec_2(0.5, 0.5175)
+    tt.render.sprites[3].z = Z_OBJECTS
+    tt.render.sprites[3].sort_y_offset = tt.render.sprites[2].sort_y_offset
+    tt.render.sprites[3].scale = vec_2(1.1, 1.1)
+    tt.render.sprites[4] = CC("sprite")
+    tt.render.sprites[4].animated = true
+    tt.render.sprites[4].offset = tt.render.sprites[2].offset
+    tt.render.sprites[4].prefix = "necromancer_tower_lvl4_tower_FX_tower_FX"
+    tt.render.sprites[4].scale = vec_2(0.9, 0.9)
+    tt.render.sprites[4].sort_y_offset = tt.render.sprites[2].sort_y_offset
+    tt.render.sprites[5] = CC("sprite")
+    tt.render.sprites[5].animated = true
+    tt.render.sprites[5].prefix = "necromancer_tower_lvl4_tower_FX_tower_FX"
+    tt.render.sprites[5].offset = tt.render.sprites[2].offset
+    tt.render.sprites[5].sort_y_offset = tt.render.sprites[2].sort_y_offset
+    tt.render.sprites[5].scale = vec_2(0.9, 0.9)
+    tt.render.sprites[6] = CC("sprite")
+    tt.render.sprites[6].animated = true
+    tt.render.sprites[6].loop = true
+    tt.render.sprites[6].prefix = "necromancer_tower_lvl4_tower"
+    tt.render.sprites[6].scale = vec_2(0.9, 0.9)
+    tt.render.sid_tower = 2
+    tt.render.sid_mage = 3
+    tt.render.sid_smoke_fx = 4
+    tt.render.sid_glow_fx = 5
+    tt.mage_offset = vec_2(0, 35)
+    tt.sound_events.insert = "TowerNecromancerTaunt"
+    tt.sound_events.tower_room_select = "TowerNecromancerTauntSelect"
+    tt.tween.remove = false
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            fts(20),
+            255
+        }
+    }
+    tt.tween.props[1].sprite_id = tt.render.sid_smoke_fx
+    tt.tween.disabled = true
+    tt.powers.skill_debuff = CC("power")
+    tt.powers.skill_debuff.mod_duration = b.skill_debuff.mod_duration
+    tt.powers.skill_debuff.aura_duration = b.skill_debuff.aura_duration
+    tt.powers.skill_debuff.radius = b.skill_debuff.radius
+    tt.powers.skill_debuff.cooldown = b.skill_debuff.cooldown
+    tt.powers.skill_debuff.price_base = 120
+    tt.powers.skill_debuff.price_inc = 120
+    tt.powers.skill_debuff.enc_icon = 17
+    tt.powers.skill_rider = CC("power")
+    tt.powers.skill_rider.run_range = b.skill_rider.run_range
+    tt.powers.skill_rider.cooldown = b.skill_rider.cooldown
+    tt.powers.skill_rider.price_base = 200
+    tt.powers.skill_rider.price_inc = 200
+    tt.powers.skill_rider.enc_icon = 18
+    tt.max_skeletons = b.curse.max_skeletons[4]
+    tt.max_golems = b.curse.max_golems
+    tt.ui.click_rect = r(-40, 0, 80, 90)
+    tt.ui.click_rect_offset_y = -10
+    
+
+    tt = RT("soldier_tower_necromancer_skeleton_lvl4", "soldier_militia")
+    local skeleton = b.skeleton
+    AC(tt, "reinforcement", "count_group")
+    tt.health_bar.offset = vec_2(0, 29)
+    tt.health.armor = skeleton.armor[4]
+    tt.health.hp_max = skeleton.hp_max[4]
+    tt.info.fn = scripts.soldier_reinforcement.get_info
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0018"
+    tt.info.i18n_key = "SOLDIER_TOWER_NECROMANCER_SKELETON"
+    tt.info.random_name_count = nil
+    tt.info.random_name_format = nil
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.update = scripts.soldier_tower_necromancer_skeleton.update
+    tt.melee.attacks[1].hit_time = fts(8)
+    tt.melee.attacks[1].cooldown = skeleton.melee_attack.cooldown[4]
+    tt.melee.attacks[1].damage_max = skeleton.melee_attack.damage_max[4]
+    tt.melee.attacks[1].damage_min = skeleton.melee_attack.damage_min[4]
+    tt.melee.range = skeleton.melee_attack.range
+    tt.motion.max_speed = skeleton.max_speed
+    tt.regen.cooldown = 1
+    tt.regen.health = 0
+    tt.reinforcement.fade = false
+    tt.render.sprites[1].prefix = "necromancer_tower_skeleton_warrior"
+    tt.render.sprites[1].name = "spawn"
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.render.sprites[1].angles.walk = {
+        "walk"
+    }
+    tt.soldier.melee_slot_offset = vec_2(3, 0)
+    tt.unit.level = 4
+    tt.unit.hit_offset = vec_2(0, 5)
+    tt.unit.mod_offset = vec_2(0, 11)
+    tt.unit.fade_time_after_death = skeleton.dead_lifetime
+    tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
+    tt.spawn_fx = "fx_soldier_tower_necromancer_skeleton_spawn"
+    tt.spawn_fx_delay = 5
+    tt.spawn_delay_min = skeleton.spawn_delay_min
+    tt.spawn_delay_max = skeleton.spawn_delay_max
+    tt.spawn_sound = "TowerNecromancerSkeletonSummon"
+    tt.count_group.name = "necromancer_skeletons"
+    tt.count_group_type = COUNT_GROUP_CONCURRENT
+    tt.count_group_max = b.curse.max_units_total
+    tt.is_golem = false
+    tt.patrol_pos_offset = vec_2(15, 10)
+    tt.patrol_min_cd = 5
+    tt.patrol_max_cd = 10
+
+    tt = RT("soldier_tower_necromancer_skeleton_golem_lvl4", "soldier_tower_necromancer_skeleton_lvl4")
+    local skeleton_golem = b.skeleton_golem
+    tt.health.armor = skeleton_golem.armor[4]
+    tt.health.hp_max = skeleton_golem.hp_max[4]
+    tt.health_bar.offset = vec_2(0, 47)
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0019"
+    tt.info.i18n_key = "SOLDIER_TOWER_NECROMANCER_SKELETON_GOLEM"
+    tt.melee.range = skeleton_golem.melee_attack.range
+    tt.melee.attacks[1].cooldown = skeleton_golem.melee_attack.cooldown[4]
+    tt.melee.attacks[1].damage_max = skeleton_golem.melee_attack.damage_max[4]
+    tt.melee.attacks[1].damage_min = skeleton_golem.melee_attack.damage_min[4]
+    tt.motion.max_speed = skeleton_golem.max_speed
+    tt.regen.cooldown = skeleton_golem.regen_cooldown
+    tt.regen.health = 0
+    tt.render.sprites[1].prefix = "necromancer_tower_bone_golem"
+    tt.soldier.melee_slot_offset = vec_2(15, 0)
+    tt.unit.hit_offset = vec_2(0, 5)
+    tt.unit.mod_offset = vec_2(0, 15)
+    tt.unit.fade_time_after_death = skeleton_golem.dead_lifetime
+    tt.unit.size = UNIT_SIZE_LARGE
+    tt.spawn_fx = "fx_soldier_tower_necromancer_skeleton_golem_spawn"
+    tt.spawn_delay = 3
+    tt.is_golem = true
+    tt.unit.level = 4
+
+    tt = RT("bullet_tower_necromancer_lvl4", "bolt")
+    AC(tt, "force_motion")
+    tt.render.sprites[1].prefix = "necromancer_tower_skull_projectile"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].z = Z_TOWER_BASES
+    tt.render.sprites[2] = CC("sprite")
+    tt.render.sprites[2].prefix = "necromancer_tower_skull_projectile_spawn_FX"
+    tt.render.sprites[2].animated = true
+    tt.render.sprites[2].z = Z_BULLETS
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.height_attack = 70
+    tt.initial_vel_y = 50
+    tt.transition_time = 1
+    tt.target_distance_detection = 20
+    tt.main_script.insert = scripts.bullet_tower_necromancer.insert
+    tt.main_script.update = scripts.bullet_tower_necromancer.update
+    tt.bullet.damage_type = b.basic_attack.damage_type
+    tt.bullet.damage_max = b.basic_attack.damage_max[4]
+    tt.bullet.damage_min = b.basic_attack.damage_min[4]
+    tt.bullet.acceleration_factor = 0.1
+    tt.bullet.min_speed = 30
+    tt.bullet.max_speed = 300
+    tt.bullet.hit_fx = "necromancer_tower_skull_projectile_hit_FX"
+    tt.bullet.mod = "mod_tower_necromancer_curse"
+    tt.bullet.particles_name = "ps_tower_necromancer_skull_trail"
+    tt.bullet.max_speed = 1800
+    tt.bullet.min_speed = 30
+    tt.bullet.max_track_distance = 50
+    tt.force_motion.a_step = 6
+    tt.force_motion.max_a = 3000
+    tt.force_motion.max_v = 360
+    tt.initial_impulse = 9000
+    tt.initial_impulse_duration = 0.1
+    tt.initial_impulse_angle = math.pi / 2
+    tt.spawn_time = fts(18)
+    tt.sound_events.insert = nil
+    tt.shoot_sound = "TowerNecromancerBasicAttack"
+    tt.hit_sound = "TowerNecromancerBasicAttackHit"
+    tt.summon_sound = "TowerNecromancerBasicAttackSummon"
+
+    tt = RT("aura_tower_necromancer_skill_debuff", "aura")
+    AC(tt, "render", "tween")
+    tt.aura.enemy_mods = {
+        "mod_tower_necromancer_curse"
+    }
+    tt.aura.soldier_mods = {
+        "mod_tower_necromancer_skill_debuff_skeleton_improve"
+    }
+    tt.aura.radius = b.skill_debuff.radius
+    tt.aura.enemy_vis_flags = bor(F_MOD)
+    tt.aura.enemy_vis_bans = bor(F_FRIEND)
+    tt.aura.soldier_vis_flags = bor(F_MOD)
+    tt.aura.soldier_vis_bans = bor(F_ENEMY)
+    tt.aura.duration = nil
+    tt.aura.soldier_allowed_templates = {
+        "soldier_tower_necromancer_skeleton_lvl4",
+        "soldier_tower_necromancer_skeleton_golem_lvl4",
+        "soldier_dragon_bone_ultimate_dog"
+    }
+    tt.render.sprites[1].prefix = "necromancer_tower_mark_of_silence_totem"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[2] = CC("sprite")
+    tt.render.sprites[2].name = "necromancer_tower_mark_of_silence_floorFX_idle"
+    tt.render.sprites[2].animated = true
+    tt.render.sprites[2].z = Z_DECALS
+    tt.main_script.insert = scripts.aura_apply_mod.insert
+    tt.main_script.update = scripts.aura_tower_necromancer_skill_debuff.update
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            0.5,
+            255
+        }
+    }
+    tt.tween.props[1].sprite_id = 2
+    tt.tween.remove = false
+    tt.sound_events.insert = "TowerNecromancerSigilOfSilence"
+    tt.modifier_inflicted_damage_factor = b.skill_debuff.damage_factor
+    tt.modifier_duration_config = b.skill_debuff.mod_duration
+
+    tt = RT("aura_tower_necromancer_skill_rider", "aura")
+    local skill_rider = b.skill_rider
+    AC(tt, "render", "tween", "motion")
+    tt.aura.mod = "mod_tower_necromancer_skill_rider"
+    tt.aura.radius = skill_rider.radius
+    tt.aura.vis_flags = bor(F_AREA)
+    tt.aura.vis_bans = bor(F_FLYING)
+    tt.aura.duration = skill_rider.duration
+    tt.aura.cycle_time = fts(5)
+    tt.render.sprites[1].prefix = "necromancer_tower_death_rider"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].angles = {}
+    tt.render.sprites[1].angles.walk = {
+        "walk_side",
+        "walk_back",
+        "walk_front"
+    }
+    tt.main_script.insert = scripts.aura_apply_mod.insert
+    tt.main_script.update = scripts.aura_tower_necromancer_skill_rider.update
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {
+        {
+            0,
+            0
+        },
+        {
+            0.5,
+            255
+        }
+    }
+    tt.tween.props[1].sprite_id = 1
+    tt.tween.remove = false
+    tt.motion.max_speed = skill_rider.speed
+    tt.damage_min = nil
+    tt.damage_max = nil
+    tt.damage_min_config = skill_rider.damage_max
+    tt.damage_max_config = skill_rider.damage_min
+    tt.damage_type = skill_rider.damage_type
+    tt.hit_fx = "fx_tower_necromancer_rider_hit"
+    tt.spawn_side_fx = "fx_tower_necromancer_rider_spawn_side"
+    tt.spawn_front_fx = "fx_tower_necromancer_rider_spawn_front"
+    tt.spawn_back_fx = "fx_tower_necromancer_rider_spawn_back"
+    tt.particles_name_A = "ps_tower_necromancer_rider_trail_A"
+    tt.particles_name_B = "ps_tower_necromancer_rider_trail_B"
+    tt.sound_events.insert = "TowerNecromancerDeathRider"
+
+    tt = RT("mod_tower_necromancer_curse", "modifier")
+    local curse = b.curse
+    AC(tt, "render")
+    tt.modifier.duration = curse.duration
+    tt.main_script.insert = scripts.mod_tower_necromancer_curse.insert
+    tt.main_script.remove = scripts.mod_tower_necromancer_curse.remove
+    tt.main_script.update = scripts.mod_track_target.update
+    tt.modifier.vis_flags = F_MOD
+    tt.render.sprites[1].name = "necromancer_tower_curse_idle"
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+    tt.render.sprites[2] = CC("sprite")
+    tt.render.sprites[2].name = "necromancer_tower_curse_decal"
+    tt.render.sprites[2].z = Z_DECALS
+    tt.render.sprites[2].animated = false
+    tt.skeleton_name = "soldier_tower_necromancer_skeleton_lvl4"
+    tt.skeleton_golem_name = "soldier_tower_necromancer_skeleton_golem_lvl4"
+    tt.sprite_small = "necromancer_tower_curse_idle"
+    tt.sprite_big = "necromancer_tower_curse_big_idle"
+    tt.decal_small = "necromancer_tower_curse_decal"
+    tt.decal_big = "necromancer_tower_curse_decal_big"
+    tt.excluded_templates = {
+        "enemy_acolyte_tentacle",
+        "enemy_lesser_sister_nightmare",
+        "enemy_spiderling",
+        "enemy_armored_nightmare",
+        "enemy_glareling",
+        "enemy_specter",
+        "enemy_animated_armor",
+        "enemy_darksteel_shielder",
+        "enemy_surveillance_sentry"
+    }
+    tt.excluded_templates_golem = {
+        ""
+    }
+    
+    tt = RT("mod_tower_necromancer_skill_debuff", "modifier")
+    tt.main_script.insert = scripts.mod_track_target.insert
+    tt.modifier.duration = nil
+    tt.modifier.duration_config = b.skill_debuff.mod_duration
+    tt.main_script.insert = scripts.mod_tower_necromancer_skill_debuff.insert
+    tt.main_script.update = scripts.mod_tower_necromancer_skill_debuff.update
+    tt.main_script.remove = scripts.mod_tower_necromancer_skill_debuff.remove
+
+    tt = RT("mod_tower_necromancer_skill_debuff_skeleton_improve", "modifier")
+    tt.main_script.insert = scripts.mod_damage_factors.insert
+    tt.main_script.remove = scripts.mod_damage_factors.remove
+    tt.main_script.update = scripts.mod_track_target.update
+
+    tt = RT("mod_tower_necromancer_skill_rider", "modifier")
+    tt.modifier.duration = 3
+    tt.modifier.allows_duplicates = true
+    tt.main_script.insert = scripts.mod_track_target.insert
+    tt.main_script.update = scripts.mod_track_target.update
+    tt.main_script.remove = scripts.mod_track_target.remove
+
+    -- 死灵法师_END
 end
 
 return mage_towers
