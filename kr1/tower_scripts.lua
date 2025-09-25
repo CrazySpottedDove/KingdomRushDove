@@ -6712,11 +6712,10 @@ function scripts.tower_demon_pit.update(this, store, script)
             end
             if pow_g.changed then
                 pow_g.changed = nil
+                ab.animation = "big_guy_attack"
+                ab.animation_reload = "big_guy_reload_2"
                 if pow_g.level == 1 then
                     ag.ts = store.tick_ts
-                    ab.animation = "big_guy_attack"
-                    ab.animation_reload = "big_guy_reload_2"
-
                     U.animation_start(this, "big_guy_buy", nil, store.tick_ts, false, this.demons_sid)
                     U.y_animation_wait(this, this.demons_sid)
                 end

@@ -378,7 +378,7 @@ end
 
 function upgrades:engineer_bombs()
     return {"bomb", "bomb_dynamite", "bomb_black", "bomb_bfg", "bomb_mecha", "rock_druid", "rock_entwood",
-            "rock_firey_nut", "tower_tricannon_bomb_4", "tower_tricannon_bomb_overheated","bullet_tower_demon_pit_basic_attack_lvl4","bullet_tower_demon_pit_guy_lvl4"}
+            "rock_firey_nut", "tower_tricannon_bomb_4", "tower_tricannon_bomb_overheated","bullet_tower_demon_pit_basic_attack_lvl4","bullet_tower_demon_pit_big_guy_lvl4"}
 end
 
 function upgrades:engineer_advanced_towers()
