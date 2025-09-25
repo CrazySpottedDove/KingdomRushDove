@@ -6899,8 +6899,18 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
     local idle_ts = store.tick_ts
     local patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
 
+    local available_paths = {}
+    for k, v in pairs(P.paths) do
+        table.insert(available_paths, k)
+    end
+    if store.level.ignore_walk_backwards_paths then
+        available_paths = table.filter(available_paths, function(k, v)
+            return not table.contains(store.level.ignore_walk_backwards_paths, v)
+        end)
+    end
+
     while true do
-        if this.health.dead or this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
+        if this.health.dead or (this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration) or ni < -20 then
             if this.health.hp > 0 then
                 this.reinforcement.hp_before_timeout = this.health.hp
             end
@@ -6941,6 +6951,11 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
 
                     goto label_833_0
                 end
+            end
+
+            if V.dist2(this.pos.x, this.pos.y, this.nav_rally.pos.x, this.nav_rally.pos.y) < 25 then
+                ni = ni - 3
+                this.nav_rally.pos = P:node_pos(pi, spi, ni)
             end
 
             if SU.soldier_go_back_step(store, this) then
