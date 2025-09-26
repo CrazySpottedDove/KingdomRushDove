@@ -6,6 +6,7 @@ if not input_file then
     print("Usage: lua sort_lua_table.lua <input_file>")
     os.exit(1)
 end
+
 ---合并两个表（递归合并，数组去重合并）
 ---@param t1 table 表1
 ---@param t2 table 表2
@@ -89,10 +90,12 @@ local function load_table_from_file(filename)
     local content = f:read("*a")
     f:close()
     -- 加载为函数
+
     local chunk, err = load(content, "@" .. filename, "t", _ENV)
     if not chunk then
         error("加载文件失败: " .. err)
     end
+
     return chunk()
 end
 
@@ -106,24 +109,30 @@ local function is_array(tbl)
     if type(tbl) ~= "table" then
         return false
     end
+
     local i = 0
+
     for _ in pairs(tbl) do
         i = i + 1
         if tbl[i] == nil then
             return false
         end
     end
+
     return true
 end
 
 local function serialize(tbl, indent)
     indent = indent or ""
     local lines = {}
+
     table.insert(lines, "{")
+
     if is_array(tbl) then
         for i = 1, #tbl do
             local v = tbl[i]
             local val_str
+
             if type(v) == "table" then
                 val_str = serialize(v, indent .. "    ")
             elseif type(v) == "string" then
@@ -131,20 +140,25 @@ local function serialize(tbl, indent)
             else
                 val_str = tostring(v)
             end
+
             table.insert(lines, string.format("%s    %s,", indent, val_str))
         end
     else
         -- 收集并排序键
         local keys = {}
+
         for k in pairs(tbl) do
             table.insert(keys, k)
         end
+
         table.sort(keys, function(a, b)
             return tostring(a) < tostring(b)
         end)
+
         for _, k in ipairs(keys) do
             local v = tbl[k]
             local key_str
+
             if is_identifier(k) then
                 key_str = k
             elseif type(k) == "string" then
@@ -152,7 +166,9 @@ local function serialize(tbl, indent)
             else
                 key_str = string.format("[%s]", tostring(k))
             end
+
             local val_str
+
             if type(v) == "table" then
                 val_str = serialize(v, indent .. "    ")
             elseif type(v) == "string" then
@@ -160,10 +176,13 @@ local function serialize(tbl, indent)
             else
                 val_str = tostring(v)
             end
+
             table.insert(lines, string.format("%s    %s = %s,", indent, key_str, val_str))
         end
     end
+
     table.insert(lines, indent .. "}")
+    
     return table.concat(lines, "\n")
 end
 
@@ -173,4 +192,3 @@ f:write("return ")
 f:write(serialize(tbl, ""))
 f:write("\n")
 f:close()
-
