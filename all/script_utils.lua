@@ -591,7 +591,7 @@ local function create_attack_damage(a, target_id, this)
     d.damage_type = a.damage_type
     d.target_id = target_id
     d.source_id = this.id
-    
+
     return d
 end
 
@@ -3854,6 +3854,10 @@ local function towers_swaped(store, this, attacks)
     end
 end
 
+local function is_wraith(template_name)
+    return GS.wraith[template_name]
+end
+
 local SU = {
     has_modifiers = U.has_modifiers,
     ui_click_proxy_add = ui_click_proxy_add,
@@ -3964,6 +3968,7 @@ local SU = {
     towers_swaped = towers_swaped,
     insert_soldier_cooldown_buff = insert_soldier_cooldown_buff,
     remove_soldier_cooldown_buff = remove_soldier_cooldown_buff,
+    is_wraith = is_wraith
 }
 
 return SU

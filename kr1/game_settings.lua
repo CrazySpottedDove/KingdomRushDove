@@ -845,6 +845,17 @@ for i = #GS.encyclopedia_enemies, 1, -1 do
 	end
 end
 
-
+GS.wraith = {
+    soldier_skeleton = true,
+    soldier_skeleton_knight = true,
+    soldier_sand_warrior = true,
+    soldier_dracolich_golem = true,
+    soldier_frankenstein = true,
+    hero_vampiress = true,
+    soldier_death_rider = true,
+    soldier_tower_necromancer_skeleton_lvl4 = true,
+    soldier_tower_necromancer_skeleton_golem_lvl4 = true,
+    soldier_dragon_bone_ultimate_dog = true
+}
 
 return GS

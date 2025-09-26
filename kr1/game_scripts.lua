@@ -7981,7 +7981,7 @@ function scripts.enemy_alien_breeder.update(this, store, script)
                     if #this.track_kills.killed > 0 and this.track_kills.killed[1] == blocker.id then
                         queue_remove(store, this)
 
-                        if not table.contains(this.spawn_bans, blocker.template_name) then
+                        if not SU.is_wraith(blocker.template_name) then
                             signal.emit("wave-notification", "icon", "enemy_alien_reaper")
 
                             local e = E:create_entity("enemy_alien_reaper")
@@ -9262,7 +9262,7 @@ function scripts.phantom_warrior_aura.update(this, store)
 
             local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.radius, a.vis_flags, a.vis_bans,
                 function(e)
-                    return not table.contains(a.banned_templates, e.template_name)
+                    return not SU.is_wraith(e.template_name)
                 end)
 
             if targets then
@@ -9718,9 +9718,7 @@ end
 scripts.enemy_elvira = {}
 
 function scripts.enemy_elvira.can_lifesteal(this, store, attack, target)
-    return target.template_name ~= "soldier_death_rider" and target.template_name ~= "soldier_skeleton" and
-               target.template_name ~= "soldier_skeleton_knight" and target.template_name ~= "soldier_frankenstein" and
-               target.emplate_name ~= "hero_vampiress" and this.enemy.can_do_magic and this.health.hp /
+    return not SU.is_wraith(target.template_name) and this.enemy.can_do_magic and this.health.hp /
                this.health.hp_max < attack.health_trigger_factor
 end
 
@@ -12304,9 +12302,7 @@ function scripts.eb_dracula.insert(this, store, script)
 end
 
 function scripts.eb_dracula.can_lifesteal(this, store, attack, target)
-    return target.template_name ~= "soldier_death_rider" and target.template_name ~= "soldier_skeleton" and
-               target.template_name ~= "soldier_skeleton_knight" and target.template_name ~= "soldier_frankenstein" and
-               target.template_name ~= "hero_vampiress"
+    return not SU.is_wraith(target.template_name)
 end
 
 function scripts.eb_dracula.update(this, store, script)

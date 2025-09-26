@@ -3816,8 +3816,6 @@ local function enemies()
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].prefix = "enemy_alien_breeder"
     tt.sound_events.death = "DeathEplosion"
-    tt.spawn_bans = {"soldier_sand_warrior", "soldier_death_rider", "soldier_skeleton_knight", "soldier_skeleton",
-                     "soldier_frankenstein", "soldier_dracolich_golem"}
     tt.tween.props[1].name = "offset"
     tt.tween.disabled = true
     tt.tween.remove = false
@@ -5050,8 +5048,6 @@ local function enemies()
     tt.vis.bans = bor(F_SKELETON, F_BLOOD, F_DRILL, F_POISON)
 
     tt = RT("phantom_warrior_aura", "aura")
-    tt.aura.banned_templates = {"soldier_mecha", "soldier_death_rider", "soldier_skeleton", "soldier_skeleton_knight",
-                                "hero_dracolich", "soldier_dracolich_golem", "hero_vampiress"}
     tt.aura.cycle_time = fts(3)
     tt.aura.duration = -1
     tt.aura.radius = 128

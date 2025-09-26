@@ -2939,9 +2939,6 @@ local function heroes()
     tt.timed_attacks.list[1].range = 160
     tt.timed_attacks.list[1].shoot_time = fts(4)
     tt.timed_attacks.list[1].sound = "HeroPriestHolyLight"
-    tt.timed_attacks.list[1].excluded_templates = {"soldier_mecha", "soldier_death_rider", "soldier_skeleton",
-                                                   "soldier_skeleton_knight", "soldier_frankenstein",
-                                                   "soldier_sand_warrior", "soldier_dracolich_golem"}
     tt.timed_attacks.list[2] = CC("mod_attack")
     tt.timed_attacks.list[2].disabled = true
     tt.timed_attacks.list[2].animation = "consecrate"

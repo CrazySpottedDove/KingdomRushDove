@@ -337,7 +337,7 @@ function upgrades:barrack_soldiers()
             "soldier_elf", "soldier_elemental", "soldier_skeleton", "soldier_skeleton_knight", "soldier_death_rider",
             "soldier_templar", "soldier_assassin", "soldier_dwarf", "soldier_amazona", "soldier_djinn",
             "soldier_pirate_flamer", "soldier_frankenstein", "soldier_blade", "soldier_forest", "soldier_druid_bear",
-            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4"}
+            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4","soldier_tower_necromancer_skeleton_lvl4","soldier_tower_necromancer_skeleton_golem_lvl4"}
 end
 
 function upgrades:towers_with_barrack()

@@ -13,6 +13,7 @@ end
 local function ady(v)
     return v - anchor_y * image_y
 end
+local GS = require("game_settings")
 require("game_templates_utils")
 
 local function mage_towers()
@@ -672,8 +673,7 @@ local function mage_towers()
     death_rider_aura.aura.duration = -1
     death_rider_aura.aura.radius = 128
     death_rider_aura.aura.track_source = true
-    death_rider_aura.aura.allowed_templates = {"soldier_skeleton", "soldier_skeleton_knight", "soldier_sand_warrior",
-                                               "soldier_dracolich_golem, soldier_frankenstein"}
+    death_rider_aura.aura.allowed_templates = table.keys(GS.wraith)
     death_rider_aura.aura.vis_bans = F_ENEMY
     death_rider_aura.aura.vis_flags = F_MOD
     death_rider_aura.main_script.insert = scripts.aura_apply_mod.insert
@@ -1660,7 +1660,7 @@ local function mage_towers()
 
     tt = RT("soldier_tower_necromancer_skeleton_lvl4", "soldier_militia")
     local skeleton = b.skeleton
-    AC(tt, "reinforcement", "count_group")
+    AC(tt, "reinforcement")
     tt.health_bar.offset = vec_2(0, 29)
     tt.health.armor = skeleton.armor[4]
     tt.health.hp_max = skeleton.hp_max[4]
@@ -1697,9 +1697,9 @@ local function mage_towers()
     tt.spawn_delay_min = skeleton.spawn_delay_min
     tt.spawn_delay_max = skeleton.spawn_delay_max
     tt.spawn_sound = "TowerNecromancerSkeletonSummon"
-    tt.count_group.name = "necromancer_skeletons"
-    tt.count_group_type = COUNT_GROUP_CONCURRENT
-    tt.count_group_max = b.curse.max_units_total
+    -- tt.count_group.name = "necromancer_skeletons"
+    -- tt.count_group_type = COUNT_GROUP_CONCURRENT
+    -- tt.count_group_max = b.curse.max_units_total
     tt.is_golem = false
     tt.patrol_pos_offset = vec_2(15, 10)
     tt.patrol_min_cd = 5
@@ -1786,11 +1786,6 @@ local function mage_towers()
     tt.aura.soldier_vis_flags = bor(F_MOD)
     tt.aura.soldier_vis_bans = bor(F_ENEMY)
     tt.aura.duration = nil
-    tt.aura.soldier_allowed_templates = {
-        "soldier_tower_necromancer_skeleton_lvl4",
-        "soldier_tower_necromancer_skeleton_golem_lvl4",
-        "soldier_dragon_bone_ultimate_dog"
-    }
     tt.render.sprites[1].prefix = "necromancer_tower_mark_of_silence_totem"
     tt.render.sprites[1].animated = true
     tt.render.sprites[2] = CC("sprite")
