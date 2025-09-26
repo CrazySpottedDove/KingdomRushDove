@@ -1775,7 +1775,8 @@ local function mage_towers()
     tt = RT("aura_tower_necromancer_skill_debuff", "aura")
     AC(tt, "render", "tween")
     tt.aura.enemy_mods = {
-        "mod_tower_necromancer_curse"
+        "mod_tower_necromancer_curse",
+        "mod_tower_necromancer_skill_debuff"
     }
     tt.aura.soldier_mods = {
         "mod_tower_necromancer_skill_debuff_skeleton_improve"
