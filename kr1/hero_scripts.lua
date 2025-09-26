@@ -8361,8 +8361,13 @@ scripts.arrow_hero_elves_archer_ultimate = {
 
             coroutine.yield()
         end
+        local targets
 
-        local targets = U.find_targets_in_range(store.enemies, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+        if band(b.damage_bans, F_FRIEND) ~= 0 then
+            targets = U.find_enemies_in_range(store, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+        else
+            targets = U.find_soldiers_in_range(store.soldiers, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+        end
 
         if targets then
             for _, target in pairs(targets) do

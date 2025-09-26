@@ -7222,50 +7222,47 @@ function scripts.tower_necromancer_lvl4.update(this, store)
     end
 
     local function check_skill_debuff()
-        if this.powers then
-            local power = this.powers.skill_debuff
-            local attack = this.attacks.list[2]
+        local power = this.powers.skill_debuff
+        local attack = this.attacks.list[2]
 
-            if power and power.level and power.level > 0 and attack and attack.cooldown and attack.ts and store.tick_ts -
-                attack.ts > attack.cooldown and
-                (not attack.min_cooldown or store.tick_ts - last_ts_shared > attack.min_cooldown) then
-                local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, attack.max_range,
-                    attack.node_prediction + attack.cast_time, attack.vis_flags, attack.vis_bans, function(e, o)
-                        local node_offset = P:predict_enemy_node_advance(e, attack.node_prediction + attack.cast_time)
-                        local e_ni = e.nav_path.ni + node_offset
-                        local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+        if power.level > 0 and ready_to_attack(attack, store, this.tower.cooldown_factor) and
+            (store.tick_ts - last_ts_shared > attack.min_cooldown * this.tower.cooldown_factor) then
+            local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, attack.max_range,
+                attack.node_prediction + attack.cast_time, attack.vis_flags, attack.vis_bans, function(e, o)
+                    local node_offset = P:predict_enemy_node_advance(e, attack.node_prediction + attack.cast_time)
+                    local e_ni = e.nav_path.ni + node_offset
+                    local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
 
-                        return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
-                    end)
+                    return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
+                end)
 
-                if not enemy or #enemies < attack.min_targets then
-                    attack.ts = attack.ts + fts(10)
-                    return
-                end
-
-                local start_ts = store.tick_ts
-
-                U.animation_start(this, attack.animation, nil, store.tick_ts, false, this.render.sid_mage)
-                U.animation_start(this, "mark_of_silence", nil, store.tick_ts, false, this.render.sid_glow_fx)
-
-                while store.tick_ts - start_ts < attack.cast_time do
-                    coroutine.yield()
-                end
-
-                local debuff_aura = E:create_entity(attack.entity)
-                local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, attack.node_prediction)
-
-                debuff_aura.pos = P:node_pos(enemy.nav_path.pi, 1, ni)
-                debuff_aura.aura.duration = power.aura_duration[power.level]
-                debuff_aura.aura.level = power.level
-                debuff_aura.aura.source_id = this.id
-
-                queue_insert(store, debuff_aura)
-                U.y_animation_wait(this, this.render.sid_mage)
-
-                attack.ts = start_ts
-                last_ts_shared = start_ts
+            if not enemy or #enemies < attack.min_targets then
+                attack.ts = attack.ts + fts(10)
+                return
             end
+
+            local start_ts = store.tick_ts
+
+            U.animation_start(this, attack.animation, nil, store.tick_ts, false, this.render.sid_mage)
+            U.animation_start(this, "mark_of_silence", nil, store.tick_ts, false, this.render.sid_glow_fx)
+
+            while store.tick_ts - start_ts < attack.cast_time do
+                coroutine.yield()
+            end
+
+            local debuff_aura = E:create_entity(attack.entity)
+            local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, attack.node_prediction)
+
+            debuff_aura.pos = P:node_pos(enemy.nav_path.pi, 1, ni)
+            debuff_aura.aura.duration = power.aura_duration[power.level]
+            debuff_aura.aura.level = power.level
+            debuff_aura.aura.source_id = this.id
+
+            queue_insert(store, debuff_aura)
+            U.y_animation_wait(this, this.render.sid_mage)
+
+            attack.ts = start_ts
+            last_ts_shared = start_ts
         end
     end
 
@@ -7273,8 +7270,8 @@ function scripts.tower_necromancer_lvl4.update(this, store)
         local power = this.powers.skill_rider
         local attack = this.attacks.list[3]
 
-        if not power or power.level <= 0 or not attack or not attack.cooldown or store.tick_ts - attack.ts <
-            attack.cooldown or attack.min_cooldown and store.tick_ts - last_ts_shared < attack.min_cooldown then
+        if power.level <= 0 or not ready_to_attack(attack, store, this.tower.cooldown_factor) or
+            (attack.min_cooldown and store.tick_ts - last_ts_shared < attack.min_cooldown * this.tower.cooldown_factor) then
             return
         end
 
@@ -7283,7 +7280,6 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 
         if not enemy or #enemies < attack.min_targets then
             attack.ts = attack.ts + fts(10)
-
             return
         end
 
@@ -7378,9 +7374,9 @@ function scripts.tower_necromancer_lvl4.update(this, store)
                 else
                     local start_ts = store.tick_ts
 
-                    if this.tower.level > 1 then
-                        U.animation_start(this, "skull_spawn", nil, store.tick_ts, 1, this.render.sid_glow_fx)
-                    end
+                    -- if this.tower.level > 1 then
+                    U.animation_start(this, "skull_spawn", nil, store.tick_ts, 1, this.render.sid_glow_fx)
+                    -- end
 
                     if is_pos_below(pred_pos) then
                         U.animation_start(this, "attack", nil, store.tick_ts, nil, this.render.sid_mage)
@@ -7424,9 +7420,9 @@ function scripts.tower_necromancer_lvl4.update(this, store)
                     b.bullet.source_id = this.id
                     b.bullet.level = this.tower.level
                     b.bullet.damage_factor = this.tower.damage_factor
-                    b.tower_ref = this
+                    -- b.tower_ref = this
                     b.render.sprites[1].flip_x = this.tower_upgrade_persistent_data.current_skulls > 0 and
-                                                     this.tower_upgrade_persistent_data.current_skulls < 3
+                                                    this.tower_upgrade_persistent_data.current_skulls < 3
                     b.fire_directly = fire_directly
 
                     if this.tower_upgrade_persistent_data.current_skulls < 2 then
@@ -7785,6 +7781,16 @@ function scripts.mod_tower_necromancer_curse.remove(this, store, script)
             end
             s.unit.damage_factor = s.unit.damage_factor * m.damage_factor
             queue_insert(store, s)
+
+            -- local bullet = E:create_entity("bullet_tower_necromancer_lvl4")
+            -- local b = bullet.bullet
+            -- b.source_id = m.source_id
+            -- bullet.pos.x = target.pos.x
+            -- bullet.pos.y = target.pos.y
+            -- b.from = V.vclone(bullet.pos)
+            -- b.to = V.vclone(bullet.pos)
+            -- b.damage_factor = m.damage_factor
+            -- queue_insert(store, bullet)
         else
             target._necromancer_entity_name = nil
 
@@ -7867,16 +7873,15 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store, script)
 
         if this.is_golem then
             targets = table.filter(store.soldiers, function(k, v)
-                return not v.pending_removal and v.source_necromancer and
-                           this.source_necromancer == v.source_necromancer and
-                           v.is_golem and v.health and not v.health.dead and not v.soldier.target_id and
-                           this.id ~= v.id
+                return not v.pending_removal and v.source_necromancer and this.source_necromancer ==
+                           v.source_necromancer and v.is_golem and v.health and not v.health.dead and
+                           not v.soldier.target_id and this.id ~= v.id
             end)
         else
             targets = table.filter(store.soldiers, function(k, v)
-                return not v.pending_removal and v.source_necromancer and
-                           this.source_necromancer == v.source_necromancer and
-                           v.health and not v.health.dead and not v.soldier.target_id and this.id ~= v.id
+                return not v.pending_removal and v.source_necromancer and this.source_necromancer ==
+                           v.source_necromancer and v.health and not v.health.dead and not v.soldier.target_id and
+                           this.id ~= v.id
             end)
         end
 
@@ -8095,7 +8100,7 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store, script)
             local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius,
                 this.aura.soldier_vis_flags, this.aura.soldier_vis_bans, function(t)
                     return SU.is_wraith(t.template_name)
-                end)
+                end) or {}
 
             for i, target in ipairs(targets) do
                 if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then

@@ -1657,7 +1657,6 @@ local function mage_towers()
     tt.ui.click_rect = r(-40, 0, 80, 90)
     tt.ui.click_rect_offset_y = -10
 
-
     tt = RT("soldier_tower_necromancer_skeleton_lvl4", "soldier_militia")
     local skeleton = b.skeleton
     AC(tt, "reinforcement")
@@ -1775,7 +1774,8 @@ local function mage_towers()
     tt = RT("aura_tower_necromancer_skill_debuff", "aura")
     AC(tt, "render", "tween")
     tt.aura.enemy_mods = {
-        "mod_tower_necromancer_curse"
+        "mod_tower_necromancer_curse",
+        "mod_tower_necromancer_skill_debuff"
     }
     tt.aura.soldier_mods = {
         "mod_tower_necromancer_skill_debuff_skeleton_improve"

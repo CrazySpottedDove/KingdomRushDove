@@ -136,7 +136,12 @@ local function serialize(tbl, indent)
             if type(v) == "table" then
                 val_str = serialize(v, indent .. "    ")
             elseif type(v) == "string" then
-                val_str = string.format("%q", v)
+                -- 先把换行替换成 \n
+                local s = v:gsub("\n", "\\n")
+                -- 再用 %q 转义
+                val_str = string.format("%q", s)
+                -- 再把 \\n 还原成 \n（去掉多余的转义）
+                val_str = val_str:gsub("\\\\n", "\\n")
             else
                 val_str = tostring(v)
             end
@@ -172,7 +177,12 @@ local function serialize(tbl, indent)
             if type(v) == "table" then
                 val_str = serialize(v, indent .. "    ")
             elseif type(v) == "string" then
-                val_str = string.format("%q", v)
+                -- 先把换行替换成 \n
+                local s = v:gsub("\n", "\\n")
+                -- 再用 %q 转义
+                val_str = string.format("%q", s)
+                -- 再把 \\n 还原成 \n（去掉多余的转义）
+                val_str = val_str:gsub("\\\\n", "\\n")
             else
                 val_str = tostring(v)
             end
