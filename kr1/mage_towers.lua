@@ -1657,7 +1657,6 @@ local function mage_towers()
     tt.ui.click_rect = r(-40, 0, 80, 90)
     tt.ui.click_rect_offset_y = -10
 
-
     tt = RT("soldier_tower_necromancer_skeleton_lvl4", "soldier_militia")
     local skeleton = b.skeleton
     AC(tt, "reinforcement")
