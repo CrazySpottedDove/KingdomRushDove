@@ -1330,15 +1330,6 @@ local function engineer_towers()
     }
     tt.tween.remove = true
 
-    tt = RT("tower_build_demon_pit", "tower_build")
-    tt.build_name = "tower_demon_pit_lvl1"
-    tt.render.sprites[1].name = "terrains_%04i"
-    tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2].name = "demon_pit_tower_build"
-    tt.render.sprites[2].offset = vec_2(0, 10)
-    tt.render.sprites[3].offset.y = 66
-    tt.render.sprites[4].offset.y = 66
-
     tt = RT("tower_demon_pit_lvl4", "tower")
     AC(tt, "attacks", "powers")
     tt.is_kr5 = true
@@ -1346,6 +1337,24 @@ local function engineer_towers()
     tt.tower.level = 1
     tt.tower.price = b.price[4]
     tt.tower.menu_offset = vec_2(0, 25)
+    tt.powers.master_exploders = CC("power")
+    tt.powers.master_exploders.price_base = b.master_exploders.price[1]
+    tt.powers.master_exploders.price_inc = b.master_exploders.price[2]
+    tt.powers.master_exploders.enc_icon = 11
+    tt.powers.master_exploders.explosion_damage_factor = b.master_exploders.explosion_damage_factor
+    tt.powers.master_exploders.burning_duration = b.master_exploders.burning_duration
+    tt.powers.master_exploders.burning_damage_min = b.master_exploders.burning_damage_min
+    tt.powers.master_exploders.burning_damage_max = b.master_exploders.burning_damage_max
+    tt.powers.master_exploders.mod = "mod_tower_demon_pit_master_explosion_burning"
+    tt.powers.master_exploders.sound = "TowerDemonPitDemonExplosion"
+    tt.powers.big_guy = CC("power")
+    tt.powers.big_guy.price_base = b.big_guy.price[1]
+    tt.powers.big_guy.price_inc = b.big_guy.price[2]
+    tt.powers.big_guy.enc_icon = 12
+    tt.powers.big_guy.damage_max = 2
+    tt.powers.big_guy.damage_min = 2
+    tt.powers.big_guy.cooldown = b.big_guy.cooldown
+    tt.powers.big_guy.key = "BIG_DEMON"
     tt.info.i18n_key = "TOWER_DEMON_PIT_4"
     tt.info.portrait = "portraits_towers_0006"
     tt.info.stat_damage = b.stats.damage
@@ -1402,24 +1411,6 @@ local function engineer_towers()
     tt.render.sprites[5] = CC("sprite")
     tt.render.sprites[5].prefix = "demon_pit_tower_lvl4_tower_front"
     tt.render.sprites[5].offset = vec_2(0, 10)
-    tt.powers.master_exploders = CC("power")
-    tt.powers.master_exploders.price_base = b.master_exploders.price[1]
-    tt.powers.master_exploders.price_inc = b.master_exploders.price[2]
-    tt.powers.master_exploders.enc_icon = 11
-    tt.powers.master_exploders.explosion_damage_factor = b.master_exploders.explosion_damage_factor
-    tt.powers.master_exploders.burning_duration = b.master_exploders.burning_duration
-    tt.powers.master_exploders.burning_damage_min = b.master_exploders.burning_damage_min
-    tt.powers.master_exploders.burning_damage_max = b.master_exploders.burning_damage_max
-    tt.powers.master_exploders.mod = "mod_tower_demon_pit_master_explosion_burning"
-    tt.powers.master_exploders.sound = "TowerDemonPitDemonExplosion"
-    tt.powers.big_guy = CC("power")
-    tt.powers.big_guy.price_base = b.big_guy.price[1]
-    tt.powers.big_guy.price_inc = b.big_guy.price[2]
-    tt.powers.big_guy.enc_icon = 12
-    tt.powers.big_guy.damage_max = 2
-    tt.powers.big_guy.damage_min = 2
-    tt.powers.big_guy.cooldown = b.big_guy.cooldown
-    tt.powers.big_guy.key = "BIG_DEMON"
 
     tt = RT("soldier_tower_demon_pit_basic_attack_lvl4", "soldier_militia")
     AC(tt, "reinforcement", "tween")

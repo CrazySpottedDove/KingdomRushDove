@@ -8481,4 +8481,1643 @@ end
 
 -- 死灵法师_END
 
+-- 熊猫_START
+
+scripts.bolt_tower_pandas_ray = {}
+
+function scripts.bolt_tower_pandas_ray.insert(this, store, script)
+    local b = this.bullet
+
+    if b.target_id then
+        local target = store.entities[b.target_id]
+
+        if not target or band(target.vis.bans, F_RANGED) ~= 0 then
+            return false
+        end
+    end
+
+    return true
+end
+
+function scripts.bolt_tower_pandas_ray.update(this, store, script)
+    local b = this.bullet
+    local target = store.entities[b.target_id]
+
+    this.pos.x, this.pos.y = b.to.x, b.to.y
+
+    if target and not target.health.dead then
+        local d = SU.create_bullet_damage(b, target.id, this.id)
+        local u = UP:get_upgrade("mage_spell_of_penetration")
+
+        if u and math.random() < u.chance then
+            d.damage_type = DAMAGE_TRUE
+        end
+
+        queue_damage(store, d)
+
+        if b.mod or b.mods then
+            local mods = b.mods or {
+                b.mod
+            }
+
+            for _, mod_name in pairs(mods) do
+                local m = E:create_entity(mod_name)
+
+                m.modifier.target_id = b.target_id
+                m.modifier.level = b.level
+
+                queue_insert(store, m)
+            end
+        end
+
+        if b.hit_payload then
+            local hp = b.hit_payload
+
+            hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
+
+            queue_insert(store, hp)
+        end
+    end
+
+    if b.payload then
+        local hp = b.payload
+
+        hp.pos.x, hp.pos.y = b.to.x, b.to.y
+
+        queue_insert(store, hp)
+    end
+
+    if b.hit_fx then
+        local sfx = E:create_entity(b.hit_fx)
+
+        sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+        sfx.render.sprites[1].ts = store.tick_ts
+        sfx.render.sprites[1].runs = 0
+
+        if target and sfx.render.sprites[1].size_names then
+            sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
+        end
+
+        queue_insert(store, sfx)
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.tower_pandas = {}
+
+function scripts.tower_pandas.get_info(this)
+    local s = E:create_entity(this.attacks.list[2].soldiers[1])
+
+    if this.powers then
+        for pn, p in pairs(this.powers) do
+            for i = 1, p.level do
+                SU.soldier_power_upgrade(s, pn)
+            end
+        end
+    end
+
+    local s_info = s.info.fn(s)
+    local attacks
+
+    if s.melee and s.melee.attacks then
+        attacks = s.melee.attacks
+    elseif s.ranged and s.ranged.attacks then
+        attacks = s.ranged.attacks
+    end
+
+    local min, max
+
+    for _, a in pairs(attacks) do
+        if a.damage_min then
+            local damage_factor = this.tower.damage_factor
+            local hit_times_mult = a.hit_times and #a.hit_times or 1
+
+            min, max = a.damage_min * damage_factor * hit_times_mult, a.damage_max * damage_factor * hit_times_mult
+
+            break
+        end
+    end
+
+    if min and max then
+        min, max = math.ceil(min), math.ceil(max)
+    end
+
+    return {
+        type = STATS_TYPE_TOWER_BARRACK,
+        hp_max = s.health.hp_max,
+        damage_min = min,
+        damage_max = max,
+        armor = s.health.armor,
+        respawn = s.health.dead_lifetime
+    }
+end
+
+function scripts.tower_pandas.update(this, store, script)
+    local b = this.barrack
+    local formation_offset = 0
+    local at = this.attacks
+    local a = at.list[1]
+    local a2 = at.list[2]
+
+    a2.force_retreat_until_ts = store.tick_ts
+    a2.next_force_retreat_kill = store.tick_ts
+
+    local function check_change_rally()
+        if b.rally_new then
+            b.rally_new = false
+
+            signal.emit("rally-point-changed", this)
+
+            local sounds = {}
+            local all_dead = true
+
+            for i, s in pairs(b.soldiers) do
+                s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
+                s.nav_rally.new = true
+
+                if s.sound_events.change_rally_point then
+                    table.insert(sounds, s.sound_events.change_rally_point)
+                end
+
+                all_dead = all_dead and s.health.dead
+            end
+
+            if not all_dead then
+                if #sounds > 0 then
+                    S:queue(sounds[math.random(1, #sounds)])
+                else
+                    S:queue(this.sound_events.change_rally_point)
+                end
+            end
+        end
+    end
+
+    local function check_powers()
+        if this.powers then
+            for pn, p in pairs(this.powers) do
+                if p.changed then
+                    p.changed = nil
+
+                    for _, s in pairs(b.soldiers) do
+                        if s.powers[pn] == nil then
+                            -- block empty
+                        else
+                            s.powers[pn].level = p.level
+                            s.powers[pn].changed = true
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    local function check_retreat()
+        if this.user_selection.in_progress and this.user_selection.arg == "pandas_retreat" then
+            this.user_selection.in_progress = nil
+            this.user_selection.arg = nil
+            a2.ts = store.tick_ts
+            a2.force_retreat_until_ts = store.tick_ts + a2.retreat_duration
+            a2.next_force_retreat_kill = math.max(a2.next_force_retreat_kill, store.tick_ts)
+        end
+    end
+
+    local function check_pandas_alive(pandas)
+        for _, soldier in pairs(pandas) do
+            if soldier.health.hp > 0 then
+                return true
+            end
+        end
+
+        return false
+    end
+
+    local function update_checks()
+        check_change_rally()
+        check_powers()
+        check_retreat()
+    end
+
+    local function update_click_rect()
+        local highest = this.ui.click_rect_heights_by_soldier.none
+
+        for i = 1, #this.pandas do
+            local panda = this.pandas[i]
+
+            if panda.status == "on_tower" and highest < this.ui.click_rect_heights_by_soldier[i] then
+                highest = this.ui.click_rect_heights_by_soldier[i]
+            end
+        end
+
+        this.ui.click_rect.size.y = highest
+    end
+
+    local function y_panda_tower_animation_play(sid, anim, flip_x)
+        U.animation_start(this, anim, flip_x, store.tick_ts, false, sid, true)
+
+        while not U.animation_finished(this, sid) do
+            update_checks()
+            coroutine.yield()
+        end
+    end
+
+    this.pandas = {}
+
+    local function random_unique_pair(max)
+        local a = math.random(1, max)
+        local b
+
+        repeat
+            b = math.random(1, max)
+        until b ~= a
+
+        return a, b
+    end
+
+    if this.tower_upgrade_persistent_data.names == nil then
+        local n1, n2 = random_unique_pair(8)
+        local n3 = math.random(1, 4)
+
+        this.tower_upgrade_persistent_data.names = {
+            n1,
+            n2,
+            n3
+        }
+    end
+
+    for i = 1, 3 do
+        this.pandas[i] = {
+            status = "on_tower",
+            in_animation = false,
+            soldier_type = a2.soldiers[i],
+            spawn_bullet_type = a2.soldiers_spawn_bullets[i],
+            render = i + 2,
+            is_panda_green = string.find(a2.soldiers[i], "green"),
+            is_panda_red = string.find(a2.soldiers[i], "red"),
+            name_index = this.tower_upgrade_persistent_data.names[i]
+        }
+    end
+
+    local a_base_cooldown = a.cooldown * #this.pandas
+
+    for i = 1, #this.pandas do
+        local panda = this.pandas[i]
+
+        for _, soldier in pairs(b.soldiers) do
+            if panda.soldier_type == soldier.template_name then
+                panda.status = "on_floor"
+                this.render.sprites[panda.render].hidden = true
+                soldier.soldier.tower_soldier_idx = i
+            end
+        end
+    end
+
+    for i, soldier in pairs(this.barrack.soldiers) do
+        soldier.bullet_arrived = true
+        soldier.do_level_up_smoke = true
+    end
+
+    if this.tower_upgrade_persistent_data.fast_spawns == nil then
+        this.tower_upgrade_persistent_data.fast_spawns = 3
+    end
+
+    if this.tower_upgrade_persistent_data.old_level == nil then
+        this.tower_upgrade_persistent_data.old_level = 0
+    end
+
+    local last_panda_spawned_index = math.random(1, #this.pandas)
+    local spawn_panda_idx = 1
+    local last_target_pos = V.vv(0)
+    local prev_target_pos = V.vv(0)
+
+    update_click_rect()
+
+    a.ts = store.tick_ts
+    a2.ts = store.tick_ts
+
+    local spawn_cooldown = a2.cooldown
+    local shooter_active = false
+    local last_panda_shoot_idx = math.random(1, #this.pandas)
+    local panda_spawn_anims = {}
+    local green_panda_sid
+
+    for _, panda in pairs(this.pandas) do
+        if not this.render.sprites[panda.render].hidden then
+            U.sprites_hide(this, panda.render, panda.render, true)
+            table.insert(panda_spawn_anims, panda.render)
+        end
+
+        if panda.is_panda_green then
+            green_panda_sid = panda.render
+        end
+    end
+
+    panda_spawn_anims = table.random_order(panda_spawn_anims)
+
+    if panda_spawn_anims and #panda_spawn_anims > 0 then
+        for i, sid in pairs(panda_spawn_anims) do
+            U.y_wait(store, 0.05 * i)
+            U.sprites_show(this, sid, sid, true)
+
+            local smoke = E:create_entity("fx_panda_smoke_level_up")
+
+            smoke.pos = V.vclone(this.pos)
+            smoke.render.sprites[1].offset = V.vclone(this.render.sprites[sid].offset)
+            smoke.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, smoke)
+
+            local flip_x
+
+            if sid == green_panda_sid and this.tower.level < 4 then
+                flip_x = true
+            end
+
+            U.animation_start(this, "spawn_end", flip_x, store.tick_ts, false, sid)
+        end
+
+        while true do
+            update_checks()
+
+            for i, sid in pairs(panda_spawn_anims) do
+                if U.animation_finished(this, sid) then
+                    table.remove(panda_spawn_anims, i)
+                    U.animation_start(this, this.render.sprites[sid].angles.idle[1], nil, store.tick_ts, false, sid, true)
+                end
+            end
+
+            if #panda_spawn_anims == 0 then
+                break
+            end
+
+            coroutine.yield()
+        end
+    end
+
+    while true do
+        local old_count = #b.soldiers
+
+        b.soldiers = table.filter(b.soldiers, function(_, s)
+            return store.entities[s.id] ~= nil
+        end)
+
+        if #b.soldiers > 0 and #b.soldiers ~= old_count then
+            for i, s in ipairs(b.soldiers) do
+                s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(s.soldier.tower_soldier_idx, b,
+                    b.max_soldiers, math.pi * 0.25)
+            end
+        end
+
+        update_checks()
+
+        if check_pandas_alive(b.soldiers) then
+            this.user_selection.actions.tw_free_action.allowed = true
+        else
+            this.user_selection.actions.tw_free_action.allowed = false
+        end
+
+        local enemy
+
+        for i = 1, #this.pandas do
+            local panda = this.pandas[i]
+            local panda_sprite = this.render.sprites[panda.render]
+
+            if panda.status == "on_floor" and not panda.in_animation then
+                local should_continue = true
+
+                for z = 1, #b.soldiers do
+                    if panda.soldier_type == b.soldiers[z].template_name and b.soldiers[z].back_to_tower_ts and store.tick_ts >= b.soldiers[z].back_to_tower_ts then
+                        b.soldiers[z].back_to_tower_ts = nil
+                        should_continue = false
+
+                        break
+                    end
+                end
+
+                if should_continue then
+                    -- block empty
+                else
+                    U.sprites_show(this, panda.render, panda.render, true)
+
+                    local flip_x
+
+                    if panda.is_panda_green and this.tower.level < 4 then
+                        flip_x = true
+                    end
+
+                    U.animation_start(this, "spawn_end", flip_x, store.tick_ts, false, panda.render, true)
+
+                    panda.in_animation = true
+                end
+            end
+        end
+
+        for _, panda in pairs(this.pandas) do
+            local spr = this.render.sprites[panda.render]
+
+            if spr.name == "spawn_end" and U.animation_finished(this, panda.render) then
+                U.animation_start(this, this.render.sprites[panda.render].angles.idle[1], nil, store.tick_ts, false,
+                    panda.render, true)
+
+                panda.in_animation = false
+                panda.status = "on_tower"
+
+                update_click_rect()
+            end
+        end
+
+        for i, panda in pairs(this.pandas) do
+            local spr = this.render.sprites[panda.render]
+
+            if panda.status == "on_tower" and spr.name == "spawn_in" and U.animation_finished(this, panda.render) then
+                local s = E:create_entity(panda.soldier_type)
+
+                s.info.i18n_key = s.info.i18n_key .. "_" .. panda.name_index
+                s.soldier.tower_id = this.id
+                s.origin_spawn = true
+                s.soldier.tower_soldier_idx = i
+                s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, math.pi * 0.25)
+                s.pos = V.vclone(s.nav_rally.pos)
+                s.nav_rally.new = true
+
+                queue_insert(store, s)
+
+                b.soldiers[#b.soldiers + 1] = s
+
+                signal.emit("tower-spawn", this, s)
+
+                panda.status = "on_floor"
+
+                local bullet = E:create_entity(panda.spawn_bullet_type)
+
+                bullet.pos.x, bullet.pos.y = this.pos.x + this.render.sprites[panda.render].offset.x,
+                    this.pos.y + this.render.sprites[panda.render].offset.y + 20
+                bullet.bullet.from = V.vclone(bullet.pos)
+                bullet.bullet.to = V.vclone(s.pos)
+                bullet.bullet.target_id = s.id
+                bullet.bullet.source_id = this.id
+                bullet.destroy_if_tower_upgraded = true
+
+                queue_insert(store, bullet)
+                coroutine.yield()
+
+                panda.in_animation = false
+
+                U.sprites_hide(this, panda.render, panda.render, true)
+                update_click_rect()
+            end
+        end
+
+        for i, panda in pairs(this.pandas) do
+            local spr = this.render.sprites[panda.render]
+            local start_offset = a.bullet_start_offset[i]
+
+            if spr.name == "spell" and U.animation_finished(this, panda.render) then
+                local an, af = U.animation_name_facing_point(this, this.render.sprites[panda.render].angles.idle[1],
+                    last_target_pos, panda.render, start_offset)
+
+                if this.tower.level == 4 and panda.is_panda_green then
+                    af = not af
+                end
+
+                U.animation_start(this, an, af, store.tick_ts, -1, panda.render)
+
+                panda.in_animation = false
+            end
+        end
+
+        if store.tick_ts < a2.force_retreat_until_ts and store.tick_ts > a2.next_force_retreat_kill and #b.soldiers > 0 then
+            for _, soldier in pairs(b.soldiers) do
+                if soldier.health.hp > 0 then
+                    soldier.health.hp = 0
+
+                    break
+                end
+            end
+
+            a2.next_force_retreat_kill = store.tick_ts + 0.15 + math.random() * 0.15
+        end
+
+        for _, panda in pairs(this.pandas) do
+            local spr = this.render.sprites[panda.render]
+            local cfg = panda.shoot_cfg
+
+            if cfg and store.tick_ts >= cfg.shoot_ts then
+                enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, at.range + 15, false, a.vis_flags,
+                    a.vis_bans)
+
+                if enemy then
+                    last_target_pos = enemy.pos
+
+                    local an, af = U.animation_name_facing_point(this, "shoot", enemy.pos, cfg.shooter_sid,
+                        cfg.start_offset)
+
+                    if this.tower.level == 4 and cfg.is_panda_green then
+                        af = not af
+                    end
+
+                    this.render.sprites[cfg.shooter_sid].flip_x = af
+
+                    local bullet = E:create_entity(cfg.bullet_data.b)
+
+                    bullet.bullet.damage_factor = this.tower.damage_factor
+                    bullet.pos.x, bullet.pos.y =
+                    this.pos.x + cfg.start_offset.x + cfg.bullet_data.offset.x * (af and -1 or 1),
+                        this.pos.y + cfg.start_offset.y + cfg.bullet_data.offset.y
+                    bullet.bullet.from = V.vclone(bullet.pos)
+                    bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+                    bullet.bullet.target_id = enemy.id
+                    bullet.bullet.source_id = this.id
+
+                    if bullet.bullet.flight_time_min and bullet.bullet.flight_time_factor then
+                        local dist = V.dist(bullet.bullet.to.x, bullet.bullet.to.y, bullet.bullet.from.x,
+                            bullet.bullet.from.y)
+
+                        bullet.bullet.flight_time = bullet.bullet.flight_time_min +
+                        dist / at.range * bullet.bullet.flight_time_factor
+                    end
+
+                    queue_insert(store, bullet)
+                end
+
+                prev_target_pos = V.vclone(last_target_pos)
+                panda.shoot_cfg = nil
+            end
+        end
+
+        if store.tick_ts - a.ts > this.tower.long_idle_cooldown then
+            for _, panda in pairs(this.pandas) do
+                local spr = this.render.sprites[panda.render]
+
+                if not panda.in_animation then
+                    local an, af = U.animation_name_facing_point(this, this.render.sprites[panda.render].angles.idle[1],
+                        this.tower.long_idle_pos, panda.render)
+
+                    if this.tower.level == 4 then
+                        af = false
+                    elseif panda.is_panda_green then
+                        af = true
+                    elseif panda.is_panda_red then
+                        af = false
+                    end
+
+                    U.animation_start(this, an, af, store.tick_ts, -1, panda.render)
+                end
+            end
+        end
+
+        if this.tower.blocked then
+            -- block empty
+        else
+            if this.tower_upgrade_persistent_data.old_level < this.tower.level then
+                this.tower_upgrade_persistent_data.old_level = this.tower.level
+                this.deploy_all = true
+            end
+
+            spawn_cooldown = a2.cooldown
+
+            if this.deploy_all then
+                this.deploy_all = nil
+                spawn_cooldown = 0
+                this.tower_upgrade_persistent_data.fast_spawns = #this.pandas - #b.soldiers
+            end
+
+            if this.tower_upgrade_persistent_data.fast_spawns > 0 then
+                spawn_cooldown = math.min(spawn_cooldown, 0.2)
+            end
+
+            if #b.soldiers >= #this.pandas or spawn_cooldown > store.tick_ts - a2.ts or store.tick_ts < a2.force_retreat_until_ts then
+                -- block empty
+            else
+                spawn_panda_idx = last_panda_spawned_index
+
+                for i = 1, #this.pandas do
+                    spawn_panda_idx = km.zmod(spawn_panda_idx + 1, #this.pandas)
+
+                    local panda = this.pandas[spawn_panda_idx]
+                    local panda_sprite = this.render.sprites[panda.render]
+
+                    if panda.status == "on_tower" and not panda.in_animation then
+                        last_panda_spawned_index = spawn_panda_idx
+
+                        S:queue("TowerPandasArrival", {
+                            delay = fts(7)
+                        })
+                        U.animation_start(this, "spawn_in", nil, store.tick_ts, false, panda.render, true)
+
+                        panda.in_animation = true
+                        this.tower_upgrade_persistent_data.fast_spawns = this.tower_upgrade_persistent_data.fast_spawns -
+                        1
+                        a2.ts = store.tick_ts
+
+                        break
+                    end
+                end
+            end
+
+            shooter_active = false
+
+            for _, panda in pairs(this.pandas) do
+                if not this.render.sprites[panda.render].hidden and not panda.in_animation then
+                    shooter_active = true
+
+                    break
+                end
+            end
+
+            if not shooter_active then
+                -- block empty
+            else
+                a.cooldown = a_base_cooldown / (#this.pandas - #this.barrack.soldiers)
+
+                if store.tick_ts - a.ts < a.cooldown then
+                    -- block empty
+                else
+                    enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, at.range, fts(17), a.vis_flags,
+                        a.vis_bans)
+
+                    if enemy then
+                        a.ts = store.tick_ts
+                        a.count = a.count + 1
+
+                        local panda
+                        local shooter_idx = last_panda_shoot_idx
+                        local shooter_sid
+                        local is_panda_green = false
+
+                        for i = 1, #this.pandas do
+                            shooter_idx = km.zmod(shooter_idx + 1, #this.pandas)
+                            panda = this.pandas[shooter_idx]
+
+                            if panda.status == "on_tower" and not panda.in_animation then
+                                last_panda_shoot_idx = shooter_idx
+                                shooter_sid = panda.render
+                                is_panda_green = panda.is_panda_green
+                                panda.in_animation = true
+
+                                break
+                            end
+                        end
+
+                        local bullet_data = a.bullet_list[shooter_idx]
+                        local start_offset = a.bullet_start_offset[shooter_idx]
+                        local an, af = U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
+
+                        if this.tower.level == 4 and is_panda_green then
+                            af = not af
+                        end
+
+                        U.animation_start(this, an, af, store.tick_ts, 1, shooter_sid)
+
+                        last_target_pos = enemy.pos
+                        panda.shoot_cfg = {
+                            bullet_data = bullet_data,
+                            start_offset = start_offset,
+                            shooter_sid = shooter_sid,
+                            is_panda_green = is_panda_green,
+                            shoot_ts = a.ts + bullet_data.shoot_time
+                        }
+                    end
+                end
+            end
+        end
+
+        coroutine.yield()
+    end
+end
+
+function scripts.tower_pandas.remove(this, store, script)
+    if this.tower.sell then
+        for _, panda in pairs(this.pandas) do
+            if panda.status == "on_tower" then
+                local fx = E:create_entity("fx_tower_panda_disappear_wood")
+
+                fx.pos = V.vclone(this.pos)
+                fx.pos.x = fx.pos.x + this.render.sprites[panda.render].offset.x
+
+                if string.find(panda.soldier_type, "blue") then
+                    fx.pos.y = fx.pos.y + 30
+                elseif string.find(panda.soldier_type, "red") then
+                    fx.pos.y = fx.pos.y + 10
+                else
+                    fx.pos.y = fx.pos.y + 0
+                end
+
+                fx.render.sprites[1].flip_x = math.random() > 0.5
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+            end
+        end
+    end
+
+    return scripts.tower_barrack.remove(this, store, script)
+end
+
+scripts.bullet_tower_pandas_spawn_soldier = {}
+
+function scripts.bullet_tower_pandas_spawn_soldier.insert(this, store, script)
+    local b = this.bullet
+
+    b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
+    b.ts = store.tick_ts
+    b.last_pos = V.vclone(b.from)
+
+    return true
+end
+
+function scripts.bullet_tower_pandas_spawn_soldier.update(this, store, script)
+    local b = this.bullet
+
+    this.render.sprites[1].flip_x = b.from.x > b.to.x
+
+    while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+        coroutine.yield()
+
+        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+        local source_tower = store.entities[b.source_id]
+
+        if not source_tower then
+            queue_remove(store, this)
+        end
+    end
+
+    if b.target_id and store.entities[b.target_id] then
+        local t = store.entities[b.target_id]
+
+        t.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+        t.bullet_arrived = true
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.tower_pandas_ray = {}
+
+function scripts.tower_pandas_ray.update(this, store)
+    local b = this.bullet
+    local s = this.render.sprites[1]
+    local target = store.entities[b.target_id]
+    local dest = V.vclone(b.to)
+    local tower = this.tower_ref
+
+    local function update_sprite()
+        if this.track_target and target and target.motion then
+            local tpx, tpy = target.pos.x, target.pos.y
+
+            if not b.ignore_hit_offset then
+                tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+            end
+
+            local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+            if d > b.max_track_distance then
+                log.paranoid("(%s) ray_simple target (%s) out of max_track_distance", this.id, target.id)
+
+                target = nil
+            else
+                dest.x, dest.y = target.pos.x, target.pos.y
+
+                if target.unit and target.unit.hit_offset then
+                    dest.x, dest.y = dest.x + target.unit.hit_offset.x, dest.y + target.unit.hit_offset.y
+                end
+            end
+        end
+
+        local angle = V.angleTo(dest.x - this.pos.x, dest.y - this.pos.y)
+
+        s.r = angle
+
+        local dist_offset = 0
+
+        if this.dist_offset then
+            dist_offset = this.dist_offset
+        end
+
+        s.scale.x = (V.dist(dest.x, dest.y, this.pos.x, this.pos.y) + dist_offset) / this.image_width
+    end
+
+    if not b.ignore_hit_offset and this.track_target and target and target.motion then
+        b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+    end
+
+    s.scale = s.scale or V.v(1, 1)
+    s.ts = store.tick_ts
+
+    update_sprite()
+
+    if b.hit_time > fts(1) then
+        while store.tick_ts - s.ts < b.hit_time do
+            coroutine.yield()
+
+            if target and U.flag_has(target.vis.bans, F_RANGED) then
+                target = nil
+            end
+
+            if this.track_target then
+                update_sprite()
+            end
+        end
+    end
+
+    if target and b.damage_type ~= DAMAGE_NONE then
+        local d = SU.create_bullet_damage(b, target.id, this.id)
+
+        queue_damage(store, d)
+    end
+
+    local mods_added = {}
+
+    if target and (b.mod or b.mods) then
+        local mods = b.mods or {
+            b.mod
+        }
+
+        for _, mod_name in pairs(mods) do
+            local m = E:create_entity(mod_name)
+
+            m.modifier.target_id = b.target_id
+
+            if m.damage_from_bullet then
+                if m.dps then
+                    m.dps.damage_min = b.damage_min * b.damage_factor
+                    m.dps.damage_max = b.damage_max * b.damage_factor
+                else
+                    m.modifier.damage_min = b.damage_min * b.damage_factor
+                    m.modifier.damage_max = b.damage_max * b.damage_factor
+                end
+            else
+                local level
+
+                if not tower then
+                    level = this.bullet.level
+                else
+                    level = tower.level
+                    level = level or this.bullet.level
+                end
+
+                m.modifier.level = level
+            end
+
+            table.insert(mods_added, m)
+            queue_insert(store, m)
+        end
+    end
+
+    if b.hit_payload then
+        local hp
+
+        if type(b.hit_payload) == "string" then
+            hp = E:create_entity(b.hit_payload)
+        else
+            hp = b.hit_payload
+        end
+
+        if hp.aura then
+            hp.aura.level = this.bullet.level
+            hp.aura.source_id = this.id
+
+            if target then
+                hp.pos.x, hp.pos.y = target.pos.x, target.pos.y
+            else
+                hp.pos.x, hp.pos.y = dest.x, dest.y
+            end
+        else
+            hp.pos.x, hp.pos.y = dest.x, dest.y
+        end
+
+        queue_insert(store, hp)
+    end
+
+    local disable_hit = false
+
+    if this.hit_fx_only_no_target then
+        disable_hit = target ~= nil and not target.health.dead
+    end
+
+    local fx
+
+    if b.hit_fx and not disable_hit then
+        local is_air = target and band(target.vis.flags, F_FLYING) ~= 0
+
+        fx = E:create_entity(b.hit_fx)
+
+        if b.hit_fx_ignore_hit_offset and target and not is_air then
+            fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+        else
+            fx.pos.x, fx.pos.y = dest.x, dest.y
+        end
+
+        fx.render.sprites[1].ts = store.tick_ts
+        fx.render.sprites[1].r = s.r + math.rad(90)
+        fx.render.sprites[1].sort_y_offset = this.pos.y - fx.pos.y - 10
+
+        queue_insert(store, fx)
+    end
+
+    if this.ray_duration then
+        while store.tick_ts - s.ts < this.ray_duration do
+            if this.track_target then
+                update_sprite()
+            end
+
+            if tower and not store.entities[tower.id] then
+                queue_remove(store, this)
+
+                if fx then
+                    queue_remove(store, fx)
+                end
+
+                for key, value in pairs(mods_added) do
+                    queue_remove(store, value)
+                end
+
+                break
+            end
+
+            coroutine.yield()
+
+            s.hidden = false
+        end
+    else
+        while not U.animation_finished(this, 1) do
+            if tower and not store.entities[tower.id] then
+                queue_remove(store, this)
+
+                break
+            end
+
+            coroutine.yield()
+        end
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.bullet_tower_pandas_air = {}
+
+function scripts.bullet_tower_pandas_air.update(this, store, script)
+    local b = this.bullet
+    local s = this.render.sprites[1]
+    local mspeed = b.min_speed
+    local target
+
+    this.bounces = 0
+
+    local already_hit = {}
+    local ps
+    local new_target = false
+    local target_invalid = false
+
+    if b.particles_name then
+        ps = E:create_entity(b.particles_name)
+        ps.particle_system.track_id = this.id
+
+        queue_insert(store, ps)
+    end
+
+    ::label_1243_0::
+
+    if b.store and not b.target_id then
+        S:queue(this.sound_events.summon)
+
+        s.z = Z_OBJECTS
+        s.sort_y_offset = b.store_sort_y_offset
+
+        U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+        if ps then
+            ps.particle_system.emit = false
+        end
+    else
+        S:queue(this.sound_events.travel)
+
+        s.z = Z_BULLETS
+        s.sort_y_offset = nil
+
+        U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+
+        if ps then
+            ps.particle_system.emit = true
+        end
+    end
+
+    while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+        coroutine.yield()
+
+        if not target_invalid then
+            target = store.entities[b.target_id]
+        end
+
+        if target and not new_target then
+            local tpx, tpy = target.pos.x, target.pos.y
+
+            if not b.ignore_hit_offset then
+                tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+            end
+
+            local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+            if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
+                target_invalid = true
+                target = nil
+            end
+        end
+
+        if target and target.health and not target.health.dead then
+            if b.ignore_hit_offset then
+                b.to.x, b.to.y = target.pos.x, target.pos.y
+            else
+                b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+            end
+
+            new_target = false
+        end
+
+        mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+        mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+        b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+        this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+
+        if not b.ignore_rotation then
+            s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+        end
+
+        if ps then
+            ps.particle_system.emit_direction = s.r
+        end
+    end
+
+    while b.store and not b.target_id do
+        coroutine.yield()
+
+        if b.target_id then
+            mspeed = b.min_speed
+            new_target = true
+
+            goto label_1243_0
+        end
+    end
+
+    this.pos.x, this.pos.y = b.to.x, b.to.y
+
+    if target and not target.health.dead then
+        table.insert(already_hit, target.id)
+
+        local d = SU.create_bullet_damage(b, target.id, this.id)
+        local u = UP:get_upgrade("mage_spell_of_penetration")
+
+        if u and math.random() < u.chance then
+            d.damage_type = DAMAGE_TRUE
+        end
+
+        queue_damage(store, d)
+
+        if b.mod or b.mods then
+            local mods = b.mods or {
+                b.mod
+            }
+
+            for _, mod_name in pairs(mods) do
+                local m = E:create_entity(mod_name)
+
+                m.modifier.target_id = b.target_id
+                m.modifier.level = b.level
+
+                queue_insert(store, m)
+            end
+        end
+
+        if b.hit_payload then
+            local hp = b.hit_payload
+
+            hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
+
+            queue_insert(store, hp)
+        end
+    end
+
+    if b.payload then
+        local hp = b.payload
+
+        hp.pos.x, hp.pos.y = b.to.x, b.to.y
+
+        queue_insert(store, hp)
+    end
+
+    if b.hit_fx then
+        local sfx = E:create_entity(b.hit_fx)
+
+        sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+        sfx.render.sprites[1].ts = store.tick_ts
+        sfx.render.sprites[1].runs = 0
+
+        if target and sfx.render.sprites[1].size_names then
+            sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
+        end
+
+        queue_insert(store, sfx)
+    end
+
+    if this.bounces < this.max_bounces[b.level] then
+        local targets = U.find_enemies_in_range(store.entities, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans,
+            function(v)
+                return not table.contains(already_hit, v.id)
+            end)
+
+        if targets then
+            table.sort(targets, function(e1, e2)
+                return V.dist2(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) <
+                V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
+            end)
+
+            target = targets[1]
+            this.bounces = this.bounces + 1
+            b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+            b.target_id = target.id
+            b.min_speed = b.min_speed * this.bounce_speed_mult
+            b.damage_min = math.floor(b.damage_min * this.bounce_damage_mult)
+
+            if b.damage_min < 1 then
+                b.damage_min = 1
+            end
+
+            b.damage_max = math.floor(b.damage_max * this.bounce_damage_mult)
+
+            if b.damage_max < 1 then
+                b.damage_max = 1
+            end
+
+            goto label_1243_0
+        end
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.soldier_tower_pandas = {}
+
+function scripts.soldier_tower_pandas.get_info(this)
+    local attacks
+
+    if this.melee and this.melee.attacks then
+        attacks = this.melee.attacks
+    elseif this.ranged and this.ranged.attacks then
+        attacks = this.ranged.attacks
+    end
+
+    local min, max
+
+    for _, a in pairs(attacks) do
+        if a.damage_min then
+            local hit_times_mult = a.hit_times and #a.hit_times or 1
+
+            min, max = a.damage_min * hit_times_mult, a.damage_max * hit_times_mult
+
+            break
+        end
+    end
+
+    if this.unit and min then
+        min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+    end
+
+    if min and max then
+        min, max = math.ceil(min), math.ceil(max)
+    end
+
+    return {
+        type = STATS_TYPE_SOLDIER,
+        hp = this.health.hp,
+        hp_max = this.health.hp_max,
+        damage_min = min,
+        damage_max = max,
+        damage_icon = this.info.damage_icon,
+        armor = this.health.armor,
+        respawn = this.health.dead_lifetime
+    }
+end
+
+function scripts.soldier_tower_pandas.insert(this, store, script)
+    if this.melee then
+        this.melee.order = U.attack_order(this.melee.attacks)
+    end
+
+    if this.ranged then
+        this.ranged.order = U.attack_order(this.ranged.attacks)
+    end
+
+    if this.info and this.info.random_name_format then
+        this.info.i18n_key = string.format(string.gsub(this.info.random_name_format, "_NAME", ""),
+            math.random(this.info.random_name_count))
+    end
+
+    return true
+end
+
+function scripts.soldier_tower_pandas.update(this, store, script)
+    local tower = store.entities[this.soldier.tower_id]
+
+    U.sprites_hide(this, nil, nil, true)
+
+    this._spawn_pushed_bans = U.push_bans(this.vis, F_ALL)
+
+    while not this.bullet_arrived do
+        coroutine.yield()
+    end
+
+    U.sprites_show(this, nil, nil, true)
+
+    if this.do_level_up_smoke then
+        local smoke = E:create_entity("fx_panda_smoke_level_up")
+
+        smoke.pos = V.vclone(this.pos)
+        smoke.render.sprites[1].ts = store.tick_ts
+
+        queue_insert(store, smoke)
+    end
+
+    U.y_animation_play(this, "scape_end", nil, store.tick_ts, 1)
+
+    if this.nav_rally.new and V.dist(this.pos.x, this.pos.y, this.nav_rally.pos.x, this.nav_rally.pos.y) < 5 then
+        this.nav_rally.new = false
+    end
+
+    U.pop_bans(this.vis, this._spawn_pushed_bans)
+
+    this._spawn_pushed_bans = nil
+
+    local brk, stam, star
+
+    this.render.sprites[1].ts = store.tick_ts
+
+    local pow_i = this.powers and this.powers.thunder or this.powers.hat or this.powers.teleport or nil
+    local a_i
+
+    if this.ranged then
+        a_i = this.ranged.attacks[1]
+    elseif this.attacks then
+        a_i = this.attacks.list[1]
+    end
+
+    if this.render.sprites[1].name == "raise" then
+        if this.sound_events and this.sound_events.raise then
+            S:queue(this.sound_events.raise)
+        end
+
+        this.health_bar.hidden = true
+
+        U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
+
+        if not this.health.dead then
+            this.health_bar.hidden = nil
+        end
+    end
+
+    if tower.powers then
+        for ptn, p_tower in pairs(tower.powers) do
+            if p_tower.level > 0 then
+                for pn, p in pairs(this.powers) do
+                    if ptn == pn then
+                        SU.soldier_power_upgrade(this, pn)
+
+                        if p == pow_i then
+                            p.level = p_tower.level
+                            a_i.disabled = nil
+                            pow_i.cooldown = p.cooldown
+                            a_i.level = p.level
+                            a_i.cooldown = p.cooldown[p.level]
+                            a_i.max_range = p.range[p.level]
+
+                            if a_i.damage_min then
+                                a_i.damage_min = p.damage_min[p.level]
+                                a_i.damage_max = p.damage_max[p.level]
+                            end
+
+                            if a_i.nodes_offset_min then
+                                a_i.nodes_offset_min = p.nodes_offset_min[p.level]
+                                a_i.nodes_offset_max = p.nodes_offset_max[p.level]
+                            end
+
+                            a_i.ts = store.tick_ts - a_i.cooldown
+
+                            if p == this.powers.hat then
+                                a_i.bullet = "bullet_tower_pandas_air_soldier_special_lvl" .. p.level
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    local function can_thunder()
+        if not a_i then
+            return false
+        end
+
+        if not this.powers.thunder then
+            return false
+        end
+
+        if pow_i.level < 1 then
+            return false
+        end
+
+        if not (store.tick_ts - a_i.ts > a_i.cooldown) then
+            return false
+        end
+
+        local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans)
+
+        if not enemies or #enemies < a_i.min_targets then
+            SU.delay_attack(store, a_i, fts(10))
+
+            return false
+        end
+
+        return true
+    end
+
+    local function can_teleport()
+        if not a_i then
+            return false
+        end
+
+        if not this.powers.teleport then
+            return false
+        end
+
+        if pow_i.level < 1 then
+            return false
+        end
+
+        if not (store.tick_ts - a_i.ts > a_i.cooldown) then
+            return false
+        end
+
+        local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans,
+            function(e)
+                return not e.enemy.counts or not e.enemy.counts.mod_teleport or
+                e.enemy.counts.mod_teleport < a_i.max_times_applied
+            end)
+
+        if not enemies or #enemies < 1 then
+            SU.delay_attack(store, a_i, fts(10))
+
+            return false
+        end
+
+        return true
+    end
+
+    local function random_float(lower, greater)
+        return lower + math.random() * (greater - lower)
+    end
+
+    while true do
+        if this.health.dead then
+            if IS_KR5 then
+                SU.remove_modifiers(store, this)
+            end
+
+            this.back_to_tower_ts = store.tick_ts + this.death_go_back_delay
+
+            SU.y_soldier_death(store, this)
+
+            return
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            while this.nav_rally.new do
+                if SU.y_soldier_new_rally(store, this) then
+                    goto label_1248_0
+                end
+            end
+
+            SU.soldier_courage_upgrade(store, this)
+
+            if this.powers then
+                for pn, p in pairs(this.powers) do
+                    if p.changed then
+                        p.changed = nil
+
+                        SU.soldier_power_upgrade(this, pn)
+
+                        if p == pow_i then
+                            a_i.disabled = nil
+                            pow_i.cooldown = p.cooldown
+                            a_i.level = p.level
+                            a_i.cooldown = p.cooldown[p.level]
+                            a_i.max_range = p.range[p.level]
+
+                            if a_i.damage_min then
+                                a_i.damage_min = p.damage_min[p.level]
+                                a_i.damage_max = p.damage_max[p.level]
+                            end
+
+                            if a_i.nodes_offset_min then
+                                a_i.nodes_offset_min = p.nodes_offset_min[p.level]
+                                a_i.nodes_offset_max = p.nodes_offset_max[p.level]
+                            end
+
+                            if p.level == 1 then
+                                a_i.ts = store.tick_ts - a_i.cooldown
+                            end
+
+                            if p == this.powers.hat then
+                                a_i.bullet = "bullet_tower_pandas_air_soldier_special_lvl" .. p.level
+                            end
+                        end
+                    end
+                end
+            end
+
+            if can_thunder() then
+                local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags,
+                    a_i.vis_bans)
+
+                if not enemies or #enemies < a_i.min_targets then
+                    a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                else
+                    local grid_size = a_i.damage_area * 0.8
+                    local min_enemies = 2
+                    local crowded_pos, enemy_count = SU5.find_most_crowded_area(enemies, this.pos, a_i.max_range,
+                        grid_size, min_enemies)
+
+                    if crowded_pos then
+                        a_i.ts = store.tick_ts
+
+                        local an, af = U.animation_name_facing_point(this, a_i.animation, crowded_pos)
+
+                        U.animation_start(this, an, af, store.tick_ts, false)
+
+                        if this.sound_events and this.sound_events.thunder then
+                            S:queue(this.sound_events.thunder)
+                        end
+
+                        local start_ts = store.tick_ts
+
+                        for shoot_index = 1, #a_i.shoot_times do
+                            local shoot_time = a_i.shoot_times[shoot_index]
+
+                            while shoot_time > store.tick_ts - start_ts do
+                                coroutine.yield()
+                            end
+
+                            local fx = E:create_entity("fx_lightining_soldier_tower_pandas_blue")
+
+                            fx.pos = V.v(crowded_pos.x, crowded_pos.y)
+
+                            if shoot_index > 1 then
+                                fx.pos.x = fx.pos.x + math.random(-30, 30)
+                                fx.pos.y = fx.pos.y + math.random(-30, 30)
+                            end
+
+                            fx.render.sprites[1].ts = store.tick_ts
+
+                            queue_insert(store, fx)
+
+                            if shoot_index == 2 then
+                                local affected = U.find_enemies_in_range(store.entities, crowded_pos, 0, a_i.damage_area,
+                                    a_i.vis_flags, a_i.vis_bans)
+
+                                if affected then
+                                    for _, enemy in ipairs(affected) do
+                                        if enemy.health and not enemy.health.dead then
+                                            local d = E:create_entity("damage")
+
+                                            d.source_id = this.id
+                                            d.target_id = enemy.id
+
+                                            local dmin, dmax = a_i.damage_min, a_i.damage_max
+
+                                            d.value = math.random(dmin, dmax)
+                                            d.damage_type = a_i.damage_type
+
+                                            queue_damage(store, d)
+
+                                            local mod = E:create_entity(a_i.mod)
+
+                                            mod.modifier.target_id = enemy.id
+                                            mod.modifier.source_id = this.id
+
+                                            queue_insert(store, mod)
+                                        end
+                                    end
+                                end
+                            end
+                        end
+
+                        U.y_animation_wait(this)
+                        U.animation_start(this, "idle", nil, store.tick_ts, true)
+                    else
+                        a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                    end
+                end
+            end
+
+            if can_teleport() then
+                local target, targets = U.find_nearest_enemy(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags,
+                    a_i.vis_bans)
+
+                if not target or not targets or #targets < 1 then
+                    a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                else
+                    a_i.ts = store.tick_ts
+
+                    U.animation_start(this, a_i.animation, nil, store.tick_ts, false)
+
+                    if this.sound_events and this.sound_events.teleport then
+                        S:queue(this.sound_events.teleport)
+                    end
+
+                    U.y_wait(store, a_i.shoot_time)
+
+                    local target, targets = U.find_nearest_enemy(store.entities, this.pos, 0, a_i.max_range,
+                        a_i.vis_flags, a_i.vis_bans)
+
+                    if not target or #targets < 1 then
+                        a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                    else
+                        local num_targets = math.min(#targets, a_i.max_targets)
+                        local decal = E:create_entity(a_i.decal)
+
+                        decal.pos = V.vclone(this.pos)
+                        decal.render.sprites[1].ts = store.tick_ts
+
+                        queue_insert(store, decal)
+
+                        for i = 1, num_targets do
+                            local t = targets[i]
+                            local d = E:create_entity("damage")
+
+                            d.source_id = this.id
+                            d.target_id = t.id
+
+                            local dmin, dmax = a_i.damage_min, a_i.damage_max
+
+                            d.value = math.random(dmin, dmax)
+                            d.damage_type = a_i.damage_type
+
+                            queue_damage(store, d)
+
+                            local mod_teleport = E:create_entity(a_i.mod)
+
+                            mod_teleport.modifier.target_id = t.id
+                            mod_teleport.modifier.source_id = this.id
+                            mod_teleport.nodes_offset_min = a_i.nodes_offset_min
+                            mod_teleport.nodes_offset_max = a_i.nodes_offset_max
+                            mod_teleport.delay_start = random_float(fts(2), fts(5))
+                            mod_teleport.hold_time = random_float(0.2, 0.4)
+                            mod_teleport.delay_end = random_float(fts(2), fts(5))
+                            mod_teleport.begin_wait = random_float(0, 0.2)
+
+                            queue_insert(store, mod_teleport)
+                        end
+
+                        U.y_animation_wait(this)
+                        U.animation_start(this, "idle", nil, store.tick_ts, true)
+                    end
+                end
+            end
+
+            if this.ranged then
+                brk, star = SU.y_soldier_ranged_attacks(store, this)
+
+                if brk or star == A_DONE then
+                    goto label_1248_0
+                end
+            end
+
+            if this.melee then
+                brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+
+                if brk or stam == A_DONE or stam == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then
+                    goto label_1248_0
+                end
+            end
+
+            if this.melee.continue_in_cooldown and stam == A_IN_COOLDOWN then
+                -- block empty
+            elseif SU.soldier_go_back_step(store, this) then
+                -- block empty
+            else
+                SU.soldier_idle(store, this)
+                SU.soldier_regen(store, this)
+            end
+        end
+
+        ::label_1248_0::
+
+        coroutine.yield()
+    end
+end
+
+-- 熊猫_END
+
 return scripts

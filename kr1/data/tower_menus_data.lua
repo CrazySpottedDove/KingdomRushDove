@@ -1,59 +1,49 @@
 ﻿-- chunkname: @./kr1/data/tower_menus_data.lua
 local templates = require("data.tower_menus_data_templates")
+local scripts = require("kr1.data.tower_menus_data_scripts")
+local merge = scripts.merge
 
 return {
+    -- 塔位
     holder = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade, {
                 action_arg = "tower_build_archer",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0001",
                 place = 1,
                 preview = "archer",
                 tt_title = _("TOWER_ARCHER_1_NAME"),
                 tt_desc = _("TOWER_ARCHER_1_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_build_barrack",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0002",
                 place = 2,
                 preview = "barrack",
                 tt_title = _("TOWER_BARRACK_1_NAME"),
                 tt_desc = _("TOWER_BARRACK_1_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_build_mage",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0003",
                 place = 3,
                 preview = "mage",
                 tt_title = _("TOWER_MAGE_1_NAME"),
                 tt_desc = _("TOWER_MAGE_1_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_build_engineer",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0004",
                 place = 4,
                 preview = "engineer",
                 tt_title = _("TOWER_ENGINEER_1_NAME"),
                 tt_desc = _("TOWER_ENGINEER_1_DESCRIPTION")
-            }
+            })
         }
     },
     holder_blocked_jungle = {
         {
             {
-                check = "main_icons_0019",
                 action_arg = "tower_holder",
                 action = "tw_unblock",
                 halo = "glow_ico_main",
@@ -67,7 +57,6 @@ return {
     holder_blocked_underground = {
         {
             {
-                check = "main_icons_0019",
                 action_arg = "tower_holder",
                 action = "tw_unblock",
                 halo = "glow_ico_main",
@@ -78,579 +67,422 @@ return {
             }
         }
     },
+
+    -- 法师塔
     mage = {
+        -- 二级法师塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.common_upgrade, {
                 action_arg = "tower_mage_2",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_MAGE_2_NAME"),
                 tt_desc = _("TOWER_MAGE_2_DESCRIPTION")
-            },
+            }),
             templates.sell
         },
+        -- 三级法师塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.common_upgrade, {
                 action_arg = "tower_mage_3",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_MAGE_3_NAME"),
                 tt_desc = _("TOWER_MAGE_3_DESCRIPTION")
-            },
+            }),
             templates.sell
         },
+        -- 四级法师塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade, {
                 action_arg = "tower_arcane_wizard",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0006",
                 place = 5,
                 tt_title = _("TOWER_ARCANE_NAME"),
                 tt_desc = _("TOWER_ARCANE_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_sorcerer",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0007",
                 place = 6,
                 tt_title = _("TOWER_SORCERER_NAME"),
                 tt_desc = _("TOWER_SORCERER_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_sunray",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0018",
                 place = 7,
                 tt_title = _("日光之塔"),
                 tt_desc = _("巫师能借助日光之塔瓦解敌人，并炼制成金，提取力量。")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_necromancer",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0021",
                 place = 10,
                 tt_title = _("TOWER_NECROMANCER_NAME"),
                 tt_desc = _("TOWER_NECROMANCER_DESCRIPTION")
-            },
-            {
+            }),
+            merge(templates.upgrade3, {
                 check = "kr3_main_icons_0019",
                 action_arg = "tower_high_elven",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0107",
                 place = 11,
                 tt_title = _("TOWER_MAGE_HIGH_ELVEN_NAME"),
                 tt_desc = _("TOWER_MAGE_HIGH_ELVEN_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_archmage",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0022",
                 place = 12,
                 tt_title = _("TOWER_ARCHMAGE_NAME"),
                 tt_desc = _("TOWER_ARCHMAGE_DESCRIPTION")
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_wild_magus",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0106",
                 place = 13,
                 tt_title = _("TOWER_MAGE_WILD_MAGUS_NAME"),
                 tt_desc = _("TOWER_MAGE_WILD_MAGUS_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_faerie_dragon",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_special_icons_0124",
                 place = 14,
                 tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_NAME"),
                 tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_pixie",
-                action = "tw_upgrade",
                 image = "kr3_special_icons_0122",
                 place = 15,
-                halo = "glow_ico_main",
                 tt_title = _("ELVES_TOWER_PIXIE_NAME"),
                 tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_necromancer_lvl4",
-                action = "tw_upgrade",
                 image = "kr5_main_icons_0011",
                 place = 16,
-                halo = "glow_ico_main",
                 tt_title = _("TOWER_NECROMANCER_NAME"),
                 tt_desc = _("TOWER_NECROMANCER_1_DESCRIPTION"),
-                is_kr3 = true
-            },
+            }),
             templates.sell
         },
     },
+
+    -- 炮塔
     engineer = {
+        -- 二级炮塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.common_upgrade, {
                 action_arg = "tower_engineer_2",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_ENGINEER_2_NAME"),
                 tt_desc = _("TOWER_ENGINEER_2_DESCRIPTION")
-            },
+            }),
             templates.sell
         },
+        -- 三级炮塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.common_upgrade, {
                 action_arg = "tower_engineer_3",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_ENGINEER_3_NAME"),
                 tt_desc = _("TOWER_ENGINEER_3_DESCRIPTION")
-            },
+            }),
             templates.sell
         },
+        -- 四级炮塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade, {
                 action_arg = "tower_bfg",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0013",
                 place = 5,
                 tt_title = _("TOWER_BFG_NAME"),
                 tt_desc = _("TOWER_BFG_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_tesla",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0012",
                 place = 6,
                 tt_title = _("TOWER_TESLA_NAME"),
                 tt_desc = _("TOWER_TESLA_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_dwaarp",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0027",
                 place = 7,
                 tt_title = _("TOWER_DWAARP_NAME"),
                 tt_desc = _("TOWER_DWAARP_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_mech",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0028",
                 place = 10,
                 tt_title = _("TOWER_MECH_NAME"),
                 tt_desc = _("TOWER_MECH_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_frankenstein",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0039",
                 place = 11,
                 tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_NAME"),
                 tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_DESCRIPTION")
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_druid",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0111",
                 place = 12,
                 tt_title = _("TOWER_STONE_DRUID_NAME"),
                 tt_desc = _("TOWER_STONE_DRUID_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_entwood",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0110",
                 place = 13,
                 tt_title = _("TOWER_ENTWOOD_NAME"),
                 tt_desc = _("TOWER_ENTWOOD_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "main_icons_0019",
-                halo = "glow_ico_main",
+            }),
+            merge(templates.upgrade5, {
                 action_arg = "tower_tricannon_lvl4",
-                action = "tw_upgrade",
                 image = "kr5_main_icons_0004",
                 tt_title = _("TOWER_TRICANNON_NAME"),
                 tt_desc = _("TOWER_TRICANNON_1_DESCRIPTION"),
                 place = 14,
-                is_kr3 = true
-            },
-            templates.sell
-            , {
-            check = "main_icons_0019",
-            action_arg = "tower_demon_pit_lvl4",
-            action = "tw_upgrade",
-            halo = "glow_ico_main",
-            image = "kr5_main_icons_0007",
-            tt_title = _("TOWER_DEMON_PIT_NAME"),
-            tt_desc = _("TOWER_DEMON_PIT_1_DESCRIPTION"),
-            place = 16,
-            is_kr3 = true
-        }
+            }),
+            merge(templates.upgrade5, {
+                action_arg = "tower_demon_pit_lvl4",
+                image = "kr5_main_icons_0007",
+                tt_title = _("TOWER_DEMON_PIT_NAME"),
+                tt_desc = _("TOWER_DEMON_PIT_1_DESCRIPTION"),
+                place = 16,
+            }),
+            templates.sell,
         }
     },
+
+    -- 箭塔
     archer = {
+        -- 二级箭塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.common_upgrade, {
                 action_arg = "tower_archer_2",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_ARCHER_2_NAME"),
                 tt_desc = _("TOWER_ARCHER_2_DESCRIPTION")
-            },
+            }),
             templates.sell
         },
+        -- 三级箭塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.common_upgrade, {
                 action_arg = "tower_archer_3",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_ARCHER_3_NAME"),
                 tt_desc = _("TOWER_ARCHER_3_DESCRIPTION")
-            },
+            }),
             templates.sell
         },
+        -- 四级箭塔
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade, {
                 action_arg = "tower_ranger",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0011",
                 place = 5,
                 tt_title = _("TOWER_RANGERS_NAME"),
                 tt_desc = _("TOWER_RANGERS_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_musketeer",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0010",
                 place = 6,
                 tt_title = _("TOWER_MUSKETEERS_NAME"),
                 tt_desc = _("TOWER_MUSKETEERS_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_crossbow",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0025",
                 place = 7,
                 tt_title = _("TOWER_CROSSBOW_NAME"),
                 tt_desc = _("TOWER_CROSSBOW_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_totem",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0026",
                 place = 10,
                 tt_title = _("TOWER_TOTEM_NAME"),
                 tt_desc = _("TOWER_TOTEM_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_archer_dwarf",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0034",
                 place = 11,
                 tt_title = _("SPECIAL_DWARF_TOWER1_NAME"),
                 tt_desc = _("SPECIAL_DWARF_TOWER1_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_pirate_watchtower",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0032",
                 place = 12,
                 tt_title = _("TOWER_PIRATE_WATCHTOWER_NAME"),
                 tt_desc = _("TOWER_PIRATE_WATCHTOWER_DESCRIPTION")
-            },
-            templates.sell
-            , {
-            check = "kr3_main_icons_0019",
-            action_arg = "tower_arcane",
-            action = "tw_upgrade",
-            halo = "glow_ico_main",
-            image = "kr3_main_icons_0108",
-            place = 13,
-            tt_title = _("TOWER_ARCANE_ARCHER_NAME"),
-            tt_desc = _("TOWER_ARCANE_ARCHER_DESCRIPTION"),
-            is_kr3 = true
-        },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
+                action_arg = "tower_arcane",
+                image = "kr3_main_icons_0108",
+                place = 13,
+                tt_title = _("TOWER_ARCANE_ARCHER_NAME"),
+                tt_desc = _("TOWER_ARCANE_ARCHER_DESCRIPTION"),
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_silver",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0109",
                 place = 14,
                 tt_title = _("TOWER_SILVER_NAME"),
                 tt_desc = _("TOWER_SILVER_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade5, {
                 action_arg = "tower_dark_elf_lvl4",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr5_main_icons_0032",
+                place = 15,
                 tt_title = _("TOWER_DARK_ELF_NAME"),
                 tt_desc = _("TOWER_DARK_ELF_1_DESCRIPTION"),
-                place = 15,
-                is_kr3 = true
-            }
+            }),
+            templates.sell
         }
     },
+
+    -- 兵营
     barrack = {
+        -- 二级兵营
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.common_upgrade, {
                 action_arg = "tower_barrack_2",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_BARRACK_2_NAME"),
                 tt_desc = _("TOWER_BARRACK_2_DESCRIPTION")
-            },
+            }),
             templates.rally,
             templates.sell
         },
+        -- 三级兵营
         {
-            {
-                check = "main_icons_0019",
+            table.merge(templates.common_upgrade, {
                 action_arg = "tower_barrack_3",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
-                image = "main_icons_0005",
-                place = 5,
                 tt_title = _("TOWER_BARRACK_3_NAME"),
                 tt_desc = _("TOWER_BARRACK_3_DESCRIPTION")
-            },
+            }),
             templates.rally,
             templates.sell
         },
+        -- 四级兵营
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade, {
                 action_arg = "tower_paladin",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0008",
                 place = 5,
                 tt_title = _("TOWER_PALADINS_NAME"),
                 tt_desc = _("TOWER_PALADINS_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_barbarian",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0009",
                 place = 6,
                 tt_title = _("TOWER_BARBARIANS_NAME"),
                 tt_desc = _("TOWER_BARBARIANS_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_elf",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0011",
                 place = 7,
                 tt_title = _("精灵哨站"),
                 tt_desc = _("训练精灵游侠，弓与剑的大师。脆弱无比，但也能迅捷地取敌性命。")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_templar",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0023",
                 place = 10,
                 tt_title = _("TOWER_TEMPLAR_NAME"),
                 tt_desc = _("TOWER_TEMPLAR_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_assassin",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0024",
                 place = 11,
                 tt_title = _("TOWER_ASSASSIN_NAME"),
                 tt_desc = _("TOWER_ASSASSIN_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_barrack_dwarf",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0015",
                 place = 12,
                 tt_title = _("TOWER_BARRACK_DWARF_NAME"),
                 tt_desc = _("TOWER_BARRACK_DWARF_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_barrack_amazonas",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0033",
                 place = 13,
                 tt_title = _("SPECIAL_AMAZONAS_NAME"),
                 tt_desc = _("SPECIAL_AMAZONAS_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_barrack_mercenaries",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0030",
                 place = 14,
                 tt_title = _("SPECIAL_DJINN_NAME"),
                 tt_desc = _("SPECIAL_DJINN_DESCRIPTION")
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade, {
                 action_arg = "tower_barrack_pirates",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0032",
                 place = 15,
                 tt_title = _("TOWER_BARRACK_PIRATES_NAME"),
                 tt_desc = _("TOWER_BARRACK_PIRATES_DESCRIPTION")
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_blade",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0104",
                 place = 16,
                 tt_title = _("TOWER_BARRACKS_BLADE_NAME"),
                 tt_desc = _("TOWER_BARRACKS_BLADE_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_forest",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0105",
                 place = 17,
                 tt_title = _("TOWER_FOREST_KEEPERS_NAME"),
                 tt_desc = _("TOWER_FOREST_KEEPERS_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_drow",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_special_icons_0121",
                 place = 18,
                 tt_title = _("ELVES_TOWER_SPECIAL_DROW_NAME"),
                 tt_desc = _("ELVES_TOWER_SPECIAL_DROW_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "kr3_main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_ewok",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0112",
                 place = 19,
                 tt_title = _("ELVES_EWOK_NAME"),
                 tt_desc = _("ELVES_EWOK_DESCRIPTION"),
-                is_kr3 = true
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade3, {
                 action_arg = "tower_baby_ashbite",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0113",
                 place = 20,
                 tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
                 tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION"),
-                is_kr3 = true
-            },
+            }),
+            merge(templates.upgrade5, {
+                action_arg = "tower_pandas_lvl4",
+                image = "main_icons_0049",
+                place = 21,
+                tt_title = _("TOWER_PANDAS_NAME"),
+                tt_desc = _("TOWER_PANDAS_1_DESCRIPTION")
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     ranger = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "poison",
-                action = "upgrade_power",
                 image = "special_icons_0008",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ArcherRangerPoisonTaunt" },
                 tt_phrase = _("TOWER_RANGERS_POISON_NOTE"),
                 tt_list =
@@ -668,14 +500,11 @@ return {
                         tt_desc = _("TOWER_RANGERS_POISON_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "thorn",
-                action = "upgrade_power",
                 image = "special_icons_0002",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ArcherRangerThornTaunt" },
                 tt_phrase = _("TOWER_RANGERS_THORNS_NOTE"),
                 tt_list =
@@ -693,19 +522,17 @@ return {
                         tt_desc = _("TOWER_RANGERS_THORNS_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     musketeer = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "sniper",
-                action = "upgrade_power",
                 image = "special_icons_0003",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ArcherMusketeerSniperTaunt" },
                 tt_phrase = _("TOWER_MUSKETEERS_SNIPER_NOTE"),
                 tt_list =
@@ -723,14 +550,11 @@ return {
                         tt_desc = _("TOWER_MUSKETEERS_SNIPER_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "shrapnel",
-                action = "upgrade_power",
                 image = "special_icons_0005",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ArcherMusketeerShrapnelTaunt" },
                 tt_phrase = _("TOWER_MUSKETEERS_SHRAPNEL_NOTE"),
                 tt_list =
@@ -748,19 +572,17 @@ return {
                         tt_desc = _("TOWER_MUSKETEERS_SHRAPNEL_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     crossbow = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "multishot",
-                action = "upgrade_power",
                 image = "special_icons_0028",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "CrossbowTauntMultishoot" },
                 tt_phrase = _("TOWER_CROSSBOW_BARRAGE_NOTE"),
                 tt_list =
@@ -778,14 +600,11 @@ return {
                         tt_desc = _("TOWER_CROSSBOW_BARRAGE_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "eagle",
-                action = "upgrade_power",
                 image = "special_icons_0029",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "CrossbowTauntEagle" },
                 tt_phrase = _("TOWER_CROSSBOW_FALCONER_NOTE"),
                 tt_list =
@@ -803,19 +622,17 @@ return {
                         tt_desc = _("TOWER_CROSSBOW_FALCONER_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     totem = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "weakness",
-                action = "upgrade_power",
                 image = "special_icons_0030",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "TotemTauntTotemOne" },
                 tt_phrase = _("TOWER_TOTEM_WEAKNESS_NOTE"),
                 tt_list =
@@ -833,14 +650,11 @@ return {
                         tt_desc = _("TOWER_TOTEM_WEAKNESS_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "silence",
-                action = "upgrade_power",
                 image = "special_icons_0031",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "TotemTauntTotemTwo" },
                 tt_phrase = _("TOWER_TOTEM_SPIRITS_NOTE"),
                 tt_list =
@@ -858,19 +672,17 @@ return {
                         tt_desc = _("TOWER_TOTEM_SPIRITS_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     archer_dwarf = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "barrel",
-                action = "upgrade_power",
                 image = "special_icons_0044",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "DwarfArcherTaunt1" },
                 tt_phrase = _("SPECIAL_DWARF_TOWER1_UPGRADE_1_NOTE"),
                 tt_list =
@@ -888,14 +700,11 @@ return {
                         tt_desc = _("SPECIAL_DWARF_TOWER1_UPGRADE_1_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "extra_damage",
-                action = "upgrade_power",
                 image = "special_icons_0043",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "DwarfArcherTaunt2" },
                 tt_phrase = _("SPECIAL_DWARF_TOWER1_UPGRADE_2_NOTE"),
                 tt_list =
@@ -913,19 +722,17 @@ return {
                         tt_desc = _("SPECIAL_DWARF_TOWER1_UPGRADE_2_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     arcane_wizard = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "disintegrate",
-                action = "upgrade_power",
                 image = "special_icons_0015",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "MageArcaneDesintegrateTaunt" },
                 tt_phrase = _("TOWER_ARCANE_DESINTEGRATE_NOTE"),
                 tt_list =
@@ -943,14 +750,11 @@ return {
                         tt_desc = _("TOWER_ARCANE_DESINTEGRATE_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "teleport",
-                action = "upgrade_power",
                 image = "special_icons_0016",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "MageArcaneTeleporthTaunt" },
                 tt_phrase = _("TOWER_ARCANE_TELEPORT_NOTE_1"),
                 tt_list =
@@ -968,19 +772,17 @@ return {
                         tt_desc = _("TOWER_ARCANE_TELEPORT_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     sorcerer = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "polymorph",
-                action = "upgrade_power",
                 image = "special_icons_0001",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "Sheep" },
                 tt_phrase = _("TOWER_SORCERER_POLIMORPH_NOTE"),
                 tt_list =
@@ -998,11 +800,8 @@ return {
                         tt_desc = _("TOWER_SORCERER_POLIMORPH_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
-                action = "upgrade_power",
-                halo = "glow_ico_special",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "elemental",
                 image = "special_icons_0004",
                 place = 2,
@@ -1022,20 +821,18 @@ return {
                         tt_desc = _("TOWER_SORCERER_ELEMENTAL_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     archmage = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "twister",
-                action = "upgrade_power",
                 image = "special_icons_0032",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ArchmageTauntTwister" },
                 tt_phrase = _("TOWER_ARCHMAGE_TWISTER_NOTE"),
                 tt_list =
@@ -1053,14 +850,11 @@ return {
                         tt_desc = _("TOWER_ARCHMAGE_TWISTER_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "blast",
-                action = "upgrade_power",
                 image = "special_icons_0033",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ArchmageTauntExplosion" },
                 tt_phrase = _("TOWER_ARCHMAGE_CRITICAL_NOTE"),
                 tt_list =
@@ -1078,19 +872,17 @@ return {
                         tt_desc = _("TOWER_ARCHMAGE_CRITICAL_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     necromancer = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "pestilence",
-                action = "upgrade_power",
                 image = "special_icons_0035",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "NecromancerTauntPestilence" },
                 tt_phrase = _("TOWER_NECROMANCER_PESTILENCE_NOTE"),
                 tt_list =
@@ -1108,14 +900,11 @@ return {
                         tt_desc = _("TOWER_NECROMANCER_PESTILENCE_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "rider",
-                action = "upgrade_power",
                 image = "special_icons_0034",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "NecromancerTauntDeath_Knight" },
                 tt_phrase = _("TOWER_NECROMANCER_RIDER_NOTE"),
                 tt_list =
@@ -1133,20 +922,18 @@ return {
                         tt_desc = _("TOWER_NECROMANCER_RIDER_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     bfg = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "missile",
-                action = "upgrade_power",
                 image = "special_icons_0017",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "EngineerBfgMissileTaunt" },
                 tt_phrase = _("TOWER_BFG_MISSILE_NOTE_1"),
                 tt_list =
@@ -1164,14 +951,11 @@ return {
                         tt_desc = _("TOWER_BFG_MISSILE_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "cluster",
-                action = "upgrade_power",
                 image = "special_icons_0018",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "EngineerBfgClusterTaunt" },
                 tt_phrase = _("TOWER_BFG_CLUSTER_NOTE_1"),
                 tt_list =
@@ -1189,74 +973,67 @@ return {
                         tt_desc = _("TOWER_BFG_CLUSTER_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     tesla = {
         {
-            {
-                check = "special_icons_0020",
-                action_arg = "bolt",
-                action = "upgrade_power",
-                image = "special_icons_0011",
-                place = 1,
-                halo = "glow_ico_special",
-                sounds = { "EngineerTeslaChargedBoltTaunt" },
-                tt_phrase = _("TOWER_TESLA_CHARGED_BOLT_NOTE"),
-                tt_list =
-                {
+            merge(templates.upgrade_power, {
+                    action_arg = "bolt",
+                    image = "special_icons_0011",
+                    place = 1,
+                    sounds = { "EngineerTeslaChargedBoltTaunt" },
+                    tt_phrase = _("TOWER_TESLA_CHARGED_BOLT_NOTE"),
+                    tt_list =
                     {
-                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_1"),
-                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_1")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_2"),
-                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_2")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_3"),
-                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_3")
+                        {
+                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_1"),
+                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_1")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_2"),
+                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_2")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_3"),
+                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_3")
+                        }
                     }
-                }
-            },
-            {
-                check = "special_icons_0020",
-                action_arg = "overcharge",
-                action = "upgrade_power",
-                image = "special_icons_0010",
-                place = 2,
-                halo = "glow_ico_special",
-                sounds = { "EngineerTeslaOverchargeTaunt" },
-                tt_phrase = _("TOWER_TESLA_OVERCHARGE_NOTE"),
-                tt_list =
+                },
                 {
+                    action_arg = "overcharge",
+                    image = "special_icons_0010",
+                    place = 2,
+                    sounds = { "EngineerTeslaOverchargeTaunt" },
+                    tt_phrase = _("TOWER_TESLA_OVERCHARGE_NOTE"),
+                    tt_list =
                     {
-                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_1"),
-                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_1")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_2"),
-                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_2")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_3"),
-                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_3")
+                        {
+                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_1"),
+                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_1")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_2"),
+                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_2")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_3"),
+                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_3")
+                        }
                     }
-                }
-            },
+                }),
             templates.sell
         }
     },
+
     dwaarp = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "drill",
-                action = "upgrade_power",
                 image = "special_icons_0036",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "EarthquakeTauntDrill" },
                 tt_phrase = _("TOWER_DWAARP_DRILL_NOTE"),
                 tt_list =
@@ -1274,14 +1051,11 @@ return {
                         tt_desc = _("TOWER_DWAARP_DRILL_DESCRIPTION_3_NOFMT")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "lava",
-                action = "upgrade_power",
                 image = "special_icons_0037",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "EarthquakeTauntScorched" },
                 tt_phrase = _("TOWER_DWAARP_BLAST_NOTE"),
                 tt_list =
@@ -1299,19 +1073,17 @@ return {
                         tt_desc = _("TOWER_DWAARP_BLAST_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     mecha = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "missile",
-                action = "upgrade_power",
                 image = "special_icons_0038",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "MechTauntMissile" },
                 tt_phrase = _("TOWER_MECH_MISSILE_NOTE"),
                 tt_list =
@@ -1329,14 +1101,11 @@ return {
                         tt_desc = _("TOWER_MECH_MISSILE_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "oil",
-                action = "upgrade_power",
                 image = "special_icons_0039",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "MechTauntSlow" },
                 tt_phrase = _("TOWER_MECH_WASTE_NOTE"),
                 tt_list =
@@ -1354,20 +1123,18 @@ return {
                         tt_desc = _("TOWER_MECH_WASTE_DESCRIPTION_3_NOFMT")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     paladin = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "healing",
-                action = "upgrade_power",
                 image = "special_icons_0007",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "BarrackPaladinHealingTaunt" },
                 tt_phrase = _("TOWER_PALADINS_HEALING_NOTE"),
                 tt_list =
@@ -1385,14 +1152,11 @@ return {
                         tt_desc = _("TOWER_PALADINS_HEALING_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "shield",
-                action = "upgrade_power",
                 image = "special_icons_0009",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "BarrackPaladinShieldTaunt" },
                 tt_phrase = _("TOWER_PALADINS_SHIELD_NOTE"),
                 tt_list =
@@ -1410,14 +1174,11 @@ return {
                         tt_desc = _("TOWER_PALADINS_SHIELD_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "holystrike",
-                action = "upgrade_power",
                 image = "special_icons_0006",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "BarrackPaladinHolyStrikeTaunt" },
                 tt_phrase = _("TOWER_PALADINS_HOLY_STRIKE_NOTE"),
                 tt_list =
@@ -1435,20 +1196,18 @@ return {
                         tt_desc = _("TOWER_PALADINS_HOLY_STRIKE_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     barbarian = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "dual",
-                action = "upgrade_power",
                 image = "special_icons_0012",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "BarrackBarbarianDoubleAxesTaunt" },
                 tt_phrase = _("TOWER_BARBARIANS_DOUBLE_AXE_NOTE_1"),
                 tt_list =
@@ -1466,14 +1225,11 @@ return {
                         tt_desc = _("TOWER_BARBARIANS_DOUBLE_AXE_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "twister",
-                action = "upgrade_power",
                 image = "special_icons_0013",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "BarrackBarbarianTwisterTaunt" },
                 tt_phrase = _("TOWER_BARBARIANS_TWISTER_NOTE"),
                 tt_list =
@@ -1491,14 +1247,11 @@ return {
                         tt_desc = _("TOWER_BARBARIANS_TWISTER_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "throwing",
-                action = "upgrade_power",
                 image = "special_icons_0019",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "BarrackBarbarianThrowingAxesTaunt" },
                 tt_phrase = _("TOWER_BARBARIANS_THROWING_AXES_NOTE_1"),
                 tt_list =
@@ -1516,35 +1269,31 @@ return {
                         tt_desc = _("TOWER_BARBARIANS_THROWING_AXES_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     holder_elf = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade_power, {
                 action_arg = "tower_elf",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0015",
                 place = 5,
                 tt_title = _("SPECIAL_ELF_REPAIR_NAME"),
                 tt_desc = _("SPECIAL_ELF_REPAIR_DESCRIPTION")
-            },
+            }),
             templates.sell
         }
     },
+
     elf = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "bleed",
-                action = "upgrade_power",
                 image = "special_icons_0014",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "ElfBleed" },
                 tt_phrase = _("你会流血吗？"),
                 tt_list =
@@ -1562,14 +1311,11 @@ return {
                         tt_desc = _("使精灵的射击附带流血效果，在三秒内造成45点伤害")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "cripple",
-                action = "upgrade_power",
                 image = "special_icons_0024",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "ElfCripple" },
                 tt_phrase = _("他们走不远的……"),
                 tt_list =
@@ -1587,30 +1333,24 @@ return {
                         tt_desc = _("游侠有50%几率射出精灵箭矢，造成100点真实伤害与40%的减速，持续2.5秒。")
                     }
                 }
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.buy_soldier, {
                 action_arg = "soldier_elf",
-                action = "tw_buy_soldier",
-                halo = "glow_ico_main",
                 image = "main_icons_0016",
-                place = 5,
                 tt_title = _("SPECIAL_ELF_NAME"),
                 tt_desc = _("SPECIAL_ELF_DESCRIPTION")
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     templar = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "holygrail",
-                action = "upgrade_power",
                 image = "special_icons_0025",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "TemplarTauntTauntOne" },
                 tt_phrase = _("TOWER_TEMPLAR_HOLY_NOTE"),
                 tt_list =
@@ -1628,14 +1368,11 @@ return {
                         tt_desc = _("TOWER_TEMPLAR_HOLY_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "extralife",
-                action = "upgrade_power",
                 image = "special_icons_0027",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "TemplarTauntTauntTwo" },
                 tt_phrase = _("TOWER_TEMPLAR_TOUGHNESS_NOTE"),
                 tt_list =
@@ -1653,14 +1390,11 @@ return {
                         tt_desc = _("TOWER_TEMPLAR_TOUGHNESS_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "blood",
-                action = "upgrade_power",
                 image = "special_icons_0026",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "TemplarTauntThree" },
                 tt_phrase = _("TOWER_TEMPLAR_ARTERIAL_NOTE"),
                 tt_list =
@@ -1678,20 +1412,18 @@ return {
                         tt_desc = _("TOWER_TEMPLAR_ARTERIAL_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     assassin = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "sneak",
-                action = "upgrade_power",
                 image = "special_icons_0024",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "AssassinTauntSneak" },
                 tt_phrase = _("TOWER_ASSASSIN_SNEAK_NOTE"),
                 tt_list =
@@ -1709,14 +1441,11 @@ return {
                         tt_desc = _("TOWER_ASSASSIN_SNEAK_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "pickpocket",
-                action = "upgrade_power",
                 image = "special_icons_0022",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "AssassinTauntGold" },
                 tt_phrase = _("TOWER_ASSASSIN_PICK_NOTE"),
                 tt_list =
@@ -1734,14 +1463,11 @@ return {
                         tt_desc = _("TOWER_ASSASSIN_PICK_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "counter",
-                action = "upgrade_power",
                 image = "special_icons_0023",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "AssassinTauntCounter" },
                 tt_phrase = _("TOWER_ASSASSIN_COUNTER_NOTE"),
                 tt_list =
@@ -1759,20 +1485,18 @@ return {
                         tt_desc = _("TOWER_ASSASSIN_COUNTER_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     barrack_dwarf = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "hammer",
-                action = "upgrade_power",
                 image = "special_icons_0040",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "DwarfTaunt" },
                 tt_phrase = _("SPECIAL_DWARF_BARRACKS_UPGRADE_1_NOTE"),
                 tt_list =
@@ -1790,14 +1514,11 @@ return {
                         tt_desc = _("SPECIAL_DWARF_BARRACKS_UPGRADE_1_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "armor",
-                action = "upgrade_power",
                 image = "special_icons_0041",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "DwarfTaunt" },
                 tt_phrase = _("SPECIAL_DWARF_BARRACKS_UPGRADE_2_NOTE"),
                 tt_list =
@@ -1811,14 +1532,11 @@ return {
                         tt_desc = _("SPECIAL_DWARF_BARRACKS_UPGRADE_2_DESCRIPTION_2")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "beer",
-                action = "upgrade_power",
                 image = "special_icons_0042",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "DwarfTaunt" },
                 tt_phrase = _("SPECIAL_DWARF_BARRACKS_UPGRADE_3_NOTE"),
                 tt_list =
@@ -1836,20 +1554,18 @@ return {
                         tt_desc = _("SPECIAL_DWARF_BARRACKS_UPGRADE_3_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     mercenaries_amazonas = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "valkyrie",
-                action = "upgrade_power",
                 image = "special_icons_0014",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "AmazonTaunt" },
                 tt_phrase = _("解脱敌人是一种荣耀。"),
                 tt_list =
@@ -1860,14 +1576,11 @@ return {
                             "女战士提升50点生命与10点攻击力，且每杀死一个敌人，提升2点攻击力、3点生命和1点移速，最高提升150点生命，60点攻击与50点移速，死亡后移除。")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "whirlwind",
-                action = "upgrade_power",
                 image = "special_icons_0013",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "AmazonTaunt" },
                 tt_phrase = _("横扫六合！"),
                 tt_list =
@@ -1877,9 +1590,8 @@ return {
                         tt_desc = _("使女战士有30%几率释放旋风斩，造成24-46点范围伤害")
                     }
                 }
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "soldier_amazona",
                 action = "tw_buy_soldier",
                 halo = "glow_ico_main",
@@ -1887,15 +1599,15 @@ return {
                 place = 5,
                 tt_title = _("SPECIAL_AMAZONAS_WARRIOR_NAME"),
                 tt_desc = _("SPECIAL_AMAZONAS_WARRIOR_DESCRIPTION")
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     holder_sasquash = {
         {
             {
-                check = "main_icons_0019",
                 halo = "glow_ico_main",
                 action = "tw_none",
                 image = "main_icons_0017",
@@ -1905,31 +1617,27 @@ return {
             }
         }
     },
+
     sasquash = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.buy_soldier, {
                 action_arg = "soldier_sasquash",
-                action = "tw_buy_soldier",
-                halo = "glow_ico_main",
                 image = "main_icons_0017",
                 place = 5,
                 tt_title = _("SPECIAL_SASQUASH_NAME"),
                 tt_desc = _("SPECIAL_SASQUASH_DESCRIPTION")
-            },
+            }),
             templates.rally
         }
     },
+
     sunray = {
         {
-            {
-                check = "main_icons_0019",
-                action = "upgrade_power",
+            merge(templates.upgrade_power, {
                 no_upgrade_lights = true,
                 image = "main_icons_0018",
                 action_arg = "ray",
                 place = 5,
-                halo = "glow_ico_main",
                 sounds = { "MageSorcererAshesToAshesTaunt" },
                 tt_phrase = _("SPECIAL_SUNRAY_NOTE"),
                 tt_list =
@@ -1951,14 +1659,11 @@ return {
                         tt_desc = _("SPECIAL_SUNRAY_UPGRADE_DESCRIPTION_1")
                     }
                 }
-            },
-            {
-                check = "main_icons_0019",
-                action = "upgrade_power",
+            }),
+            merge(templates.upgrade_power, {
                 image = "main_icons_0019",
                 action_arg = "manual",
                 place = 6,
-                halo = "glow_ico_main",
                 sounds = { "MageSorcererAshesToAshesTaunt" },
                 tt_phrase = _("日光啊，听我号令！"),
                 tt_list =
@@ -1969,14 +1674,11 @@ return {
                             "手动模式无射程限制，且攻击附带最高额外200点伤害的10%斩杀效果。只有对单时，日光才能发挥全部威力。")
                     }
                 }
-            },
-            {
-                check = "main_icons_0019",
-                action = "upgrade_power",
+            }),
+            merge(templates.upgrade_power, {
                 image = "main_icons_0020",
                 action_arg = "auto",
                 place = 7,
-                halo = "glow_ico_main",
                 sounds = { "MageSorcererAshesToAshesTaunt" },
                 tt_phrase = _("日光啊，瓦解它们！"),
                 tt_list =
@@ -1987,30 +1689,25 @@ return {
                             "自动模式射程有限，且充能速度加快40%，伤害下降25%。只有对单时，日光才能发挥全部威力。")
                     }
                 }
-            },
+            }),
             templates.point,
             templates.sell
         }
     },
+
     mercenaries_desert = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.buy_soldier, {
                 action_arg = "soldier_djinn",
-                action = "tw_buy_soldier",
-                halo = "glow_ico_main",
                 image = "main_icons_0030",
                 place = 5,
                 tt_title = _("SPECIAL_DJINN_NAME"),
                 tt_desc = _("SPECIAL_DJINN_DESCRIPTION")
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "djspell",
-                action = "upgrade_power",
                 image = "special_icons_0025",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "GenieTaunt" },
                 tt_phrase = _("TOWER_BARRACK_MERCENARIES_DJSPELL_NOTE_1"),
                 tt_list =
@@ -2028,14 +1725,11 @@ return {
                         tt_desc = _("TOWER_BARRACK_MERCENARIES_DJSPELL_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "djshock",
-                action = "upgrade_power",
                 image = "special_icons_0016",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "GenieTaunt" },
                 tt_phrase = _("TOWER_BARRACK_MERCENARIES_DJSHOCK_NOTE_1"),
                 tt_list =
@@ -2053,20 +1747,18 @@ return {
                         tt_desc = _("TOWER_BARRACK_MERCENARIES_DJSHOCK_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     mercenaries_pirates = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "bigbomb",
-                action = "upgrade_power",
                 image = "special_icons_0018",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "PiratesTaunt" },
                 tt_phrase = _("TOWER_BARRACK_PIRATES_BIGBOMB_NOTE_1"),
                 tt_list =
@@ -2084,24 +1776,18 @@ return {
                         tt_desc = _("TOWER_BARRACK_PIRATES_BIGBOMB_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "main_icons_0019",
+            }),
+            merge(templates.buy_soldier, {
                 action_arg = "soldier_pirate_flamer",
-                action = "tw_buy_soldier",
-                halo = "glow_ico_main",
                 image = "main_icons_0032",
                 place = 5,
                 tt_title = _("SPECIAL_PIRATE_FLAMER_NAME"),
                 tt_desc = _("SPECIAL_PIRATE_FLAMER_DESCRIPTION")
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "quickup",
-                action = "upgrade_power",
                 image = "special_icons_0025",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "PiratesTaunt" },
                 tt_phrase = _("TOWER_BARRACK_PIRATES_QUICKUP_NOTE_1"),
                 tt_list =
@@ -2115,20 +1801,18 @@ return {
                         tt_desc = _("TOWER_BARRACK_PIRATES_QUICKUP_DESCRIPTION_2")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     pirate_watchtower = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "reduce_cooldown",
-                action = "upgrade_power",
                 image = "special_icons_0045",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "PirateTowerTaunt1" },
                 tt_phrase = _("SPECIAL_PIRATES_WATCHTOWER_UPGRADE_1_NOTE"),
                 tt_list =
@@ -2146,14 +1830,11 @@ return {
                         tt_desc = _("SPECIAL_PIRATES_WATCHTOWER_UPGRADE_1_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "parrot",
-                action = "upgrade_power",
                 image = "special_icons_0046",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "PirateTowerTaunt2" },
                 tt_phrase = _("SPECIAL_PIRATES_WATCHTOWER_UPGRADE_2_NOTE"),
                 tt_list =
@@ -2167,31 +1848,27 @@ return {
                         tt_desc = _("SPECIAL_PIRATES_WATCHTOWER_UPGRADE_2_DESCRIPTION_2")
                     }
                 }
-            },
+            }),
             templates.sell
         }
     },
+
     holder_neptune = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade_power, {
                 action_arg = "tower_neptune",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0015",
                 place = 5,
                 tt_title = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_NAME"),
                 tt_desc = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_DESCRIPTION")
-            }
+            })
         }
     },
+
     neptune = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "ray",
-                action = "upgrade_power",
-                halo = "glow_ico_special",
                 image = "special_icons_0047",
                 place = 5,
                 tt_list =
@@ -2209,25 +1886,17 @@ return {
                         tt_desc = _("SPECIAL_NEPTUNE_TOWER_UPGRADE_DESCRIPTION_1")
                     }
                 }
-            },
-            {
-                check = "sub_icons_0003",
-                action = "tw_point",
-                halo = "glow_ico_sub",
-                image = "sub_icons_0002",
-                place = 8
-            }
+            }),
+            templates.point
         }
     },
+
     frankenstein = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power, {
                 action_arg = "lightning",
-                action = "upgrade_power",
                 image = "special_icons_0048",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "HWFrankensteinUpgradeLightning" },
                 tt_phrase = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_NOTE"),
                 tt_list =
@@ -2245,14 +1914,11 @@ return {
                         tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_DESCRIPTION_3")
                     }
                 }
-            },
-            {
-                check = "special_icons_0020",
+            }),
+            merge(templates.upgrade_power, {
                 action_arg = "frankie",
-                action = "upgrade_power",
                 image = "special_icons_0049",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "HWFrankensteinUpgradeFrankenstein" },
                 tt_phrase = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_NOTE"),
                 tt_list =
@@ -2270,21 +1936,22 @@ return {
                         tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_DESCRIPTION_3")
                     }
                 }
-            },
+            }),
             templates.rally,
             templates.sell
         }
     },
-    -- kr3 waited
+
+    --[[
+        三代
+    --]]
+
     blade = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "perfect_parry",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0105",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "ElvesBarrackBladesingerPerfectParryTaunt" },
                 tt_phrase = _("TOWER_BLADE_PERFECT_PARRY_NOTE"),
                 tt_list =
@@ -2301,16 +1968,12 @@ return {
                         tt_title = _("TOWER_BLADE_PERFECT_PARRY_NAME_3"),
                         tt_desc = _("TOWER_BLADE_PERFECT_PARRY_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "blade_dance",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0104",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "ElvesBarrackBladesingerBladeDanceTaunt" },
                 tt_phrase = _("TOWER_BLADE_BLADE_DANCE_NOTE"),
                 tt_list =
@@ -2327,16 +1990,12 @@ return {
                         tt_title = _("TOWER_BLADE_BLADE_DANCE_NAME_3"),
                         tt_desc = _("TOWER_BLADE_BLADE_DANCE_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "swirling",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0106",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "ElvesBarrackBladesingerSwirlingEdge" },
                 tt_phrase = _("TOWER_BLADE_SWIRLING_EDGE_NOTE"),
                 tt_list =
@@ -2353,22 +2012,19 @@ return {
                         tt_title = _("TOWER_BLADE_SWIRLING_EDGE_NAME_3"),
                         tt_desc = _("TOWER_BLADE_SWIRLING_EDGE_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     forest = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "circle",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0107",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "ElvesBarrackForestKeeperCircleOfLifeTaunt" },
                 tt_phrase = _("TOWER_FOREST_KEEPERS_CIRCLE_NOTE"),
                 tt_list =
@@ -2385,16 +2041,12 @@ return {
                         tt_title = _("TOWER_FOREST_KEEPERS_CIRCLE_NAME_3"),
                         tt_desc = _("TOWER_FOREST_KEEPERS_CIRCLE_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "eerie",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0109",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "ElvesBarrackForestKeeperEerieTaunt" },
                 tt_phrase = _("TOWER_FOREST_KEEPERS_EERIE_NOTE"),
                 tt_list =
@@ -2411,16 +2063,12 @@ return {
                         tt_title = _("TOWER_FOREST_KEEPERS_EERIE_NAME_3"),
                         tt_desc = _("TOWER_FOREST_KEEPERS_EERIE_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "oak",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0110",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "ElvesBarrackForestKeeperOakSpearTaunt" },
                 tt_phrase = _("TOWER_FOREST_KEEPERS_OAK_NOTE"),
                 tt_list =
@@ -2437,22 +2085,19 @@ return {
                         tt_title = _("TOWER_FOREST_KEEPERS_OAK_NAME_3"),
                         tt_desc = _("TOWER_FOREST_KEEPERS_OAK_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     druid = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "sylvan",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0112",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesRockHengeSylvanCurseTaunt" },
                 tt_phrase = _("TOWER_STONE_DRUID_SYLVAN_NOTE"),
                 tt_list =
@@ -2469,16 +2114,12 @@ return {
                         tt_title = _("TOWER_STONE_DRUID_SYLVAN_NAME_3"),
                         tt_desc = _("TOWER_STONE_DRUID_SYLVAN_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "nature",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0111",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "SoldierDruidBearRallyChange" },
                 tt_phrase = _("TOWER_STONE_DRUID_NATURES_FRIEND_NOTE"),
                 tt_list =
@@ -2495,22 +2136,19 @@ return {
                         tt_title = _("TOWER_STONE_DRUID_NATURES_FRIEND_NAME_3"),
                         tt_desc = _("TOWER_STONE_DRUID_NATURES_FRIEND_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     entwood = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "clobber",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0113",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesRockEntwoodClobberingTaunt" },
                 tt_phrase = _("TOWER_ENTWOOD_CLOBBER_NOTE"),
                 tt_list =
@@ -2527,16 +2165,12 @@ return {
                         tt_title = _("TOWER_ENTWOOD_CLOBBER_NAME_3"),
                         tt_desc = _("TOWER_ENTWOOD_CLOBBER_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "fiery_nuts",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0114",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesRockEntwoodFieryNutsTaunt" },
                 tt_phrase = _("TOWER_ENTWOOD_FIERY_NUTS_NOTE"),
                 tt_list =
@@ -2553,21 +2187,18 @@ return {
                         tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_3"),
                         tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
     arcane = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "burst",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0101",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesArcherArcaneBurstTaunt" },
                 tt_phrase = _("TOWER_ARCANE_ARCHER_BURST_NOTE"),
                 tt_list =
@@ -2584,16 +2215,12 @@ return {
                         tt_title = _("TOWER_ARCANE_ARCHER_BURST_NAME_3"),
                         tt_desc = _("TOWER_ARCANE_ARCHER_BURST_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "slumber",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0100",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesArcherArcaneSleepTaunt" },
                 tt_phrase = _("TOWER_ARCANE_ARCHER_SLUMBER_NOTE"),
                 tt_list =
@@ -2610,21 +2237,18 @@ return {
                         tt_title = _("TOWER_ARCANE_ARCHER_SLUMBER_NAME_3"),
                         tt_desc = _("TOWER_ARCANE_ARCHER_SLUMBER_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
     silver = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "sentence",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0102",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesArcherGoldenBowCrimsonTaunt" },
                 tt_phrase = _("TOWER_SILVER_SENTENCE_NOTE"),
                 tt_list =
@@ -2641,16 +2265,12 @@ return {
                         tt_title = _("TOWER_SILVER_SENTENCE_NAME_3"),
                         tt_desc = _("TOWER_SILVER_SENTENCE_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "mark",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0103",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesArcherGoldenBowMarkTaunt" },
                 tt_phrase = _("TOWER_SILVER_MARK_NOTE"),
                 tt_list =
@@ -2667,21 +2287,18 @@ return {
                         tt_title = _("TOWER_SILVER_MARK_NAME_3"),
                         tt_desc = _("TOWER_SILVER_MARK_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
     wild_magus = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "eldritch",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0115",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesMageWildMagusDoomTaunt" },
                 tt_phrase = _("TOWER_MAGE_WILD_MAGUS_ELDRITCH_NOTE"),
                 tt_list =
@@ -2698,16 +2315,12 @@ return {
                         tt_title = _("TOWER_MAGE_WILD_MAGUS_ELDRITCH_NAME_3"),
                         tt_desc = _("TOWER_MAGE_WILD_MAGUS_ELDRITCH_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "ward",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0116",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesMageWildMagusSilenceTaunt" },
                 tt_phrase = _("TOWER_MAGE_WILD_MAGUS_WARD_NOTE"),
                 tt_list =
@@ -2724,21 +2337,18 @@ return {
                         tt_title = _("TOWER_MAGE_WILD_MAGUS_WARD_NAME_3"),
                         tt_desc = _("TOWER_MAGE_WILD_MAGUS_WARD_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
     high_elven = {
         {
-            {
-                check = "kr3_special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "timelapse",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0117",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesMageHighElvenTimelapseTaunt" },
                 tt_phrase = _("TOWER_MAGE_HIGH_ELVEN_TIMELAPSE_NOTE"),
                 tt_list =
@@ -2755,16 +2365,12 @@ return {
                         tt_title = _("TOWER_MAGE_HIGH_ELVEN_TIMELAPSE_NAME_3"),
                         tt_desc = _("TOWER_MAGE_HIGH_ELVEN_TIMELAPSE_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "sentinel",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0118",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesMageHighElvenSentinelTaunt" },
                 tt_phrase = _("TOWER_MAGE_HIGH_ELVEN_SENTINEL_NOTE"),
                 tt_list =
@@ -2781,36 +2387,30 @@ return {
                         tt_title = _("TOWER_MAGE_HIGH_ELVEN_SENTINEL_NAME_3"),
                         tt_desc = _("TOWER_MAGE_HIGH_ELVEN_SENTINEL_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
     holder_ewok = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade_power3, {
                 action_arg = "tower_ewok",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0015",
                 place = 5,
                 tt_title = _("ELVES_EWOK_TOWER_BROKEN_NAME"),
                 tt_desc = _("ELVES_EWOK_TOWER_BROKEN_DESCRIPTION"),
-                is_kr3 = true
-            }
+            })
         }
     },
+
     ewok = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "armor",
-                action = "upgrade_power",
                 image = "special_icons_0041",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "ElvesEwokTaunt" },
                 tt_phrase = _("以树为甲……"),
                 tt_list =
@@ -2827,16 +2427,12 @@ return {
                         tt_title = _("大树护甲Ⅲ"),
                         tt_desc = _("进一步提升伊渥克士兵的护甲")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "shield",
-                action = "upgrade_power",
                 image = "special_icons_0009",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "ElvesEwokTaunt" },
                 tt_phrase = _("举盾，防御！"),
                 tt_list =
@@ -2849,16 +2445,12 @@ return {
                         tt_title = _("盾势Ⅱ"),
                         tt_desc = _("提升伊渥克士兵盾牌格挡的时间和恢复效果")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "kr3_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "tear",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0110",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "ElvesEwokTaunt" },
                 tt_phrase = _("撕碎他们的防御！"),
                 tt_list =
@@ -2875,22 +2467,19 @@ return {
                         tt_title = _("碎甲投索Ⅲ"),
                         tt_desc = _("提升投索碎甲能力和伤害")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     faerie_dragon = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "more_dragons",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0124",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesFaeryDragonDragonBuy" },
                 tt_phrase = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_NOTE"),
                 tt_list =
@@ -2907,16 +2496,12 @@ return {
                         tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_NAME_3"),
                         tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_SMALL_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "improve_shot",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0125",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesFaeryDragonExtraAbility" },
                 tt_phrase = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_NOTE"),
                 tt_list =
@@ -2929,21 +2514,18 @@ return {
                         tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_NAME_2"),
                         tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_SMALL_DESCRIPTION_2")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
     pixie = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "cream",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0122",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesGnomeNew" },
                 tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE1_NOTE"),
                 tt_list =
@@ -2956,16 +2538,12 @@ return {
                         tt_title = _("ELVES_TOWER_PIXIE_UPGRADE1_NAME_2"),
                         tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE1_DESCRIPTION_2")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "total",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0123",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesGnomePower" },
                 tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE2_NOTE"),
                 tt_list =
@@ -2982,52 +2560,40 @@ return {
                         tt_title = _("ELVES_TOWER_PIXIE_UPGRADE2_NAME_3"),
                         tt_desc = _("ELVES_TOWER_PIXIE_UPGRADE2_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
     baby_black_dragon = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.buy_attack3, {
                 action_arg = 1,
-                action = "tw_buy_attack",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0114",
-                place = 5,
                 tt_title = _("ELVES_BABY_BERESAD_SPECIAL_NAME_1"),
                 tt_desc = _("ELVES_BABY_BERESAD_SPECIAL_SMALL_DESCRIPTION_1"),
-                is_kr3 = true
-
-            }
+            })
         }
     },
+
     holder_baby_ashbite = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade_power3, {
                 action_arg = "tower_baby_ashbite",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "kr3_main_icons_0113",
-                place = 5,
                 tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
                 tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION"),
-                is_kr3 = true
-            }
+            })
         }
     },
+
     baby_ashbite = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "blazing_breath",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0126",
                 place = 1,
-                halo = "glow_ico_special",
                 sounds = { "ElvesAshbiteConfirm" },
                 tt_phrase = _("ELVES_BABY_ASHBITE_FIREBREATH_NOTE"),
                 tt_list =
@@ -3044,16 +2610,12 @@ return {
                         tt_title = _("ELVES_BABY_ASHBITE_FIREBREATH_NAME_3"),
                         tt_desc = _("ELVES_BABY_ASHBITE_FIREBREATH_SMALL_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "fiery_mist",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0127",
                 place = 2,
-                halo = "glow_ico_special",
                 sounds = { "ElvesAshbiteConfirm" },
                 tt_phrase = _("ELVES_BABY_ASHBITE_SMOKEBREATH_NOTE"),
                 tt_list =
@@ -3062,22 +2624,19 @@ return {
                         tt_title = _("ELVES_BABY_ASHBITE_SMOKEBREATH_NAME_1"),
                         tt_desc = _("ELVES_BABY_ASHBITE_SMOKEBREATH_SMALL_DESCRIPTION_1")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     drow = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "life_drain",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0120",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = { "ElvesSpecialDrowLifeDrain" },
                 tt_phrase = _("ELVES_TOWER_DROW_LIFE_DRAIN_NOTE"),
                 tt_list =
@@ -3094,17 +2653,12 @@ return {
                         tt_title = _("ELVES_TOWER_DROW_LIFE_DRAIN_NAME_3"),
                         tt_desc = _("ELVES_TOWER_DROW_LIFE_DRAIN_SMALL_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "blade_mail",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0119",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = { "ElvesSpecialDrowBlademail" },
                 tt_phrase = _("ELVES_TOWER_DROW_BLADE_MAIL_NOTE"),
                 tt_list =
@@ -3121,16 +2675,12 @@ return {
                         tt_title = _("ELVES_TOWER_DROW_BLADE_MAIL_NAME_3"),
                         tt_desc = _("ELVES_TOWER_DROW_BLADE_MAIL_SMALL_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power3, {
                 action_arg = "double_dagger",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0121",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "ElvesSpecialDrowDaggers" },
                 tt_phrase = _("ELVES_TOWER_DROW_DOUBLE_DAGGER_NOTE"),
                 tt_list =
@@ -3147,37 +2697,31 @@ return {
                         tt_title = _("ELVES_TOWER_DROW_DOUBLE_DAGGER_NAME_3"),
                         tt_desc = _("ELVES_TOWER_DROW_DOUBLE_DAGGER_SMALL_DESCRIPTION_3")
                     }
-                },
-                is_kr3 = true
-            },
+                }
+            }),
             templates.rally,
             templates.sell
         }
     },
+
     holder_bastion = {
         {
-            {
-                check = "main_icons_0019",
+            merge(templates.upgrade_power3, {
                 action_arg = "tower_bastion",
-                action = "tw_upgrade",
-                halo = "glow_ico_main",
                 image = "main_icons_0015",
                 place = 5,
                 tt_title = _("ELVES_TOWER_BASTION_BROKEN_NAME"),
-                tt_desc = _("ELVES_TOWER_BASTION_BROKEN_DESCRIPTION"),
-                is_kr3 = true
-            }
+                tt_desc = _("ELVES_TOWER_BASTION_BROKEN_DESCRIPTION")
+            })
         }
     },
+
     bastion = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power3, {
                 action_arg = "razor_edge",
-                action = "upgrade_power",
                 image = "kr3_special_icons_0128",
                 place = 5,
-                halo = "glow_ico_special",
                 sounds = { "ElvesTowerBastionRazorEdge" },
                 tt_phrase = _("ELVES_TOWER_BASTION_RAZOR_EDGE_NOTE"),
                 tt_list =
@@ -3190,20 +2734,22 @@ return {
                         tt_title = _("ELVES_TOWER_BASTION_RAZOR_EDGE_NAME_2"),
                         tt_desc = _("ELVES_TOWER_BASTION_RAZOR_EDGE_SMALL_DESCRIPTION_2")
                     }
-                },
-                is_kr3 = true
-            }
+                }
+            })
         }
     },
+
+    --[[
+        五代
+    --]]
+
+    -- 三管加农炮
     tricannon = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power5, {
                 action_arg = "bombardment",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0007",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerTricannonSkillATaunt"
                 },
@@ -3221,17 +2767,12 @@ return {
                         tt_title = _("TOWER_TRICANNON_4_BOMBARDMENT_3_NAME"),
                         tt_desc = _("TOWER_TRICANNON_4_BOMBARDMENT_3_DESCRIPTION")
                     }
-                },
-                is_kr3 = true,
-                is_kr5 = true
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power5, {
                 action_arg = "overheat",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0008",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerTricannonSkillBTaunt"
                 },
@@ -3249,13 +2790,13 @@ return {
                         tt_title = _("TOWER_TRICANNON_4_OVERHEAT_3_NAME"),
                         tt_desc = _("TOWER_TRICANNON_4_OVERHEAT_3_DESCRIPTION")
                     }
-                },
-                is_kr3 = true,
-                is_kr5 = true
-            },
+                }
+            }),
             templates.sell
         }
     },
+
+    -- 暮光长弓
     dark_elf = {
         {
             {
@@ -3272,13 +2813,10 @@ return {
                 tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
                 is_kr5_change_mode = true
             },
-            {
-                check = "kr5_special_icons_0020",
+            merge(templates.upgrade_power5, {
                 action_arg = "skill_soldiers",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0032",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerDarkElfSkillATaunt"
                 },
@@ -3296,17 +2834,12 @@ return {
                         tt_title = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_3_NAME"),
                         tt_desc = _("TOWER_DARK_ELF_4_SKILL_SOLDIERS_3_DESCRIPTION")
                     }
-                },
-                is_kr5 = true,
-                is_kr3 = true
-            },
-            {
-                check = "kr5_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power5, {
                 action_arg = "skill_buff",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0033",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerDarkElfSkillBTaunt"
                 },
@@ -3324,22 +2857,20 @@ return {
                         tt_title = _("TOWER_DARK_ELF_4_SKILL_BUFF_3_NAME"),
                         tt_desc = _("TOWER_DARK_ELF_4_SKILL_BUFF_3_DESCRIPTION")
                     }
-                },
-                is_kr5 = true,
-                is_kr3 = true
-            },
+                }
+            }),
             templates.rally,
             templates.sell
         }
     },
+
+    -- 恶魔澡坑
     demon_pit = {
         {
-            {
+            merge(templates.upgrade_power5, {
                 action_arg = "master_exploders",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0011",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerDemonPitSkillATaunt"
                 },
@@ -3357,17 +2888,12 @@ return {
                         tt_title = _("TOWER_DEMON_PIT_4_MASTER_EXPLODERS_3_NAME"),
                         tt_desc = _("TOWER_DEMON_PIT_4_MASTER_EXPLODERS_3_DESCRIPTION")
                     }
-                },
-                is_kr5 = true,
-                is_kr3 = true
-            },
-            {
-                check = "kr5_special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power5, {
                 action_arg = "big_guy",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0012",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerDemonPitSkillBTaunt"
                 },
@@ -3385,22 +2911,19 @@ return {
                         tt_title = _("TOWER_DEMON_PIT_4_BIG_DEMON_3_NAME"),
                         tt_desc = _("TOWER_DEMON_PIT_4_BIG_DEMON_3_DESCRIPTION")
                     }
-                },
-                is_kr5 = true,
-                is_kr3 = true
-            },
+                }
+            }),
             templates.sell
         },
     },
+
+    -- 死灵法师
     necromancer_lvl4 = {
         {
-            {
-                check = "special_icons_0020",
+            merge(templates.upgrade_power5, {
                 action_arg = "skill_debuff",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0017",
                 place = 6,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerNecromancerSkillATaunt"
                 },
@@ -3418,17 +2941,12 @@ return {
                         tt_title = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_3_NAME"),
                         tt_desc = _("TOWER_NECROMANCER_4_SKILL_DEBUFF_3_DESCRIPTION")
                     }
-                },
-                is_kr5 = true,
-                is_kr3 = true
-            },
-            {
-                check = "special_icons_0020",
+                }
+            }),
+            merge(templates.upgrade_power5, {
                 action_arg = "skill_rider",
-                action = "upgrade_power",
                 image = "kr5_special_icons_0018",
                 place = 7,
-                halo = "glow_ico_special",
                 sounds = {
                     "TowerNecromancerSkillBTaunt"
                 },
@@ -3446,10 +2964,83 @@ return {
                         tt_title = _("TOWER_NECROMANCER_4_SKILL_RIDER_3_NAME"),
                         tt_desc = _("TOWER_NECROMANCER_4_SKILL_RIDER_3_DESCRIPTION")
                     }
+                }
+            }),
+            templates.sell
+        }
+    },
+
+    -- 熊猫
+    pandas = {
+        {
+            merge(templates.upgrade_power5, {
+                action_arg = "thunder",
+                image = "special_icons_0041",
+                place = 12,
+                sounds = {
+                    i18n:cjk("TowerPandasSkillATaunt", "TowerPandasSkillATauntZH", nil, nil)
                 },
-                is_kr5 = true,
-                is_kr3 = true
+                tt_phrase = _("TOWER_PANDAS_4_THUNDER"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_PANDAS_4_THUNDER_1_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_THUNDER_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_PANDAS_4_THUNDER_2_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_THUNDER_2_DESCRIPTION")
+                    }
+                }
+            }),
+            merge(templates.upgrade_power5, {
+                action_arg = "hat",
+                image = "special_icons_0040",
+                place = 14,
+                sounds = {
+                    i18n:cjk("TowerPandasSkillBTaunt", "TowerPandasSkillBTauntZH", nil, nil)
+                },
+                tt_phrase = _("TOWER_PANDAS_4_HAT"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_PANDAS_4_HAT_1_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_HAT_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_PANDAS_4_HAT_2_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_HAT_2_DESCRIPTION")
+                    }
+                }
+            }),
+            merge(templates.upgrade_power5, {
+                action_arg = "teleport",
+                image = "special_icons_0042",
+                place = 15,
+                sounds = {
+                    i18n:cjk("TowerPandasSkillCTaunt", "TowerPandasSkillCTauntZH", nil, nil)
+                },
+                tt_phrase = _("TOWER_PANDAS_4_FIERY"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_PANDAS_4_FIERY_1_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_FIERY_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_PANDAS_4_FIERY_2_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_FIERY_2_DESCRIPTION")
+                    }
+                }
+            }),
+            {
+                check = "kr5_special_icons_0020",
+                action_arg = "pandas_retreat",
+                action = "tw_free_action",
+                halo = "glow_ico_main",
+                image = "kr5_quickmenu_retreat_icons_tower_panda",
+                place = 13,
+                tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
+                tt_desc = _("TOWER_PANDAS_RETREAT_DESCRIPTION")
             },
+            templates.rally,
             templates.sell
         }
     },

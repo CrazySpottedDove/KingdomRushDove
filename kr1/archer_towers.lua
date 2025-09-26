@@ -1052,21 +1052,36 @@ local function archer_towers()
 
     b = balance.towers.dark_elf
 
-    tt = RT("tower_build_dark_elf", "tower_build")
-    tt.build_name = "tower_dark_elf_lvl1"
-    tt.render.sprites[1].name = "terrains_%04i"
-    tt.render.sprites[1].offset = vec_2(0, 10)
-    tt.render.sprites[2].name = "Tower_construction"
-    tt.render.sprites[2].offset = vec_2(0, 10)
-    tt.render.sprites[3].offset.y = 75
-    tt.render.sprites[4].offset.y = 75
-
     tt = RT("tower_dark_elf_lvl4", "tower")
     AC(tt, "powers", "barrack", "attacks")
     tt.is_kr5 = true
     tt.tower.level = 1
     tt.tower.type = "dark_elf"
     tt.tower.price = b.price[4]
+    tt.tower_upgrade_persistent_data.current_mode = 0
+    tt.tower_upgrade_persistent_data.max_current_mode = 1
+    tt.tower_upgrade_persistent_data.souls_extra_damage_min = 0
+    tt.tower_upgrade_persistent_data.souls_extra_damage_max = 0
+    tt.powers.skill_soldiers = CC("power")
+    tt.powers.skill_soldiers.price_base = 225
+    tt.powers.skill_soldiers.price_inc = 100
+    tt.powers.skill_soldiers.cooldown = b.skill_soldiers.cooldown
+    tt.powers.skill_soldiers.hp = b.soldier.hp
+    tt.powers.skill_soldiers.damage_min = b.soldier.basic_attack.damage_min
+    tt.powers.skill_soldiers.damage_max = b.soldier.basic_attack.damage_max
+    tt.powers.skill_soldiers.dodge_chance = b.soldier.dodge_chance
+    tt.powers.skill_soldiers.enc_icon = 31
+    tt.powers.skill_soldiers.show_rally = true
+    tt.powers.skill_buff = CC("power")
+    tt.powers.skill_buff.price_base = 250
+    tt.powers.skill_buff.price_inc = 125
+    tt.powers.skill_buff.enc_icon = 32
+    tt.powers.skill_buff.damage_min = b.skill_buff.extra_damage_min
+    tt.powers.skill_buff.damage_max = b.skill_buff.extra_damage_max
+    tt.powers.skill_buff.max_level = 3
+    tt.powers.skill_buff.max_times = 0
+    tt.powers.skill_buff.max_times_table = b.skill_buff.max_times
+    tt.powers.skill_buff.times = 0
     tt.info.i18n_key = "TOWER_DARK_ELF_4"
     tt.info.fn = scripts.tower_dark_elf.get_info
     tt.info.portrait = "portraits_towers_0020"
@@ -1079,9 +1094,31 @@ local function archer_towers()
     tt.main_script.update = scripts.tower_dark_elf.update
     tt.main_script.remove = scripts.tower_dark_elf.remove
     tt.main_script.insert = scripts.tower_dark_elf.insert
-    tt.ui.click_rect = r(-38, -10, 70, 60)
+    tt.attacks.range = b.basic_attack.range[4]
+    tt.attacks.list[1] = CC("bullet_attack")
+    tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+    -- exactly, cooldown only based on the animation time 3.38 * 5 / 6 = 2.8166, bigger than this cooldown assigned
+    -- tt.attacks.list[1].shoot_time = fts(13)
+    tt.attacks.list[1].shoot_time = fts(65 / 6)
+    tt.attacks.list[1].vis_flags = bor(F_RANGED)
+    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+    tt.attacks.list[1].node_prediction_prepare = fts(60)
+    tt.attacks.list[1].node_prediction = fts(15)
+    tt.attacks.list[1].bullet = "bullet_tower_dark_elf_lvl4"
+    tt.attacks.list[1].bullet_start_offset = {
+        vec_2(18, 86),
+        vec_2(18, 86),
+        vec_2(18, 76),
+        vec_2(18, 86)
+    }
+    tt.attacks.list[1].first_cooldown = 2
+    tt.attacks.list[1].mod_target = "mod_tower_dark_elf_big_target"
+    tt.attacks.list[2] = CC("custom_attack")
+    tt.attacks.list[2].disabled = true
+    tt.attacks.list[2].spawn_delay = 1
+    tt._pow_buff_upgraded = false
     tt.render.sprites[1].animated = false
-    tt.render.sprites[1].name = "terrain_artillery_%04i"
+    tt.render.sprites[1].name = "terrain_archer_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
     tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
@@ -1111,53 +1148,6 @@ local function archer_towers()
     tt.render.sprites[3].offset = vec_2(0, 48)
     tt.render.sprites[3].fps = 36
     tt.render.sid_archer = 3
-    tt.attacks.range = b.basic_attack.range[4]
-    tt.attacks.list[1] = CC("bullet_attack")
-    tt.attacks.list[1].cooldown = b.basic_attack.cooldown
-    -- exactly, cooldown only based on the animation time 3.38 * 5 / 6 = 2.8166, bigger than this cooldown assigned
-    -- tt.attacks.list[1].shoot_time = fts(13)
-    tt.attacks.list[1].shoot_time = fts(65 / 6)
-    tt.attacks.list[1].vis_flags = bor(F_RANGED)
-    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
-    tt.attacks.list[1].node_prediction_prepare = fts(60)
-    tt.attacks.list[1].node_prediction = fts(15)
-    tt.attacks.list[1].bullet = "bullet_tower_dark_elf_lvl4"
-    tt.attacks.list[1].bullet_start_offset = {
-        vec_2(18, 86),
-        vec_2(18, 86),
-        vec_2(18, 76),
-        vec_2(18, 86)
-    }
-    tt.attacks.list[1].first_cooldown = 2
-    tt.attacks.list[1].mod_target = "mod_tower_dark_elf_big_target"
-    tt.attacks.list[2] = CC("custom_attack")
-    tt.attacks.list[2].disabled = true
-    tt.attacks.list[2].spawn_delay = 1
-    tt.tower_upgrade_persistent_data.current_mode = 0
-    tt.tower_upgrade_persistent_data.max_current_mode = 1
-    tt.tower_upgrade_persistent_data.souls_extra_damage_min = 0
-    tt.tower_upgrade_persistent_data.souls_extra_damage_max = 0
-    tt.powers.skill_soldiers = CC("power")
-    tt.powers.skill_soldiers.price_base = 225
-    tt.powers.skill_soldiers.price_inc = 100
-    tt.powers.skill_soldiers.cooldown = b.skill_soldiers.cooldown
-    tt.powers.skill_soldiers.hp = b.soldier.hp
-    tt.powers.skill_soldiers.damage_min = b.soldier.basic_attack.damage_min
-    tt.powers.skill_soldiers.damage_max = b.soldier.basic_attack.damage_max
-    tt.powers.skill_soldiers.dodge_chance = b.soldier.dodge_chance
-    tt.powers.skill_soldiers.enc_icon = 31
-    tt.powers.skill_soldiers.show_rally = true
-    tt.powers.skill_buff = CC("power")
-    tt.powers.skill_buff.price_base = 250
-    tt.powers.skill_buff.price_inc = 125
-    tt.powers.skill_buff.enc_icon = 32
-    tt.powers.skill_buff.damage_min = b.skill_buff.extra_damage_min
-    tt.powers.skill_buff.damage_max = b.skill_buff.extra_damage_max
-    tt.powers.skill_buff.max_level = 3
-    tt.powers.skill_buff.max_times = 0
-    tt.powers.skill_buff.max_times_table = b.skill_buff.max_times
-    tt.powers.skill_buff.times = 0
-    tt._pow_buff_upgraded = false
     tt.barrack.rally_range = b.rally_range
     tt.barrack.rally_radius = 25
     tt.barrack.soldier_type = "soldier_tower_dark_elf"
@@ -1166,6 +1156,7 @@ local function archer_towers()
     tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"
     tt.sound_events.change_rally_point = "TowerDarkElfUnitTaunt"
     tt.sound_events.insert = "TowerDarkElfTaunt"
+    tt.ui.click_rect = r(-38, -10, 70, 60)
 
     tt = RT("soldier_tower_dark_elf", "soldier_militia")
     AC(tt, "nav_grid", "dodge")

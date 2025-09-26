@@ -6811,6 +6811,20 @@ function TowerMenu:update(dt)
                 else
                     c.button:set_image(c.item_image)
                 end
+            elseif e and c.item_props.action == "tw_free_action" then
+                local usa = e.user_selection and e.user_selection.actions
+
+                if usa and usa.tw_free_action then
+                    if not usa.tw_free_action.allowed then
+                        c:disable()
+                    else
+                        c:enable()
+                    end
+                elseif not e.user_selection.allowed then
+                    c:disable()
+                else
+                    c:enable()
+                end
             end
         end
     end
@@ -7059,6 +7073,14 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
                 e.tower_upgrade_persistent_data.current_mode = current_mode + 1
             end
         end
+    elseif item.action == "tw_free_action" then
+        if e.user_selection then
+            e.user_selection.in_progress = true
+            e.user_selection.arg = item.action_arg
+            e.user_selection.new_pos = nil
+        end
+
+        self:hide()
     end
 
     if item.sounds and not inhibit_sounds then
@@ -7244,7 +7266,7 @@ function TowerMenuTooltip:show(entity, item)
         if power.level == power.max_level then
             -- self.hidden = true
         end
-    elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" then
+    elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_free_action" then
         if item.tt_title then
             self.title.text = item.tt_title
         end
