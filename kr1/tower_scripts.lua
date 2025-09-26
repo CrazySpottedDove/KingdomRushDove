@@ -7653,13 +7653,21 @@ function scripts.bullet_tower_necromancer.update(this, store)
     end
 
     if target and not target.health.dead then
-        local mod = E:create_entity(b.mod)
-
-        mod.modifier.target_id = target.id
-        mod.modifier.damage_factor = b.damage_factor
-        mod.modifier.source_id = this.source.id
-
-        queue_insert(store, mod)
+        if b.mods then
+            for _, mod_name in pairs(b.mods) do
+                local mod = E:create_entity(mod_name)
+                mod.modifier.target_id = target.id
+                mod.modifier.damage_factor = b.damage_factor
+                mod.modifier.source_id = this.source.id
+                queue_insert(store, mod)
+            end
+        elseif b.mod then
+            local mod = E:create_entity(b.mod)
+            mod.modifier.target_id = target.id
+            mod.modifier.damage_factor = b.damage_factor
+            mod.modifier.source_id = this.source.id
+            queue_insert(store, mod)
+        end
 
         local d = SU.create_bullet_damage(b, target.id, this.id)
 
@@ -7784,13 +7792,21 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
     end
 
     if target and not target.health.dead then
-        local mod = E:create_entity(b.mod)
-
-        mod.modifier.target_id = target.id
-        mod.modifier.damage_factor = b.damage_factor
-        mod.modifier.source_id = this.source.id
-
-        queue_insert(store, mod)
+        if b.mods then
+            for _, mod_name in pairs(b.mods) do
+                local mod = E:create_entity(mod_name)
+                mod.modifier.target_id = target.id
+                mod.modifier.damage_factor = b.damage_factor
+                mod.modifier.source_id = this.id
+                queue_insert(store, mod)
+            end
+        elseif b.mod then
+            local mod = E:create_entity(b.mod)
+            mod.modifier.target_id = target.id
+            mod.modifier.damage_factor = b.damage_factor
+            mod.modifier.source_id = this.id
+            queue_insert(store, mod)
+        end
 
         local d = SU.create_bullet_damage(b, target.id, this.id)
 
