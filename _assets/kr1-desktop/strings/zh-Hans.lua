@@ -502,58 +502,40 @@ return {
     BOSS_CORRUPTED_DENAS_EXTRA = "- 召唤眼精",
     BOSS_CORRUPTED_DENAS_NAME = "腐化迪纳斯",
     BOSS_CROCS_DESCRIPTION = "饥饿的化身，如果放任这个古老的生物行动，整个世界都会被他吞噬殆尽。",
-    BOSS_CROCS_EXTRA = "- 吞噬防御塔\
-- 吃饱之后进化\
-- 召唤鳄鱼奇趣蛋",
+    BOSS_CROCS_EXTRA = "- 吞噬防御塔\n- 吃饱之后进化\n- 召唤鳄鱼奇趣蛋",
     BOSS_CROCS_LVL1_DESCRIPTION = "饥饿的化身，如果放任这个古老的生物行动，整个世界都会被他吞噬殆尽。",
-    BOSS_CROCS_LVL1_EXTRA = "- 吞噬防御塔\
-- 吃饱之后进化\
-- 召唤鳄鱼奇趣蛋",
+    BOSS_CROCS_LVL1_EXTRA = "- 吞噬防御塔\n- 吃饱之后进化\n- 召唤鳄鱼奇趣蛋",
     BOSS_CROCS_LVL1_NAME = "噬界灾鳄",
     BOSS_CROCS_LVL2_DESCRIPTION = "饥饿的化身，如果放任这个古老的生物行动，整个世界都会被他吞噬殆尽。",
-    BOSS_CROCS_LVL2_EXTRA = "- 吞噬防御塔\
-- 吃饱之后进化\
-- 召唤鳄鱼奇趣蛋",
+    BOSS_CROCS_LVL2_EXTRA = "- 吞噬防御塔\n- 吃饱之后进化\n- 召唤鳄鱼奇趣蛋",
     BOSS_CROCS_LVL2_NAME = "噬界灾鳄",
     BOSS_CROCS_LVL3_DESCRIPTION = "饥饿的化身，如果放任这个古老的生物行动，整个世界都会被他吞噬殆尽。",
-    BOSS_CROCS_LVL3_EXTRA = "- 吞噬防御塔\
-- 吃饱之后进化\
-- 召唤鳄鱼奇趣蛋",
+    BOSS_CROCS_LVL3_EXTRA = "- 吞噬防御塔\n- 吃饱之后进化\n- 召唤鳄鱼奇趣蛋",
     BOSS_CROCS_LVL3_NAME = "噬界灾鳄",
     BOSS_CROCS_LVL4_DESCRIPTION = "饥饿的化身，如果放任这个古老的生物行动，整个世界都会被他吞噬殆尽。",
-    BOSS_CROCS_LVL4_EXTRA = "- 吞噬防御塔\
-- 吃饱之后进化\
-- 召唤鳄鱼奇趣蛋",
+    BOSS_CROCS_LVL4_EXTRA = "- 吞噬防御塔\n- 吃饱之后进化\n- 召唤鳄鱼奇趣蛋",
     BOSS_CROCS_LVL4_NAME = "噬界灾鳄",
     BOSS_CROCS_LVL5_DESCRIPTION = "饥饿的化身，如果放任这个古老的生物行动，整个世界都会被他吞噬殆尽。",
-    BOSS_CROCS_LVL5_EXTRA = "- 吞噬防御塔\
-- 吃饱之后进化\
-- 召唤鳄鱼奇趣蛋",
+    BOSS_CROCS_LVL5_EXTRA = "- 吞噬防御塔\n- 吃饱之后进化\n- 召唤鳄鱼奇趣蛋",
     BOSS_CROCS_LVL5_NAME = "噬界灾鳄",
     BOSS_CROCS_NAME = "噬界灾鳄",
     BOSS_CULT_LEADER_DESCRIPTION = "作为邪教现任的领袖，魔蒂娅丝充当全视之魔眼的副手，策划对各个世界的入侵。",
-    BOSS_CULT_LEADER_EXTRA = "- 未被阻挡时拥有高物理护甲和高魔法抗性\
-- 高范围伤害",
+    BOSS_CULT_LEADER_EXTRA = "- 未被阻挡时拥有高物理护甲和高魔法抗性\n- 高范围伤害",
     BOSS_CULT_LEADER_NAME = "泛视先知魔蒂娅丝",
     BOSS_GRYMBEARD_DESCRIPTION = "狂妄自负的矮人，满脑子都是自己，近乎疯狂，危险至极。",
     BOSS_GRYMBEARD_EXTRA = "- 向我方单位发射火箭铁拳",
     BOSS_GRYMBEARD_NAME = "诡须",
     BOSS_MACHINIST_DESCRIPTION = "诡须乘上自己的最新发明追击敌人，降下火焰与金属的倾盆大雨。",
-    BOSS_MACHINIST_EXTRA = "- 飞行单位\
-- 向单位发射废铁",
+    BOSS_MACHINIST_EXTRA = "- 飞行单位\n- 向单位发射废铁",
     BOSS_MACHINIST_NAME = "诡须",
     BOSS_NAVIRA_DESCRIPTION = "汎里埃沾染了禁忌之力，失去了女神恩典，企图借助死亡魔法重铸精灵一族的荣耀。",
-    BOSS_NAVIRA_EXTRA = "- 发射火球封锁防御塔\
-- 变身成无法阻挡的龙卷风",
+    BOSS_NAVIRA_EXTRA = "- 发射火球封锁防御塔\n- 变身成无法阻挡的龙卷风",
     BOSS_NAVIRA_NAME = "汎里埃",
     BOSS_PIG_DESCRIPTION = "自封为万兽顶点的野兽之王，可使用巨大的连枷碾碎敌人。",
     BOSS_PIG_EXTRA = "－在路径上进行超远距离跳跃",
     BOSS_PIG_NAME = "野兽之王血辗",
     BOSS_SPIDER_QUEEN_DESCRIPTION = "古老的蜘蛛女王，原始力量的化身，从沉睡中苏醒，誓要夺回属于她的一切。",
-    BOSS_SPIDER_QUEEN_EXTRA = "- 封锁防御塔\
-- 吸取周围敌人的生命值\
-- 召唤吸血蜘蛛\
-- 释放蛛网遮蔽视线",
+    BOSS_SPIDER_QUEEN_EXTRA = "- 封锁防御塔\n- 吸取周围敌人的生命值\n- 召唤吸血蜘蛛\n- 释放蛛网遮蔽视线",
     BOSS_SPIDER_QUEEN_NAME = "米迦尔",
     BRIEFING_LEVEL_WARNING = "这个战役的难度等级很高。",
     ["BUILD HERE!"] = "在此处建造！",
@@ -621,8 +603,7 @@ return {
     CINEMATICS_TAP_TO_CONTINUE_KR5 = "单击以继续……",
     CLAIM_GIFT = "领取礼物",
     ["CLICK HERE TO SKIP.\
-PLEASE DON'T"] = "单击此处以跳过。\
-请不要",
+PLEASE DON'T"] = "单击此处以跳过。\n请不要",
     ["CLICK HERE!"] = "单击此处！",
     ["CLICK ON THE ROAD"] = "单击道路",
     ["CLICK TO CALL IT EARLY"] = "单击来提前召唤下一波",
@@ -828,8 +809,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     COMIC_BALLOON_0002_KR1 = "胜利！",
     COMIC_BALLOON_01_KR1 = "我们做到了！",
     COMIC_BALLOON_02_KR1 = "胜利！",
-    COMIC_BALLOON_03_KR1 = "陛下…\
-维兹南没有了！",
+    COMIC_BALLOON_03_KR1 = "陛下…\n维兹南没有了！",
     COMIC_BALLOON_04_KR1 = "聚会的时候到啦！",
     COMIC_BALLOON_05_KR1 = "将军，我特此任命你担任…",
     COMIC_BALLOON_06_KR1 = "利尼维亚守护者！",
@@ -842,8 +822,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     COMIC_BALLOON_13_KR1 = "是我的了！！！",
     COMIC_balloon_0001_KR1 = "我们做到了！",
     COMIC_balloon_0002_KR1 = "胜利！",
-    COMIC_balloon_0003_KR1 = "陛下…\
-维兹南没有了！",
+    COMIC_balloon_0003_KR1 = "陛下…\n维兹南没有了！",
     COMIC_balloon_0004_KR1 = "聚会的时候到啦！",
     COMIC_balloon_0005_KR1 = "将军，我特此任命你担任…",
     COMIC_balloon_0006_KR1 = "利尼维亚守护者！",
@@ -858,9 +837,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     CONFIRM_EXIT = "是否退出？",
     CONFIRM_RESTART = "是否重新开始？",
     CONTROLLER_STAGE_16_OVERSEER_DESCRIPTION = "跨越各个次元，入侵其他世界并吸收其能量的饕餮异兽。必须不惜一切代价制止它！",
-    CONTROLLER_STAGE_16_OVERSEER_EXTRA = "- 交换玩家的防御塔\
-- 召唤眼精\
-- 摧毁塔位",
+    CONTROLLER_STAGE_16_OVERSEER_EXTRA = "- 交换玩家的防御塔\n- 召唤眼精\n- 摧毁塔位",
     CONTROLLER_STAGE_16_OVERSEER_NAME = "全视之魔眼",
     CREDITS = "制作人员",
     CREDITS_COPYRIGHT = "©2014Ironhide Game Studio。保留所有权利。",
@@ -1060,9 +1037,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     EB_SPIDER_SPECIAL = "破坏防御塔",
     EB_SPIDER_TAUNT_KIND_OURS = "是我们的！",
     EB_ULGUKHAI_DESCRIPTION = "比其他巨魔更庞大、更聪明也更恶毒。他可不会光喘气不咬人！",
-    EB_ULGUKHAI_EXTRA = "- 极高伤害\
-- 生命值再生\
-- 中速",
+    EB_ULGUKHAI_EXTRA = "- 极高伤害\n- 生命值再生\n- 中速",
     EB_ULGUKHAI_NAME = "阿古克汗",
     EB_ULGUKHAI_SPECIAL = "行进时无敌",
     EB_UMBRA_DESCRIPTION = "不是阴影组成了安布拉，而是安布拉组成了阴影...",
@@ -1294,48 +1269,33 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ELVES_ENEMY_DEATH_TAUNT_0007 = "我同意，但这个时间到哪儿去找派对帽子？",
     ELVES_ENEMY_DEATH_TAUNT_0008 = "...好太太太太多了",
     ELVES_ENEMY_MACTANS_TAUNT_0001 = "我是你所有的恶梦！",
-    ELVES_ENEMY_MACTANS_TAUNT_0002 = "我是你最糟的噩梦\
-成真了！",
-    ELVES_ENEMY_MACTANS_TAUNT_0003 = "我是你所恐惧\
-的所有事物\
-！",
+    ELVES_ENEMY_MACTANS_TAUNT_0002 = "我是你最糟的噩梦\n成真了！",
+    ELVES_ENEMY_MACTANS_TAUNT_0003 = "我是你所恐惧\n的所有事物\n！",
     ELVES_ENEMY_MACTANS_TAUNT_0004 = "一绺一绺，织纱成网！",
     ELVES_ENEMY_MACTANS_TAUNT_0005 = "要是萨雷格兹能看到这一切该多好！",
     ELVES_ENEMY_MACTANS_TAUNT_0006 = "我最擅长剥茧抽丝！",
     ELVES_ENEMY_MACTANS_TAUNT_0007 = "哼...战斗太拖沓了！",
-    ELVES_ENEMY_MACTANS_TAUNT_0008 = "为什么我们不早点\
-这样做？",
+    ELVES_ENEMY_MACTANS_TAUNT_0008 = "为什么我们不早点\n这样做？",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_0001 = "哦宝贝，真是个尴尬的局面啊！",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_0002 = "是我的网抓到猎物了吗？",
-    ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_0003 = "你还没有准备好\
-面对要发生的事情！",
-    ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_0004 = "不用考虑太多！\
-你横竖都是死！",
+    ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_0003 = "你还没有准备好\n面对要发生的事情！",
+    ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_0004 = "不用考虑太多！\n你横竖都是死！",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_ORDER_0001 = "玛丽西娅",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_ORDER_0002 = "黑寡妇",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_ORDER_0003 = "玛丽西娅",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_PREBATTLE_ORDER_0004 = "黑寡妇",
-    ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_0001 = "你能走到这里\
-很了不起...",
+    ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_0001 = "你能走到这里\n很了不起...",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_0002 = "正好赶上见证你们女神的降临！",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_ORDER_0001 = "黑寡妇",
     ELVES_ENEMY_MALICIA_MACTANS_TAUNT_KIND_WELCOME_ORDER_0002 = "玛丽西娅",
     ELVES_ENEMY_MALICIA_TAUNT_0001 = "你失去了你的“勇气”。",
-    ELVES_ENEMY_MALICIA_TAUNT_0002 = "没错，这儿将会\
-鲜血淋漓！",
-    ELVES_ENEMY_MALICIA_TAUNT_0003 = "暮光精灵\
-将永远统治\
-黑暗！",
-    ELVES_ENEMY_MALICIA_TAUNT_0004 = "邪恶从未\
-如此美妙！",
-    ELVES_ENEMY_MALICIA_TAUNT_0005 = "我最快乐的结局\
-就是把你的脑袋\
-插在长矛上！",
+    ELVES_ENEMY_MALICIA_TAUNT_0002 = "没错，这儿将会\n鲜血淋漓！",
+    ELVES_ENEMY_MALICIA_TAUNT_0003 = "暮光精灵\n将永远统治\n黑暗！",
+    ELVES_ENEMY_MALICIA_TAUNT_0004 = "邪恶从未\n如此美妙！",
+    ELVES_ENEMY_MALICIA_TAUNT_0005 = "我最快乐的结局\n就是把你的脑袋\n插在长矛上！",
     ELVES_ENEMY_MALICIA_TAUNT_0006 = "我才够格当这个世界的王后！",
-    ELVES_ENEMY_MALICIA_TAUNT_0007 = "你不可能\
-击败我们！",
-    ELVES_ENEMY_MALICIA_TAUNT_0008 = "我一直都是反派，\
-甚至在我不是的时候。",
+    ELVES_ENEMY_MALICIA_TAUNT_0007 = "你不可能\n击败我们！",
+    ELVES_ENEMY_MALICIA_TAUNT_0008 = "我一直都是反派，\n甚至在我不是的时候。",
     ELVES_ENEMY_MALICIA_TAUNT_KIND_BREAKING = "护罩要碎了！",
     ELVES_ENEMY_MALICIA_TAUNT_KIND_MINE = "我的！",
     ELVES_EWOK_DESCRIPTION = "友好却又可怖，保护巨大红杉的复仇三姐妹。她们的投索能对低护甲的敌人造成毁灭性的打击！",
@@ -1611,10 +1571,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENDLESS_LEVEL_SELECT_UPGRADES_INFO = "全部升级",
     ENDLESS_LEVEL_SELECT_WAVES_INFO = "无尽波数",
     ENEMY_ABOMINATION_DESCRIPTION = "巨大的肉身傀儡，由残破的肢体和许多生物的尸体组成。腐臭的气氛能让僵尸血肉复苏。",
-    ENEMY_ABOMINATION_EXTRA = "- 速度慢\
-- 死亡时爆炸\
-- 惧怕法术伤害\
-- 使身边僵尸生长",
+    ENEMY_ABOMINATION_EXTRA = "- 速度慢\n- 死亡时爆炸\n- 惧怕法术伤害\n- 使身边僵尸生长",
     ENEMY_ABOMINATION_NAME = "憎恶",
     ENEMY_ABOMINATION_SPECIAL = "尸爆，增益僵尸，惧怕魔法",
     ENEMY_ACOLYTE_DESCRIPTION = "身材矮小且弱不禁风的随从，在战场上往往以数量取胜。",
@@ -1625,86 +1582,64 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_ACOLYTE_TENTACLE_EXTRA = "- 仆从死亡时产生",
     ENEMY_ACOLYTE_TENTACLE_NAME = "仆从触手",
     ENEMY_ALIEN_BREEDER_DESCRIPTION = "这些生物会在受害者体内产卵，随后孵化出恐怖的怪物。",
-    ENEMY_ALIEN_BREEDER_EXTRA = "- 速度非常快\
-- 魔法抗性高\
-- 孵化出一只收割者",
+    ENEMY_ALIEN_BREEDER_EXTRA = "- 速度非常快\n- 魔法抗性高\n- 孵化出一只收割者",
     ENEMY_ALIEN_BREEDER_NAME = "寄生怪",
     ENEMY_ALIEN_BREEDER_SPECIAL = "寄生，孵化出收割者",
     ENEMY_ALIEN_REAPER_DESCRIPTION = "起源未知的恐怖生物。来自遥远部落的捕猎者，经过漫长的航行来捕杀猎物。",
-    ENEMY_ALIEN_REAPER_EXTRA = "- 速度快\
-- 魔法抗性高\
-- 伤害非常高",
+    ENEMY_ALIEN_REAPER_EXTRA = "- 速度快\n- 魔法抗性高\n- 伤害非常高",
     ENEMY_ALIEN_REAPER_NAME = "收割者",
     ENEMY_AMALGAM_DESCRIPTION = "由虚空之外的血肉与土壤融合而成的巨兽。行动迟缓，但能够在战场上散布恐惧。",
-    ENEMY_AMALGAM_EXTRA = "- 小BOSS\
-- 死亡时自爆",
+    ENEMY_AMALGAM_EXTRA = "- 小BOSS\n- 死亡时自爆",
     ENEMY_AMALGAM_NAME = "血壤巨兽",
     ENEMY_ANIMATED_ARMOR_DESCRIPTION = "过往战争留下的残破遗物，如今被亡魂附身，再次加入战斗。",
     ENEMY_ANIMATED_ARMOR_EXTRA = "- 击败后可以再次被亡魂附身",
     ENEMY_ANIMATED_ARMOR_NAME = "附身盔甲",
     ENEMY_ANOOBIS_NAME = "阿努比斯",
     ENEMY_ARACHNOMANCER_DESCRIPTION = "精神错乱的暮光精灵，饲养并指挥大批蜘蛛。",
-    ENEMY_ARACHNOMANCER_EXTRA = "- 召唤蜘蛛\
- - 死后产生蜘蛛",
+    ENEMY_ARACHNOMANCER_EXTRA = "- 召唤蜘蛛\n - 死后产生蜘蛛",
     ENEMY_ARACHNOMANCER_NAME = "控蛛师",
     ENEMY_ARACHNOMANCER_SPECIAL = "召唤蜘蛛",
     ENEMY_ARACHNOMANCER_SPIDER_DESCRIPTION = "由魔法变异产生的小蜘蛛，通常成批出现。",
-    ENEMY_ARACHNOMANCER_SPIDER_EXTRA = "- 快速\
-- 生命值低\
-- 中等魔法抗性",
+    ENEMY_ARACHNOMANCER_SPIDER_EXTRA = "- 快速\n- 生命值低\n- 中等魔法抗性",
     ENEMY_ARACHNOMANCER_SPIDER_NAME = "蜘蛛幼虫",
     ENEMY_ARMORED_NIGHTMARE_DESCRIPTION = "拜邪教魔法所赐，这些梦魇身披盔甲，昂首挺胸地投入战斗。",
-    ENEMY_ARMORED_NIGHTMARE_EXTRA = "－高护甲\
-－击倒时变回普通梦魇",
+    ENEMY_ARMORED_NIGHTMARE_EXTRA = "－高护甲\n－击倒时变回普通梦魇",
     ENEMY_ARMORED_NIGHTMARE_NAME = "武装梦魇",
     ENEMY_ARMORED_NIGHTMARE_SPECIAL = "被击倒时变回普通梦魇。",
     ENEMY_BALLOONING_SPIDER_DESCRIPTION = "快速又狡猾的蜘蛛，十分擅长避开麻烦。",
-    ENEMY_BALLOONING_SPIDER_EXTRA = "- 被拦截时飞行\
-- 中等护甲",
+    ENEMY_BALLOONING_SPIDER_EXTRA = "- 被拦截时飞行\n- 中等护甲",
     ENEMY_BALLOONING_SPIDER_FLYER_DESCRIPTION = "快速又狡猾的蜘蛛，十分擅长避开麻烦。",
-    ENEMY_BALLOONING_SPIDER_FLYER_EXTRA = "- 被拦截时飞行\
-- 中等护甲",
+    ENEMY_BALLOONING_SPIDER_FLYER_EXTRA = "- 被拦截时飞行\n- 中等护甲",
     ENEMY_BALLOONING_SPIDER_FLYER_NAME = "天网蜘蛛",
     ENEMY_BALLOONING_SPIDER_NAME = "天网蜘蛛",
     ENEMY_BANDERSNATCH_DESCRIPTION = "这种盛怒难遏的野兽生性凶残，身手极其敏捷，鲜少得见，令人心惧。",
-    ENEMY_BANDERSNATCH_EXTRA = "- 快速\
-- 范围伤害攻击\
-- 无法减速",
+    ENEMY_BANDERSNATCH_EXTRA = "- 快速\n- 范围伤害攻击\n- 无法减速",
     ENEMY_BANDERSNATCH_NAME = "大毛怪",
     ENEMY_BANDERSNATCH_SPECIAL = "无法减速，范围伤害",
     ENEMY_BANDIT_DESCRIPTION = "迅速而敏捷，能很快除掉敌人。",
-    ENEMY_BANDIT_EXTRA = "- 快速\
-- 伤害非常高\
-- 能闪避近战攻击",
+    ENEMY_BANDIT_EXTRA = "- 快速\n- 伤害非常高\n- 能闪避近战攻击",
     ENEMY_BANDIT_NAME = "强盗",
     ENEMY_BANDIT_SPECIAL = "闪避近战攻击",
     ENEMY_BANE_WOLF_DESCRIPTION = "要是不能及时发现这群恶狼的身影，便会沦为它们口中的猎物。",
     ENEMY_BANE_WOLF_EXTRA = "- 每次受到伤害速度加快",
     ENEMY_BANE_WOLF_NAME = "祸狼",
     ENEMY_BAT_DESCRIPTION = "长着翅膀的巨大生物，由阴影变成，会潜入黑夜搜寻捕猎目标。",
-    ENEMY_BAT_EXTRA = "- 速度快\
-- 飞行",
+    ENEMY_BAT_EXTRA = "- 速度快\n- 飞行",
     ENEMY_BAT_NAME = "吸血蝙蝠",
     ENEMY_BAT_SPECIAL = "月光效果：加速",
     ENEMY_BEAR_VANGUARD_DESCRIPTION = "他们高大、威猛且残暴，能将敌人撕成碎片。",
-    ENEMY_BEAR_VANGUARD_EXTRA = "- 高护甲\
-- 附近有熊死亡时会进入狂暴状态",
+    ENEMY_BEAR_VANGUARD_EXTRA = "- 高护甲\n- 附近有熊死亡时会进入狂暴状态",
     ENEMY_BEAR_VANGUARD_NAME = "熊先锋",
     ENEMY_BEAR_VANGUARD_SPECIAL = "附近有熊死亡时会进入狂暴状态",
     ENEMY_BEAR_WOODCUTTER_DESCRIPTION = "值班时常打瞌睡，但一旦醒来，事情就变得麻烦了。",
-    ENEMY_BEAR_WOODCUTTER_EXTRA = "- 高护甲\
-- 附近有熊死亡时会进入狂暴状态",
+    ENEMY_BEAR_WOODCUTTER_EXTRA = "- 高护甲\n- 附近有熊死亡时会进入狂暴状态",
     ENEMY_BEAR_WOODCUTTER_NAME = "熊樵夫",
     ENEMY_BLACKSURGE_DESCRIPTION = "这些来自海洋深处的深渊恶魔身披铠甲，能释放远古的魔法。",
-    ENEMY_BLACKSURGE_EXTRA = "- 重甲\
-- 能够使防御塔失效\
-- 躲进壳里时无敌",
+    ENEMY_BLACKSURGE_EXTRA = "- 重甲\n- 能够使防御塔失效\n- 躲进壳里时无敌",
     ENEMY_BLACKSURGE_NAME = "海螺法师",
     ENEMY_BLACKSURGE_SPECIAL = "使防御塔失效，龟缩前行",
     ENEMY_BLAZEFANG_DESCRIPTION = "这些巨大的爬行动物拿着来自异世界的武器，能发射毁灭射线。",
-    ENEMY_BLAZEFANG_EXTRA = "- 远程攻击\
-- 能秒杀目标\
-- 魔法抗性高",
+    ENEMY_BLAZEFANG_EXTRA = "- 远程攻击\n- 能秒杀目标\n- 魔法抗性高",
     ENEMY_BLAZEFANG_NAME = "蜥蜴未来战士",
     ENEMY_BLAZEFANG_SPECIAL = "远程攻击，秒杀，自爆",
     ENEMY_BLINKER_DESCRIPTION = "瞥视者拥有着游隼般的视觉和蝙蝠状的翅膀，会袭击毫无防备的敌人。",
@@ -1712,31 +1647,23 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_BLINKER_NAME = "虚空瞥视者",
     ENEMY_BLINKER_SPECIAL = "晕眩玩家单位。",
     ENEMY_BLOODSHELL_DESCRIPTION = "令人敬畏的勇士，拥有钢铁般坚硬的带刺甲壳，使得他们坚不可摧！",
-    ENEMY_BLOODSHELL_EXTRA = "- 强大的护甲\
-- 免疫火炮伤害\
-- 速度慢",
+    ENEMY_BLOODSHELL_EXTRA = "- 强大的护甲\n- 免疫火炮伤害\n- 速度慢",
     ENEMY_BLOODSHELL_NAME = "狂暴螃蟹",
     ENEMY_BLOODSHELL_SPECIAL = "免疫火炮",
     ENEMY_BLOODSYDIAN_WARLOCK_DESCRIPTION = "使用血曜石力量的术士，在整个王国传播腐化。",
-    ENEMY_BLOODSYDIAN_WARLOCK_EXTRA = "- 慢\
-- 魔法抗性\
-- 血曜石腐化",
+    ENEMY_BLOODSYDIAN_WARLOCK_EXTRA = "- 慢\n- 魔法抗性\n- 血曜石腐化",
     ENEMY_BLOODSYDIAN_WARLOCK_NAME = "血祭食人魔",
     ENEMY_BLOODSYDIAN_WARLOCK_SPECIAL = "血曜石腐化",
     ENEMY_BLOOD_SERVANT_DESCRIPTION = "快速又可怕的野兽，由暮光精灵创造出来，只为搜寻和毁灭而生。",
-    ENEMY_BLOOD_SERVANT_EXTRA = "- 快速\
-- 高伤害",
+    ENEMY_BLOOD_SERVANT_EXTRA = "- 快速\n- 高伤害",
     ENEMY_BLOOD_SERVANT_NAME = "血祭仆从",
     ENEMY_BLOOD_SERVANT_SPECIAL = "快速",
     ENEMY_BLUEGALE_DESCRIPTION = "深海恶魔的指挥官，他们能释放风暴，辅助兄弟们进攻。",
-    ENEMY_BLUEGALE_EXTRA = "- 远程攻击\
-- 魔法免疫\
-- 能召唤风暴",
+    ENEMY_BLUEGALE_EXTRA = "- 远程攻击\n- 魔法免疫\n- 能召唤风暴",
     ENEMY_BLUEGALE_NAME = "蓝色风暴",
     ENEMY_BLUEGALE_SPECIAL = "召唤风暴",
     ENEMY_BOOMSHROOMS_DESCRIPTION = "一种非常不稳定的蘑菇种类，受到威胁时会爆炸。",
-    ENEMY_BOOMSHROOMS_EXTRA = "- 快速\
-- 魔菇爆炸",
+    ENEMY_BOOMSHROOMS_EXTRA = "- 快速\n- 魔菇爆炸",
     ENEMY_BOOMSHROOMS_NAME = "炸弹魔菇",
     ENEMY_BOOMSHROOMS_SPECIAL = "魔菇爆炸",
     ENEMY_BOSS_CORRUPTED_DENAS_NAME = "腐化迪纳斯",
@@ -1753,28 +1680,23 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_BOSS_PIG_NAME = "野兽之王血辗",
     ENEMY_BOSS_SPIDER_QUEEN_NAME = "米迦尔",
     ENEMY_BOUNCER_DESCRIPTION = "这些匪徒是低劣的佣兵，最喜欢劫掠的快感。",
-    ENEMY_BOUNCER_EXTRA = "- 速度平均\
-- 伤害低",
+    ENEMY_BOUNCER_EXTRA = "- 速度平均\n- 伤害低",
     ENEMY_BOUNCER_NAME = "沙漠匪徒",
     ENEMY_BRIGAND_DESCRIPTION = "身穿甲胄、能承受大量伤害的歹徒。",
-    ENEMY_BRIGAND_EXTRA = "- 中速\
-- 中甲",
+    ENEMY_BRIGAND_EXTRA = "- 中速\n- 中甲",
     ENEMY_BRIGAND_NAME = "土匪",
     ENEMY_BROODGUARD_DESCRIPTION = "无畏的蜥蜴勇士，身上的伤口能激起战斗的怒火，让他们速度更快。",
     ENEMY_BROODGUARD_EXTRA = "- 受伤后速度提高",
     ENEMY_BROODGUARD_NAME = "蜥蜴人护蛋卫士",
     ENEMY_BRUTE_DESCRIPTION = "一种势不可挡的高大爬行动物，挥舞着两条能量鞭！",
-    ENEMY_BRUTE_EXTRA = "- 非常坚韧\
-- 范围攻击\
-- 速度慢",
+    ENEMY_BRUTE_EXTRA = "- 非常坚韧\n- 范围攻击\n- 速度慢",
     ENEMY_BRUTE_NAME = "蜥蜴狂战士",
     ENEMY_BRUTE_SPECIAL = "范围攻击，能量鞭",
     ENEMY_BRUTE_WELDER_DESCRIPTION = "这些工人一言不合便抄起焊枪对准敌人。",
     ENEMY_BRUTE_WELDER_EXTRA = "- 死亡时封锁一座防御塔",
     ENEMY_BRUTE_WELDER_NAME = "野蛮焊工",
     ENEMY_CANNIBAL_DESCRIPTION = "无畏的部落勇士，身上的伤疤证明已经通过了勇者仪式。",
-    ENEMY_CANNIBAL_EXTRA = "- 速度平均\
-- 吃掉受害者",
+    ENEMY_CANNIBAL_EXTRA = "- 速度平均\n- 吃掉受害者",
     ENEMY_CANNIBAL_NAME = "野蛮人战士",
     ENEMY_CANNIBAL_SPECIAL = "食人",
     ENEMY_CANNIBAL_VOLCANO_NAME = "野蛮人狂战士",
@@ -1793,9 +1715,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_CORRUPTED_STALKER_SPECIAL = "飞行单位。",
     ENEMY_CROCS_BASIC_DESCRIPTION = "自傲的鳄鱼族战士，仍是年幼的个体，但仅需几卡路里它便能进化为它所梦寐以求的杀戮机器。",
     ENEMY_CROCS_BASIC_EGG_DESCRIPTION = "势不可挡的新生鳄鱼，“孩子长得真快”这句话说的就是这些充满惊喜的小家伙。",
-    ENEMY_CROCS_BASIC_EGG_EXTRA = "- 不可阻挡\
-- 低护甲\
-- 几秒钟后孵化成鳄鱼战士",
+    ENEMY_CROCS_BASIC_EGG_EXTRA = "- 不可阻挡\n- 低护甲\n- 几秒钟后孵化成鳄鱼战士",
     ENEMY_CROCS_BASIC_EGG_NAME = "鳄鱼奇趣蛋",
     ENEMY_CROCS_BASIC_EXTRA = "- 近战",
     ENEMY_CROCS_BASIC_NAME = "鳄鱼战士",
@@ -1806,40 +1726,26 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_CROCS_FLIER_EXTRA = "- 飞行",
     ENEMY_CROCS_FLIER_NAME = "飞翼鳄",
     ENEMY_CROCS_HYDRA_DESCRIPTION = "两颗脑袋总比一颗脑袋强，海德拉的存在证明了这一点。古代神话中也曾记载了一种有三颗脑袋的怪物，但这大概只是谣言吧。",
-    ENEMY_CROCS_HYDRA_EXTRA = "- 高血量\
-- 高伤害\
-- 高魔法抗性\
-- 死亡时长出第三颗头\
-- 向地面喷吐毒液",
+    ENEMY_CROCS_HYDRA_EXTRA = "- 高血量\n- 高伤害\n- 高魔法抗性\n- 死亡时长出第三颗头\n- 向地面喷吐毒液",
     ENEMY_CROCS_HYDRA_NAME = "海德拉",
     ENEMY_CROCS_QUICKFEET_GATOR_NAME = "鳄鱼跑腿工",
     ENEMY_CROCS_RANGED_DESCRIPTION = "敏捷矫健的蜥蜴猎手，使用弹弓对付远处的敌人。",
-    ENEMY_CROCS_RANGED_EXTRA = "- 快速\
-- 远程",
+    ENEMY_CROCS_RANGED_EXTRA = "- 快速\n- 远程",
     ENEMY_CROCS_RANGED_NAME = "蜥蜴猎手",
     ENEMY_CROCS_SHAMAN_DESCRIPTION = "鳄鱼族人中地位显赫的魔法高人。毕竟，对于一个冷血的种族来说，预报天气的变化是生死攸关的大事。",
-    ENEMY_CROCS_SHAMAN_EXTRA = "- 远程魔法伤害\
-- 高魔法抗性\
-- 治疗其他鳄鱼\
-- 封锁防御塔",
+    ENEMY_CROCS_SHAMAN_EXTRA = "- 远程魔法伤害\n- 高魔法抗性\n- 治疗其他鳄鱼\n- 封锁防御塔",
     ENEMY_CROCS_SHAMAN_NAME = "鳄鱼智者",
     ENEMY_CROCS_TANK_DESCRIPTION = "鳄鱼大军的基石，坚信“防守就是最好的进攻”。他们身披不知从哪儿搞来的钉壳，践行自己的信念。",
-    ENEMY_CROCS_TANK_EXTRA = "- 高生命值\
-- 高护甲\
-- 被拦截时向前翻滚",
+    ENEMY_CROCS_TANK_EXTRA = "- 高生命值\n- 高护甲\n- 被拦截时向前翻滚",
     ENEMY_CROCS_TANK_NAME = "重装鳄鱼",
     ENEMY_CRYSTAL_GOLEM_DESCRIPTION = "这群石像的水晶中注入了异界魔法，近乎不可阻挡。",
-    ENEMY_CRYSTAL_GOLEM_EXTRA = "- 小BOSS\
-- 极高护甲值",
+    ENEMY_CRYSTAL_GOLEM_EXTRA = "- 小BOSS\n- 极高护甲值",
     ENEMY_CRYSTAL_GOLEM_NAME = "水晶魔像",
     ENEMY_CULTBROOD_DESCRIPTION = "半蜘蛛、半邪教徒的怪物，无惧无情地冲入战场。",
-    ENEMY_CULTBROOD_EXTRA = "- 快速\
-- 中毒攻击\
-- 如果敌人在中毒期间死亡，会诞生另一只邪教魔蛛",
+    ENEMY_CULTBROOD_EXTRA = "- 快速\n- 中毒攻击\n- 如果敌人在中毒期间死亡，会诞生另一只邪教魔蛛",
     ENEMY_CULTBROOD_NAME = "邪教魔蛛",
     ENEMY_CUTTHROAT_RAT_DESCRIPTION = "天性狡猾诡诈，这些老鼠是敏锐的刺客和潜行者。",
-    ENEMY_CUTTHROAT_RAT_EXTRA = "- 快速\
-- 击中敌人后进入隐形状态",
+    ENEMY_CUTTHROAT_RAT_EXTRA = "- 快速\n- 击中敌人后进入隐形状态",
     ENEMY_CUTTHROAT_RAT_NAME = "割喉鼠",
     ENEMY_CUTTHROAT_RAT_SPECIAL = "击中敌人后进入隐形状态。",
     ENEMY_DARKSTEEL_ANVIL_DESCRIPTION = "铁砧便是矮人的战鼓，看着越沉声音越宏亮。",
@@ -1849,117 +1755,86 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_DARKSTEEL_FIST_EXTRA = "- 特殊攻击可眩晕玩家单位",
     ENEMY_DARKSTEEL_FIST_NAME = "暗钢重拳",
     ENEMY_DARKSTEEL_GUARDIAN_DESCRIPTION = "由矮人战士操作、强劲引擎驱动的坚固战斗装甲。绝对是能让人下巴掉下来的打扮。",
-    ENEMY_DARKSTEEL_GUARDIAN_EXTRA = "- 小Boss\
-- 低生命值时进入狂暴状态",
+    ENEMY_DARKSTEEL_GUARDIAN_EXTRA = "- 小Boss\n- 低生命值时进入狂暴状态",
     ENEMY_DARKSTEEL_GUARDIAN_NAME = "暗钢守卫",
     ENEMY_DARKSTEEL_HAMMERER_DESCRIPTION = "和他们钟爱的武器一样笨重的战士。",
     ENEMY_DARKSTEEL_HAMMERER_EXTRA = " ",
     ENEMY_DARKSTEEL_HAMMERER_NAME = "暗钢锤兵",
     ENEMY_DARKSTEEL_HULK_DESCRIPTION = "脾气暴躁，血管中流淌的是熔融的钢铁，这是矮人能达到的最\"重\"形态。",
-    ENEMY_DARKSTEEL_HULK_EXTRA = "- 小Boss\
-- 低生命值时，沿路径冲刺并造成伤害",
+    ENEMY_DARKSTEEL_HULK_EXTRA = "- 小Boss\n- 低生命值时，沿路径冲刺并造成伤害",
     ENEMY_DARKSTEEL_HULK_NAME = "暗钢巨人",
     ENEMY_DARKSTEEL_SHIELDER_DESCRIPTION = "手持巨盾抵御攻击，在敌人中破开一条通路前进。",
     ENEMY_DARKSTEEL_SHIELDER_EXTRA = "- 被击败后变成锤兵",
     ENEMY_DARKSTEEL_SHIELDER_NAME = "暗钢盾卫",
     ENEMY_DARK_KNIGHT_DESCRIPTION = "全副武装的堕落骑士，几近刀枪不入。",
-    ENEMY_DARK_KNIGHT_EXTRA = "- 慢速\
-- 高甲",
+    ENEMY_DARK_KNIGHT_EXTRA = "- 慢速\n- 高甲",
     ENEMY_DARK_KNIGHT_NAME = "黑暗骑士",
     ENEMY_DARK_SPITTERS_DESCRIPTION = "喷吐黑暗血弹的腐化生物，其精准度堪称致命。",
-    ENEMY_DARK_SPITTERS_EXTRA = "- 中速\
-- 黑暗喷吐",
+    ENEMY_DARK_SPITTERS_EXTRA = "- 中速\n- 黑暗喷吐",
     ENEMY_DARK_SPITTERS_NAME = "黑暗喷吐者",
     ENEMY_DARK_SPITTERS_SPECIAL = "喷吐黑暗血弹",
     ENEMY_DARTER_DESCRIPTION = "罕见的蜥蜴人品种，能够使用未知的方法进行传送。",
-    ENEMY_DARTER_EXTRA = "- 受伤时传送\
-- 速度快",
+    ENEMY_DARTER_EXTRA = "- 受伤时传送\n- 速度快",
     ENEMY_DARTER_NAME = "蜥蜴跃动者",
     ENEMY_DARTER_SPECIAL = "传送",
     ENEMY_DEATHWOOD_DESCRIPTION = "被黑暗亡魂腐化的怪异树木，在林中游荡，肆意破坏。",
-    ENEMY_DEATHWOOD_EXTRA = "- 小Boss\
- - 投掷诅咒果实造成范围伤害",
+    ENEMY_DEATHWOOD_EXTRA = "- 小Boss\n - 投掷诅咒果实造成范围伤害",
     ENEMY_DEATHWOOD_NAME = "诡异枯木",
     ENEMY_DEFORMED_GRYMBEARD_CLONE_DESCRIPTION = "诡须那目空一切的傲慢所诞下的产物。想必只有这么一颗又大又丑的脑袋才能配得上他的脑力。",
-    ENEMY_DEFORMED_GRYMBEARD_CLONE_EXTRA = "- 飞行单位\
-- 高魔法抗性护盾",
+    ENEMY_DEFORMED_GRYMBEARD_CLONE_EXTRA = "- 飞行单位\n- 高魔法抗性护盾",
     ENEMY_DEFORMED_GRYMBEARD_CLONE_NAME = "畸变克隆",
     ENEMY_DEMON_CERBERUS_DESCRIPTION = "皮糙肉厚的三头犬，能吞噬大量士兵。",
-    ENEMY_DEMON_CERBERUS_EXTRA = "- 范围攻击\
-- 高甲\
-- 小头目",
+    ENEMY_DEMON_CERBERUS_EXTRA = "- 范围攻击\n- 高甲\n- 小头目",
     ENEMY_DEMON_CERBERUS_NAME = "地狱犬",
     ENEMY_DEMON_CERBERUS_SPECIAL = "小头目，地狱业火，多目标攻击",
     ENEMY_DEMON_DESCRIPTION = "恐怖的地狱生物，死亡时会发生爆炸，对附近士兵造成伤害。",
-    ENEMY_DEMON_EXTRA = "- 魔法抗性\
-- 地狱业火",
+    ENEMY_DEMON_EXTRA = "- 魔法抗性\n- 地狱业火",
     ENEMY_DEMON_FLAREON_DESCRIPTION = "这种卑劣的生物能投出破坏力十足的火球，而且总是集体发动攻击。",
-    ENEMY_DEMON_FLAREON_EXTRA = "- 远程火焰攻击\
-- 快速\
-- 魔法抗性",
+    ENEMY_DEMON_FLAREON_EXTRA = "- 远程火焰攻击\n- 快速\n- 魔法抗性",
     ENEMY_DEMON_FLAREON_NAME = "火伊布",
     ENEMY_DEMON_FLAREON_SPECIAL = "远程火焰攻击，地狱业火",
     ENEMY_DEMON_GULAEMON_DESCRIPTION = "体型庞大的恶魔，拥有有限的飞行能力，能够承受大量伤害。",
-    ENEMY_DEMON_GULAEMON_EXTRA = "- 慢速\
-- 能够飞行\
-- 非常强悍",
+    ENEMY_DEMON_GULAEMON_EXTRA = "- 慢速\n- 能够飞行\n- 非常强悍",
     ENEMY_DEMON_GULAEMON_NAME = "贪食魔",
     ENEMY_DEMON_GULAEMON_SPECIAL = "短暂飞行，地狱业火",
     ENEMY_DEMON_IMP_DESCRIPTION = "喜好作恶的地狱飞行生物，常与石像鬼一同现身。",
-    ENEMY_DEMON_IMP_EXTRA = "- 飞行\
-- 中速",
+    ENEMY_DEMON_IMP_EXTRA = "- 飞行\n- 中速",
     ENEMY_DEMON_IMP_NAME = "魔精",
     ENEMY_DEMON_IMP_SPECIAL = "飞行",
     ENEMY_DEMON_LEGION_DESCRIPTION = "从深渊中产生的恶魔...因其一人成军，故名军团...",
-    ENEMY_DEMON_LEGION_EXTRA = "- 高甲\
-- 能自我复制",
+    ENEMY_DEMON_LEGION_EXTRA = "- 高甲\n- 能自我复制",
     ENEMY_DEMON_LEGION_NAME = "恶魔军团",
     ENEMY_DEMON_LEGION_SPECIAL = "复制，地狱业火",
     ENEMY_DEMON_MAGE_DESCRIPTION = "他们带领穷凶极恶的军队踏入战场，擅用地狱护盾保护自己的手下。",
-    ENEMY_DEMON_MAGE_EXTRA = "- 遮护其他恶魔\
-- 魔法抗性\
-- 地狱业火",
+    ENEMY_DEMON_MAGE_EXTRA = "- 遮护其他恶魔\n- 魔法抗性\n- 地狱业火",
     ENEMY_DEMON_MAGE_NAME = "恶魔头领",
     ENEMY_DEMON_MAGE_SPECIAL = "遮护其他恶魔，地狱业火",
     ENEMY_DEMON_NAME = "恶魔之子",
     ENEMY_DEMON_SPECIAL = "地狱业火",
     ENEMY_DEMON_WOLF_DESCRIPTION = "令人畏惧的邪恶生物，是恶魔头领座下的猎犬。",
-    ENEMY_DEMON_WOLF_EXTRA = "- 魔法抗性\
-- 地狱业火\
-- 快速",
+    ENEMY_DEMON_WOLF_EXTRA = "- 魔法抗性\n- 地狱业火\n- 快速",
     ENEMY_DEMON_WOLF_NAME = "恶魔猎犬",
     ENEMY_DEMON_WOLF_SPECIAL = "地狱业火",
     ENEMY_DESERT_ARCHER_DESCRIPTION = "来自沙漠的弓箭手，有着致命的命中率，会攻击附近的士兵。",
-    ENEMY_DESERT_ARCHER_EXTRA = "- 远程攻击\
-- 魔法抗性低\
-- 速度平均",
+    ENEMY_DESERT_ARCHER_EXTRA = "- 远程攻击\n- 魔法抗性低\n- 速度平均",
     ENEMY_DESERT_ARCHER_NAME = "沙漠弓箭手",
     ENEMY_DESERT_ARCHER_SPECIAL = "射箭",
     ENEMY_DESERT_RAIDER_DESCRIPTION = "来自游牧部落的老道佣兵。",
-    ENEMY_DESERT_RAIDER_EXTRA = "- 护甲低\
-- 伤害高\
-- 速度平均",
+    ENEMY_DESERT_RAIDER_EXTRA = "- 护甲低\n- 伤害高\n- 速度平均",
     ENEMY_DESERT_RAIDER_NAME = "沙漠突袭者",
     ENEMY_DESERT_WOLF_DESCRIPTION = "快速、狡猾的野兽，会躲避近战攻击，也能抵御魔法攻击。",
-    ENEMY_DESERT_WOLF_EXTRA = "- 非常快\
-- 能躲避近战攻击\
-- 有魔法抗性",
+    ENEMY_DESERT_WOLF_EXTRA = "- 非常快\n- 能躲避近战攻击\n- 有魔法抗性",
     ENEMY_DESERT_WOLF_NAME = "战争猎犬",
     ENEMY_DESERT_WOLF_SMALL_DESCRIPTION = "行动非常迅速的凶残生物，能躲避近战攻击。",
-    ENEMY_DESERT_WOLF_SMALL_EXTRA = "- 非常快\
-- 能躲避近战攻击",
+    ENEMY_DESERT_WOLF_SMALL_EXTRA = "- 非常快\n- 能躲避近战攻击",
     ENEMY_DESERT_WOLF_SMALL_NAME = "沙漠猎犬",
     ENEMY_DESERT_WOLF_SMALL_SPECIAL = "躲避近战攻击",
     ENEMY_DESERT_WOLF_SPECIAL = "躲避近战攻击",
     ENEMY_DEVILTIDE_DESCRIPTION = "身着轻甲的鲨鱼骑手，是深海恶魔的突击部队。",
-    ENEMY_DEVILTIDE_EXTRA = "- 护甲低\
-- 能够投掷渔网\
-- 速度平均",
+    ENEMY_DEVILTIDE_EXTRA = "- 护甲低\n- 能够投掷渔网\n- 速度平均",
     ENEMY_DEVILTIDE_NAME = "海潮骑手",
     ENEMY_DEVILTIDE_SHARK_DESCRIPTION = "身着轻甲的鲨鱼骑手，是深海恶魔的突击部队。",
-    ENEMY_DEVILTIDE_SHARK_EXTRA = "- 护甲低\
-- 能够投掷渔网\
-- 速度平均",
+    ENEMY_DEVILTIDE_SHARK_EXTRA = "- 护甲低\n- 能够投掷渔网\n- 速度平均",
     ENEMY_DEVILTIDE_SHARK_NAME = "海潮骑手",
     ENEMY_DEVILTIDE_SHARK_SPECIAL = "投掷渔网",
     ENEMY_DEVILTIDE_SPECIAL = "投掷渔网",
@@ -1967,19 +1842,15 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_DRAINBROOD_EXTRA = "- 使敌人结晶化并吸取他们的生命。",
     ENEMY_DRAINBROOD_NAME = "吸血蜘蛛",
     ENEMY_DREADEYE_VIPER_DESCRIPTION = "用自身毒液涂抹箭矢，并从远处精准夺命。",
-    ENEMY_DREADEYE_VIPER_EXTRA = "- 低魔法抗性\
-- 毒性攻击",
+    ENEMY_DREADEYE_VIPER_EXTRA = "- 低魔法抗性\n- 毒性攻击",
     ENEMY_DREADEYE_VIPER_NAME = "骇眼毒蛇",
     ENEMY_DREADEYE_VIPER_SPECIAL = "其箭矢会对目标施加中毒效果。",
     ENEMY_DRIDER_DESCRIPTION = "半蜘蛛、半精灵的憎恶，毫无畏惧与怜悯地冲入战场。",
-    ENEMY_DRIDER_EXTRA = "- 快速\
-- 毒性攻击\
-- 利用士兵繁殖",
+    ENEMY_DRIDER_EXTRA = "- 快速\n- 毒性攻击\n- 利用士兵繁殖",
     ENEMY_DRIDER_NAME = "蛛化精灵",
     ENEMY_DRIDER_SPECIAL = "毒性攻击，利用士兵繁殖",
     ENEMY_DUST_CRYPTID_DESCRIPTION = "曾经是深林奇景，如今却是骇人恶虫。",
-    ENEMY_DUST_CRYPTID_EXTRA = "- 飞行\
-- 留下能使敌人免疫伤害的花粉团",
+    ENEMY_DUST_CRYPTID_EXTRA = "- 飞行\n- 留下能使敌人免疫伤害的花粉团",
     ENEMY_DUST_CRYPTID_NAME = "粉尘飞蛾",
     ENEMY_EFREETI_BOSS_DESCRIPTION = "许愿的时候要小心，火巨灵可不是你梦寐以求的那种魔灵...",
     ENEMY_EFREETI_BOSS_NAME = "纳泽鲁",
@@ -1987,9 +1858,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_EFREETI_SMALL_DESCRIPTION = "这些低等巨灵不能实现愿望，不过你一定会许愿让他们快点离开。",
     ENEMY_EFREETI_SMALL_NAME = "低等巨灵",
     ENEMY_ELVIRA_DESCRIPTION = "强大的不死生物，以受害者的鲜血为食。",
-    ENEMY_ELVIRA_EXTRA = "- 能够吸取生命\
-- 强大的魔法抗性\
-- 面对卢克雷齐娅的特技时很脆弱",
+    ENEMY_ELVIRA_EXTRA = "- 能够吸取生命\n- 强大的魔法抗性\n- 面对卢克雷齐娅的特技时很脆弱",
     ENEMY_ELVIRA_NAME = "吸血鬼夫人",
     ENEMY_ELVIRA_SPECIAL = "月光效果：生命吸取提升",
     ENEMY_ENDLESS_MINIBOSS_DESERT_NAME = "阿努比斯",
@@ -2001,33 +1870,25 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_ENDLESS_MINIBOSS_TWILIGHT_NAME = "暮光狂战士",
     ENEMY_ENDLESS_MINIBOSS_TWILIGHT_SPECIAL = "小头目",
     ENEMY_ETTIN_DESCRIPTION = "这种邪恶的巨人有两个头，但缺心眼，把树木当作钉头锤来挥舞。",
-    ENEMY_ETTIN_EXTRA = "- 快速生命值再生\
-- 高生命值\
-- 慢速",
+    ENEMY_ETTIN_EXTRA = "- 快速生命值再生\n- 高生命值\n- 慢速",
     ENEMY_ETTIN_NAME = "双头食人魔",
     ENEMY_ETTIN_SPECIAL = "快速生命值再生",
     ENEMY_EVOLVING_SCOURGE_DESCRIPTION = "乍看有点可愛，但当它们吞噬掉阵亡的战士时就会变成混世魔王。",
-    ENEMY_EVOLVING_SCOURGE_EXTRA = "- 吞噬阵亡单位后进化成更强形态\
-- 受到[注目]时立即进化成最终形态",
+    ENEMY_EVOLVING_SCOURGE_EXTRA = "- 吞噬阵亡单位后进化成更强形态\n- 受到[注目]时立即进化成最终形态",
     ENEMY_EVOLVING_SCOURGE_NAME = "异变灾星",
     ENEMY_EXECUTIONER_DESCRIPTION = "不可阻挡的杀人部队，手里的斧子能迅速消灭敌人。",
-    ENEMY_EXECUTIONER_EXTRA = "- 速度慢\
-- 生命值非常高\
-- 能够处决士兵",
+    ENEMY_EXECUTIONER_EXTRA = "- 速度慢\n- 生命值非常高\n- 能够处决士兵",
     ENEMY_EXECUTIONER_NAME = "行刑者",
     ENEMY_EXECUTIONER_SPECIAL = "秒杀士兵",
     ENEMY_FALLEN_DESCRIPTION = "曾经是伟大勇士的尸体，又再一次活了过来。",
     ENEMY_FALLEN_EXTRA = "- 伤害高",
     ENEMY_FALLEN_KNIGHT_DESCRIPTION = "陷入疯狂与暴躁的堕落骑士。",
-    ENEMY_FALLEN_KNIGHT_EXTRA = "- 高魔法抗性\
-- 高伤害\
-- 以亡灵之躯回归",
+    ENEMY_FALLEN_KNIGHT_EXTRA = "- 高魔法抗性\n- 高伤害\n- 以亡灵之躯回归",
     ENEMY_FALLEN_KNIGHT_NAME = "堕落骑士",
     ENEMY_FALLEN_KNIGHT_SPECIAL = "以亡灵之躯回归",
     ENEMY_FALLEN_NAME = "木乃伊",
     ENEMY_FAT_ORC_DESCRIPTION = "具有轻型护甲的强悍野蛮人。",
-    ENEMY_FAT_ORC_EXTRA = "- 轻甲\
-- 慢速",
+    ENEMY_FAT_ORC_EXTRA = "- 轻甲\n- 慢速",
     ENEMY_FAT_ORC_NAME = "兽人",
     ENEMY_FINAL_BOSS_DESCRIPTION = "不是阴影组成了安布拉，而是安布拉组成了阴影...",
     ENEMY_FINAL_BOSS_MINION_DESCRIPTION = "作为暗影位面的居民，暗影元素是黑暗与死亡的具象化表现...",
@@ -2037,31 +1898,23 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_FINAL_BOSS_PIECE_NAME = "黑暗碎片",
     ENEMY_FINAL_BOSS_SPECIAL = "头目",
     ENEMY_FOREST_TROLL_DESCRIPTION = "这种巨兽极难消灭，他们几乎能立即对伤口再生。",
-    ENEMY_FOREST_TROLL_EXTRA = "- 非常强悍\
-- 慢速\
-- 超强再生",
+    ENEMY_FOREST_TROLL_EXTRA = "- 非常强悍\n- 慢速\n- 超强再生",
     ENEMY_FOREST_TROLL_NAME = "森林巨魔",
     ENEMY_FOREST_TROLL_SPECIAL = "再生，范围攻击，免疫眩晕",
     ENEMY_GARGOYLE_DESCRIPTION = "长有双翅的卑鄙生物，能飞越兵营和火炮。",
-    ENEMY_GARGOYLE_EXTRA = "- 飞行\
-- 中速",
+    ENEMY_GARGOYLE_EXTRA = "- 飞行\n- 中速",
     ENEMY_GARGOYLE_NAME = "石像鬼",
     ENEMY_GARGOYLE_SPECIAL = "飞行",
     ENEMY_GHOST_DESCRIPTION = "受折磨的灵魂，在荒野中游荡，四处需找目标，解除它们永世的痛苦。",
-    ENEMY_GHOST_EXTRA = "- 只畏惧魔法\
-- 不按照路径前进\
-- 无法阻挡",
+    ENEMY_GHOST_EXTRA = "- 只畏惧魔法\n- 不按照路径前进\n- 无法阻挡",
     ENEMY_GHOST_NAME = "幽魂",
     ENEMY_GHOST_SPECIAL = "无法拦截",
     ENEMY_GHOUL_DESCRIPTION = "啃食人肉的贪婪不死生物，成群结队进行捕猎。",
-    ENEMY_GHOUL_EXTRA = "- 速度快\
-- 吃掉受害者",
+    ENEMY_GHOUL_EXTRA = "- 速度快\n- 吃掉受害者",
     ENEMY_GHOUL_NAME = "食尸鬼",
     ENEMY_GHOUL_SPECIAL = "月光效果：额外伤害",
     ENEMY_GIANT_RAT_DESCRIPTION = "邪恶的啮齿类生物，拥有剃刀般尖利的牙齿，几乎能撕开一切。",
-    ENEMY_GIANT_RAT_EXTRA = "- 快速\
-- 传播致命疾病\
-- 可从垃圾中产生",
+    ENEMY_GIANT_RAT_EXTRA = "- 快速\n- 传播致命疾病\n- 可从垃圾中产生",
     ENEMY_GIANT_RAT_NAME = "巨鼠",
     ENEMY_GIANT_RAT_SPECIAL = "传播致命疾病，可从垃圾中产生",
     ENEMY_GLAREBROOD_CRYSTAL_NAME = "腐败水晶",
@@ -2069,71 +1922,52 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_GLARELING_EXTRA = "- 快速",
     ENEMY_GLARELING_NAME = "眼精",
     ENEMY_GLARENWARDEN_DESCRIPTION = "这些可憎的蜘蛛是由腐晶幼蛛融合而成的，它们比以往更强大且坚韧。",
-    ENEMY_GLARENWARDEN_EXTRA = "- 高护甲\
-- 攻击时吸取生命",
+    ENEMY_GLARENWARDEN_EXTRA = "- 高护甲\n- 攻击时吸取生命",
     ENEMY_GLARENWARDEN_NAME = "腐晶巨蛛",
     ENEMY_GLOOMY_DESCRIPTION = "肮脏的黑暗妖精，能复制自身，形成淹没一切的蝇群。",
-    ENEMY_GLOOMY_EXTRA = "- 飞行\
-- 快速\
-- 自我复制",
+    ENEMY_GLOOMY_EXTRA = "- 飞行\n- 快速\n- 自我复制",
     ENEMY_GLOOMY_NAME = "幽暗蝇",
     ENEMY_GLOOMY_SPECIAL = "飞行，自我复制",
     ENEMY_GNOLL_BLIGHTER_DESCRIPTION = "自然界的污染者，掌控死亡与衰弱之力。",
-    ENEMY_GNOLL_BLIGHTER_EXTRA = "- 高魔法抗性\
-- 使魔法植物枯萎\
-- 慢速",
+    ENEMY_GNOLL_BLIGHTER_EXTRA = "- 高魔法抗性\n- 使魔法植物枯萎\n- 慢速",
     ENEMY_GNOLL_BLIGHTER_NAME = "豺狼人摧残者",
     ENEMY_GNOLL_BLIGHTER_SPECIAL = "使魔法植物枯萎",
     ENEMY_GNOLL_BLOODSYDIAN_DESCRIPTION = "他们受血曜石魔力影响而变异，相比之前要强壮和邪恶得多。",
-    ENEMY_GNOLL_BLOODSYDIAN_EXTRA = "- 快\
-- 伤害高\
-- 畏惧魔法",
+    ENEMY_GNOLL_BLOODSYDIAN_EXTRA = "- 快\n- 伤害高\n- 畏惧魔法",
     ENEMY_GNOLL_BLOODSYDIAN_NAME = "血祭豺狼人",
     ENEMY_GNOLL_BURNER_DESCRIPTION = "以对森林和生物纵火为乐的恶毒野兽。",
-    ENEMY_GNOLL_BURNER_EXTRA = "- 中速\
-- 远程火焰攻击",
+    ENEMY_GNOLL_BURNER_EXTRA = "- 中速\n- 远程火焰攻击",
     ENEMY_GNOLL_BURNER_NAME = "豺狼人纵火者",
     ENEMY_GNOLL_BURNER_SPECIAL = "远程火焰攻击",
     ENEMY_GNOLL_CATAPULT_NAME = "豺狼人投石车",
     ENEMY_GNOLL_GNAWER_DESCRIPTION = "身披盔甲、满身伤疤、体型壮硕的豺狼人战士，带领着同族奔赴战场。",
-    ENEMY_GNOLL_GNAWER_EXTRA = "- 中甲\
-- 聚集时产生战意怒火\
-- 高生命值",
+    ENEMY_GNOLL_GNAWER_EXTRA = "- 中甲\n- 聚集时产生战意怒火\n- 高生命值",
     ENEMY_GNOLL_GNAWER_NAME = "豺狼人咬噬者",
     ENEMY_GNOLL_GNAWER_SPECIAL = "聚集时产生战意怒火",
     ENEMY_GNOLL_REAVER_DESCRIPTION = "低等生物，常被当作每次豺狼人进攻的先遣部队。",
-    ENEMY_GNOLL_REAVER_EXTRA = "- 中速\
-- 低生命值",
+    ENEMY_GNOLL_REAVER_EXTRA = "- 中速\n- 低生命值",
     ENEMY_GNOLL_REAVER_NAME = "豺狼人盗匪",
     ENEMY_GOBLIN_DESCRIPTION = "矮小而邪恶的类人生物，不具备任何特别能力。",
-    ENEMY_GOBLIN_EXTRA = "- 低生命值\
-- 中速",
+    ENEMY_GOBLIN_EXTRA = "- 低生命值\n- 中速",
     ENEMY_GOBLIN_NAME = "哥布林",
     ENEMY_GOBLIN_ZAPPER_DESCRIPTION = "强壮而无畏的哥布林，他们冲入战场朝敌人投掷炸弹",
-    ENEMY_GOBLIN_ZAPPER_EXTRA = "- 中速\
-- 投掷炸弹\
-- 死亡时爆炸",
+    ENEMY_GOBLIN_ZAPPER_EXTRA = "- 中速\n- 投掷炸弹\n- 死亡时爆炸",
     ENEMY_GOBLIN_ZAPPER_NAME = "哥布林破坏者",
     ENEMY_GOBLIN_ZAPPER_SPECIAL = "投掷炸弹，自爆",
     ENEMY_GOLEM_HEAD_DESCRIPTION = "机械黑魔法的产物。",
     ENEMY_GOLEM_HEAD_NAME = "傀儡头",
     ENEMY_GORILLA_DESCRIPTION = "脾气暴躁的巨大猩猩，被训练用来战斗。被视为战场上一股强大的力量。",
-    ENEMY_GORILLA_EXTRA = "- 速度慢\
-- 非常坚韧\
-- 范围攻击",
+    ENEMY_GORILLA_EXTRA = "- 速度慢\n- 非常坚韧\n- 范围攻击",
     ENEMY_GORILLA_NAME = "大猩猩",
     ENEMY_GORILLA_SMALL_DESCRIPTION = "进化到了能踢你屁股阶段的猿猴，能把你踢出香蕉来。",
     ENEMY_GORILLA_SMALL_NAME = "猿猴",
     ENEMY_GORILLA_SPECIAL = "范围攻击",
     ENEMY_GREENFIN_DESCRIPTION = "邪恶的鱼形猎手，会偷偷潜伏上岸，捕猎人类。",
-    ENEMY_GREENFIN_EXTRA = "- 能够投掷渔网\
-- 速度快",
+    ENEMY_GREENFIN_EXTRA = "- 能够投掷渔网\n- 速度快",
     ENEMY_GREENFIN_NAME = "鱼人猎手",
     ENEMY_GREENFIN_SPECIAL = "投掷渔网",
     ENEMY_GRIM_DEVOURERS_DESCRIPTION = "戈迪斯的这些仆从有着无法填满的食欲。他们所到之处，一切都会被吞噬。",
-    ENEMY_GRIM_DEVOURERS_EXTRA = "- 快\
-- 低甲\
-- 吞噬士兵",
+    ENEMY_GRIM_DEVOURERS_EXTRA = "- 快\n- 低甲\n- 吞噬士兵",
     ENEMY_GRIM_DEVOURERS_NAME = "吞噬者",
     ENEMY_GRIM_DEVOURERS_SPECIAL = "吞噬士兵",
     ENEMY_GUNBOAT_NAME = "炮艇",
@@ -2149,65 +1983,50 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_HOG_INVADER_EXTRA = "－低血量",
     ENEMY_HOG_INVADER_NAME = "猪头兵",
     ENEMY_HUNTER_DESCRIPTION = "野蛮人猎人是迅捷的勇士，能射出致命的有毒飞镖。",
-    ENEMY_HUNTER_EXTRA = "- 速度快\
-- 远程毒素攻击",
+    ENEMY_HUNTER_EXTRA = "- 速度快\n- 远程毒素攻击",
     ENEMY_HUNTER_NAME = "野蛮人猎人",
     ENEMY_HUNTER_SPECIAL = "远程毒素攻击",
     ENEMY_HYENA5_DESCRIPTION = "嗜血成性的战士，以敌军的尸体为食。",
-    ENEMY_HYENA5_EXTRA = "－中护甲\
-－吃掉倒下的玩家单位恢复血量",
+    ENEMY_HYENA5_EXTRA = "－中护甲\n－吃掉倒下的玩家单位恢复血量",
     ENEMY_HYENA5_NAME = "腐牙鬣狗",
     ENEMY_HYENA5_SPECIAL = "吃掉死亡的玩家单位恢复血量。",
     ENEMY_HYENA_DESCRIPTION = "豺狼人饲养的野兽，行动迅捷，生性胆怯，能快速穿过敌人防线。",
-    ENEMY_HYENA_EXTRA = "- 快速\
-- 能全速冲过阻截\
-- 低魔法抗性",
+    ENEMY_HYENA_EXTRA = "- 快速\n- 能全速冲过阻截\n- 低魔法抗性",
     ENEMY_HYENA_NAME = "鬣狗",
     ENEMY_HYENA_SPECIAL = "无法阻截",
     ENEMY_IMMORTAL_DESCRIPTION = "无情的精英勇士，以坚不可摧著称。",
-    ENEMY_IMMORTAL_EXTRA = "- 身着装甲\
-- 变成木乃伊返回战场",
+    ENEMY_IMMORTAL_EXTRA = "- 身着装甲\n- 变成木乃伊返回战场",
     ENEMY_IMMORTAL_NAME = "长生军",
     ENEMY_IMMORTAL_SPECIAL = "变成木乃伊返回战场",
     ENEMY_JUNGLE_SPIDER_BIG_DESCRIPTION = "这个侵略性十足的捕食者在狩猎时会利用幼崽来战胜受害者。",
-    ENEMY_JUNGLE_SPIDER_BIG_EXTRA = "- 伤害高\
-- 魔法抗性\
-- 孵化幼蛛",
+    ENEMY_JUNGLE_SPIDER_BIG_EXTRA = "- 伤害高\n- 魔法抗性\n- 孵化幼蛛",
     ENEMY_JUNGLE_SPIDER_BIG_NAME = "丛林蜘蛛女王",
     ENEMY_JUNGLE_SPIDER_BIG_SPECIAL = "生产子嗣",
     ENEMY_JUNGLE_SPIDER_SMALL_DESCRIPTION = "这种凶残捕食者的丛林变种要比其森林里的表亲恶毒得多。",
-    ENEMY_JUNGLE_SPIDER_SMALL_EXTRA = "- 快速\
-- 魔法抗性",
+    ENEMY_JUNGLE_SPIDER_SMALL_EXTRA = "- 快速\n- 魔法抗性",
     ENEMY_JUNGLE_SPIDER_SMALL_NAME = "丛林蜘蛛",
     ENEMY_JUNGLE_SPIDER_TINY_DESCRIPTION = "没有那么小！",
     ENEMY_JUNGLE_SPIDER_TINY_NAME = "幼蛛",
     ENEMY_JUNGLE_SPIDER_TINY_WITH_GOLD_NAME = "幼蛛",
     ENEMY_KILLERTILE_DESCRIPTION = "强大的破坏者，多年的战斗经验（或一块鸡肉）使得他们拥有了强大而致命的咬合力。",
-    ENEMY_KILLERTILE_EXTRA = "- 高血量\
-- 高伤害",
+    ENEMY_KILLERTILE_EXTRA = "- 高血量\n- 高伤害",
     ENEMY_KILLERTILE_NAME = "鳄鱼屠夫",
     ENEMY_LAVA_ELEMENTAL_DESCRIPTION = "岩浆元素由岩石与火焰组成，是死亡与毁灭的存在。",
-    ENEMY_LAVA_ELEMENTAL_EXTRA = "- 极高生命值\
-- 范围攻击\
--40%雷电抗性\
-- 中护甲，低魔法抗性",
+    ENEMY_LAVA_ELEMENTAL_EXTRA = "- 极高生命值\n- 范围攻击\n-40%雷电抗性\n- 中护甲，低魔法抗性",
     ENEMY_LAVA_ELEMENTAL_NAME = "岩浆元素",
     ENEMY_LAVA_ELEMENTAL_SPECIAL = "范围攻击，雷电抗性，不导电",
     ENEMY_LESSER_EYE_DESCRIPTION = "漂浮在战场上空的邪恶之眼，作为恶毒眼巢的侦察兵而活动。",
     ENEMY_LESSER_EYE_EXTRA = "- 飞行单位",
     ENEMY_LESSER_EYE_NAME = "小型魔眼",
     ENEMY_LESSER_SISTER_DESCRIPTION = "扭曲姐妹施展她们的邪恶魔法，将梦魇带入现实世界。",
-    ENEMY_LESSER_SISTER_EXTRA = "－高魔法抗性\
-－召唤梦魇",
+    ENEMY_LESSER_SISTER_EXTRA = "－高魔法抗性\n－召唤梦魇",
     ENEMY_LESSER_SISTER_NAME = "扭曲姐妹",
     ENEMY_LESSER_SISTER_NIGHTMARE_DESCRIPTION = "由邪教姐妹们的咒语之书编织而成的虚幻暗影。",
     ENEMY_LESSER_SISTER_NIGHTMARE_EXTRA = "- 只能在近战单位拦截时被攻击",
     ENEMY_LESSER_SISTER_NIGHTMARE_NAME = "梦魇",
     ENEMY_LESSER_SISTER_SPECIAL = "能够召唤梦魇",
     ENEMY_LYCAN_DESCRIPTION = "强大的勇士，能变身成为可怕的野兽。",
-    ENEMY_LYCAN_EXTRA = "- 生命值回复\
-- 传播狼人病毒\
-- 能变成狼人",
+    ENEMY_LYCAN_EXTRA = "- 生命值回复\n- 传播狼人病毒\n- 能变成狼人",
     ENEMY_LYCAN_NAME = "强狼人",
     ENEMY_LYCAN_SPECIAL = "能变成狼人",
     ENEMY_MACHINIST_DESCRIPTION = "痴迷于齿轮和引擎，为工业自动化与战争而生的矮人。",
@@ -2217,23 +2036,17 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_MAD_TINKERER_EXTRA = "- 使用其他单位留下的废铁制造无人机",
     ENEMY_MAD_TINKERER_NAME = "疯狂修理工",
     ENEMY_MANTARAY_DESCRIPTION = "魔法飞行生物，会在目标身上产卵，从其体内孵化出后代。",
-    ENEMY_MANTARAY_EXTRA = "- 飞行\
-- 中速\
-- 利用士兵繁殖",
+    ENEMY_MANTARAY_EXTRA = "- 飞行\n- 中速\n- 利用士兵繁殖",
     ENEMY_MANTARAY_NAME = "云鹰",
     ENEMY_MANTARAY_SPECIAL = "飞行，利用士兵繁殖",
     ENEMY_MARAUDER_DESCRIPTION = "训练有素、全副武装的笨拙歹徒，常带领土匪和强盗一同出没。",
-    ENEMY_MARAUDER_EXTRA = "- 慢速\
-- 中甲\
-- 消耗3点生命",
+    ENEMY_MARAUDER_EXTRA = "- 慢速\n- 中甲\n- 消耗3点生命",
     ENEMY_MARAUDER_NAME = "掠夺者",
     ENEMY_MINDLESS_HUSK_DESCRIPTION = "看似脆弱不堪的空骸，然而它们每一个都能为战场带来令人头疼的惊喜。",
     ENEMY_MINDLESS_HUSK_EXTRA = "- 死亡时召唤眼精。",
     ENEMY_MINDLESS_HUSK_NAME = "无主躯壳",
     ENEMY_MOUNTED_AVENGER_DESCRIPTION = "这些复仇者骑在巨大的甲虫上，无情地迅速推进。",
-    ENEMY_MOUNTED_AVENGER_EXTRA = "- 快速\
-- 高魔法抗性\
-- 可下马作战",
+    ENEMY_MOUNTED_AVENGER_EXTRA = "- 快速\n- 高魔法抗性\n- 可下马作战",
     ENEMY_MOUNTED_AVENGER_NAME = "复仇骑兵",
     ENEMY_MOUNTED_AVENGER_SPECIAL = "可下马作战",
     ENEMY_MUNCHSHROOMS_DESCRIPTION = "能够咀嚼盔甲和骨头等硬物的巨型蘑菇！",
@@ -2241,70 +2054,48 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_MUNCHSHROOMS_NAME = "咀嚼魔菇",
     ENEMY_MUNCHSHROOMS_SPECIAL = "产生炸弹魔菇",
     ENEMY_MUNRA_DESCRIPTION = "通常是黑暗大军的统帅，所到之处尽是死亡与腐败。",
-    ENEMY_MUNRA_EXTRA = "- 远程攻击\
-- 能够治疗盟友\
-- 召唤木乃伊",
+    ENEMY_MUNRA_EXTRA = "- 远程攻击\n- 能够治疗盟友\n- 召唤木乃伊",
     ENEMY_MUNRA_NAME = "沙漠幽魂",
     ENEMY_MUNRA_SPECIAL = "远程攻击，召唤、治疗木乃伊",
     ENEMY_MYRMIDON_DESCRIPTION = "凶暴的精英勇士，使用大刀和尖牙战斗！",
-    ENEMY_MYRMIDON_EXTRA = "- 重护甲\
-- 速度平均\
-- 能够啃咬敌人来回复生命值",
+    ENEMY_MYRMIDON_EXTRA = "- 重护甲\n- 速度平均\n- 能够啃咬敌人来回复生命值",
     ENEMY_MYRMIDON_NAME = "蜥蜴人仆从",
     ENEMY_MYRMIDON_SPECIAL = "吸血撕咬",
     ENEMY_NECROMANCER_DESCRIPTION = "死灵法师是难缠的黑魔法大师，能召唤亡灵爪牙为其卖命，并使它们变得更为难缠。",
-    ENEMY_NECROMANCER_EXTRA = "- 召唤亡灵\
-- 远程法术攻击\
-- 慢速\
-- 中魔法抗性",
+    ENEMY_NECROMANCER_EXTRA = "- 召唤亡灵\n- 远程法术攻击\n- 慢速\n- 中魔法抗性",
     ENEMY_NECROMANCER_NAME = "死灵法师",
     ENEMY_NECROMANCER_SPECIAL = "召唤、增益亡灵，远程法术攻击",
     ENEMY_NIGHTSCALE_DESCRIPTION = "狡猾的勇士，能隐去身形，通过防御。",
-    ENEMY_NIGHTSCALE_EXTRA = "- 能够隐形\
-- 伤害高\
-- 魔法抗性",
+    ENEMY_NIGHTSCALE_EXTRA = "- 能够隐形\n- 伤害高\n- 魔法抗性",
     ENEMY_NIGHTSCALE_NAME = "蜥蜴人潜伏者",
     ENEMY_NIGHTSCALE_SPECIAL = "隐身",
     ENEMY_NOXIOUS_HORROR_DESCRIPTION = "外表看似两栖生物的怪物，会向猎物喷射有毒胆汁。近战时也同样危险。",
     ENEMY_NOXIOUS_HORROR_EXTRA = "- 受到[注目]时，会获得魔法抗性并释放毒气环",
     ENEMY_NOXIOUS_HORROR_NAME = "剧毒喷吐者",
     ENEMY_OGRE_DESCRIPTION = "高大、丑陋、强悍的类人生物，他们会消灭所到之处的一切生灵。",
-    ENEMY_OGRE_EXTRA = "- 极高生命值\
-- 极慢速\
-- 消耗3点生命",
+    ENEMY_OGRE_EXTRA = "- 极高生命值\n- 极慢速\n- 消耗3点生命",
     ENEMY_OGRE_MAGI_DESCRIPTION = "这些擅长施法的食人魔，能为附近的友军吸收伤害。",
-    ENEMY_OGRE_MAGI_EXTRA = "- 高魔法抗性\
-- 快速生命值再生\
-- 生命链接光环",
+    ENEMY_OGRE_MAGI_EXTRA = "- 高魔法抗性\n- 快速生命值再生\n- 生命链接光环",
     ENEMY_OGRE_MAGI_NAME = "食人魔魔法师",
     ENEMY_OGRE_MAGI_SPECIAL = "生命链接光环",
     ENEMY_OGRE_NAME = "食人魔",
     ENEMY_ORC_ARMORED_DESCRIPTION = "类哥布林部族的精锐战斗力量，身穿重型盔甲。",
-    ENEMY_ORC_ARMORED_EXTRA = "- 慢速\
-- 厚甲\
-- 低血时加速",
+    ENEMY_ORC_ARMORED_EXTRA = "- 慢速\n- 厚甲\n- 低血时加速",
     ENEMY_ORC_ARMORED_NAME = "兽人勇士",
     ENEMY_ORC_RIDER_DESCRIPTION = "令人生畏的勇士骑兵，只有座狼战死后他们才会下马。",
-    ENEMY_ORC_RIDER_EXTRA = "- 高魔法抗性\
-- 快速\
-- 可下马作战",
+    ENEMY_ORC_RIDER_EXTRA = "- 高魔法抗性\n- 快速\n- 可下马作战",
     ENEMY_ORC_RIDER_NAME = "座狼骑兵",
     ENEMY_ORC_RIDER_SPECIAL = "下马作战",
     ENEMY_PERYTHON_DESCRIPTION = "这种会飞的野兽由扭曲魔力催生，常常携豺狼人一同参战。",
-    ENEMY_PERYTHON_EXTRA = "- 飞行\
-- 快速\
-- 可携带豺狼人",
+    ENEMY_PERYTHON_EXTRA = "- 飞行\n- 快速\n- 可携带豺狼人",
     ENEMY_PERYTHON_NAME = "佩利顿鹰",
     ENEMY_PERYTHON_SPECIAL = "飞行，可携带豺狼人",
     ENEMY_PHANTOM_WARRIOR_DESCRIPTION = "古代勇士的亡灵。这些冷酷的灵魂会抹灭生者的生命。",
-    ENEMY_PHANTOM_WARRIOR_EXTRA = "- 只畏惧魔法\
-- 死亡光环",
+    ENEMY_PHANTOM_WARRIOR_EXTRA = "- 只畏惧魔法\n- 死亡光环",
     ENEMY_PHANTOM_WARRIOR_NAME = "幽魂勇士",
     ENEMY_PHANTOM_WARRIOR_SPECIAL = "死亡光环，物理免疫",
     ENEMY_PILLAGER_DESCRIPTION = "具有魔法抗性的罪恶军阀，能用地狱之剑扫荡大批士兵。",
-    ENEMY_PILLAGER_EXTRA = "\
-- 范围攻击\
-- 消耗5点生命",
+    ENEMY_PILLAGER_EXTRA = "\n- 范围攻击\n- 消耗5点生命",
     ENEMY_PILLAGER_NAME = "强夺者",
     ENEMY_PILLAGER_SPECIAL = "范围法术攻击",
     ENEMY_PUMPKIN_WITCH_DESCRIPTION = "敌人变成了小南瓜，踩几脚就碎。",
@@ -2314,33 +2105,22 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_PUMPKIN_WITCH_FLYING_NAME = "小南瓜",
     ENEMY_PUMPKIN_WITCH_NAME = "小南瓜",
     ENEMY_QUETZAL_DESCRIPTION = "会飞的巨大爬行类生物，能够孵化出体型较小的飞行蜥蜴。",
-    ENEMY_QUETZAL_EXTRA = "- 速度快\
-- 飞行\
-- 孵化飞行蜥蜴",
+    ENEMY_QUETZAL_EXTRA = "- 速度快\n- 飞行\n- 孵化飞行蜥蜴",
     ENEMY_QUETZAL_NAME = "巨型蜥蜴",
     ENEMY_QUETZAL_SPECIAL = "飞行",
     ENEMY_QUICKFEET_GATOR_CHICKEN_LEG_DESCRIPTION = "这群鳄鱼多年来负责给兄弟们送鸡肉，腿脚变得飞快，快到有时候连鸡肉都忘了带就出发了。",
-    ENEMY_QUICKFEET_GATOR_CHICKEN_LEG_EXTRA = "- 快速\
-- 远程\
-- 当心！他们会给鳄鱼战士送鸡腿，使其进化",
+    ENEMY_QUICKFEET_GATOR_CHICKEN_LEG_EXTRA = "- 快速\n- 远程\n- 当心！他们会给鳄鱼战士送鸡腿，使其进化",
     ENEMY_QUICKFEET_GATOR_CHICKEN_LEG_NAME = "鳄鱼跑腿工",
     ENEMY_QUICKFEET_GATOR_DESCRIPTION = "这群鳄鱼多年来负责给兄弟们送鸡肉，腿脚变得飞快，快到有时候连鸡肉都忘了带就出发了。",
-    ENEMY_QUICKFEET_GATOR_EXTRA = "- 快速\
-- 远程\
-- 当心！他们会给鳄鱼战士送鸡腿，使其进化",
+    ENEMY_QUICKFEET_GATOR_EXTRA = "- 快速\n- 远程\n- 当心！他们会给鳄鱼战士送鸡腿，使其进化",
     ENEMY_QUICKFEET_GATOR_NAME = "鳄鱼跑腿工",
     ENEMY_RABBIT_NAME = "兔子",
     ENEMY_RAIDER_DESCRIPTION = "精锐装甲雇佣兵，只为战利品和金币而战。",
-    ENEMY_RAIDER_EXTRA = "- 慢速\
-- 厚甲\
-- 消耗3点生命\
-- 远程魔法攻击",
+    ENEMY_RAIDER_EXTRA = "- 慢速\n- 厚甲\n- 消耗3点生命\n- 远程魔法攻击",
     ENEMY_RAIDER_NAME = "侵袭者",
     ENEMY_RAIDER_SPECIAL = "远程破甲攻击",
     ENEMY_RAZORBOAR_DESCRIPTION = "这种野猪脾性火爆，喜爱冲锋，焚烧沿路的一切目标。",
-    ENEMY_RAZORBOAR_EXTRA = "- 中甲\
-- 受伤后获得伤害加成\
-- 燃烧冲锋",
+    ENEMY_RAZORBOAR_EXTRA = "- 中甲\n- 受伤后获得伤害加成\n- 燃烧冲锋",
     ENEMY_RAZORBOAR_NAME = "剃刀野猪",
     ENEMY_RAZORBOAR_SPECIAL = "燃烧冲锋",
     ENEMY_RAZORWING_DESCRIPTION = "被蜥蜴人驯化成了空中猎手。",
@@ -2349,123 +2129,90 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_RAZORWING_SPECIAL = "飞行",
     ENEMY_REAPER_LORD_NAME = "收割者之王",
     ENEMY_REDCAP_DESCRIPTION = "体型小巧的邪恶侏儒，手执巨大镰刀，为浴血战斗的刺激感而生。",
-    ENEMY_REDCAP_EXTRA = "- 快速\
-- 致死打击",
+    ENEMY_REDCAP_EXTRA = "- 快速\n- 致死打击",
     ENEMY_REDCAP_NAME = "小红帽",
     ENEMY_REDCAP_SPECIAL = "致命打击",
     ENEMY_REDSPINE_DESCRIPTION = "利维坦选出来的勇士。这些精英勇士在战斗中领导着低级的鱼人猎手。",
-    ENEMY_REDSPINE_EXTRA = "- 远程攻击\
-- 重甲\
-- 速度平均",
+    ENEMY_REDSPINE_EXTRA = "- 远程攻击\n- 重甲\n- 速度平均",
     ENEMY_REDSPINE_NAME = "海潮战士",
     ENEMY_REDSPINE_SPECIAL = "远程攻击",
     ENEMY_REVENANT_HARVESTER_DESCRIPTION = "旧时的女祭司变成了游荡林间的怪物，她们支配亡魂为其所用。",
     ENEMY_REVENANT_HARVESTER_EXTRA = "- 把附近的亡魂转化为活尸收割者",
     ENEMY_REVENANT_HARVESTER_NAME = "活尸收割者",
     ENEMY_REVENANT_SOULCALLER_DESCRIPTION = "本该安息的精灵法师被死亡魔法驱使着，能召唤死去精灵的亡魂。",
-    ENEMY_REVENANT_SOULCALLER_EXTRA = "- 封锁防御塔\
-- 召唤亡魂",
+    ENEMY_REVENANT_SOULCALLER_EXTRA = "- 封锁防御塔\n- 召唤亡魂",
     ENEMY_REVENANT_SOULCALLER_NAME = "活尸唤魂者",
     ENEMY_RHINO_DESCRIPTION = "行走的攻城槌，无视战场上的一切障碍。",
-    ENEMY_RHINO_EXTRA = "- 小BOSS\
-- 向敌群冲锋",
+    ENEMY_RHINO_EXTRA = "- 小BOSS\n- 向敌群冲锋",
     ENEMY_RHINO_NAME = "撼地犀牛",
     ENEMY_RHINO_SPECIAL = "向敌群冲锋。",
     ENEMY_ROCKETEER_DESCRIPTION = "无论黑暗头领去哪儿，火箭骑兵都如影随行。",
-    ENEMY_ROCKETEER_EXTRA = "- 飞行\
-- 中速\
-- 能使用涡轮增压",
+    ENEMY_ROCKETEER_EXTRA = "- 飞行\n- 中速\n- 能使用涡轮增压",
     ENEMY_ROCKETEER_NAME = "火箭骑兵",
     ENEMY_ROCKETEER_SPECIAL = "飞行，涡轮增压",
     ENEMY_ROLLING_SENTRY_DESCRIPTION = "即使被击落，它们仍会在地面上追猎敌人。",
-    ENEMY_ROLLING_SENTRY_EXTRA = "- 死亡时变成废铁\
-- 远程",
+    ENEMY_ROLLING_SENTRY_EXTRA = "- 死亡时变成废铁\n- 远程",
     ENEMY_ROLLING_SENTRY_NAME = "滚动哨兵",
     ENEMY_ROTTEN_LESSER_DESCRIPTION = "极具攻击性的菇类生物，热衷于近身对战。",
     ENEMY_ROTTEN_LESSER_EXTRA = "- 毒性孢子",
     ENEMY_ROTTEN_LESSER_NAME = "腐烂魔菇",
     ENEMY_ROTTEN_LESSER_SPECIAL = "毒性孢子",
     ENEMY_ROTTEN_TREE_DESCRIPTION = "这种堕落的生物曾是森林的保护者，拥有钢铁般坚硬的树皮。",
-    ENEMY_ROTTEN_TREE_EXTRA = "- 高甲\
-- 强悍",
+    ENEMY_ROTTEN_TREE_EXTRA = "- 高甲\n- 强悍",
     ENEMY_ROTTEN_TREE_NAME = "污染树精",
     ENEMY_SARELGAS_BIG_NAME = "萨雷格兹主母",
     ENEMY_SARELGAZ_SMALL_DESCRIPTION = "蜘蛛女王之子是可怕的对手，也是女王的忠实护卫。",
-    ENEMY_SARELGAZ_SMALL_EXTRA = "- 高魔法抗性\
-- 高甲",
+    ENEMY_SARELGAZ_SMALL_EXTRA = "- 高魔法抗性\n- 高甲",
     ENEMY_SARELGAZ_SMALL_NAME = "萨雷格兹之子",
     ENEMY_SATYR_CUTTHROAT_DESCRIPTION = "灵活又邪恶的生物，喜好捕猎毫无防备的旅客。",
-    ENEMY_SATYR_CUTTHROAT_EXTRA = "- 快速\
-- 高伤害\
-- 远程攻击",
+    ENEMY_SATYR_CUTTHROAT_EXTRA = "- 快速\n- 高伤害\n- 远程攻击",
     ENEMY_SATYR_CUTTHROAT_NAME = "萨梯割喉者",
     ENEMY_SATYR_CUTTHROAT_SPECIAL = "远程攻击",
     ENEMY_SATYR_HOPLITE_DESCRIPTION = "喜爱近身作战的可怕战士，战斗中还会召唤友军助力。",
-    ENEMY_SATYR_HOPLITE_EXTRA = "- 高伤害\
-- 中甲\
-- 召唤友军",
+    ENEMY_SATYR_HOPLITE_EXTRA = "- 高伤害\n- 中甲\n- 召唤友军",
     ENEMY_SATYR_HOPLITE_NAME = "萨梯重装步兵",
     ENEMY_SATYR_HOPLITE_SPECIAL = "召唤友军",
     ENEMY_SAURIAN_BLAZEFANG_DESCRIPTION = "这些巨大的爬行动物拿着来自异世界的武器，能发射毁灭射线。",
-    ENEMY_SAURIAN_BLAZEFANG_EXTRA = "- 远程攻击\
-- 能秒杀目标\
-- 魔法抗性高",
+    ENEMY_SAURIAN_BLAZEFANG_EXTRA = "- 远程攻击\n- 能秒杀目标\n- 魔法抗性高",
     ENEMY_SAURIAN_BLAZEFANG_NAME = "蜥蜴未来战士",
     ENEMY_SAURIAN_BROODGUARD_DESCRIPTION = "无畏的蜥蜴勇士，身上的伤口能激起战斗的怒火，让他们速度更快。",
     ENEMY_SAURIAN_BROODGUARD_EXTRA = "- 受伤后速度提高",
     ENEMY_SAURIAN_BROODGUARD_NAME = "蜥蜴人护蛋卫士",
     ENEMY_SAURIAN_BRUTE_DESCRIPTION = "一种势不可挡的高大爬行动物，挥舞着两条能量鞭！",
-    ENEMY_SAURIAN_BRUTE_EXTRA = "- 非常坚韧\
-- 范围攻击\
-- 速度慢",
+    ENEMY_SAURIAN_BRUTE_EXTRA = "- 非常坚韧\n- 范围攻击\n- 速度慢",
     ENEMY_SAURIAN_BRUTE_NAME = "蜥蜴狂战士",
     ENEMY_SAURIAN_DARTER_DESCRIPTION = "罕见的蜥蜴人品种，能够使用未知的方法进行传送。",
-    ENEMY_SAURIAN_DARTER_EXTRA = "- 受伤时传送\
-- 速度快",
+    ENEMY_SAURIAN_DARTER_EXTRA = "- 受伤时传送\n- 速度快",
     ENEMY_SAURIAN_DARTER_NAME = "蜥蜴跃动者",
     ENEMY_SAURIAN_MYRMIDON_DESCRIPTION = "凶暴的精英勇士，使用大刀和尖牙战斗！",
-    ENEMY_SAURIAN_MYRMIDON_EXTRA = "- 重护甲\
-- 速度平均\
-- 能够啃咬敌人来回复生命值",
+    ENEMY_SAURIAN_MYRMIDON_EXTRA = "- 重护甲\n- 速度平均\n- 能够啃咬敌人来回复生命值",
     ENEMY_SAURIAN_MYRMIDON_NAME = "蜥蜴人仆从",
     ENEMY_SAURIAN_NIGHTSCALE_DESCRIPTION = "狡猾的勇士，能隐去身形，通过防御。",
-    ENEMY_SAURIAN_NIGHTSCALE_EXTRA = "- 能够隐形\
-- 伤害高\
-- 魔法抗性",
+    ENEMY_SAURIAN_NIGHTSCALE_EXTRA = "- 能够隐形\n- 伤害高\n- 魔法抗性",
     ENEMY_SAURIAN_NIGHTSCALE_NAME = "蜥蜴人潜伏者",
     ENEMY_SAURIAN_NIGHTSCALE_SPECIAL = "隐身",
     ENEMY_SAURIAN_QUETZAL_DESCRIPTION = "会飞的巨大爬行类生物，能够孵化出体型较小的飞行蜥蜴。",
-    ENEMY_SAURIAN_QUETZAL_EXTRA = "- 速度快\
-- 飞行\
-- 孵化飞行蜥蜴",
+    ENEMY_SAURIAN_QUETZAL_EXTRA = "- 速度快\n- 飞行\n- 孵化飞行蜥蜴",
     ENEMY_SAURIAN_QUETZAL_NAME = "巨型蜥蜴",
-    ENEMY_SAURIAN_RAZORWING_EXTRA = "- 速度快\
-- 飞行",
+    ENEMY_SAURIAN_RAZORWING_EXTRA = "- 速度快\n- 飞行",
     ENEMY_SAURIAN_RAZORWING_NAME = "飞行蜥蜴",
     ENEMY_SAURIAN_SAVANT_DESCRIPTION = "强大的施法者，能够将一整支蜥蜴人大军召唤至战场！",
-    ENEMY_SAURIAN_SAVANT_EXTRA = "- 远程攻击\
-- 速度慢\
-- 召唤蜥蜴人",
+    ENEMY_SAURIAN_SAVANT_EXTRA = "- 远程攻击\n- 速度慢\n- 召唤蜥蜴人",
     ENEMY_SAURIAN_SAVANT_NAME = "蜥蜴学者",
     ENEMY_SAURIAN_SAVANT_SPECIAL = "远程攻击、召唤蜥蜴人",
     ENEMY_SAVAGE_BIRD_DESCRIPTION = "巨型的空中捕食者，有时会被野蛮人驯服后当坐骑。",
     ENEMY_SAVAGE_BIRD_EXTRA = "- 飞行",
     ENEMY_SAVAGE_BIRD_NAME = "巨鸟",
     ENEMY_SAVAGE_BIRD_RIDER_DESCRIPTION = "巨鸟骑士在丛林上空翱翔，猎杀他们发现的入侵者。",
-    ENEMY_SAVAGE_BIRD_RIDER_EXTRA = "- 飞行\
-- 远程攻击\
-- 死亡后放开巨鸟",
+    ENEMY_SAVAGE_BIRD_RIDER_EXTRA = "- 飞行\n- 远程攻击\n- 死亡后放开巨鸟",
     ENEMY_SAVAGE_BIRD_RIDER_NAME = "巨鸟骑士",
     ENEMY_SAVAGE_BIRD_RIDER_SPECIAL = "飞行、远程攻击、放开坐骑",
     ENEMY_SAVANT_DESCRIPTION = "强大的施法者，能够将一整支蜥蜴人大军召唤至战场！",
-    ENEMY_SAVANT_EXTRA = "- 远程攻击\
-- 速度慢\
-- 召唤蜥蜴人",
+    ENEMY_SAVANT_EXTRA = "- 远程攻击\n- 速度慢\n- 召唤蜥蜴人",
     ENEMY_SAVANT_NAME = "蜥蜴学者",
     ENEMY_SAVANT_SPECIAL = "远程攻击、召唤蜥蜴人",
     ENEMY_SCORPION_DESCRIPTION = "凶残且有毒的捕食者，被厚厚的甲壳保护着。",
-    ENEMY_SCORPION_EXTRA = "- 重甲\
-- 毒素攻击",
+    ENEMY_SCORPION_EXTRA = "- 重甲\n- 毒素攻击",
     ENEMY_SCORPION_NAME = "巨型蝎子",
     ENEMY_SCORPION_SPECIAL = "剧毒",
     ENEMY_SCRAP_DRONE_DESCRIPTION = "粗制滥造的玩意儿，唯一目标就是骚扰敌军。",
@@ -2475,49 +2222,38 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_SCRAP_SPEEDSTER_EXTRA = "- 死亡时变成废铁",
     ENEMY_SCRAP_SPEEDSTER_NAME = "废铁疾行机",
     ENEMY_SCREECHER_BAT_DESCRIPTION = "能发出致瘫尖啸的蝙蝠，哪怕最强大的部队也无法抵挡。",
-    ENEMY_SCREECHER_BAT_EXTRA = "- 飞行\
-- 击晕敌人",
+    ENEMY_SCREECHER_BAT_EXTRA = "- 飞行\n- 击晕敌人",
     ENEMY_SCREECHER_BAT_NAME = "尖啸蝙蝠",
     ENEMY_SCREECHER_BAT_SPECIAL = "击晕士兵",
     ENEMY_SHADOWS_SPAWNS_DESCRIPTION = "由黑魔法复生的尸体，意识中只有一个命令：毁灭。",
     ENEMY_SHADOWS_SPAWNS_EXTRA = "- 慢",
     ENEMY_SHADOWS_SPAWNS_NAME = "暗影兵卒",
     ENEMY_SHADOW_ARCHER_DESCRIPTION = "精准而致命的弓手，能对其行进路途附近的士兵发射箭矢。",
-    ENEMY_SHADOW_ARCHER_EXTRA = "- 远程攻击\
-- 低魔法抗性\
-- 中速",
+    ENEMY_SHADOW_ARCHER_EXTRA = "- 远程攻击\n- 低魔法抗性\n- 中速",
     ENEMY_SHADOW_ARCHER_NAME = "暗影弓手",
     ENEMY_SHADOW_ARCHER_SPECIAL = "射箭",
     ENEMY_SHADOW_CHAMPION_DESCRIPTION = "戈迪斯之子，其力量之强，就连最勇敢的士兵都会心生畏惧。",
-    ENEMY_SHADOW_CHAMPION_EXTRA = "- 高甲\
-- 血契",
+    ENEMY_SHADOW_CHAMPION_EXTRA = "- 高甲\n- 血契",
     ENEMY_SHADOW_CHAMPION_NAME = "暗影勇士",
     ENEMY_SHADOW_CHAMPION_SPECIAL = "血契",
     ENEMY_SHAMAN_DESCRIPTION = "部落治疗师，能抵抗魔法攻击。",
-    ENEMY_SHAMAN_EXTRA = "- 高魔法抗性\
-- 能治疗友军\
-- 中速",
+    ENEMY_SHAMAN_EXTRA = "- 高魔法抗性\n- 能治疗友军\n- 中速",
     ENEMY_SHAMAN_MAGIC_DESCRIPTION = "专注于精神力量，能保护弟兄们免受魔法攻击的伤害。",
-    ENEMY_SHAMAN_MAGIC_EXTRA = "- 速度平均\
-- 魔法抗性光环",
+    ENEMY_SHAMAN_MAGIC_EXTRA = "- 速度平均\n- 魔法抗性光环",
     ENEMY_SHAMAN_MAGIC_NAME = "精神萨满",
     ENEMY_SHAMAN_MAGIC_SPECIAL = "法抗光环",
     ENEMY_SHAMAN_NAME = "萨满",
     ENEMY_SHAMAN_NECRO_DESCRIPTION = "这些狡诈的家伙会使用黑魔法，复活死去的部落族人。",
-    ENEMY_SHAMAN_NECRO_EXTRA = "- 速度平均\
-- 远程攻击\
-- 能复活死掉的野蛮人",
+    ENEMY_SHAMAN_NECRO_EXTRA = "- 速度平均\n- 远程攻击\n- 能复活死掉的野蛮人",
     ENEMY_SHAMAN_NECRO_NAME = "血祭巫医",
     ENEMY_SHAMAN_NECRO_SPECIAL = "远程攻击、复活死亡的弟兄",
     ENEMY_SHAMAN_PRIEST_DESCRIPTION = "土著治疗者，使用巫术治疗部落的弟兄。",
-    ENEMY_SHAMAN_PRIEST_EXTRA = "- 速度平均\
-- 治疗光环",
+    ENEMY_SHAMAN_PRIEST_EXTRA = "- 速度平均\n- 治疗光环",
     ENEMY_SHAMAN_PRIEST_NAME = "巫医",
     ENEMY_SHAMAN_PRIEST_SPECIAL = "治疗光环",
     ENEMY_SHAMAN_RAGE_NAME = "狂怒萨满",
     ENEMY_SHAMAN_SHIELD_DESCRIPTION = "这些睿智的人能操纵大地之力，保护盟友不受伤害。",
-    ENEMY_SHAMAN_SHIELD_EXTRA = "- 速度平均\
-- 重甲光环",
+    ENEMY_SHAMAN_SHIELD_EXTRA = "- 速度平均\n- 重甲光环",
     ENEMY_SHAMAN_SHIELD_NAME = "大地萨满",
     ENEMY_SHAMAN_SHIELD_SPECIAL = "重甲光环",
     ENEMY_SHAMAN_SPECIAL = "治疗友军",
@@ -2531,85 +2267,61 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_SKELETON_DESCRIPTION = "毫无思想的骨骸，遵从邪恶主人的命令行事。",
     ENEMY_SKELETON_NAME = "骷髅",
     ENEMY_SKUNK_BOMBARDIER_DESCRIPTION = "臭鼬们将自身的天然毒素发挥到极致，在敌军阵线中制造混乱。",
-    ENEMY_SKUNK_BOMBARDIER_EXTRA = "－慢速\
-－中魔法抗性\
-－削弱玩家单位\
-－死亡时爆炸",
+    ENEMY_SKUNK_BOMBARDIER_EXTRA = "－慢速\n－中魔法抗性\n－削弱玩家单位\n－死亡时爆炸",
     ENEMY_SKUNK_BOMBARDIER_NAME = "臭鼬投弹手",
     ENEMY_SKUNK_BOMBARDIER_SPECIAL = "攻击会削弱玩家单位。死亡时自爆并造成伤害。",
     ENEMY_SLAYER_DESCRIPTION = "毁灭者被黑暗吞没，但凡有人与其对峙，便是自寻死路。",
-    ENEMY_SLAYER_EXTRA = "- 极其强悍\
-- 慢速\
-- 厚甲\
-- 生命汲取",
+    ENEMY_SLAYER_EXTRA = "- 极其强悍\n- 慢速\n- 厚甲\n- 生命汲取",
     ENEMY_SLAYER_NAME = "黑暗毁灭者",
     ENEMY_SMALL_STALKER_DESCRIPTION = "被邪教魔法腐化的云鹰会在战场上四处穿梭，散播混乱。",
     ENEMY_SMALL_STALKER_EXTRA = "－被攻击时向前传送",
     ENEMY_SMALL_STALKER_NAME = "腐化云鹰",
     ENEMY_SMALL_STALKER_SPECIAL = "短距离传送，躲避攻击。",
     ENEMY_SNIPER_DESCRIPTION = "这些精英蜥蜴人受过良好的训练，射击命中率非常高，手持着致命的高级十字弓。",
-    ENEMY_SNIPER_EXTRA = "-2条生命\
-- 远程攻击",
+    ENEMY_SNIPER_EXTRA = "-2条生命\n- 远程攻击",
     ENEMY_SNIPER_NAME = "蜥蜴人狙击手",
     ENEMY_SNIPER_SPECIAL = "超远程攻击",
     ENEMY_SPECTER_DESCRIPTION = "纵使身体腐朽，灵魂依旧无法解脱，注定要侵扰生者。",
     ENEMY_SPECTER_EXTRA = "- 可与其他敌人或物件有联动效果",
     ENEMY_SPECTER_NAME = "亡魂",
     ENEMY_SPECTRAL_KNIGHT_DESCRIPTION = "背弃神圣骑士誓言者，注定化作痛苦魂灵，游荡在生与死之间，饱受折磨。",
-    ENEMY_SPECTRAL_KNIGHT_EXTRA = "- 物理免疫\
-- 高伤害\
-- 强化堕落骑士与骷髅\
-- 不导电",
+    ENEMY_SPECTRAL_KNIGHT_EXTRA = "- 物理免疫\n- 高伤害\n- 强化堕落骑士与骷髅\n- 不导电",
     ENEMY_SPECTRAL_KNIGHT_NAME = "死魂骑士",
     ENEMY_SPECTRAL_KNIGHT_SPECIAL = "强化堕落骑士与骷髅，物理免疫，不导电",
     ENEMY_SPIDEAD_DESCRIPTION = "作为蜘蛛女王米迦尔的直系后裔，这些蜘蛛即使在死后也能不停制造麻烦。",
-    ENEMY_SPIDEAD_EXTRA = "- 魔法抗性\
-- 死亡时生成蜘蛛网",
+    ENEMY_SPIDEAD_EXTRA = "- 魔法抗性\n- 死亡时生成蜘蛛网",
     ENEMY_SPIDEAD_NAME = "米迦尔之女",
     ENEMY_SPIDERLING_DESCRIPTION = "邪教魔法强化过后的蜘蛛，敏捷且狂暴，会狠狠咬人。",
-    ENEMY_SPIDERLING_EXTRA = "－快速\
-－低魔法抗性",
+    ENEMY_SPIDERLING_EXTRA = "－快速\n－低魔法抗性",
     ENEMY_SPIDERLING_NAME = "腐晶幼蛛",
     ENEMY_SPIDERSMALL_DESCRIPTION = "能抵抗魔法的快速邪恶敌人。",
-    ENEMY_SPIDERSMALL_EXTRA = "- 高魔法抗性\
-- 低生命值\
-- 快速",
+    ENEMY_SPIDERSMALL_EXTRA = "- 高魔法抗性\n- 低生命值\n- 快速",
     ENEMY_SPIDERSMALL_NAME = "巨型蜘蛛",
     ENEMY_SPIDERTINY_DESCRIPTION = "极其脆弱的幼蛛。",
     ENEMY_SPIDERTINY_NAME = "幼蛛",
     ENEMY_SPIDERTINY_ROTTEN_DESCRIPTION = "极其脆弱的幼蛛。",
     ENEMY_SPIDERTINY_ROTTEN_NAME = "变异幼蛛",
     ENEMY_SPIDER_DESCRIPTION = "拥有强悍魔法抗性的野兽，能产生数个幼蛛。",
-    ENEMY_SPIDER_EXTRA = "- 魔法抗性\
-- 产生幼蛛\
-- 消耗2点生命\
-- 中速",
+    ENEMY_SPIDER_EXTRA = "- 魔法抗性\n- 产生幼蛛\n- 消耗2点生命\n- 中速",
     ENEMY_SPIDER_NAME = "蜘蛛主母",
     ENEMY_SPIDER_PRIEST_DESCRIPTION = "这些祭司被新神层层束缚，在战场上施展黑暗魔法。",
-    ENEMY_SPIDER_PRIEST_EXTRA = "- 高魔法抗性\
-- 濒死时变成腐晶巨蛛",
+    ENEMY_SPIDER_PRIEST_EXTRA = "- 高魔法抗性\n- 濒死时变成腐晶巨蛛",
     ENEMY_SPIDER_PRIEST_NAME = "蛛网祭司",
     ENEMY_SPIDER_ROTTEN_DESCRIPTION = "凶猛好斗的掠食者，能孵化以猎物为食的幼蛛。",
-    ENEMY_SPIDER_ROTTEN_EXTRA = "- 中等魔法抗性\
-- 产生幼蛛\
-- 消耗3点生命",
+    ENEMY_SPIDER_ROTTEN_EXTRA = "- 中等魔法抗性\n- 产生幼蛛\n- 消耗3点生命",
     ENEMY_SPIDER_ROTTEN_NAME = "猛毒爬行者",
     ENEMY_SPIDER_ROTTEN_SPECIAL = "生产子嗣，剧毒",
     ENEMY_SPIDER_SISTER_DESCRIPTION = "蜘蛛女王的忠实信徒，能施展魔法召唤同族。",
-    ENEMY_SPIDER_SISTER_EXTRA = "- 魔法抗性\
-- 召唤腐晶幼蛛",
+    ENEMY_SPIDER_SISTER_EXTRA = "- 魔法抗性\n- 召唤腐晶幼蛛",
     ENEMY_SPIDER_SISTER_NAME = "蛛心女巫",
     ENEMY_SPIDER_SMALL_BIG_NAME = "巨蛛主母",
     ENEMY_SPIDER_SON_OF_MACTANS_DESCRIPTION = "擅从高处狩猎的邪恶怪物，毫无预警就落到目标身上。",
-    ENEMY_SPIDER_SON_OF_MACTANS_EXTRA = "- 高魔法抗性\
-- 高伤害\
-- 致命毒液",
+    ENEMY_SPIDER_SON_OF_MACTANS_EXTRA = "- 高魔法抗性\n- 高伤害\n- 致命毒液",
     ENEMY_SPIDER_SON_OF_MACTANS_NAME = "黑寡妇之子",
     ENEMY_SPIDER_SON_OF_MACTANS_SPECIAL = "致命毒液",
     ENEMY_SPIDER_SPECIAL = "生产子嗣",
     ENEMY_STAGE_11_CULT_LEADER_ILLUSION_DESCRIPTION = "魔蒂娅丝用于干涉战局的暗影分身。",
-    ENEMY_STAGE_11_CULT_LEADER_ILLUSION_EXTRA = "- 保护敌人免受伤害\
-- 召唤黑暗触手困锁防御塔",
+    ENEMY_STAGE_11_CULT_LEADER_ILLUSION_EXTRA = "- 保护敌人免受伤害\n- 召唤黑暗触手困锁防御塔",
     ENEMY_STAGE_11_CULT_LEADER_ILLUSION_NAME = "魔蒂娅丝的幻象",
     ENEMY_SURVEILLANCE_SENTRY_DESCRIPTION = "由矮人设计的空中侦察兵。",
     ENEMY_SURVEILLANCE_SENTRY_EXTRA = "- 飞行单位",
@@ -2619,15 +2331,11 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_SURVEYOR_HARPY_NAME = "侦察秃鹫",
     ENEMY_SURVEYOR_HARPY_SPECIAL = "飞行单位。",
     ENEMY_SWAMP_THING_DESCRIPTION = "大堆植物性物质在最恶劣、最腐败之处拼凑而成。",
-    ENEMY_SWAMP_THING_EXTRA = "- 极其强悍\
-- 远程攻击\
-- 再生",
+    ENEMY_SWAMP_THING_EXTRA = "- 极其强悍\n- 远程攻击\n- 再生",
     ENEMY_SWAMP_THING_NAME = "沼泽巨人",
     ENEMY_SWAMP_THING_SPECIAL = "再生，范围攻击，远程破甲攻击",
     ENEMY_SWORD_SPIDER_DESCRIPTION = "凶猛蜘蛛，长有刃一般的脚，有如精工锻造的剑一样锋利。",
-    ENEMY_SWORD_SPIDER_EXTRA = "- 高魔法抗性\
-- 高伤害\
-- 中速",
+    ENEMY_SWORD_SPIDER_EXTRA = "- 高魔法抗性\n- 高伤害\n- 中速",
     ENEMY_SWORD_SPIDER_NAME = "刃脚蜘蛛",
     ENEMY_TOWER_RAY_SHEEP_DESCRIPTION = "咩~~~~~。",
     ENEMY_TOWER_RAY_SHEEP_EXTRA = "－无法阻挡",
@@ -2636,86 +2344,59 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_TOWER_RAY_SHEEP_FLYING_NAME = "飞行绵羊",
     ENEMY_TOWER_RAY_SHEEP_NAME = "绵羊",
     ENEMY_TREMOR_DESCRIPTION = "贪婪的食肉动物，能在沙海中穿梭，经常潜伏行动，类似海中的鲨鱼。",
-    ENEMY_TREMOR_EXTRA = "- 速度快\
-- 钻地时无敌",
+    ENEMY_TREMOR_EXTRA = "- 速度快\n- 钻地时无敌",
     ENEMY_TREMOR_NAME = "沙虫",
     ENEMY_TREMOR_SPECIAL = "钻地",
     ENEMY_TROLL_AXE_THROWER_DESCRIPTION = "精锐部族战士，配备恶毒飞斧，能刺穿护甲。",
-    ENEMY_TROLL_AXE_THROWER_EXTRA = "- 远程攻击\
-- 生命值再生\
-- 中速",
+    ENEMY_TROLL_AXE_THROWER_EXTRA = "- 远程攻击\n- 生命值再生\n- 中速",
     ENEMY_TROLL_AXE_THROWER_NAME = "巨魔勇士",
     ENEMY_TROLL_AXE_THROWER_SPECIAL = "再生，投掷破甲飞斧",
     ENEMY_TROLL_BRUTE_DESCRIPTION = "身穿盔甲、受过战斗训练的巨魔，这种暴徒能撕裂哪怕是最坚固的防线。",
-    ENEMY_TROLL_BRUTE_EXTRA = "- 极高伤害\
-- 超强再生\
-- 慢速",
+    ENEMY_TROLL_BRUTE_EXTRA = "- 极高伤害\n- 超强再生\n- 慢速",
     ENEMY_TROLL_BRUTE_NAME = "巨魔粉碎者",
     ENEMY_TROLL_BRUTE_SPECIAL = "再生，范围攻击",
     ENEMY_TROLL_CHIEFTAIN_DESCRIPTION = "首领可以使他的同胞暴怒，提升其作战能力！",
-    ENEMY_TROLL_CHIEFTAIN_EXTRA = "- 高生命值再生\
-- 能激怒其他巨魔\
-- 极慢速\
-- 消耗6点生命",
+    ENEMY_TROLL_CHIEFTAIN_EXTRA = "- 高生命值再生\n- 能激怒其他巨魔\n- 极慢速\n- 消耗6点生命",
     ENEMY_TROLL_CHIEFTAIN_NAME = "巨魔首领",
     ENEMY_TROLL_CHIEFTAIN_SPECIAL = "再生，使友军暴怒",
     ENEMY_TROLL_DESCRIPTION = "极其强悍的战士，能快速治愈伤口。",
-    ENEMY_TROLL_EXTRA = "- 极高伤害\
-- 生命值再生\
-- 中速",
+    ENEMY_TROLL_EXTRA = "- 极高伤害\n- 生命值再生\n- 中速",
     ENEMY_TROLL_NAME = "巨魔",
     ENEMY_TROLL_SKATER_DESCRIPTION = "精锐巨魔战士，站在冰上的时候无法阻挡。",
-    ENEMY_TROLL_SKATER_EXTRA = "- 在冰上无法阻挡\
-- 生命值再生\
-- 中速",
+    ENEMY_TROLL_SKATER_EXTRA = "- 在冰上无法阻挡\n- 生命值再生\n- 中速",
     ENEMY_TROLL_SKATER_NAME = "巨魔先锋",
     ENEMY_TROLL_SKATER_SPECIAL = "再生，在冰上无法阻挡",
     ENEMY_TROLL_SPECIAL = "回血",
     ENEMY_TURTLE_SHAMAN_DESCRIPTION = "看似温和，实则邪恶，萨满能够治疗野兽，使其恢复战斗能力。",
-    ENEMY_TURTLE_SHAMAN_EXTRA = "- 慢速\
-- 高血量\
-- 高魔法抗性\
-- 治疗敌军单位",
+    ENEMY_TURTLE_SHAMAN_EXTRA = "- 慢速\n- 高血量\n- 高魔法抗性\n- 治疗敌军单位",
     ENEMY_TURTLE_SHAMAN_NAME = "乌龟萨满",
     ENEMY_TURTLE_SHAMAN_SPECIAL = "能治疗敌军单位。",
     ENEMY_TUSKED_BRAWLER_DESCRIPTION = "比一般猪头兵更加难缠，装备着简陋的铠甲。随时准备大打出手。",
     ENEMY_TUSKED_BRAWLER_EXTRA = "－低护甲",
     ENEMY_TUSKED_BRAWLER_NAME = "獠牙斗士",
     ENEMY_TWILIGHT_AVENGER_DESCRIPTION = "暮光精锐装甲战士，能用爆破法术诅咒体格更小的生物。",
-    ENEMY_TWILIGHT_AVENGER_EXTRA = "- 极高甲\
-- 爆破诅咒\
-- 降低近战护甲",
+    ENEMY_TWILIGHT_AVENGER_EXTRA = "- 极高甲\n- 爆破诅咒\n- 降低近战护甲",
     ENEMY_TWILIGHT_AVENGER_NAME = "暮光复仇者",
     ENEMY_TWILIGHT_AVENGER_SPECIAL = "爆破诅咒",
     ENEMY_TWILIGHT_ELF_HARASSER_DESCRIPTION = "暮光精灵战士，近身格斗和远程射击无所不精。",
-    ENEMY_TWILIGHT_ELF_HARASSER_EXTRA = "- 低甲\
-- 暗影跳跃\
-- 远程突刺攻击",
+    ENEMY_TWILIGHT_ELF_HARASSER_EXTRA = "- 低甲\n- 暗影跳跃\n- 远程突刺攻击",
     ENEMY_TWILIGHT_ELF_HARASSER_NAME = "暮光骚扰者",
     ENEMY_TWILIGHT_ELF_HARASSER_SPECIAL = "暗影跳跃，远程攻击",
     ENEMY_TWILIGHT_EVOKER_DESCRIPTION = "效命于蜘蛛女神的魔法师，既受尊崇又被敬畏。",
-    ENEMY_TWILIGHT_EVOKER_EXTRA = "- 高魔法抗性\
-- 治疗友军\
-- 沉默防御塔",
+    ENEMY_TWILIGHT_EVOKER_EXTRA = "- 高魔法抗性\n- 治疗友军\n- 沉默防御塔",
     ENEMY_TWILIGHT_EVOKER_NAME = "暮光召唤师",
     ENEMY_TWILIGHT_EVOKER_SPECIAL = "治疗友军，沉默防御塔",
     ENEMY_TWILIGHT_GOLEM_DESCRIPTION = "对岩石施展强大魔法而催生，被迫以令人生怯的力量战斗。",
-    ENEMY_TWILIGHT_GOLEM_EXTRA = "- 极其强悍\
-- 范围伤害攻击\
-- 受伤后减速",
+    ENEMY_TWILIGHT_GOLEM_EXTRA = "- 极其强悍\n- 范围伤害攻击\n- 受伤后减速",
     ENEMY_TWILIGHT_GOLEM_NAME = "暮光傀儡",
     ENEMY_TWILIGHT_GOLEM_SPECIAL = "受伤后减速",
     ENEMY_TWILIGHT_HERETIC_DESCRIPTION = "受邪恶腐蚀的术士，能运用令人费解的力量。",
-    ENEMY_TWILIGHT_HERETIC_EXTRA = "- 高魔法抗性\
-- 灵魂吞噬\
-- 黑暗之握",
+    ENEMY_TWILIGHT_HERETIC_EXTRA = "- 高魔法抗性\n- 灵魂吞噬\n- 黑暗之握",
     ENEMY_TWILIGHT_HERETIC_NAME = "暮光异教徒",
     ENEMY_TWILIGHT_HERETIC_SPECIAL = "灵魂吞噬，黑暗之握",
     ENEMY_TWILIGHT_SCOURGER_BANSHEE_NAME = "鞭笞者班西",
     ENEMY_TWILIGHT_SCOURGER_DESCRIPTION = "黑暗与痛苦之女妖，友军畏其鞭笞，远胜任何敌人。",
-    ENEMY_TWILIGHT_SCOURGER_EXTRA = "- 高魔法抗性\
-- 加速友军\
-- 死亡后诅咒防御塔",
+    ENEMY_TWILIGHT_SCOURGER_EXTRA = "- 高魔法抗性\n- 加速友军\n- 死亡后诅咒防御塔",
     ENEMY_TWILIGHT_SCOURGER_NAME = "暮光鞭笞者",
     ENEMY_TWILIGHT_SCOURGER_SPECIAL = "加速友军，死亡后诅咒防御塔",
     ENEMY_UMBRA_MINION_DESCRIPTION = "作为暗影位面的居民，暗影元素是黑暗与死亡的具象化表现...",
@@ -2729,84 +2410,61 @@ PLEASE DON'T"] = "单击此处以跳过。\
     ENEMY_UNBLINDED_ABOMINATION_STAGE_8_EXTRA = "- 必须被击败才能解放精灵。",
     ENEMY_UNBLINDED_ABOMINATION_STAGE_8_NAME = "恶煞工头",
     ENEMY_UNBLINDED_PRIEST_DESCRIPTION = "游走于宗教与神秘学之间的祭司，操控着黑暗魔法步入战场。",
-    ENEMY_UNBLINDED_PRIEST_EXTRA = "- 高魔法抗性\
-- 濒死时转变为恶煞",
+    ENEMY_UNBLINDED_PRIEST_EXTRA = "- 高魔法抗性\n- 濒死时转变为恶煞",
     ENEMY_UNBLINDED_PRIEST_NAME = "邪教祭司",
     ENEMY_UNBLINDED_PRIEST_SPECIAL = "低血量时，会转变为恶煞。",
     ENEMY_UNBLINDED_SHACKLER_DESCRIPTION = "锁链者通过嵌入手臂的水晶引导腐化魔法，在近身战斗中是令人生畏的对手。",
-    ENEMY_UNBLINDED_SHACKLER_EXTRA = "- 中魔法抗性\
-- 低血量时困锁防御塔",
+    ENEMY_UNBLINDED_SHACKLER_EXTRA = "- 中魔法抗性\n- 低血量时困锁防御塔",
     ENEMY_UNBLINDED_SHACKLER_NAME = "锁链者",
     ENEMY_UNBLINDED_SHACKLER_SPECIAL = "困锁防御塔，使其无法攻击",
     ENEMY_VILE_SPAWNER_DESCRIPTION = "恶毒眼巢将漫天魔眼投向敌人，每时每刻都向四面八方监视着敌人。",
     ENEMY_VILE_SPAWNER_EXTRA = "- 生产小型魔眼",
     ENEMY_VILE_SPAWNER_NAME = "恶毒眼巢",
     ENEMY_WASP_DESCRIPTION = "这些可怕的生物通常被训练为空中猎手。",
-    ENEMY_WASP_EXTRA = "- 速度平均\
-- 飞行",
+    ENEMY_WASP_EXTRA = "- 速度平均\n- 飞行",
     ENEMY_WASP_NAME = "巨型黄蜂",
     ENEMY_WASP_QUEEN_DESCRIPTION = "绝对强韧的飞行昆虫，腹内孕有后代。",
-    ENEMY_WASP_QUEEN_EXTRA = "- 速度慢\
-- 飞行\
-- 生出巨型黄蜂",
+    ENEMY_WASP_QUEEN_EXTRA = "- 速度慢\n- 飞行\n- 生出巨型黄蜂",
     ENEMY_WASP_QUEEN_NAME = "巨型蜂后",
     ENEMY_WASP_QUEEN_SPECIAL = "爆出巨型黄蜂、飞行",
     ENEMY_WASP_SPECIAL = "飞行",
     ENEMY_WEBSPITTING_SPIDER_DESCRIPTION = "巨大蜘蛛，能将目标束缚在蛛网茧中。",
-    ENEMY_WEBSPITTING_SPIDER_EXTRA = "- 高魔法抗性\
-- 能网住士兵",
+    ENEMY_WEBSPITTING_SPIDER_EXTRA = "- 高魔法抗性\n- 能网住士兵",
     ENEMY_WEBSPITTING_SPIDER_NAME = "喷网蜘蛛",
     ENEMY_WEBSPITTING_SPIDER_SPECIAL = "能网住士兵",
     ENEMY_WERERAT_DESCRIPTION = "受饥饿与憎恨所驱使，这种肮脏的生物纵情于腐朽之中。",
-    ENEMY_WERERAT_EXTRA = "- 快速\
-- 低甲\
-- 传播致命疾病",
+    ENEMY_WERERAT_EXTRA = "- 快速\n- 低甲\n- 传播致命疾病",
     ENEMY_WERERAT_NAME = "鼠人",
     ENEMY_WERERAT_SPECIAL = "传播致命疾病",
     ENEMY_WEREWOLF_DESCRIPTION = "曾是强大的勇士，现在只为鲜血疯狂。",
-    ENEMY_WEREWOLF_EXTRA = "- 速度快\
-- 伤害高\
-- 生命值回复",
+    ENEMY_WEREWOLF_EXTRA = "- 速度快\n- 伤害高\n- 生命值回复",
     ENEMY_WEREWOLF_NAME = "狼人",
     ENEMY_WEREWOLF_SPECIAL = "再生",
     ENEMY_WHITE_WOLF_DESCRIPTION = "这种野兽既狡猾又致命，二流战士概无还手之力。",
-    ENEMY_WHITE_WOLF_EXTRA = "- 魔法抗性\
-- 能闪避近战攻击\
-- 极快速",
+    ENEMY_WHITE_WOLF_EXTRA = "- 魔法抗性\n- 能闪避近战攻击\n- 极快速",
     ENEMY_WHITE_WOLF_NAME = "冬狼",
     ENEMY_WHITE_WOLF_SPECIAL = "闪避近战攻击",
     ENEMY_WITCH_DESCRIPTION = "这种身着黑袍的怪异女人坐在扫帚上飞行，能施展邪恶的咒法。",
-    ENEMY_WITCH_EXTRA = "- 飞行\
-- 青蛙诅咒\
-- 极高魔法抗性",
+    ENEMY_WITCH_EXTRA = "- 飞行\n- 青蛙诅咒\n- 极高魔法抗性",
     ENEMY_WITCH_NAME = "黑女巫",
     ENEMY_WITCH_SPECIAL = "飞行，青蛙诅咒",
     ENEMY_WORG_DESCRIPTION = "狡猾而迅捷的野兽，既能闪避近战攻击，又能抵御魔法攻击。",
-    ENEMY_WORG_EXTRA = "- 魔法抗性\
-- 能闪避近战攻击\
-- 极快速",
+    ENEMY_WORG_EXTRA = "- 魔法抗性\n- 能闪避近战攻击\n- 极快速",
     ENEMY_WORG_NAME = "座狼",
     ENEMY_WORG_SPECIAL = "闪避近战攻击",
     ENEMY_WULF_DESCRIPTION = "速度非常快的凶残生物，能闪避近战攻击。",
-    ENEMY_WULF_EXTRA = "- 能闪避近战攻击\
-- 低生命值\
-- 极快速",
+    ENEMY_WULF_EXTRA = "- 能闪避近战攻击\n- 低生命值\n- 极快速",
     ENEMY_WULF_NAME = "土狼",
     ENEMY_WULF_SPECIAL = "闪避近战攻击",
     ENEMY_YETI_DESCRIPTION = "巨型人猿类生物，一击便能消灭成批士兵。",
-    ENEMY_YETI_EXTRA = "- 极高生命值\
-- 极慢速\
-- 消耗5点生命\
-- 范围攻击",
+    ENEMY_YETI_EXTRA = "- 极高生命值\n- 极慢速\n- 消耗5点生命\n- 范围攻击",
     ENEMY_YETI_GUARDIAN_DESCRIPTION = "雪人护卫",
     ENEMY_YETI_GUARDIAN_NAME = "雪人护卫",
     ENEMY_YETI_NAME = "雪人",
     ENEMY_YETI_SPECIAL = "范围攻击",
     ENEMY_ZOMBIEMANCER_NAME = "邪尸法师",
     ENEMY_ZOMBIE_DESCRIPTION = "阵亡的战士，身体被森林消融，如今只剩一具没有灵魂的空壳。",
-    ENEMY_ZOMBIE_EXTRA = "\
-- 慢速\
-- 中甲",
+    ENEMY_ZOMBIE_EXTRA = "\n- 慢速\n- 中甲",
     ENEMY_ZOMBIE_NAME = "空骸",
     ERROR_MESSAGE_GENERIC = "哎呀！出错了。",
     ["Earn huge bonus points and gold by calling waves earlier!"] = "提前召唤敌人能获得大量额外分数和金币！",
@@ -2896,12 +2554,9 @@ PLEASE DON'T"] = "单击此处以跳过。\
     GEMS_POUCH_NAME = "一袋宝石",
     GEMS_WAGON_NAME = "一车宝石",
     GET_ALL_AWESOME_HEROES = "获得所有强大的英雄",
-    GET_THIS_AWESOME = "获得这位\
-强大的英雄",
-    GET_THIS_AWESOME_2 = "获得这些\
-强大的英雄",
-    GET_THIS_AWESOME_3 = "获得这些\
-强大的英雄",
+    GET_THIS_AWESOME = "获得这位\n强大的英雄",
+    GET_THIS_AWESOME_2 = "获得这些\n强大的英雄",
+    GET_THIS_AWESOME_3 = "获得这些\n强大的英雄",
     GIFT_CLAIMED = "礼物已领取！",
     GOOGLE_PLAY = "GOOGLE PLAY商店",
     ["Got it!"] = "了解了！",
@@ -4096,8 +3751,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     HERO_REINFORCEMENT_DESCRIPTION = "一位来自遥远大陆的英雄， 拥有无可匹敌的力量， 桀骜不驯的精神和坚不可摧的意志。一道毁天灭地力量， 一股毫无束缚的狂怒， 一种勇往直前的态度！",
     HERO_REINFORCEMENT_NAME = "马利克·愤怒之锤",
     HERO_REINFORCEMENT_SPECIAL = "震慑锤击，粉碎重锤， 地震",
-    HERO_RIFLEMAN_DESCRIPTION = "这位神枪手的枪术， 就连雷电也无法媲美！\
-释放枪林弹雨， 布设地雷矩阵， 敌人哪敢越雷池半步！",
+    HERO_RIFLEMAN_DESCRIPTION = "这位神枪手的枪术， 就连雷电也无法媲美！\n释放枪林弹雨， 布设地雷矩阵， 敌人哪敢越雷池半步！",
     HERO_RIFLEMAN_NAME = "火炮杀手博林",
     HERO_RIFLEMAN_SPECIAL = "布雷专家，焦油炸弹，狂热连射，霰弹射击",
     HERO_ROBOT_CLASS = "攻城魔像",
@@ -4393,19 +4047,11 @@ PLEASE DON'T"] = "单击此处以跳过。\
     High = "高",
     ["I'm ready. Now bring it on!"] = "我准备好了。现在继续！",
     INAPP_DESCRIPTION_0001 = "炸弹中的大个儿坏小子！只要一个就能扫平战场，尽情收获战利品！只要告诉我们想往哪儿扔就行！",
-    INAPP_DESCRIPTION_0002 = "冻结世界！\
-\
-这支魔杖中的魔法能冻住所有坏蛋，并阻止新出现的敌人靠近。",
-    INAPP_DESCRIPTION_0003 = "用这些特别设计的矮人炸药把敌人炸成碎片吧。\
-\
-破坏力有保证。",
+    INAPP_DESCRIPTION_0002 = "冻结世界！\n\n这支魔杖中的魔法能冻住所有坏蛋，并阻止新出现的敌人靠近。",
+    INAPP_DESCRIPTION_0003 = "用这些特别设计的矮人炸药把敌人炸成碎片吧。\n\n破坏力有保证。",
     INAPP_DESCRIPTION_0004 = "这种特别的药剂能将敌人无助地就地冻住一会儿。",
-    INAPP_DESCRIPTION_0005 = "被困在罩子里的魔法红心。\
-\
-紧急时刻打破玻璃罩，能获得5次额外生命。",
-    INAPP_DESCRIPTION_0006 = "有备无患最重要，上战场时带上额外的金币吧！\
-\
-每袋价值500金币。",
+    INAPP_DESCRIPTION_0005 = "被困在罩子里的魔法红心。\n\n紧急时刻打破玻璃罩，能获得5次额外生命。",
+    INAPP_DESCRIPTION_0006 = "有备无患最重要，上战场时带上额外的金币吧！\n\n每袋价值500金币。",
     INAPP_DESCRIPTION_0007 = "这个神圣符号能释放精灵女神的愤怒！只要放在你打算使用的位置即可！",
     INAPP_DESCRIPTION_0008 = "我们军械库中的一块瑰宝，里面保存着一千头龙的吐息！只要将它放在路上，就能将整个世界化作一片火海！",
     INAPP_DESCRIPTION_0009 = "在这个号角之下，你的防御塔和士兵处于无敌状态，而且能够造成双倍伤害。",
@@ -4583,682 +4229,426 @@ PLEASE DON'T"] = "单击此处以跳过。\
     LEVEL_1000_HISTORY = "注二号路径为下面的直线",
     LEVEL_1000_TITLE = "斗蛐蛐专用关卡1",
     LEVEL_10_HEROIC = "英雄模式描述10",
-    LEVEL_10_HISTORY = "我们已经抵达可怕的瓦拉杜勒国度。在这片贫瘠凄凉的大地上，死去的悲惨灵魂无法得到安息。\
-\
-祈求神明，别让兄弟们的灵魂困在这个地方...",
+    LEVEL_10_HISTORY = "我们已经抵达可怕的瓦拉杜勒国度。在这片贫瘠凄凉的大地上，死去的悲惨灵魂无法得到安息。\n\n祈求神明，别让兄弟们的灵魂困在这个地方...",
     LEVEL_10_IRON = "钢铁模式描述10",
     LEVEL_10_IRON_UNLOCK = "无火炮",
     LEVEL_10_MODES_UPGRADES = "等级4最高",
     LEVEL_10_TITLE = "废弃之地",
     LEVEL_11_HEROIC = "英雄模式描述11",
-    LEVEL_11_HISTORY = "穿越凄凉山谷可不容易！我们已经接近旅途的终点，虽然我们人困马乏，但心中仍然充满崇高的目标。\
-\
-不过要小心...这里到处都是岩石与火焰泰坦...最好别惊扰到他们！",
+    LEVEL_11_HISTORY = "穿越凄凉山谷可不容易！我们已经接近旅途的终点，虽然我们人困马乏，但心中仍然充满崇高的目标。\n\n不过要小心...这里到处都是岩石与火焰泰坦...最好别惊扰到他们！",
     LEVEL_11_IRON = "钢铁模式描述11",
-    LEVEL_11_IRON_UNLOCK = "无火炮\
-无弓箭塔",
+    LEVEL_11_IRON_UNLOCK = "无火炮\n无弓箭塔",
     LEVEL_11_MODES_UPGRADES = "最高5级",
     LEVEL_11_TITLE = "凄凉山谷",
     LEVEL_12_HEROIC = "英雄模式描述12",
-    LEVEL_12_HISTORY = "我们的部队围住了邪恶巫师维兹南之塔。该把帐好好算一算...展开最后决战的时候到了。这是保卫王国安全的终极之战。我们一步一步走到现在；早已没有丝毫退路。\
-\
-现在是我们展现勇气的时刻！",
+    LEVEL_12_HISTORY = "我们的部队围住了邪恶巫师维兹南之塔。该把帐好好算一算...展开最后决战的时候到了。这是保卫王国安全的终极之战。我们一步一步走到现在；早已没有丝毫退路。\n\n现在是我们展现勇气的时刻！",
     LEVEL_12_IRON = "钢铁模式描述12",
     LEVEL_12_IRON_UNLOCK = "无火炮",
     LEVEL_12_MODES_UPGRADES = "等级5最高",
     LEVEL_12_TITLE = "黑暗之塔",
     LEVEL_13_HEROIC = "英雄模式描述13",
-    LEVEL_13_HISTORY = "将军！我们需要你和你勇敢的手下！维兹南即使死了，还是留下一堆麻烦。当你们与他交战时，他派遣一个部族唤醒了可怕的蜘蛛女王之一，萨雷格兹！\
-\
-我们本以为蜘蛛女王再也不会醒来，可是萨雷格兹凭借黑暗之力，接管了维兹南的残余部队。你必须消灭他们，干掉萨雷格兹！",
+    LEVEL_13_HISTORY = "将军！我们需要你和你勇敢的手下！维兹南即使死了，还是留下一堆麻烦。当你们与他交战时，他派遣一个部族唤醒了可怕的蜘蛛女王之一，萨雷格兹！\n\n我们本以为蜘蛛女王再也不会醒来，可是萨雷格兹凭借黑暗之力，接管了维兹南的残余部队。你必须消灭他们，干掉萨雷格兹！",
     LEVEL_13_IRON = "钢铁模式描述13",
-    LEVEL_13_IRON_UNLOCK = "无火炮\
-无法师塔",
+    LEVEL_13_IRON_UNLOCK = "无火炮\n无法师塔",
     LEVEL_13_MODES_UPGRADES = "等级5最高",
     LEVEL_13_TITLE = "萨雷格兹的巢穴",
     LEVEL_14_HEROIC = "英雄模式描述14",
-    LEVEL_14_HISTORY = "利尼维亚守护者！王国虽然取得了和平，但邪恶永远不会消失！我们的密探报告称，阿卡洛斯遗迹遭到兽人和类哥布林大军的入侵。\
-\
-新的兽人军阀古拉克利用维兹南留下的权力真空，他的军队正对这片区域实施恐怖统治。\
-\
-你必须将这些入侵者从圣地赶出去！",
+    LEVEL_14_HISTORY = "利尼维亚守护者！王国虽然取得了和平，但邪恶永远不会消失！我们的密探报告称，阿卡洛斯遗迹遭到兽人和类哥布林大军的入侵。\n\n新的兽人军阀古拉克利用维兹南留下的权力真空，他的军队正对这片区域实施恐怖统治。\n\n你必须将这些入侵者从圣地赶出去！",
     LEVEL_14_IRON = "钢铁模式描述14",
-    LEVEL_14_IRON_UNLOCK = "无弓箭塔\
-无兵营",
+    LEVEL_14_IRON_UNLOCK = "无弓箭塔\n无兵营",
     LEVEL_14_MODES_UPGRADES = "等级5最高",
     LEVEL_14_TITLE = "阿卡洛斯遗迹",
     LEVEL_15_HEROIC = "英雄模式描述15",
-    LEVEL_15_HISTORY = "召唤你的部队，将军！黑暗力量无休无止地进攻我们深爱着的王国，我们必须采取行动。情报称，这片名为腐朽森林的区域确实无比腐朽；因为森林的中央打开了一扇通往地狱的传送门。\
-\
-死者在这片森林中得不到安息，植物也会对进入者恶意相向。你必须带领军队进入腐朽森林，找到问题的根源所在！",
+    LEVEL_15_HISTORY = "召唤你的部队，将军！黑暗力量无休无止地进攻我们深爱着的王国，我们必须采取行动。情报称，这片名为腐朽森林的区域确实无比腐朽；因为森林的中央打开了一扇通往地狱的传送门。\n\n死者在这片森林中得不到安息，植物也会对进入者恶意相向。你必须带领军队进入腐朽森林，找到问题的根源所在！",
     LEVEL_15_IRON = "钢铁模式描述15",
-    LEVEL_15_IRON_UNLOCK = "无弓箭塔\
-无火炮",
+    LEVEL_15_IRON_UNLOCK = "无弓箭塔\n无火炮",
     LEVEL_15_MODES_UPGRADES = "等级5最高",
     LEVEL_15_TITLE = "腐朽森林",
     LEVEL_16_HEROIC = "英雄模式描述15",
-    LEVEL_16_HISTORY = "将军，你必须再度领兵，保护我们的王国不受敌人侵犯！探子回报称，一批邪恶的罪犯正聚集到寂静森林的深处。没错，就是城民们鲜少敢于踏足的寂静森林...但你可不只是城民！\
-\
-马上率领军队进入森林，消灭这些恶棍。让他们为当初决定走上犯罪道路的那一天感到后悔！",
+    LEVEL_16_HISTORY = "将军，你必须再度领兵，保护我们的王国不受敌人侵犯！探子回报称，一批邪恶的罪犯正聚集到寂静森林的深处。没错，就是城民们鲜少敢于踏足的寂静森林...但你可不只是城民！\n\n马上率领军队进入森林，消灭这些恶棍。让他们为当初决定走上犯罪道路的那一天感到后悔！",
     LEVEL_16_IRON = "钢铁模式描述15",
-    LEVEL_16_IRON_UNLOCK = "无弓箭塔\
-无法师塔",
+    LEVEL_16_IRON_UNLOCK = "无弓箭塔\n无法师塔",
     LEVEL_16_MODES_UPGRADES = "等级5最高",
     LEVEL_16_TITLE = "寂静森林",
     LEVEL_17_HEROIC = "英雄模式描述15",
-    LEVEL_17_HISTORY = "干得漂亮！你们成功赶走了那些卑鄙的的罪犯。你们汇集起来的战斗力，击溃了敌人绝大多数游击部队，不过他们正在逃向森林的更深处。我们有理由相信，里面还有一个他们的巢穴，战利品全部屯积在那儿。\
-\
-追上去，将他们从巢穴中引出来，夺回战利品。事先警告，如此成功的罪犯很可能有着精明的脱身计划！",
+    LEVEL_17_HISTORY = "干得漂亮！你们成功赶走了那些卑鄙的的罪犯。你们汇集起来的战斗力，击溃了敌人绝大多数游击部队，不过他们正在逃向森林的更深处。我们有理由相信，里面还有一个他们的巢穴，战利品全部屯积在那儿。\n\n追上去，将他们从巢穴中引出来，夺回战利品。事先警告，如此成功的罪犯很可能有着精明的脱身计划！",
     LEVEL_17_IRON = "钢铁模式描述16",
-    LEVEL_17_IRON_UNLOCK = "无法师塔\
-无火炮",
+    LEVEL_17_IRON_UNLOCK = "无法师塔\n无火炮",
     LEVEL_17_MODES_UPGRADES = "等级5最高",
     LEVEL_17_TITLE = "强盗的巢穴",
     LEVEL_18_HEROIC = "英雄模式描述15",
-    LEVEL_18_HISTORY = "打包好你们的冬装，士兵们；我们即将启程前往冰川高地！当地人报告出现动乱，国王命令我们向高地进发，调查这些报告。小心点，因为高地可是很多准备不足的探险家们的冰封墓穴。\
-\
-你可能会在那儿冻死，前提是凶猛的哈克拉吉巨魔没有先干掉你！",
+    LEVEL_18_HISTORY = "打包好你们的冬装，士兵们；我们即将启程前往冰川高地！当地人报告出现动乱，国王命令我们向高地进发，调查这些报告。小心点，因为高地可是很多准备不足的探险家们的冰封墓穴。\n\n你可能会在那儿冻死，前提是凶猛的哈克拉吉巨魔没有先干掉你！",
     LEVEL_18_IRON = "钢铁模式描述15",
-    LEVEL_18_IRON_UNLOCK = "无弓箭塔\
-无法师塔",
+    LEVEL_18_IRON_UNLOCK = "无弓箭塔\n无法师塔",
     LEVEL_18_MODES_UPGRADES = "等级5最高",
     LEVEL_18_TITLE = "冰川高地",
     LEVEL_19_HEROIC = "英雄模式描述15",
-    LEVEL_19_HISTORY = "我们现在知道，北方动乱是由巨魔军阀阿古克汗引发的！这只卑鄙的野兽将所有哈克拉吉巨魔部族都归入到自己的血色旗帜之下！如果我们不设法阻止他，他的军队必定会从北方势如破竹，威胁到利尼维亚的善良城民。\
-\
-准备与哈克拉吉族的凶狠大军交战，到他们的地盘与他们的邪恶首领正面交锋！",
+    LEVEL_19_HISTORY = "我们现在知道，北方动乱是由巨魔军阀阿古克汗引发的！这只卑鄙的野兽将所有哈克拉吉巨魔部族都归入到自己的血色旗帜之下！如果我们不设法阻止他，他的军队必定会从北方势如破竹，威胁到利尼维亚的善良城民。\n\n准备与哈克拉吉族的凶狠大军交战，到他们的地盘与他们的邪恶首领正面交锋！",
     LEVEL_19_IRON = "钢铁模式描述15",
-    LEVEL_19_IRON_UNLOCK = "无兵营\
-无法师塔",
+    LEVEL_19_IRON_UNLOCK = "无兵营\n无法师塔",
     LEVEL_19_MODES_UPGRADES = "等级5最高",
     LEVEL_19_TITLE = "哈克拉吉高原",
     LEVEL_1_HEROIC = "英雄模式描述1",
-    LEVEL_1_HISTORY = "你好，英勇而尊贵的战士！作为陛下军队的将军，迪纳斯国王需要你的帮助。\
-\
-南港市的居民报告称受到拦路强盗和其他不法歹徒的攻击。你必须带领一队人马前往南港，支援那座城市的防御。\
-\
-祝你好运，将军！",
+    LEVEL_1_HISTORY = "你好，英勇而尊贵的战士！作为陛下军队的将军，迪纳斯国王需要你的帮助。\n\n南港市的居民报告称受到拦路强盗和其他不法歹徒的攻击。你必须带领一队人马前往南港，支援那座城市的防御。\n\n祝你好运，将军！",
     LEVEL_1_IRON = "钢铁模式描述1",
-    LEVEL_1_IRON_UNLOCK = "无弓箭塔\
-无法师塔",
-    LEVEL_1_MODES_UPGRADES = "等级1最高\
-无英雄",
+    LEVEL_1_IRON_UNLOCK = "无弓箭塔\n无法师塔",
+    LEVEL_1_MODES_UPGRADES = "等级1最高\n无英雄",
     LEVEL_1_TITLE = "南港",
     LEVEL_20_HEROIC = "英雄模式描述15",
-    LEVEL_20_HISTORY = "恶魔们消灭了我们驻扎在维兹南之塔的部队，只留下一个幸存者...从他受到惊吓的胡言乱语中，我们了解到，这些穷凶极恶的部落是从灰烬裂缝的深渊中爬上来的。\
-\
-将军，你必须保障这一带的安全，找到威胁来源，确保我们真正击败了维兹南。",
+    LEVEL_20_HISTORY = "恶魔们消灭了我们驻扎在维兹南之塔的部队，只留下一个幸存者...从他受到惊吓的胡言乱语中，我们了解到，这些穷凶极恶的部落是从灰烬裂缝的深渊中爬上来的。\n\n将军，你必须保障这一带的安全，找到威胁来源，确保我们真正击败了维兹南。",
     LEVEL_20_IRON = "钢铁模式描述15",
     LEVEL_20_IRON_UNLOCK = "无法师塔",
     LEVEL_20_MODES_UPGRADES = "等级5最高",
     LEVEL_20_TITLE = "火焰之坑",
     LEVEL_21_HEROIC = "英雄模式描述15",
-    LEVEL_21_HISTORY = "我们要面对的是大恶魔头领之一的摩洛克。我们的贤者已经发现，打开通往万魔殿传送门的人就是他，那里简直是如同地狱一般可怕的异界。\
-\
-你发誓跟随国王，哪怕是遁入地狱...现在，你要去的就是那儿...",
+    LEVEL_21_HISTORY = "我们要面对的是大恶魔头领之一的摩洛克。我们的贤者已经发现，打开通往万魔殿传送门的人就是他，那里简直是如同地狱一般可怕的异界。\n\n你发誓跟随国王，哪怕是遁入地狱...现在，你要去的就是那儿...",
     LEVEL_21_IRON = "钢铁模式描述15",
     LEVEL_21_IRON_UNLOCK = "无火炮",
     LEVEL_21_MODES_UPGRADES = "等级5最高",
     LEVEL_21_TITLE = "万魔殿",
     LEVEL_22_HEROIC = "英雄模式描述15",
-    LEVEL_22_HISTORY = "邪恶没有片刻安歇...所以正义之师也无瑕休整。信鹰从腐朽森林的精灵要塞带来了消息。整座森林仍被邪恶腐蚀，我们的精灵盟友正全力抵挡可怕的怪物。\
-\
-新的黑暗力量正在崛起，试图将势力范围拓展到森林以外的区域。赶快行动吧，将军，我们必须动身支援精灵朋友们，将邪恶从那片远古森林中永远消灭！",
+    LEVEL_22_HISTORY = "邪恶没有片刻安歇...所以正义之师也无瑕休整。信鹰从腐朽森林的精灵要塞带来了消息。整座森林仍被邪恶腐蚀，我们的精灵盟友正全力抵挡可怕的怪物。\n\n新的黑暗力量正在崛起，试图将势力范围拓展到森林以外的区域。赶快行动吧，将军，我们必须动身支援精灵朋友们，将邪恶从那片远古森林中永远消灭！",
     LEVEL_22_IRON = "钢铁模式描述15",
-    LEVEL_22_IRON_UNLOCK = "无弓箭塔\
-无火炮",
+    LEVEL_22_IRON_UNLOCK = "无弓箭塔\n无火炮",
     LEVEL_22_MODES_UPGRADES = "等级5最高",
     LEVEL_22_TITLE = "真菌森林",
     LEVEL_23_HEROIC = "英雄模式描述23",
-    LEVEL_23_HISTORY = "将军，我们的王国再次面临危险！邻国尼诺玛的国王巴内斯蒂，在前来参加“伟大王国锦标赛”的途中，被敌人在悲哀山谷俘获。如果这位老国王发生什么意外的话，他的臣民绝对不会原谅我们，甚至会引发两国之间的战争！\
-\
-通往悲哀山谷的最快捷径，恐怕就皇家之路了，但沿途会经过臭名昭著的腐芯镇。",
+    LEVEL_23_HISTORY = "将军，我们的王国再次面临危险！邻国尼诺玛的国王巴内斯蒂，在前来参加“伟大王国锦标赛”的途中，被敌人在悲哀山谷俘获。如果这位老国王发生什么意外的话，他的臣民绝对不会原谅我们，甚至会引发两国之间的战争！\n\n通往悲哀山谷的最快捷径，恐怕就皇家之路了，但沿途会经过臭名昭著的腐芯镇。",
     LEVEL_23_IRON = "英雄模式描述23",
-    LEVEL_23_IRON_UNLOCK = "无兵营\
-无火炮",
+    LEVEL_23_IRON_UNLOCK = "无兵营\n无火炮",
     LEVEL_23_MODES_UPGRADES = "等级5最高",
     LEVEL_23_TITLE = "腐芯镇",
     LEVEL_24_HEROIC = "英雄模式描述24",
-    LEVEL_24_HISTORY = "回首腐芯镇上遭到的伏击，真可谓是步步惊心，还好我们已经顺着皇家之路来到了大墓地！\
-\
-当我们经过大批古代墓室和洗劫一空的坟墓时，士兵们眼见大量坟墓被掘开，都变得焦躁不安起来。这种异常的寂静只会让情况变得更糟。毫无疑问，这是黑暗势力又一次酝酿攻击的先兆。",
+    LEVEL_24_HISTORY = "回首腐芯镇上遭到的伏击，真可谓是步步惊心，还好我们已经顺着皇家之路来到了大墓地！\n\n当我们经过大批古代墓室和洗劫一空的坟墓时，士兵们眼见大量坟墓被掘开，都变得焦躁不安起来。这种异常的寂静只会让情况变得更糟。毫无疑问，这是黑暗势力又一次酝酿攻击的先兆。",
     LEVEL_24_IRON = "英雄模式描述24",
-    LEVEL_24_IRON_UNLOCK = "无弓箭塔\
-无法师塔",
+    LEVEL_24_IRON_UNLOCK = "无弓箭塔\n无法师塔",
     LEVEL_24_MODES_UPGRADES = "等级5最高",
     LEVEL_24_TITLE = "古代大墓地",
     LEVEL_25_HEROIC = "英雄模式描述25",
-    LEVEL_25_HISTORY = "在通往魔王布莱克本城堡的路上，几乎找不到比恶心的沼泽更加污秽的地方了。\
-\
-大批女巫集聚在一起，空气中弥漫着咒语的吟唱声，与饥饿野兽的呼啸声暗自交响。她们从前曾是一位高贵骑士的仆从。而今则在腐烂的水池里，透过数十具尸体，用空洞的眼窝凝视着我们…",
+    LEVEL_25_HISTORY = "在通往魔王布莱克本城堡的路上，几乎找不到比恶心的沼泽更加污秽的地方了。\n\n大批女巫集聚在一起，空气中弥漫着咒语的吟唱声，与饥饿野兽的呼啸声暗自交响。她们从前曾是一位高贵骑士的仆从。而今则在腐烂的水池里，透过数十具尸体，用空洞的眼窝凝视着我们…",
     LEVEL_25_IRON = "英雄模式描述25",
-    LEVEL_25_IRON_UNLOCK = "无弓箭塔\
-无兵营",
+    LEVEL_25_IRON_UNLOCK = "无弓箭塔\n无兵营",
     LEVEL_25_MODES_UPGRADES = "等级5最高",
     LEVEL_25_TITLE = "夜牙沼泽",
     LEVEL_26_HEROIC = "英雄模式描述26",
-    LEVEL_26_HISTORY = "望向这个堕落勇士时，我们的心里充满了悲伤。布莱克本魔王当初为了对抗邪恶，太过于追求力量，以致于被力量腐蚀，就连他的领地也堕入黑暗之中。可惜呀，我们救不了他；但我们还来得及从绞刑架上救下巴内斯蒂国王。\
-\
-将军，你掌握着两个王国之间和平的关键…击败魔王布莱克本，也许死亡会给他带来救赎！",
+    LEVEL_26_HISTORY = "望向这个堕落勇士时，我们的心里充满了悲伤。布莱克本魔王当初为了对抗邪恶，太过于追求力量，以致于被力量腐蚀，就连他的领地也堕入黑暗之中。可惜呀，我们救不了他；但我们还来得及从绞刑架上救下巴内斯蒂国王。\n\n将军，你掌握着两个王国之间和平的关键…击败魔王布莱克本，也许死亡会给他带来救赎！",
     LEVEL_26_IRON = "英雄模式描述26",
-    LEVEL_26_IRON_UNLOCK = "无弓箭塔\
-无火炮",
+    LEVEL_26_IRON_UNLOCK = "无弓箭塔\n无火炮",
     LEVEL_26_MODES_UPGRADES = "等级5最高",
     LEVEL_26_TITLE = "布莱克本城堡",
     LEVEL_27_HEROIC = "英雄模式描述1",
-    LEVEL_27_HISTORY = "利尼维亚的守护者啊！\
-我们再一次需要你的帮助，邪恶大军正在攻打名为战锤要塞的古代堡垒！这里已经很久没遭受过进攻了...现在它再一次被沙漠中的游牧部落所围困！\
-\
-统率王师，保护我们吧！",
+    LEVEL_27_HISTORY = "利尼维亚的守护者啊！\n我们再一次需要你的帮助，邪恶大军正在攻打名为战锤要塞的古代堡垒！这里已经很久没遭受过进攻了...现在它再一次被沙漠中的游牧部落所围困！\n\n统率王师，保护我们吧！",
     LEVEL_27_IRON = "钢铁模式描述1",
-    LEVEL_27_IRON_UNLOCK = "无弓兵\
-无法师塔",
-    LEVEL_27_MODES_UPGRADES = "等级1最高\
-无英雄",
+    LEVEL_27_IRON_UNLOCK = "无弓兵\n无法师塔",
+    LEVEL_27_MODES_UPGRADES = "等级1最高\n无英雄",
     LEVEL_27_TITLE = "战锤要塞",
     LEVEL_28_HEROIC = "英雄模式描述2",
-    LEVEL_28_HISTORY = "趁着战况混乱，魔王马拉加尔从战锤要塞中盗走了强大的远古之锤。\
-\
-据我们东边的哨岗报告，马拉加尔正逃向东方，此时岗哨的守卫正在对抗魔王，拖住它逃跑的脚步。将军，我们必须即刻出发，支援哨岗！",
+    LEVEL_28_HISTORY = "趁着战况混乱，魔王马拉加尔从战锤要塞中盗走了强大的远古之锤。\n\n据我们东边的哨岗报告，马拉加尔正逃向东方，此时岗哨的守卫正在对抗魔王，拖住它逃跑的脚步。将军，我们必须即刻出发，支援哨岗！",
     LEVEL_28_IRON = "钢铁模式描述2",
-    LEVEL_28_IRON_UNLOCK = "无弓兵\
-无火炮",
-    LEVEL_28_MODES_UPGRADES = "等级2最高\
-无英雄",
+    LEVEL_28_IRON_UNLOCK = "无弓兵\n无火炮",
+    LEVEL_28_MODES_UPGRADES = "等级2最高\n无英雄",
     LEVEL_28_TITLE = "沙漠之鹰",
     LEVEL_29_HEROIC = "英雄模式描述2",
-    LEVEL_29_HISTORY = "我们的部队已经集结完毕，等候您的差遣。我们需穿越阿兹萨尔沙漠，追缉魔王马拉加尔！\
-\
-跟着魔王的踪迹，我们一路追到了萨佩绿洲，这是这片荒漠中仅有的几处绿色。但是沙漠中的游牧部落对过路的并不友好，所以千万不要惊扰到沙漠中最凶恶的居民——塔肯人！",
+    LEVEL_29_HISTORY = "我们的部队已经集结完毕，等候您的差遣。我们需穿越阿兹萨尔沙漠，追缉魔王马拉加尔！\n\n跟着魔王的踪迹，我们一路追到了萨佩绿洲，这是这片荒漠中仅有的几处绿色。但是沙漠中的游牧部落对过路的并不友好，所以千万不要惊扰到沙漠中最凶恶的居民——塔肯人！",
     LEVEL_29_IRON = "钢铁模式描述2",
     LEVEL_29_IRON_UNLOCK = "无火炮",
-    LEVEL_29_MODES_UPGRADES = "等级2最高\
-无英雄",
+    LEVEL_29_MODES_UPGRADES = "等级2最高\n无英雄",
     LEVEL_29_TITLE = "沙中绿洲",
     LEVEL_2_HEROIC = "英雄模式描述2",
-    LEVEL_2_HISTORY = "干得漂亮！你尽心尽职的调查表明，这并非单纯出没在南部港口的土匪，而是哥布林与兽人有组织的攻击！\
-\
-现在，他们的前锋部队正逼近港口北面毫无防备的郊区。\
-\
-我们必须迅速建立起有效的防御工事。",
+    LEVEL_2_HISTORY = "干得漂亮！你尽心尽职的调查表明，这并非单纯出没在南部港口的土匪，而是哥布林与兽人有组织的攻击！\n\n现在，他们的前锋部队正逼近港口北面毫无防备的郊区。\n\n我们必须迅速建立起有效的防御工事。",
     LEVEL_2_IRON = "钢铁模式描述2",
     LEVEL_2_IRON_UNLOCK = "无兵营",
-    LEVEL_2_MODES_UPGRADES = "等级2最高\
-无英雄",
+    LEVEL_2_MODES_UPGRADES = "等级2最高\n无英雄",
     LEVEL_2_TITLE = "郊原",
     LEVEL_30_HEROIC = "英雄模式描述3",
-    LEVEL_30_HISTORY = "萨佩绿洲的战斗似乎只是佯攻，魔王马拉加尔已经向海盗老巢逃去了。\
-\
-我们别无选择，只能穿过危险的绝望沙丘。没时间绕路了，当心脚下的流沙，那里面好似藏着神秘的怪兽，夺走了无数经验丰富的探险家的性命！",
+    LEVEL_30_HISTORY = "萨佩绿洲的战斗似乎只是佯攻，魔王马拉加尔已经向海盗老巢逃去了。\n\n我们别无选择，只能穿过危险的绝望沙丘。没时间绕路了，当心脚下的流沙，那里面好似藏着神秘的怪兽，夺走了无数经验丰富的探险家的性命！",
     LEVEL_30_IRON = "钢铁模式描述3",
-    LEVEL_30_IRON_UNLOCK = "无火炮\
-无法师塔",
-    LEVEL_30_MODES_UPGRADES = "等级2最高\
-无英雄",
+    LEVEL_30_IRON_UNLOCK = "无火炮\n无法师塔",
+    LEVEL_30_MODES_UPGRADES = "等级2最高\n无英雄",
     LEVEL_30_TITLE = "绝望沙丘",
     LEVEL_31_HEROIC = "英雄模式描述4",
-    LEVEL_31_HISTORY = "快看啊，是海盗老巢！\
-这里住着一群世上最桀骜不驯的强盗和最卑鄙的海贼...但同时这里也有着世界上最优秀的水手，可带你驶过水晶之海。\
-\
-问过黑道上的朋友，我们得知魔王马拉加尔早已乘船逃往了纳泽鲁之门。雇用一名水手吧，不过得先等一等，敌人的舰队已经向我们逼近了。啊嗬！",
+    LEVEL_31_HISTORY = "快看啊，是海盗老巢！\n这里住着一群世上最桀骜不驯的强盗和最卑鄙的海贼...但同时这里也有着世界上最优秀的水手，可带你驶过水晶之海。\n\n问过黑道上的朋友，我们得知魔王马拉加尔早已乘船逃往了纳泽鲁之门。雇用一名水手吧，不过得先等一等，敌人的舰队已经向我们逼近了。啊嗬！",
     LEVEL_31_IRON = "钢铁模式描述4",
-    LEVEL_31_IRON_UNLOCK = "无兵营\
-无火炮",
+    LEVEL_31_IRON_UNLOCK = "无兵营\n无火炮",
     LEVEL_31_MODES_UPGRADES = "等级2最高",
     LEVEL_31_TITLE = "海盗老巢",
     LEVEL_32_HEROIC = "英雄模式描述5",
-    LEVEL_32_HISTORY = "我们来到了传说中的纳泽鲁大门前，它挡住了前往失落之地的唯一通路。这个地方有点不对劲，士兵们都很紧张。并不是因为我们见到的敌人，我们的人能应付得来...\
-\
-幸运的是大法师工会的人赶到，帮我们开启了大门。如果战斗打响，他们也会助我们一臂之力的。",
+    LEVEL_32_HISTORY = "我们来到了传说中的纳泽鲁大门前，它挡住了前往失落之地的唯一通路。这个地方有点不对劲，士兵们都很紧张。并不是因为我们见到的敌人，我们的人能应付得来...\n\n幸运的是大法师工会的人赶到，帮我们开启了大门。如果战斗打响，他们也会助我们一臂之力的。",
     LEVEL_32_IRON = "钢铁模式描述5",
-    LEVEL_32_IRON_UNLOCK = "无兵营\
-无弓兵",
+    LEVEL_32_IRON_UNLOCK = "无兵营\n无弓兵",
     LEVEL_32_MODES_UPGRADES = "等级3最高",
     LEVEL_32_TITLE = "纳泽鲁之门",
     LEVEL_33_HEROIC = "英雄模式描述6",
-    LEVEL_33_HISTORY = "我们到了险峻的猩红山谷时，强大的圣殿骑士团加入了我们。猩红山谷因为是部落马克瓦人的狩猎场，故得此名。我们决定在此建立了营地，命令人们休息整顿，但也不能放松警惕。\
-\
-我们谁也没有见过马克瓦人，但关于马克瓦人的一些传言却令人...至少非常不安。",
+    LEVEL_33_HISTORY = "我们到了险峻的猩红山谷时，强大的圣殿骑士团加入了我们。猩红山谷因为是部落马克瓦人的狩猎场，故得此名。我们决定在此建立了营地，命令人们休息整顿，但也不能放松警惕。\n\n我们谁也没有见过马克瓦人，但关于马克瓦人的一些传言却令人...至少非常不安。",
     LEVEL_33_IRON = "钢铁模式描述6",
-    LEVEL_33_IRON_UNLOCK = "无火炮\
-无弓兵",
+    LEVEL_33_IRON_UNLOCK = "无火炮\n无弓兵",
     LEVEL_33_MODES_UPGRADES = "等级3最高",
     LEVEL_33_TITLE = "猩红山谷",
     LEVEL_34_HEROIC = "英雄模式描述7",
-    LEVEL_34_HISTORY = "前方斥候部队来报，称魔王马拉加尔正一路向东逃往扎格龙河对岸的马克瓦尔可城。而穿过扎格龙河唯一的路线，就是经过“断藤大桥”。这座桥是很久以前巴灵顿-基内斯探险队建造的。\
-\
-我们的新盟友土克亚部落是马克瓦人的宿敌，他们曾告诫我们一些和植物有关的事情...似乎这附近有着某种胃口特别大的东西...",
+    LEVEL_34_HISTORY = "前方斥候部队来报，称魔王马拉加尔正一路向东逃往扎格龙河对岸的马克瓦尔可城。而穿过扎格龙河唯一的路线，就是经过“断藤大桥”。这座桥是很久以前巴灵顿-基内斯探险队建造的。\n\n我们的新盟友土克亚部落是马克瓦人的宿敌，他们曾告诫我们一些和植物有关的事情...似乎这附近有着某种胃口特别大的东西...",
     LEVEL_34_IRON = "钢铁模式描述7",
-    LEVEL_34_IRON_UNLOCK = "无法师塔\
-无火炮",
+    LEVEL_34_IRON_UNLOCK = "无法师塔\n无火炮",
     LEVEL_34_MODES_UPGRADES = "等级3最高",
     LEVEL_34_TITLE = "断藤大桥",
     LEVEL_35_HEROIC = "英雄模式描述8",
-    LEVEL_35_HISTORY = "在前往马克瓦尔可城的路上，丛林变得越来越危险。这座由根须、树木和藤蔓组成的盘根错节的迷宫似乎从未感受过阳光的温暖，某种更加黑暗的东西就潜伏在这茂密的雨林中。\
-\
-人们有种感觉，仿佛在被某种不属于这个世界的东西追赶着...甚至连我们征兆的亡灵法师也感到不安。然而，对抗魔王马拉加尔的计划只是催促着我们尽快阻止它。",
+    LEVEL_35_HISTORY = "在前往马克瓦尔可城的路上，丛林变得越来越危险。这座由根须、树木和藤蔓组成的盘根错节的迷宫似乎从未感受过阳光的温暖，某种更加黑暗的东西就潜伏在这茂密的雨林中。\n\n人们有种感觉，仿佛在被某种不属于这个世界的东西追赶着...甚至连我们征兆的亡灵法师也感到不安。然而，对抗魔王马拉加尔的计划只是催促着我们尽快阻止它。",
     LEVEL_35_IRON = "钢铁模式描述8",
-    LEVEL_35_IRON_UNLOCK = "无兵营\
-无法师塔",
+    LEVEL_35_IRON_UNLOCK = "无兵营\n无法师塔",
     LEVEL_35_MODES_UPGRADES = "等级4最高",
     LEVEL_35_TITLE = "失落丛林",
     LEVEL_36_HEROIC = "英雄模式描述9",
-    LEVEL_36_HISTORY = "在你面前的就是马克瓦尔可城了。这座古老的城市是我们的敌人——邪恶的马克瓦食人部落的家园。耳中传来山顶震天的鼓声和低沉的咒语，迎面扑来危险的火山释放出的阵阵热浪。这里就是马克瓦人的总部了！\
-\
-为了我们恐怖的敌人，我们首先要突破马克瓦人驻守在城市四周的军队。不过好在我们的矮人工程师和侏儒工匠们，已经为我们准备好了一个巨大的机械奇迹...",
+    LEVEL_36_HISTORY = "在你面前的就是马克瓦尔可城了。这座古老的城市是我们的敌人——邪恶的马克瓦食人部落的家园。耳中传来山顶震天的鼓声和低沉的咒语，迎面扑来危险的火山释放出的阵阵热浪。这里就是马克瓦人的总部了！\n\n为了我们恐怖的敌人，我们首先要突破马克瓦人驻守在城市四周的军队。不过好在我们的矮人工程师和侏儒工匠们，已经为我们准备好了一个巨大的机械奇迹...",
     LEVEL_36_IRON = "钢铁模式描述9",
-    LEVEL_36_IRON_UNLOCK = "无火炮\
-无法师塔",
+    LEVEL_36_IRON_UNLOCK = "无火炮\n无法师塔",
     LEVEL_36_MODES_UPGRADES = "等级4最高",
     LEVEL_36_TITLE = "马克瓦尔可",
     LEVEL_37_HEROIC = "英雄模式描述10",
-    LEVEL_37_HISTORY = "我们把他包围了！萨科拉神庙就是魔王马拉加尔的葬身之地！马克瓦人在这里越发的疯狂，这里是他们祭拜鳄鱼神灵的圣地，现在由军阀之王带领着他们。\
-\
-马克瓦人与军阀之王的法术结合变得异常强大，汇聚成了有史以来最恐怖的邪恶大军。付诸全力，背水一战吧，我的弟兄们，否则我们就会成为萨科拉的祭品...或者更糟...",
+    LEVEL_37_HISTORY = "我们把他包围了！萨科拉神庙就是魔王马拉加尔的葬身之地！马克瓦人在这里越发的疯狂，这里是他们祭拜鳄鱼神灵的圣地，现在由军阀之王带领着他们。\n\n马克瓦人与军阀之王的法术结合变得异常强大，汇聚成了有史以来最恐怖的邪恶大军。付诸全力，背水一战吧，我的弟兄们，否则我们就会成为萨科拉的祭品...或者更糟...",
     LEVEL_37_IRON = "钢铁模式描述10",
-    LEVEL_37_IRON_UNLOCK = "无兵营\
-无弓兵",
+    LEVEL_37_IRON_UNLOCK = "无兵营\n无弓兵",
     LEVEL_37_MODES_UPGRADES = "等级4最高",
     LEVEL_37_TITLE = "萨科拉神庙",
     LEVEL_38_HEROIC = "英雄模式描述11",
-    LEVEL_38_HISTORY = "萨科拉神庙看来只是通往一个直接在山石上挖出的巨大地下迷宫的入口！有传说警告我们，这里有着难以名状的邪恶，也许真相就在里面...\
-\
-我们必须深入迷宫，不能半途而废。但如果我们面前只有这无尽的黑暗，那还算好消息了...",
+    LEVEL_38_HISTORY = "萨科拉神庙看来只是通往一个直接在山石上挖出的巨大地下迷宫的入口！有传说警告我们，这里有着难以名状的邪恶，也许真相就在里面...\n\n我们必须深入迷宫，不能半途而废。但如果我们面前只有这无尽的黑暗，那还算好消息了...",
     LEVEL_38_IRON = "钢铁模式描述11",
-    LEVEL_38_IRON_UNLOCK = "无火炮\
-无法师塔",
+    LEVEL_38_IRON_UNLOCK = "无火炮\n无法师塔",
     LEVEL_38_MODES_UPGRADES = "等级5最高",
     LEVEL_38_TITLE = "地下迷宫",
     LEVEL_39_HEROIC = "英雄模式描述12",
-    LEVEL_39_HISTORY = "我们已在这个石头迷宫中行军数日，却没有发现敌人的任何蛛丝马迹...直到刚才...我们负责追踪的斥候发现了敌人的踪迹...但是我们越深入，这里面越热！\
-\
-墙壁上古老的符文告诉我们，我们正向着贝莱赛德的大厅前进，如果传说是真的，我们可能会受到“热情”的款待…",
+    LEVEL_39_HISTORY = "我们已在这个石头迷宫中行军数日，却没有发现敌人的任何蛛丝马迹...直到刚才...我们负责追踪的斥候发现了敌人的踪迹...但是我们越深入，这里面越热！\n\n墙壁上古老的符文告诉我们，我们正向着贝莱赛德的大厅前进，如果传说是真的，我们可能会受到“热情”的款待…",
     LEVEL_39_IRON = "钢铁模式描述12",
-    LEVEL_39_IRON_UNLOCK = "无法师塔\
-无弓兵",
+    LEVEL_39_IRON_UNLOCK = "无法师塔\n无弓兵",
     LEVEL_39_MODES_UPGRADES = "等级5最高",
     LEVEL_39_TITLE = "贝莱赛德的巢穴",
     LEVEL_3_HEROIC = "英雄模式描述2",
-    LEVEL_3_HISTORY = "当你的部下还沉醉在击退哥布林与兽人的喜悦当中时，我们又收到了一个坏消息。\
-\
-帕格拉斯镇现在遭受敌人压倒性军力的重重包围。\
-\
-这显然是对王国的公开宣战：战争开始了！",
+    LEVEL_3_HISTORY = "当你的部下还沉醉在击退哥布林与兽人的喜悦当中时，我们又收到了一个坏消息。\n\n帕格拉斯镇现在遭受敌人压倒性军力的重重包围。\n\n这显然是对王国的公开宣战：战争开始了！",
     LEVEL_3_IRON = "钢铁模式描述2",
     LEVEL_3_IRON_UNLOCK = "无火炮",
-    LEVEL_3_MODES_UPGRADES = "等级2最高\
-无英雄",
+    LEVEL_3_MODES_UPGRADES = "等级2最高\n无英雄",
     LEVEL_3_TITLE = "帕格拉斯",
     LEVEL_40_HEROIC = "英雄模式描述13",
-    LEVEL_40_HISTORY = "我们的补给即将耗尽，士气也低至谷底，有的人干脆跑掉了。幸运的是，我们遇到了一队矮人矿工，他们在地道中挖的太深，只得封锁道路，挡住蜥蜴人。\
-\
-他们答应加入我们，找到离开这个鬼地方的路。不过逃跑的事儿得先放一放，我们和新盟友必须先对付逼近的蜥蜴人大军！",
+    LEVEL_40_HISTORY = "我们的补给即将耗尽，士气也低至谷底，有的人干脆跑掉了。幸运的是，我们遇到了一队矮人矿工，他们在地道中挖的太深，只得封锁道路，挡住蜥蜴人。\n\n他们答应加入我们，找到离开这个鬼地方的路。不过逃跑的事儿得先放一放，我们和新盟友必须先对付逼近的蜥蜴人大军！",
     LEVEL_40_IRON = "钢铁模式描述13",
-    LEVEL_40_IRON_UNLOCK = "无火炮\
-无兵营",
+    LEVEL_40_IRON_UNLOCK = "无火炮\n无兵营",
     LEVEL_40_MODES_UPGRADES = "等级5最高",
     LEVEL_40_TITLE = "黑暗深处",
     LEVEL_41_HEROIC = "英雄模式描述14",
-    LEVEL_41_HISTORY = "终于！与魔王和其军队的决战即将到来！黑暗仪式正在把魔王邪恶的主人释放出来！将军，整个世界的命运就落在你的肩上了。\
-\
-我们穿越荒芜的大地，远离国境，九死一生，是你的光辉榜样和卓越战术将我们带到了这里。只有你才能完成这项艰巨的任务，将敌人消灭。为了利尼维亚！",
+    LEVEL_41_HISTORY = "终于！与魔王和其军队的决战即将到来！黑暗仪式正在把魔王邪恶的主人释放出来！将军，整个世界的命运就落在你的肩上了。\n\n我们穿越荒芜的大地，远离国境，九死一生，是你的光辉榜样和卓越战术将我们带到了这里。只有你才能完成这项艰巨的任务，将敌人消灭。为了利尼维亚！",
     LEVEL_41_IRON = "钢铁模式描述14",
     LEVEL_41_IRON_UNLOCK = "无法师塔",
     LEVEL_41_MODES_UPGRADES = "等级5最高",
     LEVEL_41_TITLE = "余烬尖刺深渊",
     LEVEL_42_HEROIC = "英雄模式描述16",
-    LEVEL_42_HISTORY = "过去几周间，诡异的失踪事件让水手和渔夫都开始警觉起来。纷纷有报告称，船和人在附近的水域神秘消失，下落不明。我们位于海盗岛的海龟港驻军向我们请求协助。\
-\
-目前尚不确定这些失踪事件是什么人或什么东西在背后捣鬼，但我们沿海的村庄处境非常危险，国王让你带领一支小型突击舰队，将这新出现的威胁调查个水落石出。",
+    LEVEL_42_HISTORY = "过去几周间，诡异的失踪事件让水手和渔夫都开始警觉起来。纷纷有报告称，船和人在附近的水域神秘消失，下落不明。我们位于海盗岛的海龟港驻军向我们请求协助。\n\n目前尚不确定这些失踪事件是什么人或什么东西在背后捣鬼，但我们沿海的村庄处境非常危险，国王让你带领一支小型突击舰队，将这新出现的威胁调查个水落石出。",
     LEVEL_42_IRON = "钢铁模式描述16",
-    LEVEL_42_IRON_UNLOCK = "无法师塔\
-无火炮",
+    LEVEL_42_IRON_UNLOCK = "无法师塔\n无火炮",
     LEVEL_42_MODES_UPGRADES = "等级5最高",
     LEVEL_42_TITLE = "海龟港",
     LEVEL_43_HEROIC = "英雄模式描述16",
-    LEVEL_43_HISTORY = "当心深海恶魔！我们相信，这些残忍的恶魔几十年前就被利尼维亚的皇家舰队和海盗兄弟会消灭了。海龟港一役中，在那些卑鄙生物如潮水般的连续攻击之下我们几近沉没，现在必须在危机四伏的风暴环礁登岸。\
-\
-我们得在这里做好战斗准备，附近就是海洋之主——雷神的圣殿遗迹。向雷神祈祷，愿他保佑利尼维亚的守护者！",
+    LEVEL_43_HISTORY = "当心深海恶魔！我们相信，这些残忍的恶魔几十年前就被利尼维亚的皇家舰队和海盗兄弟会消灭了。海龟港一役中，在那些卑鄙生物如潮水般的连续攻击之下我们几近沉没，现在必须在危机四伏的风暴环礁登岸。\n\n我们得在这里做好战斗准备，附近就是海洋之主——雷神的圣殿遗迹。向雷神祈祷，愿他保佑利尼维亚的守护者！",
     LEVEL_43_IRON = "钢铁模式描述16",
-    LEVEL_43_IRON_UNLOCK = "无弓兵\
-无火炮",
+    LEVEL_43_IRON_UNLOCK = "无弓兵\n无火炮",
     LEVEL_43_MODES_UPGRADES = "等级5最高",
     LEVEL_43_TITLE = "风暴环礁",
     LEVEL_44_HEROIC = "英雄模式描述18",
-    LEVEL_44_HISTORY = "在海洋之主的庇护下，我们获得了战斗的胜利！然而，笑到最后的仍然可能是深海恶魔，因为它们唤醒了利维坦——一名它们崇拜的邪恶神祇。如果利维坦获得了完全的力量，这世上就没有什么能阻止它了。\
-\
-来不及重整队伍和休息的我们，直接向利维坦的巢穴进发。那里是利利耶古城——过去海洋之主统治的地方。是时候彻底消灭深海恶魔和它们的邪神了！",
+    LEVEL_44_HISTORY = "在海洋之主的庇护下，我们获得了战斗的胜利！然而，笑到最后的仍然可能是深海恶魔，因为它们唤醒了利维坦——一名它们崇拜的邪恶神祇。如果利维坦获得了完全的力量，这世上就没有什么能阻止它了。\n\n来不及重整队伍和休息的我们，直接向利维坦的巢穴进发。那里是利利耶古城——过去海洋之主统治的地方。是时候彻底消灭深海恶魔和它们的邪神了！",
     LEVEL_44_IRON = "钢铁模式描述18",
-    LEVEL_44_IRON_UNLOCK = "无弓兵\
-无兵营",
+    LEVEL_44_IRON_UNLOCK = "无弓兵\n无兵营",
     LEVEL_44_MODES_UPGRADES = "等级5最高",
     LEVEL_44_TITLE = "沉没城堡",
     LEVEL_45_HEROIC = "英雄模式描述15",
-    LEVEL_45_HISTORY = "无尽的黑夜降临了！某种邪恶的东西被唤醒，让整个地区陷入了黑暗之中！没有思维的恶魔在大地上徘徊，四处捕食人类！\
-\
-我们的国王命你保护手无寸铁的村民，并查明这场灾难的根源...王国需要你！",
+    LEVEL_45_HISTORY = "无尽的黑夜降临了！某种邪恶的东西被唤醒，让整个地区陷入了黑暗之中！没有思维的恶魔在大地上徘徊，四处捕食人类！\n\n我们的国王命你保护手无寸铁的村民，并查明这场灾难的根源...王国需要你！",
     LEVEL_45_IRON = "钢铁模式描述15",
-    LEVEL_45_IRON_UNLOCK = "无兵营\
-无法师塔",
+    LEVEL_45_IRON_UNLOCK = "无兵营\n无法师塔",
     LEVEL_45_MODES_UPGRADES = "等级5最高",
     LEVEL_45_TITLE = "白骨镇",
     LEVEL_46_HEROIC = "英雄模式描述15",
     LEVEL_46_HISTORY = "我们解放了白骨镇后，追着这些邪恶的东西来到了一片诡异的森林。你能感受到森林中散发的恶意吗？奇形怪状的丑陋树木覆盖着黑暗祭坛。这里正准备执行禁忌的仪式。黑暗的恶魔在阴影中徘徊，战斗开始了！",
     LEVEL_46_IRON = "钢铁模式描述15",
-    LEVEL_46_IRON_UNLOCK = "无火炮\
-无法师塔",
+    LEVEL_46_IRON_UNLOCK = "无火炮\n无法师塔",
     LEVEL_46_MODES_UPGRADES = "等级5最高",
     LEVEL_46_TITLE = "亵渎树林",
     LEVEL_47_HEROIC = "英雄模式描述15",
-    LEVEL_47_HISTORY = "深入森林最黑暗的中心地带，我们找到了邪恶的根源。瓦西里从长眠中苏醒了！瓦西里再一次施展出他黑暗的力量！瓦西里，远古的吸血鬼王子，很长时间里人们都认为他已经不复存在了！\
-\
-这名远古的敌人在宅邸里统率着他的黑暗大军，想要将你的部队变成吸血鬼军团，任他奴役。让我们用光明照亮这片黑暗，结束这漫长的黑夜...为了利尼维亚！",
+    LEVEL_47_HISTORY = "深入森林最黑暗的中心地带，我们找到了邪恶的根源。瓦西里从长眠中苏醒了！瓦西里再一次施展出他黑暗的力量！瓦西里，远古的吸血鬼王子，很长时间里人们都认为他已经不复存在了！\n\n这名远古的敌人在宅邸里统率着他的黑暗大军，想要将你的部队变成吸血鬼军团，任他奴役。让我们用光明照亮这片黑暗，结束这漫长的黑夜...为了利尼维亚！",
     LEVEL_47_IRON = "钢铁模式描述15",
-    LEVEL_47_IRON_UNLOCK = "无弓兵\
-无兵营",
+    LEVEL_47_IRON_UNLOCK = "无弓兵\n无兵营",
     LEVEL_47_MODES_UPGRADES = "等级5最高",
     LEVEL_47_TITLE = "沙尘高原",
     LEVEL_48_HEROIC = "英雄模式描述15",
-    LEVEL_48_HISTORY = "矮人是我们最坚定的盟友，我们的国王封他们为洞穴守卫者。在他们寻找失落王国洛瑞亚的时候，偶然发现了一个蜥蜴人的秘密隧道网络。\
-\
-有了这些隧道，一支庞大的蜥蜴人军队就能前往地表，在蜥蜴王西兹的带领下征服利尼维亚。你必须加入矮人的队伍，阻止西兹和它的怪兽们...只有迪纳斯才配做利尼维亚之王！",
+    LEVEL_48_HISTORY = "矮人是我们最坚定的盟友，我们的国王封他们为洞穴守卫者。在他们寻找失落王国洛瑞亚的时候，偶然发现了一个蜥蜴人的秘密隧道网络。\n\n有了这些隧道，一支庞大的蜥蜴人军队就能前往地表，在蜥蜴王西兹的带领下征服利尼维亚。你必须加入矮人的队伍，阻止西兹和它的怪兽们...只有迪纳斯才配做利尼维亚之王！",
     LEVEL_48_IRON = "钢铁模式描述15",
-    LEVEL_48_IRON_UNLOCK = "无兵营\
-无法师塔",
+    LEVEL_48_IRON_UNLOCK = "无兵营\n无法师塔",
     LEVEL_48_MODES_UPGRADES = "等级5最高",
     LEVEL_48_TITLE = "暗光深渊",
     LEVEL_49_HEROIC = "英雄模式描述1",
-    LEVEL_49_HISTORY = "将军，一批豺狼人正向我们逼近！\
-它们是只想着夺走与烧毁一切的野兽，但这些家伙会为离开荒芜丘陵而后悔的。\
-\
-为了女王陛下！",
+    LEVEL_49_HISTORY = "将军，一批豺狼人正向我们逼近！\n它们是只想着夺走与烧毁一切的野兽，但这些家伙会为离开荒芜丘陵而后悔的。\n\n为了女王陛下！",
     LEVEL_49_IRON = "钢铁模式描述1",
-    LEVEL_49_IRON_UNLOCK = "无弓兵\
-无法师塔",
+    LEVEL_49_IRON_UNLOCK = "无弓兵\n无法师塔",
     LEVEL_49_MODES_UPGRADES = "最高1级",
     LEVEL_49_TITLE = "灰鸦港口",
     LEVEL_4_HEROIC = "英雄模式描述4",
-    LEVEL_4_HISTORY = "敌人部队正从东边穿过石崖山脉而来，这只能说明战锤要塞已经沦陷，我们王国的首都也岌岌可危。\
-\
-从探子送回的情报看，阻止敌人前进的最佳地点就在双子河畔。",
+    LEVEL_4_HISTORY = "敌人部队正从东边穿过石崖山脉而来，这只能说明战锤要塞已经沦陷，我们王国的首都也岌岌可危。\n\n从探子送回的情报看，阻止敌人前进的最佳地点就在双子河畔。",
     LEVEL_4_IRON = "钢铁模式描述4",
-    LEVEL_4_IRON_UNLOCK = "无法师塔\
-无火炮",
-    LEVEL_4_MODES_UPGRADES = "等级2最高\
-无英雄",
+    LEVEL_4_IRON_UNLOCK = "无法师塔\n无火炮",
+    LEVEL_4_MODES_UPGRADES = "等级2最高\n无英雄",
     LEVEL_4_TITLE = "双子河畔",
     LEVEL_50_HEROIC = "英雄模式描述2",
-    LEVEL_50_HISTORY = "那批豺狼人的先遣队只能算是练练手。探子回报有更多豺狼人正准备通过古桥。\
-\
-我们非得将他们赶回老巢不可，可恶，数量实在是太多了！",
+    LEVEL_50_HISTORY = "那批豺狼人的先遣队只能算是练练手。探子回报有更多豺狼人正准备通过古桥。\n\n我们非得将他们赶回老巢不可，可恶，数量实在是太多了！",
     LEVEL_50_IRON = "钢铁模式描述2",
-    LEVEL_50_IRON_UNLOCK = "无法师塔\
-无德鲁伊塔",
+    LEVEL_50_IRON_UNLOCK = "无法师塔\n无德鲁伊塔",
     LEVEL_50_MODES_UPGRADES = "最高2级",
     LEVEL_50_TITLE = "高桥",
     LEVEL_51_HEROIC = "英雄模式描述2",
-    LEVEL_51_HISTORY = "正如我们所料，敌人大军过桥失败，此刻来到下游试图展开侧面袭击，将军。\
-\
-我们可以利用两座瀑布之间的弯曲道路，伏击豺狼人和他们带来的野兽。\
-\
-愿艾纳妮女神保佑我们！",
+    LEVEL_51_HISTORY = "正如我们所料，敌人大军过桥失败，此刻来到下游试图展开侧面袭击，将军。\n\n我们可以利用两座瀑布之间的弯曲道路，伏击豺狼人和他们带来的野兽。\n\n愿艾纳妮女神保佑我们！",
     LEVEL_51_IRON = "钢铁模式描述2",
-    LEVEL_51_IRON_UNLOCK = "无弓箭塔\
-无法师塔",
+    LEVEL_51_IRON_UNLOCK = "无弓箭塔\n无法师塔",
     LEVEL_51_MODES_UPGRADES = "最高2级",
     LEVEL_51_TITLE = "瀑布小径",
     LEVEL_52_HEROIC = "英雄模式描述3",
-    LEVEL_52_HISTORY = "豺狼人丘陵肯定空空如也，因为每一只这种丑恶的生物似乎都跑来入侵我们的领土了！\
-我们无休无止地战斗，击败了一批又一批的豺狼人，但却有更庞大的军队正向着巨大红杉进发。\
-\
-为了守护家园，树人们正拼死作战，但光是挡住对手就已达极限了...我们必须尽快前去支援！",
+    LEVEL_52_HISTORY = "豺狼人丘陵肯定空空如也，因为每一只这种丑恶的生物似乎都跑来入侵我们的领土了！\n我们无休无止地战斗，击败了一批又一批的豺狼人，但却有更庞大的军队正向着巨大红杉进发。\n\n为了守护家园，树人们正拼死作战，但光是挡住对手就已达极限了...我们必须尽快前去支援！",
     LEVEL_52_IRON = "钢铁模式描述3",
-    LEVEL_52_IRON_UNLOCK = "无兵营\
-无法师塔",
+    LEVEL_52_IRON_UNLOCK = "无兵营\n无法师塔",
     LEVEL_52_MODES_UPGRADES = "最高2级",
     LEVEL_52_TITLE = "红杉阻击战",
     LEVEL_53_HEROIC = "英雄模式描述4",
-    LEVEL_53_HISTORY = "大事不妙，将军！\
-\
-首都已经沦陷！敌军从四面八方围拢过来，所到之处民不聊生。\
-只有咏剑士还在顽强抵抗，为王后之女争取逃脱王庭的时间。\
-\
-我们以光之名起誓，一定要保护好艾莉瑞雅公主！",
+    LEVEL_53_HISTORY = "大事不妙，将军！\n\n首都已经沦陷！敌军从四面八方围拢过来，所到之处民不聊生。\n只有咏剑士还在顽强抵抗，为王后之女争取逃脱王庭的时间。\n\n我们以光之名起誓，一定要保护好艾莉瑞雅公主！",
     LEVEL_53_IRON = "钢铁模式描述4",
-    LEVEL_53_IRON_UNLOCK = "无兵营\
-无德鲁伊塔",
+    LEVEL_53_IRON_UNLOCK = "无兵营\n无德鲁伊塔",
     LEVEL_53_MODES_UPGRADES = "最高3级",
     LEVEL_53_TITLE = "皇家庭园",
     LEVEL_54_HEROIC = "英雄模式描述5",
-    LEVEL_54_HISTORY = "看来，暮光精灵的女王玛丽西娅就是这场浩劫的元凶。她派来了整个豺狼人部族，就是为了杀害艾莉瑞雅 —— 艾纳妮最后的血脉。他们将我们包围起来，整个狮鹫山脉的高原都能听到他们的咆哮声。\
-\
-将军，我们必须不惜一切代价坚守阵地，让年轻的公主安全逃往利尼维亚！",
+    LEVEL_54_HISTORY = "看来，暮光精灵的女王玛丽西娅就是这场浩劫的元凶。她派来了整个豺狼人部族，就是为了杀害艾莉瑞雅 —— 艾纳妮最后的血脉。他们将我们包围起来，整个狮鹫山脉的高原都能听到他们的咆哮声。\n\n将军，我们必须不惜一切代价坚守阵地，让年轻的公主安全逃往利尼维亚！",
     LEVEL_54_IRON = "钢铁模式描述5",
-    LEVEL_54_IRON_UNLOCK = "无弓箭塔\
-无兵营",
+    LEVEL_54_IRON_UNLOCK = "无弓箭塔\n无兵营",
     LEVEL_54_MODES_UPGRADES = "等级3最高",
     LEVEL_54_TITLE = "狮鹫驿站",
     LEVEL_55_HEROIC = "英雄模式描述5",
-    LEVEL_55_HISTORY = "战争越演越烈，我们边打边撤退，让入侵者每得到一寸我们所让出的领土都付出沉重的代价。\
-\
-将军，按照你的命令，我们撤守仙境森林，石环阵中的大德鲁伊一贯是我们的盟友。\
-尽管如此，我们走在这魔法大陆上时，都能感受到那暗处不怀好意的眼神。",
+    LEVEL_55_HISTORY = "战争越演越烈，我们边打边撤退，让入侵者每得到一寸我们所让出的领土都付出沉重的代价。\n\n将军，按照你的命令，我们撤守仙境森林，石环阵中的大德鲁伊一贯是我们的盟友。\n尽管如此，我们走在这魔法大陆上时，都能感受到那暗处不怀好意的眼神。",
     LEVEL_55_IRON = "钢铁模式描述5",
-    LEVEL_55_IRON_UNLOCK = "无法师塔\
-无兵营",
+    LEVEL_55_IRON_UNLOCK = "无法师塔\n无兵营",
     LEVEL_55_MODES_UPGRADES = "等级3最高",
     LEVEL_55_TITLE = "石环阵",
     LEVEL_56_HEROIC = "英雄模式描述5",
-    LEVEL_56_HISTORY = "令人生畏的森林守护者虽然加入了我们这一边，但还是有不少妖灵选择了投靠敌人；阵阵逼近的狂暴嘶吼，令大家感到很不安...\
-\
-艾纳妮赞誉有加的精灵黄金长弓兵精锐射手团已经设法穿过敌人防线，正在格林堡的魔法屋附近坚守。将军，他们需要我们立即支援！",
+    LEVEL_56_HISTORY = "令人生畏的森林守护者虽然加入了我们这一边，但还是有不少妖灵选择了投靠敌人；阵阵逼近的狂暴嘶吼，令大家感到很不安...\n\n艾纳妮赞誉有加的精灵黄金长弓兵精锐射手团已经设法穿过敌人防线，正在格林堡的魔法屋附近坚守。将军，他们需要我们立即支援！",
     LEVEL_56_IRON = "钢铁模式描述5",
-    LEVEL_56_IRON_UNLOCK = "无法师塔\
-无德鲁伊塔",
+    LEVEL_56_IRON_UNLOCK = "无法师塔\n无德鲁伊塔",
     LEVEL_56_MODES_UPGRADES = "等级3最高",
     LEVEL_56_TITLE = "格林堡之战",
     LEVEL_57_HEROIC = "英雄模式描述5",
-    LEVEL_57_HISTORY = "渡过水晶之湖的决定让德鲁伊盟友感到很不安，我听到他们窃窃私语谈论有关格鲁斯兰巨蟒的传言，但他们拒绝进一步谈论此事。\
-\
-我们已派出探子，前往寻找在此地钻研水晶魔法的高等精灵法师；希望圣光能指引我们及时找到他们！\
-\
-敌人正在接近，我们必须加速行军，趁力量还没有被削弱之前，抵达罪恶精灵王庭。",
+    LEVEL_57_HISTORY = "渡过水晶之湖的决定让德鲁伊盟友感到很不安，我听到他们窃窃私语谈论有关格鲁斯兰巨蟒的传言，但他们拒绝进一步谈论此事。\n\n我们已派出探子，前往寻找在此地钻研水晶魔法的高等精灵法师；希望圣光能指引我们及时找到他们！\n\n敌人正在接近，我们必须加速行军，趁力量还没有被削弱之前，抵达罪恶精灵王庭。",
     LEVEL_57_IRON = "钢铁模式描述5",
-    LEVEL_57_IRON_UNLOCK = "无兵营\
-无法师塔",
+    LEVEL_57_IRON_UNLOCK = "无兵营\n无法师塔",
     LEVEL_57_MODES_UPGRADES = "等级4最高",
     LEVEL_57_TITLE = "水晶之湖",
     LEVEL_58_HEROIC = "英雄模式描述5",
-    LEVEL_58_HISTORY = "尽管我们身经百战，但如今早已濒临崩溃边缘。\
-我们抓紧时间向奇迹仙境进军，那儿受到各种怪异树木的保护。如果这些威严的大家伙们看我们不顺眼，恐怕我们就很难全身而退了。\
-\
-时候到了，我们非得冒这个险不可，愿艾纳妮保佑我们。",
+    LEVEL_58_HISTORY = "尽管我们身经百战，但如今早已濒临崩溃边缘。\n我们抓紧时间向奇迹仙境进军，那儿受到各种怪异树木的保护。如果这些威严的大家伙们看我们不顺眼，恐怕我们就很难全身而退了。\n\n时候到了，我们非得冒这个险不可，愿艾纳妮保佑我们。",
     LEVEL_58_IRON = "钢铁模式描述5",
-    LEVEL_58_IRON_UNLOCK = "无弓箭塔\
-无兵营",
+    LEVEL_58_IRON_UNLOCK = "无弓箭塔\n无兵营",
     LEVEL_58_MODES_UPGRADES = "等级4最高",
     LEVEL_58_TITLE = "奇迹仙境",
     LEVEL_59_HEROIC = "英雄模式描述5",
-    LEVEL_59_HISTORY = "在罪恶精灵王庭，既没有安稳的避难之所，也没有休整的宁静之地，精灵们已近穷途末路。敌人占了领皇宫，玛丽西娅也自封为罪恶精灵女王。\
-\
-我们被困在这里，寡不敌众，精疲力竭...我们别无他选，唯有在投入艾纳妮怀抱之前，拼死一战！\
-\
-他们来了，将军，这一役必将名留千古！",
+    LEVEL_59_HISTORY = "在罪恶精灵王庭，既没有安稳的避难之所，也没有休整的宁静之地，精灵们已近穷途末路。敌人占了领皇宫，玛丽西娅也自封为罪恶精灵女王。\n\n我们被困在这里，寡不敌众，精疲力竭...我们别无他选，唯有在投入艾纳妮怀抱之前，拼死一战！\n\n他们来了，将军，这一役必将名留千古！",
     LEVEL_59_IRON = "钢铁模式描述5",
-    LEVEL_59_IRON_UNLOCK = "无兵营\
-无法师塔",
+    LEVEL_59_IRON_UNLOCK = "无兵营\n无法师塔",
     LEVEL_59_MODES_UPGRADES = "等级4最高",
     LEVEL_59_TITLE = "罪恶精灵王庭",
     LEVEL_5_HEROIC = "英雄模式描述5",
-    LEVEL_5_HISTORY = "据守双子河畔再加上数日行军之后，我们终于来到了银橡森林岗哨，与我们的精灵盟友会合...\
-\
-要塞的驻军近来承受了好几轮攻击，他们的探子也传来报告，一波数量更加庞大的敌军正在逼近。\
-\
-好消息是，精英游侠部队正在赶来帮助我们...将军，让我们全歼敌人的部队！",
+    LEVEL_5_HISTORY = "据守双子河畔再加上数日行军之后，我们终于来到了银橡森林岗哨，与我们的精灵盟友会合...\n\n要塞的驻军近来承受了好几轮攻击，他们的探子也传来报告，一波数量更加庞大的敌军正在逼近。\n\n好消息是，精英游侠部队正在赶来帮助我们...将军，让我们全歼敌人的部队！",
     LEVEL_5_IRON = "钢铁模式描述5",
     LEVEL_5_IRON_UNLOCK = "无兵营",
-    LEVEL_5_MODES_UPGRADES = "最高3级\
-无英雄",
+    LEVEL_5_MODES_UPGRADES = "最高3级\n无英雄",
     LEVEL_5_TITLE = "银橡森林",
     LEVEL_60_HEROIC = "英雄模式描述5",
-    LEVEL_60_HISTORY = "我们仍然无法想像到底要面对多么恐怖的敌人。最毒不过黑寡妇，古代蜘蛛女王之一。\
-\
-将军，我们的探子一路跟踪玛丽西娅和黑寡妇，他们已经逃到令人敬畏之处 —— 首城，那儿是我族发源之地，如今成了一座浮空遗迹，精灵已有数世纪之久未曾踏足。\
-\
-暮光大军在那儿严阵以待...我们没有片刻喘息的机会，就连艾纳妮女神很可能也自身难保了！",
+    LEVEL_60_HISTORY = "我们仍然无法想像到底要面对多么恐怖的敌人。最毒不过黑寡妇，古代蜘蛛女王之一。\n\n将军，我们的探子一路跟踪玛丽西娅和黑寡妇，他们已经逃到令人敬畏之处 —— 首城，那儿是我族发源之地，如今成了一座浮空遗迹，精灵已有数世纪之久未曾踏足。\n\n暮光大军在那儿严阵以待...我们没有片刻喘息的机会，就连艾纳妮女神很可能也自身难保了！",
     LEVEL_60_IRON = "钢铁模式描述5",
-    LEVEL_60_IRON_UNLOCK = "无法师塔\
-无德鲁伊塔",
+    LEVEL_60_IRON_UNLOCK = "无法师塔\n无德鲁伊塔",
     LEVEL_60_MODES_UPGRADES = "等级5最高",
     LEVEL_60_TITLE = "追本溯源",
     LEVEL_61_HEROIC = "英雄模式描述5",
-    LEVEL_61_HISTORY = "漂浮的城市与浮空的残骸，连接成最让人无法想像的危险阶梯。\
-\
-敌军退守到城市的中心，我们则紧随其后，殊死追击，稍有不慎便可能跌入万丈峡谷。我们不清楚他们为何决定停留在奥术理事会区域，有可能是个陷阱，但这是我们夺回领地的仅有机会了。\
-\
-整个地方弥漫着不祥的寂静；就连鸟儿也感受得到，有什么可怕的事物就要觉醒...",
+    LEVEL_61_HISTORY = "漂浮的城市与浮空的残骸，连接成最让人无法想像的危险阶梯。\n\n敌军退守到城市的中心，我们则紧随其后，殊死追击，稍有不慎便可能跌入万丈峡谷。我们不清楚他们为何决定停留在奥术理事会区域，有可能是个陷阱，但这是我们夺回领地的仅有机会了。\n\n整个地方弥漫着不祥的寂静；就连鸟儿也感受得到，有什么可怕的事物就要觉醒...",
     LEVEL_61_IRON = "钢铁模式描述5",
-    LEVEL_61_IRON_UNLOCK = "无弓箭塔\
-无德鲁伊塔",
+    LEVEL_61_IRON_UNLOCK = "无弓箭塔\n无德鲁伊塔",
     LEVEL_61_MODES_UPGRADES = "等级5最高",
     LEVEL_61_TITLE = "奥术都市",
     LEVEL_62_HEROIC = "英雄模式描述5",
-    LEVEL_62_HISTORY = "暮光精灵丝毫不放过任何一次伏击我们的机会，通往城市中心的道路上，布满了敌我双方的尸体。\
-\
-选择这条架在虚空之上的阶梯小径是个充满危险的决策，将军，但却也是最明智的决策。黑寡妇的巢穴就在眼前。\
-\
-我们的部队虽精疲力竭，但大家誓言要将这可恶的家伙赶出我们的圣地！",
+    LEVEL_62_HISTORY = "暮光精灵丝毫不放过任何一次伏击我们的机会，通往城市中心的道路上，布满了敌我双方的尸体。\n\n选择这条架在虚空之上的阶梯小径是个充满危险的决策，将军，但却也是最明智的决策。黑寡妇的巢穴就在眼前。\n\n我们的部队虽精疲力竭，但大家誓言要将这可恶的家伙赶出我们的圣地！",
     LEVEL_62_IRON = "钢铁模式描述5",
-    LEVEL_62_IRON_UNLOCK = "无兵营\
-无德鲁伊塔",
+    LEVEL_62_IRON_UNLOCK = "无兵营\n无德鲁伊塔",
     LEVEL_62_MODES_UPGRADES = "等级5最高",
     LEVEL_62_TITLE = "黑寡妇避难所",
     LEVEL_63_HEROIC = "英雄模式描述5",
-    LEVEL_63_HISTORY = "将军，敌人已在我们的女神雕像周围部署军队！此时此刻，黑寡妇与玛丽西娅正全力以赴，夺取强大的“艾纳妮之泪”。整个神殿都充满那泪滴中的上古神力；那股力量不仅造就了我族，如今也让我们疲惫不堪的士兵们重获力量。\
-\
-我们已经准备好面对这场最终决战。女神与族人的命运，全都交托在这一役中了。\
-\
-为了光明！为了艾纳妮！",
+    LEVEL_63_HISTORY = "将军，敌人已在我们的女神雕像周围部署军队！此时此刻，黑寡妇与玛丽西娅正全力以赴，夺取强大的“艾纳妮之泪”。整个神殿都充满那泪滴中的上古神力；那股力量不仅造就了我族，如今也让我们疲惫不堪的士兵们重获力量。\n\n我们已经准备好面对这场最终决战。女神与族人的命运，全都交托在这一役中了。\n\n为了光明！为了艾纳妮！",
     LEVEL_63_IRON = "钢铁模式描述5",
-    LEVEL_63_IRON_UNLOCK = "无弓箭塔\
-无德鲁伊塔",
+    LEVEL_63_IRON_UNLOCK = "无弓箭塔\n无德鲁伊塔",
     LEVEL_63_MODES_UPGRADES = "等级5最高",
     LEVEL_63_TITLE = "艾纳妮神殿",
     LEVEL_64_HEROIC = "英雄模式描述5",
-    LEVEL_64_HISTORY = "将军，我们已经抵达食人魔领地的边境。神秘食人魔带领豺狼人部族试图侵入我国国境，只有少数几支卫队仍在废墟城墙边死守。\
-\
-时间无比宝贵，将军，我们必须赶快上前增援！",
+    LEVEL_64_HISTORY = "将军，我们已经抵达食人魔领地的边境。神秘食人魔带领豺狼人部族试图侵入我国国境，只有少数几支卫队仍在废墟城墙边死守。\n\n时间无比宝贵，将军，我们必须赶快上前增援！",
     LEVEL_64_IRON = "钢铁模式描述5",
-    LEVEL_64_IRON_UNLOCK = "无弓箭塔\
-无德鲁伊塔",
+    LEVEL_64_IRON_UNLOCK = "无弓箭塔\n无德鲁伊塔",
     LEVEL_64_MODES_UPGRADES = "等级5最高",
     LEVEL_64_TITLE = "加拉里安之墙",
     LEVEL_65_HEROIC = "英雄模式描述5",
-    LEVEL_65_HISTORY = "这里就是食人魔提取腐化矿物，供养其魔法的地方。如果我们切断他们的血曜石补给，就能削弱他们的术士。\
-\
-将军，我们还必须为解救所有奴隶而战！",
+    LEVEL_65_HISTORY = "这里就是食人魔提取腐化矿物，供养其魔法的地方。如果我们切断他们的血曜石补给，就能削弱他们的术士。\n\n将军，我们还必须为解救所有奴隶而战！",
     LEVEL_65_IRON = "钢铁模式描述16",
-    LEVEL_65_IRON_UNLOCK = "无法师塔\
-无弓箭塔",
+    LEVEL_65_IRON_UNLOCK = "无法师塔\n无弓箭塔",
     LEVEL_65_MODES_UPGRADES = "等级5最高",
     LEVEL_65_TITLE = "血石矿场",
     LEVEL_66_HEROIC = "英雄模式描述5",
-    LEVEL_66_HISTORY = "食人魔及其豺狼人盟友已经撤退到他们残忍的国王歼灭者布拉姆所在的村庄。这将是一场没有宽恕的恶战，将军。\
-\
-这是我们一劳永逸，终结食人魔威胁的好机会。\
-\
-为了王国！",
+    LEVEL_66_HISTORY = "食人魔及其豺狼人盟友已经撤退到他们残忍的国王歼灭者布拉姆所在的村庄。这将是一场没有宽恕的恶战，将军。\n\n这是我们一劳永逸，终结食人魔威胁的好机会。\n\n为了王国！",
     LEVEL_66_IRON = "钢铁模式描述5",
-    LEVEL_66_IRON_UNLOCK = "无法师塔\
-无德鲁伊塔",
+    LEVEL_66_IRON_UNLOCK = "无法师塔\n无德鲁伊塔",
     LEVEL_66_MODES_UPGRADES = "等级5最高",
     LEVEL_66_TITLE = "歼灭者王座",
     LEVEL_67_HEROIC = "英雄模式描述5",
-    LEVEL_67_HISTORY = "将军，我们必须立即向暮光精灵的首都推进。玛丽西娅手下最后一个忠实的将领正在准备一道可怕而强大的法术，能够摧毁眼前的一切。\
-\
-如果我们不能阻止他，这片大陆就完了！",
+    LEVEL_67_HISTORY = "将军，我们必须立即向暮光精灵的首都推进。玛丽西娅手下最后一个忠实的将领正在准备一道可怕而强大的法术，能够摧毁眼前的一切。\n\n如果我们不能阻止他，这片大陆就完了！",
     LEVEL_67_IRON = "钢铁模式描述5",
-    LEVEL_67_IRON_UNLOCK = "无法师塔\
-无弓箭塔",
+    LEVEL_67_IRON_UNLOCK = "无法师塔\n无弓箭塔",
     LEVEL_67_MODES_UPGRADES = "等级5最高",
     LEVEL_67_TITLE = "暮色森林岗哨",
     LEVEL_68_HEROIC = "英雄模式描述15",
-    LEVEL_68_HISTORY = "这是最后的攻坚战了，将军！\
-\
-我们打倒大批敌人，终于来到这城门前。巴杰尼蒙别无选择，只能出来迎战。\
-\
-这将是我们阻止他那邪恶计划的好机会，趁一切还来得及。",
+    LEVEL_68_HISTORY = "这是最后的攻坚战了，将军！\n\n我们打倒大批敌人，终于来到这城门前。巴杰尼蒙别无选择，只能出来迎战。\n\n这将是我们阻止他那邪恶计划的好机会，趁一切还来得及。",
     LEVEL_68_IRON = "钢铁模式描述15",
-    LEVEL_68_IRON_UNLOCK = "无兵营\
-无德鲁伊塔",
+    LEVEL_68_IRON_UNLOCK = "无兵营\n无德鲁伊塔",
     LEVEL_68_MODES_UPGRADES = "等级5最高",
     LEVEL_68_TITLE = "都尔德郊原",
     LEVEL_69_HEROIC = "英雄模式描述15",
-    LEVEL_69_HISTORY = "战争已经结束，又或者只是我们想当然...\
-\
-尽管我们的王国回归了往日的和平与繁荣，但此前派去寻求矮人帮助的信使却未曾回来。如果说有比聒噪的矮人更麻烦的事情，那就是一言不发的沉寂。\
-\
-你必须前往他们的领地，找寻答案。",
+    LEVEL_69_HISTORY = "战争已经结束，又或者只是我们想当然...\n\n尽管我们的王国回归了往日的和平与繁荣，但此前派去寻求矮人帮助的信使却未曾回来。如果说有比聒噪的矮人更麻烦的事情，那就是一言不发的沉寂。\n\n你必须前往他们的领地，找寻答案。",
     LEVEL_69_IRON = "钢铁模式描述15",
-    LEVEL_69_IRON_UNLOCK = "无法师塔\
-无德鲁伊塔",
+    LEVEL_69_IRON_UNLOCK = "无法师塔\n无德鲁伊塔",
     LEVEL_69_MODES_UPGRADES = "等级5最高",
     LEVEL_69_TITLE = "矮人国之门",
     LEVEL_6_HEROIC = "英雄模式描述6",
-    LEVEL_6_HISTORY = "经过数天的行进，我们抵达了首都利尼维亚。\
-决战的时刻就要来临，我们必定誓死保卫南门城墙。\
-\
-除了你经验丰富的部队外，国王另外派了两个新的单位加入你的阵营。奥术巫师能提供超强的火力；而虔诚的圣骑士则能以过人的勇气鼓舞你的部队。",
+    LEVEL_6_HISTORY = "经过数天的行进，我们抵达了首都利尼维亚。\n决战的时刻就要来临，我们必定誓死保卫南门城墙。\n\n除了你经验丰富的部队外，国王另外派了两个新的单位加入你的阵营。奥术巫师能提供超强的火力；而虔诚的圣骑士则能以过人的勇气鼓舞你的部队。",
     LEVEL_6_IRON = "钢铁模式描述6",
     LEVEL_6_IRON_UNLOCK = "只有营房",
-    LEVEL_6_MODES_UPGRADES = "最高3级\
-无英雄",
+    LEVEL_6_MODES_UPGRADES = "最高3级\n无英雄",
     LEVEL_6_TITLE = "城堡之战",
     LEVEL_70_HEROIC = "英雄模式描述5",
-    LEVEL_70_HISTORY = "将军！\
-\
-曾经自豪而强大的矮人国度，已被一种不慎放出的强大恶魔消灭殆尽。\
-\
-我们一定要为先前的盟友报仇，击败地狱恶魔戈迪斯，以免他到达地表，实施恐怖统治。",
+    LEVEL_70_HISTORY = "将军！\n\n曾经自豪而强大的矮人国度，已被一种不慎放出的强大恶魔消灭殆尽。\n\n我们一定要为先前的盟友报仇，击败地狱恶魔戈迪斯，以免他到达地表，实施恐怖统治。",
     LEVEL_70_IRON = "钢铁模式描述15",
-    LEVEL_70_IRON_UNLOCK = "无弓箭塔\
-无德鲁伊塔",
+    LEVEL_70_IRON_UNLOCK = "无弓箭塔\n无德鲁伊塔",
     LEVEL_70_MODES_UPGRADES = "等级5最高",
     LEVEL_70_TITLE = "污染矿坑",
     LEVEL_7_HEROIC = "英雄模式描述7",
-    LEVEL_7_HISTORY = "我们的首都安全了，谢谢你，将军！现在，我们伟大的国王陛下委托你在群山之间打通一条安全通道，这样我们就能对瓦拉杜勒打一个措手不及，击败维兹南和他的大军。\
-\
-你这趟旅途的第一站，将是早已废弃多年的寒步矿场，现在那里成了哈克拉吉巨魔部落的老巢。为协助你完成此次任务，陛下的一队皇家火枪手将会加入你的队伍中。",
+    LEVEL_7_HISTORY = "我们的首都安全了，谢谢你，将军！现在，我们伟大的国王陛下委托你在群山之间打通一条安全通道，这样我们就能对瓦拉杜勒打一个措手不及，击败维兹南和他的大军。\n\n你这趟旅途的第一站，将是早已废弃多年的寒步矿场，现在那里成了哈克拉吉巨魔部落的老巢。为协助你完成此次任务，陛下的一队皇家火枪手将会加入你的队伍中。",
     LEVEL_7_IRON = "钢铁模式描述7",
-    LEVEL_7_IRON_UNLOCK = "无兵营\
-无火炮",
-    LEVEL_7_MODES_UPGRADES = "最高3级\
-无英雄",
+    LEVEL_7_IRON_UNLOCK = "无兵营\n无火炮",
+    LEVEL_7_MODES_UPGRADES = "最高3级\n无英雄",
     LEVEL_7_TITLE = "寒步矿场",
     LEVEL_8_HEROIC = "英雄模式描述8",
-    LEVEL_8_HISTORY = "在这群山之中，没有比冰风隘口更寒冷的地方了，但我们必须前进。\
-\
-我们的人已经被哈克拉吉巨魔围困了好几天，探子发现敌军正在我们周围四处调动...而且还有一些比巨魔更疯狂的其他敌人...\
-\
-要是我们在这里决战，可谓是安放新型炮塔的绝佳地点。另外，只要建造起蛮族大殿，就能款待一批更加...多姿多彩的部队了。",
+    LEVEL_8_HISTORY = "在这群山之中，没有比冰风隘口更寒冷的地方了，但我们必须前进。\n\n我们的人已经被哈克拉吉巨魔围困了好几天，探子发现敌军正在我们周围四处调动...而且还有一些比巨魔更疯狂的其他敌人...\n\n要是我们在这里决战，可谓是安放新型炮塔的绝佳地点。另外，只要建造起蛮族大殿，就能款待一批更加...多姿多彩的部队了。",
     LEVEL_8_IRON = "钢铁模式描述8",
-    LEVEL_8_IRON_UNLOCK = "无弓箭塔\
-无法师塔",
-    LEVEL_8_MODES_UPGRADES = "最高4级\
-无英雄",
+    LEVEL_8_IRON_UNLOCK = "无弓箭塔\n无法师塔",
+    LEVEL_8_MODES_UPGRADES = "最高4级\n无英雄",
     LEVEL_8_TITLE = "冰风隘口",
     LEVEL_90_HISTORY = "将军！我们的亚马孙盟友发现，雨林的蜘蛛近日异常疯狂！一些寄住的森林精灵则报道称，丛林中同时找到了北方蜘蛛和南方蜘蛛的痕迹！我可以预感到，一个巨大的阴谋正在酝酿……将军，我们需要你和你勇敢的士兵们前往林渊，一探究竟，将这些邪恶的节肢动物消灭殆尽！",
     LEVEL_90_TITLE = "林渊蛛巢",
     LEVEL_9_HEROIC = "英雄模式描述9",
-    LEVEL_9_HISTORY = "抵达暴云寺院是我们这些天来最美妙的事情！魔法师的日光塔威力强大，能将敌人化为灰烬！\
-\
-这里的魔法师现在听你指挥——他们能打开一道直接通往瓦拉杜勒的传送门！不过，在施法期间，我们一定要保护好他们。\
-\
-一些...更让人憎恶的东西越来越接近...我们的人也都极其紧张...",
+    LEVEL_9_HISTORY = "抵达暴云寺院是我们这些天来最美妙的事情！魔法师的日光塔威力强大，能将敌人化为灰烬！\n\n这里的魔法师现在听你指挥——他们能打开一道直接通往瓦拉杜勒的传送门！不过，在施法期间，我们一定要保护好他们。\n\n一些...更让人憎恶的东西越来越接近...我们的人也都极其紧张...",
     LEVEL_9_IRON = "钢铁模式描述9",
     LEVEL_9_IRON_UNLOCK = "只有法师",
-    LEVEL_9_MODES_UPGRADES = "最高4级\
-无英雄",
+    LEVEL_9_MODES_UPGRADES = "最高4级\n无英雄",
     LEVEL_9_TITLE = "暴云寺院",
     LEVEL_DEFEAT_TITLE = "失败！",
     LEVEL_MODE_CAMPAIGN = "战役",
@@ -5279,8 +4669,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     LEVEL_SELECT_GET_DLC = "得到它",
     LEVEL_SELECT_MODE_LOCKED1 = "模式已锁定",
     LEVEL_SELECT_MODE_LOCKED2 = "完成此阶段以解锁此模式。",
-    LEVEL_SELECT_TO_BATTLE = "进入\
-战斗",
+    LEVEL_SELECT_TO_BATTLE = "进入\n战斗",
     LV22_BOSS_BEFORE_FIGHT_EAT_01 = "美味!哈哈哈",
     LV22_BOSS_BEFORE_FIGHT_EAT_02 = "我最讨厌植物了",
     LV22_BOSS_BEFORE_FIGHT_EAT_03 = "人如其食",
@@ -5342,8 +4731,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     MAP_INAPPS_BUBBLE_INFO_1 = "进行游戏就能收集宝石。",
     MAP_INAPPS_BUBBLE_INFO_2 = "使用宝石可以购买特殊物品！",
     MAP_INAPPS_BUBBLE_MORE_GEMS = "你需要更多宝石！",
-    MAP_INAPPS_BUBBLE_SUCCESSFUL = "购买\
-成功！",
+    MAP_INAPPS_BUBBLE_SUCCESSFUL = "购买\n成功！",
     MAP_INAPP_GEMS_GEM_SHOP_TITLE = "宝石商店",
     MAP_INAPP_GEM_PACK_1 = "一把宝石",
     MAP_INAPP_GEM_PACK_2 = "一袋宝石",
@@ -5406,8 +4794,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     NOTIFICATION_bottom_info_tap_portrait_desc = "点击此处重新开启。",
     NOTIFICATION_button_ok = "好的",
     NOTIFICATION_glare_desc_body = "全视之魔眼凝视着战场，用腐化[注目]赋予周围敌人力量",
-    NOTIFICATION_glare_desc_bullets = "－治疗范围内的敌人\
-－触发敌人的特殊技能",
+    NOTIFICATION_glare_desc_bullets = "－治疗范围内的敌人\n－触发敌人的特殊技能",
     NOTIFICATION_glare_desc_title = "全视之魔眼的注目",
     NOTIFICATION_hero_desc = "显示等级、血量和经验。",
     NOTIFICATION_hero_desc_baloon_1 = "单击传送门或英雄单位来选择热键：空格",
@@ -5481,33 +4868,23 @@ PLEASE DON'T"] = "单击此处以跳过。\
     POWER_BAG_LARGE_DESCRIPTION = "选择一个特殊能力，然后点击地面。",
     POWER_BAG_NAME = "背包",
     POWER_FIREBALL_DESCRIPTION = "从天空降下火焰与硫磺。",
-    POWER_FIREBALL_LARGE_DESCRIPTION = "从天空降下火雨轰炸敌人！\
-\
-天降火雨的冷却时间很长，最好留到紧急时刻或有特别好的机会再用。",
+    POWER_FIREBALL_LARGE_DESCRIPTION = "从天空降下火雨轰炸敌人！\n\n天降火雨的冷却时间很长，最好留到紧急时刻或有特别好的机会再用。",
     POWER_FIREBALL_NAME = "天降火雨",
     POWER_HERO_DESCRIPTION = "每位英雄都拥有独门技能！",
-    POWER_HERO_LARGE_DESCRIPTION = "每位英雄都拥有独门技能！\
-\
-艾莉丹可以让你召唤箭矢风暴，冷却时间中等。英雄技能可从英雄殿堂中升级。",
+    POWER_HERO_LARGE_DESCRIPTION = "每位英雄都拥有独门技能！\n\n艾莉丹可以让你召唤箭矢风暴，冷却时间中等。英雄技能可从英雄殿堂中升级。",
     POWER_HERO_NAME = "英雄技能",
     POWER_HERO__DESCRIPTION = "每位英雄都拥有独门技能！",
     POWER_LIGHTNING_DESCRIPTION = "向一个敌人发射一道闪电。",
     POWER_LIGHTNING_LARGE_DESCRIPTION = "向一个敌人发射一道闪电。",
     POWER_LIGHTNING_NAME = "闪电",
     POWER_REINFORCEMENTS_DESCRIPTION = "召唤援军阻截并攻击敌人。",
-    POWER_REINFORCEMENTS_LARGE_DESCRIPTION = "你可以在战场上召唤军队帮助你。\
-\
-援军是免费的，每10秒就可召唤一次。",
+    POWER_REINFORCEMENTS_LARGE_DESCRIPTION = "你可以在战场上召唤军队帮助你。\n\n援军是免费的，每10秒就可召唤一次。",
     POWER_REINFORCEMENTS_NAME = "呼叫援军",
     POWER_SUMMON_DESCRIPTION = "你可以在战场上召唤部队前来助阵。",
-    POWER_SUMMON_LARGE_DESCRIPTION = "你可以在战场上召唤部队前来助阵。\
-\
-援军是免费的，每隔15秒就能召唤一次。",
+    POWER_SUMMON_LARGE_DESCRIPTION = "你可以在战场上召唤部队前来助阵。\n\n援军是免费的，每隔15秒就能召唤一次。",
     POWER_SUMMON_NAME = "召唤援军",
     POWER_THUNDER_DESCRIPTION = "以天空之怒，轰炸敌人！",
-    POWER_THUNDER_LARGE_DESCRIPTION = "以天空之怒，轰炸敌人！\
-\
-闪电箭的冷却时间很长，最好留在紧急时刻或机会非常好的时候使用。",
+    POWER_THUNDER_LARGE_DESCRIPTION = "以天空之怒，轰炸敌人！\n\n闪电箭的冷却时间很长，最好留在紧急时刻或机会非常好的时候使用。",
     POWER_THUNDER_NAME = "闪电箭打击",
     PRICE_FREE = "免费",
     PRIVACY_POLICY_ASK_AGE = "你什么时候出生？",
@@ -5545,13 +4922,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     SHOP_ROOM_BEST_VALUE_TITLE = "超值",
     SHOP_ROOM_DLC_1_DESCRIPTION = "开启新的宏大征程",
     SHOP_ROOM_DLC_1_TITLE = "巨大的威胁",
-    SHOP_ROOM_DLC_1_TOOLTIP_DESCRIPTION = "五个新关卡\
-新防御塔\
-新英雄\
-十余种新敌人\
-两场小Boss战\
-一场史诗级Boss战\
-还有更多...",
+    SHOP_ROOM_DLC_1_TOOLTIP_DESCRIPTION = "五个新关卡\n新防御塔\n新英雄\n十余种新敌人\n两场小Boss战\n一场史诗级Boss战\n还有更多...",
     SHOP_ROOM_DLC_1_TOOLTIP_TITLE = "巨大的威胁",
     SHOP_ROOM_MOST_POPULAR_TITLE = "热门",
     SLOT_CLOUD_DOWNLOADING = "正在下载...",
@@ -6477,8 +5848,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     TOWER_ARCANE_SMALL_DESCRIPTION = "奥术巫师注重改变现实之力；还能发射王国中最致命的魔法射线。",
     TOWER_ARCANE_SPECIAL = "死亡射线，传送",
     TOWER_ARCANE_TELEPORT_DESCRIPTION = "将一队敌人沿路往回传送一段随机距离。",
-    TOWER_ARCANE_TELEPORT_DESCRIPTION_1 = "每隔10秒将最多4个敌人沿路往回传送\
-一段随机距离，并造成50点法术爆炸伤害。",
+    TOWER_ARCANE_TELEPORT_DESCRIPTION_1 = "每隔10秒将最多4个敌人沿路往回传送\n一段随机距离，并造成50点法术爆炸伤害。",
     TOWER_ARCANE_TELEPORT_DESCRIPTION_2 = "传送的敌人数量提高到5个，伤害提升至75。",
     TOWER_ARCANE_TELEPORT_DESCRIPTION_3 = "传送的敌人数量提高到6个，伤害提升至100。",
     TOWER_ARCANE_TELEPORT_NAME = "传送",
@@ -6648,8 +6018,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     TOWER_BALLISTA_NAME = "巨弩哨站",
     TOWER_BARBARIANS_BLOODLUST_DESCRIPTION = "受伤时，野蛮人进入热血狂怒状态，每次攻击都能造成额外伤害。",
     TOWER_BARBARIANS_BLOODLUST_NAME = "热血狂怒",
-    TOWER_BARBARIANS_BLOODLUST_NOTE = "别惹我生气。\
-我生气时，你不会喜欢我的。",
+    TOWER_BARBARIANS_BLOODLUST_NOTE = "别惹我生气。\n我生气时，你不会喜欢我的。",
     TOWER_BARBARIANS_DESCRIPTION = "野蛮人是凶残的战士，能快速扫清战场，但通常是以自己的生命作为代价。",
     TOWER_BARBARIANS_DOUBLE_AXE_DESCRIPTION = "野蛮人额外配备一把战斧，可造成额外伤害，并无视敌人一半的护甲。",
     TOWER_BARBARIANS_DOUBLE_AXE_DESCRIPTION_1 = "野蛮人额外配备一把战斧，所有伤害无视敌方50%的护甲，且每次攻击可额外造成10点伤害",
@@ -6659,8 +6028,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     TOWER_BARBARIANS_DOUBLE_AXE_NAME_1 = "多重战斧",
     TOWER_BARBARIANS_DOUBLE_AXE_NAME_2 = "多重战斧II",
     TOWER_BARBARIANS_DOUBLE_AXE_NAME_3 = "多重战斧III",
-    TOWER_BARBARIANS_DOUBLE_AXE_NOTE = "双倍战斧\
-双倍乐趣！",
+    TOWER_BARBARIANS_DOUBLE_AXE_NOTE = "双倍战斧\n双倍乐趣！",
     TOWER_BARBARIANS_DOUBLE_AXE_NOTE_1 = "双倍乐趣！",
     TOWER_BARBARIANS_EXTRA = "生产挥舞战斧的野蛮人，能够消灭更多敌人。",
     TOWER_BARBARIANS_NAME = "蛮族大殿",
@@ -6701,8 +6069,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     TOWER_BARRACKS_UPGRADE_LEVEL2_SMALL_DESCRIPTION = "步兵训练有素，装备精良，在任何一支优秀的部队中都是中流砥柱。",
     TOWER_BARRACKS_UPGRADE_LEVEL3_DESCRIPTION = "骑士是身穿重甲的专业士兵。骑士为国王鞠躬尽瘁，阻挡敌人进军。",
     TOWER_BARRACKS_UPGRADE_LEVEL3_NAME = "骑士兵营",
-    TOWER_BARRACKS_UPGRADE_LEVEL3_SMALL_DESCRIPTION = "穿重甲的专业士兵。\
-阻挡敌人进军，鞠躬尽瘁。",
+    TOWER_BARRACKS_UPGRADE_LEVEL3_SMALL_DESCRIPTION = "穿重甲的专业士兵。\n阻挡敌人进军，鞠躬尽瘁。",
     TOWER_BARRACK_1_DESCRIPTION = "训练民兵，一群顽强的士兵，能阻截并伤害敌人。",
     TOWER_BARRACK_1_NAME = "民兵兵营",
     TOWER_BARRACK_2_DESCRIPTION = "和基本的民兵相比，步兵更加训练有素，装备也更精良。他们能成为一支优秀军队的中流砥柱。",
@@ -6710,8 +6077,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     TOWER_BARRACK_2_SMALL_DESCRIPTION = "步兵训练有素，装备精良，在任何一支优秀的部队中都是中流砥柱。",
     TOWER_BARRACK_3_DESCRIPTION = "骑士是身穿重甲的专业士兵。骑士为国王鞠躬尽瘁，阻挡敌人进军。",
     TOWER_BARRACK_3_NAME = "骑士兵营",
-    TOWER_BARRACK_3_SMALL_DESCRIPTION = "穿重甲的专业士兵。\
-阻挡敌人进军，鞠躬尽瘁。",
+    TOWER_BARRACK_3_SMALL_DESCRIPTION = "穿重甲的专业士兵。\n阻挡敌人进军，鞠躬尽瘁。",
     TOWER_BARRACK_AMAZONAS_DESCRIPTION = "一个骄傲的女战士部落已准备战斗",
     TOWER_BARRACK_AMAZONAS_NAME = "长矛女战士小屋",
     TOWER_BARRACK_DWARF_DESCRIPTION = "身穿秘银装备的矮人战士，深沉地爱着金色酿酒坊。据说他们架打得越多，酒喝得越凶",
@@ -7842,8 +7208,7 @@ PLEASE DON'T"] = "单击此处以跳过。\
     UPGRADE_ARCHER_SV_TWIN_SHOT_NAME = "双箭齐发",
     UPGRADE_BARRACKSSVCOURAGE_DESCRIPTION = "战斗时，士兵和援军能获得生命值再生。",
     UPGRADE_BARRACKSSVCOURAGE_NAME = "勇气",
-    UPGRADE_BARRACKSUPBARBEDARMOR_DESCRIPTION = "受到攻击时，士兵配备的尖刺护甲会对攻击者造成伤害。\
-（对援军同样生效）。",
+    UPGRADE_BARRACKSUPBARBEDARMOR_DESCRIPTION = "受到攻击时，士兵配备的尖刺护甲会对攻击者造成伤害。\n（对援军同样生效）。",
     UPGRADE_BARRACKSUPBARBEDARMOR_NAME = "尖刺护甲",
     UPGRADE_BARRACKSUPBETTERARMOR_DESCRIPTION = "兵营训练出的士兵具有更高护甲。",
     UPGRADE_BARRACKSUPBETTERARMOR_NAME = "精良护甲",
