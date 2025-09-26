@@ -13,6 +13,18 @@ end
 local function ady(v)
     return v - anchor_y * image_y
 end
+local function vv(x)
+    return {
+        x = x,
+        y = x
+    }
+end
+local function v(x, y)
+    return {
+        x = x,
+        y = y
+    }
+end
 require("game_templates_utils")
 
 local function barrack_towers()
@@ -2278,7 +2290,7 @@ local function barrack_towers()
     tt.modifier.duration = b.thunder.stun_duration
     tt.modifier.vis_flags = bor(F_MOD, F_STUN)
     tt.modifier.vis_bans = bor(F_BOSS)
-   
+
     tt = E:register_t("fx_lightining_soldier_tower_pandas_blue", "decal_scripted")
     tt.main_script.update = scripts.multi_sprite_fx.update
     tt.render.sprites[1].name = "tower_pandas_lighting_sky_run"
@@ -2305,7 +2317,7 @@ local function barrack_towers()
     tt.fx_start = "fx_tower_panda_skill_red_tp_enemy_fire"
     tt.fx_end = "fx_tower_panda_skill_red_tp_enemy_fire"
     tt.max_times_applied = b.teleport.max_times_applied
-    
+
     tt = E:register_t("bullet_tower_pandas_spawn_soldier_blue_lvl4", "bullet")
     tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
     tt.render.sprites[1].name = "scape_loop"
@@ -2356,7 +2368,7 @@ local function barrack_towers()
     tt.bounce_range = b.soldier.hat.bounce_range
     tt.bounce_damage_mult = b.soldier.hat.bounce_damage_mult
     tt.bounce_speed_mult = b.soldier.hat.bounce_speed_mult
-    
+
     tt = E:register_t("bullet_tower_pandas_air_soldier_special_lvl2", "bullet_tower_pandas_air_soldier_special_lvl1")
     tt.bullet.damage_min = b.soldier.hat.damage_levels[2].min
     tt.bullet.damage_max = b.soldier.hat.damage_levels[2].max
@@ -2377,7 +2389,7 @@ local function barrack_towers()
     tt.bullet.hit_fx = "fx_tower_pandas_bullet_fire_hit"
     tt.bullet.particles_name = "ps_bullet_tower_panda_fire"
     tt.sound_events.insert = "TowerPandasRangedFire"
-    
+
     tt = E:register_t("bullet_tower_pandas_ray_lvl4", "bullet")
     tt.bullet.level = 4
     tt.bullet.damage_min = b.ranged_attack.damage_min[4]
