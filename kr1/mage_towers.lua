@@ -1773,6 +1773,7 @@ local function mage_towers()
 
     tt = RT("bullet_tower_necromancer_deathspawn", "bullet_tower_necromancer_lvl4")
     tt.bullet.search_range = 120
+    tt.main_script.insert = scripts.bullet_tower_necromancer_deathspawn.insert
     tt.main_script.update = scripts.bullet_tower_necromancer_deathspawn.update
 
     tt = RT("aura_tower_necromancer_skill_debuff", "aura")
