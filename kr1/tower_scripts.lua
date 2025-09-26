@@ -7374,9 +7374,9 @@ function scripts.tower_necromancer_lvl4.update(this, store)
                 else
                     local start_ts = store.tick_ts
 
-                    if this.tower.level > 1 then
-                        U.animation_start(this, "skull_spawn", nil, store.tick_ts, 1, this.render.sid_glow_fx)
-                    end
+                    -- if this.tower.level > 1 then
+                    U.animation_start(this, "skull_spawn", nil, store.tick_ts, 1, this.render.sid_glow_fx)
+                    -- end
 
                     if is_pos_below(pred_pos) then
                         U.animation_start(this, "attack", nil, store.tick_ts, nil, this.render.sid_mage)
@@ -7420,7 +7420,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
                     b.bullet.source_id = this.id
                     b.bullet.level = this.tower.level
                     b.bullet.damage_factor = this.tower.damage_factor
-                    b.tower_ref = this
+                    -- b.tower_ref = this
                     b.render.sprites[1].flip_x = this.tower_upgrade_persistent_data.current_skulls > 0 and
                                                     this.tower_upgrade_persistent_data.current_skulls < 3
                     b.fire_directly = fire_directly
@@ -7781,6 +7781,16 @@ function scripts.mod_tower_necromancer_curse.remove(this, store, script)
             end
             s.unit.damage_factor = s.unit.damage_factor * m.damage_factor
             queue_insert(store, s)
+
+            -- local bullet = E:create_entity("bullet_tower_necromancer_lvl4")
+            -- local b = bullet.bullet
+            -- b.source_id = m.source_id
+            -- bullet.pos.x = target.pos.x
+            -- bullet.pos.y = target.pos.y
+            -- b.from = V.vclone(bullet.pos)
+            -- b.to = V.vclone(bullet.pos)
+            -- b.damage_factor = m.damage_factor
+            -- queue_insert(store, bullet)
         else
             target._necromancer_entity_name = nil
 
@@ -8090,7 +8100,7 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store, script)
             local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius,
                 this.aura.soldier_vis_flags, this.aura.soldier_vis_bans, function(t)
                     return SU.is_wraith(t.template_name)
-                end)
+                end) or {}
 
             for i, target in ipairs(targets) do
                 if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then

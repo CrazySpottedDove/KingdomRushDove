@@ -28,3 +28,5 @@ last_build_commit.txt
 .windows_kr_dove_dir
 .love_dir
 .versions/
+.last_sync_commit
+.sync_file_list

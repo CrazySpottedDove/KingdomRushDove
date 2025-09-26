@@ -1,6 +1,7 @@
 WINDOWS_DIR:=$(shell cat ./.windows_kr_dove_dir)
 LOVE:=$(shell cat ./.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
+LAST_SYNC_FILE := .last_sync_commit
 
 .PHONY: all debug package repackage sync
 
@@ -18,12 +19,7 @@ _examine_dir_map:
 	fi
 
 sync:
-	@echo -e "\033[1;36m=== sync changed & uncommitted files to: $(WINDOWS_DIR) ===\033[0m"
-	@{ \
-		git diff --name-only HEAD; \
-		git ls-files --others --exclude-standard; \
-	} | sort | uniq | xargs -I{} cp --parents "{}" "$(WINDOWS_DIR)"
-
+	@bash ./sync.sh "$(WINDOWS_DIR)"
 debug: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" debug
 
