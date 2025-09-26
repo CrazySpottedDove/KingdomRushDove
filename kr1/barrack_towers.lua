@@ -2041,6 +2041,7 @@ local function barrack_towers()
     tt = RT("soldier_tower_pandas_green_lvl4", "soldier_militia")
     AC(tt, "nav_grid", "powers", "ranged")
     local soldier = balance.towers.pandas.soldier
+    b = soldier
     tt.powers.hat = CC("power")
     tt.powers.hat.cooldown = b.hat.cooldown
     tt.powers.hat.range = b.hat.range
