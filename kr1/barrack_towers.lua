@@ -1839,15 +1839,9 @@ local function barrack_towers()
     tt.particle_system.loop = true
     tt.particle_system.emission_rate = 24
     tt.particle_system.track_rotation = false
-    tt.particle_system.particle_lifetime = {
-        fts(8),
-        fts(8)
-    }
+    tt.particle_system.particle_lifetime = {fts(8), fts(8)}
     tt.particle_system.z = Z_BULLET_PARTICLES
-    tt.particle_system.alphas = {
-        255,
-        0
-    }
+    tt.particle_system.alphas = {255, 0}
 
     tt = RT("ps_bullet_tower_panda_fire")
     AC(tt, "pos", "particle_system")
@@ -1856,10 +1850,7 @@ local function barrack_towers()
     tt.particle_system.loop = false
     tt.particle_system.emission_rate = 24
     tt.particle_system.track_rotation = true
-    tt.particle_system.particle_lifetime = {
-        fts(15),
-        fts(15)
-    }
+    tt.particle_system.particle_lifetime = {fts(15), fts(15)}
     tt.particle_system.z = Z_BULLET_PARTICLES
 
     tt = RT("fx_tower_pandas_bullet_air_hit", "fx")
@@ -1907,36 +1898,19 @@ local function barrack_towers()
     tt.render.sprites[1].name = "la_red_lvl4_tp_fire_enemy_run"
     tt.render.sprites[1].anchor = v(0.52, 0.5)
     tt.render.sprites[1].scale = vv(2)
-    tt.render.sprites[1].size_scales = {
-        vv(2),
-        vv(2),
-        vv(4)
-    }
+    tt.render.sprites[1].size_scales = {vv(2), vv(2), vv(4)}
     tt.render.sprites[1].z = Z_OBJECTS
     tt.render.sprites[1].sort_y_offset = -10
 
     tt = RT("fx_tower_panda_disappear_wood", "fx_fade")
     tt.render.sprites[1].name = "tower_pandas_disappear_wood"
     tt.render.sprites[1].z = Z_OBJECTS
-    tt.tween.props[1].keys = {
-        {
-            1.2,
-            255
-        },
-        {
-            1.5,
-            0
-        }
-    }
+    tt.tween.props[1].keys = {{1.2, 255}, {1.5, 0}}
 
     tt = RT("decal_tower_panda_skill_red_tp_enemy_fire", "fx")
     tt.render.sprites[1].name = "tower_pandas_red_lvl4_tp_decal_enemy_run"
     tt.render.sprites[1].scale = vv(2)
-    tt.render.sprites[1].size_scales = {
-        vv(2),
-        vv(2),
-        vv(2.5)
-    }
+    tt.render.sprites[1].size_scales = {vv(2), vv(2), vv(2.5)}
     tt.render.sprites[1].z = Z_DECALS
 
     tt = RT("decal_tower_panda_skill_red_tp_soldier_fire", "fx")
@@ -1987,48 +1961,6 @@ local function barrack_towers()
     tt.main_script.update = scripts.tower_pandas.update
     tt.main_script.remove = scripts.tower_pandas.remove
     tt.set_panda_bullet_arrived = scripts.tower_pandas.set_panda_bullet_arrived
-    tt.attacks.range = b.ranged_attack.range[4]
-    tt.attacks.attack_delay_on_spawn = fts(5)
-    tt.attacks.list[1] = CC("bullet_attack")
-    tt.attacks.list[1].cooldown = b.ranged_attack.cooldown
-    tt.attacks.list[1].bullet = "bullet_tower_pandas_air_lvl4"
-    tt.attacks.list[1].bullet_list = {
-        {
-            b = "bullet_tower_pandas_ray_lvl4",
-            offset = v(0, 50),
-            shoot_time = fts(8)
-        },
-        {
-            b = "bullet_tower_pandas_fire_lvl4",
-            offset = v(0, 15),
-            shoot_time = fts(10)
-        },
-        {
-            b = "bullet_tower_pandas_air_lvl4",
-            offset = v(0, 5),
-            shoot_time = fts(15)
-        }
-    }
-    tt.attacks.list[1].bullet_start_offset = {
-        v(-2, 6 + tt.render.sprites[3].offset.y),
-        v(27, 6 + tt.render.sprites[4].offset.y),
-        v(-27, 3 + tt.render.sprites[5].offset.y)
-    }
-    tt.attacks.list[1].vis_flags = bor(F_RANGED)
-    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
-    tt.attacks.list[2] = CC("custom_attack")
-    tt.attacks.list[2].soldiers = {
-        "soldier_tower_pandas_blue_lvl4",
-        "soldier_tower_pandas_red_lvl4",
-        "soldier_tower_pandas_green_lvl4"
-    }
-    tt.attacks.list[2].soldiers_spawn_bullets = {
-        "bullet_tower_pandas_spawn_soldier_blue_lvl4",
-        "bullet_tower_pandas_spawn_soldier_red_lvl4",
-        "bullet_tower_pandas_spawn_soldier_green_lvl4"
-    }
-    tt.attacks.list[2].cooldown = b.soldier.cooldown
-    tt.attacks.list[2].retreat_duration = b.soldier.retreat_duration
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrains_barrack%04i"
     tt.render.sprites[1].offset = v(0, 15)
@@ -2041,35 +1973,54 @@ local function barrack_towers()
     tt.render.sprites[3].prefix = "tower_pandas_panda_blue_lvl4"
     tt.render.sprites[3].name = "idle_torre"
     tt.render.sprites[3].angles = {}
-    tt.render.sprites[3].angles.idle = {
-        "idle_torre"
-    }
-    tt.render.sprites[3].angles.shoot = {
-        "spell"
-    }
+    tt.render.sprites[3].angles.idle = {"idle_torre"}
+    tt.render.sprites[3].angles.shoot = {"spell"}
     tt.render.sprites[3].offset = v(0, 35 + tt.render.sprites[2].offset.y)
     tt.render.sprites[4] = CC("sprite")
     tt.render.sprites[4].prefix = "tower_pandas_panda_red_lvl4"
     tt.render.sprites[4].name = "idle_torre"
     tt.render.sprites[4].angles = {}
-    tt.render.sprites[4].angles.idle = {
-        "idle_torre"
-    }
-    tt.render.sprites[4].angles.shoot = {
-        "spell"
-    }
+    tt.render.sprites[4].angles.idle = {"idle_torre"}
+    tt.render.sprites[4].angles.shoot = {"spell"}
     tt.render.sprites[4].offset = v(26, 24 + tt.render.sprites[2].offset.y)
     tt.render.sprites[5] = CC("sprite")
     tt.render.sprites[5].prefix = "tower_pandas_panda_green_lvl4"
     tt.render.sprites[5].name = "idle_torre"
     tt.render.sprites[5].angles = {}
-    tt.render.sprites[5].angles.idle = {
-        "idle_torre"
-    }
-    tt.render.sprites[5].angles.shoot = {
-        "spell"
-    }
+    tt.render.sprites[5].angles.idle = {"idle_torre"}
+    tt.render.sprites[5].angles.shoot = {"spell"}
     tt.render.sprites[5].offset = v(-24, 24 + tt.render.sprites[2].offset.y)
+    tt.attacks.range = b.ranged_attack.range[4]
+    tt.attacks.attack_delay_on_spawn = fts(5)
+    tt.attacks.list[1] = CC("bullet_attack")
+    tt.attacks.list[1].cooldown = b.ranged_attack.cooldown
+    tt.attacks.list[1].bullet = "bullet_tower_pandas_air_lvl4"
+    tt.attacks.list[1].bullet_list = {{
+        b = "bullet_tower_pandas_ray_lvl4",
+        offset = v(0, 50),
+        shoot_time = fts(8)
+    }, {
+        b = "bullet_tower_pandas_fire_lvl4",
+        offset = v(0, 15),
+        shoot_time = fts(10)
+    }, {
+        b = "bullet_tower_pandas_air_lvl4",
+        offset = v(0, 5),
+        shoot_time = fts(15)
+    }}
+    tt.attacks.list[1].bullet_start_offset = {v(-2, 6 + tt.render.sprites[3].offset.y),
+                                              v(27, 6 + tt.render.sprites[4].offset.y),
+                                              v(-27, 3 + tt.render.sprites[5].offset.y)}
+    tt.attacks.list[1].vis_flags = bor(F_RANGED)
+    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+    tt.attacks.list[2] = CC("custom_attack")
+    tt.attacks.list[2].soldiers = {"soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_red_lvl4",
+                                   "soldier_tower_pandas_green_lvl4"}
+    tt.attacks.list[2].soldiers_spawn_bullets = {"bullet_tower_pandas_spawn_soldier_blue_lvl4",
+                                                 "bullet_tower_pandas_spawn_soldier_red_lvl4",
+                                                 "bullet_tower_pandas_spawn_soldier_green_lvl4"}
+    tt.attacks.list[2].cooldown = b.soldier.cooldown
+    tt.attacks.list[2].retreat_duration = b.soldier.retreat_duration
     tt.sound_events.insert = i18n:cjk("TowerPandasTaunt", "TowerPandasTauntZH", nil, nil)
     tt.sound_events.change_rally_point = i18n:cjk("TowerPandasTaunt", "TowerPandasTauntZH", nil, nil)
     tt.sound_events.tower_room_select = i18n:cjk("TowerPandasTauntSelect", "TowerPandasTauntZHSelect", nil, nil)
@@ -2096,16 +2047,9 @@ local function barrack_towers()
     tt.melee.range = soldier.melee_attack.range
     tt.melee.attacks[1].cooldown = soldier.melee_attack.cooldown
     tt.melee.attacks[1].loops = 1
-    tt.melee.attacks[1].hit_times = {
-        fts(7),
-        fts(13),
-        fts(23)
-    }
+    tt.melee.attacks[1].hit_times = {fts(7), fts(13), fts(23)}
     tt.melee.attacks[1].hit_time = nil
-    tt.melee.attacks[1].animations = {
-        nil,
-        "attack"
-    }
+    tt.melee.attacks[1].animations = {nil, "attack"}
     tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[4].hit_times
     tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[4].hit_times
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_air_hit"
@@ -2119,9 +2063,7 @@ local function barrack_towers()
     tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
     tt.ranged.attacks[1].animation = "skill"
     tt.ranged.attacks[1].disabled = true
-    tt.ranged.attacks[1].bullet_start_offset = {
-        v(40, 20)
-    }
+    tt.ranged.attacks[1].bullet_start_offset = {v(40, 20)}
     tt.ranged.attacks[1].sound = "TowerPandasRangedHat"
     tt.ranged.attacks[1].sound_args = {
         delay = fts(12)
@@ -2142,12 +2084,8 @@ local function barrack_towers()
     tt.main_script.update = scripts.soldier_tower_pandas.update
     tt.render.sprites[1].prefix = "tower_pandas_panda_green_lvl4"
     tt.render.sprites[1].scale = vv(1.1)
-    tt.render.sprites[1].angles.walk = {
-        "walk"
-    }
-    tt.render.sprites[1].angles.attack = {
-        "attack"
-    }
+    tt.render.sprites[1].angles.walk = {"walk"}
+    tt.render.sprites[1].angles.attack = {"attack"}
     tt.unit.head_offset = v(0, 12)
     tt.unit.hit_offset = v(0, 12)
     tt.unit.marker_offset = v(0, 0)
@@ -2187,21 +2125,13 @@ local function barrack_towers()
     tt.health_bar.offset = v(0, 44)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.regen.health = b.regen_hp[4]
-    tt.melee.attacks[1].hit_times = {
-        fts(7),
-        fts(13),
-        fts(25)
-    }
+    tt.melee.attacks[1].hit_times = {fts(7), fts(13), fts(25)}
     tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_ray"
     tt.attacks.list[1] = CC("custom_attack")
     tt.attacks.list[1].cooldown = nil
-    tt.attacks.list[1].shoot_times = {
-        fts(15),
-        fts(19),
-        fts(23)
-    }
+    tt.attacks.list[1].shoot_times = {fts(15), fts(19), fts(23)}
     tt.attacks.list[1].animation = "skill"
     tt.attacks.list[1].vis_flags = F_RANGED
     tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
@@ -2243,11 +2173,7 @@ local function barrack_towers()
     tt.regen.health = b.regen_hp[4]
     tt.health_bar.offset = v(0, 44)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.melee.attacks[1].hit_times = {
-        fts(7),
-        fts(13),
-        fts(25)
-    }
+    tt.melee.attacks[1].hit_times = {fts(7), fts(13), fts(25)}
     tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_hit"
