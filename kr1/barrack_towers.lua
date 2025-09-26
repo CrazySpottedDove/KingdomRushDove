@@ -2050,8 +2050,8 @@ local function barrack_towers()
     tt.melee.attacks[1].hit_times = {fts(7), fts(13), fts(23)}
     tt.melee.attacks[1].hit_time = nil
     tt.melee.attacks[1].animations = {nil, "attack"}
-    tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[4].hit_times
-    tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[4].hit_times
+    tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[1].hit_times
+    tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_air_hit"
     tt.melee.attacks[1].hit_offset = v(30, 12)
     tt.melee.attacks[1].sound_hit = "TowerPandasMelee"
