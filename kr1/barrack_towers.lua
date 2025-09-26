@@ -1809,6 +1809,592 @@ local function barrack_towers()
     tt.render.sprites[1].loop = true
     tt.render.sprites[1].anchor.y = 0.25
     tt.tween.props[1].keys = {{0, 0}, {fts(6), 255}, {"this.duration-0.2", 255}, {"this.duration", 0}}
+
+    --[[
+        五代
+    --]]
+    local balance = require("kr1.data.balance")
+    local b
+
+    -- 熊猫_START
+
+    b = balance.towers.pandas
+
+    tt = RT("ps_bullet_tower_panda_air")
+    AC(tt, "pos", "particle_system")
+    tt.particle_system.name = "tower_pandas_projectile_air_flying"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = true
+    tt.particle_system.emission_rate = 24
+    tt.particle_system.track_rotation = false
+    tt.particle_system.particle_lifetime = {
+        fts(8),
+        fts(8)
+    }
+    tt.particle_system.z = Z_BULLET_PARTICLES
+    tt.particle_system.alphas = {
+        255,
+        0
+    }
+
+    tt = RT("ps_bullet_tower_panda_fire")
+    AC(tt, "pos", "particle_system")
+    tt.particle_system.name = "tower_pandas_trail_fire_trail"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.emission_rate = 24
+    tt.particle_system.track_rotation = true
+    tt.particle_system.particle_lifetime = {
+        fts(15),
+        fts(15)
+    }
+    tt.particle_system.z = Z_BULLET_PARTICLES
+
+    tt = RT("fx_tower_pandas_bullet_air_hit", "fx")
+    tt.render.sprites[1].name = "tower_pandas_projectile_air_hit_run"
+    tt.render.sprites[1].scale = vv(1.2)
+    tt.render.sprites[1].fps = 15
+
+    tt = RT("fx_tower_pandas_bullet_fire_hit", "fx")
+    tt.render.sprites[1].name = "tower_pandas_projectile_fire_hit_run"
+    tt.render.sprites[1].scale = vv(1.2)
+    tt.render.sprites[1].fps = 15
+
+    tt = RT("fx_tower_pandas_bullet_fire_ray", "fx")
+    tt.render.sprites[1].name = "tower_pandas_projectile_ray_hit_run"
+    tt.render.sprites[1].scale = vv(1.2)
+    tt.render.sprites[1].fps = 15
+
+    tt = RT("fx_tower_pandas_melee_air_hit", "fx")
+    tt.render.sprites[1].name = "tower_pandas_projectile_air_hit_run"
+    tt.render.sprites[1].scale = vv(1)
+    tt.render.sprites[1].fps = 15
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].sort_y_offset = -16
+
+    tt = RT("fx_tower_pandas_melee_fire_hit", "fx")
+    tt.render.sprites[1].name = "tower_pandas_projectile_fire_hit_run"
+    tt.render.sprites[1].scale = vv(1)
+    tt.render.sprites[1].fps = 15
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].sort_y_offset = -16
+
+    tt = RT("fx_tower_pandas_melee_fire_ray", "fx")
+    tt.render.sprites[1].name = "tower_pandas_projectile_ray_hit_run"
+    tt.render.sprites[1].scale = vv(1)
+    tt.render.sprites[1].fps = 15
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].sort_y_offset = -16
+
+    tt = RT("fx_panda_smoke_level_up", "fx")
+    tt.render.sprites[1].name = "tower_pandas_level_up_fx_run"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].sort_y_offset = -5
+
+    tt = RT("fx_tower_panda_skill_red_tp_enemy_fire", "fx")
+    tt.render.sprites[1].name = "la_red_lvl4_tp_fire_enemy_run"
+    tt.render.sprites[1].anchor = v(0.52, 0.5)
+    tt.render.sprites[1].scale = vv(2)
+    tt.render.sprites[1].size_scales = {
+        vv(2),
+        vv(2),
+        vv(4)
+    }
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].sort_y_offset = -10
+
+    tt = RT("fx_tower_panda_disappear_wood", "fx_fade")
+    tt.render.sprites[1].name = "tower_pandas_disappear_wood"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.tween.props[1].keys = {
+        {
+            1.2,
+            255
+        },
+        {
+            1.5,
+            0
+        }
+    }
+
+    tt = RT("decal_tower_panda_skill_red_tp_enemy_fire", "fx")
+    tt.render.sprites[1].name = "tower_pandas_red_lvl4_tp_decal_enemy_run"
+    tt.render.sprites[1].scale = vv(2)
+    tt.render.sprites[1].size_scales = {
+        vv(2),
+        vv(2),
+        vv(2.5)
+    }
+    tt.render.sprites[1].z = Z_DECALS
+
+    tt = RT("decal_tower_panda_skill_red_tp_soldier_fire", "fx")
+    tt.render.sprites[1].name = "tower_pandas_red_lvl4_tp_decal_run"
+    tt.render.sprites[1].scale = vv(2)
+    tt.render.sprites[1].z = Z_DECALS
+
+    tt = RT("tower_pandas_lvl4", "tower")
+    AC(tt, "attacks", "barrack", "user_selection", "powers")
+    tt.is_kr5 = true
+    tt.tower.type = "pandas"
+    tt.tower.level = 1
+    tt.tower.price = b.price[4]
+    tt.tower.menu_offset = v(0, 35)
+    tt.powers.thunder = CC("power")
+    tt.powers.thunder.price = b.thunder.price
+    tt.powers.thunder.enc_icon = 40
+    tt.powers.thunder.name = "thunder"
+    tt.powers.thunder.key = "THUNDER"
+    tt.powers.thunder.max_level = 2
+    tt.powers.hat = CC("power")
+    tt.powers.hat.price = b.hat.price
+    tt.powers.hat.enc_icon = 39
+    tt.powers.hat.name = "hat"
+    tt.powers.hat.max_level = 2
+    tt.powers.hat.key = "HAT"
+    tt.powers.teleport = CC("power")
+    tt.powers.teleport.price = b.teleport.price
+    tt.powers.teleport.enc_icon = 41
+    tt.powers.teleport.name = "fiery"
+    tt.powers.teleport.key = "FIERY"
+    tt.powers.teleport.max_level = 2
+    tt.info.i18n_key = "TOWER_PANDAS_4"
+    tt.info.portrait = "portraits_towers_0031"
+    tt.info.enc_icon = 84
+    tt.info.tower_portrait = "towerselect_portraits_big_0001"
+    tt.info.room_portrait = "quickmenu_main_icons_main_icons_0025_0001"
+    tt.info.fn = scripts.tower_pandas.get_info
+    tt.barrack.soldier_type = "soldier_tower_pandas_blue_lvl4"
+    tt.barrack.solder_upgrade_map = {
+        soldier_tower_pandas_green_lvl3 = "soldier_tower_pandas_green_lvl4",
+        soldier_tower_pandas_red_lvl3 = "soldier_tower_pandas_red_lvl4",
+        soldier_tower_pandas_blue_lvl3 = "soldier_tower_pandas_blue_lvl4"
+    }
+    tt.barrack.rally_range = b.rally_range
+    tt.barrack.rally_radius = 30
+    tt.main_script.insert = scripts.tower_barrack.insert
+    tt.main_script.update = scripts.tower_pandas.update
+    tt.main_script.remove = scripts.tower_pandas.remove
+    tt.set_panda_bullet_arrived = scripts.tower_pandas.set_panda_bullet_arrived
+    tt.attacks.range = b.ranged_attack.range[4]
+    tt.attacks.attack_delay_on_spawn = fts(5)
+    tt.attacks.list[1] = CC("bullet_attack")
+    tt.attacks.list[1].cooldown = b.ranged_attack.cooldown
+    tt.attacks.list[1].bullet = "bullet_tower_pandas_air_lvl4"
+    tt.attacks.list[1].bullet_list = {
+        {
+            b = "bullet_tower_pandas_ray_lvl4",
+            offset = v(0, 50),
+            shoot_time = fts(8)
+        },
+        {
+            b = "bullet_tower_pandas_fire_lvl4",
+            offset = v(0, 15),
+            shoot_time = fts(10)
+        },
+        {
+            b = "bullet_tower_pandas_air_lvl4",
+            offset = v(0, 5),
+            shoot_time = fts(15)
+        }
+    }
+    tt.attacks.list[1].bullet_start_offset = {
+        v(-2, 6 + tt.render.sprites[3].offset.y),
+        v(27, 6 + tt.render.sprites[4].offset.y),
+        v(-27, 3 + tt.render.sprites[5].offset.y)
+    }
+    tt.attacks.list[1].vis_flags = bor(F_RANGED)
+    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+    tt.attacks.list[2] = CC("custom_attack")
+    tt.attacks.list[2].soldiers = {
+        "soldier_tower_pandas_blue_lvl4",
+        "soldier_tower_pandas_red_lvl4",
+        "soldier_tower_pandas_green_lvl4"
+    }
+    tt.attacks.list[2].soldiers_spawn_bullets = {
+        "bullet_tower_pandas_spawn_soldier_blue_lvl4",
+        "bullet_tower_pandas_spawn_soldier_red_lvl4",
+        "bullet_tower_pandas_spawn_soldier_green_lvl4"
+    }
+    tt.attacks.list[2].cooldown = b.soldier.cooldown
+    tt.attacks.list[2].retreat_duration = b.soldier.retreat_duration
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].name = "terrains_barrack%04i"
+    tt.render.sprites[1].offset = v(0, 15)
+    tt.render.sprites[2] = CC("sprite")
+    tt.render.sprites[2].animated = false
+    tt.render.sprites[2].name = "tower_pandas_tower_lvl_04"
+    tt.render.sprites[2].offset = v(0, 15)
+    tt.render.sprites[2].sort_y_offset = 5
+    tt.render.sprites[3] = CC("sprite")
+    tt.render.sprites[3].prefix = "tower_pandas_panda_blue_lvl4"
+    tt.render.sprites[3].name = "idle_torre"
+    tt.render.sprites[3].angles = {}
+    tt.render.sprites[3].angles.idle = {
+        "idle_torre"
+    }
+    tt.render.sprites[3].angles.shoot = {
+        "spell"
+    }
+    tt.render.sprites[3].offset = v(0, 35 + tt.render.sprites[2].offset.y)
+    tt.render.sprites[4] = CC("sprite")
+    tt.render.sprites[4].prefix = "tower_pandas_panda_red_lvl4"
+    tt.render.sprites[4].name = "idle_torre"
+    tt.render.sprites[4].angles = {}
+    tt.render.sprites[4].angles.idle = {
+        "idle_torre"
+    }
+    tt.render.sprites[4].angles.shoot = {
+        "spell"
+    }
+    tt.render.sprites[4].offset = v(26, 24 + tt.render.sprites[2].offset.y)
+    tt.render.sprites[5] = CC("sprite")
+    tt.render.sprites[5].prefix = "tower_pandas_panda_green_lvl4"
+    tt.render.sprites[5].name = "idle_torre"
+    tt.render.sprites[5].angles = {}
+    tt.render.sprites[5].angles.idle = {
+        "idle_torre"
+    }
+    tt.render.sprites[5].angles.shoot = {
+        "spell"
+    }
+    tt.render.sprites[5].offset = v(-24, 24 + tt.render.sprites[2].offset.y)
+    tt.sound_events.insert = i18n:cjk("TowerPandasTaunt", "TowerPandasTauntZH", nil, nil)
+    tt.sound_events.change_rally_point = i18n:cjk("TowerPandasTaunt", "TowerPandasTauntZH", nil, nil)
+    tt.sound_events.tower_room_select = i18n:cjk("TowerPandasTauntSelect", "TowerPandasTauntZHSelect", nil, nil)
+    tt.ui.click_rect = r(-42, 0, 84, 70)
+    tt.ui.click_rect_heights_by_soldier = {
+        70,
+        65,
+        [3] = 58,
+        none = 53
+    }
+    tt.user_selection.allowed = true
+    tt.user_selection.actions = {
+        tw_free_action = {
+            allowed = false
+        }
+    }
+
+    tt = E:register_t("soldier_tower_pandas_green_lvl4", "soldier_militia")
+    E:add_comps(tt, "nav_grid", "powers", "ranged")
+    local soldier = balance.towers.pandas.soldier
+    tt.powers.hat = E:clone_c("power")
+    tt.powers.hat.cooldown = b.hat.cooldown
+    tt.powers.hat.range = b.hat.range
+    tt.melee.range = soldier.melee_attack.range
+    tt.melee.attacks[1].cooldown = soldier.melee_attack.cooldown
+    tt.melee.attacks[1].loops = 1
+    tt.melee.attacks[1].hit_times = {
+        fts(7),
+        fts(13),
+        fts(23)
+    }
+    tt.melee.attacks[1].hit_time = nil
+    tt.melee.attacks[1].animations = {
+        nil,
+        "attack"
+    }
+    tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[4].hit_times
+    tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[4].hit_times
+    tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_air_hit"
+    tt.melee.attacks[1].hit_offset = v(30, 12)
+    tt.melee.attacks[1].sound_hit = "TowerPandasMelee"
+    tt.ranged.attacks[1].level = 1
+    tt.ranged.attacks[1].bullet = "bullet_tower_pandas_air_soldier_special_lvl"
+    tt.ranged.attacks[1].min_range = 0
+    tt.ranged.attacks[1].shoot_time = fts(15)
+    tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+    tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+    tt.ranged.attacks[1].animation = "skill"
+    tt.ranged.attacks[1].disabled = true
+    tt.ranged.attacks[1].bullet_start_offset = {
+        v(40, 20)
+    }
+    tt.ranged.attacks[1].sound = "TowerPandasRangedHat"
+    tt.ranged.attacks[1].sound_args = {
+        delay = fts(12)
+    }
+    tt.sound_events.death = "TowerPandasDeath"
+    tt.sound_events.death_args = {
+        delay = fts(12)
+    }
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0071"
+    tt.info.random_name_format = nil
+    tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_FEMALE"
+    tt.info.fn = scripts.soldier_tower_pandas.get_info
+    tt.nav_rally.delay_min = 0
+    tt.nav_rally.delay_max = 0
+    tt.death_go_back_delay = fts(25)
+    tt.unit.fade_time_after_death = 1
+    tt.main_script.insert = scripts.soldier_tower_pandas.insert
+    tt.main_script.update = scripts.soldier_tower_pandas.update
+    tt.render.sprites[1].prefix = "tower_pandas_panda_green_lvl4"
+    tt.render.sprites[1].scale = vv(1.1)
+    tt.render.sprites[1].angles.walk = {
+        "walk"
+    }
+    tt.render.sprites[1].angles.attack = {
+        "attack"
+    }
+    tt.unit.head_offset = v(0, 12)
+    tt.unit.hit_offset = v(0, 12)
+    tt.unit.marker_offset = v(0, 0)
+    tt.unit.mod_offset = v(0, 13)
+    tt.unit.level = 4
+    tt.unit.fade_time_after_death = nil
+    tt.unit.hide_after_death = true
+    tt.soldier.melee_slot_spread = v(-13, -13)
+    tt.soldier.melee_slot_offset = v(10, 0)
+    tt.vis.bans = 0
+    tt.health.hp_max = soldier.hp[4]
+    tt.health.armor = soldier.armor[4]
+    tt.health_bar.offset = v(0, 44)
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+    tt.health.dead_lifetime = 3
+    tt.regen.health = soldier.regen_hp[4]
+    tt.motion.max_speed = soldier.speed * 1.1
+    tt.ui.click_rect = r(-13, 0, 25, 30)
+    tt.ui.click_rect_offset_y = 0
+    tt.max_dist_walk = 160
+    tt.vis.bans = bor(tt.vis.bans, F_EAT)
+    tt.ignore_linirea_true_might_revive = true
+    tt.death_go_back_delay = fts(15)
+
+    tt = E:register_t("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
+    E:add_comps(tt, "attacks")
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0070"
+    tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
+    tt.unit.level = 4
+    tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
+    tt.motion.max_speed = b.speed * 0.9
+    tt.unit.fade_time_after_death = nil
+    tt.unit.hide_after_death = true
+    tt.death_go_back_delay = fts(22)
+    tt.health.hp_max = b.hp[4]
+    tt.health.armor = b.armor[4]
+    tt.health_bar.offset = v(0, 44)
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+    tt.regen.health = b.regen_hp[4]
+    tt.melee.attacks[1].hit_times = {
+        fts(7),
+        fts(13),
+        fts(25)
+    }
+    tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[1].hit_times
+    tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[1].hit_times
+    tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_ray"
+    tt.attacks.list[1] = E:clone_c("custom_attack")
+    tt.attacks.list[1].cooldown = nil
+    tt.attacks.list[1].shoot_times = {
+        fts(15),
+        fts(19),
+        fts(23)
+    }
+    tt.attacks.list[1].animation = "skill"
+    tt.attacks.list[1].vis_flags = F_RANGED
+    tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+    tt.attacks.list[1].range = nil
+    tt.attacks.list[1].damage_min = 0
+    tt.attacks.list[1].damage_max = 0
+    tt.attacks.list[1].damage_type = b.thunder.damage_type
+    tt.attacks.list[1].damage_area = b.thunder.damage_area
+    tt.attacks.list[1].min_targets = b.thunder.min_targets
+    tt.attacks.list[1].mod = "mod_soldier_tower_pandas_blue_stun"
+    tt.powers.thunder = E:clone_c("power")
+    tt.powers.thunder.cooldown = b.thunder.cooldown
+    tt.powers.thunder.range = b.thunder.range
+    tt.powers.thunder.damage_min = b.thunder.damage_min
+    tt.powers.thunder.damage_max = b.thunder.damage_max
+    tt.ui.click_rect = r(-17, 0, 34, 30)
+    tt.sound_events.death = "TowerPandasDeath"
+    tt.sound_events.death_args = {
+        delay = fts(12)
+    }
+    tt.sound_events.thunder = "TowerPandasSkillBolt"
+    tt.sound_events.thunder_args = {
+        delay = fts(12)
+    }
+    tt.nav_rally.delay_min = 0.12
+    tt.nav_rally.delay_max = 0.2
+
+    tt = E:register_t("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
+    E:add_comps(tt, "attacks")
+    tt.info.portrait = "gui_bottom_info_image_soldiers_0069"
+    tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
+    tt.unit.level = 4
+    tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"
+    tt.unit.fade_time_after_death = nil
+    tt.unit.hide_after_death = true
+    tt.death_go_back_delay = fts(12)
+    tt.health.hp_max = b.hp[4]
+    tt.health.armor = b.armor[4]
+    tt.regen.health = b.regen_hp[4]
+    tt.health_bar.offset = v(0, 44)
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+    tt.melee.attacks[1].hit_times = {
+        fts(7),
+        fts(13),
+        fts(25)
+    }
+    tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[1].hit_times
+    tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[1].hit_times
+    tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_hit"
+    tt.powers.teleport = E:clone_c("power")
+    tt.powers.teleport.cooldown = b.teleport.cooldown
+    tt.powers.teleport.range = b.teleport.range
+    tt.powers.teleport.nodes_offset_min = b.teleport.nodes_offset_min
+    tt.powers.teleport.nodes_offset_max = b.teleport.nodes_offset_max
+    tt.powers.teleport.damage_min = b.teleport.damage_min
+    tt.powers.teleport.damage_max = b.teleport.damage_max
+    tt.attacks.list[1] = E:clone_c("custom_attack")
+    tt.attacks.list[1].cooldown = nil
+    tt.attacks.list[1].shoot_time = fts(17)
+    tt.attacks.list[1].animation = "skill"
+    tt.attacks.list[1].vis_flags = bor(F_MOD, F_TELEPORT)
+    tt.attacks.list[1].vis_bans = bor(F_BOSS)
+    tt.attacks.list[1].range = nil
+    tt.attacks.list[1].damage_min = 0
+    tt.attacks.list[1].damage_max = 0
+    tt.attacks.list[1].damage_type = b.teleport.damage_type
+    tt.attacks.list[1].max_targets = b.teleport.max_targets
+    tt.attacks.list[1].nodes_offset_min = 0
+    tt.attacks.list[1].nodes_offset_max = 0
+    tt.attacks.list[1].mod = "mod_soldier_tower_pandas_red_teleport"
+    tt.attacks.list[1].decal = "decal_tower_panda_skill_red_tp_soldier_fire"
+    tt.attacks.list[1].max_times_applied = b.teleport.max_times_applied
+    tt.ui.click_rect = r(-17, 0, 34, 30)
+    tt.sound_events.death = "TowerPandasDeath"
+    tt.sound_events.death_args = {
+        delay = fts(6)
+    }
+    tt.sound_events.teleport = "TowerPandasSkillFire"
+    tt.sound_events.teleport_args = {
+        delay = fts(12)
+    }
+    tt.nav_rally.delay_min = 0.05
+    tt.nav_rally.delay_max = 0.07
+
+    tt = E:register_t("mod_soldier_tower_pandas_blue_stun", "mod_stun")
+    tt.modifier.duration = b.thunder.stun_duration
+    tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+    tt.modifier.vis_bans = bor(F_BOSS)
+   
+    tt = E:register_t("fx_lightining_soldier_tower_pandas_blue", "decal_scripted")
+    tt.main_script.update = scripts.multi_sprite_fx.update
+    tt.render.sprites[1].name = "tower_pandas_lighting_sky_run"
+    tt.render.sprites[1].scale = vv(2)
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].name = "tower_pandas_target_ray_run"
+    tt.render.sprites[2].animated = true
+    tt.render.sprites[2].hidden = true
+    tt.render.sprites[2].z = Z_OBJECTS
+    tt.render.sprites[2].delay_start = fts(6)
+
+    tt = E:register_t("mod_soldier_tower_pandas_red_teleport", "mod_teleport")
+    tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
+    tt.modifier.vis_bans = bor(F_BOSS)
+    tt.nodes_offset_min = 0
+    tt.nodes_offset_max = 0
+    tt.nodes_offset_inc = 0
+    tt.dest_valid_node = true
+    tt.delay_start = fts(2)
+    tt.hold_time = 0.34
+    tt.delay_end = fts(4)
+    tt.modifier.use_mod_offset = false
+    tt.fx_start = "fx_tower_panda_skill_red_tp_enemy_fire"
+    tt.fx_end = "fx_tower_panda_skill_red_tp_enemy_fire"
+    tt.max_times_applied = b.teleport.max_times_applied
+    
+    tt = E:register_t("bullet_tower_pandas_spawn_soldier_blue_lvl4", "bullet")
+    tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
+    tt.render.sprites[1].name = "scape_loop"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].loop = true
+    tt.render.sprites[1].r = 0
+    tt.main_script.insert = scripts.bullet_tower_pandas_spawn_soldier.insert
+    tt.main_script.update = scripts.bullet_tower_pandas_spawn_soldier.update
+    tt.bullet.flight_time = fts(26)
+    tt.bullet.g = -1 / (fts(1) * fts(1)) * 1
+    tt.bullet.rotation_speed = 0
+    tt.bullet.hit_fx = nil
+    tt.bullet.hit_decal = nil
+    tt.bullet.hit_fx_water = nil
+    tt.bullet.hide_radius = nil
+    tt.sound_events.insert = nil
+    tt.sound_events.hit = nil
+    tt.sound_events.hit_water = nil
+
+    tt = E:register_t("bullet_tower_pandas_spawn_soldier_red_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
+    tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"
+
+    tt = E:register_t("bullet_tower_pandas_spawn_soldier_green_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
+    tt.render.sprites[1].prefix = "tower_pandas_panda_green_lvl4"
+
+    tt = E:register_t("bullet_tower_pandas_air_lvl4", "bolt")
+    tt.render.sprites[1].prefix = "tower_pandas_projectile_air"
+    tt.render.sprites[1].name = "Run"
+    tt.render.sprites[1].animated = true
+    tt.bullet.damage_min = b.ranged_attack.damage_min[4]
+    tt.bullet.damage_max = b.ranged_attack.damage_max[4]
+    tt.bullet.damage_type = b.ranged_attack.damage_type
+    tt.bullet.hit_blood_fx = nil
+    tt.bullet.acceleration_factor = 0.1
+    tt.bullet.min_speed = 360
+    tt.bullet.max_speed = 480
+    tt.bullet.ignore_rotation = true
+    tt.bullet.align_with_trajectory = false
+    tt.bullet.hit_fx = "fx_tower_pandas_bullet_air_hit"
+    tt.bullet.particles_name = "ps_bullet_tower_panda_air"
+    tt.sound_events.insert = "TowerPandasRangedHat"
+
+    tt = E:register_t("bullet_tower_pandas_air_soldier_special_lvl1", "bullet_tower_pandas_air_lvl1")
+    tt.main_script.update = scripts.bullet_tower_pandas_air.update
+    tt.bullet.damage_min = b.soldier.hat.damage_levels[1].max
+    tt.bullet.damage_max = b.soldier.hat.damage_levels[1].max
+    tt.max_bounces = b.soldier.hat.max_bounces
+    tt.bounce_range = b.soldier.hat.bounce_range
+    tt.bounce_damage_mult = b.soldier.hat.bounce_damage_mult
+    tt.bounce_speed_mult = b.soldier.hat.bounce_speed_mult
+    
+    tt = E:register_t("bullet_tower_pandas_air_soldier_special_lvl2", "bullet_tower_pandas_air_soldier_special_lvl1")
+    tt.bullet.damage_min = b.soldier.hat.damage_levels[2].min
+    tt.bullet.damage_max = b.soldier.hat.damage_levels[2].max
+
+    tt = E:register_t("bullet_tower_pandas_fire_lvl4", "bolt")
+    tt.render.sprites[1].prefix = "tower_pandas_projectile_fire"
+    tt.render.sprites[1].name = "run"
+    tt.render.sprites[1].animated = true
+    tt.bullet.damage_min = b.ranged_attack.damage_min[4]
+    tt.bullet.damage_max = b.ranged_attack.damage_max[4]
+    tt.bullet.damage_type = b.ranged_attack.damage_type
+    tt.bullet.hit_blood_fx = nil
+    tt.bullet.acceleration_factor = 0.1
+    tt.bullet.min_speed = 90
+    tt.bullet.max_speed = 600
+    tt.bullet.hide_radius = 1
+    tt.bullet.align_with_trajectory = true
+    tt.bullet.hit_fx = "fx_tower_pandas_bullet_fire_hit"
+    tt.bullet.particles_name = "ps_bullet_tower_panda_fire"
+    tt.sound_events.insert = "TowerPandasRangedFire"
+    
+    tt = E:register_t("bullet_tower_pandas_ray_lvl4", "bullet")
+    tt.bullet.level = 4
+    tt.bullet.damage_min = b.ranged_attack.damage_min[4]
+    tt.bullet.damage_max = b.ranged_attack.damage_max[4]
+    tt.bullet.damage_type = b.ranged_attack.damage_type
+    tt.bullet.hit_time = fts(3)
+    tt.bullet.hit_fx = "fx_tower_pandas_bullet_fire_ray"
+    tt.image_width = 104
+    tt.main_script.update = scripts.tower_pandas_ray.update
+    tt.render.sprites[1].anchor = v(0.5, 0.5)
+    tt.render.sprites[1].name = "tower_pandas_projectile_ray_run"
+    tt.render.sprites[1].loop = false
+    tt.track_target = false
+    tt.ray_duration = fts(11)
+    tt.sound_events.insert = "TowerPandasRangedBolt"
+
+    -- 熊猫_END
 end
 
 return barrack_towers

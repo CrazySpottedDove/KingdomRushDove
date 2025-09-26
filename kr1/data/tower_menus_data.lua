@@ -465,6 +465,13 @@ return {
                 tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
                 tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION"),
             }),
+            merge(templates.upgrade5, {
+                action_arg = "tower_pandas_lvl4",
+                image = "main_icons_0049",
+                place = 21,
+                tt_title = _("TOWER_PANDAS_NAME"),
+                tt_desc = _("TOWER_PANDAS_1_DESCRIPTION")
+            }),
             templates.rally,
             templates.sell
         }
@@ -974,49 +981,49 @@ return {
     tesla = {
         {
             merge(templates.upgrade_power, {
-                action_arg = "bolt",
-                image = "special_icons_0011",
-                place = 1,
-                sounds = { "EngineerTeslaChargedBoltTaunt" },
-                tt_phrase = _("TOWER_TESLA_CHARGED_BOLT_NOTE"),
-                tt_list =
-                {
+                    action_arg = "bolt",
+                    image = "special_icons_0011",
+                    place = 1,
+                    sounds = { "EngineerTeslaChargedBoltTaunt" },
+                    tt_phrase = _("TOWER_TESLA_CHARGED_BOLT_NOTE"),
+                    tt_list =
                     {
-                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_1"),
-                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_1")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_2"),
-                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_2")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_3"),
-                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_3")
+                        {
+                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_1"),
+                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_1")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_2"),
+                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_2")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_3"),
+                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_3")
+                        }
                     }
-                }
-            },
-            {
-                action_arg = "overcharge",
-                image = "special_icons_0010",
-                place = 2,
-                sounds = { "EngineerTeslaOverchargeTaunt" },
-                tt_phrase = _("TOWER_TESLA_OVERCHARGE_NOTE"),
-                tt_list =
+                },
                 {
+                    action_arg = "overcharge",
+                    image = "special_icons_0010",
+                    place = 2,
+                    sounds = { "EngineerTeslaOverchargeTaunt" },
+                    tt_phrase = _("TOWER_TESLA_OVERCHARGE_NOTE"),
+                    tt_list =
                     {
-                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_1"),
-                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_1")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_2"),
-                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_2")
-                    },
-                    {
-                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_3"),
-                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_3")
+                        {
+                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_1"),
+                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_1")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_2"),
+                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_2")
+                        },
+                        {
+                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_3"),
+                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_3")
+                        }
                     }
-                }
-            }),
+                }),
             templates.sell
         }
     },
@@ -2964,4 +2971,77 @@ return {
     },
 
     -- 熊猫
+    pandas = {
+        {
+            merge(templates.upgrade_power5, {
+                action_arg = "thunder",
+                image = "special_icons_0041",
+                place = 12,
+                sounds = {
+                    i18n:cjk("TowerPandasSkillATaunt", "TowerPandasSkillATauntZH", nil, nil)
+                },
+                tt_phrase = _("TOWER_PANDAS_4_THUNDER"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_PANDAS_4_THUNDER_1_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_THUNDER_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_PANDAS_4_THUNDER_2_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_THUNDER_2_DESCRIPTION")
+                    }
+                }
+            }),
+            merge(templates.upgrade_power5, {
+                action_arg = "hat",
+                image = "special_icons_0040",
+                place = 14,
+                sounds = {
+                    i18n:cjk("TowerPandasSkillBTaunt", "TowerPandasSkillBTauntZH", nil, nil)
+                },
+                tt_phrase = _("TOWER_PANDAS_4_HAT"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_PANDAS_4_HAT_1_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_HAT_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_PANDAS_4_HAT_2_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_HAT_2_DESCRIPTION")
+                    }
+                }
+            }),
+            merge(templates.upgrade_power5, {
+                action_arg = "teleport",
+                image = "special_icons_0042",
+                place = 15,
+                sounds = {
+                    i18n:cjk("TowerPandasSkillCTaunt", "TowerPandasSkillCTauntZH", nil, nil)
+                },
+                tt_phrase = _("TOWER_PANDAS_4_FIERY"),
+                tt_list = {
+                    {
+                        tt_title = _("TOWER_PANDAS_4_FIERY_1_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_FIERY_1_DESCRIPTION")
+                    },
+                    {
+                        tt_title = _("TOWER_PANDAS_4_FIERY_2_NAME"),
+                        tt_desc = _("TOWER_PANDAS_4_FIERY_2_DESCRIPTION")
+                    }
+                }
+            }),
+            {
+                check = "kr5_special_icons_0020",
+                action_arg = "pandas_retreat",
+                action = "tw_free_action",
+                halo = "glow_ico_main",
+                image = "kr5_quickmenu_retreat_icons_tower_panda",
+                place = 13,
+                tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
+                tt_desc = _("TOWER_PANDAS_RETREAT_DESCRIPTION")
+            },
+            templates.rally,
+            templates.sell
+        }
+    },
 }
