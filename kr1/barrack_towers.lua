@@ -2075,10 +2075,10 @@ local function barrack_towers()
         }
     }
 
-    tt = E:register_t("soldier_tower_pandas_green_lvl4", "soldier_militia")
-    E:add_comps(tt, "nav_grid", "powers", "ranged")
+    tt = RT("soldier_tower_pandas_green_lvl4", "soldier_militia")
+    AC(tt, "nav_grid", "powers", "ranged")
     local soldier = balance.towers.pandas.soldier
-    tt.powers.hat = E:clone_c("power")
+    tt.powers.hat = CC("power")
     tt.powers.hat.cooldown = b.hat.cooldown
     tt.powers.hat.range = b.hat.range
     tt.melee.range = soldier.melee_attack.range
@@ -2160,8 +2160,8 @@ local function barrack_towers()
     tt.ignore_linirea_true_might_revive = true
     tt.death_go_back_delay = fts(15)
 
-    tt = E:register_t("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
-    E:add_comps(tt, "attacks")
+    tt = RT("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
+    AC(tt, "attacks")
     tt.info.portrait = "gui_bottom_info_image_soldiers_0070"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
@@ -2183,7 +2183,7 @@ local function barrack_towers()
     tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_ray"
-    tt.attacks.list[1] = E:clone_c("custom_attack")
+    tt.attacks.list[1] = CC("custom_attack")
     tt.attacks.list[1].cooldown = nil
     tt.attacks.list[1].shoot_times = {
         fts(15),
@@ -2200,7 +2200,7 @@ local function barrack_towers()
     tt.attacks.list[1].damage_area = b.thunder.damage_area
     tt.attacks.list[1].min_targets = b.thunder.min_targets
     tt.attacks.list[1].mod = "mod_soldier_tower_pandas_blue_stun"
-    tt.powers.thunder = E:clone_c("power")
+    tt.powers.thunder = CC("power")
     tt.powers.thunder.cooldown = b.thunder.cooldown
     tt.powers.thunder.range = b.thunder.range
     tt.powers.thunder.damage_min = b.thunder.damage_min
@@ -2217,8 +2217,8 @@ local function barrack_towers()
     tt.nav_rally.delay_min = 0.12
     tt.nav_rally.delay_max = 0.2
 
-    tt = E:register_t("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
-    E:add_comps(tt, "attacks")
+    tt = RT("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
+    AC(tt, "attacks")
     tt.info.portrait = "gui_bottom_info_image_soldiers_0069"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
@@ -2239,14 +2239,14 @@ local function barrack_towers()
     tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4] / #tt.melee.attacks[1].hit_times
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_hit"
-    tt.powers.teleport = E:clone_c("power")
+    tt.powers.teleport = CC("power")
     tt.powers.teleport.cooldown = b.teleport.cooldown
     tt.powers.teleport.range = b.teleport.range
     tt.powers.teleport.nodes_offset_min = b.teleport.nodes_offset_min
     tt.powers.teleport.nodes_offset_max = b.teleport.nodes_offset_max
     tt.powers.teleport.damage_min = b.teleport.damage_min
     tt.powers.teleport.damage_max = b.teleport.damage_max
-    tt.attacks.list[1] = E:clone_c("custom_attack")
+    tt.attacks.list[1] = CC("custom_attack")
     tt.attacks.list[1].cooldown = nil
     tt.attacks.list[1].shoot_time = fts(17)
     tt.attacks.list[1].animation = "skill"
@@ -2274,24 +2274,24 @@ local function barrack_towers()
     tt.nav_rally.delay_min = 0.05
     tt.nav_rally.delay_max = 0.07
 
-    tt = E:register_t("mod_soldier_tower_pandas_blue_stun", "mod_stun")
+    tt = RT("mod_soldier_tower_pandas_blue_stun", "mod_stun")
     tt.modifier.duration = b.thunder.stun_duration
     tt.modifier.vis_flags = bor(F_MOD, F_STUN)
     tt.modifier.vis_bans = bor(F_BOSS)
    
-    tt = E:register_t("fx_lightining_soldier_tower_pandas_blue", "decal_scripted")
+    tt = RT("fx_lightining_soldier_tower_pandas_blue", "decal_scripted")
     tt.main_script.update = scripts.multi_sprite_fx.update
     tt.render.sprites[1].name = "tower_pandas_lighting_sky_run"
     tt.render.sprites[1].scale = vv(2)
     tt.render.sprites[1].z = Z_OBJECTS
-    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "tower_pandas_target_ray_run"
     tt.render.sprites[2].animated = true
     tt.render.sprites[2].hidden = true
     tt.render.sprites[2].z = Z_OBJECTS
     tt.render.sprites[2].delay_start = fts(6)
 
-    tt = E:register_t("mod_soldier_tower_pandas_red_teleport", "mod_teleport")
+    tt = RT("mod_soldier_tower_pandas_red_teleport", "mod_teleport")
     tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
     tt.modifier.vis_bans = bor(F_BOSS)
     tt.nodes_offset_min = 0
@@ -2306,7 +2306,7 @@ local function barrack_towers()
     tt.fx_end = "fx_tower_panda_skill_red_tp_enemy_fire"
     tt.max_times_applied = b.teleport.max_times_applied
     
-    tt = E:register_t("bullet_tower_pandas_spawn_soldier_blue_lvl4", "bullet")
+    tt = RT("bullet_tower_pandas_spawn_soldier_blue_lvl4", "bullet")
     tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
     tt.render.sprites[1].name = "scape_loop"
     tt.render.sprites[1].animated = true
@@ -2325,13 +2325,13 @@ local function barrack_towers()
     tt.sound_events.hit = nil
     tt.sound_events.hit_water = nil
 
-    tt = E:register_t("bullet_tower_pandas_spawn_soldier_red_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
+    tt = RT("bullet_tower_pandas_spawn_soldier_red_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
     tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"
 
-    tt = E:register_t("bullet_tower_pandas_spawn_soldier_green_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
+    tt = RT("bullet_tower_pandas_spawn_soldier_green_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
     tt.render.sprites[1].prefix = "tower_pandas_panda_green_lvl4"
 
-    tt = E:register_t("bullet_tower_pandas_air_lvl4", "bolt")
+    tt = RT("bullet_tower_pandas_air_lvl4", "bolt")
     tt.render.sprites[1].prefix = "tower_pandas_projectile_air"
     tt.render.sprites[1].name = "Run"
     tt.render.sprites[1].animated = true
@@ -2348,7 +2348,7 @@ local function barrack_towers()
     tt.bullet.particles_name = "ps_bullet_tower_panda_air"
     tt.sound_events.insert = "TowerPandasRangedHat"
 
-    tt = E:register_t("bullet_tower_pandas_air_soldier_special_lvl1", "bullet_tower_pandas_air_lvl1")
+    tt = RT("bullet_tower_pandas_air_soldier_special_lvl1", "bullet_tower_pandas_air_lvl1")
     tt.main_script.update = scripts.bullet_tower_pandas_air.update
     tt.bullet.damage_min = b.soldier.hat.damage_levels[1].max
     tt.bullet.damage_max = b.soldier.hat.damage_levels[1].max
@@ -2357,11 +2357,11 @@ local function barrack_towers()
     tt.bounce_damage_mult = b.soldier.hat.bounce_damage_mult
     tt.bounce_speed_mult = b.soldier.hat.bounce_speed_mult
     
-    tt = E:register_t("bullet_tower_pandas_air_soldier_special_lvl2", "bullet_tower_pandas_air_soldier_special_lvl1")
+    tt = RT("bullet_tower_pandas_air_soldier_special_lvl2", "bullet_tower_pandas_air_soldier_special_lvl1")
     tt.bullet.damage_min = b.soldier.hat.damage_levels[2].min
     tt.bullet.damage_max = b.soldier.hat.damage_levels[2].max
 
-    tt = E:register_t("bullet_tower_pandas_fire_lvl4", "bolt")
+    tt = RT("bullet_tower_pandas_fire_lvl4", "bolt")
     tt.render.sprites[1].prefix = "tower_pandas_projectile_fire"
     tt.render.sprites[1].name = "run"
     tt.render.sprites[1].animated = true
@@ -2378,7 +2378,7 @@ local function barrack_towers()
     tt.bullet.particles_name = "ps_bullet_tower_panda_fire"
     tt.sound_events.insert = "TowerPandasRangedFire"
     
-    tt = E:register_t("bullet_tower_pandas_ray_lvl4", "bullet")
+    tt = RT("bullet_tower_pandas_ray_lvl4", "bullet")
     tt.bullet.level = 4
     tt.bullet.damage_min = b.ranged_attack.damage_min[4]
     tt.bullet.damage_max = b.ranged_attack.damage_max[4]
