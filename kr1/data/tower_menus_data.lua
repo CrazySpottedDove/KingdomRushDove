@@ -1961,7 +1961,7 @@ return {
                         tt_title = _("TOWER_BLADE_PERFECT_PARRY_NAME_3"),
                         tt_desc = _("TOWER_BLADE_PERFECT_PARRY_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "blade_dance",
@@ -1983,7 +1983,7 @@ return {
                         tt_title = _("TOWER_BLADE_BLADE_DANCE_NAME_3"),
                         tt_desc = _("TOWER_BLADE_BLADE_DANCE_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "swirling",
@@ -2005,7 +2005,7 @@ return {
                         tt_title = _("TOWER_BLADE_SWIRLING_EDGE_NAME_3"),
                         tt_desc = _("TOWER_BLADE_SWIRLING_EDGE_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.rally,
             templates.sell
@@ -2034,7 +2034,7 @@ return {
                         tt_title = _("TOWER_FOREST_KEEPERS_CIRCLE_NAME_3"),
                         tt_desc = _("TOWER_FOREST_KEEPERS_CIRCLE_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "eerie",
@@ -2056,7 +2056,7 @@ return {
                         tt_title = _("TOWER_FOREST_KEEPERS_EERIE_NAME_3"),
                         tt_desc = _("TOWER_FOREST_KEEPERS_EERIE_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "oak",
@@ -2078,7 +2078,7 @@ return {
                         tt_title = _("TOWER_FOREST_KEEPERS_OAK_NAME_3"),
                         tt_desc = _("TOWER_FOREST_KEEPERS_OAK_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.rally,
             templates.sell
@@ -2107,7 +2107,7 @@ return {
                         tt_title = _("TOWER_STONE_DRUID_SYLVAN_NAME_3"),
                         tt_desc = _("TOWER_STONE_DRUID_SYLVAN_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "nature",
@@ -2129,7 +2129,7 @@ return {
                         tt_title = _("TOWER_STONE_DRUID_NATURES_FRIEND_NAME_3"),
                         tt_desc = _("TOWER_STONE_DRUID_NATURES_FRIEND_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.rally,
             templates.sell
@@ -2158,7 +2158,7 @@ return {
                         tt_title = _("TOWER_ENTWOOD_CLOBBER_NAME_3"),
                         tt_desc = _("TOWER_ENTWOOD_CLOBBER_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "fiery_nuts",
@@ -2180,7 +2180,7 @@ return {
                         tt_title = _("TOWER_ENTWOOD_FIERY_NUTS_NAME_3"),
                         tt_desc = _("TOWER_ENTWOOD_FIERY_NUTS_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.sell
         }
@@ -2208,7 +2208,7 @@ return {
                         tt_title = _("TOWER_ARCANE_ARCHER_BURST_NAME_3"),
                         tt_desc = _("TOWER_ARCANE_ARCHER_BURST_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "slumber",
@@ -2230,7 +2230,7 @@ return {
                         tt_title = _("TOWER_ARCANE_ARCHER_SLUMBER_NAME_3"),
                         tt_desc = _("TOWER_ARCANE_ARCHER_SLUMBER_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.sell
         }
@@ -2258,7 +2258,7 @@ return {
                         tt_title = _("TOWER_SILVER_SENTENCE_NAME_3"),
                         tt_desc = _("TOWER_SILVER_SENTENCE_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "mark",
@@ -2280,7 +2280,7 @@ return {
                         tt_title = _("TOWER_SILVER_MARK_NAME_3"),
                         tt_desc = _("TOWER_SILVER_MARK_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.sell
         }
@@ -2308,7 +2308,7 @@ return {
                         tt_title = _("TOWER_MAGE_WILD_MAGUS_ELDRITCH_NAME_3"),
                         tt_desc = _("TOWER_MAGE_WILD_MAGUS_ELDRITCH_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "ward",
@@ -2330,7 +2330,7 @@ return {
                         tt_title = _("TOWER_MAGE_WILD_MAGUS_WARD_NAME_3"),
                         tt_desc = _("TOWER_MAGE_WILD_MAGUS_WARD_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.sell
         }
@@ -2358,7 +2358,7 @@ return {
                         tt_title = _("TOWER_MAGE_HIGH_ELVEN_TIMELAPSE_NAME_3"),
                         tt_desc = _("TOWER_MAGE_HIGH_ELVEN_TIMELAPSE_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "sentinel",
@@ -2380,7 +2380,7 @@ return {
                         tt_title = _("TOWER_MAGE_HIGH_ELVEN_SENTINEL_NAME_3"),
                         tt_desc = _("TOWER_MAGE_HIGH_ELVEN_SENTINEL_DESCRIPTION_3")
                     }
-                },
+                }
             }),
             templates.sell
         }
@@ -2420,7 +2420,7 @@ return {
                         tt_title = _("大树护甲Ⅲ"),
                         tt_desc = _("进一步提升伊渥克士兵的护甲")
                     }
-                },
+                }
             }),
             merge(templates.upgrade_power3, {
                 action_arg = "shield",
@@ -2850,7 +2850,7 @@ return {
                         tt_title = _("TOWER_DARK_ELF_4_SKILL_BUFF_3_NAME"),
                         tt_desc = _("TOWER_DARK_ELF_4_SKILL_BUFF_3_DESCRIPTION")
                     }
-                },
+                }
             }),
             templates.rally,
             templates.sell
