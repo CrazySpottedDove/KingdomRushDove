@@ -3176,26 +3176,25 @@ local towers = {
             dead_lifetime = 10,
             max_speed = 36,
             armor = { 0, 0, 0, 0 },
-            hp_max = { 40, 40, 40, 40 },
+            hp_max = { 52, 52, 52, 52 },
             melee_attack = {
                 range = 72,
                 cooldown = { 1, 1, 1, 1 },
-                damage_max = { 4, 4, 4, 4 },
+                damage_max = { 5, 5, 5, 5 },
                 damage_min = { 1, 1, 1, 1 }
             }
         },
         skeleton_golem = {
             dead_lifetime = 10,
             max_speed = 28,
-            regen_hp = 10,
             regen_cooldown = 1,
             armor = { 0, 0, 0, 0 },
-            hp_max = { 120, 120, 120, 120 },
+            hp_max = { 156, 156, 156, 156 },
             melee_attack = {
                 range = 72,
                 cooldown = { 1, 1, 1, 1 },
-                damage_max = { 10, 10, 10, 10 },
-                damage_min = { 6, 6, 6, 6 }
+                damage_max = { 13, 13, 13, 13 },
+                damage_min = { 7, 7, 7, 7}
             }
         }
     },
