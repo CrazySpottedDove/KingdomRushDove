@@ -158,7 +158,7 @@ return {
         tt_title = _("ELVES_EWOK_NAME"),
         tt_desc = _("ELVES_EWOK_DESCRIPTION")
     }),
-    merge(templates.upgrade, {
+    merge(templates.upgrade3, {
         action_arg = "tower_baby_ashbite",
         image = "kr3_main_icons_0113",
         place = 20,
