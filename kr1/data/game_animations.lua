@@ -5481,6 +5481,11 @@ return {
             prefix = "bossJuggernaut",
             to = 48
         },
+        eb_juggernaut_walkingDown = {
+            from = 1,
+            prefix = "bossJuggernaut",
+            to = 24
+        },
         eb_kingpin_death = {
             from = 25,
             prefix = "BossBandit",
