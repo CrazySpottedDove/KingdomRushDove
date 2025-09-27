@@ -1578,7 +1578,7 @@ local function mage_towers()
     tt.attacks.list[1].bullet_start_offset = vec_2(-15, 105)
     tt.attacks.list[2] = CC("custom_attack")
     tt.attacks.list[2].animation = "mark_of_silence"
-    tt.attacks.list[2].cooldown = nil
+    tt.attacks.list[2].cooldown = b.skill_debuff.cooldown[1]
     tt.attacks.list[2].entity = "aura_tower_necromancer_skill_debuff"
     tt.attacks.list[2].max_range = b.skill_debuff.range
     tt.attacks.list[2].cast_time = fts(27)
@@ -1587,7 +1587,7 @@ local function mage_towers()
     tt.attacks.list[2].min_targets = b.skill_debuff.min_targets
     tt.attacks.list[3] = CC("custom_attack")
     tt.attacks.list[3].animation = "call_death_rider"
-    tt.attacks.list[3].cooldown = nil
+    tt.attacks.list[3].cooldown = b.skill_rider.cooldown[1]
     tt.attacks.list[3].entity = "aura_tower_necromancer_skill_rider"
     tt.attacks.list[3].max_range = b.skill_rider.range
     tt.attacks.list[3].cast_time = fts(27)
