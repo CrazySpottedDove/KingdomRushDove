@@ -7366,6 +7366,7 @@ function TowerMenuButton:initialize(item, entity)
 
     local b = KImageView:new(item.image)
     b.pos = v(0, 0)
+
     if item.is_kr5 then
         local kr5_scale = 56.177 / 42.667
         b.size.x = b.size.x * kr5_scale

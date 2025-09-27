@@ -5664,8 +5664,8 @@ local towers = {
         },
         basic_attack = {
             cooldown = 1.5,
-            damage_min = {4, 12, 20, 36},
-            damage_max = {8, 20, 36, 68},
+            damage_min = {4, 12, 20, 44},
+            damage_max = {8, 20, 36, 81},
             range = {160, 170, 185, 200},
             damage_type = DAMAGE_MAGICAL
         },
@@ -5677,7 +5677,7 @@ local towers = {
             damage_factor = {1.5, 2, 2.5},
             s_damage_factor = {0.5, 1, 1.5},
             aura_duration = {10, 10, 10},
-            price = {120, 120, 120},
+            price = {180, 180, 180},
             cooldown = {20, 16, 12}
         },
         skill_rider = {
@@ -5687,9 +5687,9 @@ local towers = {
             speed = 150,
             duration = 100,
             price = {200, 200, 200},
-            damage_min = {60, 110, 150},
-            damage_max = {60, 110, 150},
-            s_damage = {60, 110, 150},
+            damage_min = {70, 130, 180},
+            damage_max = {70, 130, 180},
+            s_damage = {70, 130, 180},
             cooldown = {30, 26, 22},
             damage_type = DAMAGE_TRUE
         },
