@@ -14053,8 +14053,7 @@ local function heroes()
     "fx_hero_wukong_giant_staff_dust_cloud_front"
     tt.timed_attacks.list[2].staff_offset = v(17, 0)
     tt.timed_attacks.list[2].vis_flags = F_INSTAKILL
-    tt.timed_attacks.list[2].vis_bans = bor(
-    tt.timed_attacks.list[2].vis_bans, F_MINIBOSS, F_BOSS)
+    tt.timed_attacks.list[2].vis_bans = F_BOSS
     tt.timed_attacks.list[2].instakill = true
     tt.timed_attacks.list[2].damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_DODGE)
     tt.timed_attacks.list[2].area_vis_flags = F_AREA

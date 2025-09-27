@@ -1523,12 +1523,9 @@ local function mage_towers()
     tt = RT("fx_tower_necromancer_rider_spawn_back", "fx")
     tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_back_idle"
 
-    tt = RT("tower_necromancer_lvl4", "tower")
+    tt = RT("tower_necromancer_lvl4", "tower5")
     AC(tt, "attacks", "tower_upgrade_persistent_data", "tween", "powers")
-    tt.is_kr5 = true
     tt.tower.type = "necromancer_lvl4"
-    tt.tower.kind = TOWER_KIND_MAGE
-    tt.tower.team = TEAM_DARK_ARMY
     tt.tower.level = 1
     tt.tower.price = b.price[4]
     tt.tower.menu_offset = vec_2(0, 34)
@@ -1658,11 +1655,10 @@ local function mage_towers()
     tt.ui.click_rect_offset_y = -10
 
     tt = RT("soldier_tower_necromancer_skeleton_lvl4", "soldier_militia")
-    local skeleton = b.skeleton
     AC(tt, "reinforcement")
     tt.health_bar.offset = vec_2(0, 29)
-    tt.health.armor = skeleton.armor[4]
-    tt.health.hp_max = skeleton.hp_max[4]
+    tt.health.armor = b.skeleton.armor[4]
+    tt.health.hp_max = b.skeleton.hp_max[4]
     tt.info.fn = scripts.soldier_reinforcement.get_info
     tt.info.portrait = "gui_bottom_info_image_soldiers_0018"
     tt.info.i18n_key = "SOLDIER_TOWER_NECROMANCER_SKELETON"
@@ -1671,11 +1667,11 @@ local function mage_towers()
     tt.main_script.insert = scripts.soldier_reinforcement.insert
     tt.main_script.update = scripts.soldier_tower_necromancer_skeleton.update
     tt.melee.attacks[1].hit_time = fts(8)
-    tt.melee.attacks[1].cooldown = skeleton.melee_attack.cooldown[4]
-    tt.melee.attacks[1].damage_max = skeleton.melee_attack.damage_max[4]
-    tt.melee.attacks[1].damage_min = skeleton.melee_attack.damage_min[4]
-    tt.melee.range = skeleton.melee_attack.range
-    tt.motion.max_speed = skeleton.max_speed
+    tt.melee.attacks[1].cooldown = b.skeleton.melee_attack.cooldown[4]
+    tt.melee.attacks[1].damage_max = b.skeleton.melee_attack.damage_max[4]
+    tt.melee.attacks[1].damage_min = b.skeleton.melee_attack.damage_min[4]
+    tt.melee.range = b.skeleton.melee_attack.range
+    tt.motion.max_speed = b.skeleton.max_speed
     tt.regen.cooldown = 1
     tt.regen.health = 0
     tt.reinforcement.fade = false
@@ -1689,12 +1685,12 @@ local function mage_towers()
     tt.unit.level = 4
     tt.unit.hit_offset = vec_2(0, 5)
     tt.unit.mod_offset = vec_2(0, 11)
-    tt.unit.fade_time_after_death = skeleton.dead_lifetime
+    tt.unit.fade_time_after_death = b.skeleton.dead_lifetime
     tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
     tt.spawn_fx = "fx_soldier_tower_necromancer_skeleton_spawn"
     tt.spawn_fx_delay = 5
-    tt.spawn_delay_min = skeleton.spawn_delay_min
-    tt.spawn_delay_max = skeleton.spawn_delay_max
+    tt.spawn_delay_min = b.skeleton.spawn_delay_min
+    tt.spawn_delay_max = b.skeleton.spawn_delay_max
     tt.spawn_sound = "TowerNecromancerSkeletonSummon"
     -- tt.count_group.name = "necromancer_skeletons"
     -- tt.count_group_type = COUNT_GROUP_CONCURRENT
@@ -1706,25 +1702,24 @@ local function mage_towers()
     tt.is_kr5 = true
 
     tt = RT("soldier_tower_necromancer_skeleton_golem_lvl4", "soldier_tower_necromancer_skeleton_lvl4")
-    local skeleton_golem = b.skeleton_golem
-    tt.health.armor = skeleton_golem.armor[4]
-    tt.health.hp_max = skeleton_golem.hp_max[4]
+    tt.health.armor = b.skeleton_golem.armor[4]
+    tt.health.hp_max = b.skeleton_golem.hp_max[4]
     tt.health_bar.offset = vec_2(0, 47)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.portrait = "gui_bottom_info_image_soldiers_0019"
     tt.info.i18n_key = "SOLDIER_TOWER_NECROMANCER_SKELETON_GOLEM"
-    tt.melee.range = skeleton_golem.melee_attack.range
-    tt.melee.attacks[1].cooldown = skeleton_golem.melee_attack.cooldown[4]
-    tt.melee.attacks[1].damage_max = skeleton_golem.melee_attack.damage_max[4]
-    tt.melee.attacks[1].damage_min = skeleton_golem.melee_attack.damage_min[4]
-    tt.motion.max_speed = skeleton_golem.max_speed
-    tt.regen.cooldown = skeleton_golem.regen_cooldown
+    tt.melee.range = b.skeleton_golem.melee_attack.range
+    tt.melee.attacks[1].cooldown = b.skeleton_golem.melee_attack.cooldown[4]
+    tt.melee.attacks[1].damage_max = b.skeleton_golem.melee_attack.damage_max[4]
+    tt.melee.attacks[1].damage_min = b.skeleton_golem.melee_attack.damage_min[4]
+    tt.motion.max_speed = b.skeleton_golem.max_speed
+    tt.regen.cooldown = b.skeleton_golem.regen_cooldown
     tt.regen.health = 0
     tt.render.sprites[1].prefix = "necromancer_tower_bone_golem"
     tt.soldier.melee_slot_offset = vec_2(15, 0)
     tt.unit.hit_offset = vec_2(0, 5)
     tt.unit.mod_offset = vec_2(0, 15)
-    tt.unit.fade_time_after_death = skeleton_golem.dead_lifetime
+    tt.unit.fade_time_after_death = b.skeleton_golem.dead_lifetime
     tt.unit.size = UNIT_SIZE_LARGE
     tt.spawn_fx = "fx_soldier_tower_necromancer_skeleton_golem_spawn"
     tt.spawn_delay = 3
@@ -1817,13 +1812,12 @@ local function mage_towers()
     tt.modifier_duration_config = b.skill_debuff.mod_duration
 
     tt = RT("aura_tower_necromancer_skill_rider", "aura")
-    local skill_rider = b.skill_rider
     AC(tt, "render", "tween", "motion")
     tt.aura.mod = "mod_tower_necromancer_skill_rider"
-    tt.aura.radius = skill_rider.radius
+    tt.aura.radius = b.skill_rider.radius
     tt.aura.vis_flags = bor(F_AREA)
     tt.aura.vis_bans = bor(F_FLYING)
-    tt.aura.duration = skill_rider.duration
+    tt.aura.duration = b.skill_rider.duration
     tt.aura.cycle_time = fts(5)
     tt.render.sprites[1].prefix = "necromancer_tower_death_rider"
     tt.render.sprites[1].animated = true
@@ -1848,12 +1842,12 @@ local function mage_towers()
     }
     tt.tween.props[1].sprite_id = 1
     tt.tween.remove = false
-    tt.motion.max_speed = skill_rider.speed
+    tt.motion.max_speed = b.skill_rider.speed
     tt.damage_min = nil
     tt.damage_max = nil
-    tt.damage_min_config = skill_rider.damage_max
-    tt.damage_max_config = skill_rider.damage_min
-    tt.damage_type = skill_rider.damage_type
+    tt.damage_min_config = b.skill_rider.damage_max
+    tt.damage_max_config = b.skill_rider.damage_min
+    tt.damage_type = b.skill_rider.damage_type
     tt.hit_fx = "fx_tower_necromancer_rider_hit"
     tt.spawn_side_fx = "fx_tower_necromancer_rider_spawn_side"
     tt.spawn_front_fx = "fx_tower_necromancer_rider_spawn_front"
@@ -1863,9 +1857,8 @@ local function mage_towers()
     tt.sound_events.insert = "TowerNecromancerDeathRider"
 
     tt = RT("mod_tower_necromancer_curse", "modifier")
-    local curse = b.curse
     AC(tt, "render")
-    tt.modifier.duration = curse.duration
+    tt.modifier.duration = b.curse.duration
     tt.main_script.insert = scripts.mod_tower_necromancer_curse.insert
     tt.main_script.remove = scripts.mod_tower_necromancer_curse.remove
     tt.main_script.update = scripts.mod_track_target.update

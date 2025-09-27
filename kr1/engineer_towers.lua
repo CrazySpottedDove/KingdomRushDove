@@ -1097,10 +1097,9 @@ local function engineer_towers()
 
     b = balance.towers.tricannon
 
-    tt = RT("tower_tricannon_lvl4", "tower")
+    tt = RT("tower_tricannon_lvl4", "tower5")
     AC(tt, "attacks", "powers")
     image_y = 120
-    tt.is_kr5 = true
     tt.tower.type = "tricannon"
     tt.tower.level = 1
     tt.tower.price = b.price[4]
@@ -1293,6 +1292,9 @@ local function engineer_towers()
     -- 恶魔澡坑_START
 
     b = balance.towers.demon_pit
+    local basic_attack = b.basic_attack
+    local big_guy = b.big_guy
+    local master_exploders = b.master_exploders
 
     tt = RT("tower_demon_pit_demon_trail")
     AC(tt, "pos", "particle_system")
@@ -1330,9 +1332,8 @@ local function engineer_towers()
     }
     tt.tween.remove = true
 
-    tt = RT("tower_demon_pit_lvl4", "tower")
+    tt = RT("tower_demon_pit_lvl4", "tower5")
     AC(tt, "attacks", "powers")
-    tt.is_kr5 = true
     tt.tower.type = "demon_pit"
     tt.tower.level = 1
     tt.tower.price = b.price[4]
@@ -1385,7 +1386,7 @@ local function engineer_towers()
     tt.attacks.list[2].cooldown = b.big_guy.cooldown[1]
     tt.attacks.list[2].shoot_time = fts(43)
     tt.attacks.list[2].bullet_start_offset = vec_2(-7, 70)
-    -- tt.attacks.list[2].max_range = b.big_guy.max_range
+    -- tt.attacks.list[2].max_range = big_guy.max_range
     tt.attacks.list[2].node_prediction = fts(80)
     tt.attacks.list[2].animation = "big_guy_spawn"
     tt.attacks.list[2].animation_reload = "big_guy_reload_big_guy"
@@ -1555,13 +1556,12 @@ local function engineer_towers()
     tt.modifier.vis_bans = bor(F_BOSS)
 
     tt = RT("mod_tower_demon_pit_master_explosion_burning", "modifier")
-    local master_exploders = b.master_exploders
     AC(tt, "dps", "render")
     tt.modifier.duration = nil
     tt.dps.damage_min = nil
     tt.dps.damage_max = nil
-    tt.dps.damage_type = master_exploders.damage_type
-    tt.dps.damage_every = master_exploders.damage_every
+    tt.dps.damage_type = b.master_exploders.damage_type
+    tt.dps.damage_every = b.master_exploders.damage_every
     tt.main_script.insert = scripts.mod_dps.insert
     tt.main_script.update = scripts.mod_dps.update
     tt.render.sprites[1].size_names = {

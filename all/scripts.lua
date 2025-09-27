@@ -8680,4 +8680,80 @@ scripts.mod_soldier_cooldown = {
     end
 }
 
+scripts.multi_sprite_fx = {}
+
+function scripts.multi_sprite_fx.update(this, store)
+    local start_ts = store.tick_ts
+    local this_sprites = this.render.sprites
+    local finished_anims = {}
+    local delayed_sprites = {}
+
+    for i = 1, #this_sprites do
+        local s = this_sprites[i]
+
+        if s.animated then
+            if s.delay_start then
+                delayed_sprites[i] = s.delay_start + start_ts
+            else
+                U.animation_start(this, s.name, nil, store.tick_ts, false, i, true)
+            end
+
+            finished_anims[i] = false
+        else
+            finished_anims[i] = true
+        end
+    end
+
+    if this.tween then
+        this.tween.ts = store.tick_ts
+    end
+
+    local function handle_finished_anim(index)
+        if delayed_sprites[index] then
+            if store.tick_ts > delayed_sprites[index] then
+                this_sprites[index].hidden = false
+
+                U.animation_start(this, this_sprites[index].name, nil, store.tick_ts, false, index, true)
+
+                delayed_sprites[index] = nil
+            end
+
+            return false
+        end
+
+        if finished_anims[index] then
+            return false
+        end
+
+        if not U.animation_finished(this, index, 1) then
+            return false
+        end
+
+        this_sprites[index].hidden = true
+        finished_anims[index] = true
+
+        for i = 1, #this_sprites do
+            if not finished_anims[i] then
+                return false
+            end
+        end
+
+        return true
+    end
+
+    while true do
+        for i = 1, #this_sprites do
+            if handle_finished_anim(i) then
+                if not this.tween or not this.tween.remove then
+                    queue_remove(store, this)
+                end
+
+                return
+            end
+        end
+
+        coroutine.yield()
+    end
+end
+
 return scripts

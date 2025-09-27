@@ -25895,9 +25895,9 @@ function scripts.hero_wukong.update(this, store)
 
     scripts.hero_wukong.choose_next_random_attack(this)
 
-    local hair_clones_attack = this.timed_attacks.list[this.timed_attacks.sid_hair_clones]
-    local giant_staff_attack = this.timed_attacks.list[this.timed_attacks.sid_giant_staff]
-    local pole_ranged_attack = this.timed_attacks.list[this.timed_attacks.sid_pole_ranged]
+    local hair_clones_attack = this.timed_attacks.list[1]
+    local giant_staff_attack = this.timed_attacks.list[2]
+    local pole_ranged_attack = this.timed_attacks.list[3]
 
     if not hair_clones_attack.disabled then
         hair_clones_attack.ts = store.tick_ts - hair_clones_attack.cooldown
@@ -26174,6 +26174,19 @@ function scripts.hero_wukong.update(this, store)
                 U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
             end
 
+            a = this.ultimate
+
+            if ready_to_use_skill(a, store) then
+                local target = U.find_foremost_enemy(store, this.pos, hair_clones_attack.min_range,
+                hair_clones_attack.max_range, nil,
+                    0, a.vis_bans)
+                if target and valid_rally_node_nearby(target.pos) then
+                    apply_ultimate(this, store, target, "levelup")
+                else
+                    a.ts = a.ts + 1
+                end
+            end
+
             skill = this.hero.skills.hair_clones
             a = hair_clones_attack
             if ready_to_use_skill(a, store) then
@@ -26299,7 +26312,7 @@ function scripts.hero_wukong.update(this, store)
                     if not target then
                         SU.delay_attack(store, a, fts(5))
                     else
-                        local is_boss = U.flag_has(target.vis.flags, bor(F_BOSS, F_MINIBOSS))
+                        local is_boss = U.flag_has(target.vis.flags, F_BOSS)
 
                         if is_boss then
                             SU.delay_attack(store, a, fts(5))
