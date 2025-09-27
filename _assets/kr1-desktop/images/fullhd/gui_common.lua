@@ -41782,4 +41782,196 @@ return {
             11,
         },
     },
+    kr5_main_icons_0049 = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			6,
+			6,
+			6,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			3523,
+			2660,
+			108,
+			109
+		},
+		alias = {}
+	},
+	kr5_main_icons_0049_disabled = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			6,
+			6,
+			6,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			3637,
+			2660,
+			108,
+			109
+		},
+		alias = {}
+	},
+    kr5_special_icons_0040 = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			4,
+			4,
+			4,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			2035,
+			2792,
+			112,
+			111
+		},
+		alias = {}
+	},
+	kr5_special_icons_0040_disabled = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			4,
+			4,
+			4,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			2035,
+			2909,
+			112,
+			111
+		},
+		alias = {}
+	},
+    kr5_special_icons_0041 = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			4,
+			4,
+			4,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			2035,
+			3260,
+			112,
+			111
+		},
+		alias = {}
+	},
+	kr5_special_icons_0041_disabled = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			4,
+			4,
+			4,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			2035,
+			3377,
+			112,
+			111
+		},
+		alias = {}
+	},
+    kr5_special_icons_0042 = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			4,
+			4,
+			4,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			2153,
+			1856,
+			112,
+			111
+		},
+		alias = {}
+	},
+	kr5_special_icons_0042_disabled = {
+		a_name = "gui_common-5-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			4,
+			4,
+			4,
+			5
+		},
+		a_size = {
+			4096,
+			3800
+		},
+		f_quad = {
+			2271,
+			1856,
+			112,
+			111
+		},
+		alias = {}
+	},
 }

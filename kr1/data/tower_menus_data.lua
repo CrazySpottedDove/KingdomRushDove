@@ -467,7 +467,7 @@ return {
             }),
             merge(templates.upgrade5, {
                 action_arg = "tower_pandas_lvl4",
-                image = "main_icons_0049",
+                image = "kr5_main_icons_0049",
                 place = 21,
                 tt_title = _("TOWER_PANDAS_NAME"),
                 tt_desc = _("TOWER_PANDAS_1_DESCRIPTION")
@@ -2975,7 +2975,7 @@ return {
         {
             merge(templates.upgrade_power5, {
                 action_arg = "thunder",
-                image = "special_icons_0041",
+                image = "kr5_special_icons_0041",
                 place = 12,
                 sounds = {
                     i18n:cjk("TowerPandasSkillATaunt", "TowerPandasSkillATauntZH", nil, nil)
@@ -2994,7 +2994,7 @@ return {
             }),
             merge(templates.upgrade_power5, {
                 action_arg = "hat",
-                image = "special_icons_0040",
+                image = "kr5_special_icons_0040",
                 place = 14,
                 sounds = {
                     i18n:cjk("TowerPandasSkillBTaunt", "TowerPandasSkillBTauntZH", nil, nil)
@@ -3013,7 +3013,7 @@ return {
             }),
             merge(templates.upgrade_power5, {
                 action_arg = "teleport",
-                image = "special_icons_0042",
+                image = "kr5_special_icons_0042",
                 place = 15,
                 sounds = {
                     i18n:cjk("TowerPandasSkillCTaunt", "TowerPandasSkillCTauntZH", nil, nil)

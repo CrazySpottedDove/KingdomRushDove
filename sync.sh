@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 WINDOWS_DIR="$1"
 LAST_SYNC_FILE=".last_sync_commit"
