@@ -533,8 +533,11 @@ function scripts.mod_death_rider.insert(this, store, script)
     if not target or not target.health or target.health.dead then
         return false
     end
-
-    target.health.armor = target.health.armor + (this.extra_armor + this.extra_armor_inc * level)
+    m.extra_armor = this.extra_armor + this.extra_armor_inc * level
+    if target.health.armor + m.extra_armor >= 1 then
+        m.extra_armor = math.max(0, 0.95 - target.health.armor)
+    end
+    SU.armor_inc(target, m.extra_armor)
     target.unit.damage_factor = target.unit.damage_factor *
                                     (this.inflicted_damage_factor + this.inflicted_damage_factor_inc * level)
 
@@ -546,7 +549,7 @@ function scripts.mod_death_rider.remove(this, store, script)
     local target = store.entities[m.target_id]
     local level = m.level
     if target then
-        target.health.armor = target.health.armor - (this.extra_armor + this.extra_armor_inc * level)
+        SU.armor_dec(target, m.extra_armor)
         target.unit.damage_factor = target.unit.damage_factor /
                                         (this.inflicted_damage_factor + this.inflicted_damage_factor_inc * level)
     end

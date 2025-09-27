@@ -673,7 +673,8 @@ local function mage_towers()
     death_rider_aura.aura.duration = -1
     death_rider_aura.aura.radius = 128
     death_rider_aura.aura.track_source = true
-    death_rider_aura.aura.allowed_templates = table.keys(GS.wraith)
+    local allowed_templates = table.keys(GS.wraith)
+    death_rider_aura.aura.allowed_templates = allowed_templates
     death_rider_aura.aura.vis_bans = F_ENEMY
     death_rider_aura.aura.vis_flags = F_MOD
     death_rider_aura.main_script.insert = scripts.aura_apply_mod.insert
