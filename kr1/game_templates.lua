@@ -17,7 +17,10 @@ require("game_templates_utils")
 
 ----------
 require("foundamental_towers")()
-require("mage_towers")()
+
+package.loaded.mage_towers = nil
+require("mage_towers")
+
 require("engineer_towers")()
 require("archer_towers")()
 require("barrack_towers")()
@@ -9907,3 +9910,47 @@ tt.thunders[2].range = 9999
 tt.thunders[2].targeting = "random"
 tt.vis_bans = bor(F_FRIEND)
 tt.vis_flags = bor(F_RANGED)
+
+tt = E:register_t("ps_bullet_tower_ray_sheep")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "channeler_tower_mutation_projectile_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 60
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_area_spread = vec_2(8, 8)
+tt.particle_system.scales_y = {1, 1.5}
+tt.particle_system.scales_x = {1, 1.5}
+tt.particle_system.anchor = vec_2(0.5, 0.5)
+tt.particle_system.emit_offset = vec_2(0, 0)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.emit_offset_relative = vec_2(-15, 0)
+
+tt = E:register_t("fx_tower_ray_hit_start", "fx")
+tt.render.sprites[1].name = "channeler_tower_crystal_union_fx_run"
+tt = E:register_t("fx_tower_ray_hit_source", "fx")
+tt.render.sprites[1].name = "channeler_tower_ray_start_loop"
+tt.render.sprites[1].loop = true
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_ray_crystal_union", "fx")
+tt.render.sprites[1].name = "channeler_tower_crystal_union_fx_run"
+tt = E:register_t("fx_tower_ray_lvl4_attack", "fx")
+tt.render.sprites[1].name = "channeler_tower_lvl4_tower_attack_fx_idle"
+tt = E:register_t("fx_tower_ray_lvl4_attack_sheep", "fx")
+tt.render.sprites[1].name = "channeler_tower_mutation_tower_fx_idle"
+tt = E:register_t("fx_tower_ray_lvl4_attack_sheep_hit", "fx")
+tt.render.sprites[1].name = "channeler_tower_mutation_fx_idle"
+tt = E:register_t("fx_tower_ray_lvl4_attack_sheep_hit_big", "fx")
+tt.render.sprites[1].name = "channeler_tower_mutation_fx_big_idle"
+tt = E:register_t("fx_tower_ray_lvl4_shock", "fx")
+
+E:add_comps(tt, "main_script")
+
+tt.render.sprites[1].prefix = "channeler_tower_lvl4_idle_shock_fx_"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = 3
+tt.render.sprites[1].z = Z_OBJECT
+tt.main_script.update = scripts.fx_tower_ray_lvl4_shock.update
+tt.timed.runs = 1e+99
