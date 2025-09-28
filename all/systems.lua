@@ -1026,7 +1026,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
                             if ne.barrack.soldier_types then
                                 soldier_type = ne.barrack.soldier_types[i]
                             end
-                            local ns = E:create_entity(ne.barrack.soldier_type)
+                            local ns = E:create_entity(soldier_type)
 
                             ns.info.i18n_key = s.info.i18n_key
                             ns.soldier.tower_id = ne.id
