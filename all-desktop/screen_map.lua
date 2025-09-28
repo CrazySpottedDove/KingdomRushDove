@@ -3403,8 +3403,8 @@ function UpgradesView:set_stars_and_check()
     for key, value in pairs(self.upgrade_buttons) do
         local do_grey = true
 
-        if self.bought_list[value.data_values.class] + 1 == value.data_values.level and not value.bought and l_stars_num >=
-            value.data_values.price then
+        if not value.bought and (self.bought_list[value.data_values.class] + 1 == value.data_values.level and l_stars_num >=
+            value.data_values.price) or self:has_enough_star_to_upgrade_to(value.data_values.class, value.data_values.level) then
             do_grey = false
         end
 
@@ -3460,6 +3460,18 @@ function UpgradesView:rest_stars(stars_num)
     else
         return true
     end
+end
+
+function UpgradesView:has_enough_star_to_upgrade_to(class, level)
+    local current_level = self.bought_list[class] or 0
+    local price_sum = 0
+    for _, v in pairs(self.upgrade_buttons) do
+        if v.data_values.class == class and v.data_values.level > current_level and v.data_values.level <= level then
+            price_sum = price_sum + v.data_values.price
+        end
+    end
+    local l_stars_num = screen_map.total_stars - self.spent_stars
+    return l_stars_num >= price_sum
 end
 
 function UpgradesView:upgrade_bought(class, level, stars_num)
