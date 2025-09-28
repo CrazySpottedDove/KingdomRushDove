@@ -7385,69 +7385,51 @@ function TowerMenuButton:initialize(item, entity)
 
     self:add_child(b, 3)
 
+    local function get_pos(this, offset)
+        offset = offset or v(0, 0)
+        local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
+        local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
+        return v(x, y)
+    end
+
+    local function create_bo_and_bg_view(img_name)
+        local bg = KImageView:new(img_name .. "_bg")
+
+        bg.pos = get_pos(bg)
+
+        self:add_child(bg, 2)
+        
+        local bo = KImageView:new(img_name)
+
+        bo.pos = get_pos(bo)
+        bo.propagate_on_click = true
+
+        self:add_child(bo, 4)
+
+        return bg, bo
+    end
+
     local halo = KImageView:new(item.halo)
 
     if item.halo == "glow_ico_sell" then
         halo.pos = v(-2.5, -3.5)
     else
-        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
+        halo.pos = get_pos(halo)
     end
 
     halo.propagate_on_click = true
     halo.hidden = true
     self.halo = halo
 
-    self:add_child(halo, 1)
+    self:add_child(halo)
+
+    local bg, bo
 
     if item.action == "upgrade_power" then
-        local bg = KImageView:new("special_icons_0000")
-
-        bg.pos = v(math.floor(-0.5 * (bg.size.x - b.size.x)), math.floor(-0.5 * (bg.size.y - b.size.y)))
-        bg.propagate_on_click = true
-
-        self:add_child(bg, 1)
-    end
-
-    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) then
-        local bo = KImageView:new("main_icons_0000")
-
-        bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
-        bo.propagate_on_click = true
-        bo.disabled_tint_color = nil
-
-        self:add_child(bo)
-    end
-
-    if item.action == "upgrade_power" then
-        local power = entity.powers[item.action_arg]
-
-        if not item.no_upgrade_lights then
-            self.power_buttons = {}
-
-            for i = 1, power.max_level do
-                local pv
-
-                if i > power.level then
-                    pv = KImageView:new("power_rank_0002")
-                else
-                    pv = KImageView:new("power_rank_0001")
-                end
-
-                pv.pos = V.vclone(data.tower_menu_power_places[i])
-                pv.pos.x, pv.pos.y = pv.pos.x - pv.size.x * 0.5, pv.pos.y - pv.size.y * 0.5
-                pv.disabled_tint_color = nil
-                pv.propagate_on_click = true
-
-                b:add_child(pv)
-                table.insert(self.power_buttons, pv)
-            end
-        end
-
-        if power.level >= power.max_level then
-            self:remove_child(self.halo)
-
-            self.halo = nil
-        end
+        bg, bo = create_bo_and_bg_view("special_icons_0000")
+    elseif table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack" }, item.action) then
+        bg, bo = create_bo_and_bg_view("main_icons_0000")
     end
 
     local price_tag
@@ -7497,6 +7479,38 @@ function TowerMenuButton:initialize(item, entity)
         self:add_child(pt)
     end
 
+    if item.action == "upgrade_power" then
+        local power = entity.powers[item.action_arg]
+
+        if not item.no_upgrade_lights then
+            self.power_buttons = {}
+
+            for i = 1, power.max_level do
+                local pv
+
+                if i > power.level then
+                    pv = KImageView:new("power_rank_0002")
+                else
+                    pv = KImageView:new("power_rank_0001")
+                end
+
+                pv.pos = get_pos(pv, V.vclone(data.tower_menu_power_offset[i]))
+                pv.pos.x, pv.pos.y = pv.pos.x - pv.size.x * 0.5, pv.pos.y - pv.size.y * 0.5
+                pv.disabled_tint_color = nil
+                pv.propagate_on_click = true
+
+                bo:add_child(pv)
+                table.insert(self.power_buttons, pv)
+            end
+        end
+
+        if power.level >= power.max_level then
+            self:remove_child(self.halo)
+
+            self.halo = nil
+        end
+    end
+
     local ufx = KImageView:new("effect_powerbuy_0001")
 
     ufx.animation = {
@@ -7504,7 +7518,7 @@ function TowerMenuButton:initialize(item, entity)
         prefix = "effect_powerbuy",
         from = 1
     }
-    ufx.pos = v(4, -4)
+    ufx.pos = get_pos(ufx)
     ufx.hidden = true
     ufx.propagate_on_click = true
     self.ufx = ufx

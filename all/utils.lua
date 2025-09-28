@@ -2196,6 +2196,63 @@ function U.flag_has(value, flag)
     return band(value, flag) ~= 0
 end
 
+function U.push_bans(t, value, op)
+    if not getmetatable(t) then
+        setmetatable(t, vis_meta)
+    end
+
+    if not t._bans_stack then
+        rawset(t, "_bans_stack", {})
+        table.insert(t._bans_stack, {
+            "set",
+            t.bans
+        })
+        rawset(t, "bans", nil)
+    end
+
+    op = op or "bor"
+
+    if op ~= "set" and not bit[op] then
+        if DEBUG then
+            assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
+        else
+            return
+        end
+    end
+
+    local row = {
+        op,
+        value
+    }
+
+    table.insert(t._bans_stack, row)
+    rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+
+    return row
+end
+
+function U.calc_vis_stack(s)
+    local o = 0
+
+    for _, r in pairs(s) do
+        local op, flag = unpack(r)
+
+        if op == "set" then
+            o = flag
+        else
+            local fop = bit[op]
+
+            if not fop then
+                -- block empty
+            else
+                o = fop(o, flag)
+            end
+        end
+    end
+
+    return o
+end
+
 ---获取英雄等级
 ---@param xp number 经验值
 ---@param thresholds table 等级阈值数组

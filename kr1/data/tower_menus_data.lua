@@ -981,49 +981,49 @@ return {
     tesla = {
         {
             merge(templates.upgrade_power, {
-                    action_arg = "bolt",
-                    image = "special_icons_0011",
-                    place = 1,
-                    sounds = { "EngineerTeslaChargedBoltTaunt" },
-                    tt_phrase = _("TOWER_TESLA_CHARGED_BOLT_NOTE"),
-                    tt_list =
-                    {
-                        {
-                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_1"),
-                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_1")
-                        },
-                        {
-                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_2"),
-                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_2")
-                        },
-                        {
-                            tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_3"),
-                            tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_3")
-                        }
-                    }
-                },
+                action_arg = "bolt",
+                image = "special_icons_0011",
+                place = 1,
+                sounds = { "EngineerTeslaChargedBoltTaunt" },
+                tt_phrase = _("TOWER_TESLA_CHARGED_BOLT_NOTE"),
+                tt_list =
                 {
-                    action_arg = "overcharge",
-                    image = "special_icons_0010",
-                    place = 2,
-                    sounds = { "EngineerTeslaOverchargeTaunt" },
-                    tt_phrase = _("TOWER_TESLA_OVERCHARGE_NOTE"),
-                    tt_list =
                     {
-                        {
-                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_1"),
-                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_1")
-                        },
-                        {
-                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_2"),
-                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_2")
-                        },
-                        {
-                            tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_3"),
-                            tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_3")
-                        }
+                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_1"),
+                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_1")
+                    },
+                    {
+                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_2"),
+                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_2")
+                    },
+                    {
+                        tt_title = _("TOWER_TESLA_CHARGED_BOLT_NAME_3"),
+                        tt_desc = _("TOWER_TESLA_CHARGED_BOLT_DESCRIPTION_3")
                     }
-                }),
+                }
+            }),
+            merge(templates.upgrade_power, {
+                action_arg = "overcharge",
+                image = "special_icons_0010",
+                place = 2,
+                sounds = { "EngineerTeslaOverchargeTaunt" },
+                tt_phrase = _("TOWER_TESLA_OVERCHARGE_NOTE"),
+                tt_list =
+                {
+                    {
+                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_1"),
+                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_1")
+                    },
+                    {
+                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_2"),
+                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_2")
+                    },
+                    {
+                        tt_title = _("TOWER_TESLA_OVERCHARGE_NAME_3"),
+                        tt_desc = _("TOWER_TESLA_OVERCHARGE_DESCRIPTION_3")
+                    }
+                }
+            }),
             templates.sell
         }
     },
