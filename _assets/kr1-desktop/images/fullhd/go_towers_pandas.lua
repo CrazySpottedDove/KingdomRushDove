@@ -28112,7 +28112,10 @@ return {
 		},
 		alias = {
 			"tower_pandas_projectile_fire_hit_0004",
-			"tower_pandas_projectile_ray_hit_0004"
+			"tower_pandas_projectile_ray_hit_0004",
+			"tower_pandas_projectile_fire_hit_0005",
+			"tower_pandas_projectile_ray_hit_0005",
+            "tower_pandas_projectile_air_hit_0005"
 		}
 	},
 	tower_pandas_projectile_fire_0001 = {

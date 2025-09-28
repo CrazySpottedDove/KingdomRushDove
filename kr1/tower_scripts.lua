@@ -9070,7 +9070,6 @@ function scripts.tower_pandas.update(this, store, script)
             local spr = this.render.sprites[panda.render]
 
             if panda.status == "on_tower" and spr.name == "spawn_in" and U.animation_finished(this, panda.render) then
-                log.error(panda.soldier_type)
                 local s = E:create_entity(panda.soldier_type)
 
                 s.info.i18n_key = s.info.i18n_key .. "_" .. panda.name_index
