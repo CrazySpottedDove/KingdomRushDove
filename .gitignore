@@ -31,3 +31,4 @@ last_build_commit.txt
 .last_sync_commit
 .sync_file_list
 .branch
+makefiles/.*
