@@ -2089,6 +2089,8 @@ local function barrack_towers()
     tt.render.sprites[1].scale = vv(1.1)
     tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].angles.attack = {"attack"}
+    tt.render.sprites[1].anchor = v(0.5, 0.5)
+    tt.render.sprites[1].name = "idle"
     tt.unit.head_offset = v(0, 12)
     tt.unit.hit_offset = v(0, 12)
     tt.unit.marker_offset = v(0, 0)

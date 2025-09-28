@@ -1022,6 +1022,10 @@ function sys.tower_upgrade:on_update(dt, ts, store)
                         if i > ne.barrack.max_soldiers then
                             U.unblock_target(store, s)
                         else
+                            local soldier_type = ne.barrack.soldier_type
+                            if ne.barrack.soldier_types then
+                                soldier_type = ne.barrack.soldier_types[i]
+                            end
                             local ns = E:create_entity(ne.barrack.soldier_type)
 
                             ns.info.i18n_key = s.info.i18n_key
