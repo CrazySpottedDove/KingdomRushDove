@@ -3,7 +3,7 @@ LOVE:=$(shell cat ./.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 LAST_SYNC_FILE := .last_sync_commit
 
-.PHONY: all debug package repackage sync
+.PHONY: all debug package repackage sync branch master
 
 all: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -27,4 +27,10 @@ monitor: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" monitor
 
 package:
-	bash ./package.sh
+	@bash ./package.sh
+
+branch:
+	@bash ./branch.sh
+
+master:
+	@bash ./master.sh
