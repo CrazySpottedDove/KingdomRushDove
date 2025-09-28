@@ -6260,38 +6260,140 @@ function CriketMenuButton:initialize(item)
     CriketMenuButton.super.initialize(self)
 
     self.item_image = item.image
+    self.item = item
+    self.entity = entity
 
     local b = KImageView:new(item.image)
-
     b.pos = v(0, 0)
+
     b.propagate_on_click = true
     b.disabled_tint_color = nil
     self.button = b
 
     self:add_child(b, 3)
 
+    local function get_pos(this, offset)
+        offset = offset or v(0, 0)
+        local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
+        local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
+        return v(x, y)
+    end
+
+    local function create_bo_and_bg_view(img_name)
+        local bg = KImageView:new(img_name .. "_bg")
+
+        bg.pos = get_pos(bg)
+
+        self:add_child(bg, 2)
+
+        local bo = KImageView:new(img_name)
+
+        bo.pos = get_pos(bo)
+        bo.propagate_on_click = true
+
+        self:add_child(bo, 4)
+
+        return bg, bo
+    end
+
     local halo = KImageView:new(item.halo)
 
     if item.halo == "glow_ico_sell" then
         halo.pos = v(-2.5, -3.5)
     else
-        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
+        halo.pos = get_pos(halo)
     end
 
     halo.propagate_on_click = true
     halo.hidden = true
     self.halo = halo
 
-    self:add_child(halo, 1)
+    self:add_child(halo)
 
-    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) and item.halo then
-        local bo = KImageView:new("main_icons_0000")
+    local bg, bo
 
-        bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
-        bo.propagate_on_click = true
-        bo.disabled_tint_color = nil
+    if table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack" }, item.action) then
+        bg, bo = create_bo_and_bg_view("main_icons_0000")
+    end
 
-        self:add_child(bo)
+    local price_tag
+
+    if item.action == "tw_upgrade" then
+        local nt = E:get_template(item.action_arg)
+
+        if nt.build_name then
+            nt = E:get_template(nt.build_name)
+        end
+
+        price_tag = tostring(nt.tower.price)
+    elseif item.action == "tw_unblock" then
+        price_tag = tostring(entity.tower_holder.unblock_price)
+    elseif item.action == "upgrade_power" then
+        local power = entity.powers[item.action_arg]
+        local price = power.level == 0 and power.price_base or power.price_inc
+
+        if power.level == power.max_level then
+            -- block empty
+        end
+
+        price_tag = tostring(price)
+    elseif item.action == "tw_buy_soldier" then
+        local nt = E:get_template(item.action_arg)
+
+        price_tag = tostring(nt.unit.price)
+    elseif item.action == "tw_buy_attack" then
+        price_tag = ""
+    end
+
+    if price_tag then
+        local pt = GGLabel:new(nil, "price_tag")
+
+        pt.id = "price_tag"
+        pt.pos = V.v(b.size.x * 0.5 - pt.size.x * 0.5, b.size.y - 11)
+        pt.text_algin = "center"
+        pt.text_offset.y = CJK(5, 2, 7, 3)
+        pt.font_name = "body"
+        pt.font_size = 11
+        pt.colors.text = { 255, 224, 0 }
+        pt.disabled_tint_color = nil
+        pt.propagate_on_click = true
+        pt.text = price_tag
+        self.price_tag = pt
+
+        self:add_child(pt)
+    end
+
+    if item.action == "upgrade_power" then
+        local power = entity.powers[item.action_arg]
+
+        if not item.no_upgrade_lights then
+            self.power_buttons = {}
+
+            for i = 1, power.max_level do
+                local pv
+
+                if i > power.level then
+                    pv = KImageView:new("power_rank_0002")
+                else
+                    pv = KImageView:new("power_rank_0001")
+                end
+
+                pv.pos = get_pos(pv, V.vclone(data.tower_menu_power_offset[i]))
+                pv.pos.x, pv.pos.y = pv.pos.x - pv.size.x * 0.5, pv.pos.y - pv.size.y * 0.5
+                pv.disabled_tint_color = nil
+                pv.propagate_on_click = true
+
+                bo:add_child(pv)
+                table.insert(self.power_buttons, pv)
+            end
+        end
+
+        if power.level >= power.max_level then
+            self:remove_child(self.halo)
+
+            self.halo = nil
+        end
     end
 
     local ufx = KImageView:new("effect_powerbuy_0001")
@@ -6301,7 +6403,7 @@ function CriketMenuButton:initialize(item)
         prefix = "effect_powerbuy",
         from = 1
     }
-    ufx.pos = v(4, -4)
+    ufx.pos = get_pos(ufx)
     ufx.hidden = true
     ufx.propagate_on_click = true
     self.ufx = ufx
@@ -7364,20 +7466,6 @@ function TowerMenuButton:initialize(item, entity)
 
     local b = KImageView:new(item.image)
     b.pos = v(0, 0)
-
-    -- if item.is_kr5 then
-    --     local kr5_scale = 56.177 / 42.667
-    --     b.size.x = b.size.x * kr5_scale
-    --     b.size.y = b.size.y * kr5_scale
-    --     b.image_scale = kr5_scale * b.image_scale
-    -- elseif item.is_kr5_change_mode then
-    --     local scale = 48 / 42.667
-    --     b.size.x = b.size.x * scale
-    --     b.size.y = b.size.y * scale
-    --     b.image_scale = scale * b.image_scale
-    --     b.pos.x = -6
-    --     b.pos.y = -6
-    -- end
 
     b.propagate_on_click = true
     b.disabled_tint_color = nil
