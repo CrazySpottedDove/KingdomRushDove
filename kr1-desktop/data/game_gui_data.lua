@@ -1900,10 +1900,11 @@ return {
         v(-112, 150),
         v(260, 150)  -- 30
     },
-	tower_menu_power_places = {
-		v(29, 3),
-		v(47, 10),
-		v(53, 27)
+	tower_menu_power_offset = {
+		-- 原版x差值18, 6 ，y差值7, 17
+		v(7, -16),
+		v(25, -9),
+		v(31, 8)
 	},
 	range_center_offset = v(0, -12),
 	damage_icons = {
