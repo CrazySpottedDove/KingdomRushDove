@@ -6710,15 +6710,15 @@ function TowerMenu:show()
 
             self:add_child(b)
 
-            if table.contains(GS.kr3_towers, entity.tower.type) then
-                local bo = KImageView:new("kr3_main_icons_over")
+            -- if table.contains(GS.kr3_towers, entity.tower.type) then
+            --     local bo = KImageView:new("kr3_main_icons_over")
 
-                bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
-                bo.propagate_on_click = true
-                bo.disabled_tint_color = nil
+            --     bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
+            --     bo.propagate_on_click = true
+            --     bo.disabled_tint_color = nil
 
-                b:add_child(bo)
-            end
+            --     b:add_child(bo)
+            -- end
         elseif item.action == "tw_sell" and entity.tower and not entity.tower.can_be_sold then
             -- block empty
         else
@@ -7435,10 +7435,10 @@ function TowerMenuButton:enable()
     self.click_disabled = false
 
     self.button:set_image(self.item_image)
-
+    self.button:enable()
     if self.price_tag then
         self.price_tag:set_image("price_tag")
-
+        self.price_tag:enable()
         self.price_tag.colors.text = {255, 224, 0}
     end
 end
@@ -7448,10 +7448,10 @@ function TowerMenuButton:disable()
 
     if self.item.action ~= "tw_change_mode" and self.item.action ~= "tw_swap_mode" then
         --self.button:set_image(self.item_image .. "_disabled")
-
+        self.button:disable()
         if self.price_tag then
-            self.price_tag:set_image("price_tag_disabled")
-
+            -- self.price_tag:set_image("price_tag_disabled")
+            self.price_tag:disable()
             self.price_tag.colors.text = {156, 146, 132}
         end
     end
@@ -7468,7 +7468,7 @@ function TowerMenuButton:initialize(item, entity)
     b.pos = v(0, 0)
 
     b.propagate_on_click = true
-    b.disabled_tint_color = nil
+    -- b.disabled_tint_color = nil
     self.button = b
 
     self:add_child(b, 3)
@@ -7487,7 +7487,7 @@ function TowerMenuButton:initialize(item, entity)
         bg.pos = get_pos(bg)
 
         self:add_child(bg, 2)
-        
+
         local bo = KImageView:new(img_name)
 
         bo.pos = get_pos(bo)

@@ -30,3 +30,5 @@ last_build_commit.txt
 .versions/
 .last_sync_commit
 .sync_file_list
+.branch
+makefiles/.*

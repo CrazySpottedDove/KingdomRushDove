@@ -2039,6 +2039,7 @@ local function barrack_towers()
 
     tt = RT("soldier_tower_pandas_green_lvl4", "soldier_militia")
     AC(tt, "nav_grid", "powers", "ranged")
+    tt.is_kr5 = true
     tt.powers.hat = CC("power")
     tt.powers.hat.cooldown = b.soldier.hat.cooldown
     tt.powers.hat.range = b.soldier.hat.range
@@ -2073,7 +2074,6 @@ local function barrack_towers()
     tt.info.portrait = "gui_bottom_info_image_soldiers_0071"
     tt.info.random_name_format = nil
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_FEMALE"
-    tt.info.fn = scripts.soldier_tower_pandas.get_info
     tt.nav_rally.delay_min = 0
     tt.nav_rally.delay_max = 0
     tt.death_go_back_delay = fts(25)
@@ -2099,7 +2099,7 @@ local function barrack_towers()
     tt.health_bar.offset = v(0, 44)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health.dead_lifetime = 3
-    tt.regen.health = b.soldier.regen_hp[4]
+    -- tt.regen.health = b.soldier.regen_hp[4]
     tt.motion.max_speed = b.soldier.speed * 1.1
     tt.ui.click_rect = r(-13, 0, 25, 30)
     tt.ui.click_rect_offset_y = 0
