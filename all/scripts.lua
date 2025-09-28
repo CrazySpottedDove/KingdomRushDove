@@ -1909,8 +1909,15 @@ function scripts.tower_barrack.update(this, store, script)
                         b.door_open = true
                         b.door_open_ts = store.tick_ts
                     end
-
-                    s = E:create_entity(b.soldier_type)
+                    local soldier_type
+                    if s then
+                        soldier_type = s.template_name
+                    elseif b.soldier_types then
+                        soldier_type = b.soldier_types[i]
+                    else
+                        soldier_type = b.soldier_type
+                    end
+                    s = E:create_entity(soldier_type)
                     s.soldier.tower_id = this.id
                     s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
                     s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)

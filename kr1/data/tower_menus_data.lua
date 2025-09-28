@@ -3035,7 +3035,8 @@ return {
                 action_arg = "pandas_retreat",
                 action = "tw_free_action",
                 halo = "glow_ico_main",
-                image = "kr5_quickmenu_retreat_icons_tower_panda",
+                -- TODO: check image
+                image = "kr5_quickmenu_action_icons_0004",
                 place = 13,
                 tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
                 tt_desc = _("TOWER_PANDAS_RETREAT_DESCRIPTION")

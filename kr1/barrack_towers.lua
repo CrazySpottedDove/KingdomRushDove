@@ -1949,6 +1949,11 @@ local function barrack_towers()
     tt.info.room_portrait = "quickmenu_main_icons_main_icons_0025_0001"
     tt.info.fn = scripts.tower_pandas.get_info
     tt.barrack.soldier_type = "soldier_tower_pandas_blue_lvl4"
+    tt.barrack.soldier_types = {
+        "soldier_tower_pandas_blue_lvl4",
+        "soldier_tower_pandas_green_lvl4",
+        "soldier_tower_pandas_red_lvl4"
+    }
     tt.barrack.solder_upgrade_map = {
         soldier_tower_pandas_green_lvl3 = "soldier_tower_pandas_green_lvl4",
         soldier_tower_pandas_red_lvl3 = "soldier_tower_pandas_red_lvl4",
@@ -1961,7 +1966,7 @@ local function barrack_towers()
     tt.main_script.remove = scripts.tower_pandas.remove
     tt.set_panda_bullet_arrived = scripts.tower_pandas.set_panda_bullet_arrived
     tt.render.sprites[1].animated = false
-    tt.render.sprites[1].name = "terrains_barrack%04i"
+    tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = v(0, 15)
     tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
