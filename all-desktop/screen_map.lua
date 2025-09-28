@@ -3223,8 +3223,8 @@ function UpgradesView:initialize(sw, sh)
 
     self.back:add_child(self.star_container)
 
-    self.stars_label = KLabel:new(V.v(self.star_container.size.x / 2, self.star_container.size.y))
-    self.stars_label.pos = v(85 + self.star_container.size.x / 2, 648)
+    self.stars_label = KLabel:new(V.v(self.star_container.size.x, self.star_container.size.y))
+    self.stars_label.pos = v(85 + self.star_container.size.x / 3.2, 648)
     self.stars_label.font = F:f("Comic Book Italic", "32")
     self.stars_label.colors.text = { 231, 222, 175 }
     self.stars_label.text = "0"
@@ -3556,10 +3556,10 @@ function UpgradeButtons:initialize(sprite, data_values, my_id, scale)
     self.size.y = self.size.y * scale
     self._scale = scale
     self.my_id = my_id
-    self.disabled_image = KImageView:new("Disabled_" .. sprite, nil, scale)
-    self.disabled_image.size.x = self.disabled_image.size.x * scale
-    self.disabled_image.size.y = self.disabled_image.size.y * scale
-    self:add_child(self.disabled_image)
+    -- self.disabled_image = KImageView:new("Disabled_" .. sprite, nil, scale)
+    -- self.disabled_image.size.x = self.disabled_image.size.x * scale
+    -- self.disabled_image.size.y = self.disabled_image.size.y * scale
+    -- self:add_child(self.disabled_image)
 
     self.data_values = data_values
     self.over_circle = KImageView:new("Upgrades_Icons_over", nil, scale)
@@ -3635,7 +3635,8 @@ end
 
 function UpgradeButtons:grey_me()
     self.grey_out = true
-    self.disabled_image.hidden = false
+    self:disable()
+    -- self.disabled_image.hidden = false
     self.cost_panel.hidden = true
     self.disabled_cost_panel.hidden = false
     self.bought = false
@@ -3645,7 +3646,8 @@ end
 
 function UpgradeButtons:ungrey_me()
     self.grey_out = false
-    self.disabled_image.hidden = true
+    self:enable()
+    -- self.disabled_image.hidden = true
     self.cost_panel.hidden = false
     self.disabled_cost_panel.hidden = true
     self.bought = false
@@ -3690,8 +3692,8 @@ function UpgradeButtons:set_bought()
     self.bought = true
     self.bought_circle.hidden = false
     self.over_circle.hidden = true
-    self.disabled_image.hidden = true
-
+    -- self.disabled_image.hidden = true
+    self:enable()
     return self.data_values.price
 end
 

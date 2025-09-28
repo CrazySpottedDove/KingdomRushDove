@@ -9,7 +9,7 @@ require("constants")
 
 local anchor_y = 0
 local image_x = 0
-local image_y, tt = nil
+local image_y, tt
 local scripts = require("game_scripts")
 
 require("templates")
