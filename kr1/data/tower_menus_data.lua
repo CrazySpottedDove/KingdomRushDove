@@ -118,7 +118,7 @@ return {
                 tt_title = _("TOWER_NECROMANCER_NAME"),
                 tt_desc = _("TOWER_NECROMANCER_DESCRIPTION")
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 check = "kr3_main_icons_0019",
                 action_arg = "tower_high_elven",
                 image = "kr3_main_icons_0107",
@@ -133,28 +133,28 @@ return {
                 tt_title = _("TOWER_ARCHMAGE_NAME"),
                 tt_desc = _("TOWER_ARCHMAGE_DESCRIPTION")
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_wild_magus",
                 image = "kr3_main_icons_0106",
                 place = 13,
                 tt_title = _("TOWER_MAGE_WILD_MAGUS_NAME"),
                 tt_desc = _("TOWER_MAGE_WILD_MAGUS_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_faerie_dragon",
                 image = "kr3_special_icons_0124",
                 place = 14,
                 tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_NAME"),
                 tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_pixie",
                 image = "kr3_special_icons_0122",
                 place = 15,
                 tt_title = _("ELVES_TOWER_PIXIE_NAME"),
                 tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_necromancer_lvl4",
                 image = "kr5_main_icons_0011",
                 place = 16,
@@ -222,28 +222,28 @@ return {
                 tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_NAME"),
                 tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_DESCRIPTION")
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_druid",
                 image = "kr3_main_icons_0111",
                 place = 12,
                 tt_title = _("TOWER_STONE_DRUID_NAME"),
                 tt_desc = _("TOWER_STONE_DRUID_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_entwood",
                 image = "kr3_main_icons_0110",
                 place = 13,
                 tt_title = _("TOWER_ENTWOOD_NAME"),
                 tt_desc = _("TOWER_ENTWOOD_DESCRIPTION"),
             }),
-            merge(templates.upgrade5, {
+            merge(templates.upgrade, {
                 action_arg = "tower_tricannon_lvl4",
                 image = "kr5_main_icons_0004",
                 tt_title = _("TOWER_TRICANNON_NAME"),
                 tt_desc = _("TOWER_TRICANNON_1_DESCRIPTION"),
                 place = 14,
             }),
-            merge(templates.upgrade5, {
+            merge(templates.upgrade, {
                 action_arg = "tower_demon_pit_lvl4",
                 image = "kr5_main_icons_0007",
                 tt_title = _("TOWER_DEMON_PIT_NAME"),
@@ -318,21 +318,21 @@ return {
                 tt_title = _("TOWER_PIRATE_WATCHTOWER_NAME"),
                 tt_desc = _("TOWER_PIRATE_WATCHTOWER_DESCRIPTION")
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_arcane",
                 image = "kr3_main_icons_0108",
                 place = 13,
                 tt_title = _("TOWER_ARCANE_ARCHER_NAME"),
                 tt_desc = _("TOWER_ARCANE_ARCHER_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_silver",
                 image = "kr3_main_icons_0109",
                 place = 14,
                 tt_title = _("TOWER_SILVER_NAME"),
                 tt_desc = _("TOWER_SILVER_DESCRIPTION"),
             }),
-            merge(templates.upgrade5, {
+            merge(templates.upgrade, {
                 action_arg = "tower_dark_elf_lvl4",
                 image = "kr5_main_icons_0032",
                 place = 15,
@@ -430,42 +430,42 @@ return {
                 tt_title = _("TOWER_BARRACK_PIRATES_NAME"),
                 tt_desc = _("TOWER_BARRACK_PIRATES_DESCRIPTION")
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_blade",
                 image = "kr3_main_icons_0104",
                 place = 16,
                 tt_title = _("TOWER_BARRACKS_BLADE_NAME"),
                 tt_desc = _("TOWER_BARRACKS_BLADE_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_forest",
                 image = "kr3_main_icons_0105",
                 place = 17,
                 tt_title = _("TOWER_FOREST_KEEPERS_NAME"),
                 tt_desc = _("TOWER_FOREST_KEEPERS_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_drow",
                 image = "kr3_special_icons_0121",
                 place = 18,
                 tt_title = _("ELVES_TOWER_SPECIAL_DROW_NAME"),
                 tt_desc = _("ELVES_TOWER_SPECIAL_DROW_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_ewok",
                 image = "kr3_main_icons_0112",
                 place = 19,
                 tt_title = _("ELVES_EWOK_NAME"),
                 tt_desc = _("ELVES_EWOK_DESCRIPTION"),
             }),
-            merge(templates.upgrade3, {
+            merge(templates.upgrade, {
                 action_arg = "tower_baby_ashbite",
                 image = "kr3_main_icons_0113",
                 place = 20,
                 tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
                 tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION"),
             }),
-            merge(templates.upgrade5, {
+            merge(templates.upgrade, {
                 action_arg = "tower_pandas_lvl4",
                 image = "kr5_main_icons_0049",
                 place = 21,
@@ -1948,7 +1948,7 @@ return {
 
     blade = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "perfect_parry",
                 image = "kr3_special_icons_0105",
                 place = 6,
@@ -1970,7 +1970,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "blade_dance",
                 image = "kr3_special_icons_0104",
                 place = 7,
@@ -1992,7 +1992,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "swirling",
                 image = "kr3_special_icons_0106",
                 place = 5,
@@ -2021,7 +2021,7 @@ return {
 
     forest = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "circle",
                 image = "kr3_special_icons_0107",
                 place = 6,
@@ -2043,7 +2043,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "eerie",
                 image = "kr3_special_icons_0109",
                 place = 5,
@@ -2065,7 +2065,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "oak",
                 image = "kr3_special_icons_0110",
                 place = 7,
@@ -2094,7 +2094,7 @@ return {
 
     druid = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "sylvan",
                 image = "kr3_special_icons_0112",
                 place = 1,
@@ -2116,7 +2116,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "nature",
                 image = "kr3_special_icons_0111",
                 place = 2,
@@ -2145,7 +2145,7 @@ return {
 
     entwood = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "clobber",
                 image = "kr3_special_icons_0113",
                 place = 2,
@@ -2167,7 +2167,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "fiery_nuts",
                 image = "kr3_special_icons_0114",
                 place = 1,
@@ -2195,7 +2195,7 @@ return {
 
     arcane = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "burst",
                 image = "kr3_special_icons_0101",
                 place = 1,
@@ -2217,7 +2217,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "slumber",
                 image = "kr3_special_icons_0100",
                 place = 2,
@@ -2245,7 +2245,7 @@ return {
 
     silver = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "sentence",
                 image = "kr3_special_icons_0102",
                 place = 1,
@@ -2267,7 +2267,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "mark",
                 image = "kr3_special_icons_0103",
                 place = 2,
@@ -2295,7 +2295,7 @@ return {
 
     wild_magus = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "eldritch",
                 image = "kr3_special_icons_0115",
                 place = 1,
@@ -2317,7 +2317,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "ward",
                 image = "kr3_special_icons_0116",
                 place = 2,
@@ -2345,7 +2345,7 @@ return {
 
     high_elven = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "timelapse",
                 image = "kr3_special_icons_0117",
                 place = 1,
@@ -2367,7 +2367,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "sentinel",
                 image = "kr3_special_icons_0118",
                 place = 2,
@@ -2395,7 +2395,7 @@ return {
 
     holder_ewok = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "tower_ewok",
                 image = "main_icons_0015",
                 place = 5,
@@ -2407,7 +2407,7 @@ return {
 
     ewok = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "armor",
                 image = "special_icons_0041",
                 place = 6,
@@ -2429,7 +2429,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "shield",
                 image = "special_icons_0009",
                 place = 5,
@@ -2447,7 +2447,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "tear",
                 image = "kr3_special_icons_0110",
                 place = 7,
@@ -2476,7 +2476,7 @@ return {
 
     faerie_dragon = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "more_dragons",
                 image = "kr3_special_icons_0124",
                 place = 1,
@@ -2498,7 +2498,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "improve_shot",
                 image = "kr3_special_icons_0125",
                 place = 2,
@@ -2522,7 +2522,7 @@ return {
 
     pixie = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "cream",
                 image = "kr3_special_icons_0122",
                 place = 1,
@@ -2540,7 +2540,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "total",
                 image = "kr3_special_icons_0123",
                 place = 2,
@@ -2568,7 +2568,7 @@ return {
 
     baby_black_dragon = {
         {
-            merge(templates.buy_attack3, {
+            merge(templates.buy_attack, {
                 action_arg = 1,
                 image = "kr3_main_icons_0114",
                 tt_title = _("ELVES_BABY_BERESAD_SPECIAL_NAME_1"),
@@ -2579,7 +2579,7 @@ return {
 
     holder_baby_ashbite = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "tower_baby_ashbite",
                 image = "kr3_main_icons_0113",
                 tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
@@ -2590,7 +2590,7 @@ return {
 
     baby_ashbite = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "blazing_breath",
                 image = "kr3_special_icons_0126",
                 place = 1,
@@ -2612,7 +2612,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "fiery_mist",
                 image = "kr3_special_icons_0127",
                 place = 2,
@@ -2633,7 +2633,7 @@ return {
 
     drow = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "life_drain",
                 image = "kr3_special_icons_0120",
                 place = 6,
@@ -2655,7 +2655,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "blade_mail",
                 image = "kr3_special_icons_0119",
                 place = 7,
@@ -2677,7 +2677,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "double_dagger",
                 image = "kr3_special_icons_0121",
                 place = 5,
@@ -2706,7 +2706,7 @@ return {
 
     holder_bastion = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "tower_bastion",
                 image = "main_icons_0015",
                 place = 5,
@@ -2718,7 +2718,7 @@ return {
 
     bastion = {
         {
-            merge(templates.upgrade_power3, {
+            merge(templates.upgrade_power, {
                 action_arg = "razor_edge",
                 image = "kr3_special_icons_0128",
                 place = 5,
@@ -2746,7 +2746,7 @@ return {
     -- 三管加农炮
     tricannon = {
         {
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "bombardment",
                 image = "kr5_special_icons_0007",
                 place = 6,
@@ -2769,7 +2769,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "overheat",
                 image = "kr5_special_icons_0008",
                 place = 7,
@@ -2813,7 +2813,7 @@ return {
                 tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
                 is_kr5_change_mode = true
             },
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "skill_soldiers",
                 image = "kr5_special_icons_0032",
                 place = 6,
@@ -2836,7 +2836,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "skill_buff",
                 image = "kr5_special_icons_0033",
                 place = 7,
@@ -2867,7 +2867,7 @@ return {
     -- 恶魔澡坑
     demon_pit = {
         {
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "master_exploders",
                 image = "kr5_special_icons_0011",
                 place = 6,
@@ -2890,7 +2890,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "big_guy",
                 image = "kr5_special_icons_0012",
                 place = 7,
@@ -2920,7 +2920,7 @@ return {
     -- 死灵法师
     necromancer_lvl4 = {
         {
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "skill_debuff",
                 image = "kr5_special_icons_0017",
                 place = 6,
@@ -2943,7 +2943,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "skill_rider",
                 image = "kr5_special_icons_0018",
                 place = 7,
@@ -2973,7 +2973,7 @@ return {
     -- 熊猫
     pandas = {
         {
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "thunder",
                 image = "kr5_special_icons_0041",
                 place = 12,
@@ -2992,7 +2992,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "hat",
                 image = "kr5_special_icons_0040",
                 place = 14,
@@ -3011,7 +3011,7 @@ return {
                     }
                 }
             }),
-            merge(templates.upgrade_power5, {
+            merge(templates.upgrade_power, {
                 action_arg = "teleport",
                 image = "kr5_special_icons_0042",
                 place = 15,

@@ -67,7 +67,8 @@ local data = require("data.game_gui_data")
 local tower_menus = require("data.tower_menus_data")
 local game_gui = {}
 
-game_gui.required_textures = {"gui_common", "gui_portraits", "achievements", "encyclopedia", "gui_notifications_common",
+game_gui.required_textures = { "gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia",
+"gui_notifications_common",
                               "gui_notifications_bg", "view_options"}
 game_gui.ref_h = GUI_REF_H
 game_gui.ref_w = GUI_REF_W
@@ -6267,17 +6268,14 @@ function CriketMenuButton:initialize(item)
     b.disabled_tint_color = nil
     self.button = b
 
-    self:add_child(b)
+    self:add_child(b, 3)
 
     local halo = KImageView:new(item.halo)
 
-    if item.is_kr3 then
-        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
-    elseif item.halo == "glow_ico_sell" then
+    if item.halo == "glow_ico_sell" then
         halo.pos = v(-2.5, -3.5)
     else
-        halo.pos = v(-5, -4)
-        halo.scale = v(1.08, 1.06)
+        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
     end
 
     halo.propagate_on_click = true
@@ -6286,8 +6284,8 @@ function CriketMenuButton:initialize(item)
 
     self:add_child(halo, 1)
 
-    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) and item.is_kr3 then
-        local bo = KImageView:new("kr3_main_icons_over")
+    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) and item.halo then
+        local bo = KImageView:new("main_icons_0000")
 
         bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
         bo.propagate_on_click = true
@@ -7347,7 +7345,7 @@ function TowerMenuButton:disable()
     self.click_disabled = true
 
     if self.item.action ~= "tw_change_mode" and self.item.action ~= "tw_swap_mode" then
-        self.button:set_image(self.item_image .. "_disabled")
+        --self.button:set_image(self.item_image .. "_disabled")
 
         if self.price_tag then
             self.price_tag:set_image("price_tag_disabled")
@@ -7367,35 +7365,32 @@ function TowerMenuButton:initialize(item, entity)
     local b = KImageView:new(item.image)
     b.pos = v(0, 0)
 
-    if item.is_kr5 then
-        local kr5_scale = 56.177 / 42.667
-        b.size.x = b.size.x * kr5_scale
-        b.size.y = b.size.y * kr5_scale
-        b.image_scale = kr5_scale * b.image_scale
-    elseif item.is_kr5_change_mode then
-        local scale = 48 / 42.667
-        b.size.x = b.size.x * scale
-        b.size.y = b.size.y * scale
-        b.image_scale = scale * b.image_scale
-        b.pos.x = -6
-        b.pos.y = -6
-    end
+    -- if item.is_kr5 then
+    --     local kr5_scale = 56.177 / 42.667
+    --     b.size.x = b.size.x * kr5_scale
+    --     b.size.y = b.size.y * kr5_scale
+    --     b.image_scale = kr5_scale * b.image_scale
+    -- elseif item.is_kr5_change_mode then
+    --     local scale = 48 / 42.667
+    --     b.size.x = b.size.x * scale
+    --     b.size.y = b.size.y * scale
+    --     b.image_scale = scale * b.image_scale
+    --     b.pos.x = -6
+    --     b.pos.y = -6
+    -- end
 
     b.propagate_on_click = true
     b.disabled_tint_color = nil
     self.button = b
 
-    self:add_child(b)
+    self:add_child(b, 3)
 
     local halo = KImageView:new(item.halo)
 
-    if item.is_kr3 then
-        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
-    elseif item.halo == "glow_ico_sell" then
+    if item.halo == "glow_ico_sell" then
         halo.pos = v(-2.5, -3.5)
     else
-        halo.pos = v(-5, -4)
-        halo.scale = v(1.08, 1.06)
+        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
     end
 
     halo.propagate_on_click = true
@@ -7404,8 +7399,8 @@ function TowerMenuButton:initialize(item, entity)
 
     self:add_child(halo, 1)
 
-    if item.is_kr3 and item.action == "upgrade_power" then
-        local bg = KImageView:new("kr3_special_icons_bg")
+    if item.action == "upgrade_power" then
+        local bg = KImageView:new("special_icons_0000")
 
         bg.pos = v(math.floor(-0.5 * (bg.size.x - b.size.x)), math.floor(-0.5 * (bg.size.y - b.size.y)))
         bg.propagate_on_click = true
@@ -7413,8 +7408,8 @@ function TowerMenuButton:initialize(item, entity)
         self:add_child(bg, 1)
     end
 
-    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) and item.is_kr3 then
-        local bo = KImageView:new("kr3_main_icons_over")
+    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) then
+        local bo = KImageView:new("main_icons_0000")
 
         bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
         bo.propagate_on_click = true

@@ -46,21 +46,21 @@ return {
         tt_title = _("TOWER_PIRATE_WATCHTOWER_NAME"),
         tt_desc = _("TOWER_PIRATE_WATCHTOWER_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_arcane",
         image = "kr3_main_icons_0108",
         place = 13,
         tt_title = _("TOWER_ARCANE_ARCHER_NAME"),
         tt_desc = _("TOWER_ARCANE_ARCHER_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_silver",
         image = "kr3_main_icons_0109",
         place = 14,
         tt_title = _("TOWER_SILVER_NAME"),
         tt_desc = _("TOWER_SILVER_DESCRIPTION")
     }),
-    merge(templates.upgrade5, {
+    merge(templates.upgrade, {
         action_arg = "tower_dark_elf_lvl4",
         image = "kr5_main_icons_0032",
         tt_title = _("TOWER_DARK_ELF_NAME"),
@@ -130,35 +130,35 @@ return {
         tt_title = _("TOWER_BARRACK_PIRATES_NAME"),
         tt_desc = _("TOWER_BARRACK_PIRATES_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_blade",
         image = "kr3_main_icons_0104",
         place = 16,
         tt_title = _("TOWER_BARRACKS_BLADE_NAME"),
         tt_desc = _("TOWER_BARRACKS_BLADE_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_forest",
         image = "kr3_main_icons_0105",
         place = 17,
         tt_title = _("TOWER_FOREST_KEEPERS_NAME"),
         tt_desc = _("TOWER_FOREST_KEEPERS_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_drow",
         image = "kr3_special_icons_0121",
         place = 18,
         tt_title = _("ELVES_TOWER_SPECIAL_DROW_NAME"),
         tt_desc = _("ELVES_TOWER_SPECIAL_DROW_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_ewok",
         image = "kr3_main_icons_0112",
         place = 19,
         tt_title = _("ELVES_EWOK_NAME"),
         tt_desc = _("ELVES_EWOK_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_baby_ashbite",
         image = "kr3_main_icons_0113",
         place = 20,
@@ -200,28 +200,28 @@ return {
         tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_NAME"),
         tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_druid",
         image = "kr3_main_icons_0111",
         place = 12,
         tt_title = _("TOWER_DRUID_HENGE_NAME"),
         tt_desc = _("TOWER_DRUID_HENGE_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_entwood",
         image = "kr3_main_icons_0110",
         place = 13,
         tt_title = _("TOWER_ENTWOOD_NAME"),
         tt_desc = _("TOWER_ENTWOOD_DESCRIPTION")
     }),
-    merge(templates.upgrade5, {
+    merge(templates.upgrade, {
         action_arg = "tower_tricannon_lvl4",
         image = "kr5_main_icons_0004",
         tt_title = _("三管加农炮"),
         tt_desc = _("TOWER_TRICANNON_1_DESCRIPTION"),
         place = 14
     }),
-    merge(templates.upgrade5, {
+    merge(templates.upgrade, {
         action_arg = "tower_demon_pit_lvl4",
         image = "kr5_main_icons_0007",
         tt_title = _("TOWER_DEMON_PIT_NAME"),
@@ -263,35 +263,35 @@ return {
         tt_title = _("TOWER_NECROMANCER_NAME"),
         tt_desc = _("TOWER_NECROMANCER_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_wild_magus",
         image = "kr3_main_icons_0106",
         place = 13,
         tt_title = _("TOWER_MAGE_WILD_MAGUS_NAME"),
         tt_desc = _("TOWER_MAGE_WILD_MAGUS_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_high_elven",
         image = "kr3_main_icons_0107",
         place = 11,
         tt_title = _("TOWER_MAGE_HIGH_ELVEN_NAME"),
         tt_desc = _("TOWER_MAGE_HIGH_ELVEN_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_faerie_dragon",
         image = "kr3_special_icons_0124",
         place = 14,
         tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_NAME"),
         tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_DESCRIPTION")
     }),
-    merge(templates.upgrade3, {
+    merge(templates.upgrade, {
         action_arg = "tower_pixie",
         image = "kr3_special_icons_0122",
         place = 15,
         tt_title = _("ELVES_TOWER_PIXIE_NAME"),
         tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION")
     }),
-    merge(templates.upgrade5, {
+    merge(templates.upgrade, {
         action_arg = "tower_necromancer_lvl4",
         image = "kr5_main_icons_0011",
         place = 16,
