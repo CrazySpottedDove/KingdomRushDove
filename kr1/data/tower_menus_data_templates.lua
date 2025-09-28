@@ -28,18 +28,6 @@ templates.upgrade = {
     tt_desc = nil
 }
 
--- 三代升级按钮
-templates.upgrade3 = merge(templates.upgrade, {
-    check = "kr3_main_icons_0019",
-    is_kr3 = true
-})
-
--- 五代升级按钮
-templates.upgrade5 = merge(templates.upgrade3, {
-    check = "kr5_main_icons_0019",
-    -- is_kr5 = true,
-})
-
 -- 技能升级按钮
 templates.upgrade_power = {
     check = "special_icons_0020",
@@ -67,18 +55,6 @@ templates.upgrade_power = {
     }
 }
 
--- 三代技能升级按钮
-templates.upgrade_power3 = merge(templates.upgrade_power, {
-    check = "kr3_special_icons_0020",
-    is_kr3 = true
-})
-
--- 五代技能升级按钮
-templates.upgrade_power5 = merge(templates.upgrade_power3, {
-    check = "kr5_special_icons_0020",
-    is_kr5 = true
-})
-
 -- 购买雇佣兵按钮
 templates.buy_soldier = {
     action = "tw_buy_soldier",
@@ -101,11 +77,6 @@ templates.buy_attack = {
     tt_title = nil,
     tt_desc = nil
 }
-
--- 三代购买攻击按钮
-templates.buy_attack3 = merge(templates.buy_attack, {
-    is_kr3 = true
-})
 
 -- 出售按钮
 templates.sell = {
