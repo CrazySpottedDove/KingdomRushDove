@@ -8798,18 +8798,16 @@ function scripts.tower_pandas.update(this, store, script)
     end
 
     local function check_powers()
-        if this.powers then
-            for pn, p in pairs(this.powers) do
-                if p.changed then
-                    p.changed = nil
+        for pn, p in pairs(this.powers) do
+            if p.changed then
+                p.changed = nil
 
-                    for _, s in pairs(b.soldiers) do
-                        if s.powers[pn] == nil then
-                            -- block empty
-                        else
-                            s.powers[pn].level = p.level
-                            s.powers[pn].changed = true
-                        end
+                for _, s in pairs(b.soldiers) do
+                    if s.powers[pn] == nil then
+                        -- block empty
+                    else
+                        s.powers[pn].level = p.level
+                        s.powers[pn].changed = true
                     end
                 end
             end
@@ -9081,7 +9079,7 @@ function scripts.tower_pandas.update(this, store, script)
                 s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, math.pi * 0.25)
                 s.pos = V.vclone(s.nav_rally.pos)
                 s.nav_rally.new = true
-
+                U.soldier_inherit_tower_buff_factor(s, this)
                 queue_insert(store, s)
 
                 b.soldiers[#b.soldiers + 1] = s
@@ -9145,7 +9143,7 @@ function scripts.tower_pandas.update(this, store, script)
             local cfg = panda.shoot_cfg
 
             if cfg and store.tick_ts >= cfg.shoot_ts then
-                enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, at.range + 15, false, a.vis_flags,
+                enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range + 15, false, a.vis_flags,
                     a.vis_bans)
 
                 if enemy then
@@ -9273,10 +9271,10 @@ function scripts.tower_pandas.update(this, store, script)
             else
                 a.cooldown = a_base_cooldown / (#this.pandas - #this.barrack.soldiers)
 
-                if store.tick_ts - a.ts < a.cooldown then
+                if store.tick_ts - a.ts < a.cooldown * this.tower.cooldown_factor then
                     -- block empty
                 else
-                    enemy = U.find_foremost_enemy(store.entities, tpos(this), 0, at.range, fts(17), a.vis_flags,
+                    enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range, fts(17), a.vis_flags,
                         a.vis_bans)
 
                     if enemy then
@@ -9321,6 +9319,8 @@ function scripts.tower_pandas.update(this, store, script)
                             is_panda_green = is_panda_green,
                             shoot_ts = a.ts + bullet_data.shoot_time
                         }
+                    else
+                        a.ts = a.ts + fts(2)
                     end
                 end
             end
@@ -9479,7 +9479,7 @@ function scripts.tower_pandas_ray.update(this, store)
 
         for _, mod_name in pairs(mods) do
             local m = E:create_entity(mod_name)
-
+            m.modifier.damage_factor = b.damage_factor
             m.modifier.target_id = b.target_id
 
             if m.damage_from_bullet then
@@ -9725,7 +9725,7 @@ function scripts.bullet_tower_pandas_air.update(this, store, script)
 
                 m.modifier.target_id = b.target_id
                 m.modifier.level = b.level
-
+                m.modifier.damage_factor = b.damage_factor
                 queue_insert(store, m)
             end
         end
@@ -9762,7 +9762,7 @@ function scripts.bullet_tower_pandas_air.update(this, store, script)
     end
 
     if this.bounces < this.max_bounces[b.level] then
-        local targets = U.find_enemies_in_range(store.entities, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans,
+        local targets = U.find_enemies_in_range(store, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans,
             function(v)
                 return not table.contains(already_hit, v.id)
             end)
@@ -9798,47 +9798,6 @@ function scripts.bullet_tower_pandas_air.update(this, store, script)
 end
 
 scripts.soldier_tower_pandas = {}
-
-function scripts.soldier_tower_pandas.get_info(this)
-    local attacks
-
-    if this.melee and this.melee.attacks then
-        attacks = this.melee.attacks
-    elseif this.ranged and this.ranged.attacks then
-        attacks = this.ranged.attacks
-    end
-
-    local min, max
-
-    for _, a in pairs(attacks) do
-        if a.damage_min then
-            local hit_times_mult = a.hit_times and #a.hit_times or 1
-
-            min, max = a.damage_min * hit_times_mult, a.damage_max * hit_times_mult
-
-            break
-        end
-    end
-
-    if this.unit and min then
-        min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-    end
-
-    if min and max then
-        min, max = math.ceil(min), math.ceil(max)
-    end
-
-    return {
-        type = STATS_TYPE_SOLDIER,
-        hp = this.health.hp,
-        hp_max = this.health.hp_max,
-        damage_min = min,
-        damage_max = max,
-        damage_icon = this.info.damage_icon,
-        armor = this.health.armor,
-        respawn = this.health.dead_lifetime
-    }
-end
 
 function scripts.soldier_tower_pandas.insert(this, store, script)
     if this.melee then
@@ -10019,9 +9978,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
     while true do
         if this.health.dead then
-            if IS_KR5 then
-                SU.remove_modifiers(store, this)
-            end
+            SU.remove_modifiers(store, this)
 
             this.back_to_tower_ts = store.tick_ts + this.death_go_back_delay
 
@@ -10086,8 +10043,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                 else
                     local grid_size = a_i.damage_area * 0.8
                     local min_enemies = 2
-                    local crowded_pos, enemy_count = SU5.find_most_crowded_area(enemies, this.pos, a_i.max_range,
-                        grid_size, min_enemies)
+                    local _, _, crowded_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a_i.max_range, nil, a_i.vis_flags, a_i.vis_bans, nil, nil, a_i.damage_area)
 
                     if crowded_pos then
                         a_i.ts = store.tick_ts
@@ -10123,7 +10079,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                             queue_insert(store, fx)
 
                             if shoot_index == 2 then
-                                local affected = U.find_enemies_in_range(store.entities, crowded_pos, 0,
+                                local affected = U.find_enemies_in_range(store, crowded_pos, 0,
                                     a_i.damage_area, a_i.vis_flags, a_i.vis_bans)
 
                                 if affected then
@@ -10136,7 +10092,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
                                             local dmin, dmax = a_i.damage_min, a_i.damage_max
 
-                                            d.value = math.random(dmin, dmax)
+                                            d.value = math.random(dmin, dmax) * this.unit.damage_factor
                                             d.damage_type = a_i.damage_type
 
                                             queue_damage(store, d)
@@ -10145,7 +10101,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
                                             mod.modifier.target_id = enemy.id
                                             mod.modifier.source_id = this.id
-
+                                            mod.modifier.damage_factor = this.unit.damage_factor
                                             queue_insert(store, mod)
                                         end
                                     end
@@ -10162,7 +10118,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             end
 
             if can_teleport() then
-                local target, targets = U.find_nearest_enemy(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags,
+                local target, targets = U.find_nearest_enemy(store, this.pos, 0, a_i.max_range, a_i.vis_flags,
                     a_i.vis_bans)
 
                 if not target or not targets or #targets < 1 then
@@ -10178,7 +10134,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
                     U.y_wait(store, a_i.shoot_time)
 
-                    local target, targets = U.find_nearest_enemy(store.entities, this.pos, 0, a_i.max_range,
+                    local target, targets = U.find_nearest_enemy(store, this.pos, 0, a_i.max_range,
                         a_i.vis_flags, a_i.vis_bans)
 
                     if not target or #targets < 1 then
@@ -10201,7 +10157,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
                             local dmin, dmax = a_i.damage_min, a_i.damage_max
 
-                            d.value = math.random(dmin, dmax)
+                            d.value = math.random(dmin, dmax) * this.unit.damage_factor
                             d.damage_type = a_i.damage_type
 
                             queue_damage(store, d)
