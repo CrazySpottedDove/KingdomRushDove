@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WINDOWS_DIR="$1"
-LAST_SYNC_FILE=".last_sync_commit"
+LAST_SYNC_FILE="makefiles/.last_sync_commit"
 
 echo -e "\033[1;36m=== sync changed files since last sync to: $WINDOWS_DIR ===\033[0m"
 
