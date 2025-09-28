@@ -26,7 +26,7 @@ require("constants")
 game = {}
 game.required_textures = {"go_decals", "go_enemies_common", "go_towers"}
 game.scale_required_textures = { "go_towers_tricannon", "go_towers_dark_elf", "go_towers_demon_pit",
-    "go_towers_necromancer", "go_towers_pandas" }
+    "go_towers_necromancer", "go_towers_pandas" ,"go_towers_ray"}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
