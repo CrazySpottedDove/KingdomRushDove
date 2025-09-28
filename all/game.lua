@@ -25,18 +25,19 @@ require("constants")
 
 game = {}
 game.required_textures = {"go_decals", "go_enemies_common", "go_towers"}
-game.scale_required_textures = { "go_towers_tricannon", "go_towers_dark_elf", "go_towers_demon_pit",
-    "go_towers_necromancer", "go_towers_pandas" ,"go_towers_ray"}
+game.scale_required_textures = {"go_towers_tricannon", "go_towers_dark_elf", "go_towers_demon_pit",
+                                "go_towers_necromancer", "go_towers_pandas", "go_towers_ray"}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
-game.required_sounds = { "common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
-    "tower_demon_pit", "tower_necromancer", "tower_pandas" ,"tower_ray"}
+game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
+                        "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray"}
 
-game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle","main_script",  "timed", "tween", "endless_patch","health",
-                           "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade", "game_upgrades",
-                           "texts", "particle_system", "render", "sound_events", "seen_tracker","performance_monitor","spatial_index","last_hook"}
+game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
+                           "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
+                           "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
+                           "performance_monitor", "spatial_index", "last_hook"}
 
 function game:init(screen_w, screen_h, done_callback)
     self.dash_start_offset = 0
@@ -808,37 +809,37 @@ function game:draw_game()
             while i <= #path_line and path_line[i] < self.dash_start_offset do
                 i = i + 1
             end
-            local x1 = path[i-1].x
+            local x1 = path[i - 1].x
             local x2 = path[i].x
-            local y1 = REF_H - path[i-1].y
+            local y1 = REF_H - path[i - 1].y
             local y2 = REF_H - path[i].y
-            local factor = (self.dash_start_offset - path_line[i - 1]) / (path_line[i] - path_line[i-1])
-            G.line((x2-x1) * factor + x1,(y2-y1)*factor + y1, x2, y2)
+            local factor = (self.dash_start_offset - path_line[i - 1]) / (path_line[i] - path_line[i - 1])
+            G.line((x2 - x1) * factor + x1, (y2 - y1) * factor + y1, x2, y2)
             local line_len = path_line[i] - self.dash_start_offset
             -- 从第 i 个点开始往下画线
             while i < #path_line do
                 while line_len <= dash_length + gap_length do
-                    local next_span_len = path_line[i+1] - path_line[i]
+                    local next_span_len = path_line[i + 1] - path_line[i]
                     while next_span_len <= 0 do
                         i = i + 1
                         if i >= #path_line then
                             break
                         end
-                        next_span_len = path_line[i+1] - path_line[i]
+                        next_span_len = path_line[i + 1] - path_line[i]
                     end
                     if i >= #path_line then
                         break
                     end
                     if line_len + next_span_len < dash_length then
-                        G.line(path[i].x, REF_H - path[i].y, path[i+1].x, REF_H - path[i+1].y)
+                        G.line(path[i].x, REF_H - path[i].y, path[i + 1].x, REF_H - path[i + 1].y)
                     else
                         if line_len < dash_length then
                             local factor = (dash_length - line_len) / next_span_len
                             local x1 = path[i].x
                             local y1 = REF_H - path[i].y
-                            local x2 = path[i+1].x
-                            local y2 = REF_H - path[i+1].y
-                            G.line(x1, y1, x1 + (x2 - x1) * factor, y1 + (y2-y1)* factor)
+                            local x2 = path[i + 1].x
+                            local y2 = REF_H - path[i + 1].y
+                            G.line(x1, y1, x1 + (x2 - x1) * factor, y1 + (y2 - y1) * factor)
                         end
                     end
                     line_len = line_len + next_span_len
@@ -847,13 +848,13 @@ function game:draw_game()
                         break
                     end
                 end
-                local factor = (line_len - dash_length - gap_length) / (path_line[i] - path_line[i-1])
+                local factor = (line_len - dash_length - gap_length) / (path_line[i] - path_line[i - 1])
                 if factor > 0 then
-                    local x1 = path[i-1].x
-                    local y1 = REF_H - path[i-1].y
+                    local x1 = path[i - 1].x
+                    local y1 = REF_H - path[i - 1].y
                     local x2 = path[i].x
                     local y2 = REF_H - path[i].y
-                    G.line(x2 - (x2 - x1)* factor, y2 - (y2 - y1)*factor, x2, y2)
+                    G.line(x2 - (x2 - x1) * factor, y2 - (y2 - y1) * factor, x2, y2)
                     line_len = line_len - dash_length - gap_length
                 end
             end
