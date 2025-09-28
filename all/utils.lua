@@ -2624,4 +2624,107 @@ function U.soldier_inherit_tower_buff_factor(soldier, tower)
     soldier.cooldown_factor = soldier.cooldown_factor * tower.tower.cooldown_factor
 end
 
+local vis_meta = {}
+
+function vis_meta.__index(t, k)
+    if k == "bans" then
+        return t._bans_stack_value
+    end
+end
+
+function vis_meta.__newindex(t, k, v)
+    if k == "bans" then
+        rawset(t, "_bans_stack", nil)
+        rawset(t, "_bans_stack_value", nil)
+        rawset(t, "bans", v)
+    else
+        rawset(t, k, v)
+    end
+end
+
+function U.calc_vis_stack(s)
+    local o = 0
+
+    for _, r in pairs(s) do
+        local op, flag = unpack(r)
+
+        if op == "set" then
+            o = flag
+        else
+            local fop = bit[op]
+
+            if not fop then
+                -- block empty
+            else
+                o = fop(o, flag)
+            end
+        end
+    end
+
+    return o
+end
+
+function U.push_bans(t, value, op)
+    if not getmetatable(t) then
+        setmetatable(t, vis_meta)
+    end
+
+    if not t._bans_stack then
+        rawset(t, "_bans_stack", {})
+        table.insert(t._bans_stack, {"set", t.bans})
+        rawset(t, "bans", nil)
+    end
+
+    op = op or "bor"
+
+    if op ~= "set" and not bit[op] then
+        if DEBUG then
+            assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
+        else
+            return
+        end
+    end
+
+    local row = {op, value}
+
+    table.insert(t._bans_stack, row)
+    rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+
+    return row
+end
+
+function U.pop_bans(t, ref)
+    if not t._bans_stack then
+        if DEBUG then
+            log.error("error in pop_ban: nil _bans_stack for vis table %s", t)
+
+            return
+        else
+            return
+        end
+    end
+
+    if #t._bans_stack <= 1 then
+        if DEBUG then
+            assert(false, "error in pop_ban: popping with stack size <= 1 for vis " .. tostring(t))
+        else
+            return
+        end
+    end
+
+    local ti = table.keyforobject(t._bans_stack, ref)
+
+    if ti ~= nil then
+        table.remove(t._bans_stack, ti)
+
+        if #t._bans_stack == 1 then
+            rawset(t, "bans", t._bans_stack[1][2])
+            rawset(t, "_bans_stack", nil)
+            rawset(t, "_bans_stack_value", nil)
+        else
+            rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+        end
+    end
+end
+
 return U
