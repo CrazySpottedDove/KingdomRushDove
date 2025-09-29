@@ -37,9 +37,10 @@ for path, info in pairs(new_index) do
     if not oinfo or oinfo.size ~= info.size or oinfo.mtime ~= info.mtime then
         local fullpath = assets_dir .. "/" .. path
         print("上传: " .. path)
-        -- 用双引号包裹 fullpath，防止 shell 误解析特殊字符
+        -- 用双引号包裹 path，确保 asset 名字带路径
+        local quoted_path = '"' .. path:gsub('"', '\\"') .. '"'
         local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
-        local cmd = string.format('gh release upload assets-latest %s --clobber', quoted_fullpath)
+        local cmd = string.format('gh release upload assets-latest %s#%s --clobber', quoted_fullpath, quoted_path)
         os.execute(cmd)
     end
 end
