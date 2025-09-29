@@ -2,6 +2,10 @@
 
 ## 美术资源的同步
 
+### 预备工具
+
+确保 `git` 和 `gh` 已添加到环境变量。
+
 ### 注册本地美术资源路径
 
 首先，在 `makefiles` 目录下创建 `.assets_path.txt`，在里面写上你本地美术资源目录。如，我在 `wsl` 下开发，但是美术资源放在 windows 中，那么我的 `.assets_path.txt` 的内容就可能是
@@ -28,7 +32,7 @@ lua ./scripts/gen_assets_index.lua
 lua ./scripts/upload_assets.lua
 ```
 
-来上传美术资源。这个命令会比较本地的 `assets_index.lua` 和远程仓库的 `assets_index.lua`，来识别两者到底有什么差别。然后，这个命令会把需要上传的本地美术资源上传到 github release 中。
+来上传美术资源。这个命令会比较本地的 `assets_index.lua` 和远程仓库的 master 分支的 `assets_index.lua`，来识别两者到底有什么差别。然后，这个命令会把需要上传的本地美术资源上传到 github release 中。
 
 需要注意的是，如果远程仓库的 `assets_index.lua` 信息和远程仓库中实际拥有的美术资源情况不一致，可能导致一些问题。因此，在执行完 `gen_assets_index.lua` 后，请务必保证成功上传全部美术资源后，再将改变进行 commit。
 
