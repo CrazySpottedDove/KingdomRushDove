@@ -13,23 +13,36 @@ end
 local assets_dir = read_assets_dir()
 local new_index = dofile("_assets/assets_index.lua")
 
+local is_windows = package.config:sub(1, 1) == '\\'
+local null_dev = is_windows and "NUL" or "/dev/null"
+
 -- 从远程 git 仓库获取最新版本的 assets_index.lua
-os.execute("git show origin/master:_assets/assets_index.lua > _assets/assets_index.remote.lua 2>NUL || true")
+os.execute(string.format(
+    "git show origin/master:_assets/assets_index.lua > _assets/assets_index.remote.lua 2>%s || true", null_dev))
 local old_index = {}
 local f = io.open("_assets/assets_index.remote.lua", "r")
 if f then
     f:close();
-    old_index = dofile("_assets/assets_index.remote.lua")
+    old_index = dofile("_assets/assets_index.remote.lua") or {}
 end
+
+-- 确保 Release 存在
+local create_release_cmd = is_windows and
+                               'gh release create assets-latest --title "Assets Latest" --notes "Auto created" 2>NUL || exit /b 0' or
+                               'gh release create assets-latest --title "Assets Latest" --notes "Auto created" 2>/dev/null || true'
+os.execute(create_release_cmd)
 
 for path, info in pairs(new_index) do
     local oinfo = old_index[path]
     if not oinfo or oinfo.size ~= info.size or oinfo.mtime ~= info.mtime then
         local fullpath = assets_dir .. "/" .. path
         print("上传: " .. path)
-        local cmd = string.format('gh release upload assets-latest "%s" --clobber', fullpath)
+        -- 用双引号包裹 fullpath，防止 shell 误解析特殊字符
+        local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
+        local cmd = string.format('gh release upload assets-latest %s --clobber', quoted_fullpath)
         os.execute(cmd)
     end
 end
 
 print("上传完成")
+
