@@ -2935,6 +2935,7 @@ function sys.last_hook:on_remove(e, d)
     if e.render then
         d.entities_with_render[e.id] = nil
     end
+    -- log.error(e.template_name)
     return true
 end
 

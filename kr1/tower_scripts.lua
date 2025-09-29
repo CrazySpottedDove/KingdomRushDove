@@ -10224,8 +10224,8 @@ function scripts.tower_ray.update(this, store)
     local ab = this.attacks.list[1]
     local ac = this.attacks.list[2]
     local as = this.attacks.list[3]
-    local pow_c = this.powers and this.powers.chain or nil
-    local pow_s = this.powers and this.powers.sheep or nil
+    local pow_c = this.powers.chain
+    local pow_s = this.powers.sheep
     local last_ts = store.tick_ts - ab.cooldown
 
     a._last_target_pos = a._last_target_pos or v(REF_W, 0)
@@ -10344,45 +10344,43 @@ function scripts.tower_ray.update(this, store)
         end
     end
 
-    if this.tower.level == 4 then
-        for i = 1, #this.rocks_ids + #this.back_rocks_ids do
-            local rock_sid = this.render.sid_rocks + i - 1
-            local prop_id = #this.crystals_ids + #this.stones_ids + i
-            local start_offset = V.vclone(this.render.sprites[2].offset)
-            local end_offset = V.v(start_offset.x, start_offset.y + 5)
-            local frec = 4
-
-            this.tween.props[prop_id] = E:clone_c("tween_prop")
-            this.tween.props[prop_id].name = "offset"
-            this.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
-            this.tween.props[prop_id].sprite_id = rock_sid
-            this.tween.props[prop_id].loop = true
-            this.tween.props[prop_id].interp = "sine"
-            this.tween.props[prop_id].ts = store.tick_ts - i
-        end
-
-        local core_rock_sid = 2
-        local prop_id = #this.crystals_ids + #this.stones_ids + #this.rocks_ids + #this.back_rocks_ids + 1
+    for i = 1, #this.rocks_ids + #this.back_rocks_ids do
+        local rock_sid = this.render.sid_rocks + i - 1
+        local prop_id = #this.crystals_ids + #this.stones_ids + i
         local start_offset = V.vclone(this.render.sprites[2].offset)
-        local end_offset = V.v(start_offset.x, start_offset.y + 4)
-        local frec = 5
+        local end_offset = V.v(start_offset.x, start_offset.y + 5)
+        local frec = 4
 
         this.tween.props[prop_id] = E:clone_c("tween_prop")
         this.tween.props[prop_id].name = "offset"
         this.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
-        this.tween.props[prop_id].sprite_id = core_rock_sid
+        this.tween.props[prop_id].sprite_id = rock_sid
         this.tween.props[prop_id].loop = true
         this.tween.props[prop_id].interp = "sine"
-        this.tween.props[prop_id].ts = store.tick_ts
-        prop_id = prop_id + 1
-        this.tween.props[prop_id] = E:clone_c("tween_prop")
-        this.tween.props[prop_id].name = "scale"
-        this.tween.props[prop_id].keys = {{0, V.vv(1)}, {frec / 2, V.vv(0.9)}, {frec, V.vv(1)}}
-        this.tween.props[prop_id].sprite_id = this.render.sid_core_rock_shadow
-        this.tween.props[prop_id].loop = true
-        this.tween.props[prop_id].interp = "sine"
-        this.tween.props[prop_id].ts = this.tween.props[prop_id - 1].ts
+        this.tween.props[prop_id].ts = store.tick_ts - i
     end
+
+    local core_rock_sid = 2
+    local prop_id = #this.crystals_ids + #this.stones_ids + #this.rocks_ids + #this.back_rocks_ids + 1
+    local start_offset = V.vclone(this.render.sprites[2].offset)
+    local end_offset = V.v(start_offset.x, start_offset.y + 4)
+    local frec = 5
+
+    this.tween.props[prop_id] = E:clone_c("tween_prop")
+    this.tween.props[prop_id].name = "offset"
+    this.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
+    this.tween.props[prop_id].sprite_id = core_rock_sid
+    this.tween.props[prop_id].loop = true
+    this.tween.props[prop_id].interp = "sine"
+    this.tween.props[prop_id].ts = store.tick_ts
+    prop_id = prop_id + 1
+    this.tween.props[prop_id] = E:clone_c("tween_prop")
+    this.tween.props[prop_id].name = "scale"
+    this.tween.props[prop_id].keys = {{0, V.vv(1)}, {frec / 2, V.vv(0.9)}, {frec, V.vv(1)}}
+    this.tween.props[prop_id].sprite_id = this.render.sid_core_rock_shadow
+    this.tween.props[prop_id].loop = true
+    this.tween.props[prop_id].interp = "sine"
+    this.tween.props[prop_id].ts = this.tween.props[prop_id - 1].ts
 
     local function find_target(aa)
         local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, aa.node_prediction,
@@ -10402,49 +10400,43 @@ function scripts.tower_ray.update(this, store)
     end
 
     while true do
+        log.error("while")
         if this.tower.blocked then
-            coroutine.yield()
+            -- block empty
         else
-            if this.powers then
-                for k, pow in pairs(this.powers) do
-                    if pow.changed then
-                        pow.changed = nil
+            if pow_c.changed then
+                pow_c.changed = nil
+                if pow_c.level >= 1 then
+                    ab.disabled = true
+                    ac.disabled = false
+                end
 
-                        if pow == pow_c then
-                            if pow.level >= 1 then
-                                ab.disabled = true
-                                ac.disabled = false
-                            end
+                local b = E:get_template(ac.bullet)
 
-                            local b = E:get_template(ac.bullet)
+                b.damage_mult = pow_c.damage_mult[pow_c.level]
+                ac.ts = store.tick_ts - ac.cooldown
 
-                            b.damage_mult = pow.damage_mult[pow.level]
-                            ac.ts = store.tick_ts - ac.cooldown
+                if not pow_c._shock_fx then
+                    pow_c._shock_fx = true
+                    for i = 1, #this.shocks_ids do
+                        local shock_fx = E:create_entity(this.shock_fx)
 
-                            if not pow_c._shock_fx then
-                                pow_c._shock_fx = true
-                                for i = 1, #this.shocks_ids do
-                                    local shock_fx = E:create_entity(this.shock_fx)
+                        shock_fx.pos = tpos(this)
+                        shock_fx.render.sprites[1].prefix = shock_fx.render.sprites[1].prefix .. this.shocks_ids[i]
+                        shock_fx.render.sprites[1].ts = store.tick_ts
+                        shock_fx.tower_id = this.id
 
-                                    shock_fx.pos = tpos(this)
-                                    shock_fx.render.sprites[1].prefix =
-                                        shock_fx.render.sprites[1].prefix .. this.shocks_ids[i]
-                                    shock_fx.render.sprites[1].ts = store.tick_ts
-                                    shock_fx.tower_id = this.id
-
-                                    queue_insert(store, shock_fx)
-                                    U.animation_start(shock_fx, "idle", nil, store.tick_ts, true)
-                                end
-                            end
-                        end
-
-                        if pow == pow_s then
-                            as.disabled = false
-                            as.cooldown = pow.cooldown[1]
-                            as.ts = store.tick_ts - as.cooldown
-                        end
+                        queue_insert(store, shock_fx)
+                        U.animation_start(shock_fx, "idle", nil, store.tick_ts, true)
                     end
                 end
+            end
+
+            if pow_s.changed then
+                pow_s.changed = nil
+                as.disabled = false
+                as.cooldown = pow_s.cooldown[1]
+                as.ts = store.tick_ts - as.cooldown
             end
 
             SU.towers_swaped(store, this, this.attacks.list)
@@ -10661,8 +10653,6 @@ function scripts.tower_ray.update(this, store)
                             if this.tower.blocked or V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) >
                                 range_to_stay * range_to_stay then
                                 b.force_stop_ray = true
-
-                                log.info("(%s) tower ray target (%s) out of range_to_stay", this.id, enemy.id)
                             end
 
                             ::label_989_1::
@@ -10707,9 +10697,9 @@ function scripts.tower_ray.update(this, store)
 
                 U.animation_start(this, "idle", false, store.tick_ts, true, this.render.sprites.sid_mage)
             end
-
-            coroutine.yield()
         end
+        log.error("yield")
+        coroutine.yield()
     end
 end
 
@@ -11030,8 +11020,8 @@ function scripts.bullet_tower_ray.update(this, store)
     while store.tick_ts - start_ts < this.ray_duration and target and not target.health.dead and not this.force_stop_ray and
         source do
         if pending_chain and store.tick_ts - start_ts > this.chain_delay then
-            local chain_target, _, _ = U.find_nearest_enemy(store, target.pos, 0, this.chain_range,
-                this.vis_flags, this.vis_bans, function(e, o)
+            local chain_target, _, _ = U.find_nearest_enemy(store, target.pos, 0, this.chain_range, this.vis_flags,
+                this.vis_bans, function(e, o)
                     return not table.contains(tower.chain_targets, e.id)
                 end)
 
