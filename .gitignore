@@ -34,3 +34,4 @@ last_build_commit.txt
 .branch
 makefiles/.*
 _assets/assets_index.remote.lua
+_assets/tmp_download
