@@ -56,17 +56,38 @@ local function ensure_release(name)
     created_releases[name] = true
 end
 
+local function is_asset_in_release(release_name, asset_name)
+    local cmd = string.format('gh release view "%s" --json assets -q ".assets[].name" 2>%s', release_name,
+        is_windows and 'NUL' or '/dev/null')
+
+    local handle = io.popen(cmd)
+    if not handle then
+        return false
+    end
+
+    local output = handle:read("*a")
+    handle:close()
+
+    -- 在输出中查找确切的资源名
+    for line in output:gmatch("[^\r\n]+") do
+        if line:gsub('^%s*(.-)%s*$', '%1') == asset_name then
+            return true
+        end
+    end
+
+    return false
+end
+
 local upload_batches = {} -- 按 release 分组
 
 for path, info in pairs(new_index) do
     local oinfo = old_index[path]
-    if not oinfo or oinfo.size ~= info.size or oinfo.mtime ~= info.mtime then
+    local filename = path:match("[^/]+$")
+    local release = get_release_for_file(filename)
+    if (not oinfo) or (oinfo.size ~= info.size or oinfo.mtime ~= info.mtime) or (not is_asset_in_release(release, filename)) then
         local fullpath = assets_dir .. "/" .. path
-        local filename = path:match("[^/]+$")
         local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
         local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
-        local release = get_release_for_file(filename)
-
         upload_batches[release] = upload_batches[release] or {}
         table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
     end
@@ -75,7 +96,7 @@ end
 -- 执行上传
 for release, files in pairs(upload_batches) do
     ensure_release(release)
-    local cmd = string.format('gh release upload %s %s --clobber', release, table.concat(args, " "))
+    local cmd = string.format('gh release upload %s %s --clobber', release, table.concat(files, " "))
     os.execute(cmd)
 end
 
