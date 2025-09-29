@@ -32,3 +32,4 @@ last_build_commit.txt
 .sync_file_list
 .branch
 makefiles/.*
+_assets/assets_index.remote.lua
