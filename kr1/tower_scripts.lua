@@ -9144,8 +9144,7 @@ function scripts.tower_pandas.update(this, store, script)
             local cfg = panda.shoot_cfg
 
             if cfg and store.tick_ts >= cfg.shoot_ts then
-                enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range + 15, false, a.vis_flags,
-                    a.vis_bans)
+                enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range + 15, false, a.vis_flags, a.vis_bans)
 
                 if enemy then
                     last_target_pos = enemy.pos
@@ -9275,8 +9274,7 @@ function scripts.tower_pandas.update(this, store, script)
                 if store.tick_ts - a.ts < a.cooldown * this.tower.cooldown_factor then
                     -- block empty
                 else
-                    enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range, fts(17), a.vis_flags,
-                        a.vis_bans)
+                    enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range, fts(17), a.vis_flags, a.vis_bans)
 
                     if enemy then
                         a.ts = store.tick_ts
@@ -10044,7 +10042,8 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                 else
                     local grid_size = a_i.damage_area * 0.8
                     local min_enemies = 2
-                    local _, _, crowded_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a_i.max_range, nil, a_i.vis_flags, a_i.vis_bans, nil, nil, a_i.damage_area)
+                    local _, _, crowded_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a_i.max_range,
+                        nil, a_i.vis_flags, a_i.vis_bans, nil, nil, a_i.damage_area)
 
                     if crowded_pos then
                         a_i.ts = store.tick_ts
@@ -10080,8 +10079,8 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                             queue_insert(store, fx)
 
                             if shoot_index == 2 then
-                                local affected = U.find_enemies_in_range(store, crowded_pos, 0,
-                                    a_i.damage_area, a_i.vis_flags, a_i.vis_bans)
+                                local affected = U.find_enemies_in_range(store, crowded_pos, 0, a_i.damage_area,
+                                    a_i.vis_flags, a_i.vis_bans)
 
                                 if affected then
                                     for _, enemy in ipairs(affected) do
@@ -10135,8 +10134,8 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
                     U.y_wait(store, a_i.shoot_time)
 
-                    local target, targets = U.find_nearest_enemy(store, this.pos, 0, a_i.max_range,
-                        a_i.vis_flags, a_i.vis_bans)
+                    local target, targets = U.find_nearest_enemy(store, this.pos, 0, a_i.max_range, a_i.vis_flags,
+                        a_i.vis_bans)
 
                     if not target or #targets < 1 then
                         a_i.ts = store.tick_ts + a_i.cooldown * 0.2
@@ -10219,26 +10218,6 @@ end
 
 -- 红法 BEGIN
 scripts.tower_ray = {}
-function scripts.tower_ray.get_info(this)
-    local b = E:get_template(this.attacks.list[1].bullet)
-
-    if not b.bullet.damage_min or not b.bullet.damage_max then
-        b.bullet.damage_min = b.bullet.damage_min_config[this.tower.level]
-        b.bullet.damage_max = b.bullet.damage_max_config[this.tower.level]
-    end
-
-    local o = scripts.tower_common.get_info(this)
-
-    o.type = STATS_TYPE_TOWER_MAGE
-
-    local min = math.ceil(b.bullet.damage_min * this.tower.damage_factor)
-    local max = math.ceil(b.bullet.damage_max * this.tower.damage_factor)
-
-    o.damage_min = min
-    o.damage_max = max
-
-    return o
-end
 
 function scripts.tower_ray.update(this, store)
     local a = this.attacks
@@ -10406,7 +10385,7 @@ function scripts.tower_ray.update(this, store)
     end
 
     local function find_target(aa)
-        local target, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.node_prediction,
+        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, aa.node_prediction,
             aa.vis_flags, aa.vis_bans, function(e, o)
                 return not aa.excluded_templates or not table.contains(aa.excluded_templates, e.template_name)
             end)
@@ -10442,7 +10421,8 @@ function scripts.tower_ray.update(this, store)
                             b.damage_mult = pow.damage_mult[pow.level]
                             ac.ts = store.tick_ts - ac.cooldown
 
-                            if pow.level == 1 then
+                            if not pow_c._shock_fx then
+                                pow_c._shock_fx = true
                                 for i = 1, #this.shocks_ids do
                                     local shock_fx = E:create_entity(this.shock_fx)
 
@@ -10470,13 +10450,13 @@ function scripts.tower_ray.update(this, store)
             SU.towers_swaped(store, this, this.attacks.list)
 
             for i, aa in pairs(attacks) do
-                if aa and not aa.disabled and store.tick_ts - aa.ts > aa.cooldown and store.tick_ts - last_ts >
-                    a.min_cooldown then
+                if not aa.disabled and ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts -
+                    last_ts > a.min_cooldown * this.tower.cooldown_factor then
                     if aa == as then
                         local enemy, pred_pos = find_target(aa)
 
                         if not enemy then
-                            SU.delay_attack(store, aa, fts(10))
+                            aa.ts = aa.ts + fts(10)
                         else
                             local enemy_id = enemy.id
                             local enemy_pos = enemy.pos
@@ -10562,7 +10542,7 @@ function scripts.tower_ray.update(this, store)
                         local enemy, pred_pos = find_target(aa)
 
                         if not enemy then
-                            SU.delay_attack(store, aa, fts(10))
+                            aa.ts = aa.ts + fts(10)
                         else
                             local enemy_id = enemy.id
                             local enemy_pos = enemy.pos
@@ -10579,13 +10559,7 @@ function scripts.tower_ray.update(this, store)
                             U.animation_start(this, an, nil, store.tick_ts, false, this.render.sid_mage)
                             U.animation_start_group(this, "union", nil, store.tick_ts, false, "crystals")
 
-                            if this.tower.level < 4 then
-                                this.render.sprites[this.render.sid_glow].hidden = false
-
-                                U.animation_start(this, "glow_start", nil, store.tick_ts, false, this.render.sid_glow)
-                            else
-                                U.animation_start_group(this, "glow_start", nil, store.tick_ts, false, "rocks")
-                            end
+                            U.animation_start_group(this, "glow_start", nil, store.tick_ts, false, "rocks")
 
                             if aa.start_fx then
                                 local fx = E:create_entity(aa.start_fx)
@@ -10601,13 +10575,7 @@ function scripts.tower_ray.update(this, store)
 
                             U.y_wait(store, fts(4))
 
-                            if this.tower.level < 4 then
-                                this.render.sprites[this.render.sid_glow].hidden = false
-
-                                U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_glow)
-                            else
-                                U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
-                            end
+                            U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
 
                             U.y_wait(store, aa.shoot_time - fts(4))
 
@@ -10716,14 +10684,8 @@ function scripts.tower_ray.update(this, store)
 
                             U.animation_start(this, an, nil, store.tick_ts, false, this.render.sid_mage)
 
-                            if this.tower.level < 4 then
-                                U.y_animation_play(this, "glow_end", nil, store.tick_ts, 1, this.render.sid_glow)
-
-                                this.render.sprites[this.render.sid_glow].hidden = true
-                            else
-                                U.y_animation_play_group(this, "glow_end", nil, store.tick_ts, 1, "rocks")
-                                U.animation_start_group(this, "idle", nil, store.tick_ts, true, "rocks")
-                            end
+                            U.y_animation_play_group(this, "glow_end", nil, store.tick_ts, 1, "rocks")
+                            U.animation_start_group(this, "idle", nil, store.tick_ts, true, "rocks")
 
                             U.y_animation_wait(this, this.render.sid_mage)
 
@@ -10756,12 +10718,9 @@ function scripts.tower_ray.remove(this, store)
         queue_remove(store, this.ray_fx_start)
     end
 
-    if this.tower.level == 1 then
-        return true
-    end
-
     return true
 end
+
 scripts.fx_tower_ray_lvl4_shock = {}
 
 function scripts.fx_tower_ray_lvl4_shock.update(this, store)
@@ -10845,25 +10804,6 @@ function scripts.mod_tower_ray_damage.update(this, store)
         total_damage = total_damage + effective_dmg
     end
 
-    local function apply_true_damage(value, add_to_total)
-        local d = E:create_entity("damage")
-
-        d.source_id = this.id
-        d.target_id = target.id
-        d.value = value
-        d.damage_type = DAMAGE_TRUE
-        d.pop = dps.pop
-        d.pop_chance = 0
-
-        queue_damage(store, d)
-
-        local effective_dmg = U.predict_damage(target, d)
-
-        if add_to_total then
-            total_damage = total_damage + effective_dmg
-        end
-    end
-
     local raw_damage = math.random(this.dps.damage_min, this.dps.damage_max)
     local raw_damage_tiers = {}
 
@@ -10879,27 +10819,6 @@ function scripts.mod_tower_ray_damage.update(this, store)
         local cycles_in_tier = m.duration / (#raw_damage_tiers * dps.damage_every)
 
         dps_damage = math.floor(raw_damage_tiers[current_tier] / cycles_in_tier)
-    end
-
-    local function get_expected_true_damage(value)
-        local d = E:create_entity("damage")
-
-        d.source_id = this.id
-        d.target_id = target.id
-        d.value = value
-        d.damage_type = dps.damage_type
-
-        return U.predict_damage(target, d)
-    end
-
-    local function get_expected_true_damage_after_tier(tier)
-        local total_acc_dmg = 0
-
-        for i = 1, tier do
-            total_acc_dmg = total_acc_dmg + raw_damage_tiers[i]
-        end
-
-        return get_expected_true_damage(math.floor(total_acc_dmg))
     end
 
     this.pos = target.pos
@@ -10937,26 +10856,6 @@ function scripts.mod_tower_ray_damage.update(this, store)
 
             apply_damage(dps_damage)
 
-            local cycles_in_tier = m.duration / (#raw_damage_tiers * dps.damage_every)
-
-            if math.fmod(cycles, cycles_in_tier) == 0 then
-                local expected_true_dmg = get_expected_true_damage_after_tier(last_damage_tier)
-                local pending_true_dmg = expected_true_dmg - total_damage
-
-                if pending_true_dmg > 0 then
-                    apply_true_damage(math.floor(pending_true_dmg), true)
-                elseif get_expected_true_damage(raw_damage_tiers[last_damage_tier]) == 0 then
-                    apply_true_damage(1, false)
-                end
-            end
-
-            if total_cycles <= cycles then
-                log.paranoid(">>>>> id:%s - mod_tower_ray_damage cycles:%s raw_damage:%s dps_damage:%s total_damage:%s",
-                    this.id, cycles, raw_damage, dps_damage, total_damage)
-
-                break
-            end
-
             this.render.sprites[1].scale = V.vv(0.4 + new_damage_tier / 5)
         end
 
@@ -10983,8 +10882,7 @@ function scripts.mod_tower_ray_slow.insert(this, store, script)
     if this.modifier.excluded_templates and table.contains(this.modifier.excluded_templates, target.template_name) then
         return false
     end
-
-    target.motion.max_speed = target.motion.max_speed * this.slow.factor
+    U.speed_mul(target, this.slow.factor)
     this.modifier.ts = store.tick_ts
 
     signal.emit("mod-applied", this, target)
@@ -11002,7 +10900,7 @@ function scripts.mod_tower_ray_slow.remove(this, store, script)
     local target = store.entities[this.modifier.target_id]
 
     if target and target.health and target.motion then
-        target.motion.max_speed = target.motion.max_speed / this.slow.factor
+        U.speed_div(target, this.slow.factor)
     end
 
     this.modifier_inserted = false
@@ -11020,7 +10918,7 @@ function scripts.bullet_tower_ray.update(this, store)
     local tower = this.tower_ref
 
     local function update_sprite()
-        if this.track_target and target and target.motion then
+        if target and target.motion then
             local tpx, tpy = target.pos.x, target.pos.y
 
             if not b.ignore_hit_offset then
@@ -11030,8 +10928,6 @@ function scripts.bullet_tower_ray.update(this, store)
             local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
 
             if d > b.max_track_distance then
-                log.paranoid("(%s) ray_simple target (%s) out of max_track_distance", this.id, target.id)
-
                 target = nil
                 this.force_stop_ray = true
             else
@@ -11076,10 +10972,7 @@ function scripts.bullet_tower_ray.update(this, store)
             if target and U.flag_has(target.vis.bans, F_RANGED) then
                 target = nil
             end
-
-            if this.track_target then
-                update_sprite()
-            end
+            update_sprite()
         end
     end
 
@@ -11093,19 +10986,7 @@ function scripts.bullet_tower_ray.update(this, store)
 
             m.modifier.target_id = b.target_id
             m.modifier.source_id = this.id
-
-            if m.damage_from_bullet then
-                local d_mult = this.damage_mult * b.damage_factor
-
-                if this.chain_pos and this.chain_pos == 1 then
-                    d_mult = 1 * b.damage_factor
-                end
-
-                if m.dps then
-                    m.dps.damage_min = math.ceil(b.damage_min * d_mult)
-                    m.dps.damage_max = math.ceil(b.damage_max * d_mult)
-                end
-            end
+            m.modifier.damage_factor = b.damage_factor
 
             table.insert(mods_added, m)
             queue_insert(store, m)
@@ -11146,90 +11027,87 @@ function scripts.bullet_tower_ray.update(this, store)
     local start_chain_delay = this.chain_delay
     local source = store.entities[b.source_id]
 
-    if this.ray_duration then
-        while store.tick_ts - start_ts < this.ray_duration and target and not target.health.dead and
-            not this.force_stop_ray and source do
-            if pending_chain and store.tick_ts - start_ts > this.chain_delay then
-                local chain_target, _, _ = U.find_nearest_enemy(store.entities, target.pos, 0, this.chain_range,
-                    this.vis_flags, this.vis_bans, function(e, o)
-                        return not table.contains(tower.chain_targets, e.id)
-                    end)
+    while store.tick_ts - start_ts < this.ray_duration and target and not target.health.dead and not this.force_stop_ray and
+        source do
+        if pending_chain and store.tick_ts - start_ts > this.chain_delay then
+            local chain_target, _, _ = U.find_nearest_enemy(store, target.pos, 0, this.chain_range,
+                this.vis_flags, this.vis_bans, function(e, o)
+                    return not table.contains(tower.chain_targets, e.id)
+                end)
 
-                if chain_target then
-                    local chain = E:create_entity(this.template_name)
-                    local start_offset = target.unit.hit_offset
+            if chain_target then
+                local chain = E:create_entity(this.template_name)
+                local start_offset = target.unit.hit_offset
 
-                    chain.pos.x, chain.pos.y = target.pos.x + start_offset.x, target.pos.y + start_offset.y
-                    chain.bullet.from = V.vclone(chain.pos)
+                chain.pos.x, chain.pos.y = target.pos.x + start_offset.x, target.pos.y + start_offset.y
+                chain.bullet.from = V.vclone(chain.pos)
 
-                    local end_offset = chain_target.unit.hit_offset
+                local end_offset = chain_target.unit.hit_offset
 
-                    chain.bullet.to = V.vclone(chain_target.pos)
-                    chain.bullet.to.x, chain.bullet.to.y = chain.bullet.to.x + end_offset.x,
-                        chain.bullet.to.y + end_offset.y
-                    chain.bullet.target_id = chain_target.id
-                    chain.bullet.source_id = b.target_id
-                    chain.bullet.level = b.level
-                    chain.tower_ref = tower
-                    chain.chain_pos = this.chain_pos + 1
-                    chain.mod_start_ts = start_ts
+                chain.bullet.to = V.vclone(chain_target.pos)
+                chain.bullet.to.x, chain.bullet.to.y = chain.bullet.to.x + end_offset.x,
+                    chain.bullet.to.y + end_offset.y
+                chain.bullet.target_id = chain_target.id
+                chain.bullet.source_id = b.target_id
+                chain.bullet.level = b.level
+                chain.bullet.damage_factor = b.damage_factor
+                chain.tower_ref = tower
+                chain.chain_pos = this.chain_pos + 1
+                chain.mod_start_ts = start_ts
 
-                    queue_insert(store, chain)
+                queue_insert(store, chain)
 
-                    this.next_in_chain = chain
+                this.next_in_chain = chain
 
-                    table.insert(tower.chain_targets, chain_target.id, chain_target.id)
+                table.insert(tower.chain_targets, chain_target.id, chain_target.id)
 
-                    pending_chain = false
-                    chained_next_ray = true
-                else
-                    this.chain_delay = this.chain_delay + 0.25
-                end
+                pending_chain = false
+                chained_next_ray = true
+            else
+                this.chain_delay = this.chain_delay + 0.25
             end
-
-            if chained_next_ray and (not this.next_in_chain or this.next_in_chain.render.sprites[1].hidden) then
-                pending_chain = true
-                chained_next_ray = false
-            end
-
-            if this.chain_pos and this.chain_pos > 1 then
-                local start_offset = source.unit.hit_offset
-
-                this.pos.x, this.pos.y = source.pos.x + start_offset.x, source.pos.y + start_offset.y
-                b.from = V.vclone(this.pos)
-            end
-
-            if store.tick_ts - start_ts > this.ray_duration - fts(7) and this.render.sprites[1].name ~= "fade" then
-                U.animation_start(this, "fade", nil, store.tick_ts)
-            end
-
-            if this.track_target then
-                update_sprite()
-            end
-
-            if tower and not store.entities[tower.id] then
-                break
-            end
-
-            target = store.entities[b.target_id]
-
-            if target and this.chain_pos and this.chain_pos > 1 and
-                V.dist2(this.pos.x, this.pos.y, target.pos.x, target.pos.y) > this.chain_range_to_stay *
-                this.chain_range_to_stay then
-                break
-            end
-
-            if target and band(target.vis.bans, this.vis_flags) ~= 0 then
-                this.force_stop_ray = true
-
-                break
-            end
-
-            coroutine.yield()
-
-            s.hidden = false
-            source = store.entities[b.source_id]
         end
+
+        if chained_next_ray and (not this.next_in_chain or this.next_in_chain.render.sprites[1].hidden) then
+            pending_chain = true
+            chained_next_ray = false
+        end
+
+        if this.chain_pos and this.chain_pos > 1 then
+            local start_offset = source.unit.hit_offset
+
+            this.pos.x, this.pos.y = source.pos.x + start_offset.x, source.pos.y + start_offset.y
+            b.from = V.vclone(this.pos)
+        end
+
+        if store.tick_ts - start_ts > this.ray_duration - fts(7) and this.render.sprites[1].name ~= "fade" then
+            U.animation_start(this, "fade", nil, store.tick_ts)
+        end
+
+        update_sprite()
+
+        if tower and not store.entities[tower.id] then
+            break
+        end
+
+        target = store.entities[b.target_id]
+
+        if target and this.chain_pos and this.chain_pos > 1 and
+            V.dist2(this.pos.x, this.pos.y, target.pos.x, target.pos.y) > this.chain_range_to_stay *
+            this.chain_range_to_stay then
+            break
+        end
+
+        if target and band(target.vis.bans, this.vis_flags) ~= 0 then
+            this.force_stop_ray = true
+
+            break
+        end
+
+        coroutine.yield()
+
+        s.hidden = false
+        source = store.entities[b.source_id]
     end
 
     if not target or target.health.dead or this.force_stop_ray or not source then
@@ -11324,9 +11202,6 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
                 math.abs(target.pos.y + target.unit.hit_offset.y - b.to.y))
 
             if d > b.max_track_distance then
-                log.info("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id,
-                    this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
-
                 target = nil
                 b.target_id = nil
             else
@@ -11366,7 +11241,7 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
         sheep.enemy.gold = target.enemy.gold
         sheep.health.hp_max = target.health.hp_max * this.sheep_hp_mult
         sheep.health.hp = target.health.hp * this.sheep_hp_mult
-
+        sheep.health.patched = true
         queue_insert(store, sheep)
 
         target.trigger_deselect = true
