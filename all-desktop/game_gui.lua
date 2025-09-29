@@ -6346,23 +6346,23 @@ function CriketMenuButton:initialize(item)
         price_tag = ""
     end
 
-    if price_tag then
-        local pt = GGLabel:new(nil, "price_tag")
+    -- if price_tag then
+    --     local pt = GGLabel:new(nil, "price_tag")
 
-        pt.id = "price_tag"
-        pt.pos = V.v(b.size.x * 0.5 - pt.size.x * 0.5, b.size.y - 11)
-        pt.text_algin = "center"
-        pt.text_offset.y = CJK(5, 2, 7, 3)
-        pt.font_name = "body"
-        pt.font_size = 11
-        pt.colors.text = { 255, 224, 0 }
-        pt.disabled_tint_color = nil
-        pt.propagate_on_click = true
-        pt.text = price_tag
-        self.price_tag = pt
+    --     pt.id = "price_tag"
+    --     pt.pos = V.v(b.size.x * 0.5 - pt.size.x * 0.5, b.size.y - 11)
+    --     pt.text_algin = "center"
+    --     pt.text_offset.y = CJK(5, 2, 7, 3)
+    --     pt.font_name = "body"
+    --     pt.font_size = 11
+    --     pt.colors.text = { 255, 224, 0 }
+    --     pt.disabled_tint_color = nil
+    --     pt.propagate_on_click = true
+    --     pt.text = price_tag
+    --     self.price_tag = pt
 
-        self:add_child(pt)
-    end
+    --     self:add_child(pt)
+    -- end
 
     if item.action == "upgrade_power" then
         local power = entity.powers[item.action_arg]

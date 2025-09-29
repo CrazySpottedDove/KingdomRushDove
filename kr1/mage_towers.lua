@@ -1865,13 +1865,14 @@ tt.powers.sheep.price = b.skill_sheep.price
 tt.powers.sheep.cooldown = b.skill_sheep.cooldown
 tt.powers.sheep.duration = b.skill_sheep.duration
 tt.powers.sheep.enc_icon = 30
-tt.main_script.insert = scripts.tower_ray.insert
+-- tt.main_script.insert = scripts.tower_ray.insert
 tt.main_script.update = scripts.tower_ray.update
 tt.main_script.remove = scripts.tower_ray.remove
 tt.attacks.min_cooldown = b.shared_min_cooldown
 tt.attacks.range = b.basic_attack.range[4]
 tt.attacks.extra_range = b.basic_attack.extra_range_to_stay
 tt.attacks.attack_delay_on_spawn = fts(5)
+tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_tower_ray_lvl4"
 tt.attacks.list[1].bullet_start_offset = vec_2(0, 102)
 tt.attacks.list[1].start_fx = "fx_tower_ray_lvl4_attack"
@@ -1910,14 +1911,17 @@ tt.render.sid_crystal_union = 6
 tt.render.sid_crystals = 7
 tt.crystals_ids = {"a", "b", "c", "d", "e", "f", "g", "h"}
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].name = "terrain_mage_%04i"
 tt.render.sprites[1].offset = vec_2(0, 13)
+tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].name = "channeler_tower_lvl4_rock_core"
 tt.render.sprites[2].draw_order = 2
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 13)
+tt.render.sprites[3] = E:clone_c("sprite")
 tt.render.sprites[3].hidden = true
 tt.render.sprites[3].prefix = "channeler_tower_lvl3_rune_glow"
+tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "channeler_tower_lvl4_mage"
 tt.render.sprites[4].draw_order = 4
 tt.render.sprites[5] = E:clone_c("sprite")
@@ -1997,7 +2001,6 @@ tt.shock_fx = "fx_tower_ray_lvl4_shock"
 tt.ui.click_rect = r(-35, 10, 70, 70)
 
 tt = E:register_t("enemy_tower_ray_sheep", "enemy")
-
 local b = balance.towers.ray.skill_sheep.sheep
 tt.is_kr5 = true
 tt.enemy.gold = b.gold
@@ -2019,10 +2022,9 @@ tt.sound_events.death = "EnemySheepDeath"
 tt.ui.click_rect = r(-17, 0, 34, 20)
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.clicks_to_destroy = b.clicks_to_destroy
+
 tt = E:register_t("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
-
 local b = balance.towers.ray.skill_sheep.sheep
-
 tt.info.portrait = "gui_bottom_info_image_enemies_0041"
 tt.flight_height = 47
 tt.health_bar.offset = vec_2(0, tt.flight_height + 40)
@@ -2126,9 +2128,7 @@ tt.sheep_flying_t = "enemy_tower_ray_sheep_flying"
 tt.sheep_hp_mult = b.sheep.hp_mult
 
 tt = E:register_t("mod_tower_ray_damage", "modifier")
-
 AC(tt, "render", "dps", "tween")
-
 b = balance.towers.ray.basic_attack
 tt.dps.damage_min = nil
 tt.dps.damage_max = nil
@@ -2149,6 +2149,7 @@ tt.damage_tiers = b.damage_per_second
 tt.tween.props[1].keys = {{0, 255}, {fts(2), 0}}
 tt.tween.remove = true
 tt.tween.disabled = true
+
 tt = E:register_t("mod_tower_ray_slow", "mod_slow")
 b = balance.towers.ray.basic_attack
 tt.slow.factor = b.slow.factor

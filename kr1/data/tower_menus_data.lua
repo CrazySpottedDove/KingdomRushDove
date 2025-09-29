@@ -128,7 +128,7 @@ return {
         tt_desc = _("TOWER_NECROMANCER_1_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_ray_lvl4",
-        image = "kr5_main_icons_0005",
+        image = "kr5_main_icons_0018",
         place = 17,
         tt_title = _("TOWER_RAY_NAME"),
         tt_desc = _("TOWER_RAY_4_DESCRIPTION")
