@@ -45,3 +45,5 @@ lua ./scripts/download_assets.lua
 ```
 
 来下载美术资源。这个命令会根据本地的 `assets_index.lua` 来确定需要下载哪些美术资源，然后从远程仓库下载到 `.assets_path.txt` 中指定的美术资源目录中。
+
+一个典型的项目部署方式是，首先 `git clone` 获取项目代码和 `assets_index.lua`，然后再通过 `download_assets.lua` 获得美术资源。
