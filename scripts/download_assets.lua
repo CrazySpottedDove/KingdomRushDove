@@ -5,7 +5,7 @@ local function read_assets_dir()
     if not f then
         os.exit(1)
     end
-    local dir = f:read("*l");
+    local dir = f:read("*l")
     f:close()
     return dir
 end
@@ -28,27 +28,37 @@ local mkdir_cmd_tpl = is_windows and 'mkdir "%s" 2>NUL || exit /b 0' or 'mkdir -
 
 for path, info in pairs(index) do
     local fullpath = assets_dir .. "/" .. path
-    local f = io.open(fullpath, "rb")
+    local filename = path:match("[^/]+$") -- 提取文件名
     local need = true
+
+    local f = io.open(fullpath, "rb")
     if f then
         f:close()
         if file_size(fullpath) == info.size then
             need = false
         end
     end
+
     if need then
         local subdir = fullpath:match("^(.*)/[^/]+$")
         if subdir then
             os.execute(string.format(mkdir_cmd_tpl, subdir))
         end
+
         print("下载: " .. path)
-        -- 用双引号包裹 path，防止 shell 误解析特殊字符
-        local quoted_pattern = '"' .. path:gsub('"', '\\"') .. '"'
-        local quoted_dir = '"' .. (subdir or assets_dir):gsub('"', '\\"') .. '"'
-        local cmd = string.format('gh release download assets-latest --pattern %s --dir %s', quoted_pattern, quoted_dir)
+
+        local tmpdir = "_assets/tmp_download"
+        os.execute(string.format(mkdir_cmd_tpl, tmpdir))
+
+        local quoted_pattern = '"' .. filename:gsub('"', '\\"') .. '"'
+        local cmd = string.format('gh release download assets-latest --pattern %s --dir "%s" --clobber', quoted_pattern,
+            tmpdir)
         os.execute(cmd)
+
+        -- 移动到目标目录
+        local tmpfile = tmpdir .. "/" .. filename
+        os.rename(tmpfile, fullpath)
     end
 end
 
 print("下载完成")
-

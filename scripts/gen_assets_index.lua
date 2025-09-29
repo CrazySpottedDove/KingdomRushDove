@@ -52,7 +52,10 @@ local allowed_exts = {
     wav = true,
     dds = true,
     ogg = true,
-    mp4 = true
+    mp4 = true,
+    otf = true,
+    ttf = true,
+    ttc = true,
 }
 
 local function get_ext(filename)
