@@ -15,6 +15,15 @@ local new_index = dofile("_assets/assets_index.lua")
 
 local is_windows = package.config:sub(1, 1) == '\\'
 local null_dev = is_windows and "NUL" or "/dev/null"
+local same_as_remote = false
+local function table_to_string(t)
+    local s = {}
+    for k, v in pairs(t) do
+        table.insert(s, tostring(k) .. "=" .. tostring(v.size))
+    end
+    table.sort(s)
+    return table.concat(s, ";")
+end
 
 -- 获取远程旧索引
 os.execute(string.format(
@@ -25,7 +34,9 @@ if f then
     f:close()
     old_index = dofile("_assets/assets_index.remote.lua") or {}
 end
-
+if table_to_string(new_index) == table_to_string(old_index) then
+    same_as_remote = true
+end
 -- 分桶函数
 local function get_release_for_file(filename)
     local name = filename:gsub("%.%w+$", "")
@@ -80,47 +91,52 @@ end
 local upload_batches = {} -- 按 release 分组
 local release_assets_cache = {}
 print("collecting upload tasks...")
-for path, info in pairs(new_index) do
-    local oinfo = old_index[path]
-    local filename = path:match("[^/]+$")
-    local release = get_release_for_file(filename)
-    -- 缓存每个 release 的 asset 列表
-    if not release_assets_cache[release] then
-        release_assets_cache[release] = get_release_assets(release)
-    end
-    local assets = release_assets_cache[release]
-    if (not oinfo) or (oinfo.size ~= info.size) or (not assets[filename]) then
-        if not oinfo then
-            print("[NEW] " .. filename)
-        elseif oinfo.size ~= info.size then
-            print(string.format("[MOD] %s (size %d -> %d)", filename, oinfo.size, info.size))
-        elseif not assets[filename] then
-            print("[MISS] " .. filename)
-        end
-        local fullpath = assets_dir .. "/" .. path
-        local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
-        local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
-        upload_batches[release] = upload_batches[release] or {}
-        table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
-        print(string.format("文件: %s, 分桶: %s", filename, release))
-    end
-end
 
-for k, v in pairs(release_assets_cache) do
-    print(k)
-    local i = 0
-    for _, _ in pairs(v) do
-        i = i + 1
+if same_as_remote then
+    for path, _ in pairs(new_index) do
+        local filename = path:match("[^/]+$")
+        local release = get_release_for_file(filename)
+        -- 缓存每个 release 的 asset 列表
+        if not release_assets_cache[release] then
+            release_assets_cache[release] = get_release_assets(release)
+        end
+        local assets = release_assets_cache[release]
+        if (not assets[filename]) then
+            print("[MISS] " .. filename)
+            local fullpath = assets_dir .. "/" .. path
+            local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
+            local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
+            upload_batches[release] = upload_batches[release] or {}
+            table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
+            print(string.format("文件: %s, 分桶: %s", filename, release))
+        end
     end
-    print(k.." 现有资源数: "..i)
+else
+    for path, info in pairs(new_index) do
+        local oinfo = old_index[path]
+        local filename = path:match("[^/]+$")
+        local release = get_release_for_file(filename)
+        if (not oinfo) or (oinfo.size ~= info.size) then
+            if not oinfo then
+                print("[NEW] " .. filename)
+            elseif oinfo.size ~= info.size then
+                print(string.format("[MOD] %s (size %d -> %d)", filename, oinfo.size, info.size))
+            end
+            local fullpath = assets_dir .. "/" .. path
+            local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
+            local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
+            upload_batches[release] = upload_batches[release] or {}
+            table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
+            print(string.format("文件: %s, 分桶: %s", filename, release))
+        end
+    end
 end
 
 -- 执行上传
 for release, files in pairs(upload_batches) do
-    print("准备上传到 release:", release, "文件数:", #files)
+    print("[tag]: ", release, "batch_size: ", #files)
     ensure_release(release)
     local cmd = string.format('gh release upload %s %s --clobber', release, table.concat(files, " "))
-    print(cmd)
     os.execute(cmd)
 end
 
