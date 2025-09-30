@@ -59,7 +59,7 @@ local function ensure_release(name)
 end
 
 local function get_release_assets(release)
-    local cmd = string.format('gh release view "%s" --json assets --jq ".assets[].name"', release)
+    local cmd = string.format('gh release view "%s" --json assets --jq ".assets[].label"', release)
     local handle = io.popen(cmd)
     if not handle then
         return {}
@@ -102,15 +102,17 @@ for path, info in pairs(new_index) do
         local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
         upload_batches[release] = upload_batches[release] or {}
         table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
-        -- print(string.format("文件: %s, 分桶: %s", filename, release))
+        print(string.format("文件: %s, 分桶: %s", filename, release))
     end
 end
 
 for k, v in pairs(release_assets_cache) do
     print(k)
-    for _k, _v in pairs(v) do
-        print(_k)
+    local i = 0
+    for _, _ in pairs(v) do
+        i = i + 1
     end
+    print(k.." 现有资源数: "..i)
 end
 
 -- 执行上传
@@ -118,6 +120,7 @@ for release, files in pairs(upload_batches) do
     print("准备上传到 release:", release, "文件数:", #files)
     ensure_release(release)
     local cmd = string.format('gh release upload %s %s --clobber', release, table.concat(files, " "))
+    print(cmd)
     os.execute(cmd)
 end
 
