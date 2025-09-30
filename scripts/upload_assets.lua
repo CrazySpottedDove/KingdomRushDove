@@ -26,18 +26,14 @@ if f then
     old_index = dofile("_assets/assets_index.remote.lua") or {}
 end
 
--- 分桶函数：首字母+尾字母（去扩展名）
+-- 分桶函数：尾字母（去扩展名）
 local function get_release_for_file(filename)
     local name = filename:gsub("%.%w+$", "")
-    local first = name:sub(1, 1):lower()
     local last = name:sub(-1):lower()
-    if not first:match("[%w]") then
-        first = "other"
-    end
     if not last:match("[%w]") then
         last = "other"
     end
-    return string.format("assets-latest-%s-%s", first, last)
+    return last
 end
 
 -- 确保 Release 存在（避免重复创建）
@@ -56,35 +52,38 @@ local function ensure_release(name)
     created_releases[name] = true
 end
 
-local function is_asset_in_release(release_name, asset_name)
-    local cmd = string.format('gh release view "%s" --json assets -q ".assets[].name" 2>%s', release_name,
-        is_windows and 'NUL' or '/dev/null')
-
+local function get_release_assets(release)
+    local cmd = string.format('gh release view "%s" --json assets -q ".assets[].name" 2>%s', release, null_dev)
     local handle = io.popen(cmd)
     if not handle then
-        return false
+        return {}
     end
-
     local output = handle:read("*a")
     handle:close()
-
-    -- 在输出中查找确切的资源名
-    for line in output:gmatch("[^\r\n]+") do
-        if line:gsub('^%s*(.-)%s*$', '%1') == asset_name then
-            return true
+    local assets = {}
+    if output and output ~= "" then
+        created_releases[release] = true
+        for line in output:gmatch("[^\r\n]+") do
+            assets[line:gsub('^%s*(.-)%s*$', '%1')] = true
         end
     end
 
-    return false
+    return assets
 end
 
 local upload_batches = {} -- 按 release 分组
-
+local release_assets_cache = {}
+print("collecting upload tasks...")
 for path, info in pairs(new_index) do
     local oinfo = old_index[path]
     local filename = path:match("[^/]+$")
     local release = get_release_for_file(filename)
-    if (not oinfo) or (oinfo.size ~= info.size or oinfo.mtime ~= info.mtime) or (not is_asset_in_release(release, filename)) then
+    -- 缓存每个 release 的 asset 列表
+    if not release_assets_cache[release] then
+        release_assets_cache[release] = get_release_assets(release)
+    end
+    local assets = release_assets_cache[release]
+    if (not oinfo) or (oinfo.size ~= info.size or oinfo.mtime ~= info.mtime) or (not assets[filename]) then
         local fullpath = assets_dir .. "/" .. path
         local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
         local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'

@@ -35,3 +35,6 @@ last_build_commit.txt
 makefiles/.*
 _assets/assets_index.remote.lua
 _assets/tmp_download
+upload_cmds.sh
+upload_cmds.bat
+upload_params.txt
