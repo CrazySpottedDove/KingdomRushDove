@@ -36,7 +36,7 @@ lua ./scripts/gen_assets_index.lua
 lua ./scripts/upload_assets.lua
 ```
 
-来上传美术资源。这个命令会比较本地的 `assets_index.lua` 和远程仓库的 master 分支的 `assets_index.lua`，来识别两者到底有什么差别。然后，这个命令会把需要上传的本地美术资源上传到 github release 中。
+来上传美术资源。这个命令会比较本地的 `assets_index.lua` 和远程仓库的 **master** 分支的 `assets_index.lua`，来识别两者到底有什么差别。然后，这个命令会把需要上传的本地美术资源上传到 github release 中。
 
 需要注意的是，如果远程仓库的 `assets_index.lua` 信息和远程仓库中实际拥有的美术资源情况不一致，可能导致一些问题。因此，在执行完 `gen_assets_index.lua` 后，请务必保证成功上传全部美术资源后，再将改变进行 commit。
 
