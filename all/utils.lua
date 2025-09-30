@@ -231,14 +231,12 @@ end
 ---检测点是否在椭圆内
 ---@param p table 点坐标 {x, y}
 ---@param center table 椭圆中心 {x, y}
----@param radius number 椭圆长轴半径
+---@param a number 椭圆长轴半径
 ---@param aspect number? 椭圆纵横比（可选，默认0.7）
 ---@return boolean 是否在椭圆内
-function U.is_inside_ellipse(p, center, radius, aspect)
+function U.is_inside_ellipse(p, center, a, aspect)
     aspect = aspect or 0.7
-
-    local a = radius
-    local b = radius * aspect
+    local b = a * aspect
     local x = (p.x - center.x) / a
     local y = (p.y - center.y) / b
     return x * x + y * y <= 1
@@ -246,18 +244,20 @@ end
 
 ---返回椭圆上指定角度的点
 ---@param center table 椭圆中心 {x, y}
----@param radius number 椭圆长轴半径
+---@param a number 椭圆长轴半径
 ---@param angle number? 角度（弧度，可选，默认0）
 ---@param aspect number? 椭圆纵横比（可选，默认0.7）
 ---@return table 椭圆上的点坐标 {x, y}
-function U.point_on_ellipse(center, radius, angle, aspect)
+function U.point_on_ellipse(center, a, angle, aspect)
     aspect = aspect or 0.7
     angle = angle or 0
 
-    local a = radius
-    local b = radius * aspect
+    local b = a * aspect
 
-    return V.v(center.x + a * math.cos(angle), center.y + b * math.sin(angle))
+    return {
+        x = center.x + a * math.cos(angle),
+        y = center.y + b * math.sin(angle)
+    }
 end
 
 ---计算点在椭圆内的距离因子
@@ -733,7 +733,7 @@ function U.walk(e, dt, accel, unsnapped)
 
     local step = e.motion.real_speed * dt
 
-    local nx, ny = V.normalize(V.rotate(v_angle, 1, 0))
+    local nx, ny = math.cos(v_angle), math.sin(v_angle)
 
     if v_len <= step and not (e.teleport and e.teleport.pending) then
         if unsnapped then
