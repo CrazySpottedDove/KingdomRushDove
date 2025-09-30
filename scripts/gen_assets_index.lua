@@ -96,20 +96,20 @@ local function file_size(path)
     return size or 0
 end
 
-local function file_mtime(path)
-    local cmd
-    if sys == "windows" then
-        cmd = 'for %I in ("' .. path .. '") do @echo %~tI'
-    elseif sys == "macos" then
-        cmd = 'stat -f %m "' .. path .. '"'
-    else
-        cmd = 'stat -c %Y "' .. path .. '"'
-    end
-    local p = io.popen(cmd)
-    local mtime = p:read("*l")
-    p:close()
-    return tonumber(mtime) or 0
-end
+-- local function file_mtime(path)
+--     local cmd
+--     if sys == "windows" then
+--         cmd = 'for %I in ("' .. path .. '") do @echo %~tI'
+--     elseif sys == "macos" then
+--         cmd = 'stat -f %m "' .. path .. '"'
+--     else
+--         cmd = 'stat -c %Y "' .. path .. '"'
+--     end
+--     local p = io.popen(cmd)
+--     local mtime = p:read("*l")
+--     p:close()
+--     return tonumber(mtime) or 0
+-- end
 
 local assets = {}
 for _, path in ipairs(list_files(assets_dir)) do
@@ -118,7 +118,6 @@ for _, path in ipairs(list_files(assets_dir)) do
         local relpath = to_relpath(path, assets_dir)
         assets[relpath] = {
             size = file_size(path),
-            mtime = file_mtime(path)
         }
     end
 end
@@ -135,7 +134,7 @@ local f = io.open("_assets/assets_index.lua", "w")
 f:write("return {\n")
 for _, path in ipairs(paths) do
     local info = assets[path]
-    f:write(string.format("    [\"%s\"] = { size = %d, mtime = %d },\n", path, info.size, info.mtime))
+    f:write(string.format("    [\"%s\"] = { size = %d},\n", path, info.size))
 end
 f:write("}\n")
 f:close()

@@ -29,12 +29,18 @@ local mkdir_cmd_tpl = is_windows and 'mkdir "%s" 2>NUL || exit /b 0' or 'mkdir -
 -- 分桶函数
 local function get_release_for_file(filename)
     local name = filename:gsub("%.%w+$", "")
-    local last = name:sub(-1):lower()
-    if not last:match("[%w]") then
-        last = "other"
+    local len = #name
+    if len == 0 then
+        return "other"
     end
-    return last
+    local mid = math.floor((len + 1) / 2)
+    local ch = name:sub(mid, mid):lower()
+    if not ch:match("[%w]") then
+        ch = "other"
+    end
+    return ch
 end
+
 
 local function move_file(src, dst)
     local infile = io.open(src, "rb")

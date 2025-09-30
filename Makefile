@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 LAST_SYNC_FILE := $(MAKE_FILE_DIR)/.last_sync_commit
 
-.PHONY: all debug package repackage sync branch master
+.PHONY: all debug package repackage sync branch master index upload download
 
 all: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -35,3 +35,12 @@ branch:
 
 master:
 	@bash $(MAKE_FILE_DIR)/master.sh
+
+index:
+	@lua scripts/gen_assets_index.lua
+
+upload:
+	@lua scripts/upload_assets.lua
+
+download:
+	@lua scripts/download_assets.lua
