@@ -9,7 +9,13 @@ local function read_assets_dir()
     f:close()
     return dir
 end
-
+local COLOR = {
+    reset = "\27[0m",
+    red = "\27[31m",
+    green = "\27[32m",
+    yellow = "\27[33m",
+    blue = "\27[34m",
+}
 local assets_dir = read_assets_dir()
 local new_index = dofile("_assets/assets_index.lua")
 
@@ -102,13 +108,12 @@ if same_as_remote then
         end
         local assets = release_assets_cache[release]
         if (not assets[filename]) then
-            print("[MISS] " .. filename)
+            print(COLOR.blue.."[MISS] " .. filename)
             local fullpath = assets_dir .. "/" .. path
             local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
             local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
             upload_batches[release] = upload_batches[release] or {}
             table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
-            print(string.format("文件: %s, 分桶: %s", filename, release))
         end
     end
 else
@@ -118,26 +123,25 @@ else
         local release = get_release_for_file(filename)
         if (not oinfo) or (oinfo.size ~= info.size) then
             if not oinfo then
-                print("[NEW] " .. filename)
+                print(COLOR.blue.."[NEW] " .. filename)
             elseif oinfo.size ~= info.size then
-                print(string.format("[MOD] %s (size %d -> %d)", filename, oinfo.size, info.size))
+                print(COLOR.blue..string.format("[MOD] %s (size %d -> %d)", filename, oinfo.size, info.size))
             end
             local fullpath = assets_dir .. "/" .. path
             local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
             local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
             upload_batches[release] = upload_batches[release] or {}
             table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
-            print(string.format("文件: %s, 分桶: %s", filename, release))
         end
     end
 end
 
 -- 执行上传
 for release, files in pairs(upload_batches) do
-    print("[tag]: ", release, "batch_size: ", #files)
+    print(COLOR.blue.."[tag]: ", release, "batch_size: ", #files)
     ensure_release(release)
     local cmd = string.format('gh release upload %s %s --clobber', release, table.concat(files, " "))
     os.execute(cmd)
 end
 
-print("上传完成")
+print(COLOR.green.."上传完成"..COLOR.reset)
