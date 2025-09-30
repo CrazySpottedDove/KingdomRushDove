@@ -53,3 +53,25 @@ lua ./scripts/download_assets.lua
 一个典型的项目部署方式是，首先 `git clone` 获取项目代码和 `assets_index.lua`，然后再通过 `download_assets.lua` 获得美术资源。
 
 对于本地依然存在，但是在本地的 `assets_index.lua` 中已经消失或不匹配的文件，`download_assets.lua` 会将它们移动到美术资源目录同级的 `_trashed_assets` 目录下，以起删除作用。
+
+### 典型案例
+
+#### 发现其他开发者修改了 `assets_index.lua`，且本地没有美术资源改动
+
+运行 `lua ./scripts/download_assets.lua`，确保本地美术资源和 `assets_index.lua` 状态一致。
+
+#### 本地修改了美术资源，将要提交
+
+在 git 提交代码更改之前，首先运行 `lua ./scripts/gen_assets_index.lua`，以生成最新的 `assets_index.lua`。
+
+然后，运行 `lua ./scripts/upload_assets.lua`，将新的或修改后的美术资源上传到远程仓库。
+
+最后，git 提交代码，使得远程仓库的 `assets_index.lua` 是最新的，和当前游戏需要的美术资源相匹配。
+
+#### 发现其他开发者修改了 `assets_index.lua`，且本地有美术资源改动
+
+首先，合并其它开发者的提交，首先运行 `lua ./scripts/download_assets.lua`，确保本地美术资源和 `assets_index.lua` 状态一致。
+
+然后，您会发现，含有冲突的美术资源会被移动的和美术资源目录同级的 `_trashed_assets` 目录下。您可以将您希望保留的美术资源重新复制回资源目录。
+
+接着，参考**本地修改了美术资源，需要提交**。

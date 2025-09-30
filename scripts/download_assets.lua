@@ -87,56 +87,6 @@ local function move_file(src, dst)
     return true
 end
 
--- 1. 收集需要下载的文件
-print("正在检查需要下载的资源...")
-local download_batches = {} -- release -> { {path=..., filename=..., fullpath=...}, ... }
-for path, info in pairs(index) do
-    local fullpath = assets_dir .. "/" .. path
-    local filename = path:match("[^/]+$")
-    local need = file_size(fullpath) ~= info.size
-
-    if need then
-        local subdir = fullpath:match("^(.*)/[^/]+$")
-        if subdir then
-            os.execute(string.format(mkdir_cmd_tpl, subdir))
-        end
-        local release = get_release_for_file(filename)
-        download_batches[release] = download_batches[release] or {}
-        table.insert(download_batches[release], {
-            path = path,
-            filename = filename,
-            fullpath = fullpath
-        })
-    end
-end
-
--- 2. 执行分批下载
-local tmpdir = "_assets/tmp_download"
-os.execute(string.format(mkdir_cmd_tpl, tmpdir))
-
-for release, files in pairs(download_batches) do
-    print(string.format("正在下载资源包 '%s' (%d 个文件)...", release, #files))
-    -- 构造 --pattern 参数
-    local patterns = {}
-    for _, f in ipairs(files) do
-        local quoted = '"' .. f.filename:gsub('"', '\\"') .. '"'
-        table.insert(patterns, quoted)
-    end
-    local cmd = string.format('gh release download %s %s --dir "%s" --clobber', release, table.concat(patterns, " "),
-        tmpdir)
-    os.execute(cmd)
-
-    -- 逐个移动到目标目录
-    for _, f in ipairs(files) do
-        local tmpfile = tmpdir .. "/" .. f.filename
-        if not move_file(tmpfile, f.fullpath) then
-            io.stderr:write("移动文件失败: " .. f.filename .. "\n")
-        end
-    end
-end
-
-print("下载完成")
-
 print("正在检查本地多余或不匹配的资源...")
 local parent_dir = assets_dir:match("^(.*)[/\\][^/\\]+$") or "."
 local trashed_dir = parent_dir .. "/_trashed_assets"
@@ -180,5 +130,55 @@ local function trash_unindexed_assets()
 end
 
 trash_unindexed_assets()
+print("已迁移本地多余或不匹配的资源到" .. trashed_dir .. "目录")
 
-print("已迁移本地多余或不匹配的资源到".. trashed_dir .."目录")
+-- 1. 收集需要下载的文件
+print("正在检查需要下载的资源...")
+local download_batches = {} -- release -> { {path=..., filename=..., fullpath=...}, ... }
+for path, info in pairs(index) do
+    local fullpath = assets_dir .. "/" .. path
+    local filename = path:match("[^/]+$")
+    local need = file_size(fullpath) ~= info.size
+
+    if need then
+        local subdir = fullpath:match("^(.*)/[^/]+$")
+        if subdir then
+            os.execute(string.format(mkdir_cmd_tpl, subdir))
+        end
+        local release = get_release_for_file(filename)
+        download_batches[release] = download_batches[release] or {}
+        table.insert(download_batches[release], {
+            path = path,
+            filename = filename,
+            fullpath = fullpath
+        })
+    end
+end
+print("检查完毕，开始下载...")
+
+-- 2. 执行分批下载
+local tmpdir = "_assets/tmp_download"
+os.execute(string.format(mkdir_cmd_tpl, tmpdir))
+
+for release, files in pairs(download_batches) do
+    print(string.format("正在下载资源包 '%s' (%d 个文件)...", release, #files))
+    -- 构造 --pattern 参数
+    local patterns = {}
+    for _, f in ipairs(files) do
+        local quoted = '"' .. f.filename:gsub('"', '\\"') .. '"'
+        table.insert(patterns, quoted)
+    end
+    local cmd = string.format('gh release download %s %s --dir "%s" --clobber', release, table.concat(patterns, " "),
+        tmpdir)
+    os.execute(cmd)
+
+    -- 逐个移动到目标目录
+    for _, f in ipairs(files) do
+        local tmpfile = tmpdir .. "/" .. f.filename
+        if not move_file(tmpfile, f.fullpath) then
+            io.stderr:write("移动文件失败: " .. f.filename .. "\n")
+        end
+    end
+end
+
+print("下载完成")
