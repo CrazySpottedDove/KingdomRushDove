@@ -102,7 +102,7 @@ for path, info in pairs(new_index) do
         local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
         upload_batches[release] = upload_batches[release] or {}
         table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
-        print(string.format("文件: %s, 分桶: %s", filename, release))
+        -- print(string.format("文件: %s, 分桶: %s", filename, release))
     end
 end
 
