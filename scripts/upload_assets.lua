@@ -59,7 +59,7 @@ local function ensure_release(name)
 end
 
 local function get_release_assets(release)
-    local cmd = string.format('gh release view "%s" --json assets -q ".assets[].name" 2>%s', release, null_dev)
+    local cmd = string.format('gh release view "%s" --json assets --jq ".assets[].name"', release)
     local handle = io.popen(cmd)
     if not handle then
         return {}
@@ -103,6 +103,13 @@ for path, info in pairs(new_index) do
         upload_batches[release] = upload_batches[release] or {}
         table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
         -- print(string.format("文件: %s, 分桶: %s", filename, release))
+    end
+end
+
+for k, v in pairs(release_assets_cache) do
+    print(k)
+    for _k, _v in pairs(v) do
+        print(_k)
     end
 end
 
