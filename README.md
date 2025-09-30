@@ -24,6 +24,10 @@ lua ./scripts/gen_assets_index.lua
 
 来更新美术资源索引。这个命令会在 `_assets` 下生成/更新美术资源索引 `assets_index.lua`。
 
+- 请注意！`gen_assets_index.lua` 只是遍历了 `_assets` 目录，并为其中所有的美术资源生成索引。所以，使用它时，有两个要点：
+    - 发现其它协作者推送的更新包含对 `assets_index.lua` 的修改时，请运行 `download_assets.lua`，以保证您的本地美术资源和远程一致。
+    - 当您需要修改美术资源并提交时，请在本地删除不再需要的美术资源，然后运行本脚本，然后将 `assets_index.lua` 更新推送到远程。
+
 ### 上传美术资源
 
 在项目目录下运行
@@ -47,3 +51,5 @@ lua ./scripts/download_assets.lua
 来下载美术资源。这个命令会根据本地的 `assets_index.lua` 来确定需要下载哪些美术资源，然后从远程仓库下载到 `.assets_path.txt` 中指定的美术资源目录中。
 
 一个典型的项目部署方式是，首先 `git clone` 获取项目代码和 `assets_index.lua`，然后再通过 `download_assets.lua` 获得美术资源。
+
+对于本地依然存在，但是在本地的 `assets_index.lua` 中已经消失或不匹配的文件，`download_assets.lua` 会将它们移动到美术资源目录同级的 `_trashed_assets` 目录下，以起删除作用。

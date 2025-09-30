@@ -1,5 +1,30 @@
 -- download_assets.lua
 -- 按索引分批下载缺失/过期的资源（按文件名首字母+尾字母分桶）
+local allowed_exts = {
+    png = true,
+    jpg = true,
+    jpeg = true,
+    bmp = true,
+    tga = true,
+    psd = true,
+    fbx = true,
+    obj = true,
+    gif = true,
+    webp = true,
+    svg = true,
+    mp3 = true,
+    wav = true,
+    dds = true,
+    ogg = true,
+    mp4 = true,
+    otf = true,
+    ttf = true,
+    ttc = true,
+}
+
+local function get_ext(filename)
+    return filename:match("^.+%.([a-zA-Z0-9]+)$")
+end
 local function read_assets_dir()
     local f = io.open("makefiles/.assets_path.txt", "r")
     if not f then
@@ -41,7 +66,6 @@ local function get_release_for_file(filename)
     return ch
 end
 
-
 local function move_file(src, dst)
     local infile = io.open(src, "rb")
     if not infile then
@@ -64,6 +88,7 @@ local function move_file(src, dst)
 end
 
 -- 1. 收集需要下载的文件
+print("正在检查需要下载的资源...")
 local download_batches = {} -- release -> { {path=..., filename=..., fullpath=...}, ... }
 for path, info in pairs(index) do
     local fullpath = assets_dir .. "/" .. path
@@ -90,6 +115,7 @@ local tmpdir = "_assets/tmp_download"
 os.execute(string.format(mkdir_cmd_tpl, tmpdir))
 
 for release, files in pairs(download_batches) do
+    print(string.format("正在下载资源包 '%s' (%d 个文件)...", release, #files))
     -- 构造 --pattern 参数
     local patterns = {}
     for _, f in ipairs(files) do
@@ -110,3 +136,49 @@ for release, files in pairs(download_batches) do
 end
 
 print("下载完成")
+
+print("正在检查本地多余或不匹配的资源...")
+local parent_dir = assets_dir:match("^(.*)[/\\][^/\\]+$") or "."
+local trashed_dir = parent_dir .. "/_trashed_assets"
+-- 移动多余或不匹配的资源到 _trashed_assets
+local function trash_unindexed_assets()
+    local scan_cmd = is_windows and 'dir /b /s "' .. assets_dir .. '"' or 'find "' .. assets_dir .. '" -type f'
+
+    local p = io.popen(scan_cmd)
+    for fullpath in p:lines() do
+        local ext = get_ext(fullpath)
+        if ext and allowed_exts[ext:lower()] == nil then
+            -- 非允许的扩展名，跳过
+            goto continue
+        end
+        -- 转为相对路径
+        local relpath = fullpath:sub(#assets_dir + 2)
+        if is_windows then
+            relpath = relpath:gsub("\\", "/")
+        end
+        local info = index[relpath]
+        local local_file_size = file_size(fullpath)
+
+        if (not info) or (info.size ~= local_file_size) then
+            local trash_path = trashed_dir .. "/" .. relpath
+            local trash_dir = trash_path:match("(.+)/[^/]+$")
+            if trash_dir then
+                if is_windows then
+                    os.execute(string.format('mkdir "%s" 2>NUL', trash_dir))
+                else
+                    os.execute(string.format('mkdir -p "%s" 2>/dev/null', trash_dir))
+                end
+            end
+            print("迁移文件: " .. fullpath .. " -> " .. trash_path)
+            if not move_file(fullpath, trash_path) then
+                io.stderr:write("移动文件失败: " .. fullpath .. "\n")
+            end
+        end
+        ::continue::
+    end
+    p:close()
+end
+
+trash_unindexed_assets()
+
+print("已迁移本地多余或不匹配的资源到".. trashed_dir .."目录")
