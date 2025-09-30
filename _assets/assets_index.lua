@@ -31,7 +31,7 @@ return {
     ["all-desktop/fonts/msyhbd.ttc"] = { size = 16883552, mtime = 1740097150 },
     ["all-desktop/fonts/msyhl.ttc"] = { size = 12189612, mtime = 1740097150 },
     ["all-desktop/fonts/tetsubin_gothic.otf"] = { size = 6107260, mtime = 1639400594 },
-    ["kr1-desktop/icons/icon256.png"] = { size = 39007, mtime = 1639400594 },
+    ["kr1-desktop/icons/krdove.png"] = { size = 1673424, mtime = 1759213732 },
     ["kr1-desktop/images/fullhd/achievements-1.png"] = { size = 610066, mtime = 1639400594 },
     ["kr1-desktop/images/fullhd/comic_10-1.png"] = { size = 1066398, mtime = 1578505060 },
     ["kr1-desktop/images/fullhd/comic_10-2.png"] = { size = 337707, mtime = 1578505060 },

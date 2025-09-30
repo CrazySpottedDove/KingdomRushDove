@@ -308,7 +308,8 @@ function love.load(arg)
     main:set_locale(main.params.locale)
     -- love.window.setTitle(_("GAME_TITLE_" .. string.upper(KR_GAME)))
     love.window.setTitle(version.title .. version.id)
-    local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/icon256.png"
+    -- icon switched
+    local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"
 
     if love.filesystem.isFile(icon) then
         love.window.setIcon(love.image.newImageData(icon))
