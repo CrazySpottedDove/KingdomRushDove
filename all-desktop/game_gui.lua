@@ -2000,11 +2000,6 @@ function HeroPortrait:initialize(hero_entity)
         -- self.portrait = KImageView:new(self.portrait_image_name, nil, 0.45)
         -- self.portrait.pos.x = self.portrait.pos.x + 5
         self.portrait = KImageView:new(self.portrait_image_name)
-    elseif hero_entity.is_kr5 then
-        -- self.portrait = KImageView:new(self.portrait_image_name, nil, 0.51)
-        self.portrait = KImageView:new(self.portrait_image_name)
-        self.portrait.pos.y = self.portrait.pos.y - 8
-
     else
         self.portrait = KImageView:new(self.portrait_image_name)
     end
@@ -3177,15 +3172,9 @@ function InfoBar:update_portrait()
     if self.v_portrait_image_name ~= e.info.portrait then
         if e.info.portrait then
             self.v_portrait:set_image(e.info.portrait)
-            if e.is_kr5 then
-                self.v_portrait.image_scale = 1.1
-                self.v_portrait.pos.x = 61
-                self.v_portrait.pos.y = 51
-            else
-                self.v_portrait.image_scale = 1
-                self.v_portrait.pos.x = 61
-                self.v_portrait.pos.y = 32
-            end
+            self.v_portrait.image_scale = 1
+            self.v_portrait.pos.x = 61
+            self.v_portrait.pos.y = 32
             self.v_portrait.hidden = false
             self.v_portrait_image_name = e.info.portrait
         else
@@ -6270,7 +6259,7 @@ function CriketMenuButton:initialize(item)
     b.disabled_tint_color = nil
     self.button = b
 
-    self:add_child(b, 3)
+    self:add_child(b)
 
     local function get_pos(this, offset)
         offset = offset or v(0, 0)
@@ -6280,21 +6269,15 @@ function CriketMenuButton:initialize(item)
         return v(x, y)
     end
 
-    local function create_bo_and_bg_view(img_name)
-        local bg = KImageView:new(img_name .. "_bg")
-
-        bg.pos = get_pos(bg)
-
-        self:add_child(bg, 2)
-
+    local function create_bo_view(img_name)
         local bo = KImageView:new(img_name)
 
         bo.pos = get_pos(bo)
         bo.propagate_on_click = true
 
-        self:add_child(bo, 4)
+        self:add_child(bo, 2)
 
-        return bg, bo
+        return bo
     end
 
     local halo = KImageView:new(item.halo)
@@ -6311,10 +6294,10 @@ function CriketMenuButton:initialize(item)
 
     self:add_child(halo)
 
-    local bg, bo
+    local bo
 
     if table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack" }, item.action) then
-        bg, bo = create_bo_and_bg_view("main_icons_0000")
+        bo = create_bo_view("main_icons_0000")
     end
 
     local price_tag
@@ -7471,7 +7454,7 @@ function TowerMenuButton:initialize(item, entity)
     -- b.disabled_tint_color = nil
     self.button = b
 
-    self:add_child(b, 3)
+    self:add_child(b)
 
     local function get_pos(this, offset)
         offset = offset or v(0, 0)
@@ -7481,21 +7464,15 @@ function TowerMenuButton:initialize(item, entity)
         return v(x, y)
     end
 
-    local function create_bo_and_bg_view(img_name)
-        local bg = KImageView:new(img_name .. "_bg")
-
-        bg.pos = get_pos(bg)
-
-        self:add_child(bg, 2)
-
+    local function create_bo_view(img_name)
         local bo = KImageView:new(img_name)
 
         bo.pos = get_pos(bo)
         bo.propagate_on_click = true
 
-        self:add_child(bo, 4)
+        self:add_child(bo, 2)
 
-        return bg, bo
+        return bo
     end
 
     local halo = KImageView:new(item.halo)
@@ -7512,12 +7489,12 @@ function TowerMenuButton:initialize(item, entity)
 
     self:add_child(halo)
 
-    local bg, bo
+    local bo
 
     if item.action == "upgrade_power" then
-        bg, bo = create_bo_and_bg_view("special_icons_0000")
+        bo = create_bo_view("special_icons_0000")
     elseif table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack" }, item.action) then
-        bg, bo = create_bo_and_bg_view("main_icons_0000")
+        bo = create_bo_view("main_icons_0000")
     end
 
     local price_tag

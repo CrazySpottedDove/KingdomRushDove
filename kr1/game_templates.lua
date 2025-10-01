@@ -666,41 +666,6 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.price = 0
 tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
 
-tt = RT("soldier_ingvar_ancestor", "soldier_militia")
-AC(tt, "reinforcement", "melee", "nav_grid")
-image_y = 60
-image_x = 72
-anchor_y = 0.17
-tt.controable = true
-tt.controable_other = true
-tt.health.armor = 0.25
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(0, 46)
-tt.health.dead_lifetime = fts(30)
-tt.info.portrait = IS_PHONE_OR_TABLET and
-"portraits_hero_0011" or "info_portraits_hero_0011"
-tt.info.i18n_key = "HERO_VIKING_ANCESTOR"
-tt.info.random_name_format = nil
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.remove = scripts.soldier_reinforcement.remove
-tt.main_script.update = scripts.soldier_reinforcement.update
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].hit_time = fts(15)
-tt.melee.attacks[1].sound = "MeleeSword"
-tt.melee.range = 128
-tt.motion.max_speed = 69
-tt.reinforcement.duration = 14
-tt.reinforcement.fade = nil
-tt.regen.cooldown = 1
-tt.render.sprites[1].prefix = "soldier_ingvar_ancestor"
-tt.ui.click_rect = r(-13, 0, 26, 30)
-tt.unit.marker_offset = vec_2(0, 0)
-tt.unit.mod_offset = vec_2(0, 15)
-tt.unit.price = 0
-tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
-
 tt = RT("spear_legionnaire", "arrow")
 tt.bullet.damage_min = 24
 tt.bullet.damage_max = 40
