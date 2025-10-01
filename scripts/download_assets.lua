@@ -167,8 +167,9 @@ for release, files in pairs(download_batches) do
         local quoted = '"' .. f.filename:gsub('"', '\\"') .. '"'
         table.insert(patterns, quoted)
     end
-    local cmd = string.format('gh release download %s %s --dir "%s" --clobber', release, table.concat(patterns, " "),
+    local cmd = string.format('gh release download %s -p %s --dir "%s" --clobber', release, table.concat(patterns, " -p "),
         tmpdir)
+
     os.execute(cmd)
 
     -- 逐个移动到目标目录
