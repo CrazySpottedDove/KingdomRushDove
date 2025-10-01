@@ -113,7 +113,8 @@ GS.heroes_require_scaled_texture = {
     ["hero_robot"] = true,
     ["hero_bird"] = true,
     ["hero_dragon_bone"] = true,
-	["hero_lumenir"] = true
+	["hero_lumenir"] = true,
+    ["hero_wukong"] = true
 }
 GS.level1_from = 0
 GS.level2_from = 26

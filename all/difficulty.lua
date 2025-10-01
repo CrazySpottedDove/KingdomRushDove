@@ -67,8 +67,6 @@ function difficulty:patch_templates()
             end
 
             if not PT(t.enemy, "gold") and gold_factor_enemy ~= 1 then
-                print(t.template_name)
-                print(t.enemy.gold)
                 t.enemy.gold = math.floor(t.enemy.gold * gold_factor_enemy)
             end
 
