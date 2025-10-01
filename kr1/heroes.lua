@@ -13881,9 +13881,9 @@ local function heroes()
     tt.hero.skills.zhu_apprentice.entity = "soldier_hero_wukong_zhu_apprentice"
     tt.hero.skills.zhu_apprentice.key = "ZHU_APPRENTICE"
     tt.hero.skills.zhu_apprentice.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3
+        [1] = 1,
+        [4] = 2,
+        [7] = 3
     }
     tt.hero.skills.pole_ranged = E:clone_c("hero_skill")
     tt.hero.skills.pole_ranged.key = "POLE_RANGED"
@@ -13893,9 +13893,9 @@ local function heroes()
     tt.hero.skills.pole_ranged.pole_amounts = b.pole_ranged.pole_amounts
     tt.hero.skills.pole_ranged.xp_gain = b.pole_ranged.xp_gain
     tt.hero.skills.pole_ranged.xp_level_steps = {
-        [3] = 1,
-        [6] = 2,
-        [9] = 3
+        [2] = 1,
+        [5] = 2,
+        [8] = 3
     }
     tt.hero.skills.giant_staff = E:clone_c("hero_skill")
     tt.hero.skills.giant_staff.cooldown = b.giant_staff.cooldown
@@ -13919,8 +13919,9 @@ local function heroes()
         [1] = 1,
         [4] = 2,
         [7] = 3,
+        [10] = 4
     }
-    tt.health.dead_lifetime = b.dead_lifetime
+    tt.health.dead_lifetime = 15
     tt.health_bar.offset = v(0, 45)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.hero_portrait = "kr5_hero_portraits_0018"
@@ -13931,7 +13932,7 @@ local function heroes()
     tt.info.stat_damage = b.stats.damage
     tt.info.stat_cooldown = b.stats.cooldown
     tt.info.damage_icon = "magic"
-    tt.info.fn = scripts.hero_basic.get_info_melee
+    tt.info.fn = scripts.hero_basic.get_info
     tt.hero.fn_level_up = scripts.hero_wukong.level_up
     tt.main_script.insert = scripts.hero_wukong.insert
     tt.main_script.update = scripts.hero_wukong.update
@@ -14074,7 +14075,7 @@ local function heroes()
     tt.timed_attacks.list[2].instakill = true
     tt.timed_attacks.list[2].damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_DODGE)
     tt.timed_attacks.list[2].area_vis_flags = F_AREA
-    tt.timed_attacks.list[2].area_vis_bans = F_FLYING
+    tt.timed_attacks.list[2].area_vis_bans = F_NONE
     tt.timed_attacks.list[2].area_damage_max = b.giant_staff.area_damage.damage_max
     tt.timed_attacks.list[2].area_damage_min = b.giant_staff.area_damage.damage_min
     tt.timed_attacks.list[2].area_damage_radius = b.giant_staff.area_damage.damage_radius
@@ -14093,7 +14094,7 @@ local function heroes()
     tt.timed_attacks.list[3].min_cooldown = 5
     tt.timed_attacks.list[3].staff_template = "decal_hero_wukong_ranged_attack_staff"
     tt.timed_attacks.list[3].vis_flags = bor(F_RANGED)
-    tt.timed_attacks.list[3].vis_bans = bor(F_FLYING)
+    tt.timed_attacks.list[3].vis_bans = F_NONE
     tt.timed_attacks.list[3].damage_type = b.pole_ranged.damage_type
     tt.timed_attacks.list[3].max_range = b.pole_ranged.max_range
     tt.timed_attacks.list[3].min_range = b.pole_ranged.min_range

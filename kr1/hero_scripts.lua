@@ -26046,7 +26046,7 @@ function scripts.hero_wukong.update(this, store)
                 S:queue(this.sound_death_sfx)
             end
 
-            SU.y_hero_death_and_respawn_kr5(store, this)
+            SU.y_hero_death_and_respawn(store, this)
         end
 
         if this.unit.is_stunned then
@@ -26074,7 +26074,7 @@ function scripts.hero_wukong.update(this, store)
 
                     this.vis.bans = F_ALL
                     this.health.immune_to = F_ALL
-                    this.motion.max_speed = this.motion.max_speed * tw.extra_speed_mult
+                    U.speed_mul_self(this, tw.extra_speed_mult)
                     this.unit.marker_hidden = true
                     this.health_bar.hidden = true
                     this.on_flywalk = true
@@ -26153,7 +26153,7 @@ function scripts.hero_wukong.update(this, store)
                     U.y_animation_wait(this, 1)
 
                     this.ui.click_rect = this.ui.click_rect_nofly
-                    this.motion.max_speed = this.motion.max_speed / tw.extra_speed_mult
+                    U.speed_div_self(this, tw.extra_speed_mult)
                     this.vis.bans = vis_bans
                     this.health.immune_to = 0
                     this.unit.marker_hidden = nil
@@ -26175,9 +26175,7 @@ function scripts.hero_wukong.update(this, store)
             a = this.ultimate
 
             if ready_to_use_skill(a, store) then
-                local target = U.find_foremost_enemy(store, this.pos, hair_clones_attack.min_range,
-                hair_clones_attack.max_range, nil,
-                    0, a.vis_bans)
+                local target = find_target_at_critical_moment(this, store, hair_clones_attack.max_range, false, false)
                 if target and valid_rally_node_nearby(target.pos) then
                     apply_ultimate(this, store, target, "levelup")
                 else
