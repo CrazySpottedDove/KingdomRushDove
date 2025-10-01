@@ -25786,10 +25786,8 @@ function scripts.hero_wukong.level_up(this, store, initial)
         this.melee.attacks[i].damage_max = ls.melee_damage_max[i][hl]
     end
 
-    local s
-
     upgrade_skill(this, "hair_clones", function(this, s)
-        local a = this.timed_attacks.list[this.timed_attacks.sid_hair_clones]
+        local a = this.timed_attacks.list[1]
 
         a.disabled = nil
         a.cooldown = s.cooldown[s.level]
@@ -25840,8 +25838,8 @@ function scripts.hero_wukong.level_up(this, store, initial)
     upgrade_skill(this, "ultimate", function(this, s)
         local uc = E:get_template(s.controller_name)
 
-        uc.cooldown = s.cooldown[sl]
-        uc.damage = s.damage_total[sl] / #uc.damage_times
+        uc.cooldown = s.cooldown[s.level]
+        uc.damage = s.damage_total[s.level] / #uc.damage_times
 
         local u_aura = E:get_template(uc.aura_slow)
 
@@ -25851,11 +25849,11 @@ function scripts.hero_wukong.level_up(this, store, initial)
                 255
             },
             {
-                s.slow_duration[sl] - 0.5,
+                s.slow_duration[s.level] - 0.5,
                 255
             },
             {
-                s.slow_duration[sl],
+                s.slow_duration[s.level],
                 0
             }
         }
@@ -26517,7 +26515,7 @@ function scripts.hero_wukong.update(this, store)
                 end
             end
 
-            brk, sta = y_hero_melee_block_and_attacks(store, this)
+            brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
             if brk or sta ~= A_NO_TARGET then
                 -- block empty

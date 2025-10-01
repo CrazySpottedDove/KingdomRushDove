@@ -13086,7 +13086,6 @@ local function heroes()
         [7] = 3,
         [10] = 4
     }
-    tt.hero.team = TEAM_LINIREA
     tt.health.dead_lifetime = 15
     tt.health_bar.draw_order = -1
     tt.health_bar.offset = v(0, 170)
@@ -13867,6 +13866,11 @@ local function heroes()
     tt.hero.skills.hair_clones.damage_max = b.hair_clones.soldier.melee_attack.damage_max
     tt.hero.skills.hair_clones.key = "HAIR_CLONES"
     tt.hero.skills.hair_clones.xp_gain = b.hair_clones.xp_gain
+    tt.hero.skills.hair_clones.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3
+    }
     tt.hero.skills.zhu_apprentice = E:clone_c("hero_skill")
     tt.hero.skills.zhu_apprentice.smash_chance = b.zhu_apprentice.smash_attack.chance
     tt.hero.skills.zhu_apprentice.hp_max = b.zhu_apprentice.hp_max
@@ -13876,6 +13880,11 @@ local function heroes()
     tt.hero.skills.zhu_apprentice.smash_damage_max = b.zhu_apprentice.smash_attack.damage_max
     tt.hero.skills.zhu_apprentice.entity = "soldier_hero_wukong_zhu_apprentice"
     tt.hero.skills.zhu_apprentice.key = "ZHU_APPRENTICE"
+    tt.hero.skills.zhu_apprentice.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3
+    }
     tt.hero.skills.pole_ranged = E:clone_c("hero_skill")
     tt.hero.skills.pole_ranged.key = "POLE_RANGED"
     tt.hero.skills.pole_ranged.cooldown = b.pole_ranged.cooldown
@@ -13883,12 +13892,22 @@ local function heroes()
     tt.hero.skills.pole_ranged.damage_min = b.pole_ranged.damage_min
     tt.hero.skills.pole_ranged.pole_amounts = b.pole_ranged.pole_amounts
     tt.hero.skills.pole_ranged.xp_gain = b.pole_ranged.xp_gain
+    tt.hero.skills.pole_ranged.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3
+    }
     tt.hero.skills.giant_staff = E:clone_c("hero_skill")
     tt.hero.skills.giant_staff.cooldown = b.giant_staff.cooldown
     tt.hero.skills.giant_staff.area_damage_min = b.giant_staff.area_damage.damage_min
     tt.hero.skills.giant_staff.area_damage_max = b.giant_staff.area_damage.damage_max
     tt.hero.skills.giant_staff.key = "GIANT_STAFF"
     tt.hero.skills.giant_staff.xp_gain = b.giant_staff.xp_gain
+    tt.hero.skills.giant_staff.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3
+    }
     tt.hero.skills.ultimate = E:clone_c("hero_skill")
     tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
     tt.hero.skills.ultimate.damage_total = b.ultimate.damage_total
@@ -13896,7 +13915,11 @@ local function heroes()
     tt.hero.skills.ultimate.key = "ULTIMATE"
     tt.hero.skills.ultimate.slow_factor = b.ultimate.slow_factor
     tt.hero.skills.ultimate.slow_duration = b.ultimate.slow_duration
-    tt.hero.team = TEAM_LINIREA
+    tt.hero.skills.ultimate.xp_level_steps = {
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
+    }
     tt.health.dead_lifetime = b.dead_lifetime
     tt.health_bar.offset = v(0, 45)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -14078,6 +14101,12 @@ local function heroes()
     tt.timed_attacks.list[3].sound = "HeroWukongMultiStaff"
     tt.timed_attacks.list[3].sound_args = {
         delay = fts(30)
+    }
+    tt.ultimate = {
+        ts = 0,
+        cooldown = 53,
+        vis_ban = 0,
+        disabled = true
     }
     tt.flywalk = {}
     tt.flywalk.min_distance = b.distance_to_flywalk
