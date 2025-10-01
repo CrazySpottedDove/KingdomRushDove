@@ -2734,7 +2734,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
     add_level_title(self.back, level_num .. " " .. _(string.format("LEVEL_%d_TITLE", level_num)), "left", ls_page_y + 22)
 
-    local stage_thumb = KImageView:new("stage_thumbs_00" .. level_string)
+    local stage_thumb = KImageView:new(string.format("stage_thumbs_%04i", level_string))
 
     stage_thumb.pos = v(215, 190)
 

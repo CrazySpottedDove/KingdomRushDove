@@ -1943,7 +1943,7 @@ local function barrack_towers()
     tt.powers.teleport.key = "FIERY"
     tt.powers.teleport.max_level = 2
     tt.info.i18n_key = "TOWER_PANDAS_4"
-    tt.info.portrait = "portraits_towers_0031"
+    tt.info.portrait = "kr5_portraits_towers_0031"
     tt.info.enc_icon = 84
     tt.info.tower_portrait = "towerselect_portraits_big_0001"
     tt.info.room_portrait = "quickmenu_main_icons_main_icons_0025_0001"

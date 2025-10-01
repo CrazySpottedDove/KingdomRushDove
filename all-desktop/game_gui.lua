@@ -2957,12 +2957,21 @@ function InfoBar:initialize()
     local v_portrait = KView:new(V.v(68, 68))
 
     v_portrait.anchor = v(34, 34)
-    v_portrait.pos = IS_KR3 and v(65, 39) or IS_KR1 and v(61, 32) or v(68, 38)
+    v_portrait.pos = v(61, 32)
     v_portrait.propagate_on_down = true
     v_portrait.propagate_on_click = true
     self.v_portrait = v_portrait
 
     self:add_child(v_portrait)
+
+    local portrait_bo = KView:new(V.v(68, 68), "info_portraits_hero_0000")
+    portrait_bo.anchor = v(34, 34)
+    portrait_bo.pos = v(61, 32)
+    portrait_bo.propagate_on_down = true
+    portrait_bo.propagate_on_click = true
+    self.portrait_bo = portrait_bo
+
+    self:add_child(portrait_bo)
 
     local l_name = GGLabel:new(V.v(130, 15))
 
@@ -3172,14 +3181,15 @@ function InfoBar:update_portrait()
     if self.v_portrait_image_name ~= e.info.portrait then
         if e.info.portrait then
             self.v_portrait:set_image(e.info.portrait)
-            self.v_portrait.image_scale = 1
-            self.v_portrait.pos.x = 61
-            self.v_portrait.pos.y = 32
             self.v_portrait.hidden = false
             self.v_portrait_image_name = e.info.portrait
+
+            self.portrait_bo.hidden = false
         else
             self.v_portrait.hidden = true
             self.v_portrait_image_name = nil
+
+            self.portrait_bo.hidden = true
         end
     end
 end
