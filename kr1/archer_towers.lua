@@ -1083,7 +1083,7 @@ local function archer_towers()
     tt.powers.skill_buff.times = 0
     tt.info.i18n_key = "TOWER_DARK_ELF_4"
     tt.info.fn = scripts.tower_dark_elf.get_info
-    tt.info.portrait = "portraits_towers_0020"
+    tt.info.portrait = "kr5_portraits_towers_0020"
     tt.info.enc_icon = 1
     tt.info.tower_portrait = "tower_room_portraits_big_tower_dark_elf_0001"
     tt.info.room_portrait = "quickmenu_main_icons_main_icons_0018_0001"

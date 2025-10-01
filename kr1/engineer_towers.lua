@@ -1107,7 +1107,7 @@ local function engineer_towers()
     tt.tower.menu_offset = vec_2(0, 24)
     tt.info.enc_icon = 13
     tt.info.i18n_key = "TOWER_TRICANNON_4"
-    tt.info.portrait = "portraits_towers_0004"
+    tt.info.portrait = "kr5_portraits_towers_0004"
     tt.powers.bombardment = CC("power")
     tt.powers.bombardment.price_base = b.bombardment.price[1]
     tt.powers.bombardment.price_inc = b.bombardment.price[2]
@@ -1357,7 +1357,7 @@ local function engineer_towers()
     tt.powers.big_guy.cooldown = b.big_guy.cooldown
     tt.powers.big_guy.key = "BIG_DEMON"
     tt.info.i18n_key = "TOWER_DEMON_PIT_4"
-    tt.info.portrait = "portraits_towers_0006"
+    tt.info.portrait = "kr5_portraits_towers_0006"
     tt.info.stat_damage = b.stats.damage
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
