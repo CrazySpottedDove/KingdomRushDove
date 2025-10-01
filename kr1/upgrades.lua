@@ -583,6 +583,8 @@ function upgrades:patch_templates(max_level)
             T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
         T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(
             T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+        T("mod_tower_ray_damage").dps.damage_max = math.ceil(T("mod_tower_ray_damage").dps.damage_max * u.damage_factor)
+        T("mod_tower_ray_damage").dps.damage_min = math.ceil(T("mod_tower_ray_damage").dps.damage_min * u.damage_factor)
     end
 
     u = self:get_upgrade("mage_slow_curse")

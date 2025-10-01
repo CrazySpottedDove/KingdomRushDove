@@ -2131,8 +2131,8 @@ tt.sheep_hp_mult = b.sheep.hp_mult
 tt = E:register_t("mod_tower_ray_damage", "modifier")
 AC(tt, "render", "dps", "tween")
 b = balance.towers.ray.basic_attack
-tt.dps.damage_min = nil
-tt.dps.damage_max = nil
+tt.dps.damage_min = b.damage_min[4]
+tt.dps.damage_max = b.damage_max[4]
 tt.dps.damage_type = bor(DAMAGE_MAGICAL, DAMAGE_ONE_SHIELD_HIT)
 tt.dps.damage_every = b.damage_every
 tt.dps.pop = {"pop_zap_arcane"}

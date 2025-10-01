@@ -1123,6 +1123,13 @@ function sys.game_upgrades:on_insert(entity, store)
         end
         dps.damage_min = ceil(dps._orig_damage_min * f)
         dps.damage_max = ceil(dps._orig_damage_max * f)
+        dps = E:get_template("mod_tower_ray_damage").dps
+        if not dps._orig_damage_min then
+            dps._orig_damage_min = dps.damage_min
+            dps._orig_damage_max = dps.damage_max
+        end
+        dps.damage_min = ceil(dps._orig_damage_min * f)
+        dps.damage_max = ceil(dps._orig_damage_max * f)
         if not bullet_ray_high_elven._orig_damage_min then
             bullet_ray_high_elven._orig_damage_min = bullet_ray_high_elven.damage_min
             bullet_ray_high_elven._orig_damage_max = bullet_ray_high_elven.damage_max
@@ -1162,6 +1169,9 @@ function sys.game_upgrades:on_remove(entity, store)
             b.damage_min = ceil(b._orig_damage_min * f)
             b.damage_max = ceil(b._orig_damage_max * f)
         end
+        dps.damage_min = ceil(dps._orig_damage_min * f)
+        dps.damage_max = ceil(dps._orig_damage_max * f)
+        dps = E:get_template("mod_tower_ray_damage").dps
         dps.damage_min = ceil(dps._orig_damage_min * f)
         dps.damage_max = ceil(dps._orig_damage_max * f)
         bullet_ray_high_elven.damage_min = ceil(bullet_ray_high_elven._orig_damage_min * f)
