@@ -64,8 +64,9 @@ upgrades.list = {
         icon = DP(17, 10)
     },
     archer_el_bloodletting_shoot = {
+        from_kr = 3,
         price = 4,
-        icon = 31,
+        icon = 5,
         class = "archers",
         level = 6
     },
@@ -106,10 +107,11 @@ upgrades.list = {
         icon = DP(12, 5)
     },
     barrack_el_enchanted_armor = {
+        from_kr = 3,
         class = "barracks",
         factor = 0.9,
         magic_armor_inc = 0.1,
-        icon = 32,
+        icon = 8,
         price = 4,
         level = 6
     },
@@ -150,8 +152,9 @@ upgrades.list = {
         icon = DP(22, 15)
     },
     mage_brilliance = {
+        from_kr = 2,
         class = "mages",
-        icon = 33,
+        icon = 15,
         price = 4,
         level = 6,
         damage_factors = {1.1, 1.12, 1.14, 1.16, 1.18, 1.2, 1.22, 1.24, 1.26, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34,
@@ -192,10 +195,11 @@ upgrades.list = {
         icon = DP(27, 20)
     },
     engineer_gnomish_tinkering = {
+        from_kr = 2,
         cooldown_factor_electric = 0.9,
         cooldown_factor = 0.88,
         class = "engineers",
-        icon = 34,
+        icon = 19,
         price = 4,
         level = 6
     },
@@ -237,9 +241,10 @@ upgrades.list = {
         icon = DP(7, 30)
     },
     rain_armaggedon = {
+        from_kr = 2,
         class = "rain",
         fireball_count_increase = 1,
-        icon = 35,
+        icon = 25,
         price = 4,
         level = 6
     },
@@ -279,10 +284,11 @@ upgrades.list = {
         icon = DP(2, 25)
     },
     reinforcement_level_6 = {
+        from_kr = 3,
         class = "reinforcements",
         duration_inc = 2,
         cooldown_dec = 1,
-        icon = 36,
+        icon = 29,
         price = 4,
         level = 6
     }

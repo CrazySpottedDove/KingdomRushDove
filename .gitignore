@@ -15,6 +15,7 @@ _assets/kr1-desktop/strings/pt.lua
 _assets/kr1-desktop/strings/ru.lua
 _assets/kr1-desktop/strings/zh-Hant.lua
 _assets_new
+_trashed_assets
 .vscode/
 mdbuild/
 /data/

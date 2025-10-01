@@ -35,13 +35,31 @@ local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
 
 screen_map = {}
-screen_map.required_sounds = { "common", "music_screen_map" }
-screen_map.required_textures = { "screen_map", "screen_map_animations", "screen_map_animations2", "view_options",
-    "achievements", "encyclopedia", "encyclopedia_thumbs", "gui_shop", "gui_shop_bg" }
-
-if IS_KR1 then
-    table.insert(screen_map.required_textures, "screen_map_hero_room")
-end
+screen_map.required_sounds = {
+    "common",
+    "music_screen_map"
+}
+screen_map.required_textures = {
+    "screen_map_upgrades",
+    "screen_map_backgrond",
+    "screen_map_achievements",
+    "screen_map_select_difficulty",
+    "screen_map_level_select",
+    "screen_map_flags",
+    "screen_map_encyclopedia",
+    "screen_map_balloon",
+    "screen_map_stars_container",
+    "screen_map_hero_room",
+    "screen_map_buttons",
+    "screen_map_animations",
+    "screen_map_animations2",
+    "view_options",
+    "achievements",
+    "encyclopedia",
+    "encyclopedia_thumbs",
+    "gui_shop",
+    "gui_shop_bg",
+}
 
 screen_map.ref_w = 1920
 screen_map.ref_h = 1080
@@ -368,7 +386,7 @@ function screen_map:init(w, h, done_callback)
 
     self.window:add_child(o_button)
 
-    local a_button = GGButton:new("mapButtons-notxt_0004", "mapButtons-notxt_0005")
+    local a_button = GGButton:new("mapButtons_notxt_0004", "mapButtons_notxt_0005")
 
     a_button.anchor = v(a_button.size.x / 2, a_button.size.y / 2)
     a_button.pos = v(sw - 100, sh - 90)
@@ -390,7 +408,7 @@ function screen_map:init(w, h, done_callback)
 
     self.TTT = a_button
 
-    local e_button = GGButton:new("mapButtons-notxt_0007", "mapButtons-notxt_0008")
+    local e_button = GGButton:new("mapButtons_notxt_0007", "mapButtons_notxt_0008")
 
     e_button.anchor = v(e_button.size.x / 2, e_button.size.y / 2)
     e_button.pos = v(a_button.pos.x - 170, sh - 90)
@@ -410,7 +428,7 @@ function screen_map:init(w, h, done_callback)
 
     self.window:add_child(e_button)
 
-    local change_button = GGButton:new("mapButtons-notxt_0011", "mapButtons-notxt_0012")
+    local change_button = GGButton:new("mapButtons_notxt_0011", "mapButtons_notxt_0012")
     change_button.anchor = v(change_button.size.x / 2, change_button.size.y / 2)
     change_button.pos = v(a_button.pos.x - 900, sh - 90)
 
@@ -448,7 +466,7 @@ function screen_map:init(w, h, done_callback)
 
     self.window:add_child(change_button)
 
-    local u_button = GGButton:new("mapButtons-notxt_0010", "mapButtons-notxt_0011")
+    local u_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
 
     u_button.anchor = v(u_button.size.x / 2, u_button.size.y / 2)
     u_button.pos = v(e_button.pos.x - 170, sh - 90)
@@ -527,7 +545,7 @@ function screen_map:init(w, h, done_callback)
 
     self.upgrade_points = points_label
 
-    local h_button = GGButton:new("mapButtons-notxt_0001", "mapButtons-notxt_0002")
+    local h_button = GGButton:new("mapButtons_notxt_0001", "mapButtons_notxt_0002")
 
     h_button.anchor = v(h_button.size.x / 2, u_button.size.y / 2)
     h_button.pos = v(u_button.pos.x - 170, sh - 90)
@@ -612,7 +630,7 @@ function screen_map:init(w, h, done_callback)
     self.skill_label = points_label
 
     if self.is_premium then
-        local s_button = GGButton:new("mapButtons-notxt_0013", "mapButtons-notxt_0014")
+        local s_button = GGButton:new("mapButtons_notxt_0013", "mapButtons_notxt_0014")
         s_button.anchor = v(s_button.size.x / 2, s_button.size.y / 2)
         s_button.pos = v(h_button.pos.x - 170, sh - 90)
 
@@ -1720,7 +1738,7 @@ function MapView:show_flags(num)
                     self.flags_layer:add_child(wing)
 
                     if extra or custom then
-                        self.wings[i+jnum] = wing
+                        self.wings[i + jnum] = wing
                     else
                         self.wings[i] = wing
                     end
@@ -1789,8 +1807,8 @@ function MapView:show_flags(num)
                 -- local flag_pos = screen_map.map_points.flags[i].pos
                 local flag, wing
                 if extra then
-                    flag = self.flags[i+jnum]
-                    wing = self.wings[i+jnum]
+                    flag = self.flags[i + jnum]
+                    wing = self.wings[i + jnum]
                 else
                     flag = self.flags[i]
                     wing = self.wings[i]
@@ -2830,7 +2848,8 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
     local b_y = rbbg.pos.y + 10
     local b_o = 50
     local allowed_towers = screen_map.level_data[level_num].iron
-    local opts = IS_KR3 and { "archers", "barracks", "mages", "druids" } or { "archers", "barracks", "mages", "artillery" }
+    local opts = IS_KR3 and { "archers", "barracks", "mages", "druids" } or
+    { "archers", "barracks", "mages", "artillery" }
 
     for i, v in ipairs(opts) do
         local n = table.contains(allowed_towers, v) and 2 * i or 2 * i - 1
@@ -3261,7 +3280,7 @@ function UpgradesView:initialize(sw, sh)
     for key, value in pairs(UPGR.list) do
         local class_ind = table.keyforobject(UPGR.display_order, value.class)
         local icon_index = value.icon
-        local icon_name = string.format("Upgrades_Icons_%04i", icon_index)
+        local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
 
         self.upgrade_buttons[key] = UpgradeButtons:new(icon_name, value, key, 0.83)
 
@@ -3404,7 +3423,7 @@ function UpgradesView:set_stars_and_check()
         local do_grey = true
 
         if not value.bought and (self.bought_list[value.data_values.class] + 1 == value.data_values.level and l_stars_num >=
-            value.data_values.price) or self:has_enough_star_to_upgrade_to(value.data_values.class, value.data_values.level) then
+                value.data_values.price) or self:has_enough_star_to_upgrade_to(value.data_values.class, value.data_values.level) then
             do_grey = false
         end
 
@@ -4796,38 +4815,29 @@ function HeroRoomViewKR1:initialize(size)
     local ht = self:get_child_by_id("hero_thumbs")
     local finished_levels = self:get_finished_levels()
     local single_hero_thumb_x_size
-    local thumb_scale = 1.08
-    local thumb_scale_1 = 0.385 * thumb_scale
-    local thumb_scale_2 = 0.217 * thumb_scale
-    local thumb_scale_3 = 0.5 * thumb_scale
-    local thumb_scale_4 = 0.295 * thumb_scale
+
+    local scale = V.v(0.5, 0.5)
+
     for i, d in ipairs(screen_map.hero_data) do
         local tpos = V.v((i - 1) % 10 * 37.5, math.floor((i - 1) / 10) * 38.5)
 
-        local v2
+        local v2_name = U.splicing_from_kr(d.from_kr, string.format("hero_room_thumbs_%04d", d.thumb))
 
-        if d.thumb == 26 or d.thumb == 50 or d.thumb == 51 then
-            v2 = KImageView:new(string.format("heroroom_thumbs_%04d", d.thumb), nil, thumb_scale_1)
-            v2.size.x = v2.size.x / thumb_scale_1 * 0.5
-            v2.size.y = v2.size.y / thumb_scale_1 * 0.5
-        elseif d.thumb >= 52 then
-            v2 = KImageView:new(string.format("heroroom_thumbs_%04d", d.thumb), nil, thumb_scale_4)
-            v2.size.x = v2.size.x / thumb_scale_4 * 0.5
-            v2.size.y = v2.size.y / thumb_scale_4 * 0.5
-        elseif d.thumb >= 17 then
-            v2 = KImageView:new(string.format("heroroom_thumbs_%04d", d.thumb), nil, thumb_scale_2)
-            v2.size.x = v2.size.x / thumb_scale_2 * 0.5
-            v2.size.y = v2.size.y / thumb_scale_2 * 0.5
-        else
-            v2 = KImageView:new(string.format("heroroom_thumbs_%04d", d.thumb), nil, thumb_scale_3)
-        end
+        local v2 = KImageView:new(v2_name)
 
         v2.pos = tpos
+        v2.scale = scale
         ht:add_child(v2)
 
+        local bo = KImageView:new("hero_room_thumbs_0000")
+        bo.pos = tpos
+        bo.scale = scale
+
+        ht:add_child(bo)
+
         if not table.find(finished_levels, d.available_level) then
-            local v1 = KImageView:new("heroroom_portraitsLock")
-            v1.scale = V.v(0.5, 0.5)
+            local v1 = KImageView:new("hero_room_portraits_lock")
+            v1.scale = scale
             v1.pos = tpos
             ht:add_child(v1)
         end
@@ -4849,29 +4859,23 @@ function HeroRoomViewKR1:initialize(size)
         end
     end
 
-    self.check_image_1 = KImageView("heroroom_thumbs_0010")
-    self.check_image_2 = KImageView("heroroom_thumbs_0010")
-    self.border_image = KImageView("heroroom_thumbs_0009")
-    self.hover_image = KImageView("heroroom_thumbs_0008")
-    self.check_image_1.scale = V.vv(thumb_scale_3)
-    self.check_image_2.scale = V.vv(thumb_scale_3)
+    local function create_select_view(name)
+        local view = KImageView(name)
+        view.scale = scale
+        view.hidden = true
+        view.not_thumb = true
+
+        ht:add_child(view)
+
+        return view
+    end
+
+    self.check_image_1 = create_select_view("hero_room_thumbs_select_0001")
+    self.check_image_2 = create_select_view("hero_room_thumbs_select_0001")
+    self.border_image = create_select_view("hero_room_thumbs_select_0000")
+    self.hover_image = create_select_view("hero_room_thumbs_select_0003")
     self.check_image_1.anchor.x = self.check_image_1.anchor.x + single_hero_thumb_x_size - self.check_image_1.size.x *
         0.06
-    self.border_image.scale = V.vv(thumb_scale_3)
-    self.hover_image.scale = V.vv(thumb_scale_3)
-    self.check_image_1.hidden = true
-    self.check_image_2.hidden = true
-    self.border_image.hidden = true
-    self.hover_image.hidden = true
-    self.check_image_1.not_thumb = true
-    self.check_image_2.not_thumb = true
-    self.border_image.not_thumb = true
-    self.hover_image.not_thumb = true
-
-    ht:add_child(self.check_image_1)
-    ht:add_child(self.check_image_2)
-    ht:add_child(self.border_image)
-    ht:add_child(self.hover_image)
 
     local bs = self:get_child_by_id("hero_room_sel_select")
     local bd = self:get_child_by_id("hero_room_sel_deselect")
@@ -4908,19 +4912,12 @@ function HeroRoomViewKR1:initialize(size)
 
         if selected_name and get_hero_index(selected_name) then
             local hd = screen_map.hero_data[get_hero_index(selected_name)]
-            if hd.is_kr5 then
-                screen_map.hero_icon_portrait.image_scale = 1
-                screen_map.hero_icon_portrait.pos.x = KR5_HERO_ICON_PORTRAIT_X
-                screen_map.hero_icon_portrait.pos.y = KR5_HERO_ICON_PORTRAIT_Y
-            else
-                screen_map.hero_icon_portrait.pos.x = 0
-                screen_map.hero_icon_portrait.pos.y = 0
-                screen_map.hero_icon_portrait.image_scale = 1
-            end
 
-            screen_map.hero_icon_portrait:set_image(string.format("mapButtons_portrait_hero_%04i", hd.icon))
+            local img_name = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
+            
+            screen_map.hero_icon_portrait:set_image(img_name)
         else
-            screen_map.hero_icon_portrait:set_image("mapButtons_portrait_hero_0010")
+            screen_map.hero_icon_portrait:set_image("mapButtons_portrait_hero_0000")
         end
     end
 end
@@ -5035,16 +5032,13 @@ function HeroRoomViewKR1:select_hero(name, silent)
         S:queue(ht.sound_events.hero_room_select)
     end
 
-    if hd.is_kr5 then
-        screen_map.hero_icon_portrait.image_scale = 1
-        screen_map.hero_icon_portrait.pos.x = KR5_HERO_ICON_PORTRAIT_X
-        screen_map.hero_icon_portrait.pos.y = KR5_HERO_ICON_PORTRAIT_Y
-    else
-        screen_map.hero_icon_portrait.pos.x = 0
-        screen_map.hero_icon_portrait.pos.y = 0
-        screen_map.hero_icon_portrait.image_scale = 1
-    end
-    screen_map.hero_icon_portrait:set_image(string.format("mapButtons_portrait_hero_%04i", hd.icon))
+    screen_map.hero_icon_portrait.pos.x = 0
+    screen_map.hero_icon_portrait.pos.y = 0
+    screen_map.hero_icon_portrait.image_scale = 1
+
+    local img_name = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
+
+    screen_map.hero_icon_portrait:set_image(img_name)
 
     -- screen_map.hero_icon_portrait:set_image(string.format("mapButtons_portrait_hero_%04i", hd.icon))
 
@@ -5438,9 +5432,10 @@ DifficultyView = class("DifficultyView", PopUpView)
 function DifficultyView:initialize(sw, sh)
     PopUpView.initialize(self, V.v(sw, sh))
 
-    local impo = GS.max_difficulty > DIFFICULTY_HARD
+    --local impo = GS.max_difficulty > DIFFICULTY_HARD
 
-    self.back = KImageView:new(impo and "difficulty_bg_wide_notxt" or "difficulty_bg_notxt")
+    --self.back = KImageView:new(impo and "difficulty_bg_wide_notxt" or "difficulty_bg_notxt")
+    self.back = KImageView:new("difficulty_bg_notxt")
     self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
     self.back.pos = v(sw / 2, sh / 2)
 
@@ -5760,7 +5755,7 @@ BooleanToggleItem = class("BooleanToggleItem", KButton)
 
 function BooleanToggleItem:initialize(key_text, initial_value, size)
     size = size or V.v(300, 40)
-    KButton.initialize(self, size)  -- 改为 KButton.initialize
+    KButton.initialize(self, size) -- 改为 KButton.initialize
 
     self.key = key_text
     self.value = initial_value or false
@@ -5779,9 +5774,9 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
     self.key_label.text = key_text
     self.key_label.text_align = "left"
     self.key_label.vertical_align = "middle"
-    self.key_label.colors.text = {200, 200, 200, 255}
-    self.key_label.colors.text_default = {200, 200, 200, 255}
-    self.key_label.colors.text_hover = {255, 255, 255, 255}
+    self.key_label.colors.text = { 200, 200, 200, 255 }
+    self.key_label.colors.text_default = { 200, 200, 200, 255 }
+    self.key_label.colors.text_hover = { 255, 255, 255, 255 }
     self.key_label.propagate_on_click = true
 
     self:add_child(self.key_label)
@@ -5793,10 +5788,10 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
     self.value_label.font_size = 16
     self.value_label.text_align = "center"
     self.value_label.vertical_align = "middle"
-    self.value_label.colors.text_yes = {100, 255, 100, 255}
-    self.value_label.colors.text_no = {255, 100, 100, 255}
-    self.value_label.colors.text_yes_hover = {150, 255, 150, 255}
-    self.value_label.colors.text_no_hover = {255, 150, 150, 255}
+    self.value_label.colors.text_yes = { 100, 255, 100, 255 }
+    self.value_label.colors.text_no = { 255, 100, 100, 255 }
+    self.value_label.colors.text_yes_hover = { 150, 255, 150, 255 }
+    self.value_label.colors.text_no_hover = { 255, 150, 150, 255 }
     self.value_label.propagate_on_click = true
 
     self:add_child(self.value_label)
@@ -5808,10 +5803,10 @@ end
 function BooleanToggleItem:update_display()
     if self.value then
         self.value_label.text = _("是")
-        self.value_label.colors.text = {100, 255, 100, 255}
+        self.value_label.colors.text = { 100, 255, 100, 255 }
     else
         self.value_label.text = _("否")
-        self.value_label.colors.text = {255, 100, 100, 255}
+        self.value_label.colors.text = { 255, 100, 100, 255 }
     end
 
     -- 强制重绘
@@ -5822,13 +5817,13 @@ end
 
 function BooleanToggleItem:on_enter()
     -- 悬浮高亮效果
-    self.colors.background = {50, 50, 50, 100}
+    self.colors.background = { 50, 50, 50, 100 }
     self.key_label.colors.text = self.key_label.colors.text_hover
 
     if self.value then
-        self.value_label.colors.text = {150, 255, 150, 255}
+        self.value_label.colors.text = { 150, 255, 150, 255 }
     else
-        self.value_label.colors.text = {255, 150, 150, 255}
+        self.value_label.colors.text = { 255, 150, 150, 255 }
     end
 
     if self.value_label.redraw then
@@ -5838,7 +5833,7 @@ end
 
 function BooleanToggleItem:on_exit()
     -- 取消高亮效果
-    self.colors.background = {0, 0, 0, 0}
+    self.colors.background = { 0, 0, 0, 0 }
     self.key_label.colors.text = self.key_label.colors.text_default
     self:update_display()
 end
@@ -5882,7 +5877,8 @@ function BooleanToggleGroup:add_item(key, initial_value)
 
     local item_y = self.padding.y + item_count * self.item_height
 
-    local item = BooleanToggleItem:new(self.key_label_map[key] or key, initial_value, V.v(self.size.x - 2 * self.padding.x, 40))
+    local item = BooleanToggleItem:new(self.key_label_map[key] or key, initial_value,
+        V.v(self.size.x - 2 * self.padding.x, 40))
     item.pos = V.v(self.padding.x, item_y)
     item.on_change_callback = function(label, value)
         self.data[table.keyforobject(self.key_label_map, label) or label] = value
@@ -5895,7 +5891,6 @@ function BooleanToggleGroup:add_item(key, initial_value)
 
     return item
 end
-
 
 -- function BooleanToggleGroup:set_value(key, value)
 --     if self.items[key] then
@@ -5977,9 +5972,11 @@ end
 function BooleanPanelView:set_key_label_map(map)
     self.data_group:set_key_label_map(map)
 end
+
 function BooleanPanelView:load()
     log.error("BooleanPanelView:load not implemented")
 end
+
 function BooleanPanelView:save()
     log.error("BooleanPanelView:save not implemented")
 end
@@ -6004,10 +6001,12 @@ function ConfigPanelView:initialize(sw, sh)
         endless = "开启无尽模式"
     })
 end
+
 function ConfigPanelView:load()
     local config = storage:load_config()
     self.data_group:set_all_data(config)
 end
+
 function ConfigPanelView:save()
     local config = storage:load_config()
     for k, v in pairs(self.data_group:get_all_data()) do
