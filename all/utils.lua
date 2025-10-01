@@ -12,6 +12,14 @@ local V = require("klua.vector")
 local P = require("path_db")
 
 require("constants")
+local random = math.random
+local min = math.min
+local max = math.max
+local sqrt = math.sqrt
+local sin = math.sin
+local cos = math.cos
+local abs = math.abs
+local PI = math.pi
 
 local U = {}
 
@@ -20,13 +28,13 @@ local U = {}
 ---@param to number 结束值
 ---@return number 随机数
 function U.frandom(from, to)
-    return math.random() * (to - from) + from
+    return random() * (to - from) + from
 end
 
 ---随机返回 -1 或 1
 ---@return number 随机符号（-1 或 1）
 function U.random_sign()
-    if math.random() < 0.5 then
+    if random() < 0.5 then
         return -1
     else
         return 1
@@ -37,7 +45,7 @@ end
 ---@param list table 概率数组（元素值表示权重）
 ---@return number 随机索引
 function U.random_table_idx(list)
-    local rn = math.random()
+    local rn = random()
     local acc = 0
 
     for i = 1, #list do
@@ -186,13 +194,13 @@ function U.ease_phase(phase, easing)
             return s * s * s * s * s
         end,
         sine = function(s)
-            return 1 - math.cos(s * math.pi * 0.5)
+            return 1 - cos(s * PI * 0.5)
         end,
         expo = function(s)
             return 2 ^ (10 * (s - 1))
         end,
         circ = function(s)
-            return 1 - math.sqrt(1 - s * s)
+            return 1 - sqrt(1 - s * s)
         end
     }
     local fn_name, first_ease = string.match(easing, "([^-]+)%-([^-]+)")
@@ -225,7 +233,7 @@ end
 function U.hover_pulse_alpha(t)
     local min, max, per = HOVER_PULSE_ALPHA_MIN, HOVER_PULSE_ALPHA_MAX, HOVER_PULSE_PERIOD
 
-    return min + (max - min) * 0.5 * (1 + math.sin(t * km.twopi / per))
+    return min + (max - min) * 0.5 * (1 + sin(t * km.twopi / per))
 end
 
 ---检测点是否在椭圆内
@@ -254,8 +262,8 @@ function U.point_on_ellipse(center, a, angle, aspect)
     local b = a * aspect
 
     return {
-        x = center.x + a * math.cos(angle),
-        y = center.y + b * math.sin(angle)
+        x = center.x + a * cos(angle),
+        y = center.y + b * sin(angle)
     }
 end
 
@@ -274,11 +282,11 @@ function U.dist_factor_inside_ellipse(p, center, radius, min_radius, aspect)
     local a = radius
     local b = radius * aspect
     local v_len = V.len(vx, vy)
-    local ab_len = V.len(a * math.cos(angle), b * math.sin(angle))
+    local ab_len = V.len(a * cos(angle), b * sin(angle))
 
     if min_radius then
         local ma, mb = min_radius, min_radius * aspect
-        local mab_len = V.len(ma * math.cos(angle), mb * math.sin(angle))
+        local mab_len = V.len(ma * cos(angle), mb * sin(angle))
 
         return km.clamp(0, 1, (v_len - mab_len) / (ab_len - mab_len))
     else
@@ -398,13 +406,13 @@ function U.animation_name_for_angle(e, group, angle, idx)
     local angles = a.angles and a.angles[group] or nil
 
     if not angles then
-        return group, angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5, 1
+        return group, angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
     elseif #angles == 1 then
-        return angles[1], angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5, 1
+        return angles[1], angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
     elseif #angles == 2 then
-        local flip_x = angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5
+        local flip_x = angle > PI * 0.5 and angle < 3 * PI * 0.5
 
-        if angle > 0 and angle < math.pi then
+        if angle > 0 and angle < PI then
             if a.angles_flip_horizontal and a.angles_flip_horizontal[1] then
                 flip_x = not flip_x
             end
@@ -435,7 +443,7 @@ function U.animation_name_for_angle(e, group, angle, idx)
             a2, a4 = a2 + skew, a4 + skew
         end
 
-        local angle_deg = angle * 180 / math.pi
+        local angle_deg = angle * 180 / PI
 
         if a1 <= angle_deg and angle_deg < a2 then
             o_name, o_flip, o_idx = angles[2], false, 2
@@ -456,7 +464,7 @@ function U.animation_name_for_angle(e, group, angle, idx)
         end
 
         if a.angles_flip_vertical and a.angles_flip_vertical[group] then
-            o_flip = angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5
+            o_flip = angle > PI * 0.5 and angle < 3 * PI * 0.5
         end
 
         return o_name, o_flip, o_idx
@@ -678,7 +686,7 @@ function U.sprites_show(entity, from, to, restore)
         local s = entity.render.sprites[i]
 
         if restore then
-            s.hidden_count = math.max(0, s.hidden_count - 1)
+            s.hidden_count = max(0, s.hidden_count - 1)
             s.hidden = s.hidden_count > 0
         else
             s.hidden_count = 0
@@ -721,7 +729,7 @@ function U.walk(e, dt, accel, unsnapped)
     local m = e.motion
     local pos = e.pos
     local vx, vy = m.dest.x - pos.x, m.dest.y - pos.y
-    local v_angle = math.atan2(vx, vy)
+    local v_angle = math.atan2(vy, vx)
     local v_len = V.len(vx, vy)
 
     if accel then
@@ -732,7 +740,7 @@ function U.walk(e, dt, accel, unsnapped)
 
     local step = e.motion.real_speed * dt
 
-    local nx, ny = math.cos(v_angle), math.sin(v_angle)
+    local nx, ny = cos(v_angle), sin(v_angle)
 
     if v_len <= step and not (e.teleport and e.teleport.pending) then
         if unsnapped then
@@ -750,7 +758,7 @@ function U.walk(e, dt, accel, unsnapped)
     if e.heading then
         e.heading.angle = v_angle
     end
-    local true_step = math.min(step, v_len)
+    local true_step = min(step, v_len)
     local sx, sy = true_step * nx, true_step * ny
     pos.x, pos.y = pos.x + sx, pos.y + sy
     m.speed.x, m.speed.y = sx / dt, sy / dt
@@ -775,7 +783,7 @@ function U.force_motion_step(this, dt, dest)
     elseif ramp_radius < dist then
         df = fm.ramp_max_factor
     else
-        df = math.max(dist / ramp_radius, fm.ramp_min_factor)
+        df = max(dist / ramp_radius, fm.ramp_min_factor)
     end
 
     fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
@@ -961,7 +969,7 @@ function U.find_random_target(entities, origin, min_range, max_range, flags, ban
     if not targets or #targets == 0 then
         return nil
     else
-        local idx = math.random(1, #targets)
+        local idx = random(1, #targets)
 
         return targets[idx]
     end
@@ -1120,8 +1128,8 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
                 if not e.pending_removal and e.nav_path and e.health and not e.health.dead and e.nav_path.pi == opi and
                     (only_upstream == true and oni > e.nav_path.ni or only_upstream == false and oni < e.nav_path.ni or
                         only_upstream == nil) and e.vis and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) ==
-                    0 and min_node_range <= math.abs(e.nav_path.ni - oni) and max_node_range >=
-                    math.abs(e.nav_path.ni - oni) and (not filter_func or filter_func(e, origin)) then
+                    0 and min_node_range <= abs(e.nav_path.ni - oni) and max_node_range >=
+                    abs(e.nav_path.ni - oni) and (not filter_func or filter_func(e, origin)) then
                     table.insert(result, {
                         enemy = e,
                         origin = n
@@ -1554,7 +1562,7 @@ function U.melee_slot_position(soldier, enemy, rank, back)
         y_off = 6
     end
 
-    local soldier_on_the_right = math.abs(km.signed_unroll(enemy.heading.angle)) < math.pi * 0.5
+    local soldier_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) < PI * 0.5
 
     if back then
         soldier_on_the_right = not soldier_on_the_right
@@ -1593,7 +1601,7 @@ function U.melee_slot_enemy_position(enemy, soldier, rank, back)
         y_off = 6
     end
 
-    local enemy_on_the_right = math.abs(km.signed_unroll(enemy.heading.angle)) > math.pi * 0.5
+    local enemy_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) > PI * 0.5
 
     if back then
         enemy_on_the_right = not enemy_on_the_right
@@ -1622,9 +1630,9 @@ function U.rally_formation_position(idx, barrack, count, angle_offset)
     if count == 1 then
         pos = V.vclone(barrack.rally_pos)
     else
-        local a = 2 * math.pi / count
+        local a = 2 * PI / count
 
-        pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - math.pi * 0.5 + angle_offset)
+        pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - PI * 0.5 + angle_offset)
     end
 
     local center = V.vclone(barrack.rally_pos)
@@ -2572,7 +2580,7 @@ end
 ---根据来自哪代，拼接字符串
 ---@param from_kr integer 代
 ---@param str string 字符串
----@return string 处理后的字符串, string 来自哪代
+---@return string 处理后的字符串, string? 来自哪代
 function U.splicing_from_kr(from_kr, str)
     if from_kr then
         local kr = "kr" .. from_kr
