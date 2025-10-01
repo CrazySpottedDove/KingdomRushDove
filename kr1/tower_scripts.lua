@@ -299,7 +299,7 @@ scripts.tower_ranger = {
 
                         U.y_wait(store, aa.shoot_time)
                         if enemy.health.dead then
-                            U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+                            enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
                         end
 
                         shot_bullet(aa, shooter_idx, enemy, pow_p.level)
@@ -440,7 +440,7 @@ scripts.tower_musketeer = {
                             U.y_wait(store, ax.shoot_time)
 
                             if enemy.health.dead then
-                                U.refind_foremost_enemy(enemy, store, ax.vis_flags, ax.vis_bans)
+                                enemy = U.refind_foremost_enemy(enemy, store, ax.vis_flags, ax.vis_bans)
                             end
 
                             shot_bullet(ax, shooter_idx, ai, enemy, pow_sn.level)
@@ -821,7 +821,7 @@ scripts.tower_crossbow = {
                         local torigin = tpos(this)
 
                         if enemy.health.dead then
-                            U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+                            enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
                         end
                         local b1 = E:create_entity(aa.bullet)
                         b1.pos.x, b1.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
@@ -964,7 +964,7 @@ scripts.tower_totem = {
                         end
 
                         if enemy.health.dead then
-                            U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+                            enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
                         end
 
                         local b1 = E:create_entity(aa.bullet)
@@ -1080,7 +1080,7 @@ scripts.tower_pirate_watchtower = {
                         end
 
                         if enemy.health.dead then
-                            U.refind_foremost_enemy(enemy, store, a.vis_flags, a.vis_bans)
+                            enemy = U.refind_foremost_enemy(enemy, store, a.vis_flags, a.vis_bans)
                         end
 
                         local b1 = E:create_entity(a.bullet)
@@ -1244,7 +1244,7 @@ scripts.tower_arcane = {
                             enemy = enemies[km.zmod(shooter_idx, #enemies)]
 
                             if enemy.health.dead then
-                                U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
+                                enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
                             end
 
                             if enemy.health and enemy.health.magic_armor > 0 then
@@ -1313,7 +1313,7 @@ scripts.tower_silver = {
             U.y_wait(store, shoot_time)
 
             if enemy.health.dead then
-                U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
+                enemy = U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
             end
 
             if V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) <= a.range * a.range then
