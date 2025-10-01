@@ -13483,7 +13483,7 @@ local function heroes()
     tt.particle_system.z = Z_OBJECTS
 
     tt = E:register_t("fx_hero_wukong_clones_spawn", "fx")
-    tt.render.sprites[1].name = "hero_wukong_clone_smoke_in"
+    tt.render.sprites[1].name = "hero_wukong_smoke_in"
     tt.render.sprites[1].sort_y_offset = -5
     tt.render.sprites[1].z = Z_OBJECTS
 

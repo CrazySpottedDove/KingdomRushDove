@@ -25836,9 +25836,10 @@ function scripts.hero_wukong.level_up(this, store, initial)
     end)
 
     upgrade_skill(this, "ultimate", function(this, s)
+        this.ultimate.disabled = nil
+        this.ultimate.cooldown = s.cooldown[s.level]
         local uc = E:get_template(s.controller_name)
 
-        uc.cooldown = s.cooldown[s.level]
         uc.damage = s.damage_total[s.level] / #uc.damage_times
 
         local u_aura = E:get_template(uc.aura_slow)
@@ -25966,18 +25967,18 @@ function scripts.hero_wukong.update(this, store)
             2.5,
             4
         }
-        local shake_falloff_dist = 450
-        local camera_posX = game.camera.x / game.game_scale
-        local camera_posY = game.ref_h - game.camera.y / game.game_scale
-        local camera_dist = V.dist(camera_posX, camera_posY, pos.x, pos.y)
-        local zoom_value = game.camera.zoom - game.camera.min_zoom_clamp
-        local falloff_value = 1 - camera_dist / shake_falloff_dist
+        -- local shake_falloff_dist = 450
+        -- local camera_posX = game.camera.x / game.game_scale
+        -- local camera_posY = game.ref_h - game.camera.y / game.game_scale
+        -- local camera_dist = V.dist(camera_posX, camera_posY, pos.x, pos.y)
+        -- local zoom_value = game.camera.zoom - game.camera.min_zoom_clamp
+        -- local falloff_value = 1 - camera_dist / shake_falloff_dist
 
-        if falloff_value < 0 then
-            falloff_value = 0
-        end
+        -- if falloff_value < 0 then
+        --     falloff_value = 0
+        -- end
 
-        local shake_value = falloff_value * zoom_value
+        local shake_value = 0.2
         local amplitude = values_amplitude[MIN] + (values_amplitude[MAX] - values_amplitude[MIN]) * shake_value
         local duration = values_duration[MIN] + (values_duration[MAX] - values_duration[MIN]) * shake_value
         local freq = values_freq[MIN] + (values_freq[MAX] - values_freq[MIN]) * shake_value
@@ -26752,22 +26753,22 @@ end
 scripts.fx_hero_wukong_giant_staff = {}
 
 function scripts.fx_hero_wukong_giant_staff.update(this, store, script)
-    U.animation_start(this, "in", nil, store.tick_ts, false, this.render.sid_staff, true)
+    U.animation_start(this, "in", nil, store.tick_ts, false, 1, true)
 
-    this.render.sprites[this.render.sid_decal].hidden = true
+    this.render.sprites[2].hidden = true
 
     U.y_wait(store, fts(21))
 
-    this.render.sprites[this.render.sid_decal].hidden = false
+    this.render.sprites[2].hidden = false
     this.tween.ts = store.tick_ts
     this.tween.disabled = false
 
     local staff_finished
 
     while not staff_finished do
-        if U.animation_finished(this, this.render.sid_staff) then
+        if U.animation_finished(this, 1) then
             staff_finished = true
-            this.render.sprites[this.render.sid_staff].hidden = true
+            this.render.sprites[2].hidden = true
         end
 
         coroutine.yield()
