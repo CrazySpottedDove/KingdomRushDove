@@ -63,10 +63,13 @@ local function get_ext(filename)
 end
 
 local function to_relpath(fullpath, basedir)
+    -- 去掉末尾的斜杠或反斜杠
+    basedir = basedir:gsub("[/\\]+$", "")
     local rel = fullpath:sub(#basedir + 2)
     if sys == "windows" then
         rel = rel:gsub("\\", "/")
     end
+    print(rel)
     return rel
 end
 
@@ -128,8 +131,11 @@ for path, _ in pairs(assets) do
     table.insert(paths, path)
 end
 table.sort(paths)
-
-os.execute("mkdir -p _assets")
+if sys == "windows" then
+    os.execute('if not exist "_assets" mkdir "_assets"')
+else
+    os.execute("mkdir -p _assets")
+end
 local f = io.open("_assets/assets_index.lua", "w")
 f:write("return {\n")
 for _, path in ipairs(paths) do
