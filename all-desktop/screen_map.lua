@@ -5443,15 +5443,6 @@ function DifficultyView:initialize(sw, sh)
     sw = self.back.size.x
     sh = self.back.size.y
 
-    if IS_KR3 then
-        local header_bg = KImageView("kr3_title_bg")
-
-        header_bg.anchor.x = km.round(header_bg.size.x / 2)
-        header_bg.pos = v(km.round(self.back.size.x / 2), -30)
-
-        self.back:add_child(header_bg)
-    end
-
     local header = GGPanelHeader:new(_("DIFFICULTY LEVEL"), 260)
 
     header.pos = V.v(sw / 2, 29 + (IS_KR3 and -34 or 0))
@@ -5460,12 +5451,15 @@ function DifficultyView:initialize(sw, sh)
     self.back:add_child(header)
 
     local campaign_done = #screen_map.user_data.levels > GS.main_campaign_levels
-    local b_y = sh / 2 + (impo and -20 or 0)
+    --local b_y = sh / 2 + (impo and -20 or 0)
+    local b_y = sh / 2
     local offset = 90
     local aw = self.back.size.x - 2 * offset
-    local sep = impo and -15 or 0
-    local b_xs = impo and { sw / 2 - 400, sw / 2 - 133.33333333333334, sw / 2 + 133.33333333333334, sw / 2 + 400 } or
-        { sw / 2 - 330, sw / 2, sw / 2 + 330 }
+    --local sep = impo and -15 or 0
+    local sep = 0
+    --local b_xs = impo and { sw / 2 - 400, sw / 2 - 133.33333333333334, sw / 2 + 133.33333333333334, sw / 2 + 400 } or
+       -- { sw / 2 - 330, sw / 2, sw / 2 + 330 }
+    local b_xs = { sw / 2 - 330, sw / 2, sw / 2 + 330 }
     local b_texts = { { _("LEVEL_SELECT_DIFFICULTY_CASUAL"), _("For beginners to strategy games!") },
         { _("LEVEL_SELECT_DIFFICULTY_NORMAL"),  _("A good challenge!") },
         { _("LEVEL_SELECT_DIFFICULTY_VETERAN"), _("Hardcore! play at your own risk!") } }
