@@ -106,7 +106,7 @@ local a = {
 		to = 462,
 		from = 357
 	},
-	hero_wukong_wukong_lvl_up = {
+	hero_wukong_wukong_levelup = {
 		prefix = "hero_wukong_wukong",
 		to = 499,
 		from = 463

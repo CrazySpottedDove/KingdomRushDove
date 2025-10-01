@@ -26174,7 +26174,7 @@ function scripts.hero_wukong.update(this, store)
             end
 
             if SU.hero_level_up(store, this) then
-                U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
             end
 
             a = this.ultimate
