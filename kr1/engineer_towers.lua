@@ -1422,7 +1422,7 @@ local function engineer_towers()
     tt.health_bar.offset = vec_2(0, 27)
     tt.health.dead_lifetime = 5
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0007"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0007"
     tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER"
     tt.info.random_name_format = false
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -1483,7 +1483,7 @@ local function engineer_towers()
     tt.explosion_damage_type = b.big_guy.explosion_damage_type
     tt.explosion_sound = "TowerDemonPitDemonExplosion"
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0006"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0006"
     tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER_BIG_GUY"
     tt.info.random_name_format = false
     tt.main_script.insert = scripts.soldier_reinforcement.insert

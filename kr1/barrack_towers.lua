@@ -2076,7 +2076,7 @@ local function barrack_towers()
     tt.sound_events.death_args = {
         delay = fts(12)
     }
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0071"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0071"
     tt.info.random_name_format = nil
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_FEMALE"
     tt.nav_rally.delay_min = 0
@@ -2117,7 +2117,7 @@ local function barrack_towers()
 
     tt = RT("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
     AC(tt, "attacks")
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0070"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0070"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
     tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
@@ -2159,7 +2159,7 @@ local function barrack_towers()
 
     tt = RT("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
     AC(tt, "attacks")
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0069"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0069"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
     tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"

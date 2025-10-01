@@ -6191,7 +6191,7 @@ local function heroes()
     tt.particle_system.sort_y_offset = -45
     tt.particle_system.spin = {-math.pi * 0.5, math.pi * 0.5}
 
-    
+
     tt = RT("hero_dwarf", "hero")
     AC(tt, "melee", "timed_attacks")
     image_y = 94
@@ -9918,7 +9918,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_HUNTER_ULTIMATE_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0038"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0038"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "dante"
@@ -11021,7 +11021,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_RAELYN_ULTIMATE_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0009"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0009"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "hero_raelyn_command_orders_dark_knight"
@@ -11838,7 +11838,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0046"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0046"
     tt.info.random_name_format = "SOLDIER_HERO_WITCH_CAT_%i_NAME"
     tt.info.random_name_count = 8
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -11877,7 +11877,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0049"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0049"
     tt.info.random_name_format = "SOLDIER_HERO_WITCH_DECOY_NAME"
     tt.info.random_name_count = 8
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -13684,7 +13684,7 @@ local function heroes()
     tt.unit.level = 0
 
     tt = E:register_t("soldier_hero_wukong_clone_b", "soldier_hero_wukong_clone")
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0074"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0074"
     tt.render.sprites[1].prefix = "hero_wukong_clone_2"
     tt.info.random_name_count = nil
     tt.info.random_name_format = nil
