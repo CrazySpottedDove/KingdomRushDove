@@ -9931,7 +9931,7 @@ local function heroes()
     tt.render.sprites[1].angles_flip_vertical = {
         ranged = true
     }
-    tt.render.sprites[1].scale = vec_1(0.52)
+    tt.render.sprites[1].scale = vec_1(0.52 * 1080 / 768)
     tt.unit.hit_offset = vec_2(0, 16)
     tt.unit.size = UNIT_SIZE_LARGE
     tt.unit.fade_time_after_death = tt.health.dead_lifetime

@@ -10400,7 +10400,6 @@ function scripts.tower_ray.update(this, store)
     end
 
     while true do
-        log.error("while")
         if this.tower.blocked then
             -- block empty
         else
@@ -10698,7 +10697,6 @@ function scripts.tower_ray.update(this, store)
                 U.animation_start(this, "idle", false, store.tick_ts, true, this.render.sprites.sid_mage)
             end
         end
-        log.error("yield")
         coroutine.yield()
     end
 end
