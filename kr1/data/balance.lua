@@ -6018,7 +6018,8 @@ local towers = {
                 armor = 0,
                 clicks_to_destroy = 5,
                 magic_armor = 0,
-                hp_mult = 0.5
+                hp_mult = 0.5,
+                gold = 0,
             }
         }
     },
