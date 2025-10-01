@@ -11036,7 +11036,7 @@ function scripts.bullet_tower_ray.update(this, store)
                         local d = E:create_entity("damage")
                         d.source_id = this.id
                         d.target_id = explosion_target.id
-                        d.value = math.random(b.damage_min, b.damage_max) * b.damage_factor
+                        d.value = math.random(b.damage_min, b.damage_max) * b.damage_factor * this.explosion_factor
                         d.damage_type = DAMAGE_MAGICAL_EXPLOSION
                         queue_damage(store, d)
                     end
