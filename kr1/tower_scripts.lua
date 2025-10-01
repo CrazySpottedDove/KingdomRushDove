@@ -11018,8 +11018,33 @@ function scripts.bullet_tower_ray.update(this, store)
     local start_chain_delay = this.chain_delay
     local source = store.entities[b.source_id]
 
-    while store.tick_ts - start_ts < this.ray_duration and target and not target.health.dead and not this.force_stop_ray and
-        source do
+    while store.tick_ts - start_ts < this.ray_duration and target and not this.force_stop_ray and source do
+        if target.health.dead then
+            if not this.chain_pos or this.chain_pos == 1 then
+                local explosion_fx = E:create_entity("fx_tower_ray_lvl4_attack_sheep_hit")
+                explosion_fx.pos = {
+                    x = target.pos.x + target.unit.hit_offset.x,
+                    y = target.pos.y + target.unit.hit_offset.y
+                }
+                explosion_fx.render.sprites[1].ts = store.tick_ts
+                queue_insert(store, explosion_fx)
+                local explosion_targets = U.find_enemies_in_range(store, explosion_fx.pos, 0, this.explosion_radius,
+                    F_AREA, F_NONE)
+                if explosion_targets then
+                    for i = 1, #explosion_targets do
+                        local explosion_target = explosion_targets[i]
+                        local d = E:create_entity("damage")
+                        d.source_id = this.id
+                        d.target_id = explosion_target.id
+                        d.value = math.random(b.damage_min, b.damage_max) * b.damage_factor
+                        d.damage_type = DAMAGE_MAGICAL_EXPLOSION
+                        queue_damage(store, d)
+                    end
+                end
+            end
+
+            break
+        end
         if pending_chain and store.tick_ts - start_ts > this.chain_delay then
             local chain_target, _, _ = U.find_nearest_enemy(store, target.pos, 0, this.chain_range, this.vis_flags,
                 this.vis_bans, function(e, o)

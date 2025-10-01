@@ -2050,7 +2050,8 @@ tt.vis.flags = bor(F_ENEMY, F_FLYING)
 tt = E:register_t("bullet_tower_ray_lvl1", "bullet")
 
 local b = balance.towers.ray.basic_attack
-
+tt.explosion_radius = b.explosion_radius
+tt.explosion_factor = b.explosion_factor
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.damage_min = b.damage_min[1]
 tt.bullet.damage_max = b.damage_max[1]

@@ -5998,7 +5998,9 @@ local towers = {
             damage_per_second = {0.1, 0.2, 0.35, 0.35},
             slow = {
                 factor = 0.8
-            }
+            },
+            explosion_radius = 50,
+            explosion_factor = 0.2,
         },
         skill_chain = {
             chain_delay = 0.1,
