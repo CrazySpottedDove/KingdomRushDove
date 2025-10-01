@@ -4874,7 +4874,7 @@ function HeroRoomViewKR1:initialize(size)
     self.check_image_2 = create_select_view("hero_room_thumbs_select_0001")
     self.border_image = create_select_view("hero_room_thumbs_select_0000")
     self.hover_image = create_select_view("hero_room_thumbs_select_0003")
-    self.check_image_1.anchor.x = self.check_image_1.anchor.x + single_hero_thumb_x_size - self.check_image_1.size.x *
+    self.check_image_1.anchor.x = self.check_image_1.anchor.x + single_hero_thumb_x_size * scale.x - self.check_image_1.size.x *
         0.06
 
     local bs = self:get_child_by_id("hero_room_sel_select")
@@ -4914,7 +4914,7 @@ function HeroRoomViewKR1:initialize(size)
             local hd = screen_map.hero_data[get_hero_index(selected_name)]
 
             local img_name = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
-            
+
             screen_map.hero_icon_portrait:set_image(img_name)
         else
             screen_map.hero_icon_portrait:set_image("mapButtons_portrait_hero_0000")
