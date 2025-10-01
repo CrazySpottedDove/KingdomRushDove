@@ -6,6 +6,7 @@ local spatial_hash = {}
 spatial_hash.__index = spatial_hash
 
 local _aspect = ASPECT
+local _aspect_inv = 1.0 / _aspect
 local ceil = math.ceil
 local floor = math.floor
 local max = math.max
@@ -103,7 +104,7 @@ function spatial_hash:query_entities_in_ellipse(x, y, radius_outer, radius_inner
             for i = 1, size do
                 local entity = array[i]
                 local dx = entity.pos.x - x
-                local dy = (entity.pos.y - y) / _aspect
+                local dy = (entity.pos.y - y) * _aspect_inv
                 local dist2 = dx * dx + dy * dy
                 if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
                     count = count + 1
@@ -134,7 +135,7 @@ function spatial_hash:query_first_entity_in_ellipse(x, y, radius_outer, radius_i
             for i = 1, size do
                 local entity = array[i]
                 local dx = entity.pos.x - x
-                local dy = (entity.pos.y - y) / _aspect
+                local dy = (entity.pos.y - y) * _aspect_inv
                 local dist2 = dx * dx + dy * dy
                 if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
                     return entity
@@ -165,7 +166,7 @@ function spatial_hash:query_enough_entities_in_ellipse(x, y, radius_outer, radiu
             for i = 1, size do
                 local entity = array[i]
                 local dx = entity.pos.x - x
-                local dy = (entity.pos.y - y) / _aspect
+                local dy = (entity.pos.y - y) * _aspect_inv
                 local dist2 = dx * dx + dy * dy
                 if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
                     found_count = found_count + 1
@@ -203,7 +204,7 @@ function spatial_hash:query_random_entity_in_ellipse(x, y, radius_outer, radius_
         for j = 1, size do
             local entity = array[j]
             local dx = entity.pos.x - x
-            local dy = (entity.pos.y - y) / _aspect
+            local dy = (entity.pos.y - y) * _aspect_inv
             local dist2 = dx * dx + dy * dy
             if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
                 return entity
@@ -239,7 +240,7 @@ function spatial_hash:query_best_entity_in_ellipse(x, y, radius_outer, radius_in
             for i = 1, size do
                 local entity = array[i]
                 local dx = entity.pos.x - x
-                local dy = (entity.pos.y - y) / _aspect
+                local dy = (entity.pos.y - y) * _aspect_inv
                 local dist2 = dx * dx + dy * dy
                 if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
                     if not best or sort_fn(entity, best) then

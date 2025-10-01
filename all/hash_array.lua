@@ -8,7 +8,7 @@ function hash_array:new()
         array = {}, -- 数组，提供高效的遍历
         hashmap = {}, -- 哈希表，提供高效的查找和删除
         size = 0 -- 元数据，记录当前元素数量
-    })
+    }, hash_array)
 end
 
 function hash_array:insert(item)
