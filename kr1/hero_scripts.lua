@@ -26105,7 +26105,11 @@ function scripts.hero_wukong.update(this, store)
                         local runs = this.render.sprites[1].runs
 
                         while not this.motion.arrived do
-                            if r.new and not on_landing_anim then
+                            if r.new then
+                                if on_landing_anim then
+                                    on_landing_anim = false
+                                    ps_nube_trail.particle_system.emit = true
+                                end
                                 r.new = false
 
                                 goto label_882_0
@@ -26127,7 +26131,7 @@ function scripts.hero_wukong.update(this, store)
 
                             local time_to_leave_cloud = fts(10)
 
-                            if path_len < this.motion.max_speed * time_to_leave_cloud and not on_landing_anim then
+                            if path_len < this.motion.real_speed * time_to_leave_cloud and not on_landing_anim then
                                 on_landing_anim = true
                                 ps_nube_trail.particle_system.emit = false
 
