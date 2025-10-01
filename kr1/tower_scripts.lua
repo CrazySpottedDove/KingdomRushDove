@@ -10974,8 +10974,11 @@ function scripts.bullet_tower_ray.update(this, store)
 
             m.modifier.target_id = b.target_id
             m.modifier.source_id = this.id
-            m.modifier.damage_factor = b.damage_factor * b.damage_mult
-
+            m.modifier.damage_factor = b.damage_factor * this.damage_mult
+            if m.dps then
+                m.dps.damage_max = b.damage_max
+                m.dps.damage_min = b.damage_min
+            end
             table.insert(mods_added, m)
             queue_insert(store, m)
 
