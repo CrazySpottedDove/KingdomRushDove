@@ -91,24 +91,23 @@ print("正在检查本地多余或不匹配的资源...")
 local parent_dir = assets_dir:match("^(.*)[/\\][^/\\]+$") or "."
 local trashed_dir = parent_dir .. "/_trashed_assets"
 -- 移动多余或不匹配的资源到 _trashed_assets
-local function trash_unindexed_assets()
-    local scan_cmd = is_windows and 'dir /b /s "' .. assets_dir .. '"' or 'find "' .. assets_dir .. '" -type f'
 
+
+local function trash_unindexed_assets()
+    local scan_cmd = is_windows and 'for /R "' .. assets_dir .. '" %f in (*) do @echo %f'
+        or 'find "' .. assets_dir .. '" -type f'
     local p = io.popen(scan_cmd)
     for fullpath in p:lines() do
         local ext = get_ext(fullpath)
         if ext and allowed_exts[ext:lower()] == nil then
-            -- 非允许的扩展名，跳过
             goto continue
         end
-        -- 转为相对路径
         local relpath = fullpath:sub(#assets_dir + 2)
         if is_windows then
             relpath = relpath:gsub("\\", "/")
         end
         local info = index[relpath]
         local local_file_size = file_size(fullpath)
-
         if (not info) or (info.size ~= local_file_size) then
             local trash_path = trashed_dir .. "/" .. relpath
             local trash_dir = trash_path:match("(.+)/[^/]+$")

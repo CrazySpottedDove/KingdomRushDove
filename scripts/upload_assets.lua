@@ -32,8 +32,13 @@ local function table_to_string(t)
 end
 
 -- 获取远程旧索引
-os.execute(string.format(
-    "git show origin/master:_assets/assets_index.lua > _assets/assets_index.remote.lua 2>%s || true", null_dev))
+local git_show_cmd
+if is_windows then
+    git_show_cmd = 'git show origin/master:_assets/assets_index.lua > _assets/assets_index.remote.lua || exit /b 0'
+else
+    git_show_cmd = 'git show origin/master:_assets/assets_index.lua > _assets/assets_index.remote.lua || true'
+end
+os.execute(git_show_cmd)
 local old_index = {}
 local f = io.open("_assets/assets_index.remote.lua", "r")
 if f then
