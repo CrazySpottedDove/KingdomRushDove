@@ -1521,12 +1521,12 @@ return {
 		-- 波尔维克
 		{
 			from_kr = 3,
-			portrait = 17,
-			thumb = 17,
+			portrait = 19,
+			thumb = 19,
 			name = "hero_bolverk",
 			available_level = 70,
 			starting_level = 5,
-			icon = 17,
+			icon = 19,
 			stats = { 5, 5, 0, 6 }
 		},
 

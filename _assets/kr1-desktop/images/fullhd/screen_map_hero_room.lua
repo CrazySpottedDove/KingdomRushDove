@@ -2351,7 +2351,7 @@ return {
 		},
 		alias = {},
 	},
-	kr3_hero_room_thumbs_0017 = {
+	kr3_hero_room_thumbs_0019 = {
 		a_name = "screen_map_hero_room-1.png",
 		size = {
 			84,

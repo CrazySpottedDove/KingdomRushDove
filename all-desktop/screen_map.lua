@@ -2848,8 +2848,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
     local b_y = rbbg.pos.y + 10
     local b_o = 50
     local allowed_towers = screen_map.level_data[level_num].iron
-    local opts = IS_KR3 and { "archers", "barracks", "mages", "druids" } or
-    { "archers", "barracks", "mages", "artillery" }
+    local opts = { "archers", "barracks", "mages", "artillery" }
 
     for i, v in ipairs(opts) do
         local n = table.contains(allowed_towers, v) and 2 * i or 2 * i - 1
