@@ -2026,7 +2026,7 @@ tt.clicks_to_destroy = b.clicks_to_destroy
 
 tt = E:register_t("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
 local b = balance.towers.ray.skill_sheep.sheep
-tt.info.portrait = "gui_bottom_info_image_enemies_0041"
+tt.info.portrait = "kr5_gui_bottom_info_image_enemies_0041"
 tt.flight_height = 47
 tt.health_bar.offset = vec_2(0, tt.flight_height + 40)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
