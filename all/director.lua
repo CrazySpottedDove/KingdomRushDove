@@ -471,7 +471,7 @@ function director:queue_load_item_named(name, force_reload)
         local item = _require("screen_comics")
 
         item.item_name = "comics"
-        item.required_textures = {"loading_common", "comic_" .. comic_idx}
+        item.required_textures = { "loading_common", "kr3_comic", "kr2_comic" }
         item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
 
         self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true)
