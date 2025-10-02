@@ -1904,7 +1904,6 @@ tt.attacks.list[3].node_prediction = fts(10)
 tt.attacks.list[3].start_fx = "fx_tower_ray_lvl4_attack_sheep"
 tt.attacks.list[3].vis_flags = bor(F_POLYMORPH, F_INSTAKILL)
 tt.attacks.list[3].vis_bans = bor(F_NIGHTMARE, F_BOSS, F_MINIBOSS)
-tt.attacks.list[3].excluded_templates = {"enemy_tower_ray_sheep", "enemy_tower_ray_sheep_flying"}
 tt.attacks.list[3].disabled = true
 tt.sound_events.insert = "TowerRayTaunt"
 tt.tween.remove = false
@@ -2023,7 +2022,7 @@ tt.render.sprites[1].prefix = "channeler_tower_sheep"
 tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
 tt.sound_events.death = "EnemySheepDeath"
 tt.ui.click_rect = r(-17, 0, 34, 20)
-tt.vis.bans = bor(F_BLOCK, F_SKELETON)
+tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_POLYMORPH)
 tt.clicks_to_destroy = b.clicks_to_destroy
 
 tt = E:register_t("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
