@@ -18,6 +18,7 @@ local UP = require("upgrades")
 local V = require("klua.vector")
 local W = require("wave_db")
 local bit = require("bit")
+local debug = require("all.debug_macros")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
@@ -9927,8 +9928,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
         if not (store.tick_ts - a_i.ts > a_i.cooldown) then
             return false
         end
-        local debug = require("debug_macros")
-        debug.print(a_i)
+
         if not U.has_enough_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, nil, a_i.min_targets) then
             SU.delay_attack(store, a_i, fts(10))
 
@@ -9954,7 +9954,6 @@ function scripts.soldier_tower_pandas.update(this, store, script)
         if not (store.tick_ts - a_i.ts > a_i.cooldown) then
             return false
         end
-
         if U.has_enemy_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, function(e)
                 return not e.enemy.counts or not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport <
                            a_i.max_times_applied
@@ -9963,7 +9962,6 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
             return false
         end
-
         return true
     end
 
@@ -10034,7 +10032,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                     a_i.vis_bans)
 
                 if not enemies then
-                    a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                    a_i.ts = a_i.ts + a_i.cooldown * 0.2
                 else
                     local grid_size = a_i.damage_area * 0.8
                     local min_enemies = 2
@@ -10108,7 +10106,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                         U.y_animation_wait(this)
                         U.animation_start(this, "idle", nil, store.tick_ts, true)
                     else
-                        a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                        a_i.ts = a_i.ts + a_i.cooldown * 0.2
                     end
                 end
             end
@@ -10116,9 +10114,8 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             if can_teleport() then
                 local target, targets = U.find_nearest_enemy(store, this.pos, 0, a_i.max_range, a_i.vis_flags,
                     a_i.vis_bans)
-
                 if not target or not targets or #targets < 1 then
-                    a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                    a_i.ts = a_i.ts + a_i.cooldown * 0.2
                 else
                     a_i.ts = store.tick_ts
 
@@ -10134,7 +10131,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                         a_i.vis_bans)
 
                     if not target or #targets < 1 then
-                        a_i.ts = store.tick_ts + a_i.cooldown * 0.2
+                        a_i.ts = a_i.ts + a_i.cooldown * 0.2
                     else
                         local num_targets = math.min(#targets, a_i.max_targets)
                         local decal = E:create_entity(a_i.decal)
@@ -10168,7 +10165,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                             mod_teleport.hold_time = random_float(0.2, 0.4)
                             mod_teleport.delay_end = random_float(fts(2), fts(5))
                             mod_teleport.begin_wait = random_float(0, 0.2)
-
+                            debug.print(mod_teleport)
                             queue_insert(store, mod_teleport)
                         end
 

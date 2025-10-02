@@ -2103,7 +2103,7 @@ local function barrack_towers()
     tt.unit.hide_after_death = true
     tt.soldier.melee_slot_spread = v(-13, -13)
     tt.soldier.melee_slot_offset = v(10, 0)
-    tt.vis.bans = 0
+    tt.vis.bans = bor(tt.vis.bans, F_SKELETON, F_EAT)
     tt.health.hp_max = b.soldier.hp[4]
     tt.health.armor = b.soldier.armor[4]
     tt.health_bar.offset = v(0, 44)
@@ -2114,7 +2114,6 @@ local function barrack_towers()
     tt.ui.click_rect = r(-13, 0, 25, 30)
     tt.ui.click_rect_offset_y = 0
     tt.max_dist_walk = 160
-    tt.vis.bans = bor(tt.vis.bans, F_EAT)
     tt.ignore_linirea_true_might_revive = true
     tt.death_go_back_delay = fts(15)
 

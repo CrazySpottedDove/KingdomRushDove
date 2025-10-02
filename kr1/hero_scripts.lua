@@ -25947,7 +25947,7 @@ function scripts.hero_wukong.update(this, store)
         e.pos = V.vclone(pos)
         e.nav_rally.center = V.vclone(e.pos)
         e.nav_rally.pos = V.vclone(e.pos)
-
+        e.unit.damage_factor = this.unit.damage_factor
         queue_insert(store, e)
 
         return e
