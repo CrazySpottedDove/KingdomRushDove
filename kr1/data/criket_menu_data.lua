@@ -142,6 +142,12 @@ return {merge(templates.upgrade, {
     tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
     tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION")
 }), merge(templates.upgrade, {
+    action_arg = "tower_pandas_lvl4",
+    image = "kr5_main_icons_0049",
+    place = 21,
+    tt_title = _("TOWER_PANDAS_NAME"),
+    tt_desc = _("TOWER_PANDAS_1_DESCRIPTION")
+}), merge(templates.upgrade, {
     action_arg = "tower_bfg",
     image = "main_icons_0013",
     place = 5,
