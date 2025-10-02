@@ -7204,7 +7204,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 
             skull.pos.x, skull.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
             skull.bullet.source_id = this.id
-            skull.bullet.level = this.tower.level
+            skull.bullet.level = 4
         end
     end
 
@@ -7420,7 +7420,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
                     b.bullet.from = V.vclone(b.pos)
                     b.bullet.to = V.vclone(b.pos)
                     b.bullet.source_id = this.id
-                    b.bullet.level = this.tower.level
+                    b.bullet.level = 4
                     b.bullet.damage_factor = this.tower.damage_factor
                     -- b.tower_ref = this
                     b.render.sprites[1].flip_x = this.tower_upgrade_persistent_data.current_skulls > 0 and
@@ -7429,10 +7429,10 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 
                     if this.tower_upgrade_persistent_data.current_skulls < 2 then
                         b.render.sprites[1].z = Z_OBJECTS
-                        b.render.sprites[1].sort_y_offset = -40 - 10 * this.tower.level
+                        b.render.sprites[1].sort_y_offset = -40 - 10 * 4
                     else
                         b.render.sprites[1].z = Z_OBJECTS
-                        b.render.sprites[1].sort_y_offset = -40 * this.tower.level
+                        b.render.sprites[1].sort_y_offset = -40 * 4
                         b.render.sprites[1].draw_order = 2
                     end
 
@@ -8967,13 +8967,7 @@ function scripts.tower_pandas.update(this, store, script)
 
             queue_insert(store, smoke)
 
-            local flip_x
-
-            if sid == green_panda_sid and this.tower.level < 4 then
-                flip_x = true
-            end
-
-            U.animation_start(this, "spawn_end", flip_x, store.tick_ts, false, sid)
+            U.animation_start(this, "spawn_end", nil, store.tick_ts, false, sid)
         end
 
         while true do
@@ -9041,13 +9035,7 @@ function scripts.tower_pandas.update(this, store, script)
                 else
                     U.sprites_show(this, panda.render, panda.render, true)
 
-                    local flip_x
-
-                    if panda.is_panda_green and this.tower.level < 4 then
-                        flip_x = true
-                    end
-
-                    U.animation_start(this, "spawn_end", flip_x, store.tick_ts, false, panda.render, true)
+                    U.animation_start(this, "spawn_end", nil, store.tick_ts, false, panda.render, true)
 
                     panda.in_animation = true
                 end
@@ -9152,7 +9140,7 @@ function scripts.tower_pandas.update(this, store, script)
                     local an, af = U.animation_name_facing_point(this, "shoot", enemy.pos, cfg.shooter_sid,
                         cfg.start_offset)
 
-                    if this.tower.level == 4 and cfg.is_panda_green then
+                    if cfg.is_panda_green then
                         af = not af
                     end
 
@@ -9192,15 +9180,7 @@ function scripts.tower_pandas.update(this, store, script)
                 if not panda.in_animation then
                     local an, af = U.animation_name_facing_point(this, this.render.sprites[panda.render].angles.idle[1],
                         this.tower.long_idle_pos, panda.render)
-
-                    if this.tower.level == 4 then
-                        af = false
-                    elseif panda.is_panda_green then
-                        af = true
-                    elseif panda.is_panda_red then
-                        af = false
-                    end
-
+                    af = false
                     U.animation_start(this, an, af, store.tick_ts, -1, panda.render)
                 end
             end
@@ -9304,7 +9284,7 @@ function scripts.tower_pandas.update(this, store, script)
                         local an, af =
                             U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
 
-                        if this.tower.level == 4 and is_panda_green then
+                        if is_panda_green then
                             af = not af
                         end
 
@@ -9495,7 +9475,7 @@ function scripts.tower_pandas_ray.update(this, store)
                 if not tower then
                     level = this.bullet.level
                 else
-                    level = tower.level
+                    level = 4
                     level = level or this.bullet.level
                 end
 
@@ -10251,13 +10231,7 @@ function scripts.tower_ray.update(this, store)
         this.tween.props[i] = E:clone_c("tween_prop")
         this.tween.props[i].name = "offset"
 
-        if this.tower.level <= 3 then
-            if i == 3 or i == 4 then
-                end_offset.x = -3
-            elseif i == 5 or i == 6 then
-                end_offset.x = 3
-            end
-        elseif i == 3 or i == 4 then
+        if i == 3 or i == 4 then
             end_offset.x = -3
         elseif i == 5 or i == 6 then
             end_offset.x = 3
@@ -10283,50 +10257,24 @@ function scripts.tower_ray.update(this, store)
             this.tween.props[prop_id] = E:clone_c("tween_prop")
             this.tween.props[prop_id].name = "offset"
 
-            if this.tower.level == 2 then
-                if i == 1 then
-                    end_offset = v(-5, start_offset.y + 3)
-                elseif i == 2 or i == 3 then
-                    end_offset = v(-5, start_offset.y - 1)
-                elseif i == 4 then
-                    end_offset = v(5, start_offset.y + 3)
-                else
-                    end_offset = v(5, start_offset.y)
-                end
-            elseif this.tower.level == 3 then
-                if i == 1 then
-                    end_offset = v(-5, start_offset.y + 3)
-                elseif i == 2 then
-                    end_offset = v(-5, start_offset.y + 1)
-                elseif i == 3 then
-                    end_offset = v(-4, start_offset.y - 3)
-                elseif i == 4 then
-                    end_offset = v(5, start_offset.y + 2)
-                elseif i == 5 then
-                    end_offset = v(3, start_offset.y + 2)
-                else
-                    end_offset = v(4, start_offset.y - 5)
-                end
-            elseif this.tower.level == 4 then
-                if i == 1 then
-                    end_offset = v(-3, start_offset.y + 2)
-                elseif i == 2 then
-                    end_offset = v(-2, start_offset.y + 4)
-                elseif i == 3 then
-                    end_offset = v(-4, start_offset.y + 2)
-                elseif i == 4 or i == 5 then
-                    end_offset = v(3, start_offset.y + 3)
-                elseif i == 6 then
-                    end_offset = v(4, start_offset.y + 1)
-                elseif i == 7 then
-                    end_offset = v(-3, start_offset.y - 1)
-                elseif i == 8 then
-                    end_offset = v(2, start_offset.y - 2)
-                elseif i == 9 or i == 10 then
-                    end_offset = v(2, start_offset.y)
-                else
-                    end_offset = v(-1, start_offset.y - 3)
-                end
+            if i == 1 then
+                end_offset = v(-3, start_offset.y + 2)
+            elseif i == 2 then
+                end_offset = v(-2, start_offset.y + 4)
+            elseif i == 3 then
+                end_offset = v(-4, start_offset.y + 2)
+            elseif i == 4 or i == 5 then
+                end_offset = v(3, start_offset.y + 3)
+            elseif i == 6 then
+                end_offset = v(4, start_offset.y + 1)
+            elseif i == 7 then
+                end_offset = v(-3, start_offset.y - 1)
+            elseif i == 8 then
+                end_offset = v(2, start_offset.y - 2)
+            elseif i == 9 or i == 10 then
+                end_offset = v(2, start_offset.y)
+            else
+                end_offset = v(-1, start_offset.y - 3)
             end
 
             this.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
@@ -10497,7 +10445,7 @@ function scripts.tower_ray.update(this, store)
                                 V.v(pred_pos.x + enemy.unit.hit_offset.x, pred_pos.y + enemy.unit.hit_offset.y)
                             b.bullet.target_id = enemy_id
                             b.bullet.source_id = this.id
-                            b.bullet.level = this.tower.level
+                            b.bullet.level = 4
                             b.tower_ref = this
                             b.pred_pos = V.vclone(pred_pos)
 
@@ -10616,7 +10564,7 @@ function scripts.tower_ray.update(this, store)
                             b.bullet.to = V.vclone(enemy_pos)
                             b.bullet.target_id = enemy_id
                             b.bullet.source_id = this.id
-                            b.bullet.level = this.tower.level
+                            b.bullet.level = 4
                             b.bullet.damage_factor = this.tower.damage_factor
                             b.tower_ref = this
 

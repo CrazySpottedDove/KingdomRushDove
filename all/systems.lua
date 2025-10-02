@@ -1685,8 +1685,8 @@ function sys.tween:on_update(dt, ts, store)
                         local keys = t.keys
                         local ka = keys[1]
                         local kb = keys[#keys]
-                        local start_time = keys[1][1]
-                        local end_time = keys[#keys][1]
+                        local start_time = ka[1]
+                        local end_time = kb[1]
                         local duration = end_time - start_time
                         local time_ref = t.ts or e.tween.ts or s.ts
                         local time = store.tick_ts - time_ref
