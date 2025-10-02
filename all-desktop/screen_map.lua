@@ -5431,9 +5431,6 @@ DifficultyView = class("DifficultyView", PopUpView)
 function DifficultyView:initialize(sw, sh)
     PopUpView.initialize(self, V.v(sw, sh))
 
-    --local impo = GS.max_difficulty > DIFFICULTY_HARD
-
-    --self.back = KImageView:new(impo and "difficulty_bg_wide_notxt" or "difficulty_bg_notxt")
     self.back = KImageView:new("difficulty_bg_notxt")
     self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
     self.back.pos = v(sw / 2, sh / 2)
@@ -5451,15 +5448,11 @@ function DifficultyView:initialize(sw, sh)
     self.back:add_child(header)
 
     local campaign_done = #screen_map.user_data.levels > GS.main_campaign_levels
-    --local b_y = sh / 2 + (impo and -20 or 0)
-    local b_y = sh / 2
+    local b_y = sh / 2 - 20
     local offset = 90
     local aw = self.back.size.x - 2 * offset
-    --local sep = impo and -15 or 0
-    local sep = 0
-    --local b_xs = impo and { sw / 2 - 400, sw / 2 - 133.33333333333334, sw / 2 + 133.33333333333334, sw / 2 + 400 } or
-       -- { sw / 2 - 330, sw / 2, sw / 2 + 330 }
-    local b_xs = { sw / 2 - 330, sw / 2, sw / 2 + 330 }
+    local sep = -60
+    b_xs = { sw / 2 - 400, sw / 2 - 133.33333333333334, sw / 2 + 133.33333333333334, sw / 2 + 400 }
     local b_texts = { { _("LEVEL_SELECT_DIFFICULTY_CASUAL"), _("For beginners to strategy games!") },
         { _("LEVEL_SELECT_DIFFICULTY_NORMAL"),  _("A good challenge!") },
         { _("LEVEL_SELECT_DIFFICULTY_VETERAN"), _("Hardcore! play at your own risk!") } }
@@ -5470,24 +5463,19 @@ function DifficultyView:initialize(sw, sh)
     --          campaign_done and _("DIFFICULTY_SELECTION_IMPOSSIBLE_DESCRIPTION") or
     --             _("DIFFICULTY_SELECTION_IMPOSSIBLE_LOCKED_DESCRIPTION")})
     -- end
-    if impo then
-        table.insert(b_texts,
-            { _("LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE"), _("DIFFICULTY_SELECTION_IMPOSSIBLE_DESCRIPTION") })
-    end
+
+    table.insert(b_texts,
+        { _("LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE"), _("DIFFICULTY_SELECTION_IMPOSSIBLE_DESCRIPTION") })
 
     for i, set in pairs(b_texts) do
         local title, desc = unpack(set)
         local b = DifficultyButton:new(title, desc, i)
         local bw = b.size.x
-        local x
-
-        if impo then
-            x = sw / 2 + (2 * i - 5) * (bw / 2 + sep / 2)
-        else
-            x = sw / 2 + (i - 2) * (bw + sep)
-        end
+        local x = sw / 2 + (2 * i - 5) * (bw / 2 + sep / 2)
 
         b.pos = V.v(x, b_y)
+
+        b.scale = V.v(0.75, 0.75)
 
         -- if i == 4 and not campaign_done then
         --     b:disable()
