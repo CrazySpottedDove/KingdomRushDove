@@ -26699,7 +26699,7 @@ function scripts.controller_hero_wukong_ultimate.update(this, store)
             for _, e in pairs(targets) do
                 local d = E:create_entity("damage")
 
-                d.value = this.damage
+                d.value = this.damage * this.damage_factor
                 d.damage_type = this.damage_type
                 d.source_id = this.id
                 d.target_id = e.id
