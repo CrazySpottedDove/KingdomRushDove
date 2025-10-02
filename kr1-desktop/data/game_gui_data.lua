@@ -7,7 +7,8 @@ local i18n = require("i18n")
 local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)
 end
-
+local TOWER_MENU_BUTTON_X_UNIT = 62
+local TOWER_MENU_BUTTON_Y_UNIT = 64
 return {
 	notifications = {
 		enemy_goblin = {
@@ -1872,33 +1873,26 @@ return {
         v(124, 20),
         v(24, 120),
         v(124, 120),
-        v(74, 2),
-        v(12, 34),
-        v(136, 34),
+        v(74, 2),  -- 0, 1
+        v(74 - TOWER_MENU_BUTTON_X_UNIT, 34), -- -1, 1
+        v(74 + TOWER_MENU_BUTTON_X_UNIT, 34), -- 1, 1
         v(128, 118),
         v(74, 140),
-        v(-50, 2),   -- 10
-        v(198, 2),
-        v(-50, 66),  -- 12
-        v(198, 66),
-        v(-112,34),
-        v(260, 34),
-        v(12,-30),
-        v(136,-30),
-        v(-112, -30),
-        v(260, -30),
-        v(74, -62),  -- 20
-        v(24, 180),
-        v(124, 180),
-        v(-50, 120),
-        v(198, 120),
-        v(-112, 90),
-        v(260, 90),
-        v(74, 200),
-        v(12, 200),
-        v(136, 200),
-        v(-112, 150),
-        v(260, 150)  -- 30
+        v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT),   -- -2, 2
+        v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT), -- 2, 2
+        v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66),  -- -2, 1
+        v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66), -- 2, 1
+        v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34), -- -3, 1
+        v(74 + 3*TOWER_MENU_BUTTON_X_UNIT, 34), -- 3, 1
+        v(74 - TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -1, 2
+        v(74 + TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 1, 2
+        v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -3, 2
+        v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 3, 2
+        v(74, 2 - TOWER_MENU_BUTTON_Y_UNIT),  -- 0, 2
+        v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT),   -- -2, 3
+        v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- 2, 3
+        v(74 - 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
+        v(74 + 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
     },
 	tower_menu_power_offset = {
 		-- 原版x差值18, 6 ，y差值7, 17

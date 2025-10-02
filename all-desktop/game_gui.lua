@@ -7403,7 +7403,7 @@ function TowerMenuTooltip:show(entity, item)
         self.phrase_label.pos.y = self.size.y - 22
     end
 
-    local oy = 126
+    local oy = 142
     local ex, ey = game_gui:g2u(V.v(entity.pos.x, entity.pos.y), true)
 
     self.pos.x = ex - math.floor(self.size.x * 0.5)
