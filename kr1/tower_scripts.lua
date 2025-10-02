@@ -9928,9 +9928,9 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             return false
         end
 
-        local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans)
+        local enemies = U.find_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans)
 
-        if not enemies or #enemies < a_i.min_targets then
+        if not enemies then
             SU.delay_attack(store, a_i, fts(10))
 
             return false
@@ -9956,7 +9956,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             return false
         end
 
-        local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans,
+        local enemies = U.find_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans,
             function(e)
                 return not e.enemy.counts or not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport <
                            a_i.max_times_applied
@@ -10034,10 +10034,10 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             end
 
             if can_thunder() then
-                local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags,
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags,
                     a_i.vis_bans)
 
-                if not enemies or #enemies < a_i.min_targets then
+                if not enemies then
                     a_i.ts = store.tick_ts + a_i.cooldown * 0.2
                 else
                     local grid_size = a_i.damage_area * 0.8

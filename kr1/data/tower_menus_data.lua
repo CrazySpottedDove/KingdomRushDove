@@ -2071,7 +2071,7 @@ return {
     pandas = {{merge(templates.upgrade_power, {
         action_arg = "thunder",
         image = "kr5_special_icons_0041",
-        place = 12,
+        place = 6,
         sounds = {i18n:cjk("TowerPandasSkillATaunt", "TowerPandasSkillATauntZH", nil, nil)},
         tt_phrase = _("TOWER_PANDAS_4_THUNDER"),
         tt_list = {{
@@ -2084,7 +2084,7 @@ return {
     }), merge(templates.upgrade_power, {
         action_arg = "hat",
         image = "kr5_special_icons_0040",
-        place = 14,
+        place = 5,
         sounds = {i18n:cjk("TowerPandasSkillBTaunt", "TowerPandasSkillBTauntZH", nil, nil)},
         tt_phrase = _("TOWER_PANDAS_4_HAT"),
         tt_list = {{
@@ -2097,7 +2097,7 @@ return {
     }), merge(templates.upgrade_power, {
         action_arg = "teleport",
         image = "kr5_special_icons_0042",
-        place = 15,
+        place = 7,
         sounds = {i18n:cjk("TowerPandasSkillCTaunt", "TowerPandasSkillCTauntZH", nil, nil)},
         tt_phrase = _("TOWER_PANDAS_4_FIERY"),
         tt_list = {{
@@ -2114,7 +2114,7 @@ return {
         halo = "glow_ico_main",
         -- TODO: check image
         image = "quickmenu_retreat_icons_tower_panda",
-        place = 13,
+        place = 3,
         tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
         tt_desc = _("TOWER_PANDAS_RETREAT_DESCRIPTION")
     }, templates.rally, templates.sell}},
