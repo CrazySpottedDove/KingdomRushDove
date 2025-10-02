@@ -6213,8 +6213,8 @@ local towers = {
         price = {110, 150, 210, 270},
         ranged_attack = {
             cooldown = 0.5,
-            damage_min = {4, 7, 10, 15},
-            damage_max = {6, 10, 15, 20},
+            damage_min = {4, 7, 10, 19},
+            damage_max = {6, 10, 15, 26},
             range = {180, 180, 180, 180},
             damage_type = DAMAGE_TRUE
         },
@@ -6223,13 +6223,13 @@ local towers = {
             retreat_duration = 10,
             speed = 75,
             armor = {0, 0, 0, 0},
-            hp = {60, 90, 120, 170},
+            hp = {60, 90, 120, 221},
             regen_hp = {6, 8, 10, 15},
             melee_attack = {
                 cooldown = 1,
                 range = 90,
-                damage_max = {10, 15, 22, 30},
-                damage_min = {7, 12, 19, 25}
+                damage_max = {10, 15, 22, 39},
+                damage_min = {7, 12, 19, 32}
             },
             thunder = {
                 damage_area = 100,
@@ -6237,8 +6237,8 @@ local towers = {
                 min_targets = 2,
                 cooldown = {15, 10},
                 range = {180, 180},
-                damage_min = {12, 22},
-                damage_max = {24, 34},
+                damage_min = {15, 28},
+                damage_max = {31, 44},
                 damage_type = DAMAGE_TRUE
             },
             hat = {
@@ -6248,11 +6248,11 @@ local towers = {
                 cooldown = {8, 8},
                 range = {180, 200},
                 damage_levels = {{
-                    max = 25,
-                    min = 20
+                    max = 32,
+                    min = 26
                 }, {
-                    max = 50,
-                    min = 40
+                    max = 65,
+                    min = 52
                 }},
                 damage_type = DAMAGE_TRUE,
                 max_bounces = {2, 4}
@@ -6262,13 +6262,14 @@ local towers = {
                 max_targets = 5,
                 cooldown = {20, 15},
                 range = {200, 200},
-                damage_min = {3, 6},
-                damage_max = {6, 9},
+                damage_min = {4, 7},
+                damage_max = {7, 11},
                 damage_type = DAMAGE_TRUE,
                 nodes_offset_max = {-20, -20},
                 nodes_offset_min = {-24, -24}
             }
         },
+        -- not in use
         thunder = {
             price = {150, 200}
         },

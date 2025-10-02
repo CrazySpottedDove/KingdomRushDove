@@ -9118,7 +9118,7 @@ function scripts.tower_pandas.update(this, store, script)
                 local an, af = U.animation_name_facing_point(this, this.render.sprites[panda.render].angles.idle[1],
                     last_target_pos, panda.render, start_offset)
 
-                if this.tower.level == 4 and panda.is_panda_green then
+                if panda.is_panda_green then
                     af = not af
                 end
 
@@ -9132,7 +9132,6 @@ function scripts.tower_pandas.update(this, store, script)
             for _, soldier in pairs(b.soldiers) do
                 if soldier.health.hp > 0 then
                     soldier.health.hp = 0
-
                     break
                 end
             end
