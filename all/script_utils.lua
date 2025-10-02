@@ -3808,30 +3808,30 @@ local function update_on_damage(entity)
     end
 end
 
----开局重置英雄的技能冷却时间
+---重置英雄的技能冷却时间
 ---@param this table 实体
 ---@param store game.store
 ---@return nil
 local function hero_spawning_set_skill_ts(this, store)
+    local function reset_skill(v)
+        if not v.disabled and v.cooldown then
+            v.ts = store.tick_ts - v.cooldown
+        end
+    end
+
     if this.melee then
         for _, v in ipairs(this.melee.attacks) do
-            if not v.disabled then
-                v.ts = store.tick_ts - v.cooldown
-            end
+            reset_skill(v)
         end
     end
     if this.ranged then
         for _, v in ipairs(this.ranged.attacks) do
-            if not v.disabled then
-                v.ts = store.tick_ts - v.cooldown
-            end
+            reset_skill(v)
         end
     end
     if this.timed_attacks then
         for _, v in ipairs(this.timed_attacks.list) do
-            if not v.disabled then
-                v.ts = store.tick_ts - v.cooldown
-            end
+            reset_skill(v)
         end
     end
 end
