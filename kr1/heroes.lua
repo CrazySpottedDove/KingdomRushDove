@@ -14081,7 +14081,6 @@ local function heroes()
     tt.timed_attacks.list[2].area_damage_min = b.giant_staff.area_damage.damage_min
     tt.timed_attacks.list[2].area_damage_radius = b.giant_staff.area_damage.damage_radius
     tt.timed_attacks.list[2].area_damage_type = b.giant_staff.area_damage.damage_type
-    .max_targets
     tt.timed_attacks.list[2].sound = "HeroWukongInstakill"
     tt.timed_attacks.list[2].sound_args = {
         delay = fts(15)
