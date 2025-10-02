@@ -11,7 +11,7 @@ GS.barrack_towers = {"tower_barrack_1", "tower_barrack_2", "tower_barrack_3", "t
              "tower_elf", "tower_templar", "tower_assassin",
             "tower_barrack_dwarf", "tower_barrack_amazonas", "tower_barrack_mercenaries", "tower_barrack_pirates",
             "tower_blade", "tower_forest", "tower_druid", "tower_drow", "tower_ewok",
-            "tower_baby_ashbite"}
+            "tower_baby_ashbite","tower_pandas_lvl4"}
 GS.soldier_regen_factor = 0.2
 GS.gameplay_tips_count = 21
 GS.early_wave_reward_per_second = 1

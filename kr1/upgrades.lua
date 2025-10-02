@@ -343,7 +343,7 @@ function upgrades:barrack_soldiers()
             "soldier_elf", "soldier_elemental", "soldier_skeleton", "soldier_skeleton_knight", "soldier_death_rider",
             "soldier_templar", "soldier_assassin", "soldier_dwarf", "soldier_amazona", "soldier_djinn",
             "soldier_pirate_flamer", "soldier_frankenstein", "soldier_blade", "soldier_forest", "soldier_druid_bear",
-            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4","soldier_tower_necromancer_skeleton_lvl4","soldier_tower_necromancer_skeleton_golem_lvl4"}
+            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4","soldier_tower_necromancer_skeleton_lvl4","soldier_tower_necromancer_skeleton_golem_lvl4","soldier_tower_pandas_green_lvl4","soldier_tower_pandas_red_lvl4","soldier_tower_pandas_blue_lvl4"}
 end
 
 function upgrades:towers_with_barrack()
@@ -351,7 +351,7 @@ function upgrades:towers_with_barrack()
             "tower_sorcerer", "tower_elf", "tower_templar", "tower_assassin", "tower_mech", "tower_necromancer",
             "tower_barrack_dwarf", "tower_barrack_amazonas", "tower_barrack_mercenaries", "tower_barrack_pirates",
             "tower_frankenstein", "tower_blade", "tower_forest", "tower_druid", "tower_drow", "tower_ewok",
-            "tower_baby_ashbite", "tower_dark_elf_lvl4"}
+            "tower_baby_ashbite", "tower_dark_elf_lvl4", "tower_pandas_lvl4"}
 end
 
 function upgrades:non_barrack_towers_with_barrack_attribute()
@@ -373,7 +373,7 @@ function upgrades:bolts()
     local other_bolts = {"ray_arcane", "bolt_elora_freeze", "bolt_elora_slow", "bolt_magnus", "bolt_magnus_illusion",
                          "bolt_priest", "bolt_voodoo_witch", "bolt_veznan", "ray_arivan_simple", "bullet_rag",
                          "ray_wizard", "ray_wizard_chain", "bolt_hero_space_elf_basic_attack",
-                         "bullet_hero_witch_basic_1", "bullet_hero_witch_basic_2", "bolt_lumenir"}
+                         "bullet_hero_witch_basic_1", "bullet_hero_witch_basic_2", "bolt_lumenir", "bullet_tower_pandas_ray_lvl4","bullet_tower_pandas_fire_lvl4","bullet_tower_pandas_air_lvl4"}
     return table.append(other_bolts, self:mage_tower_bolts())
 end
 
