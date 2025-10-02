@@ -1702,6 +1702,7 @@ function sys.tween:on_update(dt, ts, store)
                         if e.tween.reverse and not t.ignore_reverse then
                             time = duration - time
                         end
+
                         if time <= start_time then
                             value = ka[2]
                         elseif time >= end_time then
@@ -1717,7 +1718,6 @@ function sys.tween:on_update(dt, ts, store)
                             end
                             value = lerp(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]), ka[3] or t.interp)
                         end
-                        time = km.clamp(start_time, end_time, time)
 
                         if t.multiply then
                             if type(value) == "boolean" then
