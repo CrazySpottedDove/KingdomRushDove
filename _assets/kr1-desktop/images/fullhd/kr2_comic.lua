@@ -1,5 +1,5 @@
 return {
-	1_1 = {
+	["$1_$2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			187,
@@ -23,7 +23,7 @@ return {
 		},
 		alias = {},
 	},
-	1_2 = {
+	["1_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			768,
@@ -47,7 +47,7 @@ return {
 		},
 		alias = {},
 	},
-	1_3 = {
+	["1_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			262,
@@ -71,7 +71,7 @@ return {
 		},
 		alias = {},
 	},
-	1_4 = {
+	["1_4"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			714,
@@ -95,7 +95,7 @@ return {
 		},
 		alias = {},
 	},
-	1_5 = {
+	["1_5"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			380,
@@ -119,7 +119,7 @@ return {
 		},
 		alias = {},
 	},
-	2_1 = {
+	["2_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			442,
@@ -143,7 +143,7 @@ return {
 		},
 		alias = {},
 	},
-	2_2 = {
+	["2_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			638,
@@ -167,7 +167,7 @@ return {
 		},
 		alias = {},
 	},
-	2_3 = {
+	["2_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			1091,
@@ -191,7 +191,7 @@ return {
 		},
 		alias = {},
 	},
-	3_1 = {
+	["3_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			478,
@@ -215,7 +215,7 @@ return {
 		},
 		alias = {},
 	},
-	3_2 = {
+	["3_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			485,
@@ -239,7 +239,7 @@ return {
 		},
 		alias = {},
 	},
-	3_3 = {
+	["3_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			205,
@@ -263,7 +263,7 @@ return {
 		},
 		alias = {},
 	},
-	3_4 = {
+	["3_4"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			245,
@@ -287,7 +287,7 @@ return {
 		},
 		alias = {},
 	},
-	3_6 = {
+	["3_6"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			664,
@@ -311,7 +311,7 @@ return {
 		},
 		alias = {},
 	},
-	4_1 = {
+	["4_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			217,
@@ -335,7 +335,7 @@ return {
 		},
 		alias = {},
 	},
-	4_2 = {
+	["4_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			278,
@@ -359,7 +359,7 @@ return {
 		},
 		alias = {},
 	},
-	4_3 = {
+	["4_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			574,
@@ -383,7 +383,7 @@ return {
 		},
 		alias = {},
 	},
-	4_4 = {
+	["4_4"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			368,
@@ -407,7 +407,7 @@ return {
 		},
 		alias = {},
 	},
-	4_5 = {
+	["4_5"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			368,
@@ -431,7 +431,7 @@ return {
 		},
 		alias = {},
 	},
-	4_6 = {
+	["4_6"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			354,
@@ -455,7 +455,7 @@ return {
 		},
 		alias = {},
 	},
-	5_1 = {
+	["5_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			554,
@@ -479,7 +479,7 @@ return {
 		},
 		alias = {},
 	},
-	5_2 = {
+	["5_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			463,
@@ -503,7 +503,7 @@ return {
 		},
 		alias = {},
 	},
-	5_3 = {
+	["5_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			1067,
@@ -527,7 +527,7 @@ return {
 		},
 		alias = {},
 	},
-	6_1 = {
+	["6_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			430,
@@ -551,7 +551,7 @@ return {
 		},
 		alias = {},
 	},
-	6_2 = {
+	["6_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			430,
@@ -575,7 +575,7 @@ return {
 		},
 		alias = {},
 	},
-	6_3 = {
+	["6_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			553,
@@ -599,7 +599,7 @@ return {
 		},
 		alias = {},
 	},
-	7_1 = {
+	["7_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			250,
@@ -623,7 +623,7 @@ return {
 		},
 		alias = {},
 	},
-	7_2 = {
+	["7_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			420,
@@ -647,7 +647,7 @@ return {
 		},
 		alias = {},
 	},
-	7_3 = {
+	["7_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			392,
@@ -671,7 +671,7 @@ return {
 		},
 		alias = {},
 	},
-	7_4 = {
+	["7_4"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			323,
@@ -695,7 +695,7 @@ return {
 		},
 		alias = {},
 	},
-	7_5 = {
+	["7_5"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			229,
@@ -719,7 +719,7 @@ return {
 		},
 		alias = {},
 	},
-	7_6 = {
+	["7_6"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			484,
@@ -743,7 +743,7 @@ return {
 		},
 		alias = {},
 	},
-	8_1 = {
+	["8_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			453,
@@ -767,7 +767,7 @@ return {
 		},
 		alias = {},
 	},
-	8_2 = {
+	["8_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			413,
@@ -791,7 +791,7 @@ return {
 		},
 		alias = {},
 	},
-	8_3 = {
+	["8_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			186,
@@ -815,7 +815,7 @@ return {
 		},
 		alias = {},
 	},
-	8_4 = {
+	["8_4"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			309,
@@ -839,7 +839,7 @@ return {
 		},
 		alias = {},
 	},
-	8_5 = {
+	["8_5"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			762,
@@ -863,7 +863,7 @@ return {
 		},
 		alias = {},
 	},
-	9_1 = {
+	["9_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			371,
@@ -887,7 +887,7 @@ return {
 		},
 		alias = {},
 	},
-	9_2 = {
+	["9_2"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			233,
@@ -911,7 +911,7 @@ return {
 		},
 		alias = {},
 	},
-	9_3 = {
+	["9_3"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			453,
@@ -935,7 +935,7 @@ return {
 		},
 		alias = {},
 	},
-	9_4 = {
+	["9_4"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			256,
@@ -959,7 +959,7 @@ return {
 		},
 		alias = {},
 	},
-	9_5 = {
+	["9_5"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			219,
@@ -983,7 +983,7 @@ return {
 		},
 		alias = {},
 	},
-	9_6 = {
+	["9_6"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			577,
