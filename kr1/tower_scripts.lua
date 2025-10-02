@@ -9933,7 +9933,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
         if not (store.tick_ts - a_i.ts > a_i.cooldown) then
             return false
         end
-        if U.has_enemy_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, function(e)
+        if not U.has_enemy_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, function(e)
                 return not e.enemy.counts or not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport <
                            a_i.max_times_applied
             end) then
@@ -10144,7 +10144,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                             mod_teleport.hold_time = random_float(0.2, 0.4)
                             mod_teleport.delay_end = random_float(fts(2), fts(5))
                             mod_teleport.begin_wait = random_float(0, 0.2)
-                            debug.print(mod_teleport)
+
                             queue_insert(store, mod_teleport)
                         end
 

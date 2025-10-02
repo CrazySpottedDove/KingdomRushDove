@@ -1705,8 +1705,10 @@ function sys.tween:on_update(dt, ts, store)
 
                         if time <= start_time then
                             value = ka[2]
+                            kb = ka
                         elseif time >= end_time then
                             value = kb[2]
+                            ka = kb
                         else
                             for i = 2, #keys do
                                 local ki = keys[i]
