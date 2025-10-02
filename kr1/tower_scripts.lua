@@ -10786,7 +10786,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
         total_damage = total_damage + effective_dmg
     end
 
-    local raw_damage = math.random(this.dps.damage_min, this.dps.damage_max)
+    local raw_damage = math.random(this.dps.damage_min, this.dps.damage_max) * m.damage_factor
     local raw_damage_tiers = {}
 
     for _, v in pairs(this.damage_tiers) do
@@ -11131,7 +11131,9 @@ function scripts.bullet_tower_ray.update(this, store)
 
     for key, value in pairs(mods_added) do
         if not value.dps or not tower or this.force_stop_ray then
-            queue_remove(store, value)
+            if store.entities[value.id] then
+                queue_remove(store, value)
+            end
         end
     end
 

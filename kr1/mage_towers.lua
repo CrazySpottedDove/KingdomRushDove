@@ -1857,11 +1857,13 @@ tt.tower.size = TOWER_SIZE_LARGE
 tt.tower.menu_offset = vec_2(0, 38)
 tt.tower.long_idle_cooldown = 2
 tt.powers.chain = CC("power")
-tt.powers.chain.price = b.skill_chain.price
+tt.powers.chain.price = b.skill_chain.price[1]
+tt.powers.chain.price_inc = b.skill_chain.price[2]
 tt.powers.chain.damage_mult = b.skill_chain.damage_mult
 tt.powers.chain.enc_icon = 29
 tt.powers.sheep = CC("power")
-tt.powers.sheep.price = b.skill_sheep.price
+tt.powers.sheep.price = b.skill_sheep.price[1]
+tt.powers.sheep.max_level = 1
 tt.powers.sheep.cooldown = b.skill_sheep.cooldown
 tt.powers.sheep.duration = b.skill_sheep.duration
 tt.powers.sheep.enc_icon = 30
@@ -2156,7 +2158,7 @@ tt = E:register_t("mod_tower_ray_slow", "mod_slow")
 b = balance.towers.ray.basic_attack
 tt.slow.factor = b.slow.factor
 tt.modifier.duration = b.duration
-tt.main_script.insert = scripts.mod_tower_ray_slow.insert
-tt.main_script.remove = scripts.mod_tower_ray_slow.remove
+-- tt.main_script.insert = scripts.mod_tower_ray_slow.insert
+-- tt.main_script.remove = scripts.mod_tower_ray_slow.remove
 
 -- 红法 END
