@@ -10031,7 +10031,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                 local enemies = U.find_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags,
                     a_i.vis_bans)
 
-                if not enemies or #enemies < a_i.min_targets then
+                if not enemies then
                     a_i.ts = store.tick_ts + a_i.cooldown * 0.2
                 else
                     local grid_size = a_i.damage_area * 0.8
