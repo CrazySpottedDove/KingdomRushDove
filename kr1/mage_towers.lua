@@ -14,6 +14,9 @@ local function ady(v)
     return v - anchor_y * image_y
 end
 local GS = require("game_settings")
+local V = require("klua.vector")
+local v = V.v
+local vv = V.vv
 require("game_templates_utils")
 
 tt = RT("tower_arcane_wizard", "tower_mage_1")
@@ -2001,6 +2004,102 @@ end
 tt.shocks_ids = {"a", "b", "c", "d"}
 tt.shock_fx = "fx_tower_ray_lvl4_shock"
 tt.ui.click_rect = r(-35, 10, 70, 70)
+
+for i = 1, #tt.crystals_ids do
+    local crystal_sid = tt.render.sid_crystals + i - 1
+    local start_offset = tt.render.sprites[crystal_sid].offset
+    local end_offset = V.v(start_offset.x, start_offset.y + 2.5)
+    local frec = 3
+
+    tt.tween.props[i] = E:clone_c("tween_prop")
+    tt.tween.props[i].name = "offset"
+
+    if i == 3 or i == 4 then
+        end_offset.x = -3
+    elseif i == 5 or i == 6 then
+        end_offset.x = 3
+    elseif i == 7 or i == 8 then
+        end_offset.x = 3
+    end
+
+    tt.tween.props[i].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
+    tt.tween.props[i].sprite_id = crystal_sid
+    tt.tween.props[i].loop = true
+    tt.tween.props[i].interp = "sine"
+end
+
+if tt.stones_ids then
+    for i = 1, #tt.stones_ids do
+        local stone_sid = tt.render.sid_stones + i - 1
+        local prop_id = #tt.crystals_ids + i
+        local start_offset = V.vclone(tt.render.sprites[2].offset)
+        local end_offset = V.vclone(tt.render.sprites[2].offset)
+        local frec = 3
+
+        tt.tween.props[prop_id] = E:clone_c("tween_prop")
+        tt.tween.props[prop_id].name = "offset"
+
+        if i == 1 then
+            end_offset = v(-3, start_offset.y + 2)
+        elseif i == 2 then
+            end_offset = v(-2, start_offset.y + 4)
+        elseif i == 3 then
+            end_offset = v(-4, start_offset.y + 2)
+        elseif i == 4 or i == 5 then
+            end_offset = v(3, start_offset.y + 3)
+        elseif i == 6 then
+            end_offset = v(4, start_offset.y + 1)
+        elseif i == 7 then
+            end_offset = v(-3, start_offset.y - 1)
+        elseif i == 8 then
+            end_offset = v(2, start_offset.y - 2)
+        elseif i == 9 or i == 10 then
+            end_offset = v(2, start_offset.y)
+        else
+            end_offset = v(-1, start_offset.y - 3)
+        end
+
+        tt.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
+        tt.tween.props[prop_id].sprite_id = stone_sid
+        tt.tween.props[prop_id].loop = true
+        tt.tween.props[prop_id].interp = "sine"
+    end
+end
+
+for i = 1, #tt.rocks_ids + #tt.back_rocks_ids do
+    local rock_sid = tt.render.sid_rocks + i - 1
+    local prop_id = #tt.crystals_ids + #tt.stones_ids + i
+    local start_offset = V.vclone(tt.render.sprites[2].offset)
+    local end_offset = V.v(start_offset.x, start_offset.y + 5)
+    local frec = 4
+
+    tt.tween.props[prop_id] = E:clone_c("tween_prop")
+    tt.tween.props[prop_id].name = "offset"
+    tt.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
+    tt.tween.props[prop_id].sprite_id = rock_sid
+    tt.tween.props[prop_id].loop = true
+    tt.tween.props[prop_id].interp = "sine"
+end
+
+local core_rock_sid = 2
+local prop_id = #tt.crystals_ids + #tt.stones_ids + #tt.rocks_ids + #tt.back_rocks_ids + 1
+local start_offset = V.vclone(tt.render.sprites[2].offset)
+local end_offset = V.v(start_offset.x, start_offset.y + 4)
+local frec = 5
+
+tt.tween.props[prop_id] = E:clone_c("tween_prop")
+tt.tween.props[prop_id].name = "offset"
+tt.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
+tt.tween.props[prop_id].sprite_id = core_rock_sid
+tt.tween.props[prop_id].loop = true
+tt.tween.props[prop_id].interp = "sine"
+prop_id = prop_id + 1
+tt.tween.props[prop_id] = E:clone_c("tween_prop")
+tt.tween.props[prop_id].name = "scale"
+tt.tween.props[prop_id].keys = {{0, V.vv(1)}, {frec / 2, V.vv(0.9)}, {frec, V.vv(1)}}
+tt.tween.props[prop_id].sprite_id = tt.render.sid_core_rock_shadow
+tt.tween.props[prop_id].loop = true
+tt.tween.props[prop_id].interp = "sine"
 
 tt = E:register_t("enemy_tower_ray_sheep", "enemy")
 local b = balance.towers.ray.skill_sheep.sheep

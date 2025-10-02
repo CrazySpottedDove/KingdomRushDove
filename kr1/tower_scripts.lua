@@ -10223,103 +10223,17 @@ function scripts.tower_ray.update(this, store)
     end
 
     for i = 1, #this.crystals_ids do
-        local crystal_sid = this.render.sid_crystals + i - 1
-        local start_offset = this.render.sprites[crystal_sid].offset
-        local end_offset = V.v(start_offset.x, start_offset.y + 2.5)
-        local frec = 3
-
-        this.tween.props[i] = E:clone_c("tween_prop")
-        this.tween.props[i].name = "offset"
-
-        if i == 3 or i == 4 then
-            end_offset.x = -3
-        elseif i == 5 or i == 6 then
-            end_offset.x = 3
-        elseif i == 7 or i == 8 then
-            end_offset.x = 3
-        end
-
-        this.tween.props[i].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
-        this.tween.props[i].sprite_id = crystal_sid
-        this.tween.props[i].loop = true
-        this.tween.props[i].interp = "sine"
         this.tween.props[i].ts = store.tick_ts
     end
 
-    if this.stones_ids then
-        for i = 1, #this.stones_ids do
-            local stone_sid = this.render.sid_stones + i - 1
-            local prop_id = #this.crystals_ids + i
-            local start_offset = V.vclone(this.render.sprites[2].offset)
-            local end_offset = V.vclone(this.render.sprites[2].offset)
-            local frec = 3
-
-            this.tween.props[prop_id] = E:clone_c("tween_prop")
-            this.tween.props[prop_id].name = "offset"
-
-            if i == 1 then
-                end_offset = v(-3, start_offset.y + 2)
-            elseif i == 2 then
-                end_offset = v(-2, start_offset.y + 4)
-            elseif i == 3 then
-                end_offset = v(-4, start_offset.y + 2)
-            elseif i == 4 or i == 5 then
-                end_offset = v(3, start_offset.y + 3)
-            elseif i == 6 then
-                end_offset = v(4, start_offset.y + 1)
-            elseif i == 7 then
-                end_offset = v(-3, start_offset.y - 1)
-            elseif i == 8 then
-                end_offset = v(2, start_offset.y - 2)
-            elseif i == 9 or i == 10 then
-                end_offset = v(2, start_offset.y)
-            else
-                end_offset = v(-1, start_offset.y - 3)
-            end
-
-            this.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
-            this.tween.props[prop_id].sprite_id = stone_sid
-            this.tween.props[prop_id].loop = true
-            this.tween.props[prop_id].interp = "sine"
-        end
-    end
-
     for i = 1, #this.rocks_ids + #this.back_rocks_ids do
-        local rock_sid = this.render.sid_rocks + i - 1
         local prop_id = #this.crystals_ids + #this.stones_ids + i
-        local start_offset = V.vclone(this.render.sprites[2].offset)
-        local end_offset = V.v(start_offset.x, start_offset.y + 5)
-        local frec = 4
-
-        this.tween.props[prop_id] = E:clone_c("tween_prop")
-        this.tween.props[prop_id].name = "offset"
-        this.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
-        this.tween.props[prop_id].sprite_id = rock_sid
-        this.tween.props[prop_id].loop = true
-        this.tween.props[prop_id].interp = "sine"
         this.tween.props[prop_id].ts = store.tick_ts - i
     end
 
-    local core_rock_sid = 2
     local prop_id = #this.crystals_ids + #this.stones_ids + #this.rocks_ids + #this.back_rocks_ids + 1
-    local start_offset = V.vclone(this.render.sprites[2].offset)
-    local end_offset = V.v(start_offset.x, start_offset.y + 4)
-    local frec = 5
-
-    this.tween.props[prop_id] = E:clone_c("tween_prop")
-    this.tween.props[prop_id].name = "offset"
-    this.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
-    this.tween.props[prop_id].sprite_id = core_rock_sid
-    this.tween.props[prop_id].loop = true
-    this.tween.props[prop_id].interp = "sine"
     this.tween.props[prop_id].ts = store.tick_ts
     prop_id = prop_id + 1
-    this.tween.props[prop_id] = E:clone_c("tween_prop")
-    this.tween.props[prop_id].name = "scale"
-    this.tween.props[prop_id].keys = {{0, V.vv(1)}, {frec / 2, V.vv(0.9)}, {frec, V.vv(1)}}
-    this.tween.props[prop_id].sprite_id = this.render.sid_core_rock_shadow
-    this.tween.props[prop_id].loop = true
-    this.tween.props[prop_id].interp = "sine"
     this.tween.props[prop_id].ts = this.tween.props[prop_id - 1].ts
 
     local function find_target(aa)
