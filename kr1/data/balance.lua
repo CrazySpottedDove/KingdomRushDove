@@ -6007,13 +6007,13 @@ local towers = {
             s_max_enemies = 3,
             max_enemies = 4,
             chain_range = 100,
-            price = {150, 150, 150},
+            price = {200, 200, 200},
             damage_mult = {0.25, 0.5, 0.75},
             damage_type = DAMAGE_MAGICAL
         },
         skill_sheep = {
             range = 200,
-            price = {200},
+            price = {300},
             cooldown = {20},
             sheep = {
                 speed = 28,
