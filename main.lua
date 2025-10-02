@@ -843,9 +843,9 @@ function love.errhand(msg)
     -- if error_type == "coro" then
     -- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
     if has_tip then
-        table.insert(tip, "oops, 发生错误! 请先尝试提示，再将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+        table.insert(tip, "oops, 发生错误! 请先尝试提示，再将本界面与此前界面截图并反馈，而不是仅语言描述。按 “z” 显示此前界面以截图。\n")
     elseif not has_tip then
-        table.insert(tip, "oops, 发生错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+        table.insert(tip, "oops, 发生错误! 如当前版本不为最新，建议将版本升级至最新。如果已是最新版本，请将本界面与此前界面截图并反馈，而不是仅语言描述。按 “z” 显示此前界面以截图。\n")
     end
 
     if love.nx then
