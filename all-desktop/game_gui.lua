@@ -6704,16 +6704,10 @@ function TowerMenu:show()
             b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
 
             self:add_child(b)
-
-            -- if table.contains(GS.kr3_towers, entity.tower.type) then
-            --     local bo = KImageView:new("kr3_main_icons_over")
-
-            --     bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
-            --     bo.propagate_on_click = true
-            --     bo.disabled_tint_color = nil
-
-            --     b:add_child(bo)
-            -- end
+            local bo = KImageView:new("main_icons_0000")
+            bo.x = math.floor((b.size.x - bo.size.x) * 0.5)
+            bo.y = math.floor((b.size.y - bo.size.y) * 0.5)
+            b:add_child(bo)
         elseif item.action == "tw_sell" and entity.tower and not entity.tower.can_be_sold then
             -- block empty
         else
@@ -7502,10 +7496,9 @@ function TowerMenuButton:initialize(item, entity)
     self:add_child(halo)
 
     local bo
-
     if item.action == "upgrade_power" then
         bo = create_bo_view("special_icons_0000")
-    elseif table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack" }, item.action) then
+    elseif table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) then
         bo = create_bo_view("main_icons_0000")
     end
 
