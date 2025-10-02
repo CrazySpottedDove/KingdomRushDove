@@ -9829,7 +9829,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
 
     local brk, stam, star
 
-    this.render.sprites[1].ts = store.tick_ts
+    -- this.render.sprites[1].ts = store.tick_ts
 
     local pow_i = this.powers and this.powers.thunder or this.powers.hat or this.powers.teleport or nil
     local a_i
