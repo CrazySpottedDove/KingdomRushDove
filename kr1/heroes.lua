@@ -14104,7 +14104,7 @@ local function heroes()
     }
     tt.ultimate = {
         ts = 0,
-        cooldown = 53,
+        cooldown = 43,
         vis_ban = 0,
         disabled = true
     }
