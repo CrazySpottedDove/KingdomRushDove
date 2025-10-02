@@ -366,7 +366,7 @@ end
 
 function upgrades:mage_tower_bolts()
     return {"bolt_1", "bolt_2", "bolt_3", "bolt_sorcerer", "bolt_archmage", "ray_sunray", "bolt_necromancer_tower",
-            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn","bullet_tower_ray_lvl4"}
+            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn","bullet_tower_ray_lvl4","bullet_tower_ray_chain"}
 end
 
 function upgrades:bolts()

@@ -9927,10 +9927,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
         if not (store.tick_ts - a_i.ts > a_i.cooldown) then
             return false
         end
-
-        local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans)
-
-        if not enemies or #enemies < a_i.min_targets then
+        if not U.has_enough_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, nil, a_i.min_targets) then
             SU.delay_attack(store, a_i, fts(10))
 
             return false
@@ -9956,13 +9953,10 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             return false
         end
 
-        local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans,
-            function(e)
+        if U.has_enemy_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, function(e)
                 return not e.enemy.counts or not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport <
                            a_i.max_times_applied
-            end)
-
-        if not enemies or #enemies < 1 then
+            end) then
             SU.delay_attack(store, a_i, fts(10))
 
             return false
