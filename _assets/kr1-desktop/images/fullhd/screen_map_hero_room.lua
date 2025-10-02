@@ -5039,7 +5039,7 @@ return {
 		},
 		alias = {},
 	},
-	portrait_notxt_0010 = {
+	portrait_notxt_0011 = {
 		a_name = "screen_map_hero_room-1.png",
 		size = {
 			274,
@@ -5063,7 +5063,7 @@ return {
 		},
 		alias = {},
 	},
-	portrait_notxt_0011 = {
+	portrait_notxt_0010 = {
 		a_name = "screen_map_hero_room-1.png",
 		size = {
 			274,
