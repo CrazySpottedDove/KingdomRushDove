@@ -10028,7 +10028,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             end
 
             if can_thunder() then
-                local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_i.max_range, a_i.vis_flags,
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags,
                     a_i.vis_bans)
 
                 if not enemies or #enemies < a_i.min_targets then
