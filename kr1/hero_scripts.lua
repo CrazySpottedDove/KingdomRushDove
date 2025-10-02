@@ -25775,17 +25775,7 @@ function scripts.hero_wukong.update(this, store)
     local giant_staff_attack = this.timed_attacks.list[2]
     local pole_ranged_attack = this.timed_attacks.list[3]
 
-    if not hair_clones_attack.disabled then
-        hair_clones_attack.ts = store.tick_ts - hair_clones_attack.cooldown
-    end
-
-    if not giant_staff_attack.disabled then
-        giant_staff_attack.ts = store.tick_ts - giant_staff_attack.cooldown
-    end
-
-    if not pole_ranged_attack.disabled then
-        pole_ranged_attack.ts = store.tick_ts - pole_ranged_attack.cooldown
-    end
+    SU.hero_spawning_set_skill_ts(this, store)
 
     local ps_nube_trail = E:create_entity("ps_wukong_nube_trail")
 
