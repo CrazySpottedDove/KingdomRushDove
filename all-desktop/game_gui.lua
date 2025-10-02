@@ -6705,6 +6705,13 @@ function TowerMenu:show()
 
             self:add_child(b)
 
+            local bo = KImageView:new("main_icons_0000")
+
+            bo.pos = V.vclone(data.tower_menu_button_places[item.place])
+            bo.pos.x, bo.pos.y = bo.pos.x - bo.size.x * 0.5, bo.pos.y - bo.size.y * 0.5
+
+            self:add_child(bo)
+
             -- if table.contains(GS.kr3_towers, entity.tower.type) then
             --     local bo = KImageView:new("kr3_main_icons_over")
 
