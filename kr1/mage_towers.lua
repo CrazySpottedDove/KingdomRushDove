@@ -2153,6 +2153,7 @@ tt.damage_tiers = b.damage_per_second
 tt.tween.props[1].keys = {{0, 255}, {fts(2), 0}}
 tt.tween.remove = true
 tt.tween.disabled = true
+tt.modifier.allows_duplicates = true
 
 tt = E:register_t("mod_tower_ray_slow", "mod_slow")
 b = balance.towers.ray.basic_attack
