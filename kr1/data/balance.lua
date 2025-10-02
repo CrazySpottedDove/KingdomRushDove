@@ -6016,11 +6016,11 @@ local towers = {
             price = {300},
             cooldown = {20},
             sheep = {
-                speed = 28,
+                speed = 20,
                 armor = 0,
-                clicks_to_destroy = 5,
+                clicks_to_destroy = 8,
                 magic_armor = 0,
-                hp_mult = 0.5,
+                hp_mult = 0.7,
                 gold = 0,
             }
         }

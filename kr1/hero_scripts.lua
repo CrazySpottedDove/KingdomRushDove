@@ -26054,6 +26054,7 @@ function scripts.hero_wukong.update(this, store)
                 local target = find_target_at_critical_moment(this, store, hair_clones_attack.max_range, false, false)
                 if target and valid_rally_node_nearby(target.pos) then
                     apply_ultimate(this, store, target, "levelup")
+                    scripts.heal(this, h.hp_max)
                 else
                     a.ts = a.ts + 1
                 end
