@@ -1702,25 +1702,22 @@ function sys.tween:on_update(dt, ts, store)
                         if e.tween.reverse and not t.ignore_reverse then
                             time = duration - time
                         end
-
-                        time = km.clamp(start_time, end_time, time)
-
-                        for i = 1, #keys do
-                            local ki = keys[i]
-
-                            if time >= ki[1] then
-                                ka = ki
-                            else
-                                kb = ki
-                                break
-                            end
-                        end
-
-                        if ka == kb then
+                        if time <= start_time then
                             value = ka[2]
+                        elseif time >= end_time then
+                            value = kb[2]
                         else
+                            for i = 2, #keys do
+                                local ki = keys[i]
+                                if time < ki[1] then
+                                    kb = ki
+                                    ka = keys[i - 1]
+                                    break
+                                end
+                            end
                             value = lerp(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]), ka[3] or t.interp)
                         end
+                        time = km.clamp(start_time, end_time, time)
 
                         if t.multiply then
                             if type(value) == "boolean" then
