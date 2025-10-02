@@ -1,0 +1,5 @@
+_assets/kr1-desktop/images/fullhd/screen_map_hero_room.lua
+kr1-desktop/data/map_data.lua
+kr1/mage_towers.lua
+main.lua
+version.lua

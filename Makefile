@@ -3,8 +3,8 @@ WINDOWS_DIR:=$(shell cat $(MAKE_FILE_DIR)/.windows_kr_dove_dir)
 LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 LAST_SYNC_FILE := $(MAKE_FILE_DIR)/.last_sync_commit
-
-.PHONY: all debug package repackage sync branch master index upload download
+MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump
 
 all: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -44,3 +44,6 @@ upload:
 
 download:
 	@lua scripts/download_assets.lua
+
+main_version_jump: sync
+	git rev-parse HEAD > $(LAST_SYNC_FILE)
