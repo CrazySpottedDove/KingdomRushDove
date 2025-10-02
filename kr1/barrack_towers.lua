@@ -2143,6 +2143,8 @@ local function barrack_towers()
     tt.attacks.list[1].damage_area = b.soldier.thunder.damage_area
     tt.attacks.list[1].min_targets = b.soldier.thunder.min_targets
     tt.attacks.list[1].mod = "mod_soldier_tower_pandas_blue_stun"
+    tt.ranged = nil
+    tt.powers = {}
     tt.powers.thunder = CC("power")
     tt.powers.thunder.cooldown = b.soldier.thunder.cooldown
     tt.powers.thunder.range = b.soldier.thunder.range
@@ -2171,6 +2173,7 @@ local function barrack_towers()
     tt.death_go_back_delay = fts(12)
     tt.health_bar.offset = v(0, 44)
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_hit"
+    tt.powers = {}
     tt.powers.teleport = CC("power")
     tt.powers.teleport.cooldown = b.soldier.teleport.cooldown
     tt.powers.teleport.range = b.soldier.teleport.range
@@ -2194,6 +2197,7 @@ local function barrack_towers()
     tt.attacks.list[1].mod = "mod_soldier_tower_pandas_red_teleport"
     tt.attacks.list[1].decal = "decal_tower_panda_skill_red_tp_soldier_fire"
     tt.attacks.list[1].max_times_applied = b.soldier.teleport.max_times_applied
+    tt.ranged = nil
     tt.ui.click_rect = r(-17, 0, 34, 30)
     tt.sound_events.death = "TowerPandasDeath"
     tt.sound_events.death_args = {

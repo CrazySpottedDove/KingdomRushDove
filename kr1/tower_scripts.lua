@@ -9927,6 +9927,8 @@ function scripts.soldier_tower_pandas.update(this, store, script)
         if not (store.tick_ts - a_i.ts > a_i.cooldown) then
             return false
         end
+        local debug = require("debug_macros")
+        debug.print(a_i)
         if not U.has_enough_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, nil, a_i.min_targets) then
             SU.delay_attack(store, a_i, fts(10))
 
