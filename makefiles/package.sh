@@ -35,11 +35,12 @@ fi
 
 echo "打包至: $OUTPUT_ZIP"
 
-# 获取变动文件列表（只包含 .lua 文件）
-git diff --name-only "$BASE_COMMIT" HEAD > changed_files.txt
+git diff --name-status "$BASE_COMMIT" HEAD | awk '$1 != "D" {print $2}' > changed_files.txt
 
 # 用 zip 打包
 zip "$OUTPUT_ZIP" -@ < changed_files.txt
+
+rm changed_files.txt
 
 # 更新 version.lua
 sed -i "s/version\.id = \".*\"/version.id = \"$new_id\"/" "$VERSION_FILE"
