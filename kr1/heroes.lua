@@ -13583,6 +13583,7 @@ local function heroes()
 
     tt = E:register_t("decal_hero_wukong_ranged_attack_staff", "decal_scripted")
     E:add_comps(tt, "tween")
+    tt.damage_factor = 1
     b = balance.heroes.hero_wukong.pole_ranged
     tt.main_script.update = scripts.decal_hero_wukong_ranged_attack_staff.update
     tt.render.sprites[1].prefix = "hero_wukong_attack_range"
@@ -13595,7 +13596,7 @@ local function heroes()
     tt.mod_stun = "mod_hero_wukong_ranged_pole_stun"
     tt.damage_radius = b.damage_radius
     tt.damage_flags = bor(F_AREA)
-    tt.damage_bans = bor(F_FLYING)
+    tt.damage_bans = F_NONE
     tt.damage_type = b.damage_type
     tt.damage_max = nil
     tt.damage_min = nil
@@ -14080,7 +14081,6 @@ local function heroes()
     tt.timed_attacks.list[2].area_damage_min = b.giant_staff.area_damage.damage_min
     tt.timed_attacks.list[2].area_damage_radius = b.giant_staff.area_damage.damage_radius
     tt.timed_attacks.list[2].area_damage_type = b.giant_staff.area_damage.damage_type
-    tt.timed_attacks.list[2].area_damage_max_targets = b.giant_staff.area_damage
     .max_targets
     tt.timed_attacks.list[2].sound = "HeroWukongInstakill"
     tt.timed_attacks.list[2].sound_args = {
