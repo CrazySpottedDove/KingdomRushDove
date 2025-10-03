@@ -5664,8 +5664,8 @@ local towers = {
         },
         basic_attack = {
             cooldown = 1.5,
-            damage_min = {4, 12, 20, 44},
-            damage_max = {8, 20, 36, 81},
+            damage_min = {4, 12, 20, 46},
+            damage_max = {8, 20, 36, 85},
             range = {160, 170, 185, 200},
             damage_type = DAMAGE_MAGICAL
         },
@@ -5687,14 +5687,14 @@ local towers = {
             speed = 150,
             duration = 100,
             price = {200, 200, 200},
-            damage_min = {70, 130, 180},
-            damage_max = {70, 130, 180},
-            s_damage = {70, 130, 180},
+            damage_min = {70, 130, 200},
+            damage_max = {70, 130, 200},
+            s_damage = {70, 130, 200},
             cooldown = {30, 26, 22},
             damage_type = DAMAGE_TRUE
         },
         curse = {
-            max_golems = 1,
+            max_golems = 5,
             duration = 3,
             max_units_total = 30,
             max_skeletons = {2, 3, 4, 5}
