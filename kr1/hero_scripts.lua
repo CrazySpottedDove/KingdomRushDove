@@ -26234,7 +26234,13 @@ function scripts.hero_wukong.update(this, store)
                                     target = store.entities[this.soldier.target_id]
 
                                     if target then
-                                        queue_damage(store, create_damage(a, target.id))
+                                        -- queue_damage(store, create_damage(a, target.id))
+                                        local d = E:create_entity("damage")
+                                        d.source_id = this.id
+                                        d.target_id = target.id
+                                        d.value = 1
+                                        d.damage_type = a.damage_type
+                                        queue_damage(store, d)
                                     end
                                 end
 
