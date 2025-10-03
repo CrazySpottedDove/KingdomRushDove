@@ -26600,7 +26600,7 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
     end
 
     SU.stun_inc(target)
-
+    local _vis_bans = target.vis.bans
     target.vis.bans = bor(F_MOD, F_TELEPORT, F_RANGED)
     target.health.ignore_damage = true
     target.ui.can_select = false
@@ -26618,7 +26618,7 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
         return target.health.dead
     end)
     U.sprites_show(target, nil, nil, true)
-
+    target.vis.bans = _vis_bans
     target.health.ignore_damage = false
 
     if this.modifier.kill then
