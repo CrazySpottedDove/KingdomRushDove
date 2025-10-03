@@ -13488,33 +13488,33 @@ local function heroes()
     tt.render.sprites[1].z = Z_OBJECTS
 
     tt = E:register_t("fx_hero_wukong_giant_staff", "decal_scripted")
-    E:add_comps(tt, "tween")
+    -- E:add_comps(tt, "tween")
     tt.main_script.update = scripts.fx_hero_wukong_giant_staff.update
     tt.render.sprites[1].prefix = "hero_wukong_weapon"
     tt.render.sprites[1].name = "in"
     tt.render.sprites[1].z = Z_OBJECTS
     tt.render.sprites[1].scale = vv(2)
-    tt.render.sprites[2] = E:clone_c("sprite")
-    tt.render.sprites[2].name = "hero_wukong_baston_crack"
-    tt.render.sprites[2].animated = false
-    tt.render.sprites[2].z = Z_DECALS
-    tt.tween.props[1].keys = {
-        {
-            0,
-            255
-        },
-        {
-            2,
-            255
-        },
-        {
-            2.5,
-            0
-        }
-    }
-    tt.tween.props[1].sprite_id = 2
-    tt.tween.disabled = true
-    tt.tween.remove = true
+    -- tt.render.sprites[2] = E:clone_c("sprite")
+    -- tt.render.sprites[2].name = "hero_wukong_baston_crack"
+    -- tt.render.sprites[2].animated = false
+    -- tt.render.sprites[2].z = Z_DECALS
+    -- tt.tween.props[1].keys = {
+    --     {
+    --         0,
+    --         255
+    --     },
+    --     {
+    --         2,
+    --         255
+    --     },
+    --     {
+    --         2.5,
+    --         0
+    --     }
+    -- }
+    -- tt.tween.props[1].sprite_id = 2
+    -- tt.tween.disabled = true
+    -- tt.tween.remove = true
 
     tt = E:register_t("fx_zhu_apprentice_respawn", "fx")
     tt.render.sprites[1].name = "hero_wukong_woolong_spawn_FX_spawn"
@@ -14117,6 +14117,7 @@ local function heroes()
         "cloud_out"
     }
     tt.flywalk.sound = nil
+    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)
 
     tt = E:register_t("aura_hero_wukong_ultimate_slow", "aura")
     b = balance.heroes.hero_wukong.ultimate

@@ -26065,6 +26065,7 @@ function scripts.hero_wukong.update(this, store)
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
                 else
+                    this.health.immune_to = F_ALL
                     local target_nodes = {}
 
                     for i = 1, math.min(#enemies, 2) do
@@ -26088,6 +26089,7 @@ function scripts.hero_wukong.update(this, store)
                     U.animation_start(this, an, af, store.tick_ts, false)
 
                     if SU.y_hero_wait(store, this, a.cast_time) then
+                        this.health.immune_to = 0
                         goto label_882_1
                     end
 
@@ -26154,7 +26156,7 @@ function scripts.hero_wukong.update(this, store)
 
                     SU.y_hero_animation_wait(this)
                     U.animation_start(this, "idle", nil, store.tick_ts, true)
-
+                    this.health.immune_to = 0
                     goto label_882_1
                 end
             end
@@ -26205,12 +26207,12 @@ function scripts.hero_wukong.update(this, store)
                                         end
                                     end
                                 end
-
+                                this.health.immune_to = F_ALL
                                 local an, af, _ = U.animation_name_facing_point(this, a.animation, target.pos)
 
                                 U.animation_start(this, an, af, store.tick_ts, false)
 
-                                local pushed_bans = U.push_bans(this.vis, F_ALL)
+                                -- local pushed_bans = U.push_bans(this.vis, F_ALL)
 
                                 U.y_wait(store, a.staff_appear_time)
 
@@ -26280,8 +26282,8 @@ function scripts.hero_wukong.update(this, store)
 
                                 this.health_bar.hidden = false
 
-                                U.pop_bans(this.vis, pushed_bans)
-
+                                -- U.pop_bans(this.vis, pushed_bans)
+                                this.health.immune_to = 0
                                 goto label_882_1
                             end
                         end
@@ -26300,8 +26302,9 @@ function scripts.hero_wukong.update(this, store)
 
                     U.animation_start(this, an, af, store.tick_ts, false)
                     S:queue(a.sound, a.sound_args)
-
+                    this.health.immune_to = F_ALL
                     if SU.y_hero_wait(store, this, a.shoot_time) then
+                        this.health.immune_to = 0
                         goto label_882_1
                     end
 
@@ -26370,6 +26373,7 @@ function scripts.hero_wukong.update(this, store)
 
                     SU.hero_gain_xp_from_skill(this, skill)
                     SU.y_hero_animation_wait(this)
+                    this.health.immune_to = 0
                     U.animation_start(this, "idle", nil, store.tick_ts, true)
 
                     goto label_882_1
@@ -26379,6 +26383,7 @@ function scripts.hero_wukong.update(this, store)
             brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
             if brk or sta ~= A_NO_TARGET then
+                scripts.hero_wukong.choose_next_random_attack(this)
                 -- block empty
             elseif SU.soldier_go_back_step(store, this) then
                 -- block empty
@@ -26613,24 +26618,25 @@ scripts.fx_hero_wukong_giant_staff = {}
 function scripts.fx_hero_wukong_giant_staff.update(this, store, script)
     U.animation_start(this, "in", nil, store.tick_ts, false, 1, true)
 
-    this.render.sprites[2].hidden = true
+    -- this.render.sprites[2].hidden = true
 
     U.y_wait(store, fts(21))
 
-    this.render.sprites[2].hidden = false
-    this.tween.ts = store.tick_ts
-    this.tween.disabled = false
+    -- this.render.sprites[2].hidden = false
+    -- this.tween.ts = store.tick_ts
+    -- this.tween.disabled = false
 
     local staff_finished
 
     while not staff_finished do
         if U.animation_finished(this, 1) then
             staff_finished = true
-            this.render.sprites[2].hidden = true
+            -- this.render.sprites[2].hidden = true
         end
 
         coroutine.yield()
     end
+    queue_remove(store, this)
 end
 
 scripts.controller_hero_wukong_ultimate = {}
