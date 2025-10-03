@@ -7496,7 +7496,7 @@ function TowerMenuButton:initialize(item, entity)
     local bo
     if item.action == "upgrade_power" then
         bo = create_bo_view("special_icons_0000")
-    elseif table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) then
+    elseif table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock"}, item.action) then
         bo = create_bo_view("main_icons_0000")
     end
 
