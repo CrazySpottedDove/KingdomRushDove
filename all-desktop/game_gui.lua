@@ -7452,7 +7452,6 @@ function TowerMenuButton:initialize(item, entity)
     self.item_image = item.image
     self.item = item
     self.entity = entity
-
     local b = KImageView:new(item.image)
     b.pos = v(0, 0)
 
@@ -7460,25 +7459,12 @@ function TowerMenuButton:initialize(item, entity)
     -- b.disabled_tint_color = nil
     self.button = b
 
-    self:add_child(b)
-
     local function get_pos(this, offset)
         offset = offset or v(0, 0)
         local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
         local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
 
         return v(x, y)
-    end
-
-    local function create_bo_view(img_name)
-        local bo = KImageView:new(img_name)
-
-        bo.pos = get_pos(bo)
-        bo.propagate_on_click = true
-
-        self:add_child(bo, 2)
-
-        return bo
     end
 
     local halo = KImageView:new(item.halo)
@@ -7494,6 +7480,18 @@ function TowerMenuButton:initialize(item, entity)
     self.halo = halo
 
     self:add_child(halo)
+    self:add_child(b)
+
+    local function create_bo_view(img_name)
+        local bo = KImageView:new(img_name)
+
+        bo.pos = get_pos(bo)
+        bo.propagate_on_click = true
+
+        self:add_child(bo)
+
+        return bo
+    end
 
     local bo
     if item.action == "upgrade_power" then
