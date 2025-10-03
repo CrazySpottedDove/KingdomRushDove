@@ -10649,7 +10649,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
     -- 每个阶段的 dps
     local dps_per_tier = {}
     -- 可以通过调整 m.duration 来调整出伤速度
-    local cycles_per_tier = m.duration / (tier_count * dps.damage_every)
+    local cycles_per_tier = math.floor(m.duration / (tier_count * dps.damage_every))
     for i = 1, tier_count do
         dps_per_tier[i] = raw_damage * this.damage_tiers[i] / cycles_per_tier
     end
@@ -10662,12 +10662,16 @@ function scripts.mod_tower_ray_damage.update(this, store)
     if this.forced_start_ts then
         m.ts = this.forced_start_ts
     end
-
+    this.render.sprites[1].scale = V.vv(0.6)
     while true do
         target = store.entities[m.target_id]
         source = store.entities[m.source_id]
 
         if not target or target.health.dead then
+            break
+        end
+
+        if not source or source.force_stop_ray then
             break
         end
 
@@ -10681,18 +10685,13 @@ function scripts.mod_tower_ray_damage.update(this, store)
             current_cycle = current_cycle + 1
             dps.ts = dps.ts + dps.damage_every
             if current_cycle > cycles_per_tier then
-                current_cycle = current_cycle - cycles_per_tier
-                current_tier = current_tier + 1
-                current_dps = dps_per_tier[current_tier] or current_dps
+                current_cycle = 0
+                current_tier = math.min(current_tier + 1, tier_count)
+                current_dps = dps_per_tier[current_tier]
+                this.render.sprites[1].scale = V.vv(0.333 + 0.167 * current_tier)
+                source.render.sprites[1].scale.y = 0.67 + 0.33 * current_tier
             end
-
             apply_damage(current_dps)
-
-            this.render.sprites[1].scale = V.vv(0.4 + 0.2 * current_tier)
-        end
-
-        if not source or source.force_stop_ray then
-            break
         end
 
         coroutine.yield()
@@ -10822,7 +10821,7 @@ function scripts.bullet_tower_ray.update(this, store)
             if mod_name == "mod_tower_ray_damage" then
                 m.dps.damage_max = b.damage_max
                 m.dps.damage_min = b.damage_min
-                m.duration = m.duration * b.cooldown_factor
+                m.modifier.duration = m.modifier.duration * b.cooldown_factor
             end
             table.insert(mods_added, m)
             queue_insert(store, m)

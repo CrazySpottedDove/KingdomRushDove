@@ -5992,10 +5992,10 @@ local towers = {
             extra_range_to_stay = 60,
             duration = 4,
             range = {150, 160, 170, 180},
-            damage_min = {32, 80, 146, 300},
-            damage_max = {32, 80, 146, 300},
+            damage_min = {32, 80, 146, 330},
+            damage_max = {32, 80, 146, 330},
             damage_type = DAMAGE_MAGICAL,
-            damage_per_second = {0.1, 0.2, 0.35, 0.35},
+            damage_per_second = {0.1, 0.2, 0.3, 0.4},
             slow = {
                 factor = 0.8
             },
