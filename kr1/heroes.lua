@@ -6008,7 +6008,7 @@ local function heroes()
     tt.main_script.insert = scripts.hero_monkey_god.insert
     tt.main_script.update = scripts.hero_monkey_god.update
     tt.motion.max_speed = 108
-    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)
+    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
     tt.regen.cooldown = 1
     tt.regen.health = nil
     tt.render.sprites[1].anchor.y = anchor_y
@@ -14117,7 +14117,7 @@ local function heroes()
         "cloud_out"
     }
     tt.flywalk.sound = nil
-    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)
+    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
 
     tt = E:register_t("aura_hero_wukong_ultimate_slow", "aura")
     b = balance.heroes.hero_wukong.ultimate
