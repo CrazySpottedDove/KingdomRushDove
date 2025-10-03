@@ -10481,14 +10481,14 @@ function scripts.tower_ray.update(this, store)
                             b.bullet.level = 4
                             b.bullet.damage_factor = this.tower.damage_factor
                             b.tower_ref = this
-
+                            b.bullet.cooldown_factor = this.tower.cooldown_factor
                             queue_insert(store, b)
 
-                            while store.tick_ts - last_ts < aa.duration + aa.shoot_time and enemy and
+                            while store.tick_ts - last_ts < aa.duration * this.tower.cooldown_factor + aa.shoot_time and enemy and
                                 not enemy.health.dead and b and not b.force_stop_ray and not this.tower.blocked and
                                 V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) <= range_to_stay *
                                 range_to_stay do
-                                if store.tick_ts - last_fx > 1 and store.tick_ts - last_ts < aa.duration + aa.shoot_time -
+                                if store.tick_ts - last_fx > 1 and store.tick_ts - last_ts < aa.duration * this.tower.cooldown_factor + aa.shoot_time -
                                     0.75 and b.bullet.out_start_fx then
                                     local fx = E:create_entity(b.bullet.out_start_fx)
 
@@ -10615,7 +10615,8 @@ end
 scripts.mod_tower_ray_damage = {}
 
 function scripts.mod_tower_ray_damage.update(this, store)
-    local cycles, total_damage = 0, 0
+    local current_cycle = 0
+    local current_tier = 1
     local m = this.modifier
     local dps = this.dps
     local target = store.entities[m.target_id]
@@ -10640,28 +10641,19 @@ function scripts.mod_tower_ray_damage.update(this, store)
         d.pop_conds = dps.pop_conds
 
         queue_damage(store, d)
-
-        local effective_dmg = U.predict_damage(target, d)
-
-        total_damage = total_damage + effective_dmg
     end
 
+    -- 总伤由子弹给出的 dps 确定
     local raw_damage = math.random(this.dps.damage_min, this.dps.damage_max) * m.damage_factor
-    local raw_damage_tiers = {}
-
-    for _, v in pairs(this.damage_tiers) do
-        table.insert(raw_damage_tiers, raw_damage * v)
+    local tier_count = #this.damage_tiers
+    -- 每个阶段的 dps
+    local dps_per_tier = {}
+    -- 可以通过调整 m.duration 来调整出伤速度
+    local cycles_per_tier = m.duration / (tier_count * dps.damage_every)
+    for i = 1, tier_count do
+        dps_per_tier[i] = raw_damage * this.damage_tiers[i] / cycles_per_tier
     end
-
-    local total_cycles = m.duration / dps.damage_every
-    local dps_damage
-
-    local function calculate_dps_damage(tier)
-        local current_tier = km.clamp(0, #raw_damage_tiers, tier)
-        local cycles_in_tier = m.duration / (#raw_damage_tiers * dps.damage_every)
-
-        dps_damage = math.floor(raw_damage_tiers[current_tier] / cycles_in_tier)
-    end
+    local current_dps = dps_per_tier[1]
 
     this.pos = target.pos
     dps.ts = store.tick_ts
@@ -10685,20 +10677,18 @@ function scripts.mod_tower_ray_damage.update(this, store)
             end
         end
 
-        if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
-            cycles = cycles + 1
+        if store.tick_ts - dps.ts >= dps.damage_every then
+            current_cycle = current_cycle + 1
             dps.ts = dps.ts + dps.damage_every
-
-            local last_damage_tier = math.ceil((cycles - 1) * dps.damage_every)
-            local new_damage_tier = math.ceil(cycles * dps.damage_every)
-
-            if last_damage_tier ~= new_damage_tier then
-                calculate_dps_damage(new_damage_tier)
+            if current_cycle > cycles_per_tier then
+                current_cycle = current_cycle - cycles_per_tier
+                current_tier = current_tier + 1
+                current_dps = dps_per_tier[current_tier] or current_dps
             end
 
-            apply_damage(dps_damage)
+            apply_damage(current_dps)
 
-            this.render.sprites[1].scale = V.vv(0.4 + new_damage_tier / 5)
+            this.render.sprites[1].scale = V.vv(0.4 + 0.2 * current_tier)
         end
 
         if not source or source.force_stop_ray then
@@ -10829,9 +10819,10 @@ function scripts.bullet_tower_ray.update(this, store)
             m.modifier.target_id = b.target_id
             m.modifier.source_id = this.id
             m.modifier.damage_factor = b.damage_factor * this.damage_mult
-            if m.dps then
+            if mod_name == "mod_tower_ray_damage" then
                 m.dps.damage_max = b.damage_max
                 m.dps.damage_min = b.damage_min
+                m.duration = m.duration * b.cooldown_factor
             end
             table.insert(mods_added, m)
             queue_insert(store, m)
@@ -10871,8 +10862,8 @@ function scripts.bullet_tower_ray.update(this, store)
     local chained_next_ray = false
     local start_chain_delay = this.chain_delay
     local source = store.entities[b.source_id]
-
-    while store.tick_ts - start_ts < this.ray_duration and target and not this.force_stop_ray and source do
+    local ray_duration = this.ray_duration * b.cooldown_factor
+    while store.tick_ts - start_ts < ray_duration and target and not this.force_stop_ray and source do
         if target.health.dead then
             if not this.chain_pos or this.chain_pos == 1 then
                 local explosion_fx = E:create_entity("fx_tower_ray_lvl4_attack_sheep_hit")
@@ -10924,7 +10915,7 @@ function scripts.bullet_tower_ray.update(this, store)
                 chain.tower_ref = tower
                 chain.chain_pos = this.chain_pos + 1
                 chain.mod_start_ts = start_ts
-
+                chain.bullet.cooldown_factor = b.cooldown_factor
                 queue_insert(store, chain)
 
                 this.next_in_chain = chain
@@ -10950,7 +10941,7 @@ function scripts.bullet_tower_ray.update(this, store)
             b.from = V.vclone(this.pos)
         end
 
-        if store.tick_ts - start_ts > this.ray_duration - fts(7) and this.render.sprites[1].name ~= "fade" then
+        if store.tick_ts - start_ts > ray_duration - fts(7) and this.render.sprites[1].name ~= "fade" then
             U.animation_start(this, "fade", nil, store.tick_ts)
         end
 
