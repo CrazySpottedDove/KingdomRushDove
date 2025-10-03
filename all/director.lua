@@ -112,7 +112,8 @@ function director:init(params)
         end
     end
 
-    self.next_item_name = "splash"
+    -- self.next_item_name = "splash"
+    self.next_item_name = "slots"
 
     if params.level or params.screen then
         if not storage:load_slot(1) then
