@@ -1081,6 +1081,8 @@ local function archer_towers()
     tt.powers.skill_buff.max_times = 0
     tt.powers.skill_buff.max_times_table = b.skill_buff.max_times
     tt.powers.skill_buff.times = 0
+    tt.tower_upgrade_persistent_data.souls_extra_damage_min = 0
+    tt.tower_upgrade_persistent_data.souls_extra_damage_max = 0
     tt.info.i18n_key = "TOWER_DARK_ELF_4"
     tt.info.fn = scripts.tower_dark_elf.get_info
     tt.info.portrait = "kr5_portraits_towers_0020"
