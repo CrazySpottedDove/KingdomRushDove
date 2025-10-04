@@ -37,4 +37,8 @@ return {
     barrack_seek = {"f3"},
     -- 开启/关闭英雄菜单键位，只有config.lua中enable_hero_menu为true时生效，默认为 "f4"
     hero_menu_toggle = {"f4"},
+    -- 跳波开关，杀死所有敌人并进入下一波，默认为 "f5"
+    force_next_wave = {"f5"},
+    -- 加钱开关，立刻获得 99999 金币，默认为 "f6"
+    wealthy = {"f6"},
 }

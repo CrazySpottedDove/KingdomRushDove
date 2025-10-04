@@ -1121,6 +1121,8 @@ function game_gui:keypressed(key, isrepeat)
         else
             self.heromenu:hide()
         end
+    elseif table.contains(ks.force_next_wave, key) then
+        game_gui.game.store.force_next_wave = true
         -- elseif self.is_premium and self.bag_button and not self.bag_button:is_disabled() and
         --     table.contains(table.keys(ks.all_items), key) then
         --     local bb = self.bag_button
@@ -1136,6 +1138,8 @@ function game_gui:keypressed(key, isrepeat)
         --             bb:select_item(item)
         --         end
         --     end
+    elseif table.contains(ks.wealthy, key) then
+        game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
     end
 end
 
