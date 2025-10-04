@@ -6543,13 +6543,10 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
                 tower.tower_upgrade_persistent_data.souls_extra_damage_max = 0
             end
 
-            local increaseDamageMin = tower.powers.skill_buff.damage_min[math.min(tower.powers.skill_buff.level, 1)]
-            local increaseDamageMax = tower.powers.skill_buff.damage_max[math.min(tower.powers.skill_buff.level, 1)]
-
             tower.tower_upgrade_persistent_data.souls_extra_damage_min =
-                tower.tower_upgrade_persistent_data.souls_extra_damage_min + increaseDamageMin
+                tower.tower_upgrade_persistent_data.souls_extra_damage_min + tower.powers.skill_buff.damage_min
             tower.tower_upgrade_persistent_data.souls_extra_damage_max =
-                tower.tower_upgrade_persistent_data.souls_extra_damage_max + increaseDamageMax
+                tower.tower_upgrade_persistent_data.souls_extra_damage_max + tower.powers.skill_buff.damage_max
 
             if tower.render.sprites[3].fps < 45 then
                 SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)

@@ -6060,10 +6060,10 @@ local towers = {
             cooldown = {1, 1, 1}
         },
         skill_buff = {
-            extra_damage_min = {1, 1, 1},
-            extra_damage_max = {1, 1, 1},
+            extra_damage_min = 1,
+            extra_damage_max = 1,
             max_times = {20, 50, 999999},
-            s_extra_damage_total = {1, 1, 1}
+            s_extra_damage_total = 1
         }
     },
     hermit_toad = {
