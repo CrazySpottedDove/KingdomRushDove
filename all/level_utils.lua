@@ -421,7 +421,7 @@ function LU.insert_background(store, name, z, sort_y, quad_trim)
 	return e
 end
 
-function LU.insert_hero(store, name, pos)
+function LU.insert_hero(store, name, pos, force_full_level)
 	if store.level.locked_hero then
 		log.debug("hero locked for level. will not insert")
 		return
@@ -432,6 +432,17 @@ function LU.insert_hero(store, name, pos)
         hero.pos = V.vclone(pos)
         hero.nav_rally.center = V.vclone(hero.pos)
         hero.nav_rally.pos = hero.nav_rally.center
+        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
+            if hero.hero.fn_level_up then
+                for i = 1, 10 do
+                    hero.hero.level = i
+                    hero.hero.fn_level_up(hero, store)
+                end
+            else
+                hero.hero.level = 10
+            end
+        end
+
         LU.queue_insert(store, hero)
         signal.emit("hero-added-no-panel", hero)
         return
@@ -466,7 +477,7 @@ function LU.insert_hero(store, name, pos)
         store.main_hero = hero
         hero.hero.xp = 0
         hero.hero.level = 1
-        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) and hero.hero.fn_level_up then
+        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
             if hero.hero.fn_level_up then
                 for i = 1, 10 do
                     hero.hero.level = i

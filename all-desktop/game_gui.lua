@@ -67,9 +67,8 @@ local data = require("data.game_gui_data")
 local tower_menus = require("data.tower_menus_data")
 local game_gui = {}
 
-game_gui.required_textures = { "gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia",
-"gui_notifications_common",
-                              "gui_notifications_bg", "view_options"}
+game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia",
+                              "gui_notifications_common", "gui_notifications_bg", "view_options"}
 game_gui.ref_h = GUI_REF_H
 game_gui.ref_w = GUI_REF_W
 game_gui.ref_res = TEXTURE_SIZE_ALIAS.ipad
@@ -446,6 +445,9 @@ function game_gui:init(w, h, game)
     local criketmenu = CriketMenu:new()
     criketmenu.hidden = true
 
+    local heromenu = HeroMenu:new()
+    heromenu.hidden = true
+
     local towertooltip = TowerMenuTooltip:new()
 
     towertooltip.hidden = true
@@ -724,6 +726,7 @@ function game_gui:init(w, h, game)
     layer_gui_game:add_child(towertooltip)
     layer_gui_game:add_child(towermenu)
     layer_gui_game:add_child(criketmenu)
+    layer_gui_game:add_child(heromenu)
     layer_gui_game:add_child(incoming_tooltip)
 
     if IS_KR1 or IS_KR2 then
@@ -757,6 +760,7 @@ function game_gui:init(w, h, game)
     self.pickview = pickview
     self.towermenu = towermenu
     self.criketmenu = criketmenu
+    self.heromenu = heromenu
     self.towertooltip = towertooltip
     self.rallyrange = rallyrange
     self.tower_range = tower_range
@@ -1111,6 +1115,12 @@ function game_gui:keypressed(key, isrepeat)
         self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
         self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
         game_gui.endless_select_reward_view:show(true)
+    elseif table.contains(ks.hero_menu_toggle, key) and self.game.store.config.enable_hero_menu then
+        if self.heromenu.hidden then
+            self.heromenu:show()
+        else
+            self.heromenu:hide()
+        end
         -- elseif self.is_premium and self.bag_button and not self.bag_button:is_disabled() and
         --     table.contains(table.keys(ks.all_items), key) then
         --     local bb = self.bag_button
@@ -4299,7 +4309,8 @@ function VictoryView:show()
         else
             lives = game_gui.game.store.lives
         end
-        self.ct.text = string.format("%s损 %.1f秒 %d牺牲", tostring(lives), criket.time_cost, game_gui.game.store.dead_soldier_count)
+        self.ct.text = string.format("%s损 %.1f秒 %d牺牲", tostring(lives), criket.time_cost,
+            game_gui.game.store.dead_soldier_count)
         self.ct.font_size = 28
         if criket.tower_name then
             local tower_icon = KImageView:new(E:get_template(criket.tower_name).info.portrait)
@@ -6262,7 +6273,6 @@ function CriketMenuButton:initialize(item)
 
     self.item_image = item.image
     self.item = item
-    self.entity = entity
 
     local b = KImageView:new(item.image)
     b.pos = v(0, 0)
@@ -6294,11 +6304,7 @@ function CriketMenuButton:initialize(item)
 
     local halo = KImageView:new(item.halo)
 
-    if item.halo == "glow_ico_sell" then
-        halo.pos = v(-2.5, -3.5)
-    else
-        halo.pos = get_pos(halo)
-    end
+    halo.pos = get_pos(halo)
 
     halo.propagate_on_click = true
     halo.hidden = true
@@ -6306,104 +6312,7 @@ function CriketMenuButton:initialize(item)
 
     self:add_child(halo)
 
-    local bo
-
-    if table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack" }, item.action) then
-        bo = create_bo_view("main_icons_0000")
-    end
-
-    local price_tag
-
-    if item.action == "tw_upgrade" then
-        local nt = E:get_template(item.action_arg)
-
-        if nt.build_name then
-            nt = E:get_template(nt.build_name)
-        end
-
-        price_tag = tostring(nt.tower.price)
-    elseif item.action == "tw_unblock" then
-        price_tag = tostring(entity.tower_holder.unblock_price)
-    elseif item.action == "upgrade_power" then
-        local power = entity.powers[item.action_arg]
-        local price = power.level == 0 and power.price_base or power.price_inc
-
-        if power.level == power.max_level then
-            -- block empty
-        end
-
-        price_tag = tostring(price)
-    elseif item.action == "tw_buy_soldier" then
-        local nt = E:get_template(item.action_arg)
-
-        price_tag = tostring(nt.unit.price)
-    elseif item.action == "tw_buy_attack" then
-        price_tag = ""
-    end
-
-    -- if price_tag then
-    --     local pt = GGLabel:new(nil, "price_tag")
-
-    --     pt.id = "price_tag"
-    --     pt.pos = V.v(b.size.x * 0.5 - pt.size.x * 0.5, b.size.y - 11)
-    --     pt.text_algin = "center"
-    --     pt.text_offset.y = CJK(5, 2, 7, 3)
-    --     pt.font_name = "body"
-    --     pt.font_size = 11
-    --     pt.colors.text = { 255, 224, 0 }
-    --     pt.disabled_tint_color = nil
-    --     pt.propagate_on_click = true
-    --     pt.text = price_tag
-    --     self.price_tag = pt
-
-    --     self:add_child(pt)
-    -- end
-
-    if item.action == "upgrade_power" then
-        local power = entity.powers[item.action_arg]
-
-        if not item.no_upgrade_lights then
-            self.power_buttons = {}
-
-            for i = 1, power.max_level do
-                local pv
-
-                if i > power.level then
-                    pv = KImageView:new("power_rank_0002")
-                else
-                    pv = KImageView:new("power_rank_0001")
-                end
-
-                pv.pos = get_pos(pv, V.vclone(data.tower_menu_power_offset[i]))
-                pv.pos.x, pv.pos.y = pv.pos.x - pv.size.x * 0.5, pv.pos.y - pv.size.y * 0.5
-                pv.disabled_tint_color = nil
-                pv.propagate_on_click = true
-
-                bo:add_child(pv)
-                table.insert(self.power_buttons, pv)
-            end
-        end
-
-        if power.level >= power.max_level then
-            self:remove_child(self.halo)
-
-            self.halo = nil
-        end
-    end
-
-    local ufx = KImageView:new("effect_powerbuy_0001")
-
-    ufx.animation = {
-        to = 23,
-        prefix = "effect_powerbuy",
-        from = 1
-    }
-    ufx.pos = get_pos(ufx)
-    ufx.hidden = true
-    ufx.propagate_on_click = true
-    self.ufx = ufx
-
-    self:add_child(ufx)
+    create_bo_view("main_icons_0000")
 
     self.size = V.vclone(b.size)
 end
@@ -6524,20 +6433,6 @@ function CriketMenu:update(dt)
     if self.hidden then
         return
     end
-
-    local store = game_gui.game.store
-
-    for _, c in pairs(self.children) do
-        if c:isInstanceOf(CriketMenuButton) and c.item_props then
-            if c.item_props.action == "tw_upgrade" then
-                local nt = E:get_template(c.item_props.action_arg)
-
-                if nt.build_name then
-                    nt = E:get_template(nt.build_name)
-                end
-            end
-        end
-    end
 end
 
 function CriketMenu:button_enter(button)
@@ -6620,16 +6515,19 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
                 end
             end
             if table.contains(GS.archer_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_archer_1").tower.price + E:get_template("tower_archer_2").tower.price +
+                total_cost = total_cost + E:get_template("tower_archer_1").tower.price +
+                                 E:get_template("tower_archer_2").tower.price +
                                  E:get_template("tower_archer_3").tower.price
             elseif table.contains(GS.mage_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_mage_1").tower.price + E:get_template("tower_mage_2").tower.price +
-                                 E:get_template("tower_mage_3").tower.price
+                total_cost = total_cost + E:get_template("tower_mage_1").tower.price +
+                                 E:get_template("tower_mage_2").tower.price + E:get_template("tower_mage_3").tower.price
             elseif table.contains(GS.engineer_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_engineer_2").tower.price +
+                total_cost = total_cost + E:get_template("tower_engineer_1").tower.price +
+                                 E:get_template("tower_engineer_2").tower.price +
                                  E:get_template("tower_engineer_3").tower.price
             elseif table.contains(GS.barrack_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_barrack_1").tower.price + E:get_template("tower_barrack_2").tower.price +
+                total_cost = total_cost + E:get_template("tower_barrack_1").tower.price +
+                                 E:get_template("tower_barrack_2").tower.price +
                                  E:get_template("tower_barrack_3").tower.price
             end
             total_cost = total_cost + new_tower.tower.price
@@ -6645,6 +6543,192 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
             store.config.enemy_health_multiplier = total_cost / store.criket.gold_base
         end
     end
+    self:hide()
+end
+
+-- 局内召唤英雄仪表盘
+local hero_data = require("data.map_data").hero_data
+HeroMenuButton = class("HeroMenuButton", KView)
+function HeroMenuButton:initialize(item)
+    HeroMenuButton.super.initialize(self)
+
+    self.item_image = item.image
+    self.item = item
+
+    local b = KImageView:new(item.image)
+    b.pos = v(0, 0)
+
+    b.propagate_on_click = true
+    b.disabled_tint_color = nil
+    self.button = b
+
+    self:add_child(b)
+
+    local function get_pos(this, offset)
+        offset = offset or v(0, 0)
+        local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
+        local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
+        return v(x, y)
+    end
+
+    local function create_bo_view(img_name)
+        local bo = KImageView:new(img_name)
+
+        bo.pos = get_pos(bo)
+        bo.propagate_on_click = true
+
+        self:add_child(bo, 2)
+
+        return bo
+    end
+
+    local halo = KImageView:new(item.halo)
+
+    halo.pos = get_pos(halo)
+
+    halo.propagate_on_click = true
+    halo.hidden = true
+    self.halo = halo
+
+    self:add_child(halo)
+
+    create_bo_view("main_icons_0000")
+
+    self.size = V.vclone(b.size)
+end
+
+HeroMenu = class("CriketMenu", KImageView)
+
+function HeroMenu:initialize()
+    HeroMenu.super.initialize(self, "gui_ring")
+    self.can_drag = false
+    self.propagate_on_click = true
+    self.propagate_on_down = true
+    self.propagate_on_up = true
+    self.propagate_on_enter = true
+    self.anchor = v(self.size.x * 0.5, self.size.y * 0.5)
+    self.clip = false
+end
+
+function HeroMenu:calculate_button_position(item_index)
+    local circle_volume = 6
+    local radius_mod = 65
+    local radius = radius_mod -- 默认半径
+    while item_index > circle_volume do
+        item_index = item_index - circle_volume
+        radius = radius + radius_mod -- 每圈增加80像素的半径
+        circle_volume = circle_volume + 6 -- 每圈增加6个按钮
+    end
+
+    -- 计算每个按钮之间的角度间隔
+    local angle_step = (2 * math.pi) / circle_volume
+
+    -- 计算当前按钮的角度（从顶部开始，顺时针）
+    local angle = (item_index - 1) * angle_step - math.pi * 0.5
+
+    -- 计算相对于圆心的位置
+    local x = math.cos(angle) * radius
+    local y = math.sin(angle) * radius
+
+    -- 返回相对于菜单中心的位置
+    return V.v(self.size.x * 0.5 + x, self.size.y * 0.5 + y)
+end
+
+function HeroMenu:show()
+    self:remove_children()
+    for index, data in pairs(hero_data) do
+        local t = E:get_template(data.name)
+        local item = {
+            image = t.info.portrait,
+            name = data.name,
+            halo = "glow_ico_main"
+        }
+        local b = HeroMenuButton:new(item)
+        b.pos = self:calculate_button_position(index)
+        b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
+        b.item_props = item
+        local stm = self
+
+        function b.on_click(this, button, x, y)
+            if not self.tweening and not this.click_disabled then
+                stm:button_callback(this, item)
+            end
+        end
+
+        function b.on_enter(this, drag_view)
+            if not self.tweening then
+                stm:button_enter(this)
+            end
+        end
+
+        function b.on_exit(this, drag_view)
+            stm:button_exit(this)
+        end
+
+        self:add_child(b)
+    end
+
+    self.pos = v(game_gui.sw * 0.5, game_gui.sh * 0.5)
+    self.scale = v(0.6, 0.6)
+    self.alpha = 0
+    self.hidden = false
+    self.tweening = true
+    self.tweeners = {timer:tween(0.12, self.scale, {
+        x = 1,
+        y = 1
+    }, "out-quad"), timer:tween(0.12, self, {
+        alpha = 1
+    }, "out-quad", function()
+        self.tweening = nil
+        self.tweeners = {}
+    end)}
+
+    S:queue("GUIQuickMenuOpen")
+end
+
+function HeroMenu:hide()
+    if self.tweeners then
+        for _, t in pairs(self.tweeners) do
+            timer:cancel(t)
+        end
+    end
+
+    self.tweening = true
+    self.tweeners = {timer:tween(0.12, self, {
+        alpha = 0
+    }, "out-quad"), timer:tween(0.12, self.scale, {
+        x = 0.6,
+        y = 0.6
+    }, "out-quad", function()
+        self.hidden = true
+        self.tweening = false
+        self.tweeners = {}
+    end)}
+end
+
+function HeroMenu:update(dt)
+    HeroMenu.super.update(self, dt)
+
+    if self.hidden then
+        return
+    end
+end
+
+function HeroMenu:button_enter(button)
+    if button.halo then
+        button.halo.hidden = false
+    end
+end
+
+function HeroMenu:button_exit(button)
+    if button.halo then
+        button.halo.hidden = true
+    end
+end
+
+function HeroMenu:button_callback(button, item, entity, mouse_button, x, y)
+    LU.insert_hero(game_gui.game.store, item.name, game_gui.game.store.level.locations.exits[1].pos, true)
     self:hide()
 end
 
@@ -7355,7 +7439,8 @@ function TowerMenuTooltip:show(entity, item)
         if power.level == power.max_level then
             -- self.hidden = true
         end
-    elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_free_action" then
+    elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or
+        item.action == "tw_free_action" then
         if item.tt_title then
             self.title.text = item.tt_title
         end
@@ -7436,7 +7521,7 @@ function TowerMenuButton:disable()
     self.click_disabled = true
 
     if self.item.action ~= "tw_change_mode" and self.item.action ~= "tw_swap_mode" then
-        --self.button:set_image(self.item_image .. "_disabled")
+        -- self.button:set_image(self.item_image .. "_disabled")
         self.button:disable()
         if self.price_tag then
             -- self.price_tag:set_image("price_tag_disabled")
@@ -7496,7 +7581,7 @@ function TowerMenuButton:initialize(item, entity)
     local bo
     if item.action == "upgrade_power" then
         bo = create_bo_view("special_icons_0000")
-    elseif table.contains({ "tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock"}, item.action) then
+    elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock"}, item.action) then
         bo = create_bo_view("main_icons_0000")
     end
 

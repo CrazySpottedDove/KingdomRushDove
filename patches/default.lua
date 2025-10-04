@@ -30,5 +30,8 @@ return {
     custom_config_enabled = true,
 
     -- 启动无尽模式开关，默认为 false
-    endless = false
+    endless = false,
+
+    -- 允许局内召唤英雄开关，默认为 false
+    enable_hero_menu = false,
 }

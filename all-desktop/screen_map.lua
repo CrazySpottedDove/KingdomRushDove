@@ -5934,7 +5934,7 @@ function BooleanPanelView:initialize(sw, sh, title)
 
     -- 添加底部按钮
     local mx = 150
-    local y = 420
+    local y = 450
 
     local b = GGOptionsButton:new(_("BUTTON_DONE"))
     b.anchor.x = b.size.x / 2
@@ -5979,7 +5979,8 @@ function ConfigPanelView:initialize(sw, sh)
         reverse_path = "路线倒转",
         show_health_bar = "显示血条",
         custom_config_enabled = "启用自定义配置",
-        endless = "开启无尽模式"
+        endless = "开启无尽模式",
+        enable_hero_menu = "启用局内英雄菜单",
     })
 end
 
