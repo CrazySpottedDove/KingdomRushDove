@@ -10263,10 +10263,10 @@ function scripts.tower_ray.update(this, store)
                     ab.disabled = true
                     ac.disabled = false
                 end
+                ac.damage_mult = pow_c.damage_mult[pow_c.level]
+                -- local b = E:get_template(ac.bullet)
 
-                local b = E:get_template(ac.bullet)
-
-                b.damage_mult = pow_c.damage_mult[pow_c.level]
+                -- b.damage_mult = pow_c.damage_mult[pow_c.level]
                 ac.ts = store.tick_ts - ac.cooldown
 
                 if not pow_c._shock_fx then
@@ -10482,6 +10482,10 @@ function scripts.tower_ray.update(this, store)
                             b.bullet.damage_factor = this.tower.damage_factor
                             b.tower_ref = this
                             b.bullet.cooldown_factor = this.tower.cooldown_factor
+                            b._is_origin = true
+                            if aa == ac then
+                                b.damage_mult = ac.damage_mult
+                            end
                             queue_insert(store, b)
 
                             while store.tick_ts - last_ts < aa.duration * this.tower.cooldown_factor + aa.shoot_time and enemy and
@@ -10649,7 +10653,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
     -- 每个阶段的 dps
     local dps_per_tier = {}
     -- 可以通过调整 m.duration 来调整出伤速度
-    local cycles_per_tier = math.floor(m.duration / (tier_count * dps.damage_every))
+    local cycles_per_tier = m.duration / (tier_count * dps.damage_every)
     for i = 1, tier_count do
         dps_per_tier[i] = raw_damage * this.damage_tiers[i] / cycles_per_tier
     end
@@ -10685,7 +10689,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
             current_cycle = current_cycle + 1
             dps.ts = dps.ts + dps.damage_every
             if current_cycle > cycles_per_tier then
-                current_cycle = 0
+                current_cycle = current_cycle - cycles_per_tier
                 current_tier = math.min(current_tier + 1, tier_count)
                 current_dps = dps_per_tier[current_tier]
                 this.render.sprites[1].scale = V.vv(0.333 + 0.167 * current_tier)
@@ -10817,7 +10821,7 @@ function scripts.bullet_tower_ray.update(this, store)
 
             m.modifier.target_id = b.target_id
             m.modifier.source_id = this.id
-            m.modifier.damage_factor = b.damage_factor * this.damage_mult
+            m.modifier.damage_factor = b.damage_factor * (this._is_origin and 1 or this.damage_mult)
             if mod_name == "mod_tower_ray_damage" then
                 m.dps.damage_max = b.damage_max
                 m.dps.damage_min = b.damage_min
@@ -10915,6 +10919,7 @@ function scripts.bullet_tower_ray.update(this, store)
                 chain.chain_pos = this.chain_pos + 1
                 chain.mod_start_ts = start_ts
                 chain.bullet.cooldown_factor = b.cooldown_factor
+                chain.damage_mult = this.damage_mult
                 queue_insert(store, chain)
 
                 this.next_in_chain = chain
