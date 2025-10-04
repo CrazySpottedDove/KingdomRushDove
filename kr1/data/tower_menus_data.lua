@@ -1130,7 +1130,7 @@ return {
         tt_phrase = _("SPECIAL_AMAZONAS_WHIRLWIND_NOTE"),
         tt_list = {{
             tt_title = _("SPECIAL_AMAZONAS_WHIRLWIND_1_NAME"),
-            tt_desc = _("SPECIAL_AMAZONAS_WHIRLWIND_1_DESCRIPTION%几率释放旋风斩，造成24-46点范围伤害")
+            tt_desc = _("SPECIAL_AMAZONAS_WHIRLWIND_1_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "soldier_amazona",
