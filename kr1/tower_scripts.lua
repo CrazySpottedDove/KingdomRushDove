@@ -5706,34 +5706,22 @@ function scripts.tower_dark_elf.update(this, store)
         queue_insert(store, m)
     end
 
-    local function can_be_target_to_kill(target)
-        local d = E:create_entity("damage")
-        local bullet = E:get_template(attack.bullet).bullet
-        if pow_buff.level > 0 and this.tower_upgrade_persistent_data.souls_extra_damage_min then
-            d.value = math.max(1, this.tower.damage_factor *
-                (bullet.damage_min + this.tower_upgrade_persistent_data.souls_extra_damage_min))
-        else
-            d.value = math.max(1, this.tower.damage_factor * bullet.damage_min)
-        end
-
-        d.damage_type = bullet.damage_type
-        d.target_id = target.id
-        d.reduce_armor = bullet.reduce_armor
-        local damage_value = U.predict_damage(target, d)
-        return damage_value >= target.health.hp
-    end
-
     -- 找到范围内生命最高的、且一定能被一发子弹击杀的敌人
     local function find_target_to_kill(node_prediction)
         local target_to_kill, targets, pred_pos = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0,
             this.attacks.range, node_prediction, attack.vis_flags, attack.vis_bans)
+        local d = E:create_entity("damage")
+        local bullet = E:get_template(attack.bullet).bullet
+        d.value = this.tower.damage_factor * (bullet.damage_min + this.tower_upgrade_persistent_data.souls_extra_damage_min)
+        d.damage_type = bullet.damage_type
+        d.reduce_armor = bullet.reduce_armor
 
         if targets then
             local target_to_kill_hp = target_to_kill.health.hp
             local target_to_kill_flying = band(target_to_kill.vis.flags, F_FLYING) ~= 0
             for i = 2, #targets do
                 local t = targets[i]
-                if can_be_target_to_kill(t) then
+                if U.predict_damage(t, d) >= t.health.hp then
                     if t.health.hp > target_to_kill_hp then
                         local flying = band(t.vis.flags, F_FLYING) ~= 0
                         if flying or not target_to_kill_flying then
@@ -5949,11 +5937,8 @@ function scripts.tower_dark_elf.update(this, store)
                 bullet.bullet.damage_factor = this.tower.damage_factor
 
                 if pow_buff.level > 0 then
-                    local soulsDamageMin = this.tower_upgrade_persistent_data.souls_extra_damage_min or 0
-                    local soulsDamageMax = this.tower_upgrade_persistent_data.souls_extra_damage_max or 0
-
-                    bullet.bullet.damage_min = bullet.bullet.damage_min + soulsDamageMin
-                    bullet.bullet.damage_max = bullet.bullet.damage_max + soulsDamageMax
+                    bullet.bullet.damage_min = bullet.bullet.damage_min + this.tower_upgrade_persistent_data.souls_extra_damage_min
+                    bullet.bullet.damage_max = bullet.bullet.damage_max + this.tower_upgrade_persistent_data.souls_extra_damage_max
                 end
 
                 apply_precision(bullet)
