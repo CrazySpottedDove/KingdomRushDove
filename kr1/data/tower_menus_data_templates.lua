@@ -5,7 +5,6 @@ local templates = {}
 
 -- 常见升级按钮（上箭头）
 templates.common_upgrade = {
-    check = "main_icons_0019",
     action_arg = nil,
     action = "tw_upgrade",
     halo = "glow_ico_main",
@@ -17,7 +16,6 @@ templates.common_upgrade = {
 
 -- 升级按钮
 templates.upgrade = {
-    check = "main_icons_0019",
     action_arg = nil,
     action = "tw_upgrade",
     halo = "glow_ico_main",
@@ -30,7 +28,6 @@ templates.upgrade = {
 
 -- 技能升级按钮
 templates.upgrade_power = {
-    check = "special_icons_0020",
     action_arg = nil,
     action = "upgrade_power",
     image = nil,
@@ -68,7 +65,6 @@ templates.buy_soldier = {
 
 -- 购买攻击按钮
 templates.buy_attack = {
-    check = "main_icons_0019",
     action = "tw_buy_attack",
     action_arg = nil,
     halo = "glow_ico_main",
@@ -80,7 +76,6 @@ templates.buy_attack = {
 
 -- 出售按钮
 templates.sell = {
-    check = "ico_sell_0002",
     action = "tw_sell",
     halo = "glow_ico_sell",
     image = "ico_sell_0001",
@@ -97,7 +92,6 @@ templates.rally = {
 
 -- 瞄准按钮
 templates.point = {
-    check = "sub_icons_0002",
     action = "tw_point",
     halo = "glow_ico_sub",
     image = "sub_icons_0002",
