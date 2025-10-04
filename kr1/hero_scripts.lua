@@ -9021,6 +9021,10 @@ function scripts.hero_lynn.level_up(this, store)
         m.speed_factor = s.speed_factor[s.level]
         m.inflicted_damage_factor = s.damage_factor[s.level]
 
+        m = E:get_template("mod_lynn_despair_self")
+        m.modifier.duration = s.duration[s.level]
+        m.speed_factor = 2-s.speed_factor[s.level]
+        m.inflicted_damage_factor = 2-s.damage_factor[s.level]
     end)
 
     upgrade_skill(this, "weakening", function(this, s)
@@ -9033,6 +9037,11 @@ function scripts.hero_lynn.level_up(this, store)
         m.modifier.duration = s.duration[s.level]
         m.armor_reduction = s.armor_reduction[s.level]
         m.magic_armor_reduction = s.magic_armor_reduction[s.level]
+
+        m = E:get_template("mod_lynn_weakening_self")
+        m.modifier.duration = s.duration[s.level]
+        m.armor_reduction = -s.armor_reduction[s.level] * 0.5
+        m.magic_armor_reduction = -s.magic_armor_reduction[s.level] * 0.5
     end)
 
     upgrade_skill(this, "charm_of_unluck", function(this, s)
@@ -9135,7 +9144,10 @@ function scripts.hero_lynn.update(this, store)
                                 queue_insert(store, m)
                             end
                         end
-
+                        local m = E:create_entity("mod_lynn_despair_self")
+                        m.modifier.source_id = this.id
+                        m.modifier.target_id = this.id
+                        queue_insert(store, m)
                         SU.y_hero_animation_wait(this)
                     end
 
@@ -9178,7 +9190,10 @@ function scripts.hero_lynn.update(this, store)
 
                                 queue_insert(store, m)
                             end
-
+                            local m = E:create_entity("mod_lynn_weakening_self")
+                            m.modifier.source_id = this.id
+                            m.modifier.target_id = this.id
+                            queue_insert(store, m)
                         end
 
                         SU.y_hero_animation_wait(this)
@@ -9347,14 +9362,6 @@ function scripts.mod_lynn_weakening.insert(this, store, script)
     this.armor_reduction = this.armor_reduction * (1 - target.health.armor_resilience)
     SU.armor_dec(target, this.armor_reduction)
     SU.magic_armor_dec(target, this.magic_armor_reduction)
-
-    -- local mods = U.get_modifiers(store, target, {"mod_lynn_despair", "mod_lynn_ultimate"})
-
-    -- for _, m in pairs(mods) do
-    --     if m ~= this then
-    --         U.sprites_hide(m, nil, nil, true)
-    --     end
-    -- end
 
     signal.emit("mod-applied", this, target)
 

@@ -14800,9 +14800,9 @@ return {
             to = 144
         },
         hero_lynn_walk = {
-            from = 2,
+            from = 241,
             prefix = "lynn_hero",
-            to = 6
+            to = 250
         },
         hero_lynn_weakeningCurse = {
             from = 193,

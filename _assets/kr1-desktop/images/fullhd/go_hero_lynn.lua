@@ -331,7 +331,7 @@ return {
 		},
 		alias = {}
 	},
-	lynn_hero_0002 = {
+    lynn_hero_0241 = {
 		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
@@ -353,9 +353,9 @@ return {
 			72,
 			52
 		},
-		alias = {}
+		alias = {"lynn_hero_0242"}
 	},
-	lynn_hero_0003 = {
+	lynn_hero_0243 = {
 		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
@@ -377,9 +377,9 @@ return {
 			72,
 			54
 		},
-		alias = {}
+		alias = {"lynn_hero_0244"}
 	},
-	lynn_hero_0004 = {
+	lynn_hero_0245 = {
 		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
@@ -401,9 +401,9 @@ return {
 			72,
 			57
 		},
-		alias = {}
+		alias = {"lynn_hero_0246"}
 	},
-	lynn_hero_0005 = {
+	lynn_hero_0247 = {
 		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
@@ -425,9 +425,9 @@ return {
 			73,
 			54
 		},
-		alias = {}
+		alias = {"lynn_hero_0248"}
 	},
-	lynn_hero_0006 = {
+	lynn_hero_0249 = {
 		a_name = "go_hero_lynn-1.dds",
 		size = {
 			155,
@@ -449,8 +449,128 @@ return {
 			73,
 			46
 		},
-		alias = {}
+		alias = {"lynn_hero_0250"}
 	},
+	-- lynn_hero_0002 = {
+	-- 	a_name = "go_hero_lynn-1.dds",
+	-- 	size = {
+	-- 		155,
+	-- 		141
+	-- 	},
+	-- 	trim = {
+	-- 		27,
+	-- 		78,
+	-- 		56,
+	-- 		11
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		1024
+	-- 	},
+	-- 	f_quad = {
+	-- 		1000,
+	-- 		972,
+	-- 		72,
+	-- 		52
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- lynn_hero_0003 = {
+	-- 	a_name = "go_hero_lynn-1.dds",
+	-- 	size = {
+	-- 		155,
+	-- 		141
+	-- 	},
+	-- 	trim = {
+	-- 		27,
+	-- 		76,
+	-- 		56,
+	-- 		11
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		1024
+	-- 	},
+	-- 	f_quad = {
+	-- 		1168,
+	-- 		6,
+	-- 		72,
+	-- 		54
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- lynn_hero_0004 = {
+	-- 	a_name = "go_hero_lynn-1.dds",
+	-- 	size = {
+	-- 		155,
+	-- 		141
+	-- 	},
+	-- 	trim = {
+	-- 		27,
+	-- 		73,
+	-- 		56,
+	-- 		11
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		1024
+	-- 	},
+	-- 	f_quad = {
+	-- 		1090,
+	-- 		6,
+	-- 		72,
+	-- 		57
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- lynn_hero_0005 = {
+	-- 	a_name = "go_hero_lynn-1.dds",
+	-- 	size = {
+	-- 		155,
+	-- 		141
+	-- 	},
+	-- 	trim = {
+	-- 		26,
+	-- 		76,
+	-- 		56,
+	-- 		11
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		1024
+	-- 	},
+	-- 	f_quad = {
+	-- 		1000,
+	-- 		860,
+	-- 		73,
+	-- 		54
+	-- 	},
+	-- 	alias = {}
+	-- },
+	-- lynn_hero_0006 = {
+	-- 	a_name = "go_hero_lynn-1.dds",
+	-- 	size = {
+	-- 		155,
+	-- 		141
+	-- 	},
+	-- 	trim = {
+	-- 		26,
+	-- 		84,
+	-- 		56,
+	-- 		11
+	-- 	},
+	-- 	a_size = {
+	-- 		2048,
+	-- 		1024
+	-- 	},
+	-- 	f_quad = {
+	-- 		1000,
+	-- 		920,
+	-- 		73,
+	-- 		46
+	-- 	},
+	-- 	alias = {}
+	-- },
 	lynn_hero_0007 = {
 		a_name = "go_hero_lynn-1.dds",
 		size = {

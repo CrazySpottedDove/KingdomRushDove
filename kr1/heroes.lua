@@ -6892,6 +6892,10 @@ local function heroes()
     tt.tween.props[2].sprite_id = 2
     tt.tween.remove = false
 
+    tt = RT("mod_lynn_despair_self", "mod_lynn_despair")
+    tt.speed_factor = 2 - tt.speed_factor
+    tt.inflicted_damage_factor = 2 - tt.inflicted_damage_factor
+
     tt = RT("mod_lynn_weakening", "modifier")
     AC(tt, "tween", "render")
     tt.armor_reduction = 0.7
@@ -6909,6 +6913,10 @@ local function heroes()
     tt.tween.props[2] = table.deepclone(tt.tween.props[1])
     tt.tween.props[2].sprite_id = 2
     tt.tween.remove = false
+
+    tt = RT("mod_lynn_weakening_self", "mod_lynn_weakening")
+    tt.armor_reduction = -tt.armor_reduction * 0.5
+    tt.magic_armor_reduction = -tt.magic_armor_reduction * 0.5
 
     tt = RT("hero_wilbur", "hero")
     AC(tt, "ranged", "timed_attacks")
