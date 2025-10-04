@@ -81,8 +81,8 @@ return {
         action_arg = "tower_sunray",
         image = "main_icons_0018",
         place = 7,
-        tt_title = _("日光之塔"),
-        tt_desc = _("巫师能借助日光之塔瓦解敌人，并炼制成金，提取力量。")
+        tt_title = _("TOWER_SUNRAY_NAME"),
+        tt_desc = _("TOWER_SUNRAY_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_necromancer",
         image = "main_icons_0021",
@@ -297,8 +297,8 @@ return {
         action_arg = "tower_elf",
         image = "main_icons_0011",
         place = 7,
-        tt_title = _("精灵哨站"),
-        tt_desc = _("训练精灵游侠，弓与剑的大师。脆弱无比，但也能迅捷地取敌性命。")
+        tt_title = _("TOWER_ELF_NAME"),
+        tt_desc = _("TOWER_ELF_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_templar",
         image = "main_icons_0023",
@@ -927,35 +927,35 @@ return {
         image = "special_icons_0014",
         place = 7,
         sounds = {"ElfBleed"},
-        tt_phrase = _("你会流血吗？"),
+        tt_phrase = _("TOWER_ELF_BLEED_NOTE"),
         tt_list = {{
-            tt_title = _("血翎"),
-            tt_desc = _("使精灵的射击附带流血效果，在三秒内造成15点伤害")
+            tt_title = _("TOWER_ELF_BLEED_1_NAME"),
+            tt_desc = _("TOWER_ELF_BLEED_1_DESCRIPTION")
         }, {
-            tt_title = _("血翎Ⅱ"),
-            tt_desc = _("使精灵的射击附带流血效果，在三秒内造成30点伤害")
+            tt_title = _("TOWER_ELF_BLEED_2_NAME"),
+            tt_desc = _("TOWER_ELF_BLEED_2_DESCRIPTION")
         }, {
-            tt_title = _("血翎Ⅲ"),
-            tt_desc = _("使精灵的射击附带流血效果，在三秒内造成45点伤害")
+            tt_title = _("TOWER_ELF_BLEED_3_NAME"),
+            tt_desc = _("TOWER_ELF_BLEED_3_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "cripple",
         image = "special_icons_0024",
         place = 6,
         sounds = {"ElfCripple"},
-        tt_phrase = _("他们走不远的……"),
+        tt_phrase = _("TOWER_ELF_CRIPPLE_NOTE"),
         tt_list = {{
-            tt_title = _("残废"),
+            tt_title = _("TOWER_ELF_CRIPPLE_1_NAME"),
             tt_desc = _(
-                "游侠有30%几率射出精灵箭矢，造成70点真实伤害与40%的减速，持续2.5秒。")
+                "TOWER_ELF_CRIPPLE_1_DESCRIPTION")
         }, {
-            tt_title = _("残废Ⅱ"),
+            tt_title = _("TOWER_ELF_CRIPPLE_2_NAME"),
             tt_desc = _(
-                "游侠有40%几率射出精灵箭矢，造成85点真实伤害与40%的减速，持续2.5秒。")
+                "TOWER_ELF_CRIPPLE_2_DESCRIPTION")
         }, {
-            tt_title = _("残废Ⅲ"),
+            tt_title = _("TOWER_ELF_CRIPPLE_3_NAME"),
             tt_desc = _(
-                "游侠有50%几率射出精灵箭矢，造成100点真实伤害与40%的减速，持续2.5秒。")
+                "TOWER_ELF_CRIPPLE_3_DESCRIPTION")
         }}
     }), merge(templates.buy_soldier, {
         action_arg = "soldier_elf",
@@ -1116,21 +1116,21 @@ return {
         image = "special_icons_0014",
         place = 7,
         sounds = {"AmazonTaunt"},
-        tt_phrase = _("解脱敌人是一种荣耀。"),
+        tt_phrase = _("SPECIAL_AMAZONAS_VALKYRIE_NOTE"),
         tt_list = {{
-            tt_title = _("武神"),
+            tt_title = _("SPECIAL_AMAZONAS_VALKYRIE_1_NAME"),
             tt_desc = _(
-                "女战士提升50点生命与10点攻击力，且每杀死一个敌人，提升2点攻击力、3点生命和1点移速，最高提升150点生命，60点攻击与50点移速，死亡后移除。")
+                "SPECIAL_AMAZONAS_VALKYRIE_1_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "whirlwind",
         image = "special_icons_0013",
         place = 6,
         sounds = {"AmazonTaunt"},
-        tt_phrase = _("横扫六合！"),
+        tt_phrase = _("SPECIAL_AMAZONAS_WHIRLWIND_NOTE"),
         tt_list = {{
-            tt_title = _("旋风"),
-            tt_desc = _("使女战士有30%几率释放旋风斩，造成24-46点范围伤害")
+            tt_title = _("SPECIAL_AMAZONAS_WHIRLWIND_1_NAME"),
+            tt_desc = _("SPECIAL_AMAZONAS_WHIRLWIND_1_DESCRIPTION%几率释放旋风斩，造成24-46点范围伤害")
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "soldier_amazona",
@@ -1184,22 +1184,22 @@ return {
         action_arg = "manual",
         place = 6,
         sounds = {"MageSorcererAshesToAshesTaunt"},
-        tt_phrase = _("日光啊，听我号令！"),
+        tt_phrase = _("TOWER_SUNRAY_MANUAL_NOTE"),
         tt_list = {{
-            tt_title = _("切换手动模式"),
+            tt_title = _("TOWER_SUNRAY_MANUAL_NAME"),
             tt_desc = _(
-                "手动模式无射程限制，且攻击附带最高额外200点伤害的10%斩杀效果。只有对单时，日光才能发挥全部威力。")
+                "TOWER_SUNRAY_MANUAL_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         image = "main_icons_0020",
         action_arg = "auto",
         place = 7,
         sounds = {"MageSorcererAshesToAshesTaunt"},
-        tt_phrase = _("日光啊，瓦解它们！"),
+        tt_phrase = _("TOWER_SUNRAY_AUTO_NOTE"),
         tt_list = {{
-            tt_title = _("切换自动模式"),
+            tt_title = _("TOWER_SUNRAY_AUTO_NAME"),
             tt_desc = _(
-                "自动模式射程有限，且充能速度加快40%，伤害下降25%。只有对单时，日光才能发挥全部威力。")
+                "TOWER_SUNRAY_AUTO_DESCRIPTION")
         }}
     }), templates.point, templates.sell}},
 
@@ -1690,45 +1690,45 @@ return {
         image = "special_icons_0041",
         place = 6,
         sounds = {"ElvesEwokTaunt"},
-        tt_phrase = _("以树为甲……"),
+        tt_phrase = _("TOWER_EWOK_ARMOR_NOTE"),
         tt_list = {{
-            tt_title = _("大树护甲"),
-            tt_desc = _("提升伊渥克士兵的护甲")
+            tt_title = _("TOWER_EWOK_ARMOR_1_NAME"),
+            tt_desc = _("TOWER_EWOK_ARMOR_1_DESCRIPTION")
         }, {
-            tt_title = _("大树护甲Ⅱ"),
-            tt_desc = _("进一步提升伊渥克士兵的护甲")
+            tt_title = _("TOWER_EWOK_ARMOR_2_NAME"),
+            tt_desc = _("TOWER_EWOK_ARMOR_2_DESCRIPTION")
         }, {
-            tt_title = _("大树护甲Ⅲ"),
-            tt_desc = _("进一步提升伊渥克士兵的护甲")
+            tt_title = _("TOWER_EWOK_ARMOR_3_NAME"),
+            tt_desc = _("TOWER_EWOK_ARMOR_3_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "shield",
         image = "special_icons_0009",
         place = 5,
         sounds = {"ElvesEwokTaunt"},
-        tt_phrase = _("举盾，防御！"),
+        tt_phrase = _("TOWER_EWOK_SHIELD_NOTE"),
         tt_list = {{
-            tt_title = _("盾势"),
-            tt_desc = _("提升伊渥克士兵盾牌格挡的时间，并附带恢复效果")
+            tt_title = _("TOWER_EWOK_SHIELD_1_NAME"),
+            tt_desc = _("TOWER_EWOK_SHIELD_1_DESCRIPTION")
         }, {
-            tt_title = _("盾势Ⅱ"),
-            tt_desc = _("提升伊渥克士兵盾牌格挡的时间和恢复效果")
+            tt_title = _("TOWER_EWOK_SHIELD_2_NAME"),
+            tt_desc = _("TOWER_EWOK_SHIELD_2_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "tear",
         image = "kr3_special_icons_0110",
         place = 7,
         sounds = {"ElvesEwokTaunt"},
-        tt_phrase = _("撕碎他们的防御！"),
+        tt_phrase = _("TOWER_EWOK_TEAR_NOTE"),
         tt_list = {{
-            tt_title = _("碎甲投索"),
-            tt_desc = _("使投索获得削弱护甲的能力，并提升投索伤害")
+            tt_title = _("TOWER_EWOK_TEAR_1_NAME"),
+            tt_desc = _("TOWER_EWOK_TEAR_1_DESCRIPTION")
         }, {
-            tt_title = _("碎甲投索Ⅱ"),
-            tt_desc = _("提升投索碎甲能力和伤害")
+            tt_title = _("TOWER_EWOK_TEAR_2_NAME"),
+            tt_desc = _("TOWER_EWOK_TEAR_2_DESCRIPTION")
         }, {
-            tt_title = _("碎甲投索Ⅲ"),
-            tt_desc = _("提升投索碎甲能力和伤害")
+            tt_title = _("TOWER_EWOK_TEAR_3_NAME"),
+            tt_desc = _("TOWER_EWOK_TEAR_3_DESCRIPTION")
         }}
     }), templates.rally, templates.sell}},
 
