@@ -2950,7 +2950,7 @@ local function heroes()
     tt.sound_events.respawn = "HeroPriestTauntIntro"
     tt.sound_events.insert = "HeroPriestTauntIntro"
     tt.sound_events.hero_room_select = "HeroPriestTauntSelect"
-    tt.teleport.min_distance = 0
+    tt.teleport.min_distance = 51.2
     tt.teleport.sound = "HeroPriestWings"
     tt.teleport.disabled = true
     tt.unit.hit_offset = vec_2(0, 12)
@@ -4459,8 +4459,8 @@ local function heroes()
     tt.info.i18n_key = "HERO_VAMPIRESS"
     tt.main_script.insert = scripts.hero_vampiress.insert
     tt.main_script.update = scripts.hero_vampiress.update
-    tt.motion.max_speed = 1.7 * FPS
-    tt.motion.max_speed_bat = 3.7 * FPS
+    tt.motion.max_speed = 2 * FPS
+    tt.motion.max_speed_bat = 4 * FPS
     tt.regen.cooldown = 1
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].name = "idle"
@@ -4482,7 +4482,7 @@ local function heroes()
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 12)
     tt.fly_to = {}
-    tt.fly_to.min_distance = 0
+    tt.fly_to.min_distance = 80
     tt.fly_to.animation_prefix = "hero_vampiress_bat"
     tt.melee.attacks[1].cooldown = 0.9
     tt.melee.attacks[1].hit_time = fts(9)
