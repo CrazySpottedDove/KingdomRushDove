@@ -6225,8 +6225,8 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(60)
     tt.hero.fn_level_up = scripts.hero_dwarf.level_up
     tt.idle_flip.cooldown = 1
-    tt.info.hero_portrait = "kr2_hero_portraits_0010"
-    tt.info.portrait ="kr2_info_portraits_heroes_0013"
+    tt.info.hero_portrait = "kr2_hero_portraits_0017"
+    tt.info.portrait ="kr2_info_portraits_heroes_0017"
     tt.info.i18n_key = "HERO_DWARF"
     tt.main_script.update = scripts.hero_dwarf.update
     tt.melee.attacks[1].cooldown = 1
