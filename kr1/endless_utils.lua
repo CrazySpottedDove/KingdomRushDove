@@ -552,8 +552,10 @@ end
 
 function EU.patch_barrack_unity(level)
     for _, name in pairs(UP:towers_with_barrack()) do
-        local t = E:get_template(name)
-        t.barrack.max_soldiers = t.barrack.max_soldiers + level * friend_buff.barrack_unity_count
+        if name ~= "tower_pandas_lvl4" then
+            local t = E:get_template(name)
+            t.barrack.max_soldiers = t.barrack.max_soldiers + level * friend_buff.barrack_unity_count
+        end
     end
     for _, name in pairs(UP:barrack_soldiers()) do
         local s = E:get_template(name)
