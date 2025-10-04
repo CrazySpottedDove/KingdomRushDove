@@ -751,7 +751,7 @@ local function heroes()
     tt.info.hero_portrait = "hero_portraits_0006"
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.i18n_key = "HERO_FIRE"
-    tt.info.portrait = "info_portraits_hero_0003"
+    tt.info.portrait = "info_portraits_hero_0006"
     tt.main_script.update = scripts.hero_ignus.update
     tt.motion.max_speed = 4 * FPS
     tt.regen.cooldown = 1
