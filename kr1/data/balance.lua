@@ -159,26 +159,26 @@ local heroes = {
             spin = {
                 xp_gain_factor = 1.55,
                 damage_type = DAMAGE_TRUE,
-                damage_max = {9, 12, 14, 16, 18, 20, 22, 25, 27, 30},
-                damage_min = {7, 8, 9, 10, 12, 14, 16, 19, 21, 24}
+                damage_max = {10, 13, 15, 17, 19, 22, 24, 27, 29, 33},
+                damage_min = {8, 9, 10, 11, 13, 15, 17, 20, 23, 26}
             },
             jump = {
                 xp_gain_factor = 1.55,
                 damage_type = DAMAGE_TRUE,
-                damage_max = {10, 13, 15, 16, 19, 22, 24, 27, 29, 32},
-                damage_min = {7, 9, 10, 11, 13, 15, 18, 20, 23, 26}
+                damage_max = {11, 14, 16, 17, 20, 24, 26, 29, 31, 35},
+                damage_min = {8, 10, 11, 12, 14, 16, 19, 22, 25, 28}
             },
             simple = {
                 xp_gain_factor = 1.55,
                 damage_type = DAMAGE_TRUE,
-                damage_max = {10, 13, 15, 16, 19, 22, 24, 27, 29, 32},
-                damage_min = {7, 9, 10, 11, 13, 15, 18, 20, 23, 26}
+                damage_max = {11, 14, 16, 17, 20, 24, 26, 29, 31, 35},
+                damage_min = {8, 10, 11, 12, 14, 16, 19, 22, 25, 28}
             },
             fast_hits = {
                 xp_gain_factor = 1.55,
                 damage_type = DAMAGE_TRUE,
-                damage_max = {9, 11, 13, 14, 16, 18, 20, 23, 25, 27},
-                damage_min = {7, 8, 9, 10, 11, 13, 15, 17, 19, 22}
+                damage_max = {10, 12, 14, 15, 17, 19, 22, 25, 27, 29},
+                damage_min = {8, 9, 10, 11, 12, 14, 16, 18, 20, 24}
             }
         },
         pole_ranged = {
