@@ -90,7 +90,6 @@ return {
         tt_title = _("TOWER_NECROMANCER_NAME"),
         tt_desc = _("TOWER_NECROMANCER_DESCRIPTION")
     }), merge(templates.upgrade, {
-        check = "kr3_main_icons_0019",
         action_arg = "tower_high_elven",
         image = "kr3_main_icons_0107",
         place = 11,
