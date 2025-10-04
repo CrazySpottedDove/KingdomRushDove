@@ -31,7 +31,7 @@ package:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	git add .
 	@current_id=$(awk -F'"' '/version\.id[ ]*=/ {print $2}' "./version.lua" | head -n 1)
-	git commit -m "VERSION JUMP TO $$current_id"
+	git commit -m "VERSION JUMP TO $(current_id)"
 
 branch:
 	@bash $(MAKE_FILE_DIR)/branch.sh
