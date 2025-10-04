@@ -915,7 +915,7 @@ return {
         }}
     }), templates.rally, templates.sell}},
 
-    holder_elf = {{merge(templates.upgrade_power, {
+    holder_elf = {{merge(templates.upgrade, {
         action_arg = "tower_elf",
         image = "main_icons_0015",
         place = 5,
