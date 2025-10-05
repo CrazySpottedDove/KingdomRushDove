@@ -2191,14 +2191,16 @@ sys.render.name = "render"
 
 local ffi = require("ffi")
 ffi.cdef [[
-typedef struct{
-    int z;
+typedef struct {
     double sort_y;
-    int draw_order;
     double pos_x;
+    int z;
+    int draw_order;
     int lua_index;
 } RenderFrameFFI;
+void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
+local lib_render_sort = ffi.load("all/librender_sort.dll")
 
 function sys.render:init(store)
     store.render_frames = {}
@@ -2214,55 +2216,6 @@ function sys.render:init(store)
     }
     self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
     self._hb_colors = HEALTH_BAR_COLORS
-    local function ffi_cmp(a, b)
-        if a.z ~= b.z then
-            return a.z < b.z
-        end
-        if a.sort_y ~= b.sort_y then
-            return a.sort_y > b.sort_y
-        end
-        if a.draw_order ~= b.draw_order then
-            return a.draw_order < b.draw_order
-        end
-        return a.pos_x < b.pos_x
-    end
-
-    local function ffi_merge_sort(arr, tmp, left, right)
-        if right - left <= 1 then
-            return
-        end
-        local mid = floor((left + right) / 2)
-        ffi_merge_sort(arr, tmp, left, mid)
-        ffi_merge_sort(arr, tmp, mid, right)
-        local i, j, k = left, mid, left
-        local sizeof_frame = ffi.sizeof("RenderFrameFFI")
-        while i < mid and j < right do
-            if ffi_cmp(arr[i], arr[j]) then
-                ffi.copy(tmp + k, arr + i, sizeof_frame)
-                i = i + 1
-            else
-                ffi.copy(tmp + k, arr + j, sizeof_frame)
-                j = j + 1
-            end
-            k = k + 1
-        end
-        while i < mid do
-            ffi.copy(tmp + k, arr + i, sizeof_frame)
-            i = i + 1
-            k = k + 1
-        end
-        while j < right do
-            ffi.copy(tmp + k, arr + j, sizeof_frame)
-            j = j + 1
-            k = k + 1
-        end
-        for l = left, right - 1 do
-            ffi.copy(arr + l, tmp + l, sizeof_frame)
-        end
-    end
-
-    -- 要求渲染顺序稳定，因此不可以使用快速排序
-    self.ffi_sort = ffi_merge_sort
 end
 
 function sys.render:on_insert(entity, store)
@@ -2441,22 +2394,14 @@ function sys.render:on_update(dt, ts, store)
             end
 
             local last_runs = s.runs
-            -- local fn, runs, idx
             local fn
             if s.animation then
                 A:generate_frames(s.animation)
-                -- fn, runs, idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
                 fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
-                -- s.runs = runs
-                -- s.frame_idx = idx
             elseif s.animated then
-                -- fn, runs, idx = A:fn(full_name, ts - s.ts + s.time_offset, s.loop, s.fps)
                 fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name,
                     ts - s.ts + s.time_offset, s.loop, s.fps)
                 s.frame_name = fn
-                -- s.runs = runs
-                -- s.frame_idx = idx
-                -- s.frame_name = fn
             else
                 s.runs = 0
                 s.frame_idx = 1
@@ -2476,7 +2421,6 @@ function sys.render:on_update(dt, ts, store)
             s._draw_order = 100000 * (s.draw_order or i) + e.id
             if s.hide_after_runs and s.runs >= s.hide_after_runs then
                 s.hidden = true
-                -- s.marked_to_remove = true
             end
         end
 
@@ -2540,7 +2484,9 @@ function sys.render:on_update(dt, ts, store)
             n = n + 1
         end
     end
-    self.ffi_sort(store.render_frames_ffi, store.render_frames_ffi_tmp, 0, n)
+
+    lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+
     local new_frames = {}
     for i = 0, n - 1 do
         local ffi_f = render_frames_ffi[i]
