@@ -2847,11 +2847,11 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
     local b_x = 770
     local b_y = rbbg.pos.y + 10
     local b_o = 50
-    local allowed_towers = screen_map.level_data[level_num].iron
+    local locked_towers = screen_map.level_data[level_num].iron
     local opts = { "archers", "barracks", "mages", "artillery" }
 
     for i, v in ipairs(opts) do
-        local n = table.contains(allowed_towers, v) and 2 * i or 2 * i - 1
+        local n = table.contains(locked_towers, v) and 2 * i or 2 * i - 1
         local b = KImageView:new(string.format("levelSelect_modeRules_000%i", n))
 
         b.pos = V.v(b_x, b_y)

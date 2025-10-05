@@ -1769,28 +1769,28 @@ return {
                 heroe = false,
                 level = 2
             },
-            iron = {"archers", "artillery", "druids"}
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = {"artillery", "druids"}
+            iron = {"artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = {"artillery", "druids", "mages"}
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 2
             },
-            iron = {"barracks", "artillery", "druids"}
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
@@ -1804,14 +1804,14 @@ return {
                 heroe = true,
                 level = 3
             },
-            iron = {"artillery", "druids", "archers"}
+            iron = {"artillery", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 3
             },
-            iron = {"mages", "artillery", "druids"}
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
@@ -1825,7 +1825,7 @@ return {
                 heroe = true,
                 level = 4
             },
-            iron = {"artillery", "druids", "mages"}
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
@@ -1839,7 +1839,7 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"artillery", "druids", "mages"}
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
@@ -1853,7 +1853,7 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"artillery", "druids", "barracks"}
+            iron = {"artillery", "barracks"}
         },
         {
             upgrades = {
@@ -1867,14 +1867,14 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"mages", "artillery", "druids"}
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = {"archers", "artillery", "druids"}
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
@@ -1895,7 +1895,7 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"artillery", "druids", "mages"}
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
@@ -1923,7 +1923,7 @@ return {
                 heroe = true,
                 level = 2
             },
-            iron = {"mages", "druids"}
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
@@ -1944,7 +1944,7 @@ return {
                 heroe = true,
                 level = 2
             },
-            iron = {"barracks", "druids"}
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
@@ -1965,7 +1965,7 @@ return {
                 heroe = true,
                 level = 3
             },
-            iron = {"mages", "druids"}
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
@@ -1993,49 +1993,35 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"mages", "druids"}
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = {"archers", "druids"}
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = {"barracks", "druids"}
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = {"archers", "druids"}
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = {"archers", "druids"}
-        },
-        {
-            upgrades = {
-                heroe = true,
-                level = 5
-            },
-            iron = {"mages", "archers"}
-        },
-        {
-            upgrades = {
-                heroe = true,
-                level = 5
-            },
-            iron = {"mages", "druids"}
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
@@ -2049,21 +2035,35 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"barracks", "druids"}
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = {"mages", "druids"}
+            iron = {"mages", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = {"archers", "druids"}
+            iron = {"barracks", "artillery"}
+        },
+        {
+            upgrades = {
+                heroe = true,
+                level = 5
+            },
+            iron = {"mages", "artillery"}
+        },
+        {
+            upgrades = {
+                heroe = true,
+                level = 5
+            },
+            iron = {"archers", "artillery"}
         },
         -- 额外
         [71] = {
@@ -2071,7 +2071,7 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"archers", "artillery"}
+            iron = {"mages", "artillery"}
         },
         [90] = {
             upgrades = {

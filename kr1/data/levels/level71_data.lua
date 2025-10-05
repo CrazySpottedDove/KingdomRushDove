@@ -443,7 +443,10 @@ return {
             max_upgrade_level = 6
         },
         {
-            locked_towers = {},
+            locked_towers = {
+                "tower_build_engineer",
+                "tower_build_mage"
+            },
             max_upgrade_level = 6
         }
     },

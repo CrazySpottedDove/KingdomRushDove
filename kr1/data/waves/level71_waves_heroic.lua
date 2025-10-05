@@ -1,7 +1,7 @@
 -- chunkname: @./kr3/data/waves/level01_waves_challenge.lua
 
 return {
-	cash = 1200,
+	cash = 1300,
 	groups = {
 		-- 第一波：双路混合进攻
 		{
