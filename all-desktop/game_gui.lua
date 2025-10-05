@@ -4553,6 +4553,9 @@ function MousePointer:initialize()
         [GUI_MODE_RALLY_CONTROABLES] = {
             default = rally_tower
         },
+        [GUI_MODE_SUMMON_HERO] = {
+            default = rally_tower
+        },
         [GUI_MODE_SELECT_POINT] = {
             default = pirate_camp,
             sunray_tower = sunray_tower
@@ -6211,6 +6214,9 @@ function PickView:on_down(button, x, y)
             else
                 game_gui:show_invalid_point_cross(x, y)
             end
+        elseif game_gui.mode == GUI_MODE_SUMMON_HERO then
+            LU.insert_hero(game_gui.game.store, game_gui.selected_hero_to_summon, v(wx, wy), true)
+            game_gui:set_mode()
         else
             local e = game_gui:entity_at_pos(wx, wy)
 
@@ -6732,7 +6738,10 @@ function HeroMenu:button_exit(button)
 end
 
 function HeroMenu:button_callback(button, item, entity, mouse_button, x, y)
-    LU.insert_hero(game_gui.game.store, item.name, game_gui.game.store.level.locations.exits[1].pos, true)
+    game_gui.selected_hero_to_summon = item.name
+    game_gui:set_mode(GUI_MODE_SUMMON_HERO)
+    game_gui.mouse_pointer:update_pointer(GUI_MODE_SUMMON_HERO)
+    -- LU.insert_hero(game_gui.game.store, item.name, game_gui.game.store.level.locations.exits[1].pos, true)
     self:hide()
 end
 
