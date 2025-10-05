@@ -35,6 +35,8 @@ if [ -f "$LAST_SYNC_COMMIT_FILE" ]; then
             mv $TMP_SYNC_LIST_FILE "$SYNC_LIST_FILE"
         fi
     else
+    # 如果不同，则本次将原有 SYNC_LIST_FILE 中的记录和本次变动的文件都同步，然后用本次记录覆盖原有 SYNC_LIST_FILE
+        cat "$SYNC_LIST_FILE" | xargs -I{} cp --parents "{}" "$WINDOWS_DIR"
         mv $TMP_SYNC_LIST_FILE "$SYNC_LIST_FILE"
     fi
 else

@@ -1685,8 +1685,8 @@ function sys.tween:on_update(dt, ts, store)
                         local keys = t.keys
                         local ka = keys[1]
                         local kb = keys[#keys]
-                        local start_time = ka[1]
-                        local end_time = kb[1]
+                        local start_time = keys[1][1]
+                        local end_time = keys[#keys][1]
                         local duration = end_time - start_time
                         local time_ref = t.ts or e.tween.ts or s.ts
                         local time = store.tick_ts - time_ref
@@ -1703,21 +1703,25 @@ function sys.tween:on_update(dt, ts, store)
                             time = duration - time
                         end
 
-                        if time <= start_time then
-                            value = ka[2]
-                            kb = ka
-                        elseif time >= end_time then
-                            value = kb[2]
-                            ka = kb
-                        else
-                            for i = 2, #keys do
-                                local ki = keys[i]
-                                if time < ki[1] then
-                                    kb = ki
-                                    ka = keys[i - 1]
-                                    break
-                                end
+                        time = km.clamp(start_time, end_time, time)
+
+                        for i = 1, #keys do
+                            local ki = keys[i]
+
+                            if time >= ki[1] then
+                                ka = ki
                             end
+
+                            if time <= ki[1] then
+                                kb = ki
+
+                                break
+                            end
+                        end
+
+                        if ka == kb then
+                            value = ka[2]
+                        else
                             value = lerp(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]), ka[3] or t.interp)
                         end
 
@@ -1755,6 +1759,7 @@ function sys.tween:on_update(dt, ts, store)
                 end
             end
         end
+
     end
 end
 
