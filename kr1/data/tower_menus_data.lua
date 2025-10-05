@@ -1801,9 +1801,10 @@ return {
         tt_desc = _("ELVES_BABY_BERESAD_SPECIAL_SMALL_DESCRIPTION_1")
     })}},
 
-    holder_baby_ashbite = {{merge(templates.upgrade_power, {
+    holder_baby_ashbite = {{merge(templates.upgrade, {
         action_arg = "tower_baby_ashbite",
         image = "kr3_main_icons_0113",
+        place = 5,
         tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
         tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION")
     })}},
