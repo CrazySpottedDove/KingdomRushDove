@@ -1887,7 +1887,7 @@ return {
         }}
     }), templates.rally, templates.sell}},
 
-    holder_bastion = {{merge(templates.upgrade_power, {
+    holder_bastion = {{merge(templates.upgrade, {
         action_arg = "tower_bastion",
         image = "main_icons_0015",
         place = 5,
