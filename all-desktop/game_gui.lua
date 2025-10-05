@@ -6857,10 +6857,11 @@ function TowerMenu:show()
     self.alpha = 0
     self.hidden = false
     self.tweening = true
-    self.tweeners = {timer:tween(0.12, self.scale, {
+    local game_time = 0.12 * game_gui.game.store.speed_factor
+    self.tweeners = {timer:tween(game_time, self.scale, {
         x = 1,
         y = 1
-    }, "out-quad"), timer:tween(0.12, self, {
+    }, "out-quad"), timer:tween(game_time, self, {
         alpha = 1
     }, "out-quad", function()
         self.tweening = nil
