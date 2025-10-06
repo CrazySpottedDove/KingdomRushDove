@@ -22049,9 +22049,9 @@ function scripts.hero_witch.update(this, store)
                     U.animation_start(this, this.dodge.animation_dissapear, nil, store.tick_ts, false)
                     U.y_wait(store, fts(6))
                     create_soldier(this.dodge.decoy, V.v(0, 0))
-                    this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - 1
-                    this.timed_attacks.list[2].ts = this.timed_attacks.list[2].ts - 1
-                    this.timed_attacks.list[3].ts = this.timed_attacks.list[3].ts - 1
+                    this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - 2
+                    this.timed_attacks.list[2].ts = this.timed_attacks.list[2].ts - 2
+                    this.timed_attacks.list[3].ts = this.timed_attacks.list[3].ts - 2
                     U.y_animation_wait(this)
                     U.y_wait(store, fts(3))
 
