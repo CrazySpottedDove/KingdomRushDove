@@ -7583,7 +7583,7 @@ return {
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_00016 = {
+	kr3_hero_portraits_0016 = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,

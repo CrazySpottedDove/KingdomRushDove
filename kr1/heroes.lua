@@ -2709,7 +2709,7 @@ local function heroes()
     AC(tt, "melee", "nav_grid")
     anchor_y = 0.29
     image_y = 60
-    tt.info.portrait = "kr2_info_portraits_heroes_0005_pig"
+    tt.info.portrait = "kr2_info_portraits_heroes_0004_pig"
     tt.health.armor = 0.1
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 28)
@@ -2843,7 +2843,7 @@ local function heroes()
     tt.fake_hp = 60
     tt.main_script.update = scripts.beastmaster_falcon.update
     tt.info.fn = scripts.beastmaster_falcon.get_info
-    tt.info.portrait = "kr2_info_portraits_heroes_0005_falcon"
+    tt.info.portrait = "kr2_info_portraits_heroes_0004_falcon"
     tt.flight_speed = 45
     tt.flight_height = 80
     tt.custom_attack = CC("custom_attack")
