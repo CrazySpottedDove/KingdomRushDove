@@ -13931,6 +13931,7 @@ local function heroes()
         [7] = 3,
         [10] = 4
     }
+    tt.hero.skills.ultimate.xp_gain_factor = 43
     tt.health.dead_lifetime = 15
     tt.health_bar.offset = v(0, 45)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM

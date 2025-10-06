@@ -25708,6 +25708,16 @@ function scripts.hero_wukong.level_up(this, store, initial)
         e.melee.attacks[2].damage_max = s.smash_damage_max[s.level]
         e.melee.attacks[2].damage_min = s.smash_damage_min[s.level]
         e.melee.attacks[2].chance = s.smash_chance[s.level]
+        if this.zhu_apprentice_soldier then
+            local e = this.zhu_apprentice_soldier
+            e.health.hp_max = s.hp_max[s.level]
+            e.health.hp = e.health.hp_max
+            e.melee.attacks[1].damage_max = s.damage_max[s.level]
+            e.melee.attacks[1].damage_min = s.damage_min[s.level]
+            e.melee.attacks[2].damage_max = s.smash_damage_max[s.level]
+            e.melee.attacks[2].damage_min = s.smash_damage_min[s.level]
+            e.melee.attacks[2].chance = s.smash_chance[s.level]
+        end
     end)
 
     upgrade_skill(this, "giant_staff", function(this, s)
@@ -25859,6 +25869,7 @@ function scripts.hero_wukong.update(this, store)
     if this.hero.skills.zhu_apprentice.level > 0 then
         zhu_apprentice_soldier = create_soldier(this.hero.skills.zhu_apprentice.entity,
             V.v(this.pos.x - 25, this.pos.y - 10))
+        this.zhu_apprentice_soldier = zhu_apprentice_soldier
     end
 
     local function y_wukong_wait_for_second_idle(store, this, time)
@@ -26052,6 +26063,9 @@ function scripts.hero_wukong.update(this, store)
                 if target and valid_rally_node_nearby(target.pos) then
                     apply_ultimate(this, store, target, "levelup")
                     scripts.heal(this, h.hp_max)
+                    if this.health.dead then
+                        this.health.dead = false
+                    end
                 else
                     a.ts = a.ts + 1
                 end
