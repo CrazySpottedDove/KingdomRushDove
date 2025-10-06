@@ -7540,14 +7540,15 @@ local function heroes()
         [9] = 3
     }
     tt.hero.skills.shield_strike = CC("hero_skill")
-    tt.hero.skills.shield_strike.damage_max = {36, 46, 52}
-    tt.hero.skills.shield_strike.damage_min = {20, 26, 30}
-    tt.hero.skills.shield_strike.rebounds = {3, 4, 5}
-    tt.hero.skills.shield_strike.xp_gain = {50, 100, 150}
+    tt.hero.skills.shield_strike.damage_max = {36, 46, 56, 66}
+    tt.hero.skills.shield_strike.damage_min = {20, 26, 32, 38}
+    tt.hero.skills.shield_strike.rebounds = {3, 4, 5, 5}
+    tt.hero.skills.shield_strike.xp_gain = {50, 100, 150, 200}
     tt.hero.skills.shield_strike.xp_level_steps = {
         [1] = 1,
         [4] = 2,
-        [7] = 3
+        [7] = 3,
+        [10] = 4,
     }
     tt.hero.skills.sybarite = CC("hero_skill")
     tt.hero.skills.sybarite.heal_hp = {80, 160, 240}
@@ -7708,7 +7709,7 @@ local function heroes()
 
     tt = RT("mod_elves_denas_sybarite", "modifier")
     AC(tt, "render")
-    tt.inflicted_damage_factor = 2
+    tt.inflicted_damage_factor = 2.5
     tt.heal_hp = nil
     tt.main_script.insert = scripts.mod_elves_denas_sybarite.insert
     tt.main_script.remove = scripts.mod_elves_denas_sybarite.remove
