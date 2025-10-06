@@ -1311,7 +1311,7 @@ return {
         }}
     }), templates.sell}},
 
-    holder_neptune = {{merge(templates.upgrade_power, {
+    holder_neptune = {{merge(templates.upgrade, {
         action_arg = "tower_neptune",
         image = "main_icons_0015",
         place = 5,
@@ -1677,7 +1677,7 @@ return {
         }}
     }), templates.sell}},
 
-    holder_ewok = {{merge(templates.upgrade_power, {
+    holder_ewok = {{merge(templates.upgrade, {
         action_arg = "tower_ewok",
         image = "main_icons_0015",
         place = 5,

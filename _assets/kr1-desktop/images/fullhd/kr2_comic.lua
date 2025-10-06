@@ -1,5 +1,5 @@
 return {
-	["$1_$2"]= {
+	["1_1"]= {
 		a_name = "kr2_comic-1.png",
 		size = {
 			187,
