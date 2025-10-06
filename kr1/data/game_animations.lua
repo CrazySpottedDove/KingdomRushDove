@@ -15765,6 +15765,11 @@ return {
             prefix = "Halloween_hero_vamp",
             to = 137
         },
+        hero_vampiress_exit = {
+            from = 130,
+            prefix = "Halloween_hero_vamp",
+            to = 137
+        },
         hero_vampiress_bat_idle = {
             from = 37,
             prefix = "Halloween_hero_vamp",

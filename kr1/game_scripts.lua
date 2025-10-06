@@ -14443,6 +14443,7 @@ function scripts.hero_vampiress.update(this, store, script)
                     already_flying = nil
                     this.render.sprites[2].hidden = true
                     U.y_animation_play(this, "exit", nil, store.tick_ts)
+                    U.y_animation_wait(this, nil, 1)
                     this.render.sprites[1].prefix = orig_prefix
                     U.update_max_speed(this, orig_speed)
                     this.vis.bans = orig_vis_bans

@@ -4460,7 +4460,7 @@ local function heroes()
     tt.main_script.insert = scripts.hero_vampiress.insert
     tt.main_script.update = scripts.hero_vampiress.update
     tt.motion.max_speed = 2 * FPS
-    tt.motion.max_speed_bat = 4 * FPS
+    tt.motion.max_speed_bat = 4.5 * FPS
     tt.regen.cooldown = 1
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].name = "idle"
