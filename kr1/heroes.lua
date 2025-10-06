@@ -5011,7 +5011,7 @@ local function heroes()
     AC(tt, "melee", "ranged", "timed_attacks")
     image_y = 66
     anchor_y = 14 / image_y
-    tt.hero.level_stats.hp_max = {170, 190, 210, 230, 250, 270, 290, 310, 330, 350}
+    tt.hero.level_stats.hp_max = {175, 200, 225, 250, 275, 300, 325, 350, 375, 400}
     tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
     tt.hero.level_stats.damage_min = {4, 5, 7, 8, 10, 11, 13, 14, 16, 17}
     tt.hero.level_stats.damage_max = {11, 16, 20, 25, 29, 34, 38, 43, 47, 52}
@@ -5034,11 +5034,12 @@ local function heroes()
         [8] = 3
     }
     tt.hero.skills.bonedance = CC("hero_skill")
-    tt.hero.skills.bonedance.skull_count = {4, 5, 6}
+    tt.hero.skills.bonedance.skull_count = {4, 5, 6, 7}
     tt.hero.skills.bonedance.xp_level_steps = {
         [1] = 1,
         [4] = 2,
-        [7] = 3
+        [7] = 3,
+        [10] = 4
     }
     tt.hero.skills.deathaura = CC("hero_skill")
     tt.hero.skills.deathaura.slow_factor = {0.9, 0.8, 0.7, 0.6}
@@ -5138,9 +5139,9 @@ local function heroes()
     tt.count_group.name = "voodoo_witch_skulls"
     tt.count_group.type = COUNT_GROUP_CONCURRENT
     tt.flight_period = 3
-    tt.flight_speed = 30
-    tt.force_motion.max_a = 495
-    tt.force_motion.max_v = 120
+    tt.flight_speed = 40
+    tt.force_motion.max_a = 525
+    tt.force_motion.max_v = 135
     tt.force_motion.ramp_radius = 50
     tt.main_script.update = scripts.voodoo_witch_skull.update
     tt.max_flight_height = 25
