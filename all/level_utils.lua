@@ -295,7 +295,7 @@ function LU.insert_entities(store, items, store_back_references)
                     end
 				end
 
-				if e.editor and e.editor.game_mode ~= 0 and (e.editor.game_mode ~= store.level_mode)  then
+				if (e.editor and e.editor.game_mode ~= 0 and (e.editor.game_mode ~= store.level_mode)) or (item.editor_game_mode and item.editor_game_mode ~= store.level_mode) then
 					log.debug("skipping item %s. game mode mismatch", e.template_name)
 				else
 					if e.tower and e.tower.terrain_style then

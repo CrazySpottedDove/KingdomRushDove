@@ -118,6 +118,7 @@ return {
                 x = 509,
                 y = 70
             },
+            ["editor_game_mode"] = 1,
             ["nav_rally.pos"] = {
                 x = 509,
                 y = 70
@@ -135,6 +136,7 @@ return {
                 x = 533,
                 y = 70
             },
+            ["editor_game_mode"] = 1,
             ["nav_rally.pos"] = {
                 x = 533,
                 y = 70
@@ -318,7 +320,7 @@ return {
         },
         {
             template = "tower_holder",
-            ["editor.game_mode"] = 0,
+            ["editor.game_mode"] = 1,
             pos = {
                 x = 721,
                 y = 667
@@ -333,7 +335,71 @@ return {
         },
         {
             template = "tower_holder",
-            ["editor.game_mode"] = 0,
+            ["editor.game_mode"] = 1,
+            pos = {
+                x = 334,
+                y = 676
+            },
+            ["tower.default_rally_pos"] = {
+                x = 338,
+                y = 609
+            },
+            ["tower.holder_id"] = "47",
+            ["tower.terrain_style"] = 5,
+            ["ui.nav_mesh_id"] = "47"
+        },
+        {
+            template = "tower_barrack_amazonas",
+            ["editor.game_mode"] = 2,
+            pos = {
+                x = 721,
+                y = 667
+            },
+            ["tower.default_rally_pos"] = {
+                x = 683,
+                y = 607
+            },
+            ["powers.whirlwind.level"] = 1,
+            ["powers.valkyrie.level"] = 1,
+            ["tower.holder_id"] = "49",
+            ["tower.terrain_style"] = 5,
+            ["ui.nav_mesh_id"] = "49"
+        },
+        {
+            template = "tower_barrack_amazonas",
+            ["editor.game_mode"] = 2,
+            pos = {
+                x = 334,
+                y = 676
+            },
+            ["tower.default_rally_pos"] = {
+                x = 338,
+                y = 609
+            },
+            ["powers.whirlwind.level"] = 1,
+            ["powers.valkyrie.level"] = 1,
+            ["tower.holder_id"] = "47",
+            ["tower.terrain_style"] = 5,
+            ["ui.nav_mesh_id"] = "47"
+        },
+        {
+            template = "tower_mage_2",
+            ["editor.game_mode"] = 3,
+            pos = {
+                x = 721,
+                y = 667
+            },
+            ["tower.default_rally_pos"] = {
+                x = 683,
+                y = 607
+            },
+            ["tower.holder_id"] = "49",
+            ["tower.terrain_style"] = 5,
+            ["ui.nav_mesh_id"] = "49"
+        },
+        {
+            template = "tower_mage_2",
+            ["editor.game_mode"] = 3,
             pos = {
                 x = 334,
                 y = 676
@@ -594,8 +660,44 @@ return {
                 x = 507,
                 y = 624
             },
+            ["editor_game_mode"] = 1,
             ["tower.holder_id"] = "44",
             ["tower.terrain_style"] = 5,
+            ["ui.nav_mesh_id"] = "44"
+        },
+        {
+            template = "tower_totem",
+            pos = {
+                x = 514,
+                y = 536
+            },
+            ["tower.default_rally_pos"] = {
+                x = 507,
+                y = 624
+            },
+            ["editor_game_mode"] = 2,
+            ["tower.holder_id"] = "44",
+            ["tower.terrain_style"] = 5,
+            ["powers.weakness.level"] = 1,
+            ["powers.silence.level  "] = 1,
+            ["ui.nav_mesh_id"] = "44"
+        },
+        {
+            template = "tower_templar",
+            pos = {
+                x = 514,
+                y = 536
+            },
+            ["tower.default_rally_pos"] = {
+                x = 507,
+                y = 624
+            },
+            ["editor_game_mode"] = 3,
+            ["tower.holder_id"] = "44",
+            ["tower.terrain_style"] = 5,
+            ["powers.holygrail.level"] = 1,
+            ["powers.extralife.level"] = 3,
+            ["powers.blood.level"] = 1,
             ["ui.nav_mesh_id"] = "44"
         },
         {
@@ -666,7 +768,7 @@ return {
             max_upgrade_level = 6
         },
         {
-            locked_towers = {},
+            locked_towers = {"tower_build_archer","tower_build_engineer","tower_build_barrack"},
             max_upgrade_level = 6
         }
     },
