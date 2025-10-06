@@ -243,10 +243,10 @@ scripts.hero_gerald = {
                     local ca = this.dodge.counter_attack
 
                     if la then
-                        ca.damage_max = la.damage_max *
+                        ca.damage_max = (la.damage_max or 1) *
                                             (ca.reflected_damage_factor + ca.reflected_damage_factor_inc * skill.level) *
                                             this.unit.damage_factor
-                        ca.damage_min = la.damage_min *
+                        ca.damage_min = (la.damage_min or 1) *
                                             (ca.reflected_damage_factor + ca.reflected_damage_factor_inc * skill.level) *
                                             this.unit.damage_factor
                     end
