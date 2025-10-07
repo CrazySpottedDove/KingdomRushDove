@@ -428,6 +428,7 @@ return {
     ["kr1-desktop/images/fullhd/go_stage10-1.png"] = { size = 24123},
     ["kr1-desktop/images/fullhd/go_stage1000_bg-1.png"] = { size = 157434},
     ["kr1-desktop/images/fullhd/go_stage10_bg-1.png"] = { size = 10631284},
+    ["kr1-desktop/images/fullhd/go_stage110_bg-1.png"] = { size = 13432024},
     ["kr1-desktop/images/fullhd/go_stage11_bg-1.png"] = { size = 10102114},
     ["kr1-desktop/images/fullhd/go_stage12-1.png"] = { size = 2052187},
     ["kr1-desktop/images/fullhd/go_stage12-2.png"] = { size = 1197186},
