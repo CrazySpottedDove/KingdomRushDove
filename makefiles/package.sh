@@ -44,3 +44,6 @@ rm changed_files.txt
 
 # 更新 version.lua
 sed -i "s/version\.id = \".*\"/version.id = \"$new_id\"/" "$VERSION_FILE"
+
+TMP_FILES=$(cat "makefiles/.tmp_files")
+zip "$OUTPUT_ZIP" "$TMP_FILES"
