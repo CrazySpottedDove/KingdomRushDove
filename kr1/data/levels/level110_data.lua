@@ -723,7 +723,7 @@ return {
         locked_towers = {},
         max_upgrade_level = 6
     }, {
-        locked_towers = {"tower_build_barrack", "tower_build_engineer"},
+        locked_towers = {"tower_build_mage", "tower_build_engineer"},
         max_upgrade_level = 6
     }},
     level_terrain_type = 1,
@@ -762,8 +762,8 @@ return {
     },
     required_sounds = {"music_stage60", "MetropolisAmbienceSounds", "ElvesLevelFiveSounds", "ElvesPlants",
                        "ElvesCreepHyena", "ElvesRoadRunnerSpecialSounds", "ElvesLevelHRSounds", "ElvesCreepEvoker",
-                       "ElvesScourger", "ElvesCreepAvenger", "BlackburnSounds","hero_alleria"},
+                       "ElvesScourger", "ElvesCreepAvenger", "BlackburnSounds","hero_alleria","ElvesCreepMountedAvenger","ElvesCreepGolem"},
     required_textures = {"go_enemies_elven_woods","go_hero_alleria", "go_enemies_blackburn", "go_stage53", "go_stage110_bg",
-                         "go_stages_elven_woods", "go_enemies_hulking_rage", "go_enemies_ancient_metropolis"},
+                         "go_stages_elven_woods", "go_enemies_hulking_rage", "go_enemies_ancient_metropolis","go_enemies_bittering_rancor"},
     unlock_towers = {}
 }
