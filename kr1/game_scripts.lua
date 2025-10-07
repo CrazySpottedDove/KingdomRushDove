@@ -6903,6 +6903,72 @@ function scripts.graveyard_controller.update(this, store)
     queue_remove(store, this)
 end
 
+scripts.graveyard_s110 = {}
+
+function scripts.graveyard_s110.update(this, store)
+    local g = this.graveyard
+
+    while not this.interrupt do
+        local targets = table.filter(store.entities, function(k, v)
+            return not v._in_graveyard and (v.health and v.health.dead) and
+                       (v.vis and band(v.vis.flags, g.vis_has) ~= 0 and band(v.vis.flags, g.vis_bans) == 0 and
+                           band(v.vis.bans, g.vis_flags) == 0) and store.tick_ts - v.health.death_ts >= g.dead_time and
+                       (not v.reinforcement or not v.reinforcement.hp_before_timeout) and
+                       (not g.excluded_templates or not table.contains(g.excluded_templates, v.template_name))
+        end)
+
+        if #targets == 0 then
+            U.y_wait(store, g.check_interval)
+        else
+            for _, t in ipairs(targets) do
+                if this.interrupt then
+                    return
+                end
+
+                t._in_graveyard = true
+
+                for _, s in ipairs(g.spawns_by_health) do
+                    local e, s_pos, pi, spi, ni
+
+                    if t.health.hp_max > s[2] then
+                        -- block empty
+                    else
+                        s_pos = table.random(g.spawn_pos)
+
+                        local nearest_nodes = P:nearest_nodes(s_pos.x, s_pos.y, g.pi and {g.pi} or nil)
+
+                        if #nearest_nodes < 1 then
+                            log.error("graveyard controller %s could not spawn enemy. node not found near %s,%s",
+                                this.id, s_pos.x, s_pos.y)
+                        else
+                            pi, spi, ni = unpack(nearest_nodes[1])
+                            e = E:create_entity(s[1])
+                            e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, math.random(1, 3), ni
+                            e.pos = V.vclone(s_pos)
+                            -- e.render.sprites[1].name = "raise"
+                            e.motion.forced_waypoint = P:node_pos(e.nav_path)
+                            for _, sprite in pairs(e.render.sprites) do
+                                sprite.alpha = 180
+                            end
+                            if not g.keep_gold and e.enemy then
+                                e.enemy.gold = 0
+                            end
+
+                            queue_insert(store, e)
+
+                            break
+                        end
+                    end
+                end
+
+                U.y_wait(store, g.spawn_interval)
+            end
+        end
+    end
+
+    queue_remove(store, this)
+end
+
 scripts.s11_lava_spawner = {}
 
 function scripts.s11_lava_spawner.update(this, store)

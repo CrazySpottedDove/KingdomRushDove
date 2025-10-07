@@ -1133,6 +1133,7 @@ a.damage_max = 56
 a.damage_min = 40
 a.cooldown = 7.2
 a.hits = 4
+tt.enemy.gold = 30
 tt.main_script.update = function(this, store)
     local brk, sta
     local bda = this.timed_attacks.list[1]
@@ -1303,6 +1304,7 @@ tt.main_script.update = function(this, store)
         coroutine.yield()
     end
 end
+tt.render.sprites[1].alpha = 180
 
 tt = inherit_from_soldier_template("enemy_forest", "soldier_forest")
 tt.ranged.attacks[1].disabled = true

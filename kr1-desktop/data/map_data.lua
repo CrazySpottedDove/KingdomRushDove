@@ -2080,6 +2080,13 @@ return {
             },
             iron = {"archers", "artillery", "barracks"}
         },
+        [110] = {
+            upgrades = {
+                heroe = true,
+                level = 5
+            },
+            iron = {"archers", "mages"}
+        },
         [1000] = {
             upgrades = {
                 heroe = true,

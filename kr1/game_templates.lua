@@ -1165,6 +1165,20 @@ tt.graveyard.spawns_by_health = {{"enemy_skeleton", 299}, {"enemy_skeleton_big",
 tt.graveyard.vis_has = F_ENEMY
 tt.graveyard.vis_flags = F_SKELETON
 tt.graveyard.vis_bans = F_BOSS
+tt = RT("graveyard_s110", "graveyard_controller")
+tt.main_script.update = scripts.graveyard_s110.update
+tt.graveyard.keep_gold = false
+tt.graveyard.spawns_by_health = {
+    {"enemy_skeleton", 400},
+    {"enemy_halloween_zombie", 600},
+    {"enemy_skeleton_big", 1000},
+    {"enemy_gnoll_bloodsydian", 2000},
+    {"enemy_blade", 3750},
+    {"eb_alleria", 9e+99}
+}
+tt.graveyard.vis_has = bor(F_ENEMY, F_FRIEND)
+tt.graveyard.vis_flags = F_SKELETON
+tt.graveyard.vis_bans = F_HERO
 tt = RT("swamp_controller", "graveyard_controller")
 tt.graveyard.spawns_by_health = {{"enemy_zombie", 400}, {"enemy_swamp_thing", 9e+99}}
 tt.graveyard.excluded_templates = {"soldier_alleria_wildcat", "soldier_magnus_illusion"}

@@ -737,6 +737,11 @@ if DEBUG then
 			}
 		})
 		local out = "return " .. str .. "\n"
+        local dir = fn:match("(.+)/[^/]+$")
+        if dir then
+            os.execute("mkdir \"" .. dir .. "\"")
+        end
+
 		local f = io.open(fn, "w")
 
 		f:write(out)

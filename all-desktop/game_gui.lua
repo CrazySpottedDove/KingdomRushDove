@@ -6886,9 +6886,10 @@ function TowerMenu:hide()
     end
 
     self.tweening = true
-    self.tweeners = {timer:tween(0.12, self, {
+    local game_time = 0.12 * game_gui.game.store.speed_factor
+    self.tweeners = {timer:tween(game_time, self, {
         alpha = 0
-    }, "out-quad"), timer:tween(0.12, self.scale, {
+    }, "out-quad"), timer:tween(game_time, self.scale, {
         x = 0.6,
         y = 0.6
     }, "out-quad", function()
