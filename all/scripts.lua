@@ -2431,12 +2431,9 @@ function scripts.arrow_missile.update(this, store)
                 store.tick_length do
                 if not target or target.health and target.health.dead or band(target.vis.bans, b.vis_flags) ~= 0 then
                     local ref_pos = target and target.pos or this.pos
-                    local max_same_target_count = 3
 
                     -- target = U.find_foremost_enemy(store, ref_pos, 0, b.retarget_range, false, b.vis_flags)
-                    target = U.find_first_enemy(store, ref_pos, 0, retarget_range, b.vis_flags, b.vis_bans, function(e)
-                        return not e._missile_count or e._missile_count < max_same_target_count
-                    end)
+                    target = U.find_first_enemy(store, ref_pos, 0, retarget_range, b.vis_flags, b.vis_bans)
 
                     if b.rot_dir_from_long_angle and target then
                         rot_dir = target.pos.x < this.pos.x and -1 or 1
@@ -2448,12 +2445,6 @@ function scripts.arrow_missile.update(this, store)
 
                     if target.unit.hit_offset then
                         b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
-                    end
-
-                    if not target._missile_count then
-                        target._missile_count = 1
-                    else
-                        target._missile_count = target._missile_count + 1
                     end
                 end
 
@@ -3044,6 +3035,11 @@ function scripts.missile.update(this, store, script)
         if target.unit.hit_offset then
             b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
         end
+        if not target._missile_count then
+            target._missile_count = 1
+        else
+            target._missile_count = target._missile_count + 1
+        end
     end
 
     while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * mspeed * store.tick_length * store.tick_length do
@@ -3054,9 +3050,15 @@ function scripts.missile.update(this, store, script)
             target = U.find_first_enemy(store, ref_pos, 0, b.retarget_range, b.vis_flags, F_NONE, function(e)
                 return not e._missile_count or e._missile_count < max_same_target_count
             end)
-
-            if b.rot_dir_from_long_angle and target then
-                rot_dir = target.pos.x < this.pos.x and -1 or 1
+            if target then
+                if b.rot_dir_from_long_angle then
+                    rot_dir = target.pos.x < this.pos.x and -1 or 1
+                end
+                if not target._missile_count then
+                    target._missile_count = 1
+                else
+                    target._missile_count = target._missile_count + 1
+                end
             end
         end
 
@@ -3065,12 +3067,6 @@ function scripts.missile.update(this, store, script)
 
             if target.unit.hit_offset then
                 b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
-            end
-
-            if not target._missile_count then
-                target._missile_count = 1
-            else
-                target._missile_count = target._missile_count + 1
             end
         end
 

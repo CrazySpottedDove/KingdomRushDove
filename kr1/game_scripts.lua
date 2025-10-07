@@ -6942,7 +6942,11 @@ function scripts.graveyard_s110.update(this, store)
                                 this.id, s_pos.x, s_pos.y)
                         else
                             pi, spi, ni = unpack(nearest_nodes[1])
-                            e = E:create_entity(s[1])
+                            if t.template_name == "enemy_halloween_zombie" then
+                                e = E:create_entity("enemy_skeleton")
+                            else
+                                e = E:create_entity(s[1])
+                            end
                             e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, math.random(1, 3), ni
                             e.pos = V.vclone(s_pos)
                             -- e.render.sprites[1].name = "raise"
