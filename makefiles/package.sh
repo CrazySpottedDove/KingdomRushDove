@@ -26,7 +26,7 @@ new_id="$major.$minor.$patch"
 
 # 压缩包名用新 id
 mkdir -p ./.versions
-OUTPUT_ZIP="./.versions/Kingdom Rush_${current_id}.zip"
+OUTPUT_ZIP="$(pwd)/.versions/Kingdom Rush_${current_id}.zip"
 
 if [ -f "../Kingdom Rush.zip" ]; then
     echo "已存在 Kingdom Rush.zip，正在删除..."
@@ -46,4 +46,6 @@ rm changed_files.txt
 sed -i "s/version\.id = \".*\"/version.id = \"$new_id\"/" "$VERSION_FILE"
 
 TMP_FILES=$(cat "makefiles/.tmp_files")
+cd "$(cat makefiles/.windows_kr_dove_dir)"
 zip "$OUTPUT_ZIP" "$TMP_FILES"
+cd - >/dev/null
