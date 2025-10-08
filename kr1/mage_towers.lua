@@ -2261,3 +2261,240 @@ tt.modifier.duration = b.duration
 -- tt.main_script.remove = scripts.mod_tower_ray_slow.remove
 
 -- 红法 END
+
+-- 观星 BEGIN
+tt = E:register_t("ps_stargazers_death_star_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "elven_stargazers_tower_rising_star_particle_trail_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_area_spread = vec_2(2, 2)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("fx_tower_elven_stargazers_ray_hit_start", "fx")
+
+E:add_comps(tt, "tween")
+
+tt.render.sprites[1].name = "elven_stargazers_tower_rising_star_hit_fx_idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].scale = vec_2(1.5, 1.5)
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(10)
+tt.timed.runs = 1e+99
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(5), 255}, {fts(10), 0}}
+tt.tween.remove = false
+tt = E:register_t("fx_tower_stargazers_teleport_middle", "fx")
+tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(32)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_stargazers_teleport_enemy_small", "fx")
+tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(32)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_stargazers_teleport_enemy_big", "fx")
+tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_big_idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(32)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_elven_stargazers_ray_hit", "fx")
+
+E:add_comps(tt)
+
+tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(10)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_stargazers_death_star_hit", "fx")
+tt.render.sprites[1].prefix = "elven_stargazers_tower_rising_star_hit_fx"
+
+tt = E:register_t("tower_elven_stargazers_lvl4", "tower")
+local b = balance.towers.elven_stargazers
+E:add_comps(tt, "powers", "attacks")
+tt.sound_events.insert = "TowerElvenStargazersTaunt"
+tt.info.i18n_key = "TOWER_STARGAZER_4"
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_range = b.stats.range
+tt.info.stat_cooldown = b.stats.cooldown
+tt.info.damage_icon = "magic"
+tt.tower.type = "elven_stargazers"
+tt.info.portrait = "kr5_portraits_towers_0007"
+tt.info.fn = scripts.tower_mage.get_info
+tt.main_script.update = scripts.tower_stargazers.update
+tt.main_script.remove = scripts.tower_stargazers.remove
+tt.tower.level = 1
+tt.tower.price = b.price[4]
+tt.tower.menu_offset = vec_2(3, 28)
+tt.attacks.range = b.basic_attack.range[4]
+tt.attacks.min_cooldown = b.shared_min_cooldown
+tt.attacks.attack_delay_on_spawn = fts(5)
+tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1].animation = "attack"
+tt.attacks.list[1].bullet = "tower_elven_stargazers_ray"
+tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+tt.attacks.list[1].shoot_time = fts(15)
+tt.attacks.list[1].ray_timing = b.basic_attack.ray_timing
+tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+tt.attacks.list[1].sound = "TowerElvenStargazersBasicAttack"
+tt.attacks.list[1].bullet_start_offset = {vec_2(3, 85.7), vec_2(3, 85.7)}
+tt.powers.teleport = CC("power")
+tt.powers.teleport.price = b.teleport.price
+tt.powers.teleport.cooldown = b.teleport.cooldown
+tt.powers.teleport.teleport_nodes_back = b.teleport.teleport_nodes_back
+tt.powers.teleport.enc_icon = 13
+tt.powers.teleport.name = "teleport"
+tt.powers.teleport.key = "EVENT_HORIZON"
+tt.powers.teleport.price_base = b.teleport.price[1]
+tt.powers.teleport.price_inc = b.teleport.price[2]
+tt.powers.stars_death = CC("power")
+tt.powers.stars_death.price = b.stars_death.price
+tt.powers.stars_death.enc_icon = 14
+tt.powers.stars_death.name = "stars_death"
+tt.powers.stars_death.key = "RISING_STAR"
+tt.powers.stars_death.price_base = b.stars_death.price[1]
+tt.powers.stars_death.price_inc = b.stars_death.price[2]
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrain_mage_%04i"
+tt.render.sprites[1].offset = vec_2(0, 15)
+for i = 2, 9 do
+    tt.render.sprites[i] = E:clone_c("sprite")
+    tt.render.sprites[i].prefix = "elven_stargazers_tower_lvl4_tower_layer" .. i - 1
+    tt.render.sprites[i].name = "idle"
+    tt.render.sprites[i].offset = vec_2(3, 14)
+    tt.render.sprites[i].group = "layers"
+    tt.render.sprites[i].angles = {}
+    tt.render.sprites[i].angles.idle = {"idle_back", "idle"}
+    tt.render.sprites[i].angles.attack = {"attack_back", "attack"}
+end
+
+tt.render.sprites[10] = E:clone_c("sprite")
+tt.render.sprites[10].prefix = "elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1"
+tt.render.sprites[10].name = "start"
+tt.render.sprites[10].hidden = true
+tt.render.sprites[10].z = Z_BULLETS + 1
+tt.render.sprites[10].offset = vec_2(3, 88.7)
+tt.render.moon_sid = 10
+tt.render.sprites[11] = E:clone_c("sprite")
+tt.render.sprites[11].prefix = "elven_stargazers_tower_lvl4_elf"
+tt.render.sprites[11].name = "idle"
+tt.render.sprites[11].offset = vec_2(3, 35)
+tt.render.elf_sid = 11
+tt.render.sprites[12] = E:clone_c("sprite")
+tt.render.sprites[12].prefix = "elven_stargazers_tower_event_horizon_tower_fx"
+tt.render.sprites[12].name = "idle"
+tt.render.sprites[12].hidden = true
+tt.render.sprites[12].offset = vec_2(3, 85.7)
+tt.render.teleport_sid = 12
+tt.attacks.list[2] = table.deepclone(tt.attacks.list[1])
+tt.attacks.list[2].animation = "skill1"
+tt.attacks.list[2].mod = "mod_tower_stargazers_teleport_stun"
+tt.attacks.list[2].fx = "fx_tower_stargazers_teleport_middle"
+tt.attacks.list[2].enemy_fx_small = "fx_tower_stargazers_teleport_enemy_small"
+tt.attacks.list[2].enemy_fx_big = "fx_tower_stargazers_teleport_enemy_big"
+tt.attacks.list[2].cooldown = nil
+tt.attacks.list[2].vis_flags = bor(F_TELEPORT)
+tt.attacks.list[2].vis_bans = bor(F_BOSS, F_MINIBOSS, F_NIGHTMARE)
+tt.attacks.list[2].shoot_time = fts(31)
+tt.attacks.list[2].load_time = fts(13)
+tt.attacks.list[2].teleport_nodes_back = b.teleport.teleport_nodes_back
+tt.attacks.list[2].max_targets = b.teleport.max_targets
+tt.attacks.list[2].sound_cast = "TowerElvenStargazersEventHorizonCast"
+tt.attacks.list[2].sound_teleport_out = "TowerElvenStargazersEventHorizonTeleportOut"
+tt.attacks.list[2].sound_teleport_in = "TowerElvenStargazersEventHorizonTeleportIn"
+tt.attacks.list[3] = CC("custom_attack")
+tt.attacks.list[3].animation = "skill2"
+tt.attacks.list[3].mod = "mod_tower_elven_stargazers_star_death"
+tt.ui.click_rect = r(-40, 0, 85, 93)
+
+tt = E:register_t("tower_elven_stargazers_ray", "bullet")
+local b = balance.towers.elven_stargazers
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.damage_min = b.basic_attack.damage_min[4]
+tt.bullet.damage_max = b.basic_attack.damage_max[4]
+tt.bullet.hit_time = fts(2)
+tt.bullet.out_fx = "fx_tower_elven_stargazers_ray_hit_start"
+tt.bullet.mod = "mod_tower_elven_stargazers_ray_hit"
+tt.bullet.hit_fx = "fx_tower_elven_stargazers_ray_hit"
+tt.hit_fx_only_no_target = true
+tt.image_width = 169
+tt.main_script.update = scripts.ray5_simple.update
+tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+tt.render.sprites[1].name = "elven_stargazers_tower_ray_idle"
+tt.render.sprites[1].loop = false
+tt.track_target = true
+tt.ray_duration = fts(5)
+tt.sound_events.insert = "TowerElvenStargazersBasicAttack"
+
+tt = E:register_t("arrow_tower_stargazers_death_star", "arrow")
+b = balance.towers.elven_stargazers
+tt.main_script.update = scripts.arrow.update
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].name = "elven_stargazers_tower_rising_star_star_idle"
+tt.bullet.particles_name = "ps_stargazers_death_star_trail"
+tt.bullet.miss_decal = nil
+tt.bullet.hit_blood_fx = nil
+tt.bullet.miss_fx = "fx_tower_stargazers_death_star_hit"
+tt.bullet.hit_fx = "fx_tower_stargazers_death_star_hit"
+tt.bullet.mod = "mod_tower_stargazers_death_star_stun"
+tt.bullet.damage_max = b.stars_death.damage_max
+tt.bullet.damage_min = b.stars_death.damage_min
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.flight_time_variance = 3
+tt.bullet.flight_time = fts(20)
+tt.bullet.hide_radius = 0
+tt.bullet.g = -2 / (fts(1) * fts(1))
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 15
+tt.sound_events.hit = "TowerElvenStargazersRisingStarImpact"
+
+tt = E:register_t("mod_tower_elven_stargazers_ray_hit", "modifier")
+AC(tt, "render")
+b = balance.towers.elven_stargazers
+-- tt.modifier.damage_min = nil
+-- tt.modifier.damage_max = nil
+-- tt.damage_type = DAMAGE_MAGICAL
+tt.main_script.update = scripts.mod_ray_stargazers.update
+tt.modifier.duration = fts(10)
+-- tt.modifier.allows_duplicates = true
+tt.modifier.use_mod_offset = true
+tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS + 1
+-- tt.damage_from_bullet = true
+
+tt = E:register_t("mod_tower_elven_stargazers_star_death", "modifier")
+b = balance.towers.elven_stargazers
+tt.main_script.update = scripts.mod_stargazers_stars_death.update
+tt.modifier.duration = fts(10)
+tt.modifier.allows_duplicates = false
+tt.modifier.use_mod_offset = true
+tt.modifier.bullet = "arrow_tower_stargazers_death_star"
+tt.modifier.stars_death_min_range = b.stars_death.min_range
+tt.modifier.stars_death_max_range = b.stars_death.max_range
+tt.modifier.stars_death_chance = b.stars_death.chance
+tt.modifier.stars_death_stars = b.stars_death.stars
+
+tt = E:register_t("mod_tower_stargazers_teleport_stun", "mod_stun")
+tt.modifier.duration = 5
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.render.sprites[1] = nil
+
+tt = E:register_t("mod_tower_stargazers_death_star_stun", "mod_stun")
+b = balance.towers.elven_stargazers.stars_death
+tt.modifier.duration = b.stun
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.render.sprites[1] = nil
+
+-- 观星 END

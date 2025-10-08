@@ -267,4 +267,10 @@ return {merge(templates.upgrade, {
     place = 17,
     tt_title = _("TOWER_RAY_NAME"),
     tt_desc = _("TOWER_RAY_4_DESCRIPTION")
+}), merge(templates.upgrade, {
+    action_arg = "tower_elven_stargazers_lvl4",
+    image = "kr5_main_icons_0008",
+    place = 18,
+    tt_title = _("TOWER_ELVEN_STARGAZERS_NAME"),
+    tt_desc = _("TOWER_ELVEN_STARGAZERS_4_DESCRIPTION")
 })}

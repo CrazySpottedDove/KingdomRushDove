@@ -4,7 +4,7 @@ local GS = {}
 GS.archer_towers = {"tower_archer_1", "tower_archer_2", "tower_archer_3", "tower_ranger", "tower_musketeer", "tower_crossbow",
             "tower_totem", "tower_archer_dwarf", "tower_pirate_watchtower", "tower_arcane", "tower_silver","tower_dark_elf_lvl4"}
 GS.mage_towers = {"tower_mage_1", "tower_mage_2", "tower_mage_3", "tower_arcane_wizard", "tower_sorcerer", "tower_sunray",
-            "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon", "tower_pixie", "tower_necromancer_lvl4","tower_ray_lvl4"}
+            "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon", "tower_pixie", "tower_necromancer_lvl4","tower_ray_lvl4","tower_elven_stargazers_lvl4"}
 GS.engineer_towers = {"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_tesla", "tower_dwaarp",
             "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood","tower_tricannon_lvl4"}
 GS.barrack_towers = {"tower_barrack_1", "tower_barrack_2", "tower_barrack_3", "tower_paladin", "tower_barbarian",

@@ -361,12 +361,12 @@ end
 function upgrades:mage_towers()
     return {"tower_mage_1", "tower_mage_2", "tower_mage_3", "tower_arcane_wizard", "tower_sorcerer", "tower_sunray",
             "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon",
-            "tower_pixie", "tower_necromancer_lvl4","tower_ray_lvl4"}
+            "tower_pixie", "tower_necromancer_lvl4","tower_ray_lvl4","tower_elven_stargazers_lvl4"}
 end
 
 function upgrades:mage_tower_bolts()
     return {"bolt_1", "bolt_2", "bolt_3", "bolt_sorcerer", "bolt_archmage", "ray_sunray", "bolt_necromancer_tower",
-            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn","bullet_tower_ray_lvl4","bullet_tower_ray_chain"}
+            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn","bullet_tower_ray_lvl4","bullet_tower_ray_chain","tower_elven_stargazers_ray"}
 end
 
 function upgrades:bolts()

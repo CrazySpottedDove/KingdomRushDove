@@ -131,6 +131,12 @@ return {
         place = 17,
         tt_title = _("TOWER_RAY_NAME"),
         tt_desc = _("TOWER_RAY_4_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_elven_stargazers_lvl4",
+        image = "kr5_main_icons_0008",
+        place = 18,
+        tt_title = _("TOWER_ELVEN_STARGAZERS_NAME"),
+        tt_desc = _("TOWER_ELVEN_STARGAZERS_4_DESCRIPTION")
     }), templates.sell}},
 
     -- 炮塔
@@ -946,16 +952,13 @@ return {
         tt_phrase = _("TOWER_ELF_CRIPPLE_NOTE"),
         tt_list = {{
             tt_title = _("TOWER_ELF_CRIPPLE_1_NAME"),
-            tt_desc = _(
-                "TOWER_ELF_CRIPPLE_1_DESCRIPTION")
+            tt_desc = _("TOWER_ELF_CRIPPLE_1_DESCRIPTION")
         }, {
             tt_title = _("TOWER_ELF_CRIPPLE_2_NAME"),
-            tt_desc = _(
-                "TOWER_ELF_CRIPPLE_2_DESCRIPTION")
+            tt_desc = _("TOWER_ELF_CRIPPLE_2_DESCRIPTION")
         }, {
             tt_title = _("TOWER_ELF_CRIPPLE_3_NAME"),
-            tt_desc = _(
-                "TOWER_ELF_CRIPPLE_3_DESCRIPTION")
+            tt_desc = _("TOWER_ELF_CRIPPLE_3_DESCRIPTION")
         }}
     }), merge(templates.buy_soldier, {
         action_arg = "soldier_elf",
@@ -1119,8 +1122,7 @@ return {
         tt_phrase = _("SPECIAL_AMAZONAS_VALKYRIE_NOTE"),
         tt_list = {{
             tt_title = _("SPECIAL_AMAZONAS_VALKYRIE_1_NAME"),
-            tt_desc = _(
-                "SPECIAL_AMAZONAS_VALKYRIE_1_DESCRIPTION")
+            tt_desc = _("SPECIAL_AMAZONAS_VALKYRIE_1_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "whirlwind",
@@ -1187,8 +1189,7 @@ return {
         tt_phrase = _("TOWER_SUNRAY_MANUAL_NOTE"),
         tt_list = {{
             tt_title = _("TOWER_SUNRAY_MANUAL_NAME"),
-            tt_desc = _(
-                "TOWER_SUNRAY_MANUAL_DESCRIPTION")
+            tt_desc = _("TOWER_SUNRAY_MANUAL_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
         image = "main_icons_0020",
@@ -1198,8 +1199,7 @@ return {
         tt_phrase = _("TOWER_SUNRAY_AUTO_NOTE"),
         tt_list = {{
             tt_title = _("TOWER_SUNRAY_AUTO_NAME"),
-            tt_desc = _(
-                "TOWER_SUNRAY_AUTO_DESCRIPTION")
+            tt_desc = _("TOWER_SUNRAY_AUTO_DESCRIPTION")
         }}
     }), templates.point, templates.sell}},
 
@@ -2151,6 +2151,40 @@ return {
         }, {
             tt_title = _("TOWER_RAY_4_SHEEP_3_NAME"),
             tt_desc = _("TOWER_RAY_4_SHEEP_3_DESCRIPTION")
+        }}
+    }), templates.sell}},
+
+    elven_stargazers = {{merge(templates.upgrade_power, {
+        action_arg = "teleport",
+        image = "kr5_special_icons_0013",
+        place = 6,
+        sounds = {"TowerElvenStargazersSkillATaunt"},
+        tt_phrase = _("TOWER_STARGAZER_4_EVENT_HORIZON_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_STARGAZER_4_EVENT_HORIZON_1_NAME"),
+            tt_desc = _("TOWER_STARGAZER_4_EVENT_HORIZON_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_STARGAZER_4_EVENT_HORIZON_2_NAME"),
+            tt_desc = _("TOWER_STARGAZER_4_EVENT_HORIZON_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_STARGAZER_4_EVENT_HORIZON_3_NAME"),
+            tt_desc = _("TOWER_STARGAZER_4_EVENT_HORIZON_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "stars_death",
+        image = "kr5_special_icons_0014",
+        place = 7,
+        sounds = {"TowerElvenStargazersSkillBTaunt"},
+        tt_phrase = _("TOWER_STARGAZER_4_RISING_STAR_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_STARGAZER_4_RISING_STAR_1_NAME"),
+            tt_desc = _("TOWER_STARGAZER_4_RISING_STAR_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_STARGAZER_4_RISING_STAR_2_NAME"),
+            tt_desc = _("TOWER_STARGAZER_4_RISING_STAR_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_STARGAZER_4_RISING_STAR_3_NAME"),
+            tt_desc = _("TOWER_STARGAZER_4_RISING_STAR_3_DESCRIPTION")
         }}
     }), templates.sell}}
 }
