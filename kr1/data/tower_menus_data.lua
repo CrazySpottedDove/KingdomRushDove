@@ -124,7 +124,7 @@ return {
         image = "kr5_main_icons_0011",
         place = 16,
         tt_title = _("TOWER_NECROMANCER_NAME"),
-        tt_desc = _("TOWER_NECROMANCER_1_DESCRIPTION")
+        tt_desc = _("TOWER_NECROMANCER_4_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_ray_lvl4",
         image = "kr5_main_icons_0018",
@@ -136,7 +136,7 @@ return {
         image = "kr5_main_icons_0008",
         place = 18,
         tt_title = _("TOWER_ELVEN_STARGAZERS_NAME"),
-        tt_desc = _("TOWER_ELVEN_STARGAZERS_4_DESCRIPTION")
+        tt_desc = _("TOWER_STARGAZER_4_DESCRIPTION")
     }), templates.sell}},
 
     -- 炮塔

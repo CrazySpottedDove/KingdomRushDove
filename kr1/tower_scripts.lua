@@ -11169,6 +11169,7 @@ function scripts.tower_stargazers.update(this, store, script)
     local shots = 5
     local pow_t = this.powers.teleport
     local pow_s = this.powers.stars_death
+    local mod_star_m = E:get_template("mod_tower_elven_stargazers_star_death").modifier
     local last_ts = store.tick_ts - aa.cooldown
     this.teleport_targets = {}
     a._last_target_pos = a._last_target_pos or v(REF_W, 0)
@@ -11311,7 +11312,6 @@ function scripts.tower_stargazers.update(this, store, script)
                     if enemy then
                         enemies = U.find_enemies_in_range(store, enemy.pos, 0, 100, at.vis_flags, at.vis_bans)
 
-                        local picked_enemies = {}
                         local place_pi = enemy.nav_path.pi
                         local middle = V.v(enemy.pos.x, enemy.pos.y)
 
@@ -11346,6 +11346,30 @@ function scripts.tower_stargazers.update(this, store, script)
                                 fx.render.sprites[1].ts = store.tick_ts
 
                                 queue_insert(store, fx)
+                                if pow_s.level > 0 then
+                                    local e_pos = {
+                                        x = enemy.pos.x + enemy.unit.hit_offset.x,
+                                        y = enemy.pos.y + enemy.unit.hit_offset.y
+                                    }
+                                    local targets = U.find_enemies_in_range(store, e_pos, 0, mod_star_m.stars_death_max_range, F_ENEMY, F_NONE)
+                                    if targets then
+                                        for i = 1, mod_star_m.stars_death_stars[pow_s.level] do
+                                            local target = targets[i]
+                                            if not target then
+                                                break
+                                            end
+                                            local b = E:create_entity(mod_star_m.bullet)
+                                            b.pos = e_pos
+                                            b.bullet.from = V.vclone(b.pos)
+                                            b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x,
+                                                target.pos.y + target.unit.hit_offset.y)
+                                            b.bullet.target_id = target.id
+                                            b.bullet.level = pow_s.level
+                                            b.bullet.damage_factor = 0.25 * tw.damage_factor
+                                            queue_insert(store, b)
+                                        end
+                                    end
+                                end
                             end
 
                             local fx = E:create_entity(at.fx)
@@ -11601,7 +11625,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
     while true do
         if not target or target.health.dead then
             if target and chance > math.random() then
-                local targets = U.find_enemies_in_range(store, target.pos, 0, radius, F_ENEMY, F_FLYING)
+                local targets = U.find_enemies_in_range(store, target.pos, 0, radius, F_ENEMY, F_NONE)
 
                 if targets then
                     for i = 1, total_stars do

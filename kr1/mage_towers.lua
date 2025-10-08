@@ -2460,7 +2460,6 @@ tt.sound_events.hit = "TowerElvenStargazersRisingStarImpact"
 
 tt = E:register_t("mod_tower_elven_stargazers_ray_hit", "modifier")
 AC(tt, "render")
-b = balance.towers.elven_stargazers
 -- tt.modifier.damage_min = nil
 -- tt.modifier.damage_max = nil
 -- tt.damage_type = DAMAGE_MAGICAL
