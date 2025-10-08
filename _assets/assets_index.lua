@@ -604,6 +604,7 @@ return {
     ["kr1-desktop/images/fullhd/go_towers-8.dds"] = { size = 22369796},
     ["kr1-desktop/images/fullhd/go_towers_dark_elf-1.dds"] = { size = 5324928},
     ["kr1-desktop/images/fullhd/go_towers_demon_pit-1.dds"] = { size = 12583040},
+    ["kr1-desktop/images/fullhd/go_towers_elven_stargazers-1.dds"] = { size = 5734528},
     ["kr1-desktop/images/fullhd/go_towers_necromancer-1.dds"] = { size = 14745728},
     ["kr1-desktop/images/fullhd/go_towers_pandas-1.dds"] = { size = 16777344},
     ["kr1-desktop/images/fullhd/go_towers_ray-1.dds"] = { size = 5734528},
