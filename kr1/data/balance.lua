@@ -5299,7 +5299,7 @@ local towers = {
         },
         stars_death = {
             max_range = 120,
-            stun = 0.25,
+            stun = 0.8,
             min_range = 0,
             price = {175, 175, 175},
             stars = {3, 4, 5},
