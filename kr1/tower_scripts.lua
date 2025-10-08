@@ -5717,7 +5717,7 @@ function scripts.tower_dark_elf.update(this, store)
         d.reduce_armor = bullet.reduce_armor
 
         if targets then
-            local target_to_kill_hp = target_to_kill.health.hp
+            local target_to_kill_hp = 0
             local target_to_kill_flying = band(target_to_kill.vis.flags, F_FLYING) ~= 0
             for i = 2, #targets do
                 local t = targets[i]
