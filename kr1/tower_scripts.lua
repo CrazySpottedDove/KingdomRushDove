@@ -11213,21 +11213,22 @@ function scripts.tower_stargazers.update(this, store, script)
                     local start_ts = store.tick_ts
 
                     U.animation_start(this, "attack_in", nil, store.tick_ts, false, elf_sid)
-                    U.y_wait(store, 0.5)
+                    U.y_wait(store, 0.5 * tw.cooldown_factor)
                     U.animation_start(this, "attack_loop", nil, store.tick_ts, true, elf_sid)
                     U.animation_start_group(this, "attack_in", nil, store.tick_ts, 1, "layers")
-                    U.y_wait(store, 0.25)
+                    U.y_wait(store, 0.25 * tw.cooldown_factor)
                     U.animation_start_group(this, "atack_loop", nil, store.tick_ts, true, "layers")
 
                     this.render.sprites[moon_sid].hidden = false
 
                     U.animation_start(this, "start", nil, store.tick_ts, false, moon_sid)
-                    U.y_wait(store, 0.25)
+                    U.y_wait(store, 0.25 * tw.cooldown_factor)
                     U.animation_start(this, "loop", nil, store.tick_ts, true, moon_sid)
-
-                     enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
+                    local _, new_enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
                         aa.vis_bans)
-
+                    if new_enemies then
+                        enemies = new_enemies
+                    end
                     for i = 1, shots do
                         enemy = enemies[km.zmod(i, #enemies)]
 
@@ -11265,7 +11266,7 @@ function scripts.tower_stargazers.update(this, store, script)
                         bullet.bullet.level = this.tower.level
 
                         queue_insert(store, bullet)
-                        U.y_wait(store, ray_timing)
+                        U.y_wait(store, ray_timing * tw.cooldown_factor)
 
                         enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
 
@@ -11275,11 +11276,11 @@ function scripts.tower_stargazers.update(this, store, script)
                     end
 
                     U.animation_start(this, "attack_out", nil, store.tick_ts, false, elf_sid)
-                    U.y_wait(store, 0.25)
+                    U.y_wait(store, 0.25 * tw.cooldown_factor)
                     U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
                     U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
                     U.animation_start(this, "end", nil, store.tick_ts, false, moon_sid)
-                    U.y_wait(store, 0.25)
+                    U.y_wait(store, 0.25 * tw.cooldown_factor)
 
                     this.render.sprites[moon_sid].hidden = true
 
@@ -11354,7 +11355,7 @@ function scripts.tower_stargazers.update(this, store, script)
                             fx.render.sprites[1].ts = store.tick_ts
 
                             queue_insert(store, fx)
-                            U.y_wait(store, 0.2)
+                            U.y_wait(store, 0.2 * tw.cooldown_factor)
 
                             for i = 1, count do
                                 local enemy = enemies[i]
@@ -11393,7 +11394,7 @@ function scripts.tower_stargazers.update(this, store, script)
                                 end
                             end
 
-                            U.y_wait(store, 0.5)
+                            U.y_wait(store, 0.5 * tw.cooldown_factor)
                             queue_insert(store, fx)
                             S:queue(at.sound_teleport_in)
                             U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
@@ -11445,14 +11446,19 @@ function scripts.tower_stargazers.update(this, store, script)
 
                             at.ts = start_ts
                         else
-                            U.y_wait(store, 0.5)
+                            U.y_wait(store, 0.5 * tw.cooldown_factor)
                             U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
                             U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
                             U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
                             U.y_animation_wait_group(this, "layers")
                         end
+                    else
+                        U.y_wait(store, 0.5 * tw.cooldown_factor)
+                        U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
+                        U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
+                        U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
+                        U.y_animation_wait_group(this, "layers")
                     end
-
                 end
             end
         end
