@@ -26,6 +26,7 @@ new_id="$major.$minor.$patch"
 
 # 压缩包名用新 id
 mkdir -p ./.versions
+BASE_DIR="$(pwd)"
 OUTPUT_ZIP="$(pwd)/.versions/Kingdom Rush_${current_id}.zip"
 
 if [ -f "../Kingdom Rush.zip" ]; then
@@ -45,7 +46,6 @@ rm changed_files.txt
 # 更新 version.lua
 sed -i "s/version\.id = \".*\"/version.id = \"$new_id\"/" "$VERSION_FILE"
 
-TMP_FILES=$(cat "makefiles/.tmp_files")
 cd "$(cat makefiles/.windows_kr_dove_dir)"
-zip "$OUTPUT_ZIP" "$TMP_FILES"
+zip "$OUTPUT_ZIP" -@  < "$BASE_DIR/makefiles/.tmp_files"
 cd - >/dev/null
