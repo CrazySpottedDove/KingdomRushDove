@@ -196,7 +196,7 @@ function sys.level:init(store)
         P:reverse_all_paths()
     end
     E:load()
-    UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
+
     DI:patch_templates()
 
     W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
@@ -212,6 +212,8 @@ function sys.level:init(store)
     if store.level.init then
         store.level:init(store)
     end
+
+    UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
 
     if store.level.data then
         store.level.locations = {}
