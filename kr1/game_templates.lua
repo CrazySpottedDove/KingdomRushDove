@@ -9933,3 +9933,12 @@ tt.render.sprites[1].draw_order = 3
 tt.render.sprites[1].z = Z_OBJECT
 tt.main_script.update = scripts.fx_tower_ray_lvl4_shock.update
 tt.timed.runs = 1e+99
+
+tt = E:register_t("moon_controller_s91", "moon_controller")
+tt.main_script.update = scripts.moon_controller_s91.update
+tt.transit_time = 5
+tt.hold_time = 15
+tt.inactive_time = 25
+tt.enemy_damage_factor = 1.25
+tt.enemy_speed_factor = 1.25
+tt.enemy_cooldown_factor = 0.75

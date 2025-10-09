@@ -2788,6 +2788,10 @@ sys.last_hook.name = "last_hook"
 function sys.last_hook:init(store)
     store.dead_soldier_count = 0
     store.enemy_count = 0
+    store.last_hooks = {
+        on_insert = {},
+        on_remove = {}
+    }
 end
 function sys.last_hook:on_insert(e, d)
     if e.enemy then
@@ -2842,9 +2846,11 @@ function sys.last_hook:on_insert(e, d)
     if e.render then
         d.entities_with_render[e.id] = e
     end
-
     if e.motion and e.motion.max_speed ~= 0 then
         e.motion.real_speed = e.motion.max_speed
+    end
+    for _, hook in pairs(d.last_hooks.on_insert) do
+        hook(e, d)
     end
     return true
 end
@@ -2888,6 +2894,9 @@ function sys.last_hook:on_remove(e, d)
     end
     if e.render then
         d.entities_with_render[e.id] = nil
+    end
+    for _, hook in pairs(d.last_hooks.on_remove) do
+        hook(e, d)
     end
     -- log.error(e.template_name)
     return true

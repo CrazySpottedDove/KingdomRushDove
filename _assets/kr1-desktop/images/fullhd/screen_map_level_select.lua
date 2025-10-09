@@ -1046,5 +1046,13 @@ return {
         a_size = {342, 246},
         f_quad = {0, 0, 342, 246},
         alias = {}
+    },
+    stage_thumbs_0091 = {
+        a_name = "go_stage91_bg-1.png",
+        size = {1920, 1080},
+        trim = {0, 0, 0, 0},
+        a_size = {342, 246},
+        f_quad = {0, 0, 342, 246},
+        alias = {}
     }
 }

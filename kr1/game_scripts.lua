@@ -31952,6 +31952,106 @@ function scripts.endless_mage_thunder.update(this, store)
 
     queue_remove(store, this)
 end
+scripts.moon_controller_s91 = {}
+
+function scripts.moon_controller_s91.update(this, store)
+    local glow_sid, eyes_sid = 1, 4
+    local glow_s = this.render.sprites[glow_sid]
+    local eyes_s = this.render.sprites[eyes_sid]
+    local moon = this.decal_moon_dark
+    local moon_s = moon.render.sprites[1]
+    local moon_light = this.decal_moon_light
+    local overlay = this.moon_overlay
+    local fade_time = overlay.tween.props[1].keys[2][1]
+    local transit_time = this.transit_time
+    local hold_time = this.hold_time
+    local inactive_time = this.inactive_time
+    while not store.enemy_count or store.enemy_count == 0 do
+        coroutine.yield()
+    end
+    local time = store.tick_ts
+    while true do
+        while store.tick_ts - time < inactive_time do
+            coroutine.yield()
+        end
+        moon.tween.props[1].keys = {{0, math.pi / 5}, {transit_time, math.pi * 0.5}}
+        moon.tween.disabled = nil
+        moon.tween.ts = store.tick_ts
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+        moon.tween.props[1].keys = {{0, math.pi / 5}, {transit_time, math.pi * 0.5}}
+        moon.tween.disabled = nil
+        moon.tween.ts = store.tick_ts
+        moon_light.tween.ts = store.tick_ts
+        moon_light.tween.reverse = false
+        this.tween.ts = store.tick_ts
+        this.tween.reverse = false
+        overlay.tween.ts = store.tick_ts
+        overlay.tween.reverse = false
+
+        S:queue("MusicHalloweenMoon")
+
+        signal.emit("moon-changed", true, store)
+        time = store.tick_ts
+        this.moon_active = true
+        for _, e in pairs(store.enemies) do
+            e.unit.damage_factor = e.unit.damage_factor * this.enemy_damage_factor
+            U.speed_mul(e, this.enemy_speed_factor)
+            SU.insert_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+        end
+        U.insert_insert_hook(store, this.id, function(e, d)
+            if e.enemy then
+                e.unit.damage_factor = e.unit.damage_factor * this.enemy_damage_factor
+                U.speed_mul(e, this.enemy_speed_factor)
+                SU.insert_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+            end
+        end)
+        while store.tick_ts - time < hold_time do
+            coroutine.yield()
+        end
+        for _, e in pairs(store.enemies) do
+            e.unit.damage_factor = e.unit.damage_factor / this.enemy_damage_factor
+            U.speed_div(e, this.enemy_speed_factor)
+            SU.remove_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+        end
+        U.remove_insert_hook(store, this.id)
+
+        signal.emit("moon-changed", false, store)
+
+        this.moon_active = false
+
+        if not this.tween.reverse then
+            this.tween.ts = store.tick_ts
+            this.tween.reverse = true
+        end
+
+        if not overlay.tween.reverse then
+            overlay.tween.ts = store.tick_ts
+            overlay.tween.reverse = true
+        end
+
+        if not moon_light.tween.reverse then
+            moon_light.tween.ts = store.tick_ts
+            moon_light.tween.reverse = true
+
+            U.y_wait(store, fade_time)
+        end
+
+        S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+            seek = 19.774
+        })
+
+        moon.tween.props[1].keys = {{0, moon_s.r}, {transit_time, 4 * math.pi / 5}}
+        moon.tween.ts = store.tick_ts
+
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+    end
+end
 
 return scripts
 

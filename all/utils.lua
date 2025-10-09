@@ -2591,4 +2591,19 @@ function U.splicing_from_kr(from_kr, str)
     return str
 end
 
+function U.insert_insert_hook(store, id, func)
+    store.last_hooks.on_insert[id] = func
+end
+function U.remove_insert_hook(store, id)
+    store.last_hooks.on_insert[id] = nil
+end
+
+function U.insert_remove_hook(store, id, func)
+    store.last_hooks.on_remove[id] = func
+end
+
+function U.insert_remove_hook(store, id)
+    store.last_hooks.on_remove[id] = nil
+end
+
 return U

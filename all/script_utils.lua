@@ -3121,6 +3121,7 @@ local function y_enemy_range_attacks(store, this, target)
         if this.ranged.cooldown and ar.shared_cooldown then
             cooldown = this.ranged.cooldown
         end
+        cooldown = cooldown * this.cooldown_factor
         if not ar.disabled and cooldown <= store.tick_ts - ar.ts and band(ar.vis_flags, target.vis.bans) == 0 and
             band(ar.vis_bans, target.vis.flags) == 0 and (not ar.sync_animation or this.render.sprites[1].sync_flag) then
             ar.ts = store.tick_ts
@@ -3153,9 +3154,9 @@ end
 local function y_enemy_melee_attacks(store, this, target)
     for _, i in ipairs(this.melee.order) do
         local ma = this.melee.attacks[i]
-        local cooldown = ma.cooldown
+        local cooldown = ma.cooldown * this.cooldown_factor
         if ma.shared_cooldown then
-            cooldown = this.melee.cooldown
+            cooldown = this.melee.cooldown * this.cooldown_factor
         end
         if not ma.disabled and cooldown <= store.tick_ts - ma.ts and band(ma.vis_flags, target.vis.bans) == 0 and
             band(ma.vis_bans, target.vis.flags) == 0 and (not ma.fn_can or ma.fn_can(this, store, ma, target)) then
@@ -3661,7 +3662,7 @@ local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
-local function insert_soldier_cooldown_buff(ts, target, cooldown_factor)
+local function insert_unit_cooldown_buff(ts, target, cooldown_factor)
     if not target then
         return
     end
@@ -3713,7 +3714,7 @@ local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
-local function remove_soldier_cooldown_buff(ts, target, cooldown_factor)
+local function remove_unit_cooldown_buff(ts, target, cooldown_factor)
     if not target then
         return
     end
@@ -3966,8 +3967,8 @@ local SU = {
     update_on_damage = update_on_damage,
     hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
     towers_swaped = towers_swaped,
-    insert_soldier_cooldown_buff = insert_soldier_cooldown_buff,
-    remove_soldier_cooldown_buff = remove_soldier_cooldown_buff,
+    insert_unit_cooldown_buff = insert_unit_cooldown_buff,
+    remove_unit_cooldown_buff = remove_unit_cooldown_buff,
     is_wraith = is_wraith
 }
 

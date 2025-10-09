@@ -713,9 +713,10 @@ function editor:level_load(idx, mode)
 	s.level_difficulty = DIFFICULTY_EASY
 	s.level = LU.load_level(s, s.level_name, true)
 
-	director:load_texture_groups(s.level.data.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
-
-	LU.insert_entities(self.store, s.level.data.entities_list, true)
+	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
+    if s.level.data then
+    	LU.insert_entities(self.store, s.level.data.entities_list, true)
+    end
 
 	if IS_KR5 then
 		EXO:load(s.level.data.required_exoskeletons)
@@ -749,6 +750,9 @@ function editor:level_load(idx, mode)
 
 	if not s.level.nav_mesh then
 		s.level.nav_mesh = {}
+        if not s.level.data then
+            s.level.data = {}
+        end
 		s.level.data.nav_mesh = s.level.nav_mesh
 	end
 
@@ -757,7 +761,10 @@ function editor:level_load(idx, mode)
 	self.nav_dirty = true
 	self.undo_stack = {}
 	self.undo_active = true
-
+    if s.level.load then
+        P.add_invalid_range = function()end
+        s.level:load(s)
+    end
 	self.gui:level_loaded(idx)
 end
 
