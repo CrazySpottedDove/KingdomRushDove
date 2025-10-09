@@ -5304,8 +5304,8 @@ local towers = {
             price = {175, 175, 175},
             stars = {3, 4, 5},
             chance = {1, 1, 1},
-            damage_min = {18, 31, 40},
-            damage_max = {26, 46, 59}
+            damage_min = {16, 28, 36},
+            damage_max = {24, 42, 54}
         }
     },
     tricannon = {
