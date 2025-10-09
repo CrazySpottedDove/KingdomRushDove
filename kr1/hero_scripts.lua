@@ -13735,7 +13735,7 @@ function scripts.hero_faustus.update(this, store)
                 -- block empty
             elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
-            elseif store.tick_ts - a.ts < a.cooldown then
+            elseif store.tick_ts - a.ts < a.cooldown * this.cooldown_factor then
                 -- block empty
             else
                 local bullet_t = E:get_template(a.bullet)
@@ -13810,9 +13810,7 @@ function scripts.hero_faustus.update(this, store)
 
                     if a.bullet_count then
                         local extra_targets = U.find_enemies_in_range(store, target.pos, 0, a.extra_range, a.vis_flags,
-                            a.vis_bans, function(e)
-                                return af and e.pos.x <= this.pos.x or e.pos.x >= this.pos.x
-                            end)
+                            a.vis_bans)
 
                         if not extra_targets then
                             goto label_112_0
