@@ -32000,12 +32000,14 @@ function scripts.moon_controller_s91.update(this, store)
             e.unit.damage_factor = e.unit.damage_factor * this.enemy_damage_factor
             U.speed_mul(e, this.enemy_speed_factor)
             SU.insert_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+            e.health.damage_factor = e.health.damage_factor * this.enemy_health_factor
         end
         U.insert_insert_hook(store, this.id, function(e, d)
             if e.enemy then
                 e.unit.damage_factor = e.unit.damage_factor * this.enemy_damage_factor
                 U.speed_mul(e, this.enemy_speed_factor)
                 SU.insert_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+                e.health.damage_factor = e.health.damage_factor * this.enemy_health_factor
             end
         end)
         while store.tick_ts - time < hold_time do
@@ -32015,6 +32017,7 @@ function scripts.moon_controller_s91.update(this, store)
             e.unit.damage_factor = e.unit.damage_factor / this.enemy_damage_factor
             U.speed_div(e, this.enemy_speed_factor)
             SU.remove_unit_cooldown_buff(store.tick_ts, e, this.enemy_cooldown_factor)
+            e.health.damage_factor = e.health.damage_factor / this.enemy_health_factor
         end
         U.remove_insert_hook(store, this.id)
 

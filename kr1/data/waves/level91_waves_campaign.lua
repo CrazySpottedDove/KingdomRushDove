@@ -829,7 +829,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
-                interval_next = 1000,
+                interval_next = 500,
                 path = 1
             }, {
                 interval = 15,
@@ -990,7 +990,7 @@ return {
                 interval = 20,
                 max = 5,
                 fixed_sub_path = 0,
-                creep = "enemy_deviletide",
+                creep = "enemy_deviltide",
                 max_same = 0,
                 interval_next = 600,
                 path = 1

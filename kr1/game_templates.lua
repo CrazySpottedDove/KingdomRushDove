@@ -9942,3 +9942,4 @@ tt.inactive_time = 25
 tt.enemy_damage_factor = 1.25
 tt.enemy_speed_factor = 1.25
 tt.enemy_cooldown_factor = 0.75
+tt.enemy_health_factor = 0.75
