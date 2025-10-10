@@ -11156,6 +11156,33 @@ end
 
 -- 观星 BEGIN
 scripts.tower_stargazers = {}
+function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
+    local mod_star_m = E:get_template("mod_tower_elven_stargazers_star_death").modifier
+    local pow_s = this.powers.stars_death
+    if pow_s.level > 0 then
+        local e_pos = {
+            x = enemy.pos.x + enemy.unit.hit_offset.x,
+            y = enemy.pos.y + enemy.unit.hit_offset.y
+        }
+        local targets = U.find_enemies_in_range(store, e_pos, 0, mod_star_m.stars_death_max_range, F_ENEMY, F_NONE)
+        if targets then
+            for i = 1, mod_star_m.stars_death_stars[pow_s.level] do
+                local target = targets[i]
+                if not target then
+                    break
+                end
+                local b = E:create_entity(mod_star_m.bullet)
+                b.pos = e_pos
+                b.bullet.from = V.vclone(b.pos)
+                b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+                b.bullet.target_id = target.id
+                b.bullet.level = pow_s.level
+                b.bullet.damage_factor = factor * this.tower.damage_factor
+                queue_insert(store, b)
+            end
+        end
+    end
+end
 
 function scripts.tower_stargazers.update(this, store, script)
     local last_target_pos
@@ -11201,7 +11228,8 @@ function scripts.tower_stargazers.update(this, store, script)
             -- block empty
         else
             if ready_to_attack(aa, store, tw.cooldown_factor) then
-                local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
+                local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
+                    aa.vis_bans)
                 if not enemy then
                     aa.ts = aa.ts + fts(10)
                 else
@@ -11243,21 +11271,22 @@ function scripts.tower_stargazers.update(this, store, script)
                             bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x,
                                 enemy.pos.y + enemy.unit.hit_offset.y)
                             bullet.bullet.target_id = enemy.id
+                            if pow_s.level > 0 then
+                                local m = E:create_entity(as.mod)
+
+                                m.modifier.target_id = enemy.id
+                                m.modifier.source_id = this.id
+                                m.modifier.damage_factor = tw.damage_factor
+                                m.modifier.level = pow_s.level
+
+                                queue_insert(store, m)
+                            end
                         else
                             bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x + math.random(-20, 20),
                                 enemy.pos.y + enemy.unit.hit_offset.y + math.random(-20, 20))
                             bullet.bullet.target_id = nil
-                        end
-
-                        if pow_s.level > 0 then
-                            local m = E:create_entity(as.mod)
-
-                            m.modifier.target_id = enemy.id
-                            m.modifier.source_id = this.id
-                            m.modifier.damage_factor = tw.damage_factor
-                            m.modifier.level = pow_s.level
-
-                            queue_insert(store, m)
+                            -- new: 鞭尸时，也触发星爆
+                            scripts.tower_stargazers.create_star_death(this, store, enemy, 1)
                         end
 
                         local start_offset = aa.bullet_start_offset[1]
@@ -11346,30 +11375,7 @@ function scripts.tower_stargazers.update(this, store, script)
                                 fx.render.sprites[1].ts = store.tick_ts
 
                                 queue_insert(store, fx)
-                                if pow_s.level > 0 then
-                                    local e_pos = {
-                                        x = enemy.pos.x + enemy.unit.hit_offset.x,
-                                        y = enemy.pos.y + enemy.unit.hit_offset.y
-                                    }
-                                    local targets = U.find_enemies_in_range(store, e_pos, 0, mod_star_m.stars_death_max_range, F_ENEMY, F_NONE)
-                                    if targets then
-                                        for i = 1, mod_star_m.stars_death_stars[pow_s.level] do
-                                            local target = targets[i]
-                                            if not target then
-                                                break
-                                            end
-                                            local b = E:create_entity(mod_star_m.bullet)
-                                            b.pos = e_pos
-                                            b.bullet.from = V.vclone(b.pos)
-                                            b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x,
-                                                target.pos.y + target.unit.hit_offset.y)
-                                            b.bullet.target_id = target.id
-                                            b.bullet.level = pow_s.level
-                                            b.bullet.damage_factor = 0.25 * tw.damage_factor
-                                            queue_insert(store, b)
-                                        end
-                                    end
-                                end
+                                scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
                             end
 
                             local fx = E:create_entity(at.fx)

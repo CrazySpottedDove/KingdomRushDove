@@ -31996,6 +31996,8 @@ function scripts.moon_controller_s91.update(this, store)
         signal.emit("moon-changed", true, store)
         time = store.tick_ts
         this.moon_active = true
+        local spawn_count = store.wave_group_number or 1
+        local spawn_gap = hold_time / spawn_count
         for _, e in pairs(store.enemies) do
             e.unit.damage_factor = e.unit.damage_factor * this.enemy_damage_factor
             U.speed_mul(e, this.enemy_speed_factor)
@@ -32010,7 +32012,20 @@ function scripts.moon_controller_s91.update(this, store)
                 e.health.damage_factor = e.health.damage_factor * this.enemy_health_factor
             end
         end)
+        local spawn_ts = time - spawn_gap
         while store.tick_ts - time < hold_time do
+            if store.tick_ts - spawn_ts > spawn_gap then
+                local e = E:create_entity(this.spawn_creep)
+                e.nav_path.pi = math.random(2, 4)
+                e.nav_path.spi = 1
+                e.nav_path.ni = P:get_start_node(e.nav_path.pi)
+                e.enemy.gold = 0
+                for _, s in pairs(e.render.sprites) do
+                    s.alpha = 180
+                end
+                queue_insert(store, e)
+                spawn_ts = store.tick_ts
+            end
             coroutine.yield()
         end
         for _, e in pairs(store.enemies) do
