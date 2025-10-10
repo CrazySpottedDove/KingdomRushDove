@@ -1231,7 +1231,7 @@ return {
             path_index = 1,
             spawns = {{
                 interval = 15,
-                max = 6,
+                max = 12,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -1256,8 +1256,8 @@ return {
                 path = 1
             },
             {
-                interval = 15,
-                max = 2,
+                interval = 40,
+                max = 3,
                 fixed_sub_path = 0,
                 creep = "enemy_scorpion",
                 max_same = 0,
@@ -1266,7 +1266,7 @@ return {
             },
             {
                 interval = 15,
-                max = 6,
+                max = 8,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,

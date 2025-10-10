@@ -1317,7 +1317,7 @@ return {
         place = 5,
         tt_title = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_NAME"),
         tt_desc = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_DESCRIPTION")
-    })}},
+    })},templates.sell},
 
     neptune = {{merge(templates.upgrade_power, {
         action_arg = "ray",
@@ -1333,7 +1333,7 @@ return {
             tt_title = _("SPECIAL_NEPTUNE_TOWER_UPGRADE_NAME"),
             tt_desc = _("SPECIAL_NEPTUNE_TOWER_UPGRADE_DESCRIPTION_1")
         }}
-    }), templates.point}},
+    }), templates.point, templates.sell}},
 
     frankenstein = {{merge(templates.upgrade_power, {
         action_arg = "lightning",

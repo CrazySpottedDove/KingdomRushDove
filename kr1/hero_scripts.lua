@@ -13675,6 +13675,11 @@ function scripts.hero_faustus.level_up(this, store)
         m.dps.damage_min = s.mod_damage[s.level]
     end)
 
+    upgrade_skill(this,"urination", function(this, s)
+        this.ranged.attacks[1].bullet_count = s.count[s.level]
+        this.ranged.attacks[2].bullet_count = s.count[s.level]
+    end)
+
     this.health.hp = this.health.hp_max
 end
 

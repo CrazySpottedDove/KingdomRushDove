@@ -9186,6 +9186,17 @@ local function heroes()
         [7] = 3,
         [10] = 4
     }
+    tt.hero.skills.urination = CC("hero_skill")
+    tt.hero.skills.urination.xp_level_steps = {
+        [1] = 1,
+        [4] = 2,
+        [7] = 3
+    }
+    tt.hero.skills.urination.count = {
+        3,
+        4,
+        5
+    }
     tt.hero.skills.ultimate.controller_name = "hero_faustus_ultimate"
     tt.health.dead_lifetime = 15
     tt.health_bar.draw_order = -1
@@ -9252,7 +9263,8 @@ local function heroes()
     tt.ranged.attacks[2].min_range = 0
     tt.ranged.attacks[2].max_range = 150
     tt.ranged.attacks[2].extra_range = 80
-    tt.ranged.attacks[2].shoot_time = fts(22)
+    -- tt.ranged.attacks[2].shoot_time = fts(22)
+    tt.ranged.attacks[2].shoot_time = fts(12)
     tt.ranged.attacks[2].sync_animation = true
     tt.ranged.attacks[2].animation = "altAttackBase"
     tt.ranged.attacks[2].start_fx = "fx_faustus_start_lance"
