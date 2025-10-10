@@ -11166,11 +11166,9 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
         }
         local targets = U.find_enemies_in_range(store, e_pos, 0, mod_star_m.stars_death_max_range, F_ENEMY, F_NONE)
         if targets then
+            local targets_count = #targets
             for i = 1, mod_star_m.stars_death_stars[pow_s.level] do
-                local target = targets[i]
-                if not target then
-                    break
-                end
+                local target = targets[km.zmod(i, targets_count)]
                 local b = E:create_entity(mod_star_m.bullet)
                 b.pos = e_pos
                 b.bullet.from = V.vclone(b.pos)
