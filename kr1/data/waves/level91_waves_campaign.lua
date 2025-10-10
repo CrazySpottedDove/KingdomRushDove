@@ -187,7 +187,7 @@ return {
             path_index = 1,
             spawns = {{
                 interval = 20,
-                max = 5,
+                max = 6,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -195,7 +195,7 @@ return {
                 path = 1
             }, {
                 interval = 40,
-                max = 5,
+                max = 6,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -471,8 +471,8 @@ return {
                 interval_next = 0,
                 path = 1
             }, {
-                interval = 0,
-                max = 1,
+                interval = 30,
+                max = 5,
                 fixed_sub_path = 1,
                 creep = "enemy_ghost",
                 max_same = 0,
@@ -587,7 +587,7 @@ return {
             path_index = 1,
             spawns = {{
                 interval = 20,
-                max = 4,
+                max = 6,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -603,7 +603,7 @@ return {
                 path = 1
             }, {
                 interval = 20,
-                max = 4,
+                max = 6,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -611,7 +611,7 @@ return {
                 path = 1
             }, {
                 interval = 20,
-                max = 4,
+                max = 3,
                 fixed_sub_path = 0,
                 creep = "enemy_scorpion",
                 max_same = 0,
@@ -619,7 +619,7 @@ return {
                 path = 1
             }, {
                 interval = 20,
-                max = 4,
+                max = 3,
                 fixed_sub_path = 0,
                 creep = "enemy_scorpion",
                 max_same = 0,
@@ -825,7 +825,7 @@ return {
             path_index = 1,
             spawns = {{
                 interval = 0,
-                max = 0,
+                max = 1,
                 fixed_sub_path = 1,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -833,7 +833,7 @@ return {
                 path = 1
             }, {
                 interval = 15,
-                max = 12,
+                max = 16,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -1036,8 +1036,38 @@ return {
         interval = 1400,
         waves = {{
             delay = 0,
+            path_index = 1,
+            spawns = {
+            {
+                interval = 0,
+                max = 1,
+                fixed_sub_path = 0,
+                creep = "enemy_necromancer",
+                max_same = 0,
+                interval_next = 450,
+                path = 1
+            }, {
+                interval = 40,
+                max = 1,
+                fixed_sub_path = 0,
+                creep = "enemy_munra",
+                max_same = 0,
+                interval_next = 460,
+                path = 1
+            }, {
+                interval = 40,
+                max = 1,
+                fixed_sub_path = 0,
+                creep = "enemy_necromancer",
+                max_same = 0,
+                interval_next = 0,
+                path = 1
+            }}
+        },{
+            delay = 0,
             path_index = 2,
-            spawns = {{
+            spawns = {
+            {
                 interval = 0,
                 max = 0,
                 fixed_sub_path = 0,
@@ -1178,9 +1208,17 @@ return {
                 path = 1
             }, {
                 interval = 50,
-                max = 2,
+                max = 1,
                 fixed_sub_path = 0,
                 creep = "enemy_bluegale",
+                max_same = 0,
+                interval_next = 0,
+                path = 1
+            },{
+                interval = 50,
+                max = 1,
+                fixed_sub_path = 0,
+                creep = "enemy_redgale",
                 max_same = 0,
                 interval_next = 0,
                 path = 1
@@ -1358,7 +1396,7 @@ return {
                 interval = 0,
                 max = 1,
                 fixed_sub_path = 1,
-                creep = "enemy_bluegale",
+                creep = "enemy_redgale",
                 max_same = 0,
                 interval_next = 160,
                 path = 1
@@ -1443,7 +1481,7 @@ return {
                 interval = 0,
                 max = 1,
                 fixed_sub_path = 1,
-                creep = "enemy_bloodshell",
+                creep = "enemy_greenshell",
                 max_same = 0,
                 interval_next = 850,
                 path = 3
@@ -1564,7 +1602,7 @@ return {
                 path = 1
             }, {
                 interval = 15,
-                max = 2,
+                max = 3,
                 fixed_sub_path = 0,
                 creep = "enemy_munra",
                 max_same = 0,
@@ -1578,7 +1616,7 @@ return {
                 interval = 0,
                 max = 1,
                 fixed_sub_path = 1,
-                creep = "enemy_bloodshell",
+                creep = "enemy_greenshell",
                 max_same = 0,
                 interval_next = 700,
                 path = 2
@@ -1700,7 +1738,7 @@ return {
                 path = 3
             }, {
                 interval = 0,
-                max = 1,
+                max = 2,
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,

@@ -32019,10 +32019,6 @@ function scripts.moon_controller_s91.update(this, store)
                 e.nav_path.pi = math.random(2, 4)
                 e.nav_path.spi = 1
                 e.nav_path.ni = P:get_start_node(e.nav_path.pi)
-                e.enemy.gold = 0
-                for _, s in pairs(e.render.sprites) do
-                    s.alpha = 180
-                end
                 queue_insert(store, e)
                 spawn_ts = store.tick_ts
             end

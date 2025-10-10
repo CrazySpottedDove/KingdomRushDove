@@ -3154,10 +3154,11 @@ end
 local function y_enemy_melee_attacks(store, this, target)
     for _, i in ipairs(this.melee.order) do
         local ma = this.melee.attacks[i]
-        local cooldown = ma.cooldown * this.cooldown_factor
+        local cooldown = ma.cooldown
         if ma.shared_cooldown then
-            cooldown = this.melee.cooldown * this.cooldown_factor
+            cooldown = this.melee.cooldown
         end
+        cooldown = cooldown * this.cooldown_factor
         if not ma.disabled and cooldown <= store.tick_ts - ma.ts and band(ma.vis_flags, target.vis.bans) == 0 and
             band(ma.vis_bans, target.vis.flags) == 0 and (not ma.fn_can or ma.fn_can(this, store, ma, target)) then
             ma.ts = store.tick_ts

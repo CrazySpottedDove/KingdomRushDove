@@ -7157,6 +7157,47 @@ local function enemies()
     tt = RT("enemy_spider_rotten_tiny_with_gold", "enemy_spider_rotten_tiny")
     tt.enemy.gold = 1
 
+    tt = RT("enemy_redgale", "enemy_bluegale")
+    tt.main_script.update = scripts.enemy_mixed_water.update
+    tt.timed_attacks = nil
+    tt.ranged.attacks[1].max_range = 150
+    tt.ranged.attacks[1].bullet = "ray_redgale"
+    tt.render.sprites[1].color = {255, 100, 100}
+    tt.render.sprites[2].color = {255, 100, 100}
+
+    tt = RT("ray_redgale", "ray_bluegale")
+    tt.render.sprites[1].color = {255, 100, 100}
+    tt.bullet.damage_min = 50
+    tt.bullet.damage_max = 90
+
+    tt = RT("enemy_greenshell", "enemy_bloodshell")
+    AC(tt, "auras")
+    tt.render.sprites[1].color = {100, 255, 100}
+    tt.health.armor = 0.45
+    tt.health.magic_armor = 0.55
+    tt.health.immune_to = DAMAGE_EXPLOSION
+    tt.auras.list[1] = CC("aura_attack")
+    tt.auras.list[1].name = "greenshell_shield_aura"
+    tt.auras.list[1].cooldown = 0
+    tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+
+    tt = RT("greenshell_shield_aura", "shaman_shield_aura")
+    tt.aura.mod = "mod_greenshell_shield"
+    tt.aura.allowed_templates = {"enemy_greenfin", "enemy_deviltide", "enemy_redspine", "enemy_bluegale", "enemy_redgale"}
+
+    tt = RT("mod_greenshell_shield", "mod_shaman_armor")
+    tt.armor_buff.max_factor = 0.35
+
+    tt = RT("enemy_deviltide_shark_ghost", "enemy_deviltide_shark")
+    tt.payload = "enemy_deviltide_ghost"
+    tt.motion.max_speed = 90
+    tt.render.sprites[1].alpha = 180
+    tt.enemy.gold = 0
+
+    tt = RT("enemy_deviltide_ghost", "enemy_deviltide")
+    tt.enemy.gold = 0
+    tt.motion.max_speed = 50
+    tt.render.sprites[1].alpha = 180
 end
 
 return enemies

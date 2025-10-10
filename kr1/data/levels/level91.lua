@@ -13,7 +13,7 @@ local level = {}
 
 level.required_sounds = {"music_stage91", "PirateBoatSounds", "RisingTidesSounds", "SpecialMermaid","HalloweenSounds","BlackburnSounds","music_halloween_moon"}
 level.required_textures = {"go_enemies_desert", "go_enemies_rising_tides", "go_stages_rising_tides", "go_stage43",
-                           "go_stage91_bg", "go_hero_pirate", "go_enemies_blackburn","go_enemies_halloween","go_stages_halloween"}
+                           "go_stage91_bg", "go_hero_pirate", "go_enemies_blackburn","go_enemies_halloween","go_stages_halloween", "go_enemies_jungle"}
 
 function level:init(store)
     store.level_terrain_type = TERRAIN_STYLE_BEACH

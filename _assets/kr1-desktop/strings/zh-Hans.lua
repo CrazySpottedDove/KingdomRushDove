@@ -8018,5 +8018,9 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
     towers_wise_investment_NAME = "明智投资",
     ["uh-oh..."] = "啊哦...",
     ["wOOt!"] = "噢吼！",
-    ["you can adjust your soldiers rally point to make them defend a different area."] = "你可以更改士兵的集结点来使他们防御不同的区域。"
+    ["you can adjust your soldiers rally point to make them defend a different area."] = "你可以更改士兵的集结点来使他们防御不同的区域。",
+    ENEMY_GREENSHELL_NAME = "青背螃蟹",
+    ENEMY_REDGALE_NAME = "红色风暴",
+    ENEMY_DEVILTIDE_GHOST_NAME = "幽灵骑手",
+    ENEMY_DEVILTIDE_SHARK_GHOST_NAME = "幽灵骑手"
 }
