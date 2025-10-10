@@ -25,7 +25,7 @@ return {
                 path = 1
             }, {
                 interval = 80,
-                max = 4,
+                max = 8,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf_small",
                 max_same = 0,
@@ -595,7 +595,7 @@ return {
                 path = 1
             }, {
                 interval = 0,
-                max = 0,
+                max = 6,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -655,9 +655,9 @@ return {
                 path = 1
             }, {
                 interval = 40,
-                max = 4,
+                max = 1,
                 fixed_sub_path = 0,
-                creep = "enemy_greenfin",
+                creep = "enemy_greenshell",
                 max_same = 0,
                 interval_next = 0,
                 path = 1
@@ -716,7 +716,7 @@ return {
                 interval = 0,
                 max = 1,
                 fixed_sub_path = 1,
-                creep = "enemy_redspine",
+                creep = "enemy_redgale",
                 max_same = 0,
                 interval_next = 0,
                 path = 3
@@ -750,9 +750,9 @@ return {
                 path = 1
             }, {
                 interval = 30,
-                max = 2,
+                max = 1,
                 fixed_sub_path = 0,
-                creep = "enemy_greenfin",
+                creep = "enemy_greenshell",
                 max_same = 0,
                 interval_next = 150,
                 path = 1
@@ -1364,7 +1364,7 @@ return {
             }}
         }}
     }, {
-        interval = 1400,
+        interval = 1500,
         waves = {{
             delay = 0,
             path_index = 2,
@@ -1519,7 +1519,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
-                interval_next = 0,
+                interval_next = 150,
                 path = 2
             }, {
                 interval = 0,
@@ -1535,7 +1535,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
-                interval_next = 0,
+                interval_next = 150,
                 path = 2
             }, {
                 interval = 0,
@@ -1551,31 +1551,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_bat",
                 max_same = 0,
-                interval_next = 0,
-                path = 1
-            }, {
-                interval = 0,
-                max = 1,
-                fixed_sub_path = 1,
-                creep = "enemy_phantom_warrior",
-                max_same = 0,
-                interval_next = 0,
-                path = 2
-            }, {
-                interval = 0,
-                max = 1,
-                fixed_sub_path = 1,
-                creep = "enemy_phantom_warrior",
-                max_same = 0,
-                interval_next = 300,
-                path = 3
-            }, {
-                interval = 40,
-                max = 10,
-                fixed_sub_path = 0,
-                creep = "enemy_bat",
-                max_same = 0,
-                interval_next = 25,
+                interval_next = 150,
                 path = 1
             }}
         }}

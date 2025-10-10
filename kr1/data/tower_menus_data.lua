@@ -1317,7 +1317,7 @@ return {
         place = 5,
         tt_title = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_NAME"),
         tt_desc = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_DESCRIPTION")
-    })},templates.sell},
+    }),templates.sell}},
 
     neptune = {{merge(templates.upgrade_power, {
         action_arg = "ray",

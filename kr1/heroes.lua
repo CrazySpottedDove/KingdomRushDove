@@ -9170,7 +9170,7 @@ local function heroes()
     }
     tt.hero.skills.liquid_fire = CC("hero_skill")
     tt.hero.skills.liquid_fire.flames_count = {6, 12, 18}
-    tt.hero.skills.liquid_fire.mod_damage = {3, 5, 7}
+    tt.hero.skills.liquid_fire.mod_damage = {4, 6, 8}
     tt.hero.skills.liquid_fire.xp_gain = {120, 240, 360}
     tt.hero.skills.liquid_fire.xp_level_steps = {
         [4] = 1,
@@ -9263,8 +9263,7 @@ local function heroes()
     tt.ranged.attacks[2].min_range = 0
     tt.ranged.attacks[2].max_range = 150
     tt.ranged.attacks[2].extra_range = 80
-    -- tt.ranged.attacks[2].shoot_time = fts(22)
-    tt.ranged.attacks[2].shoot_time = fts(12)
+    tt.ranged.attacks[2].shoot_time = fts(22)
     tt.ranged.attacks[2].sync_animation = true
     tt.ranged.attacks[2].animation = "altAttackBase"
     tt.ranged.attacks[2].start_fx = "fx_faustus_start_lance"
