@@ -9,7 +9,7 @@ return {
             path_index = 1,
             spawns = {{
                 interval = 25,
-                max = 6,
+                max = 8,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_raider",
                 max_same = 0,
@@ -83,6 +83,14 @@ return {
             delay = 0,
             path_index = 1,
             spawns = {{
+                interval = 18,
+                max = 12,
+                fixed_sub_path = 0,
+                creep = "enemy_desert_wolf_small",
+                max_same = 0,
+                interval_next = 0,
+                path = 1
+            },{
                 interval = 0,
                 max = 0,
                 fixed_sub_path = 0,
@@ -92,7 +100,7 @@ return {
                 path = 1
             }, {
                 interval = 18,
-                max = 10,
+                max = 12,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf_small",
                 max_same = 0,
@@ -187,7 +195,7 @@ return {
             path_index = 1,
             spawns = {{
                 interval = 20,
-                max = 6,
+                max = 8,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -195,7 +203,7 @@ return {
                 path = 1
             }, {
                 interval = 40,
-                max = 6,
+                max = 8,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -203,7 +211,7 @@ return {
                 path = 1
             }, {
                 interval = 20,
-                max = 3,
+                max = 6,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_archer",
                 max_same = 0,
