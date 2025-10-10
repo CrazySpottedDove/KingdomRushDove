@@ -229,6 +229,14 @@ return {
                 max_same = 0,
                 interval_next = 150,
                 path = 1
+            },{
+                interval = 80,
+                max = 1,
+                fixed_sub_path = 0,
+                creep = "enemy_redspine",
+                max_same = 0,
+                interval_next = 150,
+                path = 1
             }}
         }}
     }, {
