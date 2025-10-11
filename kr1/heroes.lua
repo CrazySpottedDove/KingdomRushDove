@@ -135,8 +135,8 @@ local function heroes()
     tt.dodge.counter_attack = CC("area_attack")
     tt.dodge.counter_attack.animation = "counter"
     tt.dodge.counter_attack.damage_type = DAMAGE_MAGICAL_EXPLOSION
-    tt.dodge.counter_attack.reflected_damage_factor = 0.25
-    tt.dodge.counter_attack.reflected_damage_factor_inc = 0.25
+    tt.dodge.counter_attack.reflected_damage_factor = 0.3
+    tt.dodge.counter_attack.reflected_damage_factor_inc = 0.3
     tt.dodge.counter_attack.damage_radius = 50
     tt.dodge.counter_attack.hit_time = fts(5)
     tt.dodge.counter_attack.hit_decal = "decal_paladin_holystrike"
