@@ -500,6 +500,7 @@ tower_holder.custom = nil
 local tower_upgrade_persistent_data = E:register_c("tower_upgrade_persistent_data")
 tower_upgrade_persistent_data.current_mode = 0
 tower_upgrade_persistent_data.max_current_mode = 0
+tower_upgrade_persistent_data.upgrade_functions = {}
 
 local enemy = E:register_c("enemy")
 

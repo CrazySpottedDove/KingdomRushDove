@@ -5652,13 +5652,15 @@ tt.main_script.update = scripts.aura_apply_mod.update
 tt.aura.mod = "mod_teleport_faustus"
 tt.aura.cycle_time = 1000000000
 tt.aura.duration = fts(20)
-tt.aura.radius = 50
+tt.aura.radius = 75
 tt.aura.vis_flags = bor(F_RANGED, F_TELEPORT)
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO, F_FREEZE)
 tt.aura.targets_per_cycle = nil
 tt.render.sprites[1].name = "aura_teleport_faustus"
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 55}, {fts(5), 255}, {fts(15), 255}, {fts(20), 0}}
+tt.render.sprites[1].scale = vec_1(1.5)
+
 tt = E:register_t("aura_bravebark_springsap", "aura")
 E:add_comps(tt, "render", "tween")
 tt.aura.cycle_time = fts(3)

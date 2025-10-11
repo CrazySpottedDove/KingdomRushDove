@@ -2591,6 +2591,10 @@ function U.splicing_from_kr(from_kr, str)
     return str
 end
 
+--- 为游戏全局的实体添加一个插入钩子，只在实体成功插入时调用
+---@param store table
+---@param id number
+---@param func function 回调函数(this, store)
 function U.insert_insert_hook(store, id, func)
     store.last_hooks.on_insert[id] = func
 end
@@ -2604,6 +2608,23 @@ end
 
 function U.insert_remove_hook(store, id)
     store.last_hooks.on_remove[id] = nil
+end
+
+--- 添加处理塔升级时buff继承的回调函数
+---@param entity table 防御塔
+---@param func function 回调函数(this, store)
+---@param func_key string 函数键值，防止重复添加
+function U.insert_tower_upgrade_function(entity, func, func_key)
+    if not entity.tower_upgrade_persistent_data.upgrade_functions[func_key] then
+        entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = func
+    end
+end
+
+--- 移除处理塔升级时buff继承的回调函数
+---@param entity table 防御塔
+---@param func_key string 函数键值
+function U.remove_tower_upgrade_function(entity, func_key)
+    entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = nil
 end
 
 return U
