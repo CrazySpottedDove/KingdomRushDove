@@ -7160,6 +7160,8 @@ local function enemies()
     tt = RT("enemy_redgale", "enemy_bluegale")
     tt.main_script.update = scripts.enemy_mixed_water.update
     tt.timed_attacks = nil
+    tt.melee.attacks[1].damage_max = 144
+    tt.melee.attacks[1].damage_min = 72
     tt.ranged.attacks[1].max_range = 150
     tt.ranged.attacks[1].bullet = "ray_redgale"
     tt.render.sprites[1].color = {255, 100, 100}
@@ -7183,7 +7185,7 @@ local function enemies()
 
     tt = RT("greenshell_shield_aura", "shaman_shield_aura")
     tt.aura.mod = "mod_greenshell_shield"
-    tt.aura.allowed_templates = {"enemy_greenfin", "enemy_deviltide", "enemy_redspine", "enemy_bluegale", "enemy_redgale"}
+    tt.aura.allowed_templates = {"enemy_greenfin", "enemy_deviltide", "enemy_redspine", "enemy_bluegale", "enemy_redgale", "enemy_deviltide_shark", "enemy_deviltide_shark_ghost", "enemy_deviltide_ghost"}
 
     tt = RT("mod_greenshell_shield", "mod_shaman_armor")
     tt.armor_buff.max_factor = 0.35

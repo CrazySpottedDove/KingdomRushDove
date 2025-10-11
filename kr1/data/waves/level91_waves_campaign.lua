@@ -673,7 +673,7 @@ return {
                 interval = 40,
                 max = 1,
                 fixed_sub_path = 0,
-                creep = "enemy_greenshell",
+                creep = "enemy_bloodshell",
                 max_same = 0,
                 interval_next = 0,
                 path = 1
