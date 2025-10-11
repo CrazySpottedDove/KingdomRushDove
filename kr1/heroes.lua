@@ -2905,6 +2905,7 @@ local function heroes()
     tt.hero.skills.wingsoflight.range = 120
     tt.hero.skills.wingsoflight.duration = {10, 20, 30}
     tt.hero.skills.wingsoflight.armor_rate = {0.2, 0.3, 0.4}
+    tt.hero.skills.wingsoflight.damage_rate = {0.1, 0.2, 0.3}
     tt.hero.skills.wingsoflight.count = {9, 12, 15}
     tt.hero.skills.wingsoflight.xp_level_steps = {
         [1] = 1,
@@ -3031,6 +3032,7 @@ local function heroes()
     tt.modifier.duration = nil
     tt.modifier.use_mod_offset = false
     tt.armor_rate = 0.3
+    tt.damage_rate = 0.1
     tt.main_script.insert = scripts.mod_priest_armor.insert
     tt.main_script.remove = scripts.mod_priest_armor.remove
     tt.main_script.update = scripts.mod_priest_armor.update

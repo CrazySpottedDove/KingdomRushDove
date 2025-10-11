@@ -3685,7 +3685,7 @@ scripts.mod_priest_armor = {
 
         SU.armor_inc(target, this.armor_inc)
         SU.magic_armor_inc(target, this.magic_armor_inc)
-
+        target.unit.damage_factor = target.unit.damage_factor * (this.damage_rate + 1)
         signal.emit("mod-applied", this, target)
         return true
     end,
@@ -3694,6 +3694,7 @@ scripts.mod_priest_armor = {
         if target then
             SU.armor_dec(target, this.armor_inc)
             SU.magic_armor_dec(target, this.magic_armor_inc)
+            target.unit.damage_factor = target.unit.damage_factor / (this.damage_rate + 1)
         end
         return true
     end,
@@ -3789,6 +3790,7 @@ scripts.hero_priest = {
             local m = E:get_template("mod_priest_armor")
             m.modifier.duration = s.duration[s.level]
             m.armor_rate = s.armor_rate[s.level]
+            m.damage_rate = s.damage_rate[s.level]
         end)
 
         upgrade_skill(this, "blessedarmor", function(this, s)
