@@ -6540,8 +6540,8 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
                 SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)
             end
         else
-            if not tower.tower_upgrade_persistent_data.dark_elf_souls then
-                tower.tower_upgrade_persistent_data.dark_elf_souls = 0
+            if not tower.tower_upgrade_persistent_data.dark_elf_soul_damage_factor then
+                tower.tower_upgrade_persistent_data.dark_elf_soul_damage_factor = 0
             end
             tower.tower_upgrade_persistent_data.dark_elf_soul_damage_factor =
                 tower.tower_upgrade_persistent_data.dark_elf_soul_damage_factor + 0.08
