@@ -135,6 +135,21 @@ function level:load(store)
 
         LU.queue_insert(store, e)
     end
+    e = E:create_entity("soldier_pirate_flamer")
+    e.pos = V.v(850, 130)
+    e.nav_rally.center = V.v(850, 130)
+    e.nav_rally.pos = V.v(850, 130)
+    e.powers.bigbomb.level = 3
+    e.powers.quickup.level = 2
+    LU.queue_insert(store, e)
+
+    e = E:create_entity("soldier_pirate_flamer")
+    e.pos = V.v(1000, 494)
+    e.nav_rally.center = V.v(1000, 494)
+    e.nav_rally.pos = V.v(1000, 494)
+    e.powers.bigbomb.level = 3
+    e.powers.quickup.level = 2
+    LU.queue_insert(store, e)
 
     -- local wave_pos = {
     -- 	{
