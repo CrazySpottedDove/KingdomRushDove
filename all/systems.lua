@@ -1085,7 +1085,11 @@ function sys.tower_upgrade:on_update(dt, ts, store)
                 queue_insert(store, dust)
             end
             if e.tower_upgrade_persistent_data then
-                ne.tower_upgrade_persistent_data = e.tower_upgrade_persistent_data
+                for k, v in pairs(e.tower_upgrade_persistent_data) do
+                    if not ne.tower_upgrade_persistent_data[k] then
+                        ne.tower_upgrade_persistent_data[k] = v
+                    end
+                end
                 for _, f in pairs(ne.tower_upgrade_persistent_data.upgrade_functions) do
                     f(ne, store)
                 end
