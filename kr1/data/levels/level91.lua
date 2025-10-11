@@ -46,11 +46,7 @@ function level:load(store)
 
     for _, h in pairs(self.locations.holders) do
         if h.id == "00" then
-            if store.level_mode == GAME_MODE_IRON then
-                LU.insert_tower(store, "tower_neptune", h.style, h.pos, h.rally_pos, nil, h.id)
-            else
-                LU.insert_tower(store, "tower_neptune_holder", h.style, h.pos, h.rally_pos, nil, h.id)
-            end
+            LU.insert_tower(store, "tower_neptune", h.style, h.pos, h.rally_pos, nil, h.id)
         elseif h.id == "05" and store.level_mode == GAME_MODE_IRON then
             LU.insert_tower(store, "tower_barrack_1", h.style, h.pos, h.rally_pos, nil, h.id)
         else
