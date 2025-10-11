@@ -798,7 +798,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
-                interval_next = 0,
+                interval_next = 150,
                 path = 1
             }, {
                 interval = 0,
@@ -806,7 +806,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_witch",
                 max_same = 2,
-                interval_next = 200,
+                interval_next = 250,
                 path = 1
             }, {
                 interval = 0,
@@ -814,7 +814,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
-                interval_next = 15,
+                interval_next = 0,
                 path = 2
             }, {
                 interval = 0,
@@ -1527,6 +1527,14 @@ return {
                 fixed_sub_path = 0,
                 creep = "enemy_bat",
                 max_same = 0,
+                interval_next = 450,
+                path = 1
+            },{
+                interval = 0,
+                max = 1,
+                fixed_sub_path = 1,
+                creep = "enemy_phantom_warrior",
+                max_same = 0,
                 interval_next = 0,
                 path = 1
             }, {
@@ -1535,7 +1543,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
-                interval_next = 150,
+                interval_next = 0,
                 path = 2
             }, {
                 interval = 0,
@@ -1543,23 +1551,7 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
-                interval_next = 150,
-                path = 3
-            }, {
-                interval = 0,
-                max = 1,
-                fixed_sub_path = 1,
-                creep = "enemy_phantom_warrior",
-                max_same = 0,
-                interval_next = 150,
-                path = 2
-            }, {
-                interval = 0,
-                max = 1,
-                fixed_sub_path = 1,
-                creep = "enemy_phantom_warrior",
-                max_same = 0,
-                interval_next = 150,
+                interval_next = 300,
                 path = 3
             }, {
                 interval = 45,
