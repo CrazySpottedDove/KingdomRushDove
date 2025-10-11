@@ -5643,23 +5643,7 @@ tt.aura.radius = 100
 tt.aura.vis_flags = bor(F_RANGED, F_SPELLCASTER)
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO)
 tt.aura.targets_per_cycle = nil
-tt = E:register_t("aura_teleport_faustus", "aura")
 
-E:add_comps(tt, "render", "tween")
-
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-tt.aura.mod = "mod_teleport_faustus"
-tt.aura.cycle_time = 1000000000
-tt.aura.duration = fts(20)
-tt.aura.radius = 75
-tt.aura.vis_flags = bor(F_RANGED, F_TELEPORT)
-tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO, F_FREEZE)
-tt.aura.targets_per_cycle = nil
-tt.render.sprites[1].name = "aura_teleport_faustus"
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 55}, {fts(5), 255}, {fts(15), 255}, {fts(20), 0}}
-tt.render.sprites[1].scale = vec_1(1.5)
 
 tt = E:register_t("aura_bravebark_springsap", "aura")
 E:add_comps(tt, "render", "tween")
@@ -6128,20 +6112,6 @@ tt.dps.damage_max = 2
 tt.dps.kill = true
 tt.dps.damage_every = fts(3)
 tt.dps.damage_type = DAMAGE_POISON
-
-tt = E:register_t("mod_teleport_faustus", "mod_teleport")
-tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
-tt.modifier.vis_bans = bor(F_BOSS)
-tt.max_times_applied = nil
-tt.nodes_offset = -35
-tt.nodeslimit = 10
-tt.delay_start = fts(2)
-tt.hold_time = 0.4
-tt.delay_end = fts(2)
-tt.fx_start = "fx_teleport_faustus"
-tt.fx_end = "fx_teleport_faustus"
-tt.damage_base = 50
-tt.damage_inc = 25
 
 tt = E:register_t("mod_enervation_faustus", "modifier")
 E:add_comps(tt, "render", "tween")

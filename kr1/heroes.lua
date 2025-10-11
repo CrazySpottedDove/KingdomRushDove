@@ -2886,7 +2886,7 @@ local function heroes()
     tt.hero.skills.holylight.heal_hp = {40, 60, 80}
     tt.hero.skills.holylight.heal_count = {4, 7, 10}
     tt.hero.skills.holylight.revive_chance = {0.15, 0.25, 0.35}
-    tt.hero.skills.holylight.xp_gain_factor = 45
+    tt.hero.skills.holylight.xp_gain_factor = 50
     tt.hero.skills.holylight.xp_level_steps = {
         [2] = 1,
         [5] = 2,
@@ -2894,8 +2894,8 @@ local function heroes()
     }
     tt.hero.skills.consecrate = CC("hero_skill")
     tt.hero.skills.consecrate.duration = {6, 10, 14}
-    tt.hero.skills.consecrate.extra_damage = {0.15, 0.2, 0.25}
-    tt.hero.skills.consecrate.xp_gain_factor = 45
+    tt.hero.skills.consecrate.extra_damage = {0.18, 0.24, 0.3}
+    tt.hero.skills.consecrate.xp_gain_factor = 50
     tt.hero.skills.consecrate.xp_level_steps = {
         [3] = 1,
         [6] = 2,
@@ -2905,7 +2905,7 @@ local function heroes()
     tt.hero.skills.wingsoflight.range = 120
     tt.hero.skills.wingsoflight.duration = {10, 20, 30}
     tt.hero.skills.wingsoflight.armor_rate = {0.2, 0.3, 0.4}
-    tt.hero.skills.wingsoflight.damage_rate = {0.1, 0.2, 0.3}
+    tt.hero.skills.wingsoflight.damage_rate = {0.15, 0.25, 0.35}
     tt.hero.skills.wingsoflight.count = {9, 12, 15}
     tt.hero.skills.wingsoflight.xp_level_steps = {
         [1] = 1,
@@ -9344,6 +9344,37 @@ local function heroes()
     tt.render.sprites[1].prefix = "bolt_faustus"
     tt.sound_events.insert = nil
     tt.upgrades_disabled = true
+
+    tt = E:register_t("aura_teleport_faustus", "aura")
+    E:add_comps(tt, "render", "tween")
+    tt.main_script.insert = scripts.aura_apply_mod.insert
+    tt.main_script.update = scripts.aura_apply_mod.update
+    tt.aura.mod = "mod_teleport_faustus"
+    tt.aura.cycle_time = 1000000000
+    tt.aura.duration = fts(50)
+    tt.aura.radius = 75
+    tt.aura.vis_flags = bor(F_RANGED, F_TELEPORT)
+    tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO, F_FREEZE)
+    tt.aura.targets_per_cycle = nil
+    tt.render.sprites[1].name = "aura_teleport_faustus"
+    tt.tween.remove = false
+    tt.tween.props[1].keys = {{0, 55}, {fts(10), 255}, {fts(40), 255}, {fts(50), 0}}
+    tt.render.sprites[1].scale = vec_1(1.45)
+
+    tt = E:register_t("mod_teleport_faustus", "mod_teleport")
+    tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
+    tt.modifier.vis_bans = bor(F_BOSS)
+    tt.max_times_applied = nil
+    tt.nodes_offset = -35
+    tt.nodeslimit = 10
+    -- tt.delay_start = fts(2)
+    tt.delay_start = fts(32)
+    tt.hold_time = 0.4
+    tt.delay_end = fts(2)
+    tt.fx_start = "fx_teleport_faustus"
+    tt.fx_end = "fx_teleport_faustus"
+    tt.damage_base = 50
+    tt.damage_inc = 25
 
     tt = RT("hero_faustus_ultimate")
     AC(tt, "pos", "main_script", "sound_events")
