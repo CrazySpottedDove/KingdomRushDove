@@ -1,3 +1,4 @@
+
 require("klua.table")
 require("i18n")
 local scripts = require("scripts")
@@ -5376,8 +5377,18 @@ scripts.hero_hacksaw = {
             a.disabled = nil
             a.cooldown = s.cooldown[s.level]
         end)
-
         this.health.hp = this.health.hp_max
+    end,
+    side_effect = function(this, store, attack, target)
+        local fx = E:create_entity("fx_coin_jump")
+        fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+        fx.render.sprites[1].ts = store.tick_ts
+        if target.health_bar then
+            fx.render.sprites[1].offset.y = target.health_bar.offset.y
+        end
+        target.enemy.gold = target.enemy.gold * 2
+        target.health.hp = 0
+        queue_insert(store, fx)
     end
 }
 -- 英格瓦

@@ -1624,6 +1624,7 @@ local function heroes()
     tt.melee.attacks[2].xp_from_skill = "timber"
     tt.melee.attacks[2].vis_flags = bor(F_INSTAKILL)
     tt.melee.attacks[2].vis_bans = bor(F_BOSS)
+    tt.melee.attacks[2].side_effect = scripts.hero_hacksaw.side_effect
     tt.ranged.attacks[1] = CC("bullet_attack")
     tt.ranged.attacks[1].animation = "sawblade"
     tt.ranged.attacks[1].bullet = "hacksaw_sawblade"
