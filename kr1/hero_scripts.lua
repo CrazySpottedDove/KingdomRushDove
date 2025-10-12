@@ -18663,6 +18663,7 @@ function scripts.hero_raelyn.update(this, store)
                         end
 
                         SU.y_hero_animation_wait(this)
+                        onslaught_attack.duration_ts = onslaught_attack.duration_ts + store.tick_ts - start_ts
                     end
 
                     goto label_222_0
@@ -18752,6 +18753,7 @@ function scripts.hero_raelyn.update(this, store)
                         end
 
                         SU.y_hero_animation_wait(this)
+                        onslaught_attack.duration_ts = onslaught_attack.duration_ts + store.tick_ts - start_ts
                     end
 
                     goto label_222_0
