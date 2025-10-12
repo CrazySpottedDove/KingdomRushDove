@@ -1657,7 +1657,8 @@ function scripts.hero_elora.update(this, store)
             skill = this.hero.skills.ice_storm
 
             if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-                local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags, a.vis_bans)
+                local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags,
+                    a.vis_bans)
 
                 if not target then
                     SU.delay_attack(store, a, 0.13333333333333333)
@@ -1717,7 +1718,8 @@ function scripts.hero_elora.update(this, store)
             skill = this.hero.skills.chill
 
             if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-                local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags, a.vis_bans)
+                local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags,
+                    a.vis_bans)
 
                 if not target then
                     SU.delay_attack(store, a, 0.13333333333333333)
@@ -9798,8 +9800,8 @@ end
 scripts.enemy_elvira = {}
 
 function scripts.enemy_elvira.can_lifesteal(this, store, attack, target)
-    return not SU.is_wraith(target.template_name) and this.enemy.can_do_magic and this.health.hp /
-               this.health.hp_max < attack.health_trigger_factor
+    return not SU.is_wraith(target.template_name) and this.enemy.can_do_magic and this.health.hp / this.health.hp_max <
+               attack.health_trigger_factor
 end
 
 scripts.mod_elvira_lifesteal = {}
@@ -16827,6 +16829,134 @@ function scripts.decal_eerie_root.update(this, store)
 
     U.y_animation_play(this, "end", nil, store.tick_ts)
     queue_remove(store, this)
+end
+
+scripts.high_elven_sentinel_extra = {}
+
+function scripts.high_elven_sentinel_extra.update(this, store)
+    local sb_sid, ss_sid = 1, 2
+    local sb = this.render.sprites[sb_sid]
+    local ss = this.render.sprites[ss_sid]
+    local ra = this.ranged.attacks[1]
+    local fm = this.force_motion
+
+    local function move_step(dest)
+        local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+        local dist = V.len(dx, dy)
+        local ramp_radius = fm.ramp_radius
+        local df = (not ramp_radius or ramp_radius < dist) and 1 or math.max(dist / ramp_radius, 0.1)
+
+        fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
+        fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+        fm.v.x, fm.v.y = V.trim(fm.max_v, fm.v.x, fm.v.y)
+        this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+        fm.a.x, fm.a.y = V.mul(-1 * fm.fr / store.tick_length, fm.v.x, fm.v.y)
+    end
+
+    local function find_target(range)
+        return U.find_foremost_enemy(store, this.pos, 0, range, false, ra.vis_flags, ra.vis_bans)
+    end
+
+    local charge_ts, wait_ts, shoot_ts, search_ts, shots = 0, 0, 0, 0, 0
+    local target, targets, dist
+    local dest = V.v(0, 0)
+    local ps = E:create_entity(this.particles_name)
+
+    ps.particle_system.track_id = this.id
+    ps.particle_system.track_offset = V.v(0, this.flight_height)
+
+    queue_insert(store, ps)
+
+    U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+
+    ss.hidden = true
+    sb.z = Z_OBJECTS
+    sb.sort_y = this.pos.y
+    ps.particle_system.emit = true
+    ps.particle_system.sort_y = this.pos.y
+    this.tween.reverse = false
+    this.tween.ts = store.tick_ts
+    shots = 0
+    charge_ts = store.tick_ts
+
+    while not target do
+        target = find_target(ra.max_range)
+        coroutine.yield()
+    end
+
+    ::label_29_0::
+
+    sb.sort_y_offset = 0
+    ss.hidden = false
+    ps.particle_system.emit = false
+    this.chasing_target_id = target.id
+    dest.x, dest.y = target.pos.x, target.pos.y
+
+    repeat
+        dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
+
+        move_step(dest)
+        coroutine.yield()
+    until dist < ra.shoot_range or target.health.dead or band(ra.vis_flags, target.vis.bans) ~= 0
+
+    if shots < ra.max_shots and store.entities[target.id] and not target.health.dead and
+        band(ra.vis_flags, target.vis.bans) == 0 then
+        if store.tick_ts - shoot_ts > ra.cooldown then
+            shoot_ts = store.tick_ts
+            shots = shots + 1
+
+            U.animation_start(this, "shoot", nil, store.tick_ts, false, sb_sid)
+            U.y_wait(store, ra.shoot_time)
+
+            local b = E:create_entity(ra.bullet)
+
+            b.pos.x, b.pos.y = this.pos.x + sb.offset.x, this.pos.y + sb.offset.y
+            b.bullet.from = V.vclone(b.pos)
+            b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+            b.bullet.target_id = target.id
+            b.bullet.source_id = this.id
+
+            queue_insert(store, b)
+            U.y_animation_wait(this, sb_sid)
+            U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+        end
+
+        goto label_29_0
+    end
+
+    wait_ts = store.tick_ts
+    this.chasing_target_id = nil
+
+    U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
+
+    local wait_time = shots < ra.max_shots and this.wait_time or this.wait_spent_time
+
+    ::label_29_1::
+
+    search_ts = store.tick_ts
+
+    if shots < ra.max_shots then
+        target = find_target(ra.max_range)
+
+        if target then
+            goto label_29_0
+        end
+    end
+
+    while store.tick_ts - search_ts < ra.search_cooldown do
+        move_step(dest)
+        coroutine.yield()
+    end
+
+    if wait_time > store.tick_ts - wait_ts then
+        goto label_29_1
+    end
+
+    this.tween.ts = store.tick_ts
+    this.tween.reverse = true
+
+    U.y_wait(store, this.tween.props[1].keys[2][1])
+    queue_remove(store , this)
 end
 
 scripts.high_elven_sentinel = {}
@@ -25456,6 +25586,11 @@ function scripts.mod_timelapse.update(this, store)
         U.sprites_show(target, nil, nil, true)
         SU.show_modifiers(store, target, true, this)
         SU.show_auras(store, target, true)
+    else
+        local e = E:create_entity("high_elven_sentinel_extra")
+        e.pos.x = target.pos.x + target.unit.hit_offset.x
+        e.pos.y = target.pos.y + target.unit.hit_offset.y
+        queue_insert(store, e)
     end
 
     queue_remove(store, this)

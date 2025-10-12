@@ -2252,13 +2252,13 @@ local function soldier_pick_melee_attack(store, this, target)
                 local cooldown = 0
                 -- cooldown_factor: 全部近战攻击的冷却因子
                 if a.cooldown then
-                    cooldown = a.cooldown * this.cooldown_factor
+                    cooldown = a.cooldown
                 end
 
                 if this.melee.cooldown and a.shared_cooldown then
-                    cooldown = this.melee.cooldown * this.cooldown_factor
+                    cooldown = this.melee.cooldown
                 end
-
+                cooldown = cooldown * this.cooldown_factor
                 local forced_cooldown_ok = true
 
                 if this.melee.forced_cooldown and a.forced_cooldown then

@@ -947,6 +947,9 @@ tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].keys = {{0, vec_2(0.75, 1)}, {fts(10), vec_2(1, 1)}}
 tt.tween.props[2].name = "scale"
 
+tt = RT("high_elven_sentinel_extra", "high_elven_sentinel")
+tt.main_script.update = scripts.high_elven_sentinel_extra.update
+
 tt = RT("bolt_high_elven_weak", "bolt_elves")
 tt.alter_reality_chance = 0.03
 tt.alter_reality_mod = "mod_teleport_high_elven"
