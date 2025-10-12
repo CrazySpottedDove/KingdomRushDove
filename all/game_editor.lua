@@ -70,7 +70,7 @@ editor.simulation_systems = {
 	"last_hook"
 }
 
-function editor.save_data(data, name)
+function editor:save_data(data, name)
 	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_data.lua"
 
 	local function custom_sort(k, o)
@@ -124,6 +124,35 @@ function editor.save_data(data, name)
 		}
 	})
 	local out = "return " .. str .. "\n"
+	local f = io.open(fn, "w")
+
+	f:write(out)
+	f:flush()
+	f:close()
+end
+
+function editor:save_curves(name)
+	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
+	local t = {
+		connections = P.path_connections,
+		curves = P.path_curves,
+		paths = P:generate_paths(),
+		active = P.active_paths
+	}
+	local str = serpent.block(t, {
+		indent = "    ",
+		comment = false,
+		sortkeys = true,
+		keyignore = {
+			beziers = true
+		}
+	})
+	local out = "return " .. str .. "\n"
+	local dir = fn:match("(.+)/[^/]+$")
+	if dir then
+		os.execute("mkdir \"" .. dir .. "\"")
+	end
+
 	local f = io.open(fn, "w")
 
 	f:write(out)
@@ -677,13 +706,13 @@ function editor:level_save(idx, mode)
 	s.level_name = "level" .. string.format("%02i", idx)
 
 	log.debug("saving level %s", idx)
-	P:save_curves(s.level_name)
+	self:save_curves(s.level_name)
 	GR:save(s.level_name)
 	self:serialize_level(s)
 
 	ss = table.deepclone(s.level.data)
 
-	self.save_data(ss, s.level_name)
+	self:save_data(ss, s.level_name)
 end
 
 function editor:level_load(idx, mode)

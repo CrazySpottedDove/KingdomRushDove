@@ -1008,7 +1008,7 @@ function gui:duplicate_entity()
 
 	de.pos = V.v(e.pos.x, e.pos.y - 50)
 
-	if e.editor then
+	if e.editor and e.editor.props then
 		for _, item in pairs(e.editor.props) do
 			local k, kt = unpack(item)
 

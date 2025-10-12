@@ -721,35 +721,6 @@ function path_db:load_curves(name)
 	end
 end
 
-if DEBUG then
-	function path_db:save_curves(name)
-		local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
-		local t = {
-			connections = self.path_connections,
-			curves = self.path_curves,
-			paths = self:generate_paths(),
-			active = self.active_paths
-		}
-		local str = serpent.line(t, {
-			comment = false,
-			keyignore = {
-				beziers = true
-			}
-		})
-		local out = "return " .. str .. "\n"
-        local dir = fn:match("(.+)/[^/]+$")
-        if dir then
-            os.execute("mkdir \"" .. dir .. "\"")
-        end
-
-		local f = io.open(fn, "w")
-
-		f:write(out)
-		f:flush()
-		f:close()
-	end
-end
-
 function path_db:generate_paths(pi)
 	local STEP_SAMPLING = 10
 	local PATH_POINTS_DISTANCE = 7
