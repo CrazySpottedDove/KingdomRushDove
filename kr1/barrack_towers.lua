@@ -576,6 +576,9 @@ local function barrack_towers()
     tt.melee.attacks[1].shared_cooldown = true
     tt.melee.attacks[1].side_effect = function(this, store, attack, target)
         this.revive.protect = this.revive.protect + 0.01
+        if target then
+            target.health.hp = target.health.hp - this.health.hp * 0.02 * this.powers.extralife.level
+        end
     end
     tt.melee.attacks[2] = CC("melee_attack")
     tt.melee.attacks[2].animation = "blood"
@@ -597,6 +600,7 @@ local function barrack_towers()
         this.revive.protect = this.revive.protect + 0.01
         if target then
             target.health.damage_factor = target.health.damage_factor * 1.033
+            target.health.hp = target.health.hp - this.health.hp * 0.03 * this.powers.extralife.level
         end
     end
     tt.melee.arrived_slot_animation = "attack_wait"

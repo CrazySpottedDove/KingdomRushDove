@@ -25565,6 +25565,14 @@ function scripts.mod_timelapse.update(this, store)
     end)
     S:queue("TowerHighMageTimeCastEnd")
     U.animation_start(this, "end", nil, store.tick_ts, false, 1)
+    local d = E:create_entity("damage")
+
+    d.damage_type = this.damage_type
+    d.value = this.damage_levels[m.level]
+    d.source_id = this.id
+    d.target_id = target.id
+
+    queue_damage(store, d)
 
     this.tween.ts = store.tick_ts
     this.tween.reverse = true
@@ -25601,15 +25609,6 @@ function scripts.mod_timelapse.update(this, store)
         if target.death_spawns then
             target.health.last_damage_types = DAMAGE_NO_SPAWNS
         end
-    else
-        local d = E:create_entity("damage")
-
-        d.damage_type = this.damage_type
-        d.value = this.damage_levels[m.level]
-        d.source_id = this.id
-        d.target_id = target.id
-
-        queue_damage(store, d)
     end
 
     signal.emit("mod-applied", this, target)
