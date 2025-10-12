@@ -11,9 +11,11 @@ require("constants")
 
 local level = {}
 
-level.required_sounds = {"music_stage91", "PirateBoatSounds", "RisingTidesSounds", "SpecialMermaid","HalloweenSounds","BlackburnSounds","music_halloween_moon"}
+level.required_sounds = {"music_stage91", "PirateBoatSounds", "RisingTidesSounds", "SpecialMermaid", "HalloweenSounds",
+                         "BlackburnSounds", "music_halloween_moon"}
 level.required_textures = {"go_enemies_desert", "go_enemies_rising_tides", "go_stages_rising_tides", "go_stage43",
-                           "go_stage91_bg", "go_hero_pirate", "go_enemies_blackburn","go_enemies_halloween","go_stages_halloween", "go_enemies_jungle"}
+                           "go_stage91_bg", "go_hero_pirate", "go_enemies_blackburn", "go_enemies_halloween",
+                           "go_stages_halloween", "go_enemies_jungle"}
 
 function level:init(store)
     store.level_terrain_type = TERRAIN_STYLE_BEACH
@@ -25,7 +27,7 @@ function level:init(store)
     self.locked_powers = {}
 
     if store.level_mode == GAME_MODE_IRON then
-        self.locked_towers = {"tower_build_barrack"}
+        self.locked_towers = {"tower_build_mage"}
     end
 end
 
@@ -46,9 +48,17 @@ function level:load(store)
 
     for _, h in pairs(self.locations.holders) do
         if h.id == "00" then
-            LU.insert_tower(store, "tower_neptune", h.style, h.pos, h.rally_pos, nil, h.id)
-        elseif h.id == "05" and store.level_mode == GAME_MODE_IRON then
-            LU.insert_tower(store, "tower_barrack_1", h.style, h.pos, h.rally_pos, nil, h.id)
+            if store.level_mode == GAME_MODE_CAMPAIGN then
+                LU.insert_tower(store, "tower_neptune", h.style, h.pos, h.rally_pos, nil, h.id)
+            else
+                LU.insert_tower(store, "tower_archer_3", h.style, h.pos, h.rally_pos, nil, h.id)
+            end
+        elseif store.level_mode == GAME_MODE_IRON then
+            if h.id == "05" or h.id == "04" or h.id == "03" or h.id == "06" or h.id == "08" then
+                LU.insert_tower(store, "tower_barrack_1", h.style, h.pos, h.rally_pos, nil, h.id)
+            else
+                LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
+            end
         else
             LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
         end

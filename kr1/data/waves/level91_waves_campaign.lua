@@ -477,6 +477,7 @@ return {
         }}
     }, {
         interval = 1200,
+        some_flying = true,
         waves = {{
             delay = 0,
             path_index = 10,
@@ -786,6 +787,7 @@ return {
         }, {
             delay = 0,
             path_index = 12,
+            some_flying = true,
             spawns = {{
                 interval = 0,
                 max = 0,
@@ -1024,6 +1026,7 @@ return {
         }, {
             delay = 0,
             path_index = 10,
+            some_flying = true,
             spawns = {{
                 interval = 0,
                 max = 1,
@@ -1141,6 +1144,7 @@ return {
         }, {
             delay = 0,
             path_index = 11,
+            some_flying = true,
             spawns = {{
                 interval = 25,
                 max = 6,
@@ -1513,6 +1517,7 @@ return {
                 path = 1
             }}
         }, {
+            some_flying = true,
             delay = 0,
             path_index = 12,
             spawns = {{
@@ -1688,6 +1693,7 @@ return {
                 path = 1
             }}
         }, {
+            some_flying = true,
             delay = 0,
             path_index = 10,
             spawns = {{

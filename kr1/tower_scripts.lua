@@ -11405,8 +11405,8 @@ function scripts.tower_stargazers.update(this, store, script)
                                         if place_ni < 0 then
                                             place_ni = 1
                                         end
-
-                                        enemy._stargazer_bans = U.push_bans(enemy.vis, teleport_bans)
+                                        enemy.vis.bans = bor(enemy.vis.bans, F_TELEPORT)
+                                        -- enemy._stargazer_bans = U.push_bans(enemy.vis, teleport_bans)
 
                                         table.insert(this.teleport_targets, {
                                             ni = place_ni,
@@ -11453,9 +11453,9 @@ function scripts.tower_stargazers.update(this, store, script)
                                 end
 
                                 U.sprites_show(enemy, nil, nil, true)
-                                U.pop_bans(enemy.vis, enemy._stargazer_bans)
-
-                                enemy._stargazer_bans = nil
+                                -- U.pop_bans(enemy.vis, enemy._stargazer_bans)
+                                enemy.vis.bans = U.flag_clear(enemy.vis.bans, F_TELEPORT)
+                                -- enemy._stargazer_bans = nil
 
                                 table.remove(this.teleport_targets, i)
 
