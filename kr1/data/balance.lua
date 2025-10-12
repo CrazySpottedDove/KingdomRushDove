@@ -5277,7 +5277,7 @@ local towers = {
     },
     elven_stargazers = {
         shared_min_cooldown = 2,
-        price = {130, 180, 260, 325},
+        price = {130, 180, 260, 330},
         stats = {
             cooldown = 3,
             range = 5,
@@ -5286,9 +5286,9 @@ local towers = {
         basic_attack = {
             ray_timing = 0.2,
             cooldown = 2.7,
-            damage_min = {4, 8, 15, 27},
-            damage_max = {7, 16, 28, 47},
-            range = {160, 170, 185, 200},
+            damage_min = {4, 8, 15, 28},
+            damage_max = {7, 16, 28, 48},
+            range = {160, 170, 185, 205},
             damage_every = fts(1)
         },
         teleport = {
