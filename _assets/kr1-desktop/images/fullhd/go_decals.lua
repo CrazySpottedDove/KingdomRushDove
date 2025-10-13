@@ -1,6 +1,6 @@
 return {
     DartDecal = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -25,7 +25,7 @@ return {
         },
     },
     EarthquakeTower_HitDecal1 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -50,7 +50,7 @@ return {
         },
     },
     EarthquakeTower_HitDecal2 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -75,7 +75,7 @@ return {
         },
     },
     EarthquakeTower_HitDecal3 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -100,7 +100,7 @@ return {
         },
     },
     EarthquakeTower_Lava = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -125,7 +125,7 @@ return {
         },
     },
     EarthquakeTower_Lava1 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -150,7 +150,7 @@ return {
         },
     },
     EarthquakeTower_Lava2 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -175,7 +175,7 @@ return {
         },
     },
     Mecha_Shit = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -200,7 +200,7 @@ return {
         },
     },
     NecroPestilenceDecal = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -225,7 +225,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -250,7 +250,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0002 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -275,7 +275,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0003 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -300,7 +300,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0004 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -325,7 +325,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0005 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -350,7 +350,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0006 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -375,7 +375,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0007 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -400,7 +400,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0008 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -425,7 +425,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0009 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -450,7 +450,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0010 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -475,7 +475,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0011 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -500,7 +500,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0012 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -525,7 +525,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0013 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -550,7 +550,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0014 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -575,7 +575,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0015 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -600,7 +600,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0016 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -625,7 +625,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0017 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -650,7 +650,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0018 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -675,7 +675,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0019 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -700,7 +700,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0020 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -725,7 +725,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0021 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -750,7 +750,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0022 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -775,7 +775,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0023 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -800,7 +800,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0024 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -825,7 +825,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0025 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -850,7 +850,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0026 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -875,7 +875,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0027 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -900,7 +900,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0028 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -925,7 +925,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0029 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -950,7 +950,7 @@ return {
         },
     },
     NecromancerDeathKnight_Aura_0030 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -975,7 +975,7 @@ return {
         },
     },
     NecromancerSkeletonAura = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -1000,7 +1000,7 @@ return {
         },
     },
     Redspine_spear_decal = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -1025,7 +1025,7 @@ return {
         },
     },
     TotemAxe_0002 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -1050,7 +1050,7 @@ return {
         },
     },
     ["TotemTower_GroundEffect-Red_0001"] = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -1075,7 +1075,7 @@ return {
         },
     },
     ["TotemTower_GroundEffect-Red_0002"] = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -1100,7 +1100,7 @@ return {
         },
     },
     ["TotemTower_GroundEffect-Violet_0001"] = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -1125,7 +1125,7 @@ return {
         },
     },
     ["TotemTower_GroundEffect-Violet_0002"] = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -1150,7 +1150,7 @@ return {
         },
     },
     ["archer_arcane_proy2_decal-f"] = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1175,7 +1175,7 @@ return {
         },
     },
     ["archer_arcane_proy_decal-f"] = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1200,7 +1200,7 @@ return {
         },
     },
     archer_arcane_special_decal1 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1225,7 +1225,7 @@ return {
         },
     },
     archer_arcane_special_decal2 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1250,7 +1250,7 @@ return {
         },
     },
     archer_hero_arrows_decal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1276,7 +1276,7 @@ return {
         },
     },
     archer_hero_arrows_decal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1302,7 +1302,7 @@ return {
         },
     },
     archer_hero_arrows_decal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1328,7 +1328,7 @@ return {
         },
     },
     archer_hero_arrows_decal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1354,7 +1354,7 @@ return {
         },
     },
     archer_hero_arrows_decal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1380,7 +1380,7 @@ return {
         },
     },
     archer_hero_arrows_decal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1405,7 +1405,7 @@ return {
         },
     },
     archer_hero_arrows_smokeDecal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1431,7 +1431,7 @@ return {
         },
     },
     archer_hero_arrows_smokeDecal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1457,7 +1457,7 @@ return {
         },
     },
     archer_hero_arrows_smokeDecal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1483,7 +1483,7 @@ return {
         },
     },
     archer_hero_arrows_smokeDecal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1509,7 +1509,7 @@ return {
         },
     },
     archer_hero_arrows_smokeDecal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1535,7 +1535,7 @@ return {
         },
     },
     archer_hero_arrows_smokeDecal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1560,7 +1560,7 @@ return {
         },
     },
     archer_silver_mark_effect_below = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1585,7 +1585,7 @@ return {
         },
     },
     ["archer_silver_proys_0002-f"] = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1610,7 +1610,7 @@ return {
         },
     },
     ["archer_silver_proys_0004-f"] = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1635,7 +1635,7 @@ return {
         },
     },
     arivan_hero_freeze_decal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1660,7 +1660,7 @@ return {
         },
     },
     artillery_henge_curse_decal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1685,7 +1685,7 @@ return {
         },
     },
     artillery_tree_scorched_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1713,7 +1713,7 @@ return {
         },
     },
     artillery_tree_scorched_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1741,7 +1741,7 @@ return {
         },
     },
     artillery_tree_scorched_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1769,7 +1769,7 @@ return {
         },
     },
     artillery_tree_scorched_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1797,7 +1797,7 @@ return {
         },
     },
     artillery_tree_scorched_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1823,7 +1823,7 @@ return {
         },
     },
     artillery_tree_scorched_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1849,7 +1849,7 @@ return {
         },
     },
     artillery_tree_smoke_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1875,7 +1875,7 @@ return {
         },
     },
     artillery_tree_smoke_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1901,7 +1901,7 @@ return {
         },
     },
     artillery_tree_smoke_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1927,7 +1927,7 @@ return {
         },
     },
     artillery_tree_smoke_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1953,7 +1953,7 @@ return {
         },
     },
     artillery_tree_smoke_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -1979,7 +1979,7 @@ return {
         },
     },
     bloodsydianWarlock_convert_aura = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2004,7 +2004,7 @@ return {
         },
     },
     bossHiena_creepFx = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2029,7 +2029,7 @@ return {
         },
     },
     catha_hero_cloud_decal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2055,7 +2055,7 @@ return {
         },
     },
     catha_hero_cloud_decal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2081,7 +2081,7 @@ return {
         },
     },
     catha_hero_cloud_decal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2107,7 +2107,7 @@ return {
         },
     },
     catha_hero_cloud_decal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2133,7 +2133,7 @@ return {
         },
     },
     catha_hero_cloud_decal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2159,7 +2159,7 @@ return {
         },
     },
     catha_hero_cloud_decal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2185,7 +2185,7 @@ return {
         },
     },
     catha_hero_cloud_decal_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -2211,7 +2211,7 @@ return {
         },
     },
     decal_arrow = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2236,7 +2236,7 @@ return {
         },
     },
     decal_axe = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2261,7 +2261,7 @@ return {
         },
     },
     decal_blood_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2286,7 +2286,7 @@ return {
         },
     },
     decal_blood_0002 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2311,7 +2311,7 @@ return {
         },
     },
     decal_blood_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2336,7 +2336,7 @@ return {
         },
     },
     decal_blood_0004 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2361,7 +2361,7 @@ return {
         },
     },
     decal_blood_0005 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2386,7 +2386,7 @@ return {
         },
     },
     decal_bomb_crater = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2411,7 +2411,7 @@ return {
         },
     },
     decal_flying_shadow = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2436,7 +2436,7 @@ return {
         },
     },
     decal_holystrike_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2461,7 +2461,7 @@ return {
         },
     },
     decal_holystrike_0002 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -2486,7 +2486,7 @@ return {
         },
     },
     decal_holystrike_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2511,7 +2511,7 @@ return {
         },
     },
     decal_holystrike_0004 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2536,7 +2536,7 @@ return {
         },
     },
     decal_holystrike_0005 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2561,7 +2561,7 @@ return {
         },
     },
     decal_holystrike_0006 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2586,7 +2586,7 @@ return {
         },
     },
     decal_holystrike_0007 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2612,7 +2612,7 @@ return {
         },
     },
     decal_holystrike_0009 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2638,7 +2638,7 @@ return {
         },
     },
     decal_holystrike_0011 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2664,7 +2664,7 @@ return {
         },
     },
     decal_scorched_earth_base = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2689,7 +2689,7 @@ return {
         },
     },
     decal_scorched_earth_fire = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -2714,7 +2714,7 @@ return {
         },
     },
     decal_smoke_hitground_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -2740,7 +2740,7 @@ return {
         },
     },
     decal_smoke_hitground_0003 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -2766,7 +2766,7 @@ return {
         },
     },
     decal_smoke_hitground_0005 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -2792,7 +2792,7 @@ return {
         },
     },
     decal_smoke_hitground_0007 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -2818,7 +2818,7 @@ return {
         },
     },
     decal_smoke_hitground_0009 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -2844,7 +2844,7 @@ return {
         },
     },
     decal_smoke_hitground_0011 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -2870,7 +2870,7 @@ return {
         },
     },
     decal_spear = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2895,7 +2895,7 @@ return {
         },
     },
     decal_teleportal_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2920,7 +2920,7 @@ return {
         },
     },
     decal_teleportal_0002 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2945,7 +2945,7 @@ return {
         },
     },
     decal_teleportal_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2970,7 +2970,7 @@ return {
         },
     },
     decal_teleportal_0004 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -2995,7 +2995,7 @@ return {
         },
     },
     decal_teleportal_0005 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3020,7 +3020,7 @@ return {
         },
     },
     decal_teleportal_0006 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3045,7 +3045,7 @@ return {
         },
     },
     decal_teleportal_0007 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3070,7 +3070,7 @@ return {
         },
     },
     decal_teleportal_0008 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3095,7 +3095,7 @@ return {
         },
     },
     decal_teleportal_0009 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3120,7 +3120,7 @@ return {
         },
     },
     decal_teleportal_0010 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3145,7 +3145,7 @@ return {
         },
     },
     decal_teleportal_0011 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3170,7 +3170,7 @@ return {
         },
     },
     decal_teleportal_0012 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3195,7 +3195,7 @@ return {
         },
     },
     decal_teleportal_0013 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3220,7 +3220,7 @@ return {
         },
     },
     decal_teleportal_0014 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3245,7 +3245,7 @@ return {
         },
     },
     decal_teleportal_0015 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3270,7 +3270,7 @@ return {
         },
     },
     decal_teleportal_0016 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3295,7 +3295,7 @@ return {
         },
     },
     decal_teleportal_0017 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -3320,7 +3320,7 @@ return {
         },
     },
     decal_teleportal_0018 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -3345,7 +3345,7 @@ return {
         },
     },
     decal_teleportal_0019 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -3370,7 +3370,7 @@ return {
         },
     },
     decal_teleportal_0020 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -3395,7 +3395,7 @@ return {
         },
     },
     decal_teleportal_0021 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -3420,7 +3420,7 @@ return {
         },
     },
     decal_teleportal_0022 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3445,7 +3445,7 @@ return {
         },
     },
     decal_teleportal_0023 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3470,7 +3470,7 @@ return {
         },
     },
     defendFlag_0060 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3495,7 +3495,7 @@ return {
         },
     },
     defendFlag_0069 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3520,7 +3520,7 @@ return {
         },
     },
     defendFlag_underground_0069 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -3545,7 +3545,7 @@ return {
         },
     },
     ewok_2_proy_0002 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3570,7 +3570,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3595,7 +3595,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0002 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3620,7 +3620,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3645,7 +3645,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0004 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3670,7 +3670,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3695,7 +3695,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0006 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3720,7 +3720,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3745,7 +3745,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0008 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3770,7 +3770,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3795,7 +3795,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0010 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3820,7 +3820,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3845,7 +3845,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0012 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3870,7 +3870,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3895,7 +3895,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0014 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3920,7 +3920,7 @@ return {
         },
     },
     faustus_hero_teleportDecal_0015 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -3945,7 +3945,7 @@ return {
         },
     },
     fireball_shadow_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3970,7 +3970,7 @@ return {
         },
     },
     fireball_shadow_0002 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -3995,7 +3995,7 @@ return {
         },
     },
     fireball_shadow_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4020,7 +4020,7 @@ return {
         },
     },
     fireball_shadow_0004 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4045,7 +4045,7 @@ return {
         },
     },
     fireball_shadow_0005 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4070,7 +4070,7 @@ return {
         },
     },
     fireball_shadow_0006 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4095,7 +4095,7 @@ return {
         },
     },
     fireball_shadow_0007 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4120,7 +4120,7 @@ return {
         },
     },
     fireball_shadow_0008 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -4145,7 +4145,7 @@ return {
         },
     },
     fireball_shadow_0009 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4170,7 +4170,7 @@ return {
         },
     },
     fireball_shadow_0010 = {
-        a_name = "go_decals-2.png",
+        a_name = "go_decals-2.dds",
         a_size = {
             1024,
             1024,
@@ -4195,7 +4195,7 @@ return {
         },
     },
     fireball_shadow_0011 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4220,7 +4220,7 @@ return {
         },
     },
     fireball_shadow_0012 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4245,7 +4245,7 @@ return {
         },
     },
     fireball_shadow_0013 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4270,7 +4270,7 @@ return {
         },
     },
     fireball_shadow_0014 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4295,7 +4295,7 @@ return {
         },
     },
     fireball_shadow_0015 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4320,7 +4320,7 @@ return {
         },
     },
     fireball_shadow_0016 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4345,7 +4345,7 @@ return {
         },
     },
     fireball_shadow_0017 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4370,7 +4370,7 @@ return {
         },
     },
     fireball_shadow_0018 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4395,7 +4395,7 @@ return {
         },
     },
     fireball_shadow_0019 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4420,7 +4420,7 @@ return {
         },
     },
     fireball_shadow_0020 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4445,7 +4445,7 @@ return {
         },
     },
     forestKeeper_soldierBuff_decal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4471,7 +4471,7 @@ return {
         },
     },
     forestKeeper_soldierBuff_decal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4497,7 +4497,7 @@ return {
         },
     },
     forestKeeper_soldierBuff_decal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4523,7 +4523,7 @@ return {
         },
     },
     forestKeeper_soldierBuff_decal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4549,7 +4549,7 @@ return {
         },
     },
     gollem_attackFx = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4574,7 +4574,7 @@ return {
         },
     },
     hero_death_0039 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -4599,7 +4599,7 @@ return {
         },
     },
     hero_reinforce_rocks_decal = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -4624,7 +4624,7 @@ return {
         },
     },
     mage_highElven_energyBall_shadow = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4649,7 +4649,7 @@ return {
         },
     },
     mage_wild_silence_decal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4674,7 +4674,7 @@ return {
         },
     },
     mage_wild_silence_decal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4699,7 +4699,7 @@ return {
         },
     },
     mage_wild_silence_decal_0002 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4724,7 +4724,7 @@ return {
         },
     },
     mage_wild_silence_decal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4749,7 +4749,7 @@ return {
         },
     },
     mage_wild_silence_decal_0004 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4774,7 +4774,7 @@ return {
         },
     },
     mage_wild_silence_decal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4799,7 +4799,7 @@ return {
         },
     },
     mage_wild_silence_decal_0006 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4824,7 +4824,7 @@ return {
         },
     },
     mage_wild_silence_decal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4849,7 +4849,7 @@ return {
         },
     },
     mage_wild_silence_decal_0008 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4874,7 +4874,7 @@ return {
         },
     },
     mage_wild_silence_decal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4899,7 +4899,7 @@ return {
         },
     },
     mage_wild_silence_decal_0010 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4924,7 +4924,7 @@ return {
         },
     },
     mage_wild_silence_decal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4949,7 +4949,7 @@ return {
         },
     },
     mage_wild_silence_decal_0012 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4974,7 +4974,7 @@ return {
         },
     },
     mage_wild_silence_decal_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -4999,7 +4999,7 @@ return {
         },
     },
     mage_wild_silence_decal_0014 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5024,7 +5024,7 @@ return {
         },
     },
     mage_wild_silence_decal_0015 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5049,7 +5049,7 @@ return {
         },
     },
     mage_wild_silence_decal_glow = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5074,7 +5074,7 @@ return {
         },
     },
     malikAfro_ring_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5099,7 +5099,7 @@ return {
         },
     },
     malikAfro_ring_0002 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5124,7 +5124,7 @@ return {
         },
     },
     malikAfro_ring_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5149,7 +5149,7 @@ return {
         },
     },
     malikAfro_ring_0004 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5174,7 +5174,7 @@ return {
         },
     },
     malikAfro_ring_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5199,7 +5199,7 @@ return {
         },
     },
     malikAfro_ring_0006 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5224,7 +5224,7 @@ return {
         },
     },
     malikAfro_ring_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5249,7 +5249,7 @@ return {
         },
     },
     malikAfro_ring_0008 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5274,7 +5274,7 @@ return {
         },
     },
     malikAfro_ring_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5299,7 +5299,7 @@ return {
         },
     },
     malikAfro_ring_0010 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5324,7 +5324,7 @@ return {
         },
     },
     malikAfro_ring_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5349,7 +5349,7 @@ return {
         },
     },
     malikAfro_rocks_decal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5374,7 +5374,7 @@ return {
         },
     },
     mercenaryDraw_decal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5399,7 +5399,7 @@ return {
         },
     },
     mercenaryDraw_decal_0002 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5424,7 +5424,7 @@ return {
         },
     },
     mercenaryDraw_decal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5449,7 +5449,7 @@ return {
         },
     },
     mercenaryDraw_decal_0004 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5474,7 +5474,7 @@ return {
         },
     },
     mercenaryDraw_decal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5499,7 +5499,7 @@ return {
         },
     },
     mercenaryDraw_decal_0006 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5524,7 +5524,7 @@ return {
         },
     },
     mercenaryDraw_decal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5549,7 +5549,7 @@ return {
         },
     },
     mercenaryDraw_decal_0008 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5574,7 +5574,7 @@ return {
         },
     },
     mercenaryDraw_decal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5599,7 +5599,7 @@ return {
         },
     },
     mercenaryDraw_decal_0010 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5624,7 +5624,7 @@ return {
         },
     },
     mercenaryDraw_decal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5649,7 +5649,7 @@ return {
         },
     },
     mercenaryDraw_decal_0012 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5674,7 +5674,7 @@ return {
         },
     },
     mercenaryDraw_decal_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5699,7 +5699,7 @@ return {
         },
     },
     mercenaryDraw_decal_0014 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5724,7 +5724,7 @@ return {
         },
     },
     mercenaryDraw_decal_0015 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5749,7 +5749,7 @@ return {
         },
     },
     mercenaryDraw_decal_0016 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5774,7 +5774,7 @@ return {
         },
     },
     mercenaryDraw_decal_0017 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5799,7 +5799,7 @@ return {
         },
     },
     mercenaryDraw_decal_0018 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5824,7 +5824,7 @@ return {
         },
     },
     mercenaryDraw_decal_0019 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5849,7 +5849,7 @@ return {
         },
     },
     mercenaryDraw_decal_0020 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5874,7 +5874,7 @@ return {
         },
     },
     mercenaryDraw_decal_0021 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5899,7 +5899,7 @@ return {
         },
     },
     mercenaryDraw_decal_0022 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5924,7 +5924,7 @@ return {
         },
     },
     mercenaryDraw_decal_0023 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5949,7 +5949,7 @@ return {
         },
     },
     mercenaryDraw_decal_0024 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5974,7 +5974,7 @@ return {
         },
     },
     mercenaryDraw_decal_0025 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -5999,7 +5999,7 @@ return {
         },
     },
     mercenaryDraw_decal_0026 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6024,7 +6024,7 @@ return {
         },
     },
     mercenaryDraw_decal_0027 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6049,7 +6049,7 @@ return {
         },
     },
     mercenaryDraw_decal_0028 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6074,7 +6074,7 @@ return {
         },
     },
     mercenaryDraw_decal_0029 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6099,7 +6099,7 @@ return {
         },
     },
     mercenaryDraw_decal_0030 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6124,7 +6124,7 @@ return {
         },
     },
     ogre_mage_aura_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6150,7 +6150,7 @@ return {
         },
     },
     ogre_mage_aura_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6176,7 +6176,7 @@ return {
         },
     },
     ogre_mage_aura_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6202,7 +6202,7 @@ return {
         },
     },
     ogre_mage_aura_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6228,7 +6228,7 @@ return {
         },
     },
     ogre_mage_aura_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6254,7 +6254,7 @@ return {
         },
     },
     ogre_mage_aura_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6280,7 +6280,7 @@ return {
         },
     },
     ogre_mage_aura_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6306,7 +6306,7 @@ return {
         },
     },
     ogre_mage_aura_0015 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6332,7 +6332,7 @@ return {
         },
     },
     ogre_mage_aura_0017 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6358,7 +6358,7 @@ return {
         },
     },
     ogre_mage_aura_0019 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6384,7 +6384,7 @@ return {
         },
     },
     ogre_mage_aura_0021 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6410,7 +6410,7 @@ return {
         },
     },
     ogre_mage_aura_0023 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6435,7 +6435,7 @@ return {
         },
     },
     ray_explosion_decal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6461,7 +6461,7 @@ return {
         },
     },
     ray_explosion_decal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6487,7 +6487,7 @@ return {
         },
     },
     ray_explosion_decal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6513,7 +6513,7 @@ return {
         },
     },
     ray_explosion_decal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6539,7 +6539,7 @@ return {
         },
     },
     ray_explosion_decal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6565,7 +6565,7 @@ return {
         },
     },
     ray_explosion_decal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6591,7 +6591,7 @@ return {
         },
     },
     ray_explosion_decal_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6617,7 +6617,7 @@ return {
         },
     },
     ray_explosion_decal_0015 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6643,7 +6643,7 @@ return {
         },
     },
     ray_explosion_decal_0017 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6669,7 +6669,7 @@ return {
         },
     },
     ray_explosion_decal_0019 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6695,7 +6695,7 @@ return {
         },
     },
     reinforce_proy_0010 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6720,7 +6720,7 @@ return {
         },
     },
     scourger_special_decal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6745,7 +6745,7 @@ return {
         },
     },
     selected_big = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6770,7 +6770,7 @@ return {
         },
     },
     selected_med = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6795,7 +6795,7 @@ return {
         },
     },
     selected_small = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6820,7 +6820,7 @@ return {
         },
     },
     selected_soldier_small = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6845,7 +6845,7 @@ return {
         },
     },
     stage4_fire_decal_0002 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -6870,7 +6870,7 @@ return {
         },
     },
     terrain_archer_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6895,7 +6895,7 @@ return {
         },
     },
     terrain_archer_0001_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6920,7 +6920,7 @@ return {
         },
     },
     terrain_archer_0002 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6945,7 +6945,7 @@ return {
         },
     },
     terrain_archer_0002_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6970,7 +6970,7 @@ return {
         },
     },
     terrain_archer_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -6995,7 +6995,7 @@ return {
         },
     },
     terrain_archer_0003_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7020,7 +7020,7 @@ return {
         },
     },
     terrain_archer_0008 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7045,7 +7045,7 @@ return {
         },
     },
     terrain_archer_0008_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7070,7 +7070,7 @@ return {
         },
     },
     terrain_archer_0008_over_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7095,7 +7095,7 @@ return {
         },
     },
     terrain_artillery_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7120,7 +7120,7 @@ return {
         },
     },
     terrain_artillery_0001_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7145,7 +7145,7 @@ return {
         },
     },
     terrain_artillery_0002 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7170,7 +7170,7 @@ return {
         },
     },
     terrain_artillery_0002_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7195,7 +7195,7 @@ return {
         },
     },
     terrain_artillery_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7220,7 +7220,7 @@ return {
         },
     },
     terrain_artillery_0003_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7245,7 +7245,7 @@ return {
         },
     },
     terrain_artillery_0004 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -7270,7 +7270,7 @@ return {
         },
     },
     terrain_artillery_0004_over = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -7295,7 +7295,7 @@ return {
         },
     },
     terrain_artillery_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -7320,7 +7320,7 @@ return {
         },
     },
     terrain_artillery_0005_over = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -7345,7 +7345,7 @@ return {
         },
     },
     terrain_artillery_0006 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -7370,7 +7370,7 @@ return {
         },
     },
     terrain_artillery_0006_over = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -7395,7 +7395,7 @@ return {
         },
     },
     terrain_artillery_0008 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7420,7 +7420,7 @@ return {
         },
     },
     terrain_artillery_0008_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7445,7 +7445,7 @@ return {
         },
     },
     terrain_barrack_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7470,7 +7470,7 @@ return {
         },
     },
     terrain_barrack_0001_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7495,7 +7495,7 @@ return {
         },
     },
     terrain_barrack_0002 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7520,7 +7520,7 @@ return {
         },
     },
     terrain_barrack_0002_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7545,7 +7545,7 @@ return {
         },
     },
     terrain_barrack_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7570,7 +7570,7 @@ return {
         },
     },
     terrain_barrack_0003_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7595,7 +7595,7 @@ return {
         },
     },
     terrain_barrack_0008 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7620,7 +7620,7 @@ return {
         },
     },
     terrain_barrack_0008_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7645,7 +7645,7 @@ return {
         },
     },
     terrain_mage_0001 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7670,7 +7670,7 @@ return {
         },
     },
     terrain_mage_0001_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7695,7 +7695,7 @@ return {
         },
     },
     terrain_mage_0002 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7720,7 +7720,7 @@ return {
         },
     },
     terrain_mage_0002_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7745,7 +7745,7 @@ return {
         },
     },
     terrain_mage_0003 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7770,7 +7770,7 @@ return {
         },
     },
     terrain_mage_0003_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7795,7 +7795,7 @@ return {
         },
     },
     terrain_mage_0008 = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7820,7 +7820,7 @@ return {
         },
     },
     terrain_mage_0008_over = {
-        a_name = "go_decals-1.png",
+        a_name = "go_decals-1.dds",
         a_size = {
             1024,
             1024,
@@ -7845,7 +7845,7 @@ return {
         },
     },
     tower_mechs_layer1_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -7922,7 +7922,7 @@ return {
         },
     },
     tower_mechs_layer2_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -7953,7 +7953,7 @@ return {
         },
     },
     tower_mechs_layer2_0003 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -7979,7 +7979,7 @@ return {
         },
     },
     tower_mechs_layer2_0004 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8004,7 +8004,7 @@ return {
         },
     },
     tower_mechs_layer2_0005 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8029,7 +8029,7 @@ return {
         },
     },
     tower_mechs_layer2_0006 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8055,7 +8055,7 @@ return {
         },
     },
     tower_mechs_layer2_0007 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8081,7 +8081,7 @@ return {
         },
     },
     tower_mechs_layer2_0008 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8141,7 +8141,7 @@ return {
         },
     },
     tower_mechs_layer2_0046 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8166,7 +8166,7 @@ return {
         },
     },
     tower_mechs_layer2_0047 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8191,7 +8191,7 @@ return {
         },
     },
     tower_mechs_layer3_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8222,7 +8222,7 @@ return {
         },
     },
     tower_mechs_layer3_0003 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8248,7 +8248,7 @@ return {
         },
     },
     tower_mechs_layer3_0004 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8274,7 +8274,7 @@ return {
         },
     },
     tower_mechs_layer3_0005 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8300,7 +8300,7 @@ return {
         },
     },
     tower_mechs_layer3_0006 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8326,7 +8326,7 @@ return {
         },
     },
     tower_mechs_layer3_0007 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8352,7 +8352,7 @@ return {
         },
     },
     tower_mechs_layer3_0008 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8412,7 +8412,7 @@ return {
         },
     },
     tower_mechs_layer4_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8443,7 +8443,7 @@ return {
         },
     },
     tower_mechs_layer4_0003 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8469,7 +8469,7 @@ return {
         },
     },
     tower_mechs_layer4_0004 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8494,7 +8494,7 @@ return {
         },
     },
     tower_mechs_layer4_0005 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8519,7 +8519,7 @@ return {
         },
     },
     tower_mechs_layer4_0006 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8545,7 +8545,7 @@ return {
         },
     },
     tower_mechs_layer4_0007 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8571,7 +8571,7 @@ return {
         },
     },
     tower_mechs_layer4_0008 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8631,7 +8631,7 @@ return {
         },
     },
     tower_mechs_layer4_0046 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8656,7 +8656,7 @@ return {
         },
     },
     tower_mechs_layer4_0047 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8681,7 +8681,7 @@ return {
         },
     },
     tower_mechs_layer5_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8758,7 +8758,7 @@ return {
         },
     },
     tower_mechs_layer6_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8823,7 +8823,7 @@ return {
         },
     },
     tower_mechs_layer6_0023 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8853,7 +8853,7 @@ return {
         },
     },
     tower_mechs_layer6_0025 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8881,7 +8881,7 @@ return {
         },
     },
     tower_mechs_layer6_0027 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8907,7 +8907,7 @@ return {
         },
     },
     tower_mechs_layer7_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8959,7 +8959,7 @@ return {
         },
     },
     tower_mechs_layer7_0023 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -8989,7 +8989,7 @@ return {
         },
     },
     tower_mechs_layer7_0025 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9017,7 +9017,7 @@ return {
         },
     },
     tower_mechs_layer7_0027 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9043,7 +9043,7 @@ return {
         },
     },
     tower_mechs_layer7_0030 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9080,7 +9080,7 @@ return {
         },
     },
     tower_mechs_layer8_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9129,7 +9129,7 @@ return {
         },
     },
     tower_mechs_layer8_0015 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9154,7 +9154,7 @@ return {
         },
     },
     tower_mechs_layer8_0016 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9179,7 +9179,7 @@ return {
         },
     },
     tower_mechs_layer8_0017 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9204,7 +9204,7 @@ return {
         },
     },
     tower_mechs_layer8_0018 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9229,7 +9229,7 @@ return {
         },
     },
     tower_mechs_layer8_0019 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9254,7 +9254,7 @@ return {
         },
     },
     tower_mechs_layer8_0020 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9279,7 +9279,7 @@ return {
         },
     },
     tower_mechs_layer8_0021 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9304,7 +9304,7 @@ return {
         },
     },
     tower_mechs_layer8_0022 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9329,7 +9329,7 @@ return {
         },
     },
     tower_mechs_layer8_0023 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9359,7 +9359,7 @@ return {
         },
     },
     tower_mechs_layer8_0029 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9384,7 +9384,7 @@ return {
         },
     },
     tower_mechs_layer8_0030 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9409,7 +9409,7 @@ return {
         },
     },
     tower_mechs_layer8_0031 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9434,7 +9434,7 @@ return {
         },
     },
     tower_mechs_layer8_0032 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9459,7 +9459,7 @@ return {
         },
     },
     tower_mechs_layer8_0033 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9484,7 +9484,7 @@ return {
         },
     },
     tower_mechs_layer8_0034 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9509,7 +9509,7 @@ return {
         },
     },
     tower_mechs_layer8_0035 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9534,7 +9534,7 @@ return {
         },
     },
     tower_mechs_layer8_0036 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9559,7 +9559,7 @@ return {
         },
     },
     tower_mechs_layer8_0037 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9584,7 +9584,7 @@ return {
         },
     },
     tower_mechs_layer8_0038 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9609,7 +9609,7 @@ return {
         },
     },
     tower_mechs_layer8_0039 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9634,7 +9634,7 @@ return {
         },
     },
     tower_mechs_layer8_0040 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9659,7 +9659,7 @@ return {
         },
     },
     tower_mechs_layer8_0041 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9684,7 +9684,7 @@ return {
         },
     },
     tower_mechs_layer8_0042 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9709,7 +9709,7 @@ return {
         },
     },
     twilight_evoker_aura = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9734,7 +9734,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_decal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9760,7 +9760,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_decal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9786,7 +9786,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_decal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9812,7 +9812,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_decal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9838,7 +9838,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_decal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9864,7 +9864,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_decal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9890,7 +9890,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_decal_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9916,7 +9916,7 @@ return {
         },
     },
     veznan_hero_arcaneNova_terrainDecal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -9941,7 +9941,7 @@ return {
         },
     },
     weakness_big_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9967,7 +9967,7 @@ return {
         },
     },
     weakness_big_0002 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -9993,7 +9993,7 @@ return {
         },
     },
     weakness_big_0003 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10019,7 +10019,7 @@ return {
         },
     },
     weakness_big_0004 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10045,7 +10045,7 @@ return {
         },
     },
     weakness_big_0005 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10071,7 +10071,7 @@ return {
         },
     },
     weakness_big_0006 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10096,7 +10096,7 @@ return {
         },
     },
     weakness_small_0001 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10122,7 +10122,7 @@ return {
         },
     },
     weakness_small_0002 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10148,7 +10148,7 @@ return {
         },
     },
     weakness_small_0003 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10174,7 +10174,7 @@ return {
         },
     },
     weakness_small_0004 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10200,7 +10200,7 @@ return {
         },
     },
     weakness_small_0005 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10226,7 +10226,7 @@ return {
         },
     },
     weakness_small_0006 = {
-        a_name = "go_decals-3.png",
+        a_name = "go_decals-3.dds",
         a_size = {
             1024,
             1024,
@@ -10251,7 +10251,7 @@ return {
         },
     },
     xin_hero_drink_auraCircle = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10276,7 +10276,7 @@ return {
         },
     },
     xin_hero_drink_decal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10301,7 +10301,7 @@ return {
         },
     },
     xin_hero_scream_decal = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10326,7 +10326,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0001 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10352,7 +10352,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0003 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10378,7 +10378,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0005 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10404,7 +10404,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0007 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10430,7 +10430,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0009 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10456,7 +10456,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0011 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10482,7 +10482,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0013 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10508,7 +10508,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0015 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10534,7 +10534,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0017 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10560,7 +10560,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0019 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10586,7 +10586,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0021 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
@@ -10612,7 +10612,7 @@ return {
         },
     },
     xin_hero_scream_soldierDecal_0023 = {
-        a_name = "go_decals-4.png",
+        a_name = "go_decals-4.dds",
         a_size = {
             2048,
             1024,
