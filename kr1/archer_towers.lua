@@ -173,8 +173,8 @@ local function archer_towers()
     tower_crossbow.attacks.list[3].mod = "mod_crossbow_eagle"
     tower_crossbow.attacks.list[3].cooldown = 1
     tower_crossbow.attacks.list[3].fly_cooldown = 10
-    tower_crossbow.attacks.list[3].range = 128
-    tower_crossbow.attacks.list[3].range_inc = 32
+    tower_crossbow.attacks.list[3].range = 130
+    tower_crossbow.attacks.list[3].range_inc = 40
     tower_crossbow.render.sprites[1].name = "terrain_archer_%04i"
     tower_crossbow.render.sprites[1].offset = vec_2(0, 14)
     tower_crossbow.render.sprites[2].name = "CossbowHunter_tower"
