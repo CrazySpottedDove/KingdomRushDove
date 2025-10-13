@@ -18570,6 +18570,7 @@ function scripts.hero_raelyn.update(this, store)
     local unbreakable_attack = this.timed_attacks.list[1]
     local inspire_fear_attack = this.timed_attacks.list[2]
     local onslaught_attack = this.timed_attacks.list[3]
+    onslaught_attack.duration_ts = 0
     local onslaught_on = false
 
     this.health_bar.hidden = false
