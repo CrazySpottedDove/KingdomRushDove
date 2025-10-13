@@ -525,7 +525,7 @@ local function barrack_towers()
     tower_templar.tower.type = "templar"
     tower_templar.tower.price = 185
     tower_templar.powers.holygrail = CC("power")
-    tower_templar.powers.holygrail.price_base = 200
+    tower_templar.powers.holygrail.price_base = 180
     tower_templar.powers.holygrail.price_inc = 135
     tower_templar.powers.holygrail.name = "HOLY"
     tower_templar.powers.holygrail.enc_icon = 25
@@ -535,7 +535,7 @@ local function barrack_towers()
     tower_templar.powers.extralife.name = "TOUGHNESS"
     tower_templar.powers.extralife.enc_icon = 27
     tower_templar.powers.blood = CC("power")
-    tower_templar.powers.blood.price_base = 225
+    tower_templar.powers.blood.price_base = 200
     tower_templar.powers.blood.price_inc = 150
     tower_templar.powers.blood.name = "ARTERIAL"
     tower_templar.powers.blood.enc_icon = 26
