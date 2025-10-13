@@ -144,7 +144,7 @@ local function archer_towers()
     tower_crossbow.powers.multishot.enc_icon = 28
     tower_crossbow.powers.multishot.attack_idx = 2
     tower_crossbow.powers.eagle = CC("power")
-    tower_crossbow.powers.eagle.price_base = 225
+    tower_crossbow.powers.eagle.price_base = 200
     tower_crossbow.powers.eagle.price_inc = 200
     tower_crossbow.powers.eagle.name = "FALCONER"
     tower_crossbow.powers.eagle.enc_icon = 29
