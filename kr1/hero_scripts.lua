@@ -20938,8 +20938,12 @@ function scripts.bolt_hero_dragon_gem_attack.update(this, store, script)
         if is_flying then
             target_bans = 0
 
-            if target and target.flight_height then
-                target_pos.y = target_pos.y - target.flight_height
+            if target then
+                if target.flight_height then
+                    target_pos.y = target_pos.y - target.flight_height
+                elseif target.unit.hit_offset then
+                    target_pos.y = target_pos.y - target.unit.hit_offset.y
+                end
             end
         end
 
@@ -23839,7 +23843,11 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store, script)
             target_bans = 0
 
             if target and target.flight_height then
-                target_pos.y = target_pos.y - target.flight_height
+                if target.flight_height then
+                    target_pos.y = target_pos.y - target.flight_height
+                elseif target.unit.hit_offset then
+                    target_pos.y = target_pos.y - target.unit.hit_offset.y
+                end
             end
         end
 

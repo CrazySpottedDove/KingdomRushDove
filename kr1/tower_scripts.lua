@@ -1812,6 +1812,18 @@ scripts.tower_high_elven = {
 
                     if enemy then
                         if #enemies >= 3 or enemy.health.hp > 750 then
+                            table.sort(enemies, function(a, b)
+                                local e1_magic = enemy_is_silent_target(a)
+                                local e2_magic = enemy_is_silent_target(b)
+                                if e1_magic and not e2_magic then
+                                    return true
+                                end
+                                if e2_magic and not e1_magic then
+                                    return false
+                                end
+                                return a.id < b.id
+                            end)
+
                             ta.ts = store.tick_ts
 
                             local an, af = U.animation_name_facing_point(this, ta.animation, enemy.pos, shooter_sid)
