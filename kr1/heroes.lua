@@ -8166,7 +8166,7 @@ local function heroes()
     tt.ranged.attacks[1].min_range = 0
     tt.ranged.attacks[1].max_range = 150
     tt.ranged.attacks[1].shoot_time = fts(23)
-    tt.ranged.attacks[1].sync_animation = true
+    -- tt.ranged.attacks[1].sync_animation = true
     tt.ranged.attacks[1].animation = "attack"
     tt.ranged.attacks[1].sound_shoot = "ElvesHeroPhoenixAttack"
     tt.ranged.attacks[2] = CC("bullet_attack")
@@ -8177,7 +8177,7 @@ local function heroes()
     tt.ranged.attacks[2].min_range = 0
     tt.ranged.attacks[2].max_range = 300
     tt.ranged.attacks[2].shoot_times = {}
-    tt.ranged.attacks[2].sync_animation = true
+    -- tt.ranged.attacks[2].sync_animation = true
     tt.ranged.attacks[2].animations = {nil, "birdThrow"}
     tt.ranged.attacks[2].sound = "ElvesHeroPhoenixBlazingOffspringShoot"
     tt.ranged.attacks[2].loops = 1
