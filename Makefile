@@ -31,7 +31,7 @@ monitor: _examine_dir_map sync
 package:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	git add .
-	git commit -m "LAST VERSION: $(CURRENT_ID)"
+# 	git commit -m "LAST VERSION: $(CURRENT_ID)"
 
 branch:
 	@bash $(MAKE_FILE_DIR)/branch.sh
