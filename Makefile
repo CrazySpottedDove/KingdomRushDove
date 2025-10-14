@@ -49,6 +49,6 @@ download:
 	@lua scripts/download_assets.lua
 
 main_version_jump: sync
-	git rev-parse HEAD > $(LAST_SYNC_FILE)
+	git rev-parse HEAD > $(MAIN_VERSION_COMMIT_HASH_FILE)
 
 
