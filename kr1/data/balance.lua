@@ -5286,8 +5286,8 @@ local towers = {
         basic_attack = {
             ray_timing = 0.2,
             cooldown = 2.7,
-            damage_min = {4, 8, 15, 28},
-            damage_max = {7, 16, 28, 48},
+            damage_min = {4, 8, 15, 30},
+            damage_max = {7, 16, 28, 50},
             range = {160, 170, 185, 205},
             damage_every = fts(1)
         },

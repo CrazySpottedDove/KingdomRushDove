@@ -11221,7 +11221,6 @@ function scripts.tower_stargazers.update(this, store, script)
     aa.ts = store.tick_ts - aa.cooldown + a.attack_delay_on_spawn
 
     local ray_timing = aa.ray_timing
-    local teleport_bans = F_ALL
 
     local tw = this.tower
     while true do
@@ -11300,8 +11299,8 @@ function scripts.tower_stargazers.update(this, store, script)
                                 queue_insert(store, m)
                             end
                         else
-                            bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x + math.random(-20, 20),
-                                enemy.pos.y + enemy.unit.hit_offset.y + math.random(-20, 20))
+                            bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x,
+                                enemy.pos.y + enemy.unit.hit_offset.y)
                             bullet.bullet.target_id = nil
                             -- new: 鞭尸时，也触发星爆
                             scripts.tower_stargazers.create_star_death(this, store, enemy, 1)
