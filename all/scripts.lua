@@ -1495,7 +1495,10 @@ function scripts.tower_common.get_info(this)
     end
 
     min, max = min * this.tower.damage_factor, max * this.tower.damage_factor
-
+    if d_type == DAMAGE_STAB then
+        min = math.ceil(min * 0.5)
+        max = math.ceil(max * 0.5)
+    end
     local cooldown
 
     if this.attacks and this.attacks.list[1].cooldown then

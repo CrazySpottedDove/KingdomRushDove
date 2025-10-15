@@ -1253,7 +1253,6 @@ tt.sound_open = "TowerDarkElfSupportBladesSpawn"
 
 -- 沙丘哨兵 BEGIN
 tt = E:register_t("tower_sand_lvl4", "tower")
-
 E:add_comps(tt, "powers", "attacks", "vis")
 b = balance.towers.sand
 tt.info.enc_icon = 18
@@ -1302,12 +1301,14 @@ tt.main_script.update = scripts.tower_sand.update
 tt.main_script.remove = scripts.tower_sand.remove
 tt.powers.skill_gold = E:clone_c("power")
 tt.powers.skill_gold.attack_idx = 2
-tt.powers.skill_gold.price = b.skill_gold.price
+tt.powers.skill_gold.price_base = b.skill_gold.price[1]
+tt.powers.skill_gold.price_inc = b.skill_gold.price[2]
 tt.powers.skill_gold.cooldown = b.skill_gold.cooldown
 tt.powers.skill_gold.enc_icon = 27
 tt.powers.skill_big_blade = E:clone_c("power")
 tt.powers.skill_big_blade.attack_idx = 3
-tt.powers.skill_big_blade.price = b.skill_big_blade.price
+tt.powers.skill_big_blade.price_base = b.skill_big_blade.price[1]
+tt.powers.skill_big_blade.price_inc = b.skill_big_blade.price[2]
 tt.powers.skill_big_blade.enc_icon = 28
 tt.powers.skill_big_blade.cooldown = b.skill_big_blade.cooldown
 tt.powers.skill_big_blade.damage_min = b.skill_big_blade.damage_min
