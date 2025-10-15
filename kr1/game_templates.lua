@@ -9963,4 +9963,3 @@ tt = E:register_t("fx_bullet_tower_sand_skill_gold_hit_coins", "fx")
 tt.render.sprites[1].name = "tower_sand_lvl4_skill_1_coins_hit"
 tt = E:register_t("fx_aura_tower_sand_skill_big_blade", "fx")
 tt.render.sprites[1].name = "tower_sand_lvl4_skill_2_hit_FX_loop"
-

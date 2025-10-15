@@ -5899,10 +5899,10 @@ local towers = {
             bounce_range = 130,
             bounce_speed_mult = 1.25,
             bounce_damage_mult = 0.6,
-            damage_min = {3, 6, 10, 16},
-            damage_max = {5, 10, 14, 25},
+            damage_min = {3, 6, 10, 40},
+            damage_max = {5, 10, 14, 66},
             range = {145, 155, 170, 180},
-            damage_type = DAMAGE_PHYSICAL,
+            damage_type = DAMAGE_STAB,
             max_bounces = {1, 2, 3, 4}
         },
         skill_gold = {
@@ -5912,10 +5912,10 @@ local towers = {
             range_effect = 190,
             price = {250, 250, 250},
             cooldown = {8, 8, 8},
-            damage_min = {46, 94, 142},
-            damage_max = {46, 94, 142},
-            s_damage = {46, 94, 142},
-            damage_type = DAMAGE_PHYSICAL,
+            damage_min = {120, 244, 368},
+            damage_max = {120, 244, 368},
+            s_damage = {60, 122, 184},
+            damage_type = DAMAGE_STAB,
             gold_extra = {4, 8, 12}
         },
         skill_big_blade = {
@@ -5926,13 +5926,13 @@ local towers = {
             damage_every = 0.25,
             slow_duration = 0.5,
             price = {200, 200, 200},
-            damage_min = {4, 6, 9},
-            damage_max = {6, 11, 14},
-            s_damage_min = {16, 24, 36},
-            s_damage_max = {24, 44, 56},
+            damage_min = {10, 16, 24},
+            damage_max = {16, 28, 34},
+            s_damage_min = {20, 32, 48},
+            s_damage_max = {32, 42, 68},
             cooldown = {16, 16, 16},
             duration = {4, 5, 6},
-            damage_type = DAMAGE_PHYSICAL
+            damage_type = DAMAGE_STAB
         }
     },
     ghost = {
