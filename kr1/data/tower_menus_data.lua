@@ -277,7 +277,7 @@ return {
         action_arg = "tower_sand_lvl4",
         image = "kr5_main_icons_0013",
         place = 16,
-        tt_titile = _("TOWER_SAND_NAME"),
+        tt_title = _("TOWER_SAND_NAME"),
         tt_desc = _("TOWER_SAND_1_DESCRIPTION")
     }), templates.sell}},
 
