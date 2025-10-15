@@ -273,6 +273,12 @@ return {
         place = 15,
         tt_title = _("TOWER_DARK_ELF_NAME"),
         tt_desc = _("TOWER_DARK_ELF_1_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_sand_lvl4",
+        image = "kr5_main_icons_0013",
+        place = 16,
+        tt_titile = _("TOWER_SAND_NAME"),
+        tt_desc = _("TOWER_SAND_1_DESCRIPTION")
     }), templates.sell}},
 
     -- 兵营
@@ -1317,7 +1323,7 @@ return {
         place = 5,
         tt_title = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_NAME"),
         tt_desc = _("SPECIAL_NEPTUNE_BROKEN_TOWER_FIX_DESCRIPTION")
-    }),templates.sell}},
+    }), templates.sell}},
 
     neptune = {{merge(templates.upgrade_power, {
         action_arg = "ray",
@@ -2185,6 +2191,40 @@ return {
         }, {
             tt_title = _("TOWER_STARGAZER_4_RISING_STAR_3_NAME"),
             tt_desc = _("TOWER_STARGAZER_4_RISING_STAR_3_DESCRIPTION")
+        }}
+    }), templates.sell}},
+
+    sand = {{merge(templates.upgrade_power, {
+        action_arg = "skill_gold",
+        image = "kr5_special_icons_0028",
+        place = 6,
+        sounds = {"TowerSandSkillATaunt"},
+        tt_phrase = _("TOWER_SAND_4_SKILL_GOLD_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_SAND_4_SKILL_GOLD_1_NAME"),
+            tt_desc = _("TOWER_SAND_4_SKILL_GOLD_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_SAND_4_SKILL_GOLD_2_NAME"),
+            tt_desc = _("TOWER_SAND_4_SKILL_GOLD_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_SAND_4_SKILL_GOLD_3_NAME"),
+            tt_desc = _("TOWER_SAND_4_SKILL_GOLD_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "skill_big_blade",
+        image = "kr5_special_icons_0029",
+        place = 7,
+        sounds = {"TowerSandSkillBTaunt"},
+        tt_phrase = _("TOWER_SAND_4_SKILL_BIG_BLADE_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_SAND_4_SKILL_BIG_BLADE_1_NAME"),
+            tt_desc = _("TOWER_SAND_4_SKILL_BIG_BLADE_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_SAND_4_SKILL_BIG_BLADE_2_NAME"),
+            tt_desc = _("TOWER_SAND_4_SKILL_BIG_BLADE_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_SAND_4_SKILL_BIG_BLADE_3_NAME"),
+            tt_desc = _("TOWER_SAND_4_SKILL_BIG_BLADE_3_DESCRIPTION")
         }}
     }), templates.sell}}
 }

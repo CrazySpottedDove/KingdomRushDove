@@ -19,10 +19,11 @@ require("game_templates_utils")
 require("foundamental_towers")()
 
 package.loaded.mage_towers = nil
+package.loaded.archer_towers = nil
 require("mage_towers")
-
+require("archer_towers")
 require("engineer_towers")()
-require("archer_towers")()
+
 require("barrack_towers")()
 require("enemies")()
 require("heroes")()
@@ -9917,4 +9918,49 @@ tt.enemy_cooldown_factor = 0.8
 tt.enemy_health_factor = 0.8
 tt.spawn_creep = "enemy_deviltide_shark_ghost"
 
+tt = E:register_t("ps_bullet_tower_sand")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "tower_sand_lvl1_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 150
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_2(10, 0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_tower_sand_skill_gold")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "tower_sand_lvl4_skill_1_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 150
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_2(10, 0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_aura_tower_sand_skill_big_blade")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "tower_sand_lvl4_skill_2_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_1(0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("fx_bullet_tower_sand_hit", "fx")
+tt.render.sprites[1].name = "tower_sand_basic_hit"
+tt = E:register_t("fx_bullet_tower_sand_skill_gold_hit", "fx")
+tt.render.sprites[1].name = "tower_sand_lvl4_skill_1_hit"
+tt = E:register_t("fx_bullet_tower_sand_skill_gold_hit_coins", "fx")
+tt.render.sprites[1].name = "tower_sand_lvl4_skill_1_coins_hit"
+tt = E:register_t("fx_aura_tower_sand_skill_big_blade", "fx")
+tt.render.sprites[1].name = "tower_sand_lvl4_skill_2_hit_FX_loop"
 
