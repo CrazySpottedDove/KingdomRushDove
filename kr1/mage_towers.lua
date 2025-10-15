@@ -2502,3 +2502,247 @@ tt.modifier.vis_bans = bor(F_BOSS)
 tt.render.sprites[1] = nil
 
 -- 观星 END
+
+-- 五代奥术 BEGIN
+-- tt = E:register_t("tower_arcane_wizard_lvl4", "tower_KR5")
+
+-- E:add_comps(tt, "attacks", "powers", "vis")
+
+-- image_y = 90
+-- tt.tower.type = "arcane_wizard"
+-- tt.tower.kind = TOWER_KIND_MAGE
+-- tt.tower.team = TEAM_LINIREA
+-- tt.tower.level = 4
+-- tt.tower.price = b.price[4]
+-- tt.tower.size = TOWER_SIZE_LARGE
+-- tt.tower.menu_offset = vec_2(0, 25)
+-- tt.info.enc_icon = 15
+-- tt.info.i18n_key = "TOWER_ARCANE_WIZARD_4"
+-- tt.info.fn = scripts.tower_arcane_wizard.get_info
+-- tt.info.portrait = "portraits_towers" .. "_0003"
+-- tt.info.room_portrait = "quickmenu_main_icons_main_icons_0003_0001"
+-- tt.info.tower_portrait = "towerselect_portraits_big_" .. "0003"
+-- tt.info.damage_icon = "magic"
+-- tt.info.stat_damage = b.stats.damage
+-- tt.info.stat_range = b.stats.range
+-- tt.info.stat_cooldown = b.stats.cooldown
+-- tt.powers.disintegrate = CC("power")
+-- tt.powers.disintegrate.price = b.disintegrate.price
+-- tt.powers.disintegrate.cooldown = b.disintegrate.cooldown
+-- tt.powers.disintegrate.enc_icon = 5
+-- tt.powers.empowerment = CC("power")
+-- tt.powers.empowerment.price = b.empowerment.price
+-- tt.powers.empowerment.damage_factor = b.empowerment.damage_factor
+-- tt.powers.empowerment.cooldown = b.empowerment.cooldown
+-- tt.powers.empowerment.duration = b.empowerment.duration
+-- tt.powers.empowerment.enc_icon = 6
+-- tt.powers.empowerment.name = "empowerment"
+-- tt.render.sprites[1].animated = false
+-- tt.render.sprites[1].name = "terrains_%04i"
+-- tt.render.sprites[1].offset = vec_2(0, 13)
+
+-- for i = 2, 9 do
+--     tt.render.sprites[i] = E:clone_c("sprite")
+--     tt.render.sprites[i].prefix = "arcane_wizard_tower_lvl4_tower_layer" .. i - 1
+--     tt.render.sprites[i].name = "idle"
+--     tt.render.sprites[i].offset = vec_2(0, 5)
+--     tt.render.sprites[i].group = "layers"
+--     tt.render.sprites[i].angles = {}
+--     tt.render.sprites[i].angles.idle = {"idle_back", "idle"}
+--     tt.render.sprites[i].angles.attack = {"attack_back", "attack"}
+--     tt.render.sprites[i].angles.skill1 = {"skill1_back", "skill1"}
+--     tt.render.sprites[i].angles.skill2 = {"skill2_back", "skill2"}
+-- end
+
+-- tt.render.sid_shooter = 8
+-- tt.main_script.update = scripts.tower_arcane_wizard.update
+-- tt.main_script.remove = scripts.tower_arcane_wizard.remove
+-- tt.sound_events.insert = "TowerArcaneWizardTaunt"
+-- tt.sound_events.tower_room_select = "TowerArcaneWizardTauntSelect"
+-- tt.attacks.min_cooldown = b.shared_min_cooldown
+-- tt.attacks.range = b.basic_attack.range[4]
+-- tt.attacks.attack_delay_on_spawn = fts(5)
+-- tt.attacks.list[1] = E:clone_c("bullet_attack")
+-- tt.attacks.list[1].animation = "attack"
+-- tt.attacks.list[1].bullet = "tower_arcane_wizard_ray"
+-- tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+-- tt.attacks.list[1].shoot_time = fts(15)
+-- tt.attacks.list[1].bullet_start_offset = {vec_2(0, 98), vec_2(0, 98)}
+-- tt.attacks.list[1].ignore_out_of_range_check = 1
+-- tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+-- tt.attacks.list[2] = table.deepclone(tt.attacks.list[1])
+-- tt.attacks.list[2].animation = "skill1"
+-- tt.attacks.list[2].bullet = "tower_arcane_wizard_ray_disintegrate"
+-- tt.attacks.list[2].cooldown = nil
+-- tt.attacks.list[2].vis_flags = bor(F_DISINTEGRATED)
+-- tt.attacks.list[2].vis_bans = bor(F_NIGHTMARE)
+-- tt.attacks.list[2].shoot_time = fts(31)
+-- tt.attacks.list[2].load_time = fts(13)
+-- tt.attacks.list[2].sound = "TowerArcaneWizardDisintegrate"
+-- tt.attacks.list[2].excluded_templates = {"enemy_overseer_hit_point"}
+-- tt.attacks.list[3] = CC("custom_attack")
+-- tt.attacks.list[3].animation = "skill2"
+-- tt.attacks.list[3].shoot_time = fts(20)
+-- tt.attacks.list[3].cooldown = nil
+-- tt.attacks.list[3].mod = "mod_tower_arcane_wizard_power_empowerment"
+-- tt.attacks.list[3].mod_fx = "mod_tower_arcane_wizard_power_empowerment_fx"
+-- tt.attacks.list[3].mark_mod = "tower_arcane_wizard_power_empowerment_mark_mod"
+-- tt.attacks.list[3].max_range = b.empowerment.max_range
+-- tt.attacks.list[3].min_range = b.empowerment.min_range
+-- tt.attacks.list[3].exclude_tower_kind = {}
+-- tt.attacks.list[3].vis_flags = bor(F_MOD, F_CUSTOM)
+-- tt.attacks.list[3].vis_bans = bor(F_CUSTOM)
+-- tt.ui.click_rect = r(-40, 0, 80, 86)
+-- tt = E:register_t("tower_arcane_wizard_ray_disintegrate_mod", "modifier")
+
+-- local b = balance.towers.arcane_wizard
+
+-- tt.main_script.update = scripts.tower_arcane_wizard_ray_disintegrate_mod.update
+-- tt.modifier.pop = {"pop_zap_arcane"}
+-- tt.modifier.pop_conds = DR_KILL
+-- tt.modifier.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD)
+-- tt.modifier.damage = 1
+-- tt.modifier.duration = fts(5)
+-- tt.boss_damage_config = b.disintegrate.boss_damage
+-- tt = E:register_t("mod_tower_arcane_wizard_power_empowerment", "modifier")
+-- tt.main_script.insert = scripts.mod_tower_factors.insert
+-- tt.main_script.remove = scripts.mod_tower_arcane_wizard_power_empowerment.remove
+-- tt.main_script.update = scripts.mod_tower_arcane_wizard_power_empowerment.update
+-- tt.range_factor = 1
+-- tt.damage_factor = nil
+-- tt.modifier.duration = 1e+99
+-- tt.modifier.use_mod_offset = false
+-- tt = E:register_t("mod_tower_arcane_wizard_power_empowerment_fx", "modifier")
+
+-- E:add_comps(tt, "render", "tween")
+
+-- tt.main_script.update = scripts.tower_arcane_wizard_power_empowerment_mark_mod.update
+-- tt.modifier.duration = 1e+99
+-- tt.modifier.use_mod_offset = false
+-- tt.modifier.keep_on_tower_upgrade = true
+-- tt.render.sprites[1].name = "arcane_wizard_tower_empowerment_decal"
+-- tt.render.sprites[1].animated = false
+-- tt.render.sprites[1].z = Z_TOWER_BASES + 1
+-- tt.render.sprites[1].offset.y = 5
+-- tt.render.sprites[2] = E:clone_c("sprite")
+-- tt.render.sprites[2].draw_order = 11
+-- tt.render.sprites[2].name = "arcane_wizard_tower_empowerment_particles_idle"
+-- tt.render.sprites[2].loop = true
+-- tt.render.sprites[2].z = Z_OBJECTS
+-- tt.render.sprites[2].offset.y = 5
+-- tt.tween.props[1].name = "alpha"
+-- tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+-- tt.tween.remove = false
+-- tt.sound_events.insert = "TowerArcaneWizardEmpowerment"
+-- tt = E:register_t("tower_arcane_wizard_power_empowerment_mark_mod", "modifier")
+
+-- E:add_comps(tt, "mark_flags")
+
+-- tt.mark_flags.vis_bans = F_CUSTOM
+-- tt.main_script.update = scripts.tower_arcane_wizard_power_empowerment_mark_mod.update
+-- tt.modifier.allows_duplicates = true
+-- tt.modifier.duration = 1e+99
+-- tt = E:register_t("mod_tower_arcane_wizard_ray_hit", "modifier")
+
+-- AC(tt, "render", "dps")
+
+-- b = balance.towers.arcane_wizard
+-- tt.damage_min = b.basic_attack.damage_min
+-- tt.damage_max = b.basic_attack.damage_max
+-- tt.dps.damage_min = nil
+-- tt.dps.damage_max = nil
+-- tt.dps.damage_type = bor(DAMAGE_MAGICAL, DAMAGE_ONE_SHIELD_HIT)
+-- tt.dps.damage_every = b.basic_attack.damage_every
+-- tt.dps.pop = {"pop_zap_arcane"}
+-- tt.dps.pop_conds = DR_KILL
+-- tt.main_script.update = scripts.mod_ray_arcane.update
+-- tt.modifier.duration = fts(10)
+-- tt.modifier.allows_duplicates = true
+-- tt.modifier.use_mod_offset = true
+-- tt.render.sprites[1].name = "arcane_wizard_tower_ray_end_idle"
+-- tt.render.sprites[1].loop = true
+-- tt.render.sprites[1].z = Z_BULLETS + 1
+-- tt.damage_from_bullet = true
+-- tt = E:register_t("tower_arcane_wizard_ray", "bullet")
+
+-- local b = balance.towers.arcane_wizard
+
+-- tt.bullet.damage_type = DAMAGE_NONE
+-- tt.bullet.damage_min_config = b.basic_attack.damage_min
+-- tt.bullet.damage_max_config = b.basic_attack.damage_max
+-- tt.bullet.damage_min = nil
+-- tt.bullet.damage_max = nil
+-- tt.bullet.hit_time = fts(2)
+-- tt.bullet.out_fx = "fx_tower_arcane_wizard_ray_hit_start"
+-- tt.bullet.mod = "mod_tower_arcane_wizard_ray_hit"
+-- tt.bullet.hit_fx = "fx_tower_arcane_wizard_ray_hit"
+-- tt.hit_fx_only_no_target = true
+-- tt.image_width = 152.5
+-- tt.main_script.update = scripts.ray5_simple.update
+-- tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+-- tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_ray_idle"
+-- tt.render.sprites[1].loop = false
+-- tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
+-- tt.track_target = true
+-- tt.ray_duration = fts(24)
+-- tt = E:register_t("tower_arcane_wizard_ray_disintegrate", "tower_arcane_wizard_ray")
+-- tt.bullet.damage_min = 0
+-- tt.bullet.damage_max = 0
+-- tt.bullet.mod = "tower_arcane_wizard_ray_disintegrate_mod"
+-- tt.bullet.out_fx = "fx_tower_arcane_wizard_disintegrate_ray_hit_start"
+-- tt.bullet.hit_fx = "fx_tower_arcane_wizard_ray_disintegrate_hit"
+-- tt.image_width = 155
+-- tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_ray_idle"
+-- tt.render.sprites[1].loop = false
+-- tt.bullet.hit_time = fts(1)
+-- tt.hit_fx_only_no_target = false
+
+-- tt = E:register_t("decal_tower_arcane_wizard_empowerment_preview", "decal_tween")
+
+-- E:add_comps(tt, "render", "tween")
+
+-- tt.range_factor = 1
+-- tt.render.sprites[1].name = "arcane_wizard_tower_empowerment_indicator"
+-- tt.render.sprites[1].animated = false
+-- tt.render.sprites[1].z = Z_TOWER_BASES + 1
+-- tt.render.sprites[1].offset.y = 5
+-- tt.tween.props[1].name = "alpha"
+-- tt.tween.props[1].keys = {{0, 0}, {0.1, 255}}
+-- tt.tween.remove = false
+-- tt = E:register_t("fx_tower_arcane_wizard_ray_hit", "fx")
+
+-- E:add_comps(tt)
+
+-- tt.render.sprites[1].name = "arcane_wizard_tower_ray_end_idle"
+-- tt.render.sprites[1].loop = true
+-- tt.render.sprites[1].z = Z_BULLETS + 1
+-- tt.timed.duration = fts(10)
+-- tt.timed.runs = 1e+99
+-- tt = E:register_t("fx_tower_arcane_wizard_disintegrate_ray_hit_start", "fx")
+-- tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_ray_charge_origin"
+-- tt.render.sprites[1].loop = true
+-- tt.render.sprites[1].z = Z_BULLETS + 1
+-- tt.timed.duration = fts(37)
+-- tt.timed.runs = 1e+99
+-- tt = E:register_t("fx_tower_arcane_wizard_ray_disintegrate_hit", "fx")
+-- tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_hit_idle"
+-- tt.render.sprites[1].loop = false
+-- tt.render.sprites[1].z = Z_BULLETS + 1
+-- tt.render.sprites[1].fps = 25
+-- tt.timed.duration = fts(17)
+-- tt.timed.runs = 1e+99
+-- tt = E:register_t("fx_tower_arcane_wizard_ray_hit_start", "fx")
+
+-- E:add_comps(tt, "tween")
+
+-- tt.render.sprites[1].name = "arcane_wizard_tower_ray_start_idle"
+-- tt.render.sprites[1].loop = true
+-- tt.render.sprites[1].scale = vec_2(1.5, 1.5)
+-- tt.render.sprites[1].z = Z_BULLETS + 1
+-- tt.timed.duration = fts(25)
+-- tt.timed.runs = 1e+99
+-- tt.tween.props[1].name = "alpha"
+-- tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(18), 255}, {fts(25), 0}}
+-- tt.tween.remove = false
+
+-- 五代奥术 END
