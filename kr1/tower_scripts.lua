@@ -11894,19 +11894,19 @@ function scripts.bullet_tower_sand.update(this, store)
         local d = SU.create_bullet_damage(b, target.id, this.id)
 
         queue_damage(store, d)
-        local mods = b.mods
-        if not mods and b.mod then
-            if type(b.mod) == "string" then
-                mods = {b.mod}
-            else
-                mods = b.mod
-            end
+        local mods
+        if b.mod then
+            mods = type(b.mod) == "table" and b.mod or {b.mod}
+        elseif b.mods then
+            mods = b.mods
         end
+
         if mods then
             for _, mod_name in ipairs(mods) do
                 local m = E:create_entity(mod_name)
                 m.modifier.source_id = this.id
                 m.modifier.target_id = target.id
+                m.modifier.source_damage = d
                 m.modifier.damage_factor = b.damage_factor
                 m.modifier.level = b.level
                 queue_insert(store, m)
