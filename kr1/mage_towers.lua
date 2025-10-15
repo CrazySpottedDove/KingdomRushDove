@@ -1898,6 +1898,7 @@ tt.attacks.list[1].vis_flags = bor(F_RANGED)
 tt.attacks.list[2] = table.deepclone(tt.attacks.list[1])
 tt.attacks.list[2].bullet = "bullet_tower_ray_chain"
 tt.attacks.list[2].disabled = true
+tt.attacks.list[2].damage_mult = 0.25
 tt.attacks.list[3] = E:clone_c("bullet_attack")
 tt.attacks.list[3].animation_start = "attack_start"
 tt.attacks.list[3].animation_loop = "attack_loop"
