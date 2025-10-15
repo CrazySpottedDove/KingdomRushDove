@@ -1346,10 +1346,12 @@ tt = E:register_t("controller_tower_sand_lvl4_skill_big_blade")
 E:add_comps(tt, "main_script")
 
 tt.main_script.update = scripts.controller_tower_sand_lvl4_skill_big_blade.update
-tt = E:register_t("bullet_tower_sand_lvl1", "bullet")
+
+tt = E:register_t("bullet_tower_sand_lvl4", "bullet")
 b = balance.towers.sand.basic_attack
-tt.bullet.damage_min = b.damage_min[1]
-tt.bullet.damage_max = b.damage_max[1]
+tt.bullet.damage_min = b.damage_min[4]
+tt.bullet.damage_max = b.damage_max[4]
+tt.max_bounces = b.max_bounces[4]
 tt.bullet.damage_type = b.damage_type
 tt.bullet.g = 0
 tt.bullet.pop = {"pop_golden"}
@@ -1360,31 +1362,15 @@ tt.bullet.vis_flags = F_RANGED
 tt.bullet.vis_bans = F_NIGHTMARE
 tt.bullet.fixed_speed = FPS * 12
 tt.main_script.update = scripts.bullet_tower_sand.update
-tt.render.sprites[1].prefix = "tower_sand_lvl1_projectile"
+tt.render.sprites[1].prefix = "tower_sand_lvl4_projectile"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
-tt.max_bounces = b.max_bounces[1]
 tt.bounce_range = b.bounce_range
 tt.bounce_speed_mult = b.bounce_speed_mult
 tt.bounce_damage_mult = b.bounce_damage_mult
 tt.sound_hit = "TowerSandBasicAttackHit"
-tt = E:register_t("bullet_tower_sand_lvl2", "bullet_tower_sand_lvl1")
-b = balance.towers.sand.basic_attack
-tt.bullet.damage_min = b.damage_min[2]
-tt.bullet.damage_max = b.damage_max[2]
-tt.max_bounces = b.max_bounces[2]
-tt = E:register_t("bullet_tower_sand_lvl3", "bullet_tower_sand_lvl1")
-b = balance.towers.sand.basic_attack
-tt.bullet.damage_min = b.damage_min[3]
-tt.bullet.damage_max = b.damage_max[3]
-tt.max_bounces = b.max_bounces[3]
-tt = E:register_t("bullet_tower_sand_lvl4", "bullet_tower_sand_lvl1")
-b = balance.towers.sand.basic_attack
-tt.bullet.damage_min = b.damage_min[4]
-tt.bullet.damage_max = b.damage_max[4]
-tt.max_bounces = b.max_bounces[4]
-tt.render.sprites[1].prefix = "tower_sand_lvl4_projectile"
-tt = E:register_t("bullet_tower_sand_skill_gold", "bullet_tower_sand_lvl1")
+
+tt = E:register_t("bullet_tower_sand_skill_gold", "bullet_tower_sand_lvl4")
 b = balance.towers.sand.skill_gold
 tt.bullet.damage_min_config = b.damage_min
 tt.bullet.damage_max_config = b.damage_max
@@ -1397,10 +1383,9 @@ tt.render.sprites[1].prefix = "tower_sand_lvl4_skill_1_projectile"
 tt.gold_chance = b.gold_chance
 tt.gold_extra = b.gold_extra
 tt.max_bounces = b.max_bounces
+
 tt = E:register_t("aura_tower_sand_skill_big_blade", "aura")
-
 E:add_comps(tt, "render")
-
 b = balance.towers.sand.skill_big_blade
 tt.aura.duration = b.duration[1]
 tt.aura.radius = b.radius
