@@ -1559,7 +1559,7 @@ local function heroes()
     tt.hero.level_stats.melee_damage_max = {27, 30, 33, 36, 39, 42, 45, 48, 51, 54}
     tt.hero.level_stats.melee_damage_min = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
     tt.hero.skills.timber = CC("hero_skill")
-    tt.hero.skills.timber.cooldown = {35 + fts(35), 30 + fts(35), 25 + fts(35)}
+    tt.hero.skills.timber.cooldown = {31.5 + fts(35), 27 + fts(35), 22.5 + fts(35)}
     tt.hero.skills.timber.xp_level_steps = {
         [10] = 3,
         [4] = 1,
