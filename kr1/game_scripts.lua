@@ -5283,7 +5283,7 @@ function scripts.hacksaw_sawblade.update(this, store)
         queue_insert(store, sfx)
     end
 
-    if b.hit_blood_fx and target.unit.blood_color ~= BLOOD_NONE then
+    if b.hit_blood_fx and target and target.unit.blood_color ~= BLOOD_NONE then
         local sfx = E:create_entity(b.hit_blood_fx)
 
         sfx.pos = V.vclone(b.to)
