@@ -832,15 +832,15 @@ local function heroes()
     }
     -- tt.hero.skills.smash.xp_gain = {50, 100, 150}
     tt.hero.skills.fissure = CC("hero_skill")
-    tt.hero.skills.fissure.damage_min = {10, 20, 30, 40}
-    tt.hero.skills.fissure.damage_max = {30, 40, 50, 60}
+    tt.hero.skills.fissure.damage_min = {5, 15, 25, 35}
+    tt.hero.skills.fissure.damage_max = {25, 35, 45, 55}
     tt.hero.skills.fissure.xp_level_steps = {
         [1] = 1,
         [4] = 2,
         [7] = 3,
         [10] = 4
     }
-    tt.hero.skills.fissure.xp_gain = {50, 100, 150}
+    tt.hero.skills.fissure.xp_gain = {50, 100, 150, 200}
     tt.health.dead_lifetime = 15
     tt.health_bar.offset = vec_2(0, 38)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM

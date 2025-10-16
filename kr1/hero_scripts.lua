@@ -1,4 +1,3 @@
-
 require("klua.table")
 require("i18n")
 local scripts = require("scripts")
@@ -3550,7 +3549,7 @@ scripts.aura_malik_fissure = {
 
         do_attack(this.pos)
 
-        local pi, spi, ni
+        local pi, spi, ni, pis
 
         if a.target_id and store.entities[a.target_id] then
             local np = store.entities[a.target_id].nav_path
@@ -3567,32 +3566,66 @@ scripts.aura_malik_fissure = {
 
             pi, spi, ni = unpack(nodes[1])
         end
-
+        pis = {{
+            pi = pi,
+            ni1 = ni,
+            ni2 = ni
+        }}
         for i = 1, a.level do
-            spi = (spi == 2 or spi == 3) and 1 or math.random() < 0.5 and 2 or 3
-
             U.y_wait(store, a.spread_delay)
+            local node_pos1 = P:node_pos(pi, 1, pis[1].ni1 + a.spread_nodes)
+            local node_pos2 = P:node_pos(pi, 1, pis[1].ni2 - a.spread_nodes)
 
-            local nni = ni + i * a.spread_nodes
-            local spos = P:node_pos(pi, 1, nni)
+            local nodes = P:nearest_nodes(node_pos1.x, node_pos1.y, nil, nil, true)
+            if #nodes > 1 then
+                local npi, nspi, nni = unpack(nodes[2])
+                local new = true
+                for _, p in pairs(pis) do
+                    if p.pi == npi then
+                        new = false
+                        break
+                    end
+                end
+                if new then
+                    table.insert(pis, {
+                        pi = npi,
+                        ni1 = nni,
+                        ni2 = nni
+                    })
+                end
+            end
+            local nodes = P:nearest_nodes(node_pos2.x, node_pos2.y, nil, nil, true)
+            if #nodes > 1 then
+                local npi, nspi, nni = unpack(nodes[2])
+                local new = true
+                for _, p in pairs(pis) do
+                    if p.pi == npi then
+                        new = false
+                        break
+                    end
+                end
+                if new then
+                    table.insert(pis, {
+                        pi = npi,
+                        ni1 = nni,
+                        ni2 = nni
+                    })
+                end
+            end
 
-            do_attack(spos)
-
-            nni = ni - i * a.spread_nodes
-            spos = P:node_pos(pi, 1, nni)
-
-            do_attack(spos)
+            for _, p in pairs(pis) do
+                p.ni1 = p.ni1 + a.spread_nodes
+                p.ni2 = p.ni2 - a.spread_nodes
+                do_attack(P:node_pos(p.pi, 1, p.ni1))
+                do_attack(P:node_pos(p.pi, 1, p.ni2))
+            end
             if i > 1 then
-                nni = ni + (i - 1) * a.spread_nodes
-                spos = P:node_pos(pi, 2, nni)
-                do_attack(spos)
-                spos = P:node_pos(pi, 3, nni)
-                do_attack(spos)
-                nni = ni - (i - 1) * a.spread_nodes
-                spos = P:node_pos(pi, 2, nni)
-                do_attack(spos)
-                spos = P:node_pos(pi, 3, nni)
-                do_attack(spos)
+                for _, p in pairs(pis) do
+                    do_attack(P:node_pos(p.pi, 2, p.ni1 - a.spread_nodes))
+                    do_attack(P:node_pos(p.pi, 2, p.ni2 + a.spread_nodes))
+                    do_attack(P:node_pos(p.pi, 3, p.ni1 - a.spread_nodes))
+                    do_attack(P:node_pos(p.pi, 3, p.ni2 + a.spread_nodes))
+                end
             end
         end
 
@@ -9048,8 +9081,8 @@ function scripts.hero_lynn.level_up(this, store)
 
         m = E:get_template("mod_lynn_despair_self")
         m.modifier.duration = s.duration[s.level]
-        m.speed_factor = 2-s.speed_factor[s.level]
-        m.inflicted_damage_factor = 2-s.damage_factor[s.level]
+        m.speed_factor = 2 - s.speed_factor[s.level]
+        m.inflicted_damage_factor = 2 - s.damage_factor[s.level]
     end)
 
     upgrade_skill(this, "weakening", function(this, s)
@@ -13700,7 +13733,7 @@ function scripts.hero_faustus.level_up(this, store)
         m.dps.damage_min = s.mod_damage[s.level]
     end)
 
-    upgrade_skill(this,"urination", function(this, s)
+    upgrade_skill(this, "urination", function(this, s)
         this.ranged.attacks[1].bullet_count = s.count[s.level]
         this.ranged.attacks[2].bullet_count = s.count[s.level]
     end)
@@ -26312,7 +26345,8 @@ function scripts.hero_wukong.update(this, store)
                                 if enemies and #enemies > 0 then
                                     for _, e in ipairs(enemies) do
                                         local d = create_damage(a, e.id)
-                                        d.value = math.random(a.area_damage_min, a.area_damage_max) * this.unit.damage_factor
+                                        d.value = math.random(a.area_damage_min, a.area_damage_max) *
+                                                      this.unit.damage_factor
                                         queue_damage(store, d)
                                     end
                                 end
