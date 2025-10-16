@@ -11801,7 +11801,7 @@ function scripts.tower_sand.update(this, store, script)
             end
 
             if at then
-                local trigger_enemy, _ = U.find_foremost_enemy(store, tpos(this), 0, a.range, false,
+                local trigger_enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false,
                     at.vis_flags, at.vis_bans)
 
                 if not trigger_enemy then
@@ -11818,7 +11818,7 @@ function scripts.tower_sand.update(this, store, script)
                         coroutine.yield()
                     end
 
-                    local enemy, _ = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, at.vis_flags,
+                    local enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false, at.vis_flags,
                         at.vis_bans)
 
                     enemy = enemy or trigger_enemy

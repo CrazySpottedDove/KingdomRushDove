@@ -2200,7 +2200,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(26, 0)
     tt.health.armor = 1
     tt.health.hp_max = 400
-    tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_SHOT, DAMAGE_RUDE)
+    tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
     tt.health_bar.offset = vec_2(0, 61)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_SPECTRAL_KNIGHT"
@@ -4535,7 +4535,7 @@ local function enemies()
     tt.enemy.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER)
     tt.health.armor = 0
     tt.health.hp_max = 2400
-    tt.health.immune_to = bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)
+    tt.health.immune_to = DAMAGE_MAGICAL_GROUP
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, 57)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -4946,7 +4946,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(24, 0)
     tt.health.armor = 0
     tt.health.hp_max = 100
-    tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_SHOT, DAMAGE_ELECTRICAL, DAMAGE_RUDE)
+    tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, 37)
     tt.info.portrait = IS_PHONE and "portraits_sc_0080" or "kr2_info_portraits_enemies_0063"
@@ -5020,7 +5020,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(27, 0)
     tt.health.armor = 0
     tt.health.hp_max = 1000
-    tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_SHOT, DAMAGE_ELECTRICAL, DAMAGE_RUDE)
+    tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, 56)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
