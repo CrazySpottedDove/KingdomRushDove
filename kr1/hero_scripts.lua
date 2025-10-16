@@ -3574,14 +3574,26 @@ scripts.aura_malik_fissure = {
             U.y_wait(store, a.spread_delay)
 
             local nni = ni + i * a.spread_nodes
-            local spos = P:node_pos(pi, spi, nni)
+            local spos = P:node_pos(pi, 1, nni)
 
             do_attack(spos)
 
             nni = ni - i * a.spread_nodes
-            spos = P:node_pos(pi, spi, nni)
+            spos = P:node_pos(pi, 1, nni)
 
             do_attack(spos)
+            if i > 1 then
+                nni = ni + (i - 1) * a.spread_nodes
+                spos = P:node_pos(pi, 2, nni)
+                do_attack(spos)
+                spos = P:node_pos(pi, 3, nni)
+                do_attack(spos)
+                nni = ni - (i - 1) * a.spread_nodes
+                spos = P:node_pos(pi, 2, nni)
+                do_attack(spos)
+                spos = P:node_pos(pi, 3, nni)
+                do_attack(spos)
+            end
         end
 
         ::label_201_0::
