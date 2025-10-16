@@ -11928,10 +11928,7 @@ function scripts.bullet_tower_sand.update(this, store)
             sfx.render.sprites[1].ts = store.tick_ts
 
             queue_insert(store, sfx)
-
-            local gold_pos = V.v(sfx.pos.x, sfx.pos.y)
-
-            signal.emit("got-gold", gold_pos, this.gold_extra[skill_level])
+            store.player_gold = store.player_gold + this.gold_extra[skill_level]
         end
     end
 
