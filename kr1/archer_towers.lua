@@ -1584,14 +1584,26 @@ tt.tween.props[2].keys = {{0, vec_2(0.75, 1)}, {fts(10), vec_2(1, 1)}}
 tt.tween.props[2].name = "scale"
 tt.sound_events.insert = "TowerRoyalArchersRapaciousHunterTakeOff"
 tt.sound_events.descend = "TowerRoyalArchersRapaciousHunterDescend"
+
 tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod", "modifier")
-
-E:add_comps(tt, "mark_flags")
-
-tt.mark_flags.vis_bans = F_CUSTOM
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+AC(tt, "render", "tween")
+tt.main_script.insert = scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.insert
+tt.main_script.remove = scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.remove
 tt.main_script.update = scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "archer_silver_mark_effect_over"
+tt.render.sprites[1].anchor.y = 0.08823529411764706
+tt.render.sprites[1].sort_y_offset = -1
+tt.tween.remove = false
+tt.tween.props[1].name = "scale"
+tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {fts(6), vec_2(0.87, 1)}, {fts(11), vec_2(1, 1)}}
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[1].loop = true
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].disabled = true
+tt.tween.props[2].sprite_id = 1
+tt.tween.props[2].keys = {{0, 255}, {0.25, 0}}
+
 tt = E:register_t("arrow_armor_piercer_royal_archers", "arrow5_fixed_height")
 b = balance.towers.royal_archers
 tt.bullet.pop = {"pop_archer"}

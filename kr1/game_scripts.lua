@@ -25626,8 +25626,6 @@ function scripts.mod_arrow_arcane_slumber.insert(this, store)
 
         this.render.sprites[2].flip_x = false
 
-        log.debug("          pATCHING FLIP: %s", this.render.sprites[2].flip_x)
-
         return true
     end
 

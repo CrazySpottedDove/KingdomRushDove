@@ -1256,6 +1256,7 @@ local function engineer_towers()
     tt.sound_events.hit_water = nil
     tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
     tt.render.sprites[1].animated = false
+    tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 
     tt = RT("tower_tricannon_bomb_4", "tower_tricannon_bomb")
     tt.bullet.damage_max = b.basic_attack.damage_max[4]
@@ -1284,6 +1285,7 @@ local function engineer_towers()
     tt.bullet.align_with_trajectory = true
     tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
     tt.render.sprites[1].animated = false
+    tt.render.sprites[1].scale = vec_2(1.5, 1.5)
     tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
     tt.bullet.particles_name = "tower_tricannon_bomb_4_bombardment_trail"
 

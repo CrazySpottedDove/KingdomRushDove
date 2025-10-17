@@ -3952,6 +3952,7 @@ local function enemies()
     tt = RT("savage_bird_rider_drop_dead", "decal")
     AC(tt, "enemy", "health", "vis", "unit", "heading", "nav_path", "motion", "sound_events")
     tt.health.hp = 0
+    tt.health.hp_max = 0
     tt.health.dead_lifetime = 2
     tt.render.sprites[1].name = "savage_bird_rider_drop_dead"
     tt.render.sprites[1].loop = false

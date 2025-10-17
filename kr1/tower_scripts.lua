@@ -12243,6 +12243,10 @@ function scripts.tower_royal_archers.update(this, store)
             enemies = reload_enemies
         end
 
+        if enemy and band(enemy.vis.flags, F_MOCKING) ~= 0 then
+            return {enemy, enemy, enemy}
+        end
+
         local targets = {}
         local first_target_on_left = enemy.pos.x < this.pos.x
 
@@ -12448,10 +12452,16 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, sto
         end
 
         if not this.entity_spawned then
-            local enemy = U.find_foremost_enemy(store, tpos(this), 0, ab.range, false, ab.vis_flags,
+            local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, ab.range, false, ab.vis_flags,
                 ab.vis_bans)
 
             if enemy then
+                for _, e in pairs(enemies) do
+                    if band(e.vis.flags, F_MOCKING) == 0 and enemy_is_silent_target(e) then
+                        enemy = e
+                        break
+                    end
+                end
                 ab.ts = store.tick_ts
 
                 local mark_mod = E:create_entity(ab.mark_mod)
@@ -12579,8 +12589,14 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
             local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, tamer_attack.range, false,
                 tamer_attack.vis_flags, tamer_attack.vis_bans)
 
-            if targets and #targets > 0 then
+            if targets then
                 target = targets[1]
+                for _, t in pairs(targets) do
+                    if band(t.vis.flags, F_MOCKING) == 0 and enemy_is_silent_target(t) then
+                        target = t
+                        break
+                    end
+                end
                 target_still_valid = true
 
                 local mark_mod = E:create_entity(tamer_attack.mark_mod)
@@ -12738,17 +12754,50 @@ end
 
 scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod = {}
 
+function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.insert(this, store)
+    local target = store.entities[this.modifier.target_id]
+    if not target then
+        return false
+    end
+    if enemy_is_silent_target(target) then
+        if band(target.vis.flags, F_MOCKING) == 0 then
+            this.mocking_added = true
+            target.vis.flags = bor(target.vis.flags, F_MOCKING)
+        end
+    end
+    return true
+end
+
+function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.remove(this, store)
+    local target = store.entities[this.modifier.target_id]
+    if target then
+        if this.mocking_added then
+            target.vis.flags = U.flag_clear(target.vis.flags, F_MOCKING)
+        end
+    end
+    return true
+end
+
 function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update(this, store)
     local m = this.modifier
-
+    local target = store.entities[m.target_id]
+    if not target then
+        queue_remove(store, this)
+        return
+    end
+    if not this.mocking_added then
+        this.render.sprites[1].hidden = true
+    end
+    this.pos = target.pos
     m.ts = store.tick_ts
 
     while true do
         local target = store.entities[m.target_id]
 
-        if not target or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+        if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+            this.tween.props[2].disabled = nil
+            this.tween.props[2].ts = store.tick_ts
             queue_remove(store, this)
-
             return
         end
 
