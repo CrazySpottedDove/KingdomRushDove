@@ -956,8 +956,6 @@ tt.render.sprites[2].z = Z_DECALS
 tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
 tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 
-
-
 tt = RT("aura_teleport_arcane", "aura")
 AC(tt, "render")
 tt.aura.mod = "mod_teleport_arcane"
@@ -9963,3 +9961,38 @@ tt = E:register_t("fx_bullet_tower_sand_skill_gold_hit_coins", "fx")
 tt.render.sprites[1].name = "tower_sand_lvl4_skill_1_coins_hit"
 tt = E:register_t("fx_aura_tower_sand_skill_big_blade", "fx")
 tt.render.sprites[1].name = "tower_sand_lvl4_skill_2_hit_FX_loop"
+tt = E:register_t("royal_archer_tower_lvl4_arrow_armor_breaker_trail_particle")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_idle_1"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 200
+tt.particle_system.animation_fps = 20
+tt.particle_system.track_rotation = true
+tt = E:register_t("ps_rapacious_hunter_eagle_royal_archers")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_attack_particle"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 30
+tt.particle_system.particle_lifetime = {fts(1), fts(1)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("fx_tower_royal_archer_rapacious_hunter_dust", "fx")
+tt.render.sprites[1].name = "tower_build_dust"
+tt.render.sprites[1].scale = vec_2(0.5, 0.5)
+tt = E:register_t("tower_royal_archers_arrow_hit_fx", "fx")
+tt.render.sprites[1].name = "royal_archer_tower_royal_archer_hit_fx_hit_fx"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt = E:register_t("tower_royal_archers_pow_armor_piercer_arrow_hit_fx", "fx")
+tt.render.sprites[1].name = "royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_armor_breaker_hit_fx"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_eagle_hit_fx", "fx")
+tt.render.sprites[1].name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_rapacious_hunter_hit_fx"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1

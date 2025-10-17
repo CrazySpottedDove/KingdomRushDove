@@ -279,4 +279,11 @@ return {merge(templates.upgrade, {
     place = 16,
     tt_titile = _("TOWER_SAND_NAME"),
     tt_desc = _("TOWER_SAND_1_DESCRIPTION")
-})}
+}), merge(templates.upgrade, {
+    action_arg = "tower_royal_archers_lvl4",
+    image = "kr5_main_icons_0002",
+    place = 17,
+    tt_title = _("TOWER_ROYAL_ARCHERS_NAME"),
+    tt_desc = _("TOWER_ROYAL_ARCHERS_1_DESCRIPTION")
+})
+}

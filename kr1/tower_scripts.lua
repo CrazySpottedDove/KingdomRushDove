@@ -11800,8 +11800,8 @@ function scripts.tower_sand.update(this, store, script)
             end
 
             if at then
-                local trigger_enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false,
-                    at.vis_flags, at.vis_bans)
+                local trigger_enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range,
+                    false, at.vis_flags, at.vis_bans)
 
                 if not trigger_enemy then
                     at.ts = at.ts + fts(10)
@@ -11817,8 +11817,8 @@ function scripts.tower_sand.update(this, store, script)
                         coroutine.yield()
                     end
 
-                    local enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false, at.vis_flags,
-                        at.vis_bans)
+                    local enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false,
+                        at.vis_flags, at.vis_bans)
 
                     enemy = enemy or trigger_enemy
 
@@ -12150,4 +12150,611 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store, script)
 end
 
 -- 沙丘哨兵 END
+
+-- 皇家弓箭手 BEGIN
+scripts.tower_royal_archers = {}
+
+function scripts.tower_royal_archers.update(this, store)
+    local shooter_sids = {3, 4}
+    local shooter_idx = 1
+    local a = this.attacks
+    local aa = this.attacks.list[1]
+    local ap = this.attacks.list[2]
+    local pow_a = this.powers.armor_piercer
+    local pow_r = this.powers.rapacious_hunter
+
+    if not a._last_target_pos then
+        a._last_target_pos = {}
+
+        for i = 1, #shooter_sids do
+            a._last_target_pos[i] = v(REF_W, 0)
+        end
+    end
+
+    this.rapacious_hunter_tamer = nil
+
+    local function shot_animation(attack, shooter_idx, pos)
+        local ssid = shooter_sids[shooter_idx]
+        local soffset = this.render.sprites[ssid].offset
+        local s = this.render.sprites[ssid]
+        local an, af = U.animation_name_facing_point(this, attack.animation, pos, ssid, soffset)
+
+        U.animation_start(this, an, af, store.tick_ts, 1, ssid)
+    end
+
+    local function shot_bullet(attack, shooter_idx, enemy, level)
+        local ssid = shooter_sids[shooter_idx]
+        local shooting_up = tpos(this).y < enemy.pos.y
+        local shooting_right = not this.render.sprites[ssid].flip_x
+        local soffset = this.render.sprites[ssid].offset
+        local boffset = attack.bullet_start_offset[shooting_up and 1 or 2]
+        local b = E:create_entity(attack.bullet)
+
+        b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
+        b.pos.y = this.pos.y + soffset.y + boffset.y
+        b.bullet.from = V.vclone(b.pos)
+        b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+        b.bullet.target_id = enemy.id
+        b.bullet.source_id = this.id
+        b.bullet.level = level
+        b.bullet.damage_factor = this.tower.damage_factor
+        b.bullet.flight_time = 2 * (math.sqrt(2 * b.bullet.fixed_height * b.bullet.g * -1) / b.bullet.g * -1)
+
+        queue_insert(store, b)
+    end
+
+    local function shot_bullet_armor_piercer(attack, shooter_idx, enemy, level, index)
+        local ssid = shooter_sids[shooter_idx]
+        local shooting_up = tpos(this).y < enemy.pos.y
+        local shooting_right = tpos(this).x < enemy.pos.x
+        local soffset = this.render.sprites[ssid].offset
+        local boffset = attack.bullet_start_offset[shooting_up and 1 or 2]
+        local b = E:create_entity(attack.bullet)
+
+        b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
+        b.pos.y = this.pos.y + soffset.y + boffset.y
+        b.bullet.from = V.vclone(b.pos)
+        b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+        b.bullet.target_id = enemy.id
+        b.bullet.source_id = this.id
+        b.bullet.level = level
+        b.bullet.damage_factor = this.tower.damage_factor
+        b.bullet.damage_max = b.bullet.damage_max_config[b.bullet.level]
+        b.bullet.damage_min = b.bullet.damage_min_config[b.bullet.level]
+        b.bullet.reduce_armor = b.bullet.reduce_armor[b.bullet.level]
+
+        if b.bullet.fixed_height then
+            local height = b.bullet.fixed_height + (index - 1) * 15
+
+            b.bullet.fixed_height = height
+        end
+
+        b.bullet.flight_time = b.bullet.flight_time + index * fts(6)
+
+        queue_insert(store, b)
+    end
+
+    local function prepare_targets_armor_piercer(enemy, enemies)
+        local reload_enemy, reload_enemies = U.find_foremost_enemy(store, tpos(this), 0, ap.range_effect, false,
+            ap.vis_flags, ap.vis_bans)
+
+        if reload_enemy and #reload_enemies > 0 then
+            enemy = reload_enemy
+            enemies = reload_enemies
+        end
+
+        local targets = {}
+        local first_target_on_left = enemy.pos.x < this.pos.x
+
+        for i = 1, 3 do
+            local enemy_index = km.zmod(i, #enemies)
+            local e = enemies[enemy_index]
+
+            if first_target_on_left and e.pos.x < this.pos.x then
+                table.insert(targets, e)
+            elseif not first_target_on_left and e.pos.x > this.pos.x then
+                table.insert(targets, e)
+            elseif i > 1 then
+                table.insert(targets, targets[i - 1])
+            end
+        end
+
+        table.sort(targets, function(e1, e2)
+            return V.dist2(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) >
+                       V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
+        end)
+
+        return targets
+    end
+
+    local function check_upgrades_purchase()
+        if pow_a.changed then
+            pow_a.changed = nil
+            ap.cooldown = pow_a.cooldown[pow_a.level]
+            if pow_a.level == 1 then
+                ap.ts = store.tick_ts - ap.cooldown
+            end
+        end
+        if pow_r.changed then
+            pow_r.changed = nil
+            this.render.sprites[this.sid_rapacious_hunter].hidden = false
+
+            if not this.rapacious_hunter_tamer then
+                local s = E:create_entity(pow_r.entity)
+
+                s.pos.x, s.pos.y = V.add(this.pos.x, this.pos.y, pow_r.entity_offset.x, pow_r.entity_offset.y)
+                s.owner = this
+                s.level = pow_r.level
+                this.rapacious_hunter_tamer = s
+
+                queue_insert(store, s)
+
+                local fx = E:create_entity(pow_r.purchase_fx)
+
+                fx.pos = s.pos
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+            else
+                this.rapacious_hunter_tamer.level = pow_r.level
+            end
+        end
+    end
+
+    aa.ts = store.tick_ts - aa.cooldown + a.attack_delay_on_spawn
+
+    for idx, ssid in ipairs(shooter_sids) do
+        local soffset = this.render.sprites[ssid].offset
+        local s = this.render.sprites[ssid]
+        local an, af = U.animation_name_facing_point(this, "idle", a._last_target_pos[idx], ssid, soffset)
+
+        U.animation_start(this, an, af, store.tick_ts, 1, ssid)
+    end
+    local tw = this.tower
+    while true do
+        if this.tower.blocked then
+            coroutine.yield()
+        else
+            check_upgrades_purchase()
+            SU.towers_swaped(store, this, this.attacks.list)
+
+            if this.powers and this.powers.armor_piercer then
+                if ready_to_use_power(pow_a, ap, store, tw.cooldown_factor) then
+                    local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, ap.range_trigger, false,
+                        ap.vis_flags, ap.vis_bans)
+
+                    if not enemy then
+                        ap.ts = ap.ts + fts(10)
+                    else
+                        local start_ts = store.tick_ts
+
+                        shooter_idx = km.zmod(shooter_idx + 1, #shooter_sids)
+
+                        shot_animation(ap, shooter_idx, enemy.pos)
+                        S:queue(ap.sound)
+
+                        while store.tick_ts - start_ts < ap.shoot_time do
+                            check_upgrades_purchase()
+                            coroutine.yield()
+                        end
+
+                        local targets = prepare_targets_armor_piercer(enemy, enemies)
+                        local arrow_number = 1
+
+                        if targets[1].pos.x < this.pos.x then
+                            local ssid = shooter_sids[shooter_idx]
+
+                            this.render.sprites[ssid].flip_x = true
+                        end
+
+                        for _, enemy in pairs(targets) do
+                            shot_bullet_armor_piercer(ap, shooter_idx, enemy, pow_a.level, arrow_number)
+                            U.y_wait(store, ap.time_between_arrows)
+
+                            arrow_number = arrow_number + 1
+                        end
+
+                        U.y_animation_wait(this, shooter_sids[shooter_idx])
+
+                        ap.ts = start_ts
+                        aa.ts = start_ts
+                    end
+                end
+            end
+
+            if ready_to_attack(aa, store, tw.cooldown_factor) then
+                local trigger_enemy, _ = U.find_foremost_enemy(store, tpos(this), 0, a.range, false,
+                    aa.vis_flags, aa.vis_bans)
+
+                if not trigger_enemy then
+                    aa.ts = aa.ts + fts(10)
+                else
+                    aa.ts = store.tick_ts
+                    shooter_idx = km.zmod(shooter_idx + 1, #shooter_sids)
+
+                    shot_animation(aa, shooter_idx, trigger_enemy.pos)
+
+                    while store.tick_ts - aa.ts < aa.shoot_time do
+                        check_upgrades_purchase()
+                        coroutine.yield()
+                    end
+
+                    local enemy, _ = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
+                        aa.vis_bans)
+
+                    enemy = enemy or trigger_enemy
+
+                    shot_bullet(aa, shooter_idx, enemy, 0)
+
+                    a._last_target_pos[shooter_idx].x, a._last_target_pos[shooter_idx].y = enemy.pos.x, enemy.pos.y
+
+                    U.y_animation_wait(this, shooter_sids[shooter_idx])
+                end
+            end
+
+            if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
+                for _, sid in pairs(shooter_sids) do
+                    local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
+
+                    U.animation_start(this, an, af, store.tick_ts, -1, sid)
+                end
+            end
+
+            coroutine.yield()
+        end
+    end
+end
+
+function scripts.tower_royal_archers.remove(this, store)
+    if this.rapacious_hunter_tamer then
+        queue_remove(store, this.rapacious_hunter_tamer)
+
+        local eagle = this.rapacious_hunter_tamer.entity_spawned
+
+        if eagle then
+            queue_remove(store, eagle)
+        end
+    end
+
+    return true
+end
+
+scripts.tower_royal_archers_pow_rapacious_hunter_tamer = {}
+
+function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, store)
+    local ab = this.attacks.list[1]
+    local last_cheer = store.tick_ts
+    local last_idle = store.tick_ts
+    local next_idle = math.random(this.idle.min_cooldown, this.idle.max_cooldown)
+
+    this.entity_spawned = nil
+
+    U.y_animation_play(this, "in_animation", nil, store.tick_ts, 1)
+
+    while true do
+        if this.entity_spawned then
+            if this.entity_spawned.return_to_owner == true then
+                U.y_animation_play(this, "return", nil, store.tick_ts, 1)
+
+                this.entity_spawned = nil
+            elseif store.tick_ts - last_cheer > this.min_cheer_cooldown and this.entity_spawned.engage_combat == true then
+                if math.random() < this.cheer_chance or store.tick_ts - last_cheer > this.max_time_without_cheer then
+                    U.y_animation_play(this, "cheer_up", nil, store.tick_ts, 1)
+                    U.y_animation_play(this, "idle_3", nil, store.tick_ts, 1)
+                end
+
+                last_cheer = store.tick_ts
+            end
+        end
+
+        if not this.entity_spawned then
+            local enemy = U.find_foremost_enemy(store, tpos(this), 0, ab.range, false, ab.vis_flags,
+                ab.vis_bans)
+
+            if enemy then
+                ab.ts = store.tick_ts
+
+                local mark_mod = E:create_entity(ab.mark_mod)
+
+                mark_mod.modifier.source_id = this.id
+                mark_mod.modifier.target_id = enemy.id
+                mark_mod.modifier.duration = ab.mark_mod_duration
+
+                queue_insert(store, mark_mod)
+                U.animation_start(this, ab.animation, nil, store.tick_ts, false)
+
+                while store.tick_ts - ab.ts < ab.cast_time do
+                    coroutine.yield()
+                end
+
+                local p = E:create_entity(ab.entity)
+
+                p.enemy_target = enemy
+                p.level = this.level
+                p.owner = this
+                p.mark_mod = mark_mod
+                p.pos.x, p.pos.y = V.add(this.pos.x, this.pos.y, p.owner_offset.x, p.owner_offset.y)
+                this.entity_spawned = p
+
+                queue_insert(store, p)
+
+                ab.ts = store.tick_ts
+
+                U.y_animation_wait(this)
+                U.y_animation_play(this, "idle_3", nil, store.tick_ts, 1)
+
+                last_cheer = store.tick_ts
+            elseif next_idle < store.tick_ts - last_idle then
+                U.y_animation_play(this, this.idle.animation, nil, store.tick_ts, 1)
+
+                last_idle = store.tick_ts
+                next_idle = math.random(this.idle.min_cooldown, this.idle.max_cooldown)
+            end
+        end
+
+        coroutine.yield()
+    end
+end
+
+scripts.tower_royal_archers_pow_rapacious_hunter_eagle = {}
+
+function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, store)
+    local sf = this.render.sprites[1]
+    local fm = this.force_motion
+    local ca = this.attacks.list[1]
+    local target = this.enemy_target
+    local shots = 0
+    local flip_multiplier = 1
+    local tamer_attack = this.owner.attacks.list[1]
+    local far_from_tower = false
+    local target_still_valid = true
+
+    this.return_to_owner = false
+    this.engage_combat = false
+    sf.offset.y = this.flight_height
+    this.flight_height = this.flight_height_max
+    ca.ts = store.tick_ts
+
+    local move_to_owner = false
+
+    local function move_step(destination)
+        local dx, dy = V.sub(destination.x, destination.y, this.pos.x, this.pos.y)
+
+        fm.v.x, fm.v.y = V.trim(this.orbital_speed, V.mul(5, dx, dy))
+        this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+        sf.offset.y = km.clamp(0, this.flight_height, sf.offset.y + this.flight_speed * store.tick_length)
+
+        if target and V.len(dx, dy) < 10 then
+            local tx = target.pos.x - this.pos.x
+
+            sf.flip_x = tx < 0
+        else
+            sf.flip_x = fm.v.x < 0
+        end
+    end
+
+    local function return_to_owner(destination)
+        local accel = this.return_accel
+        local mspeed = this.min_speed
+        local dist = V.dist(this.pos.x, this.pos.y, destination.x, destination.y)
+        local start_dist = dist
+        local start_h = sf.offset.y
+        local target_h = this.owner_flight_height
+
+        while dist > mspeed * store.tick_length do
+            if not store.entities[this.owner.id] then
+                this.tween.disabled = false
+                this.tween.ts = store.tick_ts
+                this.tween.reverse = true
+
+                U.y_wait(store, this.tween.props[1].keys[2][1])
+                queue_remove(store, this)
+            end
+
+            local tx, ty = destination.x, destination.y
+            local dx, dy = V.mul(mspeed * store.tick_length, V.normalize(V.sub(tx, ty, this.pos.x, this.pos.y)))
+
+            this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, dx, dy)
+            sf.offset.y =
+                km.clamp(0, this.flight_height * 1.5, start_h + (target_h - start_h) * (1 - dist / start_dist))
+            sf.flip_x = dx < 0
+
+            coroutine.yield()
+
+            dist = V.dist(this.pos.x, this.pos.y, destination.x, destination.y)
+            mspeed = km.clamp(this.min_speed, this.max_speed, mspeed + accel * store.tick_length)
+        end
+
+        this.return_to_owner = true
+
+        queue_remove(store, this)
+    end
+
+    while true do
+        local distance_from_target = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
+
+        if not store.entities[target.id] or target.health.dead or far_from_tower or not target_still_valid then
+            far_from_tower = false
+
+            local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, tamer_attack.range, false,
+                tamer_attack.vis_flags, tamer_attack.vis_bans)
+
+            if targets and #targets > 0 then
+                target = targets[1]
+                target_still_valid = true
+
+                local mark_mod = E:create_entity(tamer_attack.mark_mod)
+
+                mark_mod.modifier.source_id = this.id
+                mark_mod.modifier.target_id = target.id
+                mark_mod.modifier.duration = tamer_attack.mark_mod_duration
+
+                queue_insert(store, mark_mod)
+
+                this.mark_mod = mark_mod
+            else
+                move_to_owner = true
+
+                goto label_784_0
+            end
+        end
+
+        if target and not target.health.dead then
+            if not P:is_node_valid(target.nav_path.pi, target.nav_path.ni) then
+                target_still_valid = false
+            end
+
+            if band(target.vis.flags, ca.vis_bans) ~= 0 or band(target.vis.bans, ca.vis_flags) ~= 0 then
+                target_still_valid = false
+            end
+        end
+
+        if store.tick_ts - ca.ts > ca.cooldown and distance_from_target < this.min_distance_to_attack then
+            this.engage_combat = true
+
+            U.y_animation_play(this, "attack_in", nil, store.tick_ts, 1)
+
+            local trail = E:create_entity(ca.trail)
+
+            trail.particle_system.track_id = this.id
+            trail.particle_system.emit = true
+            trail.particle_system.track_offset = sf.offset
+
+            queue_insert(store, trail)
+            S:queue(this.sound_events.descend)
+            U.y_animation_play(this, "projectile", nil, store.tick_ts, 1)
+
+            this.engage_combat = false
+
+            local accel = this.attack_accel
+            local start_h = sf.offset.y
+            local target_h = target.unit.hit_offset.y
+            local mspeed = this.min_speed
+            local target_pos = V.v(target.pos.x, target.pos.y)
+
+            if target.unit.head_offset then
+                target_pos.x, target_pos.y = target_pos.x + target.unit.head_offset.x,
+                    target_pos.y + target.unit.head_offset.y
+            end
+
+            local dist = V.dist(this.pos.x, this.pos.y, target_pos.x, target_pos.y)
+            local start_dist = dist
+
+            while dist > mspeed * store.tick_length and not target.health.dead do
+                local tx, ty = target_pos.x, target_pos.y
+                local dx, dy = V.mul(mspeed * store.tick_length, V.normalize(V.sub(tx, ty, this.pos.x, this.pos.y)))
+
+                this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, dx, dy)
+                sf.offset.y = km.clamp(0, this.flight_height * 1.5,
+                    start_h + (target_h - start_h) * (1 - dist / start_dist))
+                trail.particle_system.track_offset = sf.offset
+                sf.flip_x = dx < 0
+
+                local flip_sign = sf.flip_x and -1 or 1
+
+                trail.particle_system.scales_x = {flip_sign, flip_sign}
+
+                coroutine.yield()
+
+                dist = V.dist(this.pos.x, this.pos.y, target_pos.x, target_pos.y)
+                mspeed = km.clamp(this.min_speed, this.max_speed, mspeed + accel * store.tick_length)
+            end
+
+            if target.health.dead then
+                queue_remove(store, trail)
+
+                ca.ts = store.tick_ts
+            else
+                this.pos.x, this.pos.y = target_pos.x, target_pos.y - 1
+                sf.offset.y = target_h
+                trail.particle_system.track_offset = sf.offset
+
+                S:queue(ca.sound)
+
+                local d = E:create_entity("damage")
+
+                d.source_id = this.id
+                d.target_id = target.id
+                d.value = math.random(ca.damage_min[this.level], ca.damage_max[this.level])
+                d.damage_type = ca.damage_type
+
+                queue_damage(store, d)
+
+                local fx = E:create_entity(ca.hit_fx)
+
+                fx.pos = V.vclone(target_pos)
+                fx.render.sprites[1].offset = V.v(0, target_h)
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+
+                shots = shots + 1
+                flip_multiplier = flip_multiplier * -1
+
+                queue_remove(store, trail)
+                U.y_animation_play(this, "attack_out", nil, store.tick_ts, 1)
+
+                ca.ts = store.tick_ts
+                far_from_tower = false
+
+                local dist = V.dist(this.owner.pos.x, this.owner.pos.y, this.pos.x, this.pos.y)
+
+                if dist > this.max_distance_from_tower then
+                    far_from_tower = true
+                end
+            end
+        end
+
+        ::label_784_0::
+
+        U.animation_start(this, "idle_1", nil, store.tick_ts, true)
+
+        if move_to_owner then
+            local owner_pos = {}
+
+            owner_pos.x, owner_pos.y = V.add(this.owner.pos.x, this.owner.pos.y, this.owner_offset.x,
+                this.owner_offset.y)
+
+            return_to_owner(owner_pos)
+        else
+            local pos = V.vclone(target.pos)
+
+            pos.x = pos.x + flip_multiplier * this.offset_x_after_hit
+
+            move_step(pos)
+        end
+
+        coroutine.yield()
+    end
+end
+
+function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.remove(this, store)
+    if this.mark_mod then
+        queue_remove(store, this.mark_mod)
+    end
+
+    return true
+end
+
+scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod = {}
+
+function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update(this, store)
+    local m = this.modifier
+
+    m.ts = store.tick_ts
+
+    while true do
+        local target = store.entities[m.target_id]
+
+        if not target or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+            queue_remove(store, this)
+
+            return
+        end
+
+        coroutine.yield()
+    end
+end
+
+-- 皇家弓箭手 END
 return scripts

@@ -8762,4 +8762,12 @@ function scripts.multi_sprite_fx.update(this, store)
     end
 end
 
+scripts.arrow5_fixed_height = {}
+
+function scripts.arrow5_fixed_height.insert(this, store, script)
+    this.bullet.flight_time = 2 * (math.sqrt(2 * this.bullet.fixed_height * this.bullet.g * -1) / this.bullet.g * -1)
+
+    return scripts.arrow.insert(this, store, script)
+end
+
 return scripts

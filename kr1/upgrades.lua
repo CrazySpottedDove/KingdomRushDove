@@ -336,7 +336,7 @@ function upgrades:arrows()
             "arrow_crossbow", "axe_totem", "dwarf_shotgun", "pirate_watchtower_shotgun", "arrow_arcane",
             "arrow_arcane_slumber", "arrow_silver", "arrow_silver_long", "arrow_silver_sentence",
             "arrow_silver_sentence_long", "arrow_silver_mark", "arrow_silver_mark_long", "arrow_hero_elves_archer",
-            "arrow_hero_alleria", "multishot_crossbow", "knife_catha","bullet_tower_dark_elf_lvl4","bullet_tower_sand_lvl4"}
+            "arrow_hero_alleria", "multishot_crossbow", "knife_catha","bullet_tower_dark_elf_lvl4","bullet_tower_sand_lvl4", "bullet_rower_sand_skill_gold", "arrow_armor_piercer_royal_archers","tower_royal_archers_arrow_lvl4"}
 end
 
 function upgrades:barrack_soldiers()

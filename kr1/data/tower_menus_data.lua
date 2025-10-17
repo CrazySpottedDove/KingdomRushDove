@@ -279,6 +279,12 @@ return {
         place = 16,
         tt_title = _("TOWER_SAND_NAME"),
         tt_desc = _("TOWER_SAND_1_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_royal_archers_lvl4",
+        image = "kr5_main_icons_0002",
+        place = 17,
+        tt_title = _("TOWER_ROYAL_ARCHERS_NAME"),
+        tt_desc = _("TOWER_ROYAL_ARCHERS_1_DESCRIPTION")
     }), templates.sell}},
 
     -- 兵营
@@ -2225,6 +2231,40 @@ return {
         }, {
             tt_title = _("TOWER_SAND_4_SKILL_BIG_BLADE_3_NAME"),
             tt_desc = _("TOWER_SAND_4_SKILL_BIG_BLADE_3_DESCRIPTION")
+        }}
+    }), templates.sell}},
+
+    royal_archers = {{merge(templates.upgrade_power, {
+        action_arg = "armor_piercer",
+        image = "kr5_special_icons_0003",
+        place = 6,
+        sounds = {"TowerRoyalArchersSkillATaunt"},
+        tt_phrase = _("TOWER_ROYAL_ARCHERS_4_ARMOR_PIERCER_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_ROYAL_ARCHERS_4_ARMOR_PIERCER_1_NAME"),
+            tt_desc = _("TOWER_ROYAL_ARCHERS_4_ARMOR_PIERCER_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROYAL_ARCHERS_4_ARMOR_PIERCER_2_NAME"),
+            tt_desc = _("TOWER_ROYAL_ARCHERS_4_ARMOR_PIERCER_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROYAL_ARCHERS_4_ARMOR_PIERCER_3_NAME"),
+            tt_desc = _("TOWER_ROYAL_ARCHERS_4_ARMOR_PIERCER_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "rapacious_hunter",
+        image = "kr5_special_icons_0004",
+        place = 7,
+        sounds = {"TowerRoyalArchersSkillBTaunt"},
+        tt_phrase = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_1_NAME"),
+            tt_desc = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_2_NAME"),
+            tt_desc = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_3_NAME"),
+            tt_desc = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_3_DESCRIPTION")
         }}
     }), templates.sell}}
 }

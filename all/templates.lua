@@ -1304,3 +1304,6 @@ tt.main_script.update = scripts.mod_soldier_cooldown.update
 tt.modifier.vis_flags = F_MOD
 tt.modifier.duration = 10
 tt.cooldown_factor = 0.9
+
+tt = E:register_t("arrow5_fixed_height", "arrow")
+tt.main_script.insert = scripts.arrow5_fixed_height.insert
