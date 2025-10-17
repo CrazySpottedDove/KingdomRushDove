@@ -5896,12 +5896,12 @@ local towers = {
         price = {80, 120, 170, 240},
         basic_attack = {
             cooldown = 0.8,
-            bounce_range = 130,
+            bounce_range = 150,
             bounce_speed_mult = 1.25,
             bounce_damage_mult = 0.6,
-            damage_min = {3, 6, 10, 38},
-            damage_max = {5, 10, 14, 64},
-            range = {145, 155, 170, 180},
+            damage_min = {3, 6, 10, 35},
+            damage_max = {5, 10, 14, 58},
+            range = {145, 155, 170, 190},
             damage_type = DAMAGE_STAB,
             max_bounces = {1, 2, 3, 4}
         },

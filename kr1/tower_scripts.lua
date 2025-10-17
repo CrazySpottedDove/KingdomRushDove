@@ -18,7 +18,6 @@ local UP = require("upgrades")
 local V = require("klua.vector")
 local W = require("wave_db")
 local bit = require("bit")
-local debug = require("all.debug_macros")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
