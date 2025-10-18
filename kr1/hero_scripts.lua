@@ -18646,6 +18646,7 @@ function scripts.hero_raelyn.update(this, store)
             if ready_to_use_skill(this.ultimate, store) then
                 local target = find_target_at_critical_moment(this, store, 140, false, true, F_FLYING)
                 if target and valid_rally_node_nearby(target.pos) then
+                    local start_ts = store.tick_ts
                     U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
                     S:queue(this.sound_events.change_rally_point)
                     local e = E:create_entity(this.hero.skills.ultimate.controller_name)
@@ -18655,6 +18656,7 @@ function scripts.hero_raelyn.update(this, store)
                     queue_insert(store, e)
                     this.ultimate.ts = store.tick_ts
                     SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+                    onslaught_attack.duration_ts = onslaught_attack.duration_ts + store.tick_ts - start_ts
                 else
                     this.ultimate.ts = this.ultimate.ts + 1
                 end
