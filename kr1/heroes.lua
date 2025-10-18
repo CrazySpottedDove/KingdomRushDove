@@ -8406,8 +8406,8 @@ local function heroes()
     tt.hero.level_stats.melee_damage_max = {29, 34, 38, 43, 48, 53, 58, 62, 67, 72}
     tt.hero.level_stats.melee_damage_min = {19, 22, 26, 29, 32, 35, 38, 42, 45, 48}
     tt.hero.skills.rootspikes = CC("hero_skill")
-    tt.hero.skills.rootspikes.damage_max = {50, 90, 120}
-    tt.hero.skills.rootspikes.damage_min = {30, 50, 80}
+    tt.hero.skills.rootspikes.damage_max = {60, 90, 120}
+    tt.hero.skills.rootspikes.damage_min = {40, 60, 80}
     tt.hero.skills.rootspikes.xp_gain = {100, 200, 300}
     tt.hero.skills.rootspikes.xp_level_steps = {
         [1] = 1,
@@ -8425,8 +8425,8 @@ local function heroes()
         [8] = 3
     }
     tt.hero.skills.branchball = CC("hero_skill")
-    tt.hero.skills.branchball.hp_max = {300, 750, 9000000000}
-    tt.hero.skills.branchball.xp_gain = {157, 314, 471}
+    tt.hero.skills.branchball.hp_max = {450, 900, 9000000000}
+    tt.hero.skills.branchball.xp_gain = {160, 320, 480}
     tt.hero.skills.branchball.xp_level_steps = {
         [4] = 1,
         [7] = 2,
