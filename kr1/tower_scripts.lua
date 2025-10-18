@@ -12583,7 +12583,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
     while true do
         local distance_from_target = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
 
-        if not store.entities[target.id] or target.health.dead or far_from_tower or not target_still_valid then
+        if not store.entities[target.id] or target.health.dead or far_from_tower or not target_still_valid or not enemy_is_silent_target(target) then
             far_from_tower = false
 
             local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, tamer_attack.range, false,
