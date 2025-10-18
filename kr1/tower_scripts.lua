@@ -3359,7 +3359,7 @@ scripts.tower_bfg = {
                         -- block empty
                     else
                         am.ts = store.tick_ts
-                        local trigger_pos = trigger.pos
+                        local trigger_pos = V.vclone(trigger.pos)
                         U.animation_start(this, am.animation, nil, store.tick_ts, false, tower_sid)
                         U.y_wait(store, am.shoot_time)
 
@@ -3402,7 +3402,7 @@ scripts.tower_bfg = {
                         -- block empty
                     else
                         aa.ts = store.tick_ts
-                        local trigger_pos = trigger.pos
+                        local trigger_pos = V.vclone(trigger.pos)
                         last_ts = aa.ts
 
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
@@ -3447,7 +3447,7 @@ scripts.tower_bfg = {
                         -- block empty
                     else
                         aa.ts = store.tick_ts
-                        local trigger_pos = trigger.pos
+                        local trigger_pos = V.vclone(trigger.pos)
                         last_ts = aa.ts
 
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
