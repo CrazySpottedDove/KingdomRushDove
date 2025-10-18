@@ -28,8 +28,8 @@ local function engineer_towers()
     tt.info.i18n_key = "TOWER_BFG"
     tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0012" or "info_portraits_towers_0002"
     tt.powers.missile = CC("power")
-    tt.powers.missile.price_base = 200
-    tt.powers.missile.price_inc = 125
+    tt.powers.missile.price_base = 180
+    tt.powers.missile.price_inc = 115
     tt.powers.missile.range_inc_factor = 0.3
     tt.powers.missile.damage_inc = 40
     tt.powers.missile.enc_icon = 17
@@ -37,8 +37,8 @@ local function engineer_towers()
     tt.powers.missile.cooldown_mixed_dec = 2
     tt.powers.missile.attack_idx = 2
     tt.powers.cluster = CC("power")
-    tt.powers.cluster.price_base = 190
-    tt.powers.cluster.price_inc = 220
+    tt.powers.cluster.price_base = 170
+    tt.powers.cluster.price_inc = 200
     tt.powers.cluster.cooldown_dec = 3.5
     tt.powers.cluster.fragment_count_base = 2
     tt.powers.cluster.fragment_count_inc = 2

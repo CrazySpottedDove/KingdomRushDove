@@ -24,7 +24,7 @@ AC(tt, "attacks", "powers")
 image_y = 90
 tt.tower.type = "arcane_wizard"
 tt.tower.level = 1
-tt.tower.price = 300
+tt.tower.price = 290
 tt.tower.size = TOWER_SIZE_LARGE
 tt.tower.menu_offset = vec_2(0, 14)
 tt.info.enc_icon = 15
