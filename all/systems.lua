@@ -2264,7 +2264,7 @@ function sys.render:on_insert(entity, store)
         end
     end
 
-    if entity.health_bar and store.config.show_health_bar then
+    if entity.health_bar and store.config and store.config.show_health_bar then
         local hb = entity.health_bar
         local hbsize = self._hb_sizes[hb.type]
 
@@ -2441,7 +2441,7 @@ function sys.render:on_update(dt, ts, store)
             end
         end
 
-        if e.health_bar and store.config.show_health_bar then
+        if e.health_bar and store.config and store.config.show_health_bar then
             local hb = e.health_bar
             local fb = hb.frames[1]
             local ff = hb.frames[2]
