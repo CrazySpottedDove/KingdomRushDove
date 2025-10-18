@@ -3431,8 +3431,9 @@ scripts.tower_bfg = {
                     end
                 end
                 aa = ab
-                if ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown *
-                    this.tower.cooldown_factor then
+                -- if ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown *
+                --     this.tower.cooldown_factor then
+                if ready_to_attack(aa, store, this.tower.cooldown_factor) then
                     local trigger = U.find_first_enemy(store, tpos(this), 0, a.range, aa.vis_flags, aa.vis_bans)
 
                     if trigger then
