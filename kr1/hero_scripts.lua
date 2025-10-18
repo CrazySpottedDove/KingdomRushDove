@@ -18830,6 +18830,7 @@ function scripts.hero_raelyn.update(this, store)
                     basic_attack.sound = a.sound
                     U.speed_inc(this, this.motion.max_speed * 0.4)
                     this.melee.attacks[2].hit_aura = a.hit_aura
+                    SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.8)
                 end
             end
 
@@ -18844,6 +18845,7 @@ function scripts.hero_raelyn.update(this, store)
                 basic_attack.sound = a._sound
                 a.ts = store.tick_ts
                 U.speed_dec(this, this.motion.max_speed * 0.4)
+                SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.8)
             end
 
             brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
