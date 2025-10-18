@@ -2895,7 +2895,7 @@ local function heroes()
         [8] = 3
     }
     tt.hero.skills.consecrate = CC("hero_skill")
-    tt.hero.skills.consecrate.duration = {6, 10, 14}
+    tt.hero.skills.consecrate.duration = {6, 12, 18}
     tt.hero.skills.consecrate.extra_damage = {0.18, 0.24, 0.3}
     tt.hero.skills.consecrate.xp_gain_factor = 50
     tt.hero.skills.consecrate.xp_level_steps = {
@@ -3035,6 +3035,7 @@ local function heroes()
     tt.modifier.use_mod_offset = false
     tt.armor_rate = 0.3
     tt.damage_rate = 0.1
+    tt.cooldown_rate = 0.9
     tt.main_script.insert = scripts.mod_priest_armor.insert
     tt.main_script.remove = scripts.mod_priest_armor.remove
     tt.main_script.update = scripts.mod_priest_armor.update

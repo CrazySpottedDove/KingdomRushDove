@@ -3732,6 +3732,7 @@ scripts.mod_priest_armor = {
         SU.armor_inc(target, this.armor_inc)
         SU.magic_armor_inc(target, this.magic_armor_inc)
         target.unit.damage_factor = target.unit.damage_factor * (this.damage_rate + 1)
+        SU.insert_unit_cooldown_buff(store.tick_ts, target, this.cooldown_rate)
         signal.emit("mod-applied", this, target)
         return true
     end,
@@ -3741,6 +3742,7 @@ scripts.mod_priest_armor = {
             SU.armor_dec(target, this.armor_inc)
             SU.magic_armor_dec(target, this.magic_armor_inc)
             target.unit.damage_factor = target.unit.damage_factor / (this.damage_rate + 1)
+            SU.remove_unit_cooldown_buff(store.tick_ts, target, this.cooldown_rate)
         end
         return true
     end,
