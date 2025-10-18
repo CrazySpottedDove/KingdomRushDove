@@ -6850,7 +6850,18 @@ function TowerMenu:show()
 
     local ro = entity.tower.range_offset
     local mo = entity.tower.menu_offset
-    local ewx, ewy = game_gui:g2u(V.v(entity.pos.x + ro.x + mo.x, entity.pos.y + ro.y + mo.y), true)
+    local visible_coords = game_gui.game.store.visible_coords
+    local ewx_g, ewy_g = entity.pos.x + ro.x + mo.x, entity.pos.y + ro.y + mo.y
+    if ewy_g + data.tower_menu_button_height > visible_coords.top then
+        ewy_g = visible_coords.top - data.tower_menu_button_height
+    end
+    if ewx_g + data.tower_menu_button_width > visible_coords.right then
+        ewx_g = visible_coords.right - data.tower_menu_button_width
+    elseif ewx_g - data.tower_menu_button_width < visible_coords.left then
+        ewx_g = visible_coords.left + data.tower_menu_button_width
+    end
+
+    local ewx, ewy = game_gui:g2u(V.v(ewx_g, ewy_g), true)
 
     self.pos = v(ewx, ewy)
     self.scale = v(0.6, 0.6)

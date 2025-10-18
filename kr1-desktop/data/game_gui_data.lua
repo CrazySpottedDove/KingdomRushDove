@@ -1901,6 +1901,8 @@ return {
 		v(31, 8)
 	},
 	range_center_offset = v(0, -12),
+    tower_menu_button_width = 4 * TOWER_MENU_BUTTON_X_UNIT,
+    tower_menu_button_height = 2 * TOWER_MENU_BUTTON_Y_UNIT,
 	damage_icons = {
 		default = "base_info_icons_0001",
 		magic = "base_info_icons_0002",
