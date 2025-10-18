@@ -187,7 +187,7 @@ local function engineer_towers()
     tt.main_script.update = scripts.tower_tesla.update
     tt.sound_events.insert = "EngineerTeslaTaunt"
     tt.attacks.min_cooldown = 2.2
-    tt.attacks.range = 170
+    tt.attacks.range = 175
     tt.attacks.range_check_factor = 1.2
     tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animation = "shoot"
@@ -195,7 +195,7 @@ local function engineer_towers()
     tt.attacks.list[1].bullet_start_offset = vec_2(7, 79)
     tt.attacks.list[1].cooldown = 2.2
     tt.attacks.list[1].node_prediction = fts(18)
-    tt.attacks.list[1].range = 170
+    tt.attacks.list[1].range = 175
     tt.attacks.list[1].shoot_time = fts(48)
     -- tt.attacks.list[1].shoot_time = fts(24)
     tt.attacks.list[1].sound_shoot = "TeslaAttack"
@@ -259,8 +259,8 @@ local function engineer_towers()
     tt.aura.mod = "mod_tesla_overcharge"
     tt.aura.radius = 170
     tt.aura.damage_min = 0
-    tt.aura.damage_max = 10
-    tt.aura.damage_inc = 10
+    tt.aura.damage_max = 11
+    tt.aura.damage_inc = 11
     tt.aura.damage_type = DAMAGE_ELECTRICAL
     tt.aura.excluded_templates = {"enemy_spectral_knight"}
     tt.main_script.update = scripts.aura_tesla_overcharge.update
@@ -587,7 +587,7 @@ local function engineer_towers()
     tt.main_script.remove = scripts.tower_barrack.remove
     tt.barrack.soldier_type = "soldier_frankenstein"
     tt.barrack.rally_range = 180
-    tt.attacks.range = 200
+    tt.attacks.range = 205
     tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].bullet = "ray_frankenstein"
     tt.attacks.list[1].cooldown = 2.5
