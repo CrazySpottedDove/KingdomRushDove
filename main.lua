@@ -792,7 +792,7 @@ function love.errhand(msg)
     local err = {}
     local tip = {}
     local tip_trigger_errors = {
-        ["Texture expected, got nil"] = "贴图资源丢失，请先尝试重新安装新版本\n"
+        ["Texture expected, got nil"] = "你在老本体上放了新版本补丁，请先安装新的本体。\n"
     }
     local has_tip
 
