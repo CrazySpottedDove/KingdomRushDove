@@ -5966,14 +5966,14 @@ local function heroes()
     tt.hero.skills.spinningpole = CC("hero_skill")
     tt.hero.skills.spinningpole.xp_gain_factor = 28
     tt.hero.skills.spinningpole.loops = {2, 3, 4}
-    tt.hero.skills.spinningpole.damage = {18, 25, 30}
+    tt.hero.skills.spinningpole.damage = {18, 26, 34}
     tt.hero.skills.spinningpole.xp_level_steps = {
         [2] = 1,
         [5] = 2,
         [8] = 3
     }
     tt.hero.skills.tetsubostorm = CC("hero_skill")
-    tt.hero.skills.tetsubostorm.damage = {45, 80, 120}
+    tt.hero.skills.tetsubostorm.damage = {45, 90, 135}
     tt.hero.skills.tetsubostorm.xp_gain_factor = 60
     tt.hero.skills.tetsubostorm.xp_level_steps = {
         [2] = 1,
@@ -6060,7 +6060,7 @@ local function heroes()
     tt.melee.attacks[2].sound = "HeroMonkeyGodAttack2"
     tt.melee.attacks[3] = CC("area_attack")
     tt.melee.attacks[3].animations = {"pole_start", "pole_loop", "pole_end"}
-    tt.melee.attacks[3].cooldown = 16
+    tt.melee.attacks[3].cooldown = 14.4
     tt.melee.attacks[3].damage_max = nil
     tt.melee.attacks[3].damage_min = nil
     tt.melee.attacks[3].damage_radius = 90
@@ -6078,7 +6078,7 @@ local function heroes()
     tt.melee.attacks[3].sound_end = "HeroMonkeyGodSpinningPoleLoopEnd"
     tt.melee.attacks[4] = CC("melee_attack")
     tt.melee.attacks[4].animations = {"tetsubo_start", "tetsubo_loop", "tetsubo_end"}
-    tt.melee.attacks[4].cooldown = 16
+    tt.melee.attacks[4].cooldown = 14.4
     tt.melee.attacks[4].damage_max = nil
     tt.melee.attacks[4].damage_min = nil
     tt.melee.attacks[4].disabled = true
