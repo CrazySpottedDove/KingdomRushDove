@@ -6623,7 +6623,7 @@ local function heroes()
     tt.melee.range = 65
     tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animation = "whirlwind_mirage"
-    tt.timed_attacks.list[1].cooldown = 36
+    tt.timed_attacks.list[1].cooldown = 30
     tt.timed_attacks.list[1].disabled = true
     tt.timed_attacks.list[1].fade_time = fts(4)
     tt.timed_attacks.list[1].fade_start_end_time = fts(7)
