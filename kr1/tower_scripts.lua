@@ -12235,7 +12235,7 @@ function scripts.tower_royal_archers.update(this, store)
     end
 
     local function prepare_targets_armor_piercer(enemy, enemies)
-        local reload_enemy, reload_enemies = U.find_foremost_enemy(store, tpos(this), 0, ap.range_effect, false,
+        local reload_enemy, reload_enemies = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, ap.range_effect, false,
             ap.vis_flags, ap.vis_bans)
 
         if reload_enemy and #reload_enemies > 0 then
@@ -12301,6 +12301,7 @@ function scripts.tower_royal_archers.update(this, store)
                 queue_insert(store, fx)
             else
                 this.rapacious_hunter_tamer.level = pow_r.level
+                this.rapacious_hunter_tamer.attacks.list[1].range = pow_r.range_config[pow_r.level]
             end
         end
     end
@@ -12324,7 +12325,7 @@ function scripts.tower_royal_archers.update(this, store)
 
             if this.powers and this.powers.armor_piercer then
                 if ready_to_use_power(pow_a, ap, store, tw.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, ap.range_trigger, false,
+                    local enemy, enemies = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, ap.range_trigger, false,
                         ap.vis_flags, ap.vis_bans)
 
                     if not enemy then
@@ -12367,7 +12368,7 @@ function scripts.tower_royal_archers.update(this, store)
             end
 
             if ready_to_attack(aa, store, tw.cooldown_factor) then
-                local trigger_enemy, _ = U.find_foremost_enemy(store, tpos(this), 0, a.range, false,
+                local trigger_enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false,
                     aa.vis_flags, aa.vis_bans)
 
                 if not trigger_enemy then
@@ -12383,7 +12384,7 @@ function scripts.tower_royal_archers.update(this, store)
                         coroutine.yield()
                     end
 
-                    local enemy, _ = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
+                    local enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false, aa.vis_flags,
                         aa.vis_bans)
 
                     enemy = enemy or trigger_enemy

@@ -1469,6 +1469,7 @@ tt.powers.rapacious_hunter.price_inc = b.rapacious_hunter.price[2]
 tt.powers.rapacious_hunter.enc_icon = 4
 tt.powers.rapacious_hunter.damage_max = b.rapacious_hunter.damage_max
 tt.powers.rapacious_hunter.damage_min = b.rapacious_hunter.damage_min
+tt.powers.rapacious_hunter.range_config = b.rapacious_hunter.range_config
 tt.powers.rapacious_hunter.entity = "tower_royal_archers_pow_rapacious_hunter_tamer"
 tt.powers.rapacious_hunter.entity_offset = vec_2(31, 7)
 tt.powers.rapacious_hunter.purchase_fx = "fx_tower_royal_archer_rapacious_hunter_dust"

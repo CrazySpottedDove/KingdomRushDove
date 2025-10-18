@@ -5427,8 +5427,9 @@ local towers = {
         },
         rapacious_hunter = {
             range = 220,
+            range_config = {220, 240, 260},
             shoot_range = 25,
-            max_distance_from_tower = 200,
+            max_distance_from_tower = 240,
             attack_cooldown = 2,
             price = {200, 100, 100},
             damage_min = {18, 34, 52},
