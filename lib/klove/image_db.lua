@@ -683,6 +683,7 @@ function image_db:load_image_file(fn, path)
 			key = string.gsub(key, ".jpg$", "")
 			key = string.gsub(key, ".pkm$", "")
 			key = string.gsub(key, ".astc$", "")
+			key = string.gsub(key, ".dds$", "")
 
 			return key, im, w, h
 		end
