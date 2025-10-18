@@ -148,7 +148,7 @@ local function heroes()
     tt.courage = {
         heal_once_factor = 0.12,
         heal_inc = 0.06,
-        damage_inc = 4,
+        damage_inc = 5,
         damage_inc_base = 1,
         armor_inc = 0.05,
         magic_armor_inc = 0.05
