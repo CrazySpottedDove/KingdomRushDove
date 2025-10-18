@@ -28,8 +28,8 @@ local function engineer_towers()
     tt.info.i18n_key = "TOWER_BFG"
     tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0012" or "info_portraits_towers_0002"
     tt.powers.missile = CC("power")
-    tt.powers.missile.price_base = 180
-    tt.powers.missile.price_inc = 115
+    tt.powers.missile.price_base = 185
+    tt.powers.missile.price_inc = 120
     tt.powers.missile.range_inc_factor = 0.3
     tt.powers.missile.damage_inc = 40
     tt.powers.missile.enc_icon = 17
@@ -37,8 +37,8 @@ local function engineer_towers()
     tt.powers.missile.cooldown_mixed_dec = 2
     tt.powers.missile.attack_idx = 2
     tt.powers.cluster = CC("power")
-    tt.powers.cluster.price_base = 170
-    tt.powers.cluster.price_inc = 200
+    tt.powers.cluster.price_base = 175
+    tt.powers.cluster.price_inc = 210
     tt.powers.cluster.cooldown_dec = 3.5
     tt.powers.cluster.fragment_count_base = 2
     tt.powers.cluster.fragment_count_inc = 2
@@ -85,11 +85,12 @@ local function engineer_towers()
     tt = RT("bomb_bfg", "bomb")
     tt.bullet.damage_max = 125
     tt.bullet.damage_min = 63
-    tt.bullet.damage_radius = 70
+    tt.bullet.damage_radius = 75
     tt.bullet.flight_time = fts(35)
     tt.bullet.hit_fx = "fx_explosion_big"
     tt.render.sprites[1].name = "bombs_0005"
     tt.sound_events.hit_water = nil
+    tt.render.sprites[1].scale = vec_1(1.1)
 
     tt = RT("bomb_bfg_cluster", "bullet")
     AC(tt, "sound_events")
@@ -108,6 +109,7 @@ local function engineer_towers()
     tt.main_script.update = scripts.bomb_cluster.update
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "bombs_0005"
+    tt.render.sprites[1].scale = vec_1(1.1)
     tt.sound_events.hit = "BombExplosionSound"
     tt.sound_events.insert = "BombShootSound"
 
