@@ -7,8 +7,8 @@ return {
             delay = 0,
             path_index = 1,
             spawns = {{
-                interval = 30, -- 6秒
-                max = 24,
+                interval = 24, -- 6秒
+                max = 48,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_raider",
                 creep_aux = "enemy_bouncer",
@@ -20,8 +20,24 @@ return {
             delay = 600, -- 20秒
             path_index = 2,
             spawns = {{
-                interval = 150, -- 5秒
-                max = 20,
+                interval = 135, -- 5秒
+                max = 12,
+                fixed_sub_path = 0,
+                creep = "enemy_greenfin",
+                max_same = 0,
+                interval_next = 135, -- 20秒
+                path = 1
+            },{
+                interval = 135, -- 5秒
+                max = 3,
+                fixed_sub_path = 0,
+                creep = "enemy_redspine",
+                max_same = 0,
+                interval_next = 135, -- 20秒
+                path = 1
+            },{
+                interval = 135, -- 5秒
+                max = 12,
                 fixed_sub_path = 0,
                 creep = "enemy_greenfin",
                 max_same = 0,
@@ -32,8 +48,8 @@ return {
             delay = 1200, -- 40秒
             path_index = 1,
             spawns = {{
-                interval = 100, -- 10秒
-                max = 24,
+                interval = 50, -- 10秒
+                max = 32,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
@@ -53,15 +69,23 @@ return {
             path_index = 3,
             spawns = {{
                 interval = 450, -- 15秒
-                max = 4,
+                max = 3,
                 fixed_sub_path = 0,
                 creep = "enemy_blacksurge",
+                max_same = 0,
+                interval_next = 450, -- 25秒
+                path = 1
+            },{
+                interval = 450, -- 15秒
+                max = 1,
+                fixed_sub_path = 0,
+                creep = "enemy_redgale",
                 max_same = 0,
                 interval_next = 750, -- 25秒
                 path = 1
             }, {
                 interval = 750, -- 25秒
-                max = 2,
+                max = 1,
                 fixed_sub_path = 0,
                 creep = "enemy_bloodshell",
                 max_same = 0,
@@ -93,8 +117,8 @@ return {
             delay = 3000, -- 100秒
             path_index = 10,
             spawns = {{
-                interval = 210, -- 7秒
-                max = 10,
+                interval = 120, -- 7秒
+                max = 14,
                 fixed_sub_path = 0,
                 creep = "enemy_bat",
                 max_same = 0,
@@ -102,7 +126,7 @@ return {
                 path = 1
             }, {
                 interval = 750, -- 25秒
-                max = 2,
+                max = 1,
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
@@ -151,7 +175,7 @@ return {
                 path = 1
             }, {
                 interval = 600, -- 20秒
-                max = 3,
+                max = 1,
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
@@ -162,15 +186,15 @@ return {
             delay = 4800, -- 160秒
             path_index = 1,
             spawns = {{
-                interval = 210, -- 7秒
-                max = 12,
+                interval = 60, -- 7秒
+                max = 24,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_wolf",
                 max_same = 0,
-                interval_next = 360, -- 12秒
+                interval_next = 150, -- 12秒
                 path = 1
             }, {
-                interval = 360, -- 12秒
+                interval = 60, -- 12秒
                 max = 8,
                 fixed_sub_path = 0,
                 creep = "enemy_desert_archer",
@@ -183,7 +207,7 @@ return {
             path_index = 3,
             spawns = {{
                 interval = 450, -- 15秒
-                max = 4,
+                max = 3,
                 fixed_sub_path = 0,
                 creep = "enemy_blacksurge",
                 max_same = 0,
@@ -191,7 +215,7 @@ return {
                 path = 1
             }, {
                 interval = 750, -- 25秒
-                max = 2,
+                max = 1,
                 fixed_sub_path = 0,
                 creep = "enemy_bloodshell",
                 max_same = 0,
@@ -208,7 +232,7 @@ return {
                 fixed_sub_path = 0,
                 creep = "enemy_bat",
                 max_same = 0,
-                interval_next = 450, -- 15秒
+                interval_next = 250, -- 15秒
                 path = 1
             }, {
                 interval = 450, -- 15秒
@@ -216,11 +240,11 @@ return {
                 fixed_sub_path = 1,
                 creep = "enemy_ghost",
                 max_same = 0,
-                interval_next = 600, -- 20秒
+                interval_next = 300, -- 20秒
                 path = 1
             }, {
-                interval = 750, -- 25秒
-                max = 2,
+                interval = 500, -- 25秒
+                max = 1,
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
@@ -239,35 +263,36 @@ return {
             delay = 6000, -- 200秒
             path_index = 4,
             spawns = {{
-                interval = 90, -- 3秒
+                interval = 100, -- 3秒
                 max = 30,
                 fixed_sub_path = 0,
                 creep = "enemy_greenfin",
                 max_same = 0,
-                interval_next = 300, -- 10秒
+                interval_next = 180, -- 10秒
                 path = 1
             }, {
-                interval = 240, -- 8秒
+                interval = 200, -- 8秒
                 max = 10,
                 fixed_sub_path = 0,
                 creep = "enemy_deviltide",
                 max_same = 0,
-                interval_next = 450, -- 15秒
+                interval_next = 200, -- 15秒
                 path = 1
             }, {
-                interval = 450, -- 15秒
+                interval = 200, -- 15秒
                 max = 5,
                 fixed_sub_path = 0,
                 creep = "enemy_redspine",
                 max_same = 0,
-                interval_next = 600, -- 20秒
+                interval_next = 200, -- 20秒
                 path = 1
             }, {
-                interval = 750, -- 25秒
+                interval = 360, -- 25秒
                 max = 2,
                 fixed_sub_path = 0,
                 creep = "enemy_greenshell",
-                max_same = 0,
+                creep_aux = "enemy_bluegale",
+                max_same = 1,
                 interval_next = 0,
                 path = 1
             }}

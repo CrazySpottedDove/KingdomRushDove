@@ -12363,7 +12363,7 @@ function scripts.tower_royal_archers.update(this, store)
                         U.y_animation_wait(this, shooter_sids[shooter_idx])
 
                         ap.ts = start_ts
-                        aa.ts = start_ts
+                        -- aa.ts = start_ts
                     end
                 end
             end

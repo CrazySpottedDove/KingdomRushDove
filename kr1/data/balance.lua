@@ -5418,12 +5418,12 @@ local towers = {
             range_trigger = 140,
             nearby_range = 100,
             range_effect = 200,
-            price = {120, 120, 120},
+            price = {125, 120, 120},
             cooldown = {15, 15, 15},
             damage_min = {40, 80, 120},
             damage_max = {60, 120, 150},
             damage_type = DAMAGE_PHYSICAL,
-            armor_penetration = {0.2, 0.35, 0.5}
+            armor_penetration = {0.1, 0.25, 0.4}
         },
         rapacious_hunter = {
             range = 220,

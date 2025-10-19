@@ -27,7 +27,7 @@ function level:init(store)
     self.locked_powers = {}
 
     if store.level_mode == GAME_MODE_IRON then
-        self.locked_towers = {"tower_build_mage"}
+        self.locked_towers = {"tower_build_mage", "tower_build_barrack"}
     end
 end
 
@@ -51,7 +51,11 @@ function level:load(store)
             if store.level_mode == GAME_MODE_CAMPAIGN then
                 LU.insert_tower(store, "tower_neptune", h.style, h.pos, h.rally_pos, nil, h.id)
             else
-                LU.insert_tower(store, "tower_archer_3", h.style, h.pos, h.rally_pos, nil, h.id)
+                local e = LU.insert_tower(store, "tower_pirate_watchtower", h.style, h.pos, h.rally_pos, nil, h.id)
+                e.powers.reduce_cooldown.level = 3
+                e.powers.reduce_cooldown.changed = true
+                -- e.powers.parrot.level = 3
+                -- e.powers.parrot.changed = true
             end
         elseif store.level_mode == GAME_MODE_IRON then
             if h.id == "05" or h.id == "04" or h.id == "03" or h.id == "06" or h.id == "08" then

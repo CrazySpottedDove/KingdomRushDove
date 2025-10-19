@@ -1619,11 +1619,13 @@ tt.bullet.particles_name = "royal_archer_tower_lvl4_arrow_armor_breaker_trail_pa
 tt.bullet.miss_decal = "royal_archer_tower_lvl4_arrow_armor_piercer_0002"
 tt.bullet.fixed_height = 20
 tt.bullet.flight_time_variance = 10
+tt.bullet.mod = "mod_tower_royal_archers_armor_piercer"
 tt.bullet.g = -1.8 / (fts(1) * fts(1))
 tt.render.sprites[1].name = "royal_archer_tower_lvl4_arrow_armor_piercer_0001"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = nil
 tt.sound_events.hit = "TowerRoyalArchersArmorPiercerHit"
+
 tt = E:register_t("tower_royal_archers_arrow_lvl4", "arrow5_fixed_height")
 b = balance.towers.royal_archers
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
@@ -1635,4 +1637,9 @@ tt.bullet.pop = {"pop_archer"}
 tt.render.sprites[1].name = "royal_archer_tower_lvl4_arrow_0001"
 tt.render.sprites[1].scale = vec_1(0.9)
 tt.bullet.miss_decal = "royal_archer_tower_lvl4_arrow_0002"
+
+tt = E:register_t("mod_tower_royal_archers_armor_piercer", "mod_damage")
+tt.damage_min = 0.1
+tt.damage_max = 0.1
+tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
 -- 皇家弓箭手 END
