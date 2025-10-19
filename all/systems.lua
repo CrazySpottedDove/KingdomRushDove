@@ -2828,7 +2828,7 @@ function sys.last_hook:on_insert(e, d)
         if target then
             if not target._applied_mods then
                 target._applied_mods = {}
-                log.error(string.formst("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name,
+                log.error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name,
                      e.template_name))
             end
             local mods = target._applied_mods
