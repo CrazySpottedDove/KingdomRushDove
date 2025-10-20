@@ -1,6 +1,6 @@
 return {
     lives = 1,
-    cash = 1400,
+    cash = 1500,
     groups = {{
         interval = 0,
         waves = {{ -- 路径1：沙漠单位 - 开局（0-1800帧，0-60秒）
@@ -150,10 +150,10 @@ return {
                 fixed_sub_path = 0,
                 creep = "enemy_redspine",
                 max_same = 0,
-                interval_next = 600, -- 20秒
+                interval_next = 300, -- 20秒
                 path = 1
             }, {
-                interval = 750, -- 25秒
+                interval = 500, -- 25秒
                 max = 2,
                 fixed_sub_path = 0,
                 creep = "enemy_greenshell",
@@ -276,10 +276,10 @@ return {
                 fixed_sub_path = 0,
                 creep = "enemy_redspine",
                 max_same = 0,
-                interval_next = 200, -- 20秒
+                interval_next = 100, -- 20秒
                 path = 1
             }, {
-                interval = 180, -- 25秒
+                interval = 150, -- 25秒
                 max = 2,
                 fixed_sub_path = 0,
                 creep = "enemy_greenshell",
