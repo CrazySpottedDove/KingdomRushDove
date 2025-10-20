@@ -232,17 +232,9 @@ return {
                 fixed_sub_path = 0,
                 creep = "enemy_bat",
                 max_same = 0,
-                interval_next = 250, -- 15秒
+                interval_next = 500, -- 15秒
                 path = 1
-            }, {
-                interval = 225, -- 15秒
-                max = 4,
-                fixed_sub_path = 1,
-                creep = "enemy_ghost",
-                max_same = 0,
-                interval_next = 300, -- 20秒
-                path = 1
-            }, {
+            },  {
                 interval = 250, -- 25秒
                 max = 1,
                 fixed_sub_path = 1,

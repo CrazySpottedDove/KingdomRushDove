@@ -65,6 +65,16 @@ function level:load(store)
             else
                 LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
             end
+        elseif store.level_mode == GAME_MODE_HEROIC then
+            if h.id == "05" then
+                local e = LU.insert_tower(store, "tower_barrack_mercenaries",h.style, h.pos, h.rally_pos, nil, h.id)
+                e.powers.djspell.level = 3
+                e.powers.djspell.changed = true
+                e.powers.djshock.level = 3
+                e.powers.djshock.changed = true
+            else
+                LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
+            end
         else
             LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
         end
