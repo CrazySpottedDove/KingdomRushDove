@@ -1,6 +1,6 @@
 return {
     lives = 1,
-    cash = 1600,
+    cash = 1400,
     groups = {{
         interval = 0,
         waves = {{ -- 路径1：沙漠单位 - 开局（0-1800帧，0-60秒）
@@ -28,7 +28,7 @@ return {
                 interval_next = 135, -- 20秒
                 path = 1
             },{
-                interval = 135, -- 5秒
+                interval = 65, -- 5秒
                 max = 3,
                 fixed_sub_path = 0,
                 creep = "enemy_redspine",
@@ -227,7 +227,7 @@ return {
             delay = 5400, -- 180秒
             path_index = 12,
             spawns = {{
-                interval = 180, -- 6秒
+                interval = 90, -- 6秒
                 max = 12,
                 fixed_sub_path = 0,
                 creep = "enemy_bat",
@@ -235,7 +235,7 @@ return {
                 interval_next = 250, -- 15秒
                 path = 1
             }, {
-                interval = 450, -- 15秒
+                interval = 225, -- 15秒
                 max = 4,
                 fixed_sub_path = 1,
                 creep = "enemy_ghost",
@@ -243,15 +243,15 @@ return {
                 interval_next = 300, -- 20秒
                 path = 1
             }, {
-                interval = 500, -- 25秒
+                interval = 250, -- 25秒
                 max = 1,
                 fixed_sub_path = 1,
                 creep = "enemy_phantom_warrior",
                 max_same = 0,
-                interval_next = 900, -- 30秒
+                interval_next = 600, -- 30秒
                 path = 1
             }, {
-                interval = 1050, -- 35秒
+                interval = 525, -- 35秒
                 max = 1,
                 fixed_sub_path = 1,
                 creep = "enemy_witch",
@@ -263,15 +263,15 @@ return {
             delay = 6000, -- 200秒
             path_index = 4,
             spawns = {{
-                interval = 100, -- 3秒
+                interval = 50, -- 3秒
                 max = 30,
                 fixed_sub_path = 0,
                 creep = "enemy_greenfin",
                 max_same = 0,
-                interval_next = 180, -- 10秒
+                interval_next = 100, -- 10秒
                 path = 1
             }, {
-                interval = 200, -- 8秒
+                interval = 100, -- 8秒
                 max = 10,
                 fixed_sub_path = 0,
                 creep = "enemy_deviltide",
@@ -279,7 +279,7 @@ return {
                 interval_next = 200, -- 15秒
                 path = 1
             }, {
-                interval = 200, -- 15秒
+                interval = 100, -- 15秒
                 max = 5,
                 fixed_sub_path = 0,
                 creep = "enemy_redspine",
@@ -287,7 +287,7 @@ return {
                 interval_next = 200, -- 20秒
                 path = 1
             }, {
-                interval = 360, -- 25秒
+                interval = 180, -- 25秒
                 max = 2,
                 fixed_sub_path = 0,
                 creep = "enemy_greenshell",
