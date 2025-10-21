@@ -2399,7 +2399,7 @@ return {
 		},
 		alias = {}
 	},
-	["decal_light"] = {
+	["decal_street_lamp"] = {
 		a_name = "go_decals-1.png",
 		size = {
 			86,

@@ -10008,3 +10008,14 @@ tt = E:register_t("defend_flag", "decal")
 tt.render.sprites[1].name = "defendFlag"
 tt.render.sprites[1].z = Z_BACKGROUND
 tt.render.sprites[1].animated = false
+
+tt = E:register_t("defend_flag_water", "defend_flag")
+tt.render.sprites[1].name = "defendFlag_water"
+
+tt = E:register_t("decal_street_lamp", "decal")
+tt.render.sprites[1].name = "decal_street_lamp"
+tt.render.sprites[1].z = Z_BACKGROUND
+tt.render.sprites[1].animated = false
+
+tt = E:register_t("decal_lamp", "decal_street_lamp")
+tt.render.sprites[1].name = "decal_lamp"
