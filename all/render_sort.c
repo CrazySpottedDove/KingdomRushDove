@@ -1,4 +1,6 @@
 // render_sort.c
+#include <string.h>
+
 typedef struct
 {
     double sort_y;
@@ -17,35 +19,58 @@ static int cmp(const RenderFrameFFI* a, const RenderFrameFFI* b)
     return 0;
 }
 
-// merge 函数
+#define MIN_RUN 32
+
+// 插入排序
+static void insertion_sort(RenderFrameFFI* arr, int left, int right)
+{
+    for (int i = left + 1; i <= right; i++) {
+        RenderFrameFFI temp = arr[i];
+        int            j    = i - 1;
+        while (j >= left && cmp(&arr[j], &temp) > 0) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = temp;
+    }
+}
+
+// 合并两个有序区间
 static void merge(RenderFrameFFI* arr, RenderFrameFFI* tmp, int left, int mid, int right)
 {
-    int i = left, j = mid, k = left;
-    while (i < mid && j < right) {
-        if (cmp(&arr[i], &arr[j]) <= 0) {
-            tmp[k++] = arr[i++];
+    memcpy(tmp + left, arr + left, (right - left + 1) * sizeof(RenderFrameFFI));
+
+    int i = left, j = mid + 1, k = left;
+    while (i <= mid && j <= right) {
+        if (cmp(&tmp[i], &tmp[j]) <= 0) {
+            arr[k++] = tmp[i++];
         }
         else {
-            tmp[k++] = arr[j++];
+            arr[k++] = tmp[j++];
         }
     }
-    while (i < mid) tmp[k++] = arr[i++];
-    while (j < right) tmp[k++] = arr[j++];
-    for (i = left; i < right; i++) arr[i] = tmp[i];
+    while (i <= mid) arr[k++] = tmp[i++];
+    while (j <= right) arr[k++] = tmp[j++];
 }
 
-// 递归 merge sort
-static void merge_sort_recursive(RenderFrameFFI* arr, RenderFrameFFI* tmp, int left, int right)
-{
-    if (right - left <= 1) return;
-    int mid = (left + right) / 2;
-    merge_sort_recursive(arr, tmp, left, mid);
-    merge_sort_recursive(arr, tmp, mid, right);
-    merge(arr, tmp, left, mid, right);
-}
-
-// 外部接口
+// Timsort 主函数
 void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n)
 {
-    merge_sort_recursive(arr, tmp, 0, n);
+    // 1. 对每个子数组使用插入排序
+    for (int i = 0; i < n; i += MIN_RUN) {
+        int right = (i + MIN_RUN - 1 < n - 1) ? i + MIN_RUN - 1 : n - 1;
+        insertion_sort(arr, i, right);
+    }
+
+    // 2. 合并子数组
+    for (int size = MIN_RUN; size < n; size *= 2) {
+        for (int left = 0; left < n; left += 2 * size) {
+            int mid   = left + size - 1;
+            int right = (left + 2 * size - 1 < n - 1) ? left + 2 * size - 1 : n - 1;
+
+            if (mid < right) {
+                merge(arr, tmp, left, mid, right);
+            }
+        }
+    }
 }
