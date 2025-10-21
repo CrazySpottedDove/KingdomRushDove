@@ -9996,3 +9996,15 @@ tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_eagle_hit_fx", "fx")
 tt.render.sprites[1].name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_rapacious_hunter_hit_fx"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].hide_after_runs = 1
+
+tt = E:register_t("foreground_dark", "decal")
+tt.render.sprites[1].name = "foreground_dark"
+tt.render.sprites[1].scale = vec_2(1980, 1080)
+tt.render.sprites[1].z = Z_SCREEN_FIXED
+tt.render.sprites[1].alpha = 25
+tt.render.sprites[1].animated = false
+
+tt = E:register_t("defend_flag", "decal")
+tt.render.sprites[1].name = "defendFlag"
+tt.render.sprites[1].z = Z_BACKGROUND
+tt.render.sprites[1].animated = false

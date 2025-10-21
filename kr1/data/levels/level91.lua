@@ -33,6 +33,12 @@ end
 
 function level:load(store)
     LU.insert_background(store, "stage91", Z_BACKGROUND)
+
+    local e = E:create_entity("foreground_dark")
+    e.pos.x, e.pos.y = REF_W * 0.5, REF_H * 0.5
+
+    LU.queue_insert(store, e)
+
     LU.insert_defend_points(store, self.locations.exits, store.level_terrain_type)
 
     local flags = {{"decal_defense_flag_water", 1000, 177}, {"decal_defense_flag_water", 1000, 85}}

@@ -65,7 +65,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 3000,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 32,
 				y = 125
@@ -133,7 +133,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 3000,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 32,
 				y = 257
@@ -218,7 +218,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 3000,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 32,
 				y = 316
@@ -264,7 +264,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 3000,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 32,
 				y = 425
@@ -349,7 +349,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 3000,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 32,
 				y = 476
@@ -366,7 +366,7 @@ return {
 		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 3000,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 32,
 				y = 589

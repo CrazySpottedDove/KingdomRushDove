@@ -6,7 +6,7 @@ return {
                 x = 1098.40625,
                 y = 112.59375
             },
-            ["render.sprites[1].name"] = "blue_flag",
+            ["render.sprites[1].name"] = "defendFlag",
             ["render.sprites[1].z"] = 3000
         },
         {
@@ -15,7 +15,7 @@ return {
                 x = -47.6875,
                 y = 150.5625
             },
-            ["render.sprites[1].name"] = "blue_flag",
+            ["render.sprites[1].name"] = "defendFlag",
             ["render.sprites[1].z"] = 3000
         },
         {
@@ -24,7 +24,7 @@ return {
                 x = 1098.40625,
                 y = 225.09375
             },
-            ["render.sprites[1].name"] = "blue_flag",
+            ["render.sprites[1].name"] = "defendFlag",
             ["render.sprites[1].z"] = 3000
         },
         {
@@ -33,7 +33,7 @@ return {
                 x = -51.90625,
                 y = 278.53125
             },
-            ["render.sprites[1].name"] = "blue_flag",
+            ["render.sprites[1].name"] = "defendFlag",
             ["render.sprites[1].z"] = 3000
         },
         {
@@ -565,6 +565,5 @@ return {
         "go_stages_grass",
         "go_stages_ice",
         "go_stage71_bg",
-        "go_stages_flag"
     }
 }
