@@ -6478,7 +6478,9 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
             if new_tower.ui and v.ui then
                 new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
             end
-            queue_remove(game_gui.game.store, v)
+            if not PERFORMANCE_MONITOR_ENABLED then
+                queue_remove(game_gui.game.store, v)
+            end
             queue_insert(game_gui.game.store, new_tower)
             game_gui.game.store.towers[k] = new_tower
             if new_tower.powers then
