@@ -134,8 +134,8 @@ function path_db:reverse_all_paths()
     if not self.paths then
         return
     end
-    for i, path_group in ipairs(self.paths) do
-        for j, subpath in ipairs(path_group) do
+    for _, path_group in ipairs(self.paths) do
+        for _, subpath in ipairs(path_group) do
             if type(subpath) == "table" then
                 local n = #subpath
                 for k = 1, math.floor(n * 0.5) do
