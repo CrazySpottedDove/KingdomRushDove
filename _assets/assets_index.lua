@@ -677,7 +677,7 @@ return {
     ["kr1-desktop/images/fullhd/screen_map_encyclopedia-1.png"] = { size = 303055},
     ["kr1-desktop/images/fullhd/screen_map_flags-1.png"] = { size = 442031},
     ["kr1-desktop/images/fullhd/screen_map_hero_room-1.png"] = { size = 9650758},
-    ["kr1-desktop/images/fullhd/screen_map_level_select-1.png"] = { size = 14264057},
+    ["kr1-desktop/images/fullhd/screen_map_level_select-1.png"] = { size = 14625956},
     ["kr1-desktop/images/fullhd/screen_map_select_difficulty-1.png"] = { size = 499985},
     ["kr1-desktop/images/fullhd/screen_map_stars_container-1.png"] = { size = 45058},
     ["kr1-desktop/images/fullhd/screen_map_upgrades-1.png"] = { size = 811285},
