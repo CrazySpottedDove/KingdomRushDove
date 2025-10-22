@@ -600,6 +600,7 @@ return {
     ["kr1-desktop/images/fullhd/go_towers-7.dds"] = { size = 22369796},
     ["kr1-desktop/images/fullhd/go_towers-8.dds"] = { size = 22369796},
     ["kr1-desktop/images/fullhd/go_towers_arborean_emissary-1.dds"] = { size = 12583040},
+    ["kr1-desktop/images/fullhd/go_towers_arcane_wizard-1.dds"] = { size = 7372928},
     ["kr1-desktop/images/fullhd/go_towers_ballista-1.dds"] = { size = 5734528},
     ["kr1-desktop/images/fullhd/go_towers_barrel-1.dds"] = { size = 6144128},
     ["kr1-desktop/images/fullhd/go_towers_dark_elf-1.dds"] = { size = 5324928},
