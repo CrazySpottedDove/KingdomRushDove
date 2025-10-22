@@ -21,7 +21,7 @@ return {
                 x = 460,
                 y = 741
             },
-            ["render.sprites[1].name"] = "blue_flag",
+            ["render.sprites[1].name"] = "defendFlag",
             ["render.sprites[1].z"] = 3000
         },
         {
@@ -30,7 +30,7 @@ return {
                 x = 601,
                 y = 741
             },
-            ["render.sprites[1].name"] = "blue_flag",
+            ["render.sprites[1].name"] = "defendFlag",
             ["render.sprites[1].z"] = 3000
         },
         {
