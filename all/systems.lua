@@ -1148,7 +1148,17 @@ function sys.game_upgrades:on_insert(entity, store)
         end
         modifier_pixie.damage_min = ceil(modifier_pixie._orig_damage_min * f)
         modifier_pixie.damage_max = ceil(modifier_pixie._orig_damage_max * f)
-
+        local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
+        if not arcane5_disintegrate._origin_damage_config then
+            arcane5_disintegrate._origin_damage_config = {}
+            arcane5_disintegrate._origin_damage_config[1] = arcane5_disintegrate.boss_damage_config[1]
+            arcane5_disintegrate._origin_damage_config[2] = arcane5_disintegrate.boss_damage_config[2]
+            arcane5_disintegrate._origin_damage_config[3] = arcane5_disintegrate.boss_damage_config[3]
+        end
+        for i = 1, 3 do
+            arcane5_disintegrate.boss_damage_config[i] =
+                ceil(arcane5_disintegrate._origin_damage_config[i] * f)
+        end
     end
 
     return true
@@ -1182,6 +1192,12 @@ function sys.game_upgrades:on_remove(entity, store)
         bullet_ray_high_elven.damage_max = ceil(bullet_ray_high_elven._orig_damage_max * f)
         modifier_pixie.damage_min = ceil(modifier_pixie._orig_damage_min * f)
         modifier_pixie.damage_max = ceil(modifier_pixie._orig_damage_max * f)
+
+        local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
+        for i = 1, 3 do
+            arcane5_disintegrate.boss_damage_config[i] =
+                ceil(arcane5_disintegrate._origin_damage_config[i] * f)
+        end
     end
 
     return true

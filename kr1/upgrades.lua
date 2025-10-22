@@ -365,14 +365,14 @@ end
 
 function upgrades:mage_tower_bolts()
     return {"bolt_1", "bolt_2", "bolt_3", "bolt_sorcerer", "bolt_archmage", "ray_sunray", "bolt_necromancer_tower",
-            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn","bullet_tower_ray_lvl4","bullet_tower_ray_chain","tower_elven_stargazers_ray"}
+            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn","bullet_tower_ray_lvl4","bullet_tower_ray_chain","tower_elven_stargazers_ray","tower_arcane_wizard5_ray"}
 end
 
 function upgrades:bolts()
     local other_bolts = {"ray_arcane", "bolt_elora_freeze", "bolt_elora_slow", "bolt_magnus", "bolt_magnus_illusion",
                          "bolt_priest", "bolt_voodoo_witch", "bolt_veznan", "ray_arivan_simple", "bullet_rag",
                          "ray_wizard", "ray_wizard_chain", "bolt_hero_space_elf_basic_attack",
-                         "bullet_hero_witch_basic_1", "bullet_hero_witch_basic_2", "bolt_lumenir", "bullet_tower_pandas_ray_lvl4","bullet_tower_pandas_fire_lvl4","bullet_tower_pandas_air_lvl4"}
+                         "bullet_hero_witch_basic_1", "bullet_hero_witch_basic_2", "bolt_lumenir", "bullet_tower_pandas_ray_lvl4","bullet_tower_pandas_fire_lvl4","bullet_tower_pandas_air_lvl4",  "tower_arcane_wizard5_ray_disintegrate"}
     return table.append(other_bolts, self:mage_tower_bolts())
 end
 
@@ -584,10 +584,15 @@ function upgrades:patch_templates(max_level)
 
         T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
         T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
+
         T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(
             T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
         T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(
             T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+        local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+        for k, v in pairs(d) do
+            d[k] = math.ceil(v * u.damage_factor)
+        end
     end
 
     u = self:get_upgrade("mage_slow_curse")

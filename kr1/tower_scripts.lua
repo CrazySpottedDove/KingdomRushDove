@@ -12236,8 +12236,8 @@ function scripts.tower_royal_archers.update(this, store)
     end
 
     local function prepare_targets_armor_piercer(enemy, enemies)
-        local reload_enemy, reload_enemies = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, ap.range_effect, false,
-            ap.vis_flags, ap.vis_bans)
+        local reload_enemy, reload_enemies = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0,
+            ap.range_effect, false, ap.vis_flags, ap.vis_bans)
 
         if reload_enemy and #reload_enemies > 0 then
             enemy = reload_enemy
@@ -12326,8 +12326,8 @@ function scripts.tower_royal_archers.update(this, store)
 
             if this.powers and this.powers.armor_piercer then
                 if ready_to_use_power(pow_a, ap, store, tw.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, ap.range_trigger, false,
-                        ap.vis_flags, ap.vis_bans)
+                    local enemy, enemies = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0,
+                        ap.range_trigger, false, ap.vis_flags, ap.vis_bans)
 
                     if not enemy then
                         ap.ts = ap.ts + fts(10)
@@ -12369,8 +12369,8 @@ function scripts.tower_royal_archers.update(this, store)
             end
 
             if ready_to_attack(aa, store, tw.cooldown_factor) then
-                local trigger_enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false,
-                    aa.vis_flags, aa.vis_bans)
+                local trigger_enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range,
+                    false, aa.vis_flags, aa.vis_bans)
 
                 if not trigger_enemy then
                     aa.ts = aa.ts + fts(10)
@@ -12385,8 +12385,8 @@ function scripts.tower_royal_archers.update(this, store)
                         coroutine.yield()
                     end
 
-                    local enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false, aa.vis_flags,
-                        aa.vis_bans)
+                    local enemy, _ = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, a.range, false,
+                        aa.vis_flags, aa.vis_bans)
 
                     enemy = enemy or trigger_enemy
 
@@ -12585,7 +12585,8 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
     while true do
         local distance_from_target = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
 
-        if not store.entities[target.id] or target.health.dead or far_from_tower or not target_still_valid or not enemy_is_silent_target(target) then
+        if not store.entities[target.id] or target.health.dead or far_from_tower or not target_still_valid or
+            not enemy_is_silent_target(target) then
             far_from_tower = false
 
             local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, tamer_attack.range, false,
@@ -12808,4 +12809,526 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update(
 end
 
 -- 皇家弓箭手 END
+
+-- 五代奥术 BEGIN
+scripts.tower_arcane_wizard5 = {}
+
+function scripts.tower_arcane_wizard5.get_info(this)
+    local b = E:get_template(this.attacks.list[1].bullet)
+
+    local o = scripts.tower_common.get_info(this)
+
+    o.type = STATS_TYPE_TOWER_MAGE
+
+    local min = math.ceil(b.bullet.damage_min * this.tower.damage_factor)
+    local max = math.ceil(b.bullet.damage_max * this.tower.damage_factor)
+
+    o.damage_min = min
+    o.damage_max = max
+
+    return o
+end
+
+function scripts.tower_arcane_wizard5.update(this, store)
+    local shooter_sid = this.render.sid_shooter
+    local a = this.attacks
+    local ar = this.attacks.list[1]
+    local ad = this.attacks.list[2]
+    local ae = this.attacks.list[3]
+    local pow_d = this.powers and this.powers.disintegrate or nil
+    local pow_e = this.powers and this.powers.empowerment or nil
+    local last_ts = store.tick_ts - ar.cooldown
+
+    a._last_target_pos = a._last_target_pos or v(REF_W, 0)
+    ar.ts = store.tick_ts - ar.cooldown + a.attack_delay_on_spawn
+
+    local attacks = {}
+    local pows = {}
+    local empowerments_previews
+    local first_time_empower = true
+
+    if ad then
+        table.insert(attacks, ad)
+        table.insert(pows, pow_d)
+    end
+
+    if ae then
+        table.insert(attacks, ae)
+        table.insert(pows, pow_e)
+    end
+
+    if ar then
+        table.insert(attacks, ar)
+        table.insert(pows, nil)
+    end
+
+    local function find_target(aa)
+        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, aa.node_prediction,
+            aa.vis_flags, aa.vis_bans, function(e)
+                return not aa.excluded_templates or not table.contains(aa.excluded_templates, e.template_name)
+            end)
+
+        return target, pred_pos
+    end
+
+    do
+        local soffset = this.shooter_offset
+        local an, af, ai = U.animation_name_facing_point(this, "idle", a._last_target_pos, shooter_sid, soffset)
+
+        U.animation_start_group(this, an, false, store.tick_ts, false, "layers")
+    end
+
+    ::label_792_0::
+    local tw = this.tower
+    while true do
+        if this.tower.blocked then
+            coroutine.yield()
+        else
+            if pow_d.changed then
+                pow_d.changed = nil
+                ad.cooldown = pow_d.cooldown[pow_d.level]
+                if pow_d.level == 1 then
+                    ad.ts = store.tick_ts - ad.cooldown
+                end
+            end
+            if pow_e.changed then
+                pow_e.changed = nil
+                ae.cooldown = pow_e.cooldown[pow_e.level]
+                ae.ts = store.tick_ts - ae.cooldown
+            end
+
+            SU.towers_swaped(store, this, this.attacks.list)
+
+            if this.ui.hover_active and this.ui.args == "empowerment" and not empowerments_previews and pow_e and
+                pow_e.level == 0 then
+                empowerments_previews = {}
+
+                local targets = table.filter(store.towers, function(k, v)
+                    return v.tower.type == "holder" and v.ui.can_click and
+                               U.is_inside_ellipse(v.pos, this.pos, ae.max_range) and not v.pending_removal and
+                               not v.tower.blocked and
+                               (not ae.excluded_templates or not table.contains(ae.excluded_templates, v.template_name)) and
+                               U.is_inside_ellipse(v.pos, this.pos, ae.max_range) and
+                               (ae.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, ae.min_range)) and v.vis and
+                               band(v.vis.flags, ae.vis_bans) == 0 and band(v.vis.bans, ae.vis_flags) == 0 and
+                               not table.contains(ae.exclude_tower_kind, v.tower.kind) and
+                               not U.has_modifiers(store, v, ae.mod) and v.tower.can_be_mod
+                end)
+
+                if targets then
+                    for _, target in pairs(targets) do
+                        local decal = E:create_entity("decal_tower_arcane_wizard_empowerment_preview")
+
+                        decal.pos = target.pos
+                        decal.render.sprites[1].ts = store.tick_ts
+
+                        queue_insert(store, decal)
+                        table.insert(empowerments_previews, decal)
+                    end
+                end
+            elseif empowerments_previews and (not this.ui.hover_active or this.ui.args ~= "empowerment") then
+                for _, decal in pairs(empowerments_previews) do
+                    queue_remove(store, decal)
+                end
+
+                empowerments_previews = nil
+            end
+
+            if pow_e.level > 0 and store.tick_ts - ae.ts > ae.cooldown then
+                local towers = U.find_towers_in_range(store.towers, this.pos, ae, function(t)
+                    local has_mod, mods = U.has_modifiers(store, t, ae.mod)
+                    local max_factor = 1
+
+                    if has_mod and mods and #mods >= 1 then
+                        for k, v in pairs(mods) do
+                            if max_factor < v.damage_factor then
+                                max_factor = v.damage_factor
+                            end
+                        end
+                    end
+
+                    return t.tower.can_be_mod and max_factor < pow_e.damage_factor[pow_e.level] and
+                               band(t.vis.flags, ae.vis_bans) == 0 and band(t.vis.bans, ae.vis_flags) == 0 and
+                               not table.contains(ae.exclude_tower_kind, t.tower.kind)
+                end)
+
+                if not towers or #towers <= 0 then
+                    SU.delay_attack(store, ae, ae.cooldown)
+                else
+                    local start_ts = store.tick_ts
+
+                    if first_time_empower then
+                        U.animation_start_group(this, ae.animation, false, store.tick_ts, false, "layers")
+                        U.y_wait(store, ae.shoot_time)
+
+                        first_time_empower = false
+                        last_ts = store.tick_ts
+                    end
+
+                    for _, tower in ipairs(towers) do
+                        local mark_mod = E:create_entity(ae.mark_mod)
+
+                        mark_mod.modifier.source_id = this.id
+                        mark_mod.modifier.target_id = tower.id
+
+                        queue_insert(store, mark_mod)
+
+                        local has_mod, mods = U.has_modifiers(store, tower, ae.mod)
+                        local max_factor = 1
+
+                        if mods and #mods >= 1 then
+                            for k, v in pairs(mods) do
+                                if max_factor < v.damage_factor then
+                                    max_factor = v.damage_factor
+                                end
+                            end
+                        end
+                    end
+
+                    S:queue(a.sound)
+
+                    for _, tower in ipairs(towers) do
+                        local m = E:create_entity(ae.mod)
+
+                        m.modifier.source_id = this.id
+                        m.modifier.target_id = tower.id
+                        m.modifier.level = pow_e.level
+                        m.damage_factor = pow_e.damage_factor[pow_e.level]
+
+                        queue_insert(store, m)
+
+                        m = E:create_entity(ae.mod_fx)
+                        m.modifier.source_id = this.id
+                        m.modifier.target_id = tower.id
+                        m.modifier.level = pow_e.level
+                        m.pos.x, m.pos.y = tower.pos.x, tower.pos.y
+
+                        queue_insert(store, m)
+                    end
+
+                    ae.ts = start_ts
+
+                    U.y_animation_wait_group(this, "layers")
+
+                    goto label_792_0
+                end
+            end
+
+            if ready_to_use_power(pow_d, ad, store, tw.cooldown_factor) then
+                local enemy, pred_pos = find_target(ad)
+
+                if not enemy then
+                    ad.ts = ad.ts + fts(10)
+                else
+                    local enemy_id = enemy.id
+                    local enemy_pos = enemy.pos
+
+                    last_ts = store.tick_ts
+                    S:queue(ad.sound)
+
+                    local soffset = this.shooter_offset
+                    local an, af, ai =
+                        U.animation_name_facing_point(this, ad.animation, enemy.pos, shooter_sid, soffset)
+
+                    a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
+
+                    U.animation_start_group(this, an, false, store.tick_ts, false, "layers")
+                    local bullets = {}
+                    for i = 1, ad.count do
+                        local b = E:create_entity(ad.bullet)
+                        bullets[i] = b
+                    end
+                    -- local b = E:create_entity(ad.bullet)
+                    local start_offset = table.safe_index(ad.bullet_start_offset, ai)
+
+                    U.y_wait(store, ad.load_time)
+
+                    local fx = E:create_entity("fx_tower_arcane_wizard_disintegrate_ray_hit_start")
+
+                    fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
+                    fx.render.sprites[1].ts = store.tick_ts
+
+                    queue_insert(store, fx)
+
+                    this.ray_fx_start = fx
+
+                    U.y_wait(store, ad.shoot_time - ad.load_time)
+
+                    local _, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, ad.node_prediction,
+                        ad.vis_flags, ad.vis_bans, function(e)
+                            return not ad.excluded_templates or
+                                       not table.contains(ad.excluded_templates, e.template_name)
+                        end)
+
+                    -- enemy, pred_pos = find_target(aa)
+                    if enemies then
+                        for i = 1, ad.count do
+                            if enemies then
+                                enemy = enemies[km.zmod(i, #enemies)]
+                            end
+                            local b = bullets[i]
+                            -- b.bullet.damage_min = b.bullet.damage_min_config[this.tower.level]
+                            -- b.bullet.damage_max = b.bullet.damage_max_config[this.tower.level]
+                            b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
+                            b.bullet.from = V.vclone(b.pos)
+                            b.bullet.to = V.vclone(enemy_pos)
+                            b.bullet.target_id = enemy.id
+                            b.bullet.source_id = this.id
+                            b.bullet.damage_factor = tw.damage_factor
+                            b.tower_ref = this
+                            b.bullet.level = pow_d.level
+                            queue_insert(store, b)
+                        end
+                    end
+
+                    ad.ts = last_ts
+
+                    U.y_animation_wait_group(this, "layers")
+
+                    goto label_792_0
+                end
+
+            end
+            if ready_to_attack(ar, store, tw.cooldown_factor) then
+                local enemy, pred_pos = find_target(ar)
+
+                if not enemy then
+                    ar.ts = ar.ts + fts(10)
+                else
+                    local enemy_id = enemy.id
+                    local enemy_pos = enemy.pos
+
+                    last_ts = store.tick_ts
+
+                    local soffset = this.shooter_offset
+                    local an, af, ai =
+                        U.animation_name_facing_point(this, ar.animation, enemy.pos, shooter_sid, soffset)
+
+                    a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
+
+                    U.animation_start_group(this, an, false, store.tick_ts, false, "layers")
+
+                    local b = E:create_entity(ar.bullet)
+                    local start_offset = table.safe_index(ar.bullet_start_offset, ai)
+
+                    U.y_wait(store, ar.shoot_time)
+
+                    if b.bullet.out_fx then
+                        local fx = E:create_entity(b.bullet.out_fx)
+
+                        fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
+                        fx.render.sprites[1].ts = store.tick_ts
+
+                        queue_insert(store, fx)
+
+                        this.ray_fx_start = fx
+                    end
+
+                    enemy, pred_pos = find_target(ar)
+
+                    if enemy then
+                        enemy_id = enemy.id
+                        enemy_pos = enemy.pos
+                    end
+
+                    ar.ts = last_ts
+                    b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
+                    b.bullet.from = V.vclone(b.pos)
+                    b.bullet.to = V.vclone(enemy_pos)
+                    b.bullet.target_id = enemy_id
+                    b.bullet.source_id = this.id
+                    b.bullet.damage_factor = tw.damage_factor
+                    b.tower_ref = this
+                    b.bullet.level = tw.level
+
+                    queue_insert(store, b)
+                    U.y_animation_wait_group(this, "layers")
+
+                    goto label_792_0
+                end
+            end
+
+            if store.tick_ts - ar.ts > this.tower.long_idle_cooldown then
+                local soffset = this.shooter_offset
+                local an, af, ai = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid,
+                    soffset)
+
+                U.animation_start_group(this, an, false, store.tick_ts, true, "layers")
+            end
+
+            coroutine.yield()
+        end
+    end
+end
+
+function scripts.tower_arcane_wizard5.remove(this, store)
+    if this.ray_fx_start then
+        queue_remove(store, this.ray_fx_start)
+    end
+
+    if this.tower.level < 4 then
+        return true
+    end
+
+    local ae = this.attacks.list[3]
+    local pow_e = this.powers and this.powers.empowerment or nil
+
+    if pow_e.level > 0 then
+        local towers = U.find_towers_in_range(store.towers, this.pos, ae, function(t)
+            return U.has_modifiers(store, t, ae.mod)
+        end)
+
+        if towers then
+            for _, tower in pairs(towers) do
+                -- local mods = U.get_modifiers(store, tower)
+                -- local mods = table.filter(store.entities, function(k, v)
+                --     return v.modifier and v.template_name == ae.mark_mod and v.modifier.target_id == tower.id
+                -- end)
+
+                SU.remove_modifiers(store, tower, ae.mark_mod)
+
+                -- if mods and #mods <= 1 then
+                SU.remove_modifiers(store, tower, ae.mod)
+                SU.remove_modifiers(store, tower, ae.mod_fx)
+                -- end
+            end
+        end
+    end
+
+    return true
+end
+
+scripts.mod_tower_arcane_wizard_power_empowerment = {}
+
+function scripts.mod_tower_arcane_wizard_power_empowerment.update(this, store)
+    local m = this.modifier
+    local target = store.entities[m.target_id]
+
+    if target then
+        this.pos = target.pos
+    end
+
+    m.ts = store.tick_ts
+
+    if this.tween then
+        this.tween.ts = store.tick_ts
+    end
+
+    while store.tick_ts - m.ts < m.duration and store.entities[this.modifier.source_id] and
+        not store.entities[this.modifier.source_id].pending_removal do
+        coroutine.yield()
+    end
+
+    queue_remove(store, this)
+end
+
+function scripts.mod_tower_arcane_wizard_power_empowerment.remove(this, store)
+    local m = this.modifier
+    local target = store.entities[m.target_id]
+
+    if not target or not target.tower then
+        log.error("error removing mod_tower_factors %s", this.id)
+
+        return true
+    end
+    if this.damage_factor then
+        SU.remove_tower_damage_factor_buff(target, this.damage_factor - 1)
+    end
+
+    local source = store.entities[this.source_id]
+
+    if source then
+        source.attacks.list[3].ts = store.tick_ts
+    end
+
+    return true
+end
+
+scripts.tower_arcane_wizard_power_empowerment_mark_mod = {}
+
+function scripts.tower_arcane_wizard_power_empowerment_mark_mod.update(this, store)
+    local m = this.modifier
+
+    m.ts = store.tick_ts
+
+    while true do
+        local target = store.entities[m.target_id]
+
+        if not target or m.duration >= 0 and store.tick_ts - m.ts > m.duration or
+            not store.entities[this.modifier.source_id] or store.entities[this.modifier.source_id].pending_removal then
+            queue_remove(store, this)
+
+            return
+        end
+
+        coroutine.yield()
+    end
+end
+scripts.tower_arcane_wizard_ray_disintegrate_mod = {}
+
+function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
+    local m = this.modifier
+    local target = store.entities[m.target_id]
+
+    if not target or target.health.dead then
+        return
+    end
+
+    -- local is_boss = U.flag_has(target.vis.flags, bor(F_BOSS, F_MINIBOSS))
+
+    -- if not is_boss then
+    --     SU.stun_inc(target)
+    -- end
+
+    this.pos = target.pos
+    m.ts = store.tick_ts
+
+    while true do
+        target = store.entities[m.target_id]
+
+        if not target or target.health.dead then
+            break
+        end
+
+        if store.tick_ts - m.ts >= m.duration then
+            -- if is_boss then
+            local d = E:create_entity("damage")
+
+            d.source_id = this.id
+            d.target_id = target.id
+            d.damage_type = DAMAGE_MAGICAL
+            d.value = this.boss_damage_config[m.level]
+
+            queue_damage(store, d)
+
+            break
+            -- else
+            --     local d = E:create_entity("damage")
+
+            --     d.source_id = this.id
+            --     d.target_id = target.id
+            --     d.damage_type = m.damage_type
+            --     d.value = m.damage
+            --     d.pop = m.pop
+            --     d.pop_chance = m.pop_chance
+            --     d.pop_conds = m.pop_conds
+
+            --     queue_damage(store, d)
+
+            --     break
+            -- end
+        end
+
+        if this.render and m.use_mod_offset and target.unit.hit_offset then
+            this.render.sprites[1].offset.x, this.render.sprites[1].offset.y = target.unit.hit_offset.x,
+                target.unit.hit_offset.y
+        end
+
+        coroutine.yield()
+    end
+
+    queue_remove(store, this)
+end
+
+-- 五代奥术 END
 return scripts

@@ -5262,9 +5262,9 @@ local towers = {
         },
         disintegrate = {
             range = 186,
-            price = {300, 150, 150},
+            price = {225, 250, 250},
             cooldown = {30, 28, 26},
-            boss_damage = {800, 1200, 1500}
+            boss_damage = {192, 288, 360}
         },
         empowerment = {
             max_range = 220,
