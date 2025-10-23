@@ -12835,32 +12835,15 @@ function scripts.tower_arcane_wizard5.update(this, store)
     local ar = this.attacks.list[1]
     local ad = this.attacks.list[2]
     local ae = this.attacks.list[3]
-    local pow_d = this.powers and this.powers.disintegrate or nil
-    local pow_e = this.powers and this.powers.empowerment or nil
+    local pow_d = this.powers.disintegrate
+    local pow_e = this.powers.empowerment
     local last_ts = store.tick_ts - ar.cooldown
 
     a._last_target_pos = a._last_target_pos or v(REF_W, 0)
     ar.ts = store.tick_ts - ar.cooldown + a.attack_delay_on_spawn
 
-    local attacks = {}
-    local pows = {}
     local empowerments_previews
     local first_time_empower = true
-
-    if ad then
-        table.insert(attacks, ad)
-        table.insert(pows, pow_d)
-    end
-
-    if ae then
-        table.insert(attacks, ae)
-        table.insert(pows, pow_e)
-    end
-
-    if ar then
-        table.insert(attacks, ar)
-        table.insert(pows, nil)
-    end
 
     local function find_target(aa)
         local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, aa.node_prediction,
@@ -12899,20 +12882,13 @@ function scripts.tower_arcane_wizard5.update(this, store)
 
             SU.towers_swaped(store, this, this.attacks.list)
 
-            if this.ui.hover_active and this.ui.args == "empowerment" and not empowerments_previews and pow_e and
-                pow_e.level == 0 then
+            if this.ui.hover_active and this.ui.args == "empowerment" and not empowerments_previews then
                 empowerments_previews = {}
 
                 local targets = table.filter(store.towers, function(k, v)
-                    return v.tower.type == "holder" and v.ui.can_click and
-                               U.is_inside_ellipse(v.pos, this.pos, ae.max_range) and not v.pending_removal and
-                               not v.tower.blocked and
-                               (not ae.excluded_templates or not table.contains(ae.excluded_templates, v.template_name)) and
+                    return
                                U.is_inside_ellipse(v.pos, this.pos, ae.max_range) and
-                               (ae.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, ae.min_range)) and v.vis and
-                               band(v.vis.flags, ae.vis_bans) == 0 and band(v.vis.bans, ae.vis_flags) == 0 and
-                               not table.contains(ae.exclude_tower_kind, v.tower.kind) and
-                               not U.has_modifiers(store, v, ae.mod) and v.tower.can_be_mod
+                               not U.has_modifiers(store, v, ae.mod)
                 end)
 
                 if targets then
@@ -12948,8 +12924,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
                     end
 
                     return t.tower.can_be_mod and max_factor < pow_e.damage_factor[pow_e.level] and
-                               band(t.vis.flags, ae.vis_bans) == 0 and band(t.vis.bans, ae.vis_flags) == 0 and
-                               not table.contains(ae.exclude_tower_kind, t.tower.kind)
+                               band(t.vis.flags, ae.vis_bans) == 0 and band(t.vis.bans, ae.vis_flags) == 0
                 end)
 
                 if not towers or #towers <= 0 then
@@ -13223,8 +13198,6 @@ function scripts.mod_tower_arcane_wizard_power_empowerment.remove(this, store)
     local target = store.entities[m.target_id]
 
     if not target or not target.tower then
-        log.error("error removing mod_tower_factors %s", this.id)
-
         return true
     end
     if this.damage_factor then
@@ -13293,7 +13266,7 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
             d.source_id = this.id
             d.target_id = target.id
             d.damage_type = m.damage_type
-            d.value = this.boss_damage_config[m.level]
+            d.value = this.boss_damage_config[m.level] * m.damage_factor
 
             queue_damage(store, d)
 

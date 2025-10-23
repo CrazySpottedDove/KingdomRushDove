@@ -2594,7 +2594,6 @@ tt.attacks.list[3].mod_fx = "mod_tower_arcane_wizard_power_empowerment_fx"
 tt.attacks.list[3].mark_mod = "tower_arcane_wizard_power_empowerment_mark_mod"
 tt.attacks.list[3].max_range = b.empowerment.max_range
 tt.attacks.list[3].min_range = b.empowerment.min_range
-tt.attacks.list[3].exclude_tower_kind = {}
 tt.attacks.list[3].vis_flags = bor(F_MOD, F_CUSTOM)
 tt.attacks.list[3].vis_bans = bor(F_CUSTOM)
 tt.ui.click_rect = r(-40, 0, 80, 86)
