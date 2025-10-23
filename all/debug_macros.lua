@@ -131,6 +131,12 @@ local function serialize_impl(t, indent, printed, out)
     end
 end
 
+local std_out = {
+    write = function(_, s)
+        io.write(s)
+    end
+}
+
 -- 兼容旧用法：debug_macros.print(t) 或 debug_macros.print(t, indent_level...)
 -- 新增用法：debug_macros.print(t, filename) 当 filename 为字符串时写入文件，写入格式为 return <lua_table>
 function debug_macros.print(t, maybe_filename_or_indent, ...)
@@ -153,12 +159,34 @@ function debug_macros.print(t, maybe_filename_or_indent, ...)
     end
 
     -- 控制台输出：直接打印序列化的 lua 表（不带 return）
-    local out = {
-        write = function(_, s)
-            io.write(s)
-        end
-    }
-    serialize_impl(t, "", {}, out)
+    serialize_impl(t, "", {}, std_out)
     io.write("\n")
 end
--- ...existing code...
+
+function debug_macros.trace(t, key)
+    local last_key = "_trace_last_" .. key
+    if not t[last_key] then
+        if type(t[key]) == "table" then
+            -- 循环引用会导致错误，慎用
+            t[last_key] = table.deepclone(t[key])
+        else
+            t[last_key] = t[key]
+        end
+    end
+    local last = t[last_key]
+    local current = t[key]
+    if type(current) == "table" then
+        for k, v in pairs(current) do
+            if last[k] ~= v then
+                serialize_impl(t, "", {}, std_out)
+                io.write("\n")
+                break
+            end
+        end
+    else
+        if last ~= current then
+            serialize_impl(t, "", {}, std_out)
+            io.write("\n")
+        end
+    end
+end

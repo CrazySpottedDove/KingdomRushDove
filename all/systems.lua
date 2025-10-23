@@ -1156,8 +1156,7 @@ function sys.game_upgrades:on_insert(entity, store)
             arcane5_disintegrate._origin_damage_config[3] = arcane5_disintegrate.boss_damage_config[3]
         end
         for i = 1, 3 do
-            arcane5_disintegrate.boss_damage_config[i] =
-                ceil(arcane5_disintegrate._origin_damage_config[i] * f)
+            arcane5_disintegrate.boss_damage_config[i] = ceil(arcane5_disintegrate._origin_damage_config[i] * f)
         end
     end
 
@@ -1195,8 +1194,7 @@ function sys.game_upgrades:on_remove(entity, store)
 
         local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
         for i = 1, 3 do
-            arcane5_disintegrate.boss_damage_config[i] =
-                ceil(arcane5_disintegrate._origin_damage_config[i] * f)
+            arcane5_disintegrate.boss_damage_config[i] = ceil(arcane5_disintegrate._origin_damage_config[i] * f)
         end
     end
 
@@ -2497,6 +2495,7 @@ function sys.render:on_update(dt, ts, store)
                 else
                     ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
                 end
+
             end
         end
     end
@@ -2844,8 +2843,8 @@ function sys.last_hook:on_insert(e, d)
         if target then
             if not target._applied_mods then
                 target._applied_mods = {}
-                log.error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name,
-                     e.template_name))
+                log.error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s",
+                    target.template_name, e.template_name))
             end
             local mods = target._applied_mods
             mods[#mods + 1] = e
