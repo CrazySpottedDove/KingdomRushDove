@@ -137,6 +137,12 @@ return {
         place = 18,
         tt_title = _("TOWER_ELVEN_STARGAZERS_NAME"),
         tt_desc = _("TOWER_STARGAZER_4_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_arcane_wizard_lvl4",
+        image = "kr5_main_icons_0003",
+        place = 19,
+        tt_title = _("TOWER_ARCANE_WIZARD_NAME"),
+        tt_desc = _("TOWER_ARCANE_WIZARD_4_DESCRIPTION")
     }), templates.sell}},
 
     -- 炮塔
@@ -2265,6 +2271,40 @@ return {
         }, {
             tt_title = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_3_NAME"),
             tt_desc = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_3_DESCRIPTION")
+        }}
+    }), templates.sell}},
+    
+    arcane_wizard_five = {{merge(templates.upgrade_power, {
+        action_arg = "disintegrate",
+        image = "kr5_special_icons_0005",
+        place = 6,
+        sounds = {"TowerArcaneWizardSkillATaunt"},
+        tt_phrase = _("TOWER_ARCANE_WIZARD_4_DISINTEGRATE_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_ARCANE_WIZARD_4_DISINTEGRATE_1_NAME"),
+            tt_desc = _("TOWER_ARCANE_WIZARD_4_DISINTEGRATE_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ARCANE_WIZARD_4_DISINTEGRATE_2_NAME"),
+            tt_desc = _("TOWER_ARCANE_WIZARD_4_DISINTEGRATE_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ARCANE_WIZARD_4_DISINTEGRATE_3_NAME"),
+            tt_desc = _("TOWER_ARCANE_WIZARD_4_DISINTEGRATE_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "empowerment",
+        image = "kr5_special_icons_0006",
+        place = 7,
+        sounds = {"TowerArcaneWizardSkillBTaunt"},
+        tt_phrase = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_1_NAME"),
+            tt_desc = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_2_NAME"),
+            tt_desc = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_3_NAME"),
+            tt_desc = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_3_DESCRIPTION")
         }}
     }), templates.sell}}
 }

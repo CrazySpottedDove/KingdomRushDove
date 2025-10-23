@@ -4954,7 +4954,7 @@ tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info
 tt.info.hero_portrait = "hero_portraits_0003"
 tt.info.i18n_key = "HERO_ELVES_MALIK"
-tt.info.portrait = (IS_PHONE and "portraits_hero" or "info_portraits_heroes") .. "_0003"
+tt.info.portrait = (IS_PHONE and "portraits_hero" or "info_portraits_hero") .. "_0003"
 tt.info.ultimate_icon = "0013"
 tt.main_script.update = scripts.hero_baby_malik.update
 tt.motion.max_speed = 3 * FPS
@@ -10008,10 +10008,54 @@ tt.render.sprites[1].name = "defendFlag_water"
 tt = E:register_t("decal_street_lamp", "decal")
 AC(tt, "lights")
 tt.lights[1].radius = 70
-tt.render.sprites[1].name = "decal_street_lamp"
-tt.render.sprites[1].z = Z_BACKGROUND
-tt.render.sprites[1].animated = false
 
 tt = E:register_t("decal_lamp", "decal_street_lamp")
 tt.lights[1].radius = 70
-tt.render.sprites[1].name = "decal_lamp"
+
+tt = E:register_t("fx_tower_arcane_wizard_ray_hit_start", "fx")
+
+E:add_comps(tt, "tween")
+
+tt.render.sprites[1].name = "arcane_wizard_tower_ray_start_idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].scale = vec_2(1.5, 1.5)
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(25)
+tt.timed.runs = 1e+99
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(18), 255}, {fts(25), 0}}
+tt.tween.remove = false
+tt = E:register_t("fx_tower_arcane_wizard_ray_hit", "fx")
+
+E:add_comps(tt)
+
+tt.render.sprites[1].name = "arcane_wizard_tower_ray_end_idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(10)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_arcane_wizard_disintegrate_ray_hit_start", "fx")
+tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_ray_charge_origin"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(37)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_arcane_wizard_ray_disintegrate_hit", "fx")
+tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_hit_idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.render.sprites[1].fps = 25
+tt.timed.duration = fts(17)
+tt.timed.runs = 1e+99
+tt = E:register_t("decal_tower_arcane_wizard_empowerment_preview", "decal_tween")
+
+E:add_comps(tt, "render", "tween")
+
+tt.range_factor = 1
+tt.render.sprites[1].name = "arcane_wizard_tower_empowerment_indicator"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_TOWER_BASES + 1
+tt.render.sprites[1].offset.y = 5
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.1, 255}}
+tt.tween.remove = false
