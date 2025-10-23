@@ -15,4 +15,4 @@ version.bundle_id = "com.ironhidegames.kingdomrush.standalone"
 version.vc = "kr1-desktop-5.6.12"
 version.build = v
 version.bundle_keywords = "-standalone"
-version.id = "6.1.0"
+version.id = "6.1.1"
