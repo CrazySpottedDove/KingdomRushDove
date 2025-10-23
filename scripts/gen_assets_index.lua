@@ -69,7 +69,7 @@ local function to_relpath(fullpath, basedir)
     if sys == "windows" then
         rel = rel:gsub("\\", "/")
     end
-    print(rel)
+    -- print(rel)
     return rel
 end
 
