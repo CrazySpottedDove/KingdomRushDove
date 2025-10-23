@@ -9997,13 +9997,6 @@ tt.render.sprites[1].name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunt
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].hide_after_runs = 1
 
-tt = E:register_t("foreground_dark", "decal")
-tt.render.sprites[1].name = "foreground_dark"
-tt.render.sprites[1].scale = vec_2(1980, 1080)
-tt.render.sprites[1].z = Z_SCREEN_FIXED
-tt.render.sprites[1].alpha = 25
-tt.render.sprites[1].animated = false
-
 tt = E:register_t("defend_flag", "decal")
 tt.render.sprites[1].name = "defendFlag"
 tt.render.sprites[1].z = Z_BACKGROUND
@@ -10013,9 +10006,12 @@ tt = E:register_t("defend_flag_water", "defend_flag")
 tt.render.sprites[1].name = "defendFlag_water"
 
 tt = E:register_t("decal_street_lamp", "decal")
+AC(tt, "lights")
+tt.lights[1].radius = 70
 tt.render.sprites[1].name = "decal_street_lamp"
 tt.render.sprites[1].z = Z_BACKGROUND
 tt.render.sprites[1].animated = false
 
 tt = E:register_t("decal_lamp", "decal_street_lamp")
+tt.lights[1].radius = 70
 tt.render.sprites[1].name = "decal_lamp"

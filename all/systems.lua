@@ -2795,6 +2795,7 @@ end
 
 sys.last_hook = {}
 sys.last_hook.name = "last_hook"
+
 function sys.last_hook:init(store)
     store.dead_soldier_count = 0
     store.enemy_count = 0
@@ -2803,6 +2804,7 @@ function sys.last_hook:init(store)
         on_remove = {}
     }
 end
+
 function sys.last_hook:on_insert(e, d)
     if e.enemy then
         d.enemies[e.id] = e -- 优化分类索引
@@ -2820,62 +2822,85 @@ function sys.last_hook:on_insert(e, d)
             e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
         end
         d.enemy_count = d.enemy_count + 1
+
     elseif e.soldier and e.health then
         d.soldiers[e.id] = e
+
     elseif e.modifier then
         d.modifiers[e.id] = e
         local target = d.entities[e.modifier.target_id]
+
         if target then
             if not target._applied_mods then
                 target._applied_mods = {}
                 log.error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name,
                      e.template_name))
             end
+
             local mods = target._applied_mods
             mods[#mods + 1] = e
         end
+
     elseif e.tower then
         d.towers[e.id] = e
+
     elseif e.aura then
         d.auras[e.id] = e
     end
+
     if e.particle_system then
         d.particle_systems[e.id] = e
     end
+
     if e.main_script then
         if e.main_script.update then
             d.entities_with_main_script_on_update[e.id] = e
         end
     end
+
     if e.timed then
         d.entities_with_timed[e.id] = e
     end
+
     if e.tween then
         d.entities_with_tween[e.id] = e
     end
+
     if e.render then
         d.entities_with_render[e.id] = e
     end
+
+    if e.lights then
+        d.entities_with_lights[e.id] = e
+    end
+
     if e.motion and e.motion.max_speed ~= 0 then
         e.motion.real_speed = e.motion.max_speed
     end
+
     for _, hook in pairs(d.last_hooks.on_insert) do
         hook(e, d)
     end
+
     return true
 end
+
 function sys.last_hook:on_remove(e, d)
     if e.enemy then
         d.enemies[e.id] = nil -- 优化分类索引
         d.enemy_count = d.enemy_count - 1
+
     elseif e.soldier then
         d.soldiers[e.id] = nil
         d.dead_soldier_count = d.dead_soldier_count + 1
+
     elseif e.modifier then
         d.modifiers[e.id] = nil
         local target = d.entities[e.modifier.target_id]
+
         if target then
             local mods = target._applied_mods
+
             for i = 1, #mods do
                 if mods[i] == e then
                     table.remove(mods, i)
@@ -2883,38 +2908,109 @@ function sys.last_hook:on_remove(e, d)
                 end
             end
         end
+
     elseif e.tower then
         d.towers[e.id] = nil
+
     elseif e.aura then
         d.auras[e.id] = nil
     end
+
     if e.particle_system then
         d.particle_systems[e.id] = nil
     end
+
     if e.main_script then
         if e.main_script.update then
             d.entities_with_main_script_on_update[e.id] = nil
         end
     end
+
     if e.timed then
         d.entities_with_timed[e.id] = nil
     end
+
     if e.tween then
         d.entities_with_tween[e.id] = nil
     end
+
     if e.render then
         d.entities_with_render[e.id] = nil
     end
+
+    if e.lights then
+        d.entities_with_lights[e.id] = nil
+    end
+
     for _, hook in pairs(d.last_hooks.on_remove) do
         hook(e, d)
     end
+
     -- log.error(e.template_name)
     return true
 end
 
+sys.lights = {}
+sys.lights.name = "lights"
+
+function sys.lights:init(store)
+    store.lights = {}
+end
+
+function sys.lights:on_insert(entity, store)
+    local d = store
+
+    if entity.lights then
+        for i = 1, #entity.lights do
+            local l = entity.lights[i]
+            l.pos = {
+                x = entity.pos.x,
+                y = entity.pos.y
+            }
+
+            d.lights[#d.lights + 1] = l
+        end
+    end
+
+    return true
+end
+
+function sys.lights:on_remove(entity, store)
+    if entity.lights then
+        for i = #entity.lights, 1, -1 do
+            entity.lights[i].marked_to_remove = true
+            -- entity.lights[i] = nil
+        end
+    end
+
+    return true
+end
+
+function sys.lights:on_update(dt, ts, store)
+    local d = store
+    local entities = d.entities_with_lights
+    local new_lights = {}
+
+    for _, e in pairs(entities) do
+        for i = 1, #e.lights do
+            local l = e.lights[i]
+
+            if not l.marked_to_remove then
+                l.pos.x, l.pos.y = e.pos.x, e.pos.y
+
+                new_lights[#new_lights + 1] = l
+            end
+        end
+    end
+
+    if #new_lights > 0 then
+        d.lights = new_lights
+    end
+end
+
 if PERFORMANCE_MONITOR_ENABLED then
     -- 需要监控的系统方法列表
-    local MONITORED_METHODS = {"on_update", "on_insert", "on_remove", "on_queue", "on_dequeue"}
+    local MONITORED_METHODS = { "on_update", "on_insert", "on_remove", "on_queue", "on_dequeue" }
 
     -- 包装系统方法以添加性能监控
     local function create_monitored_system(original_sys)

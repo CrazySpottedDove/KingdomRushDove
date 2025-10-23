@@ -1250,3 +1250,10 @@ editor_script.remove = nil
 editor_script.update = nil
 editor_script.runs = 1
 editor_script.co = nil
+
+local light = E:register_c("light")
+light.radius = 0
+
+local lights = E:register_c("lights")
+lights[1] = E:clone_c("light")
+

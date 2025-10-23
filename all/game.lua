@@ -37,7 +37,7 @@ game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "towe
 game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
                            "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
                            "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
-                           "performance_monitor", "spatial_index", "last_hook"}
+                           "performance_monitor", "spatial_index", "last_hook", "lights"}
 
 function game:init(screen_w, screen_h, done_callback)
     self.dash_start_offset = 0
@@ -736,138 +736,7 @@ if DEBUG then
     end
 end
 
-function game:draw_game()
-    local frame_draw_params = RU.frame_draw_params
-    local draw_frames_range = RU.draw_frames_range
-    local gs = self.game_scale
-    local rox, roy
-
-    if self.camera then
-        local c = self.camera
-
-        c:clamp()
-
-        local dox = c.x * c.zoom - self.screen_w * 0.5
-        local doy = c.y * c.zoom - self.screen_h * 0.5
-
-        rox, roy = -dox, -doy
-        gs = gs * c.zoom
-    else
-        rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
-    end
-
-    if self.store.world_offset then
-        rox, roy = rox + self.store.world_offset.x, roy + self.store.world_offset.y
-    end
-
-    if self.shown_path then
-        local dash_length = 25 -- 虚线段长度
-        local gap_length = 15 -- 虚线间隔
-        local speed = 60 -- 虚线移动速度（像素/秒）
-
-        -- 初始化路径数据
-        local path_data = {}
-        local total_length = 0
-        self.dash_start_offset = self.dash_start_offset or 0
-        self.dash_start_offset = (self.dash_start_offset + 0.4 * 120 / DRAW_FPS) % (dash_length + gap_length)
-        -- self.path_lines[self.shown_path] 记录了这个路径上各个子路径展平成直线后各个顶点在直线上的坐标。
-        if not self.path_lines[self.shown_path] then
-            self.path_lines[self.shown_path] = {}
-            for spi, sp in ipairs(P.paths[self.shown_path]) do
-                self.path_lines[self.shown_path][spi] = {}
-                local len = 0
-                self.path_lines[self.shown_path][spi][1] = 0
-                for ni = 2, #sp do
-                    local o1 = sp[ni - 1]
-                    local o2 = sp[ni]
-                    local dx, dy = o2.x - o1.x, o2.y - o1.y
-                    local seg_len = math.sqrt(dx * dx + dy * dy)
-                    len = len + seg_len
-                    self.path_lines[self.shown_path][spi][ni] = len
-                end
-            end
-        end
-
-        -- 开始绘制
-        G.push()
-        G.translate(rox, roy)
-        G.scale(gs, gs)
-        if not self.path_canvas then
-            self.path_canvas = G.newCanvas()
-            G.setCanvas(self.path_canvas)
-        else
-            G.setCanvas(self.path_canvas)
-            G.clear(0, 0, 0, 0)
-        end
-        G.setLineWidth(4)
-        G.setColor(255, 0, 0, 255)
-
-        for spi = 1, #self.path_lines[self.shown_path] do
-            local i = 1
-            local path = P.paths[self.shown_path][spi]
-            local path_line = self.path_lines[self.shown_path][spi]
-            while i <= #path_line and path_line[i] < self.dash_start_offset do
-                i = i + 1
-            end
-            local x1 = path[i - 1].x
-            local x2 = path[i].x
-            local y1 = REF_H - path[i - 1].y
-            local y2 = REF_H - path[i].y
-            local factor = (self.dash_start_offset - path_line[i - 1]) / (path_line[i] - path_line[i - 1])
-            G.line((x2 - x1) * factor + x1, (y2 - y1) * factor + y1, x2, y2)
-            local line_len = path_line[i] - self.dash_start_offset
-            -- 从第 i 个点开始往下画线
-            while i < #path_line do
-                while line_len <= dash_length + gap_length do
-                    local next_span_len = path_line[i + 1] - path_line[i]
-                    while next_span_len <= 0 do
-                        i = i + 1
-                        if i >= #path_line then
-                            break
-                        end
-                        next_span_len = path_line[i + 1] - path_line[i]
-                    end
-                    if i >= #path_line then
-                        break
-                    end
-                    if line_len + next_span_len < dash_length then
-                        G.line(path[i].x, REF_H - path[i].y, path[i + 1].x, REF_H - path[i + 1].y)
-                    else
-                        if line_len < dash_length then
-                            local factor = (dash_length - line_len) / next_span_len
-                            local x1 = path[i].x
-                            local y1 = REF_H - path[i].y
-                            local x2 = path[i + 1].x
-                            local y2 = REF_H - path[i + 1].y
-                            G.line(x1, y1, x1 + (x2 - x1) * factor, y1 + (y2 - y1) * factor)
-                        end
-                    end
-                    line_len = line_len + next_span_len
-                    i = i + 1
-                    if i >= #path_line then
-                        break
-                    end
-                end
-                local factor = (line_len - dash_length - gap_length) / (path_line[i] - path_line[i - 1])
-                if factor > 0 then
-                    local x1 = path[i - 1].x
-                    local y1 = REF_H - path[i - 1].y
-                    local x2 = path[i].x
-                    local y2 = REF_H - path[i].y
-                    G.line(x2 - (x2 - x1) * factor, y2 - (y2 - y1) * factor, x2, y2)
-                    line_len = line_len - dash_length - gap_length
-                end
-            end
-        end
-
-        G.setLineWidth(1)
-        G.setColor(255, 255, 255, 255)
-        G.setCanvas()
-        G.pop()
-    elseif not self.path_canvas then
-        self.path_canvas = nil
-    end
-
+function game:front_draw_debug(rox, roy, gs)
     if self.DBG_DRAW_PATHS and not self.path_canvas then
         local node_size = 2
         local point_size = 3
@@ -1019,7 +888,7 @@ function game:draw_game()
             for j = 1, #GR.grid[i] do
                 local t = GR.grid[i][j]
 
-                G.setColor(GR.grid_colors[t] or {100, 100, 100})
+                G.setColor(GR.grid_colors[t] or { 100, 100, 100 })
                 G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
             end
         end
@@ -1046,16 +915,6 @@ function game:draw_game()
         G.setColor(255, 255, 255, 255)
         G.pop()
     end
-
-    local last_idx
-
-    G.push()
-    G.translate(rox, roy)
-    G.scale(gs, gs)
-
-    last_idx = draw_frames_range(self.store.render_frames, 1, Z_GUI_DECALS - 1)
-
-    G.pop()
 
     if self.DBG_DRAW_GRID then
         G.setColor(255, 255, 255, 100)
@@ -1204,30 +1063,9 @@ function game:draw_game()
         G.setColor(255, 255, 255, 255)
         G.pop()
     end
+end
 
-    G.push()
-    G.translate(rox, roy)
-    G.scale(gs, gs)
-
-    last_idx = draw_frames_range(self.store.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
-
-    G.pop()
-
-    if self.DBG_DRAW_PATHS or self.shown_path then
-        G.setColor(255, 255, 255, 100)
-        G.draw(self.path_canvas)
-        G.setColor(255, 255, 255, 255)
-    end
-
-    G.push()
-    G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
-    G.scale(self.game_scale, self.game_scale)
-
-    last_idx = draw_frames_range(self.store.render_frames, last_idx + 1, Z_GUI - 1)
-
-    G.pop()
-    self.game_gui.window:draw_child(self.game_gui.layer_gui)
-
+function game:after_draw_debug(rox, roy, gs)
     if self.DBG_DRAW_CENTERS then
         G.push()
         G.translate(rox, roy)
@@ -1410,6 +1248,245 @@ function game:draw_game()
     if self.DBG_ENEMY_PAGES then
         game:draw_enemy_pages()
     end
+end
+
+-- 绘制黑夜模式前景色
+function game:draw_dark_foreground(rox, roy, gs)
+    if not self.night_draw_count then
+        self.night_draw_count = 2
+    end
+
+    if self.store.night_mode then
+        -- 每两帧绘制一次
+        if self.night_draw_count >= 2 then
+            G.push()
+            G.translate(rox, roy)
+            G.scale(gs, gs)
+
+            if not self.dark_canvas then
+                self.dark_canvas = G.newCanvas()
+                G.setCanvas(self.dark_canvas)
+            else
+                G.setCanvas(self.dark_canvas)
+                G.clear(0, 0, 0, 0)
+            end
+
+            love.graphics.stencil(function()
+                -- 绘制圆形遮罩
+                if self.store and self.store.lights then
+                    for _, l in pairs(self.store.lights) do
+                        local _, uy = game_gui:g2u(l.pos)
+
+                        love.graphics.circle("fill", l.pos.x, uy, l.radius)
+                    end
+                end
+
+                local x, y = game_gui.window:get_mouse_position()
+                local ux, uy = game_gui.window:screen_to_view(x, y)
+                local gx = game_gui:u2g(vec_2(ux, uy))
+
+                love.graphics.circle("fill", gx, uy, 50)
+            end, "replace", 1)
+
+            -- 启用模板测试，只绘制模板值为0的区域
+            love.graphics.setStencilTest("equal", 0)
+
+            -- 绘制黑暗覆盖层
+            G.setColor(0, 0, 51, 30)
+            G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
+
+            -- 恢复默认
+            love.graphics.setStencilTest()
+            G.setColor(255, 255, 255, 255)
+            G.setCanvas()
+            G.pop()
+
+            self.night_draw_count = 0
+        else
+            self.night_draw_count = self.night_draw_count + 1
+        end
+    end
+end
+
+-- 绘制路径
+function game:draw_path(rox, roy, gs)
+    if self.shown_path then
+        local dash_length = 25 -- 虚线段长度
+        local gap_length = 15  -- 虚线间隔
+        local speed = 60       -- 虚线移动速度（像素/秒）
+
+        -- 初始化路径数据
+        local path_data = {}
+        local total_length = 0
+        self.dash_start_offset = self.dash_start_offset or 0
+        self.dash_start_offset = (self.dash_start_offset + 0.4 * 120 / DRAW_FPS) % (dash_length + gap_length)
+        -- self.path_lines[self.shown_path] 记录了这个路径上各个子路径展平成直线后各个顶点在直线上的坐标。
+        if not self.path_lines[self.shown_path] then
+            self.path_lines[self.shown_path] = {}
+            for spi, sp in ipairs(P.paths[self.shown_path]) do
+                self.path_lines[self.shown_path][spi] = {}
+                local len = 0
+                self.path_lines[self.shown_path][spi][1] = 0
+                for ni = 2, #sp do
+                    local o1 = sp[ni - 1]
+                    local o2 = sp[ni]
+                    local dx, dy = o2.x - o1.x, o2.y - o1.y
+                    local seg_len = math.sqrt(dx * dx + dy * dy)
+                    len = len + seg_len
+                    self.path_lines[self.shown_path][spi][ni] = len
+                end
+            end
+        end
+
+        -- 开始绘制
+        G.push()
+        G.translate(rox, roy)
+        G.scale(gs, gs)
+        if not self.path_canvas then
+            self.path_canvas = G.newCanvas()
+            G.setCanvas(self.path_canvas)
+        else
+            G.setCanvas(self.path_canvas)
+            G.clear(0, 0, 0, 0)
+        end
+        G.setLineWidth(4)
+        G.setColor(255, 0, 0, 255)
+
+        for spi = 1, #self.path_lines[self.shown_path] do
+            local i = 1
+            local path = P.paths[self.shown_path][spi]
+            local path_line = self.path_lines[self.shown_path][spi]
+            while i <= #path_line and path_line[i] < self.dash_start_offset do
+                i = i + 1
+            end
+            local x1 = path[i - 1].x
+            local x2 = path[i].x
+            local y1 = REF_H - path[i - 1].y
+            local y2 = REF_H - path[i].y
+            local factor = (self.dash_start_offset - path_line[i - 1]) / (path_line[i] - path_line[i - 1])
+            G.line((x2 - x1) * factor + x1, (y2 - y1) * factor + y1, x2, y2)
+            local line_len = path_line[i] - self.dash_start_offset
+            -- 从第 i 个点开始往下画线
+            while i < #path_line do
+                while line_len <= dash_length + gap_length do
+                    local next_span_len = path_line[i + 1] - path_line[i]
+                    while next_span_len <= 0 do
+                        i = i + 1
+                        if i >= #path_line then
+                            break
+                        end
+                        next_span_len = path_line[i + 1] - path_line[i]
+                    end
+                    if i >= #path_line then
+                        break
+                    end
+                    if line_len + next_span_len < dash_length then
+                        G.line(path[i].x, REF_H - path[i].y, path[i + 1].x, REF_H - path[i + 1].y)
+                    else
+                        if line_len < dash_length then
+                            local factor = (dash_length - line_len) / next_span_len
+                            local x1 = path[i].x
+                            local y1 = REF_H - path[i].y
+                            local x2 = path[i + 1].x
+                            local y2 = REF_H - path[i + 1].y
+                            G.line(x1, y1, x1 + (x2 - x1) * factor, y1 + (y2 - y1) * factor)
+                        end
+                    end
+                    line_len = line_len + next_span_len
+                    i = i + 1
+                    if i >= #path_line then
+                        break
+                    end
+                end
+                local factor = (line_len - dash_length - gap_length) / (path_line[i] - path_line[i - 1])
+                if factor > 0 then
+                    local x1 = path[i - 1].x
+                    local y1 = REF_H - path[i - 1].y
+                    local x2 = path[i].x
+                    local y2 = REF_H - path[i].y
+                    G.line(x2 - (x2 - x1) * factor, y2 - (y2 - y1) * factor, x2, y2)
+                    line_len = line_len - dash_length - gap_length
+                end
+            end
+        end
+
+        G.setLineWidth(1)
+        G.setColor(255, 255, 255, 255)
+        G.setCanvas()
+        G.pop()
+    elseif not self.path_canvas then
+        self.path_canvas = nil
+    end
+end
+
+function game:draw_game()
+    local frame_draw_params = RU.frame_draw_params
+    local draw_frames_range = RU.draw_frames_range
+    local gs = self.game_scale
+    local rox, roy
+
+    if self.camera then
+        local c = self.camera
+
+        c:clamp()
+
+        local dox = c.x * c.zoom - self.screen_w * 0.5
+        local doy = c.y * c.zoom - self.screen_h * 0.5
+
+        rox, roy = -dox, -doy
+        gs = gs * c.zoom
+    else
+        rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
+    end
+
+    if self.store.world_offset then
+        rox, roy = rox + self.store.world_offset.x, roy + self.store.world_offset.y
+    end
+
+    self:front_draw_debug(rox, roy, gs)
+
+    self:draw_path(rox, roy, gs)
+
+    self:draw_dark_foreground(rox, roy, gs)
+
+    local last_idx
+
+    G.push()
+    G.translate(rox, roy)
+    G.scale(gs, gs)
+
+    last_idx = draw_frames_range(self.store.render_frames, 1, Z_GUI_DECALS - 1)
+
+    G.pop()
+
+    G.push()
+    G.translate(rox, roy)
+    G.scale(gs, gs)
+
+    last_idx = draw_frames_range(self.store.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
+
+    G.pop()
+
+    if self.DBG_DRAW_PATHS or self.shown_path then
+        G.setColor(255, 255, 255, 100)
+        G.draw(self.path_canvas)
+        G.setColor(255, 255, 255, 255)
+    end
+
+    if self.store.night_mode then
+        G.draw(self.dark_canvas)
+    end
+
+    G.push()
+    G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
+    G.scale(self.game_scale, self.game_scale)
+
+    last_idx = draw_frames_range(self.store.render_frames, last_idx + 1, Z_GUI - 1)
+
+    G.pop()
+    self.game_gui.window:draw_child(self.game_gui.layer_gui)
+
+    self:after_draw_debug(rox, roy, gs)
 end
 
 return game

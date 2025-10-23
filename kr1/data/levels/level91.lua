@@ -34,8 +34,7 @@ end
 function level:load(store)
     LU.insert_background(store, "stage91", Z_BACKGROUND)
 
-    local e = E:create_entity("foreground_dark")
-    e.pos.x, e.pos.y = REF_W * 0.5, REF_H * 0.5
+    store.night_mode = true
 
     LU.queue_insert(store, e)
 
