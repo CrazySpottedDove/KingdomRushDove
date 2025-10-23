@@ -33,6 +33,7 @@ function simulation:init(store, system_names)
     d.entities_with_timed = {}
     d.entities_with_tween = {}
     d.entities_with_render = {}
+    d.entities_with_lights = {}
 
 	d.pending_inserts = {}
 	d.pending_removals = {}

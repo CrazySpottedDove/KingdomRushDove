@@ -274,7 +274,7 @@ return {
     ["kr1-desktop/images/fullhd/encyclopedia_thumbs-2.png"] = { size = 766113},
     ["kr1-desktop/images/fullhd/encyclopedia_thumbs-3.png"] = { size = 470858},
     ["kr1-desktop/images/fullhd/go_barrack_pirates-1.png"] = { size = 3827360},
-    ["kr1-desktop/images/fullhd/go_decals-1.png"] = { size = 2088453},
+    ["kr1-desktop/images/fullhd/go_decals-1.png"] = { size = 2088478},
     ["kr1-desktop/images/fullhd/go_editor-1.dds"] = { size = 131200},
     ["kr1-desktop/images/fullhd/go_enemies_acaroth-1.dds"] = { size = 5592580},
     ["kr1-desktop/images/fullhd/go_enemies_acaroth-2.dds"] = { size = 5592580},
