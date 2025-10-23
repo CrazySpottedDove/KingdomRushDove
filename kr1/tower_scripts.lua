@@ -13166,10 +13166,6 @@ function scripts.tower_arcane_wizard5.remove(this, store)
         queue_remove(store, this.ray_fx_start)
     end
 
-    if this.tower.level < 4 then
-        return true
-    end
-
     local ae = this.attacks.list[3]
     local pow_e = this.powers and this.powers.empowerment or nil
 
@@ -13296,7 +13292,7 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 
             d.source_id = this.id
             d.target_id = target.id
-            d.damage_type = DAMAGE_MAGICAL
+            d.damage_type = m.damage_type
             d.value = this.boss_damage_config[m.level]
 
             queue_damage(store, d)
