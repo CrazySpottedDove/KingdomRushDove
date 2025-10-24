@@ -450,6 +450,7 @@ fx_explosion_big.render.sprites[1].name = "big"
 fx_explosion_big.render.sprites[1].anchor.y = 0.13
 fx_explosion_big.render.sprites[1].z = Z_OBJECTS
 fx_explosion_big.render.sprites[1].sort_y_offset = -2
+fx_explosion_big.render.sprites[1].scale = vv(1.1)
 
 local fx_explosion_small = E:register_t("fx_explosion_small", "fx_explosion_big")
 
@@ -1304,3 +1305,6 @@ tt.main_script.update = scripts.mod_soldier_cooldown.update
 tt.modifier.vis_flags = F_MOD
 tt.modifier.duration = 10
 tt.cooldown_factor = 0.9
+
+tt = E:register_t("arrow5_fixed_height", "arrow")
+tt.main_script.insert = scripts.arrow5_fixed_height.insert

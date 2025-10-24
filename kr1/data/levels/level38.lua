@@ -72,7 +72,7 @@ function level:load(store)
 				"3",
 				"14"
 			}, h.id) then
-				e = LU.insert_tower(store, "tower_holder_blocked_underground", h.style, h.pos, h.rally_pos, nil, h.id)
+				LU.insert_tower(store, "tower_holder_blocked_underground", h.style, h.pos, h.rally_pos, nil, h.id)
 			else
 				LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
 			end

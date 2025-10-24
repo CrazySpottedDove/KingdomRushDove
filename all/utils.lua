@@ -12,6 +12,14 @@ local V = require("klua.vector")
 local P = require("path_db")
 
 require("constants")
+local random = math.random
+local min = math.min
+local max = math.max
+local sqrt = math.sqrt
+local sin = math.sin
+local cos = math.cos
+local abs = math.abs
+local PI = math.pi
 
 local U = {}
 
@@ -20,13 +28,13 @@ local U = {}
 ---@param to number 结束值
 ---@return number 随机数
 function U.frandom(from, to)
-    return math.random() * (to - from) + from
+    return random() * (to - from) + from
 end
 
 ---随机返回 -1 或 1
 ---@return number 随机符号（-1 或 1）
 function U.random_sign()
-    if math.random() < 0.5 then
+    if random() < 0.5 then
         return -1
     else
         return 1
@@ -37,7 +45,7 @@ end
 ---@param list table 概率数组（元素值表示权重）
 ---@return number 随机索引
 function U.random_table_idx(list)
-    local rn = math.random()
+    local rn = random()
     local acc = 0
 
     for i = 1, #list do
@@ -186,13 +194,13 @@ function U.ease_phase(phase, easing)
             return s * s * s * s * s
         end,
         sine = function(s)
-            return 1 - math.cos(s * math.pi * 0.5)
+            return 1 - cos(s * PI * 0.5)
         end,
         expo = function(s)
             return 2 ^ (10 * (s - 1))
         end,
         circ = function(s)
-            return 1 - math.sqrt(1 - s * s)
+            return 1 - sqrt(1 - s * s)
         end
     }
     local fn_name, first_ease = string.match(easing, "([^-]+)%-([^-]+)")
@@ -225,7 +233,7 @@ end
 function U.hover_pulse_alpha(t)
     local min, max, per = HOVER_PULSE_ALPHA_MIN, HOVER_PULSE_ALPHA_MAX, HOVER_PULSE_PERIOD
 
-    return min + (max - min) * 0.5 * (1 + math.sin(t * km.twopi / per))
+    return min + (max - min) * 0.5 * (1 + sin(t * km.twopi / per))
 end
 
 ---检测点是否在椭圆内
@@ -236,28 +244,27 @@ end
 ---@return boolean 是否在椭圆内
 function U.is_inside_ellipse(p, center, radius, aspect)
     aspect = aspect or 0.7
-
-    local a = radius
-    local b = radius * aspect
-    local x = (p.x - center.x) / a
-    local y = (p.y - center.y) / b
-    return x * x + y * y <= 1
+    local x = (p.x - center.x)
+    local y = (p.y - center.y) / aspect
+    return x * x + y * y <= radius * radius
 end
 
 ---返回椭圆上指定角度的点
 ---@param center table 椭圆中心 {x, y}
----@param radius number 椭圆长轴半径
+---@param a number 椭圆长轴半径
 ---@param angle number? 角度（弧度，可选，默认0）
 ---@param aspect number? 椭圆纵横比（可选，默认0.7）
 ---@return table 椭圆上的点坐标 {x, y}
-function U.point_on_ellipse(center, radius, angle, aspect)
+function U.point_on_ellipse(center, a, angle, aspect)
     aspect = aspect or 0.7
     angle = angle or 0
 
-    local a = radius
-    local b = radius * aspect
+    local b = a * aspect
 
-    return V.v(center.x + a * math.cos(angle), center.y + b * math.sin(angle))
+    return {
+        x = center.x + a * cos(angle),
+        y = center.y + b * sin(angle)
+    }
 end
 
 ---计算点在椭圆内的距离因子
@@ -275,11 +282,11 @@ function U.dist_factor_inside_ellipse(p, center, radius, min_radius, aspect)
     local a = radius
     local b = radius * aspect
     local v_len = V.len(vx, vy)
-    local ab_len = V.len(a * math.cos(angle), b * math.sin(angle))
+    local ab_len = V.len(a * cos(angle), b * sin(angle))
 
     if min_radius then
         local ma, mb = min_radius, min_radius * aspect
-        local mab_len = V.len(ma * math.cos(angle), mb * math.sin(angle))
+        local mab_len = V.len(ma * cos(angle), mb * sin(angle))
 
         return km.clamp(0, 1, (v_len - mab_len) / (ab_len - mab_len))
     else
@@ -399,13 +406,13 @@ function U.animation_name_for_angle(e, group, angle, idx)
     local angles = a.angles and a.angles[group] or nil
 
     if not angles then
-        return group, angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5, 1
+        return group, angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
     elseif #angles == 1 then
-        return angles[1], angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5, 1
+        return angles[1], angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
     elseif #angles == 2 then
-        local flip_x = angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5
+        local flip_x = angle > PI * 0.5 and angle < 3 * PI * 0.5
 
-        if angle > 0 and angle < math.pi then
+        if angle > 0 and angle < PI then
             if a.angles_flip_horizontal and a.angles_flip_horizontal[1] then
                 flip_x = not flip_x
             end
@@ -436,7 +443,7 @@ function U.animation_name_for_angle(e, group, angle, idx)
             a2, a4 = a2 + skew, a4 + skew
         end
 
-        local angle_deg = angle * 180 / math.pi
+        local angle_deg = angle * 180 / PI
 
         if a1 <= angle_deg and angle_deg < a2 then
             o_name, o_flip, o_idx = angles[2], false, 2
@@ -457,7 +464,7 @@ function U.animation_name_for_angle(e, group, angle, idx)
         end
 
         if a.angles_flip_vertical and a.angles_flip_vertical[group] then
-            o_flip = angle > math.pi * 0.5 and angle < 3 * math.pi * 0.5
+            o_flip = angle > PI * 0.5 and angle < 3 * PI * 0.5
         end
 
         return o_name, o_flip, o_idx
@@ -679,7 +686,7 @@ function U.sprites_show(entity, from, to, restore)
         local s = entity.render.sprites[i]
 
         if restore then
-            s.hidden_count = math.max(0, s.hidden_count - 1)
+            s.hidden_count = max(0, s.hidden_count - 1)
             s.hidden = s.hidden_count > 0
         else
             s.hidden_count = 0
@@ -721,8 +728,8 @@ function U.walk(e, dt, accel, unsnapped)
 
     local m = e.motion
     local pos = e.pos
-    local vx, vy = V.sub(m.dest.x, m.dest.y, pos.x, pos.y)
-    local v_angle = V.angleTo(vx, vy)
+    local vx, vy = m.dest.x - pos.x, m.dest.y - pos.y
+    local v_angle = math.atan2(vy, vx)
     local v_len = V.len(vx, vy)
 
     if accel then
@@ -733,13 +740,11 @@ function U.walk(e, dt, accel, unsnapped)
 
     local step = e.motion.real_speed * dt
 
-    local nx, ny = V.normalize(V.rotate(v_angle, 1, 0))
+    local nx, ny = cos(v_angle), sin(v_angle)
 
     if v_len <= step and not (e.teleport and e.teleport.pending) then
         if unsnapped then
-            local sx, sy = V.mul(step, nx, ny)
-
-            pos.x, pos.y = V.add(pos.x, pos.y, sx, sy)
+            pos.x, pos.y = pos.x + step * nx, pos.y + step * ny
         else
             pos.x, pos.y = m.dest.x, m.dest.y
         end
@@ -753,10 +758,9 @@ function U.walk(e, dt, accel, unsnapped)
     if e.heading then
         e.heading.angle = v_angle
     end
-
-    local sx, sy = V.mul(math.min(step, v_len), nx, ny)
-
-    pos.x, pos.y = V.add(pos.x, pos.y, sx, sy)
+    local true_step = min(step, v_len)
+    local sx, sy = true_step * nx, true_step * ny
+    pos.x, pos.y = pos.x + sx, pos.y + sy
     m.speed.x, m.speed.y = sx / dt, sy / dt
     m.arrived = false
 
@@ -779,7 +783,7 @@ function U.force_motion_step(this, dt, dest)
     elseif ramp_radius < dist then
         df = fm.ramp_max_factor
     else
-        df = math.max(dist / ramp_radius, fm.ramp_min_factor)
+        df = max(dist / ramp_radius, fm.ramp_min_factor)
     end
 
     fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
@@ -965,7 +969,7 @@ function U.find_random_target(entities, origin, min_range, max_range, flags, ban
     if not targets or #targets == 0 then
         return nil
     else
-        local idx = math.random(1, #targets)
+        local idx = random(1, #targets)
 
         return targets[idx]
     end
@@ -984,27 +988,13 @@ function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, f
     flags = flags or 0
     bans = bans or 0
 
-    -- local enemies = table.filter(entities, function(k, v)
-    --     return not v.pending_removal and v.vis and v.nav_path and v.health and not v.health.dead and
-    --                band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and
-    --                U.is_inside_ellipse(v.pos, origin, max_range) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-    --                (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-    --                (not filter_func or filter_func(v, origin))
-    -- end)
-    local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
+    return store.enemy_spatial_index:query_random_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
             return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
                 band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
                 (not filter_func or filter_func(v, origin))
         end)
 
-    if not enemies or #enemies == 0 then
-        return nil
-    else
-        local idx = math.random(1, #enemies)
-
-        return enemies[idx]
-    end
 end
 
 ---搜索随机敌人及其预测位置
@@ -1020,36 +1010,8 @@ end
 function U.find_random_enemy_with_pos(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func)
     flags = flags or 0
     bans = bans or 0
-    -- local enemies = {}
-    -- for _, e in pairs(entities) do
-    --     if e.pending_removal or not e.nav_path or not e.vis or e.health and e.health.dead or band(e.vis.flags, bans) ~=
-    --         0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
-    --         -- block empty
-    --     else
-    --         local e_pos, e_ni
-    --         if e.motion and e.motion.speed then
-    --             if e.motion.forced_waypoint then
-    --                 local dt = prediction_time
-    --                 e_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-    --                 e_ni = e.nav_path.ni
-    --             else
-    --                 local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-    --                 e_ni = e.nav_path.ni + node_offset
-    --                 e_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-    --             end
-    --         else
-    --             e_pos = e.pos
-    --             e_ni = e.nav_path.ni
-    --         end
-    --         if U.is_inside_ellipse(e_pos, origin, max_range) and P:is_node_valid(e.nav_path.pi, e_ni) and
-    --             (min_range == 0 or not U.is_inside_ellipse(e_pos, origin, min_range)) then
-    --             e.__ffe_pos = V.vclone(e_pos)
-    --             table.insert(enemies, e)
-    --         end
-    --     end
-    -- end
 
-    local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
+    local random_enemy = store.enemy_spatial_index:query_random_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(e)
             if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
                 return false
@@ -1072,13 +1034,10 @@ function U.find_random_enemy_with_pos(store, origin, min_range, max_range, predi
 
             return true
         end)
-
-    if not enemies or #enemies == 0 then
+    if not random_enemy then
         return nil, nil
-    else
-        local idx = math.random(1, #enemies)
-        return enemies[idx], enemies[idx].__ffe_pos
     end
+    return random_enemy, random_enemy.__ffe_pos
 end
 
 ---搜索范围内的敌人
@@ -1091,13 +1050,6 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 范围内的敌人列表
 function U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
-    -- local enemies = table.filter(entities, function(k, v)
-    --     return not v.pending_removal and v.nav_path and not v.health.dead and
-    --                band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and
-    --                U.is_inside_ellipse(v.pos, origin, max_range) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-    --                (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-    --                (not filter_func or filter_func(v, origin))
-    -- end)
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
             return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
@@ -1176,8 +1128,8 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
                 if not e.pending_removal and e.nav_path and e.health and not e.health.dead and e.nav_path.pi == opi and
                     (only_upstream == true and oni > e.nav_path.ni or only_upstream == false and oni < e.nav_path.ni or
                         only_upstream == nil) and e.vis and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) ==
-                    0 and min_node_range <= math.abs(e.nav_path.ni - oni) and max_node_range >=
-                    math.abs(e.nav_path.ni - oni) and (not filter_func or filter_func(e, origin)) then
+                    0 and min_node_range <= abs(e.nav_path.ni - oni) and max_node_range >=
+                    abs(e.nav_path.ni - oni) and (not filter_func or filter_func(e, origin)) then
                     table.insert(result, {
                         enemy = e,
                         origin = n
@@ -1200,7 +1152,9 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
         return result
     end
 end
-
+local function sort_max_hp(a, b)
+    return a.health.hp > b.health.hp
+end
 ---搜索血量最高的敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
@@ -1217,78 +1171,36 @@ function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_ti
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
-
-    local biggest_enemy = nil
-    local biggest_hp = -1
-
-    -- for _, e in pairs(entities) do
-    --     if not e.pending_removal and not e.health.dead and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) == 0 and
-    --         (not filter_func or filter_func(e, origin)) then
-
-    --         local e_pos, e_ni
-    --         if prediction_time and e.motion.speed then
-    --             if e.motion.forced_waypoint then
-    --                 local dt = prediction_time == true and 1 or prediction_time
-    --                 e_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-    --                 e_ni = e.nav_path.ni
-    --             else
-    --                 local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-    --                 e_ni = e.nav_path.ni + node_offset
-    --                 e_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-    --             end
-    --         else
-    --             e_pos = e.pos
-    --             e_ni = e.nav_path.ni
-    --         end
-
-    --         if U.is_inside_ellipse(e_pos, origin, max_range) and P:is_node_valid(e.nav_path.pi, e_ni) and
-    --             (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-    --                 not U.is_inside_ellipse(e_pos, origin, min_range)) then
-    --             e.__ffe_pos = V.vclone(e_pos)
-
-    --             if e.health.hp > biggest_hp then
-    --                 biggest_hp = e.health.hp
-    --                 biggest_enemy = e
-    --             end
-    --         end
-    --     end
-    -- end
-    local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, 0, function(e)
-        if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-            not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-                not U.is_inside_ellipse(e.pos, origin, min_range)) or filter_func and not filter_func(e, origin) then
-            return false
-        end
-
-        if prediction_time and e.motion.speed then
-            if e.motion.forced_waypoint then
-                local dt = prediction_time == true and 1 or prediction_time
-
-                e.__ffe_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-            else
-                local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-                local e_ni = e.nav_path.ni + node_offset
-                e.__ffe_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+    local biggest_enemy = store.enemy_spatial_index:query_best_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
+        function(e)
+            if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
+                not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
+                    not U.is_inside_ellipse(e.pos, origin, min_range)) or filter_func and not filter_func(e, origin) then
+                return false
             end
-        else
-            e.__ffe_pos = V.vclone(e.pos)
-        end
 
-        return true
-    end)
-    for i = 1, #enemies do
-        local e = enemies[i]
-        if e.health.hp > biggest_hp then
-            biggest_hp = e.health.hp
-            biggest_enemy = e
-        end
-    end
-    if biggest_enemy then
-        return biggest_enemy, biggest_enemy.__ffe_pos
-    else
+            if prediction_time and e.motion.speed then
+                if e.motion.forced_waypoint then
+                    local dt = prediction_time == true and 1 or prediction_time
+
+                    e.__ffe_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
+                else
+                    local node_offset = P:predict_enemy_node_advance(e, prediction_time)
+
+                    local e_ni = e.nav_path.ni + node_offset
+                    e.__ffe_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+                end
+            else
+                e.__ffe_pos = V.vclone(e.pos)
+            end
+
+            return true
+        end, sort_max_hp)
+
+    if not biggest_enemy then
         return nil, nil
     end
+    return biggest_enemy, biggest_enemy.__ffe_pos
 end
 
 ---重新搜索最前面的敌人
@@ -1298,11 +1210,14 @@ end
 ---@param bans number 禁止标志位
 ---@param filter_func function? 过滤函数（可选）
 ---@param min_override_flags number? 最小覆盖标志（可选）
+---@return table 最前面的敌人
 function U.refind_foremost_enemy(last_enemy, store, flags, bans, filter_func, min_override_flags)
     local new_enemy = U.find_foremost_enemy(store, last_enemy.pos, 0, 50, nil, flags, bans, filter_func,
         min_override_flags)
     if new_enemy then
-        last_enemy = new_enemy
+        return new_enemy
+    else
+        return last_enemy
     end
 end
 
@@ -1317,48 +1232,13 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@param cover_range number 覆盖范围
----@return table? 最前面的敌人, table? 所有范围内的敌人
+---@return table? 最前面的敌人, table? 所有范围内的敌人, table? 最前面敌人的预测位置
 function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_range, prediction_time, flags, bans,
                                                  filter_func, min_override_flags, cover_range)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
 
-    -- local enemies = {}
-
-    -- for _, e in pairs(entities) do
-    --     if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-    --         filter_func and not filter_func(e, origin) then
-    --         -- block empty
-    --     else
-    --         local e_pos, e_ni
-
-    --         if prediction_time and e.motion.speed then
-    --             if e.motion.forced_waypoint then
-    --                 local dt = prediction_time == true and 1 or prediction_time
-
-    --                 e_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-    --                 e_ni = e.nav_path.ni
-    --             else
-    --                 local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-    --                 e_ni = e.nav_path.ni + node_offset
-    --                 e_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-    --             end
-    --         else
-    --             e_pos = e.pos
-    --             e_ni = e.nav_path.ni
-    --         end
-
-    --         if U.is_inside_ellipse(e_pos, origin, max_range) and P:is_node_valid(e.nav_path.pi, e_ni) and
-    --             (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-    --                 not U.is_inside_ellipse(e_pos, origin, min_range)) then
-    --             e.__ffe_pos = V.vclone(e_pos)
-
-    --             table.insert(enemies, e)
-    --         end
-    --     end
-    -- end
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, 0, function(e)
         if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
             not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
@@ -1384,7 +1264,7 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
         return true
     end)
 
-    if not enemies or #enemies == 0 then
+    if #enemies == 0 then
         return nil, nil
     else
         U.sort_foremost_enemies(enemies)
@@ -1401,11 +1281,7 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
             end
         end
         foremost_enemy = enemies[max_cover_enemy_idx]
-        if foremost_enemy then
-            return foremost_enemy, enemies, foremost_enemy.__ffe_pos
-        else
-            return nil, nil
-        end
+        return foremost_enemy, enemies, foremost_enemy.__ffe_pos
     end
 end
 
@@ -1419,7 +1295,7 @@ end
 ---@param bans number 禁止标志位
 ---@param filter_func function? 过滤函数（可选）
 ---@param min_override_flags number? 最小覆盖标志（可选）
----@return table? 最前面的敌人, table? 所有范围内的敌人
+---@return table? 最前面的敌人, table? 所有范围内的敌人, table? 最前面敌人的预测位置
 function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, max_range, prediction_time, flags, bans,
                                                       filter_func, min_override_flags)
     flags = flags or 0
@@ -1470,7 +1346,7 @@ end
 ---@param bans number 禁止标志位
 ---@param filter_func function? 过滤函数（可选）
 ---@param min_override_flags number? 最小覆盖标志（可选）
----@return table? 最前面的敌人, table? 所有范围内的敌人
+---@return table? 最前面的敌人, table? 所有范围内的敌人 , table? 最前面敌人的预测位置
 function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
                                min_override_flags)
     flags = flags or 0
@@ -1499,10 +1375,10 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
             e.__ffe_pos = V.vclone(e.pos)
         end
 
-        return true
+        return true, nil, nil
     end)
     if not enemies or #enemies == 0 then
-        return nil, nil
+        return nil, nil, nil
     else
         U.sort_foremost_enemies(enemies)
 
@@ -1686,7 +1562,7 @@ function U.melee_slot_position(soldier, enemy, rank, back)
         y_off = 6
     end
 
-    local soldier_on_the_right = math.abs(km.signed_unroll(enemy.heading.angle)) < math.pi * 0.5
+    local soldier_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) < PI * 0.5
 
     if back then
         soldier_on_the_right = not soldier_on_the_right
@@ -1725,7 +1601,7 @@ function U.melee_slot_enemy_position(enemy, soldier, rank, back)
         y_off = 6
     end
 
-    local enemy_on_the_right = math.abs(km.signed_unroll(enemy.heading.angle)) > math.pi * 0.5
+    local enemy_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) > PI * 0.5
 
     if back then
         enemy_on_the_right = not enemy_on_the_right
@@ -1754,9 +1630,9 @@ function U.rally_formation_position(idx, barrack, count, angle_offset)
     if count == 1 then
         pos = V.vclone(barrack.rally_pos)
     else
-        local a = 2 * math.pi / count
+        local a = 2 * PI / count
 
-        pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - math.pi * 0.5 + angle_offset)
+        pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - PI * 0.5 + angle_offset)
     end
 
     local center = V.vclone(barrack.rally_pos)
@@ -1862,32 +1738,6 @@ end
 ---@param blocker table 拦截者实体
 ---@param blocked table 被拦截实体
 function U.block_enemy(store, blocker, blocked)
-    -- if blocker.max_targets then
-    --     -- 士兵还有空闲的拦截位
-    --     if blocker.max_targets > #blocker.target_ids then
-    --         -- 若敌人并没有被士兵拦截，就让它被士兵拦截
-    --         if not table.keyforobject(blocked.enemy.blockers, blocker.id) then
-    --             table.insert(blocked.enemy.blockers, blocker.id)
-    --             table.insert(blocker.soldier.target_ids, blocked.id)
-    --             if not blocker.soldier.target_id then
-    --                 blocker.soldier.target_id = blocked.id
-    --             end
-    --         end
-    --     -- 士兵没有空闲的拦截位了
-    --     else
-
-    --     end
-    -- else
-    --     if blocker.soldier.target_id ~= blocked.id then
-    --         U.unblock_target(store, blocker)
-    --     end
-
-    --     if not table.keyforobject(blocked.enemy.blockers, blocker.id) then
-    --         table.insert(blocked.enemy.blockers, blocker.id)
-
-    --         blocker.soldier.target_id = blocked.id
-    --     end
-    -- end
     if blocker.soldier.target_id ~= blocked.id then
         U.unblock_target(store, blocker)
     end
@@ -2194,6 +2044,63 @@ end
 ---@return boolean 是否包含
 function U.flag_has(value, flag)
     return band(value, flag) ~= 0
+end
+
+function U.push_bans(t, value, op)
+    if not getmetatable(t) then
+        setmetatable(t, vis_meta)
+    end
+
+    if not t._bans_stack then
+        rawset(t, "_bans_stack", {})
+        table.insert(t._bans_stack, {
+            "set",
+            t.bans
+        })
+        rawset(t, "bans", nil)
+    end
+
+    op = op or "bor"
+
+    if op ~= "set" and not bit[op] then
+        if DEBUG then
+            assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
+        else
+            return
+        end
+    end
+
+    local row = {
+        op,
+        value
+    }
+
+    table.insert(t._bans_stack, row)
+    rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+
+    return row
+end
+
+function U.calc_vis_stack(s)
+    local o = 0
+
+    for _, r in pairs(s) do
+        local op, flag = unpack(r)
+
+        if op == "set" then
+            o = flag
+        else
+            local fop = bit[op]
+
+            if not fop then
+                -- block empty
+            else
+                o = fop(o, flag)
+            end
+        end
+    end
+
+    return o
 end
 
 ---获取英雄等级
@@ -2565,6 +2472,159 @@ end
 function U.soldier_inherit_tower_buff_factor(soldier, tower)
     soldier.unit.damage_factor = soldier.unit.damage_factor * tower.tower.damage_factor
     soldier.cooldown_factor = soldier.cooldown_factor * tower.tower.cooldown_factor
+end
+
+local vis_meta = {}
+
+function vis_meta.__index(t, k)
+    if k == "bans" then
+        return t._bans_stack_value
+    end
+end
+
+function vis_meta.__newindex(t, k, v)
+    if k == "bans" then
+        rawset(t, "_bans_stack", nil)
+        rawset(t, "_bans_stack_value", nil)
+        rawset(t, "bans", v)
+    else
+        rawset(t, k, v)
+    end
+end
+
+function U.calc_vis_stack(s)
+    local o = 0
+
+    for _, r in pairs(s) do
+        local op, flag = unpack(r)
+
+        if op == "set" then
+            o = flag
+        else
+            local fop = bit[op]
+
+            if not fop then
+                -- block empty
+            else
+                o = fop(o, flag)
+            end
+        end
+    end
+
+    return o
+end
+
+function U.push_bans(t, value, op)
+    if not getmetatable(t) then
+        setmetatable(t, vis_meta)
+    end
+
+    if not t._bans_stack then
+        rawset(t, "_bans_stack", {})
+        table.insert(t._bans_stack, {"set", t.bans})
+        rawset(t, "bans", nil)
+    end
+
+    op = op or "bor"
+
+    if op ~= "set" and not bit[op] then
+        if DEBUG then
+            assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
+        else
+            return
+        end
+    end
+
+    local row = {op, value}
+
+    table.insert(t._bans_stack, row)
+    rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+
+    return row
+end
+
+function U.pop_bans(t, ref)
+    if not t._bans_stack then
+        if DEBUG then
+            log.error("error in pop_ban: nil _bans_stack for vis table %s", t)
+
+            return
+        else
+            return
+        end
+    end
+
+    if #t._bans_stack <= 1 then
+        if DEBUG then
+            assert(false, "error in pop_ban: popping with stack size <= 1 for vis " .. tostring(t))
+        else
+            return
+        end
+    end
+
+    local ti = table.keyforobject(t._bans_stack, ref)
+
+    if ti ~= nil then
+        table.remove(t._bans_stack, ti)
+
+        if #t._bans_stack == 1 then
+            rawset(t, "bans", t._bans_stack[1][2])
+            rawset(t, "_bans_stack", nil)
+            rawset(t, "_bans_stack_value", nil)
+        else
+            rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+        end
+    end
+end
+
+---根据来自哪代，拼接字符串
+---@param from_kr integer 代
+---@param str string 字符串
+---@return string 处理后的字符串, string? 来自哪代
+function U.splicing_from_kr(from_kr, str)
+    if from_kr then
+        local kr = "kr" .. from_kr
+
+        return kr .. "_" .. str, kr
+    end
+
+    return str
+end
+
+--- 为游戏全局的实体添加一个插入钩子，只在实体成功插入时调用
+---@param store table
+---@param id number
+---@param func function 回调函数(this, store)
+function U.insert_insert_hook(store, id, func)
+    store.last_hooks.on_insert[id] = func
+end
+function U.remove_insert_hook(store, id)
+    store.last_hooks.on_insert[id] = nil
+end
+
+function U.insert_remove_hook(store, id, func)
+    store.last_hooks.on_remove[id] = func
+end
+
+function U.insert_remove_hook(store, id)
+    store.last_hooks.on_remove[id] = nil
+end
+
+--- 添加处理塔升级时buff继承的回调函数
+---@param entity table 防御塔
+---@param func function 回调函数(this, store)
+---@param func_key string 函数键值，防止重复添加
+function U.insert_tower_upgrade_function(entity, func, func_key)
+    if not entity.tower_upgrade_persistent_data.upgrade_functions[func_key] then
+        entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = func
+    end
+end
+
+--- 移除处理塔升级时buff继承的回调函数
+---@param entity table 防御塔
+---@param func_key string 函数键值
+function U.remove_tower_upgrade_function(entity, func_key)
+    entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = nil
 end
 
 return U

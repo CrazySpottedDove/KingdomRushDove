@@ -77,9 +77,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_gerald.level_up
     tt.hero.tombstone_show_time = fts(90)
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0002" or "heroPortrait_portraits_0002"
+    tt.info.hero_portrait = "hero_portraits_0001"
     tt.info.i18n_key = "HERO_PALADIN"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0002" or "info_portraits_hero_0005"
+    tt.info.portrait = "info_portraits_hero_0001"
     tt.main_script.update = scripts.hero_gerald.update
     tt.motion.max_speed = 3 * FPS
     tt.regen.cooldown = 1
@@ -135,8 +135,8 @@ local function heroes()
     tt.dodge.counter_attack = CC("area_attack")
     tt.dodge.counter_attack.animation = "counter"
     tt.dodge.counter_attack.damage_type = DAMAGE_MAGICAL_EXPLOSION
-    tt.dodge.counter_attack.reflected_damage_factor = 0.25
-    tt.dodge.counter_attack.reflected_damage_factor_inc = 0.25
+    tt.dodge.counter_attack.reflected_damage_factor = 0.3
+    tt.dodge.counter_attack.reflected_damage_factor_inc = 0.3
     tt.dodge.counter_attack.damage_radius = 50
     tt.dodge.counter_attack.hit_time = fts(5)
     tt.dodge.counter_attack.hit_decal = "decal_paladin_holystrike"
@@ -148,7 +148,7 @@ local function heroes()
     tt.courage = {
         heal_once_factor = 0.12,
         heal_inc = 0.06,
-        damage_inc = 4,
+        damage_inc = 5,
         damage_inc_base = 1,
         armor_inc = 0.05,
         magic_armor_inc = 0.05
@@ -220,9 +220,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_alleria.level_up
     tt.hero.tombstone_show_time = fts(90)
     tt.info.damage_icon = "arrow"
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0004" or "heroPortrait_portraits_0004"
+    tt.info.hero_portrait = "hero_portraits_0002"
     tt.info.i18n_key = "HERO_ARCHER"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0004" or "info_portraits_hero_0001"
+    tt.info.portrait = "info_portraits_hero_0002"
     tt.main_script.update = scripts.hero_alleria.update
     tt.motion.max_speed = 4.8 * FPS
     tt.regen.cooldown = 1
@@ -329,7 +329,7 @@ local function heroes()
     anchor_y = 0.28
     image_y = 42
     tt.fn_level_up = scripts.soldier_alleria_wildcat.level_up
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0007" or "info_portraits_hero_0007"
+    tt.info.portrait = "info_portraits_hero_0002_spawn"
     tt.health.armor = 0
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 35)
@@ -354,7 +354,7 @@ local function heroes()
         walk = {"running"}
     }
     tt.soldier.melee_slot_offset.x = 5
-    tt.ui.click_rect = IS_PHONE_OR_TABLET and r(-20, -10, 40, 40) or r(-15, -5, 30, 30)
+    tt.ui.click_rect = r(-15, -5, 30, 30)
     tt.unit.hit_offset = vec_2(0, 12)
     tt.unit.mod_offset = vec_2(0, 14)
     tt.unit.hide_after_death = true
@@ -401,9 +401,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_bolin.level_up
     tt.hero.tombstone_show_time = fts(60)
     tt.info.damage_icon = "shot"
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0003" or "heroPortrait_portraits_0003"
+    tt.info.hero_portrait = "hero_portraits_0004"
     tt.info.i18n_key = "HERO_RIFLEMAN"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0003" or "info_portraits_hero_0002"
+    tt.info.portrait = "info_portraits_hero_0004"
     tt.melee.range = 40
     tt.main_script.update = scripts.hero_bolin.update
     tt.motion.max_speed = 2.6 * FPS
@@ -620,9 +620,9 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_magnus.level_up
     tt.hero.tombstone_show_time = fts(60)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0005" or "heroPortrait_portraits_0005"
+    tt.info.hero_portrait = "hero_portraits_0005"
     tt.info.i18n_key = "HERO_MAGE"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0005" or "info_portraits_hero_0004"
+    tt.info.portrait = "info_portraits_hero_0005"
     tt.main_script.update = scripts.hero_magnus.update
     tt.motion.max_speed = 1.2 * FPS
     tt.regen.cooldown = 1
@@ -748,10 +748,10 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_ignus.level_up
     tt.hero.tombstone_show_time = fts(60)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0006" or "heroPortrait_portraits_0006"
+    tt.info.hero_portrait = "hero_portraits_0006"
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.i18n_key = "HERO_FIRE"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0006" or "info_portraits_hero_0003"
+    tt.info.portrait = "info_portraits_hero_0006"
     tt.main_script.update = scripts.hero_ignus.update
     tt.motion.max_speed = 4 * FPS
     tt.regen.cooldown = 1
@@ -832,22 +832,23 @@ local function heroes()
     }
     -- tt.hero.skills.smash.xp_gain = {50, 100, 150}
     tt.hero.skills.fissure = CC("hero_skill")
-    tt.hero.skills.fissure.damage_min = {15, 25, 35}
-    tt.hero.skills.fissure.damage_max = {35, 45, 55}
+    tt.hero.skills.fissure.damage_min = {5, 15, 25, 35}
+    tt.hero.skills.fissure.damage_max = {25, 35, 45, 55}
     tt.hero.skills.fissure.xp_level_steps = {
-        [4] = 1,
-        [7] = 2,
-        [10] = 3
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
+        [10] = 4
     }
-    tt.hero.skills.fissure.xp_gain = {50, 100, 150}
+    tt.hero.skills.fissure.xp_gain = {50, 100, 150, 200}
     tt.health.dead_lifetime = 15
     tt.health_bar.offset = vec_2(0, 38)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_malik.level_up
     tt.hero.tombstone_show_time = fts(60)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0001" or "heroPortrait_portraits_0001"
+    tt.info.hero_portrait = "hero_portraits_0003"
     tt.info.i18n_key = "HERO_REINFORCEMENT"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0001" or "info_portraits_hero_0006"
+    tt.info.portrait = "info_portraits_hero_0003"
     tt.main_script.update = scripts.hero_malik.update
     tt.motion.max_speed = 2.6 * FPS
     tt.regen.cooldown = 1
@@ -972,9 +973,9 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_denas.level_up
     tt.hero.tombstone_show_time = fts(60)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0007" or "heroPortrait_portraits_0007"
+    tt.info.hero_portrait = "hero_portraits_0007"
     tt.info.i18n_key = "HERO_DENAS"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0008" or "info_portraits_hero_0008"
+    tt.info.portrait = "info_portraits_hero_0007"
     tt.main_script.update = scripts.hero_denas.update
     tt.motion.max_speed = 2.6 * FPS
     tt.regen.cooldown = 1
@@ -1192,10 +1193,10 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_ingvar.level_up
     tt.hero.tombstone_show_time = fts(60)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0009" or "heroPortrait_portraits_0009"
+    tt.info.hero_portrait = "hero_portraits_0009"
     tt.info.fn = scripts.hero_ingvar.get_info
     tt.info.i18n_key = "HERO_VIKING"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0010" or "info_portraits_hero_0010"
+    tt.info.portrait = "info_portraits_hero_0009"
     tt.main_script.update = scripts.hero_ingvar.update
     tt.motion.max_speed = 3.2 * FPS
     tt.regen.cooldown = 1
@@ -1264,6 +1265,40 @@ local function heroes()
     tt.timed_attacks.list[2].immune_to = DAMAGE_BASE_TYPES
     tt.timed_attacks.list[2].sound = "HeroVikingBearTransform"
 
+    tt = RT("soldier_ingvar_ancestor", "soldier_militia")
+    AC(tt, "reinforcement", "melee", "nav_grid")
+    image_y = 60
+    image_x = 72
+    anchor_y = 0.17
+    tt.controable = true
+    tt.controable_other = true
+    tt.health.armor = 0.25
+    tt.health.hp_max = nil
+    tt.health_bar.offset = vec_2(0, 46)
+    tt.health.dead_lifetime = fts(30)
+    tt.info.portrait = "info_portraits_hero_0009_spawn"
+    tt.info.i18n_key = "HERO_VIKING_ANCESTOR"
+    tt.info.random_name_format = nil
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.remove = scripts.soldier_reinforcement.remove
+    tt.main_script.update = scripts.soldier_reinforcement.update
+    tt.melee.attacks[1].damage_max = nil
+    tt.melee.attacks[1].damage_min = nil
+    tt.melee.attacks[1].cooldown = 1
+    tt.melee.attacks[1].hit_time = fts(15)
+    tt.melee.attacks[1].sound = "MeleeSword"
+    tt.melee.range = 128
+    tt.motion.max_speed = 69
+    tt.reinforcement.duration = 14
+    tt.reinforcement.fade = nil
+    tt.regen.cooldown = 1
+    tt.render.sprites[1].prefix = "soldier_ingvar_ancestor"
+    tt.ui.click_rect = r(-13, 0, 26, 30)
+    tt.unit.marker_offset = vec_2(0, 0)
+    tt.unit.mod_offset = vec_2(0, 15)
+    tt.unit.price = 0
+    tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
+
     tt = RT("hero_elora", "hero")
     AC(tt, "melee", "ranged", "timed_attacks")
     anchor_y = 0.17
@@ -1304,10 +1339,10 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_elora.level_up
     tt.hero.tombstone_show_time = fts(60)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0008" or "heroPortrait_portraits_0008"
+    tt.info.hero_portrait = "hero_portraits_0008"
     tt.info.i18n_key = "HERO_FROST_SORCERER"
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0009" or "info_portraits_hero_0009"
+    tt.info.portrait = "info_portraits_hero_0008"
     tt.main_script.update = scripts.hero_elora.update
     tt.motion.max_speed = 3.5 * FPS
     tt.regen.cooldown = 1
@@ -1427,9 +1462,9 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_oni.level_up
     tt.hero.tombstone_show_time = fts(150)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0011" or "heroPortrait_portraits_0011"
+    tt.info.hero_portrait = "hero_portraits_0011"
     tt.info.i18n_key = "HERO_SAMURAI"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0013" or "info_portraits_hero_0013"
+    tt.info.portrait = "info_portraits_hero_0011"
     tt.melee.range = 65
     tt.main_script.update = scripts.hero_oni.update
     tt.main_script.insert = scripts.hero_oni.insert
@@ -1524,7 +1559,7 @@ local function heroes()
     tt.hero.level_stats.melee_damage_max = {27, 30, 33, 36, 39, 42, 45, 48, 51, 54}
     tt.hero.level_stats.melee_damage_min = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
     tt.hero.skills.timber = CC("hero_skill")
-    tt.hero.skills.timber.cooldown = {35 + fts(35), 30 + fts(35), 25 + fts(35)}
+    tt.hero.skills.timber.cooldown = {31.5 + fts(35), 27 + fts(35), 22.5 + fts(35)}
     tt.hero.skills.timber.xp_level_steps = {
         [10] = 3,
         [4] = 1,
@@ -1546,9 +1581,9 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 58)
     tt.hero.fn_level_up = scripts.hero_hacksaw.level_up
     tt.hero.tombstone_show_time = fts(150)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0010" or "heroPortrait_portraits_0010"
+    tt.info.hero_portrait = "hero_portraits_0010"
     tt.info.i18n_key = "HERO_ROBOT"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0012" or "info_portraits_hero_0012"
+    tt.info.portrait = "info_portraits_hero_0010"
     tt.main_script.update = scripts.hero_hacksaw.update
     tt.motion.max_speed = 2.8 * FPS
     tt.regen.cooldown = 1
@@ -1590,6 +1625,7 @@ local function heroes()
     tt.melee.attacks[2].xp_from_skill = "timber"
     tt.melee.attacks[2].vis_flags = bor(F_INSTAKILL)
     tt.melee.attacks[2].vis_bans = bor(F_BOSS)
+    tt.melee.attacks[2].side_effect = scripts.hero_hacksaw.side_effect
     tt.ranged.attacks[1] = CC("bullet_attack")
     tt.ranged.attacks[1].animation = "sawblade"
     tt.ranged.attacks[1].bullet = "hacksaw_sawblade"
@@ -1665,8 +1701,8 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_thor.level_up
     tt.hero.tombstone_show_time = fts(150)
     tt.info.i18n_key = "HERO_THOR"
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0012" or "heroPortrait_portraits_0012"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0014" or "info_portraits_hero_0014"
+    tt.info.hero_portrait = "hero_portraits_0012"
+    tt.info.portrait = "info_portraits_hero_0012"
     tt.main_script.update = scripts.hero_thor.update
     tt.motion.max_speed = 3 * FPS
     tt.regen.cooldown = 1
@@ -1757,10 +1793,10 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_10yr.level_up
     tt.hero.tombstone_show_time = fts(90)
-    tt.info.hero_portrait = IS_PHONE_OR_TABLET and "hero_portraits_0013" or "heroPortrait_portraits_0013"
+    tt.info.hero_portrait = "hero_portraits_0013"
     tt.info.fn = scripts.hero_10yr.get_info
     tt.info.i18n_key = "HERO_10YR"
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0015" or "info_portraits_hero_0015"
+    tt.info.portrait = "info_portraits_hero_0013"
     tt.main_script.update = scripts.hero_10yr.update
     tt.motion.max_speed_normal = 1.6 * FPS
     tt.motion.max_speed_buffed = 2.5 * FPS
@@ -1864,6 +1900,7 @@ local function heroes()
     tt.timed_attacks.list[3].sound_long = "TenShiBuffedBombAttackLong"
     tt.timed_attacks.list[3].sound = tt.timed_attacks.list[3].sound_short
     tt.timed_attacks.list[3].xp_from_skill = "buffed"
+
     tt = RT("aura_10yr_fireball", "aura")
     tt.main_script.update = scripts.aura_10yr_fireball.update
     tt.aura.entity = "fireball_10yr"
@@ -1873,6 +1910,7 @@ local function heroes()
     tt.aura.max_range = E:get_template("hero_10yr").timed_attacks.list[1].max_range
     tt.aura.vis_flags = E:get_template("hero_10yr").timed_attacks.list[1].vis_flags
     tt.aura.vis_bans = E:get_template("hero_10yr").timed_attacks.list[1].vis_bans
+
     tt = RT("fireball_10yr", "bullet")
     tt.bullet.min_speed = 24 * FPS
     tt.bullet.max_speed = 24 * FPS
@@ -1889,6 +1927,7 @@ local function heroes()
     tt.scorch_earth = false
     tt.sound_events.insert = "FireballRelease"
     tt.sound_events.hit = "FireballHit"
+
     tt = RT("aura_10yr_bomb", "aura")
     tt.aura.fx = "decal_10yr_spike"
     tt.aura.damage_radius = 40
@@ -1910,15 +1949,21 @@ local function heroes()
     tt.aura.min_nodes = 0
     tt.aura.max_nodes = 25
     tt.aura.min_count = 1
+
     tt = RT("mod_10yr_stun", "mod_stun")
     tt.modifier.vis_flags = bor(F_MOD, F_STUN)
     tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
     tt.modifier.duration = 3
+
     tt = RT("decal_10yr_spike", "decal_bomb_crater")
     tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "decal_10yr_bomb_spike"
     tt.render.sprites[2].hide_after_runs = 1
     tt.render.sprites[2].anchor.y = 0.24
+
+    --[[
+        二代
+    --]]
 
     tt = RT("hero_mirage", "hero")
     AC(tt, "dodge", "melee", "ranged", "timed_attacks")
@@ -1990,7 +2035,7 @@ local function heroes()
     tt.idle_flip.cooldown = 1
     tt.info.i18n_key = "HERO_MIRAGE"
     tt.info.hero_portrait = "kr2_hero_portraits_0002"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0002" or "kr2_info_portraits_heroes_0002"
+    tt.info.portrait = "kr2_info_portraits_heroes_0002"
     tt.info.damage_icon = "arrow"
     tt.main_script.update = scripts.hero_mirage.update
     tt.melee.attacks[1] = CC("melee_attack")
@@ -2205,7 +2250,7 @@ local function heroes()
     tt.idle_flip.cooldown = 1
     tt.info.fn = scripts.hero_wizard.get_info
     tt.info.hero_portrait = "kr2_hero_portraits_0006"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0006" or "kr2_info_portraits_heroes_0006"
+    tt.info.portrait = "kr2_info_portraits_heroes_0006"
     tt.info.damage_icon = "magic"
     tt.info.i18n_key = "HERO_WIZARD"
     tt.main_script.update = scripts.hero_wizard.update
@@ -2417,7 +2462,7 @@ local function heroes()
     tt.idle_flip.cooldown = 1
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.hero_portrait = "kr2_hero_portraits_0001"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0001" or "kr2_info_portraits_heroes_0001"
+    tt.info.portrait = "kr2_info_portraits_heroes_0001"
     tt.info.i18n_key = "HERO_ALRIC"
     tt.main_script.update = scripts.hero_alric.update
     tt.melee.attacks[1] = CC("melee_attack")
@@ -2493,7 +2538,7 @@ local function heroes()
     anchor_y = 0.2
     image_y = 36
     tt.damage_buff = 0
-    tt.info.portrait = IS_PHONE and "portraits_hero_0012" or "kr2_info_portraits_heroes_0012"
+    tt.info.portrait = "kr2_info_portraits_heroes_0001_spawn"
     tt.health.armor = 0
     tt.health.hp_inc = 40
     tt.health.hp_max = 20
@@ -2580,8 +2625,8 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_beastmaster.level_up
     tt.hero.tombstone_show_time = fts(60)
     tt.idle_flip.cooldown = 1
-    tt.info.hero_portrait = "kr2_hero_portraits_0003"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0003" or "kr2_info_portraits_heroes_0003"
+    tt.info.hero_portrait = "kr2_hero_portraits_0004"
+    tt.info.portrait = "kr2_info_portraits_heroes_0004"
     tt.info.i18n_key = "HERO_BEASTMASTER"
     tt.main_script.insert = scripts.hero_beastmaster.insert
     tt.main_script.update = scripts.hero_beastmaster.update
@@ -2666,7 +2711,7 @@ local function heroes()
     AC(tt, "melee", "nav_grid")
     anchor_y = 0.29
     image_y = 60
-    tt.info.portrait = IS_PHONE and "portraits_hero_0010" or "kr2_info_portraits_heroes_0010"
+    tt.info.portrait = "kr2_info_portraits_heroes_0004_pig"
     tt.health.armor = 0.1
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 28)
@@ -2712,7 +2757,7 @@ local function heroes()
     tt.regen.cooldown = 1
     tt.info.i18n_key = "ENEMY_WORG"
     tt.info.enc_icon = 14
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0020" or "info_portraits_sc_0020"
+    tt.info.portrait = "info_portraits_sc_0020"
     tt.info.fn = scripts.beastmaster_pet.get_info
     tt.main_script.insert = scripts.beastmaster_pet.insert
     tt.main_script.update = scripts.beastmaster_pet.update
@@ -2800,7 +2845,7 @@ local function heroes()
     tt.fake_hp = 60
     tt.main_script.update = scripts.beastmaster_falcon.update
     tt.info.fn = scripts.beastmaster_falcon.get_info
-    tt.info.portrait = IS_PHONE and "portraits_hero_0011" or "kr2_info_portraits_heroes_0011"
+    tt.info.portrait = "kr2_info_portraits_heroes_0004_falcon"
     tt.flight_speed = 45
     tt.flight_height = 80
     tt.custom_attack = CC("custom_attack")
@@ -2843,16 +2888,16 @@ local function heroes()
     tt.hero.skills.holylight.heal_hp = {40, 60, 80}
     tt.hero.skills.holylight.heal_count = {4, 7, 10}
     tt.hero.skills.holylight.revive_chance = {0.15, 0.25, 0.35}
-    tt.hero.skills.holylight.xp_gain_factor = 45
+    tt.hero.skills.holylight.xp_gain_factor = 50
     tt.hero.skills.holylight.xp_level_steps = {
         [2] = 1,
         [5] = 2,
         [8] = 3
     }
     tt.hero.skills.consecrate = CC("hero_skill")
-    tt.hero.skills.consecrate.duration = {6, 10, 14}
-    tt.hero.skills.consecrate.extra_damage = {0.15, 0.2, 0.25}
-    tt.hero.skills.consecrate.xp_gain_factor = 45
+    tt.hero.skills.consecrate.duration = {6, 12, 18}
+    tt.hero.skills.consecrate.extra_damage = {0.18, 0.24, 0.3}
+    tt.hero.skills.consecrate.xp_gain_factor = 50
     tt.hero.skills.consecrate.xp_level_steps = {
         [3] = 1,
         [6] = 2,
@@ -2862,6 +2907,7 @@ local function heroes()
     tt.hero.skills.wingsoflight.range = 120
     tt.hero.skills.wingsoflight.duration = {10, 20, 30}
     tt.hero.skills.wingsoflight.armor_rate = {0.2, 0.3, 0.4}
+    tt.hero.skills.wingsoflight.damage_rate = {0.15, 0.25, 0.35}
     tt.hero.skills.wingsoflight.count = {9, 12, 15}
     tt.hero.skills.wingsoflight.xp_level_steps = {
         [1] = 1,
@@ -2892,8 +2938,8 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(60)
     tt.idle_flip.cooldown = 1
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0005"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0005" or "kr2_info_portraits_heroes_0005"
+    tt.info.hero_portrait = "kr2_hero_portraits_0007"
+    tt.info.portrait = "kr2_info_portraits_heroes_0007"
     tt.info.damage_icon = "magic"
     tt.info.i18n_key = "HERO_PRIEST"
     tt.main_script.update = scripts.hero_priest.update
@@ -2907,7 +2953,7 @@ local function heroes()
     tt.sound_events.respawn = "HeroPriestTauntIntro"
     tt.sound_events.insert = "HeroPriestTauntIntro"
     tt.sound_events.hero_room_select = "HeroPriestTauntSelect"
-    tt.teleport.min_distance = 0
+    tt.teleport.min_distance = 51.2
     tt.teleport.sound = "HeroPriestWings"
     tt.teleport.disabled = true
     tt.unit.hit_offset = vec_2(0, 12)
@@ -2988,6 +3034,8 @@ local function heroes()
     tt.modifier.duration = nil
     tt.modifier.use_mod_offset = false
     tt.armor_rate = 0.3
+    tt.damage_rate = 0.1
+    tt.cooldown_rate = 0.9
     tt.main_script.insert = scripts.mod_priest_armor.insert
     tt.main_script.remove = scripts.mod_priest_armor.remove
     tt.main_script.update = scripts.mod_priest_armor.update
@@ -3079,8 +3127,8 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_dracolich.level_up
     tt.hero.tombstone_show_time = nil
     tt.idle_flip.cooldown = 10
-    tt.info.hero_portrait = "kr2_hero_portraits_0016"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0019" or "kr2_info_portraits_heroes_0017"
+    tt.info.hero_portrait = "kr2_hero_portraits_0014"
+    tt.info.portrait = "kr2_info_portraits_heroes_0014"
     tt.info.damage_icon = "magic"
     tt.info.i18n_key = "HERO_DRACOLICH"
     tt.main_script.insert = scripts.hero_dracolich.insert
@@ -3106,7 +3154,7 @@ local function heroes()
     tt.sound_events.respawn = "HeroDracolichRespawn"
     tt.sound_events.insert = "HeroDracolichTauntIntro"
     tt.sound_events.hero_room_select = "HeroDracolichTauntSelect"
-    tt.ui.click_rect = IS_PHONE and r(-35, 50, 70, 70) or r(-25, 70, 50, 45)
+    tt.ui.click_rect = r(-25, 70, 50, 45)
     tt.unit.blood_color = BLOOD_GRAY
     tt.unit.hit_offset = vec_2(0, 98)
     tt.unit.hide_after_death = true
@@ -3336,7 +3384,7 @@ local function heroes()
     AC(tt, "melee", "nav_grid", "reinforcement")
     image_y = 48
     anchor_y = 0.16666666666666666
-    tt.info.portrait = IS_PHONE and "portraits_hero_0021" or "kr2_info_portraits_heroes_0022"
+    tt.info.portrait = "kr2_info_portraits_heroes_0014_spawn"
     tt.health.armor = 0
     tt.health.hp_max = 80
     tt.health_bar.offset = vec_2(0, 36)
@@ -3426,8 +3474,8 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.idle_flip.cooldown = 1
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0004"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0004" or "kr2_info_portraits_heroes_0004"
+    tt.info.hero_portrait = "kr2_hero_portraits_0003"
+    tt.info.portrait = "kr2_info_portraits_heroes_0003"
     tt.info.i18n_key = "HERO_PIRATE"
     tt.main_script.insert = scripts.hero_pirate.insert
     tt.main_script.update = scripts.hero_pirate.update
@@ -3702,8 +3750,8 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_dragon.level_up
     tt.hero.tombstone_show_time = nil
     tt.idle_flip.cooldown = 10
-    tt.info.hero_portrait = "kr2_hero_portraits_0009"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0009" or "kr2_info_portraits_heroes_0009"
+    tt.info.hero_portrait = "kr2_hero_portraits_0010"
+    tt.info.portrait = "kr2_info_portraits_heroes_0010"
     tt.info.damage_icon = "fireball"
     tt.info.i18n_key = "HERO_DRAGON"
     tt.main_script.insert = scripts.hero_dragon.insert
@@ -3729,7 +3777,7 @@ local function heroes()
     tt.sound_events.respawn = "HeroDragonBorn"
     tt.sound_events.insert = "HeroDragonTauntIntro"
     tt.sound_events.hero_room_select = "HeroDragonTauntSelect"
-    tt.ui.click_rect = IS_PHONE and r(-35, 95, 70, 70) or r(-30, 115, 60, 40)
+    tt.ui.click_rect = r(-30, 115, 60, 40)
     tt.unit.hit_offset = vec_2(0, 135)
     tt.unit.hide_after_death = true
     tt.unit.marker_offset = vec_2(0, -0.15)
@@ -4075,13 +4123,13 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(60)
     tt.idle_flip.cooldown = 10
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0014"
-    tt.info.hero_portrait_alive = "kr2_hero_portraits_0014"
-    tt.info.hero_portrait_dead = "kr2_hero_portraits_0015"
+    tt.info.hero_portrait = "kr2_hero_portraits_0013"
+    tt.info.hero_portrait_alive = "kr2_hero_portraits_0013"
+    tt.info.hero_portrait_dead = "kr2_hero_portraits_0013_dead"
     tt.info.hero_portrait_always_on = nil
-    tt.info.portrait = IS_PHONE and "portraits_hero_0017" or "kr2_info_portraits_heroes_0016"
-    tt.info.portrait_alive = IS_PHONE and "portraits_hero_0017" or "kr2_info_portraits_heroes_0016"
-    tt.info.portrait_dead = IS_PHONE and "portraits_hero_0018" or "kr2_info_portraits_heroes_0023"
+    tt.info.portrait = "kr2_info_portraits_heroes_0013"
+    tt.info.portrait_alive = "kr2_info_portraits_heroes_0013"
+    tt.info.portrait_dead = "kr2_info_portraits_heroes_0013_dead"
     tt.info.i18n_key = "HERO_VAN_HELSING"
     tt.main_script.insert = scripts.hero_van_helsing.insert
     tt.main_script.update = scripts.hero_van_helsing.update
@@ -4293,8 +4341,8 @@ local function heroes()
     tt.hero.level = 10
     tt.idle_flip = nil
     tt.info.fn = scripts.hero_steam_frigate.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0011"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0014" or "kr2_info_portraits_heroes_0021"
+    tt.info.hero_portrait = "kr2_hero_portraits_0018"
+    tt.info.portrait = "kr2_info_portraits_heroes_0018"
     tt.main_script.insert = scripts.hero_steam_frigate.insert
     tt.main_script.update = scripts.hero_steam_frigate.update
     tt.motion.max_speed = 75
@@ -4315,7 +4363,7 @@ local function heroes()
     tt.render.sprites[3].name = "idle"
     tt.render.sprites[3].prefix = "hero_steam_frigate_smoke"
     tt.sound_events.change_rally_point = "PirateBoatTaunt"
-    tt.ui.click_rect = IS_PHONE and r(-35, -15, 70, 70) or r(-30, 0, 60, 38)
+    tt.ui.click_rect = r(-30, 0, 60, 38)
     tt.unit.hit_offset = vec_2(0, 12)
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, ady(22))
@@ -4411,13 +4459,13 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(90)
     tt.health_bar.draw_order = -1
     tt.idle_flip.cooldown = 1
-    tt.info.hero_portrait = "kr2_hero_portraits_0017"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0020" or "kr2_info_portraits_heroes_0020"
+    tt.info.hero_portrait = "kr2_hero_portraits_0019"
+    tt.info.portrait = "kr2_info_portraits_heroes_0019"
     tt.info.i18n_key = "HERO_VAMPIRESS"
     tt.main_script.insert = scripts.hero_vampiress.insert
     tt.main_script.update = scripts.hero_vampiress.update
-    tt.motion.max_speed = 1.7 * FPS
-    tt.motion.max_speed_bat = 3.7 * FPS
+    tt.motion.max_speed = 2 * FPS
+    tt.motion.max_speed_bat = 4.5 * FPS
     tt.regen.cooldown = 1
     tt.render.sprites[1].anchor.y = anchor_y
     tt.render.sprites[1].name = "idle"
@@ -4439,7 +4487,7 @@ local function heroes()
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 12)
     tt.fly_to = {}
-    tt.fly_to.min_distance = 0
+    tt.fly_to.min_distance = 80
     tt.fly_to.animation_prefix = "hero_vampiress_bat"
     tt.melee.attacks[1].cooldown = 0.9
     tt.melee.attacks[1].hit_time = fts(9)
@@ -4562,8 +4610,8 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(66)
     tt.idle_flip.cooldown = 1
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0007"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0007" or "kr2_info_portraits_heroes_0007"
+    tt.info.hero_portrait = "kr2_hero_portraits_0009"
+    tt.info.portrait = "kr2_info_portraits_heroes_0009"
     tt.info.i18n_key = "HERO_ALIEN"
     tt.main_script.insert = scripts.hero_alien.insert
     tt.main_script.update = scripts.hero_alien.update
@@ -4847,8 +4895,8 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_monk.level_up
     tt.hero.tombstone_show_time = fts(66)
     tt.idle_flip.cooldown = 1
-    tt.info.hero_portrait = "kr2_hero_portraits_0013"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0016" or "kr2_info_portraits_heroes_0015"
+    tt.info.hero_portrait = "kr2_hero_portraits_0012"
+    tt.info.portrait = "kr2_info_portraits_heroes_0012"
     tt.info.i18n_key = "HERO_MONK"
     tt.main_script.insert = scripts.hero_monk.insert
     tt.main_script.update = scripts.hero_monk.update
@@ -4968,7 +5016,7 @@ local function heroes()
     AC(tt, "melee", "ranged", "timed_attacks")
     image_y = 66
     anchor_y = 14 / image_y
-    tt.hero.level_stats.hp_max = {170, 190, 210, 230, 250, 270, 290, 310, 330, 350}
+    tt.hero.level_stats.hp_max = {175, 200, 225, 250, 275, 300, 325, 350, 375, 400}
     tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
     tt.hero.level_stats.damage_min = {4, 5, 7, 8, 10, 11, 13, 14, 16, 17}
     tt.hero.level_stats.damage_max = {11, 16, 20, 25, 29, 34, 38, 43, 47, 52}
@@ -4991,11 +5039,12 @@ local function heroes()
         [8] = 3
     }
     tt.hero.skills.bonedance = CC("hero_skill")
-    tt.hero.skills.bonedance.skull_count = {4, 5, 6}
+    tt.hero.skills.bonedance.skull_count = {4, 5, 6, 7}
     tt.hero.skills.bonedance.xp_level_steps = {
         [1] = 1,
         [4] = 2,
-        [7] = 3
+        [7] = 3,
+        [10] = 4
     }
     tt.hero.skills.deathaura = CC("hero_skill")
     tt.hero.skills.deathaura.slow_factor = {0.9, 0.8, 0.7, 0.6}
@@ -5023,8 +5072,8 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(90)
     tt.idle_flip.cooldown = 2
     tt.info.damage_icon = "magic"
-    tt.info.hero_portrait = "kr2_hero_portraits_0019"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0023" or "kr2_info_portraits_heroes_0019"
+    tt.info.hero_portrait = "kr2_hero_portraits_0005"
+    tt.info.portrait = "kr2_info_portraits_heroes_0005"
     tt.info.i18n_key = "HERO_VOODOO_WITCH"
     tt.main_script.insert = scripts.hero_voodoo_witch.insert
     tt.main_script.update = scripts.hero_voodoo_witch.update
@@ -5095,9 +5144,9 @@ local function heroes()
     tt.count_group.name = "voodoo_witch_skulls"
     tt.count_group.type = COUNT_GROUP_CONCURRENT
     tt.flight_period = 3
-    tt.flight_speed = 30
-    tt.force_motion.max_a = 495
-    tt.force_motion.max_v = 120
+    tt.flight_speed = 40
+    tt.force_motion.max_a = 525
+    tt.force_motion.max_v = 135
     tt.force_motion.ramp_radius = 50
     tt.main_script.update = scripts.voodoo_witch_skull.update
     tt.max_flight_height = 25
@@ -5287,8 +5336,8 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(66)
     tt.idle_flip.cooldown = 5
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0012"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0015" or "kr2_info_portraits_heroes_0014"
+    tt.info.hero_portrait = "kr2_hero_portraits_0011"
+    tt.info.portrait = "kr2_info_portraits_heroes_0011"
     tt.info.i18n_key = "HERO_CRAB"
     tt.main_script.insert = scripts.hero_crab.insert
     tt.main_script.update = scripts.hero_crab.update
@@ -5518,7 +5567,7 @@ local function heroes()
     tt.idle_flip.cooldown = 1
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.hero_portrait = "kr2_hero_portraits_0008"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0008" or "kr2_info_portraits_heroes_0008"
+    tt.info.portrait = "kr2_info_portraits_heroes_0008"
     tt.info.i18n_key = "HERO_GIANT"
     tt.main_script.insert = scripts.hero_giant.insert
     tt.main_script.update = scripts.hero_giant.update
@@ -5532,7 +5581,7 @@ local function heroes()
     tt.sound_events.respawn = "HeroGiantTauntIntro"
     tt.sound_events.insert = "HeroGiantTauntIntro"
     tt.sound_events.hero_room_select = "HeroGiantTauntSelect"
-    tt.ui.click_rect = IS_PHONE and r(-35, -15, 70, 70) or r(-25, 0, 50, 45)
+    tt.ui.click_rect = r(-25, 0, 50, 45)
     tt.unit.hit_offset = vec_2(0, 12)
     tt.unit.marker_offset = vec_2(0, 0.28)
     tt.unit.mod_offset = vec_2(0, 23)
@@ -5734,8 +5783,8 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(90)
     tt.idle_flip.cooldown = 10
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0018"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0022" or "kr2_info_portraits_heroes_0018"
+    tt.info.hero_portrait = "kr2_hero_portraits_0015"
+    tt.info.portrait = "kr2_info_portraits_heroes_0015"
     tt.info.i18n_key = "HERO_MINOTAUR"
     tt.main_script.update = scripts.hero_minotaur.update
     tt.motion.max_speed = 90
@@ -5917,14 +5966,14 @@ local function heroes()
     tt.hero.skills.spinningpole = CC("hero_skill")
     tt.hero.skills.spinningpole.xp_gain_factor = 28
     tt.hero.skills.spinningpole.loops = {2, 3, 4}
-    tt.hero.skills.spinningpole.damage = {18, 25, 30}
+    tt.hero.skills.spinningpole.damage = {18, 26, 34}
     tt.hero.skills.spinningpole.xp_level_steps = {
         [2] = 1,
         [5] = 2,
         [8] = 3
     }
     tt.hero.skills.tetsubostorm = CC("hero_skill")
-    tt.hero.skills.tetsubostorm.damage = {45, 80, 120}
+    tt.hero.skills.tetsubostorm.damage = {45, 90, 135}
     tt.hero.skills.tetsubostorm.xp_gain_factor = 60
     tt.hero.skills.tetsubostorm.xp_level_steps = {
         [2] = 1,
@@ -5959,13 +6008,13 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(30)
     tt.idle_flip.cooldown = 2
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr2_hero_portraits_0020"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0024" or "kr2_info_portraits_heroes_0024"
+    tt.info.hero_portrait = "kr2_hero_portraits_0016"
+    tt.info.portrait = "kr2_info_portraits_heroes_0016"
     tt.info.i18n_key = "HERO_MONKEY_GOD"
     tt.main_script.insert = scripts.hero_monkey_god.insert
     tt.main_script.update = scripts.hero_monkey_god.update
     tt.motion.max_speed = 108
-    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)
+    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
     tt.regen.cooldown = 1
     tt.regen.health = nil
     tt.render.sprites[1].anchor.y = anchor_y
@@ -6011,7 +6060,7 @@ local function heroes()
     tt.melee.attacks[2].sound = "HeroMonkeyGodAttack2"
     tt.melee.attacks[3] = CC("area_attack")
     tt.melee.attacks[3].animations = {"pole_start", "pole_loop", "pole_end"}
-    tt.melee.attacks[3].cooldown = 16
+    tt.melee.attacks[3].cooldown = 14.4
     tt.melee.attacks[3].damage_max = nil
     tt.melee.attacks[3].damage_min = nil
     tt.melee.attacks[3].damage_radius = 90
@@ -6029,7 +6078,7 @@ local function heroes()
     tt.melee.attacks[3].sound_end = "HeroMonkeyGodSpinningPoleLoopEnd"
     tt.melee.attacks[4] = CC("melee_attack")
     tt.melee.attacks[4].animations = {"tetsubo_start", "tetsubo_loop", "tetsubo_end"}
-    tt.melee.attacks[4].cooldown = 16
+    tt.melee.attacks[4].cooldown = 14.4
     tt.melee.attacks[4].damage_max = nil
     tt.melee.attacks[4].damage_min = nil
     tt.melee.attacks[4].disabled = true
@@ -6148,6 +6197,115 @@ local function heroes()
     tt.particle_system.sort_y_offset = -45
     tt.particle_system.spin = {-math.pi * 0.5, math.pi * 0.5}
 
+
+    tt = RT("hero_dwarf", "hero")
+    AC(tt, "melee", "timed_attacks")
+    image_y = 94
+    anchor_y = 0.13
+    tt.hero.level_stats.armor = {0.43, 0.46, 0.49, 0.52, 0.55, 0.58, 0.61, 0.64, 0.67, 0.7}
+    tt.hero.level_stats.hp_max = {285, 300, 315, 330, 345, 360, 375, 390, 405, 420}
+    tt.hero.level_stats.melee_damage_min = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    tt.hero.level_stats.melee_damage_max = {12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
+    tt.hero.skills.ring = CC("hero_skill")
+    tt.hero.skills.ring.xp_level_steps = {
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
+        [10] = 4
+    }
+    tt.hero.skills.ring.damage_min = {60, 80, 100, 120}
+    tt.hero.skills.ring.damage_max = {80, 100, 120, 140}
+    tt.hero.skills.giant = CC("hero_skill")
+    tt.hero.skills.giant.xp_level_steps = {
+        [2] = 1,
+        [5] = 2,
+        [8] = 3
+    }
+    tt.hero.skills.giant.scale = {1.5, 2, 2.5}
+    tt.hero.skills.giant.xp_gain_factor = 150
+    tt.health.armor = 0.43
+    tt.health.dead_lifetime = 15
+    tt.health.hp_max = 420
+    tt.health_bar.offset = vec_2(0, ady(50))
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+    tt.hero.tombstone_show_time = fts(60)
+    tt.hero.fn_level_up = scripts.hero_dwarf.level_up
+    tt.idle_flip.cooldown = 1
+    tt.info.hero_portrait = "kr2_hero_portraits_0017"
+    tt.info.portrait ="kr2_info_portraits_heroes_0017"
+    tt.info.i18n_key = "HERO_DWARF"
+    tt.main_script.update = scripts.hero_dwarf.update
+    tt.melee.attacks[1].cooldown = 1
+    tt.melee.attacks[1].damage_max = 30
+    tt.melee.attacks[1].damage_min = 10
+    tt.melee.attacks[1].hit_time = fts(9)
+    tt.melee.attacks[1].sound = "MeleeSword"
+    tt.melee.attacks[1].xp_gain_factor = 6
+    tt.melee.attacks[2] = CC("area_attack")
+    tt.melee.attacks[2].animation = "attack2"
+    tt.melee.attacks[2].cooldown = 8
+    tt.melee.attacks[2].damage_max = 120
+    tt.melee.attacks[2].damage_min = 60
+    tt.melee.attacks[2].damage_radius = 60
+    tt.melee.attacks[2].damage_type = bor(DAMAGE_TRUE, DAMAGE_FX_EXPLODE)
+    tt.melee.attacks[2].xp_gain_factor = 1.5
+    tt.melee.attacks[2].disabled = true
+    tt.melee.attacks[2].hit_decal = "fx_dwarf_area_quake"
+    tt.melee.attacks[2].hit_fx = "fx_dwarf_area_ring"
+    tt.melee.attacks[2].hit_offset = vec_2(29, 0)
+    tt.melee.attacks[2].hit_time = fts(29)
+    tt.melee.range = 80
+    tt.timed_attacks.list[1] = CC("custom_attack")
+    tt.timed_attacks.list[1].animations = {"giant_start", "attack2", "giant_end"}
+    tt.timed_attacks.list[1].scale_time = fts(10)
+    tt.timed_attacks.list[1].cooldown = 25
+    tt.timed_attacks.list[1].disabled = true
+    tt.timed_attacks.list[1].scale = 1.5
+    tt.timed_attacks.list[1].min_count = 3
+    tt.timed_attacks.list[1].vis_flags = F_AREA
+    tt.timed_attacks.list[1].vis_bans = F_FLYING
+    tt.timed_attacks.list[1].sound = "HeroReinforcementJump"
+    tt.timed_attacks.list[1].mod = "mod_dwarf_champion_stun"
+    tt.motion.max_speed = 2.7 * FPS
+    tt.regen.cooldown = 1
+    tt.render.sprites[1].anchor.y = anchor_y
+    tt.render.sprites[1].name = "idle"
+    tt.render.sprites[1].prefix = "hero_dwarf"
+    tt.render.sprites[1].angles = {}
+    tt.render.sprites[1].angles.walk = {"running"}
+    tt.render.sprites[1].scale = vec_1(1)
+    tt.soldier.melee_slot_offset.x = 10
+    tt.sound_events.change_rally_point = "DwarfHeroTaunt"
+    tt.sound_events.death = "DwarfHeroTauntDeath"
+    tt.sound_events.respawn = "DwarfHeroTauntIntro"
+    tt.sound_events.hero_room_select = "DwarfHeroTauntSelect"
+    tt.unit.hit_offset = vec_2(0, 12)
+    tt.unit.marker_offset = vec_2(0, -2)
+    tt.unit.mod_offset = vec_2(0, ady(22))
+
+    tt = RT("fx_dwarf_area_quake", "decal_timed")
+    tt.render.sprites[1].name = "fx_dwarf_area_quake"
+    tt.render.sprites[1].anchor.y = 0.24
+    tt.render.sprites[1].offset.y = 2
+    tt.render.sprites[1].scale = vec_2(0.8, 0.8)
+    tt.render.sprites[1].alpha = 166
+    tt.render.sprites[1].z = Z_DECALS
+    tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+    tt.render.sprites[2].offset.y = -22
+
+    tt = RT("fx_dwarf_area_ring", "decal_timed")
+    tt.render.sprites[1].name = "fx_dwarf_area_ring"
+    tt.render.sprites[1].z = Z_DECALS - 1
+    tt.render.sprites[1].scale = vec_1(1)
+
+    tt = RT("mod_dwarf_champion_stun", "mod_stun")
+    tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+    tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+
+    --[[
+        三代
+    --]]
+
     tt = RT("hero_elves_archer", "hero")
     AC(tt, "melee", "ranged", "dodge")
     image_y = 68
@@ -6210,8 +6368,7 @@ local function heroes()
     tt.idle_flip.chance = 0.4
     tt.idle_flip.cooldown = 1
     tt.info.hero_portrait = "kr3_hero_portraits_0001"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0001"
-    tt.info.ultimate_icon = "0001"
+    tt.info.portrait = "kr3_info_portraits_heroes_0001"
     tt.info.ultimate_pointer_style = "area"
     tt.info.i18n_key = "HERO_ELVES_ARCHER"
     tt.main_script.insert = scripts.hero_elves_archer.insert
@@ -6404,8 +6561,7 @@ local function heroes()
     tt.idle_flip.animations = {"idle"}
     tt.info.i18n_key = "HERO_ELVES_ELDRITCH"
     tt.info.hero_portrait = "kr3_hero_portraits_0004"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0004"
-    tt.info.ultimate_icon = "0004"
+    tt.info.portrait = "kr3_info_portraits_heroes_0004"
     tt.main_script.insert = scripts.hero_regson.insert
     tt.main_script.update = scripts.hero_regson.update
     tt.motion.max_speed = 3.8 * FPS
@@ -6467,7 +6623,7 @@ local function heroes()
     tt.melee.range = 65
     tt.timed_attacks.list[1] = CC("custom_attack")
     tt.timed_attacks.list[1].animation = "whirlwind_mirage"
-    tt.timed_attacks.list[1].cooldown = 36
+    tt.timed_attacks.list[1].cooldown = 30
     tt.timed_attacks.list[1].disabled = true
     tt.timed_attacks.list[1].fade_time = fts(4)
     tt.timed_attacks.list[1].fade_start_end_time = fts(7)
@@ -6597,10 +6753,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_lynn.level_up
     tt.hero.tombstone_show_time = fts(90)
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.hero_portrait = "kr3_hero_portraits_0014"
+    tt.info.hero_portrait = "kr3_hero_portraits_0012"
     tt.info.i18n_key = "HERO_ELVES_LYNN"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0014"
-    tt.info.ultimate_icon = "0013"
+    tt.info.portrait = "kr3_info_portraits_heroes_0012"
     tt.main_script.insert = scripts.hero_basic.insert
     tt.main_script.update = scripts.hero_lynn.update
     tt.motion.max_speed = 3 * FPS
@@ -6743,6 +6898,10 @@ local function heroes()
     tt.tween.props[2].sprite_id = 2
     tt.tween.remove = false
 
+    tt = RT("mod_lynn_despair_self", "mod_lynn_despair")
+    tt.speed_factor = 2 - tt.speed_factor
+    tt.inflicted_damage_factor = 2 - tt.inflicted_damage_factor
+
     tt = RT("mod_lynn_weakening", "modifier")
     AC(tt, "tween", "render")
     tt.armor_reduction = 0.7
@@ -6760,6 +6919,10 @@ local function heroes()
     tt.tween.props[2] = table.deepclone(tt.tween.props[1])
     tt.tween.props[2].sprite_id = 2
     tt.tween.remove = false
+
+    tt = RT("mod_lynn_weakening_self", "mod_lynn_weakening")
+    tt.armor_reduction = -tt.armor_reduction * 0.5
+    tt.magic_armor_reduction = -tt.magic_armor_reduction * 0.5
 
     tt = RT("hero_wilbur", "hero")
     AC(tt, "ranged", "timed_attacks")
@@ -6822,10 +6985,9 @@ local function heroes()
     tt.hero.use_custom_spawn_point = true
     tt.idle_flip.cooldown = 10
     tt.info.damage_icon = "arrow"
-    tt.info.hero_portrait = "kr3_hero_portraits_0017"
+    tt.info.hero_portrait = "kr3_hero_portraits_0015"
     tt.info.i18n_key = "HERO_ELVES_GYRO"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0017"
-    tt.info.ultimate_icon = "0016"
+    tt.info.portrait = "kr3_info_portraits_heroes_0015"
     tt.main_script.insert = scripts.hero_wilbur.insert
     tt.main_script.update = scripts.hero_wilbur.update
     tt.motion.max_speed = 1.8 * FPS
@@ -7079,10 +7241,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_veznan.level_up
     tt.hero.tombstone_show_time = fts(90)
     tt.info.damage_icon = "magic"
-    tt.info.hero_portrait = "kr3_hero_portraits_0006"
+    tt.info.hero_portrait = "kr3_hero_portraits_0008"
     tt.info.i18n_key = "HERO_ELVES_VEZNAN"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0006"
-    tt.info.ultimate_icon = "0006"
+    tt.info.portrait = "kr3_info_portraits_heroes_0008"
     tt.main_script.update = scripts.hero_veznan.update
     tt.motion.max_speed = 2 * FPS
     tt.regen.cooldown = 1
@@ -7246,10 +7407,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_durax.level_up
     tt.hero.tombstone_show_time = fts(90)
     tt.info.fn = scripts.hero_durax.get_info
-    tt.info.hero_portrait = "kr3_hero_portraits_0012"
+    tt.info.hero_portrait = "kr3_hero_portraits_0011"
     tt.info.i18n_key = "HERO_ELVES_DURAX"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0012"
-    tt.info.ultimate_icon = "0012"
+    tt.info.portrait = "kr3_info_portraits_heroes_0011"
     tt.main_script.update = scripts.hero_durax.update
     tt.motion.max_speed = 2 * FPS
     tt.regen.cooldown = 1
@@ -7385,14 +7545,15 @@ local function heroes()
         [9] = 3
     }
     tt.hero.skills.shield_strike = CC("hero_skill")
-    tt.hero.skills.shield_strike.damage_max = {36, 46, 52}
-    tt.hero.skills.shield_strike.damage_min = {20, 26, 30}
-    tt.hero.skills.shield_strike.rebounds = {3, 4, 5}
-    tt.hero.skills.shield_strike.xp_gain = {50, 100, 150}
+    tt.hero.skills.shield_strike.damage_max = {36, 46, 56, 66}
+    tt.hero.skills.shield_strike.damage_min = {20, 26, 32, 38}
+    tt.hero.skills.shield_strike.rebounds = {3, 4, 5, 5}
+    tt.hero.skills.shield_strike.xp_gain = {50, 100, 150, 200}
     tt.hero.skills.shield_strike.xp_level_steps = {
         [1] = 1,
         [4] = 2,
-        [7] = 3
+        [7] = 3,
+        [10] = 4,
     }
     tt.hero.skills.sybarite = CC("hero_skill")
     tt.hero.skills.sybarite.heal_hp = {80, 160, 240}
@@ -7419,8 +7580,7 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(90)
     tt.info.hero_portrait = "kr3_hero_portraits_0005"
     tt.info.i18n_key = "HERO_ELVES_DENAS"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0005"
-    tt.info.ultimate_icon = "0005"
+    tt.info.portrait = "kr3_info_portraits_heroes_0005"
     tt.main_script.insert = scripts.hero_elves_denas.insert
     tt.main_script.update = scripts.hero_elves_denas.update
     tt.motion.max_speed = 2.75 * FPS
@@ -7554,7 +7714,7 @@ local function heroes()
 
     tt = RT("mod_elves_denas_sybarite", "modifier")
     AC(tt, "render")
-    tt.inflicted_damage_factor = 2
+    tt.inflicted_damage_factor = 2.5
     tt.heal_hp = nil
     tt.main_script.insert = scripts.mod_elves_denas_sybarite.insert
     tt.main_script.remove = scripts.mod_elves_denas_sybarite.remove
@@ -7629,8 +7789,7 @@ local function heroes()
     tt.info.damage_icon = "magic"
     tt.info.i18n_key = "HERO_ELVES_ELEMENTALIST"
     tt.info.hero_portrait = "kr3_hero_portraits_0002"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0002"
-    tt.info.ultimate_icon = "0002"
+    tt.info.portrait = "kr3_info_portraits_heroes_0002"
     tt.main_script.insert = scripts.hero_arivan.insert
     tt.main_script.update = scripts.hero_arivan.update
     tt.motion.max_speed = 3 * FPS
@@ -7969,10 +8128,9 @@ local function heroes()
     tt.idle_flip.cooldown = 10
     tt.info.damage_icon = "fireball"
     tt.info.fn = scripts.hero_phoenix.get_info
-    tt.info.hero_portrait = "kr3_hero_portraits_0011"
+    tt.info.hero_portrait = "kr3_hero_portraits_0010"
     tt.info.i18n_key = "HERO_ELVES_PHOENIX"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0011"
-    tt.info.ultimate_icon = "0011"
+    tt.info.portrait = "kr3_info_portraits_heroes_0010"
     tt.main_script.insert = scripts.hero_phoenix.insert
     tt.main_script.update = scripts.hero_phoenix.update
     tt.motion.max_speed = 3.5 * FPS
@@ -7997,7 +8155,7 @@ local function heroes()
     tt.sound_events.hero_room_select = "ElvesHeroPhoenixTauntSelect"
     tt.sound_events.insert = "ElvesHeroPhoenixTauntIntro"
     tt.sound_events.respawn = "ElvesHeroPhoenixTauntIntro"
-    tt.ui.click_rect = IS_PHONE and r(-35, 90, 70, 75) or r(-25, 80, 50, 55)
+    tt.ui.click_rect = r(-25, 80, 50, 55)
     tt.unit.hit_offset = vec_2(0, 100)
     tt.unit.hide_after_death = true
     tt.unit.mod_offset = vec_2(0, 134)
@@ -8010,7 +8168,7 @@ local function heroes()
     tt.ranged.attacks[1].min_range = 0
     tt.ranged.attacks[1].max_range = 150
     tt.ranged.attacks[1].shoot_time = fts(23)
-    tt.ranged.attacks[1].sync_animation = true
+    -- tt.ranged.attacks[1].sync_animation = true
     tt.ranged.attacks[1].animation = "attack"
     tt.ranged.attacks[1].sound_shoot = "ElvesHeroPhoenixAttack"
     tt.ranged.attacks[2] = CC("bullet_attack")
@@ -8021,7 +8179,7 @@ local function heroes()
     tt.ranged.attacks[2].min_range = 0
     tt.ranged.attacks[2].max_range = 300
     tt.ranged.attacks[2].shoot_times = {}
-    tt.ranged.attacks[2].sync_animation = true
+    -- tt.ranged.attacks[2].sync_animation = true
     tt.ranged.attacks[2].animations = {nil, "birdThrow"}
     tt.ranged.attacks[2].sound = "ElvesHeroPhoenixBlazingOffspringShoot"
     tt.ranged.attacks[2].loops = 1
@@ -8248,8 +8406,8 @@ local function heroes()
     tt.hero.level_stats.melee_damage_max = {29, 34, 38, 43, 48, 53, 58, 62, 67, 72}
     tt.hero.level_stats.melee_damage_min = {19, 22, 26, 29, 32, 35, 38, 42, 45, 48}
     tt.hero.skills.rootspikes = CC("hero_skill")
-    tt.hero.skills.rootspikes.damage_max = {50, 90, 120}
-    tt.hero.skills.rootspikes.damage_min = {30, 50, 80}
+    tt.hero.skills.rootspikes.damage_max = {60, 90, 120}
+    tt.hero.skills.rootspikes.damage_min = {40, 60, 80}
     tt.hero.skills.rootspikes.xp_gain = {100, 200, 300}
     tt.hero.skills.rootspikes.xp_level_steps = {
         [1] = 1,
@@ -8267,8 +8425,8 @@ local function heroes()
         [8] = 3
     }
     tt.hero.skills.branchball = CC("hero_skill")
-    tt.hero.skills.branchball.hp_max = {300, 750, 9000000000}
-    tt.hero.skills.branchball.xp_gain = {157, 314, 471}
+    tt.hero.skills.branchball.hp_max = {450, 900, 9000000000}
+    tt.hero.skills.branchball.xp_gain = {160, 320, 480}
     tt.hero.skills.branchball.xp_level_steps = {
         [4] = 1,
         [7] = 2,
@@ -8301,11 +8459,10 @@ local function heroes()
     tt.hero.hide_after_death = false
     tt.hero.tombstone_show_time = nil
     tt.info.i18n_key = "HERO_ELVES_FOREST_ELEMENTAL"
-    tt.info.ultimate_icon = "0007"
     tt.info.ultimate_pointer_style = "area"
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.hero_portrait = "kr3_hero_portraits_0007"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0007"
+    tt.info.portrait = "kr3_info_portraits_heroes_0007"
     tt.main_script.update = scripts.hero_bravebark.update
     tt.motion.max_speed = 2 * FPS
     tt.regen.cooldown = 1
@@ -8321,7 +8478,7 @@ local function heroes()
     tt.teleport.delay = fts(10)
     tt.teleport.fx_out = "fx_bravebark_teleport_out"
     tt.teleport.fx_in = "fx_bravebark_teleport_in"
-    tt.ui.click_rect = IS_PHONE and r(-35, -15, 70, 80) or r(-20, -5, 40, 60)
+    tt.ui.click_rect = r(-20, -5, 40, 60)
     tt.unit.hit_offset = vec_2(0, 25)
     tt.unit.mod_offset = vec_2(0, 25)
     tt.melee.attacks[1].cooldown = 1.8
@@ -8476,9 +8633,8 @@ local function heroes()
     tt.info.damage_icon = "arrow"
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.hero_portrait = "kr3_hero_portraits_0003"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0003"
+    tt.info.portrait = "kr3_info_portraits_heroes_0003"
     tt.info.i18n_key = "HERO_ELVES_PIXIE"
-    tt.info.ultimate_icon = "0003"
     tt.info.ultimate_pointer_style = "area"
     tt.main_script.update = scripts.hero_catha.update
     tt.motion.max_speed = 3.5 * FPS
@@ -8644,9 +8800,9 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_lilith.level_up
     tt.hero.tombstone_show_time = fts(90)
-    tt.info.hero_portrait = "kr3_hero_portraits_0016"
+    tt.info.hero_portrait = "kr3_hero_portraits_0014"
     tt.info.i18n_key = "HERO_ELVES_FALLEN_ANGEL"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0016"
+    tt.info.portrait = "kr3_info_portraits_heroes_0014"
     tt.main_script.insert = scripts.hero_lilith.insert
     tt.main_script.update = scripts.hero_lilith.update
     tt.motion.max_speed = 3.3 * FPS
@@ -8838,8 +8994,8 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_xin.level_up
     tt.hero.tombstone_show_time = fts(90)
-    tt.info.hero_portrait = "kr3_hero_portraits_0008"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0008"
+    tt.info.hero_portrait = "kr3_hero_portraits_0009"
+    tt.info.portrait = "kr3_info_portraits_heroes_0009"
     tt.info.i18n_key = "HERO_ELVES_PANDA"
     tt.main_script.update = scripts.hero_xin.update
     tt.motion.max_speed = 2.7 * FPS
@@ -9019,7 +9175,7 @@ local function heroes()
     }
     tt.hero.skills.liquid_fire = CC("hero_skill")
     tt.hero.skills.liquid_fire.flames_count = {6, 12, 18}
-    tt.hero.skills.liquid_fire.mod_damage = {3, 5, 7}
+    tt.hero.skills.liquid_fire.mod_damage = {4, 6, 8}
     tt.hero.skills.liquid_fire.xp_gain = {120, 240, 360}
     tt.hero.skills.liquid_fire.xp_level_steps = {
         [4] = 1,
@@ -9035,6 +9191,17 @@ local function heroes()
         [7] = 3,
         [10] = 4
     }
+    tt.hero.skills.urination = CC("hero_skill")
+    tt.hero.skills.urination.xp_level_steps = {
+        [1] = 1,
+        [4] = 2,
+        [7] = 3
+    }
+    tt.hero.skills.urination.count = {
+        3,
+        4,
+        5
+    }
     tt.hero.skills.ultimate.controller_name = "hero_faustus_ultimate"
     tt.health.dead_lifetime = 15
     tt.health_bar.draw_order = -1
@@ -9045,10 +9212,9 @@ local function heroes()
     tt.hero.tombstone_show_time = nil
     tt.hero.use_custom_spawn_point = true
     tt.idle_flip.cooldown = 10
-    tt.info.hero_portrait = "kr3_hero_portraits_0009"
+    tt.info.hero_portrait = "kr3_hero_portraits_0016"
     tt.info.i18n_key = "HERO_ELVES_FAUSTUS"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0009"
-    tt.info.ultimate_icon = "0009"
+    tt.info.portrait = "kr3_info_portraits_heroes_0016"
     tt.info.ultimate_pointer_style = "area"
     tt.main_script.insert = scripts.hero_faustus.insert
     tt.main_script.update = scripts.hero_faustus.update
@@ -9074,7 +9240,7 @@ local function heroes()
     tt.sound_events.respawn = "ElvesHeroFaustusTauntIntro"
     tt.sound_events.insert = "ElvesHeroFaustusTauntIntro"
     tt.sound_events.hero_room_select = "ElvesHeroFaustusTauntSelect"
-    tt.ui.click_rect = IS_PHONE and r(-35, 90, 70, 75) or r(-25, 100, 50, 55)
+    tt.ui.click_rect = r(-25, 100, 50, 55)
     tt.unit.hit_offset = vec_2(0, 135)
     tt.unit.hide_after_death = true
     tt.unit.mod_offset = vec_2(0, 134)
@@ -9182,6 +9348,37 @@ local function heroes()
     tt.sound_events.insert = nil
     tt.upgrades_disabled = true
 
+    tt = E:register_t("aura_teleport_faustus", "aura")
+    E:add_comps(tt, "render", "tween")
+    tt.main_script.insert = scripts.aura_apply_mod.insert
+    tt.main_script.update = scripts.aura_apply_mod.update
+    tt.aura.mod = "mod_teleport_faustus"
+    tt.aura.cycle_time = 1000000000
+    tt.aura.duration = fts(50)
+    tt.aura.radius = 75
+    tt.aura.vis_flags = bor(F_RANGED, F_TELEPORT)
+    tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO, F_FREEZE)
+    tt.aura.targets_per_cycle = nil
+    tt.render.sprites[1].name = "aura_teleport_faustus"
+    tt.tween.remove = false
+    tt.tween.props[1].keys = {{0, 55}, {fts(10), 255}, {fts(40), 255}, {fts(50), 0}}
+    tt.render.sprites[1].scale = vec_1(1.45)
+
+    tt = E:register_t("mod_teleport_faustus", "mod_teleport")
+    tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
+    tt.modifier.vis_bans = bor(F_BOSS)
+    tt.max_times_applied = nil
+    tt.nodes_offset = -35
+    tt.nodeslimit = 10
+    -- tt.delay_start = fts(2)
+    tt.delay_start = fts(32)
+    tt.hold_time = 0.4
+    tt.delay_end = fts(2)
+    tt.fx_start = "fx_teleport_faustus"
+    tt.fx_end = "fx_teleport_faustus"
+    tt.damage_base = 50
+    tt.damage_inc = 25
+
     tt = RT("hero_faustus_ultimate")
     AC(tt, "pos", "main_script", "sound_events")
     tt.cooldown = 32
@@ -9248,10 +9445,9 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_rag.level_up
     tt.hero.tombstone_show_time = fts(90)
-    tt.info.hero_portrait = "kr3_hero_portraits_0010"
+    tt.info.hero_portrait = "kr3_hero_portraits_0006"
     tt.info.i18n_key = "HERO_ELVES_RAG"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0010"
-    tt.info.ultimate_icon = "0010"
+    tt.info.portrait = "kr3_info_portraits_heroes_0006"
     tt.info.ultimate_pointer_style = "area"
     tt.main_script.update = scripts.hero_rag.update
     tt.motion.max_speed = 2.2 * FPS
@@ -9433,7 +9629,7 @@ local function heroes()
     tt.hero.level_stats.melee_damage_min = {18, 20, 23, 25, 28, 30, 32, 35, 37, 40}
     tt.hero.skills.sharp_claws = CC("hero_skill")
     tt.hero.skills.sharp_claws.damage = {3, 6, 9}
-    tt.hero.skills.sharp_claws.extra_damage = {12, 25, 40}
+    tt.hero.skills.sharp_claws.extra_damage = {15, 30, 45}
     tt.hero.skills.sharp_claws.xp_gain = {10, 20, 30}
     tt.hero.skills.sharp_claws.xp_level_steps = {
         [1] = 1,
@@ -9449,14 +9645,14 @@ local function heroes()
         [9] = 3
     }
     tt.hero.skills.lions_fur = CC("hero_skill")
-    tt.hero.skills.lions_fur.extra_hp = {40, 80, 120}
+    tt.hero.skills.lions_fur.extra_hp = {45, 90, 135}
     tt.hero.skills.lions_fur.xp_level_steps = {
         [1] = 1,
         [4] = 2,
         [7] = 3
     }
     tt.hero.skills.grievous_bites = CC("hero_skill")
-    tt.hero.skills.grievous_bites.damage = {20, 50, 95}
+    tt.hero.skills.grievous_bites.damage = {30, 65, 100}
     tt.hero.skills.grievous_bites.xp_gain = {30, 60, 90}
     tt.hero.skills.grievous_bites.xp_level_steps = {
         [2] = 1,
@@ -9479,9 +9675,9 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_bruce.level_up
     tt.hero.tombstone_show_time = fts(90)
-    tt.info.hero_portrait = "kr3_hero_portraits_0015"
+    tt.info.hero_portrait = "kr3_hero_portraits_0013"
     tt.info.i18n_key = "HERO_ELVES_BRUCE"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0015"
+    tt.info.portrait = "kr3_info_portraits_heroes_0013"
     tt.main_script.insert = scripts.hero_bruce.insert
     tt.main_script.update = scripts.hero_bruce.update
     tt.motion.max_speed = 3.3 * FPS
@@ -9630,9 +9826,9 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 43)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.tombstone_show_time = fts(90)
-    tt.info.hero_portrait = "kr3_hero_portraits_0018"
+    tt.info.hero_portrait = "kr3_hero_portraits_0019"
     tt.info.i18n_key = "HERO_ELVES_BOLVERK"
-    tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0018"
+    tt.info.portrait = "kr3_info_portraits_heroes_0019"
     tt.hero.fn_level_up = scripts.hero_bolverk.level_up
     tt.main_script.insert = scripts.hero_bolverk.insert
     tt.main_script.update = scripts.hero_bolverk.update
@@ -9719,111 +9915,10 @@ local function heroes()
     tt.dps.damage_min = 5
     tt.dps.damage_type = DAMAGE_POISON
 
-    tt = RT("hero_dwarf", "hero")
-    AC(tt, "melee", "timed_attacks")
-    image_y = 94
-    anchor_y = 0.13
-    tt.hero.level_stats.armor = {0.43, 0.46, 0.49, 0.52, 0.55, 0.58, 0.61, 0.64, 0.67, 0.7}
-    tt.hero.level_stats.hp_max = {285, 300, 315, 330, 345, 360, 375, 390, 405, 420}
-    tt.hero.level_stats.melee_damage_min = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-    tt.hero.level_stats.melee_damage_max = {12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
-    tt.hero.skills.ring = CC("hero_skill")
-    tt.hero.skills.ring.xp_level_steps = {
-        [1] = 1,
-        [4] = 2,
-        [7] = 3,
-        [10] = 4
-    }
-    tt.hero.skills.ring.damage_min = {60, 80, 100, 120}
-    tt.hero.skills.ring.damage_max = {80, 100, 120, 140}
-    tt.hero.skills.giant = CC("hero_skill")
-    tt.hero.skills.giant.xp_level_steps = {
-        [2] = 1,
-        [5] = 2,
-        [8] = 3
-    }
-    tt.hero.skills.giant.scale = {1.5, 2, 2.5}
-    tt.hero.skills.giant.xp_gain_factor = 150
-    tt.health.armor = 0.43
-    tt.health.dead_lifetime = 15
-    tt.health.hp_max = 420
-    tt.health_bar.offset = vec_2(0, ady(50))
-    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.hero.tombstone_show_time = fts(60)
-    tt.hero.fn_level_up = scripts.hero_dwarf.level_up
-    tt.idle_flip.cooldown = 1
-    tt.info.hero_portrait = "kr2_hero_portraits_0010"
-    tt.info.portrait = IS_PHONE and "portraits_hero_0013" or "kr2_info_portraits_heroes_0013"
-    tt.info.i18n_key = "HERO_DWARF"
-    tt.main_script.update = scripts.hero_dwarf.update
-    tt.melee.attacks[1].cooldown = 1
-    tt.melee.attacks[1].damage_max = 30
-    tt.melee.attacks[1].damage_min = 10
-    tt.melee.attacks[1].hit_time = fts(9)
-    tt.melee.attacks[1].sound = "MeleeSword"
-    tt.melee.attacks[1].xp_gain_factor = 6
-    tt.melee.attacks[2] = CC("area_attack")
-    tt.melee.attacks[2].animation = "attack2"
-    tt.melee.attacks[2].cooldown = 8
-    tt.melee.attacks[2].damage_max = 120
-    tt.melee.attacks[2].damage_min = 60
-    tt.melee.attacks[2].damage_radius = 60
-    tt.melee.attacks[2].damage_type = bor(DAMAGE_TRUE, DAMAGE_FX_EXPLODE)
-    tt.melee.attacks[2].xp_gain_factor = 1.5
-    tt.melee.attacks[2].disabled = true
-    tt.melee.attacks[2].hit_decal = "fx_dwarf_area_quake"
-    tt.melee.attacks[2].hit_fx = "fx_dwarf_area_ring"
-    tt.melee.attacks[2].hit_offset = vec_2(29, 0)
-    tt.melee.attacks[2].hit_time = fts(29)
-    tt.melee.range = 80
-    tt.timed_attacks.list[1] = CC("custom_attack")
-    tt.timed_attacks.list[1].animations = {"giant_start", "attack2", "giant_end"}
-    tt.timed_attacks.list[1].scale_time = fts(10)
-    tt.timed_attacks.list[1].cooldown = 25
-    tt.timed_attacks.list[1].disabled = true
-    tt.timed_attacks.list[1].scale = 1.5
-    tt.timed_attacks.list[1].min_count = 3
-    tt.timed_attacks.list[1].vis_flags = F_AREA
-    tt.timed_attacks.list[1].vis_bans = F_FLYING
-    tt.timed_attacks.list[1].sound = "HeroReinforcementJump"
-    tt.timed_attacks.list[1].mod = "mod_dwarf_champion_stun"
-    tt.motion.max_speed = 2.7 * FPS
-    tt.regen.cooldown = 1
-    tt.render.sprites[1].anchor.y = anchor_y
-    tt.render.sprites[1].name = "idle"
-    tt.render.sprites[1].prefix = "hero_dwarf"
-    tt.render.sprites[1].angles = {}
-    tt.render.sprites[1].angles.walk = {"running"}
-    tt.render.sprites[1].scale = vec_1(1)
-    tt.soldier.melee_slot_offset.x = 10
-    tt.sound_events.change_rally_point = "DwarfHeroTaunt"
-    tt.sound_events.death = "DwarfHeroTauntDeath"
-    tt.sound_events.respawn = "DwarfHeroTauntIntro"
-    tt.sound_events.hero_room_select = "DwarfHeroTauntSelect"
-    tt.unit.hit_offset = vec_2(0, 12)
-    tt.unit.marker_offset = vec_2(0, -2)
-    tt.unit.mod_offset = vec_2(0, ady(22))
+    --[[
+        五代
+    --]]
 
-    tt = RT("fx_dwarf_area_quake", "decal_timed")
-    tt.render.sprites[1].name = "fx_dwarf_area_quake"
-    tt.render.sprites[1].anchor.y = 0.24
-    tt.render.sprites[1].offset.y = 2
-    tt.render.sprites[1].scale = vec_2(0.8, 0.8)
-    tt.render.sprites[1].alpha = 166
-    tt.render.sprites[1].z = Z_DECALS
-    tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-    tt.render.sprites[2].offset.y = -22
-
-    tt = RT("fx_dwarf_area_ring", "decal_timed")
-    tt.render.sprites[1].name = "fx_dwarf_area_ring"
-    tt.render.sprites[1].z = Z_DECALS - 1
-    tt.render.sprites[1].scale = vec_1(1)
-
-    tt = RT("mod_dwarf_champion_stun", "mod_stun")
-    tt.modifier.vis_flags = bor(F_MOD, F_STUN)
-    tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
-
-    -- kr5
     tt = RT("soldier_hero_hunter_beast", "decal_scripted")
     AC(tt, "pos", "main_script", "attacks", "force_motion", "tween", "sound_events", "force_motion")
     b = balance.heroes.hero_hunter.beasts
@@ -9880,7 +9975,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_HUNTER_ULTIMATE_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0038"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0038"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "dante"
@@ -9893,7 +9988,7 @@ local function heroes()
     tt.render.sprites[1].angles_flip_vertical = {
         ranged = true
     }
-    tt.render.sprites[1].scale = vec_1(0.52)
+    tt.render.sprites[1].scale = vec_1(0.52 * 1080 / 768)
     tt.unit.hit_offset = vec_2(0, 16)
     tt.unit.size = UNIT_SIZE_LARGE
     tt.unit.fade_time_after_death = tt.health.dead_lifetime
@@ -10000,9 +10095,9 @@ local function heroes()
     tt.health.dead_lifetime = b.dead_lifetime
     tt.health_bar.offset = vec_2(0, 40)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.info.hero_portrait = "hero_portraits_0010"
+    tt.info.hero_portrait = "kr5_hero_portraits_0006"
     tt.info.i18n_key = "HERO_HUNTER"
-    tt.info.portrait = "portraits_hero_0010"
+    tt.info.portrait = "kr5_portraits_hero_0006"
     tt.main_script.insert = scripts.hero_hunter.insert
     tt.main_script.update = scripts.hero_hunter.update
     tt.motion.max_speed = b.speed
@@ -10322,9 +10417,9 @@ local function heroes()
     tt.health.dead_lifetime = b.dead_lifetime
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_space_elf.level_up
-    tt.info.hero_portrait = "hero_portraits_0005"
+    tt.info.hero_portrait = "kr5_hero_portraits_0007"
     tt.info.i18n_key = "HERO_SPACE_ELF"
-    tt.info.portrait = "portraits_hero_0002"
+    tt.info.portrait = "kr5_portraits_hero_0007"
     tt.main_script.insert = scripts.hero_space_elf.insert
     tt.main_script.update = scripts.hero_space_elf.update
     tt.motion.max_speed = b.speed
@@ -10441,7 +10536,7 @@ local function heroes()
     tt.is_kr5 = true
     tt.info.i18n_key = "HERO_SPACE_ELF_ASTRAL_REFLECTION_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "portraits_hero_0002ar"
+    tt.info.portrait = "kr5_portraits_hero_0007ar"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "hero_therien_reflection"
@@ -10764,10 +10859,9 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 40)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_raelyn.level_up
-    tt.info.hero_portrait = "hero_portraits_0002"
+    tt.info.hero_portrait = "kr5_hero_portraits_0002"
     tt.info.i18n_key = "HERO_RAELYN"
-    tt.info.portrait = "portraits_hero" .. "_0003"
-    tt.info.ultimate_icon = "0005"
+    tt.info.portrait = "kr5_portraits_hero_0002"
     tt.main_script.insert = scripts.hero_raelyn.insert
     tt.main_script.update = scripts.hero_raelyn.update
     tt.motion.max_speed = b.speed
@@ -10984,7 +11078,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_RAELYN_ULTIMATE_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0009"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0009"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "hero_raelyn_command_orders_dark_knight"
@@ -11154,9 +11248,9 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 40)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health.hp_max = b.hp_max[1]
-    tt.info.hero_portrait = "hero_portraits_0008"
+    tt.info.hero_portrait = "kr5_hero_portraits_0004"
     tt.info.i18n_key = "HERO_VENOM"
-    tt.info.portrait = "portraits_hero" .. "_0008"
+    tt.info.portrait = "kr5_portraits_hero_0004"
     tt.main_script.insert = scripts.hero_venom.insert
     tt.main_script.update = scripts.hero_venom.update
     tt.motion.max_speed = b.speed
@@ -11483,9 +11577,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_dragon_gem.level_up
     tt.hero.use_custom_spawn_point = true
     tt.idle_flip.cooldown = 10
-    tt.info.hero_portrait = "hero_portraits_0011"
+    tt.info.hero_portrait = "kr5_hero_portraits_0012"
     tt.info.i18n_key = "HERO_DRAGON_GEM"
-    tt.info.portrait = "portraits_hero" .. "_0011"
+    tt.info.portrait = "kr5_portraits_hero_0012"
     tt.main_script.insert = scripts.hero_dragon_gem.insert
     tt.main_script.update = scripts.hero_dragon_gem.update
     tt.motion.max_speed = b.speed
@@ -11801,7 +11895,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0046"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0046"
     tt.info.random_name_format = "SOLDIER_HERO_WITCH_CAT_%i_NAME"
     tt.info.random_name_count = 8
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -11840,7 +11934,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0049"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0049"
     tt.info.random_name_format = "SOLDIER_HERO_WITCH_DECOY_NAME"
     tt.info.random_name_count = 8
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -11954,9 +12048,9 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 40)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.hero.fn_level_up = scripts.hero_witch.level_up
-    tt.info.hero_portrait = "hero_portraits_0014"
+    tt.info.hero_portrait = "kr5_hero_portraits_0013"
     tt.info.i18n_key = "HERO_WITCH"
-    tt.info.portrait = "portraits_hero_0014"
+    tt.info.portrait = "kr5_portraits_hero_0013"
     tt.main_script.insert = scripts.hero_witch.insert
     tt.main_script.update = scripts.hero_witch.update
     tt.motion.max_speed = b.speed
@@ -12059,7 +12153,7 @@ local function heroes()
     tt.health.magic_armor = b.magic_armor
     tt.health_bar.offset = vec_2(0, 32)
     tt.info.enc_icon = 1
-    tt.info.portrait = "gui_bottom_info_image_enemies_0050"
+    tt.info.portrait = "kr5_gui_bottom_info_image_enemies_0050"
     tt.unit.hit_offset = vec_2(0, 14)
     tt.unit.head_offset = vec_2(0, 5)
     tt.unit.mod_offset = vec_2(0, 10)
@@ -12076,7 +12170,7 @@ local function heroes()
     tt.clicks_to_destroy = b.clicks_to_destroy
 
     tt = RT("enemy_pumpkin_witch_flying", "enemy_pumpkin_witch")
-    tt.info.portrait = "gui_bottom_info_image_enemies_0049"
+    tt.info.portrait = "kr5_gui_bottom_info_image_enemies_0049"
     tt.flight_height = 47
     tt.health_bar.offset = vec_2(0, tt.flight_height + 40)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -12470,10 +12564,9 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_dragon_bone.level_up
     tt.hero.use_custom_spawn_point = true
     tt.idle_flip.cooldown = 10
-    tt.info.hero_portrait = "hero_portraits_0013"
+    tt.info.hero_portrait = "kr5_hero_portraits_0014"
     tt.info.i18n_key = "HERO_DRAGON_BONE"
-    tt.info.portrait = "portraits_hero_0013"
-    tt.info.ultimate_icon = "0014"
+    tt.info.portrait = "kr5_portraits_hero_0014"
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
     tt.info.stat_damage = b.stats.damage
@@ -12602,6 +12695,7 @@ local function heroes()
     tt.tween.props[1].sprite_id = 2
     tt.tween.props[1].name = "alpha"
     tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+
     tt = RT("hero_dragon_bone_ultimate")
     b = balance.heroes.hero_dragon_bone.ultimate
     AC(tt, "pos", "main_script", "sound_events")
@@ -12627,7 +12721,7 @@ local function heroes()
     tt.health.armor = b.armor
     tt.health.hp_max = b.hp
     tt.health_bar.offset = vec_2(0, 30)
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0048"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0048"
     tt.info.random_name_format = nil
     tt.info.random_name_count = nil
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -13049,7 +13143,6 @@ local function heroes()
         [7] = 3,
         [10] = 4
     }
-    tt.hero.team = TEAM_LINIREA
     tt.health.dead_lifetime = 15
     tt.health_bar.draw_order = -1
     tt.health_bar.offset = v(0, 170)
@@ -13061,10 +13154,9 @@ local function heroes()
     tt.hero.use_custom_spawn_point = true
     tt.idle_flip.cooldown = 10
     tt.info.damage_icon = "magic"
-    tt.info.hero_portrait = "hero_portraits_0007"
+    tt.info.hero_portrait = "kr5_hero_portraits_0011"
     tt.info.i18n_key = "HERO_LUMENIR"
-    tt.info.portrait = "portraits_hero" .. "_0007"
-    tt.info.ultimate_icon = "0006"
+    tt.info.portrait = "kr5_portraits_hero_0011"
     tt.info.ultimate_pointer_style = "area"
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
@@ -13341,6 +13433,7 @@ local function heroes()
     tt.main_script.update = scripts.bolt_lumenir.update
     tt.render.sprites[1].name = "hero_lumenir_attack_projectile_idle"
     tt.render.sprites[1].z = Z_FLYING_HEROES
+
     tt = RT("bolt_lumenir_mini", "bolt_lumenir")
     tt.bullet.damage_type = DAMAGE_TRUE
     tt.force_motion.max_v = 300
@@ -13447,40 +13540,38 @@ local function heroes()
     tt.particle_system.z = Z_OBJECTS
 
     tt = E:register_t("fx_hero_wukong_clones_spawn", "fx")
-    tt.render.sprites[1].name = "hero_wukong_clone_smoke_in"
+    tt.render.sprites[1].name = "hero_wukong_smoke_in"
     tt.render.sprites[1].sort_y_offset = -5
     tt.render.sprites[1].z = Z_OBJECTS
 
     tt = E:register_t("fx_hero_wukong_giant_staff", "decal_scripted")
-    E:add_comps(tt, "tween")
+    -- E:add_comps(tt, "tween")
     tt.main_script.update = scripts.fx_hero_wukong_giant_staff.update
-    tt.render.sid_staff = 1
-    tt.render.sid_decal = 2
-    tt.render.sprites[tt.render.sid_staff].prefix = "hero_wukong_weapon"
-    tt.render.sprites[tt.render.sid_staff].name = "in"
-    tt.render.sprites[tt.render.sid_staff].z = Z_OBJECTS
-    tt.render.sprites[tt.render.sid_staff].scale = vv(2)
-    tt.render.sprites[tt.render.sid_decal] = E:clone_c("sprite")
-    tt.render.sprites[tt.render.sid_decal].name = "hero_wukong_baston_crack"
-    tt.render.sprites[tt.render.sid_decal].animated = false
-    tt.render.sprites[tt.render.sid_decal].z = Z_DECALS
-    tt.tween.props[1].keys = {
-        {
-            0,
-            255
-        },
-        {
-            2,
-            255
-        },
-        {
-            2.5,
-            0
-        }
-    }
-    tt.tween.props[1].sprite_id = tt.render.sid_decal
-    tt.tween.disabled = true
-    tt.tween.remove = true
+    tt.render.sprites[1].prefix = "hero_wukong_weapon"
+    tt.render.sprites[1].name = "in"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].scale = vv(2)
+    -- tt.render.sprites[2] = E:clone_c("sprite")
+    -- tt.render.sprites[2].name = "hero_wukong_baston_crack"
+    -- tt.render.sprites[2].animated = false
+    -- tt.render.sprites[2].z = Z_DECALS
+    -- tt.tween.props[1].keys = {
+    --     {
+    --         0,
+    --         255
+    --     },
+    --     {
+    --         2,
+    --         255
+    --     },
+    --     {
+    --         2.5,
+    --         0
+    --     }
+    -- }
+    -- tt.tween.props[1].sprite_id = 2
+    -- tt.tween.disabled = true
+    -- tt.tween.remove = true
 
     tt = E:register_t("fx_zhu_apprentice_respawn", "fx")
     tt.render.sprites[1].name = "hero_wukong_woolong_spawn_FX_spawn"
@@ -13549,6 +13640,7 @@ local function heroes()
 
     tt = E:register_t("decal_hero_wukong_ranged_attack_staff", "decal_scripted")
     E:add_comps(tt, "tween")
+    tt.damage_factor = 1
     b = balance.heroes.hero_wukong.pole_ranged
     tt.main_script.update = scripts.decal_hero_wukong_ranged_attack_staff.update
     tt.render.sprites[1].prefix = "hero_wukong_attack_range"
@@ -13561,7 +13653,7 @@ local function heroes()
     tt.mod_stun = "mod_hero_wukong_ranged_pole_stun"
     tt.damage_radius = b.damage_radius
     tt.damage_flags = bor(F_AREA)
-    tt.damage_bans = bor(F_FLYING)
+    tt.damage_bans = F_NONE
     tt.damage_type = b.damage_type
     tt.damage_max = nil
     tt.damage_min = nil
@@ -13616,7 +13708,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = v(0, 45)
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0073"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0073"
     tt.info.random_name_count = nil
     tt.info.random_name_format = nil
     tt.info.i18n_key = "SOLDIER_HERO_WUKONG_HAIR_CLONES_1"
@@ -13648,8 +13740,9 @@ local function heroes()
     tt.unit.hit_offset = v(0, 14)
     tt.unit.mod_offset = v(0, 14)
     tt.unit.level = 0
+
     tt = E:register_t("soldier_hero_wukong_clone_b", "soldier_hero_wukong_clone")
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0074"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0074"
     tt.render.sprites[1].prefix = "hero_wukong_clone_2"
     tt.info.random_name_count = nil
     tt.info.random_name_format = nil
@@ -13660,7 +13753,7 @@ local function heroes()
     b = balance.heroes.hero_wukong.zhu_apprentice
     tt.info.i18n_key = "SOLDIER_ZHU_APPRENTICE"
     tt.info.enc_icon = 12
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0072"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0072"
     tt.info.fn = scripts.soldier_reinforcement.get_info
     tt.render.sprites[1].anchor = v(0.5, 0.5)
     tt.render.sprites[1].angles = {}
@@ -13824,14 +13917,6 @@ local function heroes()
     tt.hero.level_stats.melee_damage_min[4] = b.melee_attacks.fast_hits.damage_min
     tt.hero.level_stats.regen_health = b.regen_health
     tt.hero.skills.hair_clones = E:clone_c("hero_skill")
-    tt.hero.skills.hair_clones.hr_icon = "0018"
-    tt.hero.skills.hair_clones.hr_order = 1
-    tt.hero.skills.hair_clones.hr_cost = {
-        2,
-        2,
-        2
-    }
-    tt.hero.skills.hair_clones.hr_available = true
     tt.hero.skills.hair_clones.cooldown = b.hair_clones.cooldown
     tt.hero.skills.hair_clones.duration = b.hair_clones.soldier.duration
     tt.hero.skills.hair_clones.hp_max = b.hair_clones.soldier.hp_max
@@ -13839,6 +13924,11 @@ local function heroes()
     tt.hero.skills.hair_clones.damage_max = b.hair_clones.soldier.melee_attack.damage_max
     tt.hero.skills.hair_clones.key = "HAIR_CLONES"
     tt.hero.skills.hair_clones.xp_gain = b.hair_clones.xp_gain
+    tt.hero.skills.hair_clones.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3
+    }
     tt.hero.skills.zhu_apprentice = E:clone_c("hero_skill")
     tt.hero.skills.zhu_apprentice.smash_chance = b.zhu_apprentice.smash_attack.chance
     tt.hero.skills.zhu_apprentice.hp_max = b.zhu_apprentice.hp_max
@@ -13846,75 +13936,62 @@ local function heroes()
     tt.hero.skills.zhu_apprentice.damage_max = b.zhu_apprentice.melee_attack.damage_max
     tt.hero.skills.zhu_apprentice.smash_damage_min = b.zhu_apprentice.smash_attack.damage_min
     tt.hero.skills.zhu_apprentice.smash_damage_max = b.zhu_apprentice.smash_attack.damage_max
-    tt.hero.skills.zhu_apprentice.hr_available = true
-    tt.hero.skills.zhu_apprentice.hr_icon = "0016"
-    tt.hero.skills.zhu_apprentice.hr_order = 2
-    tt.hero.skills.zhu_apprentice.hr_cost = {
-        1,
-        2,
-        3
-    }
     tt.hero.skills.zhu_apprentice.entity = "soldier_hero_wukong_zhu_apprentice"
     tt.hero.skills.zhu_apprentice.key = "ZHU_APPRENTICE"
-    tt.hero.skills.pole_ranged = E:clone_c("hero_skill")
-    tt.hero.skills.pole_ranged.hr_icon = "0018"
-    tt.hero.skills.pole_ranged.hr_order = 3
-    tt.hero.skills.pole_ranged.hr_cost = {
-        1,
-        2,
-        3
+    tt.hero.skills.zhu_apprentice.xp_level_steps = {
+        [1] = 1,
+        [4] = 2,
+        [7] = 3
     }
-    tt.hero.skills.pole_ranged.hr_available = true
+    tt.hero.skills.pole_ranged = E:clone_c("hero_skill")
     tt.hero.skills.pole_ranged.key = "POLE_RANGED"
     tt.hero.skills.pole_ranged.cooldown = b.pole_ranged.cooldown
     tt.hero.skills.pole_ranged.damage_max = b.pole_ranged.damage_max
     tt.hero.skills.pole_ranged.damage_min = b.pole_ranged.damage_min
     tt.hero.skills.pole_ranged.pole_amounts = b.pole_ranged.pole_amounts
     tt.hero.skills.pole_ranged.xp_gain = b.pole_ranged.xp_gain
-    tt.hero.skills.giant_staff = E:clone_c("hero_skill")
-    tt.hero.skills.giant_staff.hr_icon = "0018"
-    tt.hero.skills.giant_staff.hr_order = 4
-    tt.hero.skills.giant_staff.hr_cost = {
-        3,
-        3,
-        3
+    tt.hero.skills.pole_ranged.xp_level_steps = {
+        [2] = 1,
+        [5] = 2,
+        [8] = 3
     }
-    tt.hero.skills.giant_staff.hr_available = true
+    tt.hero.skills.giant_staff = E:clone_c("hero_skill")
     tt.hero.skills.giant_staff.cooldown = b.giant_staff.cooldown
     tt.hero.skills.giant_staff.area_damage_min = b.giant_staff.area_damage.damage_min
     tt.hero.skills.giant_staff.area_damage_max = b.giant_staff.area_damage.damage_max
     tt.hero.skills.giant_staff.key = "GIANT_STAFF"
     tt.hero.skills.giant_staff.xp_gain = b.giant_staff.xp_gain
-    tt.hero.skills.ultimate = E:clone_c("hero_skill")
-    tt.hero.skills.ultimate.hr_icon = "0018"
-    tt.hero.skills.ultimate.hr_order = 5
-    tt.hero.skills.ultimate.hr_cost = {
-        1,
-        3,
-        3,
-        3
+    tt.hero.skills.giant_staff.xp_level_steps = {
+        [3] = 1,
+        [6] = 2,
+        [9] = 3
     }
-    tt.hero.skills.ultimate.hr_available = true
+    tt.hero.skills.ultimate = E:clone_c("hero_skill")
     tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
     tt.hero.skills.ultimate.damage_total = b.ultimate.damage_total
     tt.hero.skills.ultimate.controller_name = "controller_hero_wukong_ultimate"
     tt.hero.skills.ultimate.key = "ULTIMATE"
     tt.hero.skills.ultimate.slow_factor = b.ultimate.slow_factor
     tt.hero.skills.ultimate.slow_duration = b.ultimate.slow_duration
-    tt.hero.team = TEAM_LINIREA
-    tt.health.dead_lifetime = b.dead_lifetime
+    tt.hero.skills.ultimate.xp_level_steps = {
+        [1] = 1,
+        [4] = 2,
+        [7] = 3,
+        [10] = 4
+    }
+    tt.hero.skills.ultimate.xp_gain_factor = 43
+    tt.health.dead_lifetime = 15
     tt.health_bar.offset = v(0, 45)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.info.hero_portrait = "hero_portraits_0018"
+    tt.info.hero_portrait = "kr5_hero_portraits_0018"
     tt.info.i18n_key = "HERO_WUKONG"
-    tt.info.portrait = "portraits_hero_0018"
-    tt.info.ultimate_icon = "0018"
+    tt.info.portrait = "kr5_portraits_hero_0018"
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
     tt.info.stat_damage = b.stats.damage
     tt.info.stat_cooldown = b.stats.cooldown
     tt.info.damage_icon = "magic"
-    tt.info.fn = scripts.hero_basic.get_info_melee
+    tt.info.fn = scripts.hero_basic.get_info
     tt.hero.fn_level_up = scripts.hero_wukong.level_up
     tt.main_script.insert = scripts.hero_wukong.insert
     tt.main_script.update = scripts.hero_wukong.update
@@ -14057,13 +14134,11 @@ local function heroes()
     tt.timed_attacks.list[2].instakill = true
     tt.timed_attacks.list[2].damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_DODGE)
     tt.timed_attacks.list[2].area_vis_flags = F_AREA
-    tt.timed_attacks.list[2].area_vis_bans = F_FLYING
+    tt.timed_attacks.list[2].area_vis_bans = F_NONE
     tt.timed_attacks.list[2].area_damage_max = b.giant_staff.area_damage.damage_max
     tt.timed_attacks.list[2].area_damage_min = b.giant_staff.area_damage.damage_min
     tt.timed_attacks.list[2].area_damage_radius = b.giant_staff.area_damage.damage_radius
     tt.timed_attacks.list[2].area_damage_type = b.giant_staff.area_damage.damage_type
-    tt.timed_attacks.list[2].area_damage_max_targets = b.giant_staff.area_damage
-    .max_targets
     tt.timed_attacks.list[2].sound = "HeroWukongInstakill"
     tt.timed_attacks.list[2].sound_args = {
         delay = fts(15)
@@ -14076,7 +14151,7 @@ local function heroes()
     tt.timed_attacks.list[3].min_cooldown = 5
     tt.timed_attacks.list[3].staff_template = "decal_hero_wukong_ranged_attack_staff"
     tt.timed_attacks.list[3].vis_flags = bor(F_RANGED)
-    tt.timed_attacks.list[3].vis_bans = bor(F_FLYING)
+    tt.timed_attacks.list[3].vis_bans = F_NONE
     tt.timed_attacks.list[3].damage_type = b.pole_ranged.damage_type
     tt.timed_attacks.list[3].max_range = b.pole_ranged.max_range
     tt.timed_attacks.list[3].min_range = b.pole_ranged.min_range
@@ -14084,6 +14159,12 @@ local function heroes()
     tt.timed_attacks.list[3].sound = "HeroWukongMultiStaff"
     tt.timed_attacks.list[3].sound_args = {
         delay = fts(30)
+    }
+    tt.ultimate = {
+        ts = 0,
+        cooldown = 43,
+        vis_ban = 0,
+        disabled = true
     }
     tt.flywalk = {}
     tt.flywalk.min_distance = b.distance_to_flywalk
@@ -14094,6 +14175,7 @@ local function heroes()
         "cloud_out"
     }
     tt.flywalk.sound = nil
+    tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
 
     tt = E:register_t("aura_hero_wukong_ultimate_slow", "aura")
     b = balance.heroes.hero_wukong.ultimate

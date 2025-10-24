@@ -1,144 +1,175 @@
 -- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2-desktop/data/map_points.lua
 return {
-    flags = {{
-        number = "23",
-        pos = {
-            x = 308,
-            y = 305
+    flags = {
+        {
+            number = "23",
+            pos = {
+                x = 308,
+                y = 305
+            }
+        },
+        {
+            number = "24",
+            pos = {
+                x = 466,
+                y = 327
+            }
+        },
+        {
+            number = "25",
+            pos = {
+                x = 450,
+                y = 438
+            }
+        },
+        {
+            number = "26",
+            pos = {
+                x = 335,
+                y = 483
+            }
+        },
+        {
+            number = "27",
+            pos = {
+                x = 278,
+                y = 645
+            }
+        },
+        {
+            number = "28",
+            pos = {
+                x = 641,
+                y = 840
+            }
+        },
+        {
+            number = "29",
+            pos = {
+                x = 989,
+                y = 674
+            }
+        },
+        {
+            number = "30",
+            pos = {
+                x = 1238,
+                y = 823
+            }
+        },
+        {
+            number = "31",
+            pos = {
+                x = 1477,
+                y = 747
+            }
+        },
+        {
+            number = "32",
+            pos = {
+                x = 1328,
+                y = 624
+            }
+        },
+        {
+            number = "33",
+            pos = {
+                x = 1198,
+                y = 534
+            }
+        },
+        {
+            number = "34",
+            pos = {
+                x = 1198,
+                y = 392
+            }
+        },
+        {
+            number = "35",
+            pos = {
+                x = 1255,
+                y = 345
+            }
+        },
+        {
+            number = "36",
+            pos = {
+                x = 1416,
+                y = 329
+            }
+        },
+        {
+            number = "37",
+            pos = {
+                x = 1490,
+                y = 349
+            }
+        },
+        {
+            number = "38",
+            pos = {
+                x = 172,
+                y = 864
+            }
+        },
+        {
+            number = "39",
+            pos = {
+                x = 233,
+                y = 908
+            }
+        },
+        {
+            number = "40",
+            pos = {
+                x = 370,
+                y = 942
+            }
+        },
+        {
+            number = "41",
+            pos = {
+                x = 1011,
+                y = 161
+            }
+        },
+        {
+            number = "42",
+            pos = {
+                x = 1109,
+                y = 129
+            }
+        },
+        {
+            number = "43",
+            pos = {
+                x = 1224,
+                y = 102
+            }
+        },
+        {
+            number = "44",
+            pos = {
+                x = 1075,
+                y = 363
+            }
+        },
+        [90] = {
+            number = "90",
+            pos = {
+                x = 1150,
+                y = 930
+            }
+        },
+        [91] = {
+            number = "91",
+            pos = {
+                x = 300,
+                y = 1000
+            }
         }
-    }, {
-        number = "24",
-        pos = {
-            x = 466,
-            y = 327
-        }
-    }, {
-        number = "25",
-        pos = {
-            x = 450,
-            y = 438
-        }
-    }, {
-        number = "26",
-        pos = {
-            x = 335,
-            y = 483
-        }
-    }, {
-        number = "27",
-        pos = {
-            x = 278,
-            y = 645
-        }
-    }, {
-        number = "28",
-        pos = {
-            x = 641,
-            y = 840
-        }
-    }, {
-        number = "29",
-        pos = {
-            x = 989,
-            y = 674
-        }
-    }, {
-        number = "30",
-        pos = {
-            x = 1238,
-            y = 823
-        }
-    }, {
-        number = "31",
-        pos = {
-            x = 1477,
-            y = 747
-        }
-    }, {
-        number = "32",
-        pos = {
-            x = 1328,
-            y = 624
-        }
-    }, {
-        number = "33",
-        pos = {
-            x = 1198,
-            y = 534
-        }
-    }, {
-        number = "34",
-        pos = {
-            x = 1198,
-            y = 392
-        }
-    }, {
-        number = "35",
-        pos = {
-            x = 1255,
-            y = 345
-        }
-    }, {
-        number = "36",
-        pos = {
-            x = 1416,
-            y = 329
-        }
-    }, {
-        number = "37",
-        pos = {
-            x = 1490,
-            y = 349
-        }
-    }, {
-        number = "38",
-        pos = {
-            x = 172,
-            y = 864
-        }
-    }, {
-        number = "39",
-        pos = {
-            x = 233,
-            y = 908
-        }
-    }, {
-        number = "40",
-        pos = {
-            x = 370,
-            y = 942
-        }
-    }, {
-        number = "41",
-        pos = {
-            x = 1011,
-            y = 161
-        }
-    }, {
-        number = "42",
-        pos = {
-            x = 1109,
-            y = 129
-        }
-    }, {
-        number = "43",
-        pos = {
-            x = 1224,
-            y = 102
-        }
-    }, {
-        number = "44",
-        pos = {
-            x = 1075,
-            y = 363
-        }
-    }, [90] = {
-        number = "90",
-        pos = {
-            x = 1150,
-            y = 930
-        }
-    }},
+    },
     endless_flags = {
         [83] = {
             show_balloon = "map_balloon_endless_view",

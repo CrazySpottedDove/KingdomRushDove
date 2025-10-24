@@ -2,16 +2,16 @@
 
 local GS = {}
 GS.archer_towers = {"tower_archer_1", "tower_archer_2", "tower_archer_3", "tower_ranger", "tower_musketeer", "tower_crossbow",
-            "tower_totem", "tower_archer_dwarf", "tower_pirate_watchtower", "tower_arcane", "tower_silver","tower_dark_elf_lvl4"}
+            "tower_totem", "tower_archer_dwarf", "tower_pirate_watchtower", "tower_arcane", "tower_silver","tower_dark_elf_lvl4","tower_sand_lvl4","tower_royal_archers_lvl4"}
 GS.mage_towers = {"tower_mage_1", "tower_mage_2", "tower_mage_3", "tower_arcane_wizard", "tower_sorcerer", "tower_sunray",
-            "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon", "tower_pixie", "tower_necromancer_lvl4"}
+            "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon", "tower_pixie", "tower_necromancer_lvl4","tower_ray_lvl4","tower_elven_stargazers_lvl4","tower_arcane_wizard_lvl4"}
 GS.engineer_towers = {"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_tesla", "tower_dwaarp",
-            "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood","tower_tricannon_lvl4"}
+            "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood","tower_tricannon_lvl4","tower_demon_pit_lvl4"}
 GS.barrack_towers = {"tower_barrack_1", "tower_barrack_2", "tower_barrack_3", "tower_paladin", "tower_barbarian",
              "tower_elf", "tower_templar", "tower_assassin",
             "tower_barrack_dwarf", "tower_barrack_amazonas", "tower_barrack_mercenaries", "tower_barrack_pirates",
             "tower_blade", "tower_forest", "tower_druid", "tower_drow", "tower_ewok",
-            "tower_baby_ashbite"}
+            "tower_baby_ashbite","tower_pandas_lvl4"}
 GS.soldier_regen_factor = 0.2
 GS.gameplay_tips_count = 21
 GS.early_wave_reward_per_second = 1
@@ -113,7 +113,8 @@ GS.heroes_require_scaled_texture = {
     ["hero_robot"] = true,
     ["hero_bird"] = true,
     ["hero_dragon_bone"] = true,
-	["hero_lumenir"] = true
+	["hero_lumenir"] = true,
+    ["hero_wukong"] = true
 }
 GS.level1_from = 0
 GS.level2_from = 26
@@ -126,9 +127,9 @@ GS.level3_count = GS.level3_from + GS.last_level3
 GS.extra_level1_from = 70
 GS.extra_level1 = 1
 GS.extra_level2_from = 89
-GS.extra_level2 = 1
+GS.extra_level2 = 2
 GS.extra_level3_from = 109
-GS.extra_level3 = 0
+GS.extra_level3 = 1
 
 GS.custom_level1_from = 999
 GS.custom_level1 = 1
@@ -179,8 +180,8 @@ GS.level_ranges1 = { { 1, 12 }, { 13 }, { 14 }, {
 }, { 16, 17 }, { 18, 19 }, { 20, 21 }, { 23, 26 }, { 71 }, { 1000 }}
 GS.level_ranges2 = { { 27, 41 }, { 42, 44 }, { 45, 47 }, {
 	48
-}, {90}  }
-GS.level_ranges3 = { { 49, 63 }, { 64, 66 }, { 67, 68 }, { 69, 70 }}
+}, {90},{91} }
+GS.level_ranges3 = { { 49, 63 }, { 64, 66 }, { 67, 68 }, { 69, 70 }, {110}}
 
 GS.default_hero = nil
 GS.hero_xp_thresholds = {

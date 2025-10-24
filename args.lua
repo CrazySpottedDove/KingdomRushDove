@@ -4,7 +4,7 @@ local r = {
     -- screen = "slots",   -- 跳过开屏 logo，与开局设置
 
     -- screen = "game_editor", -- 进入关卡编辑器
-    -- custom = 1000,  -- 要编辑的关卡
+    -- custom = 91,  -- 要编辑的关卡
 }
 
 local result = {}

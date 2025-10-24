@@ -2200,7 +2200,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(26, 0)
     tt.health.armor = 1
     tt.health.hp_max = 400
-    tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_SHOT, DAMAGE_RUDE)
+    tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
     tt.health_bar.offset = vec_2(0, 61)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_SPECTRAL_KNIGHT"
@@ -3952,6 +3952,7 @@ local function enemies()
     tt = RT("savage_bird_rider_drop_dead", "decal")
     AC(tt, "enemy", "health", "vis", "unit", "heading", "nav_path", "motion", "sound_events")
     tt.health.hp = 0
+    tt.health.hp_max = 0
     tt.health.dead_lifetime = 2
     tt.render.sprites[1].name = "savage_bird_rider_drop_dead"
     tt.render.sprites[1].loop = false
@@ -4535,7 +4536,7 @@ local function enemies()
     tt.enemy.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER)
     tt.health.armor = 0
     tt.health.hp_max = 2400
-    tt.health.immune_to = bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)
+    tt.health.immune_to = DAMAGE_MAGICAL_GROUP
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, 57)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -4946,7 +4947,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(24, 0)
     tt.health.armor = 0
     tt.health.hp_max = 100
-    tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_SHOT, DAMAGE_ELECTRICAL, DAMAGE_RUDE)
+    tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, 37)
     tt.info.portrait = IS_PHONE and "portraits_sc_0080" or "kr2_info_portraits_enemies_0063"
@@ -5020,7 +5021,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(27, 0)
     tt.health.armor = 0
     tt.health.hp_max = 1000
-    tt.health.immune_to = bor(DAMAGE_PHYSICAL, DAMAGE_EXPLOSION, DAMAGE_SHOT, DAMAGE_ELECTRICAL, DAMAGE_RUDE)
+    tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, 56)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -7157,6 +7158,49 @@ local function enemies()
     tt = RT("enemy_spider_rotten_tiny_with_gold", "enemy_spider_rotten_tiny")
     tt.enemy.gold = 1
 
+    tt = RT("enemy_redgale", "enemy_bluegale")
+    tt.main_script.update = scripts.enemy_mixed_water.update
+    tt.timed_attacks = nil
+    tt.melee.attacks[1].damage_max = 144
+    tt.melee.attacks[1].damage_min = 72
+    tt.ranged.attacks[1].max_range = 150
+    tt.ranged.attacks[1].bullet = "ray_redgale"
+    tt.render.sprites[1].color = {255, 100, 100}
+    tt.render.sprites[2].color = {255, 100, 100}
+
+    tt = RT("ray_redgale", "ray_bluegale")
+    tt.render.sprites[1].color = {255, 100, 100}
+    tt.bullet.damage_min = 50
+    tt.bullet.damage_max = 90
+
+    tt = RT("enemy_greenshell", "enemy_bloodshell")
+    AC(tt, "auras")
+    tt.render.sprites[1].color = {100, 255, 100}
+    tt.health.armor = 0.45
+    tt.health.magic_armor = 0.55
+    tt.health.immune_to = DAMAGE_EXPLOSION
+    tt.auras.list[1] = CC("aura_attack")
+    tt.auras.list[1].name = "greenshell_shield_aura"
+    tt.auras.list[1].cooldown = 0
+    tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+
+    tt = RT("greenshell_shield_aura", "shaman_shield_aura")
+    tt.aura.mod = "mod_greenshell_shield"
+    tt.aura.allowed_templates = {"enemy_greenfin", "enemy_deviltide", "enemy_redspine", "enemy_bluegale", "enemy_redgale", "enemy_deviltide_shark", "enemy_deviltide_shark_ghost", "enemy_deviltide_ghost"}
+
+    tt = RT("mod_greenshell_shield", "mod_shaman_armor")
+    tt.armor_buff.max_factor = 0.35
+
+    tt = RT("enemy_deviltide_shark_ghost", "enemy_deviltide_shark")
+    tt.payload = "enemy_deviltide_ghost"
+    tt.motion.max_speed = 90
+    tt.render.sprites[1].alpha = 180
+    tt.enemy.gold = 0
+
+    tt = RT("enemy_deviltide_ghost", "enemy_deviltide")
+    tt.enemy.gold = 0
+    tt.motion.max_speed = 50
+    tt.render.sprites[1].alpha = 180
 end
 
 return enemies

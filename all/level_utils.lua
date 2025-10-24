@@ -108,63 +108,6 @@ function LU.load_level(store, name)
 	return level
 end
 
-if DEBUG then
-	function LU.save_data(data, name)
-		local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_data.lua"
-
-		local function custom_sort(k, o)
-			local function sort_table(a, b)
-				if a == "template" then
-					return true
-				elseif b == "template" then
-					return false
-				elseif type(a) == "number" and type(b) == "number" then
-					if type(o[a]) == "table" and type(o[b]) == "table" and o[a].template and o[b].template then
-						if o[a].template == o[b].template and o[a].pos and o[b].pos then
-							if o[a].pos.y == o[b].pos.y then
-								if o[a].pos.x == o[b].pos.x and o[a]["editor.game_mode"] and o[b]["editor.game_mode"] then
-									return o[a]["editor.game_mode"] < o[b]["editor.game_mode"]
-								else
-									return o[a].pos.x < o[b].pos.x
-								end
-							else
-								return o[a].pos.y < o[b].pos.y
-							end
-						else
-							return o[a].template < o[b].template
-						end
-					else
-						return a < b
-					end
-				else
-					return tostring(a) < tostring(b)
-				end
-			end
-
-			table.sort(k, sort_table)
-		end
-
-		local str = serpent.block(data, {
-			indent = "    ",
-			comment = false,
-			sortkeys = custom_sort,
-			keyignore = {
-				_idx = true,
-				_id = true,
-				_before_ov = true,
-				locations = true,
-				frames = true
-			}
-		})
-		local out = "return " .. str .. "\n"
-		local f = io.open(fn, "w")
-
-		f:write(out)
-		f:flush()
-		f:close()
-	end
-end
-
 function LU.eval_file(filename)
 	local f, err = love.filesystem.load(filename)
 
@@ -295,7 +238,7 @@ function LU.insert_entities(store, items, store_back_references)
                     end
 				end
 
-				if e.editor and e.editor.game_mode ~= 0 and (e.editor.game_mode ~= store.level_mode)  then
+				if (e.editor and e.editor.game_mode ~= 0 and (e.editor.game_mode ~= store.level_mode)) or (item.editor_game_mode and item.editor_game_mode ~= store.level_mode) then
 					log.debug("skipping item %s. game mode mismatch", e.template_name)
 				else
 					if e.tower and e.tower.terrain_style then
@@ -421,7 +364,7 @@ function LU.insert_background(store, name, z, sort_y, quad_trim)
 	return e
 end
 
-function LU.insert_hero(store, name, pos)
+function LU.insert_hero(store, name, pos, force_full_level)
 	if store.level.locked_hero then
 		log.debug("hero locked for level. will not insert")
 		return
@@ -432,6 +375,17 @@ function LU.insert_hero(store, name, pos)
         hero.pos = V.vclone(pos)
         hero.nav_rally.center = V.vclone(hero.pos)
         hero.nav_rally.pos = hero.nav_rally.center
+        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
+            if hero.hero.fn_level_up then
+                for i = 1, 10 do
+                    hero.hero.level = i
+                    hero.hero.fn_level_up(hero, store)
+                end
+            else
+                hero.hero.level = 10
+            end
+        end
+
         LU.queue_insert(store, hero)
         signal.emit("hero-added-no-panel", hero)
         return
@@ -466,7 +420,7 @@ function LU.insert_hero(store, name, pos)
         store.main_hero = hero
         hero.hero.xp = 0
         hero.hero.level = 1
-        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) and hero.hero.fn_level_up then
+        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
             if hero.hero.fn_level_up then
                 for i = 1, 10 do
                     hero.hero.level = i

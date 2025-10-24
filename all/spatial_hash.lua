@@ -1,271 +1,272 @@
 require("constants")
+local hash_array = require("hash_array")
+local log = require("klua.log"):new("spatial_hash")
+
 local spatial_hash = {}
-local aspect = ASPECT
 spatial_hash.__index = spatial_hash
+
+local _aspect = ASPECT
+local _aspect_inv = 1.0 / _aspect
 local ceil = math.ceil
 local floor = math.floor
 local max = math.max
 local min = math.min
-function spatial_hash:new(cell_size)
-    local hash = {
-        cell_size = cell_size,
-        _cell_size_factor = 1.0 / cell_size,
-        cols = ceil((IN_GAME_X_MAX - IN_GAME_X_MIN) / cell_size),
-        rows = ceil((IN_GAME_Y_MAX - IN_GAME_Y_MIN) / cell_size),
-        x_min = IN_GAME_X_MIN,
-        y_min = IN_GAME_Y_MIN,
-        cells = {},
-        entity_cells = {} -- entity id -> cell
-    }
-    for row = 1, hash.rows do
-        hash.cells[row] = {}
-        for col = 1, hash.cols do
-            hash.cells[row][col] = {} -- id -> entity
-        end
+local _cell_size = 50
+local _cell_size_factor = 1.0 / _cell_size
+local _x_min = IN_GAME_X_MIN
+local _y_min = IN_GAME_Y_MIN
+local _cols = ceil((IN_GAME_X_MAX - IN_GAME_X_MIN) / _cell_size)
+local _rows = ceil((IN_GAME_Y_MAX - IN_GAME_Y_MIN) / _cell_size)
+local _max_index = _rows * _cols
+function spatial_hash:new()
+    local hash = {}
+
+    for i = 1, _max_index do
+        hash[i] = hash_array:new()
     end
     setmetatable(hash, spatial_hash)
     return hash
 end
 
-function spatial_hash:_x_to_col(x)
-    return floor((x - self.x_min) * self._cell_size_factor) + 1
+local function _x_to_col(x)
+    return floor((x - _x_min) * _cell_size_factor) + 1
 end
 
-function spatial_hash:_y_to_row(y)
-    return floor((y - self.y_min) * self._cell_size_factor) + 1
+local function _y_to_row(y)
+    return floor((y - _y_min) * _cell_size_factor) + 1
 end
 
-function spatial_hash:_get_cell(x, y)
-    return self.cells[self:_y_to_row(y)][self:_x_to_col(x)]
+local function _get_cell_index(x, y)
+    return floor((y - _y_min) * _cell_size_factor) * _cols + floor((x - _x_min) * _cell_size_factor) + 1
 end
 
 function spatial_hash:_get_cells_in_ellipse_range(x, y, radius)
-    local min_col = max(1, self:_x_to_col(x - radius))
-    local max_col = min(self.cols, self:_x_to_col(x + radius))
-    local b = radius * aspect
-    local min_row = max(1, self:_y_to_row(y - b))
-    local max_row = min(self.rows, self:_y_to_row(y + b))
-
+    local min_col = max(1, _x_to_col(x - radius))
+    local max_col = min(_cols, _x_to_col(x + radius))
+    local b = radius * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
     local cells = {}
-    for row = min_row, max_row do
+    local count = 0
+    local row_mul_col = (min_row - 1) * _cols
+    for _ = min_row, max_row do
         for col = min_col, max_col do
-            -- 性能敏感，避免 table.insert
-            cells[#cells + 1] = self.cells[row][col]
+            count = count + 1
+            cells[count] = self[row_mul_col + col]
         end
+        row_mul_col = row_mul_col + _cols
     end
     return cells
 end
 
 function spatial_hash:insert_entity(entity)
-    -- local cells_y = self.cells[self:_y_to_row(entity.pos.y)]
-    -- if not cells_y then
-    --     print(entity.template_name," y out of bounds:",entity.pos.y)
-    --     return
-    -- end
-    -- local cell = cells_y[self:_x_to_col(entity.pos.x)]
-    local cell = self.cells[self:_y_to_row(entity.pos.y)][self:_x_to_col(entity.pos.x)]
-    cell[entity.id] = entity
-    -- cell[entity.id] = entity
-    self.entity_cells[entity.id] = cell
+    local cell_index = _get_cell_index(entity.pos.x, entity.pos.y)
+    self[cell_index]:insert(entity)
+    entity._spatial_hash_index = cell_index
 end
 
 function spatial_hash:update_entity(entity)
-    local id = entity.id
-    local new_cell = self:_get_cell(entity.pos.x, entity.pos.y)
-    local cells_y = self.cells[self:_y_to_row(entity.pos.y)]
-    if not cells_y then
-        log.error(entity.template_name .. " y out of bounds:" .. entity.pos.y)
+    local new_cell_index = _get_cell_index(entity.pos.x, entity.pos.y)
+    if new_cell_index > _max_index then
+        log.error(entity.template_name .. " pos out of bounds:" .. entity.pos.x .. "," .. entity.pos.y)
         return
     end
-    local new_cell = cells_y[self:_x_to_col(entity.pos.x)]
-    -- local new_cell = self.cells[self:_y_to_row(entity.pos.y)][self:_x_to_col(entity.pos.x)]
-    local old_cell = self.entity_cells[id]
-    if old_cell == new_cell then
+    local old_cell_index = entity._spatial_hash_index
+    if old_cell_index == new_cell_index then
         return
     end
-    old_cell[id] = nil
-    new_cell[id] = entity
-    self.entity_cells[id] = new_cell
-    return true
+    self[old_cell_index]:remove(entity)
+    self[new_cell_index]:insert(entity)
+    entity._spatial_hash_index = new_cell_index
 end
 
 function spatial_hash:remove_entity(entity)
-    self.entity_cells[entity.id][entity.id] = nil
-    self.entity_cells[entity.id] = nil
+    self[entity._spatial_hash_index]:remove(entity)
 end
 
--- 必须提供 filter_fn
--- return 符合条件的实体数组
+-- 查询范围内所有符合条件目标的底层函数
 function spatial_hash:query_entities_in_ellipse(x, y, radius_outer, radius_inner, filter_fn)
+    local min_col = max(1, _x_to_col(x - radius_outer))
+    local max_col = min(_cols, _x_to_col(x + radius_outer))
+    local b = radius_outer * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+    local count = 0
+    local row_mul_col = (min_row - 1) * _cols
+    local r_outer_sq = radius_outer * radius_outer
+    local r_inner_sq = radius_inner * radius_inner
     local result = {}
-    local min_col = max(1, self:_x_to_col(x - radius_outer))
-    local max_col = min(self.cols, self:_x_to_col(x + radius_outer))
-    local b = radius_outer * aspect
-    local min_row = max(1, self:_y_to_row(y - b))
-    local max_row = min(self.rows, self:_y_to_row(y + b))
-
-    local b2_outer = radius_outer * aspect * radius_outer * aspect
-    local a2_outer = radius_outer * radius_outer
-    local r2_outer = a2_outer * b2_outer
-
-    local b2_inner = radius_inner * aspect * radius_inner * aspect
-    local a2_inner = radius_inner * radius_inner
-    local r2_inner = a2_inner * b2_inner
-
-    for row = min_row, max_row do
+    for _ = min_row, max_row do
         for col = min_col, max_col do
-            -- 性能敏感，避免 table.insert
-            local cell = self.cells[row][col]
-            for _, entity in pairs(cell) do
-                local r_x2 = (entity.pos.x - x) * (entity.pos.x - x)
-                local r_y2 = (entity.pos.y - y) * (entity.pos.y - y)
-
-                if r_x2 * b2_outer + r_y2 * a2_outer <= r2_outer and
-                    ((radius_inner == 0) or (r_x2 * b2_inner + r_y2 * a2_inner > r2_inner)) and filter_fn(entity) then
-                    result[#result + 1] = entity
+            local cell = self[row_mul_col + col]
+            local size = cell.size
+            local array = cell.array
+            for i = 1, size do
+                local entity = array[i]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
+                    count = count + 1
+                    result[count] = entity
                 end
             end
         end
+        row_mul_col = row_mul_col + _cols
     end
-
     return result
 end
 
+-- 查询范围内第一个符合条件目标的底层函数
 function spatial_hash:query_first_entity_in_ellipse(x, y, radius_outer, radius_inner, filter_fn)
-    local min_col = max(1, self:_x_to_col(x - radius_outer))
-    local max_col = min(self.cols, self:_x_to_col(x + radius_outer))
-    local b = radius_outer * aspect
-    local min_row = max(1, self:_y_to_row(y - b))
-    local max_row = min(self.rows, self:_y_to_row(y + b))
-
-    local b2_outer = radius_outer * aspect * radius_outer * aspect
-    local a2_outer = radius_outer * radius_outer
-    local r2_outer = a2_outer * b2_outer
-
-    local b2_inner = radius_inner * aspect * radius_inner * aspect
-    local a2_inner = radius_inner * radius_inner
-    local r2_inner = a2_inner * b2_inner
-
-    for row = min_row, max_row do
+    local min_col = max(1, _x_to_col(x - radius_outer))
+    local max_col = min(_cols, _x_to_col(x + radius_outer))
+    local b = radius_outer * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+    local row_mul_col = (min_row - 1) * _cols
+    local r_outer_sq = radius_outer * radius_outer
+    local r_inner_sq = radius_inner * radius_inner
+    for _ = min_row, max_row do
         for col = min_col, max_col do
-            -- 性能敏感，避免 table.insert
-            local cell = self.cells[row][col]
-            for _, entity in pairs(cell) do
-                local r_x2 = (entity.pos.x - x) * (entity.pos.x - x)
-                local r_y2 = (entity.pos.y - y) * (entity.pos.y - y)
-
-                if r_x2 * b2_outer + r_y2 * a2_outer <= r2_outer and
-                    ((radius_inner == 0) or (r_x2 * b2_inner + r_y2 * a2_inner > r2_inner)) and filter_fn(entity) then
+            local cell = self[row_mul_col + col]
+            local size = cell.size
+            local array = cell.array
+            for i = 1, size do
+                local entity = array[i]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
                     return entity
                 end
             end
         end
+        row_mul_col = row_mul_col + _cols
     end
-
     return nil
 end
 
+-- 查询范围内是否有足够数量目标的底层函数
 function spatial_hash:query_enough_entities_in_ellipse(x, y, radius_outer, radius_inner, filter_fn, count)
-    local found = 0
-    local min_col = max(1, self:_x_to_col(x - radius_outer))
-    local max_col = min(self.cols, self:_x_to_col(x + radius_outer))
-    local b = radius_outer * aspect
-    local min_row = max(1, self:_y_to_row(y - b))
-    local max_row = min(self.rows, self:_y_to_row(y + b))
-
-    local b2_outer = radius_outer * aspect * radius_outer * aspect
-    local a2_outer = radius_outer * radius_outer
-    local r2_outer = a2_outer * b2_outer
-
-    local b2_inner = radius_inner * aspect * radius_inner * aspect
-    local a2_inner = radius_inner * radius_inner
-    local r2_inner = a2_inner * b2_inner
-
-    for row = min_row, max_row do
+    local min_col = max(1, _x_to_col(x - radius_outer))
+    local max_col = min(_cols, _x_to_col(x + radius_outer))
+    local b = radius_outer * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+    local found_count = 0
+    local row_mul_col = (min_row - 1) * _cols
+    local r_outer_sq = radius_outer * radius_outer
+    local r_inner_sq = radius_inner * radius_inner
+    for _ = min_row, max_row do
         for col = min_col, max_col do
-            -- 性能敏感，避免 table.insert
-            local cell = self.cells[row][col]
-            for _, entity in pairs(cell) do
-                local r_x2 = (entity.pos.x - x) * (entity.pos.x - x)
-                local r_y2 = (entity.pos.y - y) * (entity.pos.y - y)
-
-                if r_x2 * b2_outer + r_y2 * a2_outer <= r2_outer and
-                    ((radius_inner == 0) or (r_x2 * b2_inner + r_y2 * a2_inner > r2_inner)) and filter_fn(entity) then
-                    found = found + 1
-                    if found >= count then
+            local cell = self[row_mul_col + col]
+            local size = cell.size
+            local array = cell.array
+            for i = 1, size do
+                local entity = array[i]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
+                    found_count = found_count + 1
+                    if found_count >= count then
                         return true
                     end
                 end
             end
         end
+        row_mul_col = row_mul_col + _cols
     end
-
     return false
 end
 
+--- 查询随机目标的底层函数
+--- @param x number
+--- @param y number
+--- @param radius_outer number
+--- @param radius_inner number
+--- @param filter_fn function
+--- @return table | nil
+function spatial_hash:query_random_entity_in_ellipse(x, y, radius_outer, radius_inner, filter_fn)
+    local cells = self:_get_cells_in_ellipse_range(x, y, radius_outer)
+    -- shuffle
+    for i = #cells, 2, -1 do
+        local j = math.random(1, i)
+        cells[i], cells[j] = cells[j], cells[i]
+    end
+    local r_outer_sq = radius_outer * radius_outer
+    local r_inner_sq = radius_inner * radius_inner
+    for i = 1, #cells do
+        local cell = cells[i]
+        local size = cell.size
+        local array = cell.array
+        for j = 1, size do
+            local entity = array[j]
+            local dx = entity.pos.x - x
+            local dy = (entity.pos.y - y) * _aspect_inv
+            local dist2 = dx * dx + dy * dy
+            if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
+                return entity
+            end
+        end
+    end
+    return nil
+end
 
--- -- 在 spatial_hash.lua 文件末尾添加调试方法
--- function spatial_hash:print_debug_info()
---     print("========== Spatial Hash Debug Info ==========")
---     print(string.format("Grid size: %d x %d cells", self.cols, self.rows))
---     print(string.format("Cell size: %d pixels", self.cell_size))
---     print(string.format("World size: %.0f x %.0f pixels", self.cols * self.cell_size, self.rows * self.cell_size))
+--- 查询范围内符合条件且排序后的第一个目标（不返回数组） 的底层函数
+--- @param x number
+--- @param y number
+--- @param radius_outer number
+--- @param radius_inner number
+--- @param filter_fn function
+--- @param sort_fn function(a, b) 返回 true 表示 a 优于 b
+--- @return table | nil
+function spatial_hash:query_best_entity_in_ellipse(x, y, radius_outer, radius_inner, filter_fn, sort_fn)
+    local min_col = max(1, _x_to_col(x - radius_outer))
+    local max_col = min(_cols, _x_to_col(x + radius_outer))
+    local b = radius_outer * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+    local row_mul_col = (min_row - 1) * _cols
+    local r_outer_sq = radius_outer * radius_outer
+    local r_inner_sq = radius_inner * radius_inner
+    local best = nil
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = self[row_mul_col + col]
+            local size = cell.size
+            local array = cell.array
+            for i = 1, size do
+                local entity = array[i]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and dist2 >= r_inner_sq and filter_fn(entity) then
+                    if not best or sort_fn(entity, best) then
+                        best = entity
+                    end
+                end
+            end
+        end
+        row_mul_col = row_mul_col + _cols
+    end
+    return best
+end
 
---     local total_entities = 0
---     local occupied_cells = 0
---     local max_entities_per_cell = 0
 
---     for key, cell in pairs(self.cells) do
---         local count = 0
---         local entity_ids = {}
+-- local spatial_hash_manager = {}
+-- spatial_hash_manager.__index = spatial_hash_manager
+-- SPATIAL_HASH_TYPE_ENEMY = 1
+-- SPATIAL_HASH_TYPE_SOLDIER = 2
+-- SPATIAL_HASH_TYPE_TOWER = 3
 
---         for entity_id, entity in pairs(cell) do
---             count = count + 1
---             table.insert(entity_ids, entity_id)
---         end
-
---         if count > 0 then
---             occupied_cells = occupied_cells + 1
---             total_entities = total_entities + count
---             max_entities_per_cell = max(max_entities_per_cell, count)
-
---             -- 计算网格坐标
---             local row = floor(key / self.cols)
---             local col = key % self.cols
-
---             print(string.format("Cell[%d,%d] (key=%d): %d entities -> %s", row, col, key, count,
---                 table.concat(entity_ids, ", ")))
-
---             -- 显示实体的实际位置
---             for _, entity_id in ipairs(entity_ids) do
---                 local entity = cell[entity_id]
---                 if entity and entity.pos then
---                     print(string.format("  Entity %s at (%.1f, %.1f)", entity_id, entity.pos.x, entity.pos.y))
---                 end
---             end
---         end
---     end
-
---     print(string.format("Summary: %d total entities in %d occupied cells (max %d per cell)", total_entities,
---         occupied_cells, max_entities_per_cell))
---     print("============================================")
+-- function spatial_hash_manager:new()
+--     local hashes = {}
+--     hashes[SPATIAL_HASH_TYPE_ENEMY] = spatial_hash:new()
+--     hashes[SPATIAL_HASH_TYPE_SOLDIER] = spatial_hash:new()
+--     hashes[SPATIAL_HASH_TYPE_TOWER] = spatial_hash:new()
+--     setmetatable(hashes, spatial_hash_manager)
+--     return hashes
 -- end
-
--- -- 添加一个更简洁的版本
--- function spatial_hash:print_summary()
---     local total = 0
---     local cells = 0
---     for _, cell in pairs(self.cells) do
---         local count = 0
---         for _ in pairs(cell) do
---             count = count + 1
---         end
---         if count > 0 then
---             cells = cells + 1
---             total = total + count
---         end
---     end
---     print(string.format("Spatial Hash: %d entities in %d cells", total, cells))
--- end
-
 return spatial_hash

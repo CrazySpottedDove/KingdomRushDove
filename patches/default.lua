@@ -1,3 +1,4 @@
+-- 不要修改这个文件！这个文件是默认配置文件，用于参考，请改你的存档位置中的 config.lua!
 return {
     -- 如果需要英雄满级，请将此条改为 true，默认为 false
     hero_full_level_at_start = false,
@@ -30,5 +31,8 @@ return {
     custom_config_enabled = true,
 
     -- 启动无尽模式开关，默认为 false
-    endless = false
+    endless = false,
+
+    -- 允许局内召唤英雄开关，默认为 false
+    enable_hero_menu = false,
 }

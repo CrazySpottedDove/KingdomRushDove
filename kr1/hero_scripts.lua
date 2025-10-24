@@ -243,10 +243,10 @@ scripts.hero_gerald = {
                     local ca = this.dodge.counter_attack
 
                     if la then
-                        ca.damage_max = la.damage_max *
+                        ca.damage_max = (la.damage_max or 1) *
                                             (ca.reflected_damage_factor + ca.reflected_damage_factor_inc * skill.level) *
                                             this.unit.damage_factor
-                        ca.damage_min = la.damage_min *
+                        ca.damage_min = (la.damage_min or 1) *
                                             (ca.reflected_damage_factor + ca.reflected_damage_factor_inc * skill.level) *
                                             this.unit.damage_factor
                     end
@@ -416,8 +416,8 @@ scripts.soldier_alleria_wildcat = {
 scripts.arrow_multishot_hero_alleria = {
     insert = function(this, store)
         if this.extra_arrows > 0 then
-            local _, targets = U.find_foremost_enemy(store, this.bullet.to, 0, this.extra_arrows_range, nil,
-                F_RANGED, F_NONE)
+            local _, targets = U.find_foremost_enemy(store, this.bullet.to, 0, this.extra_arrows_range, nil, F_RANGED,
+                F_NONE)
 
             if targets then
                 local rate
@@ -1352,8 +1352,8 @@ scripts.hero_wizard = {
                 skill = this.hero.skills.disintegrate
 
                 if ready_to_use_skill(a, store) then
-                    local triggers = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                        a.vis_bans, function(v)
+                    local triggers = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
+                        function(v)
                             return v.health.hp <= a.total_damage
                         end)
 
@@ -1362,8 +1362,8 @@ scripts.hero_wizard = {
                     else
                         local remaining_damage = a.total_damage * this.unit.damage_factor
 
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius,
-                            a.vis_flags, a.vis_bans, function(v)
+                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags,
+                            a.vis_bans, function(v)
                                 return v.health.hp <= remaining_damage
                             end)
 
@@ -1418,8 +1418,8 @@ scripts.hero_wizard = {
                 skill = this.hero.skills.magicmissile
 
                 if ready_to_use_skill(a, store) then
-                    local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false,
-                        a.vis_flags, a.vis_bans)
+                    local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false, a.vis_flags,
+                        a.vis_bans)
 
                     if target then
                         local start_ts = store.tick_ts
@@ -1526,8 +1526,8 @@ scripts.soldier_sand_warrior = {
                         U.walk(this, store.tick_length)
                         coroutine.yield()
 
-                        target = U.find_foremost_enemy(store, this.pos, 0, this.melee.range, false,
-                            attack.vis_flags, attack.vis_bans)
+                        target = U.find_foremost_enemy(store, this.pos, 0, this.melee.range, false, attack.vis_flags,
+                            attack.vis_bans)
                         expired = store.tick_ts - this.lifespan.ts > this.lifespan.duration
                         next_pos = P:next_entity_node(this, store.tick_length)
 
@@ -1705,8 +1705,7 @@ scripts.decal_bolin_mine = {
                 break
             end
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, this.radius, this.vis_flags,
-                this.vis_bans)
+            local targets = U.find_enemies_in_range(store, this.pos, 0, this.radius, this.vis_flags, this.vis_bans)
 
             if targets and #targets > 0 then
                 local dec = E:create_entity(this.hit_decal)
@@ -1865,8 +1864,8 @@ scripts.hero_bolin = {
                         SU.delay_attack(store, a, 0.5)
                     else
                         local mine_pos
-                        local _, enemy_pos = U.find_random_enemy_with_pos(store, this.pos, a.min_range,
-                            a.max_range, fts(24), a.vis_flags, a.vis_bans)
+                        local _, enemy_pos = U.find_random_enemy_with_pos(store, this.pos, a.min_range, a.max_range,
+                            fts(24), a.vis_flags, a.vis_bans)
                         if enemy_pos then
                             mine_pos = enemy_pos
                         end
@@ -2509,8 +2508,8 @@ scripts.beastmaster_rhino = {
             if store.tick_ts - attack.ts >= attack.cooldown then
                 attack.ts = store.tick_ts
 
-                local targets = U.find_enemies_in_range(store, this.pos, 0, attack.damage_radius,
-                    attack.damage_flags, attack.damage_bans, function(v)
+                local targets = U.find_enemies_in_range(store, this.pos, 0, attack.damage_radius, attack.damage_flags,
+                    attack.damage_bans, function(v)
                         return not table.contains(this.shared_enemies_hit, v)
                     end)
 
@@ -3066,8 +3065,7 @@ scripts.van_helsing_grenade = {
         end
 
         local target = store.entities[b.target_id]
-        local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.damage_flags,
-            b.damage_bans)
+        local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.damage_flags, b.damage_bans)
         if targets then
             for _, t in pairs(targets) do
                 if t.health and not t.health.dead then
@@ -3286,8 +3284,8 @@ scripts.hero_van_helsing = {
                     local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
                         a.shoot_time, a.vis_flags, a.vis_bans, function(e)
                             local center_pos = P:node_pos(e.nav_path.pi, 1, e.nav_path.ni)
-                            local nearby = U.find_enemies_in_range(store, center_pos, 0, a.search_range,
-                                a.vis_flags, a.vis_bans)
+                            local nearby = U.find_enemies_in_range(store, center_pos, 0, a.search_range, a.vis_flags,
+                                a.vis_bans)
 
                             return nearby and #nearby >= a.search_min_count
                         end)
@@ -3340,8 +3338,8 @@ scripts.hero_van_helsing = {
 
                             if target.health.dead then
                                 local center_pos = P:node_pos(target.nav_path.pi, 1, target.nav_path.ni)
-                                local nearby = U.find_nearest_enemy(store, center_pos, 0, a.search_range,
-                                    a.vis_flags, a.vis_bans)
+                                local nearby = U.find_nearest_enemy(store, center_pos, 0, a.search_range, a.vis_flags,
+                                    a.vis_bans)
 
                                 if nearby then
                                     table.removeobject(targets, target)
@@ -3375,14 +3373,14 @@ scripts.hero_van_helsing = {
                 skill = this.hero.skills.silverbullet
 
                 if ready_to_use_skill(a, store) then
-                    local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-                        a.shoot_time, a.vis_flags, a.vis_bans, function(e)
+                    local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.shoot_time,
+                        a.vis_flags, a.vis_bans, function(e)
                             return math.abs(P:nodes_to_defend_point(e.nav_path)) < a.nodes_to_defend
                         end)
 
                     if not target then
-                        local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                            a.vis_flags, a.vis_bans)
+                        local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                            a.vis_bans)
 
                         if targets then
                             table.sort(targets, function(e1, e2)
@@ -3551,7 +3549,7 @@ scripts.aura_malik_fissure = {
 
         do_attack(this.pos)
 
-        local pi, spi, ni
+        local pi, spi, ni, pis
 
         if a.target_id and store.entities[a.target_id] then
             local np = store.entities[a.target_id].nav_path
@@ -3568,21 +3566,67 @@ scripts.aura_malik_fissure = {
 
             pi, spi, ni = unpack(nodes[1])
         end
-
+        pis = {{
+            pi = pi,
+            ni1 = ni,
+            ni2 = ni
+        }}
         for i = 1, a.level do
-            spi = (spi == 2 or spi == 3) and 1 or math.random() < 0.5 and 2 or 3
-
             U.y_wait(store, a.spread_delay)
+            local node_pos1 = P:node_pos(pi, 1, pis[1].ni1 + a.spread_nodes)
+            local node_pos2 = P:node_pos(pi, 1, pis[1].ni2 - a.spread_nodes)
 
-            local nni = ni + i * a.spread_nodes
-            local spos = P:node_pos(pi, spi, nni)
+            local nodes = P:nearest_nodes(node_pos1.x, node_pos1.y, nil, nil, true)
+            if #nodes > 1 then
+                local npi, nspi, nni = unpack(nodes[2])
+                local new = true
+                for _, p in pairs(pis) do
+                    if p.pi == npi then
+                        new = false
+                        break
+                    end
+                end
+                if new then
+                    table.insert(pis, {
+                        pi = npi,
+                        ni1 = nni,
+                        ni2 = nni
+                    })
+                end
+            end
+            local nodes = P:nearest_nodes(node_pos2.x, node_pos2.y, nil, nil, true)
+            if #nodes > 1 then
+                local npi, nspi, nni = unpack(nodes[2])
+                local new = true
+                for _, p in pairs(pis) do
+                    if p.pi == npi then
+                        new = false
+                        break
+                    end
+                end
+                if new then
+                    table.insert(pis, {
+                        pi = npi,
+                        ni1 = nni,
+                        ni2 = nni
+                    })
+                end
+            end
 
-            do_attack(spos)
-
-            nni = ni - i * a.spread_nodes
-            spos = P:node_pos(pi, spi, nni)
-
-            do_attack(spos)
+            for _, p in pairs(pis) do
+                p.ni1 = p.ni1 + a.spread_nodes
+                p.ni2 = p.ni2 - a.spread_nodes
+                do_attack(P:node_pos(p.pi, 1, p.ni1))
+                do_attack(P:node_pos(p.pi, 1, p.ni2))
+            end
+            if i > 1 then
+                for _, p in pairs(pis) do
+                    do_attack(P:node_pos(p.pi, 2, p.ni1 - a.spread_nodes))
+                    do_attack(P:node_pos(p.pi, 2, p.ni2 + a.spread_nodes))
+                    do_attack(P:node_pos(p.pi, 3, p.ni1 - a.spread_nodes))
+                    do_attack(P:node_pos(p.pi, 3, p.ni2 + a.spread_nodes))
+                end
+            end
         end
 
         ::label_201_0::
@@ -3687,7 +3731,8 @@ scripts.mod_priest_armor = {
 
         SU.armor_inc(target, this.armor_inc)
         SU.magic_armor_inc(target, this.magic_armor_inc)
-
+        target.unit.damage_factor = target.unit.damage_factor * (this.damage_rate + 1)
+        SU.insert_unit_cooldown_buff(store.tick_ts, target, this.cooldown_rate)
         signal.emit("mod-applied", this, target)
         return true
     end,
@@ -3696,6 +3741,8 @@ scripts.mod_priest_armor = {
         if target then
             SU.armor_dec(target, this.armor_inc)
             SU.magic_armor_dec(target, this.magic_armor_inc)
+            target.unit.damage_factor = target.unit.damage_factor / (this.damage_rate + 1)
+            SU.remove_unit_cooldown_buff(store.tick_ts, target, this.cooldown_rate)
         end
         return true
     end,
@@ -3791,6 +3838,7 @@ scripts.hero_priest = {
             local m = E:get_template("mod_priest_armor")
             m.modifier.duration = s.duration[s.level]
             m.armor_rate = s.armor_rate[s.level]
+            m.damage_rate = s.damage_rate[s.level]
         end)
 
         upgrade_skill(this, "blessedarmor", function(this, s)
@@ -3954,8 +4002,7 @@ scripts.hero_priest = {
                             for _, s in pairs(targets) do
                                 -- 复活
                                 if s.health.dead and not s.unit.hide_during_death and (math.random() < a.revive_chance) and
-                                    not s.reinforcement and not s.hero and
-                                    not SU.is_wraith(s.template_name) then
+                                    not s.reinforcement and not s.hero and not SU.is_wraith(s.template_name) then
 
                                     s.health.dead = false
                                     s.health.hp = s.health.hp_max
@@ -4023,7 +4070,8 @@ scripts.hero_priest = {
                         end
 
                         local towers = table.filter(store.towers, function(_, e)
-                            return e.tower.can_be_mod and not e.tower.blocked and V.dist(e.pos.x, e.pos.y, this.pos.x, this.pos.y) < a.range
+                            return e.tower.can_be_mod and not e.tower.blocked and
+                                       V.dist(e.pos.x, e.pos.y, this.pos.x, this.pos.y) < a.range
                         end)
 
                         table.sort(towers, function(e1, e2)
@@ -4191,8 +4239,8 @@ scripts.soldier_magnus_illusion = {
             else
                 -- enable arcane rain attack
                 if ready_to_use_skill(arcane_rain, store) then
-                    local target = U.find_random_enemy(store, this.pos, arcane_rain.min_range,
-                        arcane_rain.max_range, arcane_rain.vis_flags, arcane_rain.vis_bans)
+                    local target = U.find_random_enemy(store, this.pos, arcane_rain.min_range, arcane_rain.max_range,
+                        arcane_rain.vis_flags, arcane_rain.vis_bans)
 
                     if not target then
                         SU.delay_attack(store, arcane_rain, 0.13333333333333333)
@@ -4723,8 +4771,8 @@ scripts.hero_giant = {
                 skill = this.hero.skills.stomp
 
                 if ready_to_use_skill(a, store) then
-                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                        a.vis_flags, a.vis_bans)
+                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                        a.vis_bans)
 
                     if not targets then
                         -- block empty
@@ -4921,8 +4969,8 @@ function scripts.hero_dracolich.update(this, store)
         skill = this.hero.skills.bonegolem
 
         if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-            local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range * 1.5, a.vis_flags,
-                a.vis_bans, function(v)
+            local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range * 1.5, a.vis_flags, a.vis_bans,
+                function(v)
                     local offset = P:predict_enemy_node_advance(v, a.spawn_time)
                     local ppos = P:node_pos(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni + offset)
 
@@ -4976,8 +5024,7 @@ function scripts.hero_dracolich.update(this, store)
         skill = this.hero.skills.spinerain
 
         if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-            local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                a.vis_bans)
+            local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
             if not target then
                 SU.delay_attack(store, a, 0.4)
@@ -5032,8 +5079,7 @@ function scripts.hero_dracolich.update(this, store)
         skill = this.hero.skills.diseasenova
 
         if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-            local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                a.vis_bans)
+            local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
             if not targets or #targets < a.min_count then
                 SU.delay_attack(store, a, 0.4)
@@ -5205,8 +5251,7 @@ function scripts.hero_dracolich.update(this, store)
                 local bullet_t = E:get_template(a.bullet)
                 local bullet_speed = bullet_t.bullet.min_speed
                 local flight_time = bullet_t.bullet.flight_time
-                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                    a.vis_bans)
+                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
                 if target then
                     local start_ts = store.tick_ts
@@ -5379,8 +5424,18 @@ scripts.hero_hacksaw = {
             a.disabled = nil
             a.cooldown = s.cooldown[s.level]
         end)
-
         this.health.hp = this.health.hp_max
+    end,
+    side_effect = function(this, store, attack, target)
+        local fx = E:create_entity("fx_coin_jump")
+        fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+        fx.render.sprites[1].ts = store.tick_ts
+        if target.health_bar then
+            fx.render.sprites[1].offset.y = target.health_bar.offset.y
+        end
+        target.enemy.gold = target.enemy.gold * 2
+        target.health.hp = 0
+        queue_insert(store, fx)
     end
 }
 -- 英格瓦
@@ -5767,8 +5822,8 @@ scripts.hero_ignus = {
                             goto label_71_0
                         end
 
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                            a.vis_bans)
+                        local targets =
+                            U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                         if not targets then
                             -- block empty
@@ -5788,8 +5843,7 @@ scripts.hero_ignus = {
                             SU.hero_gain_xp_from_skill(this, skill)
 
                             a.ts = start_ts
-                            targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                                a.vis_bans)
+                            targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                             if targets then
                                 for _, t in pairs(targets) do
@@ -5995,8 +6049,7 @@ scripts.hero_oni = {
                 skill = this.hero.skills.torment
 
                 if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-                    local triggers = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                        a.vis_bans)
+                    local triggers = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                     if not triggers or #triggers < a.min_count then
                         SU.delay_attack(store, a, 0.13333333333333333)
@@ -6014,8 +6067,8 @@ scripts.hero_oni = {
 
                         a.ts = start_ts
 
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius,
-                            a.vis_flags, a.vis_bans)
+                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags,
+                            a.vis_bans)
 
                         if not targets then
                             SU.delay_attack(store, a, 0.13333333333333333)
@@ -6252,8 +6305,8 @@ scripts.hero_10yr = {
                 if ready_to_use_skill(a, store) then
                     local start_ts, bdy, bdt, au
                     local fired_aura = false
-                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.trigger_range,
-                        a.vis_flags, a.vis_bans)
+                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.trigger_range, a.vis_flags,
+                        a.vis_bans)
 
                     if not targets then
                         SU.delay_attack(store, a, 0.2)
@@ -6310,8 +6363,7 @@ scripts.hero_10yr = {
                 skill = this.hero.skills.buffed
 
                 if not this.is_buffed and not a.disabled and store.tick_ts - a.ts >= a.cooldown then
-                    local targets =
-                        U.find_enemies_in_range(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
+                    local targets = U.find_enemies_in_range(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
                     if targets and #targets >= a.min_count then
                         SU.hero_gain_xp_from_skill(this, skill)
@@ -6759,8 +6811,8 @@ scripts.hero_monk = {
                 skill = this.hero.skills.dragonstyle
 
                 if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                        a.vis_flags, a.vis_bans)
+                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                        a.vis_bans)
 
                     if not targets then
                         SU.delay_attack(store, a, 0.13333333333333333)
@@ -6821,8 +6873,7 @@ scripts.hero_monk = {
                 skill = this.hero.skills.leopardstyle
 
                 if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-                    local targets =
-                        U.find_enemies_in_range(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
+                    local targets = U.find_enemies_in_range(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
                     if not targets then
                         SU.delay_attack(store, a, 0.13333333333333333)
@@ -7313,8 +7364,8 @@ scripts.hero_minotaur = {
                 skill = this.hero.skills.doomspin
 
                 if ready_to_use_skill(a, store) then
-                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                        a.vis_flags, a.vis_bans)
+                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                        a.vis_bans)
 
                     if not targets or #targets < a.min_count then
                         SU.delay_attack(store, a, 0.2)
@@ -7473,8 +7524,8 @@ scripts.hero_minotaur = {
                     U.set_destination(this, slot_pos)
 
                     while not U.walk(this, store.tick_length) do
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.stun_range,
-                            a.stun_vis_flags, a.stun_vis_bans, function(v)
+                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.stun_range, a.stun_vis_flags,
+                            a.stun_vis_bans, function(v)
                                 return not table.contains(damaged_enemies, v)
                             end)
 
@@ -7567,8 +7618,8 @@ scripts.hero_minotaur = {
 
                     terrains = band(terrains, bnot(TERRAIN_CLIFF, TERRAIN_FAERIE))
 
-                    local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false,
-                        a.vis_flags, a.vis_bans, function(v)
+                    local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false, a.vis_flags,
+                        a.vis_bans, function(v)
                             return (band(bnot(v.enemy.valid_terrains), terrains) == 0) and v.health.hp > 540
                         end)
 
@@ -7818,8 +7869,8 @@ scripts.hero_monkey_god = {
                 skill = this.hero.skills.angrygod
 
                 if ready_to_use_skill(a, store) then
-                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                        a.vis_flags, a.vis_bans)
+                    local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                        a.vis_bans)
 
                     if not targets or #targets < a.min_count then
                         SU.delay_attack(store, a, 0.2)
@@ -8151,9 +8202,9 @@ scripts.hero_elves_archer = {
                         if retarget_flag then
                             retarget_flag = nil
 
-                            local n_target, _, n_pred_pos = U.find_foremost_enemy(store, this.pos,
-                                attack.min_range, attack.max_range, attack.node_prediction, attack.vis_flags,
-                                attack.vis_bans, function(v)
+                            local n_target, _, n_pred_pos = U.find_foremost_enemy(store, this.pos, attack.min_range,
+                                attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans,
+                                function(v)
                                     return v ~= target
                                 end, F_FLYING)
 
@@ -8583,8 +8634,8 @@ scripts.hero_regson = {
                                         this.render.sprites[1].alpha = 255
                                         damage_applied = true
                                         local whirlwind_targets =
-                                            U.find_enemies_in_range(store, this.pos, 0, a.damage_radius,
-                                                a.vis_flags, a.vis_bans)
+                                            U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags,
+                                                a.vis_bans)
                                         if whirlwind_targets then
                                             for _, target in pairs(whirlwind_targets) do
                                                 local m = E:create_entity(a.mod)
@@ -9030,6 +9081,10 @@ function scripts.hero_lynn.level_up(this, store)
         m.speed_factor = s.speed_factor[s.level]
         m.inflicted_damage_factor = s.damage_factor[s.level]
 
+        m = E:get_template("mod_lynn_despair_self")
+        m.modifier.duration = s.duration[s.level]
+        m.speed_factor = 2 - s.speed_factor[s.level]
+        m.inflicted_damage_factor = 2 - s.damage_factor[s.level]
     end)
 
     upgrade_skill(this, "weakening", function(this, s)
@@ -9042,6 +9097,11 @@ function scripts.hero_lynn.level_up(this, store)
         m.modifier.duration = s.duration[s.level]
         m.armor_reduction = s.armor_reduction[s.level]
         m.magic_armor_reduction = s.magic_armor_reduction[s.level]
+
+        m = E:get_template("mod_lynn_weakening_self")
+        m.modifier.duration = s.duration[s.level]
+        m.armor_reduction = -s.armor_reduction[s.level] * 0.5
+        m.magic_armor_reduction = -s.magic_armor_reduction[s.level] * 0.5
     end)
 
     upgrade_skill(this, "charm_of_unluck", function(this, s)
@@ -9088,8 +9148,8 @@ function scripts.hero_lynn.update(this, store)
             end
 
             if ready_to_use_skill(this.ultimate, store) then
-                local enemy = U.find_biggest_enemy(store, this.pos, 0, this.timed_attacks.list[1].range, 0,
-                    F_RANGED, 0, function(e, origin)
+                local enemy = U.find_biggest_enemy(store, this.pos, 0, this.timed_attacks.list[1].range, 0, F_RANGED, 0,
+                    function(e, origin)
                         return e.health.hp <= this.ultimate.curse_damage_all * this.unit.damage_factor *
                                    e.health.damage_factor
                     end)
@@ -9128,8 +9188,7 @@ function scripts.hero_lynn.update(this, store)
                         SU.hero_gain_xp_from_skill(this, skill)
 
                         a.ts = store.tick_ts
-                        targets = U.find_enemies_in_range(store, this.pos, 0, a.range * 1.2, a.vis_flags,
-                            a.vis_bans)
+                        targets = U.find_enemies_in_range(store, this.pos, 0, a.range * 1.2, a.vis_flags, a.vis_bans)
 
                         if targets then
                             for i, target in ipairs(targets) do
@@ -9145,7 +9204,10 @@ function scripts.hero_lynn.update(this, store)
                                 queue_insert(store, m)
                             end
                         end
-
+                        local m = E:create_entity("mod_lynn_despair_self")
+                        m.modifier.source_id = this.id
+                        m.modifier.target_id = this.id
+                        queue_insert(store, m)
                         SU.y_hero_animation_wait(this)
                     end
 
@@ -9174,8 +9236,8 @@ function scripts.hero_lynn.update(this, store)
 
                         if blocked and U.is_blocked_valid(store, this) then
                             SU.hero_gain_xp_from_skill(this, skill)
-                            local targets = U.find_enemies_in_range(store, this.pos, 0, a.range * 1.2,
-                                a.vis_flags, a.vis_bans)
+                            local targets = U.find_enemies_in_range(store, this.pos, 0, a.range * 1.2, a.vis_flags,
+                                a.vis_bans)
                             for i, target in ipairs(targets) do
                                 if i > a.max_count then
                                     break
@@ -9188,7 +9250,10 @@ function scripts.hero_lynn.update(this, store)
 
                                 queue_insert(store, m)
                             end
-
+                            local m = E:create_entity("mod_lynn_weakening_self")
+                            m.modifier.source_id = this.id
+                            m.modifier.target_id = this.id
+                            queue_insert(store, m)
                         end
 
                         SU.y_hero_animation_wait(this)
@@ -9293,8 +9358,8 @@ function scripts.mod_lynn_ultimate.update(this, store, script)
 
             SU.insert_sprite(store, this.explode_fx, p)
 
-            local targets = U.find_enemies_in_range(store, target.pos, 0, this.explode_range,
-                this.explode_vis_flags, this.explode_vis_bans)
+            local targets = U.find_enemies_in_range(store, target.pos, 0, this.explode_range, this.explode_vis_flags,
+                this.explode_vis_bans)
 
             if targets then
                 for _, t in pairs(targets) do
@@ -9357,14 +9422,6 @@ function scripts.mod_lynn_weakening.insert(this, store, script)
     this.armor_reduction = this.armor_reduction * (1 - target.health.armor_resilience)
     SU.armor_dec(target, this.armor_reduction)
     SU.magic_armor_dec(target, this.magic_armor_reduction)
-
-    -- local mods = U.get_modifiers(store, target, {"mod_lynn_despair", "mod_lynn_ultimate"})
-
-    -- for _, m in pairs(mods) do
-    --     if m ~= this then
-    --         U.sprites_hide(m, nil, nil, true)
-    --     end
-    -- end
 
     signal.emit("mod-applied", this, target)
 
@@ -9573,8 +9630,7 @@ function scripts.hero_wilbur.update(this, store)
         end
 
         if ready_to_use_skill(this.ultimate, store) then
-            local target = U.find_foremost_enemy(store, this.pos, 0, this.ranged.attacks[1].max_range, 0,
-                F_RANGED, 0)
+            local target = U.find_foremost_enemy(store, this.pos, 0, this.ranged.attacks[1].max_range, 0, F_RANGED, 0)
 
             if target and target.pos then
                 S:queue(this.sound_events.change_rally_point)
@@ -9760,8 +9816,7 @@ function scripts.drone_wilbur.update(this, store)
         for _, set in pairs(ca.range_sets) do
             local min_range, max_range = unpack(set)
 
-            target, targets = U.find_nearest_enemy(store, this.pos, min_range, max_range, ca.vis_flags,
-                ca.vis_bans)
+            target, targets = U.find_nearest_enemy(store, this.pos, min_range, max_range, ca.vis_flags, ca.vis_bans)
 
             if target then
                 break
@@ -10182,8 +10237,8 @@ function scripts.hero_veznan.update(this, store)
             skill = this.hero.skills.arcanenova
 
             if ready_to_use_skill(a, store) then
-                local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-                    a.cast_time, a.vis_flags, a.vis_bans)
+                local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, a.cast_time,
+                    a.vis_flags, a.vis_bans)
 
                 if not target or #targets < 2 then
                     SU.delay_attack(store, a, 0.3333333333333333)
@@ -10198,8 +10253,8 @@ function scripts.hero_veznan.update(this, store)
                     node.spi = 1
 
                     local node_pos = P:node_pos(node)
-                    local targets = U.find_enemies_in_range(store, node_pos, 0, a.damage_radius, a.vis_flags,
-                        a.vis_bans)
+                    local targets =
+                        U.find_enemies_in_range(store, node_pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
 
                     if targets then
                         SU.hero_gain_xp_from_skill(this, skill)
@@ -10583,8 +10638,8 @@ function scripts.hero_durax.update(this, store)
 
             if ready_to_use_skill(this.ultimate, store) then
 
-                local target = U.find_foremost_enemy(store, this.pos, 0, this.ranged.attacks[1].max_range, 0,
-                    F_RANGED, 0)
+                local target = U.find_foremost_enemy(store, this.pos, 0, this.ranged.attacks[1].max_range, 0, F_RANGED,
+                    0)
 
                 if target and target.pos and
                     scripts.hero_durax_ultimate.can_fire_fn(nil, target.pos.x, target.pos.y, store) then
@@ -10645,10 +10700,9 @@ end
 
 function scripts.hero_durax_ultimate.update(this, store)
     this.damage = this.damage * this.damage_factor
-    local targets = U.find_enemies_in_range(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans,
-        function(e)
-            return band(e.vis.flags, F_BOSS) ~= 0 or band(e.vis.bans, F_STUN) == 0
-        end)
+    local targets = U.find_enemies_in_range(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans, function(e)
+        return band(e.vis.flags, F_BOSS) ~= 0 or band(e.vis.bans, F_STUN) == 0
+    end)
 
     if targets then
         local single = #targets == 1
@@ -10811,10 +10865,9 @@ function scripts.hero_elves_denas.update(this, store)
             skill = this.hero.skills.celebrity
 
             if ready_to_use_skill(a, store) then
-                local target = U.find_random_enemy(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans,
-                    function(e)
-                        return e.unit and not e.unit.is_stunned
-                    end)
+                local target = U.find_random_enemy(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans, function(e)
+                    return e.unit and not e.unit.is_stunned
+                end)
 
                 if not target then
                     SU.delay_attack(store, a, 0.13333333333333333)
@@ -10850,9 +10903,7 @@ function scripts.hero_elves_denas.update(this, store)
                                 function(e)
                                     return e.unit and not e.unit.is_stunned
                                 end)
-                            target = target or
-                                         U.find_random_enemy(store, this.pos, 0, a.range, a.vis_flags,
-                                    a.vis_bans)
+                            target = target or U.find_random_enemy(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
                             if target then
                                 local mod = E:create_entity("mod_elves_denas_celebrity")
@@ -11104,10 +11155,9 @@ function scripts.shield_elves_denas.update(this, store)
 
         ::label_75_1::
 
-        target = U.find_random_enemy(store, this.pos, 0, this.rebound_range, b.vis_flags, b.vis_bans,
-            function(v)
-                return not table.contains(visited, v.id)
-            end)
+        target = U.find_random_enemy(store, this.pos, 0, this.rebound_range, b.vis_flags, b.vis_bans, function(v)
+            return not table.contains(visited, v.id)
+        end)
 
         if not target and #visited > 1 then
             visited = {last_target.id}
@@ -11351,8 +11401,7 @@ function scripts.hero_arivan.update(this, store)
             skill = this.hero.skills.seal_of_fire
 
             if ready_to_use_skill(a, store) then
-                local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                    a.vis_bans)
+                local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not target then
                     SU.delay_attack(store, a, 0.26666666666666666)
@@ -11380,8 +11429,8 @@ function scripts.hero_arivan.update(this, store)
                             local offset = a.bullet_start_offset[si]
                             local b = E:create_entity(a.bullet)
 
-                            target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range,
-                                a.vis_flags, a.vis_bans)
+                            target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                                a.vis_bans)
 
                             if target then
                                 local dist = V.dist(this.pos.x, this.pos.y + offset.y, target.pos.x, target.pos.y)
@@ -11671,8 +11720,8 @@ function scripts.hero_arivan_ultimate.update(this, store)
                     if a.chance and (a.chance == 0 or math.random() >= a.chance) then
                         -- block empty
                     else
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                            a.vis_bans)
+                        local targets =
+                            U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                         if not targets then
                             if ai == 3 then
@@ -12235,8 +12284,7 @@ function scripts.hero_bravebark.update(this, store)
             skill = this.hero.skills.oakseeds
 
             if ready_to_use_skill(a, store) then
-                local target = U.find_foremost_enemy(store, this.pos, 0, a.max_range, 0.5, a.vis_flags,
-                    a.vis_bans)
+                local target = U.find_foremost_enemy(store, this.pos, 0, a.max_range, 0.5, a.vis_flags, a.vis_bans)
 
                 if not target then
                     SU.delay_attack(store, a, 0.3333333333333333)
@@ -12295,8 +12343,7 @@ function scripts.hero_bravebark.update(this, store)
             skill = this.hero.skills.rootspikes
 
             if ready_to_use_skill(a, store) then
-                local triggers = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                    a.vis_bans)
+                local triggers = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not triggers or #triggers < a.trigger_count then
                     SU.delay_attack(store, a, 0.13333333333333333)
@@ -12312,8 +12359,8 @@ function scripts.hero_bravebark.update(this, store)
                     end) then
                         -- block empty
                     else
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius,
-                            a.vis_flags, a.vis_bans)
+                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags,
+                            a.vis_bans)
 
                         if not targets then
                             -- block empty
@@ -12430,8 +12477,7 @@ function scripts.hero_bravebark_ultimate.update(this, store)
 
             queue_insert(store, e)
 
-            local targets = U.find_enemies_in_range(store, e.pos, 0, this.damage_radius, this.vis_flags,
-                this.vis_bans)
+            local targets = U.find_enemies_in_range(store, e.pos, 0, this.damage_radius, this.vis_flags, this.vis_bans)
 
             if targets then
                 for _, target in pairs(targets) do
@@ -12590,8 +12636,8 @@ function scripts.hero_catha.update(this, store)
 
                         SU.hero_gain_xp_from_skill(this, skill)
 
-                        local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                            a.vis_flags, a.vis_bans)
+                        local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                            a.vis_bans)
 
                         if targets then
                             for i = 1, skill.count[skill.level] do
@@ -12681,8 +12727,7 @@ function scripts.hero_catha.update(this, store)
             skill = this.hero.skills.tale
 
             if ready_to_use_skill(a, store) then
-                local targets =
-                    U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+                local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not targets then
                     SU.delay_attack(store, a, 0.3333333333333333)
@@ -12786,10 +12831,9 @@ function scripts.hero_catha_ultimate.update(this, store)
     U.animation_start(fx, nil, nil, store.tick_ts, false)
     queue_insert(store, fx)
 
-    local targets = U.find_enemies_in_range(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans,
-        function(e)
-            return U.flag_has(e.vis.flags, F_BOSS) or not U.flag_has(e.vis.bans, F_STUN)
-        end)
+    local targets = U.find_enemies_in_range(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans, function(e)
+        return U.flag_has(e.vis.flags, F_BOSS) or not U.flag_has(e.vis.bans, F_STUN)
+    end)
 
     if targets then
         for _, target in pairs(targets) do
@@ -13343,8 +13387,7 @@ function scripts.hero_xin.update(this, store)
             if ready_to_use_skill(a, store) then
                 local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.max_range, a.vis_flags,
                     a.vis_bans)
-                local enemies =
-                    U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not soldiers or #soldiers < a.min_count or not enemies then
                     SU.delay_attack(store, a, 0.3333333333333333)
@@ -13571,8 +13614,8 @@ function scripts.hero_xin_ultimate.update(this, store)
     }
     local node_pos = P:node_pos(node)
     local count = this.count
-    local target, targets = U.find_foremost_enemy(store, this.pos, 0, this.range, fts(10), this.vis_flags,
-        this.vis_bans)
+    local target, targets =
+        U.find_foremost_enemy(store, this.pos, 0, this.range, fts(10), this.vis_flags, this.vis_bans)
     local idx = 1
 
     while count > 0 do
@@ -13692,6 +13735,11 @@ function scripts.hero_faustus.level_up(this, store)
         m.dps.damage_min = s.mod_damage[s.level]
     end)
 
+    upgrade_skill(this, "urination", function(this, s)
+        this.ranged.attacks[1].bullet_count = s.count[s.level]
+        this.ranged.attacks[2].bullet_count = s.count[s.level]
+    end)
+
     this.health.hp = this.health.hp_max
 end
 
@@ -13752,13 +13800,13 @@ function scripts.hero_faustus.update(this, store)
                 -- block empty
             elseif a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
-            elseif store.tick_ts - a.ts < a.cooldown then
+            elseif store.tick_ts - a.ts < a.cooldown * this.cooldown_factor then
                 -- block empty
             else
                 local bullet_t = E:get_template(a.bullet)
                 local flight_time = a.estimated_flight_time or 1
-                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                    a.vis_bans, function(e)
+                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans,
+                    function(e)
                         if U.flag_has(a.vis_flags, F_SPELLCASTER) and
                             (not U.flag_has(e.vis.flags, F_SPELLCASTER) or not e.enemy.can_do_magic) then
                             log.debug("filtering (%s)%s", e.id, e.template_name)
@@ -13779,8 +13827,8 @@ function scripts.hero_faustus.update(this, store)
                             if a.max_count_range and a.min_count then
                                 local min_count_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi,
                                     e.nav_path.ni - a.min_count_nodes_offset)
-                                local nearby = U.find_enemies_in_range(store, min_count_pos, 0,
-                                    a.max_count_range, a.vis_flags, a.vis_bans)
+                                local nearby = U.find_enemies_in_range(store, min_count_pos, 0, a.max_count_range,
+                                    a.vis_flags, a.vis_bans)
 
                                 return nearby and #nearby >= a.min_count
                             end
@@ -13826,10 +13874,8 @@ function scripts.hero_faustus.update(this, store)
                     targets = {}
 
                     if a.bullet_count then
-                        local extra_targets = U.find_enemies_in_range(store, target.pos, 0, a.extra_range,
-                            a.vis_flags, a.vis_bans, function(e)
-                                return af and e.pos.x <= this.pos.x or e.pos.x >= this.pos.x
-                            end)
+                        local extra_targets = U.find_enemies_in_range(store, target.pos, 0, a.extra_range, a.vis_flags,
+                            a.vis_bans)
 
                         if not extra_targets then
                             goto label_112_0
@@ -14037,8 +14083,8 @@ function scripts.hero_rag.update(this, store)
             skill = this.hero.skills.raggified
 
             if ready_to_use_skill(a, store) then
-                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                    a.vis_bans, function(e)
+                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans,
+                    function(e)
                         return e.health.hp < a.max_target_hp * this.unit.damage_factor and
                                    GR:cell_is_only(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
                     end)
@@ -14129,8 +14175,7 @@ function scripts.hero_rag.update(this, store)
             skill = this.hero.skills.angry_gnome
 
             if ready_to_use_skill(a, store) then
-                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                    a.vis_bans)
+                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not target then
                     SU.delay_attack(store, a, 0.13333333333333333)
@@ -14153,8 +14198,7 @@ function scripts.hero_rag.update(this, store)
 
             if ready_to_use_skill(a, store) then
                 local nodes, start_node, end_node, next_node, damage_ts
-                local target, targets = U.find_nearest_enemy(store, this.pos, 0, a.max_range, a.vis_flags,
-                    a.vis_bans)
+                local target, targets = U.find_nearest_enemy(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
                 local total_hp = not targets and 0 or table.reduce(targets, function(e, hp_sum)
                     return e.health.hp + hp_sum
                 end)
@@ -14307,10 +14351,9 @@ function scripts.hero_rag_ultimate.update(this, store)
     SU.insert_sprite(store, this.hit_decal, this.pos)
     U.y_wait(store, this.hit_time)
 
-    local targets = U.find_enemies_in_range(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans,
-        function(e)
-            return GR:cell_is_only(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
-        end)
+    local targets = U.find_enemies_in_range(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans, function(e)
+        return GR:cell_is_only(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
+    end)
 
     if targets then
         for i, target in ipairs(targets) do
@@ -14633,8 +14676,7 @@ function scripts.lion_bruce.update(this, store)
         if not fading and store.tick_ts - attack.ts > attack.cooldown then
             attack.ts = store.tick_ts
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, attack.range, attack.vis_flags,
-                attack.vis_bans)
+            local targets = U.find_enemies_in_range(store, this.pos, 0, attack.range, attack.vis_flags, attack.vis_bans)
 
             if targets then
                 for _, e in pairs(targets) do
@@ -14756,8 +14798,8 @@ function scripts.hero_bolverk.update(this, store)
                     if SU.y_hero_wait(store, this, a.hit_time) then
                         -- block empty
                     else
-                        targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                            a.vis_flags, a.vis_bans)
+                        targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                            a.vis_bans)
 
                         if targets then
                             for _, target in pairs(targets) do
@@ -14889,8 +14931,8 @@ scripts.hero_dwarf = {
                         else
                             hit_pos.x = hit_pos.x + ring.hit_offset.x * a.scale
                         end
-                        targets = U.find_enemies_in_range(store, hit_pos, 0, ring.damage_radius * a.scale,
-                            a.vis_flags, a.vis_bans)
+                        targets = U.find_enemies_in_range(store, hit_pos, 0, ring.damage_radius * a.scale, a.vis_flags,
+                            a.vis_bans)
                         if targets then
                             for _, target in pairs(targets) do
                                 local d = SU.create_attack_damage(ring, target.id, this)
@@ -14997,8 +15039,7 @@ function scripts.hero_dragon.update(this, store)
         skill = this.hero.skills.feast
 
         if ready_to_use_skill(a, store) then
-            local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                a.vis_bans)
+            local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
             if not target then
                 SU.delay_attack(store, a, 0.13333333333333333)
@@ -15094,8 +15135,7 @@ function scripts.hero_dragon.update(this, store)
                 local bullet_t = E:get_template(a.bullet)
                 local bullet_speed = bullet_t.bullet.min_speed
                 local flight_time = bullet_t.bullet.flight_time
-                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags,
-                    a.vis_bans)
+                local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
                 if target then
                     local start_ts = store.tick_ts
@@ -16114,8 +16154,8 @@ function scripts.hero_hunter.update(this, store)
             a = ricochet_attack
 
             if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local enemy, enemies = U.find_foremost_enemy(store, tpos(this), a.min_range,
-                    a.max_range_trigger, a.node_prediction, a.vis_flags, a.vis_bans)
+                local enemy, enemies = U.find_foremost_enemy(store, tpos(this), a.min_range, a.max_range_trigger,
+                    a.node_prediction, a.vis_flags, a.vis_bans)
 
                 if not enemy then
                     SU.delay_attack(store, a, fts(10))
@@ -16153,8 +16193,7 @@ function scripts.hero_hunter.update(this, store)
             a = shoot_around_attack
 
             if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local enemies =
-                    U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
@@ -16203,8 +16242,7 @@ function scripts.hero_hunter.update(this, store)
             a = beasts_attack
 
             if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local enemies =
-                    U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < 1 then
                     SU.delay_attack(store, a, fts(10))
@@ -16393,8 +16431,8 @@ function scripts.arrow_hero_hunter_ricochet.update(this, store)
         local search_pos = V.vclone(target.pos)
 
         if bounce_count < this.bounces then
-            local targets = U.find_enemies_in_range(store, search_pos, 0, this.bounce_range, b.vis_flags,
-                b.vis_bans, function(v)
+            local targets = U.find_enemies_in_range(store, search_pos, 0, this.bounce_range, b.vis_flags, b.vis_bans,
+                function(v)
                     return not table.contains(already_hit, v.id)
                 end)
 
@@ -16628,9 +16666,8 @@ function scripts.aura_hero_hunter_shoot_around.update(this, store, script)
             last_hit_ts = store.tick_ts
             local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags,
                 this.aura.vis_bans, function(v)
-                    return
-                               (not this.aura.allowed_templates or
-                                   table.contains(this.aura.allowed_templates, v.template_name)) and
+                    return (not this.aura.allowed_templates or
+                               table.contains(this.aura.allowed_templates, v.template_name)) and
                                (not this.aura.excluded_templates or
                                    not table.contains(this.aura.excluded_templates, v.template_name)) and
                                (not this.aura.excluded_entities or not table.contains(this.aura.excluded_entities, v.id))
@@ -16943,8 +16980,8 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
                 -- block empty
             end
         else
-            local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, attack.range, false,
-                attack.vis_flags, attack.vis_bans, function(v)
+            local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, attack.range, false, attack.vis_flags,
+                attack.vis_bans, function(v)
                     return not SU.has_modifiers(store, v, attack.mark_mod)
                 end)
 
@@ -17515,8 +17552,7 @@ function scripts.hero_space_elf.update(this, store)
             skill = this.hero.skills.astral_reflection
 
             if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local targets =
-                    U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+                local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not targets or #targets == 0 then
                     SU.delay_attack(store, a, fts(10))
@@ -17614,8 +17650,8 @@ function scripts.hero_space_elf.update(this, store)
             skill = this.hero.skills.void_rift
 
             if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags,
-                    a.vis_bans)
+                local enemies =
+                    U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
@@ -18055,8 +18091,7 @@ function scripts.mod_hero_space_elf_black_aegis.update(this, store)
             U.animation_start(this, this.animation_end, nil, store.tick_ts, false)
             U.y_wait(store, this.explosion_time)
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, this.explosion_range, 0,
-                bor(F_FLYING, F_CLIFF))
+            local targets = U.find_enemies_in_range(store, this.pos, 0, this.explosion_range, 0, bor(F_FLYING, F_CLIFF))
 
             if targets then
                 for _, target in pairs(targets) do
@@ -18582,6 +18617,7 @@ function scripts.hero_raelyn.update(this, store)
     local unbreakable_attack = this.timed_attacks.list[1]
     local inspire_fear_attack = this.timed_attacks.list[2]
     local onslaught_attack = this.timed_attacks.list[3]
+    onslaught_attack.duration_ts = 0
     local onslaught_on = false
 
     this.health_bar.hidden = false
@@ -18612,6 +18648,7 @@ function scripts.hero_raelyn.update(this, store)
             if ready_to_use_skill(this.ultimate, store) then
                 local target = find_target_at_critical_moment(this, store, 140, false, true, F_FLYING)
                 if target and valid_rally_node_nearby(target.pos) then
+                    local start_ts = store.tick_ts
                     U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
                     S:queue(this.sound_events.change_rally_point)
                     local e = E:create_entity(this.hero.skills.ultimate.controller_name)
@@ -18621,6 +18658,7 @@ function scripts.hero_raelyn.update(this, store)
                     queue_insert(store, e)
                     this.ultimate.ts = store.tick_ts
                     SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+                    onslaught_attack.duration_ts = onslaught_attack.duration_ts + store.tick_ts - start_ts
                 else
                     this.ultimate.ts = this.ultimate.ts + 1
                 end
@@ -18630,8 +18668,8 @@ function scripts.hero_raelyn.update(this, store)
             a = inspire_fear_attack
 
             if ready_to_use_skill(a, store) then
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags,
-                    a.vis_bans)
+                local enemies =
+                    U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
@@ -18675,6 +18713,7 @@ function scripts.hero_raelyn.update(this, store)
                         end
 
                         SU.y_hero_animation_wait(this)
+                        onslaught_attack.duration_ts = onslaught_attack.duration_ts + store.tick_ts - start_ts
                     end
 
                     goto label_222_0
@@ -18685,8 +18724,8 @@ function scripts.hero_raelyn.update(this, store)
             a = unbreakable_attack
 
             if ready_to_use_skill(a, store) and not U.has_modifiers(store, this, a.mod) then
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags,
-                    a.vis_bans)
+                local enemies =
+                    U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
@@ -18764,6 +18803,7 @@ function scripts.hero_raelyn.update(this, store)
                         end
 
                         SU.y_hero_animation_wait(this)
+                        onslaught_attack.duration_ts = onslaught_attack.duration_ts + store.tick_ts - start_ts
                     end
 
                     goto label_222_0
@@ -18774,8 +18814,8 @@ function scripts.hero_raelyn.update(this, store)
             a = onslaught_attack
 
             if ready_to_use_skill(a, store) and not onslaught_on then
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags,
-                    a.vis_bans)
+                local enemies =
+                    U.find_enemies_in_range(store, this.pos, 0, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
@@ -18794,6 +18834,7 @@ function scripts.hero_raelyn.update(this, store)
                     basic_attack.sound = a.sound
                     U.speed_inc(this, this.motion.max_speed * 0.4)
                     this.melee.attacks[2].hit_aura = a.hit_aura
+                    SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.8)
                 end
             end
 
@@ -18808,6 +18849,7 @@ function scripts.hero_raelyn.update(this, store)
                 basic_attack.sound = a._sound
                 a.ts = store.tick_ts
                 U.speed_dec(this, this.motion.max_speed * 0.4)
+                SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.8)
             end
 
             brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
@@ -19534,8 +19576,8 @@ function scripts.hero_venom.update(this, store)
             a = floor_spikes_attack
 
             if not this.is_transformed and ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local enemies = U.find_enemies_in_range(store, this.pos, a.range_trigger_min,
-                    a.range_trigger_max, a.vis_flags, a.vis_bans)
+                local enemies = U.find_enemies_in_range(store, this.pos, a.range_trigger_min, a.range_trigger_max,
+                    a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
@@ -19682,8 +19724,8 @@ function scripts.hero_venom.update(this, store)
                     if SU.soldier_interrupted(this) then
                         -- block empty
                     else
-                        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), a.min_range,
-                            a.max_range, a.shoot_time, a.vis_flags, a.vis_bans)
+                        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), a.min_range, a.max_range,
+                            a.shoot_time, a.vis_flags, a.vis_bans)
 
                         if target then
                             enemy_id = target.id
@@ -19719,8 +19761,8 @@ function scripts.hero_venom.update(this, store)
             ::label_294_1::
 
             if not this.soldier.target_id and ready_to_use_skill(eat_enemy_attack, store) then
-                local targets = U.find_enemies_in_range(store, this.nav_rally.center, 0, this.melee.range,
-                    F_BLOCK, F_CLIFF, function(e)
+                local targets = U.find_enemies_in_range(store, this.nav_rally.center, 0, this.melee.range, F_BLOCK,
+                    F_CLIFF, function(e)
                         return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and
                                    band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and e.health.hp <
                                    e.health.hp_max * eat_enemy_attack.hp_trigger
@@ -19776,8 +19818,7 @@ function scripts.decal_hero_venom_spike.update(this, store, script)
     U.y_animation_play(this, "in", false, store.tick_ts)
     U.animation_start(this, "idle", false, store.tick_ts, true)
 
-    local enemies = U.find_enemies_in_range(store, this.pos, 0, this.damage_radius, this.vis_flags,
-        this.vis_bans)
+    local enemies = U.find_enemies_in_range(store, this.pos, 0, this.damage_radius, this.vis_flags, this.vis_bans)
 
     if enemies and #enemies > 0 then
         for i = 1, #enemies do
@@ -20607,8 +20648,8 @@ function scripts.hero_dragon_gem.update(this, store)
                     end
 
                     if i == 4 then
-                        local target, targets = U.find_foremost_enemy(store, this.pos, 0, a.max_range, 0,
-                            a.vis_flags, a.vis_bans)
+                        local target, targets = U.find_foremost_enemy(store, this.pos, 0, a.max_range, 0, a.vis_flags,
+                            a.vis_bans)
 
                         if not target then
                             SU.delay_attack(store, a, 0.4)
@@ -20703,8 +20744,8 @@ function scripts.hero_dragon_gem.update(this, store)
                         local bullet_t = E:get_template(a.bullet)
                         local flight_time = a.estimated_flight_time or 1
 
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                            a.vis_bans)
+                        local targets =
+                            U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                         if targets then
                             local target = targets[1]
@@ -20949,8 +20990,12 @@ function scripts.bolt_hero_dragon_gem_attack.update(this, store, script)
         if is_flying then
             target_bans = 0
 
-            if target and target.flight_height then
-                target_pos.y = target_pos.y - target.flight_height
+            if target then
+                if target.flight_height then
+                    target_pos.y = target_pos.y - target.flight_height
+                elseif target.unit.hit_offset then
+                    target_pos.y = target_pos.y - target.unit.hit_offset.y
+                end
             end
         end
 
@@ -21184,8 +21229,7 @@ function scripts.decal_hero_dragon_gem_floor_impact_shard.update(this, store)
     U.y_animation_wait(this)
     U.animation_start(this, "idle", nil, store.tick_ts, 1)
 
-    local targets =
-        U.find_enemies_in_range(store, this.pos, 0, this.damage_range, 0, bit.bor(F_FLYING, F_CLIFF))
+    local targets = U.find_enemies_in_range(store, this.pos, 0, this.damage_range, 0, bit.bor(F_FLYING, F_CLIFF))
 
     if targets then
         for _, target in pairs(targets) do
@@ -21422,8 +21466,7 @@ function scripts.aura_hero_dragon_gem_crystal_totem.update(this, store, script)
                 end
             end
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, this.damage_range, this.aura.vis_flags,
-                F_NONE)
+            local targets = U.find_enemies_in_range(store, this.pos, 0, this.damage_range, this.aura.vis_flags, F_NONE)
 
             if targets then
                 for _, target in pairs(targets) do
@@ -21661,8 +21704,7 @@ function scripts.decal_hero_dragon_gem_ultimate_shard.update(this, store)
 
     queue_insert(store, floor_decal)
 
-    local targets =
-        U.find_enemies_in_range(store, this.pos, 0, this.damage_range, 0, bit.bor(F_FLYING, F_CLIFF))
+    local targets = U.find_enemies_in_range(store, this.pos, 0, this.damage_range, 0, bit.bor(F_FLYING, F_CLIFF))
 
     if targets then
         for _, target in pairs(targets) do
@@ -21965,7 +22007,8 @@ function scripts.hero_witch.update(this, store)
             end
 
             if ready_to_use_skill(this.ultimate, store) then
-                local target = U.find_teleport_moment(store, this.pos, this.ranged.attacks[1].max_range, MANY_ENEMY_COUNT)
+                local target = U.find_teleport_moment(store, this.pos, this.ranged.attacks[1].max_range,
+                    MANY_ENEMY_COUNT)
                 if target and valid_rally_node_nearby(target.pos) then
                     apply_ultimate(this, store, target, "levelup")
                 else
@@ -21977,8 +22020,7 @@ function scripts.hero_witch.update(this, store)
             a = skill_soldiers_attack
 
             if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags,
-                    a.vis_bans)
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
@@ -22014,8 +22056,9 @@ function scripts.hero_witch.update(this, store)
             skill = this.hero.skills.path_aoe
 
             if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                local target, targets, pred_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a.max_range,
-                    a.node_prediction, a.vis_flags, a.vis_bans,nil,nil,E:get_template("aura_hero_witch_path_aoe").aura.radius)
+                local target, targets, pred_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0,
+                    a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, nil, nil, E:get_template(
+                        "aura_hero_witch_path_aoe").aura.radius)
 
                 if not targets or #targets < a.min_targets or not pred_pos then
                     SU.delay_attack(store, a, fts(10))
@@ -22080,9 +22123,9 @@ function scripts.hero_witch.update(this, store)
                     U.animation_start(this, this.dodge.animation_dissapear, nil, store.tick_ts, false)
                     U.y_wait(store, fts(6))
                     create_soldier(this.dodge.decoy, V.v(0, 0))
-                    this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - 1
-                    this.timed_attacks.list[2].ts = this.timed_attacks.list[2].ts - 1
-                    this.timed_attacks.list[3].ts = this.timed_attacks.list[3].ts - 1
+                    this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - 2
+                    this.timed_attacks.list[2].ts = this.timed_attacks.list[2].ts - 2
+                    this.timed_attacks.list[3].ts = this.timed_attacks.list[3].ts - 2
                     U.y_animation_wait(this)
                     U.y_wait(store, fts(3))
 
@@ -22108,9 +22151,9 @@ function scripts.hero_witch.update(this, store)
                 -- block empty
             else
                 if store.tick_ts - basic_ranged.ts >= basic_ranged.cooldown then
-                    local enemy, enemies, enemy_pos = U.find_foremost_enemy(store, this.pos,
-                        basic_ranged.min_range, basic_ranged.max_range, basic_ranged.node_prediction,
-                        basic_ranged.vis_flags, basic_ranged.vis_bans)
+                    local enemy, enemies, enemy_pos = U.find_foremost_enemy(store, this.pos, basic_ranged.min_range,
+                        basic_ranged.max_range, basic_ranged.node_prediction, basic_ranged.vis_flags,
+                        basic_ranged.vis_bans)
 
                     if not enemy then
                         SU.delay_attack(store, basic_ranged, fts(10))
@@ -22158,8 +22201,8 @@ function scripts.hero_witch.update(this, store)
                 a = this.timed_attacks.list[2]
 
                 if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-                    local enemy, enemies = U.find_foremost_enemy(store, this.pos, 0, a.range, false,
-                        a.vis_flags, a.vis_bans, function(e)
+                    local enemy, enemies = U.find_foremost_enemy(store, this.pos, 0, a.range, false, a.vis_flags,
+                        a.vis_bans, function(e)
                             return e.health and e.health.hp_max <= a.hp_max and P:nodes_to_goal(e.nav_path) >=
                                        a.max_nodes_to_goal
                         end)
@@ -22568,8 +22611,8 @@ function scripts.aura_hero_witch_path_aoe.update(this, store, script)
             cycles_count = cycles_count + 1
 
             local targets = table.filter(store.enemies, function(k, v)
-                return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) ==
-                           0 and band(v.vis.bans, this.aura.vis_flags) == 0 and
+                return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and
+                           band(v.vis.bans, this.aura.vis_flags) == 0 and
                            U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and
                            (not this.aura.allowed_templates or
                                table.contains(this.aura.allowed_templates, v.template_name)) and
@@ -22960,8 +23003,8 @@ function scripts.aura_hero_witch_decoy_explotion.update(this, store, script)
             cycles_count = cycles_count + 1
 
             local targets = table.filter(store.enemies, function(k, v)
-                return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) ==
-                           0 and band(v.vis.bans, this.aura.vis_flags) == 0 and
+                return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and
+                           band(v.vis.bans, this.aura.vis_flags) == 0 and
                            U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and
                            (not this.aura.allowed_templates or
                                table.contains(this.aura.allowed_templates, v.template_name)) and
@@ -23133,7 +23176,7 @@ function scripts.soldier_hero_witch_decoy.update(this, store, script)
             this.health.hp = 0
 
             -- if IS_KR5 then
-                SU.remove_modifiers(store, this)
+            SU.remove_modifiers(store, this)
             -- end
 
             y_custom_death(store, this)
@@ -23309,7 +23352,8 @@ function scripts.hero_dragon_bone.update(this, store)
         a = this.ultimate
 
         if ready_to_use_skill(a, store) then
-            local target = U.find_foremost_enemy(store, this.pos, basic_ranged.min_range, basic_ranged.max_range, nil, 0, a.vis_bans)
+            local target = U.find_foremost_enemy(store, this.pos, basic_ranged.min_range, basic_ranged.max_range, nil,
+                0, a.vis_bans)
             if target and valid_rally_node_nearby(target.pos) then
                 apply_ultimate(this, store, target, "levelup")
             else
@@ -23321,8 +23365,8 @@ function scripts.hero_dragon_bone.update(this, store)
         a = cloud_attack
 
         if ready_to_use_skill(a, store) then
-            local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range,
-                a.max_range, a.shoot_time + fts(10), a.vis_flags, a.vis_bans, function(v, o)
+            local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
+                a.shoot_time + fts(10), a.vis_flags, a.vis_bans, function(v, o)
                     return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
                 end)
 
@@ -23376,10 +23420,10 @@ function scripts.hero_dragon_bone.update(this, store)
                 goto label_664_4
             end
 
-            local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range,
-                a.max_range, a.hit_time, a.vis_flags, a.vis_bans_target, function(v, o)
-                return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
-            end)
+            local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
+                a.hit_time, a.vis_flags, a.vis_bans_target, function(v, o)
+                    return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
+                end)
 
             if not targets or not pred_pos or #targets < a.min_targets then
                 SU.delay_attack(store, a, 0.2)
@@ -23398,8 +23442,7 @@ function scripts.hero_dragon_bone.update(this, store)
                 goto label_664_4
             end
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a
-            .vis_flags, a.vis_bans_damage)
+            local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans_damage)
 
             if targets then
                 for i, v in ipairs(targets) do
@@ -23438,8 +23481,7 @@ function scripts.hero_dragon_bone.update(this, store)
         a = rain_attack
 
         if ready_to_use_skill(a, store) then
-            local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range,
-                a.vis_flags, a.vis_bans)
+            local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
             if not target then
                 SU.delay_attack(store, a, 0.4)
@@ -23448,9 +23490,7 @@ function scripts.hero_dragon_bone.update(this, store)
             end
 
             local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
-            local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {
-                pi
-            }, nil, nil, NF_RALLY)
+            local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 
             if #nodes < 1 then
                 SU.delay_attack(store, a, 0.4)
@@ -23480,11 +23520,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
                 e.pos = P:node_pos(pi, spi, ni)
 
-                local types = {
-                    "a",
-                    "b",
-                    "c"
-                }
+                local types = {"a", "b", "c"}
                 local type = types[math.random(1, 3)]
 
                 e.bone_type = type
@@ -23513,10 +23549,10 @@ function scripts.hero_dragon_bone.update(this, store)
         a = burst_attack
 
         if ready_to_use_skill(a, store) then
-            local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range,
-                a.max_range, a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans_target, function(v, o)
-                return GR:cell_is(v.pos.x, v.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
-            end)
+            local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
+                a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans_target, function(v, o)
+                    return GR:cell_is(v.pos.x, v.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
+                end)
 
             if not target or not targets or #targets < a.min_targets then
                 SU.delay_attack(store, a, 0.4)
@@ -23547,8 +23583,7 @@ function scripts.hero_dragon_bone.update(this, store)
                     local e_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, e_ni)
                     local b = E:create_entity(a.bullet)
 
-                    b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x,
-                        this.pos.y + a.bullet_start_offset.y
+                    b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
                     b.bullet.from = V.vclone(b.pos)
                     b.bullet.to = e_pos
                     b.bullet.damage_factor = this.unit.damage_factor
@@ -23561,8 +23596,7 @@ function scripts.hero_dragon_bone.update(this, store)
                 local function shoot_bullet_to_pos(pos)
                     local b = E:create_entity(a.bullet)
 
-                    b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x,
-                        this.pos.y + a.bullet_start_offset.y
+                    b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
                     b.bullet.from = V.vclone(b.pos)
                     b.bullet.to = pos
                     b.bullet.source_id = this.id
@@ -23602,10 +23636,7 @@ function scripts.hero_dragon_bone.update(this, store)
                 ::label_664_1::
 
                 do
-                    local nodes = P:get_all_valid_pos(this.pos.x, this.pos.y, 0, a.max_range, nil, nil, nil,
-                        {
-                            1
-                        })
+                    local nodes = P:get_all_valid_pos(this.pos.x, this.pos.y, 0, a.max_range, nil, nil, nil, {1})
 
                     shuffle_table(nodes)
 
@@ -23657,18 +23688,17 @@ function scripts.hero_dragon_bone.update(this, store)
             local bullet_t = E:get_template(a.bullet)
             local flight_time = a.estimated_flight_time or 1
             local pos_offset = v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
-            local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                a.vis_flags, a.vis_bans, function(e)
-                return V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > a.radius * a.radius
-            end)
+            local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans,
+                function(e)
+                    return V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > a.radius * a.radius
+                end)
 
             if targets then
                 local target = targets[1]
                 local start_ts = store.tick_ts
                 local b, targets
                 local node_offset = P:predict_enemy_node_advance(target, flight_time)
-                local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi,
-                    target.nav_path.ni + node_offset)
+                local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
                 local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
 
                 U.animation_start(this, an, af, store.tick_ts)
@@ -23682,9 +23712,7 @@ function scripts.hero_dragon_bone.update(this, store)
                     coroutine.yield()
                 end
 
-                targets = {
-                    target
-                }
+                targets = {target}
                 b = E:create_entity(a.bullet)
                 b.bullet.target_id = target.id
                 b.bullet.source_id = this.id
@@ -23711,8 +23739,7 @@ function scripts.hero_dragon_bone.update(this, store)
                 if b.bullet.ignore_hit_offset then
                     b.bullet.to = V.v(target.pos.x, target.pos.y)
                 else
-                    b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x,
-                        target.pos.y + target.unit.hit_offset.y)
+                    b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
                 end
 
                 b.bullet.shot_index = i
@@ -23728,9 +23755,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
                     if triggered_lethal_focus then
                         b.bullet.damage_factor = b.bullet.damage_factor * upg_lf.damage_factor_area
-                        b.bullet.pop = {
-                            "pop_crit"
-                        }
+                        b.bullet.pop = {"pop_crit"}
                         b.bullet.pop_chance = 1
                         b.bullet.pop_conds = DR_DAMAGE
                     end
@@ -23754,8 +23779,8 @@ function scripts.hero_dragon_bone.update(this, store)
 
                 a.ts = start_ts
 
-                U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts,
-                    this.idle_flip.loop, nil, true)
+                U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil,
+                    true)
 
                 ::label_664_0::
 
@@ -23870,7 +23895,11 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store, script)
             target_bans = 0
 
             if target and target.flight_height then
-                target_pos.y = target_pos.y - target.flight_height
+                if target.flight_height then
+                    target_pos.y = target_pos.y - target.flight_height
+                elseif target.unit.hit_offset then
+                    target_pos.y = target_pos.y - target.unit.hit_offset.y
+                end
             end
         end
 
@@ -24067,11 +24096,13 @@ function scripts.aura_dragon_bone_cloud.update(this, store, script)
             last_hit_ts = 1e+99
         end
 
-        if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration then
+        if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts -
+            this.aura.ts > this.actual_duration then
             break
         end
 
-        if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
+        if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and
+            store.tick_ts - first_hit_ts > this.aura.apply_duration then
             -- block empty
         else
             first_hit_ts = first_hit_ts or store.tick_ts
@@ -24083,9 +24114,7 @@ function scripts.aura_dragon_bone_cloud.update(this, store, script)
 
             if targets then
                 for i, target in ipairs(targets) do
-                    local mods = this.aura.mods or {
-                        this.aura.mod
-                    }
+                    local mods = this.aura.mods or {this.aura.mod}
 
                     for _, mod_name in pairs(mods) do
                         local new_mod = E:create_entity(mod_name)
@@ -24115,12 +24144,7 @@ function scripts.aura_dragon_bone_cloud.update(this, store, script)
     this.tween.remove = true
     this.tween.ts = store.tick_ts
 
-    local clouds = {
-        cloud_1,
-        cloud_2,
-        cloud_3,
-        cloud_4
-    }
+    local clouds = {cloud_1, cloud_2, cloud_3, cloud_4}
 
     for i, v in ipairs(clouds) do
         v.tween.reverse = true
@@ -24627,7 +24651,8 @@ function scripts.hero_lumenir.update(this, store)
         a = this.ultimate
 
         if ready_to_use_skill(a, store) then
-            local target = U.find_foremost_enemy(store, this.pos, basic_ranged.min_range, basic_ranged.max_range, nil, 0, a.vis_bans)
+            local target = U.find_foremost_enemy(store, this.pos, basic_ranged.min_range, basic_ranged.max_range, nil,
+                0, a.vis_bans)
             if target and valid_rally_node_nearby(target.pos) then
                 apply_ultimate(this, store, target, "levelup")
             else
@@ -24640,8 +24665,7 @@ function scripts.hero_lumenir.update(this, store)
 
         if ready_to_use_skill(a, store) then
             if store.wave_group_number > 0 then
-                local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range, a.vis_flags,
-                    a.vis_bans)
+                local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
                 if not soldiers or #soldiers <= a.min_count then
                     SU.delay_attack(store, a, fts(10))
@@ -24738,8 +24762,8 @@ function scripts.hero_lumenir.update(this, store)
         a = fire_balls_attack
 
         if ready_to_use_skill(a, store) then
-            local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min,
-                a.range_nodes_max, nil, a.vis_flags, a.vis_bans)
+            local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min, a.range_nodes_max,
+                nil, a.vis_flags, a.vis_bans)
 
             if not targets_info or #targets_info < a.min_targets then
                 SU.delay_attack(store, a, 0.4)
@@ -24764,9 +24788,7 @@ function scripts.hero_lumenir.update(this, store)
             end
 
             local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
-            local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {
-                pi
-            }, nil, nil, NF_RALLY)
+            local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 
             if #nodes < 1 then
                 SU.delay_attack(store, a, 0.4)
@@ -24787,23 +24809,14 @@ function scripts.hero_lumenir.update(this, store)
             U.y_wait(store, a.spawn_time)
 
             local delay = 0
-            local pattern = {
-                1,
-                2,
-                3,
-                2,
-                3,
-                1,
-                2
-            }
+            local pattern = {1, 2, 3, 2, 3, 1, 2}
 
             for i = 1, a.count do
                 delay = delay + math.random(0.5, 0.66)
 
                 local e = E:create_entity(a.entity)
 
-                e.pos.x, e.pos.y = this.pos.x + (flip and -1 or 1) * a.spawn_offset.x,
-                    this.pos.y + a.spawn_offset.y
+                e.pos.x, e.pos.y = this.pos.x + (flip and -1 or 1) * a.spawn_offset.x, this.pos.y + a.spawn_offset.y
                 e.nav_path.pi = s_pi
                 e.nav_path.spi = pattern[i % #pattern + 1]
                 e.nav_path.ni = s_ni
@@ -24829,16 +24842,14 @@ function scripts.hero_lumenir.update(this, store)
 
         if ready_to_use_skill(a, store) then
             -- local pos_offset = v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
-            local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range,
-                a.vis_flags, a.vis_bans)
+            local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
             if targets then
                 local target = targets[1]
                 local start_ts = store.tick_ts
                 local start_fx, b, targets
                 local node_offset = P:predict_enemy_node_advance(target, flight_time)
-                local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi,
-                    target.nav_path.ni + node_offset)
+                local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
                 local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
 
                 U.animation_start(this, an, af, store.tick_ts)
@@ -24863,8 +24874,7 @@ function scripts.hero_lumenir.update(this, store)
                 b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
                 b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
                 b.bullet.from = V.vclone(b.pos)
-                b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x,
-                    target.pos.y + target.unit.hit_offset.y)
+                b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
                 b.bullet.shot_index = 1
                 b.initial_impulse = 10
 
@@ -24905,8 +24915,8 @@ function scripts.hero_lumenir.update(this, store)
 
                 a.ts = start_ts
 
-                U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts,
-                    this.idle_flip.loop, nil, true)
+                U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil,
+                    true)
 
                 ::label_411_0::
 
@@ -25016,11 +25026,7 @@ function scripts.hero_lumenir_ultimate.update(this, store)
 
     if nearest and #nearest > 0 then
         local path_pi, path_spi, path_ni = unpack(nearest[1])
-        local spi = {
-            1,
-            3,
-            2
-        }
+        local spi = {1, 3, 2}
 
         while count > 0 do
             local ni_random = math.random(-5, 5)
@@ -25067,8 +25073,7 @@ function scripts.soldier_lumenir_ultimate.update(this, store)
     U.animation_start(this, "idle", nil, store.tick_ts, false, 1)
 
     if target then
-        local enemies = U.find_enemies_in_range(store, target.pos, 0, this.stun_range, this.stun_flags,
-            this.stun_bans)
+        local enemies = U.find_enemies_in_range(store, target.pos, 0, this.stun_range, this.stun_flags, this.stun_bans)
 
         if enemies then
             for k, e in pairs(enemies) do
@@ -25086,7 +25091,8 @@ function scripts.soldier_lumenir_ultimate.update(this, store)
     if not target then
         U.y_wait(store, U.frandom(this.min_wait, this.max_wait))
     else
-        while target and not target.health.dead and not this.health.dead and (not this.max_attack_count or attack_count < this.max_attack_count) do
+        while target and not target.health.dead and not this.health.dead and
+            (not this.max_attack_count or attack_count < this.max_attack_count) do
             local attack = SU.soldier_pick_melee_attack(store, this, target)
 
             if attack then
@@ -25273,7 +25279,8 @@ function scripts.mod_hero_lumenir_shield.update(this, store, script)
     while true do
         target = store.entities[m.target_id]
 
-        if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+        if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and
+            target.nav_path.ni > m.last_node then
             this.tween.reverse = true
             this.tween.remove = true
             this.tween.ts = store.tick_ts
@@ -25330,29 +25337,14 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
     local flight_height = this.flight_height
 
     flight_height = this.custom_height and this.custom_height[hero.template_name] or flight_height
-    this.tween.props[1].keys = {
-        {
-            0,
-            v(0, flight_height + 2)
-        },
-        {
-            0.4,
-            v(0, flight_height - 2)
-        },
-        {
-            0.8,
-            v(0, flight_height + 2)
-        }
-    }
+    this.tween.props[1].keys = {{0, v(0, flight_height + 2)}, {0.4, v(0, flight_height - 2)},
+                                {0.8, v(0, flight_height + 2)}}
     this.render.sprites[1].offset.y = flight_height
     fm.a_step = fm.a_step + math.random(-3, 3)
     this.tween.disabled = false
     this.tween.ts = store.tick_ts
 
-    local oos = {
-        V.v(-15, 0),
-        V.v(10, 7)
-    }
+    local oos = {V.v(-15, 0), V.v(10, 7)}
 
     U.y_animation_play(this, "spawn", true, store.tick_ts)
     U.animation_start(this, "walk", nil, store.tick_ts, true)
@@ -25398,8 +25390,7 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
             if a.sync_animation and not this.render.sprites[1].sync_flag then
                 -- block empty
             else
-                local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a
-                .vis_bans)
+                local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if targets and #targets > 0 then
                     local start_ts = store.tick_ts
@@ -25454,27 +25445,8 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
         end
     end
 
-    U.y_ease_keys(store, {
-        sd,
-        sd.offset,
-        ss
-    }, {
-        "alpha",
-        "y",
-        "alpha"
-    }, {
-        255,
-        this.flight_height,
-        255
-    }, {
-        0,
-        85,
-        0
-    }, 0.4, {
-        "linear",
-        "linear",
-        "linear"
-    })
+    U.y_ease_keys(store, {sd, sd.offset, ss}, {"alpha", "y", "alpha"}, {255, this.flight_height, 255}, {0, 85, 0}, 0.4,
+        {"linear", "linear", "linear"})
     queue_remove(store, this)
 end
 
@@ -25567,8 +25539,7 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
         if store.tick_ts - hit_ts > a.damage_cycle then
             hit_ts = store.tick_ts
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.damage_flags,
-                a.damage_bans)
+            local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.damage_flags, a.damage_bans)
 
             if not targets then
                 -- block empty
@@ -25578,7 +25549,8 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 
                     d.source_id = this.id
                     d.target_id = e.id
-                    d.value = math.random(this.flame_damage_min[this.level], this.flame_damage_max[this.level]) * a.damage_factor
+                    d.value = math.random(this.flame_damage_min[this.level], this.flame_damage_max[this.level]) *
+                                  a.damage_factor
                     d.damage_type = a.damage_type
 
                     queue_damage(store, d)
@@ -25595,107 +25567,110 @@ end
 scripts.bolt_lumenir = {}
 
 function scripts.bolt_lumenir.insert(this, store)
-	return true
+    return true
 end
 
 function scripts.bolt_lumenir.update(this, store)
-	local b = this.bullet
-	local fm = this.force_motion
-	local target = store.entities[b.target_id]
-	local ps
+    local b = this.bullet
+    local fm = this.force_motion
+    local target = store.entities[b.target_id]
+    local ps
 
-	local function move_step(dest)
-		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
-		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
-		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
+    local function move_step(dest)
+        local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+        local dist = V.len(dx, dy)
+        local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
+        local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
 
-		if dist <= 4 * fm.max_v * store.tick_length then
-			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
-		end
+        if dist <= 4 * fm.max_v * store.tick_length then
+            stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
+        end
 
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
-		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
-		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
-		fm.a.x, fm.a.y = 0, 0
+        fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
+        fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+        this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+        fm.a.x, fm.a.y = 0, 0
 
-		return dist <= fm.max_v * store.tick_length
-	end
+        return dist <= fm.max_v * store.tick_length
+    end
 
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.emit = true
-		ps.particle_system.track_id = this.id
+    if b.particles_name then
+        ps = E:create_entity(b.particles_name)
+        ps.particle_system.emit = true
+        ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
-	end
+        queue_insert(store, ps)
+    end
 
-	local pred_pos
+    local pred_pos
 
-	if target then
-		pred_pos = P:predict_enemy_pos(target, fts(5))
-	else
-		pred_pos = b.to
-	end
+    if target then
+        pred_pos = P:predict_enemy_pos(target, fts(5))
+    else
+        pred_pos = b.to
+    end
 
-	local iix, iiy = V.normalize(pred_pos.x - this.pos.x, pred_pos.y - this.pos.y)
-	local last_pos = V.vclone(this.pos)
+    local iix, iiy = V.normalize(pred_pos.x - this.pos.x, pred_pos.y - this.pos.y)
+    local last_pos = V.vclone(this.pos)
 
-	b.ts = store.tick_ts
+    b.ts = store.tick_ts
 
-	while true do
-		target = store.entities[b.target_id]
+    while true do
+        target = store.entities[b.target_id]
 
-		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
-			local d = math.max(math.abs(target.pos.x + target.unit.hit_offset.x - b.to.x), math.abs(target.pos.y + target.unit.hit_offset.y - b.to.y))
+        if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+            local d = math.max(math.abs(target.pos.x + target.unit.hit_offset.x - b.to.x),
+                math.abs(target.pos.y + target.unit.hit_offset.y - b.to.y))
 
-			if d > b.max_track_distance then
-				log.debug("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id, this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
+            if d > b.max_track_distance then
+                log.debug("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id,
+                    this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
 
-				target = nil
-				b.target_id = nil
-			else
-				b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
-			end
-		end
+                target = nil
+                b.target_id = nil
+            else
+                b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+            end
+        end
 
-		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
-			local t = store.tick_ts - b.ts
+        if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
+            local t = store.tick_ts - b.ts
 
-			if this.initial_impulse_angle_abs then
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
-			else
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle * (b.shot_index % 2 == 0 and 1 or -1), iix, iiy))
-			end
-		end
+            if this.initial_impulse_angle_abs then
+                fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
+            else
+                fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(
+                    this.initial_impulse_angle * (b.shot_index % 2 == 0 and 1 or -1), iix, iiy))
+            end
+        end
 
-		last_pos.x, last_pos.y = this.pos.x, this.pos.y
+        last_pos.x, last_pos.y = this.pos.x, this.pos.y
 
-		if move_step(b.to) then
-			break
-		end
+        if move_step(b.to) then
+            break
+        end
 
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
-		end
+        if b.align_with_trajectory then
+            this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+        end
 
-		coroutine.yield()
-	end
+        coroutine.yield()
+    end
 
-	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-		-- local u = UP:get_upgrade("mage_el_empowerment")
+    if target and not target.health.dead then
+        local d = SU.create_bullet_damage(b, target.id, this.id)
+        -- local u = UP:get_upgrade("mage_el_empowerment")
 
-		-- if u and not this.upgrades_disabled and math.random() < u.chance then
-		-- 	d.value = km.round(d.value * u.damage_factor)
+        -- if u and not this.upgrades_disabled and math.random() < u.chance then
+        -- 	d.value = km.round(d.value * u.damage_factor)
 
-		-- 	if b.pop_mage_el_empowerment then
-		-- 		d.pop = b.pop_mage_el_empowerment
-		-- 		d.pop_conds = DR_DAMAGE
-		-- 	end
-		-- end
+        -- 	if b.pop_mage_el_empowerment then
+        -- 		d.pop = b.pop_mage_el_empowerment
+        -- 		d.pop_conds = DR_DAMAGE
+        -- 	end
+        -- end
 
-		queue_damage(store, d)
+        queue_damage(store, d)
         if b.mod or b.mods then
             local mods = b.mods or {b.mod}
 
@@ -25709,53 +25684,53 @@ function scripts.bolt_lumenir.update(this, store)
             end
         end
 
-		-- if this.alter_reality_chance and UP:has_upgrade("mage_el_alter_reality") and math.random() < this.alter_reality_chance then
-		-- 	local mod = E:create_entity(this.alter_reality_mod)
+        -- if this.alter_reality_chance and UP:has_upgrade("mage_el_alter_reality") and math.random() < this.alter_reality_chance then
+        -- 	local mod = E:create_entity(this.alter_reality_mod)
 
-		-- 	mod.modifier.target_id = target.id
+        -- 	mod.modifier.target_id = target.id
 
-		-- 	queue_insert(store, mod)
-		-- end
-	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+        -- 	queue_insert(store, mod)
+        -- end
+    elseif b.damage_radius and b.damage_radius > 0 then
+        local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
-		if targets then
-			for _, target in pairs(targets) do
-				local d = SU.create_bullet_damage(b, target.id, this.id)
+        if targets then
+            for _, target in pairs(targets) do
+                local d = SU.create_bullet_damage(b, target.id, this.id)
 
-				queue_damage(store, d)
-			end
-		end
-	end
+                queue_damage(store, d)
+            end
+        end
+    end
 
-	this.render.sprites[1].hidden = true
+    this.render.sprites[1].hidden = true
 
-	if b.hit_fx then
-		local fx = E:create_entity(b.hit_fx)
+    if b.hit_fx then
+        local fx = E:create_entity(b.hit_fx)
 
-		fx.pos.x, fx.pos.y = b.to.x, b.to.y
-		fx.render.sprites[1].ts = store.tick_ts
-		fx.render.sprites[1].runs = 0
+        fx.pos.x, fx.pos.y = b.to.x, b.to.y
+        fx.render.sprites[1].ts = store.tick_ts
+        fx.render.sprites[1].runs = 0
 
-		queue_insert(store, fx)
-	end
+        queue_insert(store, fx)
+    end
 
-	if b.hit_decal then
-		local decal = E:create_entity(b.hit_decal)
+    if b.hit_decal then
+        local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(b.to)
-		decal.render.sprites[1].ts = store.tick_ts
+        decal.pos = V.vclone(b.to)
+        decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
-	end
+        queue_insert(store, decal)
+    end
 
-	if ps and ps.particle_system.emit then
-		ps.particle_system.emit = false
+    if ps and ps.particle_system.emit then
+        ps.particle_system.emit = false
 
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
-	end
+        U.y_wait(store, ps.particle_system.particle_lifetime[2])
+    end
 
-	queue_remove(store, this)
+    queue_remove(store, this)
 end
 
 -- 悟空_START
@@ -25786,10 +25761,8 @@ function scripts.hero_wukong.level_up(this, store, initial)
         this.melee.attacks[i].damage_max = ls.melee_damage_max[i][hl]
     end
 
-    local s
-
     upgrade_skill(this, "hair_clones", function(this, s)
-        local a = this.timed_attacks.list[this.timed_attacks.sid_hair_clones]
+        local a = this.timed_attacks.list[1]
 
         a.disabled = nil
         a.cooldown = s.cooldown[s.level]
@@ -25813,6 +25786,16 @@ function scripts.hero_wukong.level_up(this, store, initial)
         e.melee.attacks[2].damage_max = s.smash_damage_max[s.level]
         e.melee.attacks[2].damage_min = s.smash_damage_min[s.level]
         e.melee.attacks[2].chance = s.smash_chance[s.level]
+        if this.zhu_apprentice_soldier then
+            local e = this.zhu_apprentice_soldier
+            e.health.hp_max = s.hp_max[s.level]
+            e.health.hp = e.health.hp_max
+            e.melee.attacks[1].damage_max = s.damage_max[s.level]
+            e.melee.attacks[1].damage_min = s.damage_min[s.level]
+            e.melee.attacks[2].damage_max = s.smash_damage_max[s.level]
+            e.melee.attacks[2].damage_min = s.smash_damage_min[s.level]
+            e.melee.attacks[2].chance = s.smash_chance[s.level]
+        end
     end)
 
     upgrade_skill(this, "giant_staff", function(this, s)
@@ -25838,27 +25821,15 @@ function scripts.hero_wukong.level_up(this, store, initial)
     end)
 
     upgrade_skill(this, "ultimate", function(this, s)
+        this.ultimate.disabled = nil
+        this.ultimate.cooldown = s.cooldown[s.level]
         local uc = E:get_template(s.controller_name)
 
-        uc.cooldown = s.cooldown[sl]
-        uc.damage = s.damage_total[sl] / #uc.damage_times
+        uc.damage = s.damage_total[s.level] / #uc.damage_times
 
         local u_aura = E:get_template(uc.aura_slow)
 
-        u_aura.tween.props[1].keys = {
-            {
-                0,
-                255
-            },
-            {
-                s.slow_duration[sl] - 0.5,
-                255
-            },
-            {
-                s.slow_duration[sl],
-                0
-            }
-        }
+        u_aura.tween.props[1].keys = {{0, 255}, {s.slow_duration[s.level] - 0.5, 255}, {s.slow_duration[s.level], 0}}
         u_aura.aura.duration = s.slow_duration[s.level]
 
         local u_slow_mod = E:get_template(u_aura.aura.mod)
@@ -25899,17 +25870,7 @@ function scripts.hero_wukong.update(this, store)
     local giant_staff_attack = this.timed_attacks.list[2]
     local pole_ranged_attack = this.timed_attacks.list[3]
 
-    if not hair_clones_attack.disabled then
-        hair_clones_attack.ts = store.tick_ts - hair_clones_attack.cooldown
-    end
-
-    if not giant_staff_attack.disabled then
-        giant_staff_attack.ts = store.tick_ts - giant_staff_attack.cooldown
-    end
-
-    if not pole_ranged_attack.disabled then
-        pole_ranged_attack.ts = store.tick_ts - pole_ranged_attack.cooldown
-    end
+    SU.hero_spawning_set_skill_ts(this, store)
 
     local ps_nube_trail = E:create_entity("ps_wukong_nube_trail")
 
@@ -25948,7 +25909,7 @@ function scripts.hero_wukong.update(this, store)
         e.pos = V.vclone(pos)
         e.nav_rally.center = V.vclone(e.pos)
         e.nav_rally.pos = V.vclone(e.pos)
-
+        e.unit.damage_factor = this.unit.damage_factor
         queue_insert(store, e)
 
         return e
@@ -25956,30 +25917,21 @@ function scripts.hero_wukong.update(this, store)
 
     local function camera_shake(pos)
         local MIN, MAX = 1, 2
-        local values_amplitude = {
-            0.2,
-            1.5
-        }
-        local values_duration = {
-            0.7,
-            1.3
-        }
-        local values_freq = {
-            2.5,
-            4
-        }
-        local shake_falloff_dist = 450
-        local camera_posX = game.camera.x / game.game_scale
-        local camera_posY = game.ref_h - game.camera.y / game.game_scale
-        local camera_dist = V.dist(camera_posX, camera_posY, pos.x, pos.y)
-        local zoom_value = game.camera.zoom - game.camera.min_zoom_clamp
-        local falloff_value = 1 - camera_dist / shake_falloff_dist
+        local values_amplitude = {0.2, 1.5}
+        local values_duration = {0.7, 1.3}
+        local values_freq = {2.5, 4}
+        -- local shake_falloff_dist = 450
+        -- local camera_posX = game.camera.x / game.game_scale
+        -- local camera_posY = game.ref_h - game.camera.y / game.game_scale
+        -- local camera_dist = V.dist(camera_posX, camera_posY, pos.x, pos.y)
+        -- local zoom_value = game.camera.zoom - game.camera.min_zoom_clamp
+        -- local falloff_value = 1 - camera_dist / shake_falloff_dist
 
-        if falloff_value < 0 then
-            falloff_value = 0
-        end
+        -- if falloff_value < 0 then
+        --     falloff_value = 0
+        -- end
 
-        local shake_value = falloff_value * zoom_value
+        local shake_value = 0.2
         local amplitude = values_amplitude[MIN] + (values_amplitude[MAX] - values_amplitude[MIN]) * shake_value
         local duration = values_duration[MIN] + (values_duration[MAX] - values_duration[MIN]) * shake_value
         local freq = values_freq[MIN] + (values_freq[MAX] - values_freq[MIN]) * shake_value
@@ -25995,6 +25947,7 @@ function scripts.hero_wukong.update(this, store)
     if this.hero.skills.zhu_apprentice.level > 0 then
         zhu_apprentice_soldier = create_soldier(this.hero.skills.zhu_apprentice.entity,
             V.v(this.pos.x - 25, this.pos.y - 10))
+        this.zhu_apprentice_soldier = zhu_apprentice_soldier
     end
 
     local function y_wukong_wait_for_second_idle(store, this, time)
@@ -26044,11 +25997,14 @@ function scripts.hero_wukong.update(this, store)
 
     while true do
         if h.dead then
-            if (not this.selfdestruct or this.selfdestruct.disabled or band(h.last_damage_types, bor(DAMAGE_EAT, DAMAGE_HOST, DAMAGE_DISINTEGRATE_BOSS)) ~= 0) and band(h.last_damage_types, bor(DAMAGE_DISINTEGRATE_BOSS)) == 0 and band(h.last_damage_types, bor(DAMAGE_EAT)) == 0 and band(h.last_damage_types, bor(DAMAGE_HOST)) == 0 then
+            if (not this.selfdestruct or this.selfdestruct.disabled or
+                band(h.last_damage_types, bor(DAMAGE_EAT, DAMAGE_HOST, DAMAGE_DISINTEGRATE_BOSS)) ~= 0) and
+                band(h.last_damage_types, bor(DAMAGE_DISINTEGRATE_BOSS)) == 0 and
+                band(h.last_damage_types, bor(DAMAGE_EAT)) == 0 and band(h.last_damage_types, bor(DAMAGE_HOST)) == 0 then
                 S:queue(this.sound_death_sfx)
             end
 
-            SU.y_hero_death_and_respawn_kr5(store, this)
+            SU.y_hero_death_and_respawn(store, this)
         end
 
         if this.unit.is_stunned then
@@ -26076,7 +26032,7 @@ function scripts.hero_wukong.update(this, store)
 
                     this.vis.bans = F_ALL
                     this.health.immune_to = F_ALL
-                    this.motion.max_speed = this.motion.max_speed * tw.extra_speed_mult
+                    U.speed_mul_self(this, tw.extra_speed_mult)
                     this.unit.marker_hidden = true
                     this.health_bar.hidden = true
                     this.on_flywalk = true
@@ -26107,7 +26063,11 @@ function scripts.hero_wukong.update(this, store)
                         local runs = this.render.sprites[1].runs
 
                         while not this.motion.arrived do
-                            if r.new and not on_landing_anim then
+                            if r.new then
+                                if on_landing_anim then
+                                    on_landing_anim = false
+                                    ps_nube_trail.particle_system.emit = true
+                                end
                                 r.new = false
 
                                 goto label_882_0
@@ -26129,7 +26089,7 @@ function scripts.hero_wukong.update(this, store)
 
                             local time_to_leave_cloud = fts(10)
 
-                            if path_len < this.motion.max_speed * time_to_leave_cloud and not on_landing_anim then
+                            if path_len < this.motion.real_speed * time_to_leave_cloud and not on_landing_anim then
                                 on_landing_anim = true
                                 ps_nube_trail.particle_system.emit = false
 
@@ -26155,7 +26115,7 @@ function scripts.hero_wukong.update(this, store)
                     U.y_animation_wait(this, 1)
 
                     this.ui.click_rect = this.ui.click_rect_nofly
-                    this.motion.max_speed = this.motion.max_speed / tw.extra_speed_mult
+                    U.speed_div_self(this, tw.extra_speed_mult)
                     this.vis.bans = vis_bans
                     this.health.immune_to = 0
                     this.unit.marker_hidden = nil
@@ -26171,17 +26131,19 @@ function scripts.hero_wukong.update(this, store)
             end
 
             if SU.hero_level_up(store, this) then
-                U.y_animation_play(this, "lvl_up", nil, store.tick_ts, 1)
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
             end
 
             a = this.ultimate
 
             if ready_to_use_skill(a, store) then
-                local target = U.find_foremost_enemy(store, this.pos, hair_clones_attack.min_range,
-                hair_clones_attack.max_range, nil,
-                    0, a.vis_bans)
+                local target = find_target_at_critical_moment(this, store, hair_clones_attack.max_range, false, false)
                 if target and valid_rally_node_nearby(target.pos) then
                     apply_ultimate(this, store, target, "levelup")
+                    scripts.heal(this, h.hp_max)
+                    if this.health.dead then
+                        this.health.dead = false
+                    end
                 else
                     a.ts = a.ts + 1
                 end
@@ -26190,18 +26152,19 @@ function scripts.hero_wukong.update(this, store)
             skill = this.hero.skills.hair_clones
             a = hair_clones_attack
             if ready_to_use_skill(a, store) then
-                local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, 0, a.max_range,
-                    a.cast_time, a.vis_flags, a.vis_bans, function(e, origin)
-                    local node_offset = P:predict_enemy_node_advance(e, a.cast_time)
-                    local e_ni = e.nav_path.ni + node_offset + 8
-                    local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+                local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, 0, a.max_range, a.cast_time,
+                    a.vis_flags, a.vis_bans, function(e, origin)
+                        local node_offset = P:predict_enemy_node_advance(e, a.cast_time)
+                        local e_ni = e.nav_path.ni + node_offset + 8
+                        local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
 
-                    return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
-                end)
+                        return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
+                    end)
 
                 if not enemies or #enemies < a.min_targets then
                     SU.delay_attack(store, a, fts(10))
                 else
+                    this.health.immune_to = F_ALL
                     local target_nodes = {}
 
                     for i = 1, math.min(#enemies, 2) do
@@ -26225,16 +26188,17 @@ function scripts.hero_wukong.update(this, store)
                     U.animation_start(this, an, af, store.tick_ts, false)
 
                     if SU.y_hero_wait(store, this, a.cast_time) then
+                        this.health.immune_to = 0
                         goto label_882_1
                     end
 
-                    enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, 0, a.max_range,
-                        a.cast_time, a.vis_flags, a.vis_bans, function(e, origin)
-                        local e_ni = e.nav_path.ni + 8
-                        local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+                    enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, 0, a.max_range, a.cast_time,
+                        a.vis_flags, a.vis_bans, function(e, origin)
+                            local e_ni = e.nav_path.ni + 8
+                            local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
 
-                        return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
-                    end)
+                            return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
+                        end)
 
                     if enemies and #enemies > 0 then
                         target_nodes = {}
@@ -26261,16 +26225,13 @@ function scripts.hero_wukong.update(this, store)
                     if #target_nodes == 1 then
                         local npos = P:node_pos(target_nodes[1].pi, target_nodes[1].spi, target_nodes[1].ni)
 
-                        positions = {
-                            {
-                                x = npos.x + 27,
-                                y = npos.y
-                            },
-                            {
-                                x = npos.x + 27,
-                                y = npos.y
-                            }
-                        }
+                        positions = {{
+                            x = npos.x + 27,
+                            y = npos.y
+                        }, {
+                            x = npos.x + 27,
+                            y = npos.y
+                        }}
                     else
                         for _, n in ipairs(target_nodes) do
                             table.insert(positions, P:node_pos(n.pi, n.spi, n.ni))
@@ -26294,7 +26255,7 @@ function scripts.hero_wukong.update(this, store)
 
                     SU.y_hero_animation_wait(this)
                     U.animation_start(this, "idle", nil, store.tick_ts, true)
-
+                    this.health.immune_to = 0
                     goto label_882_1
                 end
             end
@@ -26345,12 +26306,12 @@ function scripts.hero_wukong.update(this, store)
                                         end
                                     end
                                 end
-
+                                this.health.immune_to = F_ALL
                                 local an, af, _ = U.animation_name_facing_point(this, a.animation, target.pos)
 
                                 U.animation_start(this, an, af, store.tick_ts, false)
 
-                                local pushed_bans = U.push_bans(this.vis, F_ALL)
+                                -- local pushed_bans = U.push_bans(this.vis, F_ALL)
 
                                 U.y_wait(store, a.staff_appear_time)
 
@@ -26374,25 +26335,25 @@ function scripts.hero_wukong.update(this, store)
                                     target = store.entities[this.soldier.target_id]
 
                                     if target then
-                                        queue_damage(store, create_damage(a, target.id))
+                                        -- queue_damage(store, create_damage(a, target.id))
+                                        local d = E:create_entity("damage")
+                                        d.source_id = this.id
+                                        d.target_id = target.id
+                                        d.value = 1
+                                        d.damage_type = a.damage_type
+                                        queue_damage(store, d)
                                     end
                                 end
 
-                                local enemies = U.find_enemies_in_range(store, this.pos, 0, a
-                                .area_damage_radius, a.area_vis_flags, a.area_vis_bans)
+                                local enemies = U.find_enemies_in_range(store, this.pos, 0, a.area_damage_radius,
+                                    a.area_vis_flags, a.area_vis_bans)
 
                                 if enemies and #enemies > 0 then
-                                    local targets = 0
-
                                     for _, e in ipairs(enemies) do
-                                        if targets < a.area_damage_max_targets then
-                                            targets = targets + 1
-
-                                            local d = create_damage(a, e.id)
-                                            d.value = math.random(a.area_damage_min, a.area_damage_max)
-
-                                            queue_damage(store, d)
-                                        end
+                                        local d = create_damage(a, e.id)
+                                        d.value = math.random(a.area_damage_min, a.area_damage_max) *
+                                                      this.unit.damage_factor
+                                        queue_damage(store, d)
                                     end
                                 end
 
@@ -26421,8 +26382,8 @@ function scripts.hero_wukong.update(this, store)
 
                                 this.health_bar.hidden = false
 
-                                U.pop_bans(this.vis, pushed_bans)
-
+                                -- U.pop_bans(this.vis, pushed_bans)
+                                this.health.immune_to = 0
                                 goto label_882_1
                             end
                         end
@@ -26441,19 +26402,20 @@ function scripts.hero_wukong.update(this, store)
 
                     U.animation_start(this, an, af, store.tick_ts, false)
                     S:queue(a.sound, a.sound_args)
-
+                    this.health.immune_to = F_ALL
                     if SU.y_hero_wait(store, this, a.shoot_time) then
+                        this.health.immune_to = 0
                         goto label_882_1
                     end
 
                     local old_first_ranged_target_pred_pos = first_ranged_target_pred_pos
 
-                    first_ranged_target, ranged_targets, first_ranged_target_pred_pos = U.find_foremost_enemy(
-                    store, this.pos, a.min_range, a.max_range, a.shoot_time + fts(4), a.vis_flags, a.vis_bans)
+                    first_ranged_target, ranged_targets, first_ranged_target_pred_pos = U.find_foremost_enemy(store,
+                        this.pos, a.min_range, a.max_range, a.shoot_time + fts(4), a.vis_flags, a.vis_bans)
 
                     local function create_bullet_decal(pos, delay)
                         local b = E:create_entity(a.staff_template)
-
+                        b.damage_factor = this.unit.damage_factor
                         b.pos = V.v(pos.x + math.random(-20, 20), pos.y + math.random(-20, 20))
                         b.delay_start = delay
 
@@ -26511,15 +26473,17 @@ function scripts.hero_wukong.update(this, store)
 
                     SU.hero_gain_xp_from_skill(this, skill)
                     SU.y_hero_animation_wait(this)
+                    this.health.immune_to = 0
                     U.animation_start(this, "idle", nil, store.tick_ts, true)
 
                     goto label_882_1
                 end
             end
 
-            brk, sta = y_hero_melee_block_and_attacks(store, this)
+            brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
             if brk or sta ~= A_NO_TARGET then
+                scripts.hero_wukong.choose_next_random_attack(this)
                 -- block empty
             elseif SU.soldier_go_back_step(store, this) then
                 -- block empty
@@ -26752,26 +26716,27 @@ end
 scripts.fx_hero_wukong_giant_staff = {}
 
 function scripts.fx_hero_wukong_giant_staff.update(this, store, script)
-    U.animation_start(this, "in", nil, store.tick_ts, false, this.render.sid_staff, true)
+    U.animation_start(this, "in", nil, store.tick_ts, false, 1, true)
 
-    this.render.sprites[this.render.sid_decal].hidden = true
+    -- this.render.sprites[2].hidden = true
 
     U.y_wait(store, fts(21))
 
-    this.render.sprites[this.render.sid_decal].hidden = false
-    this.tween.ts = store.tick_ts
-    this.tween.disabled = false
+    -- this.render.sprites[2].hidden = false
+    -- this.tween.ts = store.tick_ts
+    -- this.tween.disabled = false
 
     local staff_finished
 
     while not staff_finished do
-        if U.animation_finished(this, this.render.sid_staff) then
+        if U.animation_finished(this, 1) then
             staff_finished = true
-            this.render.sprites[this.render.sid_staff].hidden = true
+            -- this.render.sprites[2].hidden = true
         end
 
         coroutine.yield()
     end
+    queue_remove(store, this)
 end
 
 scripts.controller_hero_wukong_ultimate = {}
@@ -26837,7 +26802,7 @@ function scripts.controller_hero_wukong_ultimate.update(this, store)
             for _, e in pairs(targets) do
                 local d = E:create_entity("damage")
 
-                d.value = this.damage
+                d.value = this.damage * this.damage_factor
                 d.damage_type = this.damage_type
                 d.source_id = this.id
                 d.target_id = e.id
@@ -26883,7 +26848,8 @@ function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store, script)
             last_hit_ts = 1e+99
         end
 
-        if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration then
+        if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts -
+            this.aura.ts > this.actual_duration then
             goto label_900_1
         end
 
@@ -26931,7 +26897,8 @@ function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store, script)
             end
         end
 
-        if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
+        if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and
+            store.tick_ts - first_hit_ts > this.aura.apply_duration then
             -- block empty
         else
             if this.render and this.aura.cast_resets_sprite_id then
@@ -26943,11 +26910,14 @@ function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store, script)
             cycles_count = cycles_count + 1
 
             local targets = table.filter(store.entities, function(k, v)
-                return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and
-                band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and
-                (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and
-                (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and
-                (not this.aura.filter_source or this.aura.source_id ~= v.id)
+                return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) ==
+                           0 and band(v.vis.bans, this.aura.vis_flags) == 0 and
+                           U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and
+                           (not this.aura.allowed_templates or
+                               table.contains(this.aura.allowed_templates, v.template_name)) and
+                           (not this.aura.excluded_templates or
+                               not table.contains(this.aura.excluded_templates, v.template_name)) and
+                           (not this.aura.filter_source or this.aura.source_id ~= v.id)
             end)
 
             for i, target in ipairs(targets) do
@@ -26959,9 +26929,7 @@ function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store, script)
                     break
                 end
 
-                local mods = this.aura.mods or {
-                    this.aura.mod
-                }
+                local mods = this.aura.mods or {this.aura.mod}
 
                 for _, mod_name in pairs(mods) do
                     local new_mod = E:create_entity(mod_name)
@@ -27006,14 +26974,13 @@ function scripts.decal_hero_wukong_ranged_attack_staff.update(this, store)
     U.animation_start(this, "projectile", nil, store.tick_ts, false, 1)
     U.y_wait(store, fts(5))
 
-    local targets = U.find_enemies_in_range(store, this.pos, 0, this.damage_radius, this.damage_flags,
-        this.damage_bans)
+    local targets = U.find_enemies_in_range(store, this.pos, 0, this.damage_radius, this.damage_flags, this.damage_bans)
 
     if targets then
         for _, e in pairs(targets) do
             local d = E:create_entity("damage")
 
-            d.value = math.random(this.damage_min, this.damage_max)
+            d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
             d.damage_type = this.damage_type
             d.source_id = this.id
             d.target_id = e.id

@@ -525,7 +525,7 @@ local function barrack_towers()
     tower_templar.tower.type = "templar"
     tower_templar.tower.price = 185
     tower_templar.powers.holygrail = CC("power")
-    tower_templar.powers.holygrail.price_base = 200
+    tower_templar.powers.holygrail.price_base = 180
     tower_templar.powers.holygrail.price_inc = 135
     tower_templar.powers.holygrail.name = "HOLY"
     tower_templar.powers.holygrail.enc_icon = 25
@@ -535,7 +535,7 @@ local function barrack_towers()
     tower_templar.powers.extralife.name = "TOUGHNESS"
     tower_templar.powers.extralife.enc_icon = 27
     tower_templar.powers.blood = CC("power")
-    tower_templar.powers.blood.price_base = 225
+    tower_templar.powers.blood.price_base = 200
     tower_templar.powers.blood.price_inc = 150
     tower_templar.powers.blood.name = "ARTERIAL"
     tower_templar.powers.blood.enc_icon = 26
@@ -576,6 +576,9 @@ local function barrack_towers()
     tt.melee.attacks[1].shared_cooldown = true
     tt.melee.attacks[1].side_effect = function(this, store, attack, target)
         this.revive.protect = this.revive.protect + 0.01
+        if target then
+            target.health.hp = target.health.hp - this.health.hp * 0.02 * this.powers.extralife.level
+        end
     end
     tt.melee.attacks[2] = CC("melee_attack")
     tt.melee.attacks[2].animation = "blood"
@@ -597,6 +600,7 @@ local function barrack_towers()
         this.revive.protect = this.revive.protect + 0.01
         if target then
             target.health.damage_factor = target.health.damage_factor * 1.033
+            target.health.hp = target.health.hp - this.health.hp * 0.03 * this.powers.extralife.level
         end
     end
     tt.melee.arrived_slot_animation = "attack_wait"
@@ -1099,8 +1103,8 @@ local function barrack_towers()
     tt.powers.perfect_parry.price_inc = 200
     tt.powers.perfect_parry.enc_icon = 6
     tt.powers.blade_dance = CC("power")
-    tt.powers.blade_dance.price_base = 225
-    tt.powers.blade_dance.price_inc = 250
+    tt.powers.blade_dance.price_base = 200
+    tt.powers.blade_dance.price_inc = 225
     tt.powers.blade_dance.enc_icon = 5
     tt.powers.swirling = CC("power")
     tt.powers.swirling.price_base = 250
@@ -1125,16 +1129,16 @@ local function barrack_towers()
     tt.barrack.soldier_type = "soldier_forest"
     tt.barrack.rally_angle_offset = math.pi / 3
     tt.powers.circle = CC("power")
-    tt.powers.circle.price_base = 225
-    tt.powers.circle.price_inc = 190
+    tt.powers.circle.price_base = 200
+    tt.powers.circle.price_inc = 185
     tt.powers.circle.enc_icon = 9
     tt.powers.eerie = CC("power")
-    tt.powers.eerie.price_base = 225
+    tt.powers.eerie.price_base = 200
     tt.powers.eerie.price_inc = 200
     tt.powers.eerie.max_level = 2
     tt.powers.eerie.enc_icon = 10
     tt.powers.oak = CC("power")
-    tt.powers.oak.price_base = 275
+    tt.powers.oak.price_base = 200
     tt.powers.oak.price_inc = 250
     tt.powers.oak.enc_icon = 11
     tt.render.sprites[2].name = "barracks_towers_layer1_0101"
@@ -1925,30 +1929,38 @@ local function barrack_towers()
     tt.tower.price = b.price[4]
     tt.tower.menu_offset = v(0, 35)
     tt.powers.thunder = CC("power")
-    tt.powers.thunder.price = b.soldier.thunder.price
+    tt.powers.thunder.price_base = 150
+    tt.powers.thunder.price_inc = 150
     tt.powers.thunder.enc_icon = 40
     tt.powers.thunder.name = "thunder"
     tt.powers.thunder.key = "THUNDER"
     tt.powers.thunder.max_level = 2
     tt.powers.hat = CC("power")
-    tt.powers.hat.price = b.soldier.hat.price
+    tt.powers.hat.price_base = 140
+    tt.powers.hat.price_inc = 140
     tt.powers.hat.enc_icon = 39
     tt.powers.hat.name = "hat"
     tt.powers.hat.max_level = 2
     tt.powers.hat.key = "HAT"
     tt.powers.teleport = CC("power")
-    tt.powers.teleport.price = b.soldier.teleport.price
+    tt.powers.teleport.price_base = 160
+    tt.powers.teleport.price_inc = 160
     tt.powers.teleport.enc_icon = 41
     tt.powers.teleport.name = "fiery"
     tt.powers.teleport.key = "FIERY"
     tt.powers.teleport.max_level = 2
     tt.info.i18n_key = "TOWER_PANDAS_4"
-    tt.info.portrait = "portraits_towers_0031"
+    tt.info.portrait = "kr5_portraits_towers_0031"
     tt.info.enc_icon = 84
     tt.info.tower_portrait = "towerselect_portraits_big_0001"
     tt.info.room_portrait = "quickmenu_main_icons_main_icons_0025_0001"
     tt.info.fn = scripts.tower_pandas.get_info
     tt.barrack.soldier_type = "soldier_tower_pandas_blue_lvl4"
+    tt.barrack.soldier_types = {
+        "soldier_tower_pandas_blue_lvl4",
+        "soldier_tower_pandas_green_lvl4",
+        "soldier_tower_pandas_red_lvl4"
+    }
     tt.barrack.solder_upgrade_map = {
         soldier_tower_pandas_green_lvl3 = "soldier_tower_pandas_green_lvl4",
         soldier_tower_pandas_red_lvl3 = "soldier_tower_pandas_red_lvl4",
@@ -1961,7 +1973,7 @@ local function barrack_towers()
     tt.main_script.remove = scripts.tower_pandas.remove
     tt.set_panda_bullet_arrived = scripts.tower_pandas.set_panda_bullet_arrived
     tt.render.sprites[1].animated = false
-    tt.render.sprites[1].name = "terrains_barrack%04i"
+    tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = v(0, 15)
     tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
@@ -2039,6 +2051,7 @@ local function barrack_towers()
 
     tt = RT("soldier_tower_pandas_green_lvl4", "soldier_militia")
     AC(tt, "nav_grid", "powers", "ranged")
+    tt.is_kr5 = true
     tt.powers.hat = CC("power")
     tt.powers.hat.cooldown = b.soldier.hat.cooldown
     tt.powers.hat.range = b.soldier.hat.range
@@ -2070,10 +2083,9 @@ local function barrack_towers()
     tt.sound_events.death_args = {
         delay = fts(12)
     }
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0071"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0071"
     tt.info.random_name_format = nil
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_FEMALE"
-    tt.info.fn = scripts.soldier_tower_pandas.get_info
     tt.nav_rally.delay_min = 0
     tt.nav_rally.delay_max = 0
     tt.death_go_back_delay = fts(25)
@@ -2084,6 +2096,8 @@ local function barrack_towers()
     tt.render.sprites[1].scale = vv(1.1)
     tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].angles.attack = {"attack"}
+    tt.render.sprites[1].anchor = v(0.5, 0.5)
+    tt.render.sprites[1].name = "idle"
     tt.unit.head_offset = v(0, 12)
     tt.unit.hit_offset = v(0, 12)
     tt.unit.marker_offset = v(0, 0)
@@ -2093,24 +2107,23 @@ local function barrack_towers()
     tt.unit.hide_after_death = true
     tt.soldier.melee_slot_spread = v(-13, -13)
     tt.soldier.melee_slot_offset = v(10, 0)
-    tt.vis.bans = 0
+    tt.vis.bans = bor(tt.vis.bans, F_SKELETON, F_EAT)
     tt.health.hp_max = b.soldier.hp[4]
     tt.health.armor = b.soldier.armor[4]
     tt.health_bar.offset = v(0, 44)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health.dead_lifetime = 3
-    tt.regen.health = b.soldier.regen_hp[4]
+    -- tt.regen.health = b.soldier.regen_hp[4]
     tt.motion.max_speed = b.soldier.speed * 1.1
     tt.ui.click_rect = r(-13, 0, 25, 30)
     tt.ui.click_rect_offset_y = 0
     tt.max_dist_walk = 160
-    tt.vis.bans = bor(tt.vis.bans, F_EAT)
     tt.ignore_linirea_true_might_revive = true
     tt.death_go_back_delay = fts(15)
 
     tt = RT("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
     AC(tt, "attacks")
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0070"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0070"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
     tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
@@ -2133,6 +2146,8 @@ local function barrack_towers()
     tt.attacks.list[1].damage_area = b.soldier.thunder.damage_area
     tt.attacks.list[1].min_targets = b.soldier.thunder.min_targets
     tt.attacks.list[1].mod = "mod_soldier_tower_pandas_blue_stun"
+    tt.ranged = nil
+    tt.powers = {}
     tt.powers.thunder = CC("power")
     tt.powers.thunder.cooldown = b.soldier.thunder.cooldown
     tt.powers.thunder.range = b.soldier.thunder.range
@@ -2152,7 +2167,7 @@ local function barrack_towers()
 
     tt = RT("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
     AC(tt, "attacks")
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0069"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0069"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
     tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"
@@ -2161,6 +2176,7 @@ local function barrack_towers()
     tt.death_go_back_delay = fts(12)
     tt.health_bar.offset = v(0, 44)
     tt.melee.attacks[1].hit_fx = "fx_tower_pandas_melee_fire_hit"
+    tt.powers = {}
     tt.powers.teleport = CC("power")
     tt.powers.teleport.cooldown = b.soldier.teleport.cooldown
     tt.powers.teleport.range = b.soldier.teleport.range
@@ -2184,6 +2200,7 @@ local function barrack_towers()
     tt.attacks.list[1].mod = "mod_soldier_tower_pandas_red_teleport"
     tt.attacks.list[1].decal = "decal_tower_panda_skill_red_tp_soldier_fire"
     tt.attacks.list[1].max_times_applied = b.soldier.teleport.max_times_applied
+    tt.ranged = nil
     tt.ui.click_rect = r(-17, 0, 34, 30)
     tt.sound_events.death = "TowerPandasDeath"
     tt.sound_events.death_args = {

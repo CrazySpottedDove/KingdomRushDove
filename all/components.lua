@@ -500,6 +500,7 @@ tower_holder.custom = nil
 local tower_upgrade_persistent_data = E:register_c("tower_upgrade_persistent_data")
 tower_upgrade_persistent_data.current_mode = 0
 tower_upgrade_persistent_data.max_current_mode = 0
+tower_upgrade_persistent_data.upgrade_functions = {}
 
 local enemy = E:register_c("enemy")
 
@@ -1249,3 +1250,10 @@ editor_script.remove = nil
 editor_script.update = nil
 editor_script.runs = 1
 editor_script.co = nil
+
+local light = E:register_c("light")
+light.radius = 0
+
+local lights = E:register_c("lights")
+lights[1] = E:clone_c("light")
+

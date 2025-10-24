@@ -89,8 +89,7 @@ local function remove_modifiers(store, entity, mod_name, exclude_name)
     local mods = entity._applied_mods
     for i = 1, #mods do
         local m = mods[i]
-        if (not mod_name or m.template_name == mod_name) and
-           (not exclude_name or m.template_name ~= exclude_name) then
+        if (not mod_name or m.template_name == mod_name) and (not exclude_name or m.template_name ~= exclude_name) then
             queue_remove(store, m)
         end
     end
@@ -107,10 +106,9 @@ local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
         return
     end
     local mods = entity._applied_mods
-    for i=1, #mods do
+    for i = 1, #mods do
         local m = mods[i]
-        if m.modifier.type == mod_type and
-           (not exclude_name or exclude_name ~= m.template_name) then
+        if m.modifier.type == mod_type and (not exclude_name or exclude_name ~= m.template_name) then
             queue_remove(store, m)
         end
     end
@@ -159,7 +157,7 @@ local function show_modifiers(store, entity, restore, exclude_mod)
     if not mods then
         return
     end
-    for i=1, #mods do
+    for i = 1, #mods do
         local mod = mods[i]
         if mod ~= exclude_mod then
             U.sprites_show(mods[i], nil, nil, restore)
@@ -213,7 +211,7 @@ local function unit_dodges(store, this, ranged_attack, attack, source)
         (not this.dodge.cooldown or store.tick_ts - this.dodge.ts > this.dodge.cooldown) and
         (not attack or not attack.damage_type or band(attack.damage_type, DAMAGE_NO_DODGE) == 0) and
         ((not is_special_attack and math.random() <= this.dodge.chance) or
-            (is_special_attack and math.random() <= 0.6 * this.dodge.chance))   and
+            (is_special_attack and math.random() <= 0.6 * this.dodge.chance)) and
         (not this.dodge.can_dodge or this.dodge.can_dodge(store, this, ranged_attack, attack, source)) then
         this.dodge.last_doge_ts = store.tick_ts
         this.dodge.last_attack = attack
@@ -883,7 +881,8 @@ local function hero_level_up(store, this)
         expected_level_multiplier = 0.1 * (store.level_idx - 48)
     end
     local difficulty_multiplier = GS.hero_xp_gain_per_difficulty_mode[store.level_difficulty]
-    local net_xp = h.xp_queued * expected_level_multiplier * difficulty_multiplier * store.config.hero_xp_gain_multiplier
+    local net_xp = h.xp_queued * expected_level_multiplier * difficulty_multiplier *
+                       store.config.hero_xp_gain_multiplier
     log_xp.debug("XP+: (%s)%s xp:%07.2f + net_xp:%6.2f = %8.2f | net_xp = xp_queued:%s * exp_lvl_mul:%s * diff_mul:%s",
         this.id, this.template_name, h.xp, km.round(net_xp), h.xp + km.round(net_xp), h.xp_queued,
         expected_level_multiplier, difficulty_multiplier)
@@ -936,15 +935,14 @@ local function y_hero_death_and_respawn(store, this)
             hero_gain_xp_from_skill(this, this.hero.skills[sd.xp_from_skill])
         end
 
-        local targets =
-            U.find_enemies_in_range(store, this.pos, 0, sd.damage_radius, sd.vis_flags, sd.vis_bans)
+        local targets = U.find_enemies_in_range(store, this.pos, 0, sd.damage_radius, sd.vis_flags, sd.vis_bans)
 
         if targets then
             for _, t in pairs(targets) do
                 local d = E:create_entity("damage")
                 d.damage_type = sd.damage_type
                 d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.damage_buff) *
-                    this.unit.damage_factor
+                              this.unit.damage_factor
                 d.source_id = this.id
                 d.target_id = t.id
                 queue_damage(store, d)
@@ -1356,8 +1354,8 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
             else
                 node_prediction = nil
             end
-            target, trash, pred_pos = U.find_foremost_enemy(store, this.pos, attack.min_range,
-                attack.max_range, node_prediction, attack.vis_flags, attack.vis_bans, attack.filter_fn, F_FLYING)
+            target, trash, pred_pos = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range,
+                node_prediction, attack.vis_flags, attack.vis_bans, attack.filter_fn, F_FLYING)
             if target and not target.health.dead then
                 bullet_to = pred_pos or target.pos
                 bullet_to_start = V.vclone(bullet_to)
@@ -1438,7 +1436,7 @@ local function soldier_pick_ranged_target_and_attack(store, this)
                 local ready = store.tick_ts - a.ts >= a.cooldown * this.cooldown_factor
                 if this.ranged.forced_cooldown then
                     ready = ready and store.tick_ts - this.ranged.forced_ts >= this.ranged.forced_cooldown *
-                        this.cooldown_factor
+                                this.cooldown_factor
                 end
                 if not ready then
                     awaiting_target = target
@@ -1631,7 +1629,7 @@ end
 ---@return boolean 是否被打断
 local function attack_interrupted(this, attack)
     return this.health.dead or this.unit.is_stunned or
-        (this.dodge and this.dodge.active and not (this.dodge.silent or attack.never_interrupt))
+               (this.dodge and this.dodge.active and not (this.dodge.silent or attack.never_interrupt))
 end
 
 ---士兵单次范围攻击
@@ -1680,8 +1678,8 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
         hit_pos.x = hit_pos.x + (af and -1 or 1) * attack.hit_offset.x
         hit_pos.y = hit_pos.y + attack.hit_offset.y
     end
-    targets = U.find_enemies_in_range(store, hit_pos, 0, attack.damage_radius, attack.damage_flags,
-        attack.damage_bans) or {}
+    targets =
+        U.find_enemies_in_range(store, hit_pos, 0, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
     if attack.count then
         table.sort(targets, function(e1, e2)
             return V.dist2(e1.pos.x, e1.pos.y, hit_pos.x, hit_pos.y) < V.dist2(e2.pos.x, e2.pos.y, hit_pos.x, hit_pos.y)
@@ -1774,7 +1772,7 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
         S:queue(attack.sound_loop, attack.sound_loop_args)
         an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
         U.animation_start(this, an, af, store.tick_ts, 1)
-        local hit_times = attack.hit_times and attack.hit_times or { attack.hit_time }
+        local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
         for _, ht in pairs(hit_times) do
             while ht > store.tick_ts - loop_ts do
                 if this.unit.is_stunned then
@@ -1814,15 +1812,15 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
                     hit_pos.x = hit_pos.x + (af and -1 or 1) * attack.hit_offset.x
                     hit_pos.y = hit_pos.y + attack.hit_offset.y
                 end
-                local targets = U.find_enemies_in_range(store, hit_pos, 0, attack.damage_radius,
-                    attack.damage_flags, attack.damage_bans) or {}
+                local targets = U.find_enemies_in_range(store, hit_pos, 0, attack.damage_radius, attack.damage_flags,
+                    attack.damage_bans) or {}
                 for _, e in pairs(targets) do
                     local d = E:create_entity("damage")
                     d.source_id = this.id
                     d.target_id = e.id
                     d.damage_type = attack.damage_type
                     d.value = (math.random(attack.damage_min, attack.damage_max) + this.damage_buff) *
-                        this.unit.damage_factor
+                                  this.unit.damage_factor
                     d.track_kills = this.track_kills ~= nil
                     d.track_damage = attack.track_damage
                     d.xp_gain_factor = attack.xp_gain_factor
@@ -1879,7 +1877,7 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
                 else
                     d.damage_type = attack.damage_type
                     d.value = this.unit.damage_factor *
-                        (math.random(attack.damage_min, attack.damage_max) + this.damage_buff)
+                                  (math.random(attack.damage_min, attack.damage_max) + this.damage_buff)
                 end
 
                 d.source_id = this.id
@@ -2024,7 +2022,7 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
             elseif attack.damage_min then
                 d.damage_type = attack.damage_type
                 d.value = this.unit.damage_factor *
-                    (math.random(attack.damage_min, attack.damage_max) + this.damage_buff)
+                              (math.random(attack.damage_min, attack.damage_max) + this.damage_buff)
             end
 
             queue_damage(store, d)
@@ -2167,18 +2165,17 @@ local function soldier_pick_melee_target(store, this)
     if not target then
         -- 如果当前还没有 target_id，就索一下敌
         if this.hero then
-            target = U.find_nearest_enemy(store, center, 0, this.melee.range, F_BLOCK, bit.bor(F_CLIFF),
+            target = U.find_nearest_enemy(store, center, 0, this.melee.range, F_BLOCK, bit.bor(F_CLIFF), function(e)
+                return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and
+                           band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and
+                           (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
+            end)
+        else
+            target = U.find_foremost_enemy(store, center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF),
                 function(e)
                     return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and
-                        band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and
-                        (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-                end)
-        else
-            target = U.find_foremost_enemy(store, center, 0, this.melee.range, false, F_BLOCK,
-                bit.bor(F_CLIFF), function(e)
-                    return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and
-                        band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and
-                        (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
+                               band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and
+                               (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
                 end)
         end
     elseif U.blocker_rank(store, this) ~= 1 then
@@ -2252,13 +2249,13 @@ local function soldier_pick_melee_attack(store, this, target)
                 local cooldown = 0
                 -- cooldown_factor: 全部近战攻击的冷却因子
                 if a.cooldown then
-                    cooldown = a.cooldown * this.cooldown_factor
+                    cooldown = a.cooldown
                 end
 
                 if this.melee.cooldown and a.shared_cooldown then
-                    cooldown = this.melee.cooldown * this.cooldown_factor
+                    cooldown = this.melee.cooldown
                 end
-
+                cooldown = cooldown * this.cooldown_factor
                 local forced_cooldown_ok = true
 
                 if this.melee.forced_cooldown and a.forced_cooldown then
@@ -2267,15 +2264,14 @@ local function soldier_pick_melee_attack(store, this, target)
 
                 if not a.disabled and cooldown < store.tick_ts - a.ts and forced_cooldown_ok and
                     band(a.vis_flags, target.vis.bans) == 0 and band(a.vis_bans, target.vis.flags) == 0 and
-                    (not a.fn_can or a.fn_can(this, store, a, target))
-                    then
+                    (not a.fn_can or a.fn_can(this, store, a, target)) then
                     if not a.fn_chance and math.random() >= a.chance or a.fn_chance and
                         not a.fn_chance(this, store, a, target) then
                         a.ts = store.tick_ts
                     else
                         if a.min_count and a.type == "area" and a.damage_radius then
-                            local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius,
-                                a.vis_flags, a.vis_bans)
+                            local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags,
+                                a.vis_bans)
 
                             if not targets or #targets < a.min_count then
                                 goto label_78_0
@@ -2562,7 +2558,7 @@ end
 ---@return boolean 是否可拦截
 local function can_melee_blocker(store, this, blocker)
     return not this.health.dead and not this.unit.is_stunned and blocker and not blocker.health.dead and
-        table.contains(this.enemy.blockers, blocker.id) and store.entities[blocker.id]
+               table.contains(this.enemy.blockers, blocker.id) and store.entities[blocker.id]
 end
 
 ---判断敌人是否可被远程士兵攻击
@@ -2786,7 +2782,7 @@ local function y_enemy_death(store, this)
         end
     end
     local can_spawn = this.death_spawns and
-        band(this.health.last_damage_types,
+                          band(this.health.last_damage_types,
             bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS, this.death_spawns.no_spawn_damage_types or 0)) == 0
     if can_spawn and this.death_spawns.concurrent_with_death then
         do_death_spawns(store, this)
@@ -2795,8 +2791,8 @@ local function y_enemy_death(store, this)
     end
     local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
     if (band(this.health.last_damage_types, bor(DAMAGE_EXPLOSION, DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE, DAMAGE_SHOT)) ~=
-            0 and band(this.health.last_damage_types, bor(DAMAGE_FX_NOT_EXPLODE, DAMAGE_DISINTEGRATE)) == 0 and
-            this.unit.can_explode) or (this.unit.explode_when_silenced_death and not this.enemy.can_do_magic) and
+        0 and band(this.health.last_damage_types, bor(DAMAGE_FX_NOT_EXPLODE, DAMAGE_DISINTEGRATE)) == 0 and
+        this.unit.can_explode) or (this.unit.explode_when_silenced_death and not this.enemy.can_do_magic) and
         this.unit.explode_fx and band(terrain_type, TERRAIN_WATER) == 0 then
         S:queue(this.sound_events.death_by_explosion)
         local fx = E:create_entity(this.unit.explode_fx)
@@ -2807,7 +2803,7 @@ local function y_enemy_death(store, this)
         show_blood_pool(this, terrain_type)
         this.unit.hide_during_death = true
     elseif (band(this.health.last_damage_types, bor(DAMAGE_DISINTEGRATE)) ~= 0 or
-            this.unit.disintegrate_when_silenced_death and not this.enemy.can_do_magic) and this.unit.can_disintegrate and
+        this.unit.disintegrate_when_silenced_death and not this.enemy.can_do_magic) and this.unit.can_disintegrate and
         this.unit.disintegrate_fx then
         local fx = E:create_entity(this.unit.disintegrate_fx)
         fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
@@ -3005,7 +3001,7 @@ local function y_enemy_do_ranged_attack(store, this, target, attack)
             target_num = #targets
         end
     else
-        targets = { target }
+        targets = {target}
     end
     if targets then
         for index, target in pairs(targets) do
@@ -3059,7 +3055,7 @@ local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
     for i = 1, attack.loops do
         an, af, ai = U.animation_name_facing_point(this, attack.animations[2], target.pos)
         U.animation_start(this, an, af, store.tick_ts, false)
-        local shoot_times = attack.shoot_times or { attack.shoot_time }
+        local shoot_times = attack.shoot_times or {attack.shoot_time}
         for si, st in pairs(shoot_times) do
             while st > store.tick_ts - this.render.sprites[1].ts do
                 if this.unit.is_stunned and not attack.ignore_stun then
@@ -3121,6 +3117,7 @@ local function y_enemy_range_attacks(store, this, target)
         if this.ranged.cooldown and ar.shared_cooldown then
             cooldown = this.ranged.cooldown
         end
+        cooldown = cooldown * this.cooldown_factor
         if not ar.disabled and cooldown <= store.tick_ts - ar.ts and band(ar.vis_flags, target.vis.bans) == 0 and
             band(ar.vis_bans, target.vis.flags) == 0 and (not ar.sync_animation or this.render.sprites[1].sync_flag) then
             ar.ts = store.tick_ts
@@ -3157,6 +3154,7 @@ local function y_enemy_melee_attacks(store, this, target)
         if ma.shared_cooldown then
             cooldown = this.melee.cooldown
         end
+        cooldown = cooldown * this.cooldown_factor
         if not ma.disabled and cooldown <= store.tick_ts - ma.ts and band(ma.vis_flags, target.vis.bans) == 0 and
             band(ma.vis_bans, target.vis.flags) == 0 and (not ma.fn_can or ma.fn_can(this, store, ma, target)) then
             ma.ts = store.tick_ts
@@ -3181,7 +3179,7 @@ local function y_enemy_melee_attacks(store, this, target)
                     hit_pos.x = hit_pos.x + (af and -1 or 1) * ma.hit_offset.x
                     hit_pos.y = hit_pos.y + ma.hit_offset.y
                 end
-                local hit_times = ma.hit_times and ma.hit_times or { ma.hit_time }
+                local hit_times = ma.hit_times and ma.hit_times or {ma.hit_time}
                 for i = 1, #hit_times do
                     local hit_time = hit_times[i]
                     local dodged = false
@@ -3248,8 +3246,8 @@ local function y_enemy_melee_attacks(store, this, target)
                             ma.side_effect(this, store, ma, target)
                         end
                         local targets = table.filter(store.soldiers, function(_, e)
-                            return not e.health.dead and
-                                       band(e.vis.flags, ma.vis_bans) == 0 and band(e.vis.bans, ma.vis_flags) == 0 and
+                            return not e.health.dead and band(e.vis.flags, ma.vis_bans) == 0 and
+                                       band(e.vis.bans, ma.vis_flags) == 0 and
                                        U.is_inside_ellipse(e.pos, hit_pos, ma.damage_radius) and
                                        (not ma.fn_filter or ma.fn_filter(this, store, ma, e))
                         end)
@@ -3462,7 +3460,7 @@ local function y_spawner_spawn(store, this)
         if spawn.motion.forced_waypoint then
             local fw = spawn.motion.forced_waypoint
             local pis = P:get_connected_paths(sp.pi)
-            local nodes = P:nearest_nodes(fw.x, fw.y, pis, { spawn.nav_path.spi }, true)
+            local nodes = P:nearest_nodes(fw.x, fw.y, pis, {spawn.nav_path.spi}, true)
 
             if #nodes < 1 then
                 log.error("(%s) could not find point to spawn near %s,%s", this.id, fw.x, fw.y)
@@ -3598,7 +3596,7 @@ local fps_based_keys = {
     ["hit_time"] = true,
     ["cast_time"] = true,
     ["shoot_time"] = true,
-    ["dodge_time"] = true,
+    ["dodge_time"] = true
 }
 
 local function scale_fps_based_keys(tbl, factor, visited)
@@ -3623,21 +3621,23 @@ local function scale_fps_based_keys(tbl, factor, visited)
 end
 
 local function change_fps(ts, entity, factor)
-    for _, s in pairs(entity.render.sprites) do
-        if not s._origin_fps then
-            if not s.fps then
-                s._origin_fps = FPS
-            else
-                s._origin_fps = s.fps
+    if entity.render then
+        for _, s in pairs(entity.render.sprites) do
+            if not s._origin_fps then
+                if not s.fps then
+                    s._origin_fps = FPS
+                else
+                    s._origin_fps = s.fps
+                end
             end
-        end
 
-        local new_fps = s._origin_fps * factor
-        local t = ts + s.time_offset
-        s.ts = t - (t - s.ts) * (s.fps or s._origin_fps) / new_fps
-        s.fps = new_fps
+            local new_fps = s._origin_fps * factor
+            local t = ts + s.time_offset
+            s.ts = t - (t - s.ts) * (s.fps or s._origin_fps) / new_fps
+            s.fps = new_fps
+        end
+        scale_fps_based_keys(entity, 1 / factor)
     end
-    scale_fps_based_keys(entity, 1 / factor)
 end
 
 ---增加塔冷却缩放（乘算）
@@ -3650,7 +3650,7 @@ local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 
     target.tower.cooldown_factor = target.tower.cooldown_factor * cooldown_factor
-    change_fps(ts , target, 1 / (target.tower.cooldown_factor))
+    change_fps(ts, target, 1 / (target.tower.cooldown_factor))
     if target.barrack then
         for _, s in pairs(target.barrack.soldiers) do
             if s.cooldown_factor then
@@ -3661,7 +3661,7 @@ local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
-local function insert_soldier_cooldown_buff(ts, target, cooldown_factor)
+local function insert_unit_cooldown_buff(ts, target, cooldown_factor)
     if not target then
         return
     end
@@ -3713,7 +3713,7 @@ local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
     end
 end
 
-local function remove_soldier_cooldown_buff(ts, target, cooldown_factor)
+local function remove_unit_cooldown_buff(ts, target, cooldown_factor)
     if not target then
         return
     end
@@ -3808,30 +3808,30 @@ local function update_on_damage(entity)
     end
 end
 
----开局重置英雄的技能冷却时间
+---重置英雄的技能冷却时间
 ---@param this table 实体
 ---@param store game.store
 ---@return nil
 local function hero_spawning_set_skill_ts(this, store)
+    local function reset_skill(v)
+        if not v.disabled and v.cooldown then
+            v.ts = store.tick_ts - v.cooldown
+        end
+    end
+
     if this.melee then
         for _, v in ipairs(this.melee.attacks) do
-            if not v.disabled then
-                v.ts = store.tick_ts - v.cooldown
-            end
+            reset_skill(v)
         end
     end
     if this.ranged then
         for _, v in ipairs(this.ranged.attacks) do
-            if not v.disabled then
-                v.ts = store.tick_ts - v.cooldown
-            end
+            reset_skill(v)
         end
     end
     if this.timed_attacks then
         for _, v in ipairs(this.timed_attacks.list) do
-            if not v.disabled then
-                v.ts = store.tick_ts - v.cooldown
-            end
+            reset_skill(v)
         end
     end
 end
@@ -3966,8 +3966,8 @@ local SU = {
     update_on_damage = update_on_damage,
     hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
     towers_swaped = towers_swaped,
-    insert_soldier_cooldown_buff = insert_soldier_cooldown_buff,
-    remove_soldier_cooldown_buff = remove_soldier_cooldown_buff,
+    insert_unit_cooldown_buff = insert_unit_cooldown_buff,
+    remove_unit_cooldown_buff = remove_unit_cooldown_buff,
     is_wraith = is_wraith
 }
 

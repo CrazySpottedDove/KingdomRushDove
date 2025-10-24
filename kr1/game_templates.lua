@@ -17,9 +17,13 @@ require("game_templates_utils")
 
 ----------
 require("foundamental_towers")()
-require("mage_towers")()
+
+package.loaded.mage_towers = nil
+package.loaded.archer_towers = nil
+require("mage_towers")
+require("archer_towers")
 require("engineer_towers")()
-require("archer_towers")()
+
 require("barrack_towers")()
 require("enemies")()
 require("heroes")()
@@ -663,41 +667,6 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.price = 0
 tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
 
-tt = RT("soldier_ingvar_ancestor", "soldier_militia")
-AC(tt, "reinforcement", "melee", "nav_grid")
-image_y = 60
-image_x = 72
-anchor_y = 0.17
-tt.controable = true
-tt.controable_other = true
-tt.health.armor = 0.25
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(0, 46)
-tt.health.dead_lifetime = fts(30)
-tt.info.portrait = IS_PHONE_OR_TABLET and
-"portraits_hero_0011" or "info_portraits_hero_0011"
-tt.info.i18n_key = "HERO_VIKING_ANCESTOR"
-tt.info.random_name_format = nil
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.remove = scripts.soldier_reinforcement.remove
-tt.main_script.update = scripts.soldier_reinforcement.update
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].hit_time = fts(15)
-tt.melee.attacks[1].sound = "MeleeSword"
-tt.melee.range = 128
-tt.motion.max_speed = 69
-tt.reinforcement.duration = 14
-tt.reinforcement.fade = nil
-tt.regen.cooldown = 1
-tt.render.sprites[1].prefix = "soldier_ingvar_ancestor"
-tt.ui.click_rect = r(-13, 0, 26, 30)
-tt.unit.marker_offset = vec_2(0, 0)
-tt.unit.mod_offset = vec_2(0, 15)
-tt.unit.price = 0
-tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
-
 tt = RT("spear_legionnaire", "arrow")
 tt.bullet.damage_min = 24
 tt.bullet.damage_max = 40
@@ -987,8 +956,6 @@ tt.render.sprites[2].z = Z_DECALS
 tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
 tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 
-
-
 tt = RT("aura_teleport_arcane", "aura")
 AC(tt, "render")
 tt.aura.mod = "mod_teleport_arcane"
@@ -1197,6 +1164,20 @@ tt.graveyard.spawns_by_health = {{"enemy_skeleton", 299}, {"enemy_skeleton_big",
 tt.graveyard.vis_has = F_ENEMY
 tt.graveyard.vis_flags = F_SKELETON
 tt.graveyard.vis_bans = F_BOSS
+tt = RT("graveyard_s110", "graveyard_controller")
+tt.main_script.update = scripts.graveyard_s110.update
+tt.graveyard.keep_gold = false
+tt.graveyard.spawns_by_health = {
+    {"enemy_skeleton", 400},
+    {"enemy_halloween_zombie", 600},
+    {"enemy_skeleton_big", 1000},
+    {"enemy_gnoll_bloodsydian", 2000},
+    {"enemy_blade", 3750},
+    {"eb_alleria", 9e+99}
+}
+tt.graveyard.vis_has = bor(F_ENEMY, F_FRIEND)
+tt.graveyard.vis_flags = F_SKELETON
+tt.graveyard.vis_bans = F_HERO
 tt = RT("swamp_controller", "graveyard_controller")
 tt.graveyard.spawns_by_health = {{"enemy_zombie", 400}, {"enemy_swamp_thing", 9e+99}}
 tt.graveyard.excluded_templates = {"soldier_alleria_wildcat", "soldier_magnus_illusion"}
@@ -1535,8 +1516,8 @@ tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt = RT("mod_gulaemon_fly", "modifier")
-tt.main_script.queue = scripts.mod_gulaemon_fly.queue
-tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue
+-- tt.main_script.queue = scripts.mod_gulaemon_fly.queue
+-- tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue
 tt.main_script.insert = scripts.mod_gulaemon_fly.insert
 tt.main_script.remove = scripts.mod_gulaemon_fly.remove
 tt.main_script.update = scripts.mod_gulaemon_fly.update
@@ -1545,10 +1526,11 @@ tt.modifier.type = MOD_TYPE_FAST
 tt.speed_factor = 3.666666666666667
 tt.nodes_limit = 20
 tt = RT("mod_troll_skater", "modifier")
-tt.main_script.queue = scripts.mod_gulaemon_fly.queue
-tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue
+-- tt.main_script.queue = scripts.mod_gulaemon_fly.queue
+-- tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue
 tt.main_script.insert = scripts.mod_gulaemon_fly.insert
 tt.main_script.update = scripts.mod_gulaemon_fly.update
+tt.main_script.remove = scripts.mod_gulaemon_fly.remove
 tt.modifier.type = MOD_TYPE_FAST
 tt.speed_factor = 2.4166666666666665
 tt.nodes_limit = 1
@@ -4970,9 +4952,9 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_baby_malik.level_up
 tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info
-tt.info.hero_portrait = "kr3_hero_portraits_0013"
+tt.info.hero_portrait = "hero_portraits_0003"
 tt.info.i18n_key = "HERO_ELVES_MALIK"
-tt.info.portrait = (IS_PHONE and "portraits_hero" or "kr3_info_portraits_heroes") .. "_0013"
+tt.info.portrait = (IS_PHONE and "portraits_hero" or "info_portraits_hero") .. "_0003"
 tt.info.ultimate_icon = "0013"
 tt.main_script.update = scripts.hero_baby_malik.update
 tt.motion.max_speed = 3 * FPS
@@ -5660,22 +5642,8 @@ tt.aura.radius = 100
 tt.aura.vis_flags = bor(F_RANGED, F_SPELLCASTER)
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO)
 tt.aura.targets_per_cycle = nil
-tt = E:register_t("aura_teleport_faustus", "aura")
 
-E:add_comps(tt, "render", "tween")
 
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-tt.aura.mod = "mod_teleport_faustus"
-tt.aura.cycle_time = 1000000000
-tt.aura.duration = fts(20)
-tt.aura.radius = 50
-tt.aura.vis_flags = bor(F_RANGED, F_TELEPORT)
-tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO, F_FREEZE)
-tt.aura.targets_per_cycle = nil
-tt.render.sprites[1].name = "aura_teleport_faustus"
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 55}, {fts(5), 255}, {fts(15), 255}, {fts(20), 0}}
 tt = E:register_t("aura_bravebark_springsap", "aura")
 E:add_comps(tt, "render", "tween")
 tt.aura.cycle_time = fts(3)
@@ -6143,20 +6111,6 @@ tt.dps.damage_max = 2
 tt.dps.kill = true
 tt.dps.damage_every = fts(3)
 tt.dps.damage_type = DAMAGE_POISON
-
-tt = E:register_t("mod_teleport_faustus", "mod_teleport")
-tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
-tt.modifier.vis_bans = bor(F_BOSS)
-tt.max_times_applied = nil
-tt.nodes_offset = -35
-tt.nodeslimit = 10
-tt.delay_start = fts(2)
-tt.hold_time = 0.4
-tt.delay_end = fts(2)
-tt.fx_start = "fx_teleport_faustus"
-tt.fx_end = "fx_teleport_faustus"
-tt.damage_base = 50
-tt.damage_inc = 25
 
 tt = E:register_t("mod_enervation_faustus", "modifier")
 E:add_comps(tt, "render", "tween")
@@ -9906,3 +9860,202 @@ tt.thunders[2].range = 9999
 tt.thunders[2].targeting = "random"
 tt.vis_bans = bor(F_FRIEND)
 tt.vis_flags = bor(F_RANGED)
+
+tt = E:register_t("ps_bullet_tower_ray_sheep")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "channeler_tower_mutation_projectile_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 60
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_area_spread = vec_2(8, 8)
+tt.particle_system.scales_y = {1, 1.5}
+tt.particle_system.scales_x = {1, 1.5}
+tt.particle_system.anchor = vec_2(0.5, 0.5)
+tt.particle_system.emit_offset = vec_2(0, 0)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.emit_offset_relative = vec_2(-15, 0)
+
+tt = E:register_t("fx_tower_ray_hit_start", "fx")
+tt.render.sprites[1].name = "channeler_tower_crystal_union_fx_run"
+tt = E:register_t("fx_tower_ray_hit_source", "fx")
+tt.render.sprites[1].name = "channeler_tower_ray_start_loop"
+tt.render.sprites[1].loop = true
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_ray_crystal_union", "fx")
+tt.render.sprites[1].name = "channeler_tower_crystal_union_fx_run"
+tt = E:register_t("fx_tower_ray_lvl4_attack", "fx")
+tt.render.sprites[1].name = "channeler_tower_lvl4_tower_attack_fx_idle"
+tt = E:register_t("fx_tower_ray_lvl4_attack_sheep", "fx")
+tt.render.sprites[1].name = "channeler_tower_mutation_tower_fx_idle"
+tt = E:register_t("fx_tower_ray_lvl4_attack_sheep_hit", "fx")
+tt.render.sprites[1].name = "channeler_tower_mutation_fx_idle"
+tt = E:register_t("fx_tower_ray_lvl4_attack_sheep_hit_big", "fx")
+tt.render.sprites[1].name = "channeler_tower_mutation_fx_big_idle"
+tt = E:register_t("fx_tower_ray_lvl4_shock", "fx")
+
+E:add_comps(tt, "main_script")
+
+tt.render.sprites[1].prefix = "channeler_tower_lvl4_idle_shock_fx_"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = 3
+tt.render.sprites[1].z = Z_OBJECT
+tt.main_script.update = scripts.fx_tower_ray_lvl4_shock.update
+tt.timed.runs = 1e+99
+
+tt = E:register_t("moon_controller_s91", "moon_controller")
+tt.main_script.update = scripts.moon_controller_s91.update
+tt.transit_time = 5
+tt.hold_time = 15
+tt.inactive_time = 25
+tt.enemy_damage_factor = 1.2
+tt.enemy_speed_factor = 1.2
+tt.enemy_cooldown_factor = 0.8
+tt.enemy_health_factor = 0.8
+tt.spawn_creep = "enemy_deviltide_shark_ghost"
+
+tt = E:register_t("ps_bullet_tower_sand")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "tower_sand_lvl1_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 150
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_2(10, 0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_tower_sand_skill_gold")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "tower_sand_lvl4_skill_1_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 150
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_2(10, 0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_aura_tower_sand_skill_big_blade")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "tower_sand_lvl4_skill_2_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_1(0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("fx_bullet_tower_sand_hit", "fx")
+tt.render.sprites[1].name = "tower_sand_basic_hit"
+tt = E:register_t("fx_bullet_tower_sand_skill_gold_hit", "fx")
+tt.render.sprites[1].name = "tower_sand_lvl4_skill_1_hit"
+tt = E:register_t("fx_bullet_tower_sand_skill_gold_hit_coins", "fx")
+tt.render.sprites[1].name = "tower_sand_lvl4_skill_1_coins_hit"
+tt = E:register_t("fx_aura_tower_sand_skill_big_blade", "fx")
+tt.render.sprites[1].name = "tower_sand_lvl4_skill_2_hit_FX_loop"
+tt = E:register_t("royal_archer_tower_lvl4_arrow_armor_breaker_trail_particle")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_idle_1"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 200
+tt.particle_system.animation_fps = 20
+tt.particle_system.track_rotation = true
+tt = E:register_t("ps_rapacious_hunter_eagle_royal_archers")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_attack_particle"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 30
+tt.particle_system.particle_lifetime = {fts(1), fts(1)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("fx_tower_royal_archer_rapacious_hunter_dust", "fx")
+tt.render.sprites[1].name = "tower_build_dust"
+tt.render.sprites[1].scale = vec_2(0.5, 0.5)
+tt = E:register_t("tower_royal_archers_arrow_hit_fx", "fx")
+tt.render.sprites[1].name = "royal_archer_tower_royal_archer_hit_fx_hit_fx"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt = E:register_t("tower_royal_archers_pow_armor_piercer_arrow_hit_fx", "fx")
+tt.render.sprites[1].name = "royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_armor_breaker_hit_fx"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_eagle_hit_fx", "fx")
+tt.render.sprites[1].name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_rapacious_hunter_hit_fx"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+
+tt = E:register_t("defend_flag", "decal")
+tt.render.sprites[1].name = "defendFlag"
+tt.render.sprites[1].z = Z_BACKGROUND
+tt.render.sprites[1].animated = false
+
+tt = E:register_t("defend_flag_water", "defend_flag")
+tt.render.sprites[1].name = "defendFlag_water"
+
+tt = E:register_t("decal_street_lamp", "decal")
+AC(tt, "lights")
+tt.lights[1].radius = 70
+
+tt = E:register_t("decal_lamp", "decal_street_lamp")
+tt.lights[1].radius = 70
+
+tt = E:register_t("fx_tower_arcane_wizard_ray_hit_start", "fx")
+
+E:add_comps(tt, "tween")
+
+tt.render.sprites[1].name = "arcane_wizard_tower_ray_start_idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].scale = vec_2(1.5, 1.5)
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(25)
+tt.timed.runs = 1e+99
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(18), 255}, {fts(25), 0}}
+tt.tween.remove = false
+tt = E:register_t("fx_tower_arcane_wizard_ray_hit", "fx")
+
+E:add_comps(tt)
+
+tt.render.sprites[1].name = "arcane_wizard_tower_ray_end_idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(10)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_arcane_wizard_disintegrate_ray_hit_start", "fx")
+tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_ray_charge_origin"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.timed.duration = fts(37)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_tower_arcane_wizard_ray_disintegrate_hit", "fx")
+tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_hit_idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS + 1
+tt.render.sprites[1].fps = 25
+tt.timed.duration = fts(17)
+tt.timed.runs = 1e+99
+tt = E:register_t("decal_tower_arcane_wizard_empowerment_preview", "decal_tween")
+
+E:add_comps(tt, "render", "tween")
+
+tt.range_factor = 1
+tt.render.sprites[1].name = "arcane_wizard_tower_empowerment_indicator"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_TOWER_BASES + 1
+tt.render.sprites[1].offset.y = 5
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.1, 255}}
+tt.tween.remove = false

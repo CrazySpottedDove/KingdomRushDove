@@ -308,7 +308,8 @@ function love.load(arg)
     main:set_locale(main.params.locale)
     -- love.window.setTitle(_("GAME_TITLE_" .. string.upper(KR_GAME)))
     love.window.setTitle(version.title .. version.id)
-    local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/icon256.png"
+    -- icon switched
+    local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"
 
     if love.filesystem.isFile(icon) then
         love.window.setIcon(love.image.newImageData(icon))
@@ -791,7 +792,7 @@ function love.errhand(msg)
     local err = {}
     local tip = {}
     local tip_trigger_errors = {
-        ["Texture expected, got nil"] = "贴图资源丢失，请先尝试重新安装新版本\n"
+        ["Texture expected, got nil"] = "你在老本体上放了新版本补丁，请先安装新的本体。\n"
     }
     local has_tip
 
@@ -842,9 +843,9 @@ function love.errhand(msg)
     -- if error_type == "coro" then
     -- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
     if has_tip then
-        table.insert(tip, "oops, 发生错误! 请先尝试提示，再将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+        table.insert(tip, "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。按 “z” 显示此前界面以截图。\n")
     elseif not has_tip then
-        table.insert(tip, "oops, 发生错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面\n")
+        table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，并按 “z” 显示崩溃前界面，一并截图展示，并用语言简要说明发生了什么。\n")
     end
 
     if love.nx then

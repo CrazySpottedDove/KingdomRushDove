@@ -1105,7 +1105,7 @@ tt.health.on_damage = function(this, store, damage)
     local bda = this.timed_attacks.list[1]
     if this.unit.is_stuuned or this.health.dead or bda.in_progress or
         band(damage.damage_type, DAMAGE_ALL_TYPES, bnot(bor(DAMAGE_PHYSICAL, DAMAGE_MAGICAL, (DAMAGE_MIXED or 0)))) ~= 0 or
-        band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.dodge.chance < math.random() then
+        band(damage.damage_type, DAMAGE_NO_DODGE) ~= 0 or this.dodge.chance < math.random() or (not this.enemy.can_do_magic) then
         return true
     end
     -- if #this.enemy.blockers > 0 then
@@ -1133,6 +1133,7 @@ a.damage_max = 56
 a.damage_min = 40
 a.cooldown = 7.2
 a.hits = 4
+tt.enemy.gold = 30
 tt.main_script.update = function(this, store)
     local brk, sta
     local bda = this.timed_attacks.list[1]
@@ -1303,6 +1304,7 @@ tt.main_script.update = function(this, store)
         coroutine.yield()
     end
 end
+tt.render.sprites[1].alpha = 180
 
 tt = inherit_from_soldier_template("enemy_forest", "soldier_forest")
 tt.ranged.attacks[1].disabled = true

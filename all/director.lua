@@ -112,7 +112,8 @@ function director:init(params)
         end
     end
 
-    self.next_item_name = "splash"
+    -- self.next_item_name = "splash"
+    self.next_item_name = "slots"
 
     if params.level or params.screen then
         if not storage:load_slot(1) then
@@ -319,7 +320,18 @@ function director:unload_item(item)
         groups = table.append(groups, replace_locale(game.required_textures))
         groups = table.append(groups, replace_locale(game.store.level.required_textures))
         scaled_groups = table.append(scaled_groups, replace_locale(game.scale_required_textures))
-        if game.store.selected_hero then
+        if game.store.config.enable_hero_menu then
+            local hero_data = require("data.map_data").hero_data
+            for _ , data in pairs(hero_data) do
+                local hero = data.name
+                local hero_textures = {"go_" .. hero}
+                if GS.heroes_require_scaled_texture[hero] then
+                    scaled_groups = table.append(scaled_groups, hero_textures)
+                else
+                    groups = table.append(groups, hero_textures)
+                end
+            end
+        elseif game.store.selected_hero then
             for _, hero in pairs(game.store.selected_hero) do
                 if hero then
                     if GS.heroes_require_scaled_texture[hero] then
@@ -471,7 +483,7 @@ function director:queue_load_item_named(name, force_reload)
         local item = _require("screen_comics")
 
         item.item_name = "comics"
-        item.required_textures = {"loading_common", "comic_" .. comic_idx}
+        item.required_textures = { "loading_common", "kr3_comic", "kr2_comic" }
         item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
 
         self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true)
@@ -521,20 +533,37 @@ function director:queue_load_item_named(name, force_reload)
 
         self:load_sound_groups(game.store.level.required_sounds)
 
-        local slot = storage:load_slot()
-        if slot.heroes.selected then
-            for _, hero in pairs(slot.heroes.selected) do
-                if hero then
-                    local hero_textures = {"go_" .. hero}
+        if game.store.config.enable_hero_menu then
+            local hero_data = require("data.map_data").hero_data
+            for _ , data in pairs(hero_data) do
+                local hero = data.name
+                local hero_textures = {"go_" .. hero}
                     if GS.heroes_require_scaled_texture[hero] then
-                        self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, true, "game")
+                        self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res * game.scale_required_textures_scale,
+                            true, "game")
                     else
                         self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
                     end
-                    self:load_sound_groups({hero})
+                self:load_sound_groups({hero})
+            end
+        else
+            local slot = storage:load_slot()
+            if slot.heroes.selected then
+                for _, hero in pairs(slot.heroes.selected) do
+                    if hero then
+                        local hero_textures = {"go_" .. hero}
+                        if GS.heroes_require_scaled_texture[hero] then
+                            self:load_texture_groups(hero_textures, self.params.texture_size,
+                                game.ref_res * game.scale_required_textures_scale, true, "game")
+                        else
+                            self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
+                        end
+                        self:load_sound_groups({hero})
+                    end
                 end
             end
         end
+
         if game.store.level.show_comic_idx and game.store.level_mode == GAME_MODE_CAMPAIGN then
             local comic_idx = game.store.level.show_comic_idx
             local item = _require("screen_comics")

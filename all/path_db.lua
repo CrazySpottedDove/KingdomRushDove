@@ -134,8 +134,8 @@ function path_db:reverse_all_paths()
     if not self.paths then
         return
     end
-    for i, path_group in ipairs(self.paths) do
-        for j, subpath in ipairs(path_group) do
+    for _, path_group in ipairs(self.paths) do
+        for _, subpath in ipairs(path_group) do
             if type(subpath) == "table" then
                 local n = #subpath
                 for k = 1, math.floor(n * 0.5) do
@@ -718,30 +718,6 @@ function path_db:load_curves(name)
 		if self.active_paths[i] == nil then
 			self.active_paths[i] = true
 		end
-	end
-end
-
-if DEBUG then
-	function path_db:save_curves(name)
-		local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
-		local t = {
-			connections = self.path_connections,
-			curves = self.path_curves,
-			paths = self:generate_paths(),
-			active = self.active_paths
-		}
-		local str = serpent.line(t, {
-			comment = false,
-			keyignore = {
-				beziers = true
-			}
-		})
-		local out = "return " .. str .. "\n"
-		local f = io.open(fn, "w")
-
-		f:write(out)
-		f:flush()
-		f:close()
 	end
 end
 

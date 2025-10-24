@@ -196,7 +196,7 @@ function sys.level:init(store)
         P:reverse_all_paths()
     end
     E:load()
-    UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
+
     DI:patch_templates()
 
     W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
@@ -212,6 +212,8 @@ function sys.level:init(store)
     if store.level.init then
         store.level:init(store)
     end
+
+    UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
 
     if store.level.data then
         store.level.locations = {}
@@ -1022,7 +1024,11 @@ function sys.tower_upgrade:on_update(dt, ts, store)
                         if i > ne.barrack.max_soldiers then
                             U.unblock_target(store, s)
                         else
-                            local ns = E:create_entity(ne.barrack.soldier_type)
+                            local soldier_type = ne.barrack.soldier_type
+                            if ne.barrack.soldier_types then
+                                soldier_type = ne.barrack.soldier_types[i]
+                            end
+                            local ns = E:create_entity(soldier_type)
 
                             ns.info.i18n_key = s.info.i18n_key
                             ns.soldier.tower_id = ne.id
@@ -1078,6 +1084,16 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 
                 queue_insert(store, dust)
             end
+            if e.tower_upgrade_persistent_data then
+                for k, v in pairs(e.tower_upgrade_persistent_data) do
+                    if not ne.tower_upgrade_persistent_data[k] then
+                        ne.tower_upgrade_persistent_data[k] = v
+                    end
+                end
+                for _, f in pairs(ne.tower_upgrade_persistent_data.upgrade_functions) do
+                    f(ne, store)
+                end
+            end
         end
     end
 end
@@ -1119,6 +1135,7 @@ function sys.game_upgrades:on_insert(entity, store)
         end
         dps.damage_min = ceil(dps._orig_damage_min * f)
         dps.damage_max = ceil(dps._orig_damage_max * f)
+
         if not bullet_ray_high_elven._orig_damage_min then
             bullet_ray_high_elven._orig_damage_min = bullet_ray_high_elven.damage_min
             bullet_ray_high_elven._orig_damage_max = bullet_ray_high_elven.damage_max
@@ -1131,7 +1148,16 @@ function sys.game_upgrades:on_insert(entity, store)
         end
         modifier_pixie.damage_min = ceil(modifier_pixie._orig_damage_min * f)
         modifier_pixie.damage_max = ceil(modifier_pixie._orig_damage_max * f)
-
+        local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
+        if not arcane5_disintegrate._origin_damage_config then
+            arcane5_disintegrate._origin_damage_config = {}
+            arcane5_disintegrate._origin_damage_config[1] = arcane5_disintegrate.boss_damage_config[1]
+            arcane5_disintegrate._origin_damage_config[2] = arcane5_disintegrate.boss_damage_config[2]
+            arcane5_disintegrate._origin_damage_config[3] = arcane5_disintegrate.boss_damage_config[3]
+        end
+        for i = 1, 3 do
+            arcane5_disintegrate.boss_damage_config[i] = ceil(arcane5_disintegrate._origin_damage_config[i] * f)
+        end
     end
 
     return true
@@ -1160,10 +1186,16 @@ function sys.game_upgrades:on_remove(entity, store)
         end
         dps.damage_min = ceil(dps._orig_damage_min * f)
         dps.damage_max = ceil(dps._orig_damage_max * f)
+
         bullet_ray_high_elven.damage_min = ceil(bullet_ray_high_elven._orig_damage_min * f)
         bullet_ray_high_elven.damage_max = ceil(bullet_ray_high_elven._orig_damage_max * f)
         modifier_pixie.damage_min = ceil(modifier_pixie._orig_damage_min * f)
         modifier_pixie.damage_max = ceil(modifier_pixie._orig_damage_max * f)
+
+        local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
+        for i = 1, 3 do
+            arcane5_disintegrate.boss_damage_config[i] = ceil(arcane5_disintegrate._origin_damage_config[i] * f)
+        end
     end
 
     return true
@@ -1704,8 +1736,11 @@ function sys.tween:on_update(dt, ts, store)
 
                             if time >= ki[1] then
                                 ka = ki
-                            else
+                            end
+
+                            if time <= ki[1] then
                                 kb = ki
+
                                 break
                             end
                         end
@@ -1750,6 +1785,7 @@ function sys.tween:on_update(dt, ts, store)
                 end
             end
         end
+
     end
 end
 
@@ -2186,14 +2222,16 @@ sys.render.name = "render"
 
 local ffi = require("ffi")
 ffi.cdef [[
-typedef struct{
-    int z;
+typedef struct {
     double sort_y;
-    int draw_order;
     double pos_x;
+    int z;
+    int draw_order;
     int lua_index;
 } RenderFrameFFI;
+void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
+local lib_render_sort = ffi.load("all/librender_sort.dll")
 
 function sys.render:init(store)
     store.render_frames = {}
@@ -2209,55 +2247,6 @@ function sys.render:init(store)
     }
     self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
     self._hb_colors = HEALTH_BAR_COLORS
-    local function ffi_cmp(a, b)
-        if a.z ~= b.z then
-            return a.z < b.z
-        end
-        if a.sort_y ~= b.sort_y then
-            return a.sort_y > b.sort_y
-        end
-        if a.draw_order ~= b.draw_order then
-            return a.draw_order < b.draw_order
-        end
-        return a.pos_x < b.pos_x
-    end
-
-    local function ffi_merge_sort(arr, tmp, left, right)
-        if right - left <= 1 then
-            return
-        end
-        local mid = floor((left + right) / 2)
-        ffi_merge_sort(arr, tmp, left, mid)
-        ffi_merge_sort(arr, tmp, mid, right)
-        local i, j, k = left, mid, left
-        local sizeof_frame = ffi.sizeof("RenderFrameFFI")
-        while i < mid and j < right do
-            if ffi_cmp(arr[i], arr[j]) then
-                ffi.copy(tmp + k, arr + i, sizeof_frame)
-                i = i + 1
-            else
-                ffi.copy(tmp + k, arr + j, sizeof_frame)
-                j = j + 1
-            end
-            k = k + 1
-        end
-        while i < mid do
-            ffi.copy(tmp + k, arr + i, sizeof_frame)
-            i = i + 1
-            k = k + 1
-        end
-        while j < right do
-            ffi.copy(tmp + k, arr + j, sizeof_frame)
-            j = j + 1
-            k = k + 1
-        end
-        for l = left, right - 1 do
-            ffi.copy(arr + l, tmp + l, sizeof_frame)
-        end
-    end
-
-    -- 要求渲染顺序稳定，因此不可以使用快速排序
-    self.ffi_sort = ffi_merge_sort
 end
 
 function sys.render:on_insert(entity, store)
@@ -2289,7 +2278,7 @@ function sys.render:on_insert(entity, store)
         end
     end
 
-    if entity.health_bar and store.config.show_health_bar then
+    if entity.health_bar and store.config and store.config.show_health_bar then
         local hb = entity.health_bar
         local hbsize = self._hb_sizes[hb.type]
 
@@ -2436,22 +2425,14 @@ function sys.render:on_update(dt, ts, store)
             end
 
             local last_runs = s.runs
-            -- local fn, runs, idx
             local fn
             if s.animation then
                 A:generate_frames(s.animation)
-                -- fn, runs, idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
                 fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
-                -- s.runs = runs
-                -- s.frame_idx = idx
             elseif s.animated then
-                -- fn, runs, idx = A:fn(full_name, ts - s.ts + s.time_offset, s.loop, s.fps)
                 fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name,
                     ts - s.ts + s.time_offset, s.loop, s.fps)
                 s.frame_name = fn
-                -- s.runs = runs
-                -- s.frame_idx = idx
-                -- s.frame_name = fn
             else
                 s.runs = 0
                 s.frame_idx = 1
@@ -2471,11 +2452,10 @@ function sys.render:on_update(dt, ts, store)
             s._draw_order = 100000 * (s.draw_order or i) + e.id
             if s.hide_after_runs and s.runs >= s.hide_after_runs then
                 s.hidden = true
-                -- s.marked_to_remove = true
             end
         end
 
-        if e.health_bar and store.config.show_health_bar then
+        if e.health_bar and store.config and store.config.show_health_bar then
             local hb = e.health_bar
             local fb = hb.frames[1]
             local ff = hb.frames[2]
@@ -2515,6 +2495,7 @@ function sys.render:on_update(dt, ts, store)
                 else
                     ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
                 end
+
             end
         end
     end
@@ -2535,7 +2516,9 @@ function sys.render:on_update(dt, ts, store)
             n = n + 1
         end
     end
-    self.ffi_sort(store.render_frames_ffi, store.render_frames_ffi_tmp, 0, n)
+
+    lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+
     local new_frames = {}
     for i = 0, n - 1 do
         local ffi_f = render_frames_ffi[i]
@@ -2827,10 +2810,16 @@ end
 
 sys.last_hook = {}
 sys.last_hook.name = "last_hook"
+
 function sys.last_hook:init(store)
     store.dead_soldier_count = 0
     store.enemy_count = 0
+    store.last_hooks = {
+        on_insert = {},
+        on_remove = {}
+    }
 end
+
 function sys.last_hook:on_insert(e, d)
     if e.enemy then
         d.enemies[e.id] = e -- 优化分类索引
@@ -2848,60 +2837,85 @@ function sys.last_hook:on_insert(e, d)
             e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
         end
         d.enemy_count = d.enemy_count + 1
+
     elseif e.soldier and e.health then
         d.soldiers[e.id] = e
+
     elseif e.modifier then
         d.modifiers[e.id] = e
         local target = d.entities[e.modifier.target_id]
+
         if target then
             if not target._applied_mods then
                 target._applied_mods = {}
-                log.error("！如果看见这条消息，请截下来发给作者 target:", target.template_name,
-                    "mod:", e.template_name)
+                log.error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s",
+                    target.template_name, e.template_name))
             end
+
             local mods = target._applied_mods
             mods[#mods + 1] = e
         end
+
     elseif e.tower then
         d.towers[e.id] = e
+
     elseif e.aura then
         d.auras[e.id] = e
     end
+
     if e.particle_system then
         d.particle_systems[e.id] = e
     end
+
     if e.main_script then
         if e.main_script.update then
             d.entities_with_main_script_on_update[e.id] = e
         end
     end
+
     if e.timed then
         d.entities_with_timed[e.id] = e
     end
+
     if e.tween then
         d.entities_with_tween[e.id] = e
     end
+
     if e.render then
         d.entities_with_render[e.id] = e
+    end
+
+    if e.lights then
+        d.entities_with_lights[e.id] = e
     end
 
     if e.motion and e.motion.max_speed ~= 0 then
         e.motion.real_speed = e.motion.max_speed
     end
+
+    for _, hook in pairs(d.last_hooks.on_insert) do
+        hook(e, d)
+    end
+
     return true
 end
+
 function sys.last_hook:on_remove(e, d)
     if e.enemy then
         d.enemies[e.id] = nil -- 优化分类索引
         d.enemy_count = d.enemy_count - 1
+
     elseif e.soldier then
         d.soldiers[e.id] = nil
         d.dead_soldier_count = d.dead_soldier_count + 1
+
     elseif e.modifier then
         d.modifiers[e.id] = nil
         local target = d.entities[e.modifier.target_id]
+
         if target then
             local mods = target._applied_mods
+
             for i = 1, #mods do
                 if mods[i] == e then
                     table.remove(mods, i)
@@ -2909,34 +2923,109 @@ function sys.last_hook:on_remove(e, d)
                 end
             end
         end
+
     elseif e.tower then
         d.towers[e.id] = nil
+
     elseif e.aura then
         d.auras[e.id] = nil
     end
+
     if e.particle_system then
         d.particle_systems[e.id] = nil
     end
+
     if e.main_script then
         if e.main_script.update then
             d.entities_with_main_script_on_update[e.id] = nil
         end
     end
+
     if e.timed then
         d.entities_with_timed[e.id] = nil
     end
+
     if e.tween then
         d.entities_with_tween[e.id] = nil
     end
+
     if e.render then
         d.entities_with_render[e.id] = nil
     end
+
+    if e.lights then
+        d.entities_with_lights[e.id] = nil
+    end
+
+    for _, hook in pairs(d.last_hooks.on_remove) do
+        hook(e, d)
+    end
+
+    -- log.error(e.template_name)
     return true
+end
+
+sys.lights = {}
+sys.lights.name = "lights"
+
+function sys.lights:init(store)
+    store.lights = {}
+end
+
+function sys.lights:on_insert(entity, store)
+    local d = store
+
+    if entity.lights then
+        for i = 1, #entity.lights do
+            local l = entity.lights[i]
+            l.pos = {
+                x = entity.pos.x,
+                y = entity.pos.y
+            }
+
+            d.lights[#d.lights + 1] = l
+        end
+    end
+
+    return true
+end
+
+function sys.lights:on_remove(entity, store)
+    if entity.lights then
+        for i = #entity.lights, 1, -1 do
+            entity.lights[i].marked_to_remove = true
+            -- entity.lights[i] = nil
+        end
+    end
+
+    return true
+end
+
+function sys.lights:on_update(dt, ts, store)
+    local d = store
+    local entities = d.entities_with_lights
+    local new_lights = {}
+
+    for _, e in pairs(entities) do
+        for i = 1, #e.lights do
+            local l = e.lights[i]
+
+            if not l.marked_to_remove then
+                l.pos.x, l.pos.y = e.pos.x, e.pos.y
+
+                new_lights[#new_lights + 1] = l
+            end
+        end
+    end
+
+    if #new_lights > 0 then
+        d.lights = new_lights
+    end
 end
 
 if PERFORMANCE_MONITOR_ENABLED then
     -- 需要监控的系统方法列表
-    local MONITORED_METHODS = {"on_update", "on_insert", "on_remove", "on_queue", "on_dequeue"}
+    local MONITORED_METHODS = { "on_update", "on_insert", "on_remove", "on_queue", "on_dequeue" }
 
     -- 包装系统方法以添加性能监控
     local function create_monitored_system(original_sys)

@@ -96,7 +96,6 @@ while true do
         else
             file_count = file_count + 1
             local w,h = data:getDimensions()
-            -- 使用优化的扩展名移除
             local key = fn:match("(.+)%.[^.]*$") or fn
             cout:push({'OK',key,data,w,h})
         end
@@ -684,6 +683,7 @@ function image_db:load_image_file(fn, path)
 			key = string.gsub(key, ".jpg$", "")
 			key = string.gsub(key, ".pkm$", "")
 			key = string.gsub(key, ".astc$", "")
+			key = string.gsub(key, ".dds$", "")
 
 			return key, im, w, h
 		end

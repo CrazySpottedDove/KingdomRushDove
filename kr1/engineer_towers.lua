@@ -28,8 +28,8 @@ local function engineer_towers()
     tt.info.i18n_key = "TOWER_BFG"
     tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0012" or "info_portraits_towers_0002"
     tt.powers.missile = CC("power")
-    tt.powers.missile.price_base = 200
-    tt.powers.missile.price_inc = 125
+    tt.powers.missile.price_base = 185
+    tt.powers.missile.price_inc = 120
     tt.powers.missile.range_inc_factor = 0.3
     tt.powers.missile.damage_inc = 40
     tt.powers.missile.enc_icon = 17
@@ -37,8 +37,8 @@ local function engineer_towers()
     tt.powers.missile.cooldown_mixed_dec = 2
     tt.powers.missile.attack_idx = 2
     tt.powers.cluster = CC("power")
-    tt.powers.cluster.price_base = 190
-    tt.powers.cluster.price_inc = 220
+    tt.powers.cluster.price_base = 175
+    tt.powers.cluster.price_inc = 210
     tt.powers.cluster.cooldown_dec = 3.5
     tt.powers.cluster.fragment_count_base = 2
     tt.powers.cluster.fragment_count_inc = 2
@@ -85,11 +85,12 @@ local function engineer_towers()
     tt = RT("bomb_bfg", "bomb")
     tt.bullet.damage_max = 125
     tt.bullet.damage_min = 63
-    tt.bullet.damage_radius = 70
+    tt.bullet.damage_radius = 75
     tt.bullet.flight_time = fts(35)
     tt.bullet.hit_fx = "fx_explosion_big"
     tt.render.sprites[1].name = "bombs_0005"
     tt.sound_events.hit_water = nil
+    tt.render.sprites[1].scale = vec_1(1.1)
 
     tt = RT("bomb_bfg_cluster", "bullet")
     AC(tt, "sound_events")
@@ -108,6 +109,7 @@ local function engineer_towers()
     tt.main_script.update = scripts.bomb_cluster.update
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "bombs_0005"
+    tt.render.sprites[1].scale = vec_1(1.1)
     tt.sound_events.hit = "BombExplosionSound"
     tt.sound_events.insert = "BombShootSound"
 
@@ -185,7 +187,7 @@ local function engineer_towers()
     tt.main_script.update = scripts.tower_tesla.update
     tt.sound_events.insert = "EngineerTeslaTaunt"
     tt.attacks.min_cooldown = 2.2
-    tt.attacks.range = 170
+    tt.attacks.range = 175
     tt.attacks.range_check_factor = 1.2
     tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].animation = "shoot"
@@ -193,7 +195,7 @@ local function engineer_towers()
     tt.attacks.list[1].bullet_start_offset = vec_2(7, 79)
     tt.attacks.list[1].cooldown = 2.2
     tt.attacks.list[1].node_prediction = fts(18)
-    tt.attacks.list[1].range = 170
+    tt.attacks.list[1].range = 175
     tt.attacks.list[1].shoot_time = fts(48)
     -- tt.attacks.list[1].shoot_time = fts(24)
     tt.attacks.list[1].sound_shoot = "TeslaAttack"
@@ -257,8 +259,8 @@ local function engineer_towers()
     tt.aura.mod = "mod_tesla_overcharge"
     tt.aura.radius = 170
     tt.aura.damage_min = 0
-    tt.aura.damage_max = 10
-    tt.aura.damage_inc = 10
+    tt.aura.damage_max = 11
+    tt.aura.damage_inc = 11
     tt.aura.damage_type = DAMAGE_ELECTRICAL
     tt.aura.excluded_templates = {"enemy_spectral_knight"}
     tt.main_script.update = scripts.aura_tesla_overcharge.update
@@ -585,7 +587,7 @@ local function engineer_towers()
     tt.main_script.remove = scripts.tower_barrack.remove
     tt.barrack.soldier_type = "soldier_frankenstein"
     tt.barrack.rally_range = 180
-    tt.attacks.range = 200
+    tt.attacks.range = 205
     tt.attacks.list[1] = CC("bullet_attack")
     tt.attacks.list[1].bullet = "ray_frankenstein"
     tt.attacks.list[1].cooldown = 2.5
@@ -1107,7 +1109,7 @@ local function engineer_towers()
     tt.tower.menu_offset = vec_2(0, 24)
     tt.info.enc_icon = 13
     tt.info.i18n_key = "TOWER_TRICANNON_4"
-    tt.info.portrait = "portraits_towers_0004"
+    tt.info.portrait = "kr5_portraits_towers_0004"
     tt.powers.bombardment = CC("power")
     tt.powers.bombardment.price_base = b.bombardment.price[1]
     tt.powers.bombardment.price_inc = b.bombardment.price[2]
@@ -1256,6 +1258,7 @@ local function engineer_towers()
     tt.sound_events.hit_water = nil
     tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
     tt.render.sprites[1].animated = false
+    tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 
     tt = RT("tower_tricannon_bomb_4", "tower_tricannon_bomb")
     tt.bullet.damage_max = b.basic_attack.damage_max[4]
@@ -1284,6 +1287,7 @@ local function engineer_towers()
     tt.bullet.align_with_trajectory = true
     tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
     tt.render.sprites[1].animated = false
+    tt.render.sprites[1].scale = vec_2(1.5, 1.5)
     tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
     tt.bullet.particles_name = "tower_tricannon_bomb_4_bombardment_trail"
 
@@ -1357,7 +1361,7 @@ local function engineer_towers()
     tt.powers.big_guy.cooldown = b.big_guy.cooldown
     tt.powers.big_guy.key = "BIG_DEMON"
     tt.info.i18n_key = "TOWER_DEMON_PIT_4"
-    tt.info.portrait = "portraits_towers_0006"
+    tt.info.portrait = "kr5_portraits_towers_0006"
     tt.info.stat_damage = b.stats.damage
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
@@ -1422,7 +1426,7 @@ local function engineer_towers()
     tt.health_bar.offset = vec_2(0, 27)
     tt.health.dead_lifetime = 5
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0007"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0007"
     tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER"
     tt.info.random_name_format = false
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -1483,7 +1487,7 @@ local function engineer_towers()
     tt.explosion_damage_type = b.big_guy.explosion_damage_type
     tt.explosion_sound = "TowerDemonPitDemonExplosion"
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "gui_bottom_info_image_soldiers_0006"
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0006"
     tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER_BIG_GUY"
     tt.info.random_name_format = false
     tt.main_script.insert = scripts.soldier_reinforcement.insert

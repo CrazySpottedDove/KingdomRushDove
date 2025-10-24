@@ -14800,9 +14800,9 @@ return {
             to = 144
         },
         hero_lynn_walk = {
-            from = 2,
+            from = 241,
             prefix = "lynn_hero",
-            to = 6
+            to = 250
         },
         hero_lynn_weakeningCurse = {
             from = 193,
@@ -15761,6 +15761,11 @@ return {
             to = 18
         },
         hero_vampiress_bat_exit = {
+            from = 130,
+            prefix = "Halloween_hero_vamp",
+            to = 137
+        },
+        hero_vampiress_exit = {
             from = 130,
             prefix = "Halloween_hero_vamp",
             to = 137

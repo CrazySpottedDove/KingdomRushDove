@@ -64,8 +64,9 @@ upgrades.list = {
         icon = DP(17, 10)
     },
     archer_el_bloodletting_shoot = {
+        from_kr = 3,
         price = 4,
-        icon = 31,
+        icon = 5,
         class = "archers",
         level = 6
     },
@@ -106,10 +107,11 @@ upgrades.list = {
         icon = DP(12, 5)
     },
     barrack_el_enchanted_armor = {
+        from_kr = 3,
         class = "barracks",
         factor = 0.9,
         magic_armor_inc = 0.1,
-        icon = 32,
+        icon = 8,
         price = 4,
         level = 6
     },
@@ -150,8 +152,9 @@ upgrades.list = {
         icon = DP(22, 15)
     },
     mage_brilliance = {
+        from_kr = 2,
         class = "mages",
-        icon = 33,
+        icon = 15,
         price = 4,
         level = 6,
         damage_factors = {1.1, 1.12, 1.14, 1.16, 1.18, 1.2, 1.22, 1.24, 1.26, 1.28, 1.29, 1.30, 1.31, 1.32, 1.33, 1.34,
@@ -192,10 +195,11 @@ upgrades.list = {
         icon = DP(27, 20)
     },
     engineer_gnomish_tinkering = {
+        from_kr = 2,
         cooldown_factor_electric = 0.9,
         cooldown_factor = 0.88,
         class = "engineers",
-        icon = 34,
+        icon = 19,
         price = 4,
         level = 6
     },
@@ -237,9 +241,10 @@ upgrades.list = {
         icon = DP(7, 30)
     },
     rain_armaggedon = {
+        from_kr = 2,
         class = "rain",
         fireball_count_increase = 1,
-        icon = 35,
+        icon = 25,
         price = 4,
         level = 6
     },
@@ -279,10 +284,11 @@ upgrades.list = {
         icon = DP(2, 25)
     },
     reinforcement_level_6 = {
+        from_kr = 3,
         class = "reinforcements",
         duration_inc = 2,
         cooldown_dec = 1,
-        icon = 36,
+        icon = 29,
         price = 4,
         level = 6
     }
@@ -319,9 +325,10 @@ function upgrades:get_total_stars()
 
     return total
 end
+local GS = require("game_settings")
+
 function upgrades:archer_towers()
-    return {"tower_archer_1", "tower_archer_2", "tower_archer_3", "tower_ranger", "tower_musketeer", "tower_crossbow",
-            "tower_totem", "tower_archer_dwarf", "tower_pirate_watchtower", "tower_arcane", "tower_silver","tower_dark_elf_lvl4"}
+   return GS.archer_towers
 end
 
 function upgrades:arrows()
@@ -329,7 +336,7 @@ function upgrades:arrows()
             "arrow_crossbow", "axe_totem", "dwarf_shotgun", "pirate_watchtower_shotgun", "arrow_arcane",
             "arrow_arcane_slumber", "arrow_silver", "arrow_silver_long", "arrow_silver_sentence",
             "arrow_silver_sentence_long", "arrow_silver_mark", "arrow_silver_mark_long", "arrow_hero_elves_archer",
-            "arrow_hero_alleria", "multishot_crossbow", "knife_catha","bullet_tower_dark_elf_lvl4"}
+            "arrow_hero_alleria", "multishot_crossbow", "knife_catha","bullet_tower_dark_elf_lvl4","bullet_tower_sand_lvl4", "bullet_tower_sand_skill_gold", "arrow_armor_piercer_royal_archers","tower_royal_archers_arrow_lvl4"}
 end
 
 function upgrades:barrack_soldiers()
@@ -337,7 +344,7 @@ function upgrades:barrack_soldiers()
             "soldier_elf", "soldier_elemental", "soldier_skeleton", "soldier_skeleton_knight", "soldier_death_rider",
             "soldier_templar", "soldier_assassin", "soldier_dwarf", "soldier_amazona", "soldier_djinn",
             "soldier_pirate_flamer", "soldier_frankenstein", "soldier_blade", "soldier_forest", "soldier_druid_bear",
-            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4","soldier_tower_necromancer_skeleton_lvl4","soldier_tower_necromancer_skeleton_golem_lvl4"}
+            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4","soldier_tower_necromancer_skeleton_lvl4","soldier_tower_necromancer_skeleton_golem_lvl4","soldier_tower_pandas_green_lvl4","soldier_tower_pandas_red_lvl4","soldier_tower_pandas_blue_lvl4"}
 end
 
 function upgrades:towers_with_barrack()
@@ -345,7 +352,7 @@ function upgrades:towers_with_barrack()
             "tower_sorcerer", "tower_elf", "tower_templar", "tower_assassin", "tower_mech", "tower_necromancer",
             "tower_barrack_dwarf", "tower_barrack_amazonas", "tower_barrack_mercenaries", "tower_barrack_pirates",
             "tower_frankenstein", "tower_blade", "tower_forest", "tower_druid", "tower_drow", "tower_ewok",
-            "tower_baby_ashbite", "tower_dark_elf_lvl4"}
+            "tower_baby_ashbite", "tower_dark_elf_lvl4", "tower_pandas_lvl4"}
 end
 
 function upgrades:non_barrack_towers_with_barrack_attribute()
@@ -353,27 +360,24 @@ function upgrades:non_barrack_towers_with_barrack_attribute()
 end
 
 function upgrades:mage_towers()
-    return {"tower_mage_1", "tower_mage_2", "tower_mage_3", "tower_arcane_wizard", "tower_sorcerer", "tower_sunray",
-            "tower_archmage", "tower_necromancer", "tower_high_elven", "tower_wild_magus", "tower_faerie_dragon",
-            "tower_pixie", "tower_necromancer_lvl4"}
+    return GS.mage_towers
 end
 
 function upgrades:mage_tower_bolts()
     return {"bolt_1", "bolt_2", "bolt_3", "bolt_sorcerer", "bolt_archmage", "ray_sunray", "bolt_necromancer_tower",
-            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn"}
+            "bolt_high_elven_strong", "bolt_high_elven_weak", "bolt_wild_magus", "bolt_faerie_dragon", "bullet_tower_necromancer_lvl4","bullet_tower_necromancer_deathspawn","bullet_tower_ray_lvl4","bullet_tower_ray_chain","tower_elven_stargazers_ray","tower_arcane_wizard5_ray"}
 end
 
 function upgrades:bolts()
     local other_bolts = {"ray_arcane", "bolt_elora_freeze", "bolt_elora_slow", "bolt_magnus", "bolt_magnus_illusion",
                          "bolt_priest", "bolt_voodoo_witch", "bolt_veznan", "ray_arivan_simple", "bullet_rag",
                          "ray_wizard", "ray_wizard_chain", "bolt_hero_space_elf_basic_attack",
-                         "bullet_hero_witch_basic_1", "bullet_hero_witch_basic_2", "bolt_lumenir"}
+                         "bullet_hero_witch_basic_1", "bullet_hero_witch_basic_2", "bolt_lumenir", "bullet_tower_pandas_ray_lvl4","bullet_tower_pandas_fire_lvl4","bullet_tower_pandas_air_lvl4",  "tower_arcane_wizard5_ray_disintegrate"}
     return table.append(other_bolts, self:mage_tower_bolts())
 end
 
 function upgrades:engineer_towers()
-    return {"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_tesla", "tower_dwaarp",
-            "tower_mech", "tower_frankenstein", "tower_druid", "tower_entwood", "tower_tricannon_lvl4","tower_demon_pit_lvl4"}
+    return GS.engineer_towers
 end
 
 function upgrades:engineer_bombs()
@@ -423,7 +427,14 @@ function upgrades:patch_templates(max_level)
 
     if u then
         for _, n in pairs(self:arrows()) do
-            T(n).bullet.reduce_armor = u.reduce_armor_factor + T(n).bullet.reduce_armor
+            local reduce_armor = T(n).bullet.reduce_armor
+            if type(reduce_armor) == "table" then
+                for k, v in pairs(reduce_armor) do
+                    reduce_armor[k] = v + u.reduce_armor_factor
+                end
+            else
+                T(n).bullet.reduce_armor = u.reduce_armor_factor + reduce_armor
+            end
         end
     end
 
@@ -573,10 +584,15 @@ function upgrades:patch_templates(max_level)
 
         T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
         T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
+
         T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(
             T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
         T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(
             T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+        local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+        for k, v in pairs(d) do
+            d[k] = math.ceil(v * u.damage_factor)
+        end
     end
 
     u = self:get_upgrade("mage_slow_curse")

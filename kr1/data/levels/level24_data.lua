@@ -211,7 +211,7 @@ return {
 			template = "decal_background",
 			["render.sprites[1].z"] = 1400,
 			["render.sprites[1].flip"] = true,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 993,
 				y = 265
@@ -486,7 +486,7 @@ return {
 			template = "decal_background",
 			["render.sprites[1].z"] = 1400,
 			["render.sprites[1].flip"] = true,
-			["render.sprites[1].name"] = "blue_flag",
+			["render.sprites[1].name"] = "defendFlag",
 			pos = {
 				x = 992,
 				y = 460

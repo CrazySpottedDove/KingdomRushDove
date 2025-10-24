@@ -67,8 +67,8 @@ local data = require("data.game_gui_data")
 local tower_menus = require("data.tower_menus_data")
 local game_gui = {}
 
-game_gui.required_textures = {"gui_common", "gui_portraits", "achievements", "encyclopedia", "gui_notifications_common",
-                              "gui_notifications_bg", "view_options"}
+game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia",
+                              "gui_notifications_common", "gui_notifications_bg", "view_options"}
 game_gui.ref_h = GUI_REF_H
 game_gui.ref_w = GUI_REF_W
 game_gui.ref_res = TEXTURE_SIZE_ALIAS.ipad
@@ -445,6 +445,9 @@ function game_gui:init(w, h, game)
     local criketmenu = CriketMenu:new()
     criketmenu.hidden = true
 
+    local heromenu = HeroMenu:new()
+    heromenu.hidden = true
+
     local towertooltip = TowerMenuTooltip:new()
 
     towertooltip.hidden = true
@@ -723,6 +726,7 @@ function game_gui:init(w, h, game)
     layer_gui_game:add_child(towertooltip)
     layer_gui_game:add_child(towermenu)
     layer_gui_game:add_child(criketmenu)
+    layer_gui_game:add_child(heromenu)
     layer_gui_game:add_child(incoming_tooltip)
 
     if IS_KR1 or IS_KR2 then
@@ -756,6 +760,7 @@ function game_gui:init(w, h, game)
     self.pickview = pickview
     self.towermenu = towermenu
     self.criketmenu = criketmenu
+    self.heromenu = heromenu
     self.towertooltip = towertooltip
     self.rallyrange = rallyrange
     self.tower_range = tower_range
@@ -1110,6 +1115,14 @@ function game_gui:keypressed(key, isrepeat)
         self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
         self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
         game_gui.endless_select_reward_view:show(true)
+    elseif table.contains(ks.hero_menu_toggle, key) and self.game.store.config.enable_hero_menu then
+        if self.heromenu.hidden then
+            self.heromenu:show()
+        else
+            self.heromenu:hide()
+        end
+    elseif table.contains(ks.force_next_wave, key) then
+        game_gui.game.store.force_next_wave = true
         -- elseif self.is_premium and self.bag_button and not self.bag_button:is_disabled() and
         --     table.contains(table.keys(ks.all_items), key) then
         --     local bb = self.bag_button
@@ -1125,6 +1138,8 @@ function game_gui:keypressed(key, isrepeat)
         --             bb:select_item(item)
         --         end
         --     end
+    elseif table.contains(ks.wealthy, key) then
+        game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
     end
 end
 
@@ -1995,22 +2010,19 @@ function HeroPortrait:initialize(hero_entity)
     self.disabled_tint_color = {200, 200, 200, 255}
     self.hero_id = hero_entity.id
     self.portrait_image_name = hero_entity.info.hero_portrait
-    if hero_entity.template_name == "hero_dragon_gem" then
-        -- self.portrait = KImageView:new(self.portrait_image_name, nil, 0.45)
-        -- self.portrait.pos.x = self.portrait.pos.x + 5
-        self.portrait = KImageView:new(self.portrait_image_name)
-    elseif hero_entity.is_kr5 then
-        -- self.portrait = KImageView:new(self.portrait_image_name, nil, 0.51)
-        self.portrait = KImageView:new(self.portrait_image_name)
-        self.portrait.pos.y = self.portrait.pos.y - 8
-
-    else
-        self.portrait = KImageView:new(self.portrait_image_name)
-    end
+    -- if hero_entity.template_name == "hero_dragon_gem" then
+    --     -- self.portrait = KImageView:new(self.portrait_image_name, nil, 0.45)
+    --     -- self.portrait.pos.x = self.portrait.pos.x + 5
+    --     self.portrait = KImageView:new(self.portrait_image_name)
+    -- else
+    self.portrait = KImageView:new(self.portrait_image_name)
+    self.portrait_bo = KImageView:new("hero_portraits_0000")
+    -- end
 
     self.portrait.propagate_on_click = true
 
     self:add_child(self.portrait)
+    self:add_child(self.portrait_bo)
 
     self.ov_cooldown = KView:new(V.v(63, 63))
     self.ov_cooldown.pos = v(19, 78)
@@ -2961,12 +2973,21 @@ function InfoBar:initialize()
     local v_portrait = KView:new(V.v(68, 68))
 
     v_portrait.anchor = v(34, 34)
-    v_portrait.pos = IS_KR3 and v(65, 39) or IS_KR1 and v(61, 32) or v(68, 38)
+    v_portrait.pos = v(61, 32)
     v_portrait.propagate_on_down = true
     v_portrait.propagate_on_click = true
     self.v_portrait = v_portrait
 
     self:add_child(v_portrait)
+
+    local portrait_bo = KView:new(V.v(68, 68), "info_portraits_hero_0000")
+    portrait_bo.anchor = v(34, 34)
+    portrait_bo.pos = v(61, 32)
+    portrait_bo.propagate_on_down = true
+    portrait_bo.propagate_on_click = true
+    self.portrait_bo = portrait_bo
+
+    self:add_child(portrait_bo)
 
     local l_name = GGLabel:new(V.v(130, 15))
 
@@ -3176,20 +3197,15 @@ function InfoBar:update_portrait()
     if self.v_portrait_image_name ~= e.info.portrait then
         if e.info.portrait then
             self.v_portrait:set_image(e.info.portrait)
-            if e.is_kr5 then
-                self.v_portrait.image_scale = 1.1
-                self.v_portrait.pos.x = 61
-                self.v_portrait.pos.y = 51
-            else
-                self.v_portrait.image_scale = 1
-                self.v_portrait.pos.x = 61
-                self.v_portrait.pos.y = 32
-            end
             self.v_portrait.hidden = false
             self.v_portrait_image_name = e.info.portrait
+
+            self.portrait_bo.hidden = false
         else
             self.v_portrait.hidden = true
             self.v_portrait_image_name = nil
+
+            self.portrait_bo.hidden = true
         end
     end
 end
@@ -4297,7 +4313,8 @@ function VictoryView:show()
         else
             lives = game_gui.game.store.lives
         end
-        self.ct.text = string.format("%s损 %.1f秒 %d牺牲", tostring(lives), criket.time_cost, game_gui.game.store.dead_soldier_count)
+        self.ct.text = string.format("%s损 %.1f秒 %d牺牲", tostring(lives), criket.time_cost,
+            game_gui.game.store.dead_soldier_count)
         self.ct.font_size = 28
         if criket.tower_name then
             local tower_icon = KImageView:new(E:get_template(criket.tower_name).info.portrait)
@@ -4534,6 +4551,9 @@ function MousePointer:initialize()
             default = rally_tower
         },
         [GUI_MODE_RALLY_CONTROABLES] = {
+            default = rally_tower
+        },
+        [GUI_MODE_SUMMON_HERO] = {
             default = rally_tower
         },
         [GUI_MODE_SELECT_POINT] = {
@@ -6194,6 +6214,9 @@ function PickView:on_down(button, x, y)
             else
                 game_gui:show_invalid_point_cross(x, y)
             end
+        elseif game_gui.mode == GUI_MODE_SUMMON_HERO then
+            LU.insert_hero(game_gui.game.store, game_gui.selected_hero_to_summon, v(wx, wy), true)
+            game_gui:set_mode()
         else
             local e = game_gui:entity_at_pos(wx, wy)
 
@@ -6259,56 +6282,47 @@ function CriketMenuButton:initialize(item)
     CriketMenuButton.super.initialize(self)
 
     self.item_image = item.image
+    self.item = item
 
     local b = KImageView:new(item.image)
-
     b.pos = v(0, 0)
+
     b.propagate_on_click = true
     b.disabled_tint_color = nil
     self.button = b
 
     self:add_child(b)
 
+    local function get_pos(this, offset)
+        offset = offset or v(0, 0)
+        local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
+        local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
+        return v(x, y)
+    end
+
+    local function create_bo_view(img_name)
+        local bo = KImageView:new(img_name)
+
+        bo.pos = get_pos(bo)
+        bo.propagate_on_click = true
+
+        self:add_child(bo, 2)
+
+        return bo
+    end
+
     local halo = KImageView:new(item.halo)
 
-    if item.is_kr3 then
-        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
-    elseif item.halo == "glow_ico_sell" then
-        halo.pos = v(-2.5, -3.5)
-    else
-        halo.pos = v(-5, -4)
-        halo.scale = v(1.08, 1.06)
-    end
+    halo.pos = get_pos(halo)
 
     halo.propagate_on_click = true
     halo.hidden = true
     self.halo = halo
 
-    self:add_child(halo, 1)
+    self:add_child(halo)
 
-    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) and item.is_kr3 then
-        local bo = KImageView:new("kr3_main_icons_over")
-
-        bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
-        bo.propagate_on_click = true
-        bo.disabled_tint_color = nil
-
-        self:add_child(bo)
-    end
-
-    local ufx = KImageView:new("effect_powerbuy_0001")
-
-    ufx.animation = {
-        to = 23,
-        prefix = "effect_powerbuy",
-        from = 1
-    }
-    ufx.pos = v(4, -4)
-    ufx.hidden = true
-    ufx.propagate_on_click = true
-    self.ufx = ufx
-
-    self:add_child(ufx)
+    create_bo_view("main_icons_0000")
 
     self.size = V.vclone(b.size)
 end
@@ -6429,20 +6443,6 @@ function CriketMenu:update(dt)
     if self.hidden then
         return
     end
-
-    local store = game_gui.game.store
-
-    for _, c in pairs(self.children) do
-        if c:isInstanceOf(CriketMenuButton) and c.item_props then
-            if c.item_props.action == "tw_upgrade" then
-                local nt = E:get_template(c.item_props.action_arg)
-
-                if nt.build_name then
-                    nt = E:get_template(nt.build_name)
-                end
-            end
-        end
-    end
 end
 
 function CriketMenu:button_enter(button)
@@ -6478,7 +6478,9 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
             if new_tower.ui and v.ui then
                 new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
             end
-            queue_remove(game_gui.game.store, v)
+            if not PERFORMANCE_MONITOR_ENABLED then
+                queue_remove(game_gui.game.store, v)
+            end
             queue_insert(game_gui.game.store, new_tower)
             game_gui.game.store.towers[k] = new_tower
             if new_tower.powers then
@@ -6525,16 +6527,19 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
                 end
             end
             if table.contains(GS.archer_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_archer_1").tower.price + E:get_template("tower_archer_2").tower.price +
+                total_cost = total_cost + E:get_template("tower_archer_1").tower.price +
+                                 E:get_template("tower_archer_2").tower.price +
                                  E:get_template("tower_archer_3").tower.price
             elseif table.contains(GS.mage_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_mage_1").tower.price + E:get_template("tower_mage_2").tower.price +
-                                 E:get_template("tower_mage_3").tower.price
+                total_cost = total_cost + E:get_template("tower_mage_1").tower.price +
+                                 E:get_template("tower_mage_2").tower.price + E:get_template("tower_mage_3").tower.price
             elseif table.contains(GS.engineer_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_engineer_2").tower.price +
+                total_cost = total_cost + E:get_template("tower_engineer_1").tower.price +
+                                 E:get_template("tower_engineer_2").tower.price +
                                  E:get_template("tower_engineer_3").tower.price
             elseif table.contains(GS.barrack_towers, new_tower.template_name) then
-                total_cost = total_cost + E:get_template("tower_barrack_1").tower.price + E:get_template("tower_barrack_2").tower.price +
+                total_cost = total_cost + E:get_template("tower_barrack_1").tower.price +
+                                 E:get_template("tower_barrack_2").tower.price +
                                  E:get_template("tower_barrack_3").tower.price
             end
             total_cost = total_cost + new_tower.tower.price
@@ -6550,6 +6555,195 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
             store.config.enemy_health_multiplier = total_cost / store.criket.gold_base
         end
     end
+    self:hide()
+end
+
+-- 局内召唤英雄仪表盘
+local hero_data = require("data.map_data").hero_data
+HeroMenuButton = class("HeroMenuButton", KView)
+function HeroMenuButton:initialize(item)
+    HeroMenuButton.super.initialize(self)
+
+    self.item_image = item.image
+    self.item = item
+
+    local b = KImageView:new(item.image)
+    b.pos = v(0, 0)
+
+    b.propagate_on_click = true
+    b.disabled_tint_color = nil
+    self.button = b
+
+    self:add_child(b)
+
+    local function get_pos(this, offset)
+        offset = offset or v(0, 0)
+        local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
+        local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
+        return v(x, y)
+    end
+
+    local function create_bo_view(img_name)
+        local bo = KImageView:new(img_name)
+
+        bo.pos = get_pos(bo)
+        bo.propagate_on_click = true
+
+        self:add_child(bo, 2)
+
+        return bo
+    end
+
+    local halo = KImageView:new(item.halo)
+
+    halo.pos = get_pos(halo)
+
+    halo.propagate_on_click = true
+    halo.hidden = true
+    self.halo = halo
+
+    self:add_child(halo)
+
+    create_bo_view("main_icons_0000")
+
+    self.size = V.vclone(b.size)
+end
+
+HeroMenu = class("CriketMenu", KImageView)
+
+function HeroMenu:initialize()
+    HeroMenu.super.initialize(self, "gui_ring")
+    self.can_drag = false
+    self.propagate_on_click = true
+    self.propagate_on_down = true
+    self.propagate_on_up = true
+    self.propagate_on_enter = true
+    self.anchor = v(self.size.x * 0.5, self.size.y * 0.5)
+    self.clip = false
+end
+
+function HeroMenu:calculate_button_position(item_index)
+    local circle_volume = 6
+    local radius_mod = 65
+    local radius = radius_mod -- 默认半径
+    while item_index > circle_volume do
+        item_index = item_index - circle_volume
+        radius = radius + radius_mod -- 每圈增加80像素的半径
+        circle_volume = circle_volume + 6 -- 每圈增加6个按钮
+    end
+
+    -- 计算每个按钮之间的角度间隔
+    local angle_step = (2 * math.pi) / circle_volume
+
+    -- 计算当前按钮的角度（从顶部开始，顺时针）
+    local angle = (item_index - 1) * angle_step - math.pi * 0.5
+
+    -- 计算相对于圆心的位置
+    local x = math.cos(angle) * radius
+    local y = math.sin(angle) * radius
+
+    -- 返回相对于菜单中心的位置
+    return V.v(self.size.x * 0.5 + x, self.size.y * 0.5 + y)
+end
+
+function HeroMenu:show()
+    self:remove_children()
+    for index, data in pairs(hero_data) do
+        local t = E:get_template(data.name)
+        local item = {
+            image = t.info.portrait,
+            name = data.name,
+            halo = "glow_ico_main"
+        }
+        local b = HeroMenuButton:new(item)
+        b.pos = self:calculate_button_position(index)
+        b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
+        b.item_props = item
+        local stm = self
+
+        function b.on_click(this, button, x, y)
+            if not self.tweening and not this.click_disabled then
+                stm:button_callback(this, item)
+            end
+        end
+
+        function b.on_enter(this, drag_view)
+            if not self.tweening then
+                stm:button_enter(this)
+            end
+        end
+
+        function b.on_exit(this, drag_view)
+            stm:button_exit(this)
+        end
+
+        self:add_child(b)
+    end
+
+    self.pos = v(game_gui.sw * 0.5, game_gui.sh * 0.5)
+    self.scale = v(0.6, 0.6)
+    self.alpha = 0
+    self.hidden = false
+    self.tweening = true
+    self.tweeners = {timer:tween(0.12, self.scale, {
+        x = 1,
+        y = 1
+    }, "out-quad"), timer:tween(0.12, self, {
+        alpha = 1
+    }, "out-quad", function()
+        self.tweening = nil
+        self.tweeners = {}
+    end)}
+
+    S:queue("GUIQuickMenuOpen")
+end
+
+function HeroMenu:hide()
+    if self.tweeners then
+        for _, t in pairs(self.tweeners) do
+            timer:cancel(t)
+        end
+    end
+
+    self.tweening = true
+    self.tweeners = {timer:tween(0.12, self, {
+        alpha = 0
+    }, "out-quad"), timer:tween(0.12, self.scale, {
+        x = 0.6,
+        y = 0.6
+    }, "out-quad", function()
+        self.hidden = true
+        self.tweening = false
+        self.tweeners = {}
+    end)}
+end
+
+function HeroMenu:update(dt)
+    HeroMenu.super.update(self, dt)
+
+    if self.hidden then
+        return
+    end
+end
+
+function HeroMenu:button_enter(button)
+    if button.halo then
+        button.halo.hidden = false
+    end
+end
+
+function HeroMenu:button_exit(button)
+    if button.halo then
+        button.halo.hidden = true
+    end
+end
+
+function HeroMenu:button_callback(button, item, entity, mouse_button, x, y)
+    game_gui.selected_hero_to_summon = item.name
+    game_gui:set_mode(GUI_MODE_SUMMON_HERO)
+    game_gui.mouse_pointer:update_pointer(GUI_MODE_SUMMON_HERO)
+    -- LU.insert_hero(game_gui.game.store, item.name, game_gui.game.store.level.locations.exits[1].pos, true)
     self:hide()
 end
 
@@ -6609,16 +6803,10 @@ function TowerMenu:show()
             b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
 
             self:add_child(b)
-
-            if table.contains(GS.kr3_towers, entity.tower.type) then
-                local bo = KImageView:new("kr3_main_icons_over")
-
-                bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
-                bo.propagate_on_click = true
-                bo.disabled_tint_color = nil
-
-                b:add_child(bo)
-            end
+            local bo = KImageView:new("main_icons_0000")
+            bo.x = math.floor((b.size.x - bo.size.x) * 0.5)
+            bo.y = math.floor((b.size.y - bo.size.y) * 0.5)
+            b:add_child(bo)
         elseif item.action == "tw_sell" and entity.tower and not entity.tower.can_be_sold then
             -- block empty
         else
@@ -6664,17 +6852,29 @@ function TowerMenu:show()
 
     local ro = entity.tower.range_offset
     local mo = entity.tower.menu_offset
-    local ewx, ewy = game_gui:g2u(V.v(entity.pos.x + ro.x + mo.x, entity.pos.y + ro.y + mo.y), true)
+    local visible_coords = game_gui.game.store.visible_coords
+    local ewx_g, ewy_g = entity.pos.x + ro.x + mo.x, entity.pos.y + ro.y + mo.y
+    if ewy_g + data.tower_menu_button_height > visible_coords.top then
+        ewy_g = visible_coords.top - data.tower_menu_button_height
+    end
+    if ewx_g + data.tower_menu_button_width > visible_coords.right then
+        ewx_g = visible_coords.right - data.tower_menu_button_width
+    elseif ewx_g - data.tower_menu_button_width < visible_coords.left then
+        ewx_g = visible_coords.left + data.tower_menu_button_width
+    end
+
+    local ewx, ewy = game_gui:g2u(V.v(ewx_g, ewy_g), true)
 
     self.pos = v(ewx, ewy)
     self.scale = v(0.6, 0.6)
     self.alpha = 0
     self.hidden = false
     self.tweening = true
-    self.tweeners = {timer:tween(0.12, self.scale, {
+    local game_time = 0.12 * game_gui.game.store.speed_factor
+    self.tweeners = {timer:tween(game_time, self.scale, {
         x = 1,
         y = 1
-    }, "out-quad"), timer:tween(0.12, self, {
+    }, "out-quad"), timer:tween(game_time, self, {
         alpha = 1
     }, "out-quad", function()
         self.tweening = nil
@@ -6699,9 +6899,10 @@ function TowerMenu:hide()
     end
 
     self.tweening = true
-    self.tweeners = {timer:tween(0.12, self, {
+    local game_time = 0.12 * game_gui.game.store.speed_factor
+    self.tweeners = {timer:tween(game_time, self, {
         alpha = 0
-    }, "out-quad"), timer:tween(0.12, self.scale, {
+    }, "out-quad"), timer:tween(game_time, self.scale, {
         x = 0.6,
         y = 0.6
     }, "out-quad", function()
@@ -7266,7 +7467,8 @@ function TowerMenuTooltip:show(entity, item)
         if power.level == power.max_level then
             -- self.hidden = true
         end
-    elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_free_action" then
+    elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or
+        item.action == "tw_free_action" then
         if item.tt_title then
             self.title.text = item.tt_title
         end
@@ -7314,7 +7516,7 @@ function TowerMenuTooltip:show(entity, item)
         self.phrase_label.pos.y = self.size.y - 22
     end
 
-    local oy = 126
+    local oy = 142
     local ex, ey = game_gui:g2u(V.v(entity.pos.x, entity.pos.y), true)
 
     self.pos.x = ex - math.floor(self.size.x * 0.5)
@@ -7335,10 +7537,10 @@ function TowerMenuButton:enable()
     self.click_disabled = false
 
     self.button:set_image(self.item_image)
-
+    self.button:enable()
     if self.price_tag then
         self.price_tag:set_image("price_tag")
-
+        self.price_tag:enable()
         self.price_tag.colors.text = {255, 224, 0}
     end
 end
@@ -7347,11 +7549,11 @@ function TowerMenuButton:disable()
     self.click_disabled = true
 
     if self.item.action ~= "tw_change_mode" and self.item.action ~= "tw_swap_mode" then
-        self.button:set_image(self.item_image .. "_disabled")
-
+        -- self.button:set_image(self.item_image .. "_disabled")
+        self.button:disable()
         if self.price_tag then
-            self.price_tag:set_image("price_tag_disabled")
-
+            -- self.price_tag:set_image("price_tag_disabled")
+            self.price_tag:disable()
             self.price_tag.colors.text = {156, 146, 132}
         end
     end
@@ -7363,96 +7565,52 @@ function TowerMenuButton:initialize(item, entity)
     self.item_image = item.image
     self.item = item
     self.entity = entity
-
     local b = KImageView:new(item.image)
     b.pos = v(0, 0)
 
-    if item.is_kr5 then
-        local kr5_scale = 56.177 / 42.667
-        b.size.x = b.size.x * kr5_scale
-        b.size.y = b.size.y * kr5_scale
-        b.image_scale = kr5_scale * b.image_scale
-    elseif item.is_kr5_change_mode then
-        local scale = 48 / 42.667
-        b.size.x = b.size.x * scale
-        b.size.y = b.size.y * scale
-        b.image_scale = scale * b.image_scale
-        b.pos.x = -6
-        b.pos.y = -6
-    end
-
     b.propagate_on_click = true
-    b.disabled_tint_color = nil
+    -- b.disabled_tint_color = nil
     self.button = b
 
-    self:add_child(b)
+    local function get_pos(this, offset)
+        offset = offset or v(0, 0)
+        local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
+        local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
+        return v(x, y)
+    end
 
     local halo = KImageView:new(item.halo)
 
-    if item.is_kr3 then
-        halo.pos = v(math.floor(-0.5 * (halo.size.x - b.size.x)), math.floor(-0.5 * (halo.size.y - b.size.y)))
-    elseif item.halo == "glow_ico_sell" then
+    if item.halo == "glow_ico_sell" then
         halo.pos = v(-2.5, -3.5)
     else
-        halo.pos = v(-5, -4)
-        halo.scale = v(1.08, 1.06)
+        halo.pos = get_pos(halo)
     end
 
     halo.propagate_on_click = true
     halo.hidden = true
     self.halo = halo
 
-    self:add_child(halo, 1)
+    self:add_child(halo)
+    self:add_child(b)
 
-    if item.is_kr3 and item.action == "upgrade_power" then
-        local bg = KImageView:new("kr3_special_icons_bg")
+    local function create_bo_view(img_name)
+        local bo = KImageView:new(img_name)
 
-        bg.pos = v(math.floor(-0.5 * (bg.size.x - b.size.x)), math.floor(-0.5 * (bg.size.y - b.size.y)))
-        bg.propagate_on_click = true
-
-        self:add_child(bg, 1)
-    end
-
-    if table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack"}, item.action) and item.is_kr3 then
-        local bo = KImageView:new("kr3_main_icons_over")
-
-        bo.pos = v(math.floor(-0.5 * (bo.size.x - b.size.x)), math.floor(-0.5 * (bo.size.y - b.size.y)))
+        bo.pos = get_pos(bo)
         bo.propagate_on_click = true
-        bo.disabled_tint_color = nil
 
         self:add_child(bo)
+
+        return bo
     end
 
+    local bo
     if item.action == "upgrade_power" then
-        local power = entity.powers[item.action_arg]
-
-        if not item.no_upgrade_lights then
-            self.power_buttons = {}
-
-            for i = 1, power.max_level do
-                local pv
-
-                if i > power.level then
-                    pv = KImageView:new("power_rank_0002")
-                else
-                    pv = KImageView:new("power_rank_0001")
-                end
-
-                pv.pos = V.vclone(data.tower_menu_power_places[i])
-                pv.pos.x, pv.pos.y = pv.pos.x - pv.size.x * 0.5, pv.pos.y - pv.size.y * 0.5
-                pv.disabled_tint_color = nil
-                pv.propagate_on_click = true
-
-                b:add_child(pv)
-                table.insert(self.power_buttons, pv)
-            end
-        end
-
-        if power.level >= power.max_level then
-            self:remove_child(self.halo)
-
-            self.halo = nil
-        end
+        bo = create_bo_view("special_icons_0000")
+    elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock"}, item.action) then
+        bo = create_bo_view("main_icons_0000")
     end
 
     local price_tag
@@ -7502,6 +7660,38 @@ function TowerMenuButton:initialize(item, entity)
         self:add_child(pt)
     end
 
+    if item.action == "upgrade_power" then
+        local power = entity.powers[item.action_arg]
+
+        if not item.no_upgrade_lights then
+            self.power_buttons = {}
+
+            for i = 1, power.max_level do
+                local pv
+
+                if i > power.level then
+                    pv = KImageView:new("power_rank_0002")
+                else
+                    pv = KImageView:new("power_rank_0001")
+                end
+
+                pv.pos = get_pos(pv, V.vclone(data.tower_menu_power_offset[i]))
+                pv.pos.x, pv.pos.y = pv.pos.x - pv.size.x * 0.5, pv.pos.y - pv.size.y * 0.5
+                pv.disabled_tint_color = nil
+                pv.propagate_on_click = true
+
+                bo:add_child(pv)
+                table.insert(self.power_buttons, pv)
+            end
+        end
+
+        if power.level >= power.max_level then
+            self:remove_child(self.halo)
+
+            self.halo = nil
+        end
+    end
+
     local ufx = KImageView:new("effect_powerbuy_0001")
 
     ufx.animation = {
@@ -7509,7 +7699,7 @@ function TowerMenuButton:initialize(item, entity)
         prefix = "effect_powerbuy",
         from = 1
     }
-    ufx.pos = v(4, -4)
+    ufx.pos = get_pos(ufx)
     ufx.hidden = true
     ufx.propagate_on_click = true
     self.ufx = ufx
