@@ -5028,7 +5028,7 @@ return {
         wait = {0, 0},
         animation = {
             to = 11,
-            prefix = "map_background",
+            prefix = "kr3_map_background",
             from = 11
         }
     }, {
@@ -5050,7 +5050,7 @@ return {
         pos = v(960, 540),
         animation = {
             to = 4,
-            prefix = "map_background",
+            prefix = "kr3_map_background",
             from = 4
         }
     }, {
@@ -5068,7 +5068,7 @@ return {
         wait = {0, 0},
         animation = {
             to = 5,
-            prefix = "map_background",
+            prefix = "kr3_map_background",
             from = 5
         }
     }, {

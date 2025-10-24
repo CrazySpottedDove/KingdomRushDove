@@ -106,7 +106,7 @@ function deco_fn.ma_big_boat:prepare()
 
     -- function deco_fn.md_ft_mountain.unlock(this, wait)
     --     if wait then
-    --         this.ctx.timer.tween(2, this, {
+    --         this.ctx.timer:tween(2, this, {
     --             alpha = 0
     --         }, "out-quad")
     --         wait(1)
@@ -134,10 +134,10 @@ function deco_fn.ma_big_boat:prepare()
 
     --             local dx = pos_to.x - self.pos.x
 
-    --             timer.tween(dx / d.speed_x, self.pos, {
+    --             timer:tween(dx / d.speed_x, self.pos, {
     --                 x = pos_to.x
     --             })
-    --             timer.tween(dx / d.speed_x, self.pos, {
+    --             timer:tween(dx / d.speed_x, self.pos, {
     --                 y = pos_to.y
     --             }, "in-quad")
     --             wait(dx / d.speed_x)
@@ -149,10 +149,10 @@ function deco_fn.ma_big_boat:prepare()
 
     --             local dx = pos_to.x - self.pos.x
 
-    --             timer.tween(dx / d.speed_x, self.pos, {
+    --             timer:tween(dx / d.speed_x, self.pos, {
     --                 x = pos_to.x
     --             })
-    --             timer.tween(dx / d.speed_x, self.pos, {
+    --             timer:tween(dx / d.speed_x, self.pos, {
     --                 y = pos_to.y
     --             }, "in-quad")
     --             wait(dx / d.speed_x)
@@ -206,12 +206,12 @@ function deco_fn.ma_big_boat:prepare()
     --             v_trail_in.alpha = 1
     --             v_ship_in.animation = d.animations.in_sail
 
-    --             timer.tween(d.sail_time, self.pos, {
+    --             timer:tween(d.sail_time, self.pos, {
     --                 x = d.pos_in.x,
     --                 y = d.pos_in.y
     --             }, "out-quad")
     --             wait(0.8 * d.sail_time)
-    --             timer.tween(0.2 * d.sail_time, v_trail_in, {
+    --             timer:tween(0.2 * d.sail_time, v_trail_in, {
     --                 alpha = 0
     --             }, "out-quad")
 
@@ -222,10 +222,10 @@ function deco_fn.ma_big_boat:prepare()
 
     --             v_ship_out.ts = 0
 
-    --             timer.tween(1, v_ship_in, {
+    --             timer:tween(1, v_ship_in, {
     --                 alpha = 0
     --             })
-    --             timer.tween(1, v_ship_out, {
+    --             timer:tween(1, v_ship_out, {
     --                 alpha = 1
     --             })
     --             wait(d.wait_in)
@@ -233,10 +233,10 @@ function deco_fn.ma_big_boat:prepare()
     --             v_ship_out.ts = 0
     --             v_ship_out.animation = d.animations.out_sail
 
-    --             timer.tween(0.2 * d.sail_time, v_trail_out, {
+    --             timer:tween(0.2 * d.sail_time, v_trail_out, {
     --                 alpha = 1
     --             }, "in-quad")
-    --             timer.tween(d.sail_time, self.pos, {
+    --             timer:tween(d.sail_time, self.pos, {
     --                 x = d.pos_out.x,
     --                 y = d.pos_out.y
     --             }, "in-quad")
@@ -257,7 +257,7 @@ function deco_fn.ma_waterfall1_barrel:prepare()
     local d = self.ctx.data
     local timer = self.ctx.timer
 
-    timer.script(function(wait)
+    timer:script(function(wait)
         while true do
             wait(math.random(d.wait_out[1], d.wait_out[2]))
 
@@ -270,10 +270,10 @@ function deco_fn.ma_waterfall1_barrel:prepare()
 
             local dx = pos_to.x - self.pos.x
 
-            timer.tween(dx / d.speed_x, self.pos, {
+            timer:tween(dx / d.speed_x, self.pos, {
                 x = pos_to.x
             })
-            timer.tween(dx / d.speed_x, self.pos, {
+            timer:tween(dx / d.speed_x, self.pos, {
                 y = pos_to.y
             }, "in-quad")
             wait(dx / d.speed_x)
@@ -285,10 +285,10 @@ function deco_fn.ma_waterfall1_barrel:prepare()
 
             local dx = pos_to.x - self.pos.x
 
-            timer.tween(dx / d.speed_x, self.pos, {
+            timer:tween(dx / d.speed_x, self.pos, {
                 x = pos_to.x
             })
-            timer.tween(dx / d.speed_x, self.pos, {
+            timer:tween(dx / d.speed_x, self.pos, {
                 y = pos_to.y
             }, "in-quad")
             wait(dx / d.speed_x)
@@ -330,7 +330,7 @@ function deco_fn.ma_ship:prepare()
     self:add_child(v_trail_in)
     self:add_child(v_ship_out)
     self:add_child(v_ship_in)
-    timer.script(function(wait)
+    timer:script(function(wait)
         while true do
             self.pos.x, self.pos.y = d.pos_out.x, d.pos_out.y
 
@@ -342,12 +342,12 @@ function deco_fn.ma_ship:prepare()
             v_trail_in.alpha = 1
             v_ship_in.animation = d.animations.in_sail
 
-            timer.tween(d.sail_time, self.pos, {
+            timer:tween(d.sail_time, self.pos, {
                 x = d.pos_in.x,
                 y = d.pos_in.y
             }, "out-quad")
             wait(0.8 * d.sail_time)
-            timer.tween(0.2 * d.sail_time, v_trail_in, {
+            timer:tween(0.2 * d.sail_time, v_trail_in, {
                 alpha = 0
             }, "out-quad")
 
@@ -358,10 +358,10 @@ function deco_fn.ma_ship:prepare()
 
             v_ship_out.ts = 0
 
-            timer.tween(1, v_ship_in, {
+            timer:tween(1, v_ship_in, {
                 alpha = 0
             })
-            timer.tween(1, v_ship_out, {
+            timer:tween(1, v_ship_out, {
                 alpha = 1
             })
             wait(d.wait_in)
@@ -369,10 +369,10 @@ function deco_fn.ma_ship:prepare()
             v_ship_out.ts = 0
             v_ship_out.animation = d.animations.out_sail
 
-            timer.tween(0.2 * d.sail_time, v_trail_out, {
+            timer:tween(0.2 * d.sail_time, v_trail_out, {
                 alpha = 1
             }, "in-quad")
-            timer.tween(d.sail_time, self.pos, {
+            timer:tween(d.sail_time, self.pos, {
                 x = d.pos_out.x,
                 y = d.pos_out.y
             }, "in-quad")
@@ -389,7 +389,7 @@ deco_fn.m1 = {}
 
 function deco_fn.m1.unlock(this, wait)
     if wait then
-        this.ctx.timer.tween(1, this, {
+        this.ctx.timer:tween(1, this, {
             alpha = 0
         }, "out-quad")
         wait(1)
@@ -402,7 +402,7 @@ deco_fn.m2 = {}
 
 function deco_fn.m2.unlock(this, wait)
     if wait then
-        this.ctx.timer.tween(1, this, {
+        this.ctx.timer:tween(1, this, {
             alpha = 0
         }, "out-quad")
         wait(1)
@@ -505,7 +505,7 @@ deco_fn.md_ft_mountain = {}
 
 function deco_fn.md_ft_mountain.unlock(this, wait)
     if wait then
-        this.ctx.timer.tween(2, this, {
+        this.ctx.timer:tween(2, this, {
             alpha = 0
         }, "out-quad")
         wait(1)

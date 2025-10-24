@@ -1,6 +1,6 @@
 return {
 	["levelSelect_background"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			1202,
 			720
@@ -24,7 +24,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_badges_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -48,7 +48,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_badges_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -72,7 +72,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_badges_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -96,7 +96,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_badges_0004"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -120,7 +120,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_badges_0005"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -144,7 +144,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_badges_0006"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -168,7 +168,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_capitular_bg"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			88,
 			104
@@ -192,7 +192,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_closeBtn_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -216,7 +216,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_closeBtn_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -240,7 +240,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_closeBtn_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			34,
 			32
@@ -264,7 +264,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -288,7 +288,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -312,7 +312,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0004"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -360,7 +360,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0005"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -384,7 +384,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0006"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -408,7 +408,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0007"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -432,7 +432,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficulty_0008"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			64,
 			60
@@ -456,7 +456,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficultyCompleted_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			73,
 			66
@@ -480,7 +480,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficultyCompleted_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			73,
 			66
@@ -504,7 +504,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficultyCompleted_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			73,
 			66
@@ -528,7 +528,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_difficultyCompleted_0004"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			73,
 			66
@@ -552,7 +552,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -576,7 +576,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -600,7 +600,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -624,7 +624,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0004"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -648,7 +648,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0005"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -672,7 +672,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0006"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -696,7 +696,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0007"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0008"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -744,7 +744,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0009"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -768,7 +768,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0010"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -792,7 +792,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_Mode_notxt_0011"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			116,
 			102
@@ -816,7 +816,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modebg_notxt_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			376,
 			80
@@ -840,7 +840,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modebg_notxt_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			376,
 			80
@@ -864,7 +864,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -888,7 +888,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -912,7 +912,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -936,7 +936,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0004"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -960,7 +960,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0005"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -984,7 +984,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0006"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -1008,7 +1008,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0007"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -1032,7 +1032,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0008"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -1056,7 +1056,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0009"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -1080,7 +1080,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0010"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -1104,7 +1104,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_modeRules_0011"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			46,
 			46
@@ -1128,7 +1128,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_startMode_notxt_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			122,
 			114
@@ -1152,7 +1152,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_startMode_notxt_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			122,
 			114
@@ -1176,7 +1176,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_startMode_notxt_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			122,
 			114
@@ -1200,7 +1200,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_startMode_notxt_0004"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			122,
 			114
@@ -1224,7 +1224,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_startMode_notxt_0005"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			122,
 			114
@@ -1248,7 +1248,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_startMode_notxt_0006"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			122,
 			114
@@ -1272,7 +1272,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_thumbFrame"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			370,
 			280
@@ -1296,7 +1296,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_volutas_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			120,
 			20
@@ -1320,7 +1320,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_volutas_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			120,
 			20
@@ -1344,7 +1344,7 @@ return {
 		alias = {}
 	},
 	["levelSelect_volutas_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			120,
 			20
@@ -1368,7 +1368,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0001"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1392,7 +1392,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0002"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1416,7 +1416,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0003"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1440,7 +1440,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0004"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1464,7 +1464,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0005"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1488,7 +1488,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0006"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1512,7 +1512,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0007"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1536,7 +1536,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0008"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1560,7 +1560,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0009"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1584,7 +1584,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0010"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1608,7 +1608,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0011"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1632,7 +1632,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0012"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1656,7 +1656,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0013"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1680,7 +1680,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0014"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1704,7 +1704,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0015"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1728,7 +1728,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0016"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1752,7 +1752,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0017"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1776,7 +1776,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0018"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1800,7 +1800,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0019"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1824,7 +1824,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0020"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1848,7 +1848,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0021"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1872,7 +1872,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0022"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1896,7 +1896,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0023"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1920,7 +1920,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0024"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1944,7 +1944,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0025"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1968,7 +1968,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0026"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -1992,7 +1992,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0027"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2016,7 +2016,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0028"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2040,7 +2040,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0029"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2064,7 +2064,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0030"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2088,7 +2088,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0031"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2112,7 +2112,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0032"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2136,7 +2136,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0033"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2160,7 +2160,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0034"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2184,7 +2184,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0035"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2208,7 +2208,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0036"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2232,7 +2232,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0037"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2256,7 +2256,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0038"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2280,7 +2280,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0039"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2304,7 +2304,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0040"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2328,7 +2328,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0041"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2352,7 +2352,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0042"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2376,7 +2376,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0043"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2400,7 +2400,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0044"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2424,7 +2424,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0045"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2448,7 +2448,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0046"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2472,7 +2472,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0047"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2496,7 +2496,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0048"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2520,7 +2520,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0049"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2544,7 +2544,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0050"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2568,7 +2568,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0051"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2592,7 +2592,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0052"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2616,7 +2616,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0053"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2640,7 +2640,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0054"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2664,7 +2664,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0055"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2688,7 +2688,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0056"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2712,7 +2712,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0057"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2736,7 +2736,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0058"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2760,7 +2760,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0059"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2784,7 +2784,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0060"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2808,7 +2808,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0061"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2832,7 +2832,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0062"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2856,7 +2856,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0063"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2880,7 +2880,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0064"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2904,7 +2904,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0065"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2928,7 +2928,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0066"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2952,7 +2952,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0067"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -2976,7 +2976,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0068"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -3000,7 +3000,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0069"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -3024,7 +3024,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0070"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -3048,7 +3048,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0071"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -3072,7 +3072,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0090"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -3096,7 +3096,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0091"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -3120,7 +3120,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_0110"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246
@@ -3144,7 +3144,7 @@ return {
 		alias = {}
 	},
 	["stage_thumbs_1000"] = {
-		a_name = "screen_map_level_select-1.png",
+		a_name = "level_select-1.png",
 		size = {
 			342,
 			246

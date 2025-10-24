@@ -91,7 +91,7 @@ return {
         tt_desc = _("TOWER_NECROMANCER_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_high_elven",
-        image = "kr3_main_icons_0107",
+        image = "kr3_main_icons_0004",
         place = 11,
         tt_title = _("TOWER_MAGE_HIGH_ELVEN_NAME"),
         tt_desc = _("TOWER_MAGE_HIGH_ELVEN_DESCRIPTION")
@@ -103,19 +103,19 @@ return {
         tt_desc = _("TOWER_ARCHMAGE_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_wild_magus",
-        image = "kr3_main_icons_0106",
+        image = "kr3_main_icons_0003",
         place = 13,
         tt_title = _("TOWER_MAGE_WILD_MAGUS_NAME"),
         tt_desc = _("TOWER_MAGE_WILD_MAGUS_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_faerie_dragon",
-        image = "kr3_special_icons_0124",
+        image = "kr3_main_icons_0013",
         place = 14,
         tt_title = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_NAME"),
         tt_desc = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_pixie",
-        image = "kr3_special_icons_0122",
+        image = "kr3_main_icons_0012",
         place = 15,
         tt_title = _("ELVES_TOWER_PIXIE_NAME"),
         tt_desc = _("ELVES_TOWER_PIXIE_DESCRIPTION")
@@ -189,13 +189,13 @@ return {
         tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_druid",
-        image = "kr3_main_icons_0111",
+        image = "kr3_main_icons_0008",
         place = 12,
         tt_title = _("TOWER_STONE_DRUID_NAME"),
         tt_desc = _("TOWER_STONE_DRUID_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_entwood",
-        image = "kr3_main_icons_0110",
+        image = "kr3_main_icons_0007",
         place = 13,
         tt_title = _("TOWER_ENTWOOD_NAME"),
         tt_desc = _("TOWER_ENTWOOD_DESCRIPTION")
@@ -263,13 +263,13 @@ return {
         tt_desc = _("TOWER_PIRATE_WATCHTOWER_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_arcane",
-        image = "kr3_main_icons_0108",
+        image = "kr3_main_icons_0005",
         place = 13,
         tt_title = _("TOWER_ARCANE_ARCHER_NAME"),
         tt_desc = _("TOWER_ARCANE_ARCHER_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_silver",
-        image = "kr3_main_icons_0109",
+        image = "kr3_main_icons_0006",
         place = 14,
         tt_title = _("TOWER_SILVER_NAME"),
         tt_desc = _("TOWER_SILVER_DESCRIPTION")
@@ -361,31 +361,31 @@ return {
         tt_desc = _("TOWER_BARRACK_PIRATES_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_blade",
-        image = "kr3_main_icons_0104",
+        image = "kr3_main_icons_0001",
         place = 16,
         tt_title = _("TOWER_BARRACKS_BLADE_NAME"),
         tt_desc = _("TOWER_BARRACKS_BLADE_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_forest",
-        image = "kr3_main_icons_0105",
+        image = "kr3_main_icons_0002",
         place = 17,
         tt_title = _("TOWER_FOREST_KEEPERS_NAME"),
         tt_desc = _("TOWER_FOREST_KEEPERS_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_drow",
-        image = "kr3_special_icons_0121",
+        image = "kr3_main_icons_0014",
         place = 18,
         tt_title = _("ELVES_TOWER_SPECIAL_DROW_NAME"),
         tt_desc = _("ELVES_TOWER_SPECIAL_DROW_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_ewok",
-        image = "kr3_main_icons_0112",
+        image = "kr3_main_icons_0009",
         place = 19,
         tt_title = _("ELVES_EWOK_NAME"),
         tt_desc = _("ELVES_EWOK_DESCRIPTION")
     }), merge(templates.upgrade, {
         action_arg = "tower_baby_ashbite",
-        image = "kr3_main_icons_0113",
+        image = "kr3_main_icons_0010",
         place = 20,
         tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
         tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION")

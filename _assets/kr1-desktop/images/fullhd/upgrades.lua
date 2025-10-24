@@ -1,6 +1,6 @@
 return {
-	Disabled_Upgrades_Icons_PriceTag = {
-		a_name = "screen_map_upgrades-1.png",
+	["Disabled_Upgrades_Icons_PriceTag"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			38,
 			28
@@ -21,10 +21,10 @@ return {
 			36,
 			26
 		},
-		alias = {},
+		alias = {}
 	},
-	Disabled_Upgrades_Icons_PriceTag_Nm_0001 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Disabled_Upgrades_Icons_PriceTag_Nm_0001"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -45,10 +45,10 @@ return {
 			10,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	Disabled_Upgrades_Icons_PriceTag_Nm_0002 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Disabled_Upgrades_Icons_PriceTag_Nm_0002"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -69,10 +69,10 @@ return {
 			12,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	Disabled_Upgrades_Icons_PriceTag_Nm_0003 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Disabled_Upgrades_Icons_PriceTag_Nm_0003"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -93,10 +93,10 @@ return {
 			11,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	Disabled_Upgrades_Icons_PriceTag_Nm_0004 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Disabled_Upgrades_Icons_PriceTag_Nm_0004"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -117,10 +117,10 @@ return {
 			11,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0001 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0001"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -141,10 +141,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0002 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0002"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -165,10 +165,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0003 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0003"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -189,10 +189,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0004 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0004"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -213,10 +213,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0005 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0005"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -237,10 +237,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0006 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0006"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -261,10 +261,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0007 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0007"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -285,10 +285,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0008 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0008"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -309,10 +309,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0009 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0009"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -333,10 +333,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0010 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0010"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -357,10 +357,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0011 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0011"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -381,10 +381,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0012 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0012"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -405,10 +405,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0013 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0013"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -429,10 +429,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0014 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0014"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -453,10 +453,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0015 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0015"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -477,10 +477,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0016 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0016"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -501,10 +501,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0017 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0017"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -525,10 +525,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0018 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0018"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -549,10 +549,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0019 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0019"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -573,10 +573,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0020 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0020"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -597,10 +597,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0021 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0021"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -621,10 +621,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0022 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0022"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -645,10 +645,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0023 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0023"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -669,10 +669,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0024 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0024"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -693,10 +693,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0025 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0025"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -717,10 +717,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0026 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0026"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -741,10 +741,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0027 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0027"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -765,10 +765,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0028 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0028"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -789,10 +789,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0029 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0029"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -813,10 +813,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr2_Upgrades_Icons_0030 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr2_Upgrades_Icons_0030"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -837,10 +837,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0001 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0001"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -861,10 +861,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0002 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0002"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -885,10 +885,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0003 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0003"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -909,10 +909,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0004 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0004"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -933,10 +933,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0005 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0005"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -957,10 +957,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0006 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0006"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -981,10 +981,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0007 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0007"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1005,10 +1005,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0008 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0008"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1029,10 +1029,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0009 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0009"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1053,10 +1053,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0010 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0010"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1077,10 +1077,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0011 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0011"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1101,10 +1101,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0012 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0012"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1125,10 +1125,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0013 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0013"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1149,10 +1149,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0014 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0014"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1173,10 +1173,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0015 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0015"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1197,10 +1197,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0016 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0016"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1221,10 +1221,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0017 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0017"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1245,10 +1245,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0018 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0018"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1269,10 +1269,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0019 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0019"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1293,10 +1293,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0020 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0020"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1317,10 +1317,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0021 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0021"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1341,10 +1341,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0022 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0022"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1365,10 +1365,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0023 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0023"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1389,10 +1389,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0024 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0024"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1413,10 +1413,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0025 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0025"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1437,10 +1437,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0026 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0026"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1461,10 +1461,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0027 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0027"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1485,10 +1485,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0028 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0028"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1509,10 +1509,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0029 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0029"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1533,10 +1533,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	kr3_Upgrades_Icons_0030 = {
-		a_name = "screen_map_upgrades-1.png",
+	["kr3_Upgrades_Icons_0030"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1557,10 +1557,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	mapUpgradePointsAvailable = {
-		a_name = "screen_map_upgrades-1.png",
+	["mapUpgradePointsAvailable"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			62,
 			58
@@ -1581,10 +1581,10 @@ return {
 			62,
 			58
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_BG_notxt = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_BG_notxt"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			920,
 			764
@@ -1605,10 +1605,10 @@ return {
 			909,
 			758
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Btns_notxt_0001 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Btns_notxt_0001"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			132,
 			72
@@ -1629,10 +1629,10 @@ return {
 			128,
 			66
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Btns_notxt_0002 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Btns_notxt_0002"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			132,
 			72
@@ -1653,10 +1653,10 @@ return {
 			132,
 			71
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0001 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0001"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1677,10 +1677,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0002 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0002"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1701,10 +1701,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0003 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0003"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1725,10 +1725,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0004 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0004"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1749,10 +1749,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0005 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0005"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1773,10 +1773,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0006 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0006"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1797,10 +1797,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0007 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0007"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1821,10 +1821,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0008 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0008"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1845,10 +1845,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0009 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0009"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1869,10 +1869,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0010 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0010"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1893,10 +1893,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0011 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0011"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1917,10 +1917,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0012 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0012"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1941,10 +1941,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0013 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0013"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1965,10 +1965,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0014 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0014"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -1989,10 +1989,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0015 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0015"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2013,10 +2013,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0016 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0016"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2037,10 +2037,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0017 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0017"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2061,10 +2061,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0018 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0018"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2085,10 +2085,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0019 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0019"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2109,10 +2109,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0020 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0020"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2133,10 +2133,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0021 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0021"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2157,10 +2157,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0022 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0022"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2181,10 +2181,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0023 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0023"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2205,10 +2205,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0024 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0024"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2229,10 +2229,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0025 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0025"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2253,10 +2253,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0026 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0026"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2277,10 +2277,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0027 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0027"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2301,10 +2301,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0028 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0028"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2325,10 +2325,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0029 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0029"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2349,10 +2349,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_0030 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_0030"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2373,10 +2373,10 @@ return {
 			73,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_Bought = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_Bought"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2397,10 +2397,10 @@ return {
 			74,
 			74
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0001 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0001"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2421,10 +2421,10 @@ return {
 			42,
 			42
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0002 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0002"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2445,10 +2445,10 @@ return {
 			58,
 			58
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0003 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0003"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2469,10 +2469,10 @@ return {
 			58,
 			58
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0004 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0004"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2493,10 +2493,10 @@ return {
 			73,
 			73
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0005 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0005"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2517,10 +2517,10 @@ return {
 			76,
 			76
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0006 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0006"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2541,10 +2541,10 @@ return {
 			80,
 			79
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0007 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0007"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2565,10 +2565,10 @@ return {
 			83,
 			83
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0008 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0008"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2589,10 +2589,10 @@ return {
 			86,
 			86
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0009 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0009"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2613,10 +2613,10 @@ return {
 			94,
 			94
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0010 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0010"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2637,10 +2637,10 @@ return {
 			62,
 			62
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0011 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0011"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2661,10 +2661,10 @@ return {
 			66,
 			66
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0012 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0012"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2685,10 +2685,10 @@ return {
 			70,
 			71
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0013 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0013"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2709,10 +2709,10 @@ return {
 			75,
 			75
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0014 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0014"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2733,10 +2733,10 @@ return {
 			80,
 			79
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0015 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0015"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2757,10 +2757,10 @@ return {
 			84,
 			84
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0016 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0016"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2781,10 +2781,10 @@ return {
 			88,
 			88
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0017 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0017"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2805,10 +2805,10 @@ return {
 			92,
 			93
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_buyFx_0018 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_buyFx_0018"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			110,
 			110
@@ -2829,10 +2829,10 @@ return {
 			68,
 			69
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_Hover = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_Hover"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			76,
 			78
@@ -2853,10 +2853,10 @@ return {
 			72,
 			72
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_over = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_over"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			82,
 			82
@@ -2877,10 +2877,10 @@ return {
 			82,
 			82
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_PriceTag = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_PriceTag"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			38,
 			28
@@ -2901,10 +2901,10 @@ return {
 			36,
 			26
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_PriceTag_Nm_0001 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_PriceTag_Nm_0001"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -2925,10 +2925,10 @@ return {
 			10,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_PriceTag_Nm_0002 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_PriceTag_Nm_0002"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -2949,10 +2949,10 @@ return {
 			12,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_PriceTag_Nm_0003 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_PriceTag_Nm_0003"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -2973,10 +2973,10 @@ return {
 			11,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Icons_PriceTag_Nm_0004 = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Icons_PriceTag_Nm_0004"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			12
@@ -2997,10 +2997,10 @@ return {
 			11,
 			12
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_StarContainer = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_StarContainer"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			130,
 			62
@@ -3021,10 +3021,10 @@ return {
 			130,
 			62
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Tips = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Tips"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			300,
 			110
@@ -3045,10 +3045,10 @@ return {
 			282,
 			92
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Tips_Star = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Tips_Star"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			20,
 			18
@@ -3069,10 +3069,10 @@ return {
 			20,
 			18
 		},
-		alias = {},
+		alias = {}
 	},
-	Upgrades_Tips_tip = {
-		a_name = "screen_map_upgrades-1.png",
+	["Upgrades_Tips_tip"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			24,
 			34
@@ -3093,10 +3093,10 @@ return {
 			24,
 			34
 		},
-		alias = {},
+		alias = {}
 	},
-	YellowBar = {
-		a_name = "screen_map_upgrades-1.png",
+	["YellowBar"] = {
+		a_name = "upgrades-1.png",
 		size = {
 			12,
 			372
@@ -3117,6 +3117,6 @@ return {
 			12,
 			372
 		},
-		alias = {},
+		alias = {}
 	}
 }

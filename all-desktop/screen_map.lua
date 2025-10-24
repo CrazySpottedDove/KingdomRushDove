@@ -40,25 +40,23 @@ screen_map.required_sounds = {
     "music_screen_map"
 }
 screen_map.required_textures = {
-    "screen_map_upgrades",
+    "upgrades",
     "screen_map_backgrond",
-    "screen_map_achievements",
-    "screen_map_select_difficulty",
-    "screen_map_level_select",
+    "achievements",
+    "select_difficulty",
+    "level_select",
     "screen_map_flags",
-    "screen_map_encyclopedia",
-    "screen_map_balloon",
-    "screen_map_stars_container",
-    "screen_map_hero_room",
+    "balloon",
+    "stars_container",
+    "hero_room",
     "screen_map_buttons",
     "screen_map_animations",
-    "screen_map_animations2",
+    "kr2_screen_map_animations",
+    "kr3_screen_map_animations",
     "view_options",
     "achievements",
     "encyclopedia",
-    "encyclopedia_thumbs",
-    "gui_shop",
-    "gui_shop_bg",
+    "encyclopedia_creeps"
 }
 
 screen_map.ref_w = 1920
@@ -1198,7 +1196,7 @@ function MapView:initialize(screen_w, screen_h)
             end
         end
 
-        -- self:load_map_animations(3)
+        self:load_map_animations(3)
         self:show_flags(3)
     else
         KImageView.initialize(self, "map_background")
@@ -5516,6 +5514,8 @@ AchievementsView = class("AchievementsView", PopUpView)
 function AchievementsView:initialize(sw, sh)
     PopUpView.initialize(self, V.v(sw, sh))
 
+    self.disabled_tint_color = { 200, 200, 200, 255 }
+
     self.back = KImageView:new("Achievements_BG_notxt")
     self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
     self.back.pos = v(sw / 2 - 15, sh / 2)
@@ -5524,15 +5524,6 @@ function AchievementsView:initialize(sw, sh)
 
     sw = self.back.size.x
     sh = self.back.size.y
-
-    if IS_KR3 then
-        local header_bg = KImageView("kr3_title_bg")
-
-        header_bg.anchor.x = km.round(header_bg.size.x / 2)
-        header_bg.pos = v(km.round(self.back.size.x / 2) - 10, -24)
-
-        self.back:add_child(header_bg)
-    end
 
     local header = GGPanelHeader:new(_("ACHIEVEMENTS"), 274)
 
@@ -5571,7 +5562,7 @@ function AchievementsView:initialize(sw, sh)
 
         ach.img = KImageView:new("achievement_icons_0001")
         ach.img.anchor = v(math.floor(ach.img.size.x / 2), math.floor(ach.img.size.y / 2))
-        ach.img.pos = IS_KR3 and v(59, 53) or v(57, 49)
+        ach.img.pos = v(57, 49)
 
         ach:add_child(ach.img)
 
@@ -5640,11 +5631,11 @@ function AchievementsView:createPage(pagenum)
 
             local isActive = screen_map.user_data.achievements[ach.name]
 
-            if isActive then
+            --if isActive then
                 box.img:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
-            else
-                box.img:set_image("achievement_icons_disabled_" .. string.format("%04i", ach.icon))
-            end
+            --else
+                --box.img:set_image("achievement_icons_disabled_" .. string.format("%04i", ach.icon))
+            --end
 
             local prefix = IS_KR3 and "ELVES_" or ""
             local title = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_NAME")
