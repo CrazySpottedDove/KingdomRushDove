@@ -19,7 +19,7 @@ function entity_db:load()
 	package.loaded.game_scripts = nil
 	package.loaded.scripts = nil
 	package.loaded.script_utils = nil
-
+    package.loaded["kr1.data.balance"] = nil
 	require("components")
 	require("templates")
 	require("game_templates")
