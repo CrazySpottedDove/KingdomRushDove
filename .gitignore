@@ -1,4 +1,5 @@
-_assets/all-desktop
+_assets/all-desktop/cursors
+_assets/all-desktop/fonts
 _assets/kr1-desktop/icons
 _assets/kr1-desktop/images/fullhd/*.png
 _assets/kr1-desktop/images/fullhd/*.dds
@@ -14,6 +15,7 @@ _assets/kr1-desktop/strings/pt.lua
 _assets/kr1-desktop/strings/ru.lua
 _assets/kr1-desktop/strings/zh-Hant.lua
 _assets_new
+_trashed_assets
 .vscode/
 mdbuild/
 /data/
@@ -30,3 +32,10 @@ last_build_commit.txt
 .versions/
 .last_sync_commit
 .sync_file_list
+.branch
+makefiles/.*
+_assets/assets_index.remote.lua
+_assets/tmp_download
+upload_cmds.sh
+upload_cmds.bat
+upload_params.txt
