@@ -292,21 +292,12 @@ GS.gems_per_level = {
     0,
     0
 }
-GS.encyclopedia_tower_fmt = "encyclopedia_towers_00%02i"
-GS.encyclopedia_tower_fmt2 = "encyclopedia_towers_02%02i"
-GS.encyclopedia_tower_fmt3 = "encyclopedia_towers_03%02i"
-GS.encyclopedia_tower_thumb_fmt = "encyclopedia_tower_thumbs_00%02i"
-GS.encyclopedia_tower_thumb_fmt2 = "encyclopedia_tower_thumbs_02%02i"
-GS.encyclopedia_tower_thumb_fmt3 = "encyclopedia_tower_thumbs_03%02i"
 GS.encyclopedia_enemy_fmt = "encyclopedia_creeps_00%02i"
 GS.encyclopedia_enemy_fmt2 = "encyclopedia_creeps_02%02i"
 GS.encyclopedia_enemy_fmt3 = "encyclopedia_creeps_03%02i"
 GS.encyclopedia_enemy_thumb_fmt = "encyclopedia_creep_thumbs_00%02i"
 GS.encyclopedia_enemy_thumb_fmt2 = "encyclopedia_creep_thumbs_02%02i"
 GS.encyclopedia_enemy_thumb_fmt3 = "encyclopedia_creep_thumbs_03%02i"
-GS.encyclopedia_tower_specials_fmt= "encyclopedia_tower_specials_00%02i"
-GS.encyclopedia_tower_specials_fmt2 = "encyclopedia_tower_specials_02%02i"
-GS.encyclopedia_tower_specials_fmt3 = "encyclopedia_tower_specials_03%02i"
 GS.encyclopedia_enemies = {
 	{
 		always_shown = true,

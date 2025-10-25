@@ -1,6 +1,6 @@
 return {
-	mapStarsContainer = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			311,
 			61
@@ -12,8 +12,8 @@ return {
             0
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			1,
@@ -21,10 +21,10 @@ return {
 			311,
 			61
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0001 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0001"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -36,8 +36,8 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			314,
@@ -45,10 +45,10 @@ return {
 			18,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0002 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0002"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -60,8 +60,8 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			334,
@@ -69,10 +69,10 @@ return {
 			23,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0003 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0003"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -84,8 +84,8 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			359,
@@ -93,10 +93,10 @@ return {
 			24,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0004 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0004"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -108,8 +108,8 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			385,
@@ -117,10 +117,10 @@ return {
 			25,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0005 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0005"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -132,8 +132,8 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			412,
@@ -141,10 +141,10 @@ return {
 			23,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0006 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0006"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -156,8 +156,8 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			437,
@@ -165,10 +165,10 @@ return {
 			24,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0007 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0007"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -180,8 +180,8 @@ return {
             2
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
 			463,
@@ -189,10 +189,10 @@ return {
 			23,
 			30
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0008 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0008"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -204,19 +204,19 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
-			488,
 			1,
+			64,
 			23,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0009 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0009"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -228,19 +228,19 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
-			513,
-			1,
+			26,
+			64,
 			23,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0010 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0010"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -252,19 +252,19 @@ return {
             1
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
-			538,
-			1,
+			51,
+			64,
 			24,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainer_numbers_0011 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainer_numbers_0011"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			32,
 			32
@@ -276,19 +276,19 @@ return {
             0
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
-			564,
-			1,
+			77,
+			64,
 			30,
 			32
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainerEmpty = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainerEmpty"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			312,
 			62
@@ -300,19 +300,19 @@ return {
             0
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
-			596,
-			1,
+			109,
+			64,
 			312,
 			62
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainerIcons_0001 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainerIcons_0001"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			62,
 			62
@@ -324,19 +324,19 @@ return {
             17
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
-			910,
-			1,
+			423,
+			64,
 			39,
 			35
 		},
-		alias = {},
+		alias = {}
 	},
-	mapStarsContainerIcons_0002 = {
-		a_name = "screen_map_stars_container-1.png",
+	["mapStarsContainerIcons_0002"] = {
+		a_name = "stars_container-1.png",
 		size = {
 			62,
 			62
@@ -348,15 +348,15 @@ return {
             15
 		},
 		a_size = {
-			993,
-			64
+			506,
+			127
 		},
 		f_quad = {
-			951,
-			1,
+			464,
+			64,
 			41,
 			36
 		},
-		alias = {},
+		alias = {}
 	}
 }

@@ -1,8 +1,8 @@
--- chunkname: @./kr2-desktop/assets/images/fullhd/screen_map_animations.lua
+﻿-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/_assets/kr2-desktop/images/fullhd/kr2_screen_map_animations.lua
 
 return {
 	big_ship_0001 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	big_ship_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	big_ship_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	big_ship_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	big_ship_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	big_ship_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	big_ship_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	big_ship_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	big_ship_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	big_ship_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	big_ship_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	big_ship_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	big_ship_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	big_ship_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	big_ship_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	big_ship_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	big_ship_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	big_ship_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	big_ship_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	big_ship_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	big_ship_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	big_ship_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	big_ship_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	big_ship_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	big_ship_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	big_ship_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	big_ship_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	big_ship_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	big_ship_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	big_ship_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -722,7 +722,7 @@ return {
 		alias = {}
 	},
 	big_ship_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -746,7 +746,7 @@ return {
 		alias = {}
 	},
 	big_ship_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -770,7 +770,7 @@ return {
 		alias = {}
 	},
 	big_ship_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -794,7 +794,7 @@ return {
 		alias = {}
 	},
 	big_ship_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -818,7 +818,7 @@ return {
 		alias = {}
 	},
 	big_ship_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -842,7 +842,7 @@ return {
 		alias = {}
 	},
 	big_ship_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -866,7 +866,7 @@ return {
 		alias = {}
 	},
 	big_ship_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -890,7 +890,7 @@ return {
 		alias = {}
 	},
 	big_ship_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -914,7 +914,7 @@ return {
 		alias = {}
 	},
 	big_ship_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -938,7 +938,7 @@ return {
 		alias = {}
 	},
 	big_ship_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -962,7 +962,7 @@ return {
 		alias = {}
 	},
 	big_ship_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -986,7 +986,7 @@ return {
 		alias = {}
 	},
 	big_ship_0042 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -1010,7 +1010,7 @@ return {
 		alias = {}
 	},
 	big_ship_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -1034,7 +1034,7 @@ return {
 		alias = {}
 	},
 	big_ship_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -1058,7 +1058,7 @@ return {
 		alias = {}
 	},
 	big_ship_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -1082,7 +1082,7 @@ return {
 		alias = {}
 	},
 	big_ship_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	big_ship_0047 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	big_ship_0048 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1154,7 +1154,7 @@ return {
 		alias = {}
 	},
 	big_ship_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1178,7 +1178,7 @@ return {
 		alias = {}
 	},
 	big_ship_0050 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1202,7 +1202,7 @@ return {
 		alias = {}
 	},
 	big_ship_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1226,7 +1226,7 @@ return {
 		alias = {}
 	},
 	big_ship_0052 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1250,7 +1250,7 @@ return {
 		alias = {}
 	},
 	big_ship_0053 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1274,7 +1274,7 @@ return {
 		alias = {}
 	},
 	big_ship_0054 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1298,7 +1298,7 @@ return {
 		alias = {}
 	},
 	big_ship_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1322,7 +1322,7 @@ return {
 		alias = {}
 	},
 	big_ship_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1346,7 +1346,7 @@ return {
 		alias = {}
 	},
 	big_ship_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1370,7 +1370,7 @@ return {
 		alias = {}
 	},
 	big_ship_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1394,7 +1394,7 @@ return {
 		alias = {}
 	},
 	big_ship_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1418,7 +1418,7 @@ return {
 		alias = {}
 	},
 	big_ship_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1442,7 +1442,7 @@ return {
 		alias = {}
 	},
 	big_ship_0061 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1466,7 +1466,7 @@ return {
 		alias = {}
 	},
 	big_ship_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1490,7 +1490,7 @@ return {
 		alias = {}
 	},
 	big_ship_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1514,7 +1514,7 @@ return {
 		alias = {}
 	},
 	big_ship_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1538,7 +1538,7 @@ return {
 		alias = {}
 	},
 	big_ship_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1562,7 +1562,7 @@ return {
 		alias = {}
 	},
 	big_ship_0066 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1586,7 +1586,7 @@ return {
 		alias = {}
 	},
 	big_ship_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1610,7 +1610,7 @@ return {
 		alias = {}
 	},
 	big_ship_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1634,7 +1634,7 @@ return {
 		alias = {}
 	},
 	big_ship_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1658,7 +1658,7 @@ return {
 		alias = {}
 	},
 	big_ship_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1682,7 +1682,7 @@ return {
 		alias = {}
 	},
 	big_ship_0071 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1706,7 +1706,7 @@ return {
 		alias = {}
 	},
 	big_ship_0072 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1730,7 +1730,7 @@ return {
 		alias = {}
 	},
 	big_ship_0073 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1754,7 +1754,7 @@ return {
 		alias = {}
 	},
 	big_ship_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1778,7 +1778,7 @@ return {
 		alias = {}
 	},
 	big_ship_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1802,7 +1802,7 @@ return {
 		alias = {}
 	},
 	big_ship_0076 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1826,7 +1826,7 @@ return {
 		alias = {}
 	},
 	big_ship_0077 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1850,7 +1850,7 @@ return {
 		alias = {}
 	},
 	big_ship_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1874,7 +1874,7 @@ return {
 		alias = {}
 	},
 	big_ship_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1898,7 +1898,7 @@ return {
 		alias = {}
 	},
 	big_ship_0080 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1922,7 +1922,7 @@ return {
 		alias = {}
 	},
 	big_ship_0081 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1946,7 +1946,7 @@ return {
 		alias = {}
 	},
 	big_ship_0082 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1970,7 +1970,7 @@ return {
 		alias = {}
 	},
 	big_ship_0083 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -1994,7 +1994,7 @@ return {
 		alias = {}
 	},
 	big_ship_0084 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2018,7 +2018,7 @@ return {
 		alias = {}
 	},
 	big_ship_0085 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2042,7 +2042,7 @@ return {
 		alias = {}
 	},
 	big_ship_0086 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2066,7 +2066,7 @@ return {
 		alias = {}
 	},
 	big_ship_0087 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2090,7 +2090,7 @@ return {
 		alias = {}
 	},
 	big_ship_0088 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2114,7 +2114,7 @@ return {
 		alias = {}
 	},
 	big_ship_0089 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2138,7 +2138,7 @@ return {
 		alias = {}
 	},
 	big_ship_0090 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2162,7 +2162,7 @@ return {
 		alias = {}
 	},
 	big_ship_0091 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2186,7 +2186,7 @@ return {
 		alias = {}
 	},
 	big_ship_0092 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2210,7 +2210,7 @@ return {
 		alias = {}
 	},
 	big_ship_0093 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2234,7 +2234,7 @@ return {
 		alias = {}
 	},
 	big_ship_0094 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2258,7 +2258,7 @@ return {
 		alias = {}
 	},
 	big_ship_0095 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2282,7 +2282,7 @@ return {
 		alias = {}
 	},
 	big_ship_0096 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2306,7 +2306,7 @@ return {
 		alias = {}
 	},
 	big_ship_0097 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2330,7 +2330,7 @@ return {
 		alias = {}
 	},
 	big_ship_0098 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2354,7 +2354,7 @@ return {
 		alias = {}
 	},
 	big_ship_0099 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2378,7 +2378,7 @@ return {
 		alias = {}
 	},
 	big_ship_0100 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2402,7 +2402,7 @@ return {
 		alias = {}
 	},
 	big_ship_0101 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2426,7 +2426,7 @@ return {
 		alias = {}
 	},
 	big_ship_0102 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2450,7 +2450,7 @@ return {
 		alias = {}
 	},
 	big_ship_0103 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2474,7 +2474,7 @@ return {
 		alias = {}
 	},
 	big_ship_0104 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2498,7 +2498,7 @@ return {
 		alias = {}
 	},
 	big_ship_0105 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2522,7 +2522,7 @@ return {
 		alias = {}
 	},
 	big_ship_0106 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2546,7 +2546,7 @@ return {
 		alias = {}
 	},
 	big_ship_0107 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2570,7 +2570,7 @@ return {
 		alias = {}
 	},
 	big_ship_0108 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2594,7 +2594,7 @@ return {
 		alias = {}
 	},
 	big_ship_0109 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2618,7 +2618,7 @@ return {
 		alias = {}
 	},
 	big_ship_0110 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2642,7 +2642,7 @@ return {
 		alias = {}
 	},
 	big_ship_0111 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2666,7 +2666,7 @@ return {
 		alias = {}
 	},
 	big_ship_0112 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2690,7 +2690,7 @@ return {
 		alias = {}
 	},
 	big_ship_0113 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -2714,7 +2714,7 @@ return {
 		alias = {}
 	},
 	big_ship_0114 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2738,7 +2738,7 @@ return {
 		alias = {}
 	},
 	big_ship_0115 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2762,7 +2762,7 @@ return {
 		alias = {}
 	},
 	big_ship_0116 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2786,7 +2786,7 @@ return {
 		alias = {}
 	},
 	big_ship_0117 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2810,7 +2810,7 @@ return {
 		alias = {}
 	},
 	big_ship_0118 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2834,7 +2834,7 @@ return {
 		alias = {}
 	},
 	big_ship_0119 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2858,7 +2858,7 @@ return {
 		alias = {}
 	},
 	big_ship_0120 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2882,7 +2882,7 @@ return {
 		alias = {}
 	},
 	big_ship_0121 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2906,7 +2906,7 @@ return {
 		alias = {}
 	},
 	big_ship_0122 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2930,7 +2930,7 @@ return {
 		alias = {}
 	},
 	big_ship_0123 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2954,7 +2954,7 @@ return {
 		alias = {}
 	},
 	big_ship_0124 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -2978,7 +2978,7 @@ return {
 		alias = {}
 	},
 	big_ship_0125 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3002,7 +3002,7 @@ return {
 		alias = {}
 	},
 	big_ship_0126 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3026,7 +3026,7 @@ return {
 		alias = {}
 	},
 	big_ship_0127 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3050,7 +3050,7 @@ return {
 		alias = {}
 	},
 	big_ship_0128 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3074,7 +3074,7 @@ return {
 		alias = {}
 	},
 	big_ship_0129 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3098,7 +3098,7 @@ return {
 		alias = {}
 	},
 	big_ship_0130 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3122,7 +3122,7 @@ return {
 		alias = {}
 	},
 	big_ship_0131 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3146,7 +3146,7 @@ return {
 		alias = {}
 	},
 	big_ship_0132 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3170,7 +3170,7 @@ return {
 		alias = {}
 	},
 	big_ship_0133 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			100,
 			60
@@ -3194,7 +3194,7 @@ return {
 		alias = {}
 	},
 	big_ship_0134 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			100,
 			60
@@ -3218,7 +3218,7 @@ return {
 		alias = {}
 	},
 	big_ship_0135 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3242,7 +3242,7 @@ return {
 		alias = {}
 	},
 	big_ship_0136 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3266,7 +3266,7 @@ return {
 		alias = {}
 	},
 	big_ship_0137 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3292,7 +3292,7 @@ return {
 		}
 	},
 	big_ship_0139 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3318,7 +3318,7 @@ return {
 		}
 	},
 	big_ship_0141 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3342,7 +3342,7 @@ return {
 		alias = {}
 	},
 	big_ship_0142 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3366,7 +3366,7 @@ return {
 		alias = {}
 	},
 	big_ship_0143 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3392,7 +3392,7 @@ return {
 		}
 	},
 	big_ship_0145 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3418,7 +3418,7 @@ return {
 		}
 	},
 	big_ship_0147 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3442,7 +3442,7 @@ return {
 		alias = {}
 	},
 	big_ship_0148 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3466,7 +3466,7 @@ return {
 		alias = {}
 	},
 	big_ship_0149 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3492,7 +3492,7 @@ return {
 		}
 	},
 	big_ship_0151 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3518,7 +3518,7 @@ return {
 		}
 	},
 	big_ship_0153 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3542,7 +3542,7 @@ return {
 		alias = {}
 	},
 	big_ship_0154 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3566,7 +3566,7 @@ return {
 		alias = {}
 	},
 	big_ship_0155 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3592,7 +3592,7 @@ return {
 		}
 	},
 	big_ship_0157 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3618,7 +3618,7 @@ return {
 		}
 	},
 	big_ship_0159 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3642,7 +3642,7 @@ return {
 		alias = {}
 	},
 	big_ship_0160 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3666,7 +3666,7 @@ return {
 		alias = {}
 	},
 	big_ship_0161 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3692,7 +3692,7 @@ return {
 		}
 	},
 	big_ship_0163 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3718,7 +3718,7 @@ return {
 		}
 	},
 	big_ship_0165 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3742,7 +3742,7 @@ return {
 		alias = {}
 	},
 	big_ship_0166 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3766,7 +3766,7 @@ return {
 		alias = {}
 	},
 	big_ship_0167 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3790,7 +3790,7 @@ return {
 		alias = {}
 	},
 	big_ship_0168 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3814,7 +3814,7 @@ return {
 		alias = {}
 	},
 	big_ship_0169 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3838,7 +3838,7 @@ return {
 		alias = {}
 	},
 	big_ship_0170 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3864,7 +3864,7 @@ return {
 		}
 	},
 	big_ship_0172 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3888,7 +3888,7 @@ return {
 		alias = {}
 	},
 	big_ship_0173 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3912,7 +3912,7 @@ return {
 		alias = {}
 	},
 	big_ship_0174 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3936,7 +3936,7 @@ return {
 		alias = {}
 	},
 	big_ship_0175 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3960,7 +3960,7 @@ return {
 		alias = {}
 	},
 	big_ship_0176 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -3984,7 +3984,7 @@ return {
 		alias = {}
 	},
 	big_ship_0177 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -4008,7 +4008,7 @@ return {
 		alias = {}
 	},
 	big_ship_0178 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -4034,7 +4034,7 @@ return {
 		}
 	},
 	big_ship_0180 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			100,
 			60
@@ -4058,7 +4058,7 @@ return {
 		alias = {}
 	},
 	big_ship_0181 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4082,7 +4082,7 @@ return {
 		alias = {}
 	},
 	big_ship_0182 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4106,7 +4106,7 @@ return {
 		alias = {}
 	},
 	big_ship_0183 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4130,7 +4130,7 @@ return {
 		alias = {}
 	},
 	big_ship_0184 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4154,7 +4154,7 @@ return {
 		alias = {}
 	},
 	big_ship_0185 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4178,7 +4178,7 @@ return {
 		alias = {}
 	},
 	big_ship_0186 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4202,7 +4202,7 @@ return {
 		alias = {}
 	},
 	big_ship_0187 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4228,7 +4228,7 @@ return {
 		}
 	},
 	big_ship_0189 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4252,7 +4252,7 @@ return {
 		alias = {}
 	},
 	big_ship_0190 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4276,7 +4276,7 @@ return {
 		alias = {}
 	},
 	big_ship_0191 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4302,7 +4302,7 @@ return {
 		}
 	},
 	big_ship_0193 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4326,7 +4326,7 @@ return {
 		alias = {}
 	},
 	big_ship_0194 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4350,7 +4350,7 @@ return {
 		alias = {}
 	},
 	big_ship_0195 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4374,7 +4374,7 @@ return {
 		alias = {}
 	},
 	big_ship_0196 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4398,7 +4398,7 @@ return {
 		alias = {}
 	},
 	big_ship_0197 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4422,7 +4422,7 @@ return {
 		alias = {}
 	},
 	big_ship_0198 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4446,7 +4446,7 @@ return {
 		alias = {}
 	},
 	big_ship_0199 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4472,7 +4472,7 @@ return {
 		}
 	},
 	big_ship_0201 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4496,7 +4496,7 @@ return {
 		alias = {}
 	},
 	big_ship_0202 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4520,7 +4520,7 @@ return {
 		alias = {}
 	},
 	big_ship_0203 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4546,7 +4546,7 @@ return {
 		}
 	},
 	big_ship_0205 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4570,7 +4570,7 @@ return {
 		alias = {}
 	},
 	big_ship_0206 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4594,7 +4594,7 @@ return {
 		alias = {}
 	},
 	big_ship_0207 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4618,7 +4618,7 @@ return {
 		alias = {}
 	},
 	big_ship_0208 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4642,7 +4642,7 @@ return {
 		alias = {}
 	},
 	big_ship_0209 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4666,7 +4666,7 @@ return {
 		alias = {}
 	},
 	big_ship_0210 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4690,7 +4690,7 @@ return {
 		alias = {}
 	},
 	big_ship_0211 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4716,7 +4716,7 @@ return {
 		}
 	},
 	big_ship_0213 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4740,7 +4740,7 @@ return {
 		alias = {}
 	},
 	big_ship_0214 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4764,7 +4764,7 @@ return {
 		alias = {}
 	},
 	big_ship_0215 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4790,7 +4790,7 @@ return {
 		}
 	},
 	big_ship_0217 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4814,7 +4814,7 @@ return {
 		alias = {}
 	},
 	big_ship_0218 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4838,7 +4838,7 @@ return {
 		alias = {}
 	},
 	big_ship_0219 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4862,7 +4862,7 @@ return {
 		alias = {}
 	},
 	big_ship_0220 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4886,7 +4886,7 @@ return {
 		alias = {}
 	},
 	big_ship_0221 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4910,7 +4910,7 @@ return {
 		alias = {}
 	},
 	big_ship_0222 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4934,7 +4934,7 @@ return {
 		alias = {}
 	},
 	big_ship_0223 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4960,7 +4960,7 @@ return {
 		}
 	},
 	big_ship_0225 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			100,
 			60
@@ -4984,7 +4984,7 @@ return {
 		alias = {}
 	},
 	darktower_fog_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5010,7 +5010,7 @@ return {
 		}
 	},
 	darktower_fog_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5036,7 +5036,7 @@ return {
 		}
 	},
 	darktower_fog_0003 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5062,7 +5062,7 @@ return {
 		}
 	},
 	darktower_fog_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5088,7 +5088,7 @@ return {
 		}
 	},
 	darktower_fog_0005 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5114,7 +5114,7 @@ return {
 		}
 	},
 	darktower_fog_0006 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5140,7 +5140,7 @@ return {
 		}
 	},
 	darktower_fog_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5166,7 +5166,7 @@ return {
 		}
 	},
 	darktower_fog_0008 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5192,7 +5192,7 @@ return {
 		}
 	},
 	darktower_fog_0009 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5220,7 +5220,7 @@ return {
 		}
 	},
 	darktower_fog_0011 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5246,7 +5246,7 @@ return {
 		}
 	},
 	darktower_fog_0012 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5272,7 +5272,7 @@ return {
 		}
 	},
 	darktower_fog_0013 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5298,7 +5298,7 @@ return {
 		}
 	},
 	darktower_fog_0014 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5324,7 +5324,7 @@ return {
 		}
 	},
 	darktower_fog_0015 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5350,7 +5350,7 @@ return {
 		}
 	},
 	darktower_fog_0016 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5376,7 +5376,7 @@ return {
 		}
 	},
 	darktower_fog_0017 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5402,7 +5402,7 @@ return {
 		}
 	},
 	darktower_fog_0018 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5428,7 +5428,7 @@ return {
 		}
 	},
 	darktower_fog_0019 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5454,7 +5454,7 @@ return {
 		}
 	},
 	darktower_fog_0020 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5480,7 +5480,7 @@ return {
 		}
 	},
 	darktower_fog_0021 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5506,7 +5506,7 @@ return {
 		}
 	},
 	darktower_fog_0022 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5532,7 +5532,7 @@ return {
 		}
 	},
 	darktower_fog_0023 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5558,7 +5558,7 @@ return {
 		}
 	},
 	darktower_fog_0024 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5584,7 +5584,7 @@ return {
 		}
 	},
 	darktower_fog_0025 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5610,7 +5610,7 @@ return {
 		}
 	},
 	darktower_fog_0026 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5636,7 +5636,7 @@ return {
 		}
 	},
 	darktower_fog_0027 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5662,7 +5662,7 @@ return {
 		}
 	},
 	darktower_fog_0028 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5688,7 +5688,7 @@ return {
 		}
 	},
 	darktower_fog_0029 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5714,7 +5714,7 @@ return {
 		}
 	},
 	darktower_fog_0030 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5740,7 +5740,7 @@ return {
 		}
 	},
 	darktower_fog_0031 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5766,7 +5766,7 @@ return {
 		}
 	},
 	darktower_fog_0032 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5792,7 +5792,7 @@ return {
 		}
 	},
 	darktower_fog_0033 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5818,7 +5818,7 @@ return {
 		}
 	},
 	darktower_fog_0034 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			235,
 			170
@@ -5844,7 +5844,7 @@ return {
 		}
 	},
 	darktower_fog_0035 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5870,7 +5870,7 @@ return {
 		}
 	},
 	darktower_fog_0036 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5896,7 +5896,7 @@ return {
 		}
 	},
 	darktower_fog_0037 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5922,7 +5922,7 @@ return {
 		}
 	},
 	darktower_fog_0038 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5948,7 +5948,7 @@ return {
 		}
 	},
 	darktower_fog_0039 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -5974,7 +5974,7 @@ return {
 		}
 	},
 	darktower_fog_0040 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -6000,7 +6000,7 @@ return {
 		}
 	},
 	darktower_fog_0041 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -6026,7 +6026,7 @@ return {
 		}
 	},
 	darktower_fog_0042 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -6052,7 +6052,7 @@ return {
 		}
 	},
 	darktower_fog_0043 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -6078,7 +6078,7 @@ return {
 		}
 	},
 	darktower_fog_0044 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			235,
 			170
@@ -6104,7 +6104,7 @@ return {
 		}
 	},
 	darktower_fog_0045 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6130,7 +6130,7 @@ return {
 		}
 	},
 	darktower_fog_0046 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6156,7 +6156,7 @@ return {
 		}
 	},
 	darktower_fog_0047 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6182,7 +6182,7 @@ return {
 		}
 	},
 	darktower_fog_0048 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6208,7 +6208,7 @@ return {
 		}
 	},
 	darktower_fog_0049 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6234,7 +6234,7 @@ return {
 		}
 	},
 	darktower_fog_0050 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6260,7 +6260,7 @@ return {
 		}
 	},
 	darktower_fog_0051 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6286,7 +6286,7 @@ return {
 		}
 	},
 	darktower_fog_0052 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6312,7 +6312,7 @@ return {
 		}
 	},
 	darktower_fog_0053 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6338,7 +6338,7 @@ return {
 		}
 	},
 	darktower_fog_0054 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6364,7 +6364,7 @@ return {
 		}
 	},
 	darktower_fog_0055 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6390,7 +6390,7 @@ return {
 		}
 	},
 	darktower_fog_0056 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6416,7 +6416,7 @@ return {
 		}
 	},
 	darktower_fog_0057 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6442,7 +6442,7 @@ return {
 		}
 	},
 	darktower_fog_0058 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6468,7 +6468,7 @@ return {
 		}
 	},
 	darktower_fog_0059 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			235,
 			170
@@ -6494,7 +6494,7 @@ return {
 		}
 	},
 	ma_alien_ship_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6518,7 +6518,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0002 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6542,7 +6542,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6566,7 +6566,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6590,7 +6590,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6614,7 +6614,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6638,7 +6638,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6662,7 +6662,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6686,7 +6686,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6710,7 +6710,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6734,7 +6734,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6758,7 +6758,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6782,7 +6782,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6806,7 +6806,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6830,7 +6830,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6854,7 +6854,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6878,7 +6878,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6902,7 +6902,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6926,7 +6926,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6950,7 +6950,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -6974,7 +6974,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -6998,7 +6998,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7022,7 +7022,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7046,7 +7046,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7070,7 +7070,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7094,7 +7094,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0026 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7118,7 +7118,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7142,7 +7142,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7166,7 +7166,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7190,7 +7190,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0030 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7214,7 +7214,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7238,7 +7238,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7262,7 +7262,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7286,7 +7286,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7310,7 +7310,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7334,7 +7334,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7358,7 +7358,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7382,7 +7382,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7406,7 +7406,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7430,7 +7430,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7454,7 +7454,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7478,7 +7478,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7502,7 +7502,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7526,7 +7526,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0044 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7550,7 +7550,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0045 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7574,7 +7574,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7598,7 +7598,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0047 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7622,7 +7622,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0048 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7646,7 +7646,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7670,7 +7670,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0050 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7694,7 +7694,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7718,7 +7718,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0052 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7742,7 +7742,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0053 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7766,7 +7766,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0054 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7790,7 +7790,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7814,7 +7814,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7838,7 +7838,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7862,7 +7862,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7886,7 +7886,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7910,7 +7910,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			61
@@ -7934,7 +7934,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -7958,7 +7958,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -7982,7 +7982,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8006,7 +8006,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8030,7 +8030,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8054,7 +8054,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8078,7 +8078,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8102,7 +8102,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8126,7 +8126,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8150,7 +8150,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0070 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8174,7 +8174,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0071 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8198,7 +8198,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0072 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8222,7 +8222,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0073 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8246,7 +8246,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0074 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8270,7 +8270,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0075 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8294,7 +8294,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0076 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8318,7 +8318,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0077 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8342,7 +8342,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0078 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8366,7 +8366,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0079 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8390,7 +8390,7 @@ return {
 		alias = {}
 	},
 	ma_alien_ship_0080 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			44,
 			61
@@ -8414,7 +8414,7 @@ return {
 		alias = {}
 	},
 	ma_bantha_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8440,7 +8440,7 @@ return {
 		}
 	},
 	ma_bantha_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8466,7 +8466,7 @@ return {
 		}
 	},
 	ma_bantha_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8494,7 +8494,7 @@ return {
 		}
 	},
 	ma_bantha_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8520,7 +8520,7 @@ return {
 		}
 	},
 	ma_bantha_0011 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			18
@@ -8546,7 +8546,7 @@ return {
 		}
 	},
 	ma_bantha_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8572,7 +8572,7 @@ return {
 		}
 	},
 	ma_bantha_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8598,7 +8598,7 @@ return {
 		}
 	},
 	ma_bantha_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8624,7 +8624,7 @@ return {
 		}
 	},
 	ma_bantha_0019 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			18
@@ -8650,7 +8650,7 @@ return {
 		}
 	},
 	ma_bantha_0021 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			18
@@ -8676,7 +8676,7 @@ return {
 		}
 	},
 	ma_bantha_0023 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			18
@@ -8702,7 +8702,7 @@ return {
 		}
 	},
 	ma_bantha_0025 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			18
@@ -8728,7 +8728,7 @@ return {
 		}
 	},
 	ma_bantha_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8754,7 +8754,7 @@ return {
 		}
 	},
 	ma_bantha_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8780,7 +8780,7 @@ return {
 		}
 	},
 	ma_bantha_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8806,7 +8806,7 @@ return {
 		}
 	},
 	ma_bantha_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8832,7 +8832,7 @@ return {
 		}
 	},
 	ma_bantha_0035 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			18
@@ -8858,7 +8858,7 @@ return {
 		}
 	},
 	ma_bantha_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8884,7 +8884,7 @@ return {
 		}
 	},
 	ma_bantha_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			18
@@ -8910,7 +8910,7 @@ return {
 		}
 	},
 	ma_bantha_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			18
@@ -8936,7 +8936,7 @@ return {
 		}
 	},
 	ma_bantha_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			18
@@ -8962,7 +8962,7 @@ return {
 		}
 	},
 	ma_bantha_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			18
@@ -8988,7 +8988,7 @@ return {
 		}
 	},
 	ma_bantha_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			18
@@ -9014,7 +9014,7 @@ return {
 		}
 	},
 	ma_bantha_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			18
@@ -9040,7 +9040,7 @@ return {
 		}
 	},
 	ma_bantha_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			18
@@ -9066,7 +9066,7 @@ return {
 		}
 	},
 	ma_bantha_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			18
@@ -9092,7 +9092,7 @@ return {
 		}
 	},
 	ma_bat_loop_0001 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			16,
 			12
@@ -9118,7 +9118,7 @@ return {
 		}
 	},
 	ma_bat_loop_0003 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			16,
 			12
@@ -9144,7 +9144,7 @@ return {
 		}
 	},
 	ma_bat_loop_0005 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			16,
 			12
@@ -9170,7 +9170,7 @@ return {
 		}
 	},
 	ma_bat_loop_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			16,
 			12
@@ -9196,7 +9196,7 @@ return {
 		}
 	},
 	ma_beach_1_0001 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			74,
 			82
@@ -9220,7 +9220,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9244,7 +9244,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0003 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			74,
 			82
@@ -9268,7 +9268,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9292,7 +9292,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9316,7 +9316,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9340,7 +9340,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9364,7 +9364,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9388,7 +9388,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9412,7 +9412,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9436,7 +9436,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9460,7 +9460,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9484,7 +9484,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9508,7 +9508,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9532,7 +9532,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9556,7 +9556,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9580,7 +9580,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9604,7 +9604,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9628,7 +9628,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9652,7 +9652,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9676,7 +9676,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9700,7 +9700,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9724,7 +9724,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9748,7 +9748,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9772,7 +9772,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9796,7 +9796,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0026 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			74,
 			82
@@ -9820,7 +9820,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9844,7 +9844,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9868,7 +9868,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9892,7 +9892,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0030 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9916,7 +9916,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0031 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			74,
 			82
@@ -9940,7 +9940,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9964,7 +9964,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -9988,7 +9988,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10012,7 +10012,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10036,7 +10036,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10060,7 +10060,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10084,7 +10084,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10108,7 +10108,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10132,7 +10132,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10156,7 +10156,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10180,7 +10180,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10204,7 +10204,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10228,7 +10228,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0044 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10252,7 +10252,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0045 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10276,7 +10276,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10300,7 +10300,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0047 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10324,7 +10324,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0048 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10348,7 +10348,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10372,7 +10372,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0050 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10396,7 +10396,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10420,7 +10420,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0052 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10444,7 +10444,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0053 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10468,7 +10468,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0054 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10492,7 +10492,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10516,7 +10516,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10540,7 +10540,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10564,7 +10564,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10588,7 +10588,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10612,7 +10612,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10636,7 +10636,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0061 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10660,7 +10660,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10684,7 +10684,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10708,7 +10708,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10732,7 +10732,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10756,7 +10756,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0066 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10780,7 +10780,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10804,7 +10804,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10828,7 +10828,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10852,7 +10852,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10876,7 +10876,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0071 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10900,7 +10900,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0072 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10924,7 +10924,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0073 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10948,7 +10948,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10972,7 +10972,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -10996,7 +10996,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0076 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11020,7 +11020,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0077 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11044,7 +11044,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11068,7 +11068,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11092,7 +11092,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0080 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11116,7 +11116,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0081 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11140,7 +11140,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0082 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11164,7 +11164,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0083 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11188,7 +11188,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0084 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11212,7 +11212,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0085 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11236,7 +11236,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0086 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11260,7 +11260,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0087 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11284,7 +11284,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0088 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11308,7 +11308,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0089 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11332,7 +11332,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0090 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11356,7 +11356,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0091 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11380,7 +11380,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0092 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11404,7 +11404,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0093 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11428,7 +11428,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0094 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11452,7 +11452,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0095 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11476,7 +11476,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0096 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11500,7 +11500,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0097 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11524,7 +11524,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0098 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11548,7 +11548,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0099 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11572,7 +11572,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0100 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11596,7 +11596,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0101 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11620,7 +11620,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0102 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11644,7 +11644,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0103 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11668,7 +11668,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0104 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11692,7 +11692,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0105 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11716,7 +11716,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0106 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11740,7 +11740,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0107 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11764,7 +11764,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0108 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11788,7 +11788,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0109 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11812,7 +11812,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0110 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11836,7 +11836,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0111 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11860,7 +11860,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0112 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			74,
 			82
@@ -11884,7 +11884,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0113 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11908,7 +11908,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0114 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11932,7 +11932,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0115 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11956,7 +11956,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0116 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -11980,7 +11980,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0117 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12004,7 +12004,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0118 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12028,7 +12028,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0119 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12052,7 +12052,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0120 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12076,7 +12076,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0121 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12100,7 +12100,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0122 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12124,7 +12124,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0123 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12148,7 +12148,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0124 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12172,7 +12172,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0125 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12196,7 +12196,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0126 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			74,
 			82
@@ -12220,7 +12220,7 @@ return {
 		alias = {}
 	},
 	ma_beach_1_0127 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			74,
 			82
@@ -12253,7 +12253,7 @@ return {
 		}
 	},
 	ma_beach_2_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12283,7 +12283,7 @@ return {
 		}
 	},
 	ma_beach_2_0003 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12307,7 +12307,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12331,7 +12331,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0005 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12355,7 +12355,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0006 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12379,7 +12379,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0007 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12403,7 +12403,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0008 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12427,7 +12427,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -12451,7 +12451,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0010 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12475,7 +12475,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0011 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12499,7 +12499,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0012 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12523,7 +12523,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0013 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12547,7 +12547,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0014 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12571,7 +12571,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0015 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12595,7 +12595,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0016 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12619,7 +12619,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0017 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12643,7 +12643,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0018 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12667,7 +12667,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0019 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12691,7 +12691,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0020 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12715,7 +12715,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0021 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12739,7 +12739,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0022 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12763,7 +12763,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0023 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12787,7 +12787,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0024 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12811,7 +12811,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0025 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12835,7 +12835,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0026 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -12859,7 +12859,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0027 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -12883,7 +12883,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0028 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -12907,7 +12907,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0029 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -12931,7 +12931,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0030 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -12955,7 +12955,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0031 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -12979,7 +12979,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0032 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -13003,7 +13003,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0033 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -13027,7 +13027,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0034 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -13051,7 +13051,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0035 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -13075,7 +13075,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0036 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -13099,7 +13099,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0037 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -13123,7 +13123,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0038 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -13147,7 +13147,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0039 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13171,7 +13171,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13195,7 +13195,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0041 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13219,7 +13219,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0042 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -13243,7 +13243,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0043 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13267,7 +13267,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0044 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13291,7 +13291,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0045 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -13315,7 +13315,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0046 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -13339,7 +13339,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0047 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -13363,7 +13363,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0048 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -13387,7 +13387,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0049 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -13411,7 +13411,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -13435,7 +13435,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13459,7 +13459,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13483,7 +13483,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0053 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13507,7 +13507,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0054 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -13531,7 +13531,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13555,7 +13555,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13579,7 +13579,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13603,7 +13603,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13627,7 +13627,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13651,7 +13651,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13675,7 +13675,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0061 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -13699,7 +13699,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13723,7 +13723,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13747,7 +13747,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13771,7 +13771,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13795,7 +13795,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0066 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13819,7 +13819,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0067 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13843,7 +13843,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -13867,7 +13867,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0069 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13891,7 +13891,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0070 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13915,7 +13915,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0071 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13939,7 +13939,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0072 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13963,7 +13963,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0073 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -13987,7 +13987,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0074 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14011,7 +14011,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0075 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14035,7 +14035,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0076 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14059,7 +14059,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0077 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14083,7 +14083,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0078 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14107,7 +14107,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0079 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14131,7 +14131,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0080 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14155,7 +14155,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0081 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14179,7 +14179,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0082 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14203,7 +14203,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0083 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14227,7 +14227,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0084 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14251,7 +14251,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0085 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14275,7 +14275,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0086 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -14299,7 +14299,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0087 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -14323,7 +14323,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0088 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -14347,7 +14347,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0089 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -14371,7 +14371,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0090 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			131,
 			51
@@ -14395,7 +14395,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0091 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14419,7 +14419,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0092 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14443,7 +14443,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0093 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14467,7 +14467,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0094 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14491,7 +14491,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0095 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14515,7 +14515,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0096 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			131,
 			51
@@ -14539,7 +14539,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0097 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14563,7 +14563,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0098 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14587,7 +14587,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0099 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14611,7 +14611,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0100 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14635,7 +14635,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0101 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14659,7 +14659,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0102 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14683,7 +14683,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0103 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14707,7 +14707,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0104 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14731,7 +14731,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0105 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			131,
 			51
@@ -14755,7 +14755,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0106 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14779,7 +14779,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0107 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14803,7 +14803,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0108 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14827,7 +14827,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0109 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14851,7 +14851,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0110 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14875,7 +14875,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0111 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -14899,7 +14899,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0112 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			131,
 			51
@@ -14923,7 +14923,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0113 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -14950,7 +14950,7 @@ return {
 		}
 	},
 	ma_beach_2_0116 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -14974,7 +14974,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0117 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -14998,7 +14998,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0118 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15022,7 +15022,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0119 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15046,7 +15046,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0120 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15070,7 +15070,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0121 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15094,7 +15094,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0122 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15118,7 +15118,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0123 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15142,7 +15142,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0124 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15166,7 +15166,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0125 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15190,7 +15190,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0126 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			131,
 			51
@@ -15214,7 +15214,7 @@ return {
 		alias = {}
 	},
 	ma_beach_2_0127 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			131,
 			51
@@ -15238,7 +15238,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			85,
 			69
@@ -15268,7 +15268,7 @@ return {
 		}
 	},
 	ma_beach_3_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			85,
 			69
@@ -15292,7 +15292,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0008 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			85,
 			69
@@ -15316,7 +15316,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15340,7 +15340,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15364,7 +15364,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15388,7 +15388,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15412,7 +15412,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15436,7 +15436,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15460,7 +15460,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15484,7 +15484,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0016 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			85,
 			69
@@ -15508,7 +15508,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15532,7 +15532,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15556,7 +15556,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15580,7 +15580,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15604,7 +15604,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15628,7 +15628,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15652,7 +15652,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15676,7 +15676,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15700,7 +15700,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15724,7 +15724,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15748,7 +15748,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15772,7 +15772,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15796,7 +15796,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15820,7 +15820,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15844,7 +15844,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15868,7 +15868,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15892,7 +15892,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15916,7 +15916,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15940,7 +15940,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15964,7 +15964,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -15988,7 +15988,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16012,7 +16012,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16036,7 +16036,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16060,7 +16060,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16084,7 +16084,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16108,7 +16108,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			85,
 			69
@@ -16132,7 +16132,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16156,7 +16156,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16180,7 +16180,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16204,7 +16204,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16228,7 +16228,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16252,7 +16252,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16276,7 +16276,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			85,
 			69
@@ -16300,7 +16300,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16324,7 +16324,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16348,7 +16348,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0052 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16372,7 +16372,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16396,7 +16396,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0054 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16420,7 +16420,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16444,7 +16444,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16468,7 +16468,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16492,7 +16492,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16516,7 +16516,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16540,7 +16540,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16564,7 +16564,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16588,7 +16588,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16612,7 +16612,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16636,7 +16636,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16660,7 +16660,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16684,7 +16684,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16708,7 +16708,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16732,7 +16732,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16756,7 +16756,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16780,7 +16780,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0070 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16804,7 +16804,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0071 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			85,
 			69
@@ -16828,7 +16828,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0072 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16852,7 +16852,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0073 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16876,7 +16876,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0074 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16900,7 +16900,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0075 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16924,7 +16924,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0076 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -16948,7 +16948,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0077 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			85,
 			69
@@ -16972,7 +16972,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			85,
 			69
@@ -16996,7 +16996,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			85,
 			69
@@ -17020,7 +17020,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0080 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			85,
 			69
@@ -17044,7 +17044,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0081 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17068,7 +17068,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0082 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17092,7 +17092,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0083 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17116,7 +17116,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0084 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17140,7 +17140,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0085 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17164,7 +17164,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0086 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17188,7 +17188,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0087 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17212,7 +17212,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0088 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17236,7 +17236,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0089 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17260,7 +17260,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0090 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			85,
 			69
@@ -17284,7 +17284,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0091 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17308,7 +17308,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0092 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17332,7 +17332,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0093 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17356,7 +17356,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0094 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17380,7 +17380,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0095 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17404,7 +17404,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0096 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17428,7 +17428,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0097 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17452,7 +17452,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0098 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17476,7 +17476,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0099 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17500,7 +17500,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0100 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17524,7 +17524,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0101 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17548,7 +17548,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0102 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17572,7 +17572,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0103 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17596,7 +17596,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0104 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17620,7 +17620,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0105 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17644,7 +17644,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0106 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17668,7 +17668,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0107 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17692,7 +17692,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0108 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17716,7 +17716,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0109 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17740,7 +17740,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0110 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17764,7 +17764,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0111 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17788,7 +17788,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0112 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17812,7 +17812,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0113 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17836,7 +17836,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0114 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17860,7 +17860,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0115 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17884,7 +17884,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0116 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17908,7 +17908,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0117 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			85,
 			69
@@ -17934,7 +17934,7 @@ return {
 		}
 	},
 	ma_beach_3_0119 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17958,7 +17958,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0120 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -17982,7 +17982,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0121 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18006,7 +18006,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0122 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18030,7 +18030,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0123 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18054,7 +18054,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0124 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18078,7 +18078,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0125 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18102,7 +18102,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0126 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18126,7 +18126,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0127 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18150,7 +18150,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0128 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18174,7 +18174,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0129 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18198,7 +18198,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0130 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			85,
 			69
@@ -18222,7 +18222,7 @@ return {
 		alias = {}
 	},
 	ma_beach_3_0131 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			85,
 			69
@@ -18246,7 +18246,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			92,
 			73
@@ -18277,7 +18277,7 @@ return {
 		}
 	},
 	ma_beach_4_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			92,
 			73
@@ -18301,7 +18301,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0008 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			92,
 			73
@@ -18325,7 +18325,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18349,7 +18349,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18373,7 +18373,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18397,7 +18397,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18421,7 +18421,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18445,7 +18445,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18469,7 +18469,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -18493,7 +18493,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -18517,7 +18517,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -18541,7 +18541,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -18565,7 +18565,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -18589,7 +18589,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -18613,7 +18613,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18637,7 +18637,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -18661,7 +18661,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18685,7 +18685,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18709,7 +18709,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18733,7 +18733,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18757,7 +18757,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18781,7 +18781,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18805,7 +18805,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18829,7 +18829,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18853,7 +18853,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18877,7 +18877,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18901,7 +18901,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18925,7 +18925,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18949,7 +18949,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18973,7 +18973,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -18997,7 +18997,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19021,7 +19021,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19045,7 +19045,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19069,7 +19069,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19093,7 +19093,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -19117,7 +19117,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0042 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19141,7 +19141,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19165,7 +19165,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19189,7 +19189,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19213,7 +19213,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19237,7 +19237,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19261,7 +19261,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19285,7 +19285,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19309,7 +19309,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19333,7 +19333,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19357,7 +19357,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0052 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19381,7 +19381,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19405,7 +19405,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0054 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19429,7 +19429,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19453,7 +19453,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19477,7 +19477,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19501,7 +19501,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19525,7 +19525,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19549,7 +19549,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19573,7 +19573,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19597,7 +19597,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19621,7 +19621,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19645,7 +19645,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19669,7 +19669,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19693,7 +19693,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19717,7 +19717,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19741,7 +19741,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19765,7 +19765,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19789,7 +19789,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0070 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19813,7 +19813,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0071 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19837,7 +19837,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0072 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -19861,7 +19861,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0073 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			92,
 			73
@@ -19885,7 +19885,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -19909,7 +19909,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -19933,7 +19933,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0076 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -19957,7 +19957,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0077 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			92,
 			73
@@ -19981,7 +19981,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20005,7 +20005,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20029,7 +20029,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0080 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20053,7 +20053,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0081 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20077,7 +20077,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0082 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20101,7 +20101,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0083 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20125,7 +20125,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0084 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20149,7 +20149,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0085 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20173,7 +20173,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0086 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20197,7 +20197,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0087 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20221,7 +20221,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0088 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20245,7 +20245,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0089 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20269,7 +20269,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0090 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20293,7 +20293,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0091 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20317,7 +20317,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0092 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20341,7 +20341,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0093 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20365,7 +20365,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0094 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20389,7 +20389,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0095 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20413,7 +20413,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0096 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20437,7 +20437,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0097 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20461,7 +20461,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0098 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20485,7 +20485,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0099 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20509,7 +20509,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0100 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20533,7 +20533,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0101 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20557,7 +20557,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0102 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20581,7 +20581,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0103 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20605,7 +20605,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0104 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20629,7 +20629,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0105 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20653,7 +20653,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0106 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20677,7 +20677,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0107 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20701,7 +20701,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0108 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20725,7 +20725,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0109 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			92,
 			73
@@ -20749,7 +20749,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0110 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20773,7 +20773,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0111 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20797,7 +20797,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0112 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20821,7 +20821,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0113 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20845,7 +20845,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0114 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20869,7 +20869,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0115 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20893,7 +20893,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0116 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20917,7 +20917,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0117 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20944,7 +20944,7 @@ return {
 		}
 	},
 	ma_beach_4_0120 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20968,7 +20968,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0121 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -20992,7 +20992,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0122 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21016,7 +21016,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0123 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21040,7 +21040,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0124 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21064,7 +21064,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0125 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21088,7 +21088,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0126 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21112,7 +21112,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0127 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21136,7 +21136,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0128 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21160,7 +21160,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0129 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21184,7 +21184,7 @@ return {
 		alias = {}
 	},
 	ma_beach_4_0130 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			92,
 			73
@@ -21208,7 +21208,7 @@ return {
 		alias = {}
 	},
 	ma_big_bird_loop_0001 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			25,
 			38
@@ -21235,7 +21235,7 @@ return {
 		}
 	},
 	ma_big_bird_loop_0004 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			25,
 			38
@@ -21262,7 +21262,7 @@ return {
 		}
 	},
 	ma_big_bird_loop_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			25,
 			38
@@ -21289,7 +21289,7 @@ return {
 		}
 	},
 	ma_big_bird_loop_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			25,
 			38
@@ -21316,7 +21316,7 @@ return {
 		}
 	},
 	ma_big_bird_loop_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			25,
 			38
@@ -21343,7 +21343,7 @@ return {
 		}
 	},
 	ma_big_bird_loop_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			25,
 			38
@@ -21370,7 +21370,7 @@ return {
 		}
 	},
 	ma_big_bird_loop_0019 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			25,
 			38
@@ -21397,7 +21397,7 @@ return {
 		}
 	},
 	ma_big_bird_loop_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			25,
 			38
@@ -21424,7 +21424,7 @@ return {
 		}
 	},
 	ma_bottle_cover_0001 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			529,
 			681
@@ -21448,7 +21448,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0001 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			14,
 			14
@@ -21472,7 +21472,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			14,
 			14
@@ -21496,7 +21496,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0003 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21520,7 +21520,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0004 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21544,7 +21544,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0005 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21568,7 +21568,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0006 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21592,7 +21592,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0007 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21616,7 +21616,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0008 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21640,7 +21640,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0009 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21664,7 +21664,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0010 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21688,7 +21688,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0011 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21712,7 +21712,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			14,
 			14
@@ -21736,7 +21736,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			14,
 			14
@@ -21760,7 +21760,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			14,
 			14
@@ -21784,7 +21784,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0015 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21808,7 +21808,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0016 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21832,7 +21832,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0017 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			14,
 			14
@@ -21856,7 +21856,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0018 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			14,
 			14
@@ -21880,7 +21880,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0019 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21904,7 +21904,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0020 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			14,
 			14
@@ -21928,7 +21928,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0021 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -21952,7 +21952,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0022 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			14,
 			14
@@ -21976,7 +21976,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0023 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			14,
 			14
@@ -22000,7 +22000,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0024 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			14,
 			14
@@ -22024,7 +22024,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0025 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			14,
 			14
@@ -22048,7 +22048,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0026 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			14,
 			14
@@ -22072,7 +22072,7 @@ return {
 		alias = {}
 	},
 	ma_bottle_loop_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			14,
 			14
@@ -22096,7 +22096,7 @@ return {
 		alias = {}
 	},
 	ma_castle_flame_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			17,
 			19
@@ -22122,7 +22122,7 @@ return {
 		}
 	},
 	ma_castle_flame_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			17,
 			19
@@ -22148,7 +22148,7 @@ return {
 		}
 	},
 	ma_castle_flame_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			17,
 			19
@@ -22174,7 +22174,7 @@ return {
 		}
 	},
 	ma_castle_flame_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			17,
 			19
@@ -22200,7 +22200,7 @@ return {
 		}
 	},
 	ma_castle_flame_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			17,
 			19
@@ -22226,7 +22226,7 @@ return {
 		}
 	},
 	ma_castle_flame_0011 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			17,
 			19
@@ -22252,7 +22252,7 @@ return {
 		}
 	},
 	ma_castle_window_1_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			12,
 			14
@@ -22276,7 +22276,7 @@ return {
 		alias = {}
 	},
 	ma_castle_window_2_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			13,
 			13
@@ -22300,7 +22300,7 @@ return {
 		alias = {}
 	},
 	ma_castle_window_3_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			12,
 			14
@@ -22324,7 +22324,7 @@ return {
 		alias = {}
 	},
 	ma_castle_window_4_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			9,
 			12
@@ -22348,7 +22348,7 @@ return {
 		alias = {}
 	},
 	ma_castle_window_5_0001 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			9,
 			10
@@ -22372,7 +22372,7 @@ return {
 		alias = {}
 	},
 	ma_cloud_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			414,
 			183
@@ -22396,7 +22396,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			122,
 			115
@@ -22422,7 +22422,7 @@ return {
 		}
 	},
 	ma_diamond_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			122,
 			115
@@ -22446,7 +22446,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			122,
 			115
@@ -22470,7 +22470,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0004 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22494,7 +22494,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0005 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22518,7 +22518,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0006 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22542,7 +22542,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0007 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			122,
 			115
@@ -22566,7 +22566,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0008 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22590,7 +22590,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0009 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22614,7 +22614,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0010 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22638,7 +22638,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0011 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22662,7 +22662,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0012 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22686,7 +22686,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0013 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22710,7 +22710,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0014 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22734,7 +22734,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0015 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22758,7 +22758,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0016 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22782,7 +22782,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0017 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22806,7 +22806,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0018 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22830,7 +22830,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0019 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22854,7 +22854,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0020 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22878,7 +22878,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0021 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22902,7 +22902,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0022 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22926,7 +22926,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0023 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22950,7 +22950,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0024 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22974,7 +22974,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0025 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -22998,7 +22998,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0026 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23022,7 +23022,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0027 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23046,7 +23046,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0028 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23070,7 +23070,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0029 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23094,7 +23094,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0030 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23118,7 +23118,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0031 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23142,7 +23142,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0032 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23166,7 +23166,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0033 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23190,7 +23190,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0034 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23214,7 +23214,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0035 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23238,7 +23238,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0036 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23262,7 +23262,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0037 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23286,7 +23286,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0038 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23310,7 +23310,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0039 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23334,7 +23334,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0040 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23358,7 +23358,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0041 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23382,7 +23382,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0042 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23406,7 +23406,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0043 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23430,7 +23430,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0044 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23454,7 +23454,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0045 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23478,7 +23478,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0046 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23502,7 +23502,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0047 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23526,7 +23526,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0048 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23550,7 +23550,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0049 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23574,7 +23574,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23598,7 +23598,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0051 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23622,7 +23622,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0052 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23646,7 +23646,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0053 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23670,7 +23670,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0054 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23694,7 +23694,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0055 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23718,7 +23718,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0056 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23742,7 +23742,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0057 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23766,7 +23766,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0058 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23790,7 +23790,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0059 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23814,7 +23814,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0060 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23838,7 +23838,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0061 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23862,7 +23862,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0062 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23886,7 +23886,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0063 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23910,7 +23910,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0064 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23934,7 +23934,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0065 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23958,7 +23958,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0066 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -23982,7 +23982,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0067 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			122,
 			115
@@ -24006,7 +24006,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			122,
 			115
@@ -24030,7 +24030,7 @@ return {
 		alias = {}
 	},
 	ma_diamond_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			122,
 			115
@@ -24054,7 +24054,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0001 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24080,7 +24080,7 @@ return {
 		}
 	},
 	ma_falls_left_0003 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24104,7 +24104,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0004 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24128,7 +24128,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0005 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24154,7 +24154,7 @@ return {
 		}
 	},
 	ma_falls_left_0007 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24180,7 +24180,7 @@ return {
 		}
 	},
 	ma_falls_left_0009 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24204,7 +24204,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0010 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24228,7 +24228,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0011 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			246,
 			323
@@ -24254,7 +24254,7 @@ return {
 		}
 	},
 	ma_falls_left_0013 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24280,7 +24280,7 @@ return {
 		}
 	},
 	ma_falls_left_0015 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24304,7 +24304,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0016 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24330,7 +24330,7 @@ return {
 		}
 	},
 	ma_falls_left_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24356,7 +24356,7 @@ return {
 		}
 	},
 	ma_falls_left_0019 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24382,7 +24382,7 @@ return {
 		}
 	},
 	ma_falls_left_0021 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24406,7 +24406,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0022 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24430,7 +24430,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0023 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24456,7 +24456,7 @@ return {
 		}
 	},
 	ma_falls_left_0025 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24482,7 +24482,7 @@ return {
 		}
 	},
 	ma_falls_left_0027 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24506,7 +24506,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0028 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24530,7 +24530,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0029 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24556,7 +24556,7 @@ return {
 		}
 	},
 	ma_falls_left_0031 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24582,7 +24582,7 @@ return {
 		}
 	},
 	ma_falls_left_0033 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24606,7 +24606,7 @@ return {
 		alias = {}
 	},
 	ma_falls_left_0034 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			246,
 			323
@@ -24630,7 +24630,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0001 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24656,7 +24656,7 @@ return {
 		}
 	},
 	ma_gate_0003 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24682,7 +24682,7 @@ return {
 		}
 	},
 	ma_gate_0005 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24708,7 +24708,7 @@ return {
 		}
 	},
 	ma_gate_0007 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24734,7 +24734,7 @@ return {
 		}
 	},
 	ma_gate_0009 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24760,7 +24760,7 @@ return {
 		}
 	},
 	ma_gate_0011 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24786,7 +24786,7 @@ return {
 		}
 	},
 	ma_gate_0013 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24812,7 +24812,7 @@ return {
 		}
 	},
 	ma_gate_0015 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24838,7 +24838,7 @@ return {
 		}
 	},
 	ma_gate_0017 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24864,7 +24864,7 @@ return {
 		}
 	},
 	ma_gate_0019 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24905,7 +24905,7 @@ return {
 		}
 	},
 	ma_gate_0021 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24931,7 +24931,7 @@ return {
 		}
 	},
 	ma_gate_0038 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24957,7 +24957,7 @@ return {
 		}
 	},
 	ma_gate_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -24983,7 +24983,7 @@ return {
 		}
 	},
 	ma_gate_0042 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25009,7 +25009,7 @@ return {
 		}
 	},
 	ma_gate_0044 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25035,7 +25035,7 @@ return {
 		}
 	},
 	ma_gate_0046 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25063,7 +25063,7 @@ return {
 		}
 	},
 	ma_gate_0048 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25089,7 +25089,7 @@ return {
 		}
 	},
 	ma_gate_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25115,7 +25115,7 @@ return {
 		}
 	},
 	ma_gate_0054 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25146,7 +25146,7 @@ return {
 		}
 	},
 	ma_gate_0061 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25172,7 +25172,7 @@ return {
 		}
 	},
 	ma_gate_0063 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25198,7 +25198,7 @@ return {
 		}
 	},
 	ma_gate_0065 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25224,7 +25224,7 @@ return {
 		}
 	},
 	ma_gate_0067 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25250,7 +25250,7 @@ return {
 		}
 	},
 	ma_gate_0069 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25276,7 +25276,7 @@ return {
 		}
 	},
 	ma_gate_0071 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25302,7 +25302,7 @@ return {
 		}
 	},
 	ma_gate_0073 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25328,7 +25328,7 @@ return {
 		}
 	},
 	ma_gate_0075 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25352,7 +25352,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0076 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25376,7 +25376,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0077 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25400,7 +25400,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0078 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25424,7 +25424,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0079 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25448,7 +25448,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0080 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25472,7 +25472,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0081 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25496,7 +25496,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0082 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25520,7 +25520,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0083 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25544,7 +25544,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0084 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25568,7 +25568,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0085 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25592,7 +25592,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0086 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25616,7 +25616,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0087 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25640,7 +25640,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0088 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			125,
 			111
@@ -25664,7 +25664,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0089 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25688,7 +25688,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0090 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25712,7 +25712,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0091 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25736,7 +25736,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0092 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25760,7 +25760,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0093 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25784,7 +25784,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0094 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25808,7 +25808,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0095 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25832,7 +25832,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0096 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25856,7 +25856,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0097 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25880,7 +25880,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0098 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25904,7 +25904,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0099 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25928,7 +25928,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0100 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25952,7 +25952,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0101 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -25976,7 +25976,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0102 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26000,7 +26000,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0103 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26024,7 +26024,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0104 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26048,7 +26048,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0105 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26072,7 +26072,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0106 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26096,7 +26096,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0107 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26120,7 +26120,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0108 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26144,7 +26144,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0109 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26168,7 +26168,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0110 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26192,7 +26192,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0111 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26216,7 +26216,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0112 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26240,7 +26240,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0113 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26269,7 +26269,7 @@ return {
 		}
 	},
 	ma_gate_0118 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26293,7 +26293,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0119 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26317,7 +26317,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0120 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26341,7 +26341,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0121 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26365,7 +26365,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0122 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26389,7 +26389,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0123 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26413,7 +26413,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0124 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26437,7 +26437,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0125 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26461,7 +26461,7 @@ return {
 		alias = {}
 	},
 	ma_gate_0126 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			125,
 			111
@@ -26488,7 +26488,7 @@ return {
 		}
 	},
 	ma_goat_0001 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			22,
 			16
@@ -26514,7 +26514,7 @@ return {
 		}
 	},
 	ma_goat_0002 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26540,7 +26540,7 @@ return {
 		}
 	},
 	ma_goat_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26568,7 +26568,7 @@ return {
 		}
 	},
 	ma_goat_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26594,7 +26594,7 @@ return {
 		}
 	},
 	ma_goat_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26620,7 +26620,7 @@ return {
 		}
 	},
 	ma_goat_0010 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			22,
 			16
@@ -26648,7 +26648,7 @@ return {
 		}
 	},
 	ma_goat_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26676,7 +26676,7 @@ return {
 		}
 	},
 	ma_goat_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			22,
 			16
@@ -26704,7 +26704,7 @@ return {
 		}
 	},
 	ma_goat_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26732,7 +26732,7 @@ return {
 		}
 	},
 	ma_goat_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26758,7 +26758,7 @@ return {
 		}
 	},
 	ma_goat_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			22,
 			16
@@ -26784,7 +26784,7 @@ return {
 		}
 	},
 	ma_jungle_bird_1_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			31,
 			23
@@ -26808,7 +26808,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_1_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			31,
 			23
@@ -26834,7 +26834,7 @@ return {
 		}
 	},
 	ma_jungle_bird_1_0004 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			31,
 			23
@@ -26858,7 +26858,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_1_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			31,
 			23
@@ -26882,7 +26882,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_1_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			31,
 			23
@@ -26906,7 +26906,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_1_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			31,
 			23
@@ -26932,7 +26932,7 @@ return {
 		}
 	},
 	ma_jungle_bird_2_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			31,
 			23
@@ -26956,7 +26956,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_2_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			31,
 			23
@@ -26982,7 +26982,7 @@ return {
 		}
 	},
 	ma_jungle_bird_2_0004 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			31,
 			23
@@ -27006,7 +27006,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_2_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			31,
 			23
@@ -27030,7 +27030,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_2_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			31,
 			23
@@ -27054,7 +27054,7 @@ return {
 		alias = {}
 	},
 	ma_jungle_bird_2_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			31,
 			23
@@ -27080,7 +27080,7 @@ return {
 		}
 	},
 	ma_lava_1_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27107,7 +27107,7 @@ return {
 		}
 	},
 	ma_lava_1_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27135,7 +27135,7 @@ return {
 		}
 	},
 	ma_lava_1_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27163,7 +27163,7 @@ return {
 		}
 	},
 	ma_lava_1_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27191,7 +27191,7 @@ return {
 		}
 	},
 	ma_lava_1_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27219,7 +27219,7 @@ return {
 		}
 	},
 	ma_lava_1_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27247,7 +27247,7 @@ return {
 		}
 	},
 	ma_lava_1_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27275,7 +27275,7 @@ return {
 		}
 	},
 	ma_lava_1_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27303,7 +27303,7 @@ return {
 		}
 	},
 	ma_lava_1_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27331,7 +27331,7 @@ return {
 		}
 	},
 	ma_lava_1_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27359,7 +27359,7 @@ return {
 		}
 	},
 	ma_lava_1_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27387,7 +27387,7 @@ return {
 		}
 	},
 	ma_lava_1_0044 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			45,
 			59
@@ -27413,7 +27413,7 @@ return {
 		}
 	},
 	ma_lava_1_glow_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27439,7 +27439,7 @@ return {
 		}
 	},
 	ma_lava_1_glow_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27465,7 +27465,7 @@ return {
 		}
 	},
 	ma_lava_1_glow_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27489,7 +27489,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27513,7 +27513,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27537,7 +27537,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27561,7 +27561,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27585,7 +27585,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27609,7 +27609,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27633,7 +27633,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27657,7 +27657,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27681,7 +27681,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27705,7 +27705,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27729,7 +27729,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27755,7 +27755,7 @@ return {
 		}
 	},
 	ma_lava_1_glow_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27779,7 +27779,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27803,7 +27803,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27827,7 +27827,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27851,7 +27851,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27875,7 +27875,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0020 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			67,
 			71
@@ -27899,7 +27899,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27923,7 +27923,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27947,7 +27947,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27971,7 +27971,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -27995,7 +27995,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28019,7 +28019,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0026 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28043,7 +28043,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28067,7 +28067,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28091,7 +28091,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28115,7 +28115,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0030 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28139,7 +28139,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28165,7 +28165,7 @@ return {
 		}
 	},
 	ma_lava_1_glow_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28189,7 +28189,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28213,7 +28213,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28237,7 +28237,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28261,7 +28261,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28285,7 +28285,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28309,7 +28309,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28333,7 +28333,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28357,7 +28357,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28381,7 +28381,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28405,7 +28405,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28429,7 +28429,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28453,7 +28453,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0044 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28477,7 +28477,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0045 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28501,7 +28501,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28525,7 +28525,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0047 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28549,7 +28549,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0048 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			67,
 			71
@@ -28573,7 +28573,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0049 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			67,
 			71
@@ -28597,7 +28597,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0050 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			67,
 			71
@@ -28621,7 +28621,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28645,7 +28645,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0052 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			67,
 			71
@@ -28669,7 +28669,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0053 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			67,
 			71
@@ -28693,7 +28693,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0054 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28717,7 +28717,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28741,7 +28741,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28765,7 +28765,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28789,7 +28789,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28813,7 +28813,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28837,7 +28837,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28861,7 +28861,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0061 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28885,7 +28885,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28909,7 +28909,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28933,7 +28933,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28957,7 +28957,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -28981,7 +28981,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0066 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29005,7 +29005,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29029,7 +29029,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29053,7 +29053,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29077,7 +29077,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0071 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29101,7 +29101,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0072 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29125,7 +29125,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0073 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29149,7 +29149,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29173,7 +29173,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29197,7 +29197,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0076 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29221,7 +29221,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0077 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29245,7 +29245,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29269,7 +29269,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29293,7 +29293,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0080 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29317,7 +29317,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0081 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29341,7 +29341,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0082 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29365,7 +29365,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0083 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29389,7 +29389,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0085 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29413,7 +29413,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0086 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29437,7 +29437,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0087 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29461,7 +29461,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0088 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29485,7 +29485,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0089 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29509,7 +29509,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0090 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29533,7 +29533,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0091 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29557,7 +29557,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0092 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29581,7 +29581,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0093 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29605,7 +29605,7 @@ return {
 		alias = {}
 	},
 	ma_lava_1_glow_0094 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			67,
 			71
@@ -29629,7 +29629,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_0001 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			30,
 			56
@@ -29656,7 +29656,7 @@ return {
 		}
 	},
 	ma_lava_2_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			56
@@ -29684,7 +29684,7 @@ return {
 		}
 	},
 	ma_lava_2_0008 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			30,
 			56
@@ -29712,7 +29712,7 @@ return {
 		}
 	},
 	ma_lava_2_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29740,7 +29740,7 @@ return {
 		}
 	},
 	ma_lava_2_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29768,7 +29768,7 @@ return {
 		}
 	},
 	ma_lava_2_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29796,7 +29796,7 @@ return {
 		}
 	},
 	ma_lava_2_0024 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			30,
 			56
@@ -29824,7 +29824,7 @@ return {
 		}
 	},
 	ma_lava_2_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29852,7 +29852,7 @@ return {
 		}
 	},
 	ma_lava_2_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29880,7 +29880,7 @@ return {
 		}
 	},
 	ma_lava_2_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29908,7 +29908,7 @@ return {
 		}
 	},
 	ma_lava_2_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29936,7 +29936,7 @@ return {
 		}
 	},
 	ma_lava_2_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			56
@@ -29963,7 +29963,7 @@ return {
 		}
 	},
 	ma_lava_2_glow_0001 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			109,
 			89
@@ -29989,7 +29989,7 @@ return {
 		}
 	},
 	ma_lava_2_glow_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			109,
 			89
@@ -30013,7 +30013,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			109,
 			89
@@ -30037,7 +30037,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0004 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30061,7 +30061,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0005 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30085,7 +30085,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0006 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30109,7 +30109,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0007 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			109,
 			89
@@ -30133,7 +30133,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0008 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30157,7 +30157,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0009 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30181,7 +30181,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0010 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30205,7 +30205,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0011 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30231,7 +30231,7 @@ return {
 		}
 	},
 	ma_lava_2_glow_0012 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30255,7 +30255,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0013 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30279,7 +30279,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0014 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30303,7 +30303,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0015 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30327,7 +30327,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0016 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30351,7 +30351,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0017 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30375,7 +30375,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0018 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30399,7 +30399,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0019 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30423,7 +30423,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0020 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			109,
 			89
@@ -30447,7 +30447,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0021 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			109,
 			89
@@ -30473,7 +30473,7 @@ return {
 		}
 	},
 	ma_lava_2_glow_0022 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30497,7 +30497,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0023 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30521,7 +30521,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0024 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30545,7 +30545,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0025 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30569,7 +30569,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0026 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30593,7 +30593,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0027 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30617,7 +30617,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0028 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30641,7 +30641,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0029 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30665,7 +30665,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0030 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30689,7 +30689,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0031 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30713,7 +30713,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0032 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30737,7 +30737,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0033 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30761,7 +30761,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0034 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30785,7 +30785,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0035 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30809,7 +30809,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0036 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30833,7 +30833,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0037 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30857,7 +30857,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0038 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30881,7 +30881,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0039 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30905,7 +30905,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0040 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30929,7 +30929,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0041 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30955,7 +30955,7 @@ return {
 		}
 	},
 	ma_lava_2_glow_0042 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -30979,7 +30979,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0043 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31003,7 +31003,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0044 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31027,7 +31027,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0045 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31051,7 +31051,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0046 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31075,7 +31075,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0047 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31099,7 +31099,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0048 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31123,7 +31123,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0049 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			109,
 			89
@@ -31147,7 +31147,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31171,7 +31171,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0051 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31195,7 +31195,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0052 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31219,7 +31219,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0053 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31243,7 +31243,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0054 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31267,7 +31267,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0055 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31291,7 +31291,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0056 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31315,7 +31315,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0057 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31339,7 +31339,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0058 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31363,7 +31363,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0059 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31387,7 +31387,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0061 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31411,7 +31411,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0062 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31435,7 +31435,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0063 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31459,7 +31459,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0064 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31483,7 +31483,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0065 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31507,7 +31507,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0066 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31531,7 +31531,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0067 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31555,7 +31555,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0068 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31579,7 +31579,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0069 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31603,7 +31603,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0070 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31627,7 +31627,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0071 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31651,7 +31651,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0072 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31675,7 +31675,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0073 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31699,7 +31699,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0074 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31723,7 +31723,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0075 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31747,7 +31747,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0076 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31771,7 +31771,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0077 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31795,7 +31795,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0079 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31819,7 +31819,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0080 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31843,7 +31843,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0081 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31867,7 +31867,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0082 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31891,7 +31891,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0083 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31915,7 +31915,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0084 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31939,7 +31939,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0085 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31963,7 +31963,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0086 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -31987,7 +31987,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0088 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -32011,7 +32011,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0089 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -32035,7 +32035,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0090 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -32059,7 +32059,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0091 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -32083,7 +32083,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0092 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -32107,7 +32107,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0093 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			109,
 			89
@@ -32131,7 +32131,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0094 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			109,
 			89
@@ -32155,7 +32155,7 @@ return {
 		alias = {}
 	},
 	ma_lava_2_glow_0095 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			109,
 			89
@@ -32179,7 +32179,7 @@ return {
 		alias = {}
 	},
 	ma_lava_smoke_0001 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32208,7 +32208,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0006 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32237,7 +32237,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0011 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32266,7 +32266,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0016 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32295,7 +32295,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0021 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32324,7 +32324,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0026 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32353,7 +32353,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0031 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32382,7 +32382,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0036 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32411,7 +32411,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0041 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32440,7 +32440,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0046 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32469,7 +32469,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0051 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32498,7 +32498,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0056 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32527,7 +32527,7 @@ return {
 		}
 	},
 	ma_lava_smoke_0061 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			93,
 			174
@@ -32557,7 +32557,7 @@ return {
 		}
 	},
 	ma_lava_sparks_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -32581,7 +32581,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -32605,7 +32605,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0003 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -32629,7 +32629,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -32653,7 +32653,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0005 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			20,
 			67
@@ -32677,7 +32677,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0006 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -32701,7 +32701,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -32725,7 +32725,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0008 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			20,
 			67
@@ -32749,7 +32749,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0009 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			20,
 			67
@@ -32773,7 +32773,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0010 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			20,
 			67
@@ -32797,7 +32797,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0011 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			20,
 			67
@@ -32821,7 +32821,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0012 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -32845,7 +32845,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0013 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			20,
 			67
@@ -32869,7 +32869,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0014 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			20,
 			67
@@ -32893,7 +32893,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			20,
 			67
@@ -32917,7 +32917,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -32941,7 +32941,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -32965,7 +32965,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			20,
 			67
@@ -32989,7 +32989,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33013,7 +33013,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33037,7 +33037,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33061,7 +33061,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33085,7 +33085,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33109,7 +33109,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33133,7 +33133,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33157,7 +33157,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33181,7 +33181,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33205,7 +33205,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33229,7 +33229,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33253,7 +33253,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33277,7 +33277,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33301,7 +33301,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33325,7 +33325,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33349,7 +33349,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33373,7 +33373,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33397,7 +33397,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33421,7 +33421,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33445,7 +33445,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33469,7 +33469,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33493,7 +33493,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33517,7 +33517,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33541,7 +33541,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0042 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33565,7 +33565,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33589,7 +33589,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33613,7 +33613,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33637,7 +33637,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33661,7 +33661,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33685,7 +33685,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33709,7 +33709,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33733,7 +33733,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33757,7 +33757,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33781,7 +33781,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0052 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33805,7 +33805,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33829,7 +33829,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0054 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			20,
 			67
@@ -33853,7 +33853,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33877,7 +33877,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33901,7 +33901,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0057 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			20,
 			67
@@ -33925,7 +33925,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33949,7 +33949,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33973,7 +33973,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			20,
 			67
@@ -33997,7 +33997,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0061 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34021,7 +34021,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0062 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34045,7 +34045,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0063 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34069,7 +34069,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0064 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34093,7 +34093,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0065 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34117,7 +34117,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0066 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34141,7 +34141,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0067 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34165,7 +34165,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0068 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34189,7 +34189,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0069 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34213,7 +34213,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0070 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34237,7 +34237,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0071 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34261,7 +34261,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0072 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34285,7 +34285,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0073 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34309,7 +34309,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0074 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34333,7 +34333,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0075 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34357,7 +34357,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0076 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34381,7 +34381,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0077 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34405,7 +34405,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0078 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34429,7 +34429,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0079 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34453,7 +34453,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0080 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34477,7 +34477,7 @@ return {
 		alias = {}
 	},
 	ma_lava_sparks_0081 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			20,
 			67
@@ -34501,7 +34501,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -34525,7 +34525,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -34549,7 +34549,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0003 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -34573,7 +34573,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0004 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34597,7 +34597,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0005 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			251,
 			186
@@ -34621,7 +34621,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0006 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34645,7 +34645,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0007 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34669,7 +34669,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0008 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34693,7 +34693,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0009 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34717,7 +34717,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0010 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34741,7 +34741,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0011 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34765,7 +34765,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0012 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34789,7 +34789,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0013 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34813,7 +34813,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0014 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34837,7 +34837,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0015 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34861,7 +34861,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0016 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34885,7 +34885,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34909,7 +34909,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -34933,7 +34933,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0019 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -34957,7 +34957,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0020 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -34981,7 +34981,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0021 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -35005,7 +35005,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0022 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35029,7 +35029,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0023 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35053,7 +35053,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0024 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35077,7 +35077,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0025 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35101,7 +35101,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0026 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35125,7 +35125,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0027 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35149,7 +35149,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0028 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35173,7 +35173,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0029 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35197,7 +35197,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0030 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35221,7 +35221,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0031 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35245,7 +35245,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0032 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35269,7 +35269,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0033 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35293,7 +35293,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0034 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			251,
 			186
@@ -35317,7 +35317,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0035 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35341,7 +35341,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0036 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35365,7 +35365,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0037 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35389,7 +35389,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0038 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35413,7 +35413,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0039 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35437,7 +35437,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35461,7 +35461,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0041 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35485,7 +35485,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0042 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35509,7 +35509,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0043 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			251,
 			186
@@ -35533,7 +35533,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0044 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35557,7 +35557,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0045 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35581,7 +35581,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0046 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35605,7 +35605,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0047 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35629,7 +35629,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0048 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35653,7 +35653,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0049 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35677,7 +35677,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0050 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35701,7 +35701,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0051 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35725,7 +35725,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0052 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35749,7 +35749,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0053 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35773,7 +35773,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0054 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35797,7 +35797,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0055 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35821,7 +35821,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0056 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35845,7 +35845,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0057 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -35869,7 +35869,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0058 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			251,
 			186
@@ -35893,7 +35893,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0059 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -35917,7 +35917,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0060 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -35941,7 +35941,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0061 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -35965,7 +35965,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0062 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -35989,7 +35989,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0063 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36013,7 +36013,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0064 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36037,7 +36037,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0065 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36061,7 +36061,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0066 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36085,7 +36085,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0067 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36109,7 +36109,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0068 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36133,7 +36133,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0069 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36157,7 +36157,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0070 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36181,7 +36181,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0071 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36205,7 +36205,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0072 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36229,7 +36229,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0073 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36253,7 +36253,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0074 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			251,
 			186
@@ -36277,7 +36277,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0075 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36301,7 +36301,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0076 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36325,7 +36325,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0077 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36349,7 +36349,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0078 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36373,7 +36373,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0079 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36397,7 +36397,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0080 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			251,
 			186
@@ -36421,7 +36421,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0081 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36445,7 +36445,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0082 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36469,7 +36469,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0083 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36493,7 +36493,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0084 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36517,7 +36517,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0085 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36541,7 +36541,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0086 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36565,7 +36565,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0087 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36589,7 +36589,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0088 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36613,7 +36613,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0089 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36637,7 +36637,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0090 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36661,7 +36661,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0091 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36685,7 +36685,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0092 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36709,7 +36709,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0093 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36733,7 +36733,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0094 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36757,7 +36757,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0095 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36781,7 +36781,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0096 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36805,7 +36805,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0097 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36829,7 +36829,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0098 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36853,7 +36853,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0099 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			251,
 			186
@@ -36877,7 +36877,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0100 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36901,7 +36901,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0101 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36925,7 +36925,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0102 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36949,7 +36949,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0103 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36973,7 +36973,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0104 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -36997,7 +36997,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0105 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37021,7 +37021,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0106 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37045,7 +37045,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0107 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37069,7 +37069,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0108 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37093,7 +37093,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0109 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37117,7 +37117,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0110 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37141,7 +37141,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0111 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37165,7 +37165,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0112 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37189,7 +37189,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0113 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37213,7 +37213,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0114 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37237,7 +37237,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0115 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37261,7 +37261,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0116 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			251,
 			186
@@ -37285,7 +37285,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0117 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -37309,7 +37309,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0118 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -37333,7 +37333,7 @@ return {
 		alias = {}
 	},
 	ma_lighthouse_light_0119 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			251,
 			186
@@ -37357,7 +37357,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37381,7 +37381,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37405,7 +37405,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37429,7 +37429,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37453,7 +37453,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37477,7 +37477,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37501,7 +37501,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37525,7 +37525,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37549,7 +37549,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37573,7 +37573,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37597,7 +37597,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37621,7 +37621,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37645,7 +37645,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0013 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			39,
 			37
@@ -37669,7 +37669,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37693,7 +37693,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37717,7 +37717,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37741,7 +37741,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37765,7 +37765,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37789,7 +37789,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37816,7 +37816,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37843,7 +37843,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37870,7 +37870,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37897,7 +37897,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37921,7 +37921,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37945,7 +37945,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37969,7 +37969,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -37993,7 +37993,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38017,7 +38017,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38041,7 +38041,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38065,7 +38065,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38089,7 +38089,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38113,7 +38113,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_1_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38140,7 +38140,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38167,7 +38167,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38194,7 +38194,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38221,7 +38221,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0052 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38248,7 +38248,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38275,7 +38275,7 @@ return {
 		}
 	},
 	ma_mini_volcano_1_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			39,
 			37
@@ -38302,7 +38302,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38326,7 +38326,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38350,7 +38350,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38374,7 +38374,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38398,7 +38398,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38422,7 +38422,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38446,7 +38446,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38470,7 +38470,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38494,7 +38494,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38518,7 +38518,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38542,7 +38542,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38566,7 +38566,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38590,7 +38590,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38614,7 +38614,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38638,7 +38638,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38662,7 +38662,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38686,7 +38686,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38710,7 +38710,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38734,7 +38734,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38761,7 +38761,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38788,7 +38788,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38815,7 +38815,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38842,7 +38842,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38866,7 +38866,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38890,7 +38890,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38914,7 +38914,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38938,7 +38938,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38962,7 +38962,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -38986,7 +38986,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39010,7 +39010,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39034,7 +39034,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39058,7 +39058,7 @@ return {
 		alias = {}
 	},
 	ma_mini_volcano_2_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39085,7 +39085,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39112,7 +39112,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39139,7 +39139,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39166,7 +39166,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0052 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39193,7 +39193,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39220,7 +39220,7 @@ return {
 		}
 	},
 	ma_mini_volcano_2_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			44,
 			43
@@ -39247,7 +39247,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0001 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39275,7 +39275,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39303,7 +39303,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39331,7 +39331,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39359,7 +39359,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39387,7 +39387,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39415,7 +39415,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39443,7 +39443,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39471,7 +39471,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39499,7 +39499,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39527,7 +39527,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39555,7 +39555,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39583,7 +39583,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_1_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			36,
 			49
@@ -39611,7 +39611,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			43,
 			61
@@ -39639,7 +39639,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0005 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39667,7 +39667,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0009 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39695,7 +39695,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0013 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39723,7 +39723,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39751,7 +39751,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0021 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39779,7 +39779,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0025 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39807,7 +39807,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0029 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39835,7 +39835,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0033 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			61
@@ -39863,7 +39863,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			61
@@ -39891,7 +39891,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			61
@@ -39919,7 +39919,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			61
@@ -39947,7 +39947,7 @@ return {
 		}
 	},
 	ma_mini_volcano_smoke_2_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			61
@@ -39975,7 +39975,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			30,
 			24
@@ -39999,7 +39999,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_shout_0002 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			30,
 			24
@@ -40026,7 +40026,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40052,7 +40052,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40078,7 +40078,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0007 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			30,
 			24
@@ -40104,7 +40104,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40136,7 +40136,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40162,7 +40162,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40188,7 +40188,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40214,7 +40214,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40240,7 +40240,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40266,7 +40266,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40292,7 +40292,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40318,7 +40318,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40344,7 +40344,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40372,7 +40372,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40398,7 +40398,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40424,7 +40424,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40450,7 +40450,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40476,7 +40476,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40502,7 +40502,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40528,7 +40528,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40554,7 +40554,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40578,7 +40578,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_shout_0052 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			30,
 			24
@@ -40604,7 +40604,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40628,7 +40628,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_shout_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40652,7 +40652,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_shout_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40676,7 +40676,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_shout_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			30,
 			24
@@ -40700,7 +40700,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_shout_0060 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			30,
 			24
@@ -40724,7 +40724,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_shout_0061 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			24
@@ -40750,7 +40750,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40776,7 +40776,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40802,7 +40802,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0067 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			30,
 			24
@@ -40828,7 +40828,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40854,7 +40854,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0071 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			24
@@ -40880,7 +40880,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0073 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			24
@@ -40906,7 +40906,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -40932,7 +40932,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0077 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			30,
 			24
@@ -40958,7 +40958,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0079 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			30,
 			24
@@ -40984,7 +40984,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0081 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -41010,7 +41010,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0083 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -41036,7 +41036,7 @@ return {
 		}
 	},
 	ma_monkey_shout_0085 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			30,
 			24
@@ -41060,7 +41060,7 @@ return {
 		alias = {}
 	},
 	ma_monkey_vine_1_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			96,
 			77
@@ -41086,7 +41086,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0002 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			96,
 			77
@@ -41112,7 +41112,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0004 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			96,
 			77
@@ -41139,7 +41139,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			96,
 			77
@@ -41165,7 +41165,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0009 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			96,
 			77
@@ -41191,7 +41191,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41218,7 +41218,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41244,7 +41244,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			96,
 			77
@@ -41270,7 +41270,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41296,7 +41296,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41323,7 +41323,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41349,7 +41349,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			96,
 			77
@@ -41375,7 +41375,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41402,7 +41402,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0030 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			96,
 			77
@@ -41428,7 +41428,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41454,7 +41454,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41480,7 +41480,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41507,7 +41507,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0039 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			96,
 			77
@@ -41533,7 +41533,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41559,7 +41559,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41586,7 +41586,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41612,7 +41612,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41638,7 +41638,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41665,7 +41665,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0053 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			96,
 			77
@@ -41691,7 +41691,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41717,7 +41717,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41744,7 +41744,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41770,7 +41770,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0062 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			96,
 			77
@@ -41796,7 +41796,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41822,7 +41822,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41849,7 +41849,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			96,
 			77
@@ -41875,7 +41875,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0071 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			96,
 			77
@@ -41901,7 +41901,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0073 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			96,
 			77
@@ -41928,7 +41928,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0076 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			96,
 			77
@@ -41954,7 +41954,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0078 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			96,
 			77
@@ -41980,7 +41980,7 @@ return {
 		}
 	},
 	ma_monkey_vine_1_0080 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			96,
 			77
@@ -42006,7 +42006,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			97,
 			64
@@ -42032,7 +42032,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			97,
 			64
@@ -42058,7 +42058,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0004 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			97,
 			64
@@ -42084,7 +42084,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42111,7 +42111,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42137,7 +42137,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42163,7 +42163,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			97,
 			64
@@ -42190,7 +42190,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42216,7 +42216,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			97,
 			64
@@ -42242,7 +42242,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42268,7 +42268,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42295,7 +42295,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			97,
 			64
@@ -42321,7 +42321,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42347,7 +42347,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42374,7 +42374,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			97,
 			64
@@ -42400,7 +42400,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42426,7 +42426,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0036 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			97,
 			64
@@ -42452,7 +42452,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42479,7 +42479,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42505,7 +42505,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			97,
 			64
@@ -42531,7 +42531,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42558,7 +42558,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			97,
 			64
@@ -42584,7 +42584,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			97,
 			64
@@ -42610,7 +42610,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			97,
 			64
@@ -42636,7 +42636,7 @@ return {
 		}
 	},
 	ma_monkey_vine_2_0054 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			97,
 			64
@@ -42662,7 +42662,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			82,
 			69
@@ -42688,7 +42688,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			82,
 			69
@@ -42715,7 +42715,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			82,
 			69
@@ -42741,7 +42741,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0006 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			82,
 			69
@@ -42767,7 +42767,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -42794,7 +42794,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -42820,7 +42820,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0013 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			82,
 			69
@@ -42846,7 +42846,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -42872,7 +42872,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -42899,7 +42899,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -42925,7 +42925,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -42951,7 +42951,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -42978,7 +42978,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43004,7 +43004,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43030,7 +43030,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43056,7 +43056,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			82,
 			69
@@ -43083,7 +43083,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43109,7 +43109,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			82,
 			69
@@ -43135,7 +43135,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43162,7 +43162,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43188,7 +43188,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43214,7 +43214,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			82,
 			69
@@ -43241,7 +43241,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0050 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			82,
 			69
@@ -43267,7 +43267,7 @@ return {
 		}
 	},
 	ma_monkey_vine_3_0052 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			82,
 			69
@@ -43293,7 +43293,7 @@ return {
 		}
 	},
 	ma_mountain_lava_1_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			60,
 			150
@@ -43319,7 +43319,7 @@ return {
 		}
 	},
 	ma_mountain_lava_1_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43345,7 +43345,7 @@ return {
 		}
 	},
 	ma_mountain_lava_1_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43369,7 +43369,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43393,7 +43393,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43417,7 +43417,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43441,7 +43441,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43465,7 +43465,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43489,7 +43489,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43513,7 +43513,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43537,7 +43537,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43561,7 +43561,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43587,7 +43587,7 @@ return {
 		}
 	},
 	ma_mountain_lava_1_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43611,7 +43611,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43635,7 +43635,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43659,7 +43659,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43683,7 +43683,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43707,7 +43707,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43731,7 +43731,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43755,7 +43755,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43779,7 +43779,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43803,7 +43803,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43827,7 +43827,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43851,7 +43851,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43875,7 +43875,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43899,7 +43899,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0026 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43923,7 +43923,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43947,7 +43947,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43971,7 +43971,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -43995,7 +43995,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0030 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44019,7 +44019,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44043,7 +44043,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44067,7 +44067,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44091,7 +44091,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44115,7 +44115,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44139,7 +44139,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44163,7 +44163,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44187,7 +44187,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44211,7 +44211,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44235,7 +44235,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44259,7 +44259,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44283,7 +44283,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44307,7 +44307,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0044 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44331,7 +44331,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0045 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44355,7 +44355,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44379,7 +44379,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0047 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44403,7 +44403,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0048 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44427,7 +44427,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44451,7 +44451,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0050 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44475,7 +44475,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44499,7 +44499,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0052 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44523,7 +44523,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0053 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44547,7 +44547,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0054 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44571,7 +44571,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44595,7 +44595,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44619,7 +44619,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44643,7 +44643,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44667,7 +44667,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44691,7 +44691,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44715,7 +44715,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0061 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44739,7 +44739,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44763,7 +44763,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44787,7 +44787,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44811,7 +44811,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44835,7 +44835,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0066 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44859,7 +44859,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44883,7 +44883,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44907,7 +44907,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44931,7 +44931,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44955,7 +44955,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0071 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -44979,7 +44979,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0072 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -45003,7 +45003,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0073 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -45027,7 +45027,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -45051,7 +45051,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -45075,7 +45075,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0077 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -45099,7 +45099,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -45123,7 +45123,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_1_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			60,
 			150
@@ -45147,7 +45147,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			107,
 			144
@@ -45173,7 +45173,7 @@ return {
 		}
 	},
 	ma_mountain_lava_2_0002 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -45197,7 +45197,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0003 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -45221,7 +45221,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0004 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -45247,7 +45247,7 @@ return {
 		}
 	},
 	ma_mountain_lava_2_0005 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -45271,7 +45271,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0006 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -45295,7 +45295,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0007 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -45319,7 +45319,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0008 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -45343,7 +45343,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0009 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45367,7 +45367,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0010 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45393,7 +45393,7 @@ return {
 		}
 	},
 	ma_mountain_lava_2_0011 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45417,7 +45417,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0012 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45441,7 +45441,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0013 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45465,7 +45465,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0014 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45489,7 +45489,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0015 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45513,7 +45513,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0016 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45537,7 +45537,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0017 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45561,7 +45561,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0018 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45585,7 +45585,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0019 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45611,7 +45611,7 @@ return {
 		}
 	},
 	ma_mountain_lava_2_0020 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45637,7 +45637,7 @@ return {
 		}
 	},
 	ma_mountain_lava_2_0021 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45661,7 +45661,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0022 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45685,7 +45685,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0023 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45709,7 +45709,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0024 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45733,7 +45733,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0025 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45757,7 +45757,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0026 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45781,7 +45781,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0027 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45805,7 +45805,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0029 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45829,7 +45829,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0031 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45853,7 +45853,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0032 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45877,7 +45877,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0033 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45901,7 +45901,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0034 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45925,7 +45925,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0035 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45949,7 +45949,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0036 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45973,7 +45973,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0037 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -45997,7 +45997,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0038 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -46021,7 +46021,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0039 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -46045,7 +46045,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			107,
 			144
@@ -46069,7 +46069,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0041 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46093,7 +46093,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0042 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46117,7 +46117,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0043 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46141,7 +46141,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0044 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46165,7 +46165,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0046 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46189,7 +46189,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0047 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46213,7 +46213,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0048 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46237,7 +46237,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0049 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46261,7 +46261,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46285,7 +46285,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0051 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46309,7 +46309,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0052 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46333,7 +46333,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0053 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46357,7 +46357,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0054 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46381,7 +46381,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0056 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46405,7 +46405,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0057 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46429,7 +46429,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0058 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			107,
 			144
@@ -46453,7 +46453,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_lava_2_0059 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			107,
 			144
@@ -46477,7 +46477,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0001 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46501,7 +46501,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0002 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46525,7 +46525,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0003 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46549,7 +46549,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0004 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46573,7 +46573,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0005 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46597,7 +46597,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0006 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46621,7 +46621,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0007 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46645,7 +46645,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0008 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -46669,7 +46669,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46693,7 +46693,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46717,7 +46717,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46741,7 +46741,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46765,7 +46765,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46789,7 +46789,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46813,7 +46813,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46837,7 +46837,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46861,7 +46861,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46885,7 +46885,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46909,7 +46909,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46933,7 +46933,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46957,7 +46957,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -46981,7 +46981,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47005,7 +47005,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47029,7 +47029,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47053,7 +47053,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47077,7 +47077,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0026 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47101,7 +47101,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47125,7 +47125,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47149,7 +47149,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47173,7 +47173,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0030 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47197,7 +47197,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47221,7 +47221,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47245,7 +47245,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47269,7 +47269,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47293,7 +47293,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47317,7 +47317,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47341,7 +47341,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47365,7 +47365,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47389,7 +47389,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47413,7 +47413,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47437,7 +47437,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47461,7 +47461,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47485,7 +47485,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			118,
 			134
@@ -47509,7 +47509,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0044 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47533,7 +47533,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0045 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47557,7 +47557,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0046 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47581,7 +47581,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0047 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47605,7 +47605,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0048 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47629,7 +47629,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0049 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47653,7 +47653,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0050 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47677,7 +47677,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0051 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47701,7 +47701,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47725,7 +47725,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0053 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47749,7 +47749,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0054 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47773,7 +47773,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0055 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47797,7 +47797,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0056 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47821,7 +47821,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0057 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47845,7 +47845,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0058 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47869,7 +47869,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0059 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47893,7 +47893,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0060 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47917,7 +47917,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0061 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47941,7 +47941,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0062 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47965,7 +47965,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0063 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			118,
 			134
@@ -47989,7 +47989,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0064 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48013,7 +48013,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0065 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48037,7 +48037,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0066 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48061,7 +48061,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0067 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48085,7 +48085,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0068 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48109,7 +48109,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0069 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48133,7 +48133,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0070 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48157,7 +48157,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0071 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48181,7 +48181,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0072 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48205,7 +48205,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0073 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48229,7 +48229,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0074 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48253,7 +48253,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0075 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48277,7 +48277,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0076 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48301,7 +48301,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0077 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48325,7 +48325,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0078 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48349,7 +48349,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0079 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48373,7 +48373,7 @@ return {
 		alias = {}
 	},
 	ma_mountain_sparks_0080 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			118,
 			134
@@ -48397,7 +48397,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48426,7 +48426,7 @@ return {
 		}
 	},
 	ma_north_lights_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48450,7 +48450,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48474,7 +48474,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48498,7 +48498,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48522,7 +48522,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48546,7 +48546,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48570,7 +48570,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48594,7 +48594,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48618,7 +48618,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0010 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			42,
 			23
@@ -48642,7 +48642,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48666,7 +48666,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0012 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			42,
 			23
@@ -48690,7 +48690,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0013 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			42,
 			23
@@ -48714,7 +48714,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0014 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			42,
 			23
@@ -48740,7 +48740,7 @@ return {
 		}
 	},
 	ma_north_lights_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48766,7 +48766,7 @@ return {
 		}
 	},
 	ma_north_lights_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48790,7 +48790,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48814,7 +48814,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48838,7 +48838,7 @@ return {
 		alias = {}
 	},
 	ma_north_lights_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			42,
 			23
@@ -48862,7 +48862,7 @@ return {
 		alias = {}
 	},
 	ma_north_river_0001 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			103,
 			189
@@ -48892,7 +48892,7 @@ return {
 		}
 	},
 	ma_north_river_0004 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			103,
 			189
@@ -48922,7 +48922,7 @@ return {
 		}
 	},
 	ma_north_river_0007 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			103,
 			189
@@ -48949,7 +48949,7 @@ return {
 		}
 	},
 	ma_north_river_0010 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			103,
 			189
@@ -48976,7 +48976,7 @@ return {
 		}
 	},
 	ma_north_river_0013 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			103,
 			189
@@ -49003,7 +49003,7 @@ return {
 		}
 	},
 	ma_north_river_0022 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			103,
 			189
@@ -49030,7 +49030,7 @@ return {
 		}
 	},
 	ma_north_river_0025 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			103,
 			189
@@ -49057,7 +49057,7 @@ return {
 		}
 	},
 	ma_north_river_0028 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			103,
 			189
@@ -49084,7 +49084,7 @@ return {
 		}
 	},
 	ma_river_l_0001 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49110,7 +49110,7 @@ return {
 		}
 	},
 	ma_river_l_0003 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49136,7 +49136,7 @@ return {
 		}
 	},
 	ma_river_l_0005 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49162,7 +49162,7 @@ return {
 		}
 	},
 	ma_river_l_0007 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49188,7 +49188,7 @@ return {
 		}
 	},
 	ma_river_l_0009 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49214,7 +49214,7 @@ return {
 		}
 	},
 	ma_river_l_0011 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49240,7 +49240,7 @@ return {
 		}
 	},
 	ma_river_l_0013 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49266,7 +49266,7 @@ return {
 		}
 	},
 	ma_river_l_0015 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			563,
 			570
@@ -49292,7 +49292,7 @@ return {
 		}
 	},
 	ma_river_l_0017 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			563,
 			570
@@ -49318,7 +49318,7 @@ return {
 		}
 	},
 	ma_river_r_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49344,7 +49344,7 @@ return {
 		}
 	},
 	ma_river_r_0003 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49368,7 +49368,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49392,7 +49392,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0005 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49416,7 +49416,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0006 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49440,7 +49440,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49466,7 +49466,7 @@ return {
 		}
 	},
 	ma_river_r_0009 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49490,7 +49490,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0010 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49514,7 +49514,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0011 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49538,7 +49538,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0012 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49562,7 +49562,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0013 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49588,7 +49588,7 @@ return {
 		}
 	},
 	ma_river_r_0015 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49612,7 +49612,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0016 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49636,7 +49636,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0017 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			713,
 			272
@@ -49660,7 +49660,7 @@ return {
 		alias = {}
 	},
 	ma_river_r_0018 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			713,
 			272
@@ -49684,7 +49684,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49708,7 +49708,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49732,7 +49732,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49756,7 +49756,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49780,7 +49780,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49804,7 +49804,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49828,7 +49828,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49852,7 +49852,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49876,7 +49876,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0009 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			53,
 			47
@@ -49900,7 +49900,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49924,7 +49924,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49948,7 +49948,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49972,7 +49972,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -49996,7 +49996,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50020,7 +50020,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50044,7 +50044,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50068,7 +50068,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50092,7 +50092,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50116,7 +50116,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50140,7 +50140,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50164,7 +50164,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50188,7 +50188,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50212,7 +50212,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50236,7 +50236,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50260,7 +50260,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50284,7 +50284,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0026 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50308,7 +50308,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50332,7 +50332,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50356,7 +50356,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50380,7 +50380,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0030 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50407,7 +50407,7 @@ return {
 		}
 	},
 	ma_sandworm_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50431,7 +50431,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0033 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50455,7 +50455,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50479,7 +50479,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50503,7 +50503,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50529,7 +50529,7 @@ return {
 		}
 	},
 	ma_sandworm_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50555,7 +50555,7 @@ return {
 		}
 	},
 	ma_sandworm_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50581,7 +50581,7 @@ return {
 		}
 	},
 	ma_sandworm_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50607,7 +50607,7 @@ return {
 		}
 	},
 	ma_sandworm_0045 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50633,7 +50633,7 @@ return {
 		}
 	},
 	ma_sandworm_0047 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50659,7 +50659,7 @@ return {
 		}
 	},
 	ma_sandworm_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50685,7 +50685,7 @@ return {
 		}
 	},
 	ma_sandworm_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50711,7 +50711,7 @@ return {
 		}
 	},
 	ma_sandworm_0053 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50743,7 +50743,7 @@ return {
 		}
 	},
 	ma_sandworm_0061 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50767,7 +50767,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50791,7 +50791,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50815,7 +50815,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50839,7 +50839,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50863,7 +50863,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0066 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50887,7 +50887,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50911,7 +50911,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50935,7 +50935,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50959,7 +50959,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -50983,7 +50983,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0071 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			47
@@ -51007,7 +51007,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0072 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			53,
 			47
@@ -51031,7 +51031,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0073 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			53,
 			47
@@ -51055,7 +51055,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0074 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			53,
 			47
@@ -51079,7 +51079,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0075 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			53,
 			47
@@ -51103,7 +51103,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0076 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			53,
 			47
@@ -51127,7 +51127,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0077 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			53,
 			47
@@ -51151,7 +51151,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0078 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			53,
 			47
@@ -51175,7 +51175,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0079 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			53,
 			47
@@ -51199,7 +51199,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0080 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			53,
 			47
@@ -51223,7 +51223,7 @@ return {
 		alias = {}
 	},
 	ma_sandworm_0081 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			53,
 			47
@@ -51247,7 +51247,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -51274,7 +51274,7 @@ return {
 		}
 	},
 	ma_ship_0003 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -51298,7 +51298,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -51322,7 +51322,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0005 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -51346,7 +51346,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0006 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -51370,7 +51370,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0007 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51394,7 +51394,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0008 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51418,7 +51418,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0009 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51442,7 +51442,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0010 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51466,7 +51466,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0011 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -51490,7 +51490,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0012 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51514,7 +51514,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0013 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -51538,7 +51538,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0014 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51562,7 +51562,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0015 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -51586,7 +51586,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0016 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51610,7 +51610,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51634,7 +51634,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51658,7 +51658,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0019 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51682,7 +51682,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0020 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51706,7 +51706,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0021 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51730,7 +51730,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51754,7 +51754,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51778,7 +51778,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51802,7 +51802,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51826,7 +51826,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51850,7 +51850,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0027 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -51874,7 +51874,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51898,7 +51898,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0029 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -51922,7 +51922,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51946,7 +51946,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -51970,7 +51970,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0032 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -51994,7 +51994,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0033 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -52018,7 +52018,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52042,7 +52042,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0035 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52066,7 +52066,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -52090,7 +52090,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0037 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52114,7 +52114,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52138,7 +52138,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52162,7 +52162,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52186,7 +52186,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52210,7 +52210,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52234,7 +52234,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52258,7 +52258,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0044 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52282,7 +52282,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0045 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52306,7 +52306,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0046 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52330,7 +52330,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0047 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52354,7 +52354,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0048 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52378,7 +52378,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0049 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52402,7 +52402,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0050 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52426,7 +52426,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0051 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52450,7 +52450,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0052 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52474,7 +52474,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0053 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52498,7 +52498,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0054 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52522,7 +52522,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52546,7 +52546,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52570,7 +52570,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52594,7 +52594,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52618,7 +52618,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52642,7 +52642,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52666,7 +52666,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0061 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52690,7 +52690,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0062 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52714,7 +52714,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52738,7 +52738,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52762,7 +52762,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52786,7 +52786,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0066 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -52810,7 +52810,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -52834,7 +52834,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0068 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -52858,7 +52858,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0069 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52882,7 +52882,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0070 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52906,7 +52906,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0071 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52930,7 +52930,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0072 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52954,7 +52954,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0073 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -52978,7 +52978,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0074 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53002,7 +53002,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0075 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53026,7 +53026,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0076 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53050,7 +53050,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0077 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53074,7 +53074,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0078 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53098,7 +53098,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0079 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53122,7 +53122,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0080 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53146,7 +53146,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0081 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53170,7 +53170,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0082 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53194,7 +53194,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0083 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53218,7 +53218,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0084 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53242,7 +53242,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0085 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53266,7 +53266,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0086 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53290,7 +53290,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0087 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53314,7 +53314,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0088 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53338,7 +53338,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0089 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53362,7 +53362,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0090 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53386,7 +53386,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0091 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53410,7 +53410,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0092 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53434,7 +53434,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0093 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53458,7 +53458,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0094 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53482,7 +53482,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0095 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53506,7 +53506,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0096 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53530,7 +53530,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0097 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53554,7 +53554,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0098 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53578,7 +53578,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0099 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53602,7 +53602,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0100 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53626,7 +53626,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0101 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53650,7 +53650,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0102 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53674,7 +53674,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0103 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53698,7 +53698,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0104 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53722,7 +53722,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0105 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53746,7 +53746,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0106 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53770,7 +53770,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0107 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53794,7 +53794,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0108 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53818,7 +53818,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0109 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53842,7 +53842,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0110 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53866,7 +53866,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0111 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53890,7 +53890,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0112 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53914,7 +53914,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0113 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53938,7 +53938,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0114 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53962,7 +53962,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0115 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -53986,7 +53986,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0116 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54010,7 +54010,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0117 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54034,7 +54034,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0118 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54058,7 +54058,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0119 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54082,7 +54082,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0120 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54106,7 +54106,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0121 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54130,7 +54130,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0122 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54154,7 +54154,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0123 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54178,7 +54178,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0124 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54202,7 +54202,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0125 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54226,7 +54226,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0126 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54250,7 +54250,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0127 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54274,7 +54274,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0128 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54298,7 +54298,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0129 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54322,7 +54322,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0130 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54346,7 +54346,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0131 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54370,7 +54370,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0132 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54394,7 +54394,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0133 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54418,7 +54418,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0134 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54442,7 +54442,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0135 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54466,7 +54466,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0136 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54490,7 +54490,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0137 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54514,7 +54514,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0138 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54538,7 +54538,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0139 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54562,7 +54562,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0140 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54586,7 +54586,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0141 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54610,7 +54610,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0142 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54634,7 +54634,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0143 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54658,7 +54658,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0144 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54682,7 +54682,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0145 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54706,7 +54706,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0146 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54730,7 +54730,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0147 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54754,7 +54754,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0148 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54778,7 +54778,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0149 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54802,7 +54802,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0150 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54826,7 +54826,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0151 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54850,7 +54850,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0152 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54874,7 +54874,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0153 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54898,7 +54898,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0154 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54922,7 +54922,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0155 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54946,7 +54946,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0156 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54970,7 +54970,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0157 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -54994,7 +54994,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0158 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55018,7 +55018,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0159 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55042,7 +55042,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0160 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55066,7 +55066,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0161 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55090,7 +55090,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0162 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55114,7 +55114,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0163 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55138,7 +55138,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0164 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55162,7 +55162,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0165 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55186,7 +55186,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0166 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55210,7 +55210,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0167 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -55234,7 +55234,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0168 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55258,7 +55258,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0169 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55282,7 +55282,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0170 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55306,7 +55306,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0171 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55330,7 +55330,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0172 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55354,7 +55354,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0173 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55378,7 +55378,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0174 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55402,7 +55402,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0175 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55426,7 +55426,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0176 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55450,7 +55450,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0177 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55474,7 +55474,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0178 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55498,7 +55498,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0179 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55522,7 +55522,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0180 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55546,7 +55546,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0181 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55570,7 +55570,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0182 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55594,7 +55594,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0183 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55618,7 +55618,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0184 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55642,7 +55642,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0185 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55668,7 +55668,7 @@ return {
 		}
 	},
 	ma_ship_0186 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55694,7 +55694,7 @@ return {
 		}
 	},
 	ma_ship_0187 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55718,7 +55718,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0188 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55742,7 +55742,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0189 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55766,7 +55766,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0190 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55790,7 +55790,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0191 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55814,7 +55814,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0192 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55838,7 +55838,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0193 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55862,7 +55862,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0194 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55886,7 +55886,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0195 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55910,7 +55910,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0196 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55934,7 +55934,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0197 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55958,7 +55958,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0198 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -55982,7 +55982,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0199 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56006,7 +56006,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0200 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56030,7 +56030,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0201 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56054,7 +56054,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0202 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56078,7 +56078,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0203 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56102,7 +56102,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0204 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56126,7 +56126,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0205 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56150,7 +56150,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0206 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56174,7 +56174,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0207 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56198,7 +56198,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0208 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56222,7 +56222,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0209 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56246,7 +56246,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0210 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56270,7 +56270,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0211 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56294,7 +56294,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0212 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56318,7 +56318,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0213 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56342,7 +56342,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0214 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56366,7 +56366,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0215 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56390,7 +56390,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0216 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56414,7 +56414,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0217 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56438,7 +56438,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0218 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56462,7 +56462,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0219 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56486,7 +56486,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0220 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56510,7 +56510,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0221 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56534,7 +56534,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0222 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56558,7 +56558,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0223 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56582,7 +56582,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0224 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56606,7 +56606,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0225 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56630,7 +56630,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0226 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56654,7 +56654,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0227 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56678,7 +56678,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0228 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56702,7 +56702,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0229 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56726,7 +56726,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0230 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56750,7 +56750,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0231 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56774,7 +56774,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0232 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56798,7 +56798,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0233 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56822,7 +56822,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0234 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56846,7 +56846,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0235 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56870,7 +56870,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0236 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56894,7 +56894,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0237 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56918,7 +56918,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0238 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56942,7 +56942,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0239 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56966,7 +56966,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0240 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -56990,7 +56990,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0241 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57014,7 +57014,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0242 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57038,7 +57038,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0243 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57062,7 +57062,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0244 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57086,7 +57086,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0245 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57110,7 +57110,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0246 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57134,7 +57134,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0247 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57158,7 +57158,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0248 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57182,7 +57182,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0249 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57206,7 +57206,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0250 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57230,7 +57230,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0251 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57254,7 +57254,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0252 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57278,7 +57278,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0253 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57302,7 +57302,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0254 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57326,7 +57326,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0255 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57350,7 +57350,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0256 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57374,7 +57374,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0257 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57398,7 +57398,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0258 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57422,7 +57422,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0259 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57446,7 +57446,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0260 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57470,7 +57470,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0261 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57494,7 +57494,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0262 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57518,7 +57518,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0263 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57542,7 +57542,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0264 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57566,7 +57566,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0265 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57590,7 +57590,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0266 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57614,7 +57614,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0267 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57638,7 +57638,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0268 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57662,7 +57662,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0269 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57686,7 +57686,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0270 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57710,7 +57710,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0271 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57734,7 +57734,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0272 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57758,7 +57758,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0273 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57782,7 +57782,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0274 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57806,7 +57806,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0275 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57830,7 +57830,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0276 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57854,7 +57854,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0279 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57878,7 +57878,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0280 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57902,7 +57902,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0281 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57926,7 +57926,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0282 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57950,7 +57950,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0283 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57974,7 +57974,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0284 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -57998,7 +57998,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0285 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58022,7 +58022,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0286 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58046,7 +58046,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0287 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58070,7 +58070,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0288 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58094,7 +58094,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0289 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58118,7 +58118,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0290 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58142,7 +58142,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0291 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58166,7 +58166,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0292 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58190,7 +58190,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0293 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58214,7 +58214,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0294 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58238,7 +58238,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0295 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58262,7 +58262,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0296 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58286,7 +58286,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0297 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58310,7 +58310,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0298 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58334,7 +58334,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0299 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58358,7 +58358,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0300 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58382,7 +58382,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0301 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58406,7 +58406,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0302 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58430,7 +58430,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0303 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58454,7 +58454,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0304 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -58478,7 +58478,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0305 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58502,7 +58502,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0306 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58526,7 +58526,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0307 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58550,7 +58550,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0308 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58574,7 +58574,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0309 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58598,7 +58598,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0310 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58622,7 +58622,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0311 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58646,7 +58646,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0312 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58670,7 +58670,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0313 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58694,7 +58694,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0314 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58718,7 +58718,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0315 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58742,7 +58742,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0316 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58766,7 +58766,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0317 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58790,7 +58790,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0318 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58814,7 +58814,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0319 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58838,7 +58838,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0320 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58862,7 +58862,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0321 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58886,7 +58886,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0322 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58910,7 +58910,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0323 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58934,7 +58934,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0324 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58958,7 +58958,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0325 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -58982,7 +58982,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0326 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59006,7 +59006,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0327 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59030,7 +59030,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0328 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59054,7 +59054,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0329 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59078,7 +59078,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0330 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59102,7 +59102,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0331 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59126,7 +59126,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0332 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59150,7 +59150,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0333 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59174,7 +59174,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0334 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59198,7 +59198,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0335 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59222,7 +59222,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0336 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59246,7 +59246,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0337 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59270,7 +59270,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0338 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59294,7 +59294,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0339 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59318,7 +59318,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0340 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59342,7 +59342,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0341 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59366,7 +59366,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0342 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59390,7 +59390,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0343 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59414,7 +59414,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0344 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59438,7 +59438,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0345 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59462,7 +59462,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0346 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59486,7 +59486,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0347 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59510,7 +59510,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0348 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -59534,7 +59534,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0349 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59558,7 +59558,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0350 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59582,7 +59582,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0351 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59606,7 +59606,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0352 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59630,7 +59630,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0353 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59654,7 +59654,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0354 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59678,7 +59678,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0355 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59702,7 +59702,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0356 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59726,7 +59726,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0357 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59750,7 +59750,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0358 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59774,7 +59774,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0359 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59798,7 +59798,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0360 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59822,7 +59822,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0361 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59846,7 +59846,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0362 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59870,7 +59870,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0363 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59894,7 +59894,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0364 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -59918,7 +59918,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0365 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -59942,7 +59942,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0366 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -59966,7 +59966,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0367 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -59990,7 +59990,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0368 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60014,7 +60014,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0369 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60038,7 +60038,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0370 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -60062,7 +60062,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0371 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -60086,7 +60086,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0372 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -60110,7 +60110,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0373 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -60134,7 +60134,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0374 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -60158,7 +60158,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0375 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -60182,7 +60182,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0376 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -60206,7 +60206,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0377 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60230,7 +60230,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0378 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60254,7 +60254,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0379 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60278,7 +60278,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0380 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60302,7 +60302,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0381 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60326,7 +60326,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0382 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60350,7 +60350,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0383 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60374,7 +60374,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0384 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60398,7 +60398,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0385 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60422,7 +60422,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0386 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60446,7 +60446,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0387 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60470,7 +60470,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0388 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60494,7 +60494,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0389 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60518,7 +60518,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0390 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60542,7 +60542,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0391 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60566,7 +60566,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0392 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60590,7 +60590,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0393 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60614,7 +60614,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0394 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60638,7 +60638,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0395 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60662,7 +60662,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0396 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60686,7 +60686,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0397 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60710,7 +60710,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0398 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60734,7 +60734,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0399 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60758,7 +60758,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0400 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60782,7 +60782,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0401 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60806,7 +60806,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0402 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60830,7 +60830,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0403 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60854,7 +60854,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0404 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60878,7 +60878,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0405 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60902,7 +60902,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0406 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60926,7 +60926,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0407 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60950,7 +60950,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0408 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60974,7 +60974,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0409 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -60998,7 +60998,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0410 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61022,7 +61022,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0411 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61046,7 +61046,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0412 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61070,7 +61070,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0413 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61094,7 +61094,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0414 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61118,7 +61118,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0415 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61142,7 +61142,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0416 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61166,7 +61166,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0417 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61190,7 +61190,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0418 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61214,7 +61214,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0419 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61238,7 +61238,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0420 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61262,7 +61262,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0421 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61286,7 +61286,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0422 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61310,7 +61310,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0423 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61334,7 +61334,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0424 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61358,7 +61358,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0425 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61382,7 +61382,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0426 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61406,7 +61406,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0427 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61430,7 +61430,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0428 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61454,7 +61454,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0429 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61478,7 +61478,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0430 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61502,7 +61502,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0431 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61526,7 +61526,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0432 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61550,7 +61550,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0433 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61574,7 +61574,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0434 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61598,7 +61598,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0435 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61622,7 +61622,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0436 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61646,7 +61646,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0437 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61670,7 +61670,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0438 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61694,7 +61694,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0439 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61718,7 +61718,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0440 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61742,7 +61742,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0441 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61766,7 +61766,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0442 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -61790,7 +61790,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0443 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61814,7 +61814,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0444 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61838,7 +61838,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0445 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61862,7 +61862,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0446 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61886,7 +61886,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0447 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61910,7 +61910,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0448 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61934,7 +61934,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0449 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61958,7 +61958,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0450 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -61982,7 +61982,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0451 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62006,7 +62006,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0452 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62030,7 +62030,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0453 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62054,7 +62054,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0454 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62078,7 +62078,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0455 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62102,7 +62102,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0456 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -62126,7 +62126,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0457 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62150,7 +62150,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0458 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62174,7 +62174,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0459 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62198,7 +62198,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0460 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62222,7 +62222,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0461 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62246,7 +62246,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0462 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62270,7 +62270,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0463 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62294,7 +62294,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0464 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62318,7 +62318,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0465 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62342,7 +62342,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0466 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62366,7 +62366,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0467 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62390,7 +62390,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0468 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62414,7 +62414,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0469 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62438,7 +62438,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0470 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -62462,7 +62462,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0471 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62486,7 +62486,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0472 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62510,7 +62510,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0473 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62534,7 +62534,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0474 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62558,7 +62558,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0475 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62582,7 +62582,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0476 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62606,7 +62606,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0477 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62630,7 +62630,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0478 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62654,7 +62654,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0479 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -62678,7 +62678,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0480 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62702,7 +62702,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0481 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62726,7 +62726,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0482 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62750,7 +62750,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0483 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62774,7 +62774,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0484 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			230,
 			192
@@ -62798,7 +62798,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0485 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62822,7 +62822,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0486 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62846,7 +62846,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0487 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62870,7 +62870,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0488 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62894,7 +62894,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0489 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62918,7 +62918,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0490 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62942,7 +62942,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0491 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -62966,7 +62966,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0492 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			230,
 			192
@@ -62990,7 +62990,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0493 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -63014,7 +63014,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0494 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -63038,7 +63038,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0495 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			230,
 			192
@@ -63062,7 +63062,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0496 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -63086,7 +63086,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0497 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			230,
 			192
@@ -63110,7 +63110,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0498 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -63134,7 +63134,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0499 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -63158,7 +63158,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0500 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -63182,7 +63182,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0501 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -63206,7 +63206,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0502 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			230,
 			192
@@ -63230,7 +63230,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0503 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			230,
 			192
@@ -63254,7 +63254,7 @@ return {
 		alias = {}
 	},
 	ma_ship_0504 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			230,
 			192
@@ -63278,7 +63278,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			21,
 			24
@@ -63304,7 +63304,7 @@ return {
 		}
 	},
 	ma_skeleton_0002 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			21,
 			24
@@ -63328,7 +63328,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0003 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			21,
 			24
@@ -63352,7 +63352,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0004 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			21,
 			24
@@ -63376,7 +63376,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0005 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			21,
 			24
@@ -63400,7 +63400,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0006 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			21,
 			24
@@ -63424,7 +63424,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			21,
 			24
@@ -63448,7 +63448,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0008 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			21,
 			24
@@ -63472,7 +63472,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0009 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			21,
 			24
@@ -63496,7 +63496,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0010 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			21,
 			24
@@ -63520,7 +63520,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0011 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			21,
 			24
@@ -63544,7 +63544,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0012 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			21,
 			24
@@ -63568,7 +63568,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0013 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			21,
 			24
@@ -63592,7 +63592,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0014 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			21,
 			24
@@ -63616,7 +63616,7 @@ return {
 		alias = {}
 	},
 	ma_skeleton_0015 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			21,
 			24
@@ -63700,7 +63700,7 @@ return {
 		}
 	},
 	ma_skeleton_0075 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63726,7 +63726,7 @@ return {
 		}
 	},
 	ma_skeleton_0077 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63752,7 +63752,7 @@ return {
 		}
 	},
 	ma_skeleton_0079 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63778,7 +63778,7 @@ return {
 		}
 	},
 	ma_skeleton_0081 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			21,
 			24
@@ -63804,7 +63804,7 @@ return {
 		}
 	},
 	ma_skeleton_0083 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63832,7 +63832,7 @@ return {
 		}
 	},
 	ma_skeleton_0087 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63858,7 +63858,7 @@ return {
 		}
 	},
 	ma_skeleton_0089 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63884,7 +63884,7 @@ return {
 		}
 	},
 	ma_skeleton_0091 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63910,7 +63910,7 @@ return {
 		}
 	},
 	ma_skeleton_0093 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63936,7 +63936,7 @@ return {
 		}
 	},
 	ma_skeleton_0095 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63964,7 +63964,7 @@ return {
 		}
 	},
 	ma_skeleton_0099 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -63990,7 +63990,7 @@ return {
 		}
 	},
 	ma_skeleton_0101 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -64016,7 +64016,7 @@ return {
 		}
 	},
 	ma_skeleton_0103 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -64043,7 +64043,7 @@ return {
 		}
 	},
 	ma_skeleton_0106 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			21,
 			24
@@ -64069,7 +64069,7 @@ return {
 		}
 	},
 	ma_skeleton_0108 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -64095,7 +64095,7 @@ return {
 		}
 	},
 	ma_skeleton_0110 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -64121,7 +64121,7 @@ return {
 		}
 	},
 	ma_skeleton_0112 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -64147,7 +64147,7 @@ return {
 		}
 	},
 	ma_skeleton_0114 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			21,
 			24
@@ -64174,7 +64174,7 @@ return {
 		}
 	},
 	ma_skeleton_0117 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			21,
 			24
@@ -64201,7 +64201,7 @@ return {
 		}
 	},
 	ma_skeleton_0120 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			21,
 			24
@@ -64228,7 +64228,7 @@ return {
 		}
 	},
 	ma_skeleton_0123 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			21,
 			24
@@ -64254,7 +64254,7 @@ return {
 		}
 	},
 	ma_skeleton_0125 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			21,
 			24
@@ -64280,7 +64280,7 @@ return {
 		}
 	},
 	ma_skeleton_0127 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			21,
 			24
@@ -64306,7 +64306,7 @@ return {
 		}
 	},
 	ma_snapvine_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			34,
 			40
@@ -64330,7 +64330,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0002 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64354,7 +64354,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64378,7 +64378,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64402,7 +64402,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64426,7 +64426,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64450,7 +64450,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64474,7 +64474,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64498,7 +64498,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64522,7 +64522,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0010 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			34,
 			40
@@ -64546,7 +64546,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64570,7 +64570,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64594,7 +64594,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64618,7 +64618,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64642,7 +64642,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64666,7 +64666,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64690,7 +64690,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			34,
 			40
@@ -64714,7 +64714,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			34,
 			40
@@ -64738,7 +64738,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			34,
 			40
@@ -64762,7 +64762,7 @@ return {
 		alias = {}
 	},
 	ma_snapvine_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			34,
 			40
@@ -64786,7 +64786,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0001 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			86,
 			57
@@ -64810,7 +64810,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0002 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			86,
 			57
@@ -64834,7 +64834,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -64858,7 +64858,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0004 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			86,
 			57
@@ -64882,7 +64882,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -64906,7 +64906,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -64930,7 +64930,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -64954,7 +64954,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -64978,7 +64978,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65002,7 +65002,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65026,7 +65026,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65050,7 +65050,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65074,7 +65074,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65098,7 +65098,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65122,7 +65122,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65148,7 +65148,7 @@ return {
 		}
 	},
 	ma_tentacle_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65172,7 +65172,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			86,
 			57
@@ -65196,7 +65196,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65224,7 +65224,7 @@ return {
 		}
 	},
 	ma_tentacle_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65252,7 +65252,7 @@ return {
 		}
 	},
 	ma_tentacle_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65280,7 +65280,7 @@ return {
 		}
 	},
 	ma_tentacle_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65308,7 +65308,7 @@ return {
 		}
 	},
 	ma_tentacle_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65336,7 +65336,7 @@ return {
 		}
 	},
 	ma_tentacle_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			86,
 			57
@@ -65364,7 +65364,7 @@ return {
 		}
 	},
 	ma_tentacle_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			86,
 			57
@@ -65392,7 +65392,7 @@ return {
 		}
 	},
 	ma_tentacle_0033 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			86,
 			57
@@ -65420,7 +65420,7 @@ return {
 		}
 	},
 	ma_tentacle_0035 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65448,7 +65448,7 @@ return {
 		}
 	},
 	ma_tentacle_0037 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65476,7 +65476,7 @@ return {
 		}
 	},
 	ma_tentacle_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			86,
 			57
@@ -65504,7 +65504,7 @@ return {
 		}
 	},
 	ma_tentacle_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			86,
 			57
@@ -65532,7 +65532,7 @@ return {
 		}
 	},
 	ma_tentacle_0043 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65560,7 +65560,7 @@ return {
 		}
 	},
 	ma_tentacle_0045 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65588,7 +65588,7 @@ return {
 		}
 	},
 	ma_tentacle_0047 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65621,7 +65621,7 @@ return {
 		}
 	},
 	ma_tentacle_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65651,7 +65651,7 @@ return {
 		}
 	},
 	ma_tentacle_0053 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65681,7 +65681,7 @@ return {
 		}
 	},
 	ma_tentacle_0056 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65711,7 +65711,7 @@ return {
 		}
 	},
 	ma_tentacle_0059 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65741,7 +65741,7 @@ return {
 		}
 	},
 	ma_tentacle_0062 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65771,7 +65771,7 @@ return {
 		}
 	},
 	ma_tentacle_0065 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65801,7 +65801,7 @@ return {
 		}
 	},
 	ma_tentacle_0068 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			86,
 			57
@@ -65831,7 +65831,7 @@ return {
 		}
 	},
 	ma_tentacle_0126 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65855,7 +65855,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0127 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65879,7 +65879,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0128 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			86,
 			57
@@ -65905,7 +65905,7 @@ return {
 		}
 	},
 	ma_tentacle_0130 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			86,
 			57
@@ -65929,7 +65929,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0131 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			86,
 			57
@@ -65953,7 +65953,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0132 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			86,
 			57
@@ -65977,7 +65977,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0133 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			86,
 			57
@@ -66001,7 +66001,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0134 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			86,
 			57
@@ -66025,7 +66025,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0135 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			86,
 			57
@@ -66049,7 +66049,7 @@ return {
 		alias = {}
 	},
 	ma_tentacle_0136 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			86,
 			57
@@ -66075,7 +66075,7 @@ return {
 		}
 	},
 	ma_tentacle_0138 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			86,
 			57
@@ -66101,7 +66101,7 @@ return {
 		}
 	},
 	ma_tentacle_0140 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			86,
 			57
@@ -66127,7 +66127,7 @@ return {
 		}
 	},
 	ma_twister_1_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			43,
 			83
@@ -66151,7 +66151,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			43,
 			83
@@ -66175,7 +66175,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66199,7 +66199,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66223,7 +66223,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66247,7 +66247,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66271,7 +66271,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0007 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			83
@@ -66295,7 +66295,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66319,7 +66319,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66343,7 +66343,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66367,7 +66367,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66391,7 +66391,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0012 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			43,
 			83
@@ -66415,7 +66415,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66439,7 +66439,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66463,7 +66463,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0015 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			43,
 			83
@@ -66487,7 +66487,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66511,7 +66511,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66535,7 +66535,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66559,7 +66559,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66583,7 +66583,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0020 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			43,
 			83
@@ -66607,7 +66607,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66631,7 +66631,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66655,7 +66655,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66679,7 +66679,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66703,7 +66703,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66727,7 +66727,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66751,7 +66751,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66775,7 +66775,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0028 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			43,
 			83
@@ -66799,7 +66799,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66823,7 +66823,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66847,7 +66847,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66871,7 +66871,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66895,7 +66895,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66919,7 +66919,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66943,7 +66943,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66967,7 +66967,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -66991,7 +66991,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67015,7 +67015,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67039,7 +67039,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67063,7 +67063,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67087,7 +67087,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67111,7 +67111,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0042 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67135,7 +67135,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67159,7 +67159,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67183,7 +67183,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67207,7 +67207,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67231,7 +67231,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67255,7 +67255,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67279,7 +67279,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67303,7 +67303,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67327,7 +67327,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67351,7 +67351,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0052 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67375,7 +67375,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67399,7 +67399,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0054 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67423,7 +67423,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67447,7 +67447,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67471,7 +67471,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67495,7 +67495,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67519,7 +67519,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67543,7 +67543,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67567,7 +67567,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67591,7 +67591,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67615,7 +67615,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67639,7 +67639,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67663,7 +67663,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67687,7 +67687,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67711,7 +67711,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67735,7 +67735,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67759,7 +67759,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67783,7 +67783,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0070 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67807,7 +67807,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0071 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67831,7 +67831,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0072 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67855,7 +67855,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0073 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67879,7 +67879,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0074 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67903,7 +67903,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0075 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67927,7 +67927,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0076 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67951,7 +67951,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0077 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67975,7 +67975,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0078 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -67999,7 +67999,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0079 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68023,7 +68023,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0080 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68047,7 +68047,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0081 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68071,7 +68071,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0082 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68095,7 +68095,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0083 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68119,7 +68119,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0084 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68143,7 +68143,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0085 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68167,7 +68167,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0086 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68191,7 +68191,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0087 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68215,7 +68215,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0088 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68239,7 +68239,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0089 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68263,7 +68263,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0090 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68287,7 +68287,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0091 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68311,7 +68311,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0092 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68335,7 +68335,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0093 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68359,7 +68359,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0094 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68383,7 +68383,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0095 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68407,7 +68407,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0096 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68431,7 +68431,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0097 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68455,7 +68455,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0098 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68479,7 +68479,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0099 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68503,7 +68503,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0100 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68527,7 +68527,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0101 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68551,7 +68551,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0102 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68575,7 +68575,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0103 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68599,7 +68599,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0104 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68623,7 +68623,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0105 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68647,7 +68647,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0106 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68671,7 +68671,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0107 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68695,7 +68695,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0108 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68719,7 +68719,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0109 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68743,7 +68743,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0110 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68767,7 +68767,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0111 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68791,7 +68791,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0112 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68815,7 +68815,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0113 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68839,7 +68839,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0114 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68863,7 +68863,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0115 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			43,
 			83
@@ -68887,7 +68887,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0116 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			43,
 			83
@@ -68911,7 +68911,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0117 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			43,
 			83
@@ -68935,7 +68935,7 @@ return {
 		alias = {}
 	},
 	ma_twister_1_0118 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			43,
 			83
@@ -68961,7 +68961,7 @@ return {
 		}
 	},
 	ma_twister_2_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			68,
 			55
@@ -68985,7 +68985,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0002 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69009,7 +69009,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69033,7 +69033,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69057,7 +69057,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69081,7 +69081,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69105,7 +69105,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69129,7 +69129,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69153,7 +69153,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69177,7 +69177,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69201,7 +69201,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69225,7 +69225,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69249,7 +69249,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69273,7 +69273,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69297,7 +69297,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69321,7 +69321,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69345,7 +69345,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69369,7 +69369,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69393,7 +69393,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69417,7 +69417,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69441,7 +69441,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69465,7 +69465,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69489,7 +69489,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69513,7 +69513,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69537,7 +69537,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69561,7 +69561,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69585,7 +69585,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69609,7 +69609,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69633,7 +69633,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69657,7 +69657,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69681,7 +69681,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69705,7 +69705,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69729,7 +69729,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69753,7 +69753,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69777,7 +69777,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69801,7 +69801,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69825,7 +69825,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69849,7 +69849,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69873,7 +69873,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69897,7 +69897,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69921,7 +69921,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69945,7 +69945,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0042 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69969,7 +69969,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -69993,7 +69993,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70017,7 +70017,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70041,7 +70041,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70065,7 +70065,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70089,7 +70089,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70113,7 +70113,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70137,7 +70137,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70161,7 +70161,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70185,7 +70185,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0052 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70209,7 +70209,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70233,7 +70233,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0054 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70257,7 +70257,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70281,7 +70281,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70305,7 +70305,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70329,7 +70329,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70353,7 +70353,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70377,7 +70377,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70401,7 +70401,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70425,7 +70425,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70449,7 +70449,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70473,7 +70473,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70497,7 +70497,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70521,7 +70521,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70545,7 +70545,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70569,7 +70569,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70593,7 +70593,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70617,7 +70617,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0070 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70641,7 +70641,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0071 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70665,7 +70665,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0072 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70689,7 +70689,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0073 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70713,7 +70713,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0074 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70737,7 +70737,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0075 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70761,7 +70761,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0076 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70785,7 +70785,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0077 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70809,7 +70809,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0078 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70833,7 +70833,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0079 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70857,7 +70857,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0080 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70881,7 +70881,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0081 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70905,7 +70905,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0082 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70929,7 +70929,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0083 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70953,7 +70953,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0084 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -70977,7 +70977,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0085 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71001,7 +71001,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0086 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71025,7 +71025,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0087 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71049,7 +71049,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0088 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71073,7 +71073,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0089 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71097,7 +71097,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0090 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71121,7 +71121,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0091 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71145,7 +71145,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0092 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71169,7 +71169,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0093 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71193,7 +71193,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0094 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71217,7 +71217,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0095 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71241,7 +71241,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0096 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71265,7 +71265,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0097 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71289,7 +71289,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0098 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71313,7 +71313,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0099 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71337,7 +71337,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0100 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71361,7 +71361,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0101 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71385,7 +71385,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0102 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71409,7 +71409,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0103 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71433,7 +71433,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0104 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71457,7 +71457,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0105 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71481,7 +71481,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0106 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71505,7 +71505,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0107 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71529,7 +71529,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0108 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71553,7 +71553,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0109 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71577,7 +71577,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0110 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71601,7 +71601,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0111 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71625,7 +71625,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0112 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71649,7 +71649,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0113 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71673,7 +71673,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0114 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71697,7 +71697,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0115 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71721,7 +71721,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0116 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			68,
 			55
@@ -71745,7 +71745,7 @@ return {
 		alias = {}
 	},
 	ma_twister_2_0117 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			68,
 			55
@@ -71772,7 +71772,7 @@ return {
 		}
 	},
 	ma_twister_3_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			53,
 			57
@@ -71796,7 +71796,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0002 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71820,7 +71820,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71844,7 +71844,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71868,7 +71868,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71892,7 +71892,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71916,7 +71916,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71940,7 +71940,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71964,7 +71964,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -71988,7 +71988,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72012,7 +72012,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72036,7 +72036,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72060,7 +72060,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72084,7 +72084,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72108,7 +72108,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72132,7 +72132,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72156,7 +72156,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72180,7 +72180,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72204,7 +72204,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72228,7 +72228,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72252,7 +72252,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72276,7 +72276,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72300,7 +72300,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72324,7 +72324,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72348,7 +72348,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72372,7 +72372,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72396,7 +72396,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72420,7 +72420,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72444,7 +72444,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72468,7 +72468,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72492,7 +72492,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72516,7 +72516,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72540,7 +72540,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72564,7 +72564,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72588,7 +72588,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72612,7 +72612,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72636,7 +72636,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72660,7 +72660,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72684,7 +72684,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72708,7 +72708,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72732,7 +72732,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72756,7 +72756,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0042 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72780,7 +72780,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72804,7 +72804,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72828,7 +72828,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72852,7 +72852,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72876,7 +72876,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72900,7 +72900,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72924,7 +72924,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72948,7 +72948,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72972,7 +72972,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -72996,7 +72996,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0052 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73020,7 +73020,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73044,7 +73044,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0054 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73068,7 +73068,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73092,7 +73092,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73116,7 +73116,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73140,7 +73140,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73164,7 +73164,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73188,7 +73188,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73212,7 +73212,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73236,7 +73236,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73260,7 +73260,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73284,7 +73284,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73308,7 +73308,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73332,7 +73332,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73356,7 +73356,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73380,7 +73380,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73404,7 +73404,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73428,7 +73428,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0070 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73452,7 +73452,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0071 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73476,7 +73476,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0072 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73500,7 +73500,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0073 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73524,7 +73524,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0074 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73548,7 +73548,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0075 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73572,7 +73572,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0076 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73596,7 +73596,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0077 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73620,7 +73620,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0078 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73644,7 +73644,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0079 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73668,7 +73668,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0080 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73692,7 +73692,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0081 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73716,7 +73716,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0082 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73740,7 +73740,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0083 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73764,7 +73764,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0084 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73788,7 +73788,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0085 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73812,7 +73812,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0086 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73836,7 +73836,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0087 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73860,7 +73860,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0088 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73884,7 +73884,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0089 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73908,7 +73908,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0090 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73932,7 +73932,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0091 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73956,7 +73956,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0092 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -73980,7 +73980,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0093 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74004,7 +74004,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0094 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74028,7 +74028,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0095 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74052,7 +74052,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0096 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74076,7 +74076,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0097 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74100,7 +74100,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0098 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74124,7 +74124,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0099 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74148,7 +74148,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0100 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74172,7 +74172,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0101 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74196,7 +74196,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0102 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74220,7 +74220,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0103 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74244,7 +74244,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0104 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74268,7 +74268,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0105 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74292,7 +74292,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0106 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74316,7 +74316,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0107 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74340,7 +74340,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0108 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74364,7 +74364,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0109 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74388,7 +74388,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0110 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74412,7 +74412,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0111 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74436,7 +74436,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0112 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			53,
 			57
@@ -74460,7 +74460,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0113 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			53,
 			57
@@ -74484,7 +74484,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0114 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74508,7 +74508,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0115 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			53,
 			57
@@ -74532,7 +74532,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0116 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			53,
 			57
@@ -74556,7 +74556,7 @@ return {
 		alias = {}
 	},
 	ma_twister_3_0117 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			53,
 			57
@@ -74583,7 +74583,7 @@ return {
 		}
 	},
 	ma_volcano_bubble_0001 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -74607,7 +74607,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74631,7 +74631,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0003 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74655,7 +74655,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74679,7 +74679,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0005 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74703,7 +74703,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0006 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74727,7 +74727,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0007 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74751,7 +74751,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0008 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74775,7 +74775,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0009 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -74799,7 +74799,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0010 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -74823,7 +74823,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0011 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74847,7 +74847,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0012 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -74871,7 +74871,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0013 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -74895,7 +74895,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0014 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -74919,7 +74919,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0015 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -74943,7 +74943,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0016 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -74967,7 +74967,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -74991,7 +74991,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75015,7 +75015,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0019 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -75039,7 +75039,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0020 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -75063,7 +75063,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0021 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -75087,7 +75087,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0022 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -75111,7 +75111,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0023 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -75135,7 +75135,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0024 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -75159,7 +75159,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0025 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -75183,7 +75183,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0026 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -75207,7 +75207,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0027 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75231,7 +75231,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0028 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75255,7 +75255,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0029 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75279,7 +75279,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0030 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75303,7 +75303,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0031 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75327,7 +75327,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0032 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75351,7 +75351,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0033 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75375,7 +75375,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0034 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75399,7 +75399,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0035 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75423,7 +75423,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0036 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75447,7 +75447,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0037 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75471,7 +75471,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0038 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75495,7 +75495,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0039 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75519,7 +75519,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0040 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75543,7 +75543,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0041 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75567,7 +75567,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0042 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -75591,7 +75591,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0043 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -75615,7 +75615,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0044 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -75639,7 +75639,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0045 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -75663,7 +75663,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0046 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			37,
 			16
@@ -75687,7 +75687,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0047 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -75711,7 +75711,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0048 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75735,7 +75735,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0049 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75759,7 +75759,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0050 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75783,7 +75783,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0051 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75807,7 +75807,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75831,7 +75831,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0053 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75855,7 +75855,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0054 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75879,7 +75879,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0055 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75903,7 +75903,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0056 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75927,7 +75927,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0057 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75951,7 +75951,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0058 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -75975,7 +75975,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0059 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -75999,7 +75999,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0060 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -76023,7 +76023,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0061 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -76047,7 +76047,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0062 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -76071,7 +76071,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			37,
 			16
@@ -76095,7 +76095,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			37,
 			16
@@ -76119,7 +76119,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			37,
 			16
@@ -76143,7 +76143,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0066 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -76167,7 +76167,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0067 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -76191,7 +76191,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0068 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			37,
 			16
@@ -76215,7 +76215,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0069 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			37,
 			16
@@ -76239,7 +76239,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_bubble_0070 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			37,
 			16
@@ -76263,7 +76263,7 @@ return {
 		alias = {}
 	},
 	ma_volcano_smoke_0001 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76291,7 +76291,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0005 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76319,7 +76319,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0009 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76347,7 +76347,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0013 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76375,7 +76375,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0017 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76403,7 +76403,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0021 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76431,7 +76431,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0025 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76459,7 +76459,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0029 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76487,7 +76487,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0033 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76515,7 +76515,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0037 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76543,7 +76543,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0041 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76571,7 +76571,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0045 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76599,7 +76599,7 @@ return {
 		}
 	},
 	ma_volcano_smoke_0049 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			129,
 			158
@@ -76627,7 +76627,7 @@ return {
 		}
 	},
 	ma_vulture_0001 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76651,7 +76651,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0002 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76675,7 +76675,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76699,7 +76699,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76723,7 +76723,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76747,7 +76747,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76771,7 +76771,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76795,7 +76795,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76819,7 +76819,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76843,7 +76843,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76867,7 +76867,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76891,7 +76891,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76915,7 +76915,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76939,7 +76939,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76963,7 +76963,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -76987,7 +76987,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77011,7 +77011,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77035,7 +77035,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77059,7 +77059,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77083,7 +77083,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77107,7 +77107,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77131,7 +77131,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77155,7 +77155,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -77179,7 +77179,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77203,7 +77203,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77227,7 +77227,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77251,7 +77251,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77275,7 +77275,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77299,7 +77299,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77323,7 +77323,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77347,7 +77347,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77371,7 +77371,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77395,7 +77395,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77419,7 +77419,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0034 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77443,7 +77443,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0035 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77467,7 +77467,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77491,7 +77491,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77515,7 +77515,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77539,7 +77539,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77563,7 +77563,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77587,7 +77587,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0041 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77611,7 +77611,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0042 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77635,7 +77635,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77659,7 +77659,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77683,7 +77683,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77707,7 +77707,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77731,7 +77731,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77755,7 +77755,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77779,7 +77779,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77803,7 +77803,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -77827,7 +77827,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0051 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -77851,7 +77851,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0052 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -77875,7 +77875,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0053 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -77899,7 +77899,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0054 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -77923,7 +77923,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0055 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -77947,7 +77947,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0056 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -77971,7 +77971,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0057 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -77995,7 +77995,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0058 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -78019,7 +78019,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78043,7 +78043,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78067,7 +78067,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78091,7 +78091,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78115,7 +78115,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78139,7 +78139,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78163,7 +78163,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78187,7 +78187,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78211,7 +78211,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78235,7 +78235,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78259,7 +78259,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78283,7 +78283,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78307,7 +78307,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0071 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78331,7 +78331,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0072 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78355,7 +78355,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0073 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78379,7 +78379,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78403,7 +78403,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78427,7 +78427,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0076 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78451,7 +78451,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0077 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78475,7 +78475,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78499,7 +78499,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78523,7 +78523,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0080 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78547,7 +78547,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0081 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78571,7 +78571,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0082 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78595,7 +78595,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0083 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78619,7 +78619,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0084 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78643,7 +78643,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0085 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78667,7 +78667,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0086 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			237,
 			249
@@ -78691,7 +78691,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0087 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78715,7 +78715,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0088 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			237,
 			249
@@ -78739,7 +78739,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0089 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78763,7 +78763,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0090 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78787,7 +78787,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0091 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78811,7 +78811,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0092 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78835,7 +78835,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0093 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -78859,7 +78859,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0094 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			237,
 			249
@@ -78883,7 +78883,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0095 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78907,7 +78907,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0096 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -78931,7 +78931,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0097 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			237,
 			249
@@ -78955,7 +78955,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0098 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			237,
 			249
@@ -78979,7 +78979,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0099 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79003,7 +79003,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0100 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79027,7 +79027,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0101 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79051,7 +79051,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0102 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79075,7 +79075,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0103 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79099,7 +79099,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0104 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79123,7 +79123,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0105 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79147,7 +79147,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0106 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79171,7 +79171,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0107 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79195,7 +79195,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0108 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79219,7 +79219,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0109 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79243,7 +79243,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0110 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79267,7 +79267,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0111 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			237,
 			249
@@ -79291,7 +79291,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0112 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79315,7 +79315,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0113 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79339,7 +79339,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0114 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79363,7 +79363,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0115 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79387,7 +79387,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0116 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79411,7 +79411,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0117 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79435,7 +79435,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0118 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79459,7 +79459,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0119 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79483,7 +79483,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0120 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79507,7 +79507,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0121 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79531,7 +79531,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0122 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79555,7 +79555,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0123 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79579,7 +79579,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0124 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79603,7 +79603,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0125 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79627,7 +79627,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0126 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79651,7 +79651,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0127 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79675,7 +79675,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0128 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79699,7 +79699,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0129 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79723,7 +79723,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0130 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79747,7 +79747,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0131 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79771,7 +79771,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0132 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79795,7 +79795,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0133 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79819,7 +79819,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0134 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79843,7 +79843,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0135 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79867,7 +79867,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0136 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79891,7 +79891,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0137 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79915,7 +79915,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0138 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79939,7 +79939,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0139 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79963,7 +79963,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0140 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -79987,7 +79987,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0141 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80011,7 +80011,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0142 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80035,7 +80035,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0143 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80059,7 +80059,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0144 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80083,7 +80083,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0145 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80107,7 +80107,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0146 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80131,7 +80131,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0147 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80155,7 +80155,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0148 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80179,7 +80179,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0149 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80203,7 +80203,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0150 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80227,7 +80227,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0151 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80251,7 +80251,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0152 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80275,7 +80275,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0153 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80299,7 +80299,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0154 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80323,7 +80323,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0155 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80347,7 +80347,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0156 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80371,7 +80371,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0157 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80395,7 +80395,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0158 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80419,7 +80419,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0159 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80443,7 +80443,7 @@ return {
 		alias = {}
 	},
 	ma_vulture_0160 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			237,
 			249
@@ -80467,7 +80467,7 @@ return {
 		alias = {}
 	},
 	ma_waterSparks_0001 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			50,
 			34
@@ -80499,7 +80499,7 @@ return {
 		}
 	},
 	ma_waterSparks_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			50,
 			34
@@ -80540,7 +80540,7 @@ return {
 		}
 	},
 	ma_waterSparks_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			50,
 			34
@@ -80572,7 +80572,7 @@ return {
 		}
 	},
 	ma_waterfall_left_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80598,7 +80598,7 @@ return {
 		}
 	},
 	ma_waterfall_left_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80622,7 +80622,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall_left_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80646,7 +80646,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall_left_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80672,7 +80672,7 @@ return {
 		}
 	},
 	ma_waterfall_left_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80698,7 +80698,7 @@ return {
 		}
 	},
 	ma_waterfall_left_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80722,7 +80722,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall_left_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80746,7 +80746,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall_left_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80772,7 +80772,7 @@ return {
 		}
 	},
 	ma_waterfall_left_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80798,7 +80798,7 @@ return {
 		}
 	},
 	ma_waterfall_left_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80822,7 +80822,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall_left_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80846,7 +80846,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall_left_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			65,
 			152
@@ -80872,7 +80872,7 @@ return {
 		}
 	},
 	ma_waves_1_0001 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -80896,7 +80896,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0002 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -80920,7 +80920,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0003 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -80944,7 +80944,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0004 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -80968,7 +80968,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0005 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -80992,7 +80992,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0006 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81016,7 +81016,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0007 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81040,7 +81040,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0008 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81064,7 +81064,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0009 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81088,7 +81088,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0010 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81112,7 +81112,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0011 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81136,7 +81136,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0012 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81160,7 +81160,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0013 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81184,7 +81184,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0014 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81208,7 +81208,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0015 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81232,7 +81232,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0016 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81256,7 +81256,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0017 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81280,7 +81280,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0018 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81304,7 +81304,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0019 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81328,7 +81328,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0020 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81352,7 +81352,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0021 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81376,7 +81376,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0022 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81400,7 +81400,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0023 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81424,7 +81424,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0024 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81448,7 +81448,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0025 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81472,7 +81472,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0026 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81496,7 +81496,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0027 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81520,7 +81520,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0028 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81544,7 +81544,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0029 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81568,7 +81568,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0030 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81592,7 +81592,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0031 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81616,7 +81616,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0032 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81640,7 +81640,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0033 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81664,7 +81664,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0034 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81688,7 +81688,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0035 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81712,7 +81712,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0036 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81736,7 +81736,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0037 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81760,7 +81760,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0038 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81784,7 +81784,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0039 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81808,7 +81808,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81832,7 +81832,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0041 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81856,7 +81856,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0042 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81880,7 +81880,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0043 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81904,7 +81904,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0044 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81928,7 +81928,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0045 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81952,7 +81952,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0046 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -81976,7 +81976,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0047 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82000,7 +82000,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0048 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82024,7 +82024,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0049 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82048,7 +82048,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0050 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82072,7 +82072,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0051 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82096,7 +82096,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82120,7 +82120,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0053 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82144,7 +82144,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0054 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82168,7 +82168,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0055 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82192,7 +82192,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0056 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82216,7 +82216,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0057 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82240,7 +82240,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0058 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82264,7 +82264,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0059 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82288,7 +82288,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0060 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82312,7 +82312,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0061 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82336,7 +82336,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0062 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82360,7 +82360,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0063 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82384,7 +82384,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0064 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82408,7 +82408,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0065 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82432,7 +82432,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0066 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82456,7 +82456,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0067 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82480,7 +82480,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0068 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82504,7 +82504,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0069 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82528,7 +82528,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0070 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			137,
 			75
@@ -82552,7 +82552,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0071 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			137,
 			75
@@ -82576,7 +82576,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0072 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			137,
 			75
@@ -82600,7 +82600,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0073 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			137,
 			75
@@ -82624,7 +82624,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0074 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			137,
 			75
@@ -82648,7 +82648,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0075 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82672,7 +82672,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0076 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82696,7 +82696,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0077 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82720,7 +82720,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0078 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82744,7 +82744,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0079 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82768,7 +82768,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0080 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82792,7 +82792,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0081 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82816,7 +82816,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0082 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82840,7 +82840,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0083 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82864,7 +82864,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0084 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82888,7 +82888,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0085 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82912,7 +82912,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0086 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82936,7 +82936,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0087 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82960,7 +82960,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0088 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -82984,7 +82984,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0089 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83008,7 +83008,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0090 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83032,7 +83032,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0091 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83056,7 +83056,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0092 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83080,7 +83080,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0093 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83104,7 +83104,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0094 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83128,7 +83128,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0095 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83152,7 +83152,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0096 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83176,7 +83176,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0097 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83200,7 +83200,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0098 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83224,7 +83224,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0099 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83248,7 +83248,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0100 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83272,7 +83272,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0101 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83296,7 +83296,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0102 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83320,7 +83320,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0103 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83344,7 +83344,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0104 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83368,7 +83368,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0105 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83392,7 +83392,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0106 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83416,7 +83416,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0107 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83440,7 +83440,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0108 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83464,7 +83464,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0109 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83488,7 +83488,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0110 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83512,7 +83512,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0111 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83536,7 +83536,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0112 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83560,7 +83560,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0113 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83584,7 +83584,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0114 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83608,7 +83608,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0115 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83632,7 +83632,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0116 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83656,7 +83656,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0117 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83680,7 +83680,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0118 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83704,7 +83704,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0119 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83728,7 +83728,7 @@ return {
 		alias = {}
 	},
 	ma_waves_1_0120 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			137,
 			75
@@ -83752,7 +83752,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0001 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -83776,7 +83776,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0002 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -83800,7 +83800,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0003 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -83824,7 +83824,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0004 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			145,
 			82
@@ -83848,7 +83848,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0005 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			145,
 			82
@@ -83872,7 +83872,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0006 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -83896,7 +83896,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0007 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -83920,7 +83920,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0008 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -83944,7 +83944,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0009 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -83968,7 +83968,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0010 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			145,
 			82
@@ -83992,7 +83992,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0011 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -84016,7 +84016,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0012 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -84040,7 +84040,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0013 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -84064,7 +84064,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0014 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -84088,7 +84088,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0015 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84112,7 +84112,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0016 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -84136,7 +84136,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -84160,7 +84160,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			145,
 			82
@@ -84184,7 +84184,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0019 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84208,7 +84208,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0020 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84232,7 +84232,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0021 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84256,7 +84256,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0022 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84280,7 +84280,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0023 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84304,7 +84304,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0024 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84328,7 +84328,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0025 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84352,7 +84352,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0026 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84376,7 +84376,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0027 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84400,7 +84400,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0028 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84424,7 +84424,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0029 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -84448,7 +84448,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0030 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84472,7 +84472,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0031 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84496,7 +84496,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0032 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84520,7 +84520,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0033 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84544,7 +84544,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0034 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84568,7 +84568,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0035 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84592,7 +84592,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0036 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84616,7 +84616,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0037 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84640,7 +84640,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0038 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84664,7 +84664,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0039 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84688,7 +84688,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84712,7 +84712,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0041 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84736,7 +84736,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0042 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			145,
 			82
@@ -84760,7 +84760,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0043 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			145,
 			82
@@ -84784,7 +84784,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0044 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			145,
 			82
@@ -84808,7 +84808,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0045 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84832,7 +84832,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0046 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84856,7 +84856,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0047 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84880,7 +84880,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0048 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84904,7 +84904,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0049 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84928,7 +84928,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0050 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84952,7 +84952,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0051 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -84976,7 +84976,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85000,7 +85000,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0053 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85024,7 +85024,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0054 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85048,7 +85048,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0055 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85072,7 +85072,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0056 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85096,7 +85096,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0057 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85120,7 +85120,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0058 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85144,7 +85144,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0059 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85168,7 +85168,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0060 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85192,7 +85192,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0061 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85216,7 +85216,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0062 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85240,7 +85240,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0063 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85264,7 +85264,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0064 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85288,7 +85288,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0065 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85312,7 +85312,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0066 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85336,7 +85336,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0067 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85360,7 +85360,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0068 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85384,7 +85384,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0069 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85408,7 +85408,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0070 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85432,7 +85432,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0071 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85456,7 +85456,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0072 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85480,7 +85480,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0073 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85504,7 +85504,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0074 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85528,7 +85528,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0075 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85552,7 +85552,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0076 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85576,7 +85576,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0077 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85600,7 +85600,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0078 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85624,7 +85624,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0079 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85648,7 +85648,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0080 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85672,7 +85672,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0081 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85696,7 +85696,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0082 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85720,7 +85720,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0083 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85744,7 +85744,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0084 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85768,7 +85768,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0085 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85792,7 +85792,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0086 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85816,7 +85816,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0087 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85840,7 +85840,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0088 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85864,7 +85864,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0089 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85888,7 +85888,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0090 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85912,7 +85912,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0091 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85936,7 +85936,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0092 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85960,7 +85960,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0093 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -85984,7 +85984,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0094 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86008,7 +86008,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0095 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86032,7 +86032,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0096 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86056,7 +86056,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0097 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86080,7 +86080,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0098 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86104,7 +86104,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0099 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86128,7 +86128,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0100 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86152,7 +86152,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0101 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86176,7 +86176,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0102 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86200,7 +86200,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0103 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86224,7 +86224,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0104 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86248,7 +86248,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0105 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86272,7 +86272,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0106 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86296,7 +86296,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0107 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -86320,7 +86320,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0108 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -86344,7 +86344,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0109 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			145,
 			82
@@ -86368,7 +86368,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0110 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			145,
 			82
@@ -86392,7 +86392,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0111 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			145,
 			82
@@ -86416,7 +86416,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0112 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			145,
 			82
@@ -86440,7 +86440,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0113 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			145,
 			82
@@ -86464,7 +86464,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0114 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			145,
 			82
@@ -86488,7 +86488,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0115 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			145,
 			82
@@ -86512,7 +86512,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0116 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86536,7 +86536,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0117 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			145,
 			82
@@ -86560,7 +86560,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0118 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			145,
 			82
@@ -86584,7 +86584,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0119 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			145,
 			82
@@ -86608,7 +86608,7 @@ return {
 		alias = {}
 	},
 	ma_waves_2_0120 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			145,
 			82
@@ -86632,7 +86632,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -86656,7 +86656,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0002 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -86680,7 +86680,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0003 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -86704,7 +86704,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0004 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -86728,7 +86728,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0005 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86752,7 +86752,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0006 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86776,7 +86776,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0007 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86800,7 +86800,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0008 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86824,7 +86824,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0009 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86848,7 +86848,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0010 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86872,7 +86872,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0011 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86896,7 +86896,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0012 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86920,7 +86920,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0013 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86944,7 +86944,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0014 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -86968,7 +86968,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0015 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -86992,7 +86992,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0016 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87016,7 +87016,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87040,7 +87040,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87064,7 +87064,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0019 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87088,7 +87088,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0020 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87112,7 +87112,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0021 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87136,7 +87136,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0022 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87160,7 +87160,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0023 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87184,7 +87184,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0024 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87208,7 +87208,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0025 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87232,7 +87232,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0026 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87256,7 +87256,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0027 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87280,7 +87280,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0028 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87304,7 +87304,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0029 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87328,7 +87328,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0030 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87352,7 +87352,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0031 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87376,7 +87376,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0032 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87400,7 +87400,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0033 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87424,7 +87424,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0034 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87448,7 +87448,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0035 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87472,7 +87472,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0036 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87496,7 +87496,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0037 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87520,7 +87520,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0038 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87544,7 +87544,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0039 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -87568,7 +87568,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			241,
 			85
@@ -87592,7 +87592,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0041 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			241,
 			85
@@ -87616,7 +87616,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0042 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			241,
 			85
@@ -87640,7 +87640,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0043 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			241,
 			85
@@ -87664,7 +87664,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0044 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			241,
 			85
@@ -87688,7 +87688,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0045 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87712,7 +87712,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0046 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87736,7 +87736,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0047 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87760,7 +87760,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0048 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87784,7 +87784,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0049 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87808,7 +87808,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0050 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87832,7 +87832,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0051 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87856,7 +87856,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0052 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87880,7 +87880,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0053 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87904,7 +87904,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0054 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87928,7 +87928,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0055 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87952,7 +87952,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0056 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -87976,7 +87976,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0057 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88000,7 +88000,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0058 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88024,7 +88024,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0059 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88048,7 +88048,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0060 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88072,7 +88072,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0061 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88096,7 +88096,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0062 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88120,7 +88120,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0063 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88144,7 +88144,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0064 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88168,7 +88168,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0065 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88192,7 +88192,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0066 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88216,7 +88216,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0067 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88240,7 +88240,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0068 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88264,7 +88264,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0069 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88288,7 +88288,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0070 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88312,7 +88312,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0071 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88336,7 +88336,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0072 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88360,7 +88360,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0073 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88384,7 +88384,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0074 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88408,7 +88408,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0075 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88432,7 +88432,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0076 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88456,7 +88456,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0077 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88480,7 +88480,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0078 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88504,7 +88504,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0079 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88528,7 +88528,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0080 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88552,7 +88552,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0081 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -88576,7 +88576,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0082 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -88600,7 +88600,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0083 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -88624,7 +88624,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0084 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -88648,7 +88648,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0085 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -88672,7 +88672,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0086 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88696,7 +88696,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0087 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88720,7 +88720,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0088 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88744,7 +88744,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0089 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88768,7 +88768,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0090 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88792,7 +88792,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0091 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88816,7 +88816,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0092 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88840,7 +88840,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0093 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -88864,7 +88864,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0094 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -88888,7 +88888,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0095 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88912,7 +88912,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0096 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -88936,7 +88936,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0097 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			241,
 			85
@@ -88960,7 +88960,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0098 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			241,
 			85
@@ -88984,7 +88984,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0099 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -89008,7 +89008,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0100 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -89032,7 +89032,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0101 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			241,
 			85
@@ -89056,7 +89056,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0102 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89080,7 +89080,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0103 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89104,7 +89104,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0104 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89128,7 +89128,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0105 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89152,7 +89152,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0106 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89176,7 +89176,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0107 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89200,7 +89200,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0108 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89224,7 +89224,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0109 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89248,7 +89248,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0110 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89272,7 +89272,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0111 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89296,7 +89296,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0112 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -89320,7 +89320,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0113 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89344,7 +89344,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0114 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -89368,7 +89368,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0115 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -89392,7 +89392,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0116 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -89416,7 +89416,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0117 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -89440,7 +89440,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0118 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			241,
 			85
@@ -89464,7 +89464,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0119 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89488,7 +89488,7 @@ return {
 		alias = {}
 	},
 	ma_waves_3_0120 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			241,
 			85
@@ -89512,7 +89512,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -89536,7 +89536,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0002 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			95,
 			133
@@ -89560,7 +89560,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0003 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89584,7 +89584,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0004 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89608,7 +89608,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0005 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89632,7 +89632,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0006 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89656,7 +89656,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0007 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89680,7 +89680,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0008 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89704,7 +89704,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0009 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89728,7 +89728,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0010 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89752,7 +89752,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0011 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89776,7 +89776,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0012 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -89800,7 +89800,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0013 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -89824,7 +89824,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0014 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			95,
 			133
@@ -89848,7 +89848,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0015 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89872,7 +89872,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0016 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89896,7 +89896,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0017 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89920,7 +89920,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0018 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89944,7 +89944,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0019 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89968,7 +89968,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0020 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -89992,7 +89992,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0021 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90016,7 +90016,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0022 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90040,7 +90040,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0023 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90064,7 +90064,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0024 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90088,7 +90088,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0025 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90112,7 +90112,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0026 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90136,7 +90136,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0027 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90160,7 +90160,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0028 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90184,7 +90184,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0029 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90208,7 +90208,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0030 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90232,7 +90232,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0031 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90256,7 +90256,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0032 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90280,7 +90280,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0033 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90304,7 +90304,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0034 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90328,7 +90328,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0035 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90352,7 +90352,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0036 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90376,7 +90376,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0037 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90400,7 +90400,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0038 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90424,7 +90424,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0039 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90448,7 +90448,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0040 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90472,7 +90472,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0041 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90496,7 +90496,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0042 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90520,7 +90520,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0043 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90544,7 +90544,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0044 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90568,7 +90568,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0045 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90592,7 +90592,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0046 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -90616,7 +90616,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0047 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -90640,7 +90640,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0048 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -90664,7 +90664,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0049 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90688,7 +90688,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90712,7 +90712,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0051 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			95,
 			133
@@ -90736,7 +90736,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0052 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			95,
 			133
@@ -90760,7 +90760,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0053 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			95,
 			133
@@ -90784,7 +90784,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0054 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			95,
 			133
@@ -90808,7 +90808,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -90832,7 +90832,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -90856,7 +90856,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0057 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -90880,7 +90880,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0058 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -90904,7 +90904,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0059 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -90928,7 +90928,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0060 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -90952,7 +90952,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0061 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -90976,7 +90976,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91000,7 +91000,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91024,7 +91024,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0064 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91048,7 +91048,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91072,7 +91072,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0066 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			95,
 			133
@@ -91096,7 +91096,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91120,7 +91120,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91144,7 +91144,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91168,7 +91168,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91192,7 +91192,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0071 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91216,7 +91216,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0072 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91240,7 +91240,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0073 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91264,7 +91264,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91288,7 +91288,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0075 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91312,7 +91312,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0076 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91336,7 +91336,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0077 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91360,7 +91360,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0078 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91384,7 +91384,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0079 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91408,7 +91408,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0080 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91432,7 +91432,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0081 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91456,7 +91456,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0082 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91480,7 +91480,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0083 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91504,7 +91504,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0084 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91528,7 +91528,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0085 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91552,7 +91552,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0086 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91576,7 +91576,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0087 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91600,7 +91600,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0088 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91624,7 +91624,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0089 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91648,7 +91648,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0090 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91672,7 +91672,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0091 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91696,7 +91696,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0092 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91720,7 +91720,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0093 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91744,7 +91744,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0094 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91768,7 +91768,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0095 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91792,7 +91792,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0096 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91816,7 +91816,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0097 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91840,7 +91840,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0098 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91864,7 +91864,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0099 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91888,7 +91888,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0100 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91912,7 +91912,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0101 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91936,7 +91936,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0102 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91960,7 +91960,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0103 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -91984,7 +91984,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0104 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -92008,7 +92008,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0105 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -92032,7 +92032,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0106 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -92056,7 +92056,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0107 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -92080,7 +92080,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0108 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -92104,7 +92104,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0109 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -92128,7 +92128,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0110 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -92152,7 +92152,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0111 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			95,
 			133
@@ -92176,7 +92176,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0112 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			95,
 			133
@@ -92200,7 +92200,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0113 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -92224,7 +92224,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0114 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			95,
 			133
@@ -92248,7 +92248,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0115 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			95,
 			133
@@ -92272,7 +92272,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0116 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			95,
 			133
@@ -92296,7 +92296,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0117 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			95,
 			133
@@ -92320,7 +92320,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0118 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			95,
 			133
@@ -92344,7 +92344,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0119 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			95,
 			133
@@ -92368,7 +92368,7 @@ return {
 		alias = {}
 	},
 	ma_waves_4_0120 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			95,
 			133
@@ -92392,7 +92392,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0001 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92416,7 +92416,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0002 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92440,7 +92440,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0003 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92464,7 +92464,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0004 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92488,7 +92488,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0005 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92512,7 +92512,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0006 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92536,7 +92536,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0007 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92560,7 +92560,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0008 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92584,7 +92584,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0009 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92608,7 +92608,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0010 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92632,7 +92632,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0011 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92656,7 +92656,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0012 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92680,7 +92680,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0013 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92704,7 +92704,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0014 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92728,7 +92728,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0015 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92752,7 +92752,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0016 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92776,7 +92776,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0017 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92800,7 +92800,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0018 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92824,7 +92824,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0019 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92848,7 +92848,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0020 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92872,7 +92872,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0021 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92896,7 +92896,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0022 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92920,7 +92920,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0023 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92944,7 +92944,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0024 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92968,7 +92968,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0025 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -92992,7 +92992,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0026 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93016,7 +93016,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0027 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93040,7 +93040,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0028 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			182,
 			109
@@ -93064,7 +93064,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0029 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			182,
 			109
@@ -93088,7 +93088,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0030 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			182,
 			109
@@ -93112,7 +93112,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0031 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93136,7 +93136,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0032 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			182,
 			109
@@ -93160,7 +93160,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0033 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93184,7 +93184,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0034 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93208,7 +93208,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0035 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93232,7 +93232,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0036 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			182,
 			109
@@ -93256,7 +93256,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0037 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93280,7 +93280,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0038 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93304,7 +93304,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0039 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93328,7 +93328,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0040 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93352,7 +93352,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0041 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -93376,7 +93376,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0042 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93400,7 +93400,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0043 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93424,7 +93424,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0044 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93448,7 +93448,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0045 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93472,7 +93472,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0046 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93496,7 +93496,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0047 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93520,7 +93520,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0048 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93544,7 +93544,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0049 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93568,7 +93568,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0050 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93592,7 +93592,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0051 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93616,7 +93616,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0052 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93640,7 +93640,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0053 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93664,7 +93664,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0054 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93688,7 +93688,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0055 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93712,7 +93712,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0056 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93736,7 +93736,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0057 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93760,7 +93760,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0058 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93784,7 +93784,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0059 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93808,7 +93808,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0060 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93832,7 +93832,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0061 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93856,7 +93856,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0062 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93880,7 +93880,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0063 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93904,7 +93904,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0064 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93928,7 +93928,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0065 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93952,7 +93952,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0066 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -93976,7 +93976,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0067 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94000,7 +94000,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0068 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94024,7 +94024,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0069 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94048,7 +94048,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0070 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -94072,7 +94072,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0071 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -94096,7 +94096,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0072 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -94120,7 +94120,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0073 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -94144,7 +94144,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0074 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			182,
 			109
@@ -94168,7 +94168,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0075 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94192,7 +94192,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0076 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94216,7 +94216,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0077 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94240,7 +94240,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0078 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94264,7 +94264,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0079 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94288,7 +94288,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0080 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94312,7 +94312,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0081 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94336,7 +94336,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0082 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94360,7 +94360,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0083 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94384,7 +94384,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0084 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94408,7 +94408,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0085 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94432,7 +94432,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0086 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94456,7 +94456,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0087 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94480,7 +94480,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0088 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94504,7 +94504,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0089 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94528,7 +94528,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0090 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94552,7 +94552,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0091 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94576,7 +94576,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0092 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94600,7 +94600,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0093 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94624,7 +94624,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0094 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94648,7 +94648,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0095 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94672,7 +94672,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0096 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94696,7 +94696,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0097 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94720,7 +94720,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0098 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94744,7 +94744,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0099 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94768,7 +94768,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0100 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94792,7 +94792,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0101 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94816,7 +94816,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0102 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94840,7 +94840,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0103 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94864,7 +94864,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0104 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94888,7 +94888,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0105 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94912,7 +94912,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0106 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			182,
 			109
@@ -94936,7 +94936,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0107 = {
-		a_name = "screen_map_animations-16.png",
+		a_name = "kr2_screen_map_animations-2.png",
 		size = {
 			182,
 			109
@@ -94960,7 +94960,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0108 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -94984,7 +94984,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0109 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95008,7 +95008,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0110 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95032,7 +95032,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0111 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95056,7 +95056,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0112 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95080,7 +95080,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0113 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95104,7 +95104,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0114 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95128,7 +95128,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0115 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95152,7 +95152,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0116 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95176,7 +95176,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0117 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95200,7 +95200,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0118 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95224,7 +95224,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0119 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95248,7 +95248,7 @@ return {
 		alias = {}
 	},
 	ma_waves_5_0120 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			182,
 			109
@@ -95272,7 +95272,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0001 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95296,7 +95296,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0002 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95320,7 +95320,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0003 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95344,7 +95344,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0004 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95368,7 +95368,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0005 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95392,7 +95392,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0006 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95416,7 +95416,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0007 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95440,7 +95440,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0008 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95464,7 +95464,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0009 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95488,7 +95488,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0010 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95512,7 +95512,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0011 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95536,7 +95536,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0012 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95560,7 +95560,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0013 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95584,7 +95584,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0014 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95608,7 +95608,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0015 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95632,7 +95632,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0016 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95656,7 +95656,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0017 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95680,7 +95680,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0018 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95704,7 +95704,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0019 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95728,7 +95728,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0020 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95752,7 +95752,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0021 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95776,7 +95776,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0022 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95800,7 +95800,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0023 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95824,7 +95824,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0024 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95848,7 +95848,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0025 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95872,7 +95872,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0026 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95896,7 +95896,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0027 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95920,7 +95920,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0028 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95944,7 +95944,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0029 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95968,7 +95968,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0030 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -95992,7 +95992,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0031 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96016,7 +96016,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0032 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96040,7 +96040,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0033 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			112,
 			49
@@ -96064,7 +96064,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0034 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96088,7 +96088,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0035 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96112,7 +96112,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96136,7 +96136,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96160,7 +96160,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96184,7 +96184,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0039 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96208,7 +96208,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0040 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96232,7 +96232,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0041 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96256,7 +96256,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0042 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96280,7 +96280,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0043 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96304,7 +96304,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0044 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96328,7 +96328,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0045 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			112,
 			49
@@ -96352,7 +96352,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0046 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			112,
 			49
@@ -96376,7 +96376,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0047 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			112,
 			49
@@ -96400,7 +96400,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0048 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			112,
 			49
@@ -96424,7 +96424,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0049 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			112,
 			49
@@ -96448,7 +96448,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0050 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			112,
 			49
@@ -96472,7 +96472,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0051 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			112,
 			49
@@ -96496,7 +96496,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0052 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			112,
 			49
@@ -96520,7 +96520,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0053 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			112,
 			49
@@ -96544,7 +96544,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0054 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96568,7 +96568,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0055 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96592,7 +96592,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0056 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96616,7 +96616,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0057 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			112,
 			49
@@ -96640,7 +96640,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0058 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			112,
 			49
@@ -96664,7 +96664,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0059 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			112,
 			49
@@ -96688,7 +96688,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0060 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			112,
 			49
@@ -96712,7 +96712,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0061 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			112,
 			49
@@ -96736,7 +96736,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0062 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96760,7 +96760,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0063 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96784,7 +96784,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0064 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			112,
 			49
@@ -96808,7 +96808,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0065 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96832,7 +96832,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0066 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96856,7 +96856,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0067 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96880,7 +96880,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0068 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96904,7 +96904,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0069 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96928,7 +96928,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0070 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -96952,7 +96952,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0071 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			112,
 			49
@@ -96976,7 +96976,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0072 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			112,
 			49
@@ -97000,7 +97000,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0073 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97024,7 +97024,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0074 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97048,7 +97048,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0075 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			112,
 			49
@@ -97072,7 +97072,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0076 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97096,7 +97096,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0077 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			112,
 			49
@@ -97120,7 +97120,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0078 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			112,
 			49
@@ -97144,7 +97144,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0079 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			112,
 			49
@@ -97168,7 +97168,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0080 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			112,
 			49
@@ -97192,7 +97192,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0081 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			112,
 			49
@@ -97216,7 +97216,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0082 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97240,7 +97240,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0083 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97264,7 +97264,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0084 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97288,7 +97288,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0085 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97312,7 +97312,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0086 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97336,7 +97336,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0087 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97360,7 +97360,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0088 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97384,7 +97384,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0089 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97408,7 +97408,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0090 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97432,7 +97432,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0091 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97456,7 +97456,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0092 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97480,7 +97480,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0093 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97504,7 +97504,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0094 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97528,7 +97528,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0095 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97552,7 +97552,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0096 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97576,7 +97576,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0097 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97600,7 +97600,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0098 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97624,7 +97624,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0099 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97648,7 +97648,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0100 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97672,7 +97672,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0101 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97696,7 +97696,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0102 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97720,7 +97720,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0103 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97744,7 +97744,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0104 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97768,7 +97768,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0105 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97792,7 +97792,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0106 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97816,7 +97816,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0107 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97840,7 +97840,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0108 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97864,7 +97864,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0109 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97888,7 +97888,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0110 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97912,7 +97912,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0111 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97936,7 +97936,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0112 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97960,7 +97960,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0113 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -97984,7 +97984,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0114 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -98008,7 +98008,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0115 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -98032,7 +98032,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0116 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -98056,7 +98056,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0117 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -98080,7 +98080,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0118 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -98104,7 +98104,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0119 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -98128,7 +98128,7 @@ return {
 		alias = {}
 	},
 	ma_waves_6_0120 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			112,
 			49
@@ -98152,7 +98152,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			40,
 			97
@@ -98220,7 +98220,7 @@ return {
 		}
 	},
 	ma_waves_7_0002 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			40,
 			97
@@ -98244,7 +98244,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0003 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			40,
 			97
@@ -98268,7 +98268,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0004 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			40,
 			97
@@ -98292,7 +98292,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0005 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			40,
 			97
@@ -98316,7 +98316,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0006 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			40,
 			97
@@ -98340,7 +98340,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0007 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			40,
 			97
@@ -98364,7 +98364,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98388,7 +98388,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98412,7 +98412,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98436,7 +98436,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98460,7 +98460,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98484,7 +98484,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98508,7 +98508,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98532,7 +98532,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98556,7 +98556,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98580,7 +98580,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98604,7 +98604,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98628,7 +98628,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0019 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			40,
 			97
@@ -98652,7 +98652,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0020 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			40,
 			97
@@ -98676,7 +98676,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98700,7 +98700,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98724,7 +98724,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0023 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98748,7 +98748,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98772,7 +98772,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0025 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98796,7 +98796,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98820,7 +98820,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0027 = {
-		a_name = "screen_map_animations-18.png",
+		a_name = "kr2_screen_map_animations-4.png",
 		size = {
 			40,
 			97
@@ -98844,7 +98844,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98868,7 +98868,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98892,7 +98892,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98916,7 +98916,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98940,7 +98940,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98964,7 +98964,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -98988,7 +98988,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0034 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			40,
 			97
@@ -99012,7 +99012,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0035 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			40,
 			97
@@ -99036,7 +99036,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0036 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99060,7 +99060,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0037 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			40,
 			97
@@ -99084,7 +99084,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0038 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			40,
 			97
@@ -99108,7 +99108,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0039 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99132,7 +99132,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0040 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99156,7 +99156,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0041 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			40,
 			97
@@ -99180,7 +99180,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0042 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			40,
 			97
@@ -99204,7 +99204,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0043 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99228,7 +99228,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0044 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99252,7 +99252,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0045 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99276,7 +99276,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0046 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99300,7 +99300,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0047 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99324,7 +99324,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0048 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99348,7 +99348,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0049 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99372,7 +99372,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0050 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99396,7 +99396,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0051 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99420,7 +99420,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0052 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99444,7 +99444,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0053 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99468,7 +99468,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0054 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99492,7 +99492,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0055 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99516,7 +99516,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0056 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99540,7 +99540,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0057 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99564,7 +99564,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0058 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99588,7 +99588,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0059 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99612,7 +99612,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0060 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99636,7 +99636,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0061 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99660,7 +99660,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0062 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99684,7 +99684,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0063 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99708,7 +99708,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0064 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99732,7 +99732,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0065 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99756,7 +99756,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0066 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99780,7 +99780,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0067 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99804,7 +99804,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0068 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99828,7 +99828,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0069 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99852,7 +99852,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0070 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99876,7 +99876,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0071 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99900,7 +99900,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0072 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99924,7 +99924,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0073 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99948,7 +99948,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0074 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99972,7 +99972,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0075 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -99996,7 +99996,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0076 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			40,
 			97
@@ -100020,7 +100020,7 @@ return {
 		alias = {}
 	},
 	ma_waves_7_0077 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			40,
 			97
@@ -100044,7 +100044,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0001 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			28,
 			39
@@ -100147,7 +100147,7 @@ return {
 		}
 	},
 	ma_waves_8_0002 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100171,7 +100171,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0003 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100195,7 +100195,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0004 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100219,7 +100219,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0005 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100243,7 +100243,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0006 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100267,7 +100267,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0007 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100291,7 +100291,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0008 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100315,7 +100315,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0009 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100339,7 +100339,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0010 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100363,7 +100363,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0011 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100387,7 +100387,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0012 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100411,7 +100411,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0013 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100435,7 +100435,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0014 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100459,7 +100459,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0015 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100483,7 +100483,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0016 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100507,7 +100507,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0017 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100531,7 +100531,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0018 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100555,7 +100555,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0019 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100579,7 +100579,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0020 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100603,7 +100603,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0021 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100627,7 +100627,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0022 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100651,7 +100651,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0023 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			28,
 			39
@@ -100675,7 +100675,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0024 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100699,7 +100699,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0025 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			28,
 			39
@@ -100723,7 +100723,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0026 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100747,7 +100747,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0027 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100771,7 +100771,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0028 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100795,7 +100795,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0029 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100819,7 +100819,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0030 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100843,7 +100843,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0031 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100867,7 +100867,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0032 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100891,7 +100891,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0033 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -100915,7 +100915,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0034 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			28,
 			39
@@ -100939,7 +100939,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0035 = {
-		a_name = "screen_map_animations-17.png",
+		a_name = "kr2_screen_map_animations-3.png",
 		size = {
 			28,
 			39
@@ -100963,7 +100963,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0036 = {
-		a_name = "screen_map_animations-20.png",
+		a_name = "kr2_screen_map_animations-6.png",
 		size = {
 			28,
 			39
@@ -100987,7 +100987,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0037 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -101011,7 +101011,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0038 = {
-		a_name = "screen_map_animations-21.png",
+		a_name = "kr2_screen_map_animations-7.png",
 		size = {
 			28,
 			39
@@ -101035,7 +101035,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0039 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			28,
 			39
@@ -101059,7 +101059,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0040 = {
-		a_name = "screen_map_animations-19.png",
+		a_name = "kr2_screen_map_animations-5.png",
 		size = {
 			28,
 			39
@@ -101083,7 +101083,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0041 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			28,
 			39
@@ -101107,7 +101107,7 @@ return {
 		alias = {}
 	},
 	ma_waves_8_0042 = {
-		a_name = "screen_map_animations-15.png",
+		a_name = "kr2_screen_map_animations-1.png",
 		size = {
 			28,
 			39

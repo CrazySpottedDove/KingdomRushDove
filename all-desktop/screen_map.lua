@@ -40,25 +40,23 @@ screen_map.required_sounds = {
     "music_screen_map"
 }
 screen_map.required_textures = {
-    "screen_map_upgrades",
+    "upgrades",
     "screen_map_backgrond",
-    "screen_map_achievements",
-    "screen_map_select_difficulty",
-    "screen_map_level_select",
+    "achievements",
+    "select_difficulty",
+    "level_select",
     "screen_map_flags",
-    "screen_map_encyclopedia",
-    "screen_map_balloon",
-    "screen_map_stars_container",
-    "screen_map_hero_room",
+    "ballon",
+    "stars_container",
+    "hero_room",
     "screen_map_buttons",
     "screen_map_animations",
-    "screen_map_animations2",
+    "kr2_screen_map_animations",
+    "kr3_screen_map_animations",
     "view_options",
     "achievements",
     "encyclopedia",
-    "encyclopedia_thumbs",
-    "gui_shop",
-    "gui_shop_bg",
+    "encyclopedia_creeps"
 }
 
 screen_map.ref_w = 1920
@@ -1198,7 +1196,7 @@ function MapView:initialize(screen_w, screen_h)
             end
         end
 
-        -- self:load_map_animations(3)
+        self:load_map_animations(3)
         self:show_flags(3)
     else
         KImageView.initialize(self, "map_background")
@@ -3897,7 +3895,7 @@ function EncyclopediaView:load_towers()
 
     if self.towers then
         self.towers.hidden = false
-        self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_0022")
+        self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_over")
         self.over_sprite.hidden = true
         self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
         self.over_sprite.propagate_on_click = true
@@ -3943,25 +3941,23 @@ function EncyclopediaView:load_towers()
     right_deco.scale.x = -1
 
     self.towers:add_child(right_deco)
-    self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_0022")
-    self.select_sprite = KImageView:new("encyclopedia_tower_thumbs_0023")
+    self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_over")
+    self.select_sprite = KImageView:new("encyclopedia_tower_thumbs_select")
     self.select_sprite.pos = v(50, 120)
     self.select_sprite.hidden = false
+
     local tower_count = #screen_map.tower_data
+
     for i = 1, tower_count do
-        local icon_idx = screen_map.tower_data[i].icon
-        local tower_thumb_fmt
-        if i <= 8 then
-            tower_thumb_fmt = GS.encyclopedia_tower_thumb_fmt
-        elseif i <= 16 then
-            tower_thumb_fmt = GS.encyclopedia_tower_thumb_fmt2
-        else
-            tower_thumb_fmt = GS.encyclopedia_tower_thumb_fmt3
-        end
-        local icon = string.format(tower_thumb_fmt, icon_idx)
+        local t = screen_map.tower_data[i]
+
+        local f = string.format("encyclopedia_tower_thumbs_%04i", t.icon)
+
+        local icon = U.splicing_from_kr(t.from_kr, f)
         local off_y = 120
 
-        self:create_tower(icon, v(math.fmod(i - 1, 4) * 88 + 50, math.floor((i - 1) / 4) * 85 + off_y), i, true)
+        self:create_tower(icon, v(math.fmod(i - 1, 4) * 88 + 50, math.floor((i - 1) / 4) * 85 + off_y),
+           i, true)
     end
 
     self.towers:add_child(self.over_sprite)
@@ -4003,7 +3999,7 @@ function EncyclopediaView:create_tower(icon, pos, information, enabled)
             self:tower_clicked(information, pos)
         end
     else
-        local tower = KImageView:new("encyclopedia_tower_thumbs_0021")
+        local tower = KImageView:new("encyclopedia_tower_thumbs_lock")
 
         tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
         tower.pos = pos
@@ -4029,6 +4025,8 @@ function EncyclopediaView:tower_clicked(information, pos)
 end
 
 function EncyclopediaView:detail_tower(index)
+    local t = screen_map.tower_data[index]
+
     if self.right_panel then
         self.back:remove_child(self.right_panel)
 
@@ -4041,7 +4039,7 @@ function EncyclopediaView:detail_tower(index)
 
     self.back:add_child(self.right_panel)
 
-    local tower_name = screen_map.tower_data[index].name
+    local tower_name = t.name
     local dt = E:create_entity(tower_name)
     local di = dt.info.fn(dt)
     local title_label = GGLabel:new(V.v(280, 50))
@@ -4074,15 +4072,12 @@ function EncyclopediaView:detail_tower(index)
     right_decoration.scale.x = -0.7
 
     self.right_panel:add_child(right_decoration)
-    local tower_fmt
-    if index <= 8 then
-        tower_fmt = GS.encyclopedia_tower_fmt
-    elseif index <= 16 then
-        tower_fmt = GS.encyclopedia_tower_fmt2
-    else
-        tower_fmt = GS.encyclopedia_tower_fmt3
-    end
-    local portrait = KImageView:new(string.format(tower_fmt, screen_map.tower_data[index].icon))
+
+    local f = string.format("encyclopedia_towers_%04i", t.detail_icon)
+
+    local tower_fmt = U.splicing_from_kr(t.from_kr, f)
+
+    local portrait = KImageView:new(tower_fmt)
 
     portrait.anchor = v(portrait.size.x / 2, portrait.size.y / 2)
     portrait.pos = v(300, 175)
@@ -4231,15 +4226,12 @@ function EncyclopediaView:detail_tower(index)
         for i, k in pairs(power_names) do
             local power = dt.powers[k]
             local px = 120 + (2 * i - 1) * iw / 2
-            local tower_specials_fmt
-            if index <= 8 then
-                tower_specials_fmt = GS.encyclopedia_tower_specials_fmt
-            elseif index <= 16 then
-                tower_specials_fmt = GS.encyclopedia_tower_specials_fmt2
-            else
-                tower_specials_fmt = GS.encyclopedia_tower_specials_fmt3
-            end
-            local icon = KImageView:new(string.format(tower_specials_fmt, power.enc_icon))
+
+            local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
+
+            local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
+
+            local icon = KImageView:new(tower_specials_fmt)
 
             icon.pos = v(px, 515)
             icon.anchor = v(icon.size.x / 2, icon.size.y / 2)
@@ -4426,7 +4418,7 @@ function EncyclopediaView:create_creep(icon, pos, information, enabled)
             self:creep_clicked(information, pos)
         end
     else
-        local b = KImageView:new("encyclopedia_creep_thumbs_0049")
+        local b = KImageView:new("encyclopedia_creep_thumbs_lock")
         b.scale = V.v(0.75, 0.75)
         b.anchor = v(b.size.x / 2, b.size.y / 2)
         b.pos = pos
@@ -5516,6 +5508,8 @@ AchievementsView = class("AchievementsView", PopUpView)
 function AchievementsView:initialize(sw, sh)
     PopUpView.initialize(self, V.v(sw, sh))
 
+    self.disabled_tint_color = { 200, 200, 200, 255 }
+
     self.back = KImageView:new("Achievements_BG_notxt")
     self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
     self.back.pos = v(sw / 2 - 15, sh / 2)
@@ -5524,15 +5518,6 @@ function AchievementsView:initialize(sw, sh)
 
     sw = self.back.size.x
     sh = self.back.size.y
-
-    if IS_KR3 then
-        local header_bg = KImageView("kr3_title_bg")
-
-        header_bg.anchor.x = km.round(header_bg.size.x / 2)
-        header_bg.pos = v(km.round(self.back.size.x / 2) - 10, -24)
-
-        self.back:add_child(header_bg)
-    end
 
     local header = GGPanelHeader:new(_("ACHIEVEMENTS"), 274)
 
@@ -5571,7 +5556,7 @@ function AchievementsView:initialize(sw, sh)
 
         ach.img = KImageView:new("achievement_icons_0001")
         ach.img.anchor = v(math.floor(ach.img.size.x / 2), math.floor(ach.img.size.y / 2))
-        ach.img.pos = IS_KR3 and v(59, 53) or v(57, 49)
+        ach.img.pos = v(57, 49)
 
         ach:add_child(ach.img)
 
@@ -5640,11 +5625,11 @@ function AchievementsView:createPage(pagenum)
 
             local isActive = screen_map.user_data.achievements[ach.name]
 
-            if isActive then
+            --if isActive then
                 box.img:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
-            else
-                box.img:set_image("achievement_icons_disabled_" .. string.format("%04i", ach.icon))
-            end
+            --else
+                --box.img:set_image("achievement_icons_disabled_" .. string.format("%04i", ach.icon))
+            --end
 
             local prefix = IS_KR3 and "ELVES_" or ""
             local title = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_NAME")

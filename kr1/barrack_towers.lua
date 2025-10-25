@@ -267,7 +267,7 @@ local function barrack_towers()
     tt.tower.can_be_mod = false
     tt.info.i18n_key = "SPECIAL_ELF"
     tt.info.fn = scripts.tower_elf_holder.get_info
-    tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_towers" or "info_portraits_towers") .. "_0013"
+    tt.info.portrait = "info_portraits_towers_0013"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 2)
@@ -284,7 +284,7 @@ local function barrack_towers()
 
     tt = RT("tower_elf", "tower_barrack_1")
     AC(tt, "powers")
-    tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_towers" or "info_portraits_towers") .. "_0013"
+    tt.info.portrait = "info_portraits_towers_0013"
     tt.barrack.max_soldiers = 4
     tt.barrack.rally_range = 170
     tt.barrack.respawn_offset = vec_2(0, 0)
@@ -411,7 +411,7 @@ local function barrack_towers()
     tt.tower.price = 190
     tt.barrack.max_soldiers = 4
     tt.mercenary = true
-    tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0015"
+    tt.info.portrait = "kr2_info_portraits_towers_0015"
     tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].name = "idle"
     tt.render.sprites[2].offset = vec_2(0, 35)
@@ -520,7 +520,7 @@ local function barrack_towers()
 
     local tower_templar = RT("tower_templar", "tower_barrack_1")
     AC(tower_templar, "powers")
-    tower_templar.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0007"
+    tower_templar.info.portrait = "kr2_info_portraits_towers_0007"
     tower_templar.info.enc_icon = 19
     tower_templar.tower.type = "templar"
     tower_templar.tower.price = 185
@@ -528,17 +528,17 @@ local function barrack_towers()
     tower_templar.powers.holygrail.price_base = 180
     tower_templar.powers.holygrail.price_inc = 135
     tower_templar.powers.holygrail.name = "HOLY"
-    tower_templar.powers.holygrail.enc_icon = 25
+    tower_templar.powers.holygrail.enc_icon = 4
     tower_templar.powers.extralife = CC("power")
     tower_templar.powers.extralife.price_base = 150
     tower_templar.powers.extralife.price_inc = 150
     tower_templar.powers.extralife.name = "TOUGHNESS"
-    tower_templar.powers.extralife.enc_icon = 27
+    tower_templar.powers.extralife.enc_icon = 6
     tower_templar.powers.blood = CC("power")
     tower_templar.powers.blood.price_base = 200
     tower_templar.powers.blood.price_inc = 150
     tower_templar.powers.blood.name = "ARTERIAL"
-    tower_templar.powers.blood.enc_icon = 26
+    tower_templar.powers.blood.enc_icon = 5
     tower_templar.barrack.soldier_type = "soldier_templar"
     tower_templar.barrack.rally_range = 160
     tower_templar.render.sprites[1].name = "terrain_barrack_%04i"
@@ -645,24 +645,24 @@ local function barrack_towers()
 
     local tower_assassin = RT("tower_assassin", "tower_barrack_1")
     AC(tower_assassin, "powers")
-    tower_assassin.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0008"
+    tower_assassin.info.portrait = "kr2_info_portraits_towers_0008"
     tower_assassin.info.enc_icon = 20
     tower_assassin.tower.type = "assassin"
     tower_assassin.tower.price = 185
     tower_assassin.powers.sneak = CC("power")
     tower_assassin.powers.sneak.price_base = 225
     tower_assassin.powers.sneak.price_inc = 150
-    tower_assassin.powers.sneak.enc_icon = 24
+    tower_assassin.powers.sneak.enc_icon = 3
     tower_assassin.powers.pickpocket = CC("power")
     tower_assassin.powers.pickpocket.price_base = 100
     tower_assassin.powers.pickpocket.price_inc = 75
     tower_assassin.powers.pickpocket.max_level = 3
     tower_assassin.powers.pickpocket.name = "PICK"
-    tower_assassin.powers.pickpocket.enc_icon = 22
+    tower_assassin.powers.pickpocket.enc_icon = 1
     tower_assassin.powers.counter = CC("power")
     tower_assassin.powers.counter.price_base = 125
     tower_assassin.powers.counter.price_inc = 125
-    tower_assassin.powers.counter.enc_icon = 23
+    tower_assassin.powers.counter.enc_icon = 2
     tower_assassin.barrack.soldier_type = "soldier_assassin"
     tower_assassin.barrack.rally_range = 165
     tower_assassin.render.sprites[1].name = "terrain_barrack_%04i"
@@ -764,17 +764,20 @@ local function barrack_towers()
     tt.barrack.rally_range = 180
     tt.barrack.soldier_type = "soldier_dwarf"
     tt.barrack.max_soldiers = 4
-    tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0018"
+    tt.info.portrait = "kr2_info_portraits_towers_0018"
     tt.powers.armor = CC("power")
     tt.powers.armor.max_level = 2
     tt.powers.armor.price_base = 125
     tt.powers.armor.price_inc = 125
+    tt.powers.armor.enc_icon = 20
     tt.powers.beer = CC("power")
     tt.powers.beer.price_base = 160
     tt.powers.beer.price_inc = 140
+    tt.powers.beer.enc_icon = 21
     tt.powers.hammer = CC("power")
     tt.powers.hammer.price_base = 100
     tt.powers.hammer.price_inc = 100
+    tt.powers.hammer.enc_icon = 19
     tt.render.sprites[1].name = "terrain_barrack_%04i"
     tt.render.sprites[1].offset = vec_2(0, 10)
     tt.render.sprites[2].name = "DwarfHall_0001"
@@ -852,7 +855,7 @@ local function barrack_towers()
     tt.tower.price = 185
     tt.barrack.max_soldiers = 4
     tt.mercenary = true
-    tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0013"
+    tt.info.portrait = "kr2_info_portraits_towers_0013"
     tt.info.fn = function()
         local tpl = E:get_template("tower_barrack_mercenaries")
         return scripts.tower_barrack.get_info(tpl)
@@ -985,7 +988,7 @@ local function barrack_towers()
         local tpl = E:get_template("tower_barrack_pirates")
         return scripts.tower_barrack.get_info(tpl)
     end
-    tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0014"
+    tt.info.portrait = "kr2_info_portraits_towers_0014"
     tt.main_script.update = scripts.tower_barrack_mercenaries.update
     tt.main_script.remove = scripts.tower_barrack.remove
     tt.powers.bigbomb = CC("power")
@@ -1095,22 +1098,22 @@ local function barrack_towers()
     tt = RT("tower_blade", "tower_barrack_1")
     AC(tt, "powers")
     tt.info.enc_icon = 20
-    tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0005"
+    tt.info.portrait = "kr3_info_portraits_towers_0005"
     tt.barrack.soldier_type = "soldier_blade"
     tt.barrack.rally_range = 160
     tt.powers.perfect_parry = CC("power")
     tt.powers.perfect_parry.price_base = 200
     tt.powers.perfect_parry.price_inc = 200
-    tt.powers.perfect_parry.enc_icon = 6
+    tt.powers.perfect_parry.enc_icon = 21
     tt.powers.blade_dance = CC("power")
     tt.powers.blade_dance.price_base = 200
     tt.powers.blade_dance.price_inc = 225
-    tt.powers.blade_dance.enc_icon = 5
+    tt.powers.blade_dance.enc_icon = 12
     tt.powers.swirling = CC("power")
     tt.powers.swirling.price_base = 250
     tt.powers.swirling.price_inc = 150
     tt.powers.swirling.max_level = 1
-    tt.powers.swirling.enc_icon = 7
+    tt.powers.swirling.enc_icon = 16
     tt.powers.swirling.name = "SWIRLING_EDGE"
     tt.render.sprites[2].name = "barracks_towers_layer1_0076"
     tt.render.sprites[3].prefix = "tower_blade_door"
@@ -1123,7 +1126,7 @@ local function barrack_towers()
     AC(tt, "powers")
     tt.barrack.rally_range = 165
     tt.info.enc_icon = 19
-    tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0006"
+    tt.info.portrait = "kr3_info_portraits_towers_0006"
     tt.info.i18n_key = "TOWER_FOREST_KEEPERS"
     tt.barrack.max_soldiers = 2
     tt.barrack.soldier_type = "soldier_forest"
@@ -1131,16 +1134,16 @@ local function barrack_towers()
     tt.powers.circle = CC("power")
     tt.powers.circle.price_base = 200
     tt.powers.circle.price_inc = 185
-    tt.powers.circle.enc_icon = 9
+    tt.powers.circle.enc_icon = 1
     tt.powers.eerie = CC("power")
     tt.powers.eerie.price_base = 200
     tt.powers.eerie.price_inc = 200
     tt.powers.eerie.max_level = 2
-    tt.powers.eerie.enc_icon = 10
+    tt.powers.eerie.enc_icon = 5
     tt.powers.oak = CC("power")
     tt.powers.oak.price_base = 200
     tt.powers.oak.price_inc = 250
-    tt.powers.oak.enc_icon = 11
+    tt.powers.oak.enc_icon = 10
     tt.render.sprites[2].name = "barracks_towers_layer1_0101"
     tt.render.sprites[3].prefix = "tower_forest_door"
     tt.render.sprites[3].hidden = true
@@ -1355,7 +1358,7 @@ local function barrack_towers()
     AC(tt, "powers")
     tt.barrack.soldier_type = "soldier_drow"
     tt.info.i18n_key = "ELVES_TOWER_SPECIAL_DROW"
-    tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0016"
+    tt.info.portrait = "kr3_info_portraits_towers_0016"
     tt.powers.life_drain = CC("power")
     tt.powers.life_drain.price_base = 225
     tt.powers.life_drain.price_inc = 225
@@ -1465,7 +1468,7 @@ local function barrack_towers()
 
     tt = RT("tower_ewok", "tower_barrack_1")
     AC(tt, "powers")
-    tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0013"
+    tt.info.portrait = "kr3_info_portraits_towers_0013"
     tt.barrack.max_soldiers = 4
     tt.barrack.rally_range = 175
     tt.barrack.respawn_offset = vec_2(0, 0)
@@ -1606,7 +1609,7 @@ local function barrack_towers()
     tt.tower.level = 1
     tt.tower.price = 350
     tt.info.fn = scripts.tower_baby_ashbite.get_info
-    tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr3_info_portraits_towers_") .. "0019"
+    tt.info.portrait = "kr3_info_portraits_towers_0019"
     tt.info.i18n_key = "ELVES_BABY_ASHBITE_TOWER"
     tt.info.damage_icon = "fireball"
     tt.render.sprites[1].name = "babyAshbite_tower_layer1_0001"
@@ -1635,10 +1638,12 @@ local function barrack_towers()
     tt.powers.blazing_breath = CC("power")
     tt.powers.blazing_breath.price_base = 275
     tt.powers.blazing_breath.price_inc = 225
+    tt.powers.blazing_breath.enc_icon = 8
     tt.powers.blazing_breath.max_level = 3
     tt.powers.fiery_mist = CC("power")
     tt.powers.fiery_mist.price_base = 275
     tt.powers.fiery_mist.price_inc = 0
+    tt.powers.fiery_mist.enc_icon = 9
     tt.powers.fiery_mist.max_level = 1
 
     tt = RT("soldier_baby_ashbite", "soldier")
@@ -1652,7 +1657,7 @@ local function barrack_towers()
     tt.idle_flip.chance = 0.4
     tt.idle_flip.cooldown = 1
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = (IS_PHONE and "portraits_towers" or "kr3_info_portraits_towers") .. "_0014"
+    tt.info.portrait = "kr3_info_portraits_towers_0014"
     tt.info.i18n_key = "ELVES_BABY_ASHBITE"
     tt.info.damage_icon = "fireball"
     tt.main_script.insert = scripts.soldier_baby_ashbite.insert

@@ -67,8 +67,8 @@ local data = require("data.game_gui_data")
 local tower_menus = require("data.tower_menus_data")
 local game_gui = {}
 
-game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia",
-                              "gui_notifications_common", "gui_notifications_bg", "view_options"}
+game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps",
+                              "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
 game_gui.ref_h = GUI_REF_H
 game_gui.ref_w = GUI_REF_W
 game_gui.ref_res = TEXTURE_SIZE_ALIAS.ipad

@@ -214,7 +214,7 @@ local function foundamental_towers()
     tt.tower.type = "archer"
     tt.tower.level = 1
     tt.tower.price = 70
-    tt.info.portrait = (IS_PHONE_OR_TABLET and "portraits_towers_" or "info_portraits_towers_") .. "0001"
+    tt.info.portrait = "info_portraits_towers_0001"
     tt.info.enc_icon = 1
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].name = "terrain_archer_%04i"
@@ -339,7 +339,7 @@ local function foundamental_towers()
     tt.tower.type = "holder_neptune"
     tt.tower.can_be_mod = false
     tt.info.fn = scripts.tower_neptune_holder.get_info
-    tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0021"
+    tt.info.portrait = "kr2_info_portraits_towers_0021"
     tt.render.sprites[1].name = "neptuno_0001"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].offset = vec_2(0, 7)
@@ -358,13 +358,14 @@ local function foundamental_towers()
     tt.tower.price = 500
     tt.tower.can_be_mod = false
     tt.tower.terrain_style = nil
-    tt.info.portrait = (IS_PHONE and "portraits_towers_" or "kr2_info_portraits_towers_") .. "0021"
+    tt.info.portrait = "kr2_info_portraits_towers_0021"
     tt.info.fn = scripts.tower_neptune.get_info
     tt.ui.click_rect = r(-40, -10, 80, 90)
     tt.powers.ray = CC("power")
     tt.powers.ray.level = 1
     tt.powers.ray.max_level = 3
     tt.powers.ray.price_inc = 500
+    tt.powers.ray.enc_icon = 26
     tt.main_script.insert = scripts.tower_neptune.insert
     tt.main_script.update = scripts.tower_neptune.update
     tt.render.sprites[1].name = "neptuno_0002"

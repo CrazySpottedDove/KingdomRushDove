@@ -1,6 +1,6 @@
 return {
-	difficulty_bg_notxt = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_bg_notxt"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			1200,
 			720
@@ -21,10 +21,10 @@ return {
 			1173,
 			717
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_btns_ilustraciones_0001 = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_btns_ilustraciones_0001"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			340,
 			380
@@ -45,10 +45,10 @@ return {
 			233,
 			201
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_btns_ilustraciones_0002 = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_btns_ilustraciones_0002"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			340,
 			380
@@ -69,10 +69,10 @@ return {
 			233,
 			201
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_btns_ilustraciones_0003 = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_btns_ilustraciones_0003"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			340,
 			380
@@ -93,10 +93,10 @@ return {
 			252,
 			206
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_btns_ilustraciones_0004 = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_btns_ilustraciones_0004"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			340,
 			380
@@ -117,10 +117,10 @@ return {
 			284,
 			222
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_btns_notxt_marco_0001 = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_btns_notxt_marco_0001"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			340,
 			380
@@ -141,10 +141,10 @@ return {
 			319,
 			348
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_btns_notxt_marco_0002 = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_btns_notxt_marco_0002"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			340,
 			380
@@ -165,10 +165,10 @@ return {
 			331,
 			366
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_btns_notxt_marco_0003 = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_btns_notxt_marco_0003"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			340,
 			380
@@ -189,10 +189,10 @@ return {
 			274,
 			308
 		},
-		alias = {},
+		alias = {}
 	},
-	difficulty_select_bg = {
-		a_name = "screen_map_select_difficulty-1.png",
+	["difficulty_select_bg"] = {
+		a_name = "select_difficulty-1.png",
 		size = {
 			208,
 			46
@@ -213,6 +213,6 @@ return {
 			208,
 			46
 		},
-		alias = {},
+		alias = {}
 	}
 }
