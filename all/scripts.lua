@@ -1843,7 +1843,7 @@ function scripts.tower_barrack.get_info(this)
     end
 
     if min and max then
-        min, max = math.ceil(min), math.ceil(max)
+        min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
     end
 
     return {

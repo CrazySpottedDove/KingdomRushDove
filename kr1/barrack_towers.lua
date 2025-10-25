@@ -2338,31 +2338,30 @@ local function barrack_towers()
     -- 熊猫_END
 
     -- 牢大 BEGIN
-    tt = E:register_t("tower_rocket_gunners_lvl1", "tower_KR5")
+    tt = E:register_t("tower_rocket_gunners_lvl1", "tower")
     b = balance.towers.rocket_gunners
-
-    E:add_comps(tt, "barrack", "vis", "tower_upgrade_persistent_data")
-
+    E:add_comps(tt, "barrack")
     tt.tower.type = "rocket_gunners"
     tt.tower.kind = TOWER_KIND_ARCHER
     tt.tower.team = TEAM_DARK_ARMY
     tt.tower.level = 1
-    tt.tower.price = b.price[1]
+    tt.tower.price = b.price[4]
     tt.info.i18n_key = "TOWER_ROCKET_GUNNERS_1"
     tt.info.portrait = "portraits_towers_0009"
     tt.info.room_portrait = "quickmenu_main_icons_main_icons_0009_0001"
     tt.info.enc_icon = 2
     tt.tower.menu_offset = vec_2(0, 15)
     tt.info.tower_portrait = "towerselect_portraits_big_0009"
-    tt.barrack.soldier_type = "soldier_tower_rocket_gunners_lvl1"
-    tt.barrack.rally_range = b.rally_range[1]
+    tt.barrack.soldier_type = "soldier_tower_rocket_gunners_lvl4"
+    tt.barrack.rally_range = b.rally_range[4]
     tt.barrack.respawn_offset = vec_2(1, 23)
     tt.barrack.max_soldiers = b.max_soldiers
     tt.barrack.has_door = false
     tt.barrack.range_upgradable = true
     tt.sound_events.insert = "TowerPaladinCovenantTaunt"
     tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
-    tt.info.fn = scripts.tower_rocket_gunners.get_info
+    -- tt.info.fn = scripts.tower_rocket_gunners.get_info
+    tt.info.fn = scripts.tower_barrack.get_info
     tt.main_script.insert = scripts.tower_barrack.insert
     tt.main_script.update = scripts.tower_rocket_gunners.update
     tt.main_script.remove = scripts.tower_barrack.remove
