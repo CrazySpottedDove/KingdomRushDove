@@ -192,7 +192,7 @@ local function load_director()
 
     local director = require("director")
 
-    director:init(main.params)
+    require("mods.mod_main"):init(director)
 
     main.handler = director
 end

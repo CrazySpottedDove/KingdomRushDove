@@ -624,49 +624,6 @@ for i = 1, 3 do
     E:set_template("re_current_" .. i, E:get_template("re_farmer_" .. i))
 end
 
-tt = RT("soldier_magnus_illusion", "soldier_militia")
-AC(tt, "reinforcement", "ranged", "tween")
-image_y = 76
-image_x = 60
-anchor_y = 0.14
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(0, 33)
-tt.health.dead_lifetime = fts(14)
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0005" or "info_portraits_hero_0004"
-tt.info.i18n_key = "HERO_MAGE_SHADOW"
-tt.info.random_name_format = nil
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.update = scripts.soldier_magnus_illusion.update
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].hit_time = fts(12)
-tt.melee.range = 45
-tt.reinforcement.duration = 10
-tt.reinforcement.fade = nil
-tt.ranged.attacks[1] = CC("bullet_attack")
-tt.ranged.attacks[1].bullet = "bolt_magnus_illusion"
-tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 23)}
-tt.ranged.attacks[1].max_range = 150
-tt.ranged.attacks[1].min_range = 50
-tt.ranged.attacks[1].damage_max = nil
-tt.ranged.attacks[1].damage_min = nil
-tt.ranged.attacks[1].shoot_time = fts(18)
-tt.ranged.attacks[1].cooldown = fts(33)
-tt.regen.cooldown = 1
-tt.render.sprites[1].prefix = "soldier_magnus_illusion"
-tt.render.sprites[1].name = "raise"
-tt.render.sprites[1].alpha = 180
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(6), vec_2(0, 0)}}
-tt.tween.remove = false
-tt.tween.run_once = true
-tt.ui.click_rect = r(-13, -5, 26, 32)
-tt.unit.marker_offset = vec_2(0, 0)
-tt.unit.mod_offset = vec_2(0, 15)
-tt.unit.price = 0
-tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
-
 tt = RT("spear_legionnaire", "arrow")
 tt.bullet.damage_min = 24
 tt.bullet.damage_max = 40
