@@ -177,10 +177,6 @@ Timer.tween = setmetatable({
 		}
 		local last_s = 0
 
-		if type(self) =="number" then
-			print()
-		end
-
 		return self:during(len, function(dt)
 			t = t + dt
 
