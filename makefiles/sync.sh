@@ -39,13 +39,13 @@ if [ -f "$LAST_SYNC_COMMIT_FILE" ]; then
         cat "$SYNC_LIST_FILE" | xargs -I{} cp --parents "{}" "$WINDOWS_DIR"
         mv $TMP_SYNC_LIST_FILE "$SYNC_LIST_FILE"
     fi
+    echo "将要同步的文件:"
+    cat $SYNC_LIST_FILE
 else
     echo "首次同步，复制所有文件"
     git ls-files > $SYNC_LIST_FILE
     git ls-files --others --exclude-standard >> $SYNC_LIST_FILE
     sort $SYNC_LIST_FILE | uniq > $TMP_SYNC_LIST_FILE && mv $TMP_SYNC_LIST_FILE $SYNC_LIST_FILE
 fi
-echo "将要同步的文件:"
-cat $SYNC_LIST_FILE
 cat "$SYNC_LIST_FILE" | xargs -I{} cp --parents "{}" "$WINDOWS_DIR"
 git rev-parse HEAD > "$LAST_SYNC_COMMIT_FILE"

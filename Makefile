@@ -2,7 +2,6 @@ MAKE_FILE_DIR:=makefiles
 WINDOWS_DIR:=$(shell cat $(MAKE_FILE_DIR)/.windows_kr_dove_dir)
 LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
-LAST_SYNC_FILE := $(MAKE_FILE_DIR)/.last_sync_commit
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
 .PHONY: all debug package repackage sync branch master index upload download main_version_jump
