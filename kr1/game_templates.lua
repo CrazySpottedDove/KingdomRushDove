@@ -10060,3 +10060,62 @@ tt.render.sprites[1].offset.y = 5
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}}
 tt.tween.remove = false
+
+tt = E:register_t("ps_tower_rocket_gunners_sting_missiles_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "rocket_gunners_tower_sting_missiles_particles_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 50
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_area_spread = vec_2(2, 2)
+tt.particle_system.anchor = vec_2(0.5, 0.5)
+tt.particle_system.emit_offset = vec_2(0, 0)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.particle_lifetime = {fts(9), fts(9)}
+tt.emit_offset_relative = vec_2(-15, 0)
+
+tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_floor", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_hit_fx_floor_idle"
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_hit", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_hit_fx_idle"
+tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_sting_missiles_hit_air", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_phosphoric_coating_explosion_air_idle"
+tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_phosphoric_floor", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_phosphoric_coating_hit_fx_floor_idle"
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_phosphoric_hit", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_phosphoric_coating_hit_fx_idle"
+tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_sting_missiles_hit", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_phosphoric_coating_explosion_idle"
+tt = E:register_t("fx_tower_rocket_gunners_take_off", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_take_off_fx_idle"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -50
+tt = E:register_t("fx_soldier_tower_rocket_gunners_land", "fx")
+tt.render.sprites[1].name = "rocket_gunners_tower_landing_fx_idle"
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_sting_missiles_smoke", "fx")
+
+E:add_comps(tt, "tween")
+
+tt.render.sprites[1].name = "rocket_gunners_tower_sting_missiles_floor_decal_smoke_idle"
+tt.render.sprites[1].loop = true
+tt.timed.duration = 1e+99
+tt.timed.runs = 1e+99
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
+tt.tween.remove = true
+
+tt = E:register_t("decal_soldier_tower_rocket_gunners_shadow", "decal_soldier_shadow")
+tt.render.sprites[1].name = "rocket_gunners_tower_gunner_shadow"
+tt.shadow_shrink = 0.25
+tt = E:register_t("decal_bullet_soldier_tower_rocket_gunners_sting_missiles", "decal_tween")
+tt.render.sprites[1].name = "rocket_gunners_tower_sting_missiles_floor_decal"
+tt.render.sprites[1].animated = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
+tt.tween.remove = true
