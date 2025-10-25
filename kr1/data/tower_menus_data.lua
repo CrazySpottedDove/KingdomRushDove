@@ -1393,7 +1393,7 @@ return {
 
     blade = {{merge(templates.upgrade_power, {
         action_arg = "perfect_parry",
-        image = "kr3_special_icons_0105",
+        image = "kr3_special_icons_0006",
         place = 6,
         sounds = {"ElvesBarrackBladesingerPerfectParryTaunt"},
         tt_phrase = _("TOWER_BLADE_PERFECT_PARRY_NOTE"),
@@ -1409,7 +1409,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "blade_dance",
-        image = "kr3_special_icons_0104",
+        image = "kr3_special_icons_0005",
         place = 7,
         sounds = {"ElvesBarrackBladesingerBladeDanceTaunt"},
         tt_phrase = _("TOWER_BLADE_BLADE_DANCE_NOTE"),
@@ -1425,7 +1425,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "swirling",
-        image = "kr3_special_icons_0106",
+        image = "kr3_special_icons_0007",
         place = 5,
         sounds = {"ElvesBarrackBladesingerSwirlingEdge"},
         tt_phrase = _("TOWER_BLADE_SWIRLING_EDGE_NOTE"),
@@ -1443,7 +1443,7 @@ return {
 
     forest = {{merge(templates.upgrade_power, {
         action_arg = "circle",
-        image = "kr3_special_icons_0107",
+        image = "kr3_special_icons_0008",
         place = 6,
         sounds = {"ElvesBarrackForestKeeperCircleOfLifeTaunt"},
         tt_phrase = _("TOWER_FOREST_KEEPERS_CIRCLE_NOTE"),
@@ -1459,7 +1459,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "eerie",
-        image = "kr3_special_icons_0109",
+        image = "kr3_special_icons_0009",
         place = 5,
         sounds = {"ElvesBarrackForestKeeperEerieTaunt"},
         tt_phrase = _("TOWER_FOREST_KEEPERS_EERIE_NOTE"),
@@ -1475,7 +1475,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "oak",
-        image = "kr3_special_icons_0110",
+        image = "kr3_special_icons_0010",
         place = 7,
         sounds = {"ElvesBarrackForestKeeperOakSpearTaunt"},
         tt_phrase = _("TOWER_FOREST_KEEPERS_OAK_NOTE"),
@@ -1493,7 +1493,7 @@ return {
 
     druid = {{merge(templates.upgrade_power, {
         action_arg = "sylvan",
-        image = "kr3_special_icons_0112",
+        image = "kr3_special_icons_0012",
         place = 1,
         sounds = {"ElvesRockHengeSylvanCurseTaunt"},
         tt_phrase = _("TOWER_STONE_DRUID_SYLVAN_NOTE"),
@@ -1509,7 +1509,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "nature",
-        image = "kr3_special_icons_0111",
+        image = "kr3_special_icons_0011",
         place = 2,
         sounds = {"SoldierDruidBearRallyChange"},
         tt_phrase = _("TOWER_STONE_DRUID_NATURES_FRIEND_NOTE"),
@@ -1527,7 +1527,7 @@ return {
 
     entwood = {{merge(templates.upgrade_power, {
         action_arg = "clobber",
-        image = "kr3_special_icons_0113",
+        image = "kr3_special_icons_0013",
         place = 2,
         sounds = {"ElvesRockEntwoodClobberingTaunt"},
         tt_phrase = _("TOWER_ENTWOOD_CLOBBER_NOTE"),
@@ -1543,7 +1543,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "fiery_nuts",
-        image = "kr3_special_icons_0114",
+        image = "kr3_special_icons_0014",
         place = 1,
         sounds = {"ElvesRockEntwoodFieryNutsTaunt"},
         tt_phrase = _("TOWER_ENTWOOD_FIERY_NUTS_NOTE"),
@@ -1561,7 +1561,7 @@ return {
 
     arcane = {{merge(templates.upgrade_power, {
         action_arg = "burst",
-        image = "kr3_special_icons_0101",
+        image = "kr3_special_icons_0001",
         place = 1,
         sounds = {"ElvesArcherArcaneBurstTaunt"},
         tt_phrase = _("TOWER_ARCANE_ARCHER_BURST_NOTE"),
@@ -1577,7 +1577,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "slumber",
-        image = "kr3_special_icons_0100",
+        image = "kr3_special_icons_0002",
         place = 2,
         sounds = {"ElvesArcherArcaneSleepTaunt"},
         tt_phrase = _("TOWER_ARCANE_ARCHER_SLUMBER_NOTE"),
@@ -1595,7 +1595,7 @@ return {
 
     silver = {{merge(templates.upgrade_power, {
         action_arg = "sentence",
-        image = "kr3_special_icons_0102",
+        image = "kr3_special_icons_0003",
         place = 1,
         sounds = {"ElvesArcherGoldenBowCrimsonTaunt"},
         tt_phrase = _("TOWER_SILVER_SENTENCE_NOTE"),
@@ -1611,7 +1611,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "mark",
-        image = "kr3_special_icons_0103",
+        image = "kr3_special_icons_0004",
         place = 2,
         sounds = {"ElvesArcherGoldenBowMarkTaunt"},
         tt_phrase = _("TOWER_SILVER_MARK_NOTE"),
@@ -1629,7 +1629,7 @@ return {
 
     wild_magus = {{merge(templates.upgrade_power, {
         action_arg = "eldritch",
-        image = "kr3_special_icons_0115",
+        image = "kr3_special_icons_0015",
         place = 1,
         sounds = {"ElvesMageWildMagusDoomTaunt"},
         tt_phrase = _("TOWER_MAGE_WILD_MAGUS_ELDRITCH_NOTE"),
@@ -1645,7 +1645,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "ward",
-        image = "kr3_special_icons_0116",
+        image = "kr3_special_icons_0016",
         place = 2,
         sounds = {"ElvesMageWildMagusSilenceTaunt"},
         tt_phrase = _("TOWER_MAGE_WILD_MAGUS_WARD_NOTE"),
@@ -1663,7 +1663,7 @@ return {
 
     high_elven = {{merge(templates.upgrade_power, {
         action_arg = "timelapse",
-        image = "kr3_special_icons_0117",
+        image = "kr3_special_icons_0017",
         place = 1,
         sounds = {"ElvesMageHighElvenTimelapseTaunt"},
         tt_phrase = _("TOWER_MAGE_HIGH_ELVEN_TIMELAPSE_NOTE"),
@@ -1679,7 +1679,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "sentinel",
-        image = "kr3_special_icons_0118",
+        image = "kr3_special_icons_0018",
         place = 2,
         sounds = {"ElvesMageHighElvenSentinelTaunt"},
         tt_phrase = _("TOWER_MAGE_HIGH_ELVEN_SENTINEL_NOTE"),
@@ -1734,7 +1734,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "tear",
-        image = "kr3_special_icons_0110",
+        image = "kr3_special_icons_0010",
         place = 7,
         sounds = {"ElvesEwokTaunt"},
         tt_phrase = _("TOWER_EWOK_TEAR_NOTE"),
@@ -1752,7 +1752,7 @@ return {
 
     faerie_dragon = {{merge(templates.upgrade_power, {
         action_arg = "more_dragons",
-        image = "kr3_special_icons_0124",
+        image = "kr3_special_icons_0024",
         place = 1,
         sounds = {"ElvesFaeryDragonDragonBuy"},
         tt_phrase = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_MORE_DRAGONS_NOTE"),
@@ -1768,7 +1768,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "improve_shot",
-        image = "kr3_special_icons_0125",
+        image = "kr3_special_icons_0025",
         place = 2,
         sounds = {"ElvesFaeryDragonExtraAbility"},
         tt_phrase = _("ELVES_TOWER_SPECIAL_FAERIE_DRAGONS_UPGRADE_IMPROVE_SHOT_NOTE"),
@@ -1783,7 +1783,7 @@ return {
 
     pixie = {{merge(templates.upgrade_power, {
         action_arg = "cream",
-        image = "kr3_special_icons_0122",
+        image = "kr3_special_icons_0022",
         place = 1,
         sounds = {"ElvesGnomeNew"},
         tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE1_NOTE"),
@@ -1796,7 +1796,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "total",
-        image = "kr3_special_icons_0123",
+        image = "kr3_special_icons_0023",
         place = 2,
         sounds = {"ElvesGnomePower"},
         tt_phrase = _("ELVES_TOWER_PIXIE_UPGRADE2_NOTE"),
@@ -1821,7 +1821,7 @@ return {
 
     holder_baby_ashbite = {{merge(templates.upgrade, {
         action_arg = "tower_baby_ashbite",
-        image = "kr3_main_icons_0113",
+        image = "kr3_main_icons_0010",
         place = 5,
         tt_title = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_NAME"),
         tt_desc = _("ELVES_BABY_ASHBITE_TOWER_BROKEN_DESCRIPTION")
@@ -1829,7 +1829,7 @@ return {
 
     baby_ashbite = {{merge(templates.upgrade_power, {
         action_arg = "blazing_breath",
-        image = "kr3_special_icons_0126",
+        image = "kr3_special_icons_0026",
         place = 1,
         sounds = {"ElvesAshbiteConfirm"},
         tt_phrase = _("ELVES_BABY_ASHBITE_FIREBREATH_NOTE"),
@@ -1845,7 +1845,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "fiery_mist",
-        image = "kr3_special_icons_0127",
+        image = "kr3_special_icons_0027",
         place = 2,
         sounds = {"ElvesAshbiteConfirm"},
         tt_phrase = _("ELVES_BABY_ASHBITE_SMOKEBREATH_NOTE"),
@@ -1857,7 +1857,7 @@ return {
 
     drow = {{merge(templates.upgrade_power, {
         action_arg = "life_drain",
-        image = "kr3_special_icons_0120",
+        image = "kr3_special_icons_0020",
         place = 6,
         sounds = {"ElvesSpecialDrowLifeDrain"},
         tt_phrase = _("ELVES_TOWER_DROW_LIFE_DRAIN_NOTE"),
@@ -1873,7 +1873,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "blade_mail",
-        image = "kr3_special_icons_0119",
+        image = "kr3_special_icons_0019",
         place = 7,
         sounds = {"ElvesSpecialDrowBlademail"},
         tt_phrase = _("ELVES_TOWER_DROW_BLADE_MAIL_NOTE"),
@@ -1889,7 +1889,7 @@ return {
         }}
     }), merge(templates.upgrade_power, {
         action_arg = "double_dagger",
-        image = "kr3_special_icons_0121",
+        image = "kr3_special_icons_0021",
         place = 5,
         sounds = {"ElvesSpecialDrowDaggers"},
         tt_phrase = _("ELVES_TOWER_DROW_DOUBLE_DAGGER_NOTE"),
@@ -1915,7 +1915,7 @@ return {
 
     bastion = {{merge(templates.upgrade_power, {
         action_arg = "razor_edge",
-        image = "kr3_special_icons_0128",
+        image = "kr3_special_icons_0028",
         place = 5,
         sounds = {"ElvesTowerBastionRazorEdge"},
         tt_phrase = _("ELVES_TOWER_BASTION_RAZOR_EDGE_NOTE"),

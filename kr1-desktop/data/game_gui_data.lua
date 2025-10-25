@@ -342,7 +342,7 @@ return {
 			image = "encyclopedia_creeps_0068",
 			layout = N_ENEMY
 		},
-        		enemy_bouncer = {
+		enemy_bouncer = {
 			image = "encyclopedia_creeps_0201",
 			icon = "kr2_alert_creep_notxt_0001",
 			layout = N_ENEMY,
@@ -583,7 +583,7 @@ return {
 			icon = "kr2_alert_creep_notxt_0050",
 			layout = N_ENEMY
 		},
-        		enemy_gnoll_reaver = {
+		enemy_gnoll_reaver = {
 			image = "encyclopedia_creeps_0301",
 			icon = "kr3_alert_creep_notxt_0001",
 			layout = N_ENEMY,
@@ -1596,7 +1596,8 @@ return {
 			{
 				color = "gray",
 				fit_lines = 4,
-				text = "some enemies enjoy different levels of magic resistance that protects them against magical attacks.",
+				text =
+				"some enemies enjoy different levels of magic resistance that protects them against magical attacks.",
 				font_size = 16,
 				pos = v(118, CJK(78, 84, nil, 91)),
 				size = v(338, 80),
@@ -1681,7 +1682,8 @@ return {
 			{
 				color = "gray",
 				fit_lines = 4,
-				text = "Barracks are good for blocking the enemy but lack in attack power. Make sure you have enough firepower to support them!",
+				text =
+				"Barracks are good for blocking the enemy but lack in attack power. Make sure you have enough firepower to support them!",
 				font_size = 16,
 				pos = v(60, 66),
 				size = v(399, 66),
@@ -1709,7 +1711,8 @@ return {
 				size = v(392, 54)
 			},
 			{
-				text = "Some enemies wear heavy armor and are almost impervious to physical damage. In order to kill them hit them with magic attacks!",
+				text =
+				"Some enemies wear heavy armor and are almost impervious to physical damage. In order to kill them hit them with magic attacks!",
 				font_size = 18,
 				text_align = "center",
 				pos = v(60, 75),
@@ -1867,33 +1870,33 @@ return {
 			}
 		}
 	},
-    -- 5,6,7,10,11,12,13,14,15,16,17,18,19,20
+	-- 5,6,7,10,11,12,13,14,15,16,17,18,19,20
 	tower_menu_button_places = {
-        v(24, 20),
-        v(124, 20),
-        v(24, 120),
-        v(124, 120),
-        v(74, 2),  -- 0, 1
-        v(74 - TOWER_MENU_BUTTON_X_UNIT, 34), -- -1, 1
-        v(74 + TOWER_MENU_BUTTON_X_UNIT, 34), -- 1, 1
-        v(128, 118),
-        v(74, 140),
-        v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT),   -- -2, 2
-        v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT), -- 2, 2
-        v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66),  -- -2, 1
-        v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66), -- 2, 1
-        v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34), -- -3, 1
-        v(74 + 3*TOWER_MENU_BUTTON_X_UNIT, 34), -- 3, 1
-        v(74 - TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -1, 2
-        v(74 + TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 1, 2
-        v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -3, 2
-        v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 3, 2
-        v(74, 2 - TOWER_MENU_BUTTON_Y_UNIT),  -- 0, 2
-        v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT),   -- -2, 3
-        v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- 2, 3
-        v(74 - 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
-        v(74 + 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
-    },
+		v(24, 20),
+		v(124, 20),
+		v(24, 120),
+		v(124, 120),
+		v(74, 2),                             -- 0, 1
+		v(74 - TOWER_MENU_BUTTON_X_UNIT, 34), -- -1, 1
+		v(74 + TOWER_MENU_BUTTON_X_UNIT, 34), -- 1, 1
+		v(128, 118),
+		v(74, 140),
+		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT),     -- -2, 2
+		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT),     -- 2, 2
+		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66),                                -- -2, 1
+		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66),                                -- 2, 1
+		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34),                                -- -3, 1
+		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34),                                -- 3, 1
+		v(74 - TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),         -- -1, 2
+		v(74 + TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),         -- 1, 2
+		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),     -- -3, 2
+		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),     -- 3, 2
+		v(74, 2 - TOWER_MENU_BUTTON_Y_UNIT),                                     -- 0, 2
+		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- -2, 3
+		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- 2, 3
+		v(74 - 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
+		v(74 + 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
+	},
 	tower_menu_power_offset = {
 		-- 原版x差值18, 6 ，y差值7, 17
 		v(7, -16),
@@ -1901,8 +1904,8 @@ return {
 		v(31, 8)
 	},
 	range_center_offset = v(0, -12),
-    tower_menu_button_width = 4 * TOWER_MENU_BUTTON_X_UNIT,
-    tower_menu_button_height = 2 * TOWER_MENU_BUTTON_Y_UNIT,
+	tower_menu_button_width = 4 * TOWER_MENU_BUTTON_X_UNIT,
+	tower_menu_button_height = 2 * TOWER_MENU_BUTTON_Y_UNIT,
 	damage_icons = {
 		default = "base_info_icons_0001",
 		magic = "base_info_icons_0002",
@@ -1911,15 +1914,15 @@ return {
 		arrow = "base_info_icons_0010",
 		shot = "base_info_icons_0011",
 		[DAMAGE_TRUE] = "base_info_icons_0014",
-        -- 远程的物理攻击在 game_gui 中额外处理，显示为箭伤
+		-- 远程的物理攻击在 game_gui 中额外处理，显示为箭伤
 		[DAMAGE_PHYSICAL] = "base_info_icons_0001",
 		[DAMAGE_MAGICAL] = "base_info_icons_0002",
-        [DAMAGE_MAGICAL_EXPLOSION] = "base_info_icons_0002",
+		[DAMAGE_MAGICAL_EXPLOSION] = "base_info_icons_0002",
 		[DAMAGE_EXPLOSION] = "base_info_icons_0012",
-        [DAMAGE_ELECTRICAL] = "base_info_icons_0012",
-        [DAMAGE_SHOT] = "base_info_icons_0011",
+		[DAMAGE_ELECTRICAL] = "base_info_icons_0012",
+		[DAMAGE_SHOT] = "base_info_icons_0011",
 		[DAMAGE_RUDE] = "base_info_icons_0013",
-        [DAMAGE_STAB] = "base_info_icons_0010",
-        [DAMAGE_MIXED] = "base_info_icons_0001",
+		[DAMAGE_STAB] = "base_info_icons_0010",
+		[DAMAGE_MIXED] = "base_info_icons_0001",
 	}
 }
