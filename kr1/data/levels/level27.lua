@@ -66,7 +66,7 @@ function level:init(store)
 		}
 	end
 
-	self.show_next_wave_balloon = nil
+	-- self.show_next_wave_balloon = nil
 end
 
 function level:load(store)

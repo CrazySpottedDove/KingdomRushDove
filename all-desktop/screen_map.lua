@@ -46,7 +46,7 @@ screen_map.required_textures = {
     "select_difficulty",
     "level_select",
     "screen_map_flags",
-    "balloon",
+    "ballon",
     "stars_container",
     "hero_room",
     "screen_map_buttons",

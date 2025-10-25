@@ -21,9 +21,9 @@ function level:update(store)
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		self.manual_hero_insertion = true
 
-		signal.emit("show-balloon", "TB_START")
-		signal.emit("show-balloon", "TB_BUILD")
-		signal.emit("wave-notification", "view", "TUTORIAL_1")
+		-- signal.emit("show-balloon", "TB_START")
+		-- signal.emit("show-balloon", "TB_BUILD")
+		-- signal.emit("wave-notification", "view", "TUTORIAL_1")
 
 		if store.selected_hero and store.selected_hero ~= "hero_elves_archer" then
 			LU.insert_hero(store)
@@ -33,26 +33,26 @@ function level:update(store)
 			coroutine.yield()
 		end
 
-		self.show_next_wave_balloon = true
+		-- self.show_next_wave_balloon = true
 
 		while store.wave_group_number < 2 do
 			coroutine.yield()
 		end
 
-		signal.emit("wave-notification", "view", "POWER_REINFORCEMENT")
+		-- signal.emit("wave-notification", "view", "POWER_REINFORCEMENT")
 
 		while store.wave_group_number < 3 do
 			coroutine.yield()
 		end
 
-		signal.emit("wave-notification", "view", "POWER_FIREBALL")
+		-- signal.emit("wave-notification", "view", "POWER_FIREBALL")
 
 		while store.wave_group_number < 5 do
 			coroutine.yield()
 		end
 
 		if store.selected_hero and store.selected_hero == "hero_elves_archer" then
-			signal.emit("wave-notification", "view", "TIP_HEROES")
+			-- signal.emit("wave-notification", "view", "TIP_HEROES")
 
 			while store.paused do
 				coroutine.yield()
