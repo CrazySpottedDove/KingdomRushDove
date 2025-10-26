@@ -5637,8 +5637,8 @@ local towers = {
                 damage_min = {5, 12, 22, 40}
             },
             phosphoric = {
-                damage_radius = 40,
-                price = {200, 100, 100},
+                damage_radius = 50,
+                price = {225, 100, 100},
                 armor_reduction = {0.01, 0.02, 0.03},
                 damage_area_max = {18, 24, 30},
                 damage_area_min = {12, 16, 20},

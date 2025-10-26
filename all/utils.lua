@@ -1859,7 +1859,7 @@ function U.predict_damage(entity, damage)
 
     -- 该类攻击对护甲高的敌人伤害更高
     if band(d.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
-        rounded_damage = rounded_damage + rounded_damage * protection / (1 - protection)
+        rounded_damage = rounded_damage + rounded_damage * protection * protection * 2 / (1 - protection)
     end
 
     rounded_damage = km.round(rounded_damage * e.health.damage_factor)
