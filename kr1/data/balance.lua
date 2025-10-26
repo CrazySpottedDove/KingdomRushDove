@@ -5638,10 +5638,20 @@ local towers = {
             },
             phosphoric = {
                 damage_radius = 50,
-                price = {225, 100, 100},
+                price = {250, 100, 100},
                 armor_reduction = {0.01, 0.02, 0.03},
-                damage_area_max = {18, 24, 30},
-                damage_area_min = {12, 16, 20},
+                damage_area_max = {
+                    [0] = 18,
+                    [1] = 18,
+                    [2] = 24,
+                    [3] = 30
+                },
+                damage_area_min = {
+                    [0] = 12,
+                    [1] = 12,
+                    [2] = 16,
+                    [3] = 20
+                },
                 damage_factor = {1, 1, 1},
                 damage_type = DAMAGE_AGAINST_ARMOR + DAMAGE_SHOT
             },
@@ -5651,7 +5661,7 @@ local towers = {
                 min_range = {20, 20, 20},
                 damage_type = DAMAGE_INSTAKILL,
                 hp_max_target = {300, 600, 900},
-                kill_hp_factor = {0.4, 0.5, 0.6},
+                kill_hp_factor = {0.4, 0.5, 0.6}
             }
         }
     },
@@ -6003,7 +6013,7 @@ local towers = {
                 factor = 0.8
             },
             explosion_radius = 50,
-            explosion_factor = 0.2,
+            explosion_factor = 0.2
         },
         skill_chain = {
             chain_delay = 0.1,
@@ -6024,7 +6034,7 @@ local towers = {
                 clicks_to_destroy = 8,
                 magic_armor = 0,
                 hp_mult = 0.7,
-                gold = 0,
+                gold = 0
             }
         }
     },
