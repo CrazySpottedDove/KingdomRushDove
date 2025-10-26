@@ -1804,7 +1804,7 @@ function U.predict_damage(entity, damage)
         end
     end
 
-    local protection
+    local protection = 0
 
     local function calc_explosion_protection(armor)
         return armor * (0.2 * armor + 0.4)
@@ -1846,7 +1846,7 @@ function U.predict_damage(entity, damage)
         protection = 1
     end
 
-    protection = protection or 0
+    protection = km.clamp(0, 1, protection)
 
     local rounded_damage = d.value
     if band(d.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
@@ -1857,9 +1857,14 @@ function U.predict_damage(entity, damage)
         rounded_damage = km.round(rounded_damage * e.health.damage_factor_electrical)
     end
 
+    -- 该类攻击对护甲高的敌人伤害更高
+    if band(d.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
+        rounded_damage = rounded_damage + rounded_damage * protection / (1 - protection)
+    end
+
     rounded_damage = km.round(rounded_damage * e.health.damage_factor)
 
-    local actual_damage = math.ceil(rounded_damage * km.clamp(0, 1, 1 - protection))
+    local actual_damage = math.ceil(rounded_damage * (1 - protection))
 
     if band(d.damage_type, DAMAGE_NO_KILL) ~= 0 and e.health and actual_damage >= e.health.hp then
         actual_damage = e.health.hp - 1

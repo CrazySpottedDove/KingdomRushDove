@@ -632,7 +632,7 @@ anchor_y = 0.14
 tt.health.hp_max = nil
 tt.health_bar.offset = vec_2(0, 33)
 tt.health.dead_lifetime = fts(14)
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_hero_0005" or "info_portraits_hero_0004"
+tt.info.portrait = "info_portraits_hero_0005"
 tt.info.i18n_key = "HERO_MAGE_SHADOW"
 tt.info.random_name_format = nil
 tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -10109,6 +10109,15 @@ tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
 tt.tween.remove = true
+
+tt = E:register_t("decal_soldier_shadow", "decal_scripted")
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].animated = false
+tt.main_script.update = scripts.decal_soldier_shadow.update
+tt.max_height = 50
+tt.shadow_shrink = 0.4
+tt.entity = nil
+tt.dissapear_time = 14
 
 tt = E:register_t("decal_soldier_tower_rocket_gunners_shadow", "decal_soldier_shadow")
 tt.render.sprites[1].name = "rocket_gunners_tower_gunner_shadow"

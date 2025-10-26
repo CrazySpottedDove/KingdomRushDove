@@ -13302,52 +13302,6 @@ end
 -- 牢大 BEGIN
 scripts.tower_rocket_gunners = {}
 
-function scripts.tower_rocket_gunners.get_info(this)
-    local s = E:create_entity(this.barrack.soldier_type)
-
-    if this.powers then
-        for pn, p in pairs(this.powers) do
-            for i = 1, p.level do
-                SU.soldier_power_upgrade(s, pn)
-            end
-        end
-    end
-
-    local s_info = s.info.fn(s)
-    local attacks
-
-    if s.melee and s.melee.attacks then
-        attacks = s.melee.attacks
-    elseif s.ranged and s.ranged.attacks then
-        attacks = s.ranged.attacks
-    end
-
-    local min, max
-
-    for _, a in pairs(attacks) do
-        if a.damage_min then
-            local damage_factor = this.tower.damage_factor
-
-            min, max = a.damage_min * damage_factor, a.damage_max * damage_factor
-
-            break
-        end
-    end
-
-    if min and max then
-        min, max = math.ceil(min), math.ceil(max)
-    end
-
-    return {
-        type = STATS_TYPE_TOWER_BARRACK,
-        hp_max = s.health.hp_max,
-        damage_min = min,
-        damage_max = max,
-        armor = s.health.armor,
-        respawn = s.health.dead_lifetime
-    }
-end
-
 function scripts.tower_rocket_gunners.update(this, store, script)
     local tower_sid = 2
     local b = this.barrack
@@ -13358,13 +13312,8 @@ function scripts.tower_rocket_gunners.update(this, store, script)
     local sting_missiles_ready = false
     local sting_missiles_soldier
 
-    if not this.tower_upgrade_persistent_data.current_mode then
-        this.tower_upgrade_persistent_data.current_mode = MODE_FLY
-    end
-
-    if not this.tower_upgrade_persistent_data.is_taking_off then
-        this.tower_upgrade_persistent_data.is_taking_off = {true, true}
-    end
+    local pow_p = this.powers.phosphoric
+    local pow_s = this.powers.sting_missiles
 
     local function check_change_rally()
         if b.rally_new then
@@ -13390,12 +13339,6 @@ function scripts.tower_rocket_gunners.update(this, store, script)
         if this.change_mode then
             this.change_mode = false
 
-            if this.tower_upgrade_persistent_data.current_mode == MODE_GROUND then
-                this.tower_upgrade_persistent_data.current_mode = MODE_FLY
-            else
-                this.tower_upgrade_persistent_data.current_mode = MODE_GROUND
-            end
-
             for _, soldier in ipairs(b.soldiers) do
                 soldier.change_mode = true
             end
@@ -13403,24 +13346,25 @@ function scripts.tower_rocket_gunners.update(this, store, script)
     end
 
     while true do
-        if this.powers then
-            for pn, p in pairs(this.powers) do
-                if p.changed then
-                    p.changed = nil
+        if pow_p.changed then
+            pow_p.changed = nil
 
-                    for _, s in pairs(b.soldiers) do
-                        s.powers[pn].level = p.level
-                        s.powers[pn].changed = true
-
-                        if p == this.powers.sting_missiles then
-                            sting_missiles_ready = true
-                        end
-                    end
-                end
+            for _, s in pairs(b.soldiers) do
+                s.powers.phosphoric.level = pow_p.level
+                s.powers.phosphoric.changed = true
             end
         end
+        if pow_s.changed then
+            pow_s.changed = nil
 
-        if this.powers and this.powers.sting_missiles and this.powers.sting_missiles.level > 0 then
+            for _, s in pairs(b.soldiers) do
+                s.powers.sting_missiles.level = pow_s.level
+                s.powers.sting_missiles.changed = true
+            end
+            sting_missiles_ready = true
+        end
+
+        if pow_s.level > 0 then
             if sting_missiles_ready then
                 if (not sting_missiles_soldier or sting_missiles_soldier.health.dead) and #b.soldiers > 0 then
                     sting_missiles_soldier = b.soldiers[math.random(#b.soldiers)]
@@ -13433,8 +13377,7 @@ function scripts.tower_rocket_gunners.update(this, store, script)
                     sting_missiles_soldier = nil
                 end
             else
-                sting_missiles_ready = store.tick_ts - sting_missiles_ts >
-                                           this.powers.sting_missiles.cooldown[this.powers.sting_missiles.level]
+                sting_missiles_ready = store.tick_ts - sting_missiles_ts > pow_s.cooldown[pow_s.level] * this.tower.cooldown_factor
             end
         end
 
@@ -13460,15 +13403,15 @@ function scripts.tower_rocket_gunners.update(this, store, script)
                     s = E:create_entity(b.soldier_type)
                     s.soldier.tower_id = this.id
                     s.soldier.tower_soldier_idx = i
+                    U.soldier_inherit_tower_buff_factor(s, this)
                     s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
                     s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
                     s.nav_rally.new = true
                     s.render.sprites[1].flip_x = true
 
-                    if this.powers then
-                        for pn, p in pairs(this.powers) do
-                            s.powers[pn].level = p.level
-                        end
+                    for pn, p in pairs(this.powers) do
+                        s.powers[pn].level = p.level
+                        s.powers[pn].changed = true
                     end
 
                     s.spawned_from_tower = true
@@ -13490,53 +13433,14 @@ end
 
 scripts.soldier_tower_rocket_gunners = {}
 
-function scripts.soldier_tower_rocket_gunners.insert(this, store, script)
-    local tower = store.entities[this.soldier.tower_id]
-    local has_phosphoric = false
-
-    if tower.powers then
-        for ptn, p_tower in pairs(tower.powers) do
-            if p_tower.level > 0 then
-                for pn, p_soldier in pairs(this.powers) do
-                    if ptn == pn then
-                        p_soldier.level = p_tower.level
-
-                        SU.soldier_power_upgrade(this, pn)
-
-                        if pn == "phosphoric" then
-                            this.melee.attacks[2].level = p_soldier.level
-                            this.ranged.attacks[2].level = p_soldier.level
-                            this.unit.damage_factor = p_soldier.damage_factor[p_soldier.level]
-                            has_phosphoric = true
-                        end
-
-                        if pn == "sting_missiles" then
-                            this.ranged.attacks[3].max_range = p_soldier.max_range[p_soldier.level]
-                            this.ranged.attacks[3].min_range = p_soldier.min_range[p_soldier.level]
-                        end
-                    end
-                end
-            end
-        end
-
-        this.melee.attacks[1].disabled = has_phosphoric
-        this.melee.attacks[2].disabled = not has_phosphoric
-        this.ranged.attacks[1].disabled = has_phosphoric
-        this.ranged.attacks[2].disabled = not has_phosphoric
-    end
-
-    return scripts.soldier_barrack.insert(this, store, script)
-end
-
-function tower_rocket_gunners_phosphoric_area_damage(soldier, store, target)
+local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, target)
     local attack = soldier.melee.attacks[2]
     local dradius = attack.damage_radius
-    local enemies = table.filter(store.entities, function(k, v)
-        return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, attack.vis_bans) == 0 and
-                   band(v.vis.bans, attack.vis_flags) == 0 and v.id ~= target.id and
-                   U.is_inside_ellipse(v.pos, target.pos, dradius)
-    end)
 
+    local enemies = U.find_enemies_in_range(store, target.pos, 0, dradius, attack.vis_flags, attack.vis_bans)
+    if not enemies then
+        return
+    end
     for _, enemy in pairs(enemies) do
         local d = E:create_entity("damage")
 
@@ -13544,16 +13448,16 @@ function tower_rocket_gunners_phosphoric_area_damage(soldier, store, target)
 
         local dmax = attack.damage_area_max[soldier.powers.phosphoric.level]
         local dmin = attack.damage_area_min[soldier.powers.phosphoric.level]
-        local upg = UP:get_upgrade("towers_improved_formulas")
+
+        local upg = UP:get_upgrade("engineer_efficiency")
 
         if upg then
             d.value = dmax
         else
             local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, target.pos, dradius)
-
             d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
         end
-
+        d.value = d.value * soldier.unit.damage_factor
         d.source_id = soldier.id
         d.target_id = enemy.id
 
@@ -13622,23 +13526,6 @@ function scripts.soldier_tower_rocket_gunners.update(this, store, script)
         adjust_position_reference()
 
         this.drag_line_origin_offset.y = height_dest
-    end
-
-    local function check_tower_damage_factor()
-        if store.entities[this.soldier.tower_id] then
-            for _, a in ipairs(this.melee.attacks) do
-                if not a._original_damage_min then
-                    a._original_damage_min = a.damage_min
-                end
-
-                if not a._original_damage_max then
-                    a._original_damage_max = a.damage_max
-                end
-
-                a.damage_min = a._original_damage_min * store.entities[this.soldier.tower_id].tower.damage_factor
-                a.damage_max = a._original_damage_max * store.entities[this.soldier.tower_id].tower.damage_factor
-            end
-        end
     end
 
     local function y_soldier_new_rally_custom(store, this)
@@ -13789,7 +13676,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store, script)
     end
 
     local function change_mode_fly()
-        this.motion.max_speed = this.speed_flight
+        U.update_max_speed(this, this.speed_flight)
         this.ranged.attacks[1].animation = "attack_air"
         this.melee.attacks[1].disabled = true
 
@@ -13825,7 +13712,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store, script)
             coroutine.yield()
         end
 
-        U.y_wait(store, 0.2 * this.soldier.tower_soldier_idx)
+        -- U.y_wait(store, 0.2 * this.soldier.tower_soldier_idx)
 
         this.tween.props[1].disabled = false
         this.tween.disabled = false
@@ -13835,12 +13722,12 @@ function scripts.soldier_tower_rocket_gunners.update(this, store, script)
     end
 
     local function change_mode_ground()
-        this.motion.max_speed = this.speed_ground
+        U.update_max_speed(this, this.speed_ground)
         this.ranged.attacks[1].animation = "attack_floor"
         this.unit.death_animation = "death_floor"
         this.unit.hide_after_death = false
 
-        if this.powers and this.powers.phosphoric.level > 0 then
+        if this.powers.phosphoric.level > 0 then
             this.melee.attacks[1].disabled = true
             this.melee.attacks[2].disabled = false
         else
@@ -14058,53 +13945,43 @@ function scripts.soldier_tower_rocket_gunners.update(this, store, script)
             end
         end
 
-        if this.change_mode or this.current_mode ~= tower.tower_upgrade_persistent_data.current_mode then
+        if this.current_mode ~= tower.tower_upgrade_persistent_data.current_mode then
             this.change_mode = false
-
             U.unblock_target(store, this)
-
-            if this.current_mode == MODE_GROUND then
-                this.current_mode = MODE_FLY
-
+            this.current_mode = tower.tower_upgrade_persistent_data.current_mode
+            if this.current_mode == MODE_FLY then
                 change_mode_fly()
             else
-                this.current_mode = MODE_GROUND
-
                 change_mode_ground()
             end
         end
 
         adjust_position_reference()
 
-        if this.powers then
-            for pn, p in pairs(this.powers) do
-                if p.changed then
-                    p.changed = nil
+        for pn, p in pairs(this.powers) do
+            if p.changed then
+                p.changed = nil
 
-                    SU.soldier_power_upgrade(this, pn)
+                SU.soldier_power_upgrade(this, pn)
 
-                    if p == this.powers.phosphoric then
-                        this.melee.attacks[1].disabled = true
-                        this.melee.attacks[2].disabled = false
-                        this.melee.attacks[2].level = p.level
-                        this.ranged.attacks[1].disabled = true
-                        this.ranged.attacks[2].disabled = false
-                        this.ranged.attacks[2].level = p.level
-                        this.unit.damage_factor = p.damage_factor[p.level]
-                    end
+                if p == this.powers.phosphoric then
+                    this.melee.attacks[1].disabled = true
+                    this.melee.attacks[2].disabled = false
+                    this.melee.attacks[2].level = p.level
+                    this.ranged.attacks[1].disabled = true
+                    this.ranged.attacks[2].disabled = false
+                    this.ranged.attacks[2].level = p.level
+                end
 
-                    if p == this.powers.sting_missiles then
-                        this.ranged.attacks[3].max_range = p.max_range[p.level]
-                        this.ranged.attacks[3].min_range = p.min_range[p.level]
-                        this.ranged.attacks[3].filter_fn = function(e)
-                            return e.health and e.health.hp_max <= p.hp_max_target[p.level]
-                        end
+                if p == this.powers.sting_missiles then
+                    this.ranged.attacks[3].max_range = p.max_range[p.level]
+                    this.ranged.attacks[3].min_range = p.min_range[p.level]
+                    this.ranged.attacks[3].filter_fn = function(e)
+                        return e.health and e.health.hp <= e.health.hp_max * p.kill_hp_factor[p.level] and e.health.hp >= 500
                     end
                 end
             end
         end
-
-        check_tower_damage_factor()
 
         if this.health.dead then
             tower.tower_upgrade_persistent_data.is_taking_off[this.soldier.tower_soldier_idx] = true
@@ -14115,7 +13992,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store, script)
                 U.unblock_target(store, this)
                 SU.y_enemy_death(store, this)
             else
-                this.tween = nil
+                this.tween.disabled = true
 
                 SU.y_soldier_death(store, this)
             end
@@ -14136,14 +14013,10 @@ function scripts.soldier_tower_rocket_gunners.update(this, store, script)
         if this.current_mode == MODE_GROUND then
             brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-            if sta == A_DONE and this.powers and this.powers.phosphoric.level > 0 then
+            if sta == A_DONE and this.powers.phosphoric.level > 0 then
                 local target = store.entities[this.soldier.target_id]
 
                 if target then
-                    if target.health.armor and target.health.armor > 0 then
-                        SU.armor_dec(target, this.powers.phosphoric.armor_reduction[this.powers.phosphoric.level])
-                    end
-
                     tower_rocket_gunners_phosphoric_area_damage(this, store, target)
                 end
             end
@@ -14193,20 +14066,9 @@ function scripts.bullet_soldier_tower_rocket_gunners.update(this, store)
     local target = store.entities[b.target_id]
     local source = store.entities[b.source_id]
 
-    b.damage_min = b.damage_min_config[b.level]
-    b.damage_max = b.damage_max_config[b.level]
-
-    local tower = source and store.entities[source.soldier.tower_id]
-
     U.y_wait(store, b.flight_time)
 
     if target then
-        if tower then
-            local tower_damage_factor = tower.tower.damage_factor
-
-            b.damage_factor = tower_damage_factor
-        end
-
         local d = SU.create_bullet_damage(b, target.id, this.id)
 
         queue_damage(store, d)
@@ -14214,7 +14076,8 @@ function scripts.bullet_soldier_tower_rocket_gunners.update(this, store)
         if band(target.vis.flags, F_FLYING) ~= 0 then
             local fx = E:create_entity(b.hit_fx)
 
-            fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.flight_height
+            -- fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.flight_height
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
             fx.render.sprites[1].ts = store.tick_ts
 
             queue_insert(store, fx)
@@ -14306,64 +14169,30 @@ function scripts.bullet_soldier_tower_rocket_gunners_phosphoric.update(this, sto
             if this.track_target then
                 update_sprite()
             end
-
-            if tower and not store.entities[tower.id] then
-                queue_remove(store, this)
-
-                if fx then
-                    queue_remove(store, fx)
-                end
-
-                for key, value in pairs(mods_added) do
-                    queue_remove(store, value)
-                end
-
-                break
-            end
-
             coroutine.yield()
 
             s.hidden = false
         end
     else
         while not U.animation_finished(this, 1) do
-            if tower and not store.entities[tower.id] then
-                queue_remove(store, this)
-
-                break
-            end
-
             coroutine.yield()
         end
     end
 
     if target and source then
-        b.damage_factor = source.unit.damage_factor
-
-        local tower_id = source.soldier.tower_id
-
-        if tower_id and store.entities[tower_id] then
-            local tower_damage_factor = store.entities[tower_id].tower.damage_factor
-
-            b.damage_factor = tower_damage_factor
-        end
-
         local d = SU.create_bullet_damage(b, target.id, this.id)
 
         queue_damage(store, d)
 
-        if target.health.armor and target.health.armor > 0 and source.powers and source.powers.phosphoric then
-            SU.armor_dec(target, source.powers.phosphoric.armor_reduction[b.level])
-        end
-
         if band(target.vis.flags, F_FLYING) ~= 0 then
             local fx = E:create_entity(b.hit_fx)
 
-            if target.flight_height then
-                fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.flight_height
-            else
-                fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
-            end
+            -- if target.flight_height then
+            --     fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.flight_height
+            -- else
+                -- fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+            -- end
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 
             fx.render.sprites[1].ts = store.tick_ts
 
@@ -14488,17 +14317,17 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 
     fly_to_pos(target_pos)
 
-    target_pos = v(soldier_pos.x + 35 * side_flip, soldier_pos.y + 100)
+    -- target_pos = v(soldier_pos.x + 35 * side_flip, soldier_pos.y + 100)
 
-    fly_to_pos(target_pos)
+    -- fly_to_pos(target_pos)
 
-    target_pos = v(soldier_pos.x, soldier_pos.y + 130)
+    -- target_pos = v(soldier_pos.x, soldier_pos.y + 130)
 
-    fly_to_pos(target_pos)
+    -- fly_to_pos(target_pos)
 
-    target_pos = v(soldier_pos.x, soldier_pos.y + 180)
+    -- target_pos = v(soldier_pos.x, soldier_pos.y + 180)
 
-    fly_to_pos(target_pos)
+    -- fly_to_pos(target_pos)
 
     if target then
         target_pos = v(target.pos.x, soldier_pos.y + 180)
@@ -14512,8 +14341,8 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
     ps.particle_system.emission_rate = 90
 
     if not target or target.health.dead then
-        local new_target, targets = U.find_foremost_enemy(store.entities, soldier_floor_pos, 0, attack.max_range, false,
-            attack.vis_flags, attack.vis_bans)
+        local new_target, targets = U.find_foremost_enemy(store, soldier_floor_pos, 0, attack.max_range, false,
+            attack.vis_flags, attack.vis_bans, attack.filter_fn)
 
         if new_target then
             b.target_id = new_target.id
@@ -14536,8 +14365,12 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 
     while true do
         target = store.entities[b.target_id]
-
-        if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+        if not target or target.health.dead then
+            target = U.find_foremost_enemy(store, soldier_floor_pos, 0, attack.max_range, false,
+                attack.vis_flags, attack.vis_bans, attack.filter_fn)
+        end
+        if target and not target.health.dead and band(target.vis.bans, bor(F_RANGED, F_INSTAKILL)) == 0 then
+            b.target_id = target.id
             local hit_offset = V.v(0, 0)
 
             if not b.ignore_hit_offset then
@@ -14583,16 +14416,6 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
                 m.modifier.level = b.level
 
                 queue_insert(store, m)
-            end
-        end
-    elseif b.damage_radius and b.damage_radius > 0 then
-        local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
-
-        if targets then
-            for _, target in pairs(targets) do
-                local d = SU.create_bullet_damage(b, target.id, this.id)
-
-                queue_damage(store, d)
             end
         end
     end

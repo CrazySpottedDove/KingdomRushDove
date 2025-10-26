@@ -32216,7 +32216,7 @@ function scripts.decal_soldier_shadow.update(this, store, script)
         local offset_y = this.entity.render.sprites[1].offset.y
         local shadow_scale = 1 - this.shadow_shrink * offset_y / this.max_height
 
-        this.render.sprites[1].scale = v(shadow_scale, shadow_scale)
+        this.render.sprites[1].scale = V.v(shadow_scale, shadow_scale)
 
         coroutine.yield()
     end

@@ -395,6 +395,13 @@ return {
         place = 21,
         tt_title = _("TOWER_PANDAS_NAME"),
         tt_desc = _("TOWER_PANDAS_1_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_rocket_gunners_lvl4",
+        type = "rocket_gunners",
+        image = "kr5_main_icons_0009",
+        place = 22,
+        tt_title = _("TOWER_ROCKET_GUNNERS_NAME"),
+        tt_desc = _("TOWER_ROCKET_GUNNERS_1_DESCRIPTION")
     }), templates.rally, templates.sell}},
 
     ranger = {{merge(templates.upgrade_power, {
@@ -1972,6 +1979,8 @@ return {
         check = "kr5_quickmenu_action_icons_0003",
         action = "tw_change_mode",
         image = "kr5_quickmenu_action_icons_0005",
+        image_mode0 = "kr5_quickmenu_action_icons_0005",
+        image_mode1 = "kr5_quickmenu_action_icons_0006",
         place = 3,
         halo = "kr5_quickmenu_action_icons_0001_hover",
         tt_title_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NAME"),
@@ -1980,7 +1989,6 @@ return {
         tt_title_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NAME"),
         tt_desc_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_DESCRIPTION"),
         tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
-        is_kr5_change_mode = true
     }, merge(templates.upgrade_power, {
         action_arg = "skill_soldiers",
         image = "kr5_special_icons_0032",
@@ -2130,7 +2138,6 @@ return {
         action_arg = "pandas_retreat",
         action = "tw_free_action",
         halo = "glow_ico_main",
-        -- TODO: check image
         image = "quickmenu_retreat_icons_tower_panda",
         place = 3,
         tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
@@ -2273,7 +2280,7 @@ return {
             tt_desc = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_3_DESCRIPTION")
         }}
     }), templates.sell}},
-    
+
     arcane_wizard_five = {{merge(templates.upgrade_power, {
         action_arg = "disintegrate",
         image = "kr5_special_icons_0005",
@@ -2306,5 +2313,53 @@ return {
             tt_title = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_3_NAME"),
             tt_desc = _("TOWER_ARCANE_WIZARD_4_EMPOWERMENT_3_DESCRIPTION")
         }}
-    }), templates.sell}}
+    }), templates.sell}},
+    rocket_gunners = {{merge(templates.upgrade_power, {
+        action_arg = "sting_missiles",
+        image = "kr5_special_icons_0015",
+        place = 6,
+        sounds = {"TowerRocketGunnersSkillATaunt"},
+        tt_phrase = _("TOWER_ROCKET_GUNNERS_4_STING_MISSILES_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_ROCKET_GUNNERS_4_STING_MISSILES_1_NAME"),
+            tt_desc = _("TOWER_ROCKET_GUNNERS_4_STING_MISSILES_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROCKET_GUNNERS_4_STING_MISSILES_2_NAME"),
+            tt_desc = _("TOWER_ROCKET_GUNNERS_4_STING_MISSILES_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROCKET_GUNNERS_4_STING_MISSILES_3_NAME"),
+            tt_desc = _("TOWER_ROCKET_GUNNERS_4_STING_MISSILES_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "phosphoric",
+        action = "upgrade_power",
+        image = "kr5_special_icons_0016",
+        place = 7,
+        sounds = {"TowerRocketGunnersSkillBTaunt"},
+        tt_phrase = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_1_NAME"),
+            tt_desc = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_2_NAME"),
+            tt_desc = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_3_NAME"),
+            tt_desc = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_3_DESCRIPTION")
+        }}
+    }), templates.rally, templates.sell, {
+        halo = "kr5_quickmenu_action_icons_0001_hover",
+        action = "tw_change_mode",
+        image = "kr5_quickmenu_action_icons_0002",
+        image_mode1 = "kr5_quickmenu_action_icons_0001",
+        image_mode0 = "kr5_quickmenu_action_icons_0002",
+        place = 3,
+        tt_title_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NAME"),
+        tt_desc_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_DESCRIPTION"),
+        tt_phrase_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NOTE"),
+        tt_title_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_NAME"),
+        tt_desc_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_DESCRIPTION"),
+        tt_phrase_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_NOTE"),
+        sounds = {"TowerRocketGunnersLiftoffTaunt", "TowerRocketGunnersTouchdownTaunt"}
+    }}}
 }
