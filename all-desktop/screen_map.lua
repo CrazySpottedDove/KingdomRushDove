@@ -35,29 +35,11 @@ local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
 
 screen_map = {}
-screen_map.required_sounds = {
-    "common",
-    "music_screen_map"
-}
-screen_map.required_textures = {
-    "upgrades",
-    "screen_map_backgrond",
-    "achievements",
-    "select_difficulty",
-    "level_select",
-    "screen_map_flags",
-    "ballon",
-    "stars_container",
-    "hero_room",
-    "screen_map_buttons",
-    "screen_map_animations",
-    "kr2_screen_map_animations",
-    "kr3_screen_map_animations",
-    "view_options",
-    "achievements",
-    "encyclopedia",
-    "encyclopedia_creeps"
-}
+screen_map.required_sounds = {"common", "music_screen_map"}
+screen_map.required_textures = {"upgrades", "screen_map_backgrond", "achievements", "select_difficulty", "level_select",
+                                "screen_map_flags", "ballon", "stars_container", "hero_room", "screen_map_buttons",
+                                "screen_map_animations", "kr2_screen_map_animations", "kr3_screen_map_animations",
+                                "view_options", "achievements", "encyclopedia", "encyclopedia_creeps"}
 
 screen_map.ref_w = 1920
 screen_map.ref_h = 1080
@@ -310,7 +292,7 @@ function screen_map:init(w, h, done_callback)
 
         storage:save_slot(self.user_data)
     elseif #self.user_data.levels == 0 then
-        self.unlock_data.unlocked_levels = { 1 }
+        self.unlock_data.unlocked_levels = {1}
         levels[1] = {}
 
         storage:save_slot(self.user_data)
@@ -503,7 +485,7 @@ function screen_map:init(w, h, done_callback)
         l.text = _("BUY UPGRADES!")
         l.text_align = "center"
         l.vertical_align = "middle"
-        l.colors.text = { 0, 102, 158, 255 }
+        l.colors.text = {0, 102, 158, 255}
         l.line_height = CJK(0.7, nil, 1.1, nil)
         l.fit_lines = 2
 
@@ -515,7 +497,7 @@ function screen_map:init(w, h, done_callback)
         l.font_name = "body"
         l.font_size = 18
         l.text = _("Use the earned stars to improve your towers and powers!")
-        l.colors.text = { 46, 41, 39, 255 }
+        l.colors.text = {46, 41, 39, 255}
         l.line_height = CJK(0.9, nil, 1.25, nil)
         l.fit_lines = 3
 
@@ -534,7 +516,7 @@ function screen_map:init(w, h, done_callback)
 
     points_label.pos = v(0, 19)
     points_label.font = F:f("Comic Book Italic", "22")
-    points_label.colors.text = { 78, 43, 7 }
+    points_label.colors.text = {78, 43, 7}
     points_label.text = "1"
     points_label.text_align = "center"
     points_label.propagate_on_click = true
@@ -589,7 +571,7 @@ function screen_map:init(w, h, done_callback)
         l.text = _("HERO UNLOCKED!")
         l.text_align = "center"
         l.vertical_align = "middle"
-        l.colors.text = { 0, 102, 158, 255 }
+        l.colors.text = {0, 102, 158, 255}
         l.fit_lines = 2
 
         self.heroTip:add_child(l)
@@ -619,7 +601,7 @@ function screen_map:init(w, h, done_callback)
 
     points_label.pos = v(-1, 11)
     points_label.font = F:f("Comic Book Italic", "22")
-    points_label.colors.text = { 78, 43, 7 }
+    points_label.colors.text = {78, 43, 7}
     points_label.text_align = "center"
     points_label.propagate_on_click = true
 
@@ -734,7 +716,7 @@ function screen_map:init(w, h, done_callback)
         local sv = KView:new(V.v(sw, sh))
 
         sv.id = "modal_bg_shaded_view"
-        sv.colors.background = { 0, 0, 0, 160 }
+        sv.colors.background = {0, 0, 0, 160}
         sv.hidden = true
         sv.propagate_on_enter = false
 
@@ -938,7 +920,7 @@ function screen_map:keypressed(key, isrepeat)
 
         if key == "c" then
             if not av.colors.background then
-                av.colors.background = { 200, 200, 200, 100 }
+                av.colors.background = {200, 200, 200, 100}
             else
                 av.colors.background = nil
             end
@@ -958,7 +940,7 @@ function screen_map:keypressed(key, isrepeat)
 
             for iid, iv in pairs(self.SEL_LIST) do
                 out = out ..
-                    string.format("%s = { pos=v(%s,%s), scale=v(%s,%s)\n", iid, iv.pos.x, iv.pos.y, iv.scale.x,
+                          string.format("%s = { pos=v(%s,%s), scale=v(%s,%s)\n", iid, iv.pos.x, iv.pos.y, iv.scale.x,
                         iv.scale.y)
             end
 
@@ -989,7 +971,7 @@ function screen_map:keypressed(key, isrepeat)
         if key == "r" then
             self.map_view:clear_flags()
 
-            self.user_data.levels = { {} }
+            self.user_data.levels = {{}}
 
             reset_unlock_data()
 
@@ -1571,7 +1553,7 @@ function MapView:clear_flags()
 end
 
 function MapView:load_level_decos(i)
-    local layers = { self.ma_under_layer, self.ma_mid_layer, self.ma_over_layer }
+    local layers = {self.ma_under_layer, self.ma_mid_layer, self.ma_over_layer}
     local out = {}
 
     for _, d in pairs(map_data.map_decos[i]) do
@@ -1952,7 +1934,7 @@ function MapView:show_flags(num)
             l.text = _("START HERE!")
             l.text_align = "center"
             l.vertical_align = "middle"
-            l.colors.text = { 46, 41, 39, 255 }
+            l.colors.text = {46, 41, 39, 255}
             l.fit_lines = 1
 
             start_here:add_child(l)
@@ -1997,7 +1979,7 @@ LevelFlagView = class("LevelFlagView", KImageView)
 function LevelFlagView:initialize(level_num)
     KImageView.initialize(self, "map_flag_0181")
 
-    self.star_pos = { v(12, 12), v(28, 12), v(43, 12) }
+    self.star_pos = {v(12, 12), v(28, 12), v(43, 12)}
     self.star_views = {}
     self.anchor = v(self.size.x / 2, self.size.y / 2)
     self.mode = "default"
@@ -2254,7 +2236,7 @@ local function add_level_title(parent, text, style, y)
     title.font_size = fs
     title.font_align = "center"
     title.vertical_align = "middle"
-    title.colors.text = style == "sub" and { 142, 131, 91, 255 } or { 100, 89, 52, 255 }
+    title.colors.text = style == "sub" and {142, 131, 91, 255} or {100, 89, 52, 255}
     title.text = text
     title.line_height = CJK(0.9, 0.9, 1, 0.9)
     title.fit_lines = lines
@@ -2310,7 +2292,7 @@ local function add_level_description(parent, text)
     first_letter_label.pos = v(bg.pos.x + CJK(-4, 0, 0, 0), bg.pos.y + CJK(0, -4, -6, -6))
     first_letter_label.font_name = "capitals"
     first_letter_label.font_size = CJK(64, 56, 56, 56)
-    first_letter_label.colors.text = { 247, 234, 186 }
+    first_letter_label.colors.text = {247, 234, 186}
     first_letter_label.text_align = "center"
     first_letter_label.vertical_align = "bottom"
     first_letter_label.text = string.sub(text, 1, utf8.offset(text, 2) - 1)
@@ -2323,7 +2305,7 @@ local function add_level_description(parent, text)
     first_paragraph_1_label.font_name = font_name
     first_paragraph_1_label.font_size = font_size
     first_paragraph_1_label.line_height = line_height
-    first_paragraph_1_label.colors.text = { 64, 57, 36 }
+    first_paragraph_1_label.colors.text = {64, 57, 36}
     first_paragraph_1_label.text_align = "left"
     first_paragraph_1_label.text = p
 
@@ -2331,7 +2313,7 @@ local function add_level_description(parent, text)
 
     local w, p_nlines, p_lines = first_paragraph_1_label:get_wrap_lines()
     local p_max_lines = math.ceil((bg.pos.y + bg.size.y - TEXT_TOP_POS - 3) /
-        (first_paragraph_1_label:get_font_height() * line_height))
+                                      (first_paragraph_1_label:get_font_height() * line_height))
     local p_1_nlines = math.min(p_max_lines, #p_lines)
 
     for i = 1, #p_lines do
@@ -2355,7 +2337,7 @@ local function add_level_description(parent, text)
     first_paragraph_2_label.font_name = font_name
     first_paragraph_2_label.font_size = font_size
     first_paragraph_2_label.line_height = line_height
-    first_paragraph_2_label.colors.text = { 64, 57, 36 }
+    first_paragraph_2_label.colors.text = {64, 57, 36}
     first_paragraph_2_label.text_align = "left"
 
     parent:add_child(first_paragraph_2_label)
@@ -2374,11 +2356,11 @@ local function add_difficulty_stamp(parent, mode, diff, x, y)
 end
 
 local function add_level_battle_button(parent, mode, level_num)
-    local c1 = { 0.9529411764705882, 0.7764705882352941, 0.596078431372549, 1 }
-    local c3 = { 0.6862745098039216, 0.5372549019607843, 0.38823529411764707, 1 }
-    local co = { 0.37254901960784315, 0.023529411764705882, 0.050980392156862744, 1 }
-    local sh = { "p_bands", "p_outline", "p_glow" }
-    local sha = { {
+    local c1 = {0.9529411764705882, 0.7764705882352941, 0.596078431372549, 1}
+    local c3 = {0.6862745098039216, 0.5372549019607843, 0.38823529411764707, 1}
+    local co = {0.37254901960784315, 0.023529411764705882, 0.050980392156862744, 1}
+    local sh = {"p_bands", "p_outline", "p_glow"}
+    local sha = {{
         margin = 0,
         p1 = 0,
         p2 = 0.4,
@@ -2390,12 +2372,12 @@ local function add_level_battle_button(parent, mode, level_num)
         outline_color = co
     }, {
         thickness = 1.6,
-        glow_color = { 0, 0, 0, 0.6 }
-    } }
-    local c1_hover = { 1, 1, 1, 1 }
-    local c3_hover = { 1, 1, 0.6941176470588235, 1 }
-    local co_hover = { 0.807843137254902, 0.13725490196078433, 0.08627450980392157, 1 }
-    local sha_hover = { {
+        glow_color = {0, 0, 0, 0.6}
+    }}
+    local c1_hover = {1, 1, 1, 1}
+    local c3_hover = {1, 1, 0.6941176470588235, 1}
+    local co_hover = {0.807843137254902, 0.13725490196078433, 0.08627450980392157, 1}
+    local sha_hover = {{
         margin = 0,
         p1 = 0,
         p2 = 0.4,
@@ -2407,8 +2389,8 @@ local function add_level_battle_button(parent, mode, level_num)
         outline_color = co_hover
     }, {
         thickness = 1.6,
-        glow_color = { c3[1], c3[2], c3[3], 0.6 }
-    } }
+        glow_color = {c3[1], c3[2], c3[3], 0.6}
+    }}
     local prefix = "levelSelect_startMode_notxt_000%i"
     local nu = string.format(prefix, 2 * mode - 1)
     local nh = string.format(prefix, 2 * mode)
@@ -2450,7 +2432,7 @@ local function add_level_battle_button(parent, mode, level_num)
     t.font_name = "h_noti"
     t.text_align = "center"
     t.text = _("BUTTON_TO_BATTLE_1")
-    t.colors.text = { 255, 255, 255, 255 }
+    t.colors.text = {255, 255, 255, 255}
     t.shaders = sh
     t.shader_args = sha
     t.propagate_on_click = true
@@ -2464,7 +2446,7 @@ local function add_level_battle_button(parent, mode, level_num)
     t.font_name = "h_noti"
     t.text_align = "center"
     t.text = _("BUTTON_TO_BATTLE_2")
-    t.colors.text = { 255, 255, 255, 255 }
+    t.colors.text = {255, 255, 255, 255}
     t.shaders = sh
     t.shader_args = sha
     t.propagate_on_click = true
@@ -2493,7 +2475,7 @@ local function add_level_rules(parent, level_num, y)
     upg_label.text_align = "center"
     upg_label.vertical_align = "middle"
     upg_label.text = upg_desc
-    upg_label.colors.text = { 64, 57, 36 }
+    upg_label.colors.text = {64, 57, 36}
 
     parent:add_child(upg_label)
 
@@ -2512,7 +2494,7 @@ local function add_level_rules(parent, level_num, y)
     hero_label.text_align = "center"
     hero_label.vertical_align = "middle"
     hero_label.text = has_hero and _("HEROES") or _("NO HEROES")
-    hero_label.colors.text = { 64, 57, 36 }
+    hero_label.colors.text = {64, 57, 36}
 
     parent:add_child(hero_label)
 end
@@ -2521,12 +2503,12 @@ local function add_level_tab(parent, mode, y, stars)
     local x = 1105
     local fmt = "levelSelect_Mode_notxt_00%02i"
     local indexes = {
-        [GAME_MODE_CAMPAIGN] = { nil, 1, 2, 3 },
-        [GAME_MODE_HEROIC] = { 4, 5, 6, 7 },
-        [GAME_MODE_IRON] = { 8, 9, 10, 11 }
+        [GAME_MODE_CAMPAIGN] = {nil, 1, 2, 3},
+        [GAME_MODE_HEROIC] = {4, 5, 6, 7},
+        [GAME_MODE_IRON] = {8, 9, 10, 11}
     }
     local i_l, i_n, i_h, i_s = unpack(indexes[mode])
-    local texts = { _("Campaign"), _("Heroic"), _("Iron") }
+    local texts = {_("Campaign"), _("Heroic"), _("Iron")}
 
     if not parent.tabs_locked then
         parent.tabs_locked = {}
@@ -2572,7 +2554,7 @@ local function add_level_tab(parent, mode, y, stars)
         l.font_size = 13
         l.font_align = "center"
         l.pos = v(lx + ox, ly + oy)
-        l.colors.text = { 198, 134, 95, 255 }
+        l.colors.text = {198, 134, 95, 255}
         l.text = texts[mode]
         l.propagate_on_click = true
         l.fit_lines = 1
@@ -2587,7 +2569,7 @@ local function add_level_tab(parent, mode, y, stars)
             l.font_size = 13
             l.font_align = "center"
             l.pos = v(lx + ox, ly + oy)
-            l.colors.text = { 198, 134, 95, 255 }
+            l.colors.text = {198, 134, 95, 255}
             l.text = texts[mode]
             l.propagate_on_click = true
             l.fit_lines = 1
@@ -2604,13 +2586,13 @@ local function add_level_tab(parent, mode, y, stars)
             function t.on_enter(this)
                 S:queue("GUIQuickMenuOver")
 
-                l.colors.text = { 95, 59, 38, 255 }
+                l.colors.text = {95, 59, 38, 255}
 
                 this.class.on_enter(this)
             end
 
             function t.on_exit(this)
-                l.colors.text = { 198, 134, 95, 255 }
+                l.colors.text = {198, 134, 95, 255}
 
                 this.class.on_exit(this)
             end
@@ -2629,7 +2611,7 @@ local function add_level_tab(parent, mode, y, stars)
             l.font_size = 13
             l.font_align = "center"
             l.pos = v(lx_sel + ox, ly + oy)
-            l.colors.text = { 142, 213, 246, 255 }
+            l.colors.text = {142, 213, 246, 255}
             l.text = texts[mode]
             l.propagate_on_click = true
             l.fit_lines = 1
@@ -2846,7 +2828,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
     local b_y = rbbg.pos.y + 10
     local b_o = 50
     local locked_towers = screen_map.level_data[level_num].iron
-    local opts = { "archers", "barracks", "mages", "artillery" }
+    local opts = {"archers", "barracks", "mages", "artillery"}
 
     for i, v in ipairs(opts) do
         local n = table.contains(locked_towers, v) and 2 * i or 2 * i - 1
@@ -2874,7 +2856,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
     name_label.pos = v(10, 10)
     name_label.font_name = "body"
     name_label.font_size = 18
-    name_label.colors.text = { 255, 255, 255 }
+    name_label.colors.text = {255, 255, 255}
     name_label.text = _("Heroic")
     name_label.text_align = "left"
 
@@ -2883,7 +2865,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
     desc_label.pos = v(10, name_label.pos.y + name_label.size.y + 5)
     desc_label.font_name = "body"
     desc_label.font_size = 18
-    desc_label.colors.text = { 245, 203, 6 }
+    desc_label.colors.text = {245, 203, 6}
     desc_label.text_align = "left"
     desc_label.text = _("LEVEL_MODE_LOCKED_DESCRIPTION")
     desc_label.line_height = 0.9
@@ -2892,7 +2874,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
     local panel_h = desc_label.pos.y + lines * desc_label:get_font_height() * desc_label.line_height + 10
 
     self.tip_panel = KView:new(V.v(300, panel_h))
-    self.tip_panel.colors.background = { 21, 17, 13, 255 }
+    self.tip_panel.colors.background = {21, 17, 13, 255}
     self.tip_panel.alpha = 0.9
 
     self:add_child(self.tip_panel)
@@ -2947,7 +2929,7 @@ function LevelSelectView:show_page(page, stars)
     self.heroic.hidden = page ~= GAME_MODE_HEROIC
     self.iron.hidden = page ~= GAME_MODE_IRON
 
-    for _, m in pairs({ GAME_MODE_CAMPAIGN, GAME_MODE_HEROIC, GAME_MODE_IRON }) do
+    for _, m in pairs({GAME_MODE_CAMPAIGN, GAME_MODE_HEROIC, GAME_MODE_IRON}) do
         if self.tabs[m] then
             self.tabs[m].hidden = page == m
         end
@@ -3024,8 +3006,8 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
     wl.font_name = "body"
     wl.font_size = 20
     wl.fit_size = true
-    wl.colors.text = { 64, 57, 36 }
-    wl.colors.background = { 0, 0, 0, 0 }
+    wl.colors.text = {64, 57, 36}
+    wl.colors.background = {0, 0, 0, 0}
     wl.text = "99"
 
     w:add_child(wl)
@@ -3041,7 +3023,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
     wd.font_size = 16
     wd.text_align = "center"
     wd.vertical_align = "top"
-    wd.colors.text = { 64, 57, 36 }
+    wd.colors.text = {64, 57, 36}
 
     self.back:add_child(wd)
 
@@ -3060,8 +3042,8 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
     sl.font_size = 20
     sl.fit_size = true
     sl.fit_lines = 1
-    sl.colors.text = { 64, 57, 36 }
-    sl.colors.background = { 0, 0, 0, 0 }
+    sl.colors.text = {64, 57, 36}
+    sl.colors.background = {0, 0, 0, 0}
     sl.text = "999999"
 
     s:add_child(sl)
@@ -3077,7 +3059,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
     sd.font_size = 16
     sd.text_align = "center"
     sd.vertical_align = "top"
-    sd.colors.text = { 64, 57, 36 }
+    sd.colors.text = {64, 57, 36}
 
     self.back:add_child(sd)
     self:load_score()
@@ -3119,7 +3101,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
     heart_label.font_size = 13
     heart_label.text_align = "center"
     heart_label.vertical_align = "middle"
-    heart_label.colors.text = { 64, 57, 36 }
+    heart_label.colors.text = {64, 57, 36}
 
     right_page:add_child(heart_label)
 
@@ -3132,7 +3114,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
     skull_label.font_size = 13
     skull_label.text_align = "center"
     skull_label.vertical_align = "middle"
-    skull_label.colors.text = { 64, 57, 36 }
+    skull_label.colors.text = {64, 57, 36}
 
     right_page:add_child(skull_label)
 
@@ -3242,14 +3224,14 @@ function UpgradesView:initialize(sw, sh)
     self.stars_label = KLabel:new(V.v(self.star_container.size.x, self.star_container.size.y))
     self.stars_label.pos = v(85 + self.star_container.size.x / 3.2, 648)
     self.stars_label.font = F:f("Comic Book Italic", "32")
-    self.stars_label.colors.text = { 231, 222, 175 }
+    self.stars_label.colors.text = {231, 222, 175}
     self.stars_label.text = "0"
 
     self.back:add_child(self.stars_label)
 
     self.disabled_icon = {}
 
-    local bar_positions = { v(152, 538), v(274, 538), v(394, 538), v(514, 538), v(636, 538), v(755, 538) }
+    local bar_positions = {v(152, 538), v(274, 538), v(394, 538), v(514, 538), v(636, 538), v(755, 538)}
 
     self.upgrade_bars = {}
 
@@ -3273,7 +3255,7 @@ function UpgradesView:initialize(sw, sh)
     local start_y = 520
     local separation_y = 80
     -- local x_offsets = {115, 237, 355, 477, 598, 718}
-    local x_offsets = { 121, 243, 361, 483, 604, 724 }
+    local x_offsets = {121, 243, 361, 483, 604, 724}
     for key, value in pairs(UPGR.list) do
         local class_ind = table.keyforobject(UPGR.display_order, value.class)
         local icon_index = value.icon
@@ -3294,7 +3276,7 @@ function UpgradesView:initialize(sw, sh)
     self:set_stars_and_check()
 
     self.tip_panel = KView:new(V.v(320, 100))
-    self.tip_panel.colors.background = { 21, 17, 13, 255 }
+    self.tip_panel.colors.background = {21, 17, 13, 255}
     self.tip_panel.anchor = v(0, 105)
     self.tip_panel.alpha = 0.9
 
@@ -3314,7 +3296,7 @@ function UpgradesView:initialize(sw, sh)
     name_label.pos = v(20, 8)
     name_label.font_name = "body"
     name_label.font_size = 18
-    name_label.colors.text = { 255, 255, 255 }
+    name_label.colors.text = {255, 255, 255}
     name_label.text = "title_name"
     name_label.text_align = "left"
     name_label.fit_lines = 1
@@ -3327,7 +3309,7 @@ function UpgradesView:initialize(sw, sh)
     desc_label.pos = v(20, 33)
     desc_label.font_name = "body"
     desc_label.font_size = 18
-    desc_label.colors.text = { 245, 203, 6 }
+    desc_label.colors.text = {245, 203, 6}
     desc_label.text_align = "left"
     desc_label.text = "desc_name"
     desc_label.line_height = CJK(0.85, nil, 1, 0.9)
@@ -3340,7 +3322,7 @@ function UpgradesView:initialize(sw, sh)
     price_label.pos = v(295, 8)
     price_label.font_name = "numbers"
     price_label.font_size = 18
-    price_label.colors.text = { 255, 255, 255 }
+    price_label.colors.text = {255, 255, 255}
     price_label.text = "2"
     price_label.text_align = "left"
     self.tip_panel.price = price_label
@@ -3419,8 +3401,10 @@ function UpgradesView:set_stars_and_check()
     for key, value in pairs(self.upgrade_buttons) do
         local do_grey = true
 
-        if not value.bought and (self.bought_list[value.data_values.class] + 1 == value.data_values.level and l_stars_num >=
-                value.data_values.price) or self:has_enough_star_to_upgrade_to(value.data_values.class, value.data_values.level) then
+        if not value.bought and
+            (self.bought_list[value.data_values.class] + 1 == value.data_values.level and l_stars_num >=
+                value.data_values.price) or
+            self:has_enough_star_to_upgrade_to(value.data_values.class, value.data_values.level) then
             do_grey = false
         end
 
@@ -3737,20 +3721,20 @@ function EncyclopediaTabLabel:initialize(text, selected, rotation)
     self.r = rotation or 4 * math.pi / 180
     self.text = text
     self.fit_lines = 1
-    self.shaders = { "p_glow" }
+    self.shaders = {"p_glow"}
 
     if selected then
-        self.colors.text = { 224, 242, 253, 255 }
-        self.shader_args = { {
+        self.colors.text = {224, 242, 253, 255}
+        self.shader_args = {{
             thickness = 2,
-            glow_color = { 0.03137254901960784, 0.12549019607843137, 0.1803921568627451, 1 }
-        } }
+            glow_color = {0.03137254901960784, 0.12549019607843137, 0.1803921568627451, 1}
+        }}
     else
-        self.shader_args = { {
+        self.shader_args = {{
             thickness = 2,
-            glow_color = { 0.29411764705882354, 0.13725490196078433, 0.06666666666666667, 1 }
-        } }
-        self.colors.text = { 198, 134, 95, 255 }
+            glow_color = {0.29411764705882354, 0.13725490196078433, 0.06666666666666667, 1}
+        }}
+        self.colors.text = {198, 134, 95, 255}
     end
 end
 
@@ -3920,7 +3904,7 @@ function EncyclopediaView:load_towers()
     title.font_name = "h_book"
     title.font_size = 40
     title.font_align = "center"
-    title.colors.text = { 100, 89, 51, 255 }
+    title.colors.text = {100, 89, 51, 255}
     title.text = _("Towers")
 
     self.towers:add_child(title)
@@ -3956,8 +3940,7 @@ function EncyclopediaView:load_towers()
         local icon = U.splicing_from_kr(t.from_kr, f)
         local off_y = 120
 
-        self:create_tower(icon, v(math.fmod(i - 1, 4) * 88 + 50, math.floor((i - 1) / 4) * 85 + off_y),
-           i, true)
+        self:create_tower(icon, v(math.fmod(i - 1, 4) * 88 + 50, math.floor((i - 1) / 4) * 85 + off_y), i, true)
     end
 
     self.towers:add_child(self.over_sprite)
@@ -4048,7 +4031,7 @@ function EncyclopediaView:detail_tower(index)
     title_label.anchor.x = title_label.size.x / 2
     title_label.font_name = "h_book"
     title_label.font_size = 22
-    title_label.colors.text = { 148, 94, 58 }
+    title_label.colors.text = {148, 94, 58}
     title_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_NAME")
     title_label.text_align = "center"
     title_label.fit_lines = 1
@@ -4099,7 +4082,7 @@ function EncyclopediaView:detail_tower(index)
     desc_label.font_name = "body"
     desc_label.font_size = 16
     desc_label.line_height = CJK(0.85, nil, 1.1, 0.9)
-    desc_label.colors.text = { 0, 0, 0 }
+    desc_label.colors.text = {0, 0, 0}
     desc_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_DESCRIPTION")
     desc_label.text_align = "center"
     desc_label.fit_lines = 4
@@ -4125,11 +4108,11 @@ function EncyclopediaView:detail_tower(index)
     local stats_list
 
     if di.type == STATS_TYPE_TOWER_BARRACK then
-        stats_list = { "health", "dmg", "armor", "respawn" }
+        stats_list = {"health", "dmg", "armor", "respawn"}
     elseif di.type == STATS_TYPE_TOWER_MAGE then
-        stats_list = { "mdmg", "reload", "range" }
+        stats_list = {"mdmg", "reload", "range"}
     else
-        stats_list = { "dmg", "reload", "range" }
+        stats_list = {"dmg", "reload", "range"}
     end
 
     local mx = 200
@@ -4188,7 +4171,7 @@ function EncyclopediaView:detail_tower(index)
         specials.font_name = "h_book"
         specials.font_size = 20
         specials.text_align = "center"
-        specials.colors.text = { 116, 105, 66, 255 }
+        specials.colors.text = {116, 105, 66, 255}
         specials.fit_lines = 1
 
         self.right_panel:add_child(specials)
@@ -4245,7 +4228,7 @@ function EncyclopediaView:detail_tower(index)
             label.font_name = "body"
             label.font_size = 14
             label.line_height = 0.85
-            label.colors.text = { 0, 0, 0 }
+            label.colors.text = {0, 0, 0}
             label.text = _(string.upper(string.format("%s_%s_NAME", dt.info.i18n_key or tower_name, power.name or k)))
             label.text_align = "center"
             label.fit_lines = 2
@@ -4280,7 +4263,7 @@ function EncyclopediaView:load_creeps(index)
     title.font_name = "h_book"
     title.font_size = 40
     title.font_align = "center"
-    title.colors.text = { 100, 89, 51, 255 }
+    title.colors.text = {100, 89, 51, 255}
     title.text = _("Enemies")
 
     self.creep:add_child(title)
@@ -4456,7 +4439,7 @@ function EncyclopediaView:detail_creep(index)
     title_label.anchor.x = title_label.size.x / 2
     title_label.font_name = "h_book"
     title_label.font_size = 22
-    title_label.colors.text = { 148, 94, 58 }
+    title_label.colors.text = {148, 94, 58}
     title_label.text = _(name_prefix .. "_NAME")
     title_label.text_align = "center"
     title_label.fit_lines = 1
@@ -4515,7 +4498,7 @@ function EncyclopediaView:detail_creep(index)
     desc_label.font_name = "body"
     desc_label.font_size = 16
     desc_label.line_height = CJK(1, nil, 1.1, 0.9)
-    desc_label.colors.text = { 0, 0, 0 }
+    desc_label.colors.text = {0, 0, 0}
     desc_label.text = _(name_prefix .. "_DESCRIPTION")
     desc_label.text_align = "center"
     desc_label.fit_lines = 4
@@ -4532,9 +4515,9 @@ function EncyclopediaView:detail_creep(index)
     local mx = 205
     local my = 380
     local ci = ce.info.fn(ce)
-    local skill_table = { ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), GU.armor_value_desc(ci.armor),
-        GU.armor_value_desc(ci.magic_armor), GU.speed_value_desc(ce.motion.max_speed),
-        (GU.lives_desc(ci.lives)) }
+    local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), GU.armor_value_desc(ci.armor),
+                         GU.armor_value_desc(ci.magic_armor), GU.speed_value_desc(ce.motion.max_speed),
+                         (GU.lives_desc(ci.lives))}
 
     for i = 1, 6 do
         local desc_label = GGLabel:new(V.v(90, 50))
@@ -4585,7 +4568,7 @@ function EncyclopediaView:detail_creep(index)
     desc_label.font_size = 15
     desc_label.text = special
     desc_label.text_align = "center"
-    desc_label.colors.text = { 148, 94, 58 }
+    desc_label.colors.text = {148, 94, 58}
     desc_label.vertical_align = "middle"
     desc_label.fit_lines = 1
 
@@ -4605,11 +4588,11 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
     local conf = self.hero_name_config[hero_name] or self.hero_name_config.default
     local text = _(string.upper(hero_i18n_key or hero_name) .. "_NAME")
 
-    for _, s in pairs({ "・", "·" }) do
+    for _, s in pairs({"・", "·"}) do
         text = string.gsub(text, s, " ")
     end
 
-    local parts = conf.single_line and { text } or string.split(text, " ")
+    local parts = conf.single_line and {text} or string.split(text, " ")
     local labels = self.labels
     local fs = conf.font_size or #parts > 2 and 28 or #parts > 1 and (IS_KR1 and 38 or 44) or IS_KR1 and 64 or 70
 
@@ -4621,7 +4604,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 
             labels[i] = l
             l.font_name = IS_KR1 and "hero_name_label_kr1" or "hero_name_label"
-            l.shaders = { "p_bands", "p_outline", "p_glow", "p_drop_shadow" }
+            l.shaders = {"p_bands", "p_outline", "p_glow", "p_drop_shadow"}
             l.fit_lines = 1
 
             if IS_KR1 then
@@ -4722,7 +4705,7 @@ function HeroStatDots:update(dt)
 end
 
 HPAni = class("HPAni", KView)
-HPAni.static.init_arg_names = { "image_name" }
+HPAni.static.init_arg_names = {"image_name"}
 
 function HPAni:initialize(image_name)
     HPAni.super.initialize(self, nil, image_name)
@@ -4865,8 +4848,8 @@ function HeroRoomViewKR1:initialize(size)
     self.check_image_2 = create_select_view("hero_room_thumbs_select_0001")
     self.border_image = create_select_view("hero_room_thumbs_select_0000")
     self.hover_image = create_select_view("hero_room_thumbs_select_0003")
-    self.check_image_1.anchor.x = self.check_image_1.anchor.x + single_hero_thumb_x_size * scale.x - self.check_image_1.size.x *
-        0.06
+    self.check_image_1.anchor.x = self.check_image_1.anchor.x + single_hero_thumb_x_size * scale.x -
+                                      self.check_image_1.size.x * 0.06
 
     local bs = self:get_child_by_id("hero_room_sel_select")
     local bd = self:get_child_by_id("hero_room_sel_deselect")
@@ -4887,7 +4870,7 @@ function HeroRoomViewKR1:initialize(size)
     end
     self:get_child_by_id("done_button").on_click = self:get_child_by_id("close_button").on_click
     if type(screen_map.user_data.heroes.selected) ~= "table" then
-        screen_map.user_data.heroes.selected = { screen_map.user_data.heroes.selected }
+        screen_map.user_data.heroes.selected = {screen_map.user_data.heroes.selected}
     end
     local selected_names = screen_map.user_data.heroes.selected
     for _, selected_name in pairs(selected_names) do
@@ -5170,8 +5153,8 @@ function OptionsView:initialize(sw, sh)
         self.difficulty_idx = 1
     end
 
-    self.difficulty_labels = { "LEVEL_SELECT_DIFFICULTY_CASUAL", "LEVEL_SELECT_DIFFICULTY_NORMAL",
-        "LEVEL_SELECT_DIFFICULTY_VETERAN", "LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE" }
+    self.difficulty_labels = {"LEVEL_SELECT_DIFFICULTY_CASUAL", "LEVEL_SELECT_DIFFICULTY_NORMAL",
+                              "LEVEL_SELECT_DIFFICULTY_VETERAN", "LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE"}
     y = y + 38
 
     local diff_bg = KImageView:new("difficulty_select_bg")
@@ -5189,9 +5172,9 @@ function OptionsView:initialize(sw, sh)
     self.difficulty.font_name = CJK("body", nil, nil, "h")
     self.difficulty.font_size = 24
     self.difficulty.text = _(self.difficulty_labels[self.difficulty_idx])
-    self.difficulty.colors.text = { 214, 189, 131 }
-    self.difficulty.colors.text_default = { 214, 189, 131 }
-    self.difficulty.colors.text_hover = { 255, 223, 0 }
+    self.difficulty.colors.text = {214, 189, 131}
+    self.difficulty.colors.text_default = {214, 189, 131}
+    self.difficulty.colors.text_hover = {255, 223, 0}
     self.difficulty.fit_size = true
 
     self.back:add_child(self.difficulty)
@@ -5316,27 +5299,27 @@ function DifficultyButton:initialize(label_text, desc_text, difficulty)
     label.font_size = 46
     label.text_align = "center"
     label.vertical_align = "middle-caps"
-    label.colors.text = { 255, 226, 99, 255 }
+    label.colors.text = {255, 226, 99, 255}
     label.propagate_on_up = true
     label.propagate_on_down = true
     label.propagate_on_click = true
     label.text = label_text
     label.fit_lines = 1
-    label.shaders = { "p_bands", "p_outline", "p_glow" }
-    label.shader_args = { {
+    label.shaders = {"p_bands", "p_outline", "p_glow"}
+    label.shader_args = {{
         margin = 2,
         p1 = 0,
         p2 = 0.47,
-        c1 = { 1, 0.8862745098039215, 0.38823529411764707, 1 },
-        c2 = { 1, 0.8862745098039215, 0.38823529411764707, 1 },
-        c3 = { 0.8509803921568627, 0.5137254901960784, 0.10588235294117647, 1 }
+        c1 = {1, 0.8862745098039215, 0.38823529411764707, 1},
+        c2 = {1, 0.8862745098039215, 0.38823529411764707, 1},
+        c3 = {0.8509803921568627, 0.5137254901960784, 0.10588235294117647, 1}
     }, {
         thickness = 2.5,
-        outline_color = { 0.2901960784313726, 0.1607843137254902, 0, 1 }
+        outline_color = {0.2901960784313726, 0.1607843137254902, 0, 1}
     }, {
         thickness = 1.6,
-        glow_color = { 0, 0, 0, 0.6 }
-    } }
+        glow_color = {0, 0, 0, 0.6}
+    }}
     label.anchor = v(label.size.x / 2, label.size.y)
     label.pos = v(self.size.x / 2, 272)
 
@@ -5351,7 +5334,7 @@ function DifficultyButton:initialize(label_text, desc_text, difficulty)
     desc.line_height = CJK(1, nil, nil, 0.8)
     desc.text_align = "center"
     desc.vertical_align = "top"
-    desc.colors.text = { 255, 232, 189 }
+    desc.colors.text = {255, 232, 189}
     desc.propagate_on_up = true
     desc.propagate_on_down = true
     desc.propagate_on_click = true
@@ -5403,9 +5386,9 @@ function DifficultyButton:disable(tint, color)
 
     local args = self.label.shader_args[1]
 
-    args.c1 = { 0.6078431372549019, 0.49411764705882355, 0, 1 }
-    args.c2 = { 0.6078431372549019, 0.49411764705882355, 0, 1 }
-    args.c3 = { 0.4588235294117647, 0.12156862745098039, 0, 1 }
+    args.c1 = {0.6078431372549019, 0.49411764705882355, 0, 1}
+    args.c2 = {0.6078431372549019, 0.49411764705882355, 0, 1}
+    args.c3 = {0.4588235294117647, 0.12156862745098039, 0, 1}
 end
 
 function DifficultyButton:enable(untint)
@@ -5413,9 +5396,9 @@ function DifficultyButton:enable(untint)
 
     local args = self.label.shader_args[1]
 
-    args.c1 = { 1, 0.8862745098039215, 0.38823529411764707, 1 }
-    args.c2 = { 1, 0.8862745098039215, 0.38823529411764707, 1 }
-    args.c3 = { 0.8509803921568627, 0.5137254901960784, 0.10588235294117647, 1 }
+    args.c1 = {1, 0.8862745098039215, 0.38823529411764707, 1}
+    args.c2 = {1, 0.8862745098039215, 0.38823529411764707, 1}
+    args.c3 = {0.8509803921568627, 0.5137254901960784, 0.10588235294117647, 1}
 end
 
 DifficultyView = class("DifficultyView", PopUpView)
@@ -5444,10 +5427,10 @@ function DifficultyView:initialize(sw, sh)
     local offset = 90
     local aw = self.back.size.x - 2 * offset
     local sep = -60
-    b_xs = { sw / 2 - 400, sw / 2 - 133.33333333333334, sw / 2 + 133.33333333333334, sw / 2 + 400 }
-    local b_texts = { { _("LEVEL_SELECT_DIFFICULTY_CASUAL"), _("For beginners to strategy games!") },
-        { _("LEVEL_SELECT_DIFFICULTY_NORMAL"),  _("A good challenge!") },
-        { _("LEVEL_SELECT_DIFFICULTY_VETERAN"), _("Hardcore! play at your own risk!") } }
+    b_xs = {sw / 2 - 400, sw / 2 - 133.33333333333334, sw / 2 + 133.33333333333334, sw / 2 + 400}
+    local b_texts = {{_("LEVEL_SELECT_DIFFICULTY_CASUAL"), _("For beginners to strategy games!")},
+                     {_("LEVEL_SELECT_DIFFICULTY_NORMAL"), _("A good challenge!")},
+                     {_("LEVEL_SELECT_DIFFICULTY_VETERAN"), _("Hardcore! play at your own risk!")}}
 
     -- if impo then
     --     table.insert(b_texts,
@@ -5456,8 +5439,7 @@ function DifficultyView:initialize(sw, sh)
     --             _("DIFFICULTY_SELECTION_IMPOSSIBLE_LOCKED_DESCRIPTION")})
     -- end
 
-    table.insert(b_texts,
-        { _("LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE"), _("DIFFICULTY_SELECTION_IMPOSSIBLE_DESCRIPTION") })
+    table.insert(b_texts, {_("LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE"), _("DIFFICULTY_SELECTION_IMPOSSIBLE_DESCRIPTION")})
 
     for i, set in pairs(b_texts) do
         local title, desc = unpack(set)
@@ -5491,7 +5473,7 @@ function DifficultyView:initialize(sw, sh)
     tip.font_size = 20
     tip.text_align = "left"
     tip.vertical_align = "middle"
-    tip.colors.text = { 255, 232, 189 }
+    tip.colors.text = {255, 232, 189}
     tip.propagate_on_up = true
     tip.propagate_on_down = true
     tip.propagate_on_click = true
@@ -5508,7 +5490,7 @@ AchievementsView = class("AchievementsView", PopUpView)
 function AchievementsView:initialize(sw, sh)
     PopUpView.initialize(self, V.v(sw, sh))
 
-    self.disabled_tint_color = { 200, 200, 200, 255 }
+    self.disabled_tint_color = {200, 200, 200, 255}
 
     self.back = KImageView:new("Achievements_BG_notxt")
     self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -5564,7 +5546,7 @@ function AchievementsView:initialize(sw, sh)
         ach.title.pos = v(118, 2 + (IS_KR3 and 4 or 0))
         ach.title.font_name = "h"
         ach.title.font_size = 18
-        ach.title.colors.text = { 233, 224, 117 }
+        ach.title.colors.text = {233, 224, 117}
         ach.title.text_align = "left"
         ach.title.vertical_align = "bottom"
         ach.title.fit_lines = 1
@@ -5575,7 +5557,7 @@ function AchievementsView:initialize(sw, sh)
         ach.desc.pos = v(118, CJK(33, nil, 36, 36) + (IS_KR3 and 6 or 0))
         ach.desc.font_name = "body"
         ach.desc.font_size = 15
-        ach.desc.colors.text = { 156, 152, 126 }
+        ach.desc.colors.text = {156, 152, 126}
         ach.desc.line_height = CJK(0.75, nil, 1.1, 0.9)
         ach.desc.text_align = "left"
         ach.desc.fit_lines = CJK(4, nil, nil, 2)
@@ -5625,11 +5607,15 @@ function AchievementsView:createPage(pagenum)
 
             local isActive = screen_map.user_data.achievements[ach.name]
 
-            --if isActive then
-                box.img:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
-            --else
-                --box.img:set_image("achievement_icons_disabled_" .. string.format("%04i", ach.icon))
-            --end
+            -- if isActive then
+
+            box.img:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
+            if not isActive then
+                box.img:disable()
+            end
+            -- else
+            -- box.img:set_image("achievement_icons_disabled_" .. string.format("%04i", ach.icon))
+            -- end
 
             local prefix = IS_KR3 and "ELVES_" or ""
             local title = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_NAME")
@@ -5639,11 +5625,11 @@ function AchievementsView:createPage(pagenum)
             box.desc.text = desc
 
             if isActive then
-                box.desc.colors.text = { 156, 152, 126 }
-                box.title.colors.text = { 233, 224, 177 }
+                box.desc.colors.text = {156, 152, 126}
+                box.title.colors.text = {233, 224, 177}
             else
-                box.desc.colors.text = { 107, 98, 87 }
-                box.title.colors.text = { 107, 98, 87 }
+                box.desc.colors.text = {107, 98, 87}
+                box.title.colors.text = {107, 98, 87}
             end
 
             function box.img.on_click(this, button, x, y)
@@ -5673,7 +5659,7 @@ function AchievementsView:createPage(pagenum)
 end
 
 AchievementsPageButton = class("AchievementsPageButton", GGButton)
-AchievementsPageButton.static.init_arg_names = { "label_text" }
+AchievementsPageButton.static.init_arg_names = {"label_text"}
 
 function AchievementsPageButton:initialize(label_text)
     local rs = GGLabel.static.ref_h / REF_H
@@ -5740,9 +5726,9 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
     self.key_label.text = key_text
     self.key_label.text_align = "left"
     self.key_label.vertical_align = "middle"
-    self.key_label.colors.text = { 200, 200, 200, 255 }
-    self.key_label.colors.text_default = { 200, 200, 200, 255 }
-    self.key_label.colors.text_hover = { 255, 255, 255, 255 }
+    self.key_label.colors.text = {200, 200, 200, 255}
+    self.key_label.colors.text_default = {200, 200, 200, 255}
+    self.key_label.colors.text_hover = {255, 255, 255, 255}
     self.key_label.propagate_on_click = true
 
     self:add_child(self.key_label)
@@ -5754,10 +5740,10 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
     self.value_label.font_size = 16
     self.value_label.text_align = "center"
     self.value_label.vertical_align = "middle"
-    self.value_label.colors.text_yes = { 100, 255, 100, 255 }
-    self.value_label.colors.text_no = { 255, 100, 100, 255 }
-    self.value_label.colors.text_yes_hover = { 150, 255, 150, 255 }
-    self.value_label.colors.text_no_hover = { 255, 150, 150, 255 }
+    self.value_label.colors.text_yes = {100, 255, 100, 255}
+    self.value_label.colors.text_no = {255, 100, 100, 255}
+    self.value_label.colors.text_yes_hover = {150, 255, 150, 255}
+    self.value_label.colors.text_no_hover = {255, 150, 150, 255}
     self.value_label.propagate_on_click = true
 
     self:add_child(self.value_label)
@@ -5769,10 +5755,10 @@ end
 function BooleanToggleItem:update_display()
     if self.value then
         self.value_label.text = _("是")
-        self.value_label.colors.text = { 100, 255, 100, 255 }
+        self.value_label.colors.text = {100, 255, 100, 255}
     else
         self.value_label.text = _("否")
-        self.value_label.colors.text = { 255, 100, 100, 255 }
+        self.value_label.colors.text = {255, 100, 100, 255}
     end
 
     -- 强制重绘
@@ -5783,13 +5769,13 @@ end
 
 function BooleanToggleItem:on_enter()
     -- 悬浮高亮效果
-    self.colors.background = { 50, 50, 50, 100 }
+    self.colors.background = {50, 50, 50, 100}
     self.key_label.colors.text = self.key_label.colors.text_hover
 
     if self.value then
-        self.value_label.colors.text = { 150, 255, 150, 255 }
+        self.value_label.colors.text = {150, 255, 150, 255}
     else
-        self.value_label.colors.text = { 255, 150, 150, 255 }
+        self.value_label.colors.text = {255, 150, 150, 255}
     end
 
     if self.value_label.redraw then
@@ -5799,7 +5785,7 @@ end
 
 function BooleanToggleItem:on_exit()
     -- 取消高亮效果
-    self.colors.background = { 0, 0, 0, 0 }
+    self.colors.background = {0, 0, 0, 0}
     self.key_label.colors.text = self.key_label.colors.text_default
     self:update_display()
 end
@@ -5965,7 +5951,7 @@ function ConfigPanelView:initialize(sw, sh)
         show_health_bar = "显示血条",
         custom_config_enabled = "启用自定义配置",
         endless = "开启无尽模式",
-        enable_hero_menu = "启用局内英雄菜单",
+        enable_hero_menu = "启用局内英雄菜单"
     })
 end
 
@@ -5988,7 +5974,7 @@ function CriketPanelView:initialize(sw, sh)
     self:set_key_label_map({
         on = "启用斗蛐蛐",
         fps_transformed = "请勿修改本条",
-        gold_judge = "启用金币裁判",
+        gold_judge = "启用金币裁判"
     })
 end
 

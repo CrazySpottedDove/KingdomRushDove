@@ -7006,12 +7006,12 @@ function TowerMenu:update(dt)
                 end
             elseif e and c.item_props.action == "tw_change_mode" then
                 local current_mode = e.tower_upgrade_persistent_data.current_mode
-
-                if current_mode ~= 0 then
-                    c.button:set_image(U.str_reset_leading_zero(c.item_image, current_mode))
-                else
-                    c.button:set_image(c.item_image)
-                end
+                c.button:set_image(c.item["image_mode" .. current_mode])
+                -- if current_mode ~= 0 then
+                --     c.button:set_image(U.str_reset_leading_zero(c.item_image, current_mode))
+                -- else
+                --     c.button:set_image(c.item_image)
+                -- end
             elseif e and c.item_props.action == "tw_free_action" then
                 local usa = e.user_selection and e.user_selection.actions
 

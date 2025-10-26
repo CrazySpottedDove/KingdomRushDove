@@ -5606,7 +5606,7 @@ local towers = {
     },
     rocket_gunners = {
         max_soldiers = 2,
-        price = {100, 140, 190, 270},
+        price = {100, 140, 190, 210},
         stats = {
             cooldown = 5,
             range = 10,
@@ -5614,13 +5614,13 @@ local towers = {
         },
         rally_range = {130, 145, 160, 175},
         sting_missiles = {
-            cooldown = {24, 20, 16}
+            cooldown = {16, 16, 16}
         },
         soldier = {
             speed_flight = 250,
             dead_lifetime = 10,
             speed_ground = 75,
-            armor = {0.1, 0.15, 0.2, 0.25},
+            armor = {0.1, 0.15, 0.2, 0.45},
             hp = {30, 50, 70, 100},
             regen_hp = {5, 8, 11, 15},
             melee_attack = {
@@ -5633,23 +5633,25 @@ local towers = {
                 cooldown = 2,
                 max_range = {150, 150, 150, 150},
                 min_range = {10, 10, 10, 10},
-                damage_max = {7, 18, 34, 58},
-                damage_min = {5, 12, 22, 38}
+                damage_max = {7, 18, 34, 60},
+                damage_min = {5, 12, 22, 40}
             },
             phosphoric = {
-                damage_radius = 40,
-                price = {200, 200, 200},
+                damage_radius = 50,
+                price = {225, 100, 100},
                 armor_reduction = {0.01, 0.02, 0.03},
-                damage_area_max = {16, 22, 27},
-                damage_area_min = {13, 17, 21},
-                damage_factor = {1, 1, 1}
+                damage_area_max = {18, 24, 30},
+                damage_area_min = {12, 16, 20},
+                damage_factor = {1, 1, 1},
+                damage_type = DAMAGE_AGAINST_ARMOR + DAMAGE_SHOT
             },
             sting_missiles = {
                 price = {250, 100, 100},
-                max_range = {200, 200, 200},
+                max_range = {200, 125, 125},
                 min_range = {20, 20, 20},
                 damage_type = DAMAGE_INSTAKILL,
-                hp_max_target = {300, 600, 900}
+                hp_max_target = {300, 600, 900},
+                kill_hp_factor = {0.4, 0.5, 0.6},
             }
         }
     },

@@ -1961,11 +1961,8 @@ local function barrack_towers()
     tt.info.room_portrait = "quickmenu_main_icons_main_icons_0025_0001"
     tt.info.fn = scripts.tower_pandas.get_info
     tt.barrack.soldier_type = "soldier_tower_pandas_blue_lvl4"
-    tt.barrack.soldier_types = {
-        "soldier_tower_pandas_blue_lvl4",
-        "soldier_tower_pandas_green_lvl4",
-        "soldier_tower_pandas_red_lvl4"
-    }
+    tt.barrack.soldier_types = {"soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4",
+                                "soldier_tower_pandas_red_lvl4"}
     tt.barrack.solder_upgrade_map = {
         soldier_tower_pandas_green_lvl3 = "soldier_tower_pandas_green_lvl4",
         soldier_tower_pandas_red_lvl3 = "soldier_tower_pandas_red_lvl4",
@@ -2339,6 +2336,263 @@ local function barrack_towers()
     tt.sound_events.insert = "TowerPandasRangedBolt"
 
     -- 熊猫_END
+
+    -- 牢大 BEGIN
+    tt = E:register_t("tower_rocket_gunners_lvl4", "tower")
+    b = balance.towers.rocket_gunners
+    E:add_comps(tt, "barrack", "powers")
+    tt.tower.type = "rocket_gunners"
+    tt.tower.kind = TOWER_KIND_ARCHER
+    tt.tower.team = TEAM_DARK_ARMY
+    tt.tower.level = 1
+    tt.tower.price = b.price[4]
+    tt.tower_upgrade_persistent_data.max_current_mode = 1
+    tt.tower_upgrade_persistent_data.current_mode = 0
+    tt.tower_upgrade_persistent_data.is_taking_off = {true, true}
+    tt.info.i18n_key = "TOWER_ROCKET_GUNNERS_4"
+    tt.info.portrait = "kr5_portraits_towers_0009"
+    tt.info.room_portrait = "quickmenu_main_icons_main_icons_0009_0001"
+    tt.info.enc_icon = 2
+    tt.tower.menu_offset = vec_2(0, 15)
+    tt.info.tower_portrait = "towerselect_portraits_big_0009"
+    tt.barrack.soldier_type = "soldier_tower_rocket_gunners_lvl4"
+    tt.barrack.rally_range = b.rally_range[4]
+    tt.barrack.respawn_offset = vec_2(0, 34)
+    tt.barrack.max_soldiers = b.max_soldiers
+    tt.barrack.has_door = false
+    tt.barrack.range_upgradable = true
+    tt.sound_events.insert = "TowerPaladinCovenantTaunt"
+    tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
+    -- tt.info.fn = scripts.tower_rocket_gunners.get_info
+    tt.info.fn = scripts.tower_barrack.get_info
+    tt.main_script.insert = scripts.tower_barrack.insert
+    tt.main_script.update = scripts.tower_rocket_gunners.update
+    tt.main_script.remove = scripts.tower_barrack.remove
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].name = "terrain_barrack_%04i"
+    tt.render.sprites[1].offset = vec_2(0, 15)
+    tt.render.sprites[2] = E:clone_c("sprite")
+    tt.render.sprites[2].animated = true
+    tt.render.sprites[2].prefix = "rocket_gunners_tower_lvl4_tower"
+    tt.render.sprites[2].name = "idle"
+    tt.render.sprites[2].offset = vec_2(0, 18)
+    tt.render.sprites[2].sort_y_offset = 30
+    tt.render.sprites[2].scale = vec_2(0.95, 0.95)
+    tt.ui.click_rect = r(-35, -2, 70, 60)
+    tt.spawn_time = 34
+    tt.spawn_delay = 10
+    tt.sound_events.insert = "TowerRocketGunnersTaunt"
+    tt.sound_events.change_rally_point = "TowerRocketGunnersTaunt"
+    tt.sound_events.tower_room_select = "TowerRocketGunnersTauntSelect"
+    tt.spawn_sound = "TowerRocketGunnersSpawn"
+    tt.powers.phosphoric = E:clone_c("power")
+    tt.powers.phosphoric.price_base = b.soldier.phosphoric.price[1]
+    tt.powers.phosphoric.price_inc = b.soldier.phosphoric.price[2]
+    tt.powers.phosphoric.enc_icon = 16
+    tt.powers.sting_missiles = E:clone_c("power")
+    tt.powers.sting_missiles.price_base = b.soldier.sting_missiles.price[1]
+    tt.powers.sting_missiles.price_inc = b.soldier.sting_missiles.price[2]
+    tt.powers.sting_missiles.enc_icon = 15
+    tt.powers.sting_missiles.cooldown = b.sting_missiles.cooldown
+
+    tt = E:register_t("soldier_tower_rocket_gunners_lvl4", "soldier_militia")
+    E:add_comps(tt, "nav_grid", "powers", "ranged", "tween")
+    b = balance.towers.rocket_gunners
+    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0017"
+    tt.info.random_name_format = "SOLDIER_TOWER_ROCKET_GUNNERS_%i_NAME"
+    tt.info.random_name_count = 10
+    tt.main_script.update = scripts.soldier_tower_rocket_gunners.update
+    tt.render.sprites[1].prefix = "rocket_gunners_tower_lvl4_gunner"
+    tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+    tt.render.sprites[1].name = "take_off"
+    tt.render.sprites[1].angles.walk = {"idle_air"}
+    tt.render.sprites[1].angles.attack_floor = {"attack_floor", "attack_floor_back", "attack_floor"}
+    tt.render.sprites[1].angles.phosphoric_coating_air = {"phosphoric_coating_air", "phosphoric_coating_air_back",
+                                                      "phosphoric_coating_air"}
+    tt.render.sprites[1].angles.phosphoric_coating_floor = {"phosphoric_coating_floor", "phosphoric_coating_floor_back",
+                                                            "phosphoric_coating_floor"}
+    tt.render.sprites[1].angles.attack_air = {"attack_air", "attack_air_back", "attack_air"}
+    tt.render.sprites[1].angles.idle_air = {"idle_air", "idle_air_back", "idle_air"}
+    tt.render.sprites[1].angles.idle_floor = {"idle_floor", "idle_floor_back", "idle_floor"}
+    tt.render.sprites[1].angles_flip_vertical = {
+        idle_air = true,
+        phosphoric_coating_air = true,
+        attack_air = true,
+        phosphoric_coating_floor = true,
+        idle_floor = true,
+        attack_floor = true
+    }
+    tt.render.sprites[1].scale = vec_2(1.1, 1.1)
+    tt.flight_height = 65
+    tt.unit.hit_offset = vec_2(0, tt.flight_height + 12)
+    tt.unit.marker_offset = vec_2(0, 0)
+    tt.unit.mod_offset = vec_2(0, tt.flight_height + 13)
+    tt.unit.level = 1
+    tt.unit.death_animation = "death_air"
+    tt.unit.show_blood_pool = false
+    tt.unit.hide_after_death = true
+    tt.soldier.melee_slot_spread = vec_2(-10, -10)
+    tt.soldier.melee_slot_offset = vec_2(10, 0)
+    tt.vis.bans = 0
+    tt.vis_bans_before_take_off = F_ALL
+    tt.vis_bans_after_take_off = 0
+    tt.health.hp_max = b.soldier.hp[4]
+    tt.health.armor = b.soldier.armor[4]
+    tt.health_bar.y_offset = 30
+    tt.health.dead_lifetime = b.soldier.dead_lifetime
+    tt.motion.max_speed = b.soldier.speed_flight
+    tt.speed_flight = b.soldier.speed_flight
+    tt.speed_ground = b.soldier.speed_ground
+    tt.melee.range = b.soldier.melee_attack.range
+    tt.melee.attacks[1].cooldown = b.soldier.melee_attack.cooldown
+    tt.melee.attacks[1].damage_min = b.soldier.melee_attack.damage_min[4]
+    tt.melee.attacks[1].damage_max = b.soldier.melee_attack.damage_max[4]
+    tt.melee.attacks[1].hit_time = fts(10)
+    tt.melee.attacks[1].animation = "attack_floor"
+    tt.melee.attacks[1].hit_fx = "fx_bullet_soldier_tower_rocket_gunners_hit"
+    tt.melee.attacks[1].hit_decal = "fx_bullet_soldier_tower_rocket_gunners_floor"
+    tt.melee.attacks[1].hit_offset = vec_2(34, 10)
+    tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+    tt.melee.attacks[2].animation = "phosphoric_coating_floor"
+    tt.melee.attacks[2].disabled = true
+    tt.melee.attacks[2].hit_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_hit"
+    tt.melee.attacks[2].hit_decal = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_floor"
+    tt.melee.attacks[2].damage_radius = b.soldier.phosphoric.damage_radius
+    tt.melee.attacks[2].damage_area_max = b.soldier.phosphoric.damage_area_max
+    tt.melee.attacks[2].damage_area_min = b.soldier.phosphoric.damage_area_min
+    tt.melee.attacks[2].damage_type = b.soldier.phosphoric.damage_type
+    tt.melee.arrived_slot_animation = "idle_floor"
+    tt.ranged.attacks[1].animation = "attack_air"
+    tt.ranged.attacks[1].bullet = "bullet_soldier_tower_rocket_gunners"
+    tt.ranged.attacks[1].cooldown = b.soldier.ranged_attack.cooldown
+    tt.ranged.attacks[1].max_range = b.soldier.ranged_attack.max_range[4]
+    tt.ranged.attacks[1].min_range = b.soldier.ranged_attack.min_range[4]
+    tt.ranged.attacks[1].shoot_time = fts(6)
+    tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+    tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
+    tt.ranged.attacks[2].animation = "phosphoric_coating_air"
+    tt.ranged.attacks[2].bullet = "bullet_soldier_tower_rocket_gunners_phosphoric"
+    tt.ranged.attacks[2].disabled = true
+    tt.ranged.attacks[2].bullet_start_offset = {vec_2(0, 0), vec_2(0, 0), vec_2(0, 0)}
+    tt.ranged.attacks[2].bullet_start_offset_relative = vec_2(15, 14)
+    tt.ranged.attacks[2].shoot_time = fts(7)
+    tt.ranged.attacks[3] = E:clone_c("bullet_attack")
+    tt.ranged.attacks[3].animation = "sting_missiles_air"
+    tt.ranged.attacks[3].bullet = "bullet_soldier_tower_rocket_gunners_sting_missiles"
+    tt.ranged.attacks[3].disabled = true
+    tt.ranged.attacks[3].bullet_start_offset = nil
+    tt.ranged.attacks[3].bullet_start_offset_relative = vec_2(0, 45)
+    tt.ranged.attacks[3].cooldown = 0
+    tt.ranged.attacks[3].max_range = b.soldier.sting_missiles.max_range[1]
+    tt.ranged.attacks[3].min_range = b.soldier.sting_missiles.min_range[1]
+    tt.ranged.attacks[3].shoot_time = fts(12)
+    tt.ranged.attacks[3].vis_flags = bor(F_INSTAKILL, F_RANGED)
+    tt.ranged.attacks[3].vis_bans = bor(F_BOSS, F_MINIBOSS, F_NIGHTMARE)
+    tt.ranged.attacks[3].mark_mod = "mod_soldier_tower_rocket_gunners_sting_missiles_mark"
+    tt.powers.phosphoric = E:clone_c("power")
+    tt.powers.phosphoric.damage_factor = b.soldier.phosphoric.damage_factor
+    tt.powers.phosphoric.armor_reduction = b.soldier.phosphoric.armor_reduction
+    tt.powers.sting_missiles = E:clone_c("power")
+    tt.powers.sting_missiles.max_range = b.soldier.sting_missiles.max_range
+    tt.powers.sting_missiles.min_range = b.soldier.sting_missiles.min_range
+    tt.powers.sting_missiles.kill_hp_factor = b.soldier.sting_missiles.kill_hp_factor
+    tt.ui.click_rect = r(-13, 7, 25, 27)
+    tt.ui.click_rect_offset_y = 0
+    tt.drag_line_origin_offset = vec_2(0, tt.flight_height)
+    tt.nav_rally.delay_max = nil
+    tt.spawn_fx = "fx_tower_rocket_gunners_take_off"
+    tt.shadow_decal_t = "decal_soldier_tower_rocket_gunners_shadow"
+    tt.land_fx = "fx_soldier_tower_rocket_gunners_land"
+    tt.distance_to_land_fx = 10
+    tt.current_mode = 0
+    tt.arrive_epsilon = 0.5
+    tt.fly_strenght = 5
+    tt.fly_frequency = 13
+    tt.spawn_sort_y_offset = -9
+    tt.tween.disabled = true
+    tt.tween.remove = false
+    tt.tween.props[1].name = "offset"
+    tt.tween.props[1].interp = "sine"
+    tt.tween.props[1].keys = {{fts(0), vec_2(0, tt.flight_height)},
+                              {fts(tt.fly_frequency), vec_2(0, tt.flight_height - tt.fly_strenght)},
+                              {fts(tt.fly_frequency * 2), vec_2(0, tt.flight_height)}}
+    tt.tween.props[1].loop = true
+    tt.tween.props[1].disabled = true
+    tt.tween.props[1].remove = false
+    tt.sound_take_off = "TowerRocketGunnersTakeoff"
+
+    tt = E:register_t("bullet_soldier_tower_rocket_gunners", "bullet")
+    b = balance.towers.rocket_gunners.soldier.ranged_attack
+    tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_hit"
+    tt.bullet.floor_fx = "fx_bullet_soldier_tower_rocket_gunners_floor"
+    tt.bullet.flight_time = fts(2)
+    tt.bullet.damage_type = DAMAGE_SHOT
+    tt.bullet.damage_max = b.damage_max[4]
+    tt.bullet.damage_min = b.damage_min[4]
+    tt.bullet.level = 1
+    tt.main_script.update = scripts.bullet_soldier_tower_rocket_gunners.update
+    tt.render = nil
+    tt.sound_events.insert = "TowerRocketGunnersBasicAttack"
+
+    tt = E:register_t("bullet_soldier_tower_rocket_gunners_phosphoric", "bullet")
+    b = balance.towers.rocket_gunners.soldier
+    tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_hit"
+    tt.bullet.floor_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_floor"
+    tt.bullet.flight_time = fts(2)
+    tt.bullet.hit_time = fts(2)
+    tt.bullet.damage_type = b.phosphoric.damage_type
+    tt.bullet.level = 1
+    tt.main_script.update = scripts.bullet_soldier_tower_rocket_gunners_phosphoric.update
+    tt.bullet.damage_max = b.ranged_attack.damage_max[4]
+    tt.bullet.damage_min = b.ranged_attack.damage_min[4]
+    tt.render.sprites[1].anchor = vec_2(0.2, 0.5)
+    tt.render.sprites[1].name = "rocket_gunners_tower_phosphoric_coating_trace_idle"
+    tt.render.sprites[1].loop = false
+    tt.image_width = 70
+    tt.track_target = true
+    tt.ray_duration = fts(2)
+    tt.sound_events.insert = "TowerRocketGunnersPhosphoricCoating"
+
+    tt = E:register_t("bullet_soldier_tower_rocket_gunners_sting_missiles", "bullet")
+    b = balance.towers.rocket_gunners.soldier
+    E:add_comps(tt, "force_motion")
+    tt.bullet.flight_time = fts(31)
+    tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_sting_missiles_hit"
+    tt.bullet.hit_fx_air = "fx_bullet_soldier_tower_rocket_gunners_sting_missiles_hit_air"
+    tt.bullet.particles_name = "ps_tower_rocket_gunners_sting_missiles_trail"
+    tt.bullet.hit_decal = "decal_bullet_soldier_tower_rocket_gunners_sting_missiles"
+    tt.bullet.hit_decal_fx = "fx_bullet_soldier_tower_rocket_gunners_sting_missiles_smoke"
+    tt.bullet.align_with_trajectory = true
+    tt.bullet.ignore_hit_offset = true
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].name = "rocket_gunners_tower_sting_missiles_projectile_idle"
+    tt.main_script.update = scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update
+    tt.initial_impulse = 3000
+    tt.initial_impulse_duration = 0.3
+    tt.initial_impulse_angle = 0
+    tt.force_motion.a_step = 5
+    tt.force_motion.max_a = 1800
+    tt.force_motion.max_v = 450
+    tt.mod = "mod_soldier_tower_rocket_gunners_sting_missiles_target"
+    tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
+    tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
+
+    tt = E:register_t("mod_soldier_tower_rocket_gunners_sting_missiles_target", "modifier")
+    E:add_comps(tt, "render")
+    tt.main_script.update = scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update
+    tt.modifier.use_mod_offset = true
+    tt.modifier.duration = 1e+99
+    tt.render.sprites[1].prefix = "rocket_gunners_tower_reticle"
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+
+    tt = E:register_t("mod_soldier_tower_rocket_gunners_sting_missiles_mark", "modifier")
+    E:add_comps(tt, "mark_flags")
+    tt.mark_flags.vis_bans = F_CUSTOM
+    tt.main_script.queue = scripts.mod_mark_flags.queue
+    tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+    tt.main_script.update = scripts.mod_mark_flags.update
+
+    -- 牢大 END
 end
 
 return barrack_towers

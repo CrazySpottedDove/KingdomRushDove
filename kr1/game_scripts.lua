@@ -32199,5 +32199,28 @@ function scripts.moon_controller_s91.update(this, store)
     end
 end
 
+scripts.decal_soldier_shadow = {}
+
+function scripts.decal_soldier_shadow.update(this, store, script)
+    while true do
+        if this.entity.health.dead then
+            if not this.entity.health.last_damage_types == 0 then
+                U.y_wait(store, fts(this.dissapear_time))
+            end
+
+            queue_remove(store, this)
+
+            return
+        end
+
+        local offset_y = this.entity.render.sprites[1].offset.y
+        local shadow_scale = 1 - this.shadow_shrink * offset_y / this.max_height
+
+        this.render.sprites[1].scale = V.v(shadow_scale, shadow_scale)
+
+        coroutine.yield()
+    end
+end
+
 return scripts
 

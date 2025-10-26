@@ -344,7 +344,7 @@ function upgrades:barrack_soldiers()
             "soldier_elf", "soldier_elemental", "soldier_skeleton", "soldier_skeleton_knight", "soldier_death_rider",
             "soldier_templar", "soldier_assassin", "soldier_dwarf", "soldier_amazona", "soldier_djinn",
             "soldier_pirate_flamer", "soldier_frankenstein", "soldier_blade", "soldier_forest", "soldier_druid_bear",
-            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4","soldier_tower_necromancer_skeleton_lvl4","soldier_tower_necromancer_skeleton_golem_lvl4","soldier_tower_pandas_green_lvl4","soldier_tower_pandas_red_lvl4","soldier_tower_pandas_blue_lvl4"}
+            "soldier_drow", "soldier_ewok", "soldier_baby_ashbite", "soldier_tower_dark_elf", "soldier_tower_demon_pit_basic_attack_lvl4","big_guy_tower_demon_pit_lvl4","soldier_tower_necromancer_skeleton_lvl4","soldier_tower_necromancer_skeleton_golem_lvl4","soldier_tower_pandas_green_lvl4","soldier_tower_pandas_red_lvl4","soldier_tower_pandas_blue_lvl4","soldier_tower_rocket_gunners_lvl4"}
 end
 
 function upgrades:towers_with_barrack()
@@ -352,7 +352,7 @@ function upgrades:towers_with_barrack()
             "tower_sorcerer", "tower_elf", "tower_templar", "tower_assassin", "tower_mech", "tower_necromancer",
             "tower_barrack_dwarf", "tower_barrack_amazonas", "tower_barrack_mercenaries", "tower_barrack_pirates",
             "tower_frankenstein", "tower_blade", "tower_forest", "tower_druid", "tower_drow", "tower_ewok",
-            "tower_baby_ashbite", "tower_dark_elf_lvl4", "tower_pandas_lvl4"}
+            "tower_baby_ashbite", "tower_dark_elf_lvl4", "tower_pandas_lvl4", "tower_rocket_gunners_lvl4"}
 end
 
 function upgrades:non_barrack_towers_with_barrack_attribute()

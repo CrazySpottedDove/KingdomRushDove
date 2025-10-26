@@ -11652,11 +11652,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 
                 if targets then
                     for i = 1, total_stars do
-                        if targets[i] == nil then
-                            break
-                        end
-
-                        shoot_bullet(targets[i], m.level)
+                        shoot_bullet(targets[km.zmod(i, #targets)], m.level)
                     end
                 end
             end
@@ -12886,9 +12882,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
                 empowerments_previews = {}
 
                 local targets = table.filter(store.towers, function(k, v)
-                    return
-                               U.is_inside_ellipse(v.pos, this.pos, ae.max_range) and
-                               not U.has_modifiers(store, v, ae.mod)
+                    return U.is_inside_ellipse(v.pos, this.pos, ae.max_range) and not U.has_modifiers(store, v, ae.mod)
                 end)
 
                 if targets then
@@ -13300,4 +13294,1242 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 end
 
 -- 五代奥术 END
+
+-- 牢大 BEGIN
+scripts.tower_rocket_gunners = {}
+
+function scripts.tower_rocket_gunners.update(this, store, script)
+    local tower_sid = 2
+    local b = this.barrack
+    local formation_offset = 0
+    local MODE_FLY = 0
+    local MODE_GROUND = 1
+    local sting_missiles_ts = store.tick_ts
+    local sting_missiles_ready = false
+    local sting_missiles_soldier
+
+    local pow_p = this.powers.phosphoric
+    local pow_s = this.powers.sting_missiles
+
+    local function check_change_rally()
+        if b.rally_new then
+            b.rally_new = false
+
+            signal.emit("rally-point-changed", this)
+
+            local all_dead = true
+
+            for i, s in ipairs(b.soldiers) do
+                s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
+                s.nav_rally.new = true
+                all_dead = all_dead and s.health.dead
+            end
+
+            if not all_dead then
+                S:queue(this.sound_events.change_rally_point)
+            end
+        end
+    end
+
+    local function check_change_mode()
+        if this.change_mode then
+            this.change_mode = false
+
+            for _, soldier in ipairs(b.soldiers) do
+                soldier.change_mode = true
+            end
+        end
+    end
+
+    while true do
+        if pow_p.changed then
+            pow_p.changed = nil
+
+            for _, s in pairs(b.soldiers) do
+                s.powers.phosphoric.level = pow_p.level
+                s.powers.phosphoric.changed = true
+            end
+        end
+        if pow_s.changed then
+            pow_s.changed = nil
+
+            for _, s in pairs(b.soldiers) do
+                s.powers.sting_missiles.level = pow_s.level
+                s.powers.sting_missiles.changed = true
+            end
+            sting_missiles_ready = true
+        end
+
+        if pow_s.level > 0 then
+            if sting_missiles_ready then
+                if (not sting_missiles_soldier or sting_missiles_soldier.health.dead) and #b.soldiers > 0 then
+                    sting_missiles_soldier = b.soldiers[math.random(#b.soldiers)]
+                    sting_missiles_soldier.ranged.attacks[3].disabled = false
+                end
+
+                if sting_missiles_soldier and sting_missiles_soldier.ranged.attacks[3].disabled then
+                    sting_missiles_ready = false
+                    sting_missiles_ts = store.tick_ts
+                    sting_missiles_soldier = nil
+                end
+            else
+                sting_missiles_ready = store.tick_ts - sting_missiles_ts > pow_s.cooldown[pow_s.level] * this.tower.cooldown_factor
+            end
+        end
+
+        check_change_mode()
+
+        if not this.tower.blocked then
+            for i = 1, b.max_soldiers do
+                local s = b.soldiers[i]
+
+                if not s or s.health.dead and not store.entities[s.id] then
+                    U.animation_start(this, "spawn", nil, store.tick_ts, 1, tower_sid)
+
+                    local spawn_ts = store.tick_ts
+
+                    S:queue(this.spawn_sound)
+
+                    while store.tick_ts - spawn_ts < fts(this.spawn_time) do
+                        check_change_rally()
+                        check_change_mode()
+                        coroutine.yield()
+                    end
+
+                    s = E:create_entity(b.soldier_type)
+                    s.soldier.tower_id = this.id
+                    s.soldier.tower_soldier_idx = i
+                    U.soldier_inherit_tower_buff_factor(s, this)
+                    s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+                    s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
+                    s.nav_rally.new = true
+                    s.render.sprites[1].flip_x = true
+
+                    for pn, p in pairs(this.powers) do
+                        s.powers[pn].level = p.level
+                        s.powers[pn].changed = true
+                    end
+
+                    s.spawned_from_tower = true
+
+                    queue_insert(store, s)
+
+                    b.soldiers[i] = s
+
+                    U.y_animation_wait(this, tower_sid)
+                    U.y_wait(store, fts(this.spawn_delay))
+                end
+            end
+        end
+
+        check_change_rally()
+        coroutine.yield()
+    end
+end
+
+scripts.soldier_tower_rocket_gunners = {}
+
+local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, target)
+    local attack = soldier.melee.attacks[2]
+    local dradius = attack.damage_radius
+
+    local enemies = U.find_enemies_in_range(store, target.pos, 0, dradius, attack.vis_flags, attack.vis_bans)
+    if not enemies then
+        return
+    end
+    for _, enemy in pairs(enemies) do
+        local d = E:create_entity("damage")
+
+        d.damage_type = attack.damage_type
+
+        local dmax = attack.damage_area_max[soldier.powers.phosphoric.level]
+        local dmin = attack.damage_area_min[soldier.powers.phosphoric.level]
+
+        local upg = UP:get_upgrade("engineer_efficiency")
+
+        if upg then
+            d.value = dmax
+        else
+            local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, target.pos, dradius)
+            d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+        end
+        d.value = d.value * soldier.unit.damage_factor
+        d.source_id = soldier.id
+        d.target_id = enemy.id
+
+        queue_damage(store, d)
+    end
+end
+
+function scripts.soldier_tower_rocket_gunners.update(this, store, script)
+    local brk, sta
+    local tower = store.entities[this.soldier.tower_id]
+    local is_taking_off = tower.tower_upgrade_persistent_data.is_taking_off[this.soldier.tower_soldier_idx]
+    local last_target_pos
+
+    this.melee.attacks[1].level = this.unit.level
+    this.ranged.attacks[1].level = this.unit.level
+    this.vis.flags = bor(this.vis.flags, F_FLYING)
+    this._max_speed = this.motion.max_speed
+
+    if this.vis._bans then
+        this.vis.bans = this.vis._bans
+        this.vis._bans = nil
+    end
+
+    local MODE_FLY = 0
+    local MODE_GROUND = 1
+
+    local function adjust_position_reference()
+        this.ui.click_rect.pos.y = this.render.sprites[1].offset.y + this.ui.click_rect_offset_y
+        this.unit.hit_offset.y = this.render.sprites[1].offset.y + 12
+        this.unit.mod_offset.y = this.render.sprites[1].offset.y + 13
+
+        if this.ranged.attacks[3] then
+            this.ranged.attacks[3].bullet_start_offset = {v(this.ranged.attacks[3].bullet_start_offset_relative.x,
+                this.render.sprites[1].offset.y + this.ranged.attacks[3].bullet_start_offset_relative.y)}
+        end
+
+        if this.current_mode == MODE_GROUND then
+            local new_height = U.ease_value(this.health_bar.offset.y, this.health_bar.y_offset, store.tick_length * 10,
+                "linear")
+
+            this.health_bar.offset.y = new_height
+        else
+            local new_height = U.ease_value(this.health_bar.offset.y, this.flight_height + this.health_bar.y_offset,
+                store.tick_length * 10, "linear")
+
+            this.health_bar.offset.y = new_height
+        end
+    end
+
+    local function adjust_height()
+        local height_dest = this.flight_height
+        local easing = "quart-in"
+        local strength = 1.5
+
+        if this.current_mode == MODE_GROUND then
+            height_dest = 0
+            easing = "expo-in"
+            strength = 2
+        end
+
+        local new_height = U.ease_value(this.render.sprites[1].offset.y, height_dest, store.tick_length * strength,
+            easing)
+
+        this.render.sprites[1].offset.y = km.clamp(0, this.flight_height, new_height)
+
+        adjust_position_reference()
+
+        this.drag_line_origin_offset.y = height_dest
+    end
+
+    local function y_soldier_new_rally_custom(store, this)
+        local r = this.nav_rally
+        local out = false
+        local prev_immune = this.health.immune_to
+
+        this.health.immune_to = r.immune_to
+
+        if r.new then
+            r.new = false
+
+            U.unblock_target(store, this)
+            U.set_destination(this, r.pos)
+
+            if r.delay_max then
+                U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+
+                if SU.y_soldier_wait(store, this, math.random() * r.delay_max) then
+                    goto label_540_0
+                end
+            end
+
+            local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
+            U.animation_start(this, an, af, store.tick_ts, -1)
+
+            local start_ts = store.tick_ts
+
+            if is_taking_off then
+                this.vis.bans = this.vis_bans_before_take_off
+                this.shadow_decal = E:create_entity(this.shadow_decal_t)
+                this.shadow_decal.pos = this.pos
+                this.shadow_decal.soldier_height = this.flight_height
+                this.shadow_decal.entity = this
+
+                queue_insert(store, this.shadow_decal)
+
+                local dest = V.vclone(r.pos)
+
+                this.render.sprites[1].sort_y_offset = this.spawn_sort_y_offset
+                this.tween.disabled = true
+                this.tween.props[1].disabled = true
+                this.render.sprites[1].scale = v(0.9, 0.9)
+
+                U.y_animation_play(this, "take_off", nil, store.tick_ts, 1)
+
+                this.render.sprites[1].scale = v(1, 1)
+
+                U.animation_start(this, "idle_air", nil, store.tick_ts, true)
+
+                this.idle_flip.last_animation = "idle_air"
+
+                local fx = E:create_entity(this.spawn_fx)
+
+                fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+
+                while not this.motion.arrived do
+                    adjust_height()
+
+                    local easing = "quart-inout"
+
+                    this.pos.x = U.ease_value(this.pos.x, dest.x, (store.tick_ts - start_ts) / 30, easing)
+                    this.pos.y = U.ease_value(this.pos.y, dest.y, (store.tick_ts - start_ts) / 30, easing)
+
+                    local vx, vy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+                    local v_len = V.len(vx, vy)
+
+                    if v_len <= this.arrive_epsilon then
+                        this.motion.arrived = true
+                    end
+
+                    if tower and tower.tower.upgrade_to then
+                        is_taking_off = false
+
+                        break
+                    end
+
+                    coroutine.yield()
+                end
+
+                is_taking_off = false
+                tower.tower_upgrade_persistent_data.is_taking_off[this.soldier.tower_soldier_idx] = false
+                this.tween.disabled = false
+                this.tween.props[1].disabled = false
+                this.tween.props[1].ts = store.tick_ts
+                this.render.sprites[1].sort_y_offset = 0
+                this.motion.max_speed = this.speed_flight
+                this.melee.attacks[1].disabled = true
+                this.current_mode = MODE_FLY
+            else
+                local start_ts = store.tick_ts
+                local time_to_accel = 0.7
+                local dist_to_break = 50
+
+                while not this.motion.arrived do
+                    if this.health.dead or this.unit.is_stunned then
+                        out = true
+
+                        break
+                    end
+
+                    if r.new and not is_taking_off then
+                        out = false
+
+                        break
+                    end
+
+                    if this.change_mode then
+                        out = false
+
+                        break
+                    end
+
+                    if this.current_mode == MODE_FLY then
+                        local vx, vy = V.sub(r.pos.x, r.pos.y, this.pos.x, this.pos.y)
+                        local dist = V.len(vx, vy)
+
+                        if dist_to_break < dist then
+                            local ease_step = (store.tick_ts - start_ts) / time_to_accel
+
+                            this.motion.max_speed = U.ease_value(0, this._max_speed, ease_step, "quad-in")
+                        else
+                            local ease_step = dist / dist_to_break
+
+                            this.motion.max_speed = U.ease_value(20, this._max_speed, ease_step, "quad-in")
+                        end
+                    end
+
+                    U.walk(this, store.tick_length)
+
+                    this.motion.speed.x, this.motion.speed.y = 0, 0
+
+                    coroutine.yield()
+                end
+            end
+        end
+
+        ::label_540_0::
+
+        this.vis.bans = this.vis_bans_after_take_off
+        this.health.immune_to = prev_immune
+
+        return out
+    end
+
+    local function change_mode_fly()
+        U.update_max_speed(this, this.speed_flight)
+        this.ranged.attacks[1].animation = "attack_air"
+        this.melee.attacks[1].disabled = true
+
+        if this.melee.attacks[2] then
+            this.melee.attacks[2].disabled = true
+        end
+
+        if this.ranged.attacks[2] then
+            this.ranged.attacks[2].animation = "phosphoric_coating_air"
+        end
+
+        if this.ranged.attacks[3] then
+            this.ranged.attacks[3].animation = "sting_missiles_air"
+        end
+
+        this.unit.death_animation = "death_air"
+        this.unit.hide_after_death = true
+
+        local land_fx = E:create_entity(this.land_fx)
+
+        land_fx.render.sprites[1].ts = store.tick_ts
+        land_fx.pos = this.pos
+
+        queue_insert(store, land_fx)
+        S:queue(this.sound_take_off)
+        U.y_animation_play(this, "take_off", nil, store.tick_ts, 1)
+        U.animation_start(this, "idle_air", nil, store.tick_ts, true)
+
+        this.idle_flip.last_animation = "idle_air"
+
+        while this.render.sprites[1].offset.y < this.flight_height - this.arrive_epsilon do
+            adjust_height()
+            coroutine.yield()
+        end
+
+        -- U.y_wait(store, 0.2 * this.soldier.tower_soldier_idx)
+
+        this.tween.props[1].disabled = false
+        this.tween.disabled = false
+        this.tween.props[1].ts = store.tick_ts
+        this.render.sprites[1].angles.walk = {"idle_air"}
+        this.vis.flags = bor(this.vis.flags, F_FLYING)
+    end
+
+    local function change_mode_ground()
+        U.update_max_speed(this, this.speed_ground)
+        this.ranged.attacks[1].animation = "attack_floor"
+        this.unit.death_animation = "death_floor"
+        this.unit.hide_after_death = false
+
+        if this.powers.phosphoric.level > 0 then
+            this.melee.attacks[1].disabled = true
+            this.melee.attacks[2].disabled = false
+        else
+            this.melee.attacks[1].disabled = false
+        end
+
+        if this.ranged.attacks[2] then
+            this.ranged.attacks[2].animation = "phosphoric_coating_floor"
+        end
+
+        if this.ranged.attacks[3] then
+            this.ranged.attacks[3].animation = "sting_missiles_floor"
+        end
+
+        this.tween.props[1].disabled = true
+        this.tween.disabled = true
+
+        local land_fx_ready = false
+
+        while this.render.sprites[1].offset.y > this.arrive_epsilon do
+            adjust_height()
+
+            if not land_fx_ready and this.render.sprites[1].offset.y < this.distance_to_land_fx then
+                land_fx_ready = true
+
+                local land_fx = E:create_entity(this.land_fx)
+
+                land_fx.render.sprites[1].ts = store.tick_ts
+                land_fx.pos = this.pos
+
+                queue_insert(store, land_fx)
+            end
+
+            coroutine.yield()
+        end
+
+        U.y_animation_play(this, "landing", nil, store.tick_ts, 1)
+        U.animation_start(this, "idle_floor", nil, store.tick_ts, 1)
+
+        this.idle_flip.last_animation = "idle_floor"
+        this.render.sprites[1].angles.walk = {"walk"}
+        this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
+    end
+
+    local function soldier_idle(store, this)
+        local idle_animation = "idle_floor"
+
+        if this.current_mode == MODE_FLY then
+            idle_animation = "idle_air"
+        end
+
+        local idle_pos = this.pos
+
+        if this.soldier.target_id then
+            local target = store.entities[this.soldier.target_id]
+
+            if target then
+                idle_pos = target.pos
+
+                local an, af = U.animation_name_facing_point(this, idle_animation, idle_pos)
+
+                U.animation_start(this, an, af, store.tick_ts, true)
+            end
+        elseif last_target_pos then
+            idle_pos = last_target_pos
+
+            local an, af = U.animation_name_facing_point(this, idle_animation, idle_pos)
+
+            U.animation_start(this, an, af, store.tick_ts, true)
+        else
+            U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil,
+                force_ts)
+        end
+
+        if store.tick_ts - this.idle_flip.ts > 2 * store.tick_length then
+            this.idle_flip.ts_counter = 0
+        end
+
+        this.idle_flip.ts = store.tick_ts
+        this.idle_flip.ts_counter = this.idle_flip.ts_counter + store.tick_length
+
+        if this.idle_flip.ts_counter > this.idle_flip.cooldown then
+            this.idle_flip.ts_counter = 0
+
+            if math.random() < this.idle_flip.chance then
+                this.render.sprites[1].flip_x = not this.render.sprites[1].flip_x
+            end
+
+            if this.idle_flip.animations then
+                this.idle_flip.last_animation = table.random(this.idle_flip.animations)
+            end
+        end
+    end
+
+    local function y_soldier_ranged_attacks(store, this)
+        local target, attack, pred_pos = SU.soldier_pick_ranged_target_and_attack(store, this)
+
+        if not target then
+            last_target_pos = nil
+
+            return false, A_NO_TARGET
+        end
+
+        if not attack then
+            return false, A_IN_COOLDOWN
+        end
+
+        local start_ts = store.tick_ts
+        local attack_done
+
+        U.set_destination(this, this.pos)
+
+        if this.current_mode == MODE_FLY and attack ~= this.ranged.attacks[3] then
+            pred_pos.y = pred_pos.y - this.flight_height
+        end
+
+        if attack == this.ranged.attacks[3] then
+            local mark = E:create_entity(attack.mark_mod)
+
+            mark.modifier.target_id = target.id
+            mark.modifier.source_id = this.id
+            mark.modifier.duration = 9e+99
+
+            queue_insert(store, mark)
+        end
+
+        attack_done = SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
+
+        if attack_done then
+            last_target_pos = pred_pos
+            attack.ts = start_ts
+
+            if attack.shared_cooldown then
+                for _, aa in pairs(this.ranged.attacks) do
+                    if aa ~= attack and aa.shared_cooldown then
+                        aa.ts = attack.ts
+                    end
+                end
+            end
+
+            if this.ranged.forced_cooldown then
+                this.ranged.forced_ts = start_ts
+            end
+        end
+
+        if attack_done then
+            return false, A_DONE
+        else
+            return true
+        end
+    end
+
+    if not this.spawned_from_tower then
+        this.current_mode = tower.tower_upgrade_persistent_data.current_mode
+        this.change_mode = false
+        this.vis.bans = this.vis_bans_after_take_off
+        this.shadow_decal = E:create_entity(this.shadow_decal_t)
+        this.shadow_decal.pos = this.pos
+        this.shadow_decal.soldier_height = this.flight_height
+        this.shadow_decal.entity = this
+
+        queue_insert(store, this.shadow_decal)
+
+        if this.current_mode == MODE_FLY then
+            U.animation_start(this, "idle_air", nil, store.tick_ts, true)
+
+            this.idle_flip.last_animation = "idle_air"
+
+            if this.ranged.attacks[2] then
+                this.ranged.attacks[2].animation = "phosphoric_coating_air"
+            end
+
+            if this.ranged.attacks[3] then
+                this.ranged.attacks[3].animation = "sting_missiles_air"
+            end
+
+            this.tween.disabled = false
+            this.tween.props[1].disabled = false
+            this.tween.props[1].ts = store.tick_ts
+            this.motion.max_speed = this.speed_flight
+            this.melee.attacks[1].disabled = true
+            this.vis.flags = bor(this.vis.flags, F_FLYING)
+        else
+            this.motion.max_speed = this.speed_ground
+            this.melee.attacks[1].disabled = false
+            this.ranged.attacks[1].animation = "attack_floor"
+
+            if this.ranged.attacks[2] then
+                this.ranged.attacks[2].animation = "phosphoric_coating_floor"
+            end
+
+            if this.ranged.attacks[3] then
+                this.ranged.attacks[3].animation = "sting_missiles_floor"
+            end
+
+            this.unit.death_animation = "death_floor"
+            this.unit.hide_after_death = false
+            this.tween.props[1].disabled = true
+            this.tween.disabled = true
+
+            U.animation_start(this, "idle_floor", nil, store.tick_ts, true)
+
+            this.idle_flip.last_animation = "idle_floor"
+            this.render.sprites[1].angles.walk = {"walk"}
+            this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
+        end
+
+        adjust_height()
+    end
+
+    while true do
+        while this.nav_rally.new do
+            if y_soldier_new_rally_custom(store, this) then
+                goto label_536_1
+            end
+        end
+
+        if this.current_mode ~= tower.tower_upgrade_persistent_data.current_mode then
+            this.change_mode = false
+            U.unblock_target(store, this)
+            this.current_mode = tower.tower_upgrade_persistent_data.current_mode
+            if this.current_mode == MODE_FLY then
+                change_mode_fly()
+            else
+                change_mode_ground()
+            end
+        end
+
+        adjust_position_reference()
+
+        for pn, p in pairs(this.powers) do
+            if p.changed then
+                p.changed = nil
+
+                SU.soldier_power_upgrade(this, pn)
+
+                if p == this.powers.phosphoric then
+                    this.melee.attacks[1].disabled = true
+                    this.melee.attacks[2].disabled = false
+                    this.melee.attacks[2].level = p.level
+                    this.ranged.attacks[1].disabled = true
+                    this.ranged.attacks[2].disabled = false
+                    this.ranged.attacks[2].level = p.level
+                end
+
+                if p == this.powers.sting_missiles then
+                    this.ranged.attacks[3].max_range = p.max_range[p.level]
+                    this.ranged.attacks[3].min_range = p.min_range[p.level]
+                    this.ranged.attacks[3].filter_fn = function(e)
+                        return e.health and e.health.hp <= e.health.hp_max * p.kill_hp_factor[p.level] and e.health.hp >= 500
+                    end
+                end
+            end
+        end
+
+        if this.health.dead then
+            tower.tower_upgrade_persistent_data.is_taking_off[this.soldier.tower_soldier_idx] = true
+
+            if this.current_mode == MODE_FLY then
+                this.unit.fade_time_after_death = false
+
+                U.unblock_target(store, this)
+                SU.y_enemy_death(store, this)
+            else
+                this.tween.disabled = true
+
+                SU.y_soldier_death(store, this)
+            end
+
+            return
+        end
+
+        if this.unit.is_stunned then
+            this.tween.props[1].disabled = true
+
+            SU.soldier_idle(store, this)
+
+            goto label_536_1
+        else
+            this.tween.props[1].disabled = false
+        end
+
+        if this.current_mode == MODE_GROUND then
+            brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+            if sta == A_DONE and this.powers.phosphoric.level > 0 then
+                local target = store.entities[this.soldier.target_id]
+
+                if target then
+                    tower_rocket_gunners_phosphoric_area_damage(this, store, target)
+                end
+            end
+
+            if brk or sta ~= A_NO_TARGET then
+                goto label_536_1
+            end
+        end
+
+        if this.ranged and not this.ranged.range_while_blocking then
+            if this.ranged.attacks[2] and this.ranged.attacks[2].bullet_start_offset then
+                for _, start_offset in ipairs(this.ranged.attacks[2].bullet_start_offset) do
+                    start_offset.y = this.render.sprites[1].offset.y +
+                                         this.ranged.attacks[2].bullet_start_offset_relative.y
+                    start_offset.x = this.ranged.attacks[2].bullet_start_offset_relative.x
+                end
+            end
+
+            brk, sta = y_soldier_ranged_attacks(store, this)
+
+            if brk or sta == A_DONE then
+                goto label_536_1
+            elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+                goto label_536_0
+            end
+        end
+
+        if SU.soldier_go_back_step(store, this) then
+            goto label_536_1
+        end
+
+        ::label_536_0::
+
+        soldier_idle(store, this)
+        SU.soldier_regen(store, this)
+
+        ::label_536_1::
+
+        coroutine.yield()
+    end
+end
+
+scripts.bullet_soldier_tower_rocket_gunners = {}
+
+function scripts.bullet_soldier_tower_rocket_gunners.update(this, store)
+    local b = this.bullet
+    local target = store.entities[b.target_id]
+    local source = store.entities[b.source_id]
+
+    U.y_wait(store, b.flight_time)
+
+    if target then
+        local d = SU.create_bullet_damage(b, target.id, this.id)
+
+        queue_damage(store, d)
+
+        if band(target.vis.flags, F_FLYING) ~= 0 then
+            local fx = E:create_entity(b.hit_fx)
+
+            -- fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.flight_height
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+        else
+            local fx = E:create_entity(b.hit_fx)
+
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+
+            if band(target.vis.flags, F_CLIFF) == 0 then
+                local fx = E:create_entity(b.floor_fx)
+
+                fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+            end
+        end
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.bullet_soldier_tower_rocket_gunners_phosphoric = {}
+
+function scripts.bullet_soldier_tower_rocket_gunners_phosphoric.update(this, store)
+    local b = this.bullet
+    local s = this.render.sprites[1]
+    local target = store.entities[b.target_id]
+    local source = store.entities[b.source_id]
+    local dest = V.vclone(b.to)
+
+    local function update_sprite()
+        if this.track_target and target and target.motion then
+            local tpx, tpy = target.pos.x, target.pos.y
+
+            if not b.ignore_hit_offset then
+                tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+            end
+
+            local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+            if d > b.max_track_distance then
+                log.paranoid("(%s) ray_simple target (%s) out of max_track_distance", this.id, target.id)
+
+                target = nil
+            else
+                dest.x, dest.y = target.pos.x, target.pos.y
+
+                if target.unit and target.unit.hit_offset then
+                    dest.x, dest.y = dest.x + target.unit.hit_offset.x, dest.y + target.unit.hit_offset.y
+                end
+            end
+        end
+
+        local angle = V.angleTo(dest.x - this.pos.x, dest.y - this.pos.y)
+
+        s.r = angle
+        s.scale.x = V.dist(dest.x, dest.y, this.pos.x, this.pos.y) / this.image_width
+    end
+
+    if not b.ignore_hit_offset and this.track_target and target and target.motion then
+        b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+    end
+
+    s.scale = s.scale or V.v(1, 1)
+    s.ts = store.tick_ts
+
+    update_sprite()
+
+    if b.hit_time > fts(1) then
+        while store.tick_ts - s.ts < b.hit_time do
+            coroutine.yield()
+
+            if target and U.flag_has(target.vis.bans, F_RANGED) then
+                target = nil
+            end
+
+            if this.track_target then
+                update_sprite()
+            end
+        end
+    end
+
+    if this.ray_duration then
+        while store.tick_ts - s.ts < this.ray_duration do
+            if this.track_target then
+                update_sprite()
+            end
+            coroutine.yield()
+
+            s.hidden = false
+        end
+    else
+        while not U.animation_finished(this, 1) do
+            coroutine.yield()
+        end
+    end
+
+    if target and source then
+        local d = SU.create_bullet_damage(b, target.id, this.id)
+
+        queue_damage(store, d)
+
+        if band(target.vis.flags, F_FLYING) ~= 0 then
+            local fx = E:create_entity(b.hit_fx)
+
+            -- if target.flight_height then
+            --     fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.flight_height
+            -- else
+                -- fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+            -- end
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+        else
+            local fx = E:create_entity(b.hit_fx)
+
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+
+            if band(target.vis.flags, F_CLIFF) == 0 then
+                local fx = E:create_entity(b.floor_fx)
+
+                fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+                fx.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, fx)
+            end
+        end
+
+        if band(target.vis.flags, F_FLYING) == 0 then
+            tower_rocket_gunners_phosphoric_area_damage(source, store, target)
+        end
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.bullet_soldier_tower_rocket_gunners_sting_missiles = {}
+
+function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this, store)
+    local b = this.bullet
+    local fm = this.force_motion
+    local target = store.entities[b.target_id]
+    local source = store.entities[b.source_id]
+    local ps
+
+    if not source then
+        queue_remove(store, this)
+
+        return
+    end
+
+    source.ranged.attacks[3].disabled = true
+
+    local function move_step(dest)
+        local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+        local dist = V.len(dx, dy)
+        local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
+        local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
+
+        if dist <= 8 * fm.max_v * store.tick_length then
+            stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
+        end
+
+        fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
+        fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+        this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+        fm.a.x, fm.a.y = 0, 0
+
+        return dist <= fm.max_v * store.tick_length
+    end
+
+    local function fly_to_pos(target_pos)
+        local start_ts = store.tick_ts
+        local last_pos = V.vclone(this.pos)
+        local dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
+        local dist = V.len(dx, dy)
+
+        while V.len(dx, dy) > 20 do
+            last_pos.x, last_pos.y = this.pos.x, this.pos.y
+
+            move_step(target_pos)
+
+            this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+            ps.particle_system.emit_offset.x, ps.particle_system.emit_offset.y =
+                V.rotate(this.render.sprites[1].r, ps.emit_offset_relative.x, ps.emit_offset_relative.y)
+            dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
+            dist = V.len(dx, dy)
+
+            coroutine.yield()
+        end
+    end
+
+    if b.particles_name then
+        ps = E:create_entity(b.particles_name)
+        ps.particle_system.emit = true
+        ps.particle_system.track_id = this.id
+
+        queue_insert(store, ps)
+    end
+
+    if target then
+        local m = E:create_entity(this.mod)
+
+        m.modifier.target_id = target.id
+
+        queue_insert(store, m)
+    end
+
+    local soldier_pos = v(source.pos.x, source.pos.y + source.render.sprites[1].offset.y)
+    local soldier_floor_pos = v(source.pos.x, source.pos.y)
+    local attack = table.deepclone(source.ranged.attacks[3])
+
+    fm.a.x, fm.a.y = 0, 80
+
+    local target_pos = v(soldier_pos.x, soldier_pos.y + 130)
+
+    fly_to_pos(target_pos)
+
+    local side_flip = 1
+
+    if target and target.pos.x < soldier_pos.x then
+        side_flip = -1
+    end
+
+    fm.a.x, fm.a.y = 100, 0
+
+    local target_pos = v(soldier_pos.x + 70 * side_flip, soldier_pos.y + 130)
+
+    fly_to_pos(target_pos)
+
+    -- target_pos = v(soldier_pos.x + 35 * side_flip, soldier_pos.y + 100)
+
+    -- fly_to_pos(target_pos)
+
+    -- target_pos = v(soldier_pos.x, soldier_pos.y + 130)
+
+    -- fly_to_pos(target_pos)
+
+    -- target_pos = v(soldier_pos.x, soldier_pos.y + 180)
+
+    -- fly_to_pos(target_pos)
+
+    if target then
+        target_pos = v(target.pos.x, soldier_pos.y + 180)
+
+        fly_to_pos(target_pos)
+    end
+
+    fm.a_step = 5
+    fm.max_a = 2700
+    fm.max_v = 900
+    ps.particle_system.emission_rate = 90
+
+    if not target or target.health.dead then
+        local new_target, targets = U.find_foremost_enemy(store, soldier_floor_pos, 0, attack.max_range, false,
+            attack.vis_flags, attack.vis_bans, attack.filter_fn)
+
+        if new_target then
+            b.target_id = new_target.id
+
+            local m = E:create_entity(this.mod)
+
+            m.modifier.target_id = new_target.id
+
+            queue_insert(store, m)
+        end
+    end
+
+    local last_pos = V.vclone(this.pos)
+
+    b.ts = store.tick_ts
+
+    if target and band(target.vis.flags, F_FLYING) ~= 0 then
+        b.ignore_hit_offset = false
+    end
+
+    while true do
+        target = store.entities[b.target_id]
+        if not target or target.health.dead then
+            target = U.find_foremost_enemy(store, soldier_floor_pos, 0, attack.max_range, false,
+                attack.vis_flags, attack.vis_bans, attack.filter_fn)
+        end
+        if target and not target.health.dead and band(target.vis.bans, bor(F_RANGED, F_INSTAKILL)) == 0 then
+            b.target_id = target.id
+            local hit_offset = V.v(0, 0)
+
+            if not b.ignore_hit_offset then
+                hit_offset.x = target.unit.hit_offset.x
+                hit_offset.y = target.unit.hit_offset.y
+            end
+
+            b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
+        end
+
+        last_pos.x, last_pos.y = this.pos.x, this.pos.y
+
+        if move_step(b.to) then
+            break
+        end
+
+        if b.align_with_trajectory then
+            this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+            ps.particle_system.emit_offset.x, ps.particle_system.emit_offset.y =
+                V.rotate(this.render.sprites[1].r, ps.emit_offset_relative.x, ps.emit_offset_relative.y)
+        end
+
+        coroutine.yield()
+    end
+
+    if target and not target.health.dead then
+        local d = E:create_entity("damage")
+
+        d.source_id = this.id
+        d.target_id = target.id
+        d.damage_type = DAMAGE_INSTAKILL
+        d.value = 10
+
+        queue_damage(store, d)
+
+        if b.mod or b.mods then
+            local mods = b.mods or {b.mod}
+
+            for _, mod_name in pairs(mods) do
+                local m = E:create_entity(mod_name)
+
+                m.modifier.target_id = b.target_id
+                m.modifier.level = b.level
+
+                queue_insert(store, m)
+            end
+        end
+    end
+
+    S:queue(this.sound_events.hit)
+
+    this.render.sprites[1].hidden = true
+
+    if target and band(target.vis.flags, F_FLYING) ~= 0 then
+        if b.hit_fx_air then
+            local decal = E:create_entity(b.hit_fx_air)
+
+            decal.pos = V.vclone(b.to)
+            decal.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, decal)
+        end
+    else
+        if b.hit_fx then
+            local fx = E:create_entity(b.hit_fx)
+
+            fx.pos.x, fx.pos.y = b.to.x, b.to.y
+            fx.render.sprites[1].ts = store.tick_ts
+            fx.render.sprites[1].runs = 0
+
+            queue_insert(store, fx)
+        end
+
+        if target and target.unit.can_explode then
+            target.unit.show_blood_pool = false
+
+            if b.hit_decal then
+                local decal = E:create_entity(b.hit_decal)
+
+                decal.pos = V.vclone(b.to)
+                decal.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, decal)
+            end
+
+            if b.hit_decal_fx then
+                local decal = E:create_entity(b.hit_decal_fx)
+
+                decal.pos = V.vclone(b.to)
+                decal.render.sprites[1].ts = store.tick_ts
+
+                queue_insert(store, decal)
+            end
+        end
+    end
+
+    if ps and ps.particle_system.emit then
+        ps.particle_system.emit = false
+
+        U.y_wait(store, ps.particle_system.particle_lifetime[2])
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target = {}
+
+function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(this, store, script)
+    local m = this.modifier
+
+    this.modifier.ts = store.tick_ts
+
+    local target = store.entities[m.target_id]
+
+    if not target or not target.pos then
+        queue_remove(store, this)
+
+        return
+    end
+
+    this.pos = target.pos
+
+    U.animation_start(this, "start", nil, store.tick_ts)
+
+    local is_idle = false
+
+    while true do
+        target = store.entities[m.target_id]
+
+        if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and
+            target.nav_path.ni > m.last_node then
+            queue_remove(store, this)
+
+            return
+        end
+
+        if this.render and target.unit then
+            local s = this.render.sprites[1]
+            local flip_sign = 1
+
+            if target.render then
+                flip_sign = target.render.sprites[1].flip_x and -1 or 1
+            end
+
+            if m.health_bar_offset and target.health_bar then
+                local hb = target.health_bar.offset
+                local hbo = m.health_bar_offset
+
+                s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
+            elseif m.use_mod_offset and target.unit.mod_offset then
+                s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+            end
+        end
+
+        if U.animation_finished(this, 1) and not is_idle then
+            is_idle = true
+
+            U.animation_start(this, "idle", nil, store.tick_ts, true)
+        end
+
+        coroutine.yield()
+    end
+end
+
+-- 牢大 END
 return scripts
