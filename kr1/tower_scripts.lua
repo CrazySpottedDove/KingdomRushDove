@@ -11652,11 +11652,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 
                 if targets then
                     for i = 1, total_stars do
-                        if targets[i] == nil then
-                            break
-                        end
-
-                        shoot_bullet(targets[i], m.level)
+                        shoot_bullet(targets[km.zmod(i, #targets)], m.level)
                     end
                 end
             end
