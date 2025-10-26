@@ -3,6 +3,8 @@ if arg[2] == "debug" then
     LLDEBUGGER = require("lldebugger")
     LLDEBUGGER.start()
 end
+local G = love.graphics
+
 require("main_globals")
 
 if KR_TARGET == "universal" then
@@ -175,7 +177,7 @@ local function load_director()
         highdpi = main.params.highdpi
     })
 
-    local aw, ah = love.graphics.getDimensions()
+    local aw, ah = G.getDimensions()
 
     if aw and ah and (aw ~= main.params.width or ah ~= main.params.height) then
         log.debug("patching width/height from %s,%s, to %s,%s dpi scale:%s", main.params.width, main.params.height, aw,
@@ -574,11 +576,11 @@ function love.run()
 
                 main.draw_stats:update_lap(dt, updatei, updatef)
             end
-            if love.window and love.graphics and love.window.isCreated() and love.graphics.isActive() then
+            if love.window and G and love.window.isCreated() and G.isActive() then
                 nx.profilerEnterCodeBlock("clear")
 
-                love.graphics.clear()
-                love.graphics.origin()
+                G.clear()
+                G.origin()
 
                 nx.profilerExitCodeBlock("clear")
 
@@ -608,7 +610,7 @@ function love.run()
 
                 nx.profilerEnterCodeBlock("present")
 
-                love.graphics.present()
+                G.present()
 
                 nx.profilerExitCodeBlock("present")
 
@@ -657,9 +659,9 @@ function love.run()
                 updatef = love.timer.getTime()
                 main.draw_stats:update_lap(dt, updatei, updatef)
             end
-            if love.window and love.graphics and love.window.isCreated() and love.graphics.isActive() then
-                love.graphics.clear()
-                love.graphics.origin()
+            if love.window and G and love.window.isCreated() and G.isActive() then
+                G.clear()
+                G.origin()
 
                 if love.draw then
                     if main.draw_stats then
@@ -679,7 +681,7 @@ function love.run()
                     presi = love.timer.getTime()
                 end
 
-                love.graphics.present()
+                G.present()
 
                 if main.draw_stats then
                     presf = love.timer.getTime()
@@ -726,9 +728,9 @@ local function crash_report(str)
 end
 
 function love.errhand(msg)
-    local error_canvas = love.graphics.newCanvas(love.graphics.getWidth(), love.graphics.getHeight())
-    local last_canvas = love.graphics.getCanvas()
-    love.graphics.setCanvas(error_canvas)
+    local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
+    local last_canvas = G.getCanvas()
+    G.setCanvas(error_canvas)
 
     local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
 
@@ -743,11 +745,11 @@ function love.errhand(msg)
     close_log()
     pcall(crash_report, stack_msg)
 
-    if not love.window or not love.graphics or not love.event then
+    if not love.window or not G or not love.event then
         return
     end
 
-    if not love.graphics.isCreated() or not love.window.isOpen() then
+    if not G.isCreated() or not love.window.isOpen() then
         local success, status = pcall(love.window.setMode, 800, 600)
 
         if not success or not status then
@@ -775,19 +777,19 @@ function love.errhand(msg)
         love.audio.stop()
     end
 
-    love.graphics.reset()
+    G.reset()
 
-    local font = love.graphics.setNewFont(math.floor(love.window.toPixels(15)))
-    local cn_font = love.graphics.setNewFont("_assets/all-desktop/fonts/msyh.ttc",
+    local font = G.setNewFont(math.floor(love.window.toPixels(15)))
+    local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc",
         math.floor(love.window.toPixels(16)))
 
-    love.graphics.setBackgroundColor(89, 157, 220)
-    love.graphics.setColor(255, 255, 255, 255)
+    G.setBackgroundColor(89, 157, 220)
+    G.setColor(255, 255, 255, 255)
 
     local trace = debug.traceback()
 
-    --love.graphics.clear(love.graphics.getBackgroundColor())
-    love.graphics.origin()
+    --G.clear(G.getBackgroundColor())
+    G.origin()
 
     local err = {}
     local tip = {}
@@ -867,21 +869,21 @@ function love.errhand(msg)
 
     local pos = love.window.toPixels(70)
 
-    love.graphics.setFont(font)
-    love.graphics.clear(love.graphics.getBackgroundColor())
-    love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
+    G.setFont(font)
+    G.clear(G.getBackgroundColor())
+    G.printf(p, pos, pos, G.getWidth() - pos)
 
-    love.graphics.setFont(cn_font)
-    love.graphics.printf(pt, pos, pos, love.graphics.getWidth() - pos)
+    G.setFont(cn_font)
+    G.printf(pt, pos, pos, G.getWidth() - pos)
 
-    love.graphics.present()
+    G.present()
 
     local function draw()
         if love.keyboard.isDown("z") then
-            love.graphics.present()
+            G.present()
             love.timer.sleep(0.4)
         else
-            love.graphics.draw(error_canvas, 0, 0)
+            G.draw(error_canvas, 0, 0)
         end
     end
 

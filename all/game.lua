@@ -1252,60 +1252,47 @@ end
 
 -- 绘制黑夜模式前景色
 function game:draw_dark_foreground(rox, roy, gs)
-    if not self.night_draw_count then
-        self.night_draw_count = 2
+    G.push()
+    G.translate(rox, roy)
+    G.scale(gs, gs)
+
+    if not self.dark_canvas then
+        self.dark_canvas = G.newCanvas()
+        G.setCanvas(self.dark_canvas)
+    else
+        G.setCanvas(self.dark_canvas)
+        G.clear(0, 0, 0, 0)
     end
 
-    if self.store.night_mode then
-        -- 每两帧绘制一次
-        if self.night_draw_count >= 2 then
-            G.push()
-            G.translate(rox, roy)
-            G.scale(gs, gs)
+    love.graphics.stencil(function()
+        -- 绘制圆形遮罩
+        if self.store and self.store.lights then
+            for _, l in pairs(self.store.lights) do
+                local _, uy = game_gui:g2u(l.pos)
 
-            if not self.dark_canvas then
-                self.dark_canvas = G.newCanvas()
-                G.setCanvas(self.dark_canvas)
-            else
-                G.setCanvas(self.dark_canvas)
-                G.clear(0, 0, 0, 0)
+                love.graphics.circle("fill", l.pos.x, uy, l.radius)
             end
-
-            love.graphics.stencil(function()
-                -- 绘制圆形遮罩
-                if self.store and self.store.lights then
-                    for _, l in pairs(self.store.lights) do
-                        local _, uy = game_gui:g2u(l.pos)
-
-                        love.graphics.circle("fill", l.pos.x, uy, l.radius)
-                    end
-                end
-
-                local x, y = game_gui.window:get_mouse_position()
-                local ux, uy = game_gui.window:screen_to_view(x, y)
-                local gx = game_gui:u2g(vec_2(ux, uy))
-
-                love.graphics.circle("fill", gx, uy, 50)
-            end, "replace", 1)
-
-            -- 启用模板测试，只绘制模板值为0的区域
-            love.graphics.setStencilTest("equal", 0)
-
-            -- 绘制黑暗覆盖层
-            G.setColor(0, 0, 51, 30)
-            G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
-
-            -- 恢复默认
-            love.graphics.setStencilTest()
-            G.setColor(255, 255, 255, 255)
-            G.setCanvas()
-            G.pop()
-
-            self.night_draw_count = 0
-        else
-            self.night_draw_count = self.night_draw_count + 1
         end
-    end
+
+        local x, y = game_gui.window:get_mouse_position()
+        local ux, uy = game_gui.window:screen_to_view(x, y)
+        local gx = game_gui:u2g(vec_2(ux, uy))
+
+        love.graphics.circle("fill", gx, uy, 50)
+    end, "replace", 1)
+
+    -- 启用模板测试，只绘制模板值为0的区域
+    love.graphics.setStencilTest("equal", 0)
+
+    -- 绘制黑暗覆盖层
+    G.setColor(0, 0, 51, 30)
+    G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
+
+    -- 恢复默认
+    love.graphics.setStencilTest()
+    G.setColor(255, 255, 255, 255)
+    G.setCanvas()
+    G.pop()
 end
 
 -- 绘制路径
@@ -1419,7 +1406,108 @@ function game:draw_path(rox, roy, gs)
     end
 end
 
+-- 绘制变速状态显示
+function game:draw_speed_state(rox, roy, gs)
+    local d = self.store
+
+    if not self.cn_font then
+        self.cn_font = G.newFont("_assets/all-desktop/fonts/msyhbd.ttc",
+            math.floor(love.window.toPixels(20)))
+    end
+
+    G.push()
+    G.translate(rox, roy)
+    G.scale(gs, gs)
+
+    if not self.speed_state then
+        self.speed_state = G.newCanvas()
+        G.setCanvas(self.speed_state)
+    else
+        G.setCanvas(self.speed_state)
+        G.clear(0, 0, 0, 0)
+    end
+
+    local r = 255 * (math.sin(d.ts) + 1)
+    local g = 255 * (math.sin(d.ts + 2) + 1)
+    local b = 255 * (math.sin(d.ts + 4) + 1)
+
+    G.setColor(r, g, b, 180)
+    G.setFont(self.cn_font)
+
+    local pos = vec_2(500, 500)
+
+    local function draw_polygon(offset_x)
+        offset_x = offset_x or 0
+
+        local x = pos.x + offset_x
+        local y = pos.y
+
+        local w = 100
+        local h
+
+        if offset_x < 0 then
+            h = -100
+        else
+            h = 100
+        end
+
+        G.polygon("fill", x, y, x, y + w, x + h / 2, y + w / 2)
+    end
+
+    if d.speed_factor > 1 then
+        draw_polygon(1)
+        draw_polygon(75)
+
+        if d.speed_factor > 2 then
+            draw_polygon(150)
+        end
+
+        G.printf(string.format("%s 倍加速中...", d.speed_factor), pos.x, pos.y - 75, G.getWidth() - pos.x)
+    else
+        draw_polygon(-1)
+        draw_polygon(-75)
+
+        if d.speed_factor < 0.5 then
+            draw_polygon(-150)
+        end
+
+        G.printf(string.format("%s 倍减速中...", d.speed_factor), pos.x, pos.y - 75, G.getWidth() - pos.x)
+    end
+
+    G.printf(string.format("按 %s 还原", game_gui.key_shortcuts.normal[1]), pos.x, pos.y - 35, G.getWidth() - pos.x)
+
+    -- 恢复默认
+    G.setColor(255, 255, 255, 255)
+    G.setCanvas()
+    G.pop()
+end
+
+-- 设定每多少帧绘制一次
+function game:on_interval_draw(draw_fn_name, interval, rox, roy, gs)
+    if not self.draw_count[draw_fn_name] then
+        self.draw_count[draw_fn_name] = interval
+    end
+
+    local count = self.draw_count[draw_fn_name]
+
+    if count >= interval then
+        self[draw_fn_name](self, rox, roy, gs)
+
+        count = 0
+    else
+        count = count + 1
+    end
+
+    self.draw_count[draw_fn_name] = count
+end
+
 function game:draw_game()
+    local d = self.store
+
+    if not self.draw_count then
+        self.draw_count = {}
+    end
+
     local frame_draw_params = RU.frame_draw_params
     local draw_frames_range = RU.draw_frames_range
     local gs = self.game_scale
@@ -1439,7 +1527,7 @@ function game:draw_game()
         rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
     end
 
-    if self.store.world_offset then
+    if d.world_offset then
         rox, roy = rox + self.store.world_offset.x, roy + self.store.world_offset.y
     end
 
@@ -1447,7 +1535,11 @@ function game:draw_game()
 
     self:draw_path(rox, roy, gs)
 
-    self:draw_dark_foreground(rox, roy, gs)
+    if d.night_mode then
+        self:draw_dark_foreground(rox, roy, gs)
+    end
+
+    self:draw_speed_state(rox, roy, gs)
 
     local last_idx
 
@@ -1463,7 +1555,7 @@ function game:draw_game()
     G.translate(rox, roy)
     G.scale(gs, gs)
 
-    last_idx = draw_frames_range(self.store.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
+    last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
 
     G.pop()
 
@@ -1473,15 +1565,19 @@ function game:draw_game()
         G.setColor(255, 255, 255, 255)
     end
 
-    if self.store.night_mode then
+    if d.night_mode then
         G.draw(self.dark_canvas)
+    end
+
+    if d.speed_factor ~= 1 then
+        G.draw(self.speed_state)
     end
 
     G.push()
     G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
     G.scale(self.game_scale, self.game_scale)
 
-    last_idx = draw_frames_range(self.store.render_frames, last_idx + 1, Z_GUI - 1)
+    last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
 
     G.pop()
     self.game_gui.window:draw_child(self.game_gui.layer_gui)
