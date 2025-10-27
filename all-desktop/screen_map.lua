@@ -39,7 +39,7 @@ screen_map.required_sounds = {"common", "music_screen_map"}
 screen_map.required_textures = {"upgrades", "screen_map_backgrond", "achievements", "select_difficulty", "level_select",
                                 "screen_map_flags", "ballon", "stars_container", "hero_room", "screen_map_buttons",
                                 "screen_map_animations", "kr2_screen_map_animations", "kr3_screen_map_animations",
-                                "view_options", "achievements", "encyclopedia", "encyclopedia_creeps"}
+                                "view_options", "achievements", "encyclopedia", "encyclopedia_creeps", "gui_ico"}
 
 screen_map.ref_w = 1920
 screen_map.ref_h = 1080
@@ -4138,15 +4138,18 @@ function EncyclopediaView:detail_tower(index)
         if v == "health" then
             label.text = di.hp_max
         elseif v == "armor" then
-            label.text = GU.armor_value_desc(di.armor)
+            -- label.text = GU.armor_value_desc(di.armor)
+            label.text = U.safe_int_string(di.armor and di.armor * 100 or 0)
         elseif v == "dmg" or v == "mdmg" then
             label.text = di.damage_min .. "-" .. di.damage_max
         elseif v == "respawn" then
             label.text = string.format(_("%i sec."), di.respawn)
         elseif v == "reload" then
-            label.text = GU.cooldown_value_desc(di.cooldown)
+            -- label.text = GU.cooldown_value_desc(di.cooldown)
+            label.text = U.safe_float_string(di.cooldown)
         elseif v == "range" then
-            label.text = GU.range_value_desc(di.range)
+            -- label.text = GU.range_value_desc(di.range)
+            label.text = U.safe_int_string(di.range)
         end
 
         label.fit_lines = 2
@@ -4321,24 +4324,36 @@ function EncyclopediaView:detail_tower_second(index)
             power_button.anchor = v(power_button.size.x / 2, power_button.size.y / 2)
             if i == 1 then
                 self:show_skill_detail(prefix, power.name or k, power)
+                power_button._selected = true
             else
                 -- power_button:disable()
                 power_button:apply_disabled_tint()
+                power_button._selected = false
             end
 
             function power_button.on_click()
                 S:queue("GUIButtonCommon")
                 power_button:remove_disabled_tint()
+                power_button._selected = true
                 self:show_skill_detail(prefix, power.name or k, power)
                 for _, btn in pairs(self.right_panel.power_buttons) do
                     if btn ~= power_button then
                         btn:apply_disabled_tint()
+                        btn._selected = false
                     end
                 end
             end
 
             function power_button.on_enter()
-                power_button:remove_disabled_tint()
+                if not power_button._selected then
+                    power_button:remove_disabled_tint()
+                end
+            end
+
+            function power_button.on_exit()
+                if not power_button._selected then
+                    power_button:apply_disabled_tint()
+                end
             end
 
             table.insert(self.right_panel.power_buttons, power_button)
@@ -4398,7 +4413,7 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power)
 
         -- 技能描述
         local desc_label = GGLabel:new(V.v(400, 140))
-        desc_label.text = _(prefix.. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i))
+        desc_label.text = U.balance_format(_(prefix.. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
         desc_label.font_size = 16
         desc_label.font_name = "body"
         desc_label.pos = v(50, 65 + offset_y)
@@ -4687,9 +4702,12 @@ function EncyclopediaView:detail_creep(index)
     local mx = 205
     local my = 380
     local ci = ce.info.fn(ce)
-    local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), GU.armor_value_desc(ci.armor),
-                         GU.armor_value_desc(ci.magic_armor), GU.speed_value_desc(ce.motion.max_speed),
-                         (GU.lives_desc(ci.lives))}
+    -- local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), GU.armor_value_desc(ci.armor),
+    --                      GU.armor_value_desc(ci.magic_armor), GU.speed_value_desc(ce.motion.max_speed),
+    --                      (GU.lives_desc(ci.lives))}
+    local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), string.format("%i", ci.armor * 100),
+                     string.format("%i", ci.magic_armor * 100), string.format("%i", ce.motion.max_speed),
+                     (GU.lives_desc(ci.lives))}
 
     for i = 1, 6 do
         local desc_label = GGLabel:new(V.v(90, 50))

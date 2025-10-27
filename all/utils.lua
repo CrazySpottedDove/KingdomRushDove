@@ -2632,4 +2632,11 @@ function U.remove_tower_upgrade_function(entity, func_key)
     entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = nil
 end
 
+function U.safe_int_string(value)
+    return value and string.format("%i", value) or "-"
+end
+
+function U.safe_float_string(value)
+    return value and string.format("%.2f", value) or "-"
+end
 return U

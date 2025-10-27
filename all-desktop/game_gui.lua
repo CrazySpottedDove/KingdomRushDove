@@ -7464,9 +7464,9 @@ function TowerMenuTooltip:show(entity, item)
         self.title.text = texts.tt_title
         self.desc.text = U.balance_format(texts.tt_desc)
 
-        if power.level == power.max_level then
+        -- if power.level == power.max_level then
             -- self.hidden = true
-        end
+        -- end
     elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or
         item.action == "tw_free_action" then
         if item.tt_title then

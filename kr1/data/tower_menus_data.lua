@@ -2280,7 +2280,6 @@ return {
             tt_desc = _("TOWER_ROYAL_ARCHERS_4_RAPACIOUS_HUNTER_3_DESCRIPTION")
         }}
     }), templates.sell}},
-
     arcane_wizard_five = {{merge(templates.upgrade_power, {
         action_arg = "disintegrate",
         image = "kr5_special_icons_0005",
