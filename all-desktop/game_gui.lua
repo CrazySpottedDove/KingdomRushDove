@@ -5854,7 +5854,7 @@ end
 AchievementBanner = class("AchievementBanner", KImageView)
 
 function AchievementBanner:initialize(id)
-    AchievementBanner.super.initialize(self, "Achievements_Box_Large")
+    AchievementBanner.super.initialize(self, "Achievements_Box_Big")
 
     local header = GGLabel:new(V.v(78, 13))
 
