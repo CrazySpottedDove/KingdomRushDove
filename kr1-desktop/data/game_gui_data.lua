@@ -789,7 +789,7 @@ return {
 			prefix = "TOWER_ARCANE",
 			always = true,
 			sub = "TOWER_ARCHERS_SUBTITLE",
-			image = "encyclopedia_towers_0317",
+			image = "kr3_encyclopedia_towers_0005",
 			layout = N_TOWER,
 			seen = {
 				"tower_arcane"
@@ -799,7 +799,7 @@ return {
 			prefix = "TOWER_BARRACKS_BLADE",
 			always = true,
 			sub = "TOWER_BARRACKS_SUBTITLE",
-			image = "encyclopedia_towers_0320",
+			image = "kr3_encyclopedia_towers_0008",
 			layout = N_TOWER,
 			seen = {
 				"tower_blade"
@@ -809,7 +809,7 @@ return {
 			prefix = "TOWER_MAGE_WILD_MAGUS",
 			always = true,
 			sub = "TOWER_MAGES_SUBTITLE",
-			image = "encyclopedia_towers_0316",
+			image = "kr3_encyclopedia_towers_0004",
 			layout = N_TOWER,
 			seen = {
 				"tower_wild_magus"
@@ -819,7 +819,7 @@ return {
 			prefix = "TOWER_STONE_DRUID",
 			always = true,
 			sub = "TOWER_ROCK_THROWER_SUBTITLE",
-			image = "encyclopedia_towers_0313",
+			image = "kr3_encyclopedia_towers_0001",
 			layout = N_TOWER,
 			seen = {
 				"tower_druid"
@@ -829,7 +829,7 @@ return {
 			prefix = "TOWER_MAGE_HIGH_ELVEN",
 			always = true,
 			sub = "TOWER_MAGES_SUBTITLE",
-			image = "encyclopedia_towers_0315",
+			image = "kr3_encyclopedia_towers_0003",
 			layout = N_TOWER,
 			seen = {
 				"tower_high_elven"
@@ -839,7 +839,7 @@ return {
 			prefix = "TOWER_ENTWOOD",
 			always = true,
 			sub = "TOWER_ROCK_THROWER_SUBTITLE",
-			image = "encyclopedia_towers_0314",
+			image = "kr3_encyclopedia_towers_0002",
 			layout = N_TOWER,
 			seen = {
 				"tower_entwood"
@@ -849,8 +849,8 @@ return {
 			always = true,
 			layout = N_TOWER_2,
 			images = {
-				"encyclopedia_towers_0318",
-				"encyclopedia_towers_0319"
+				"kr3_encyclopedia_towers_0006",
+				"kr3_encyclopedia_towers_0007"
 			},
 			prefixes = {
 				"TOWER_SILVER",
@@ -869,7 +869,7 @@ return {
 			prefix = "TOWER_DWAARP",
 			always = true,
 			sub = "TOWER_ENGINEERS_SUBTITLE",
-			image = "encyclopedia_towers_0216",
+			image = "kr2_encyclopedia_towers_0004",
 			layout = N_TOWER,
 			seen = {
 				"tower_dwaarp"
@@ -879,7 +879,7 @@ return {
 			prefix = "TOWER_ARCHMAGE",
 			always = true,
 			sub = "TOWER_MAGES_SUBTITLE",
-			image = "encyclopedia_towers_0215",
+			image = "kr2_encyclopedia_towers_0003",
 			layout = N_TOWER,
 			seen = {
 				"tower_archmage"
@@ -889,7 +889,7 @@ return {
 			prefix = "TOWER_TEMPLAR",
 			always = true,
 			sub = "TOWER_BARRACKS_SUBTITLE",
-			image = "encyclopedia_towers_0218",
+			image = "kr2_encyclopedia_towers_0006",
 			layout = N_TOWER,
 			seen = {
 				"tower_templar"
@@ -899,7 +899,7 @@ return {
 			prefix = "TOWER_TOTEM",
 			always = true,
 			sub = "TOWER_ARCHERS_SUBTITLE",
-			image = "encyclopedia_towers_0217",
+			image = "kr2_encyclopedia_towers_0005",
 			layout = N_TOWER,
 			seen = {
 				"tower_totem"
@@ -909,7 +909,7 @@ return {
 			prefix = "TOWER_NECROMANCER",
 			always = true,
 			sub = "TOWER_MAGES_SUBTITLE",
-			image = "encyclopedia_towers_0219",
+			image = "kr2_encyclopedia_towers_0007",
 			layout = N_TOWER,
 			seen = {
 				"tower_necromancer"
@@ -919,7 +919,7 @@ return {
 			prefix = "TOWER_MECH",
 			always = true,
 			sub = "TOWER_ENGINEERS_SUBTITLE",
-			image = "encyclopedia_towers_0220",
+			image = "kr2_encyclopedia_towers_0008",
 			layout = N_TOWER,
 			seen = {
 				"tower_mech"
@@ -929,8 +929,8 @@ return {
 			always = true,
 			layout = N_TOWER_2,
 			images = {
-				"encyclopedia_towers_0214",
-				"encyclopedia_towers_0213"
+				"kr2_encyclopedia_towers_0002",
+				"kr2_encyclopedia_towers_0001"
 			},
 			prefixes = {
 				"TOWER_ASSASSIN",
