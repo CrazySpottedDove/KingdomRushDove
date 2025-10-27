@@ -1061,7 +1061,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 
                                 U.replace_blocker(store, s, ns)
                             end
-
+                            ns.soldier.tower_soldier_idx = i
                             ne.barrack.soldiers[i] = ns
 
                             queue_insert(store, ns)
