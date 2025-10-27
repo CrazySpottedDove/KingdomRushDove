@@ -1207,7 +1207,7 @@ return {
             tt_desc = _("SPECIAL_SUNRAY_UPGRADE_DESCRIPTION_1")
         }}
     }), merge(templates.upgrade_power, {
-        image = "main_icons_0019",
+        image = "main_icons_0018",
         action_arg = "manual",
         place = 6,
         sounds = {"MageSorcererAshesToAshesTaunt"},
@@ -1217,7 +1217,7 @@ return {
             tt_desc = _("TOWER_SUNRAY_MANUAL_DESCRIPTION")
         }}
     }), merge(templates.upgrade_power, {
-        image = "main_icons_0020",
+        image = "main_icons_0018",
         action_arg = "auto",
         place = 7,
         sounds = {"MageSorcererAshesToAshesTaunt"},
