@@ -12,16 +12,16 @@ return {
             2
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			673,
-			1021,
+			1017,
 			88,
 			80
 		},
-		alias = {}
+		alias = {},
 	},
 	["glow_ico_sell"] = {
 		a_name = "gui_ico-1.png",
@@ -36,8 +36,8 @@ return {
             2
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			437,
@@ -45,7 +45,7 @@ return {
 			63,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["glow_ico_special"] = {
 		a_name = "gui_ico-1.png",
@@ -60,16 +60,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			763,
-			1021,
+			1017,
 			90,
 			86
 		},
-		alias = {}
+		alias = {},
 	},
 	["glow_ico_sub"] = {
 		a_name = "gui_ico-1.png",
@@ -84,16 +84,16 @@ return {
             1
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			340,
-			481,
+			409,
+			477,
 			76,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["ico_sell_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -108,8 +108,8 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			1,
@@ -117,7 +117,7 @@ return {
 			56,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -132,8 +132,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			502,
@@ -141,7 +141,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -156,8 +156,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			563,
@@ -165,7 +165,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0003"] = {
 		a_name = "gui_ico-1.png",
@@ -180,8 +180,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			624,
@@ -189,7 +189,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0004"] = {
 		a_name = "gui_ico-1.png",
@@ -204,8 +204,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			685,
@@ -213,7 +213,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0005"] = {
 		a_name = "gui_ico-1.png",
@@ -228,8 +228,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			746,
@@ -237,7 +237,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0006"] = {
 		a_name = "gui_ico-1.png",
@@ -252,8 +252,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			807,
@@ -261,7 +261,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0007"] = {
 		a_name = "gui_ico-1.png",
@@ -276,8 +276,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			868,
@@ -285,7 +285,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0008"] = {
 		a_name = "gui_ico-1.png",
@@ -300,8 +300,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			929,
@@ -309,7 +309,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0009"] = {
 		a_name = "gui_ico-1.png",
@@ -324,8 +324,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			1,
@@ -333,7 +333,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0010"] = {
 		a_name = "gui_ico-1.png",
@@ -348,8 +348,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			62,
@@ -357,7 +357,7 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0011"] = {
 		a_name = "gui_ico-1.png",
@@ -372,8 +372,8 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			123,
@@ -381,79 +381,79 @@ return {
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0012"] = {
 		a_name = "gui_ico-1.png",
 		size = {
 			82,
-			76
+			74
 		},
 		trim = {
-			0,
-            0,
-            0,
-            1
+			10,
+            8,
+            11,
+            9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			505,
-			709,
-			82,
-			75
+			184,
+			60,
+			61,
+			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0013"] = {
 		a_name = "gui_ico-1.png",
 		size = {
 			82,
-			76
+			74
 		},
 		trim = {
-			0,
-            0,
-            0,
-            1
+			10,
+            8,
+            11,
+            9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			589,
-			709,
-			82,
-			75
+			247,
+			60,
+			61,
+			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_main_icons_0014"] = {
 		a_name = "gui_ico-1.png",
 		size = {
 			82,
-			76
+			74
 		},
 		trim = {
-			0,
-            0,
-            0,
-            1
+			10,
+            8,
+            11,
+            9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			673,
-			709,
-			82,
-			75
+			310,
+			60,
+			61,
+			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -468,16 +468,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			241,
+			301,
 			415,
 			59,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -492,16 +492,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			302,
+			362,
 			415,
 			59,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0003"] = {
 		a_name = "gui_ico-1.png",
@@ -516,16 +516,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			241,
+			301,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0004"] = {
 		a_name = "gui_ico-1.png",
@@ -540,16 +540,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			301,
+			361,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0005"] = {
 		a_name = "gui_ico-1.png",
@@ -564,16 +564,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			361,
+			421,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0006"] = {
 		a_name = "gui_ico-1.png",
@@ -588,16 +588,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			421,
+			481,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0007"] = {
 		a_name = "gui_ico-1.png",
@@ -612,16 +612,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			481,
+			541,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0008"] = {
 		a_name = "gui_ico-1.png",
@@ -636,16 +636,16 @@ return {
             4
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			910,
-			415,
+			1,
+			477,
 			67,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0009"] = {
 		a_name = "gui_ico-1.png",
@@ -660,16 +660,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			541,
+			601,
 			355,
 			60,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0010"] = {
 		a_name = "gui_ico-1.png",
@@ -684,16 +684,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			363,
+			423,
 			415,
 			59,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0011"] = {
 		a_name = "gui_ico-1.png",
@@ -708,16 +708,16 @@ return {
             7
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			788,
+			848,
 			415,
 			58,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0012"] = {
 		a_name = "gui_ico-1.png",
@@ -732,16 +732,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			424,
+			484,
 			415,
 			58,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0013"] = {
 		a_name = "gui_ico-1.png",
@@ -756,16 +756,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			603,
+			663,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0014"] = {
 		a_name = "gui_ico-1.png",
@@ -780,16 +780,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			663,
+			723,
 			355,
 			59,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0015"] = {
 		a_name = "gui_ico-1.png",
@@ -804,16 +804,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			724,
+			784,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0016"] = {
 		a_name = "gui_ico-1.png",
@@ -828,16 +828,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			784,
+			844,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0017"] = {
 		a_name = "gui_ico-1.png",
@@ -852,16 +852,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			484,
+			544,
 			415,
 			62,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0018"] = {
 		a_name = "gui_ico-1.png",
@@ -876,16 +876,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			844,
+			904,
 			355,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0019"] = {
 		a_name = "gui_ico-1.png",
@@ -900,16 +900,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			184,
+			373,
 			60,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0020"] = {
 		a_name = "gui_ico-1.png",
@@ -924,16 +924,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			904,
-			355,
+			1,
+			415,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0021"] = {
 		a_name = "gui_ico-1.png",
@@ -948,16 +948,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
+			61,
 			415,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0022"] = {
 		a_name = "gui_ico-1.png",
@@ -972,16 +972,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			61,
+			121,
 			415,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0023"] = {
 		a_name = "gui_ico-1.png",
@@ -996,16 +996,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			121,
+			181,
 			415,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0024"] = {
 		a_name = "gui_ico-1.png",
@@ -1020,16 +1020,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			548,
+			608,
 			415,
 			58,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0025"] = {
 		a_name = "gui_ico-1.png",
@@ -1044,16 +1044,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			608,
+			668,
 			415,
 			58,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0026"] = {
 		a_name = "gui_ico-1.png",
@@ -1068,16 +1068,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			668,
+			728,
 			415,
 			58,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0027"] = {
 		a_name = "gui_ico-1.png",
@@ -1092,16 +1092,16 @@ return {
             8
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			728,
+			788,
 			415,
 			58,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_special_icons_0028"] = {
 		a_name = "gui_ico-1.png",
@@ -1116,16 +1116,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			181,
+			241,
 			415,
 			58,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -1140,16 +1140,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			244,
+			433,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -1164,16 +1164,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			305,
+			494,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0003"] = {
 		a_name = "gui_ico-1.png",
@@ -1188,16 +1188,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			366,
+			555,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0004"] = {
 		a_name = "gui_ico-1.png",
@@ -1212,16 +1212,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			427,
+			616,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0006"] = {
 		a_name = "gui_ico-1.png",
@@ -1236,16 +1236,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			488,
+			677,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0007"] = {
 		a_name = "gui_ico-1.png",
@@ -1260,16 +1260,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			549,
+			738,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0008"] = {
 		a_name = "gui_ico-1.png",
@@ -1284,16 +1284,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			610,
+			799,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0009"] = {
 		a_name = "gui_ico-1.png",
@@ -1308,16 +1308,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			671,
+			860,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0010"] = {
 		a_name = "gui_ico-1.png",
@@ -1332,16 +1332,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			732,
+			921,
 			60,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0011"] = {
 		a_name = "gui_ico-1.png",
@@ -1356,16 +1356,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			793,
-			60,
+			1,
+			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0012"] = {
 		a_name = "gui_ico-1.png",
@@ -1380,16 +1380,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			854,
-			60,
+			62,
+			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0013"] = {
 		a_name = "gui_ico-1.png",
@@ -1404,16 +1404,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			915,
-			60,
+			123,
+			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0016"] = {
 		a_name = "gui_ico-1.png",
@@ -1428,16 +1428,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
+			184,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0017"] = {
 		a_name = "gui_ico-1.png",
@@ -1452,16 +1452,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			62,
+			245,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0018"] = {
 		a_name = "gui_ico-1.png",
@@ -1476,16 +1476,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			123,
+			306,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0030"] = {
 		a_name = "gui_ico-1.png",
@@ -1500,16 +1500,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			184,
+			367,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0031"] = {
 		a_name = "gui_ico-1.png",
@@ -1524,16 +1524,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			245,
+			428,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0032"] = {
 		a_name = "gui_ico-1.png",
@@ -1548,16 +1548,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			306,
+			489,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0033"] = {
 		a_name = "gui_ico-1.png",
@@ -1572,16 +1572,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			367,
+			550,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0034"] = {
 		a_name = "gui_ico-1.png",
@@ -1596,16 +1596,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			428,
+			611,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0035"] = {
 		a_name = "gui_ico-1.png",
@@ -1620,16 +1620,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			489,
+			672,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0036"] = {
 		a_name = "gui_ico-1.png",
@@ -1644,16 +1644,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			550,
+			733,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0037"] = {
 		a_name = "gui_ico-1.png",
@@ -1668,16 +1668,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			611,
+			794,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0038"] = {
 		a_name = "gui_ico-1.png",
@@ -1692,16 +1692,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			672,
+			855,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0039"] = {
 		a_name = "gui_ico-1.png",
@@ -1716,16 +1716,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			733,
+			916,
 			119,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0040"] = {
 		a_name = "gui_ico-1.png",
@@ -1740,16 +1740,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			794,
-			119,
+			1,
+			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0041"] = {
 		a_name = "gui_ico-1.png",
@@ -1764,16 +1764,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			855,
-			119,
+			62,
+			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0042"] = {
 		a_name = "gui_ico-1.png",
@@ -1788,16 +1788,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			916,
-			119,
+			123,
+			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0043"] = {
 		a_name = "gui_ico-1.png",
@@ -1812,16 +1812,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
+			184,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0044"] = {
 		a_name = "gui_ico-1.png",
@@ -1836,16 +1836,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			62,
+			245,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0045"] = {
 		a_name = "gui_ico-1.png",
@@ -1860,16 +1860,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			123,
+			306,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0046"] = {
 		a_name = "gui_ico-1.png",
@@ -1884,16 +1884,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			184,
+			367,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0047"] = {
 		a_name = "gui_ico-1.png",
@@ -1908,16 +1908,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			245,
+			428,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0048"] = {
 		a_name = "gui_ico-1.png",
@@ -1932,16 +1932,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			306,
+			489,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0049"] = {
 		a_name = "gui_ico-1.png",
@@ -1956,16 +1956,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			367,
+			550,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0050"] = {
 		a_name = "gui_ico-1.png",
@@ -1980,16 +1980,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			428,
+			611,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_main_icons_0105"] = {
 		a_name = "gui_ico-1.png",
@@ -2004,16 +2004,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			489,
+			672,
 			178,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -2028,8 +2028,8 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			59,
@@ -2037,7 +2037,7 @@ return {
 			52,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0001_hover"] = {
 		a_name = "gui_ico-1.png",
@@ -2052,16 +2052,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
-			481,
+			70,
+			477,
 			64,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -2076,8 +2076,8 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			113,
@@ -2085,7 +2085,7 @@ return {
 			52,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0004"] = {
 		a_name = "gui_ico-1.png",
@@ -2100,8 +2100,8 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			167,
@@ -2109,7 +2109,7 @@ return {
 			52,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0005"] = {
 		a_name = "gui_ico-1.png",
@@ -2124,8 +2124,8 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			221,
@@ -2133,7 +2133,7 @@ return {
 			52,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0006"] = {
 		a_name = "gui_ico-1.png",
@@ -2148,8 +2148,8 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			275,
@@ -2157,7 +2157,7 @@ return {
 			52,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0007"] = {
 		a_name = "gui_ico-1.png",
@@ -2172,8 +2172,8 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			329,
@@ -2181,7 +2181,7 @@ return {
 			52,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0008"] = {
 		a_name = "gui_ico-1.png",
@@ -2196,8 +2196,8 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			383,
@@ -2205,7 +2205,7 @@ return {
 			52,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_quickmenu_retreat_icons_tower_panda"] = {
 		a_name = "gui_ico-1.png",
@@ -2220,16 +2220,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			848,
+			908,
 			415,
 			60,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -2244,16 +2244,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			550,
+			733,
 			178,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -2268,16 +2268,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			610,
+			793,
 			178,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0003"] = {
 		a_name = "gui_ico-1.png",
@@ -2292,16 +2292,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			670,
+			853,
 			178,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0004"] = {
 		a_name = "gui_ico-1.png",
@@ -2316,16 +2316,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			730,
+			913,
 			178,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0005"] = {
 		a_name = "gui_ico-1.png",
@@ -2340,16 +2340,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			790,
-			178,
+			1,
+			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0006"] = {
 		a_name = "gui_ico-1.png",
@@ -2364,16 +2364,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			850,
-			178,
+			61,
+			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0007"] = {
 		a_name = "gui_ico-1.png",
@@ -2388,16 +2388,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			910,
-			178,
+			121,
+			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0008"] = {
 		a_name = "gui_ico-1.png",
@@ -2412,16 +2412,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
+			181,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0009"] = {
 		a_name = "gui_ico-1.png",
@@ -2436,16 +2436,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			61,
+			241,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0010"] = {
 		a_name = "gui_ico-1.png",
@@ -2460,16 +2460,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			121,
+			301,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0011"] = {
 		a_name = "gui_ico-1.png",
@@ -2484,16 +2484,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			181,
+			361,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0012"] = {
 		a_name = "gui_ico-1.png",
@@ -2508,16 +2508,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			241,
+			421,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0013"] = {
 		a_name = "gui_ico-1.png",
@@ -2532,16 +2532,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			301,
+			481,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0014"] = {
 		a_name = "gui_ico-1.png",
@@ -2556,16 +2556,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			361,
+			541,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0015"] = {
 		a_name = "gui_ico-1.png",
@@ -2580,16 +2580,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			421,
+			601,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0016"] = {
 		a_name = "gui_ico-1.png",
@@ -2604,16 +2604,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			481,
+			661,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0017"] = {
 		a_name = "gui_ico-1.png",
@@ -2628,16 +2628,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			541,
+			721,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0018"] = {
 		a_name = "gui_ico-1.png",
@@ -2652,16 +2652,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			601,
+			781,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0019"] = {
 		a_name = "gui_ico-1.png",
@@ -2676,16 +2676,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			661,
+			841,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0021"] = {
 		a_name = "gui_ico-1.png",
@@ -2700,16 +2700,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			721,
+			901,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0022"] = {
 		a_name = "gui_ico-1.png",
@@ -2724,16 +2724,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			781,
+			961,
 			237,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0023"] = {
 		a_name = "gui_ico-1.png",
@@ -2748,16 +2748,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			841,
-			237,
+			1,
+			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0024"] = {
 		a_name = "gui_ico-1.png",
@@ -2772,16 +2772,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			901,
-			237,
+			61,
+			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0025"] = {
 		a_name = "gui_ico-1.png",
@@ -2796,16 +2796,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
+			121,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0026"] = {
 		a_name = "gui_ico-1.png",
@@ -2820,16 +2820,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			61,
+			181,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0027"] = {
 		a_name = "gui_ico-1.png",
@@ -2844,16 +2844,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			121,
+			241,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0028"] = {
 		a_name = "gui_ico-1.png",
@@ -2868,16 +2868,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			181,
+			301,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0029"] = {
 		a_name = "gui_ico-1.png",
@@ -2892,16 +2892,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			241,
+			361,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0030"] = {
 		a_name = "gui_ico-1.png",
@@ -2916,16 +2916,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			301,
+			421,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0031"] = {
 		a_name = "gui_ico-1.png",
@@ -2940,16 +2940,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			361,
+			481,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0032"] = {
 		a_name = "gui_ico-1.png",
@@ -2964,16 +2964,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			421,
+			541,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0033"] = {
 		a_name = "gui_ico-1.png",
@@ -2988,16 +2988,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			481,
+			601,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0034"] = {
 		a_name = "gui_ico-1.png",
@@ -3012,16 +3012,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			541,
+			661,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0035"] = {
 		a_name = "gui_ico-1.png",
@@ -3036,16 +3036,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			601,
+			721,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0036"] = {
 		a_name = "gui_ico-1.png",
@@ -3060,16 +3060,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			661,
+			781,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0037"] = {
 		a_name = "gui_ico-1.png",
@@ -3084,16 +3084,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			721,
+			841,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0038"] = {
 		a_name = "gui_ico-1.png",
@@ -3108,16 +3108,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			781,
+			901,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0039"] = {
 		a_name = "gui_ico-1.png",
@@ -3132,16 +3132,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			841,
+			961,
 			296,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0040"] = {
 		a_name = "gui_ico-1.png",
@@ -3156,16 +3156,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			901,
-			296,
+			1,
+			355,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0041"] = {
 		a_name = "gui_ico-1.png",
@@ -3180,16 +3180,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
+			61,
 			355,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr5_special_icons_0042"] = {
 		a_name = "gui_ico-1.png",
@@ -3204,16 +3204,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			61,
+			121,
 			355,
 			57,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0000"] = {
 		a_name = "gui_ico-1.png",
@@ -3228,16 +3228,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			418,
-			481,
+			487,
+			477,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -3252,16 +3252,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			502,
-			481,
+			571,
+			477,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -3276,16 +3276,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			586,
-			481,
+			655,
+			477,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0003"] = {
 		a_name = "gui_ico-1.png",
@@ -3300,16 +3300,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			670,
-			481,
+			739,
+			477,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0004"] = {
 		a_name = "gui_ico-1.png",
@@ -3324,16 +3324,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			754,
-			481,
+			823,
+			477,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0005"] = {
 		a_name = "gui_ico-1.png",
@@ -3348,16 +3348,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			838,
-			481,
+			907,
+			477,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0006"] = {
 		a_name = "gui_ico-1.png",
@@ -3372,16 +3372,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			922,
-			481,
+			1,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0007"] = {
 		a_name = "gui_ico-1.png",
@@ -3396,16 +3396,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
-			557,
+			85,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0008"] = {
 		a_name = "gui_ico-1.png",
@@ -3420,16 +3420,16 @@ return {
             9
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			120,
+			180,
 			355,
 			59,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0009"] = {
 		a_name = "gui_ico-1.png",
@@ -3444,16 +3444,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			85,
-			557,
+			169,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0010"] = {
 		a_name = "gui_ico-1.png",
@@ -3468,16 +3468,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			169,
-			557,
+			253,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0011"] = {
 		a_name = "gui_ico-1.png",
@@ -3492,16 +3492,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			253,
-			557,
+			337,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0012"] = {
 		a_name = "gui_ico-1.png",
@@ -3516,16 +3516,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			337,
-			557,
+			421,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0013"] = {
 		a_name = "gui_ico-1.png",
@@ -3540,16 +3540,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			421,
-			557,
+			505,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0014"] = {
 		a_name = "gui_ico-1.png",
@@ -3564,16 +3564,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			505,
-			557,
+			589,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0015"] = {
 		a_name = "gui_ico-1.png",
@@ -3588,16 +3588,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			589,
-			557,
+			673,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0016"] = {
 		a_name = "gui_ico-1.png",
@@ -3612,16 +3612,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			673,
-			557,
+			757,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0017"] = {
 		a_name = "gui_ico-1.png",
@@ -3636,16 +3636,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			757,
-			557,
+			841,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0018"] = {
 		a_name = "gui_ico-1.png",
@@ -3660,16 +3660,64 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			841,
-			557,
+			925,
+			553,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
+	},
+	["main_icons_0019"] = {
+		a_name = "gui_ico-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1020,
+			1104
+		},
+		f_quad = {
+			1,
+			629,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0020"] = {
+		a_name = "gui_ico-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1020,
+			1104
+		},
+		f_quad = {
+			85,
+			629,
+			82,
+			74
+		},
+		alias = {},
 	},
 	["main_icons_0021"] = {
 		a_name = "gui_ico-1.png",
@@ -3684,16 +3732,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			925,
-			557,
+			169,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0022"] = {
 		a_name = "gui_ico-1.png",
@@ -3708,16 +3756,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
-			633,
+			253,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0023"] = {
 		a_name = "gui_ico-1.png",
@@ -3732,16 +3780,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			85,
-			633,
+			337,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0024"] = {
 		a_name = "gui_ico-1.png",
@@ -3756,16 +3804,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			169,
-			633,
+			421,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0025"] = {
 		a_name = "gui_ico-1.png",
@@ -3780,16 +3828,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			253,
-			633,
+			505,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0026"] = {
 		a_name = "gui_ico-1.png",
@@ -3804,16 +3852,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			337,
-			633,
+			589,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0027"] = {
 		a_name = "gui_ico-1.png",
@@ -3828,16 +3876,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			421,
-			633,
+			673,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0028"] = {
 		a_name = "gui_ico-1.png",
@@ -3852,16 +3900,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			505,
-			633,
+			757,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0029"] = {
 		a_name = "gui_ico-1.png",
@@ -3876,16 +3924,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			589,
-			633,
+			841,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0030"] = {
 		a_name = "gui_ico-1.png",
@@ -3900,16 +3948,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			673,
-			633,
+			925,
+			629,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0031"] = {
 		a_name = "gui_ico-1.png",
@@ -3924,16 +3972,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			757,
-			633,
+			1,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0032"] = {
 		a_name = "gui_ico-1.png",
@@ -3948,16 +3996,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			841,
-			633,
+			85,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0033"] = {
 		a_name = "gui_ico-1.png",
@@ -3972,16 +4020,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			925,
-			633,
+			169,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0034"] = {
 		a_name = "gui_ico-1.png",
@@ -3996,16 +4044,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			1,
-			709,
+			253,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0035"] = {
 		a_name = "gui_ico-1.png",
@@ -4020,16 +4068,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			85,
-			709,
+			337,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0036"] = {
 		a_name = "gui_ico-1.png",
@@ -4044,16 +4092,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			169,
-			709,
+			421,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0037"] = {
 		a_name = "gui_ico-1.png",
@@ -4068,16 +4116,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			253,
-			709,
+			505,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0038"] = {
 		a_name = "gui_ico-1.png",
@@ -4092,16 +4140,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			337,
-			709,
+			589,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["main_icons_0039"] = {
 		a_name = "gui_ico-1.png",
@@ -4116,16 +4164,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			421,
-			709,
+			673,
+			705,
 			82,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0000"] = {
 		a_name = "gui_ico-1.png",
@@ -4140,16 +4188,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			757,
-			709,
+			705,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -4164,16 +4212,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			841,
-			709,
+			705,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -4188,16 +4236,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			925,
-			709,
+			705,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0003"] = {
 		a_name = "gui_ico-1.png",
@@ -4212,16 +4260,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			1,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0004"] = {
 		a_name = "gui_ico-1.png",
@@ -4236,16 +4284,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			85,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0005"] = {
 		a_name = "gui_ico-1.png",
@@ -4260,16 +4308,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			169,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0006"] = {
 		a_name = "gui_ico-1.png",
@@ -4284,16 +4332,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			253,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0007"] = {
 		a_name = "gui_ico-1.png",
@@ -4308,16 +4356,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			337,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0008"] = {
 		a_name = "gui_ico-1.png",
@@ -4332,16 +4380,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			421,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0009"] = {
 		a_name = "gui_ico-1.png",
@@ -4356,16 +4404,16 @@ return {
             10
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			181,
+			241,
 			355,
 			58,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0010"] = {
 		a_name = "gui_ico-1.png",
@@ -4380,16 +4428,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			505,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0011"] = {
 		a_name = "gui_ico-1.png",
@@ -4404,16 +4452,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			589,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0012"] = {
 		a_name = "gui_ico-1.png",
@@ -4428,16 +4476,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			673,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0013"] = {
 		a_name = "gui_ico-1.png",
@@ -4452,16 +4500,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			757,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0014"] = {
 		a_name = "gui_ico-1.png",
@@ -4476,16 +4524,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			841,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0015"] = {
 		a_name = "gui_ico-1.png",
@@ -4500,16 +4548,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			925,
-			787,
+			783,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0016"] = {
 		a_name = "gui_ico-1.png",
@@ -4524,16 +4572,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			1,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0017"] = {
 		a_name = "gui_ico-1.png",
@@ -4548,16 +4596,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			85,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0018"] = {
 		a_name = "gui_ico-1.png",
@@ -4572,16 +4620,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			169,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0019"] = {
 		a_name = "gui_ico-1.png",
@@ -4596,16 +4644,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			253,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0022"] = {
 		a_name = "gui_ico-1.png",
@@ -4620,16 +4668,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			337,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0023"] = {
 		a_name = "gui_ico-1.png",
@@ -4644,16 +4692,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			421,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0024"] = {
 		a_name = "gui_ico-1.png",
@@ -4668,16 +4716,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			505,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0025"] = {
 		a_name = "gui_ico-1.png",
@@ -4692,16 +4740,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			589,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0026"] = {
 		a_name = "gui_ico-1.png",
@@ -4716,16 +4764,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			673,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0027"] = {
 		a_name = "gui_ico-1.png",
@@ -4740,16 +4788,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			757,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0028"] = {
 		a_name = "gui_ico-1.png",
@@ -4764,16 +4812,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			841,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0029"] = {
 		a_name = "gui_ico-1.png",
@@ -4788,16 +4836,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			925,
-			865,
+			861,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0030"] = {
 		a_name = "gui_ico-1.png",
@@ -4812,16 +4860,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			1,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0031"] = {
 		a_name = "gui_ico-1.png",
@@ -4836,16 +4884,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			85,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0032"] = {
 		a_name = "gui_ico-1.png",
@@ -4860,16 +4908,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			169,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0033"] = {
 		a_name = "gui_ico-1.png",
@@ -4884,16 +4932,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			253,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0034"] = {
 		a_name = "gui_ico-1.png",
@@ -4908,16 +4956,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			337,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0035"] = {
 		a_name = "gui_ico-1.png",
@@ -4932,16 +4980,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			421,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0036"] = {
 		a_name = "gui_ico-1.png",
@@ -4956,16 +5004,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			505,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0037"] = {
 		a_name = "gui_ico-1.png",
@@ -4980,16 +5028,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			589,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0038"] = {
 		a_name = "gui_ico-1.png",
@@ -5004,16 +5052,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			673,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0039"] = {
 		a_name = "gui_ico-1.png",
@@ -5028,16 +5076,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			757,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0040"] = {
 		a_name = "gui_ico-1.png",
@@ -5052,16 +5100,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			841,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0041"] = {
 		a_name = "gui_ico-1.png",
@@ -5076,16 +5124,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			925,
-			943,
+			939,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0042"] = {
 		a_name = "gui_ico-1.png",
@@ -5100,16 +5148,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			1,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0043"] = {
 		a_name = "gui_ico-1.png",
@@ -5124,16 +5172,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			85,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0044"] = {
 		a_name = "gui_ico-1.png",
@@ -5148,16 +5196,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			169,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0045"] = {
 		a_name = "gui_ico-1.png",
@@ -5172,16 +5220,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			253,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0046"] = {
 		a_name = "gui_ico-1.png",
@@ -5196,16 +5244,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			337,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0047"] = {
 		a_name = "gui_ico-1.png",
@@ -5220,16 +5268,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			421,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0048"] = {
 		a_name = "gui_ico-1.png",
@@ -5244,16 +5292,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			505,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0049"] = {
 		a_name = "gui_ico-1.png",
@@ -5268,16 +5316,16 @@ return {
             0
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
 			589,
-			1021,
+			1017,
 			82,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["special_icons_0108"] = {
 		a_name = "gui_ico-1.png",
@@ -5292,16 +5340,16 @@ return {
             6
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			67,
-			481,
+			136,
+			477,
 			67,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["sub_icons_0000"] = {
 		a_name = "gui_ico-1.png",
@@ -5316,16 +5364,16 @@ return {
             2
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			136,
-			481,
+			205,
+			477,
 			66,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["sub_icons_0001"] = {
 		a_name = "gui_ico-1.png",
@@ -5340,16 +5388,16 @@ return {
             2
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			204,
-			481,
+			273,
+			477,
 			66,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["sub_icons_0002"] = {
 		a_name = "gui_ico-1.png",
@@ -5364,15 +5412,15 @@ return {
             2
 		},
 		a_size = {
-			1008,
-			1108
+			1020,
+			1104
 		},
 		f_quad = {
-			272,
-			481,
+			341,
+			477,
 			66,
 			64
 		},
-		alias = {}
+		alias = {},
 	}
 }

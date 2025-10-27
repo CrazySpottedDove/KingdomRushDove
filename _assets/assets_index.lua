@@ -388,7 +388,7 @@ return {
     ["kr1-desktop/images/fullhd/go_towers_sparking_geode-1.dds"] = { size = 12288128},
     ["kr1-desktop/images/fullhd/go_towers_tricannon-1.dds"] = { size = 22369796},
     ["kr1-desktop/images/fullhd/gui_common-1.png"] = { size = 3823991},
-    ["kr1-desktop/images/fullhd/gui_ico-1.png"] = { size = 1143802},
+    ["kr1-desktop/images/fullhd/gui_ico-1.png"] = { size = 1152415},
     ["kr1-desktop/images/fullhd/gui_notifications-1.png"] = { size = 2436327},
     ["kr1-desktop/images/fullhd/gui_notifications_bg-1.png"] = { size = 1981271},
     ["kr1-desktop/images/fullhd/gui_portraits-1.png"] = { size = 5533964},
