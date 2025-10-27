@@ -26,13 +26,16 @@ require("constants")
 game = {}
 game.required_textures = {"go_decals", "go_enemies_common", "go_towers"}
 game.scale_required_textures = {"go_towers_tricannon", "go_towers_dark_elf", "go_towers_demon_pit",
-                                "go_towers_necromancer", "go_towers_pandas", "go_towers_ray","go_towers_elven_stargazers","go_towers_sand","go_towers_royal_archers", "go_towers_arcane_wizard", "go_towers_rocket_gunners"}
+                                "go_towers_necromancer", "go_towers_pandas", "go_towers_ray",
+                                "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
+                                "go_towers_arcane_wizard", "go_towers_rocket_gunners"}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
 game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
-                        "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray","tower_elven_stargazers","tower_sand","tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners"}
+                        "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
+                        "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners"}
 
 game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
                            "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
@@ -888,7 +891,7 @@ function game:front_draw_debug(rox, roy, gs)
             for j = 1, #GR.grid[i] do
                 local t = GR.grid[i][j]
 
-                G.setColor(GR.grid_colors[t] or { 100, 100, 100 })
+                G.setColor(GR.grid_colors[t] or {100, 100, 100})
                 G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
             end
         end
@@ -1299,8 +1302,8 @@ end
 function game:draw_path(rox, roy, gs)
     if self.shown_path then
         local dash_length = 25 -- 虚线段长度
-        local gap_length = 15  -- 虚线间隔
-        local speed = 60       -- 虚线移动速度（像素/秒）
+        local gap_length = 15 -- 虚线间隔
+        local speed = 60 -- 虚线移动速度（像素/秒）
 
         -- 初始化路径数据
         local path_data = {}
@@ -1411,8 +1414,7 @@ function game:draw_speed_state(rox, roy, gs)
     local d = self.store
 
     if not self.cn_font then
-        self.cn_font = G.newFont("_assets/all-desktop/fonts/msyhbd.ttc",
-            math.floor(love.window.toPixels(20)))
+        self.cn_font = G.newFont("_assets/all-desktop/fonts/msyhbd.ttc", math.floor(love.window.toPixels(20)))
     end
 
     G.push()
@@ -1434,42 +1436,46 @@ function game:draw_speed_state(rox, roy, gs)
     G.setColor(r, g, b, 180)
     G.setFont(self.cn_font)
 
-    local pos = vec_2(500, 500)
+    -- local pos = vec_2(500, 500)
+    local pos = {
+        x = 150,
+        y = 150
+    }
 
-    local function draw_polygon(offset_x)
-        offset_x = offset_x or 0
+    -- local function draw_polygon(offset_x)
+    --     offset_x = offset_x or 0
 
-        local x = pos.x + offset_x
-        local y = pos.y
+    --     local x = pos.x + offset_x
+    --     local y = pos.y
 
-        local w = 100
-        local h
+    --     local w = 100
+    --     local h
 
-        if offset_x < 0 then
-            h = -100
-        else
-            h = 100
-        end
+    --     if offset_x < 0 then
+    --         h = -100
+    --     else
+    --         h = 100
+    --     end
 
-        G.polygon("fill", x, y, x, y + w, x + h / 2, y + w / 2)
-    end
+    --     G.polygon("fill", x, y, x, y + w, x + h / 2, y + w / 2)
+    -- end
 
     if d.speed_factor > 1 then
-        draw_polygon(1)
-        draw_polygon(75)
+        -- draw_polygon(1)
+        -- draw_polygon(75)
 
-        if d.speed_factor > 2 then
-            draw_polygon(150)
-        end
+        -- if d.speed_factor > 2 then
+        --     draw_polygon(150)
+        -- end
 
         G.printf(string.format("%s 倍加速中...", d.speed_factor), pos.x, pos.y - 75, G.getWidth() - pos.x)
     else
-        draw_polygon(-1)
-        draw_polygon(-75)
+        -- draw_polygon(-1)
+        -- draw_polygon(-75)
 
-        if d.speed_factor < 0.5 then
-            draw_polygon(-150)
-        end
+        -- if d.speed_factor < 0.5 then
+        --     draw_polygon(-150)
+        -- end
 
         G.printf(string.format("%s 倍减速中...", d.speed_factor), pos.x, pos.y - 75, G.getWidth() - pos.x)
     end
@@ -1528,18 +1534,17 @@ function game:draw_game()
     end
 
     if d.world_offset then
-        rox, roy = rox + self.store.world_offset.x, roy + self.store.world_offset.y
+        rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
     end
 
     self:front_draw_debug(rox, roy, gs)
 
     self:draw_path(rox, roy, gs)
 
-    if d.night_mode then
-        self:draw_dark_foreground(rox, roy, gs)
-    end
+    -- if d.night_mode then
+    -- end
 
-    self:draw_speed_state(rox, roy, gs)
+    -- self:draw_speed_state(rox, roy, gs)
 
     local last_idx
 
@@ -1547,7 +1552,7 @@ function game:draw_game()
     G.translate(rox, roy)
     G.scale(gs, gs)
 
-    last_idx = draw_frames_range(self.store.render_frames, 1, Z_GUI_DECALS - 1)
+    last_idx = draw_frames_range(d.render_frames, 1, Z_GUI_DECALS - 1)
 
     G.pop()
 
@@ -1566,11 +1571,8 @@ function game:draw_game()
     end
 
     if d.night_mode then
+        self:draw_dark_foreground(rox, roy, gs)
         G.draw(self.dark_canvas)
-    end
-
-    if d.speed_factor ~= 1 then
-        G.draw(self.speed_state)
     end
 
     G.push()
@@ -1581,6 +1583,11 @@ function game:draw_game()
 
     G.pop()
     self.game_gui.window:draw_child(self.game_gui.layer_gui)
+
+    if d.speed_factor ~= 1 then
+        self:draw_speed_state(d.visible_coords.left, d.visible_coords.bottom, gs)
+        G.draw(self.speed_state)
+    end
 
     self:after_draw_debug(rox, roy, gs)
 end
