@@ -3773,6 +3773,7 @@ function EncyclopediaView:initialize(sw, sh)
         self:load_towers()
     end
 
+    -- 防御塔书签：未选中状态
     local tl = EncyclopediaTabLabel:new(_("Towers"), false)
 
     tl.pos.x, tl.pos.y = 56, 86
@@ -3784,6 +3785,7 @@ function EncyclopediaView:initialize(sw, sh)
 
     self.back:add_child(self.tower_selected)
 
+    -- 防御塔书签：已选中状态
     local tl = EncyclopediaTabLabel:new(_("Towers"), true)
 
     tl.pos.x, tl.pos.y = 56, ISW(81, "zh-Hans", 81)
@@ -3815,10 +3817,9 @@ function EncyclopediaView:initialize(sw, sh)
         self:detail_creep(1)
     end
 
+    -- 敌人书签：未选中状态
     local tl = EncyclopediaTabLabel:new(_("Enemies"), false, 2 * math.pi / 180)
-
     tl.pos.x, tl.pos.y = 56, ISW(88, "zh-Hans", 90)
-
     self.enemies_button:add_child(tl)
 
     self.enemies_selected = KImageView:new("encyclopedia_buttons_notxt_0004")
@@ -3828,16 +3829,14 @@ function EncyclopediaView:initialize(sw, sh)
 
     self.enemies_selected.hidden = true
 
+    -- 敌人书签：已选中状态
     local tl = EncyclopediaTabLabel:new(_("Enemies"), true, 2 * math.pi / 180)
-
     tl.pos.x, tl.pos.y = 56, 81
-
     self.enemies_selected:add_child(tl)
 
     self.backback = KImageView:new("encyclopedia_bg")
     self.backback.anchor = v(self.backback.size.x / 2, self.backback.size.y / 2)
     self.backback.pos = v(sw / 2, sh / 2)
-
     self.back:add_child(self.backback)
 
     local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002",
@@ -4236,7 +4235,180 @@ function EncyclopediaView:detail_tower(index)
             self.right_panel:add_child(label)
         end
     end
+
+    local detail_btn = GGOptionsButton:new("细节")
+    detail_btn.pos = v(520, 650)
+    self.right_panel:add_child(detail_btn)
+    function detail_btn.on_click()
+        S:queue("GUIButtonCommon")
+        self:detail_tower_second(index)
+    end
 end
+
+function EncyclopediaView:detail_tower_second(index)
+    local t = screen_map.tower_data[index]
+
+    if self.right_panel then
+        self.back:remove_child(self.right_panel)
+
+        self.right_panel = nil
+    end
+
+    self.right_panel = KView:new(V.v(600, 700))
+    self.right_panel.pos = v(self.sw / 2 - 30, 200)
+    self.right_panel.propagate_on_click = true
+
+    self.back:add_child(self.right_panel)
+    local tower_name = t.name
+    local dt = E:create_entity(tower_name)
+    local prefix = string.upper(dt.info.i18n_key or t.name)
+
+    if dt.powers then
+        local specials = GGLabel:new(V.v(190, 26))
+
+        specials.pos = v(300, 44)
+        specials.anchor.x = specials.size.x / 2
+        specials.text = _("Specials")
+        specials.font_name = "h_book"
+        specials.font_size = 20
+        specials.text_align = "center"
+        specials.colors.text = {116, 105, 66, 255}
+        specials.fit_lines = 1
+
+        self.right_panel:add_child(specials)
+
+        local title_w = specials:get_text_width(specials.text)
+        local left_deco = KImageView:new("encyclopedia_rightArt")
+
+        left_deco.pos = v(self.right_panel.size.x / 2 - title_w / 2 - 10, specials.pos.y + 16)
+        left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
+        left_deco.alpha = 0.6
+        left_deco.scale.x = 0.7
+
+        self.right_panel:add_child(left_deco)
+
+        local right_deco = KImageView:new("encyclopedia_rightArt")
+
+        right_deco.pos = v(self.right_panel.size.x / 2 + title_w / 2 + 13, specials.pos.y + 16)
+        right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
+        right_deco.alpha = 0.6
+        right_deco.scale.x = -0.7
+
+        self.right_panel:add_child(right_deco)
+
+        local power_names = {}
+
+        for k, v in pairs(dt.powers) do
+            table.insert(power_names, k)
+        end
+
+        table.sort(power_names)
+
+        local tw = 360
+        local iw = math.ceil(tw / #power_names)
+        self.right_panel.power_buttons = {}
+        for i, k in pairs(power_names) do
+            local power = dt.powers[k]
+            local px = 120 + (2 * i - 1) * iw / 2
+
+            local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
+
+            local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
+
+            local power_button = KImageButton:new(tower_specials_fmt)
+
+            power_button.pos = v(px, 90)
+            power_button.anchor = v(power_button.size.x / 2, power_button.size.y / 2)
+            if i == 1 then
+                self:show_skill_detail(prefix, power.name or k, power)
+            else
+                -- power_button:disable()
+                power_button:apply_disabled_tint()
+            end
+
+            function power_button.on_click()
+                S:queue("GUIButtonCommon")
+                power_button:remove_disabled_tint()
+                self:show_skill_detail(prefix, power.name or k, power)
+                for _, btn in pairs(self.right_panel.power_buttons) do
+                    if btn ~= power_button then
+                        btn:apply_disabled_tint()
+                    end
+                end
+            end
+
+            function power_button.on_enter()
+                power_button:remove_disabled_tint()
+            end
+
+            table.insert(self.right_panel.power_buttons, power_button)
+            self.right_panel:add_child(power_button)
+
+            local label = GGLabel:new(V.v(tw / #power_names, 50))
+
+            label.pos = v(px, 110)
+            label.anchor = v(label.size.x / 2, 0)
+            label.font_name = "body"
+            label.font_size = 14
+            label.line_height = 0.85
+            label.colors.text = {0, 0, 0}
+            label.text = _(string.upper(string.format("%s_%s_NAME", dt.info.i18n_key or tower_name, power.name or k)))
+            label.text_align = "center"
+            label.fit_lines = 2
+
+            self.right_panel:add_child(label)
+        end
+    end
+
+    local back_btn = GGOptionsButton:new("返回")
+    back_btn.pos = v(520, 650)
+    self.right_panel:add_child(back_btn)
+    function back_btn.on_click()
+        S:queue("GUIButtonCommon")
+        self:detail_tower(index)
+    end
+end
+
+function EncyclopediaView:show_skill_detail(prefix, power_name, power)
+    if self.right_panel.detail_skill_panel then
+        self.right_panel:remove_child(self.right_panel.detail_skill_panel)
+        self.right_panel.detail_skill_panel = nil
+    end
+    self.right_panel.detail_skill_panel = KView:new(V.v(500, 300))
+
+    local panel = self.right_panel.detail_skill_panel
+    panel.pos = v(50, 100)
+    panel.anchor = v(0, 0)
+    local i_map = {
+        "一",
+        "二",
+        "三",
+        "四"
+    }
+    for i = 1, power.max_level do
+        local offset_y = (i - 1) * 150
+        -- 技能名
+        local name_label = GGLabel:new(V.v(400, 40))
+        name_label.text = i_map[i] .. "级效果"
+        name_label.font_name = "h_book"
+        name_label.font_size = 24
+        name_label.pos = v(-140, 40 + offset_y)
+
+        panel:add_child(name_label)
+
+        -- 技能描述
+        local desc_label = GGLabel:new(V.v(400, 140))
+        desc_label.text = _(prefix.. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i))
+        desc_label.font_size = 16
+        desc_label.font_name = "body"
+        desc_label.pos = v(50, 65 + offset_y)
+        desc_label.line_height = 0.8
+        desc_label.text_align = "left"
+        panel:add_child(desc_label)
+    end
+    self.right_panel:add_child(panel)
+end
+
 
 -- 加载一页的敌人图鉴资源
 function EncyclopediaView:load_creeps(index)
