@@ -5955,27 +5955,6 @@ for _, n in pairs({"barrack_1", "barrack_2", "barrack_3", "blade", "forest", "dr
     tt.damage_type = DAMAGE_MAGICAL
 end
 
-
-
-tt = E:register_t("mod_eldritch", "modifier")
-E:add_comps(tt, "render")
-tt.render.sprites[1].name = "mod_eldritch"
-tt.render.sprites[1].sort_y_offset = -1
-tt.render.sprites[1].z = Z_OBJECTS
-tt.main_script.update = scripts.mod_eldritch.update
-tt.modifier.remove_banned = true
-tt.modifier.bans = {"mod_faerie_dragon_l0", "mod_faerie_dragon_l1", "mod_faerie_dragon_l2", "mod_arivan_freeze",
-                    "mod_arivan_ultimate_freeze", "mod_crystal_arcane_freeze", "mod_crystal_unstable_teleport",
-                    "mod_metropolis_portal", "mod_teleport_mage", "mod_teleport_wild_magus", "mod_teleport_high_elven",
-                    "mod_teleport_faustus", "mod_pixie_teleport", "mod_teleport_scroll", "mod_teleport_ainyl",
-                    "mod_twilight_avenger_last_service", "mod_lynn_ultimate", "mod_shield_ainyl"}
-tt.modifier.vis_flags = bor(F_MOD, F_EAT)
-tt.damage_levels = {80, 180, 260}
-tt.damage_radius = 87.5
-tt.damage_flags = F_RANGED
-tt.damage_bans = 0
-tt.damage_type = DAMAGE_MAGICAL
-tt.sound_events.loop = "TowerWildMagusDoomLoop"
 tt = E:register_t("eldritch_enemy_decal", "decal_tween")
 tt.tween.disabled = true
 tt.tween.remove = true

@@ -23,7 +23,7 @@ local signal = require("hump.signal")
 local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data
-
+local tower_menus_data = require("data.tower_menus_data")
 require("klove.kui")
 
 local kui_db = require("klove.kui_db")
@@ -3770,7 +3770,7 @@ function EncyclopediaView:initialize(sw, sh)
         self.tower_selected.hidden = false
         self.tower_button.hidden = true
 
-        self:load_towers()
+        self:load_towers(1)
     end
 
     -- 防御塔书签：未选中状态
@@ -3863,7 +3863,7 @@ function EncyclopediaView:show()
     DI:set_level(screen_map.user_data.difficulty)
     UPGR:patch_templates(6)
     DI:patch_templates()
-    self:load_towers()
+    self:load_towers(1)
 
     self.enemies_button.hidden = false
     self.enemies_selected.hidden = true
@@ -3871,25 +3871,26 @@ function EncyclopediaView:show()
     self.tower_button.hidden = true
 end
 
-function EncyclopediaView:load_towers()
+function EncyclopediaView:load_towers(index)
     if self.creep then
         self.creep.hidden = true
     end
 
     if self.towers then
-        self.towers.hidden = false
-        self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_over")
-        self.over_sprite.hidden = true
-        self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
-        self.over_sprite.propagate_on_click = true
+        -- self.towers.hidden = false
+        -- self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_over")
+        -- self.over_sprite.hidden = true
+        -- self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
+        -- self.over_sprite.propagate_on_click = true
 
-        self.towers:add_child(self.over_sprite)
-        self:detail_tower(1)
+        -- self.towers:add_child(self.over_sprite)
+        -- self:detail_tower(1)
 
-        self.select_sprite.pos = v(50, 120)
-        self.select_sprite.hidden = false
+        -- self.select_sprite.pos = v(50, 120)
+        -- self.select_sprite.hidden = false
 
-        return
+        -- return
+        self.back:remove_child(self.towers)
     end
 
     self.towers = KView:new(V.v(366, 444))
@@ -3930,16 +3931,19 @@ function EncyclopediaView:load_towers()
     self.select_sprite.hidden = false
 
     local tower_count = #screen_map.tower_data
+    local towers_per_page = 20
+    for d = 1, towers_per_page do
+        local i = d + (index - 1) * towers_per_page
+        if i <= tower_count then
+            local t = screen_map.tower_data[i]
 
-    for i = 1, tower_count do
-        local t = screen_map.tower_data[i]
+            local f = string.format("encyclopedia_tower_thumbs_%04i", t.icon)
 
-        local f = string.format("encyclopedia_tower_thumbs_%04i", t.icon)
+            local icon = U.splicing_from_kr(t.from_kr, f)
+            local off_y = 120
 
-        local icon = U.splicing_from_kr(t.from_kr, f)
-        local off_y = 120
-
-        self:create_tower(icon, v(math.fmod(i - 1, 4) * 88 + 50, math.floor((i - 1) / 4) * 85 + off_y), i, true)
+            self:create_tower(icon, v(math.fmod(d - 1, 4) * 88 + 50, math.floor((d - 1) / 4) * 85 + off_y), i, true)
+        end
     end
 
     self.towers:add_child(self.over_sprite)
@@ -3953,8 +3957,44 @@ function EncyclopediaView:load_towers()
     self.select_sprite.pos = v(50, 120)
     self.select_sprite.anchor = v(self.select_sprite.size.x / 2, self.select_sprite.size.y / 2)
     self.select_sprite.hidden = false
+    self.page_buttons = {}
 
-    self:detail_tower(1)
+    local total_pages = math.ceil(tower_count / towers_per_page)
+    local boffset = 40
+    local bx, by = 192 - 40 * (total_pages - 1) / 2, 530
+
+    for i = 1, total_pages do
+        if i == index then
+            local b = KImageView:new("encyclopedia_pageNbrSelected_000" .. i)
+
+            b.anchor = v(b.size.x / 2, b.size.y / 2)
+            b.pos = v(bx + boffset * (i - 1), by)
+
+            self.towers:add_child(b)
+            table.insert(self.page_buttons, b)
+        else
+            local b = KImageButton:new("encyclopedia_pageNbr_000" .. i, "encyclopedia_pageNbrOver_000" .. i,
+                "encyclopedia_pageNbrSelected_000" .. i)
+
+            b.anchor = v(b.size.x / 2, b.size.y / 2)
+            b.pos = v(bx + boffset * (i - 1), by)
+
+            function b.on_click(this, button, x, y)
+                local this_idx = i
+
+                S:queue("GUIButtonCommon")
+                self:load_towers(this_idx)
+            end
+
+            self.towers:add_child(b)
+            table.insert(self.page_buttons, b)
+        end
+    end
+    if self.detail_tower_level == 2 then
+        self:detail_tower_second((index - 1) * towers_per_page + 1)
+    else
+        self:detail_tower((index - 1) * towers_per_page + 1)
+    end
 end
 
 function EncyclopediaView:create_tower(icon, pos, information, enabled)
@@ -4003,10 +4043,15 @@ function EncyclopediaView:tower_clicked(information, pos)
     self.select_sprite.hidden = false
     self.select_sprite.pos = pos
 
-    self:detail_tower(information)
+    if self.detail_tower_level == 2 then
+        self:detail_tower_second(information)
+    else
+        self:detail_tower(information)
+    end
 end
 
 function EncyclopediaView:detail_tower(index)
+    self.detail_tower_level = 1
     local t = screen_map.tower_data[index]
 
     if self.right_panel then
@@ -4163,6 +4208,7 @@ function EncyclopediaView:detail_tower(index)
             my = 420
         end
     end
+    local tower_data_in_menu = tower_menus_data[dt.tower.type]
 
     if dt.powers then
         local specials = GGLabel:new(V.v(190, 26))
@@ -4212,12 +4258,21 @@ function EncyclopediaView:detail_tower(index)
             local power = dt.powers[k]
             local px = 120 + (2 * i - 1) * iw / 2
 
-            local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
+            -- local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
 
-            local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
+            -- local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
+            local tower_specials_fmt
+            for _, item in pairs(tower_data_in_menu[1]) do
+                if item.action_arg == k then
+                    tower_specials_fmt = item.image
+                    break
+                end
+            end
 
             local icon = KImageView:new(tower_specials_fmt)
-
+            icon.image_scale = 0.65
+            icon.size.x = icon.size.x * 0.65
+            icon.size.y = icon.size.y * 0.65
             icon.pos = v(px, 515)
             icon.anchor = v(icon.size.x / 2, icon.size.y / 2)
 
@@ -4231,7 +4286,14 @@ function EncyclopediaView:detail_tower(index)
             label.font_size = 14
             label.line_height = 0.85
             label.colors.text = {0, 0, 0}
-            label.text = _(string.upper(string.format("%s_%s_NAME", dt.info.i18n_key or tower_name, power.name or k)))
+            if t.from_kr == 5 then
+                label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name,
+                    power.key or power.name or k)))
+            else
+                label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name,
+                    power.name or power.key or k)))
+            end
+
             label.text_align = "center"
             label.fit_lines = 2
 
@@ -4249,6 +4311,7 @@ function EncyclopediaView:detail_tower(index)
 end
 
 function EncyclopediaView:detail_tower_second(index)
+    self.detail_tower_level = 2
     local t = screen_map.tower_data[index]
 
     if self.right_panel then
@@ -4265,7 +4328,7 @@ function EncyclopediaView:detail_tower_second(index)
     local tower_name = t.name
     local dt = E:create_entity(tower_name)
     local prefix = string.upper(dt.info.i18n_key or t.name)
-
+    local tower_data_in_menu = tower_menus_data[dt.tower.type]
     if dt.powers then
         local specials = GGLabel:new(V.v(190, 26))
 
@@ -4314,16 +4377,25 @@ function EncyclopediaView:detail_tower_second(index)
             local power = dt.powers[k]
             local px = 120 + (2 * i - 1) * iw / 2
 
-            local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
+            -- local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
 
-            local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
+            -- local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
+            local tower_specials_fmt
+            for _, item in pairs(tower_data_in_menu[1]) do
+                if item.action_arg == k then
+                    tower_specials_fmt = item.image
+                    break
+                end
+            end
 
             local power_button = KImageButton:new(tower_specials_fmt)
-
+            power_button.image_scale = 0.65
+            power_button.size.x = power_button.size.x * 0.65
+            power_button.size.y = power_button.size.y * 0.65
             power_button.pos = v(px, 90)
             power_button.anchor = v(power_button.size.x / 2, power_button.size.y / 2)
             if i == 1 then
-                self:show_skill_detail(prefix, power.name or k, power)
+                self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
                 power_button._selected = true
             else
                 -- power_button:disable()
@@ -4335,7 +4407,7 @@ function EncyclopediaView:detail_tower_second(index)
                 S:queue("GUIButtonCommon")
                 power_button:remove_disabled_tint()
                 power_button._selected = true
-                self:show_skill_detail(prefix, power.name or k, power)
+                self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
                 for _, btn in pairs(self.right_panel.power_buttons) do
                     if btn ~= power_button then
                         btn:apply_disabled_tint()
@@ -4367,7 +4439,13 @@ function EncyclopediaView:detail_tower_second(index)
             label.font_size = 14
             label.line_height = 0.85
             label.colors.text = {0, 0, 0}
-            label.text = _(string.upper(string.format("%s_%s_NAME", dt.info.i18n_key or tower_name, power.name or k)))
+            if t.from_kr == 5 then
+                label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name,
+                    power.key or power.name or k)))
+            else
+                label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name,
+                    power.name or power.key or k)))
+            end
             label.text_align = "center"
             label.fit_lines = 2
 
@@ -4384,7 +4462,7 @@ function EncyclopediaView:detail_tower_second(index)
     end
 end
 
-function EncyclopediaView:show_skill_detail(prefix, power_name, power)
+function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
     if self.right_panel.detail_skill_panel then
         self.right_panel:remove_child(self.right_panel.detail_skill_panel)
         self.right_panel.detail_skill_panel = nil
@@ -4394,26 +4472,31 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power)
     local panel = self.right_panel.detail_skill_panel
     panel.pos = v(50, 100)
     panel.anchor = v(0, 0)
-    local i_map = {
-        "一",
-        "二",
-        "三",
-        "四"
-    }
+    local i_map = {"一级: ", "二级: ", "三级: ", "四级: "}
     for i = 1, power.max_level do
         local offset_y = (i - 1) * 150
         -- 技能名
         local name_label = GGLabel:new(V.v(400, 40))
-        name_label.text = i_map[i] .. "级效果"
+        if i == 1 then
+            name_label.text = i_map[i] .. power.price_base .. " 金币"
+        else
+            name_label.text = i_map[i] .. power.price_inc .. " 金币"
+        end
         name_label.font_name = "h_book"
         name_label.font_size = 24
-        name_label.pos = v(-140, 40 + offset_y)
+        name_label.text_align = "left"
+        name_label.pos = v(50, 40 + offset_y)
 
         panel:add_child(name_label)
 
         -- 技能描述
         local desc_label = GGLabel:new(V.v(400, 140))
-        desc_label.text = U.balance_format(_(prefix.. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
+        if from_kr == 5 then
+            desc_label.text = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION" )))
+        else
+        desc_label.text = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
+
+        end
         desc_label.font_size = 16
         desc_label.font_name = "body"
         desc_label.pos = v(50, 65 + offset_y)
@@ -4423,7 +4506,6 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power)
     end
     self.right_panel:add_child(panel)
 end
-
 
 -- 加载一页的敌人图鉴资源
 function EncyclopediaView:load_creeps(index)
@@ -4705,9 +4787,9 @@ function EncyclopediaView:detail_creep(index)
     -- local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), GU.armor_value_desc(ci.armor),
     --                      GU.armor_value_desc(ci.magic_armor), GU.speed_value_desc(ce.motion.max_speed),
     --                      (GU.lives_desc(ci.lives))}
-    local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), string.format("%i", ci.armor * 100),
-                     string.format("%i", ci.magic_armor * 100), string.format("%i", ce.motion.max_speed),
-                     (GU.lives_desc(ci.lives))}
+    local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max),
+                         string.format("%i", ci.armor * 100), string.format("%i", ci.magic_armor * 100),
+                         string.format("%i", ce.motion.max_speed), (GU.lives_desc(ci.lives))}
 
     for i = 1, 6 do
         local desc_label = GGLabel:new(V.v(90, 50))

@@ -12,7 +12,7 @@ local function CJK(default, zh, ja, kr)
 end
 
 local function fc(r, g, b, a)
-    return { r / 255, g / 255, b / 255, a / 255 }
+    return {r / 255, g / 255, b / 255, a / 255}
 end
 
 local p11, p12 = 0, CJK(0.48, 0.5, 0.5, 0.5)
@@ -22,7 +22,7 @@ local rs = GGLabel.static.ref_h / REF_H
 return {
     hero_names_config = {
         default = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -35,10 +35,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(88, 19, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_gerald = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -51,10 +51,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(0, 69, 100, 255)
-            }, {} }
+            }, {}}
         },
         hero_alleria = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -67,10 +67,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(37, 93, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_malik = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -83,10 +83,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(135, 74, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_bolin = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -99,10 +99,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(98, 37, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_magnus = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -115,10 +115,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(69, 0, 112, 255)
-            }, {} }
+            }, {}}
         },
         hero_ignus = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -131,10 +131,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(105, 40, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_denas = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -147,10 +147,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(107, 65, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_elora = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -163,10 +163,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(17, 108, 119, 255)
-            }, {} }
+            }, {}}
         },
         hero_ingvar = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -179,10 +179,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(102, 33, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_hacksaw = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -195,10 +195,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(45, 88, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_oni = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -211,10 +211,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(114, 18, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_thor = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -231,10 +231,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_10yr = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -247,10 +247,10 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(105, 40, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_alric = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -263,10 +263,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(88, 19, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_mirage = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -279,10 +279,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(77, 0, 75, 255)
-            }, {} }
+            }, {}}
         },
         hero_pirate = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -295,10 +295,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(0, 81, 84, 255)
-            }, {} }
+            }, {}}
         },
         hero_beastmaster = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -311,10 +311,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(32, 58, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_voodoo_witch = {
-            shader_args = { {
+            shader_args = {{
                 margin = 2 * rs,
                 p1 = p21,
                 p2 = p22,
@@ -327,10 +327,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(61, 27, 86, 255)
-            }, {} }
+            }, {}}
         },
         hero_wizard = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -343,10 +343,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(79, 44, 26, 255)
-            }, {} }
+            }, {}}
         },
         hero_priest = {
-            shader_args = { {
+            shader_args = {{
                 margin = 2 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -359,10 +359,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(0, 97, 121, 255)
-            }, {} }
+            }, {}}
         },
         hero_giant = {
-            shader_args = { {
+            shader_args = {{
                 margin = 2 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -375,10 +375,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(0, 83, 86, 255)
-            }, {} }
+            }, {}}
         },
         hero_alien = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -391,10 +391,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(70, 20, 109, 255)
-            }, {} }
+            }, {}}
         },
         hero_dragon = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p21,
                 p2 = p22,
@@ -407,10 +407,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(98, 20, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_crab = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -423,10 +423,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(56, 72, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_monk = {
-            shader_args = { {
+            shader_args = {{
                 margin = 2 * rs,
                 p1 = p21,
                 p2 = p22,
@@ -439,10 +439,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(98, 47, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_van_helsing = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -455,10 +455,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(100, 0, 16, 255)
-            }, {} }
+            }, {}}
         },
         hero_dracolich = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -471,10 +471,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(29, 51, 1, 255)
-            }, {} }
+            }, {}}
         },
         hero_minotaur = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -487,10 +487,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(81, 17, 0, 255)
-            }, {} }
+            }, {}}
         },
         hero_monkey_god = {
-            shader_args = { {
+            shader_args = {{
                 margin = 2 * rs,
                 p1 = p21,
                 p2 = p22,
@@ -503,10 +503,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(49, 107, 6, 255)
-            }, {} }
+            }, {}}
         },
         hero_elves_archer = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 2.5 * rs,
                 p1 = p21,
@@ -524,10 +524,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_arivan = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 10,
                 margin = 2 * rs,
                 p1 = p21,
@@ -545,10 +545,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_catha = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1.5 * rs,
                 p1 = p21,
@@ -566,10 +566,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_regson = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -587,10 +587,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_elves_denas = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -608,10 +608,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_bravebark = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -629,10 +629,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_veznan = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -650,10 +650,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_faustus = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -671,10 +671,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_xin = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -692,11 +692,11 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_rag = {
             single_line = true,
-            shader_args = { {
+            shader_args = {{
                 sharpness = 10,
                 margin = 1 * rs,
                 p1 = p21,
@@ -714,10 +714,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_durax = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1.5 * rs,
                 p1 = p21,
@@ -735,10 +735,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_lilith = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -756,10 +756,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_bruce = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1.5 * rs,
                 p1 = p21,
@@ -777,10 +777,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_lynn = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 10,
                 p1 = 0.5,
                 p2 = 0.5,
@@ -798,10 +798,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_phoenix = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 10,
                 p1 = 0.5,
                 p2 = 0.5,
@@ -819,10 +819,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_wilbur = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 10,
                 margin = 2 * rs,
                 p1 = p21,
@@ -840,10 +840,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_hunter = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -856,10 +856,10 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(100, 0, 16, 255)
-            }, {} }
+            }, {}}
         },
         hero_space_elf = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 20,
                 margin = 1 * rs,
                 p1 = p21,
@@ -877,11 +877,11 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 2 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
 
         },
         hero_raelyn = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -894,11 +894,11 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(88, 19, 0, 255)
-            }, {} }
+            }, {}}
 
         },
         hero_venom = {
-            shader_args = { {
+            shader_args = {{
                 margin = 2 * rs,
                 p1 = p21,
                 p2 = p22,
@@ -911,11 +911,11 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(61, 27, 86, 255)
-            }, {} }
+            }, {}}
 
         },
         hero_dragon_gem = {
-            shader_args = { {
+            shader_args = {{
                 sharpness = 10,
                 margin = 2 * rs,
                 p1 = p21,
@@ -933,12 +933,12 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
 
         },
         hero_witch = {
             single_line = true,
-            shader_args = { {
+            shader_args = {{
                 sharpness = 10,
                 margin = 1 * rs,
                 p1 = p21,
@@ -956,10 +956,10 @@ return {
                 shadow_width = 0.5 * rs,
                 shadow_height = 3 * rs,
                 shadow_color = fc(0, 0, 0, 255)
-            } }
+            }}
         },
         hero_dragon_bone = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -972,11 +972,11 @@ return {
             }, {
                 thickness = 1.5 * rs,
                 glow_color = fc(29, 51, 1, 255)
-            }, {} }
+            }, {}}
 
         },
         hero_lumenir = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -989,11 +989,11 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(0, 69, 100, 255)
-            }, {} }
+            }, {}}
 
         },
         hero_wukong = {
-            shader_args = { {
+            shader_args = {{
                 margin = 0 * rs,
                 p1 = p11,
                 p2 = p12,
@@ -1006,1064 +1006,1064 @@ return {
             }, {
                 thickness = 1 * rs,
                 glow_color = fc(107, 65, 0, 255)
-            }, {} }
+            }, {}}
 
         }
     },
     hero_data = { -- 爵士
-        {
-            portrait = 1,
-            thumb = 1,
-            name = "hero_gerald",
-            available_level = 6,
-            starting_level = 1,
-            icon = 1,
-            stats = { 6, 5, 0, 4 }
-        }, -- 小公主
-        {
-            portrait = 2,
-            thumb = 2,
-            name = "hero_alleria",
-            available_level = 5,
-            starting_level = 1,
-            icon = 2,
-            stats = { 4, 3, 5, 7 }
-        }, -- 大锤
-        {
-            portrait = 3,
-            thumb = 3,
-            name = "hero_malik",
-            available_level = 3,
-            starting_level = 1,
-            icon = 3,
-            stats = { 8, 6, 0, 3 }
-        }, -- 波林
-        {
-            portrait = 4,
-            thumb = 4,
-            name = "hero_bolin",
-            available_level = 7,
-            starting_level = 1,
-            icon = 4,
-            stats = { 7, 5, 4, 3 }
-        }, -- 小马哥
-        {
-            portrait = 5,
-            thumb = 5,
-            name = "hero_magnus",
-            available_level = 6,
-            starting_level = 1,
-            icon = 5,
-            stats = { 3, 2, 7, 8 }
-        }, -- 火男
-        {
-            portrait = 6,
-            thumb = 6,
-            name = "hero_ignus",
-            available_level = 11,
-            starting_level = 1,
-            icon = 6,
-            stats = { 7, 7, 0, 7 }
-        }, -- 国王
-        {
-            portrait = 7,
-            thumb = 7,
-            name = "hero_denas",
-            available_level = 12,
-            starting_level = 1,
-            icon = 7,
-            stats = { 5, 5, 8, 3 }
-        }, -- 冰女
-        {
-            portrait = 8,
-            thumb = 8,
-            name = "hero_elora",
-            available_level = 9,
-            starting_level = 1,
-            icon = 8,
-            stats = { 4, 3, 6, 7 }
-        }, -- 熊人
-        {
-            portrait = 9,
-            thumb = 9,
-            name = "hero_ingvar",
-            available_level = 8,
-            starting_level = 1,
-            icon = 9,
-            stats = { 8, 6, 0, 5 }
-        }, -- 钢锯
-        {
-            portrait = 10,
-            thumb = 10,
-            name = "hero_hacksaw",
-            available_level = 22,
-            starting_level = 1,
-            icon = 10,
-            stats = { 6, 5, 0, 2 }
-        }, -- 鬼侍
-        {
-            portrait = 11,
-            thumb = 11,
-            name = "hero_oni",
-            available_level = 20,
-            starting_level = 1,
-            icon = 11,
-            stats = { 7, 8, 0, 6 }
-        }, -- 雷神
-        {
-            portrait = 12,
-            thumb = 12,
-            name = "hero_thor",
-            available_level = 10,
-            starting_level = 1,
-            icon = 12,
-            stats = { 7, 5, 0, 6 }
-        }, -- 天十
-        {
-            portrait = 13,
-            thumb = 13,
-            name = "hero_10yr",
-            available_level = 16,
-            starting_level = 1,
-            icon = 13,
-            stats = { 6, 5, 0, 8 }
-        }, --[[
+    {
+        portrait = 1,
+        thumb = 1,
+        name = "hero_gerald",
+        available_level = 6,
+        starting_level = 1,
+        icon = 1,
+        stats = {6, 5, 0, 4}
+    }, -- 小公主
+    {
+        portrait = 2,
+        thumb = 2,
+        name = "hero_alleria",
+        available_level = 5,
+        starting_level = 1,
+        icon = 2,
+        stats = {4, 3, 5, 7}
+    }, -- 大锤
+    {
+        portrait = 3,
+        thumb = 3,
+        name = "hero_malik",
+        available_level = 3,
+        starting_level = 1,
+        icon = 3,
+        stats = {8, 6, 0, 3}
+    }, -- 波林
+    {
+        portrait = 4,
+        thumb = 4,
+        name = "hero_bolin",
+        available_level = 7,
+        starting_level = 1,
+        icon = 4,
+        stats = {7, 5, 4, 3}
+    }, -- 小马哥
+    {
+        portrait = 5,
+        thumb = 5,
+        name = "hero_magnus",
+        available_level = 6,
+        starting_level = 1,
+        icon = 5,
+        stats = {3, 2, 7, 8}
+    }, -- 火男
+    {
+        portrait = 6,
+        thumb = 6,
+        name = "hero_ignus",
+        available_level = 11,
+        starting_level = 1,
+        icon = 6,
+        stats = {7, 7, 0, 7}
+    }, -- 国王
+    {
+        portrait = 7,
+        thumb = 7,
+        name = "hero_denas",
+        available_level = 12,
+        starting_level = 1,
+        icon = 7,
+        stats = {5, 5, 8, 3}
+    }, -- 冰女
+    {
+        portrait = 8,
+        thumb = 8,
+        name = "hero_elora",
+        available_level = 9,
+        starting_level = 1,
+        icon = 8,
+        stats = {4, 3, 6, 7}
+    }, -- 熊人
+    {
+        portrait = 9,
+        thumb = 9,
+        name = "hero_ingvar",
+        available_level = 8,
+        starting_level = 1,
+        icon = 9,
+        stats = {8, 6, 0, 5}
+    }, -- 钢锯
+    {
+        portrait = 10,
+        thumb = 10,
+        name = "hero_hacksaw",
+        available_level = 22,
+        starting_level = 1,
+        icon = 10,
+        stats = {6, 5, 0, 2}
+    }, -- 鬼侍
+    {
+        portrait = 11,
+        thumb = 11,
+        name = "hero_oni",
+        available_level = 20,
+        starting_level = 1,
+        icon = 11,
+        stats = {7, 8, 0, 6}
+    }, -- 雷神
+    {
+        portrait = 12,
+        thumb = 12,
+        name = "hero_thor",
+        available_level = 10,
+        starting_level = 1,
+        icon = 12,
+        stats = {7, 5, 0, 6}
+    }, -- 天十
+    {
+        portrait = 13,
+        thumb = 13,
+        name = "hero_10yr",
+        available_level = 16,
+        starting_level = 1,
+        icon = 13,
+        stats = {6, 5, 0, 8}
+    }, --[[
 			二代
 		--]] -- 沙王
-        {
-            from_kr = 2,
-            portrait = 1,
-            thumb = 1,
-            name = "hero_alric",
-            available_level = 27,
-            starting_level = 1,
-            icon = 1,
-            stats = { 6, 5, 0, 4 }
-        }, -- 幻影
-        {
-            from_kr = 2,
-            portrait = 2,
-            thumb = 2,
-            name = "hero_mirage",
-            available_level = 30,
-            starting_level = 1,
-            icon = 2,
-            stats = { 4, 3, 5, 7 }
-        }, -- 船长
-        {
-            from_kr = 2,
-            portrait = 3,
-            thumb = 3,
-            name = "hero_pirate",
-            available_level = 31,
-            starting_level = 1,
-            icon = 3,
-            stats = { 5, 5, 5, 5 }
-        }, -- 大法师
-        {
-            from_kr = 2,
-            portrait = 6,
-            thumb = 6,
-            name = "hero_wizard",
-            available_level = 32,
-            starting_level = 1,
-            icon = 6,
-            stats = { 3, 2, 6, 8 }
-        }, -- 兽王
-        {
-            from_kr = 2,
-            portrait = 4,
-            thumb = 4,
-            name = "hero_beastmaster",
-            available_level = 33,
-            starting_level = 1,
-            icon = 4,
-            stats = { 7, 5, 0, 3 }
-        }, -- 女巫
-        {
-            from_kr = 2,
-            portrait = 5,
-            thumb = 5,
-            name = "hero_voodoo_witch",
-            available_level = 34,
-            starting_level = 4,
-            icon = 5,
-            stats = { 6, 5, 6, 5 }
-        }, -- 沙塔
-        {
-            from_kr = 2,
-            portrait = 9,
-            thumb = 9,
-            name = "hero_alien",
-            available_level = 35,
-            starting_level = 1,
-            icon = 9,
-            stats = { 4, 5, 0, 6 }
-        }, -- 武僧
-        {
-            from_kr = 2,
-            portrait = 12,
-            thumb = 12,
-            name = "hero_monk",
-            available_level = 36,
-            starting_level = 1,
-            icon = 12,
-            stats = { 6, 5, 0, 6 }
-        }, -- 猴神
-        {
-            from_kr = 2,
-            portrait = 16,
-            thumb = 16,
-            name = "hero_monkey_god",
-            available_level = 37,
-            starting_level = 5,
-            icon = 16,
-            stats = { 5, 5, 0, 7 }
-        }, -- 石头人
-        {
-            from_kr = 2,
-            portrait = 8,
-            thumb = 8,
-            name = "hero_giant",
-            available_level = 38,
-            starting_level = 5,
-            icon = 8,
-            stats = { 7, 5, 0, 2 }
-        }, -- 火龙
-        {
-            from_kr = 2,
-            portrait = 10,
-            thumb = 10,
-            name = "hero_dragon",
-            available_level = 39,
-            starting_level = 1,
-            icon = 10,
-            stats = { 7, 6, 5, 6 }
-        }, -- 女祭司
-        {
-            from_kr = 2,
-            portrait = 7,
-            thumb = 7,
-            name = "hero_priest",
-            available_level = 40,
-            starting_level = 1,
-            icon = 7,
-            stats = { 6, 3, 5, 8 }
-        }, -- 鲁林
-        {
-            from_kr = 2,
-            portrait = 17,
-            thumb = 17,
-            name = "hero_dwarf",
-            available_level = 40,
-            starting_level = 1,
-            icon = 17,
-            stats = { 7, 5, 0, 4 }
-        }, -- 牛头人
-        {
-            from_kr = 2,
-            portrait = 15,
-            thumb = 15,
-            name = "hero_minotaur",
-            available_level = 41,
-            starting_level = 5,
-            icon = 15,
-            stats = { 5, 5, 0, 5 }
-        }, -- 螃蟹
-        {
-            from_kr = 2,
-            portrait = 11,
-            thumb = 11,
-            name = "hero_crab",
-            available_level = 42,
-            starting_level = 5,
-            icon = 11,
-            stats = { 7, 5, 0, 6 }
-        }, -- 但丁
-        {
-            from_kr = 2,
-            portrait = 13,
-            thumb = 13,
-            name = "hero_van_helsing",
-            available_level = 45,
-            starting_level = 1,
-            icon = 13,
-            stats = { 6, 7, 5, 6 }
-        }, -- 骨龙
-        {
-            from_kr = 2,
-            portrait = 14,
-            thumb = 14,
-            name = "hero_dracolich",
-            available_level = 46,
-            starting_level = 1,
-            icon = 14,
-            stats = { 7, 5, 5, 6 }
-        }, -- 女吸血鬼
-        {
-            from_kr = 2,
-            portrait = 18,
-            thumb = 18,
-            name = "hero_vampiress",
-            available_level = 47,
-            starting_level = 1,
-            icon = 18,
-            stats = { 7, 6, 0, 6 }
-        }, --[[
+    {
+        from_kr = 2,
+        portrait = 1,
+        thumb = 1,
+        name = "hero_alric",
+        available_level = 27,
+        starting_level = 1,
+        icon = 1,
+        stats = {6, 5, 0, 4}
+    }, -- 幻影
+    {
+        from_kr = 2,
+        portrait = 2,
+        thumb = 2,
+        name = "hero_mirage",
+        available_level = 30,
+        starting_level = 1,
+        icon = 2,
+        stats = {4, 3, 5, 7}
+    }, -- 船长
+    {
+        from_kr = 2,
+        portrait = 3,
+        thumb = 3,
+        name = "hero_pirate",
+        available_level = 31,
+        starting_level = 1,
+        icon = 3,
+        stats = {5, 5, 5, 5}
+    }, -- 大法师
+    {
+        from_kr = 2,
+        portrait = 6,
+        thumb = 6,
+        name = "hero_wizard",
+        available_level = 32,
+        starting_level = 1,
+        icon = 6,
+        stats = {3, 2, 6, 8}
+    }, -- 兽王
+    {
+        from_kr = 2,
+        portrait = 4,
+        thumb = 4,
+        name = "hero_beastmaster",
+        available_level = 33,
+        starting_level = 1,
+        icon = 4,
+        stats = {7, 5, 0, 3}
+    }, -- 女巫
+    {
+        from_kr = 2,
+        portrait = 5,
+        thumb = 5,
+        name = "hero_voodoo_witch",
+        available_level = 34,
+        starting_level = 4,
+        icon = 5,
+        stats = {6, 5, 6, 5}
+    }, -- 沙塔
+    {
+        from_kr = 2,
+        portrait = 9,
+        thumb = 9,
+        name = "hero_alien",
+        available_level = 35,
+        starting_level = 1,
+        icon = 9,
+        stats = {4, 5, 0, 6}
+    }, -- 武僧
+    {
+        from_kr = 2,
+        portrait = 12,
+        thumb = 12,
+        name = "hero_monk",
+        available_level = 36,
+        starting_level = 1,
+        icon = 12,
+        stats = {6, 5, 0, 6}
+    }, -- 猴神
+    {
+        from_kr = 2,
+        portrait = 16,
+        thumb = 16,
+        name = "hero_monkey_god",
+        available_level = 37,
+        starting_level = 5,
+        icon = 16,
+        stats = {5, 5, 0, 7}
+    }, -- 石头人
+    {
+        from_kr = 2,
+        portrait = 8,
+        thumb = 8,
+        name = "hero_giant",
+        available_level = 38,
+        starting_level = 5,
+        icon = 8,
+        stats = {7, 5, 0, 2}
+    }, -- 火龙
+    {
+        from_kr = 2,
+        portrait = 10,
+        thumb = 10,
+        name = "hero_dragon",
+        available_level = 39,
+        starting_level = 1,
+        icon = 10,
+        stats = {7, 6, 5, 6}
+    }, -- 女祭司
+    {
+        from_kr = 2,
+        portrait = 7,
+        thumb = 7,
+        name = "hero_priest",
+        available_level = 40,
+        starting_level = 1,
+        icon = 7,
+        stats = {6, 3, 5, 8}
+    }, -- 鲁林
+    {
+        from_kr = 2,
+        portrait = 17,
+        thumb = 17,
+        name = "hero_dwarf",
+        available_level = 40,
+        starting_level = 1,
+        icon = 17,
+        stats = {7, 5, 0, 4}
+    }, -- 牛头人
+    {
+        from_kr = 2,
+        portrait = 15,
+        thumb = 15,
+        name = "hero_minotaur",
+        available_level = 41,
+        starting_level = 5,
+        icon = 15,
+        stats = {5, 5, 0, 5}
+    }, -- 螃蟹
+    {
+        from_kr = 2,
+        portrait = 11,
+        thumb = 11,
+        name = "hero_crab",
+        available_level = 42,
+        starting_level = 5,
+        icon = 11,
+        stats = {7, 5, 0, 6}
+    }, -- 但丁
+    {
+        from_kr = 2,
+        portrait = 13,
+        thumb = 13,
+        name = "hero_van_helsing",
+        available_level = 45,
+        starting_level = 1,
+        icon = 13,
+        stats = {6, 7, 5, 6}
+    }, -- 骨龙
+    {
+        from_kr = 2,
+        portrait = 14,
+        thumb = 14,
+        name = "hero_dracolich",
+        available_level = 46,
+        starting_level = 1,
+        icon = 14,
+        stats = {7, 5, 5, 6}
+    }, -- 女吸血鬼
+    {
+        from_kr = 2,
+        portrait = 18,
+        thumb = 18,
+        name = "hero_vampiress",
+        available_level = 47,
+        starting_level = 1,
+        icon = 18,
+        stats = {7, 6, 0, 6}
+    }, --[[
 			三代
 		--]] -- 艾莉丹
-        {
-            from_kr = 3,
-            portrait = 1,
-            thumb = 1,
-            name = "hero_elves_archer",
-            available_level = 49,
-            starting_level = 1,
-            icon = 1,
-            stats = { 6, 5, 6, 6 }
-        }, -- 埃里汎
-        {
-            from_kr = 3,
-            portrait = 2,
-            thumb = 2,
-            name = "hero_arivan",
-            available_level = 51,
-            starting_level = 3,
-            icon = 2,
-            stats = { 5, 6, 6, 6 }
-        }, -- 树人
-        {
-            from_kr = 3,
-            portrait = 7,
-            thumb = 7,
-            name = "hero_bravebark",
-            available_level = 52,
-            starting_level = 5,
-            icon = 7,
-            stats = { 6, 5, 0, 7 }
-        }, -- 熊猫
-        {
-            from_kr = 3,
-            portrait = 9,
-            thumb = 9,
-            name = "hero_xin",
-            available_level = 53,
-            starting_level = 5,
-            icon = 9,
-            stats = { 6, 4, 0, 8 }
-        }, -- 王子迪纳斯
-        {
-            from_kr = 3,
-            portrait = 5,
-            thumb = 5,
-            name = "hero_elves_denas",
-            available_level = 54,
-            starting_level = 5,
-            icon = 5,
-            stats = { 7, 4, 0, 4 }
-        }, -- 大瑞格
-        {
-            from_kr = 3,
-            portrait = 6,
-            thumb = 6,
-            name = "hero_rag",
-            available_level = 56,
-            starting_level = 5,
-            icon = 6,
-            stats = { 5, 4, 4, 5 }
-        }, -- 水晶人
-        {
-            from_kr = 3,
-            portrait = 11,
-            thumb = 11,
-            name = "hero_durax",
-            available_level = 57,
-            starting_level = 5,
-            icon = 11,
-            stats = { 5, 8, 0, 7 }
-        }, -- 仙子
-        {
-            from_kr = 3,
-            portrait = 3,
-            thumb = 3,
-            name = "hero_catha",
-            available_level = 58,
-            starting_level = 4,
-            icon = 3,
-            stats = { 5, 3, 6, 6 }
-        }, -- 雷格森
-        {
-            from_kr = 3,
-            portrait = 4,
-            thumb = 4,
-            name = "hero_regson",
-            available_level = 59,
-            starting_level = 5,
-            icon = 4,
-            stats = { 7, 5, 0, 6 }
-        }, -- 堕天使
-        {
-            from_kr = 3,
-            portrait = 14,
-            thumb = 14,
-            name = "hero_lilith",
-            available_level = 60,
-            starting_level = 5,
-            icon = 14,
-            stats = { 6, 5, 5, 6 }
-        }, -- 火凤凰
-        {
-            from_kr = 3,
-            portrait = 10,
-            thumb = 10,
-            name = "hero_phoenix",
-            available_level = 61,
-            starting_level = 5,
-            icon = 10,
-            stats = { 5, 6, 0, 6 }
-        }, -- 浮士德
-        {
-            from_kr = 3,
-            portrait = 16,
-            thumb = 16,
-            name = "hero_faustus",
-            available_level = 62,
-            starting_level = 5,
-            icon = 16,
-            stats = { 6, 6, 6, 6 }
-        }, -- 维兹南
-        {
-            from_kr = 3,
-            portrait = 8,
-            thumb = 8,
-            name = "hero_veznan",
-            available_level = 63,
-            starting_level = 5,
-            icon = 8,
-            stats = { 3, 5, 0, 8 }
-        }, -- 狮王
-        {
-            from_kr = 3,
-            portrait = 13,
-            thumb = 13,
-            name = "hero_bruce",
-            available_level = 64,
-            starting_level = 5,
-            icon = 13,
-            stats = { 6, 6, 0, 5 }
-        }, -- 利恩
-        {
-            from_kr = 3,
-            portrait = 12,
-            thumb = 12,
-            name = "hero_lynn",
-            available_level = 67,
-            starting_level = 5,
-            icon = 12,
-            stats = { 6, 6, 0, 5 }
-        }, -- 飞机
-        {
-            from_kr = 3,
-            portrait = 15,
-            thumb = 15,
-            name = "hero_wilbur",
-            available_level = 69,
-            starting_level = 5,
-            icon = 15,
-            stats = { 6, 7, 5, 5 }
-        }, -- 波尔维克
-        {
-            from_kr = 3,
-            portrait = 19,
-            thumb = 19,
-            name = "hero_bolverk",
-            available_level = 70,
-            starting_level = 5,
-            icon = 19,
-            stats = { 5, 5, 0, 6 }
-        }, --[[
+    {
+        from_kr = 3,
+        portrait = 1,
+        thumb = 1,
+        name = "hero_elves_archer",
+        available_level = 49,
+        starting_level = 1,
+        icon = 1,
+        stats = {6, 5, 6, 6}
+    }, -- 埃里汎
+    {
+        from_kr = 3,
+        portrait = 2,
+        thumb = 2,
+        name = "hero_arivan",
+        available_level = 51,
+        starting_level = 3,
+        icon = 2,
+        stats = {5, 6, 6, 6}
+    }, -- 树人
+    {
+        from_kr = 3,
+        portrait = 7,
+        thumb = 7,
+        name = "hero_bravebark",
+        available_level = 52,
+        starting_level = 5,
+        icon = 7,
+        stats = {6, 5, 0, 7}
+    }, -- 熊猫
+    {
+        from_kr = 3,
+        portrait = 9,
+        thumb = 9,
+        name = "hero_xin",
+        available_level = 53,
+        starting_level = 5,
+        icon = 9,
+        stats = {6, 4, 0, 8}
+    }, -- 王子迪纳斯
+    {
+        from_kr = 3,
+        portrait = 5,
+        thumb = 5,
+        name = "hero_elves_denas",
+        available_level = 54,
+        starting_level = 5,
+        icon = 5,
+        stats = {7, 4, 0, 4}
+    }, -- 大瑞格
+    {
+        from_kr = 3,
+        portrait = 6,
+        thumb = 6,
+        name = "hero_rag",
+        available_level = 56,
+        starting_level = 5,
+        icon = 6,
+        stats = {5, 4, 4, 5}
+    }, -- 水晶人
+    {
+        from_kr = 3,
+        portrait = 11,
+        thumb = 11,
+        name = "hero_durax",
+        available_level = 57,
+        starting_level = 5,
+        icon = 11,
+        stats = {5, 8, 0, 7}
+    }, -- 仙子
+    {
+        from_kr = 3,
+        portrait = 3,
+        thumb = 3,
+        name = "hero_catha",
+        available_level = 58,
+        starting_level = 4,
+        icon = 3,
+        stats = {5, 3, 6, 6}
+    }, -- 雷格森
+    {
+        from_kr = 3,
+        portrait = 4,
+        thumb = 4,
+        name = "hero_regson",
+        available_level = 59,
+        starting_level = 5,
+        icon = 4,
+        stats = {7, 5, 0, 6}
+    }, -- 堕天使
+    {
+        from_kr = 3,
+        portrait = 14,
+        thumb = 14,
+        name = "hero_lilith",
+        available_level = 60,
+        starting_level = 5,
+        icon = 14,
+        stats = {6, 5, 5, 6}
+    }, -- 火凤凰
+    {
+        from_kr = 3,
+        portrait = 10,
+        thumb = 10,
+        name = "hero_phoenix",
+        available_level = 61,
+        starting_level = 5,
+        icon = 10,
+        stats = {5, 6, 0, 6}
+    }, -- 浮士德
+    {
+        from_kr = 3,
+        portrait = 16,
+        thumb = 16,
+        name = "hero_faustus",
+        available_level = 62,
+        starting_level = 5,
+        icon = 16,
+        stats = {6, 6, 6, 6}
+    }, -- 维兹南
+    {
+        from_kr = 3,
+        portrait = 8,
+        thumb = 8,
+        name = "hero_veznan",
+        available_level = 63,
+        starting_level = 5,
+        icon = 8,
+        stats = {3, 5, 0, 8}
+    }, -- 狮王
+    {
+        from_kr = 3,
+        portrait = 13,
+        thumb = 13,
+        name = "hero_bruce",
+        available_level = 64,
+        starting_level = 5,
+        icon = 13,
+        stats = {6, 6, 0, 5}
+    }, -- 利恩
+    {
+        from_kr = 3,
+        portrait = 12,
+        thumb = 12,
+        name = "hero_lynn",
+        available_level = 67,
+        starting_level = 5,
+        icon = 12,
+        stats = {6, 6, 0, 5}
+    }, -- 飞机
+    {
+        from_kr = 3,
+        portrait = 15,
+        thumb = 15,
+        name = "hero_wilbur",
+        available_level = 69,
+        starting_level = 5,
+        icon = 15,
+        stats = {6, 7, 5, 5}
+    }, -- 波尔维克
+    {
+        from_kr = 3,
+        portrait = 19,
+        thumb = 19,
+        name = "hero_bolverk",
+        available_level = 70,
+        starting_level = 5,
+        icon = 19,
+        stats = {5, 5, 0, 6}
+    }, --[[
 			五代
 		--]] -- 安雅
-        {
-            from_kr = 5,
-            portrait = 6,
-            thumb = 6,
-            name = "hero_hunter",
-            available_level = 1,
-            starting_level = 1,
-            icon = 6,
-            stats = { 6, 5, 6, 7 }
-        }, -- 虚空法师
-        {
-            from_kr = 5,
-            portrait = 7,
-            thumb = 7,
-            name = "hero_space_elf",
-            available_level = 1,
-            starting_level = 1,
-            icon = 7,
-            stats = { 4, 4, 6, 8 }
-        }, -- 黑暗中尉
-        {
-            from_kr = 5,
-            portrait = 2,
-            thumb = 2,
-            name = "hero_raelyn",
-            available_level = 1,
-            starting_level = 1,
-            icon = 2,
-            stats = { 7, 6, 0, 3 }
-        }, -- 毒液
-        {
-            from_kr = 5,
-            portrait = 4,
-            thumb = 4,
-            name = "hero_venom",
-            available_level = 1,
-            starting_level = 1,
-            icon = 4,
-            stats = { 5, 5, 5, 6 }
-        }, -- 晶龙
-        {
-            from_kr = 5,
-            portrait = 12,
-            thumb = 12,
-            name = "hero_dragon_gem",
-            available_level = 1,
-            starting_level = 1,
-            icon = 12,
-            stats = { 7, 6, 5, 5 }
-        }, -- 小女巫
-        {
-            from_kr = 5,
-            portrait = 13,
-            thumb = 13,
-            name = "hero_witch",
-            available_level = 1,
-            starting_level = 1,
-            icon = 13,
-            stats = { 5, 4, 5, 7 }
-        }, -- 骨龙
-        {
-            from_kr = 5,
-            portrait = 14,
-            thumb = 14,
-            name = "hero_dragon_bone",
-            available_level = 1,
-            starting_level = 1,
-            icon = 14,
-            stats = { 6, 0, 5, 5 }
-        }, -- 圣龙
-        {
-            from_kr = 5,
-            portrait = 11,
-            thumb = 11,
-            name = "hero_lumenir",
-            available_level = 1,
-            starting_level = 1,
-            icon = 11,
-            stats = { 7, 0, 5, 5 }
-        }, -- 悟空
-        {
-            from_kr = 5,
-            portrait = 18,
-            thumb = 18,
-            name = "hero_wukong",
-            available_level = 1,
-            starting_level = 1,
-            icon = 18,
-            stats = { 5, 7, 4, 5 }
-        } },
+    {
+        from_kr = 5,
+        portrait = 6,
+        thumb = 6,
+        name = "hero_hunter",
+        available_level = 1,
+        starting_level = 1,
+        icon = 6,
+        stats = {6, 5, 6, 7}
+    }, -- 虚空法师
+    {
+        from_kr = 5,
+        portrait = 7,
+        thumb = 7,
+        name = "hero_space_elf",
+        available_level = 1,
+        starting_level = 1,
+        icon = 7,
+        stats = {4, 4, 6, 8}
+    }, -- 黑暗中尉
+    {
+        from_kr = 5,
+        portrait = 2,
+        thumb = 2,
+        name = "hero_raelyn",
+        available_level = 1,
+        starting_level = 1,
+        icon = 2,
+        stats = {7, 6, 0, 3}
+    }, -- 毒液
+    {
+        from_kr = 5,
+        portrait = 4,
+        thumb = 4,
+        name = "hero_venom",
+        available_level = 1,
+        starting_level = 1,
+        icon = 4,
+        stats = {5, 5, 5, 6}
+    }, -- 晶龙
+    {
+        from_kr = 5,
+        portrait = 12,
+        thumb = 12,
+        name = "hero_dragon_gem",
+        available_level = 1,
+        starting_level = 1,
+        icon = 12,
+        stats = {7, 6, 5, 5}
+    }, -- 小女巫
+    {
+        from_kr = 5,
+        portrait = 13,
+        thumb = 13,
+        name = "hero_witch",
+        available_level = 1,
+        starting_level = 1,
+        icon = 13,
+        stats = {5, 4, 5, 7}
+    }, -- 骨龙
+    {
+        from_kr = 5,
+        portrait = 14,
+        thumb = 14,
+        name = "hero_dragon_bone",
+        available_level = 1,
+        starting_level = 1,
+        icon = 14,
+        stats = {6, 0, 5, 5}
+    }, -- 圣龙
+    {
+        from_kr = 5,
+        portrait = 11,
+        thumb = 11,
+        name = "hero_lumenir",
+        available_level = 1,
+        starting_level = 1,
+        icon = 11,
+        stats = {7, 0, 5, 5}
+    }, -- 悟空
+    {
+        from_kr = 5,
+        portrait = 18,
+        thumb = 18,
+        name = "hero_wukong",
+        available_level = 1,
+        starting_level = 1,
+        icon = 18,
+        stats = {5, 7, 4, 5}
+    }},
     level_data = {
         {
             upgrades = {
                 heroe = false,
                 level = 1
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = { "barracks" }
+            iron = {"barracks"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = { "artillery" }
+            iron = {"artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 3
             },
-            iron = { "barracks" }
+            iron = {"barracks"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 3
             },
-            iron = { "archers", "mages", "artillery" }
+            iron = {"archers", "mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 3
             },
-            iron = { "barracks", "artillery" }
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 4
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 4
             },
-            iron = { "archers", "barracks", "artillery" }
+            iron = {"archers", "barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 4
             },
-            iron = { "artillery" }
+            iron = {"artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery", "archers" }
+            iron = {"artillery", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery" }
+            iron = {"artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery", "mages" }
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "barracks" }
+            iron = {"archers", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "barracks", "mages" }
+            iron = {"barracks", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages" }
+            iron = {"mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery" }
+            iron = {"artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "barracks", "artillery" }
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "barracks" }
+            iron = {"archers", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         }, -- 2代
         {
             upgrades = {
                 heroe = false,
                 level = 1
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = { "artillery" }
+            iron = {"artillery"}
         },
         {
             upgrades = {
                 heroe = false,
                 level = 2
             },
-            iron = { "artillery", "mages" }
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 2
             },
-            iron = { "barracks", "artillery" }
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 3
             },
-            iron = { "barracks", "archers" }
+            iron = {"barracks", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 3
             },
-            iron = { "artillery", "archers" }
+            iron = {"artillery", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 3
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 4
             },
-            iron = { "barracks", "mages" }
+            iron = {"barracks", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 4
             },
-            iron = { "artillery", "mages" }
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 4
             },
-            iron = { "barracks", "archers" }
+            iron = {"barracks", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery", "mages" }
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "archers" }
+            iron = {"mages", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery", "barracks" }
+            iron = {"artillery", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages" }
+            iron = {"mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "barracks" }
+            iron = {"archers", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "barracks", "mages" }
+            iron = {"barracks", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery", "mages" }
+            iron = {"artillery", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "barracks" }
+            iron = {"archers", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "barracks", "mages" }
+            iron = {"barracks", "mages"}
         }, -- 3代
         {
             upgrades = {
                 heroe = true,
                 level = 1
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 2
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 2
             },
-            iron = { "archers", "mages" }
+            iron = {"archers", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 2
             },
-            iron = { "barracks", "mages" }
+            iron = {"barracks", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 2
             },
-            iron = { "barracks", "artillery" }
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 3
             },
-            iron = { "archers", "barracks" }
+            iron = {"archers", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 3
             },
-            iron = { "mages", "barracks" }
+            iron = {"mages", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 3
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 4
             },
-            iron = { "barracks", "mages" }
+            iron = {"barracks", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 4
             },
-            iron = { "archers", "barracks" }
+            iron = {"archers", "barracks"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 4
             },
-            iron = { "barracks", "mages" }
+            iron = {"barracks", "mages"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "barracks", "artillery" }
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "archers" }
+            iron = {"mages", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "archers" }
+            iron = {"mages", "archers"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "barracks", "artillery" }
+            iron = {"barracks", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery" }
+            iron = {"archers", "artillery"}
         },
         -- 额外
         [71] = {
@@ -2071,28 +2071,28 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "artillery" }
+            iron = {"mages", "artillery"}
         },
         [90] = {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "archers", "artillery", "barracks" }
+            iron = {"archers", "artillery", "barracks"}
         },
         [91] = {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "mages", "barracks" }
+            iron = {"mages", "barracks"}
         },
         [110] = {
             upgrades = {
                 heroe = true,
                 level = 5
             },
-            iron = { "artillery", "mages" }
+            iron = {"artillery", "mages"}
         },
         [1000] = {
             upgrades = {
@@ -2102,7 +2102,7 @@ return {
             iron = {}
         }
     },
-    tower_data = { {
+    tower_data = {{
         --     name = "tower_archer_1"
         -- }, {
         --     name = "tower_barrack_1"
@@ -2238,8 +2238,58 @@ return {
         icon = 8,
         detail_icon = 8,
         from_kr = 3
-    } },
-    map_animations1 = { {
+    }, {
+        name = "tower_arcane_wizard_lvl4",
+        icon = 1,
+        detail_icon = 1,
+        from_kr = 5
+    }, {
+        name = "tower_royal_archers_lvl4",
+        icon = 3,
+        detail_icon = 3,
+        from_kr = 5
+    }, {
+        name = "tower_tricannon_lvl4",
+        icon = 4,
+        detail_icon = 4,
+        from_kr = 5
+    }, {
+        name = "tower_demon_pit_lvl4",
+        icon = 7,
+        detail_icon = 7,
+        from_kr = 5
+    }, {
+        name = "tower_necromancer_lvl4",
+        icon = 9,
+        detail_icon = 9,
+        from_kr = 5
+    }, {
+        name = "tower_elven_stargazers_lvl4",
+        icon = 10,
+        detail_icon = 10,
+        from_kr = 5
+    }, {
+        name = "tower_sand_lvl4",
+        icon = 12,
+        detail_icon = 12,
+        from_kr = 5
+    }, {
+        name = "tower_rocket_gunners_lvl4",
+        icon = 13,
+        detail_icon = 13,
+        from_kr = 5
+    }, {
+        name = "tower_dark_elf_lvl4",
+        icon = 15,
+        detail_icon = 16,
+        from_kr = 5
+    }, {
+        name = "tower_pandas_lvl4",
+        icon = 20,
+        detail_icon = 21,
+        from_kr = 5
+    }},
+    map_animations1 = {{
         sail_time = 15,
         id = "ma_big_boat",
         wait_in = 12.5,
@@ -2359,7 +2409,7 @@ return {
         id = "ma_eagle",
         layer = 2,
         pos = v(958, 85),
-        wait = { 2, 3 },
+        wait = {2, 3},
         animation = {
             to = 203,
             prefix = "eagle_1",
@@ -2369,7 +2419,7 @@ return {
         id = "ma_fisher man",
         layer = 2,
         pos = v(456, 898),
-        wait = { 1, 5 },
+        wait = {1, 5},
         animation = {
             to = 172,
             prefix = "fisherMan",
@@ -2389,7 +2439,7 @@ return {
         id = "ma_ghost",
         layer = 2,
         pos = v(1485, 455),
-        wait = { 3, 12 },
+        wait = {3, 12},
         animation = {
             to = 188,
             prefix = "ghost",
@@ -2399,7 +2449,7 @@ return {
         id = "ma_north_lights",
         layer = 2,
         pos = v(1423, 272),
-        wait = { 8, 15 },
+        wait = {8, 15},
         scale = v(0.8, 0.8),
         animation = {
             to = 25,
@@ -2410,7 +2460,7 @@ return {
         id = "ma_hacker",
         layer = 2,
         pos = v(378, 431),
-        wait = { 1, 3 },
+        wait = {1, 3},
         animation = {
             to = 255,
             prefix = "hacker",
@@ -2430,7 +2480,7 @@ return {
         id = "ma_mobiDick",
         layer = 2,
         pos = v(1099, 55),
-        wait = { 2, 10 },
+        wait = {2, 10},
         animation = {
             to = 224,
             prefix = "mobiDick",
@@ -2466,7 +2516,7 @@ return {
         id = "ma_rottenBubbles1",
         layer = 2,
         pos = v(1757, 309),
-        wait = { 3, 12 },
+        wait = {3, 12},
         animation = {
             to = 47,
             prefix = "rottenBubble",
@@ -2561,7 +2611,7 @@ return {
         id = "ma_sheep1",
         layer = 2,
         pos = v(240, 758),
-        wait = { 1, 8 },
+        wait = {1, 8},
         animation = {
             to = 18,
             prefix = "sheep",
@@ -2589,7 +2639,7 @@ return {
         id = "ma_sheepSmall1",
         layer = 2,
         pos = v(380, 817),
-        wait = { 1, 8 },
+        wait = {1, 8},
         animation = {
             to = 18,
             prefix = "sheepSmall",
@@ -2648,7 +2698,7 @@ return {
         id = "ma_spider1",
         layer = 2,
         pos = v(431, 123),
-        wait = { 3, 6 },
+        wait = {3, 6},
         animation = {
             to = 87,
             prefix = "spider_1",
@@ -2658,7 +2708,7 @@ return {
         id = "ma_spider2",
         layer = 2,
         pos = v(431, 123),
-        wait = { 3, 6 },
+        wait = {3, 6},
         animation = {
             to = 79,
             prefix = "spider_2",
@@ -2668,7 +2718,7 @@ return {
         id = "ma_spider3",
         layer = 2,
         pos = v(431, 123),
-        wait = { 3, 6 },
+        wait = {3, 6},
         animation = {
             to = 85,
             prefix = "spider_3",
@@ -2699,12 +2749,12 @@ return {
                 from = 124
             }
         },
-        sequence = { { "default", 3, 6 }, { "left", 3, 6 }, { "right", 3, 6 } }
+        sequence = {{"default", 3, 6}, {"left", 3, 6}, {"right", 3, 6}}
     }, {
         id = "ma_twister",
         layer = 2,
         pos = v(1409, 914),
-        wait = { 5, 15 },
+        wait = {5, 15},
         animation = {
             to = 119,
             prefix = "twister",
@@ -2724,7 +2774,7 @@ return {
         id = "ma_volcanoes1",
         layer = 2,
         pos = v(1448, 604),
-        wait = { 3, 12 },
+        wait = {3, 12},
         animation = {
             to = 62,
             prefix = "volcanos_1",
@@ -2734,7 +2784,7 @@ return {
         id = "ma_volcanoes2",
         layer = 2,
         pos = v(1448, 604),
-        wait = { 3, 12 },
+        wait = {3, 12},
         animation = {
             to = 62,
             prefix = "volcanos_2",
@@ -2744,7 +2794,7 @@ return {
         id = "ma_volcanoes3",
         layer = 2,
         pos = v(1448, 604),
-        wait = { 3, 12 },
+        wait = {3, 12},
         animation = {
             to = 62,
             prefix = "volcanos_3",
@@ -2754,7 +2804,7 @@ return {
         id = "ma_volcanoes4",
         layer = 2,
         pos = v(1448, 604),
-        wait = { 3, 12 },
+        wait = {3, 12},
         animation = {
             to = 62,
             prefix = "volcanos_4",
@@ -3018,7 +3068,7 @@ return {
             from = v(-250, 1000),
             to = v(2250, 1020)
         },
-        wait = { 1, 60 },
+        wait = {1, 60},
         animation = {
             to = 1,
             prefix = "ma_cloud",
@@ -3154,8 +3204,8 @@ return {
             from = v(-200, 10),
             to = v(2100, 10)
         }
-    } },
-    map_animations2 = { {
+    }},
+    map_animations2 = {{
         loop = true,
         id = "ma_waterfall_left",
         layer = 1,
@@ -3179,7 +3229,7 @@ return {
         id = "ma_twister_1",
         layer = 1,
         pos = v(312, 183),
-        wait = { 10, 20 },
+        wait = {10, 20},
         animation = {
             to = 119,
             prefix = "ma_twister_1",
@@ -3189,7 +3239,7 @@ return {
         id = "ma_twister_2",
         layer = 1,
         pos = v(97, 467),
-        wait = { 10, 20 },
+        wait = {10, 20},
         animation = {
             to = 119,
             prefix = "ma_twister_2",
@@ -3199,7 +3249,7 @@ return {
         id = "ma_twister_3",
         layer = 1,
         pos = v(259, 386),
-        wait = { 10, 20 },
+        wait = {10, 20},
         animation = {
             to = 119,
             prefix = "ma_twister_3",
@@ -3209,7 +3259,7 @@ return {
         id = "ma_sandworm",
         layer = 1,
         pos = v(283, 490),
-        wait = { 20, 40 },
+        wait = {20, 40},
         animation = {
             to = 81,
             prefix = "ma_sandworm",
@@ -3219,7 +3269,7 @@ return {
         id = "ma_bantha_1",
         layer = 1,
         pos = v(53, 323),
-        wait = { 2, 4 },
+        wait = {2, 4},
         animation = {
             to = 54,
             prefix = "ma_bantha",
@@ -3229,7 +3279,7 @@ return {
         id = "ma_goat_1",
         layer = 1,
         pos = v(522, 642),
-        wait = { 3, 7 },
+        wait = {3, 7},
         animation = {
             to = 32,
             prefix = "ma_goat",
@@ -3244,7 +3294,7 @@ return {
         id = "ma_mini_volcano_a_1",
         layer = 1,
         pos = v(556, 16),
-        wait = { 5, 10 },
+        wait = {5, 10},
         animation = {
             to = 60,
             prefix = "ma_mini_volcano_1",
@@ -3288,7 +3338,7 @@ return {
         id = "ma_mini_volcano_b_1",
         layer = 1,
         pos = v(321, 33),
-        wait = { 5, 10 },
+        wait = {5, 10},
         animation = {
             to = 60,
             prefix = "ma_mini_volcano_2",
@@ -3326,7 +3376,7 @@ return {
         id = "ma_north_lights",
         layer = 1,
         pos = v(986, 171),
-        wait = { 8, 15 },
+        wait = {8, 15},
         animation = {
             to = 25,
             prefix = "ma_north_lights",
@@ -3336,7 +3386,7 @@ return {
         id = "ma_skeleton",
         layer = 1,
         pos = v(1094, 222),
-        wait = { 10, 30 },
+        wait = {10, 30},
         animation = {
             to = 129,
             prefix = "ma_skeleton",
@@ -3347,7 +3397,7 @@ return {
         toggle = true,
         layer = 1,
         pos = v(1269, 89),
-        wait = { 8, 25 },
+        wait = {8, 25},
         animation = {
             to = 1,
             prefix = "ma_castle_window_1",
@@ -3358,7 +3408,7 @@ return {
         toggle = true,
         layer = 1,
         pos = v(1275, 100),
-        wait = { 8, 25 },
+        wait = {8, 25},
         animation = {
             to = 1,
             prefix = "ma_castle_window_2",
@@ -3369,7 +3419,7 @@ return {
         toggle = true,
         layer = 1,
         pos = v(1303, 99),
-        wait = { 8, 25 },
+        wait = {8, 25},
         animation = {
             to = 1,
             prefix = "ma_castle_window_3",
@@ -3380,7 +3430,7 @@ return {
         toggle = true,
         layer = 1,
         pos = v(1276, 126),
-        wait = { 8, 25 },
+        wait = {8, 25},
         animation = {
             to = 1,
             prefix = "ma_castle_window_4",
@@ -3391,7 +3441,7 @@ return {
         toggle = true,
         layer = 1,
         pos = v(1286, 83),
-        wait = { 8, 25 },
+        wait = {8, 25},
         animation = {
             to = 1,
             prefix = "ma_castle_window_5",
@@ -3415,7 +3465,7 @@ return {
         id = "ma_lava_1_glow",
         layer = 1,
         pos = v(585, 133),
-        wait = { 5, 10 },
+        wait = {5, 10},
         animation = {
             to = 96,
             prefix = "ma_lava_1_glow",
@@ -3435,7 +3485,7 @@ return {
         id = "ma_lava_2_glow",
         layer = 1,
         pos = v(759, 126),
-        wait = { 5, 10 },
+        wait = {5, 10},
         animation = {
             to = 96,
             prefix = "ma_lava_2_glow",
@@ -3485,7 +3535,7 @@ return {
         id = "ma_diamond",
         layer = 1,
         pos = v(1522, 349),
-        wait = { 3, 6 },
+        wait = {3, 6},
         animation = {
             to = 70,
             prefix = "ma_diamond",
@@ -3495,7 +3545,7 @@ return {
         id = "ma_mountain_lava_1",
         layer = 1,
         pos = v(1539, 142),
-        wait = { 3, 6 },
+        wait = {3, 6},
         animation = {
             to = 80,
             prefix = "ma_mountain_lava_1",
@@ -3506,7 +3556,7 @@ return {
         id = "ma_mountain_lava_2",
         layer = 1,
         pos = v(1520, 187),
-        wait = { 3, 6 },
+        wait = {3, 6},
         animation = {
             to = 60,
             prefix = "ma_mountain_lava_2",
@@ -3563,7 +3613,7 @@ return {
         layer = 1,
         id = "ma_bottle_1",
         path = ani_paths2.ma_bottle_1,
-        wait = { 10, 20 },
+        wait = {10, 20},
         animation = {
             to = 27,
             prefix = "ma_bottle_loop",
@@ -3583,7 +3633,7 @@ return {
         id = "ma_monkey_vine_1",
         layer = 1,
         pos = v(977, 602),
-        wait = { 15, 30 },
+        wait = {15, 30},
         animation = {
             to = 82,
             prefix = "ma_monkey_vine_1",
@@ -3593,7 +3643,7 @@ return {
         id = "ma_monkey_vine_2",
         layer = 1,
         pos = v(1131, 686),
-        wait = { 25, 25 },
+        wait = {25, 25},
         animation = {
             to = 56,
             prefix = "ma_monkey_vine_2",
@@ -3603,7 +3653,7 @@ return {
         id = "ma_monkey_vine_3",
         layer = 1,
         pos = v(1593, 636),
-        wait = { 30, 45 },
+        wait = {30, 45},
         animation = {
             to = 55,
             prefix = "ma_monkey_vine_3",
@@ -3614,7 +3664,7 @@ return {
         layer = 1,
         pos = v(971, 854),
         scale = v(-1, 1),
-        wait = { 20, 45 },
+        wait = {20, 45},
         animation = {
             to = 85,
             prefix = "ma_monkey_shout",
@@ -3624,7 +3674,7 @@ return {
         id = "ma_monkey_shout_2",
         layer = 1,
         pos = v(1303, 731),
-        wait = { 20, 45 },
+        wait = {20, 45},
         animation = {
             to = 85,
             prefix = "ma_monkey_shout",
@@ -3634,7 +3684,7 @@ return {
         id = "ma_monkey_shout_3",
         layer = 1,
         pos = v(1745, 546),
-        wait = { 20, 45 },
+        wait = {20, 45},
         animation = {
             to = 85,
             prefix = "ma_monkey_shout",
@@ -3644,7 +3694,7 @@ return {
         id = "ma_volcano_bubble",
         layer = 1,
         pos = v(1440, 610),
-        wait = { 1, 2 },
+        wait = {1, 2},
         animation = {
             to = 70,
             prefix = "ma_volcano_bubble",
@@ -3664,7 +3714,7 @@ return {
         id = "ma_alien_ship",
         layer = 1,
         pos = v(1565, 783),
-        wait = { 1, 3 },
+        wait = {1, 3},
         animation = {
             to = 80,
             prefix = "ma_alien_ship",
@@ -3755,7 +3805,7 @@ return {
         id = "ma_beach_1",
         layer = 1,
         pos = v(502, 924),
-        wait = { 5, 5 },
+        wait = {5, 5},
         animation = {
             to = 135,
             prefix = "ma_beach_1",
@@ -3766,7 +3816,7 @@ return {
         id = "ma_beach_2",
         layer = 1,
         pos = v(269, 636),
-        wait = { 5, 5 },
+        wait = {5, 5},
         animation = {
             to = 131,
             prefix = "ma_beach_2",
@@ -3777,7 +3827,7 @@ return {
         id = "ma_beach_3",
         layer = 1,
         pos = v(301, 990),
-        wait = { 5, 5 },
+        wait = {5, 5},
         animation = {
             to = 131,
             prefix = "ma_beach_3",
@@ -3788,7 +3838,7 @@ return {
         id = "ma_beach_4",
         layer = 1,
         pos = v(173, 966),
-        wait = { 5, 5 },
+        wait = {5, 5},
         animation = {
             to = 131,
             prefix = "ma_beach_4",
@@ -3876,7 +3926,7 @@ return {
         id = "ma_tentacle",
         layer = 1,
         pos = v(351, 1012),
-        wait = { 22, 45 },
+        wait = {22, 45},
         animation = {
             to = 140,
             prefix = "ma_tentacle",
@@ -3896,7 +3946,7 @@ return {
         id = "ma_ship_left",
         layer = 2,
         pos = v(115, 742),
-        wait = { 15, 30 },
+        wait = {15, 30},
         animation = {
             to = 505,
             prefix = "ma_ship",
@@ -3906,7 +3956,7 @@ return {
         id = "ma_snapvine",
         layer = 2,
         pos = v(1345, 867),
-        wait = { 15, 30 },
+        wait = {15, 30},
         animation = {
             to = 20,
             prefix = "ma_snapvine",
@@ -3916,7 +3966,7 @@ return {
         id = "ma_vulture",
         layer = 3,
         pos = v(80, 480),
-        wait = { 20, 40 },
+        wait = {20, 40},
         animation = {
             to = 160,
             prefix = "ma_vulture",
@@ -3927,7 +3977,7 @@ return {
         layer = 3,
         id = "ma_bat_1",
         path = ani_paths2.ma_bat_1,
-        wait = { 3, 10 },
+        wait = {3, 10},
         animation = {
             to = 8,
             prefix = "ma_bat_loop",
@@ -3938,7 +3988,7 @@ return {
         layer = 3,
         id = "ma_bat_2",
         path = ani_paths2.ma_bat_2,
-        wait = { 3, 10 },
+        wait = {3, 10},
         animation = {
             to = 8,
             prefix = "ma_bat_loop",
@@ -3949,7 +3999,7 @@ return {
         layer = 3,
         id = "ma_bat_3",
         path = ani_paths2.ma_bat_3,
-        wait = { 3, 10 },
+        wait = {3, 10},
         animation = {
             to = 8,
             prefix = "ma_bat_loop",
@@ -3960,7 +4010,7 @@ return {
         layer = 3,
         id = "ma_bat_4",
         path = ani_paths2.ma_bat_4,
-        wait = { 3, 10 },
+        wait = {3, 10},
         animation = {
             to = 8,
             prefix = "ma_bat_loop",
@@ -3971,7 +4021,7 @@ return {
         layer = 3,
         id = "ma_bat_5",
         path = ani_paths2.ma_bat_5,
-        wait = { 3, 10 },
+        wait = {3, 10},
         animation = {
             to = 8,
             prefix = "ma_bat_loop",
@@ -3982,7 +4032,7 @@ return {
         layer = 3,
         id = "ma_big_bird",
         path = ani_paths2.ma_big_bird_1,
-        wait = { 10, 20 },
+        wait = {10, 20},
         animation = {
             to = 24,
             prefix = "ma_big_bird_loop",
@@ -3993,7 +4043,7 @@ return {
         layer = 3,
         id = "ma_jungle_bird_1",
         path = ani_paths2.ma_jungle_bird_1,
-        wait = { 10, 20 },
+        wait = {10, 20},
         scale = v(0.6, 0.6),
         animation = {
             to = 8,
@@ -4005,7 +4055,7 @@ return {
         layer = 3,
         id = "ma_jungle_bird_2",
         path = ani_paths2.ma_jungle_bird_2,
-        wait = { 10, 20 },
+        wait = {10, 20},
         scale = v(0.6, 0.6),
         animation = {
             to = 8,
@@ -4034,7 +4084,7 @@ return {
             from = v(-250, 1020),
             to = v(2250, 1020)
         },
-        wait = { 1, 60 },
+        wait = {1, 60},
         animation = {
             to = 1,
             prefix = "ma_cloud",
@@ -4170,23 +4220,23 @@ return {
             from = v(-200, 10),
             to = v(2100, 10)
         }
-    } },
-    map_animations3 = { {
+    }},
+    map_animations3 = {{
         id = "ma_george_shout_1",
         layer = 1,
-        wait = { 2, 6 },
+        wait = {2, 6},
         animation = {
             to = 103,
             prefix = "ma_george_shout",
             from = 1
         },
-        pos_list = { v(153, 484), v(153, 528), v(97, 490), v(210, 511), v(439, 553), v(152, 690) },
-        scale_list = { v(-1, 1), v(1, 1), v(1, 1), v(-1, 1), v(1, 1), v(-1, 1) }
+        pos_list = {v(153, 484), v(153, 528), v(97, 490), v(210, 511), v(439, 553), v(152, 690)},
+        scale_list = {v(-1, 1), v(1, 1), v(1, 1), v(-1, 1), v(1, 1), v(-1, 1)}
     }, {
         id = "ma_venom_vine_1",
         layer = 1,
         pos = v(785, 664),
-        wait = { 8, 12 },
+        wait = {8, 12},
         action_animation = {
             to = 79,
             prefix = "ma_venom_vine",
@@ -4201,7 +4251,7 @@ return {
         id = "ma_ft_bubbles",
         layer = 1,
         pos = v(1364, 263),
-        wait = { 1, 3 },
+        wait = {1, 3},
         animation = {
             to = 74,
             prefix = "ma_ft_bubbles",
@@ -4221,7 +4271,7 @@ return {
         id = "ma_hr_crystals",
         layer = 1,
         pos = v(793, 196),
-        wait = { 8, 12 },
+        wait = {8, 12},
         animation = {
             to = 32,
             prefix = "ma_hr_crystals",
@@ -4231,7 +4281,7 @@ return {
         id = "ma_hr_sparks",
         layer = 1,
         pos = v(793, 194),
-        wait = { 4, 8 },
+        wait = {4, 8},
         animation = {
             to = 42,
             prefix = "ma_hr_sparks",
@@ -4251,7 +4301,7 @@ return {
         id = "ma_lake_crystals",
         layer = 1,
         pos = v(848, 495),
-        wait = { 8, 12 },
+        wait = {8, 12},
         animation = {
             to = 43,
             prefix = "ma_lake_crystals",
@@ -4261,7 +4311,7 @@ return {
         id = "ma_lake_sparks",
         layer = 1,
         pos = v(845, 495),
-        wait = { 4, 8 },
+        wait = {4, 8},
         animation = {
             to = 45,
             prefix = "ma_lake_sparks",
@@ -4270,9 +4320,9 @@ return {
     }, {
         id = "ma_lake_serpent",
         layer = 1,
-        wait = { 6, 12 },
-        pos_list = { v(846, 496), v(846, 496) },
-        scale_list = { v(1, 1), v(-1, 1) },
+        wait = {6, 12},
+        pos_list = {v(846, 496), v(846, 496)},
+        scale_list = {v(1, 1), v(-1, 1)},
         animation = {
             to = 66,
             prefix = "ma_lake_serpent",
@@ -4282,7 +4332,7 @@ return {
         id = "ma_metro_spider_1",
         layer = 2,
         pos = v(1721, 632),
-        wait = { 3, 5 },
+        wait = {3, 5},
         animation = {
             to = 35,
             prefix = "ma_metro_spider_1",
@@ -4292,7 +4342,7 @@ return {
         id = "ma_metro_spider_2",
         layer = 2,
         pos = v(1783, 671),
-        wait = { 3, 5 },
+        wait = {3, 5},
         animation = {
             to = 36,
             prefix = "ma_metro_spider_2",
@@ -4302,7 +4352,7 @@ return {
         id = "ma_metro_spider_3",
         layer = 2,
         pos = v(1721, 753),
-        wait = { 3, 5 },
+        wait = {3, 5},
         animation = {
             to = 34,
             prefix = "ma_metro_spider_3",
@@ -4312,7 +4362,7 @@ return {
         id = "ma_br_tree",
         layer = 1,
         pos = v(1541, 375),
-        wait = { 4, 8 },
+        wait = {4, 8},
         action_animation = {
             to = 89,
             prefix = "ma_br_tree",
@@ -4337,7 +4387,7 @@ return {
         id = "ma_br_castle_glow",
         layer = 1,
         pos = v(1769, 266),
-        wait = { 1, 3 },
+        wait = {1, 3},
         animation = {
             to = 90,
             prefix = "ma_br_castle_glow",
@@ -4347,7 +4397,7 @@ return {
         id = "ma_broom",
         layer = 1,
         pos = v(1662, 480),
-        wait = { 4, 10 },
+        wait = {4, 10},
         animation = {
             to = 166,
             prefix = "ma_broom",
@@ -4361,7 +4411,7 @@ return {
             from = v(-30, 700),
             to = v(1000, 1200)
         },
-        wait = { 10, 20 },
+        wait = {10, 20},
         animation = {
             to = 16,
             prefix = "ma_gryphon",
@@ -4381,7 +4431,7 @@ return {
         id = "ma_hr_worker_2",
         layer = 1,
         pos = v(804, 227),
-        wait = { 4, 10 },
+        wait = {4, 10},
         animation = {
             to = 143,
             prefix = "ma_hr_worker_2",
@@ -4401,7 +4451,7 @@ return {
         id = "ma_magic_flower_1",
         layer = 2,
         pos = v(498, 831),
-        wait = { 3, 6 },
+        wait = {3, 6},
         action_animation = {
             to = 66,
             prefix = "ma_magic_flower",
@@ -4416,7 +4466,7 @@ return {
         id = "ma_magic_flower_2",
         template = "ma_magic_flower_1",
         pos = v(380, 279),
-        wait = { 4, 8 }
+        wait = {4, 8}
     }, {
         loop = true,
         id = "ma_metro_diamond",
@@ -4436,7 +4486,7 @@ return {
             from = v(800, 1100),
             to = v(1950, 500)
         },
-        wait = { 10, 30 },
+        wait = {10, 30},
         animation = {
             to = 8,
             prefix = "ma_metro_ducks",
@@ -4456,7 +4506,7 @@ return {
         id = "ma_pixie_2",
         layer = 1,
         pos = v(1042, 425),
-        wait = { 5, 15 },
+        wait = {5, 15},
         animation = {
             to = 77,
             prefix = "ma_pixie_2",
@@ -4521,7 +4571,7 @@ return {
         id = "ma_wolf",
         layer = 1,
         pos = v(920, 661),
-        wait = { 4, 10 },
+        wait = {4, 10},
         animation = {
             to = 45,
             prefix = "ma_wolf",
@@ -4655,7 +4705,7 @@ return {
         id = "ma_wisps_5_1",
         layer = 1,
         pos = v(1256, 679),
-        wait = { 2, 6 },
+        wait = {2, 6},
         animation = {
             to = 58,
             prefix = "wisps_5",
@@ -4669,7 +4719,7 @@ return {
         id = "ma_wisps_6_1",
         layer = 1,
         pos = v(1194, 332),
-        wait = { 2, 6 },
+        wait = {2, 6},
         animation = {
             to = 26,
             prefix = "wisps_6",
@@ -4683,7 +4733,7 @@ return {
         id = "ma_wisps_7_1",
         layer = 1,
         pos = v(975, 396),
-        wait = { 2, 6 },
+        wait = {2, 6},
         animation = {
             to = 40,
             prefix = "wisps_7",
@@ -4697,7 +4747,7 @@ return {
         id = "ma_wisps_8_1",
         layer = 1,
         pos = v(1074, 414),
-        wait = { 2, 6 },
+        wait = {2, 6},
         animation = {
             to = 26,
             prefix = "wisps_8",
@@ -4711,7 +4761,7 @@ return {
         id = "ma_wisps_9_1",
         layer = 1,
         pos = v(899, 747),
-        wait = { 2, 6 },
+        wait = {2, 6},
         animation = {
             to = 22,
             prefix = "wisps_9",
@@ -4725,7 +4775,7 @@ return {
         id = "ma_wisps_10_1",
         layer = 1,
         pos = v(1080, 838),
-        wait = { 2, 6 },
+        wait = {2, 6},
         animation = {
             to = 24,
             prefix = "wisps_10",
@@ -4831,7 +4881,7 @@ return {
         id = "ma_sea_bounce_0",
         layer = 1,
         pos = v(100, 122),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 143,
             prefix = "ma_sea_bounce_0",
@@ -4841,7 +4891,7 @@ return {
         id = "ma_sea_bounce_1",
         layer = 1,
         pos = v(119, 120),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 133,
             prefix = "ma_sea_bounce_1",
@@ -4851,7 +4901,7 @@ return {
         id = "ma_sea_bounce_2",
         layer = 1,
         pos = v(311, 82),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 137,
             prefix = "ma_sea_bounce_2",
@@ -4861,7 +4911,7 @@ return {
         id = "ma_sea_bounce_3",
         layer = 1,
         pos = v(447, 114),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 120,
             prefix = "ma_sea_bounce_3",
@@ -4871,7 +4921,7 @@ return {
         id = "ma_sea_bounce_4",
         layer = 1,
         pos = v(625, 89),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 120,
             prefix = "ma_sea_bounce_4",
@@ -4881,7 +4931,7 @@ return {
         id = "ma_sea_bounce_5",
         layer = 1,
         pos = v(821, 73),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 120,
             prefix = "ma_sea_bounce_5",
@@ -4891,7 +4941,7 @@ return {
         id = "ma_sea_bounce_6",
         layer = 1,
         pos = v(1005, 62),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 141,
             prefix = "ma_sea_bounce_6",
@@ -4901,7 +4951,7 @@ return {
         id = "ma_sea_bounce_7",
         layer = 1,
         pos = v(1203, 68),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 120,
             prefix = "ma_sea_bounce_7",
@@ -4911,7 +4961,7 @@ return {
         id = "ma_sea_bounce_8",
         layer = 1,
         pos = v(1323, 143),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 137,
             prefix = "ma_sea_bounce_8",
@@ -4921,7 +4971,7 @@ return {
         id = "ma_sea_bounce_9",
         layer = 1,
         pos = v(1505, 121),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 193,
             prefix = "ma_sea_bounce_9",
@@ -4931,7 +4981,7 @@ return {
         id = "ma_sea_bounce_10",
         layer = 1,
         pos = v(1636, 150),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 140,
             prefix = "ma_sea_bounce_10",
@@ -4941,7 +4991,7 @@ return {
         id = "ma_sea_bounce_11",
         layer = 1,
         pos = v(1840, 195),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 120,
             prefix = "ma_sea_bounce_11",
@@ -4951,7 +5001,7 @@ return {
         id = "ma_sea_bounce_12",
         layer = 1,
         pos = v(309, 135),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 121,
             prefix = "ma_sea_bounce_12",
@@ -4961,7 +5011,7 @@ return {
         id = "ma_sea_bounce_13",
         layer = 1,
         pos = v(300, 27),
-        wait = { 0, 1 },
+        wait = {0, 1},
         animation = {
             to = 157,
             prefix = "ma_sea_bounce_13",
@@ -5065,7 +5115,7 @@ return {
             from = v(953, 539),
             to = v(967, 541)
         },
-        wait = { 0, 0 },
+        wait = {0, 0},
         animation = {
             to = 11,
             prefix = "kr3_map_background",
@@ -5105,7 +5155,7 @@ return {
             from = v(960, 538),
             to = v(960, 542)
         },
-        wait = { 0, 0 },
+        wait = {0, 0},
         animation = {
             to = 5,
             prefix = "kr3_map_background",
@@ -5215,7 +5265,7 @@ return {
                 from = 78
             }
         },
-        sequence = { { "default", 3, 6 }, { "left", 1, 3 }, { "right", 1, 3 } }
+        sequence = {{"default", 3, 6}, {"left", 1, 3}, {"right", 1, 3}}
     }, {
         id = "ma_ewok",
         layer = 1,
@@ -5223,8 +5273,8 @@ return {
         fns = {
             prepare = deco_fn.ani_seq.prepare
         },
-        sequence = { { "default", 3, 5 }, { "go_out", 1, 3 }, { "left", 1, 3 }, { "right", 1, 3 }, { "left", 1, 2 },
-            { "right",   1, 2 }, { "go_in", 0, 0 } },
+        sequence = {{"default", 3, 5}, {"go_out", 1, 3}, {"left", 1, 3}, {"right", 1, 3}, {"left", 1, 2},
+                    {"right", 1, 2}, {"go_in", 0, 0}},
         animations = {
             default = {
                 to = 89,
@@ -5286,9 +5336,9 @@ return {
                 from = 88
             }
         },
-        sequence = { { "blink", 2, 3 }, { "blink", 2, 3 }, { "move", 1, 2 }, { "blink", 2, 3 }, { "tail", 1, 2 }, { "blink", 2, 3 },
-            { "blink", 2, 3 }, { "tail", 1, 2 }, { "move", 1, 2 }, { "blink", 2, 3 }, { "flame", 1, 2 }, { "blink", 2, 3 },
-            { "move", 1, 2 }, { "blink", 2, 3 }, { "tail", 1, 2 } }
+        sequence = {{"blink", 2, 3}, {"blink", 2, 3}, {"move", 1, 2}, {"blink", 2, 3}, {"tail", 1, 2}, {"blink", 2, 3},
+                    {"blink", 2, 3}, {"tail", 1, 2}, {"move", 1, 2}, {"blink", 2, 3}, {"flame", 1, 2}, {"blink", 2, 3},
+                    {"move", 1, 2}, {"blink", 2, 3}, {"tail", 1, 2}}
     }, {
         speed_x = 50,
         loop = true,
@@ -5298,8 +5348,8 @@ return {
         fns = {
             prepare = deco_fn.ma_waterfall1_barrel.prepare
         },
-        wait_out = { 8, 12 },
-        sequence = { { "idle", v(88, 337) }, { "fall", v(110, 418) }, { "crash", v(105, 418) } },
+        wait_out = {8, 12},
+        sequence = {{"idle", v(88, 337)}, {"fall", v(110, 418)}, {"crash", v(105, 418)}},
         animations = {
             default = {
                 to = 30,
@@ -5367,9 +5417,9 @@ return {
                 from = 1
             }
         }
-    } },
+    }},
     map_decos = {
-        [1] = { {
+        [1] = {{
             id = "md_muelle",
             image = "muelle",
             layer = 2,
@@ -5604,37 +5654,37 @@ return {
             fns = {
                 unlock = deco_fn.path_open.unlock
             }
-        } },
+        }},
         [2] = { -- {
-            -- 	layer = 3,
-            -- 	id = "md_m1",
-            -- 	image = "map_background_cover_1",
-            -- 	trigger_level = 12,
-            -- 	pos = v(1250, 378),
-            -- 	fns = {
-            -- 		unlock = deco_fn.m1.unlock
-            -- 	}
-            -- },
-            -- {
-            -- 	layer = 3,
-            -- 	id = "md_m2",
-            -- 	image = "map_background_cover_2",
-            -- 	trigger_level = 14,
-            -- 	pos = v(1460, 335),
-            -- 	fns = {
-            -- 		unlock = deco_fn.m2.unlock
-            -- 	}
-            -- },
-            {
-                layer = 2,
-                id = "md_gate",
-                image = "ma_gate_0001",
-                trigger_level = 7,
-                pos = v(680, 836),
-                fns = {
-                    unlock = deco_fn.gate.unlock
-                }
-            }, {
+        -- 	layer = 3,
+        -- 	id = "md_m1",
+        -- 	image = "map_background_cover_1",
+        -- 	trigger_level = 12,
+        -- 	pos = v(1250, 378),
+        -- 	fns = {
+        -- 		unlock = deco_fn.m1.unlock
+        -- 	}
+        -- },
+        -- {
+        -- 	layer = 3,
+        -- 	id = "md_m2",
+        -- 	image = "map_background_cover_2",
+        -- 	trigger_level = 14,
+        -- 	pos = v(1460, 335),
+        -- 	fns = {
+        -- 		unlock = deco_fn.m2.unlock
+        -- 	}
+        -- },
+        {
+            layer = 2,
+            id = "md_gate",
+            image = "ma_gate_0001",
+            trigger_level = 7,
+            pos = v(680, 836),
+            fns = {
+                unlock = deco_fn.gate.unlock
+            }
+        }, {
             loop = true,
             layer = 2,
             id = "ship",
@@ -5673,8 +5723,8 @@ return {
                     from = 136
                 }
             }
-        } },
-        [3] = { {
+        }},
+        [3] = {{
             layer = 3,
             id = "md_ft_mountain",
             image = "kr3_map_background_0002",
@@ -5684,6 +5734,6 @@ return {
             fns = {
                 unlock = deco_fn.md_ft_mountain.unlock
             }
-        } }
+        }}
     }
 }
