@@ -32,7 +32,7 @@ return {
     ["all-desktop/fonts/msyhl.ttc"] = { size = 12189612},
     ["all-desktop/fonts/tetsubin_gothic.otf"] = { size = 6107260},
     ["kr1-desktop/icons/krdove.png"] = { size = 1673424},
-    ["kr1-desktop/images/fullhd/achievements-1.png"] = { size = 1626793},
+    ["kr1-desktop/images/fullhd/achievements-1.png"] = { size = 1668389},
     ["kr1-desktop/images/fullhd/ballon-1.png"] = { size = 67682},
     ["kr1-desktop/images/fullhd/comic_end-1.png"] = { size = 693361},
     ["kr1-desktop/images/fullhd/comic_end-2.png"] = { size = 710713},

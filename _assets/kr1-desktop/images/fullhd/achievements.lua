@@ -12,16 +12,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			851,
-			53,
+			534,
+			198,
 			62,
 			54
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0002"] = {
 		a_name = "achievements-1.png",
@@ -36,16 +36,16 @@ return {
             16
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			515,
+			479,
 			1,
 			53,
 			48
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0003"] = {
 		a_name = "achievements-1.png",
@@ -60,16 +60,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			144,
-			351,
+			598,
+			198,
 			54,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0004"] = {
 		a_name = "achievements-1.png",
@@ -84,16 +84,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			764,
-			415,
+			612,
+			626,
 			67,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0005"] = {
 		a_name = "achievements-1.png",
@@ -108,16 +108,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			200,
-			351,
+			649,
+			133,
 			51,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0006"] = {
 		a_name = "achievements-1.png",
@@ -132,16 +132,16 @@ return {
             15
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			484,
-			53,
+			116,
+			133,
 			59,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0007"] = {
 		a_name = "achievements-1.png",
@@ -156,16 +156,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			511,
-			167,
+			127,
+			1,
 			32,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0008"] = {
 		a_name = "achievements-1.png",
@@ -180,16 +180,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			488,
-			616,
+			1,
+			626,
 			63,
 			67
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0009"] = {
 		a_name = "achievements-1.png",
@@ -204,16 +204,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			545,
-			53,
+			741,
+			273,
 			69,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0010"] = {
 		a_name = "achievements-1.png",
@@ -228,16 +228,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			570,
-			1,
+			353,
+			133,
 			63,
 			49
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0011"] = {
 		a_name = "achievements-1.png",
@@ -252,16 +252,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			262,
-			415,
+			60,
+			273,
 			55,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0012"] = {
 		a_name = "achievements-1.png",
@@ -276,16 +276,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			833,
-			415,
+			392,
+			407,
 			60,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0013"] = {
 		a_name = "achievements-1.png",
@@ -300,16 +300,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			827,
-			109,
+			238,
+			133,
 			55,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0014"] = {
 		a_name = "achievements-1.png",
@@ -324,16 +324,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			781,
-			226,
+			1,
+			133,
 			51,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0015"] = {
 		a_name = "achievements-1.png",
@@ -348,16 +348,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			545,
-			167,
+			371,
+			273,
 			62,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0016"] = {
 		a_name = "achievements-1.png",
@@ -372,16 +372,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			187,
-			109,
+			898,
+			1,
 			52,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0017"] = {
 		a_name = "achievements-1.png",
@@ -396,16 +396,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			553,
-			616,
+			638,
+			769,
 			71,
 			67
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0018"] = {
 		a_name = "achievements-1.png",
@@ -420,16 +420,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			253,
-			351,
+			654,
+			198,
 			54,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0019"] = {
 		a_name = "achievements-1.png",
@@ -444,16 +444,16 @@ return {
             23
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
+			248,
 			1,
 			69,
 			33
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0020"] = {
 		a_name = "achievements-1.png",
@@ -468,16 +468,16 @@ return {
             17
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			404,
+			161,
 			1,
 			43,
 			45
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0021"] = {
 		a_name = "achievements-1.png",
@@ -492,16 +492,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			623,
-			288,
+			281,
+			65,
 			48,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0022"] = {
 		a_name = "achievements-1.png",
@@ -516,16 +516,16 @@ return {
             15
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			616,
-			53,
+			177,
+			133,
 			59,
 			52
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0023"] = {
 		a_name = "achievements-1.png",
@@ -540,16 +540,16 @@ return {
             16
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			818,
-			1,
+			935,
+			133,
 			64,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0024"] = {
 		a_name = "achievements-1.png",
@@ -564,16 +564,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			609,
-			167,
+			514,
+			339,
 			66,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0025"] = {
 		a_name = "achievements-1.png",
@@ -588,16 +588,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			884,
-			109,
+			384,
+			1,
 			45,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0026"] = {
 		a_name = "achievements-1.png",
@@ -612,16 +612,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			309,
-			351,
+			702,
+			133,
 			51,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0027"] = {
 		a_name = "achievements-1.png",
@@ -636,16 +636,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			895,
-			415,
+			683,
+			273,
 			56,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0028"] = {
 		a_name = "achievements-1.png",
@@ -660,16 +660,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			667,
-			548,
+			122,
+			65,
 			44,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0029"] = {
 		a_name = "achievements-1.png",
@@ -684,16 +684,16 @@ return {
             6
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			626,
-			616,
+			136,
+			769,
 			69,
 			67
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0030"] = {
 		a_name = "achievements-1.png",
@@ -708,16 +708,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			241,
-			109,
+			431,
+			1,
 			46,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0031"] = {
 		a_name = "achievements-1.png",
@@ -732,16 +732,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			237,
-			53,
+			238,
+			198,
 			64,
 			51
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0032"] = {
 		a_name = "achievements-1.png",
@@ -756,16 +756,16 @@ return {
             16
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			884,
-			1,
+			62,
+			65,
 			58,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0033"] = {
 		a_name = "achievements-1.png",
@@ -780,16 +780,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			934,
-			481,
+			467,
+			480,
 			61,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0034"] = {
 		a_name = "achievements-1.png",
@@ -804,16 +804,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			362,
-			351,
+			815,
+			626,
 			70,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0035"] = {
 		a_name = "achievements-1.png",
@@ -828,16 +828,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			915,
-			53,
+			755,
+			133,
 			59,
 			54
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0036"] = {
 		a_name = "achievements-1.png",
@@ -852,16 +852,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			673,
-			288,
+			627,
+			65,
 			49,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0037"] = {
 		a_name = "achievements-1.png",
@@ -876,16 +876,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			289,
-			109,
+			206,
+			1,
 			40,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0038"] = {
 		a_name = "achievements-1.png",
@@ -900,16 +900,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			834,
-			226,
+			718,
+			407,
 			65,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0039"] = {
 		a_name = "achievements-1.png",
@@ -924,16 +924,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			931,
-			109,
+			827,
+			198,
 			61,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0040"] = {
 		a_name = "achievements-1.png",
@@ -948,16 +948,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			434,
-			351,
+			900,
+			339,
 			61,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0041"] = {
 		a_name = "achievements-1.png",
@@ -972,16 +972,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			331,
-			109,
+			295,
+			133,
 			56,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0042"] = {
 		a_name = "achievements-1.png",
@@ -996,16 +996,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			944,
-			1,
+			469,
+			133,
 			62,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0043"] = {
 		a_name = "achievements-1.png",
@@ -1020,16 +1020,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			677,
-			167,
+			120,
+			198,
 			57,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0044"] = {
 		a_name = "achievements-1.png",
@@ -1044,16 +1044,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			389,
-			109,
+			240,
+			273,
 			64,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0045"] = {
 		a_name = "achievements-1.png",
@@ -1068,16 +1068,16 @@ return {
             15
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			635,
 			1,
+			65,
 			59,
 			49
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0046"] = {
 		a_name = "achievements-1.png",
@@ -1092,16 +1092,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			455,
-			109,
+			952,
+			1,
 			52,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0047"] = {
 		a_name = "achievements-1.png",
@@ -1116,16 +1116,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			497,
-			351,
+			686,
+			1,
 			44,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0048"] = {
 		a_name = "achievements-1.png",
@@ -1140,16 +1140,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			509,
-			109,
+			879,
+			65,
 			55,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0049"] = {
 		a_name = "achievements-1.png",
@@ -1164,16 +1164,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			724,
-			288,
+			582,
+			407,
 			63,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0050"] = {
 		a_name = "achievements-1.png",
@@ -1188,16 +1188,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			736,
-			167,
+			324,
+			339,
 			65,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0051"] = {
 		a_name = "achievements-1.png",
@@ -1212,16 +1212,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			543,
-			351,
+			850,
+			1,
 			46,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0052"] = {
 		a_name = "achievements-1.png",
@@ -1236,16 +1236,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			167,
+			306,
+			273,
 			63,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0053"] = {
 		a_name = "achievements-1.png",
@@ -1260,16 +1260,16 @@ return {
             15
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			109,
+			816,
+			133,
 			59,
 			54
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0054"] = {
 		a_name = "achievements-1.png",
@@ -1284,16 +1284,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			713,
-			548,
+			582,
+			339,
 			57,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0055"] = {
 		a_name = "achievements-1.png",
@@ -1308,16 +1308,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			481,
+			839,
+			696,
 			71,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0056"] = {
 		a_name = "achievements-1.png",
@@ -1332,16 +1332,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			548,
+			203,
+			626,
 			65,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0057"] = {
 		a_name = "achievements-1.png",
@@ -1356,16 +1356,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			68,
-			548,
+			270,
+			626,
 			65,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0058"] = {
 		a_name = "achievements-1.png",
@@ -1380,16 +1380,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			591,
-			351,
+			887,
+			626,
 			70,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0059"] = {
 		a_name = "achievements-1.png",
@@ -1404,16 +1404,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			663,
-			351,
+			850,
+			480,
 			65,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0060"] = {
 		a_name = "achievements-1.png",
@@ -1428,16 +1428,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			677,
-			53,
+			635,
+			1,
 			49,
 			53
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0061"] = {
 		a_name = "achievements-1.png",
@@ -1452,16 +1452,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			789,
-			288,
+			133,
+			551,
 			67,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0062"] = {
 		a_name = "achievements-1.png",
@@ -1476,16 +1476,16 @@ return {
             17
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			53,
+			448,
+			65,
 			59,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0063"] = {
 		a_name = "achievements-1.png",
@@ -1500,16 +1500,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			858,
-			288,
+			1,
+			407,
 			62,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0064"] = {
 		a_name = "achievements-1.png",
@@ -1524,16 +1524,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			319,
-			415,
+			260,
+			551,
 			65,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0065"] = {
 		a_name = "achievements-1.png",
@@ -1548,16 +1548,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			255,
-			226,
+			538,
+			626,
 			72,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0066"] = {
 		a_name = "achievements-1.png",
@@ -1572,16 +1572,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			803,
-			167,
+			117,
+			273,
 			61,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0067"] = {
 		a_name = "achievements-1.png",
@@ -1596,16 +1596,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			566,
-			109,
+			710,
+			198,
 			61,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0068"] = {
 		a_name = "achievements-1.png",
@@ -1620,16 +1620,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			730,
-			351,
+			452,
+			339,
 			60,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0069"] = {
 		a_name = "achievements-1.png",
@@ -1644,16 +1644,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			685,
+			721,
+			480,
 			59,
 			68
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0070"] = {
 		a_name = "achievements-1.png",
@@ -1668,16 +1668,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			922,
-			288,
+			136,
+			339,
 			60,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0071"] = {
 		a_name = "achievements-1.png",
@@ -1692,16 +1692,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			329,
-			226,
+			63,
+			198,
 			55,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0072"] = {
 		a_name = "achievements-1.png",
@@ -1716,16 +1716,16 @@ return {
             15
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			696,
-			1,
+			678,
+			65,
 			61,
 			49
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0073"] = {
 		a_name = "achievements-1.png",
@@ -1740,16 +1740,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			62,
-			109,
+			1,
+			198,
 			60,
 			54
 		},
-		alias = {}
+		alias = {},
 	},
 	["achievement_icons_0074"] = {
 		a_name = "achievements-1.png",
@@ -1764,16 +1764,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			66,
-			167,
+			890,
+			198,
 			61,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["Achievements_BG_notxt"] = {
 		a_name = "achievements-1.png",
@@ -1788,16 +1788,40 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
 			1,
-			1095,
+			1204,
 			1018,
 			763
 		},
-		alias = {}
+		alias = {},
+	},
+	["Achievements_Box_Big"] = {
+		a_name = "achievements-1.png",
+		size = {
+			368,
+			122
+		},
+		trim = {
+			1,
+            0,
+            2,
+            0
+		},
+		a_size = {
+			1024,
+			1968
+		},
+		f_quad = {
+			647,
+			1080,
+			365,
+			122
+		},
+		alias = {},
 	},
 	["Achievements_Box_Large"] = {
 		a_name = "achievements-1.png",
@@ -1812,16 +1836,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			393,
-			987,
+			243,
+			1080,
 			402,
 			106
 		},
-		alias = {}
+		alias = {},
 	},
 	["Achievements_page_0001"] = {
 		a_name = "achievements-1.png",
@@ -1836,16 +1860,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			179,
+			43,
 			1,
 			40,
 			41
 		},
-		alias = {}
+		alias = {},
 	},
 	["Achievements_page_0002"] = {
 		a_name = "achievements-1.png",
@@ -1860,16 +1884,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			137,
+			1,
 			1,
 			40,
 			40
 		},
-		alias = {}
+		alias = {},
 	},
 	["Achievements_page_0003"] = {
 		a_name = "achievements-1.png",
@@ -1884,16 +1908,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			221,
+			85,
 			1,
 			40,
 			41
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0001"] = {
 		a_name = "achievements-1.png",
@@ -1908,16 +1932,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			792,
-			351,
+			70,
+			696,
 			71,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0002"] = {
 		a_name = "achievements-1.png",
@@ -1932,16 +1956,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			386,
-			226,
+			138,
+			480,
 			67,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0003"] = {
 		a_name = "achievements-1.png",
@@ -1956,16 +1980,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			728,
-			53,
+			469,
+			198,
 			63,
 			53
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0004"] = {
 		a_name = "achievements-1.png",
@@ -1980,16 +2004,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			772,
-			548,
+			281,
+			769,
 			71,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0005"] = {
 		a_name = "achievements-1.png",
@@ -2004,16 +2028,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			303,
-			53,
+			168,
+			65,
 			57,
 			51
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0006"] = {
 		a_name = "achievements-1.png",
@@ -2028,16 +2052,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			845,
-			548,
+			337,
+			480,
 			60,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0007"] = {
 		a_name = "achievements-1.png",
@@ -2052,16 +2076,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			74,
-			481,
+			454,
+			407,
 			60,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0008"] = {
 		a_name = "achievements-1.png",
@@ -2076,16 +2100,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			136,
-			481,
+			708,
+			339,
 			59,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0009"] = {
 		a_name = "achievements-1.png",
@@ -2100,16 +2124,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			62,
-			53,
+			936,
+			65,
 			61,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0010"] = {
 		a_name = "achievements-1.png",
@@ -2124,16 +2148,16 @@ return {
             15
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			125,
-			53,
+			791,
+			1,
 			57,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0011"] = {
 		a_name = "achievements-1.png",
@@ -2148,16 +2172,16 @@ return {
             18
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			184,
-			53,
+			534,
+			1,
 			51,
 			50
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0012"] = {
 		a_name = "achievements-1.png",
@@ -2172,16 +2196,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			362,
-			53,
+			509,
+			65,
 			58,
 			51
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0013"] = {
 		a_name = "achievements-1.png",
@@ -2196,16 +2220,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			197,
-			481,
+			207,
+			696,
 			69,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0014"] = {
 		a_name = "achievements-1.png",
@@ -2220,16 +2244,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			135,
-			548,
+			1,
+			696,
 			67,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0015"] = {
 		a_name = "achievements-1.png",
@@ -2244,16 +2268,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			129,
-			167,
+			199,
+			407,
 			68,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0016"] = {
 		a_name = "achievements-1.png",
@@ -2268,16 +2292,16 @@ return {
             6
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			73,
-			757,
+			69,
+			769,
 			65,
 			71
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0017"] = {
 		a_name = "achievements-1.png",
@@ -2292,16 +2316,16 @@ return {
             21
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			72,
+			319,
 			1,
 			63,
 			39
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0018"] = {
 		a_name = "achievements-1.png",
@@ -2316,16 +2340,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			140,
-			757,
+			269,
+			407,
 			54,
 			71
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0019"] = {
 		a_name = "achievements-1.png",
@@ -2340,16 +2364,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			196,
-			757,
+			785,
+			407,
 			55,
 			71
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0020"] = {
 		a_name = "achievements-1.png",
@@ -2364,16 +2388,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			441,
-			832,
+			79,
+			1080,
 			80,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0021"] = {
 		a_name = "achievements-1.png",
@@ -2388,16 +2412,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			696,
-			685,
+			459,
+			551,
 			59,
 			70
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0022"] = {
 		a_name = "achievements-1.png",
@@ -2412,16 +2436,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			268,
-			481,
+			331,
+			65,
 			46,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0023"] = {
 		a_name = "achievements-1.png",
@@ -2436,16 +2460,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			901,
-			226,
+			516,
+			407,
 			64,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0024"] = {
 		a_name = "achievements-1.png",
@@ -2460,16 +2484,16 @@ return {
             6
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			697,
-			616,
+			207,
+			480,
 			59,
 			67
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0025"] = {
 		a_name = "achievements-1.png",
@@ -2484,16 +2508,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			204,
-			548,
+			773,
+			198,
 			52,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0026"] = {
 		a_name = "achievements-1.png",
@@ -2508,16 +2532,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			865,
 			351,
+			198,
 			53,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0027"] = {
 		a_name = "achievements-1.png",
@@ -2532,16 +2556,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			490,
-			685,
+			661,
+			480,
 			58,
 			69
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0028"] = {
 		a_name = "achievements-1.png",
@@ -2556,16 +2580,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			907,
-			548,
+			681,
+			626,
 			65,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0029"] = {
 		a_name = "achievements-1.png",
@@ -2580,16 +2604,16 @@ return {
             18
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			759,
+			732,
 			1,
 			57,
 			49
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0030"] = {
 		a_name = "achievements-1.png",
@@ -2604,16 +2628,16 @@ return {
             1
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			691,
-			757,
+			202,
+			551,
 			56,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0031"] = {
 		a_name = "achievements-1.png",
@@ -2628,16 +2652,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			920,
-			351,
+			65,
+			407,
 			61,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0032"] = {
 		a_name = "achievements-1.png",
@@ -2652,16 +2676,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			62,
-			685,
+			633,
+			696,
 			66,
 			68
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0033"] = {
 		a_name = "achievements-1.png",
@@ -2676,16 +2700,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			351,
+			782,
+			480,
 			66,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0034"] = {
 		a_name = "achievements-1.png",
@@ -2700,16 +2724,16 @@ return {
             19
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			263,
-			1,
+			807,
+			65,
 			70,
 			43
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0035"] = {
 		a_name = "achievements-1.png",
@@ -2724,16 +2748,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			749,
-			757,
+			304,
+			198,
 			45,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0036"] = {
 		a_name = "achievements-1.png",
@@ -2748,16 +2772,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			316,
-			481,
+			327,
+			551,
 			64,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0037"] = {
 		a_name = "achievements-1.png",
@@ -2772,16 +2796,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			386,
-			415,
+			66,
+			626,
 			67,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0038"] = {
 		a_name = "achievements-1.png",
@@ -2796,16 +2820,16 @@ return {
             1
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			311,
-			987,
+			161,
+			1080,
 			80,
 			79
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0039"] = {
 		a_name = "achievements-1.png",
@@ -2820,16 +2844,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			258,
-			548,
+			337,
+			626,
 			65,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0040"] = {
 		a_name = "achievements-1.png",
@@ -2844,16 +2868,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			288,
+			198,
+			339,
 			61,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0041"] = {
 		a_name = "achievements-1.png",
@@ -2868,16 +2892,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			422,
-			53,
+			54,
+			133,
 			60,
 			51
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0042"] = {
 		a_name = "achievements-1.png",
@@ -2892,16 +2916,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			455,
-			415,
+			418,
+			133,
 			49,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0043"] = {
 		a_name = "achievements-1.png",
@@ -2916,16 +2940,16 @@ return {
             17
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			335,
-			1,
+			379,
+			65,
 			67,
 			44
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0044"] = {
 		a_name = "achievements-1.png",
@@ -2940,16 +2964,16 @@ return {
             14
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			199,
-			167,
+			69,
+			339,
 			65,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0045"] = {
 		a_name = "achievements-1.png",
@@ -2964,16 +2988,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			130,
-			685,
+			914,
+			551,
 			62,
 			68
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0046"] = {
 		a_name = "achievements-1.png",
@@ -2988,16 +3012,16 @@ return {
             15
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			449,
-			1,
+			741,
+			65,
 			64,
 			47
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0047"] = {
 		a_name = "achievements-1.png",
@@ -3012,16 +3036,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			616,
+			912,
+			696,
 			69,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0048"] = {
 		a_name = "achievements-1.png",
@@ -3036,16 +3060,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			415,
+			842,
+			407,
 			63,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0049"] = {
 		a_name = "achievements-1.png",
@@ -3060,16 +3084,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			64,
-			288,
+			953,
+			198,
 			57,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0050"] = {
 		a_name = "achievements-1.png",
@@ -3084,16 +3108,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			866,
-			167,
+			533,
+			133,
 			55,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0051"] = {
 		a_name = "achievements-1.png",
@@ -3108,16 +3132,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			123,
-			288,
+			877,
+			273,
 			60,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0052"] = {
 		a_name = "achievements-1.png",
@@ -3132,16 +3156,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			185,
-			288,
+			1,
+			273,
 			57,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0053"] = {
 		a_name = "achievements-1.png",
@@ -3156,16 +3180,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			72,
-			616,
+			354,
+			769,
 			71,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0054"] = {
 		a_name = "achievements-1.png",
@@ -3180,16 +3204,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			455,
-			226,
+			268,
+			480,
 			67,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0055"] = {
 		a_name = "achievements-1.png",
@@ -3204,16 +3228,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			325,
-			548,
+			917,
+			480,
 			62,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0056"] = {
 		a_name = "achievements-1.png",
@@ -3228,16 +3252,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			382,
-			481,
+			135,
+			626,
 			66,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0057"] = {
 		a_name = "achievements-1.png",
@@ -3252,16 +3276,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			758,
-			616,
+			701,
+			696,
 			67,
 			67
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0058"] = {
 		a_name = "achievements-1.png",
@@ -3276,16 +3300,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			145,
-			616,
+			348,
+			696,
 			67,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0059"] = {
 		a_name = "achievements-1.png",
@@ -3300,16 +3324,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			523,
-			832,
+			371,
+			924,
 			72,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr2_achievement_icons_0060"] = {
 		a_name = "achievements-1.png",
@@ -3324,16 +3348,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			468,
-			757,
+			148,
+			924,
 			74,
 			72
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0001"] = {
 		a_name = "achievements-1.png",
@@ -3348,16 +3372,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			244,
-			288,
+			399,
+			480,
 			66,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0002"] = {
 		a_name = "achievements-1.png",
@@ -3372,16 +3396,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			125,
-			226,
+			641,
+			339,
 			65,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0003"] = {
 		a_name = "achievements-1.png",
@@ -3396,16 +3420,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			597,
-			832,
+			676,
+			924,
 			75,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0004"] = {
 		a_name = "achievements-1.png",
@@ -3420,16 +3444,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			312,
-			288,
+			180,
+			273,
 			58,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0005"] = {
 		a_name = "achievements-1.png",
@@ -3444,16 +3468,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			629,
-			109,
+			590,
+			133,
 			57,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0006"] = {
 		a_name = "achievements-1.png",
@@ -3468,16 +3492,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			389,
-			548,
+			404,
+			626,
 			65,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0007"] = {
 		a_name = "achievements-1.png",
@@ -3492,16 +3516,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			372,
-			288,
+			261,
+			339,
 			61,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0008"] = {
 		a_name = "achievements-1.png",
@@ -3516,16 +3540,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			435,
-			288,
+			835,
+			339,
 			63,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0009"] = {
 		a_name = "achievements-1.png",
@@ -3540,16 +3564,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			757,
-			685,
+			500,
+			769,
 			67,
 			70
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0010"] = {
 		a_name = "achievements-1.png",
@@ -3564,16 +3588,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			66,
-			415,
+			907,
+			407,
 			63,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0011"] = {
 		a_name = "achievements-1.png",
@@ -3588,16 +3612,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			74,
-			909,
+			309,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0012"] = {
 		a_name = "achievements-1.png",
@@ -3612,16 +3636,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			506,
-			415,
+			1,
+			551,
 			64,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0013"] = {
 		a_name = "achievements-1.png",
@@ -3636,16 +3660,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			572,
-			415,
+			596,
+			480,
 			63,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0014"] = {
 		a_name = "achievements-1.png",
@@ -3660,16 +3684,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			923,
-			167,
+			877,
+			133,
 			56,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0015"] = {
 		a_name = "achievements-1.png",
@@ -3684,16 +3708,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			637,
-			415,
+			67,
+			551,
 			64,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0016"] = {
 		a_name = "achievements-1.png",
@@ -3708,16 +3732,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			214,
-			616,
+			417,
+			696,
 			67,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0017"] = {
 		a_name = "achievements-1.png",
@@ -3732,16 +3756,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			266,
-			167,
+			227,
+			65,
 			52,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0018"] = {
 		a_name = "achievements-1.png",
@@ -3756,16 +3780,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			450,
-			481,
+			646,
+			551,
 			65,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0019"] = {
 		a_name = "achievements-1.png",
@@ -3780,16 +3804,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			550,
-			685,
+			1,
+			769,
 			66,
 			69
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0020"] = {
 		a_name = "achievements-1.png",
@@ -3804,16 +3828,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			152,
-			909,
+			387,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0021"] = {
 		a_name = "achievements-1.png",
@@ -3828,16 +3852,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			524,
-			226,
+			498,
+			273,
 			60,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0022"] = {
 		a_name = "achievements-1.png",
@@ -3852,16 +3876,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			283,
-			616,
+			427,
+			769,
 			71,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0023"] = {
 		a_name = "achievements-1.png",
@@ -3876,16 +3900,16 @@ return {
             6
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			517,
-			481,
+			845,
+			769,
 			76,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0024"] = {
 		a_name = "achievements-1.png",
@@ -3900,16 +3924,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			674,
-			832,
+			907,
+			924,
 			76,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0025"] = {
 		a_name = "achievements-1.png",
@@ -3924,16 +3948,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			827,
-			616,
+			770,
+			696,
 			67,
 			67
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0026"] = {
 		a_name = "achievements-1.png",
@@ -3948,16 +3972,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			688,
-			109,
+			1,
+			339,
 			66,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0027"] = {
 		a_name = "achievements-1.png",
@@ -3972,16 +3996,16 @@ return {
             6
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			456,
-			548,
+			278,
+			696,
 			68,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0028"] = {
 		a_name = "achievements-1.png",
@@ -3996,16 +4020,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			230,
-			909,
+			1,
+			1002,
 			75,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0029"] = {
 		a_name = "achievements-1.png",
@@ -4020,16 +4044,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			526,
-			548,
+			207,
+			769,
 			72,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0030"] = {
 		a_name = "achievements-1.png",
@@ -4044,16 +4068,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			320,
-			167,
+			647,
+			407,
 			69,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0031"] = {
 		a_name = "achievements-1.png",
@@ -4068,16 +4092,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			307,
-			909,
+			465,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0032"] = {
 		a_name = "achievements-1.png",
@@ -4092,16 +4116,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			796,
-			757,
+			820,
+			846,
 			72,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0033"] = {
 		a_name = "achievements-1.png",
@@ -4116,16 +4140,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			226,
+			812,
+			273,
 			63,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0034"] = {
 		a_name = "achievements-1.png",
@@ -4140,16 +4164,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			586,
-			226,
+			769,
+			339,
 			64,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0035"] = {
 		a_name = "achievements-1.png",
@@ -4164,16 +4188,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			652,
-			226,
+			325,
+			407,
 			65,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0036"] = {
 		a_name = "achievements-1.png",
@@ -4188,16 +4212,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			356,
-			616,
+			748,
+			626,
 			65,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0037"] = {
 		a_name = "achievements-1.png",
@@ -4212,16 +4236,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			391,
-			167,
+			587,
+			1,
 			46,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0038"] = {
 		a_name = "achievements-1.png",
@@ -4236,16 +4260,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			544,
-			757,
+			224,
+			846,
 			70,
 			72
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0039"] = {
 		a_name = "achievements-1.png",
@@ -4260,16 +4284,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			253,
-			757,
+			744,
+			846,
 			74,
 			71
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0040"] = {
 		a_name = "achievements-1.png",
@@ -4284,16 +4308,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			703,
-			415,
+			391,
+			339,
 			59,
 			63
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0041"] = {
 		a_name = "achievements-1.png",
@@ -4308,16 +4332,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			756,
-			109,
+			128,
+			407,
 			69,
 			55
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0042"] = {
 		a_name = "achievements-1.png",
@@ -4332,16 +4356,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			600,
-			548,
+			471,
+			626,
 			65,
 			65
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0043"] = {
 		a_name = "achievements-1.png",
@@ -4356,16 +4380,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			423,
-			616,
+			581,
+			551,
 			63,
 			66
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0044"] = {
 		a_name = "achievements-1.png",
@@ -4380,16 +4404,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			385,
-			909,
+			296,
+			846,
 			67,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0045"] = {
 		a_name = "achievements-1.png",
@@ -4404,16 +4428,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			439,
-			167,
+			66,
+			480,
 			70,
 			56
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0046"] = {
 		a_name = "achievements-1.png",
@@ -4428,16 +4452,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			826,
-			685,
+			520,
+			551,
 			59,
 			70
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0047"] = {
 		a_name = "achievements-1.png",
@@ -4452,16 +4476,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			752,
-			832,
+			711,
+			769,
 			64,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0048"] = {
 		a_name = "achievements-1.png",
@@ -4476,16 +4500,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			887,
-			685,
+			569,
+			769,
 			67,
 			70
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0049"] = {
 		a_name = "achievements-1.png",
@@ -4500,16 +4524,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			793,
-			53,
+			569,
+			65,
 			56,
 			53
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0050"] = {
 		a_name = "achievements-1.png",
@@ -4524,16 +4548,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			616,
-			757,
+			894,
+			846,
 			73,
 			72
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0051"] = {
 		a_name = "achievements-1.png",
@@ -4548,16 +4572,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			131,
-			415,
+			530,
+			480,
 			64,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0052"] = {
 		a_name = "achievements-1.png",
@@ -4572,16 +4596,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			818,
-			832,
+			753,
+			924,
 			75,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0053"] = {
 		a_name = "achievements-1.png",
@@ -4596,16 +4620,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			870,
-			757,
+			598,
+			924,
 			76,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0054"] = {
 		a_name = "achievements-1.png",
@@ -4620,16 +4644,16 @@ return {
             6
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			194,
-			685,
+			959,
+			626,
 			64,
 			68
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0055"] = {
 		a_name = "achievements-1.png",
@@ -4644,16 +4668,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			895,
-			832,
+			830,
+			924,
 			75,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0056"] = {
 		a_name = "achievements-1.png",
@@ -4668,16 +4692,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			948,
-			757,
+			923,
+			769,
 			67,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0057"] = {
 		a_name = "achievements-1.png",
@@ -4692,16 +4716,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			69,
-			351,
+			486,
+			696,
 			73,
 			61
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0058"] = {
 		a_name = "achievements-1.png",
@@ -4716,16 +4740,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			329,
-			757,
+			143,
+			696,
 			62,
 			71
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0059"] = {
 		a_name = "achievements-1.png",
@@ -4740,16 +4764,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			260,
-			685,
+			513,
+			846,
 			76,
 			68
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0060"] = {
 		a_name = "achievements-1.png",
@@ -4764,16 +4788,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			338,
-			685,
+			149,
+			846,
 			73,
 			68
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0061"] = {
 		a_name = "achievements-1.png",
@@ -4788,16 +4812,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			220,
-			832,
+			522,
+			924,
 			74,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0062"] = {
 		a_name = "achievements-1.png",
@@ -4812,16 +4836,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			500,
-			288,
+			560,
+			273,
 			59,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0063"] = {
 		a_name = "achievements-1.png",
@@ -4836,16 +4860,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			454,
-			909,
+			543,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0064"] = {
 		a_name = "achievements-1.png",
@@ -4860,16 +4884,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			896,
-			616,
+			73,
+			846,
 			74,
 			67
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0065"] = {
 		a_name = "achievements-1.png",
@@ -4884,16 +4908,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			618,
-			685,
+			666,
+			846,
 			76,
 			69
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0066"] = {
 		a_name = "achievements-1.png",
@@ -4908,16 +4932,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			719,
-			226,
+			621,
+			273,
 			60,
 			59
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0067"] = {
 		a_name = "achievements-1.png",
@@ -4932,16 +4956,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			197,
-			415,
+			1,
+			480,
 			63,
 			62
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0068"] = {
 		a_name = "achievements-1.png",
@@ -4956,16 +4980,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			832,
+			445,
+			924,
 			75,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0069"] = {
 		a_name = "achievements-1.png",
@@ -4980,16 +5004,16 @@ return {
             7
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			595,
-			481,
+			561,
+			696,
 			70,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0070"] = {
 		a_name = "achievements-1.png",
@@ -5004,16 +5028,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			192,
-			226,
+			435,
+			273,
 			61,
 			58
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0071"] = {
 		a_name = "achievements-1.png",
@@ -5028,16 +5052,16 @@ return {
             12
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			66,
-			226,
+			179,
+			198,
 			57,
 			57
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0072"] = {
 		a_name = "achievements-1.png",
@@ -5052,16 +5076,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			78,
-			832,
+			777,
+			769,
 			66,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0073"] = {
 		a_name = "achievements-1.png",
@@ -5076,16 +5100,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
 			1,
-			757,
+			846,
 			70,
 			70
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0074"] = {
 		a_name = "achievements-1.png",
@@ -5100,16 +5124,16 @@ return {
             4
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			296,
-			832,
+			224,
+			924,
 			72,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0075"] = {
 		a_name = "achievements-1.png",
@@ -5124,16 +5148,16 @@ return {
             10
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			561,
-			288,
+			939,
+			273,
 			60,
 			60
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0076"] = {
 		a_name = "achievements-1.png",
@@ -5148,16 +5172,16 @@ return {
             13
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			124,
-			109,
+			406,
+			198,
 			61,
 			54
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0077"] = {
 		a_name = "achievements-1.png",
@@ -5172,16 +5196,16 @@ return {
             9
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			667,
-			481,
+			713,
+			551,
 			65,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0078"] = {
 		a_name = "achievements-1.png",
@@ -5196,16 +5220,16 @@ return {
             11
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			734,
-			481,
+			780,
+			551,
 			65,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0079"] = {
 		a_name = "achievements-1.png",
@@ -5220,16 +5244,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			801,
-			481,
+			393,
+			551,
 			64,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0080"] = {
 		a_name = "achievements-1.png",
@@ -5244,16 +5268,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			532,
-			909,
+			298,
+			924,
 			71,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0081"] = {
 		a_name = "achievements-1.png",
@@ -5268,16 +5292,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			605,
-			909,
+			621,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0082"] = {
 		a_name = "achievements-1.png",
@@ -5292,16 +5316,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			370,
-			832,
+			442,
+			846,
 			69,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0083"] = {
 		a_name = "achievements-1.png",
@@ -5316,16 +5340,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			393,
-			757,
+			591,
+			846,
 			73,
 			71
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0084"] = {
 		a_name = "achievements-1.png",
@@ -5340,16 +5364,16 @@ return {
             3
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			909,
+			75,
+			924,
 			71,
 			75
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0085"] = {
 		a_name = "achievements-1.png",
@@ -5364,16 +5388,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			146,
-			832,
+			1,
+			924,
 			72,
 			73
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0086"] = {
 		a_name = "achievements-1.png",
@@ -5388,16 +5412,16 @@ return {
             8
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			867,
-			481,
+			847,
+			551,
 			65,
 			64
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0087"] = {
 		a_name = "achievements-1.png",
@@ -5412,16 +5436,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			683,
-			909,
+			78,
+			1002,
 			75,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0088"] = {
 		a_name = "achievements-1.png",
@@ -5436,16 +5460,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			760,
-			909,
+			699,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0089"] = {
 		a_name = "achievements-1.png",
@@ -5460,16 +5484,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			838,
-			909,
+			777,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0090"] = {
 		a_name = "achievements-1.png",
@@ -5484,16 +5508,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			916,
-			909,
+			855,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0091"] = {
 		a_name = "achievements-1.png",
@@ -5508,16 +5532,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			1,
-			987,
+			155,
+			1002,
 			75,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0092"] = {
 		a_name = "achievements-1.png",
@@ -5532,16 +5556,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			78,
-			987,
+			232,
+			1002,
 			75,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0093"] = {
 		a_name = "achievements-1.png",
@@ -5556,16 +5580,16 @@ return {
             5
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			413,
-			685,
+			365,
+			846,
 			75,
 			68
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0094"] = {
 		a_name = "achievements-1.png",
@@ -5580,16 +5604,16 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			155,
-			987,
+			933,
+			1002,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	},
 	["kr3_achievement_icons_0095"] = {
 		a_name = "achievements-1.png",
@@ -5604,15 +5628,15 @@ return {
             2
 		},
 		a_size = {
-			1020,
-			1859
+			1024,
+			1968
 		},
 		f_quad = {
-			233,
-			987,
+			1,
+			1080,
 			76,
 			76
 		},
-		alias = {}
+		alias = {},
 	}
 }
