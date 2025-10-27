@@ -1438,8 +1438,8 @@ function game:draw_speed_state(rox, roy, gs)
 
     -- local pos = vec_2(500, 500)
     local pos = {
-        x = 150,
-        y = 150
+        x = 120,
+        y = 120
     }
 
     -- local function draw_polygon(offset_x)
