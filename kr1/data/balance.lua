@@ -5631,7 +5631,7 @@ local towers = {
             },
             ranged_attack = {
                 cooldown = 2,
-                max_range = {150, 150, 150, 150},
+                max_range = {150, 150, 150, 160},
                 min_range = {10, 10, 10, 10},
                 damage_max = {7, 18, 34, 60},
                 damage_min = {5, 12, 22, 40}

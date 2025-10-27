@@ -2361,6 +2361,7 @@ local function barrack_towers()
     tt.barrack.max_soldiers = b.max_soldiers
     tt.barrack.has_door = false
     tt.barrack.range_upgradable = true
+    tt.barrack.rally_anywhere = true
     tt.sound_events.insert = "TowerPaladinCovenantTaunt"
     tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
     -- tt.info.fn = scripts.tower_rocket_gunners.get_info
