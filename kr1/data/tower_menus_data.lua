@@ -1821,7 +1821,7 @@ return {
 
     baby_black_dragon = {{merge(templates.buy_attack, {
         action_arg = 1,
-        image = "kr3_main_icons_0114",
+        image = "kr3_main_icons_0011",
         tt_title = _("ELVES_BABY_BERESAD_SPECIAL_NAME_1"),
         tt_desc = _("ELVES_BABY_BERESAD_SPECIAL_SMALL_DESCRIPTION_1")
     })}},
