@@ -35,6 +35,7 @@ package:
 	git merge dev
 	git push origin master
 	git push gitee master
+	git checkout dev
 
 branch:
 	@bash $(MAKE_FILE_DIR)/branch.sh
