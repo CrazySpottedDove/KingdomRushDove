@@ -49,3 +49,5 @@ sed -i "s/version\.id = \".*\"/version.id = \"$new_id\"/" "$VERSION_FILE"
 cd "$(cat makefiles/.windows_kr_dove_dir)"
 zip "$OUTPUT_ZIP" -@  < "$BASE_DIR/makefiles/.tmp_files"
 cd - >/dev/null
+
+git rev-parse HEAD > ./current_version_commit_hash.txt
