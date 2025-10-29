@@ -210,10 +210,11 @@ return {
         image = "kr5_main_icons_0007",
         tt_title = _("TOWER_DEMON_PIT_NAME"),
         tt_desc = _("TOWER_DEMON_PIT_1_DESCRIPTION"),
-        place = 16
+        place = 15
     }), merge(templates.upgrade,{
         action_arg = "tower_flamespitter_lvl4",
         image = "kr5_main_icons_0012",
+        place = 16,
         tt_title = _("TOWER_FLAMESPITTER_NAME"),
         tt_desc = _("TOWER_FLAMESPITTER_1_DESCRIPTION"),
     }), templates.sell}},
