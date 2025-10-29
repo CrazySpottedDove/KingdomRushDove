@@ -14670,14 +14670,14 @@ function scripts.tower_flamespitter.update(this, store)
         b.bullet.source_id = this.id
         b.bullet.damage_min = attack_bomb.damage_min[this.powers.skill_bomb.level]
         b.bullet.damage_max = attack_bomb.damage_max[this.powers.skill_bomb.level]
-
+        b.bullet.damage_factor = tw.damage_factor
         queue_insert(store, b)
     end
 
     local function spawn_column(origin, dest)
         local power = this.powers.skill_columns
         local column = E:create_entity(power.column_template)
-
+        column.damage_factor = tw.damage_factor
         column.origin = V.vclone(origin)
         column.dest = V.vclone(dest)
         column.source_id = this.id
@@ -15152,7 +15152,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store, script
             local d = E:create_entity("damage")
 
             d.damage_type = this.damage_in_type
-            d.value = math.random(this.damage_in_min, this.damage_in_max)
+            d.value = math.random(this.damage_in_min, this.damage_in_max) * this.damage_factor
             d.source_id = this.source_id
             d.target_id = enemy.id
 
@@ -15168,7 +15168,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store, script
             local d = E:create_entity("damage")
 
             d.damage_type = this.damage_out_type
-            d.value = math.random(this.damage_out_min, this.damage_out_max)
+            d.value = math.random(this.damage_out_min, this.damage_out_max) * this.damage_factor
             d.source_id = this.source_id
             d.target_id = enemy.id
 
