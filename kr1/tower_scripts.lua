@@ -15157,13 +15157,6 @@ function scripts.controller_tower_flamespitter_column.update(this, store, script
             d.target_id = enemy.id
 
             queue_damage(store, d)
-
-            local mod = E:create_entity(this.mod)
-
-            mod.modifier.target_id = enemy.id
-            mod.modifier.source_id = this.id
-
-            queue_insert(store, mod)
         end
     end
 
@@ -15180,6 +15173,12 @@ function scripts.controller_tower_flamespitter_column.update(this, store, script
             d.target_id = enemy.id
 
             queue_damage(store, d)
+            local mod = E:create_entity(this.mod)
+
+            mod.modifier.target_id = enemy.id
+            mod.modifier.source_id = this.id
+
+            queue_insert(store, mod)
         end
     end
 
