@@ -14571,10 +14571,11 @@ function scripts.tower_flamespitter.update(this, store)
     if not this.tower_upgrade_persistent_data.current_angle then
         this.tower_upgrade_persistent_data.current_angle = 235
     end
+    local tpos = tpos(this)
 
     local function find_target(attack)
-        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range,
-            attack.node_prediction, attack.vis_flags, attack.vis_bans)
+        local target, _, pred_pos = U.find_foremost_enemy(store, tpos, 0, this.attacks.range, attack.node_prediction,
+            attack.vis_flags, attack.vis_bans)
 
         return target, pred_pos
     end
@@ -14927,6 +14928,7 @@ function scripts.tower_flamespitter.update(this, store)
                 this.flame_fx.pos.y = this.pos.y + offset.y
                 this.flame_fx.render.sprites[1].r = V.angleTo(this.pos.x + this.tower_top_offset.x - pred_pos.x,
                     this.pos.y + this.tower_top_offset.y - pred_pos.y)
+
                 this.flame_fx.render.sprites[1].scale = v(1, 1)
                 this.flame_fx.render.sprites[1].scale.x = attack_basic.flame_fx_scale_x[angle_idx]
 
@@ -14935,57 +14937,72 @@ function scripts.tower_flamespitter.update(this, store)
                 U.animation_start(this.flame_fx, "loop", false, store.tick_ts, true)
                 local fire_ts = store.tick_ts
                 local fire_cycle_ts = store.tick_ts - attack_basic.cycle_time * tw.cooldown_factor
-
+                local tried_seek_last_time = false
                 while store.tick_ts - fire_ts < attack_basic.duration * tw.cooldown_factor do
+                    if not target or target.health.dead then
+                        if tried_seek_last_time then
+                            tried_seek_last_time = false
+                        else
+                            target = U.find_foremost_enemy(store, tpos, 0, this.attacks.range, 0,
+                                attack_basic.vis_flags, attack_basic.vis_bans, function(v)
+                                    return math.abs(V.angleTo(tpos.x - v.pos.x, tpos.y - v.pos.y, tpos.x - pred_pos.x,
+                                        tpos.y - pred_pos.y)) < attack_basic.max_retarget_angle
+                                end)
+                            tried_seek_last_time = true
+                        end
+                    end
+                    if target then
+                        pred_pos.x = target.pos.x
+                        pred_pos.y = target.pos.y
+                        rotate_towards_pos(pred_pos)
+                        a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("attack", pred_pos,
+                            this.tower_top_offset)
+                        offset = V.vclone(attack_basic.bullet_start_offset[angle_idx])
+                        if not a_flip then
+                            offset.x = -offset.x
+                        end
+                        this.flame_fx.pos.x = this.pos.x + offset.x
+                        this.flame_fx.pos.y = this.pos.y + offset.y
+                        this.flame_fx.render.sprites[1].r = V.angleTo(this.pos.x + this.tower_top_offset.x - pred_pos.x,
+                            this.pos.y + this.tower_top_offset.y - pred_pos.y)
+                    end
+
+                    this.flame_fx.render.sprites[1].scale.x = this.attacks.range / attack_basic.square_y
+
                     if store.tick_ts - fire_cycle_ts >= attack_basic.cycle_time * tw.cooldown_factor then
                         fire_cycle_ts = store.tick_ts
-                        if not target or target.health.dead then
-                            target = U.find_foremost_enemy(store, pred_pos, 0, attack_basic.max_retarget_range, 0,
-                                attack_basic.vis_flags, attack_basic.vis_bans, function(v)
-                                    return U.is_inside_ellipse(v.pos, tpos(this), this.attacks.range)
-                                end)
-                        end
-                        if target then
-                            pred_pos.x = target.pos.x
-                            pred_pos.y = target.pos.y
-                            rotate_towards_pos(pred_pos)
-                            a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("attack", pred_pos,
-                                this.tower_top_offset)
-                            offset = V.vclone(attack_basic.bullet_start_offset[angle_idx])
-                            if not a_flip then
-                                offset.x = -offset.x
-                            end
-                            this.flame_fx.pos.x = this.pos.x + offset.x
-                            this.flame_fx.pos.y = this.pos.y + offset.y
-                            this.flame_fx.render.sprites[1].r = V.angleTo(
-                                this.pos.x + this.tower_top_offset.x - pred_pos.x,
-                                this.pos.y + this.tower_top_offset.y - pred_pos.y)
-                            this.flame_fx.render.sprites[1].scale.x = attack_basic.flame_fx_scale_x[angle_idx]
-                            local aura_targets = U.find_enemies_in_range(store, pred_pos, 0, attack_basic.radius,
-                                attack_basic.vis_flags, attack_basic.vis_bans)
-                            if aura_targets then
-                                for _, aura_target in ipairs(aura_targets) do
-                                    local d = E:create_entity("damage")
-                                    d.source_id = this.id
-                                    d.target_id = aura_target.id
-                                    d.damage_type = attack_basic.damage_type
-                                    if up then
-                                        d.value = attack_basic.damage_max * tw.damage_factor
-                                    else
-                                        d.value = math.random(attack_basic.damage_min, attack_basic.damage_max) *
-                                                      tw.damage_factor
-                                    end
+                        local r = -this.flame_fx.render.sprites[1].r
+                        -- 矩形索敌
+                        local aura_center = {
+                            x = this.pos.x + this.tower_top_offset.x - math.cos(r) * this.attacks.range * 0.6,
+                            y = this.pos.y + this.tower_top_offset.y + math.sin(r) * this.attacks.range * 0.6
+                        }
+                        local aura_targets = U.find_enemies_in_range(store, tpos, 0, this.attacks.range,
+                            attack_basic.vis_flags, attack_basic.vis_bans, function(v)
+                                return U.is_inside_square(aura_center, this.attacks.range * 0.6,
+                                    attack_basic.square_half_x, r, v.pos)
+                            end)
 
-                                    queue_damage(store, d)
-                                    local new_mod = E:create_entity(attack_basic.mod)
-                                    new_mod.modifier.source_id = this.id
-                                    new_mod.modifier.target_id = aura_target.id
-                                    new_mod.dps.damage_inc = 0
-                                    queue_insert(store, new_mod)
+                        if aura_targets then
+                            for _, aura_target in ipairs(aura_targets) do
+                                local d = E:create_entity("damage")
+                                d.source_id = this.id
+                                d.target_id = aura_target.id
+                                d.damage_type = attack_basic.damage_type
+                                if up then
+                                    d.value = attack_basic.damage_max * tw.damage_factor
+                                else
+                                    d.value = (math.random(attack_basic.damage_min, attack_basic.damage_max)) *
+                                                  tw.damage_factor
                                 end
+
+                                queue_damage(store, d)
+                                local new_mod = E:create_entity(attack_basic.mod)
+                                new_mod.modifier.source_id = this.id
+                                new_mod.modifier.target_id = aura_target.id
+                                new_mod.dps.damage_inc = 0
+                                queue_insert(store, new_mod)
                             end
-                        else
-                            break
                         end
                     end
                     coroutine.yield()

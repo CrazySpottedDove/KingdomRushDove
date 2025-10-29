@@ -2639,4 +2639,28 @@ end
 function U.safe_float_string(value)
     return value and string.format("%.2f", value) or "-"
 end
+
+--- 是否在矩形区域内
+--- @param o table 矩形中心
+--- @param half_x number 矩形半宽
+--- @param half_y number 矩形半高
+--- @param r number 矩形旋转角度（弧度）
+--- @param p table 待判断点
+--- @return is_inside boolean 是否在矩形区域内
+function U.is_inside_square(o, half_x, half_y, r, p)
+    local cos_r = math.cos(r)
+    local sin_r = math.sin(r)
+
+    local dx = p.x - o.x
+    local dy = p.y - o.y
+
+    local local_x = dx * cos_r + dy * sin_r
+    local local_y = -dx * sin_r + dy * cos_r
+
+    if math.abs(local_x) <= half_x and math.abs(local_y) <= half_y then
+        return true
+    end
+    return false
+end
+
 return U

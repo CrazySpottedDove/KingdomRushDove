@@ -5795,7 +5795,7 @@ local towers = {
             cycle_time = 0.1,
             damage_min = {2, 5, 12, 8},
             damage_max = {3, 10, 16, 10},
-            range = {180, 180, 180, 180},
+            range = {180, 180, 180, 200},
             damage_type = DAMAGE_TRUE
         },
         skill_bomb = {
