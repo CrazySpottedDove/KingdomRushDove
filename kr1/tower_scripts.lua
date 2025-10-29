@@ -14746,7 +14746,7 @@ function scripts.tower_flamespitter.update(this, store)
         end
 
         local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-            a.node_prediction, a.vis_flags, a.vis_bans)
+            a.node_prediction * tw.cooldown_factor, a.vis_flags, a.vis_bans)
 
         -- if not enemy or not pred_pos or a.min_targets and #enemies < a.min_targets then
         --     return
@@ -14824,6 +14824,15 @@ function scripts.tower_flamespitter.update(this, store)
 
     local up = UP:get_upgrade("engineer_efficiency")
     local scale_factor = this.attacks.range / attack_basic.square_y
+
+    local co_powers = coroutine.create(function ()
+        while true do
+            check_skill_bomb()
+            check_skill_columns()
+            coroutine.yield()
+        end
+    end)
+
     ::label_606_0::
 
     while true do
@@ -14913,7 +14922,7 @@ function scripts.tower_flamespitter.update(this, store)
                 local pi, spi, ni = unpack(nearest[1])
                 local aura_pos = P:node_pos(pi, 1, ni)
 
-                U.animation_start(this, "attack", a_flip, store.tick_ts, false, this.render.sid_dwarf)
+                -- U.animation_start(this, "attack", a_flip, store.tick_ts, false, this.render.sid_dwarf)
                 U.y_wait(store, fts(14) * tw.cooldown_factor)
 
                 a_name, a_flip, angle_idx = animation_name_facing_point_flamespitter("attack", pred_pos,
@@ -15024,6 +15033,7 @@ function scripts.tower_flamespitter.update(this, store)
                                 queue_insert(store, new_mod)
                             end
                         end
+                        coroutine.resume(co_powers)
                     end
                     coroutine.yield()
                 end
@@ -15038,8 +15048,9 @@ function scripts.tower_flamespitter.update(this, store)
                 idle_cooldown = math.random(4, 8)
             end
 
-            check_skill_bomb()
-            check_skill_columns()
+            -- check_skill_bomb()
+            -- check_skill_columns()
+            coroutine.resume(co_powers)
 
             ::label_606_1::
 
