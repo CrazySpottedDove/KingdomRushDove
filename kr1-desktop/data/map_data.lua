@@ -2288,6 +2288,11 @@ return {
         icon = 20,
         detail_icon = 21,
         from_kr = 5
+    },{
+        name = "tower_flamespitter_lvl4",
+        icon = 11,
+        detail_icon = 11,
+        from_kr = 5
     }},
     map_animations1 = {{
         sail_time = 15,

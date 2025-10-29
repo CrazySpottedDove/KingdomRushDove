@@ -623,6 +623,10 @@ function upgrades:patch_templates(max_level)
             math.floor(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
         T("mod_ray_frankenstein").dps.damage_max =
             math.floor(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
+        T("tower_flamespitter_lvl4").attacks.list[1].damage_min =
+            math.floor(T("tower_flamespitter_lvl4").attacks.list[1].damage_min * u.damage_factor)
+        T("tower_flamespitter_lvl4").attacks.list[1].damage_max =
+            math.floor(T("tower_flamespitter_lvl4").attacks.list[1].damage_max * u.damage_factor)
     end
 
     u = self:get_upgrade("engineer_range_finder")
@@ -647,6 +651,10 @@ function upgrades:patch_templates(max_level)
         T("tower_dwaarp").origin_range = math.ceil(T("tower_dwaarp").origin_range * u.range_factor)
         T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(
             T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
+        T("tower_flamespitter_lvl4").attacks.list[2].max_range = math.ceil(
+            T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor)
+        T("tower_flamespitter_lvl4").attacks.list[3].max_range = math.ceil(
+            T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor)
     end
 
     u = self:get_upgrade("engineer_field_logistics")
@@ -711,6 +719,14 @@ function upgrades:patch_templates(max_level)
         at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
         at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
         at = T("tower_demon_pit_lvl4").powers.big_guy
+        at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
+        at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
+        at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
+        at = T("tower_flamespitter_lvl4").powers.skill_bomb
+        at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
+        at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
+        at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
+        at = T("tower_flamespitter_lvl4").powers.skill_columns
         at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
         at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
         at.cooldown[3] = at.cooldown[3] * u.cooldown_factor

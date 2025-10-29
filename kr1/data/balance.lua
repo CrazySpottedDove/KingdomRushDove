@@ -5790,11 +5790,11 @@ local towers = {
             damage = {1, 2, 3, 4}
         },
         basic_attack = {
-            duration = 0.5,
-            cooldown = 3,
-            cycle_time = 0.3,
-            damage_min = {2, 5, 12, 16},
-            damage_max = {3, 10, 16, 30},
+            duration = 1,
+            cooldown = 1.8,
+            cycle_time = 0.1,
+            damage_min = {2, 5, 12, 8},
+            damage_max = {3, 10, 16, 10},
             range = {180, 180, 180, 180},
             damage_type = DAMAGE_TRUE
         },

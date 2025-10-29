@@ -20,9 +20,10 @@ require("foundamental_towers")()
 
 package.loaded.mage_towers = nil
 package.loaded.archer_towers = nil
+package.loaded.engineer_towers = nil
 require("mage_towers")
 require("archer_towers")
-require("engineer_towers")()
+require("engineer_towers")
 
 require("barrack_towers")()
 require("enemies")()
@@ -10064,3 +10065,45 @@ tt.render.sprites[1].animated = false
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
 tt.tween.remove = true
+
+tt = E:register_t("ps_bullet_tower_flamespitter_skill_bomb")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "dwarven_flamespitter_tower_blazing_trail_projectile_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 50
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_1(5)
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("fx_tower_flamespitter_flame", "fx")
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "dwarven_flamespitter_tower_flamethrower_fx"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].z = Z_BULLETS
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_bullet_tower_flamespitter_bomb_explosion", "fx")
+tt.render.sprites[1].name = "dwarven_flamespitter_tower_blazing_trail_explosion_idle"
+tt = E:register_t("fx_bullet_tower_flamespitter_bomb_burn", "fx")
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "dwarven_flamespitter_tower_blazing_trail_path_fx"
+tt.render.sprites[1].name = "idle"
+tt = E:register_t("fx_tower_flamespitter_column", "fx")
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "dwarven_flamespitter_tower_scorching_torches_fx"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].scale = vec_1(0.75)
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_bullet_tower_flamespitter_bomb", "decal_tween")
+tt.render.sprites[1].name = "dwarven_flamespitter_tower_blazing_trail_explosion_decal"
+tt.render.sprites[1].animated = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {1, 255}, {2, 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_tower_flamespitter_skill_columns", "decal_timed")
+tt.render.sprites[1].prefix = "dwarven_flamespitter_tower_scorching_torches_particle"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.timed.duration = fts(10)
