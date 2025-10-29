@@ -727,6 +727,13 @@ function EU.patch_engineer_aftermath(level)
         ray.main_script.remove = U.function_append(ray.main_script.remove, endless_engineer_aftermath_ray_remove)
         ray._endless_engineer_aftermath = true
     end
+    local tower = E:get_template("tower_flamespitter")
+    if not tower._endless_engineer_aftermath then
+        tower.attacks.range = tower.attacks.range * (1 + friend_buff.engineer_seek)
+        tower._endless_engineer_aftermath = true
+        tower._endless_engineer_aftermath_last_level = 0
+    end
+    tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_aftermath * 0.8
 end
 
 function EU.patch_engineer_seek(level)
