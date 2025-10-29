@@ -14718,12 +14718,12 @@ function scripts.tower_flamespitter.update(this, store)
 
         U.animation_start(this, "blazing_trail", nil, store.tick_ts, false, this.render.sid_dwarf)
         U.animation_start(this, "blazing_trail", nil, store.tick_ts, false, this.render.sid_skill_2)
-        U.y_wait(store, fts(16))
+        U.y_wait(store, fts(16) * tw.cooldown_factor)
 
         this.render.sprites[this.render.sid_stove_fire].hidden = false
 
         U.animation_start(this, "blazing_trail", nil, store.tick_ts, false, this.render.sid_stove_fire)
-        U.y_wait(store, fts(34))
+        U.y_wait(store, fts(34) * tw.cooldown_factor)
         S:queue(a.sound)
         shoot_bomb(nil, pred_pos)
 
@@ -14786,7 +14786,7 @@ function scripts.tower_flamespitter.update(this, store)
         this.render.sprites[this.render.sid_stove_fire].hidden = false
 
         U.animation_start(this, "scorching_torches", nil, store.tick_ts, false, this.render.sid_stove_fire)
-        U.y_wait(store, fts(16))
+        U.y_wait(store, fts(16) * tw.cooldown_factor)
         S:queue(a.sound)
 
         local origin = V.vclone(this.pos)
