@@ -77,6 +77,7 @@ local endless = {
         interval = 300,
         available_paths = {},
         only_fly_paths = {},
+        only_water_paths = {},
         special_paths = {},
         avg_interval = 0,
         avg_interval_next = 0,

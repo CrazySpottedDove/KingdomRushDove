@@ -5264,7 +5264,12 @@ local towers = {
             range = 186,
             price = {225, 250, 250},
             cooldown = {30, 28, 26},
-            boss_damage = {192, 288, 360}
+            boss_damage = {
+                [0] = 192,
+                [1] = 192,
+                [2] = 288,
+                [3] = 360
+            }
         },
         empowerment = {
             max_range = 240,

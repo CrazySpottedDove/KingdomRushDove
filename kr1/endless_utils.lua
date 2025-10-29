@@ -254,7 +254,9 @@ function EU.init_endless(level_name, groups)
             table.insert(endless.available_paths, i)
         end
         endless.only_fly_paths = table.deepclone(endless.available_paths)
+        endless.only_water_paths = table.deepclone(endless.available_paths)
         endless.special_paths = table.deepclone(endless.available_paths)
+        local fixed_special_paths = {}
         for _, group in pairs(groups) do
             for _, wave in pairs(group.waves) do
                 for _, spawn in pairs(wave.spawns) do
@@ -263,6 +265,9 @@ function EU.init_endless(level_name, groups)
                         if endless.only_fly_paths[wave.path_index] and band(tpl.vis.flags, F_FLYING) == 0 then
                             endless.only_fly_paths[wave.path_index] = false
                         end
+                        if endless.only_water_paths[wave.path_index] and (not tpl.water) and band(tpl.vis.flags, F_FLYING) == 0 and band(tpl.vis.flags, F_FLYING_FAKE) == 0 then
+                            endless.only_water_paths[wave.path_index] = false
+                        end
                         endless.extra_cash = endless.extra_cash + (tpl.enemy.gold or 0) * spawn.max
                         if not endless.enemy_weight_map[spawn.creep] then
                             endless.enemy_weight_map[spawn.creep] = get_enemy_weight(spawn.creep)
@@ -270,13 +275,19 @@ function EU.init_endless(level_name, groups)
                         if endless.special_paths[wave.path_index] then
                             endless.special_paths[wave.path_index] = nil
                         end
+                    else
+                        fixed_special_paths[wave.path_index] = true
                     end
                 end
             end
         end
+        for k, v in pairs(fixed_special_paths) do
+            endless.special_paths[k] = true
+        end
         for k, v in pairs(endless.special_paths) do
             endless.available_paths[k] = nil
             endless.only_fly_paths[k] = nil
+            endless.only_water_paths[k] = nil
         end
         endless.enemy_list = table.keys(endless.enemy_weight_map)
         endless.spawn_count_per_wave = math.ceil(total_spawns / #endless.available_paths)
@@ -339,6 +350,14 @@ function EU.generate_group(endless)
             wave_enemy_list = {}
             for _, name in pairs(endless.enemy_list) do
                 if band(E:get_template(name).vis.flags, F_FLYING) ~= 0 then
+                    table.insert(wave_enemy_list, name)
+                end
+            end
+        elseif endless.only_water_paths[wave.path_index] then
+            wave_enemy_list = {}
+            for _, name in pairs(endless.enemy_list) do
+                local tpl = E:get_template(name)
+                if tpl.water or band(tpl.vis.flags, F_FLYING) ~= 0 or band(tpl.vis.flags, F_FLYING_FAKE) ~= 0 then
                     table.insert(wave_enemy_list, name)
                 end
             end
