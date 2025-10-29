@@ -14574,9 +14574,10 @@ function scripts.tower_flamespitter.update(this, store)
     local tpos = tpos(this)
 
     local function find_target(attack)
-        local target, _, pred_pos = U.find_foremost_enemy(store, tpos, 0, this.attacks.range, attack.node_prediction,
-            attack.vis_flags, attack.vis_bans)
-
+        -- local target, _, pred_pos = U.find_foremost_enemy(store, tpos, 0, this.attacks.range,
+        --     attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
+        local target , pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, this.attacks.range,
+            attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
         return target, pred_pos
     end
 
@@ -14697,10 +14698,15 @@ function scripts.tower_flamespitter.update(this, store)
             return
         end
 
-        local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-            a.node_prediction, a.vis_flags, a.vis_bans)
-
-        if not enemy or not pred_pos or a.min_targets and #enemies < a.min_targets then
+        -- local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
+        --     a.node_prediction, a.vis_flags, a.vis_bans)
+        local enemy, pred_pos = U.find_random_enemy_with_pos(store, this.pos, a.min_range, a.max_range,
+            a.node_prediction * tw.cooldown_factor, a.vis_flags, a.vis_bans)
+        -- if not enemy or not pred_pos or a.min_targets and #enemies < a.min_targets then
+        --     return
+        -- end
+        if not enemy then
+            a.ts = a.ts + fts(5)
             return
         end
 
@@ -14742,7 +14748,12 @@ function scripts.tower_flamespitter.update(this, store)
         local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
             a.node_prediction, a.vis_flags, a.vis_bans)
 
-        if not enemy or not pred_pos or a.min_targets and #enemies < a.min_targets then
+        -- if not enemy or not pred_pos or a.min_targets and #enemies < a.min_targets then
+        --     return
+        -- end
+
+        if not enemy then
+            a.ts = a.ts + fts(5)
             return
         end
 
@@ -14944,11 +14955,17 @@ function scripts.tower_flamespitter.update(this, store)
                         if tried_seek_last_time then
                             tried_seek_last_time = false
                         else
-                            target = U.find_foremost_enemy(store, tpos, 0, this.attacks.range, 0,
-                                attack_basic.vis_flags, attack_basic.vis_bans, function(v)
+                            -- target = U.find_foremost_enemy(store, tpos, 0, this.attacks.range, 0,
+                            --     attack_basic.vis_flags, attack_basic.vis_bans, function(v)
+                            --         return math.abs(V.angleTo(tpos.x - v.pos.x, tpos.y - v.pos.y, tpos.x - pred_pos.x,
+                            --             tpos.y - pred_pos.y)) < attack_basic.max_retarget_angle
+                            --     end)
+                            target = U.find_random_enemy(store, tpos, 0, this.attacks.range, attack_basic.vis_flags,
+                                attack_basic.vis_bans, function(v)
                                     return math.abs(V.angleTo(tpos.x - v.pos.x, tpos.y - v.pos.y, tpos.x - pred_pos.x,
                                         tpos.y - pred_pos.y)) < attack_basic.max_retarget_angle
                                 end)
+
                             tried_seek_last_time = true
                         end
                     end
@@ -14972,7 +14989,7 @@ function scripts.tower_flamespitter.update(this, store)
                     this.flame_fx.render.sprites[1].scale.y = scale_factor
 
                     if store.tick_ts - fire_cycle_ts >= attack_basic.cycle_time * tw.cooldown_factor then
-                        fire_cycle_ts = store.tick_ts
+                        fire_cycle_ts = fire_cycle_ts + attack_basic.cycle_time * tw.cooldown_factor
                         local r = -this.flame_fx.render.sprites[1].r
                         -- 矩形索敌
                         local aura_center = {
