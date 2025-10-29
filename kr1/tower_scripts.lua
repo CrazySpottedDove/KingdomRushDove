@@ -11483,6 +11483,7 @@ function scripts.tower_stargazers.update(this, store, script)
                                 fx.render.sprites[1].ts = store.tick_ts
 
                                 queue_insert(store, fx)
+                                scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
                             end
 
                             this.render.sprites[teleport_sid].hidden = true
@@ -15048,8 +15049,6 @@ function scripts.tower_flamespitter.update(this, store)
                 idle_cooldown = math.random(4, 8)
             end
 
-            -- check_skill_bomb()
-            -- check_skill_columns()
             coroutine.resume(co_powers)
 
             ::label_606_1::
