@@ -5168,25 +5168,23 @@ function scripts.tower_druid.update(this, store)
 
                     local adv = P:predict_enemy_node_advance(target, ba.node_prediction)
 
-                    if U.is_inside_ellipse(tpos(this), pred_pos, a.range * 1.05) then
-                        for i, b in ipairs(this.loaded_bullets) do
-                            b.bullet.target_id = target.id
+                    for i, b in ipairs(this.loaded_bullets) do
+                        b.bullet.target_id = target.id
 
-                            if i > 1 then
-                                local ni_pred = target.nav_path.ni + adv
+                        if i > 1 then
+                            local ni_pred = target.nav_path.ni + adv
 
-                                if P:is_node_valid(target.nav_path.pi, ni_pred - (i - 2) * 5) then
-                                    ni_pred = ni_pred - (i - 2) * 5
-                                end
-
-                                pred_pos = P:node_pos(target.nav_path.pi, 1, ni_pred)
+                            if P:is_node_valid(target.nav_path.pi, ni_pred - (i - 2) * 5) then
+                                ni_pred = ni_pred - (i - 2) * 5
                             end
 
-                            b.bullet.to = V.v(pred_pos.x, pred_pos.y)
+                            pred_pos = P:node_pos(target.nav_path.pi, 1, ni_pred)
                         end
 
-                        this.loaded_bullets = {}
+                        b.bullet.to = V.v(pred_pos.x, pred_pos.y)
                     end
+
+                    this.loaded_bullets = {}
 
                     U.y_animation_wait(this, shooter_sid)
                 elseif #this.loaded_bullets < ba.max_loaded_bullets then
@@ -14974,7 +14972,8 @@ function scripts.tower_flamespitter.update(this, store)
                                     if up then
                                         d.value = attack_basic.damage_max * tw.damage_factor
                                     else
-                                        d.value = math.random(attack_basic.damage_min, attack_basic.damage_max) * tw.damage_factor
+                                        d.value = math.random(attack_basic.damage_min, attack_basic.damage_max) *
+                                                      tw.damage_factor
                                     end
 
                                     queue_damage(store, d)
