@@ -674,7 +674,7 @@ function EU.patch_engineer_focus(level)
     tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
     tower = E:get_template("tower_frankenstein")
     tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
-    tower = E:get_template("tower_flamespitter")
+    tower = E:get_template("tower_flamespitter_lvl4")
     tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
     local missile = E:get_template("missile_bfg")
     if not missile.bullet._engineer_focus_damage_min then
@@ -727,7 +727,7 @@ function EU.patch_engineer_aftermath(level)
         ray.main_script.remove = U.function_append(ray.main_script.remove, endless_engineer_aftermath_ray_remove)
         ray._endless_engineer_aftermath = true
     end
-    local tower = E:get_template("tower_flamespitter")
+    local tower = E:get_template("tower_flamespitter_lvl4")
     if not tower._endless_engineer_aftermath then
         tower.attacks.range = tower.attacks.range * (1 + friend_buff.engineer_seek)
         tower._endless_engineer_aftermath = true
@@ -767,6 +767,8 @@ function EU.patch_engineer_seek(level)
     t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
     t = E:get_template("tower_dwaarp")
     t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
+    t = E:get_template("tower_flamespitter_lvl4")
+    t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
 end
 
 local function fireball_quick_up(this, store)
@@ -796,7 +798,7 @@ function EU.patch_engineer_fireball(level)
 end
 
 function EU.patch_mage_thunder(level)
-    for _, name in pairs(table.append(UP:bolts(), {"ray_arcane_disintegrate"}, true)) do
+    for _, name in pairs(table.append(UP:bolts(), {"ray_arcane_disintegrate", "bullet_tower_ray_lvl4"}, true)) do
         local bolt = E:get_template(name)
         if not bolt._endless_mage_thunder then
             bolt._endless_mage_thunder = true
@@ -1118,6 +1120,8 @@ function EU.patch_upgrade_in_game(key, store, endless)
                 for _, s in pairs(t.barrack.soldiers) do
                     s.attacks.list[1].vis_bans = U.flag_clear(s.attacks.list[1].vis_bans, F_FLYING)
                 end
+            elseif t.template_name == "tower_flamespitter_lvl4" then
+                t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
             end
         end
     elseif key == "engineer_fireball" then
