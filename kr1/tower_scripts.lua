@@ -14812,6 +14812,7 @@ function scripts.tower_flamespitter.update(this, store)
     local target, pred_pos = find_target(attack_basic)
 
     local up = UP:get_upgrade("engineer_efficiency")
+    local scale_factor = this.attacks.range / attack_basic.square_y
     ::label_606_0::
 
     while true do
@@ -14966,8 +14967,9 @@ function scripts.tower_flamespitter.update(this, store)
                         this.flame_fx.render.sprites[1].r = V.angleTo(this.pos.x + this.tower_top_offset.x - pred_pos.x,
                             this.pos.y + this.tower_top_offset.y - pred_pos.y)
                     end
-
-                    this.flame_fx.render.sprites[1].scale.x = this.attacks.range / attack_basic.square_y
+                    scale_factor = this.attacks.range / attack_basic.square_y
+                    this.flame_fx.render.sprites[1].scale.x = scale_factor
+                    this.flame_fx.render.sprites[1].scale.y = scale_factor
 
                     if store.tick_ts - fire_cycle_ts >= attack_basic.cycle_time * tw.cooldown_factor then
                         fire_cycle_ts = store.tick_ts
@@ -14980,7 +14982,7 @@ function scripts.tower_flamespitter.update(this, store)
                         local aura_targets = U.find_enemies_in_range(store, tpos, 0, this.attacks.range,
                             attack_basic.vis_flags, attack_basic.vis_bans, function(v)
                                 return U.is_inside_square(aura_center, this.attacks.range * 0.6,
-                                    attack_basic.square_half_x, r, v.pos)
+                                    attack_basic.square_half_x * scale_factor, r, v.pos)
                             end)
 
                         if aura_targets then
@@ -15000,6 +15002,7 @@ function scripts.tower_flamespitter.update(this, store)
                                 local new_mod = E:create_entity(attack_basic.mod)
                                 new_mod.modifier.source_id = this.id
                                 new_mod.modifier.target_id = aura_target.id
+                                new_mod.modifier.damage_factor = tw.damage_factor
                                 new_mod.dps.damage_inc = 0
                                 queue_insert(store, new_mod)
                             end
