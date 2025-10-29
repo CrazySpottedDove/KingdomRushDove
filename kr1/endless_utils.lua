@@ -619,7 +619,7 @@ end
 local bombs = {"bomb", "bomb_dynamite", "bomb_black", "bomb_musketeer", "dwarf_barrel", "pirate_watchtower_bomb",
                "bomb_molotov", "bomb_molotov_big", "bomb_bfg", "bomb_bfg_fragment", "bomb_mecha",
                "tower_tricannon_bomb", "tower_tricannon_bomb_bombardment_bomb", "rock_druid", "rock_entwood",
-               "rock_druid"}
+               "rock_druid","bullet_tower_demon_pit_basic_attack_lvl4", "bullet_tower_flamespitter_skill_bomb"}
 
 function EU.patch_engineer_focus(level)
     for _, name in pairs(bombs) do
@@ -673,6 +673,8 @@ function EU.patch_engineer_focus(level)
     tower = E:get_template("tower_dwaarp")
     tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
     tower = E:get_template("tower_frankenstein")
+    tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
+    tower = E:get_template("tower_flamespitter")
     tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
     local missile = E:get_template("missile_bfg")
     if not missile.bullet._engineer_focus_damage_min then
