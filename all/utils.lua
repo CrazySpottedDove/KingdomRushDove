@@ -2582,12 +2582,12 @@ function U.pop_bans(t, ref)
     end
 end
 
----根据来自哪代，拼接字符串
+---根据来自哪代拼接字符串
 ---@param from_kr integer 代
 ---@param str string 字符串
 ---@return string 处理后的字符串, string? 来自哪代
 function U.splicing_from_kr(from_kr, str)
-    if from_kr then
+    if from_kr and from_kr ~= 1 then
         local kr = "kr" .. from_kr
 
         return kr .. "_" .. str, kr

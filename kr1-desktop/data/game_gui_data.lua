@@ -343,7 +343,7 @@ return {
 			layout = N_ENEMY
 		},
 		enemy_bouncer = {
-			image = "encyclopedia_creeps_0201",
+			image = "kr2_encyclopedia_creeps_0001",
 			icon = "kr2_alert_creep_notxt_0001",
 			layout = N_ENEMY,
 			icon_signals = {
@@ -354,237 +354,237 @@ return {
 			}
 		},
 		enemy_desert_raider = {
-			image = "encyclopedia_creeps_0202",
+			image = "kr2_encyclopedia_creeps_0002",
 			icon = "kr2_alert_creep_notxt_0002",
 			layout = N_ENEMY
 		},
 		enemy_immortal = {
-			image = "encyclopedia_creeps_0203",
+			image = "kr2_encyclopedia_creeps_0003",
 			icon = "kr2_alert_creep_notxt_0003",
 			layout = N_ENEMY
 		},
 		enemy_desert_wolf = {
-			image = "encyclopedia_creeps_0209",
+			image = "kr2_encyclopedia_creeps_0009",
 			icon = "kr2_alert_creep_notxt_0008",
 			layout = N_ENEMY
 		},
 		enemy_desert_wolf_small = {
-			image = "encyclopedia_creeps_0208",
+			image = "kr2_encyclopedia_creeps_0008",
 			icon = "kr2_alert_creep_notxt_0007",
 			layout = N_ENEMY
 		},
 		enemy_executioner = {
-			image = "encyclopedia_creeps_0205",
+			image = "kr2_encyclopedia_creeps_0005",
 			icon = "kr2_alert_creep_notxt_0005",
 			layout = N_ENEMY
 		},
 		enemy_scorpion = {
-			image = "encyclopedia_creeps_0211",
+			image = "kr2_encyclopedia_creeps_0011",
 			icon = "kr2_alert_creep_notxt_0010",
 			layout = N_ENEMY
 		},
 		enemy_wasp = {
-			image = "encyclopedia_creeps_0212",
+			image = "kr2_encyclopedia_creeps_0012",
 			icon = "kr2_alert_creep_notxt_0011",
 			layout = N_ENEMY
 		},
 		enemy_wasp_queen = {
-			image = "encyclopedia_creeps_0213",
+			image = "kr2_encyclopedia_creeps_0013",
 			icon = "kr2_alert_creep_notxt_0012",
 			layout = N_ENEMY
 		},
 		enemy_munra = {
-			image = "encyclopedia_creeps_0206",
+			image = "kr2_encyclopedia_creeps_0006",
 			icon = "kr2_alert_creep_notxt_0006",
 			layout = N_ENEMY
 		},
 		enemy_tremor = {
-			image = "encyclopedia_creeps_0210",
+			image = "kr2_encyclopedia_creeps_0010",
 			icon = "kr2_alert_creep_notxt_0009",
 			layout = N_ENEMY
 		},
 		enemy_desert_archer = {
-			image = "encyclopedia_creeps_0204",
+			image = "kr2_encyclopedia_creeps_0004",
 			icon = "kr2_alert_creep_notxt_0004",
 			layout = N_ENEMY
 		},
 		enemy_jungle_spider_small = {
-			image = "encyclopedia_creeps_0216",
+			image = "kr2_encyclopedia_creeps_0016",
 			icon = "kr2_alert_creep_notxt_0013",
 			layout = N_ENEMY
 		},
 		enemy_jungle_spider_big = {
-			image = "encyclopedia_creeps_0217",
+			image = "kr2_encyclopedia_creeps_0017",
 			icon = "kr2_alert_creep_notxt_0014",
 			layout = N_ENEMY
 		},
 		enemy_jungle_spider_tiny = {
-			image = "encyclopedia_creeps_0217",
+			image = "kr2_encyclopedia_creeps_0017",
 			icon = "kr2_alert_creep_notxt_0001",
 			layout = N_ENEMY
 		},
 		enemy_gorilla = {
-			image = "encyclopedia_creeps_0225",
+			image = "kr2_encyclopedia_creeps_0025",
 			icon = "kr2_alert_creep_notxt_0021",
 			layout = N_ENEMY
 		},
 		enemy_savage_bird = {
-			image = "encyclopedia_creeps_0226",
+			image = "kr2_encyclopedia_creeps_0026",
 			icon = "kr2_alert_creep_notxt_0022",
 			layout = N_ENEMY
 		},
 		enemy_savage_bird_rider = {
-			image = "encyclopedia_creeps_0226",
+			image = "kr2_encyclopedia_creeps_0026",
 			icon = "kr2_alert_creep_notxt_0022",
 			layout = N_ENEMY
 		},
 		enemy_cannibal = {
-			image = "encyclopedia_creeps_0218",
+			image = "kr2_encyclopedia_creeps_0018",
 			icon = "kr2_alert_creep_notxt_0015",
 			layout = N_ENEMY
 		},
 		enemy_hunter = {
-			image = "encyclopedia_creeps_0219",
+			image = "kr2_encyclopedia_creeps_0019",
 			icon = "kr2_alert_creep_notxt_0016",
 			layout = N_ENEMY
 		},
 		enemy_shaman_necro = {
-			image = "encyclopedia_creeps_0223",
+			image = "kr2_encyclopedia_creeps_0023",
 			icon = "kr2_alert_creep_notxt_0020",
 			layout = N_ENEMY
 		},
 		enemy_shaman_priest = {
-			image = "encyclopedia_creeps_0220",
+			image = "kr2_encyclopedia_creeps_0020",
 			icon = "kr2_alert_creep_notxt_0017",
 			layout = N_ENEMY
 		},
 		enemy_shaman_magic = {
-			image = "encyclopedia_creeps_0222",
+			image = "kr2_encyclopedia_creeps_0022",
 			icon = "kr2_alert_creep_notxt_0019",
 			layout = N_ENEMY
 		},
 		enemy_shaman_shield = {
-			image = "encyclopedia_creeps_0221",
+			image = "kr2_encyclopedia_creeps_0021",
 			icon = "kr2_alert_creep_notxt_0018",
 			layout = N_ENEMY
 		},
 		enemy_alien_breeder = {
-			image = "encyclopedia_creeps_0227",
+			image = "kr2_encyclopedia_creeps_0027",
 			icon = "kr2_alert_creep_notxt_0023",
 			layout = N_ENEMY
 		},
 		enemy_alien_reaper = {
-			image = "encyclopedia_creeps_0228",
+			image = "kr2_encyclopedia_creeps_0028",
 			icon = "kr2_alert_creep_notxt_0024",
 			layout = N_ENEMY
 		},
 		enemy_brute = {
-			image = "encyclopedia_creeps_0232",
+			image = "kr2_encyclopedia_creeps_0032",
 			icon = "kr2_alert_creep_notxt_0028",
 			layout = N_ENEMY
 		},
 		enemy_broodguard = {
-			image = "encyclopedia_creeps_0229",
+			image = "kr2_encyclopedia_creeps_0029",
 			icon = "kr2_alert_creep_notxt_0025",
 			layout = N_ENEMY
 		},
 		enemy_darter = {
-			image = "encyclopedia_creeps_0231",
+			image = "kr2_encyclopedia_creeps_0031",
 			icon = "kr2_alert_creep_notxt_0027",
 			layout = N_ENEMY
 		},
 		enemy_myrmidon = {
-			image = "encyclopedia_creeps_0233",
+			image = "kr2_encyclopedia_creeps_0033",
 			icon = "kr2_alert_creep_notxt_0029",
 			layout = N_ENEMY
 		},
 		enemy_razorwing = {
-			image = "encyclopedia_creeps_0236",
+			image = "kr2_encyclopedia_creeps_0036",
 			icon = "kr2_alert_creep_notxt_0033",
 			layout = N_ENEMY
 		},
 		enemy_quetzal = {
-			image = "encyclopedia_creeps_0235",
+			image = "kr2_encyclopedia_creeps_0035",
 			icon = "kr2_alert_creep_notxt_0031",
 			layout = N_ENEMY
 		},
 		enemy_nightscale = {
-			image = "encyclopedia_creeps_0234",
+			image = "kr2_encyclopedia_creeps_0034",
 			icon = "kr2_alert_creep_notxt_0030",
 			layout = N_ENEMY
 		},
 		enemy_savant = {
-			image = "encyclopedia_creeps_0237",
+			image = "kr2_encyclopedia_creeps_0037",
 			icon = "kr2_alert_creep_notxt_0032",
 			layout = N_ENEMY
 		},
 		enemy_blazefang = {
-			image = "encyclopedia_creeps_0230",
+			image = "kr2_encyclopedia_creeps_0030",
 			icon = "kr2_alert_creep_notxt_0026",
 			layout = N_ENEMY
 		},
 		enemy_greenfin = {
-			image = "encyclopedia_creeps_0244",
+			image = "kr2_encyclopedia_creeps_0044",
 			icon = "kr2_alert_creep_notxt_0034",
 			layout = N_ENEMY
 		},
 		enemy_redspine = {
-			image = "encyclopedia_creeps_0246",
+			image = "kr2_encyclopedia_creeps_0046",
 			icon = "kr2_alert_creep_notxt_0038",
 			layout = N_ENEMY
 		},
 		enemy_blacksurge = {
-			image = "encyclopedia_creeps_0245",
+			image = "kr2_encyclopedia_creeps_0045",
 			icon = "kr2_alert_creep_notxt_0037",
 			layout = N_ENEMY
 		},
 		enemy_deviltide_shark = {
-			image = "encyclopedia_creeps_0247",
+			image = "kr2_encyclopedia_creeps_0047",
 			icon = "kr2_alert_creep_notxt_0039",
 			layout = N_ENEMY
 		},
 		enemy_bluegale = {
-			image = "encyclopedia_creeps_0243",
+			image = "kr2_encyclopedia_creeps_0043",
 			icon = "kr2_alert_creep_notxt_0036",
 			layout = N_ENEMY
 		},
 		enemy_bloodshell = {
-			image = "encyclopedia_creeps_0242",
+			image = "kr2_encyclopedia_creeps_0042",
 			icon = "kr2_alert_creep_notxt_0035",
 			layout = N_ENEMY
 		},
 		enemy_ghoul = {
-			image = "encyclopedia_creeps_0256",
+			image = "kr2_encyclopedia_creeps_0056",
 			icon = "kr2_alert_creep_notxt_0048",
 			layout = N_ENEMY
 		},
 		enemy_bat = {
-			image = "encyclopedia_creeps_0249",
+			image = "kr2_encyclopedia_creeps_0049",
 			icon = "kr2_alert_creep_notxt_0041",
 			layout = N_ENEMY
 		},
 		enemy_ghost = {
-			image = "encyclopedia_creeps_0252",
+			image = "kr2_encyclopedia_creeps_0052",
 			icon = "kr2_alert_creep_notxt_0044",
 			layout = N_ENEMY
 		},
 		enemy_phantom_warrior = {
-			image = "encyclopedia_creeps_0251",
+			image = "kr2_encyclopedia_creeps_0051",
 			icon = "kr2_alert_creep_notxt_0043",
 			layout = N_ENEMY
 		},
 		enemy_elvira = {
-			image = "encyclopedia_creeps_0258",
+			image = "kr2_encyclopedia_creeps_0058",
 			icon = "kr2_alert_creep_notxt_0049",
 			layout = N_ENEMY
 		},
 		enemy_sniper = {
-			image = "encyclopedia_creeps_0259",
+			image = "kr2_encyclopedia_creeps_0059",
 			icon = "kr2_alert_creep_notxt_0050",
 			layout = N_ENEMY
 		},
 		enemy_gnoll_reaver = {
-			image = "encyclopedia_creeps_0301",
+			image = "kr3_encyclopedia_creeps_0001",
 			icon = "kr3_alert_creep_notxt_0001",
 			layout = N_ENEMY,
 			icon_signals = {
@@ -596,192 +596,192 @@ return {
 			}
 		},
 		enemy_gnoll_burner = {
-			image = "encyclopedia_creeps_0302",
+			image = "kr3_encyclopedia_creeps_0002",
 			icon = "kr3_alert_creep_notxt_0002",
 			layout = N_ENEMY
 		},
 		enemy_gnoll_gnawer = {
-			image = "encyclopedia_creeps_0303",
+			image = "kr3_encyclopedia_creeps_0003",
 			icon = "kr3_alert_creep_notxt_0003",
 			layout = N_ENEMY
 		},
 		enemy_hyena = {
-			image = "encyclopedia_creeps_0307",
+			image = "kr3_encyclopedia_creeps_0007",
 			icon = "kr3_alert_creep_notxt_0007",
 			layout = N_ENEMY
 		},
 		enemy_perython = {
-			image = "encyclopedia_creeps_0306",
+			image = "kr3_encyclopedia_creeps_0006",
 			icon = "kr3_alert_creep_notxt_0006",
 			layout = N_ENEMY
 		},
 		enemy_gnoll_blighter = {
-			image = "encyclopedia_creeps_0304",
+			image = "kr3_encyclopedia_creeps_0004",
 			icon = "kr3_alert_creep_notxt_0004",
 			layout = N_ENEMY
 		},
 		enemy_ettin = {
-			image = "encyclopedia_creeps_0305",
+			image = "kr3_encyclopedia_creeps_0005",
 			icon = "kr3_alert_creep_notxt_0005",
 			layout = N_ENEMY
 		},
 		enemy_twilight_elf_harasser = {
-			image = "encyclopedia_creeps_0308",
+			image = "kr3_encyclopedia_creeps_0008",
 			icon = "kr3_alert_creep_notxt_0008",
 			layout = N_ENEMY
 		},
 		enemy_sword_spider = {
-			image = "encyclopedia_creeps_0310",
+			image = "kr3_encyclopedia_creeps_0010",
 			icon = "kr3_alert_creep_notxt_0010",
 			layout = N_ENEMY
 		},
 		enemy_satyr_cutthroat = {
-			image = "encyclopedia_creeps_0312",
+			image = "kr3_encyclopedia_creeps_0012",
 			icon = "kr3_alert_creep_notxt_0012",
 			layout = N_ENEMY
 		},
 		enemy_satyr_hoplite = {
-			image = "encyclopedia_creeps_0313",
+			image = "kr3_encyclopedia_creeps_0013",
 			icon = "kr3_alert_creep_notxt_0013",
 			layout = N_ENEMY
 		},
 		enemy_webspitting_spider = {
-			image = "encyclopedia_creeps_0318",
+			image = "kr3_encyclopedia_creeps_0018",
 			icon = "kr3_alert_creep_notxt_0018",
 			layout = N_ENEMY
 		},
 		enemy_gloomy = {
-			image = "encyclopedia_creeps_0317",
+			image = "kr3_encyclopedia_creeps_0017",
 			icon = "kr3_alert_creep_notxt_0017",
 			layout = N_ENEMY
 		},
 		enemy_twilight_scourger = {
-			image = "encyclopedia_creeps_0311",
+			image = "kr3_encyclopedia_creeps_0011",
 			icon = "kr3_alert_creep_notxt_0011",
 			layout = N_ENEMY
 		},
 		enemy_bandersnatch = {
-			image = "encyclopedia_creeps_0316",
+			image = "kr3_encyclopedia_creeps_0016",
 			icon = "kr3_alert_creep_notxt_0016",
 			layout = N_ENEMY
 		},
 		enemy_redcap = {
-			image = "encyclopedia_creeps_0314",
+			image = "kr3_encyclopedia_creeps_0014",
 			icon = "kr3_alert_creep_notxt_0014",
 			layout = N_ENEMY
 		},
 		enemy_twilight_avenger = {
-			image = "encyclopedia_creeps_0309",
+			image = "kr3_encyclopedia_creeps_0009",
 			icon = "kr3_alert_creep_notxt_0009",
 			layout = N_ENEMY
 		},
 		enemy_boomshrooms = {
-			image = "encyclopedia_creeps_0332",
+			image = "kr3_encyclopedia_creeps_0032",
 			icon = "kr3_alert_creep_notxt_0030",
 			layout = N_ENEMY
 		},
 		enemy_munchshrooms = {
-			image = "encyclopedia_creeps_0331",
+			image = "kr3_encyclopedia_creeps_0031",
 			icon = "kr3_alert_creep_notxt_0029",
 			layout = N_ENEMY
 		},
 		enemy_shroom_breeder = {
-			image = "encyclopedia_creeps_0315",
+			image = "kr3_encyclopedia_creeps_0015",
 			icon = "kr3_alert_creep_notxt_0015",
 			layout = N_ENEMY
 		},
 		enemy_razorboar = {
-			image = "encyclopedia_creeps_0323",
+			image = "kr3_encyclopedia_creeps_0023",
 			icon = "kr3_alert_creep_notxt_0023",
 			layout = N_ENEMY
 		},
 		enemy_twilight_evoker = {
-			image = "encyclopedia_creeps_0321",
+			image = "kr3_encyclopedia_creeps_0021",
 			icon = "kr3_alert_creep_notxt_0021",
 			layout = N_ENEMY
 		},
 		enemy_twilight_golem = {
-			image = "encyclopedia_creeps_0325",
+			image = "kr3_encyclopedia_creeps_0025",
 			icon = "kr3_alert_creep_notxt_0025",
 			layout = N_ENEMY
 		},
 		enemy_mantaray = {
-			image = "encyclopedia_creeps_0328",
+			image = "kr3_encyclopedia_creeps_0028",
 			icon = "kr3_alert_creep_notxt_0026",
 			layout = N_ENEMY
 		},
 		enemy_spider_arachnomancer = {
-			image = "encyclopedia_creeps_0330",
+			image = "kr3_encyclopedia_creeps_0030",
 			icon = "kr3_alert_creep_notxt_0028",
 			layout = N_ENEMY
 		},
 		enemy_twilight_heretic = {
-			image = "encyclopedia_creeps_0324",
+			image = "kr3_encyclopedia_creeps_0024",
 			icon = "kr3_alert_creep_notxt_0024",
 			layout = N_ENEMY
 		},
 		enemy_spider_son_of_mactans = {
-			image = "encyclopedia_creeps_0329",
+			image = "kr3_encyclopedia_creeps_0029",
 			icon = "kr3_alert_creep_notxt_0027",
 			layout = N_ENEMY
 		},
 		enemy_arachnomancer = {
-			image = "encyclopedia_creeps_0322",
+			image = "kr3_encyclopedia_creeps_0022",
 			icon = "kr3_alert_creep_notxt_0022",
 			layout = N_ENEMY
 		},
 		enemy_drider = {
-			image = "encyclopedia_creeps_0320",
+			image = "kr3_encyclopedia_creeps_0020",
 			icon = "kr3_alert_creep_notxt_0020",
 			layout = N_ENEMY
 		},
 		enemy_gnoll_bloodsydian = {
-			image = "encyclopedia_creeps_0335",
+			image = "kr3_encyclopedia_creeps_0035",
 			icon = "kr3_alert_creep_notxt_0031",
 			layout = N_ENEMY
 		},
 		enemy_bloodsydian_warlock = {
-			image = "encyclopedia_creeps_0337",
+			image = "kr3_encyclopedia_creeps_0037",
 			icon = "kr3_alert_creep_notxt_0033",
 			layout = N_ENEMY
 		},
 		enemy_ogre_magi = {
-			image = "encyclopedia_creeps_0336",
+			image = "kr3_encyclopedia_creeps_0036",
 			icon = "kr3_alert_creep_notxt_0032",
 			layout = N_ENEMY
 		},
 		enemy_blood_servant = {
-			image = "encyclopedia_creeps_0339",
+			image = "kr3_encyclopedia_creeps_0039",
 			icon = "kr3_alert_creep_notxt_0034",
 			layout = N_ENEMY
 		},
 		enemy_screecher_bat = {
-			image = "encyclopedia_creeps_0341",
+			image = "kr3_encyclopedia_creeps_0041",
 			icon = "kr3_alert_creep_notxt_0036",
 			layout = N_ENEMY
 		},
 		enemy_mounted_avenger = {
-			image = "encyclopedia_creeps_0340",
+			image = "kr3_encyclopedia_creeps_0040",
 			icon = "kr3_alert_creep_notxt_0035",
 			layout = N_ENEMY
 		},
 		enemy_shadows_spawns = {
-			image = "encyclopedia_creeps_0344",
+			image = "kr3_encyclopedia_creeps_0044",
 			icon = "kr3_alert_creep_notxt_0037",
 			layout = N_ENEMY
 		},
 		enemy_grim_devourers = {
-			image = "encyclopedia_creeps_0346",
+			image = "kr3_encyclopedia_creeps_0046",
 			icon = "kr3_alert_creep_notxt_0039",
 			layout = N_ENEMY
 		},
 		enemy_dark_spitters = {
-			image = "encyclopedia_creeps_0345",
+			image = "kr3_encyclopedia_creeps_0045",
 			icon = "kr3_alert_creep_notxt_0038",
 			layout = N_ENEMY
 		},
 		enemy_shadow_champion = {
-			image = "encyclopedia_creeps_0347",
+			image = "kr3_encyclopedia_creeps_0047",
 			icon = "kr3_alert_creep_notxt_0040",
 			layout = N_ENEMY
 		},
