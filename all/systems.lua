@@ -2737,6 +2737,7 @@ sys.endless_patch.name = "endless_patch"
 function sys.endless_patch:on_insert(entity, store)
     if store.level_mode_override == GAME_MODE_ENDLESS then
         if not entity._endless_strengthened then
+            local endless = store.endless
             entity._endless_strengthened = true
             if entity.enemy then
                 if entity.health.hp_max then
@@ -2762,17 +2763,17 @@ function sys.endless_patch:on_insert(entity, store)
                     entity.unit.damage_factor = entity.unit.damage_factor * store.endless.soldier_damage_factor
                 end
                 if entity.cooldown_factor then
-                    entity.cooldown_factor = entity.cooldown_factor * store.endless.soldier_cooldown_factor
+                    SU.insert_unit_cooldown_buff(store.tick_ts, entity, endless.soldier_cooldown_factor)
                 end
                 if entity.hero then
                     entity.unit.damage_factor = entity.unit.damage_factor * store.endless.hero_damage_factor
-                    entity.cooldown_factor = entity.cooldown_factor * store.endless.hero_cooldown_factor
+                    SU.insert_unit_cooldown_buff(store.tick_ts, entity, endless.hero_cooldown_factor)
                     entity.health.hp_max = ceil(entity.health.hp_max * store.endless.hero_health_factor)
                     entity.health.hp = entity.health.hp_max
                 end
             elseif entity.tower then
                 entity.tower.damage_factor = entity.tower.damage_factor * store.endless.tower_damage_factor
-                entity.tower.cooldown_factor = entity.tower.cooldown_factor * store.endless.tower_cooldown_factor
+                SU.insert_tower_cooldown_buff(store.tick_ts, entity, endless.tower_cooldown_factor)
             end
         end
     end

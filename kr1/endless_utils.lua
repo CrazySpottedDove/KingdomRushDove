@@ -733,7 +733,8 @@ function EU.patch_engineer_aftermath(level)
         tower._endless_engineer_aftermath = true
         tower._endless_engineer_aftermath_last_level = 0
     end
-    tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_aftermath * 0.8
+    tower.tower.damage_factor = tower.tower.damage_factor + (level - tower._endless_engineer_aftermath_last_level) * friend_buff.engineer_aftermath * 0.8
+    tower._endless_engineer_aftermath_last_level = level
 end
 
 function EU.patch_engineer_seek(level)
@@ -794,6 +795,12 @@ function EU.patch_engineer_fireball(level)
     if not ray._endless_engineer_fireball then
         ray.main_script.remove = U.function_append(ray.main_script.remove, fireball_quick_up)
         ray._endless_engineer_fireball = true
+    end
+    local flame = E:get_template("fx_tower_flamespitter_flame")
+    if not flame._endless_engineer_fireball then
+        E:add_comps(flame, "main_script")
+        flame._endless_engineer_fireball = true
+        flame.main_script.remove = U.function_append(flame.main_script.remove, fireball_quick_up)
     end
 end
 
@@ -1093,7 +1100,7 @@ function EU.patch_upgrade_in_game(key, store, endless)
     elseif key == "engineer_focus" then
         for _, t in pairs(store.towers) do
             if t.template_name == "tower_tesla" or t.template_name == "tower_dwaarp" or t.template_name ==
-                "tower_frankenstein" then
+                "tower_frankenstein" or t.template_name == "tower_flamespitter_lvl4" then
                 t.tower.damage_factor = t.tower.damage_factor + friend_buff.engineer_focus * 0.8
             end
         end
