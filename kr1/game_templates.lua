@@ -553,6 +553,7 @@ tt.melee.attacks[1].damage_max = 10
 tt.motion.max_speed = 80
 tt = RT("re_legionnaire_ranged", "re_legionnaire")
 AC(tt, "ranged")
+tt.info.portrait_idxs = { 18, 19, 20 }
 tt.unit.level = 5
 tt.motion.max_speed = 85
 tt.ranged.attacks[1].bullet = "spear_legionnaire"

@@ -1,5 +1,101 @@
 return {
-	hero_portraits_0000 = {
+	["glow_ico_main"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			0,
+            0,
+            2,
+            2
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			2140,
+			88,
+			80
+		},
+		alias = {},
+	},
+	["glow_ico_sell"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			60
+		},
+		trim = {
+			0,
+            1,
+            1,
+            2
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			437,
+			1,
+			63,
+			57
+		},
+		alias = {},
+	},
+	["glow_ico_special"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			90,
+			86
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			345,
+			2314,
+			90,
+			86
+		},
+		alias = {},
+	},
+	["glow_ico_sub"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			76,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            1
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			415,
+			1908,
+			76,
+			73
+		},
+		alias = {},
+	},
+	["hero_portraits_0000"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -12,18 +108,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			785,
-			1731,
+			2266,
+			2314,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0001 = {
+	["hero_portraits_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -36,18 +132,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			697,
-			1731,
+			2178,
+			2314,
 			86,
 			87
 		},
 		alias = {},
 	},
-	hero_portraits_0002 = {
+	["hero_portraits_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -60,18 +156,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			876,
-			1731,
+			2357,
+			2314,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0003 = {
+	["hero_portraits_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -84,18 +180,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			967,
-			1731,
+			1,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0004 = {
+	["hero_portraits_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -108,18 +204,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1058,
-			1731,
+			92,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0005 = {
+	["hero_portraits_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -132,18 +228,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1149,
-			1731,
+			183,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0006 = {
+	["hero_portraits_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -156,18 +252,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1240,
-			1731,
+			274,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0007 = {
+	["hero_portraits_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -180,18 +276,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1331,
-			1731,
+			365,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0008 = {
+	["hero_portraits_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -204,18 +300,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1422,
-			1731,
+			456,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0009 = {
+	["hero_portraits_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -228,18 +324,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1513,
-			1731,
+			547,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0010 = {
+	["hero_portraits_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -252,18 +348,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1604,
-			1731,
+			638,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0011 = {
+	["hero_portraits_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -276,18 +372,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1695,
-			1731,
+			729,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0012 = {
+	["hero_portraits_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -300,18 +396,18 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1786,
-			1731,
+			820,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	hero_portraits_0013 = {
+	["hero_portraits_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -324,18 +420,42 @@ return {
             32
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1877,
-			1731,
+			911,
+			2405,
 			89,
 			89
 		},
 		alias = {},
 	},
-	info_portraits_hero_0000 = {
+	["ico_sell_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			56,
+			50
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1,
+			56,
+			50
+		},
+		alias = {},
+	},
+	["info_portraits_0000"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -348,18 +468,18 @@ return {
             5
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			958,
-			1643,
+			437,
+			2314,
 			86,
 			86
 		},
 		alias = {},
 	},
-	info_portraits_hero_0001 = {
+	["info_portraits_enemies_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -372,18 +492,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1174,
-			70,
+			553,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0002 = {
+	["info_portraits_enemies_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -396,18 +516,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1244,
-			70,
+			623,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0002_spawn = {
+	["info_portraits_enemies_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -420,18 +540,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1314,
-			70,
+			693,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0003 = {
+	["info_portraits_enemies_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -444,18 +564,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1384,
-			70,
+			763,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0004 = {
+	["info_portraits_enemies_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -468,18 +588,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1454,
-			70,
+			833,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0005 = {
+	["info_portraits_enemies_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -492,18 +612,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1524,
-			70,
+			903,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0006 = {
+	["info_portraits_enemies_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -516,18 +636,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1594,
-			70,
+			973,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0007 = {
+	["info_portraits_enemies_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -540,18 +660,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1664,
-			70,
+			1043,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0008 = {
+	["info_portraits_enemies_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -564,18 +684,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1734,
-			70,
+			1113,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0009 = {
+	["info_portraits_enemies_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -588,18 +708,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1804,
-			70,
+			1183,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0009_spawn = {
+	["info_portraits_enemies_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -612,18 +732,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1874,
-			70,
+			1253,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0010 = {
+	["info_portraits_enemies_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -636,18 +756,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1944,
-			70,
+			1323,
+			438,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0011 = {
+	["info_portraits_enemies_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -660,18 +780,378 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			1393,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1463,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1533,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1603,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1673,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1743,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1813,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1883,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1953,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2023,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2093,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2163,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2233,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2303,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2373,
+			438,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0012 = {
+	["info_portraits_enemies_0029"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -684,18 +1164,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			71,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_hero_0013 = {
+	["info_portraits_enemies_0030"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -708,18 +1188,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			141,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0001 = {
+	["info_portraits_enemies_0031"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -732,18 +1212,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			211,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0002 = {
+	["info_portraits_enemies_0032"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -756,18 +1236,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			281,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0003 = {
+	["info_portraits_enemies_0033"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -780,18 +1260,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			351,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0004 = {
+	["info_portraits_enemies_0034"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -804,18 +1284,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			421,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0005 = {
+	["info_portraits_enemies_0035"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -828,18 +1308,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			491,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0006 = {
+	["info_portraits_enemies_0036"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -852,18 +1332,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			561,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0007 = {
+	["info_portraits_enemies_0037"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -876,18 +1356,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			631,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0008 = {
+	["info_portraits_enemies_0038"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -900,18 +1380,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			701,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0009 = {
+	["info_portraits_enemies_0039"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -924,18 +1404,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			771,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0010 = {
+	["info_portraits_enemies_0040"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -948,18 +1428,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			841,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0011 = {
+	["info_portraits_enemies_0041"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -972,18 +1452,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			911,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0012 = {
+	["info_portraits_enemies_0042"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -996,18 +1476,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			981,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0013 = {
+	["info_portraits_enemies_0043"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1020,18 +1500,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1051,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0014 = {
+	["info_portraits_enemies_0044"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1044,18 +1524,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1121,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0015 = {
+	["info_portraits_enemies_0045"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1068,18 +1548,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1191,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0016 = {
+	["info_portraits_enemies_0046"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1092,18 +1572,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1261,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0017 = {
+	["info_portraits_enemies_0047"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1116,18 +1596,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1331,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0018 = {
+	["info_portraits_enemies_0048"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1140,18 +1620,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1401,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0019 = {
+	["info_portraits_enemies_0049"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1164,18 +1644,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1471,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0020 = {
+	["info_portraits_enemies_0050"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1188,18 +1668,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1541,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0021 = {
+	["info_portraits_enemies_0051"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1212,18 +1692,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1611,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0022 = {
+	["info_portraits_enemies_0052"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1236,18 +1716,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1681,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0023 = {
+	["info_portraits_enemies_0053"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1260,18 +1740,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1751,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0024 = {
+	["info_portraits_enemies_0054"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1284,18 +1764,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1821,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0025 = {
+	["info_portraits_enemies_0055"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1308,18 +1788,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1891,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0026 = {
+	["info_portraits_enemies_0056"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1332,18 +1812,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1961,
-			140,
+			508,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0027 = {
+	["info_portraits_enemies_0057"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1356,18 +1836,162 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			508,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0058"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			508,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0059"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			508,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0060"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			508,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0061"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			508,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0062"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			508,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_enemies_0063"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0028 = {
+	["info_portraits_enemies_0064"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1380,18 +2004,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			71,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0029 = {
+	["info_portraits_enemies_0065"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1404,18 +2028,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			141,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0030 = {
+	["info_portraits_enemies_0066"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1428,18 +2052,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			211,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0031 = {
+	["info_portraits_enemies_0067"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1452,18 +2076,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			281,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0032 = {
+	["info_portraits_enemies_0068"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1476,18 +2100,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			351,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0033 = {
+	["info_portraits_enemies_0069"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1500,18 +2124,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			421,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0034 = {
+	["info_portraits_enemies_0070"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1524,18 +2148,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			491,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0035 = {
+	["info_portraits_enemies_0071"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1548,18 +2172,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			561,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0036 = {
+	["info_portraits_enemies_0072"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1572,18 +2196,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			631,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0037 = {
+	["info_portraits_heroes_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1596,18 +2220,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			701,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0038 = {
+	["info_portraits_heroes_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1620,18 +2244,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			771,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0039 = {
+	["info_portraits_heroes_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1644,18 +2268,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			841,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0040 = {
+	["info_portraits_heroes_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1668,18 +2292,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			911,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0041 = {
+	["info_portraits_heroes_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1692,18 +2316,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			981,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0042 = {
+	["info_portraits_heroes_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1716,18 +2340,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1051,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0043 = {
+	["info_portraits_heroes_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1740,18 +2364,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1121,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0044 = {
+	["info_portraits_heroes_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1764,18 +2388,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1191,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0045 = {
+	["info_portraits_heroes_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1788,18 +2412,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1261,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0046 = {
+	["info_portraits_heroes_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1812,18 +2436,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1331,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0047 = {
+	["info_portraits_heroes_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1836,18 +2460,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1401,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0048 = {
+	["info_portraits_heroes_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1860,18 +2484,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1471,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0049 = {
+	["info_portraits_heroes_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1884,18 +2508,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1541,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0050 = {
+	["info_portraits_soldiers_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1908,18 +2532,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1611,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0051 = {
+	["info_portraits_soldiers_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1932,18 +2556,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1681,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0052 = {
+	["info_portraits_soldiers_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1956,18 +2580,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1751,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0053 = {
+	["info_portraits_soldiers_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -1980,18 +2604,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1821,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0054 = {
+	["info_portraits_soldiers_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2004,18 +2628,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1891,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0055 = {
+	["info_portraits_soldiers_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2028,18 +2652,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1961,
-			210,
+			578,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0056 = {
+	["info_portraits_soldiers_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2052,18 +2676,162 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			578,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_soldiers_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			578,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_soldiers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			578,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_soldiers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			578,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_soldiers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			578,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_soldiers_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			578,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["info_portraits_soldiers_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0057 = {
+	["info_portraits_soldiers_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2076,18 +2844,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			71,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0058 = {
+	["info_portraits_soldiers_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2100,18 +2868,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			141,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0059 = {
+	["info_portraits_soldiers_0016"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2124,18 +2892,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			211,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0060 = {
+	["info_portraits_soldiers_0017"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2148,18 +2916,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			281,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0061 = {
+	["info_portraits_soldiers_0018"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2172,18 +2940,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			351,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0062 = {
+	["info_portraits_soldiers_0019"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2196,18 +2964,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			421,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0063 = {
+	["info_portraits_soldiers_0020"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2220,18 +2988,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			491,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0064 = {
+	["info_portraits_soldiers_0021"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2244,18 +3012,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			561,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0065 = {
+	["info_portraits_soldiers_0022"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2268,18 +3036,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			631,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0066 = {
+	["info_portraits_soldiers_0023"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2292,18 +3060,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			701,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0067 = {
+	["info_portraits_towers_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2316,18 +3084,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			771,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0068 = {
+	["info_portraits_towers_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2340,18 +3108,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			841,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0069 = {
+	["info_portraits_towers_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2364,18 +3132,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			911,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0070 = {
+	["info_portraits_towers_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2388,18 +3156,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			981,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0071 = {
+	["info_portraits_towers_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2412,18 +3180,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1051,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0072 = {
+	["info_portraits_towers_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2436,18 +3204,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1121,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0073 = {
+	["info_portraits_towers_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2460,18 +3228,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1191,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0074 = {
+	["info_portraits_towers_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2484,18 +3252,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1261,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0075 = {
+	["info_portraits_towers_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2508,18 +3276,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1331,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0076 = {
+	["info_portraits_towers_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2532,18 +3300,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1401,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0077 = {
+	["info_portraits_towers_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2556,18 +3324,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1471,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0078 = {
+	["info_portraits_towers_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2580,18 +3348,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1541,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0079 = {
+	["info_portraits_towers_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2604,18 +3372,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1611,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0080 = {
+	["info_portraits_towers_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2628,18 +3396,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1681,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0081 = {
+	["info_portraits_towers_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -2652,666 +3420,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1751,
-			280,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	info_portraits_sc_0082 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1821,
-			280,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0083 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1891,
-			280,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0084 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1961,
-			280,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0085 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0086 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			71,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0087 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			141,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0088 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0089 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			281,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0090 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0091 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0092 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_sc_0093 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			701,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			771,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			841,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			911,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			981,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1051,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1121,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1191,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1331,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1401,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1471,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1541,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	info_portraits_towers_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1611,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_hero_portraits_0001 = {
+	["kr2_hero_portraits_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3324,18 +3444,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1046,
-			1643,
+			525,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0002 = {
+	["kr2_hero_portraits_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3348,18 +3468,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1133,
-			1643,
+			612,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0003 = {
+	["kr2_hero_portraits_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3372,18 +3492,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1220,
-			1643,
+			699,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0004 = {
+	["kr2_hero_portraits_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3396,18 +3516,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1307,
-			1643,
+			786,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0005 = {
+	["kr2_hero_portraits_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3420,18 +3540,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1394,
-			1643,
+			873,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0006 = {
+	["kr2_hero_portraits_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3444,18 +3564,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1481,
-			1643,
+			960,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0007 = {
+	["kr2_hero_portraits_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3468,18 +3588,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1568,
-			1643,
+			1047,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0008 = {
+	["kr2_hero_portraits_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3492,18 +3612,18 @@ return {
             36
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1657,
-			1470,
+			511,
+			2140,
 			81,
 			82
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0009 = {
+	["kr2_hero_portraits_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3516,18 +3636,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1655,
-			1643,
+			1134,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0010 = {
+	["kr2_hero_portraits_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3540,18 +3660,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1742,
-			1643,
+			1221,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0011 = {
+	["kr2_hero_portraits_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3564,18 +3684,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1829,
-			1643,
+			1308,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0012 = {
+	["kr2_hero_portraits_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3588,18 +3708,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1916,
-			1643,
+			1395,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0013 = {
+	["kr2_hero_portraits_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3612,18 +3732,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1,
-			1731,
+			1482,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0013_dead = {
+	["kr2_hero_portraits_0013_dead"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3636,18 +3756,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			88,
-			1731,
+			1569,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0014 = {
+	["kr2_hero_portraits_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3660,18 +3780,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			175,
-			1731,
+			1656,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0015 = {
+	["kr2_hero_portraits_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3684,18 +3804,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			262,
-			1731,
+			1743,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0016 = {
+	["kr2_hero_portraits_0016"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3708,18 +3828,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			349,
-			1731,
+			1830,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0017 = {
+	["kr2_hero_portraits_0017"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3732,18 +3852,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			436,
-			1731,
+			1917,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0018 = {
+	["kr2_hero_portraits_0018"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3756,18 +3876,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			523,
-			1731,
+			2004,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_hero_portraits_0019 = {
+	["kr2_hero_portraits_0019"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -3780,18 +3900,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			610,
-			1731,
+			2091,
+			2314,
 			85,
 			86
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0001 = {
+	["kr2_info_portraits_enemies_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -3804,66 +3924,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1681,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_enemies_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1751,
-			350,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_enemies_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1821,
-			350,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0004 = {
+	["kr2_info_portraits_enemies_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -3876,18 +3948,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1891,
-			350,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0005 = {
+	["kr2_info_portraits_enemies_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -3900,18 +3972,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1961,
-			350,
+			648,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0006 = {
+	["kr2_info_portraits_enemies_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -3924,18 +3996,162 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			648,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			648,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			648,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			648,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			648,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			648,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0007 = {
+	["kr2_info_portraits_enemies_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -3948,18 +4164,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			71,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0008 = {
+	["kr2_info_portraits_enemies_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -3972,18 +4188,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			141,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0009 = {
+	["kr2_info_portraits_enemies_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -3996,18 +4212,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			211,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0010 = {
+	["kr2_info_portraits_enemies_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4020,18 +4236,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			281,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0011 = {
+	["kr2_info_portraits_enemies_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4044,18 +4260,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			351,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0012 = {
+	["kr2_info_portraits_enemies_0016"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4068,18 +4284,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			421,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0013 = {
+	["kr2_info_portraits_enemies_0017"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4092,18 +4308,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			491,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0014 = {
+	["kr2_info_portraits_enemies_0018"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4116,18 +4332,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			561,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0015 = {
+	["kr2_info_portraits_enemies_0019"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4140,18 +4356,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			631,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0016 = {
+	["kr2_info_portraits_enemies_0020"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4164,18 +4380,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			701,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0017 = {
+	["kr2_info_portraits_enemies_0021"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4188,18 +4404,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			771,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0018 = {
+	["kr2_info_portraits_enemies_0022"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4212,18 +4428,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			841,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0019 = {
+	["kr2_info_portraits_enemies_0023"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4236,18 +4452,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			911,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0020 = {
+	["kr2_info_portraits_enemies_0024"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4260,18 +4476,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			981,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0021 = {
+	["kr2_info_portraits_enemies_0025"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4284,18 +4500,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1051,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0022 = {
+	["kr2_info_portraits_enemies_0026"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4308,18 +4524,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1121,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0023 = {
+	["kr2_info_portraits_enemies_0027"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4332,18 +4548,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1191,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0024 = {
+	["kr2_info_portraits_enemies_0028"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4356,18 +4572,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1261,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0025 = {
+	["kr2_info_portraits_enemies_0029"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4380,18 +4596,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1331,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0026 = {
+	["kr2_info_portraits_enemies_0030"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4404,18 +4620,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1401,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0027 = {
+	["kr2_info_portraits_enemies_0031"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4428,18 +4644,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1471,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0028 = {
+	["kr2_info_portraits_enemies_0032"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4452,18 +4668,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1541,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0029 = {
+	["kr2_info_portraits_enemies_0033"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4476,18 +4692,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1611,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0030 = {
+	["kr2_info_portraits_enemies_0034"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4500,18 +4716,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1681,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0031 = {
+	["kr2_info_portraits_enemies_0035"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4524,18 +4740,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1751,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0032 = {
+	["kr2_info_portraits_enemies_0036"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4548,18 +4764,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1821,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0033 = {
+	["kr2_info_portraits_enemies_0037"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4572,18 +4788,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1891,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0034 = {
+	["kr2_info_portraits_enemies_0038"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4596,18 +4812,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1961,
-			420,
+			718,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0035 = {
+	["kr2_info_portraits_enemies_0039"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4620,18 +4836,162 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			718,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0040"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			718,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0041"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			718,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0042"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			718,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0043"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			718,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0044"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			718,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_enemies_0045"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0036 = {
+	["kr2_info_portraits_enemies_0046"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4644,18 +5004,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			71,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0037 = {
+	["kr2_info_portraits_enemies_0047"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4668,18 +5028,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			141,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0038 = {
+	["kr2_info_portraits_enemies_0048"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4692,18 +5052,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			211,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0039 = {
+	["kr2_info_portraits_enemies_0049"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4716,18 +5076,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			281,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0040 = {
+	["kr2_info_portraits_enemies_0050"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4740,18 +5100,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			351,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0041 = {
+	["kr2_info_portraits_enemies_0051"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4764,18 +5124,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			421,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0042 = {
+	["kr2_info_portraits_enemies_0052"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4788,18 +5148,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			491,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0043 = {
+	["kr2_info_portraits_enemies_0053"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4812,18 +5172,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			561,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0044 = {
+	["kr2_info_portraits_enemies_0054"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4836,18 +5196,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			631,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0045 = {
+	["kr2_info_portraits_enemies_0055"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4860,18 +5220,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			701,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0046 = {
+	["kr2_info_portraits_enemies_0056"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4884,18 +5244,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			771,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0047 = {
+	["kr2_info_portraits_enemies_0057"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4908,18 +5268,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			841,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0048 = {
+	["kr2_info_portraits_enemies_0058"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4932,18 +5292,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			911,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0049 = {
+	["kr2_info_portraits_enemies_0059"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4956,18 +5316,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			981,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0050 = {
+	["kr2_info_portraits_enemies_0060"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -4980,18 +5340,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1051,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0051 = {
+	["kr2_info_portraits_enemies_0061"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5004,18 +5364,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1121,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0052 = {
+	["kr2_info_portraits_enemies_0062"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5028,18 +5388,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1191,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0053 = {
+	["kr2_info_portraits_enemies_0063"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5052,18 +5412,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1261,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0054 = {
+	["kr2_info_portraits_enemies_0064"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5076,18 +5436,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1331,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0055 = {
+	["kr2_info_portraits_enemies_0065"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5100,18 +5460,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1401,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0056 = {
+	["kr2_info_portraits_enemies_0066"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5124,18 +5484,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1471,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0057 = {
+	["kr2_info_portraits_enemies_0067"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5148,18 +5508,498 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1541,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0058 = {
+	["kr2_info_portraits_heroes_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2262,
+			300,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2332,
+			300,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2402,
+			300,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0013_dead"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_heroes_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_soldiers_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5172,18 +6012,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1611,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0059 = {
+	["kr2_info_portraits_soldiers_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5196,18 +6036,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1681,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0060 = {
+	["kr2_info_portraits_soldiers_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5220,18 +6060,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1751,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0061 = {
+	["kr2_info_portraits_soldiers_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5244,18 +6084,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1821,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0062 = {
+	["kr2_info_portraits_soldiers_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5268,18 +6108,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1891,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0063 = {
+	["kr2_info_portraits_soldiers_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5292,18 +6132,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1961,
-			490,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0064 = {
+	["kr2_info_portraits_soldiers_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -5316,1218 +6156,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1,
-			560,
+			2031,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_enemies_0065 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			71,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_enemies_0066 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			141,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_enemies_0067 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0001_spawn = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			71,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			141,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			281,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0004_falcon = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0004_pig = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			701,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			771,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			841,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			911,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			981,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1051,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0013_dead = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1121,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1191,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0014_spawn = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1331,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1401,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1471,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1541,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_heroes_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1611,
-			1,
-			68,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			281,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			701,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			771,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			841,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			911,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			981,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1051,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1121,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1191,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1331,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1401,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1471,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0020 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1541,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0021 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1611,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0022 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1681,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0023 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1751,
-			560,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr2_info_portraits_soldiers_0024 = {
+	["kr2_info_portraits_soldiers_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6540,18 +6180,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1821,
-			560,
+			2101,
+			788,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_soldiers_0025 = {
+	["kr2_info_portraits_soldiers_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6564,18 +6204,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1890,
-			560,
+			2170,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_soldiers_0026 = {
+	["kr2_info_portraits_soldiers_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6588,18 +6228,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1960,
-			560,
+			2240,
+			788,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_soldiers_0027 = {
+	["kr2_info_portraits_soldiers_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6612,18 +6252,66 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			2310,
+			788,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_soldiers_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2380,
+			788,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_soldiers_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			630,
+			858,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_soldiers_0028 = {
+	["kr2_info_portraits_soldiers_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6636,18 +6324,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			71,
-			630,
+			858,
 			68,
 			68
 		},
 		alias = {},
 	},
-	kr2_info_portraits_soldiers_0029 = {
+	["kr2_info_portraits_soldiers_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6657,21 +6345,21 @@ return {
 			14,
             14,
             14,
-            14
+            15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			141,
-			630,
+			1191,
+			369,
 			68,
-			68
+			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_soldiers_0030 = {
+	["kr2_info_portraits_soldiers_0016"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6681,21 +6369,69 @@ return {
 			14,
             14,
             14,
-            14
+            15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			211,
-			630,
+			1261,
+			369,
 			68,
-			68
+			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_towers_0001 = {
+	["kr2_info_portraits_soldiers_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_soldiers_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			369,
+			68,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6708,18 +6444,18 @@ return {
             15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1681,
-			1,
+			1471,
+			369,
 			67,
 			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_towers_0002 = {
+	["kr2_info_portraits_towers_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6732,18 +6468,18 @@ return {
             15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1750,
-			1,
+			1540,
+			369,
 			67,
 			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_towers_0003 = {
+	["kr2_info_portraits_towers_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6756,18 +6492,18 @@ return {
             15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1819,
-			1,
+			1609,
+			369,
 			67,
 			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_towers_0004 = {
+	["kr2_info_portraits_towers_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6780,18 +6516,18 @@ return {
             15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1888,
-			1,
+			1678,
+			369,
 			67,
 			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_towers_0005 = {
+	["kr2_info_portraits_towers_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6804,18 +6540,18 @@ return {
             15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1957,
-			1,
+			1747,
+			369,
 			67,
 			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_towers_0006 = {
+	["kr2_info_portraits_towers_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6828,18 +6564,18 @@ return {
             15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1,
-			70,
+			1816,
+			369,
 			67,
 			67
 		},
 		alias = {},
 	},
-	kr2_info_portraits_towers_0007 = {
+	["kr2_info_portraits_towers_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -6852,594 +6588,378 @@ return {
             15
 		},
 		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			346,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			415,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			484,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			553,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			622,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			691,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			760,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			829,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			898,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0020 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			967,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0021 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1036,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr2_info_portraits_towers_0022 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1105,
-			70,
-			67,
-			67
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1276,
-			1556,
-			85,
-			85
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1363,
-			1556,
-			85,
-			85
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1450,
-			1556,
-			85,
-			85
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1537,
-			1556,
-			85,
-			85
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1624,
-			1556,
-			85,
-			85
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1711,
-			1556,
-			85,
-			85
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1798,
-			1556,
-			85,
-			85
-		},
-		alias = {},
-	},
-	kr3_hero_portraits_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			144,
-			142
-		},
-		trim = {
-			29,
-            23,
-            30,
-            34
-		},
-		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1885,
-			1556,
-			85,
-			85
+			369,
+			67,
+			67
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0009 = {
+	["kr2_info_portraits_towers_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			29,
-            23,
-            30,
-            34
+			14,
+            14,
+            15,
+            15
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			1954,
+			369,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2023,
+			369,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2092,
+			369,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2161,
+			369,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2230,
+			369,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2299,
+			369,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2368,
+			369,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			1643,
-			85,
-			85
+			438,
+			67,
+			67
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0010 = {
+	["kr2_info_portraits_towers_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			70,
+			438,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			139,
+			438,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			208,
+			438,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			277,
+			438,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			346,
+			438,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			415,
+			438,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr2_info_portraits_towers_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			484,
+			438,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["kr3_hero_portraits_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7452,18 +6972,138 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
+		},
+		f_quad = {
+			2124,
+			2140,
+			85,
+			85
+		},
+		alias = {},
+	},
+	["kr3_hero_portraits_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			29,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2211,
+			2140,
+			85,
+			85
+		},
+		alias = {},
+	},
+	["kr3_hero_portraits_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			29,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2298,
+			2140,
+			85,
+			85
+		},
+		alias = {},
+	},
+	["kr3_hero_portraits_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			29,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2385,
+			2140,
+			85,
+			85
+		},
+		alias = {},
+	},
+	["kr3_hero_portraits_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			29,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			2227,
+			85,
+			85
+		},
+		alias = {},
+	},
+	["kr3_hero_portraits_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			29,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
 		},
 		f_quad = {
 			88,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0011 = {
+	["kr3_hero_portraits_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7476,18 +7116,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			175,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0012 = {
+	["kr3_hero_portraits_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7500,18 +7140,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			262,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0013 = {
+	["kr3_hero_portraits_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7524,18 +7164,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			349,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0014 = {
+	["kr3_hero_portraits_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7548,18 +7188,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			436,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0015 = {
+	["kr3_hero_portraits_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7572,18 +7212,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			523,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0016 = {
+	["kr3_hero_portraits_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7596,18 +7236,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			610,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0017 = {
+	["kr3_hero_portraits_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7620,18 +7260,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			697,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0018 = {
+	["kr3_hero_portraits_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7644,18 +7284,18 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			784,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_hero_portraits_0019 = {
+	["kr3_hero_portraits_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
@@ -7668,8178 +7308,12234 @@ return {
             34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			871,
-			1643,
+			2227,
 			85,
 			85
 		},
 		alias = {},
 	},
-	kr3_info_portraits_heroes_0001 = {
+	["kr3_hero_portraits_00016"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			96,
-			96
+			144,
+			142
 		},
 		trim = {
-			14,
-            14,
-            14,
-            14
+			29,
+            23,
+            30,
+            34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			281,
-			630,
-			68,
-			68
+			958,
+			2227,
+			85,
+			85
 		},
 		alias = {},
 	},
-	kr3_info_portraits_heroes_0002 = {
+	["kr3_hero_portraits_0017"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			96,
-			96
+			144,
+			142
 		},
 		trim = {
-			14,
-            14,
-            14,
-            14
+			29,
+            23,
+            30,
+            34
 		},
 		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0003_spawn = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			701,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			771,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			841,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			911,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			981,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1051,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1121,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1191,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1331,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1401,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1471,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1541,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_heroes_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1611,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1681,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1751,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1821,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1891,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1961,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			71,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			141,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0008_spawn = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			281,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			701,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			771,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			841,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			911,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			981,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_info_portraits_towers_0020 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1051,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1121,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1191,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1331,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1401,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1471,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1541,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1611,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1681,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1751,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1821,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1891,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1961,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			71,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			141,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			281,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0020 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0021 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0022 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0023 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0024 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			701,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0025 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			771,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0026 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			841,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0027 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			911,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0028 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			981,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0029 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1051,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0030 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1121,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0031 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1191,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0032 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0033 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1331,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0034 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1401,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0035 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1471,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0036 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1541,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0037 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1611,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0038 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1681,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0039 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1751,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0040 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1821,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0041 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1891,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0042 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1961,
-			770,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0043 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0044 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			71,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0045 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			141,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0046 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0047 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			281,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0048 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0049 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0050 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0051 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0052 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0053 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			701,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0054 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			771,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0055 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			841,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0056 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			911,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0057 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			981,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0058 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			700,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0059 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1051,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0060 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1121,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0061 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1191,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0062 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1261,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0063 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1331,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0065 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1401,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0066 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			630,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0067 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1471,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0068 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1541,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0069 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1611,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0070 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1681,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0071 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1751,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0072 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1821,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0073 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1891,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0074 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1961,
-			840,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0075 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0076 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			71,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0077 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			141,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0078 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			211,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0079 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			281,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0080 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			351,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0081 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			421,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0082 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			491,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr3_portraits_sc_0083 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            14,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			561,
-			910,
-			68,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			631,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			700,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			769,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			838,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			907,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			976,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1045,
-			910,
-			67,
-			68
+			2227,
+			85,
+			85
 		},
 		alias = {},
 	},
-	kr5_gui_bottom_info_image_enemies_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1114,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1183,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1252,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1321,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1390,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1459,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1528,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1597,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1666,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1735,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1804,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1873,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0020 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1942,
-			910,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0021 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0022 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0023 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0024 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0025 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0026 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			346,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0027 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			415,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0028 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			484,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0029 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			553,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0030 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			622,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0031 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			691,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0032 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			760,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0033 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			829,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0034 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			898,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0035 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			967,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0036 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1036,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0037 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1105,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0038 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1174,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0039 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1243,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0040 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1312,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0041 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1381,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0042 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1450,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0043 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1519,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0044 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1588,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0045 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1657,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0046 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1726,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0047 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1795,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0048 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1864,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0049 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1933,
-			980,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0050 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0051 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0052 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0053 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0054 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0055 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			346,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0056 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			415,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0057 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			484,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0058 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			553,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0059 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			622,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0060 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			691,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0061 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			760,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0062 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			829,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0063 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			898,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0064 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			967,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0065 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1036,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0066 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1105,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0072 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1174,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0073 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1243,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0074 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1312,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0075 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1381,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0076 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1450,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0077 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1519,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0078 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1588,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0079 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1657,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0080 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1726,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0081 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1795,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0082 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1864,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0083 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1933,
-			1050,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0084 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0085 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0086 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0087 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0088 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0089 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			346,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0090 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			415,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0091 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			484,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0092 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			553,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0093 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			622,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0094 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			691,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0095 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			760,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0096 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			829,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0097 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			898,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0098 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			967,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0099 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1036,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0100 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1105,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0101 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1174,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0102 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1243,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0103 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1312,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0104 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1381,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0105 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1450,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0106 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1519,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0107 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1588,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0108 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1657,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0109 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1726,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0110 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1795,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0111 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1864,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0112 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1933,
-			1120,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0113 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0114 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0115 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0116 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0117 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0118 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			346,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0119 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			415,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0120 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			484,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0121 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			553,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0122 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			622,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0123 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			691,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0124 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			760,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0125 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			829,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0126 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			898,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0127 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			967,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_enemies_0128 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1036,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0001 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1105,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0002 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1174,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0003 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1243,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1312,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1381,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1450,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0007 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1519,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0008 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1588,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0009 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1657,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0010 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1726,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0011 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1795,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0012 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1864,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0013 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1933,
-			1190,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0014 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0015 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0016 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0017 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0018 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0019 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			346,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0020 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			415,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0021 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			484,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0022 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			553,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0023 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			622,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0024 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			691,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0025 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			760,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0026 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			829,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0027 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			898,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0028 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			967,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0029 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1036,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0030 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1105,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0031 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1174,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0032 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1243,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0033 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1312,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0034 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1381,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0035 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1450,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0036 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1519,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0037 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1588,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0038 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1657,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0039 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1726,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0040 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1795,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0041 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1864,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0042 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1933,
-			1260,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0043 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0044 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0045 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0046 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0047 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0048 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			346,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0049 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			415,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0050 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			484,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0051 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			553,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0052 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			622,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0053 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			691,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0054 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			760,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0055 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			829,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0056 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			898,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0057 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			967,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0058 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1036,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0059 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1105,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0060 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1174,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0061 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1243,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0062 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1312,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0063 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1381,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0064 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1450,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0065 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1519,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0066 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1588,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0067 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1657,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0068 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1726,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0069 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1795,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0070 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1864,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0071 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1933,
-			1330,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0072 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0073 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			70,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0074 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			139,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0075 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			208,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_gui_bottom_info_image_soldiers_0076 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			277,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_hero_portraits_0001 = {
+	["kr3_hero_portraits_0018"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
 			142
 		},
 		trim = {
-			30,
+			29,
             23,
-            31,
-            35
+            30,
+            34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1740,
-			1470,
-			83,
-			84
+			1132,
+			2227,
+			85,
+			85
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0002 = {
+	["kr3_hero_portraits_0019"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			144,
 			142
 		},
 		trim = {
-			30,
+			29,
             23,
-            31,
-            35
+            30,
+            34
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1825,
-			1470,
-			83,
-			84
+			1219,
+			2227,
+			85,
+			85
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0003 = {
+	["kr3_info_portraits_enemies_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1910,
-			1470,
-			83,
-			84
+			141,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0004 = {
+	["kr3_info_portraits_enemies_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1,
-			1556,
-			83,
-			84
+			211,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0005 = {
+	["kr3_info_portraits_enemies_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			86,
-			1556,
-			83,
-			84
+			281,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0006 = {
+	["kr3_info_portraits_enemies_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			171,
-			1556,
-			83,
-			84
+			351,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0007 = {
+	["kr3_info_portraits_enemies_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			256,
-			1556,
-			83,
-			84
+			421,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0008 = {
+	["kr3_info_portraits_enemies_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			341,
-			1556,
-			83,
-			84
+			491,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0009 = {
+	["kr3_info_portraits_enemies_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			426,
-			1556,
-			83,
-			84
+			561,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0010 = {
+	["kr3_info_portraits_enemies_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			511,
-			1556,
-			83,
-			84
+			631,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0011 = {
+	["kr3_info_portraits_enemies_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			596,
-			1556,
-			83,
-			84
+			701,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0012 = {
+	["kr3_info_portraits_enemies_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			681,
-			1556,
-			83,
-			84
+			771,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0013 = {
+	["kr3_info_portraits_enemies_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			766,
-			1556,
-			83,
-			84
+			841,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0014 = {
+	["kr3_info_portraits_enemies_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			851,
-			1556,
-			83,
-			84
+			911,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0015 = {
+	["kr3_info_portraits_enemies_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			936,
-			1556,
-			83,
-			84
+			981,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0016 = {
+	["kr3_info_portraits_enemies_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1021,
-			1556,
-			83,
-			84
+			1051,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0017 = {
+	["kr3_info_portraits_enemies_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1106,
-			1556,
-			83,
-			84
+			1121,
+			858,
+			68,
+			68
 		},
 		alias = {},
 	},
-	kr5_hero_portraits_0018 = {
+	["kr3_info_portraits_enemies_0016"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
-			144,
-			142
+			96,
+			96
 		},
 		trim = {
-			30,
-            23,
-            31,
-            35
+			14,
+            14,
+            14,
+            14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1191,
-			1556,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			858,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0040"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0041"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0042"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0043"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0044"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0045"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0046"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0047"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0048"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0049"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0050"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0051"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0052"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0053"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0054"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0055"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0056"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_enemies_0057"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			928,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_heroes_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_soldiers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			998,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_info_portraits_towers_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			502,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			563,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			624,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			685,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			746,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			807,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			868,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			929,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			990,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1112,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			10,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1173,
+			1,
+			61,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			10,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1236,
+			1,
+			61,
+			57
+		},
+		alias = {},
+	},
+	["kr3_main_icons_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			10,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1299,
+			1,
+			61,
+			57
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1860,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1922,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			372,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			434,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			496,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			558,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			620,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			8,
+            8,
+            7,
+            4
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1923,
+			300,
+			67,
+			64
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			682,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1984,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            7
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1799,
+			300,
+			60,
+			60
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2046,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			744,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			806,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			868,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			930,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			10,
+            9,
+            10,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2108,
+			178,
+			62,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			992,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1362,
+			1,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1054,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1116,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1178,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1240,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2172,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2234,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2296,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2358,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr3_special_icons_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1302,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1306,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1392,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1478,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1564,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1650,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1736,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1822,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1908,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1994,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2080,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2166,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2252,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2338,
+			2227,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			2314,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			87,
+			2314,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			173,
+			2314,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_hero_portraits_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            30,
+            34
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			259,
+			2314,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			1068,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0040"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0041"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0042"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0043"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0044"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0045"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0046"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0047"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0048"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0049"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0050"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0051"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0052"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0053"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0054"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0055"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0056"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0057"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0058"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0059"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0060"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0061"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0062"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0063"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0064"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0065"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0066"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0067"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			1138,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0068"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0069"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0070"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0071"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0072"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0073"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0074"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0075"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0076"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0077"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0078"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0079"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0080"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0081"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0082"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0083"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0084"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0085"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0086"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0087"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0088"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0089"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0090"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0091"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0092"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0093"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0094"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0095"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0096"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0097"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0098"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0099"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0100"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0101"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0102"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			1208,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0103"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0104"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0105"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0106"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0107"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0108"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0109"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0110"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0111"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0112"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0113"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0114"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0115"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0116"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0117"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0118"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0119"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0120"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0121"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0122"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0123"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0124"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0125"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0126"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0127"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0128"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0129"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0130"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0131"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0132"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0133"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0134"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0135"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0136"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_enemies_0137"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			1278,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_heroes_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			1348,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			981,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1051,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1121,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1191,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1331,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1401,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_soldiers_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1471,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1541,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1611,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1751,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1821,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1891,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1961,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2031,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2241,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2311,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2381,
+			1418,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			71,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			141,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			211,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			281,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			351,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			491,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			561,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			631,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			701,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			771,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_info_portraits_towers_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            14,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			911,
+			1488,
+			68,
+			68
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1424,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1485,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1546,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1607,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1668,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1729,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1790,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1851,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1912,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1973,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2034,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2095,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2156,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2217,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2278,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2339,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2400,
+			1,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			62,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			123,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			184,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			245,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_main_icons_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			306,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2420,
+			178,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			63,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			125,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			187,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			249,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			311,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			373,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			435,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			497,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			559,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			621,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			683,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			745,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			807,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			869,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			931,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			993,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1055,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1117,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1179,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1241,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1303,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1365,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1427,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1489,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1551,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1613,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1675,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1737,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1799,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1861,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1923,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1985,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2047,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2109,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2171,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2233,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2295,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0040"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2357,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0041"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2419,
+			239,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0042"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0043"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			63,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0044"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			125,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0045"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			187,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0046"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			249,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0047"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			311,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0048"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			373,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0049"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			435,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0050"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			497,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0051"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			559,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0052"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			621,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0053"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			683,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0054"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			745,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0055"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			807,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0056"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			869,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0057"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			931,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0058"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			993,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0059"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1055,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0060"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1364,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0061"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1426,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0062"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1488,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0063"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1550,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0064"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1612,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0065"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1674,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0066"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1736,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0067"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1798,
+			178,
+			60,
+			58
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0068"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1117,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0069"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1179,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0070"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1241,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0071"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1303,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0072"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1365,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0073"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1427,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0074"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1489,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0075"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1551,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0076"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1613,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0077"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1675,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr4_special_icons_0078"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            8
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1737,
+			300,
+			60,
+			59
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			594,
+			2140,
 			83,
 			84
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0001 = {
+	["kr5_hero_portraits_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			679,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			764,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			849,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			934,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1019,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1104,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1189,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1274,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1359,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1444,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1529,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1614,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1699,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1784,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1869,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1954,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_hero_portraits_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			144,
+			142
+		},
+		trim = {
+			30,
+            23,
+            31,
+            35
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2039,
+			2140,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0001"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -15852,18 +19548,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			346,
-			1400,
+			981,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0002 = {
+	["kr5_info_portraits_enemies_0002"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -15876,18 +19572,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			415,
-			1400,
+			1050,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0003 = {
+	["kr5_info_portraits_enemies_0003"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -15900,18 +19596,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			484,
-			1400,
+			1119,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0004 = {
+	["kr5_info_portraits_enemies_0004"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -15924,18 +19620,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			553,
-			1400,
+			1188,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0005 = {
+	["kr5_info_portraits_enemies_0005"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -15948,18 +19644,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			622,
-			1400,
+			1257,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0006 = {
+	["kr5_info_portraits_enemies_0006"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -15972,18 +19668,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			691,
-			1400,
+			1326,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0007 = {
+	["kr5_info_portraits_enemies_0007"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -15996,18 +19692,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			760,
-			1400,
+			1395,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0007ar = {
+	["kr5_info_portraits_enemies_0008"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16020,18 +19716,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			829,
-			1400,
+			1464,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0008 = {
+	["kr5_info_portraits_enemies_0009"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16044,18 +19740,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			898,
-			1400,
+			1533,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0009 = {
+	["kr5_info_portraits_enemies_0010"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16068,18 +19764,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			967,
-			1400,
+			1602,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0010 = {
+	["kr5_info_portraits_enemies_0011"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16092,18 +19788,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1036,
-			1400,
+			1671,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0011 = {
+	["kr5_info_portraits_enemies_0012"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16116,18 +19812,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1105,
-			1400,
+			1740,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0012 = {
+	["kr5_info_portraits_enemies_0013"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16140,18 +19836,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1174,
-			1400,
+			1809,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0013 = {
+	["kr5_info_portraits_enemies_0014"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16164,18 +19860,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1243,
-			1400,
+			1878,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0014 = {
+	["kr5_info_portraits_enemies_0015"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16188,18 +19884,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1312,
-			1400,
+			1947,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0015 = {
+	["kr5_info_portraits_enemies_0016"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16212,18 +19908,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1381,
-			1400,
+			2016,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0016 = {
+	["kr5_info_portraits_enemies_0017"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16236,18 +19932,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1450,
-			1400,
+			2085,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0017 = {
+	["kr5_info_portraits_enemies_0018"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16260,18 +19956,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1519,
-			1400,
+			2154,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_hero_0018 = {
+	["kr5_info_portraits_enemies_0019"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16284,18 +19980,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1588,
-			1400,
+			2223,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0001 = {
+	["kr5_info_portraits_enemies_0020"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16308,18 +20004,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1657,
-			1400,
+			2292,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0002 = {
+	["kr5_info_portraits_enemies_0021"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16332,18 +20028,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
-			1726,
-			1400,
+			2361,
+			1488,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0003 = {
+	["kr5_info_portraits_enemies_0022"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16356,90 +20052,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1795,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_portraits_towers_0004 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1864,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_portraits_towers_0005 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
-		},
-		f_quad = {
-			1933,
-			1400,
-			67,
-			68
-		},
-		alias = {},
-	},
-	kr5_portraits_towers_0006 = {
-		a_name = "gui_portraits-1.png",
-		size = {
-			96,
-			96
-		},
-		trim = {
-			14,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0007 = {
+	["kr5_info_portraits_enemies_0023"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16452,18 +20076,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			70,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0008 = {
+	["kr5_info_portraits_enemies_0024"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16476,18 +20100,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			139,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0009 = {
+	["kr5_info_portraits_enemies_0025"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16500,18 +20124,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			208,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0010 = {
+	["kr5_info_portraits_enemies_0026"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16524,18 +20148,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			277,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0011 = {
+	["kr5_info_portraits_enemies_0027"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16548,18 +20172,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			346,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0014 = {
+	["kr5_info_portraits_enemies_0028"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16572,18 +20196,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			415,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0015 = {
+	["kr5_info_portraits_enemies_0029"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16596,18 +20220,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			484,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0016 = {
+	["kr5_info_portraits_enemies_0030"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16620,18 +20244,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			553,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0017 = {
+	["kr5_info_portraits_enemies_0031"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16644,18 +20268,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			622,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0018 = {
+	["kr5_info_portraits_enemies_0032"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16668,18 +20292,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			691,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0019 = {
+	["kr5_info_portraits_enemies_0033"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16692,18 +20316,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			760,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0020 = {
+	["kr5_info_portraits_enemies_0034"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16716,18 +20340,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			829,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0021 = {
+	["kr5_info_portraits_enemies_0035"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16740,18 +20364,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			898,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0022 = {
+	["kr5_info_portraits_enemies_0036"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16764,18 +20388,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			967,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0023 = {
+	["kr5_info_portraits_enemies_0037"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16788,18 +20412,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1036,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0024 = {
+	["kr5_info_portraits_enemies_0038"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16812,18 +20436,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1105,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0025 = {
+	["kr5_info_portraits_enemies_0039"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16836,18 +20460,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1174,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0026 = {
+	["kr5_info_portraits_enemies_0040"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16860,18 +20484,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1243,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0027 = {
+	["kr5_info_portraits_enemies_0041"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16884,18 +20508,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1312,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0028 = {
+	["kr5_info_portraits_enemies_0042"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16908,18 +20532,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1381,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0029 = {
+	["kr5_info_portraits_enemies_0043"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16932,18 +20556,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1450,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0030 = {
+	["kr5_info_portraits_enemies_0044"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16956,18 +20580,18 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1519,
-			1470,
+			1558,
 			67,
 			68
 		},
 		alias = {},
 	},
-	kr5_portraits_towers_0031 = {
+	["kr5_info_portraits_enemies_0045"] = {
 		a_name = "gui_portraits-1.png",
 		size = {
 			96,
@@ -16980,14 +20604,8174 @@ return {
             14
 		},
 		a_size = {
-			2030,
-			1821
+			2495,
+			2495
 		},
 		f_quad = {
 			1588,
-			1470,
+			1558,
 			67,
 			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0046"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1657,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0047"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1726,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0048"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1795,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0049"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1864,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0050"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1933,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0051"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2002,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0052"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2071,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0053"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2140,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0054"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2209,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0055"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2278,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0056"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2347,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0057"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2416,
+			1558,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0058"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0059"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			70,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0060"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			139,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0061"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			208,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0062"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			277,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0063"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			346,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0064"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			415,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0065"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			484,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0066"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			553,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0072"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			622,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0073"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			691,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0074"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			760,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0075"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			829,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0076"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			898,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0077"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			967,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0078"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1036,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0079"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1105,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0080"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1174,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0081"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1243,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0082"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1312,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0083"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1381,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0084"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1450,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0085"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1519,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0086"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1588,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0087"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1657,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0088"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1726,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0089"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1795,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0090"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1864,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0091"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1933,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0092"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2002,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0093"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2071,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0094"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2140,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0095"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2209,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0096"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2278,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0097"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2347,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0098"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2416,
+			1628,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0099"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0100"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			70,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0101"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			139,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0102"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			208,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0103"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			277,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0104"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			346,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0105"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			415,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0106"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			484,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0107"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			553,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0108"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			622,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0109"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			691,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0110"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			760,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0111"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			829,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0112"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			898,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0113"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			967,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0114"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1036,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0115"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1105,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0116"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1174,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0117"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1243,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0118"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1312,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0119"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1381,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0120"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1450,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0121"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1519,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0122"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1588,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0123"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1657,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0124"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1726,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0125"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1795,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0126"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1864,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0127"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1933,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_enemies_0128"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2002,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2071,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2140,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2209,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2278,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2347,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2416,
+			1698,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			70,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			139,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			208,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			277,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			346,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			415,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			484,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			553,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			622,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			691,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_heroes_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			760,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			829,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			898,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			967,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1036,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1105,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1174,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1243,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1312,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1381,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1450,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1519,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1588,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1657,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1726,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1795,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1864,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1933,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2002,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2071,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2140,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2209,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2278,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2347,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2416,
+			1768,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			70,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			139,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			208,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			277,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			346,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			415,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			484,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			553,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			622,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			691,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			760,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_info_portraits_soldiers_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			829,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			12,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			367,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			428,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			489,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			550,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			611,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			672,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			733,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			794,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			855,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			916,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			977,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1038,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1099,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1160,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1221,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1282,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1343,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1404,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1465,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1526,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1587,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1648,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1709,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1770,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1831,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0040"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1892,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0041"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1953,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0042"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2014,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0043"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2075,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0044"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2136,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0045"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2197,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0046"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2258,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0047"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2319,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0048"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2380,
+			60,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0049"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			119,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0050"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			62,
+			119,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_main_icons_0105"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			123,
+			119,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			898,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			967,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1036,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1105,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1174,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1243,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1312,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1381,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1450,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1519,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1588,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1657,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1726,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1795,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1864,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1933,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2002,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2071,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2140,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2209,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2278,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2347,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2416,
+			1838,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1908,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			70,
+			1908,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			139,
+			1908,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			208,
+			1908,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			277,
+			1908,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_portraits_towers_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			96,
+			96
+		},
+		trim = {
+			14,
+            14,
+            15,
+            14
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			346,
+			1908,
+			67,
+			68
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			6,
+            6,
+            6,
+            6
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			59,
+			1,
+			52,
+			52
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0001_hover"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1992,
+			300,
+			64,
+			64
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			6,
+            6,
+            6,
+            6
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			113,
+			1,
+			52,
+			52
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			6,
+            6,
+            6,
+            6
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			167,
+			1,
+			52,
+			52
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			6,
+            6,
+            6,
+            6
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			221,
+			1,
+			52,
+			52
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			6,
+            6,
+            6,
+            6
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			275,
+			1,
+			52,
+			52
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			6,
+            6,
+            6,
+            6
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			329,
+			1,
+			52,
+			52
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_action_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			64,
+			64
+		},
+		trim = {
+			6,
+            6,
+            6,
+            6
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			383,
+			1,
+			52,
+			52
+		},
+		alias = {},
+	},
+	["kr5_quickmenu_retreat_icons_tower_panda"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			60,
+			60
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1861,
+			300,
+			60,
+			60
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			184,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			246,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			308,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			370,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			432,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			494,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			556,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			618,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			680,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			742,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			804,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			866,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			928,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			990,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1052,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1114,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1176,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1238,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1300,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1362,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1424,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1486,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1548,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1610,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1672,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1734,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1796,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1858,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1920,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1982,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2044,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2106,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2168,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2230,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2292,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2354,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2416,
+			119,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			178,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0040"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			63,
+			178,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0041"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			125,
+			178,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["kr5_special_icons_0042"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			187,
+			178,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["main_icons_0000"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			493,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			577,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			661,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			745,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			829,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			913,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			997,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1081,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			12,
+            8,
+            11,
+            9
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			249,
+			178,
+			59,
+			57
+		},
+		alias = {},
+	},
+	["main_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1165,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1249,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1333,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1417,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1501,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1585,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1669,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1753,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1837,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1921,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2005,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0020"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2089,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0021"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2173,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2257,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2341,
+			1908,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			85,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			169,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			253,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			337,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			505,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			589,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			673,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			757,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			925,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1009,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1093,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1177,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["main_icons_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			74
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			1984,
+			82,
+			74
+		},
+		alias = {},
+	},
+	["special_icons_0000"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1345,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1429,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1513,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0003"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1597,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0004"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0005"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1765,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0006"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1849,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0007"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1933,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0008"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2017,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0009"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			11,
+            9,
+            11,
+            10
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			310,
+			178,
+			60,
+			57
+		},
+		alias = {},
+	},
+	["special_icons_0010"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0011"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2185,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0012"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2269,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0013"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2353,
+			1984,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0014"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0015"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			85,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0016"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			169,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0017"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			253,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0018"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			337,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0019"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			421,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0022"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			505,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0023"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			589,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0024"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			673,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0025"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			757,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0026"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			841,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0027"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			925,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0028"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1009,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0029"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1093,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0030"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1177,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0031"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1261,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0032"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1345,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0033"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1429,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0034"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1513,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0035"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1597,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0036"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1681,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0037"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1765,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0038"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1849,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0039"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1933,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0040"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2017,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0041"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2101,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0042"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2185,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0043"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2269,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0044"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2353,
+			2062,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0045"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			1,
+			2140,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0046"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			85,
+			2140,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0047"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			169,
+			2140,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0048"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			253,
+			2140,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["special_icons_0049"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			82,
+			76
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			337,
+			2140,
+			82,
+			76
+		},
+		alias = {},
+	},
+	["sub_icons_0000"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			1,
+            2,
+            1,
+            2
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2058,
+			300,
+			66,
+			64
+		},
+		alias = {},
+	},
+	["sub_icons_0001"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			1,
+            2,
+            1,
+            2
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2126,
+			300,
+			66,
+			64
+		},
+		alias = {},
+	},
+	["sub_icons_0002"] = {
+		a_name = "gui_portraits-1.png",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			1,
+            2,
+            1,
+            2
+		},
+		a_size = {
+			2495,
+			2495
+		},
+		f_quad = {
+			2194,
+			300,
+			66,
+			64
 		},
 		alias = {},
 	}
