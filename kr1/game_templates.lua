@@ -428,7 +428,7 @@ tt.health.hp_max = 2500
 tt.health_bar.offset = vec_2(0, ady(73))
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health.dead_lifetime = 12
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0034" or "info_portraits_sc_0034"
+tt.info.portrait = "info_portraits_soldiers_0008"
 tt.info.i18n_key = "SOLDIER_SASQUASH"
 tt.info.random_name_format = nil
 tt.main_script.insert = scripts.soldier_sasquash.insert
@@ -458,47 +458,6 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, ady(30))
 tt.unit.price = 400
 
-tt = RT("soldier_gerald_paladin", "soldier_militia")
-AC(tt, "reinforcement", "melee", "tween", "nav_grid")
-anchor_y = 0.15
-anchor_x = 0.5
-image_y = 41
-image_x = 58
-tt.controable = true
-tt.controable_other = true
-tt.health.armor = 0.4
-tt.health.dead_lifetime = 3
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(adx(28), ady(40))
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.remove = scripts.soldier_reinforcement.remove
-tt.main_script.update = scripts.soldier_reinforcement.update
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0026" or "info_portraits_sc_0026"
-tt.info.random_name_count = 20
-tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].shared_cooldown = true
-tt.melee.attacks[1].hit_time = fts(5)
-tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
-tt.melee.attacks[2].animation = "attack2"
-tt.melee.attacks[2].chance = 0.5
-tt.melee.attacks[2].hit_time = fts(6)
-tt.melee.cooldown = 1
-tt.melee.range = 72.5
-tt.motion.max_speed = 60
-tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
-tt.render.sprites[1].prefix = "soldier_s6_imperial_guard"
-tt.soldier.melee_slot_offset = vec_2(8, 0)
-tt.unit.mod_offset = vec_2(adx(27), ady(22))
-tt.reinforcement.duration = 14
-tt.reinforcement.fade = true
-tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
-tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
-tt.tween.props[1].name = "alpha"
-tt.tween.remove = false
-tt.tween.reverse = false
-
 tt = RT("soldier_s6_imperial_guard", "soldier_militia")
 AC(tt, "editor")
 
@@ -510,7 +469,7 @@ tt.health.armor = 0.4
 tt.health.dead_lifetime = 3
 tt.health.hp_max = 250
 tt.health_bar.offset = vec_2(adx(28), ady(40))
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0026" or "info_portraits_sc_0026"
+tt.info.portrait = "info_portraits_soldiers_0007"
 tt.info.random_name_count = 20
 tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
 tt.melee.attacks[1].damage_max = 30
@@ -540,7 +499,7 @@ tt.cooldown = 10
 tt.health.armor = 0
 tt.health.hp_max = 30
 tt.health_bar.offset = vec_2(0, ady(32))
-tt.info.portrait_idxs = {15, 16, 14}
+tt.info.portrait_idxs = {9, 10, 11}
 tt.controable = true
 tt.main_script.insert = scripts.soldier_reinforcement.insert
 tt.main_script.update = scripts.soldier_reinforcement.update
@@ -568,7 +527,7 @@ tt.health.armor = 0
 tt.melee.attacks[1].damage_max = 3
 tt.motion.max_speed = 65
 tt = RT("re_conscript", "re_farmer")
-tt.info.portrait_idxs = {41, 38, 35}
+tt.info.portrait_idxs = {12, 13, 14}
 tt.unit.level = 2
 tt.health.hp_max = 70
 tt.health.armor = 0.1
@@ -584,7 +543,7 @@ tt.melee.attacks[1].damage_min = 3
 tt.melee.attacks[1].damage_max = 6
 tt.motion.max_speed = 75
 tt = RT("re_legionnaire", "re_farmer")
-tt.info.portrait_idxs = {43, 40, 37}
+tt.info.portrait_idxs = {15, 16, 17}
 tt.unit.level = 4
 tt.health.hp_max = 110
 tt.health.armor = 0.3
@@ -611,12 +570,7 @@ for i = 1, 3 do
         local base_t = E:get_template(name)
         local t = RT(fn, base_t)
         t.render.sprites[1].prefix = fn
-
-        if IS_PHONE_OR_TABLET then
-            t.info.portrait = string.format("portraits_sc_00%02d", t.info.portrait_idxs[i])
-        else
-            t.info.portrait = string.format("info_portraits_sc_00%02d", t.info.portrait_idxs[i])
-        end
+        t.info.portrait = string.format("info_portraits_soldiers_%04d", t.info.portrait_idxs[i])
     end
 end
 
@@ -4340,7 +4294,7 @@ tt.health.hp_max = 50
 tt.health_bar.offset = vec_2(0, 44)
 tt.health_bar.size = HEALTH_BAR_SIZE_MEDIUM
 -- tt.info.fn = scripts.soldier_reinforcement.get_info
-tt.info.portrait = "kr3_portraits_sc_0057"
+tt.info.portrait = "kr3_info_portraits_soldiers_0003"
 tt.info.i18n_key = "HERO_ELVES_FOREST_ELEMENTAL_MINION"
 tt.info.random_name_format = nil
 tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -4425,106 +4379,6 @@ end
 tt.sound_events.insert = "ElvesHeroXinAfterTeleportIn"
 tt.sound_events.death = "ElvesHeroXinAfterTeleportOut"
 
-tt = RT("soldier_catha", "soldier_militia")
-AC(tt, "reinforcement", "ranged", "tween")
-tt.health.armor = 0
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(0, 45)
-tt.info.portrait = "kr3_portraits_sc_0066"
-tt.info.random_name_count = nil
-tt.info.random_name_format = nil
-tt.info.i18n_key = "HERO_ELVES_PIXIE_SHADOW"
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.update = scripts.soldier_reinforcement.update
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_max = 7
-tt.melee.attacks[1].damage_min = 3
-tt.melee.attacks[1].hit_time = fts(12)
-tt.melee.range = 60
-tt.motion.max_speed = 90
-tt.ranged.attacks[1] = CC("bullet_attack")
-tt.ranged.attacks[1].max_range = 175
-tt.ranged.attacks[1].min_range = 20
-tt.ranged.attacks[1].cooldown = 1
-tt.ranged.attacks[1].bullet = "knife_soldier_catha"
-tt.ranged.attacks[1].bullet_start_offset = {vec_2(9, 27)}
-tt.ranged.attacks[1].shoot_time = fts(7)
-tt.regen.cooldown = 1
-tt.regen.health = 10
-tt.reinforcement.duration = 10
-tt.reinforcement.fade = nil
-tt.render.sprites[1].anchor.y = 0.373
-tt.render.sprites[1].prefix = "soldier_catha"
-tt.render.sprites[1].name = "raise"
-tt.render.sprites[1].angles.ranged = {"shoot", "shootUp", "shoot"}
-tt.render.sprites[1].angles_custom = {
-    ranged = {45, 135, 210, 315}
-}
-tt.render.sprites[1].angles_flip_vertical = {
-    ranged = true
-}
-tt.soldier.melee_slot_offset = vec_2(3, 0)
-tt.sound_events.death = "ElvesHeroCathaTaleDeath"
-tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(6), vec_2(0, 0)}}
-tt.tween.remove = false
-tt.tween.run_once = true
-tt.ui.click_rect = r(-10, 0, 20, 30)
-tt.unit.level = 0
-tt.unit.hit_offset = vec_2(0, 16)
-tt.unit.mod_offset = vec_2(0, 22)
-tt.unit.hide_after_death = true
-
-tt = RT("soldier_veznan_demon", "soldier_militia")
-AC(tt, "reinforcement", "ranged", "nav_grid")
-tt.controable = true
-tt.controable_other = true
-tt.health.armor = 0
-tt.health.hp_max = nil
-tt.health_bar.offset = vec_2(0, 65)
-tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.info.portrait = "kr3_portraits_sc_0058"
-tt.info.random_name_count = 8
-tt.info.random_name_format = "ELVES_SOLDIER_VEZNAN_DEMON_%i_NAME"
-tt.main_script.insert = scripts.soldier_reinforcement.insert
-tt.main_script.update = scripts.soldier_reinforcement.update
-tt.melee.attacks[1].cooldown = 1
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].damage_type = DAMAGE_TRUE
-tt.melee.attacks[1].hit_time = fts(15)
-tt.melee.attacks[1].mod = "mod_veznan_demon_fire"
-tt.melee.continue_in_cooldown = true
-
-function tt.melee.fn_can_pick(soldier, target)
-    return target.template_name ~= "enemy_mantaray"
-end
-
-tt.melee.range = 65
-tt.motion.max_speed = 75
-tt.ranged.attacks[1] = CC("bullet_attack")
-tt.ranged.attacks[1].max_range = 150
-tt.ranged.attacks[1].min_range = 65
-tt.ranged.attacks[1].cooldown = 2
-tt.ranged.attacks[1].bullet = "fireball_veznan_demon"
-tt.ranged.attacks[1].bullet_start_offset = {vec_2(25, 42)}
-tt.ranged.attacks[1].shoot_time = fts(13)
-tt.ranged.attacks[1].node_prediction = fts(25)
-tt.regen = nil
-tt.reinforcement.duration = 30
-tt.reinforcement.fade = nil
-tt.render.sprites[1].anchor.y = 0.1
-tt.render.sprites[1].prefix = "veznan_demon"
-tt.render.sprites[1].name = "raise"
-tt.soldier.melee_slot_offset = vec_2(10, 0)
-tt.sound_events.death = "ElvesHeroVeznanDemonDeath"
-tt.ui.click_rect = r(-10, 0, 20, 30)
-tt.unit.level = 0
-tt.unit.hit_offset = vec_2(0, 30)
-tt.unit.mod_offset = vec_2(0, 28)
-tt.unit.hide_after_death = true
-tt.vis.flags = bor(tt.vis.flags, F_HERO)
-tt.vis.bans = bor(F_POISON, F_NET, F_STUN, F_BURN)
 tt = RT("rabbit_kamihare", "decal_scripted")
 
 AC(tt, "nav_path", "motion", "custom_attack")

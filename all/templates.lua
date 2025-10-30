@@ -958,8 +958,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
 tt.idle_flip.chance = 0.4
 tt.idle_flip.cooldown = 5
 tt.info.fn = scripts.soldier_barrack.get_info
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0001" or IS_KR1 and "info_portraits_sc_0001" or
-                       "info_portraits_soldiers_0001"
+tt.info.portrait = "info_portraits_soldiers_0001"
 tt.info.random_name_count = 40
 tt.info.random_name_format = "SOLDIER_RANDOM_%i_NAME"
 tt.main_script.insert = scripts.soldier_barrack.insert
@@ -987,8 +986,7 @@ tt.unit.marker_offset = v(0, ady(8))
 tt.unit.mod_offset = v(0, ady(21))
 
 tt = E:register_t("soldier_footmen", "soldier_militia")
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0002" or IS_KR1 and "info_portraits_sc_0002" or
-                       "info_portraits_soldiers_0002"
+tt.info.portrait = "info_portraits_soldiers_0002"
 tt.render.sprites[1].prefix = "soldierfootmen"
 tt.health.hp_max = 100
 tt.health.armor = 0.15
@@ -997,8 +995,7 @@ tt.melee.attacks[1].damage_min = 3
 tt.melee.attacks[1].damage_max = 4
 
 tt = E:register_t("soldier_knight", "soldier_militia")
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0003" or IS_KR1 and "info_portraits_sc_0003" or
-                       "info_portraits_soldiers_0003"
+tt.info.portrait = "info_portraits_soldiers_0003"
 tt.render.sprites[1].prefix = "soldierknight"
 tt.health.hp_max = 150
 tt.health.armor = 0.3

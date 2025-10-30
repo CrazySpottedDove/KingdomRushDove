@@ -79,7 +79,7 @@ local function heroes()
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.hero_portrait = "hero_portraits_0001"
     tt.info.i18n_key = "HERO_PALADIN"
-    tt.info.portrait = "info_portraits_hero_0001"
+    tt.info.portrait = "info_portraits_heroes_0001"
     tt.main_script.update = scripts.hero_gerald.update
     tt.motion.max_speed = 3 * FPS
     tt.regen.cooldown = 1
@@ -162,6 +162,47 @@ local function heroes()
     tt.render.sprites[1].anchor = vec_2(0.51, 0.17307692307692307)
     tt.render.sprites[1].draw_order = 2
 
+    tt = RT("soldier_gerald_paladin", "soldier_militia")
+    AC(tt, "reinforcement", "melee", "tween", "nav_grid")
+    anchor_y = 0.15
+    anchor_x = 0.5
+    image_y = 41
+    image_x = 58
+    tt.controable = true
+    tt.controable_other = true
+    tt.health.armor = 0.4
+    tt.health.dead_lifetime = 3
+    tt.health.hp_max = nil
+    tt.health_bar.offset = vec_2(adx(28), ady(40))
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.remove = scripts.soldier_reinforcement.remove
+    tt.main_script.update = scripts.soldier_reinforcement.update
+    tt.info.portrait = "info_portraits_soldiers_0007"
+    tt.info.random_name_count = 20
+    tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
+    tt.melee.attacks[1].damage_max = nil
+    tt.melee.attacks[1].damage_min = nil
+    tt.melee.attacks[1].shared_cooldown = true
+    tt.melee.attacks[1].hit_time = fts(5)
+    tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+    tt.melee.attacks[2].animation = "attack2"
+    tt.melee.attacks[2].chance = 0.5
+    tt.melee.attacks[2].hit_time = fts(6)
+    tt.melee.cooldown = 1
+    tt.melee.range = 72.5
+    tt.motion.max_speed = 60
+    tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
+    tt.render.sprites[1].prefix = "soldier_s6_imperial_guard"
+    tt.soldier.melee_slot_offset = vec_2(8, 0)
+    tt.unit.mod_offset = vec_2(adx(27), ady(22))
+    tt.reinforcement.duration = 14
+    tt.reinforcement.fade = true
+    tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
+    tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+    tt.tween.props[1].name = "alpha"
+    tt.tween.remove = false
+    tt.tween.reverse = false
+
     -- 艾莉瑞亚
     tt = RT("hero_alleria", "hero")
     AC(tt, "melee", "ranged", "timed_attacks")
@@ -222,7 +263,7 @@ local function heroes()
     tt.info.damage_icon = "arrow"
     tt.info.hero_portrait = "hero_portraits_0002"
     tt.info.i18n_key = "HERO_ARCHER"
-    tt.info.portrait = "info_portraits_hero_0002"
+    tt.info.portrait = "info_portraits_heroes_0002"
     tt.main_script.update = scripts.hero_alleria.update
     tt.motion.max_speed = 4.8 * FPS
     tt.regen.cooldown = 1
@@ -329,7 +370,7 @@ local function heroes()
     anchor_y = 0.28
     image_y = 42
     tt.fn_level_up = scripts.soldier_alleria_wildcat.level_up
-    tt.info.portrait = "info_portraits_hero_0002_spawn"
+    tt.info.portrait = "info_portraits_soldiers_0022"
     tt.health.armor = 0
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 35)
@@ -403,7 +444,7 @@ local function heroes()
     tt.info.damage_icon = "shot"
     tt.info.hero_portrait = "hero_portraits_0004"
     tt.info.i18n_key = "HERO_RIFLEMAN"
-    tt.info.portrait = "info_portraits_hero_0004"
+    tt.info.portrait = "info_portraits_heroes_0004"
     tt.melee.range = 40
     tt.main_script.update = scripts.hero_bolin.update
     tt.motion.max_speed = 2.6 * FPS
@@ -622,7 +663,7 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(60)
     tt.info.hero_portrait = "hero_portraits_0005"
     tt.info.i18n_key = "HERO_MAGE"
-    tt.info.portrait = "info_portraits_hero_0005"
+    tt.info.portrait = "info_portraits_heroes_0005"
     tt.main_script.update = scripts.hero_magnus.update
     tt.motion.max_speed = 1.2 * FPS
     tt.regen.cooldown = 1
@@ -719,7 +760,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 33)
     tt.health.dead_lifetime = fts(14)
-    tt.info.portrait = "info_portraits_hero_0005"
+    tt.info.portrait = "info_portraits_heroes_0005"
     tt.info.i18n_key = "HERO_MAGE_SHADOW"
     tt.info.random_name_format = nil
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -794,7 +835,7 @@ local function heroes()
     tt.info.hero_portrait = "hero_portraits_0006"
     tt.info.fn = scripts.hero_basic.get_info
     tt.info.i18n_key = "HERO_FIRE"
-    tt.info.portrait = "info_portraits_hero_0006"
+    tt.info.portrait = "info_portraits_heroes_0006"
     tt.main_script.update = scripts.hero_ignus.update
     tt.motion.max_speed = 4 * FPS
     tt.regen.cooldown = 1
@@ -891,7 +932,7 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(60)
     tt.info.hero_portrait = "hero_portraits_0003"
     tt.info.i18n_key = "HERO_REINFORCEMENT"
-    tt.info.portrait = "info_portraits_hero_0003"
+    tt.info.portrait = "info_portraits_heroes_0003"
     tt.main_script.update = scripts.hero_malik.update
     tt.motion.max_speed = 2.6 * FPS
     tt.regen.cooldown = 1
@@ -1018,7 +1059,7 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(60)
     tt.info.hero_portrait = "hero_portraits_0007"
     tt.info.i18n_key = "HERO_DENAS"
-    tt.info.portrait = "info_portraits_hero_0007"
+    tt.info.portrait = "info_portraits_heroes_0007"
     tt.main_script.update = scripts.hero_denas.update
     tt.motion.max_speed = 2.6 * FPS
     tt.regen.cooldown = 1
@@ -1239,7 +1280,7 @@ local function heroes()
     tt.info.hero_portrait = "hero_portraits_0009"
     tt.info.fn = scripts.hero_ingvar.get_info
     tt.info.i18n_key = "HERO_VIKING"
-    tt.info.portrait = "info_portraits_hero_0009"
+    tt.info.portrait = "info_portraits_heroes_0009"
     tt.main_script.update = scripts.hero_ingvar.update
     tt.motion.max_speed = 3.2 * FPS
     tt.regen.cooldown = 1
@@ -1319,7 +1360,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 46)
     tt.health.dead_lifetime = fts(30)
-    tt.info.portrait = "info_portraits_hero_0009_spawn"
+    tt.info.portrait = "info_portraits_soldiers_0023"
     tt.info.i18n_key = "HERO_VIKING_ANCESTOR"
     tt.info.random_name_format = nil
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -1385,7 +1426,7 @@ local function heroes()
     tt.info.hero_portrait = "hero_portraits_0008"
     tt.info.i18n_key = "HERO_FROST_SORCERER"
     tt.info.fn = scripts.hero_basic.get_info
-    tt.info.portrait = "info_portraits_hero_0008"
+    tt.info.portrait = "info_portraits_heroes_0008"
     tt.main_script.update = scripts.hero_elora.update
     tt.motion.max_speed = 3.5 * FPS
     tt.regen.cooldown = 1
@@ -1507,7 +1548,7 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(150)
     tt.info.hero_portrait = "hero_portraits_0011"
     tt.info.i18n_key = "HERO_SAMURAI"
-    tt.info.portrait = "info_portraits_hero_0011"
+    tt.info.portrait = "info_portraits_heroes_0011"
     tt.melee.range = 65
     tt.main_script.update = scripts.hero_oni.update
     tt.main_script.insert = scripts.hero_oni.insert
@@ -1626,7 +1667,7 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(150)
     tt.info.hero_portrait = "hero_portraits_0010"
     tt.info.i18n_key = "HERO_ROBOT"
-    tt.info.portrait = "info_portraits_hero_0010"
+    tt.info.portrait = "info_portraits_heroes_0010"
     tt.main_script.update = scripts.hero_hacksaw.update
     tt.motion.max_speed = 2.8 * FPS
     tt.regen.cooldown = 1
@@ -1745,7 +1786,7 @@ local function heroes()
     tt.hero.tombstone_show_time = fts(150)
     tt.info.i18n_key = "HERO_THOR"
     tt.info.hero_portrait = "hero_portraits_0012"
-    tt.info.portrait = "info_portraits_hero_0012"
+    tt.info.portrait = "info_portraits_heroes_0012"
     tt.main_script.update = scripts.hero_thor.update
     tt.motion.max_speed = 3 * FPS
     tt.regen.cooldown = 1
@@ -1839,7 +1880,7 @@ local function heroes()
     tt.info.hero_portrait = "hero_portraits_0013"
     tt.info.fn = scripts.hero_10yr.get_info
     tt.info.i18n_key = "HERO_10YR"
-    tt.info.portrait = "info_portraits_hero_0013"
+    tt.info.portrait = "info_portraits_heroes_0013"
     tt.main_script.update = scripts.hero_10yr.update
     tt.motion.max_speed_normal = 1.6 * FPS
     tt.motion.max_speed_buffed = 2.5 * FPS
@@ -2581,7 +2622,7 @@ local function heroes()
     anchor_y = 0.2
     image_y = 36
     tt.damage_buff = 0
-    tt.info.portrait = "kr2_info_portraits_heroes_0001_spawn"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0015"
     tt.health.armor = 0
     tt.health.hp_inc = 40
     tt.health.hp_max = 20
@@ -2754,7 +2795,7 @@ local function heroes()
     AC(tt, "melee", "nav_grid")
     anchor_y = 0.29
     image_y = 60
-    tt.info.portrait = "kr2_info_portraits_heroes_0004_pig"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0016"
     tt.health.armor = 0.1
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 28)
@@ -2888,7 +2929,7 @@ local function heroes()
     tt.fake_hp = 60
     tt.main_script.update = scripts.beastmaster_falcon.update
     tt.info.fn = scripts.beastmaster_falcon.get_info
-    tt.info.portrait = "kr2_info_portraits_heroes_0004_falcon"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0017"
     tt.flight_speed = 45
     tt.flight_height = 80
     tt.custom_attack = CC("custom_attack")
@@ -3427,7 +3468,7 @@ local function heroes()
     AC(tt, "melee", "nav_grid", "reinforcement")
     image_y = 48
     anchor_y = 0.16666666666666666
-    tt.info.portrait = "kr2_info_portraits_heroes_0014_spawn"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0018"
     tt.health.armor = 0
     tt.health.hp_max = 80
     tt.health_bar.offset = vec_2(0, 36)
@@ -7392,6 +7433,57 @@ local function heroes()
     tt.sound_events.insert = "ElvesHeroVeznanDarkPact"
     tt.vis_bans = bor(F_BOSS)
     tt.vis_flags = bor(F_MOD, F_STUN)
+        
+    tt = RT("soldier_veznan_demon", "soldier_militia")
+    AC(tt, "reinforcement", "ranged", "nav_grid")
+    tt.controable = true
+    tt.controable_other = true
+    tt.health.armor = 0
+    tt.health.hp_max = nil
+    tt.health_bar.offset = vec_2(0, 65)
+    tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+    tt.info.portrait = "kr3_info_portraits_soldiers_0011"
+    tt.info.random_name_count = 8
+    tt.info.random_name_format = "ELVES_SOLDIER_VEZNAN_DEMON_%i_NAME"
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.update = scripts.soldier_reinforcement.update
+    tt.melee.attacks[1].cooldown = 1
+    tt.melee.attacks[1].damage_max = nil
+    tt.melee.attacks[1].damage_min = nil
+    tt.melee.attacks[1].damage_type = DAMAGE_TRUE
+    tt.melee.attacks[1].hit_time = fts(15)
+    tt.melee.attacks[1].mod = "mod_veznan_demon_fire"
+    tt.melee.continue_in_cooldown = true
+
+    function tt.melee.fn_can_pick(soldier, target)
+        return target.template_name ~= "enemy_mantaray"
+    end
+
+    tt.melee.range = 65
+    tt.motion.max_speed = 75
+    tt.ranged.attacks[1] = CC("bullet_attack")
+    tt.ranged.attacks[1].max_range = 150
+    tt.ranged.attacks[1].min_range = 65
+    tt.ranged.attacks[1].cooldown = 2
+    tt.ranged.attacks[1].bullet = "fireball_veznan_demon"
+    tt.ranged.attacks[1].bullet_start_offset = {vec_2(25, 42)}
+    tt.ranged.attacks[1].shoot_time = fts(13)
+    tt.ranged.attacks[1].node_prediction = fts(25)
+    tt.regen = nil
+    tt.reinforcement.duration = 30
+    tt.reinforcement.fade = nil
+    tt.render.sprites[1].anchor.y = 0.1
+    tt.render.sprites[1].prefix = "veznan_demon"
+    tt.render.sprites[1].name = "raise"
+    tt.soldier.melee_slot_offset = vec_2(10, 0)
+    tt.sound_events.death = "ElvesHeroVeznanDemonDeath"
+    tt.ui.click_rect = r(-10, 0, 20, 30)
+    tt.unit.level = 0
+    tt.unit.hit_offset = vec_2(0, 30)
+    tt.unit.mod_offset = vec_2(0, 28)
+    tt.unit.hide_after_death = true
+    tt.vis.flags = bor(tt.vis.flags, F_HERO)
+    tt.vis.bans = bor(F_POISON, F_NET, F_STUN, F_BURN)
 
     tt = RT("hero_durax", "hero")
     AC(tt, "melee", "ranged", "timed_attacks", "transfer")
@@ -7722,7 +7814,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 40)
     tt.controable = true
     tt.controable_other = true
-    tt.info.portrait = "kr3_portraits_sc_0059"
+    tt.info.portrait = "kr3_info_portraits_soldiers_0005"
     tt.info.random_name_count = 15
     tt.info.random_name_format = "ELVES_SOLDIER_IMPERIAL_%i_NAME"
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -8785,6 +8877,56 @@ local function heroes()
     tt.bullet.mod = "mod_catha_curse"
     tt.bullet.xp_gain_factor = 4
 
+    tt = RT("soldier_catha", "soldier_militia")
+    AC(tt, "reinforcement", "ranged", "tween")
+    tt.health.armor = 0
+    tt.health.hp_max = nil
+    tt.health_bar.offset = vec_2(0, 45)
+    tt.info.portrait = "kr3_info_portraits_soldiers_0010"
+    tt.info.random_name_count = nil
+    tt.info.random_name_format = nil
+    tt.info.i18n_key = "HERO_ELVES_PIXIE_SHADOW"
+    tt.main_script.insert = scripts.soldier_reinforcement.insert
+    tt.main_script.update = scripts.soldier_reinforcement.update
+    tt.melee.attacks[1].cooldown = 1
+    tt.melee.attacks[1].damage_max = 7
+    tt.melee.attacks[1].damage_min = 3
+    tt.melee.attacks[1].hit_time = fts(12)
+    tt.melee.range = 60
+    tt.motion.max_speed = 90
+    tt.ranged.attacks[1] = CC("bullet_attack")
+    tt.ranged.attacks[1].max_range = 175
+    tt.ranged.attacks[1].min_range = 20
+    tt.ranged.attacks[1].cooldown = 1
+    tt.ranged.attacks[1].bullet = "knife_soldier_catha"
+    tt.ranged.attacks[1].bullet_start_offset = {vec_2(9, 27)}
+    tt.ranged.attacks[1].shoot_time = fts(7)
+    tt.regen.cooldown = 1
+    tt.regen.health = 10
+    tt.reinforcement.duration = 10
+    tt.reinforcement.fade = nil
+    tt.render.sprites[1].anchor.y = 0.373
+    tt.render.sprites[1].prefix = "soldier_catha"
+    tt.render.sprites[1].name = "raise"
+    tt.render.sprites[1].angles.ranged = {"shoot", "shootUp", "shoot"}
+    tt.render.sprites[1].angles_custom = {
+        ranged = {45, 135, 210, 315}
+    }
+    tt.render.sprites[1].angles_flip_vertical = {
+        ranged = true
+    }
+    tt.soldier.melee_slot_offset = vec_2(3, 0)
+    tt.sound_events.death = "ElvesHeroCathaTaleDeath"
+    tt.tween.props[1].name = "offset"
+    tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {fts(6), vec_2(0, 0)}}
+    tt.tween.remove = false
+    tt.tween.run_once = true
+    tt.ui.click_rect = r(-10, 0, 20, 30)
+    tt.unit.level = 0
+    tt.unit.hit_offset = vec_2(0, 16)
+    tt.unit.mod_offset = vec_2(0, 22)
+    tt.unit.hide_after_death = true
+
     tt = RT("hero_lilith", "hero")
     AC(tt, "melee", "ranged", "timed_attacks", "revive")
     tt.hero.level_stats.armor = {0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55}
@@ -9638,7 +9780,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 37)
     tt.health_bar.size = HEALTH_BAR_SIZE_SMALL
     tt.health.damage_factor = 1.5
-    tt.info.portrait = "kr3_portraits_sc_0068"
+    tt.info.portrait = "kr3_info_portraits_soldiers_0009"
     tt.info.i18n_key = "ELVES_SOLDIER_RAG_DOLL"
     tt.info.random_name_format = nil
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -10018,7 +10160,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_HUNTER_ULTIMATE_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0038"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0013"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "dante"
@@ -10140,7 +10282,7 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.hero_portrait = "kr5_hero_portraits_0006"
     tt.info.i18n_key = "HERO_HUNTER"
-    tt.info.portrait = "kr5_portraits_hero_0006"
+    tt.info.portrait = "kr5_info_portraits_heroes_0006"
     tt.main_script.insert = scripts.hero_hunter.insert
     tt.main_script.update = scripts.hero_hunter.update
     tt.motion.max_speed = b.speed
@@ -10462,7 +10604,7 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_space_elf.level_up
     tt.info.hero_portrait = "kr5_hero_portraits_0007"
     tt.info.i18n_key = "HERO_SPACE_ELF"
-    tt.info.portrait = "kr5_portraits_hero_0007"
+    tt.info.portrait = "kr5_info_portraits_heroes_0007"
     tt.main_script.insert = scripts.hero_space_elf.insert
     tt.main_script.update = scripts.hero_space_elf.update
     tt.motion.max_speed = b.speed
@@ -10579,7 +10721,7 @@ local function heroes()
     tt.is_kr5 = true
     tt.info.i18n_key = "HERO_SPACE_ELF_ASTRAL_REFLECTION_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "kr5_portraits_hero_0007ar"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0037"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "hero_therien_reflection"
@@ -10904,7 +11046,7 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_raelyn.level_up
     tt.info.hero_portrait = "kr5_hero_portraits_0002"
     tt.info.i18n_key = "HERO_RAELYN"
-    tt.info.portrait = "kr5_portraits_hero_0002"
+    tt.info.portrait = "kr5_info_portraits_heroes_0002"
     tt.main_script.insert = scripts.hero_raelyn.insert
     tt.main_script.update = scripts.hero_raelyn.update
     tt.motion.max_speed = b.speed
@@ -11121,7 +11263,7 @@ local function heroes()
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_RAELYN_ULTIMATE_ENTITY"
     tt.info.enc_icon = 12
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0009"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0006"
     tt.info.random_name_format = nil
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].prefix = "hero_raelyn_command_orders_dark_knight"
@@ -11293,7 +11435,7 @@ local function heroes()
     tt.health.hp_max = b.hp_max[1]
     tt.info.hero_portrait = "kr5_hero_portraits_0004"
     tt.info.i18n_key = "HERO_VENOM"
-    tt.info.portrait = "kr5_portraits_hero_0004"
+    tt.info.portrait = "kr5_info_portraits_heroes_0004"
     tt.main_script.insert = scripts.hero_venom.insert
     tt.main_script.update = scripts.hero_venom.update
     tt.motion.max_speed = b.speed
@@ -11622,7 +11764,7 @@ local function heroes()
     tt.idle_flip.cooldown = 10
     tt.info.hero_portrait = "kr5_hero_portraits_0012"
     tt.info.i18n_key = "HERO_DRAGON_GEM"
-    tt.info.portrait = "kr5_portraits_hero_0012"
+    tt.info.portrait = "kr5_info_portraits_heroes_0012"
     tt.main_script.insert = scripts.hero_dragon_gem.insert
     tt.main_script.update = scripts.hero_dragon_gem.update
     tt.motion.max_speed = b.speed
@@ -11938,7 +12080,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0046"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0018"
     tt.info.random_name_format = "SOLDIER_HERO_WITCH_CAT_%i_NAME"
     tt.info.random_name_count = 8
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -11977,7 +12119,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0049"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0021"
     tt.info.random_name_format = "SOLDIER_HERO_WITCH_DECOY_NAME"
     tt.info.random_name_count = 8
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -12093,7 +12235,7 @@ local function heroes()
     tt.hero.fn_level_up = scripts.hero_witch.level_up
     tt.info.hero_portrait = "kr5_hero_portraits_0013"
     tt.info.i18n_key = "HERO_WITCH"
-    tt.info.portrait = "kr5_portraits_hero_0013"
+    tt.info.portrait = "kr5_info_portraits_heroes_0013"
     tt.main_script.insert = scripts.hero_witch.insert
     tt.main_script.update = scripts.hero_witch.update
     tt.motion.max_speed = b.speed
@@ -12196,7 +12338,7 @@ local function heroes()
     tt.health.magic_armor = b.magic_armor
     tt.health_bar.offset = vec_2(0, 32)
     tt.info.enc_icon = 1
-    tt.info.portrait = "kr5_gui_bottom_info_image_enemies_0050"
+    tt.info.portrait = "kr5_info_portraits_enemies_0050"
     tt.unit.hit_offset = vec_2(0, 14)
     tt.unit.head_offset = vec_2(0, 5)
     tt.unit.mod_offset = vec_2(0, 10)
@@ -12213,7 +12355,7 @@ local function heroes()
     tt.clicks_to_destroy = b.clicks_to_destroy
 
     tt = RT("enemy_pumpkin_witch_flying", "enemy_pumpkin_witch")
-    tt.info.portrait = "kr5_gui_bottom_info_image_enemies_0049"
+    tt.info.portrait = "kr5_info_portraits_enemies_0049"
     tt.flight_height = 47
     tt.health_bar.offset = vec_2(0, tt.flight_height + 40)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -12609,7 +12751,7 @@ local function heroes()
     tt.idle_flip.cooldown = 10
     tt.info.hero_portrait = "kr5_hero_portraits_0014"
     tt.info.i18n_key = "HERO_DRAGON_BONE"
-    tt.info.portrait = "kr5_portraits_hero_0014"
+    tt.info.portrait = "kr5_info_portraits_heroes_0014"
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
     tt.info.stat_damage = b.stats.damage
@@ -12764,7 +12906,7 @@ local function heroes()
     tt.health.armor = b.armor
     tt.health.hp_max = b.hp
     tt.health_bar.offset = vec_2(0, 30)
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0048"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0020"
     tt.info.random_name_format = nil
     tt.info.random_name_count = nil
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -13199,7 +13341,7 @@ local function heroes()
     tt.info.damage_icon = "magic"
     tt.info.hero_portrait = "kr5_hero_portraits_0011"
     tt.info.i18n_key = "HERO_LUMENIR"
-    tt.info.portrait = "kr5_portraits_hero_0011"
+    tt.info.portrait = "kr5_info_portraits_heroes_0011"
     tt.info.ultimate_pointer_style = "area"
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
@@ -13751,7 +13893,7 @@ local function heroes()
     tt.health.hp_max = nil
     tt.health_bar.offset = v(0, 45)
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0073"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0033"
     tt.info.random_name_count = nil
     tt.info.random_name_format = nil
     tt.info.i18n_key = "SOLDIER_HERO_WUKONG_HAIR_CLONES_1"
@@ -13785,7 +13927,7 @@ local function heroes()
     tt.unit.level = 0
 
     tt = E:register_t("soldier_hero_wukong_clone_b", "soldier_hero_wukong_clone")
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0074"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0034"
     tt.render.sprites[1].prefix = "hero_wukong_clone_2"
     tt.info.random_name_count = nil
     tt.info.random_name_format = nil
@@ -13796,7 +13938,7 @@ local function heroes()
     b = balance.heroes.hero_wukong.zhu_apprentice
     tt.info.i18n_key = "SOLDIER_ZHU_APPRENTICE"
     tt.info.enc_icon = 12
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0072"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0032"
     tt.info.fn = scripts.soldier_reinforcement.get_info
     tt.render.sprites[1].anchor = v(0.5, 0.5)
     tt.render.sprites[1].angles = {}
@@ -14028,7 +14170,7 @@ local function heroes()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.hero_portrait = "kr5_hero_portraits_0018"
     tt.info.i18n_key = "HERO_WUKONG"
-    tt.info.portrait = "kr5_portraits_hero_0018"
+    tt.info.portrait = "kr5_info_portraits_heroes_0018"
     tt.info.stat_hp = b.stats.hp
     tt.info.stat_armor = b.stats.armor
     tt.info.stat_damage = b.stats.damage

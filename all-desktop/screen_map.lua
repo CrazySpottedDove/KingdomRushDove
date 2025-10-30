@@ -4752,7 +4752,7 @@ function EncyclopediaView:detail_creep(index)
 
     local f = string.format("encyclopedia_creeps_%04i", ce.info.enc_icon)
 
-    local enemy_fmt = U.splicing_from_kr(ce.info.from_kr, f)
+    local enemy_fmt = U.splicing_from_kr(from_kr, f)
 
     local portrait = KImageView:new(enemy_fmt)
 

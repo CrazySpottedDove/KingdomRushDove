@@ -1146,7 +1146,7 @@ tt.ui.click_rect = r(-38, -10, 70, 60)
 tt = RT("soldier_tower_dark_elf", "soldier_militia")
 AC(tt, "nav_grid", "dodge")
 tt.is_kr5 = true
-tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0045"
+tt.info.portrait = "kr5_info_portraits_soldiers_0017"
 tt.info.random_name_count = 9
 tt.info.random_name_format = "SOLDIER_TOWER_DARK_ELF_%i_NAME"
 tt.main_script.update = scripts.soldier_barrack.update

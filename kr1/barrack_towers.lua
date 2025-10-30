@@ -74,7 +74,7 @@ local function barrack_towers()
     tt.health.armor_power_name = "shield"
     tt.health.armor_inc = 0.15
     tt.health_bar.offset = vec_2(0, ady(40))
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0004" or "info_portraits_sc_0004"
+    tt.info.portrait = "info_portraits_sc_0004"
     tt.info.random_name_count = 20
     tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
     tt.melee.attacks[1].damage_max = 18
@@ -195,7 +195,7 @@ local function barrack_towers()
     tt.health.dead_lifetime = 10
     tt.health.hp_max = 310
     tt.health_bar.offset = vec_2(0, ady(48))
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0005" or "info_portraits_sc_0005"
+    tt.info.portrait = "info_portraits_soldiers_0005"
     tt.info.random_name_count = 20
     tt.info.random_name_format = "SOLDIER_BARBARIAN_RANDOM_%i_NAME"
     tt.motion.max_speed = 90
@@ -336,7 +336,7 @@ local function barrack_towers()
     tt.health.hp_max = 90
     tt.health_bar.offset = vec_2(0, ady(31))
     tt.health.dead_lifetime = 14
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0044" or "info_portraits_sc_0044"
+    tt.info.portrait = "info_portraits_soldiers_0021"
     tt.info.random_name_count = 10
     tt.info.random_name_format = "SOLDIER_ELVES_RANDOM_%i_NAME"
     tt.melee.attacks[1].damage_max = 50
@@ -453,7 +453,7 @@ local function barrack_towers()
     tt.health.hp_inc = 50
     tt.health.power_name = "valkyrie"
     tt.health_bar.offset = vec_2(0, ady(56))
-    tt.info.portrait = IS_PHONE and "portraits_sc_0026" or "kr2_info_portraits_soldiers_0027"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0011"
     tt.info.random_name_count = 10
     tt.info.random_name_format = "SOLDIER_AMAZONAS_RANDOM_%i_NAME"
     tt.melee.attacks[1].damage_max = 36
@@ -568,7 +568,7 @@ local function barrack_towers()
     tt.health.power_name = "extralife"
     tt.health_bar.offset = vec_2(0, ady(40))
     tt.idle_flip.animations = {"idle", "idle2"}
-    tt.info.portrait = IS_PHONE and "portraits_sc_0004" or "kr2_info_portraits_soldiers_0004"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0001"
     tt.info.random_name_count = 20
     tt.info.random_name_format = "SOLDIER_TEMPLAR_RANDOM_%i_NAME"
     tt.melee.attacks[1].damage_max = 40
@@ -698,7 +698,7 @@ local function barrack_towers()
     tt.health.hp_max = 200
     tt.health.instakill_resistance = 0.5
     tt.health_bar.offset = vec_2(0, 32.86)
-    tt.info.portrait = IS_PHONE and "portraits_sc_0005" or "kr2_info_portraits_soldiers_0005"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0002"
     tt.info.random_name_count = 20
     tt.info.random_name_format = "SOLDIER_ASSASSIN_RANDOM_%i_NAME"
     tt.melee.attacks[1].cooldown = 0.6 + fts(13)
@@ -806,7 +806,7 @@ local function barrack_towers()
     tt.health.dead_lifetime = 12
     tt.health.hp_max = 220
     tt.health_bar.offset = vec_2(0, ady(41))
-    tt.info.portrait = IS_PHONE and "portraits_sc_0066" or "kr2_info_portraits_soldiers_0028"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0012"
     tt.info.random_name_count = 10
     tt.info.random_name_format = "SOLDIER_DWARF_RANDOM_%i_NAME"
     tt.main_script.update = scripts.soldier_dwarf.update
@@ -899,7 +899,7 @@ local function barrack_towers()
     tt.health.hp_max = 300
     tt.health_bar.offset = vec_2(0, ady(58))
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.info.portrait = IS_PHONE and "portraits_sc_0023" or "kr2_info_portraits_soldiers_0023"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0007"
     tt.info.random_name_count = 10
     tt.info.random_name_format = "SOLDIER_DJINN_RANDOM_%i_NAME"
     tt.melee.attacks[1].damage_max = 40
@@ -1019,7 +1019,7 @@ local function barrack_towers()
     tt.health.dead_lifetime = 10
     tt.health.hp_max = 100
     tt.health_bar.offset = vec_2(0, ady(32))
-    tt.info.portrait = IS_PHONE and "portraits_sc_0025" or "kr2_info_portraits_soldiers_0025"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0009"
     tt.info.random_name_count = 10
     tt.info.random_name_format = "SOLDIER_PIRATES_RANDOM_%i_NAME"
     tt.melee.attacks[1].damage_max = 30
@@ -1175,7 +1175,7 @@ local function barrack_towers()
     tt.health.dead_lifetime = 15
     tt.health.hp_max = 200
     tt.health.on_damage = scripts.soldier_blade.on_damage
-    tt.info.portrait = "kr3_portraits_sc_0036"
+    tt.info.portrait = "kr3_info_portraits_soldiers_0001"
     tt.main_script.insert = scripts.soldier_blade.insert
     tt.main_script.update = scripts.soldier_blade.update
     tt.melee.attacks[1].animation = "attack1"
@@ -1229,7 +1229,7 @@ local function barrack_towers()
     tt.health.dead_lifetime = 12
     tt.health.hp_max = 300
     tt.health_bar.offset = vec_2(0, 54)
-    tt.info.portrait = "kr3_portraits_sc_0037"
+    tt.info.portrait = "kr3_info_portraits_soldiers_0002"
     tt.info.random_name_format = "ELVES_SOLDIER_FOREST_KEEPER_%i_NAME"
     tt.info.random_name_count = 9
     tt.main_script.insert = scripts.soldier_forest.insert
@@ -1387,7 +1387,7 @@ local function barrack_towers()
     tt.health.dead_lifetime = 15
     tt.health.hp_max = 180
     tt.health.spiked_armor = 0
-    tt.info.portrait = "kr3_portraits_sc_0061"
+    tt.info.portrait = "kr3_info_portraits_soldiers_0007"
     tt.info.random_name_format = "ELVES_SOLDIER_DROW_%i_NAME"
     tt.info.random_name_count = 15
     tt.main_script.insert = scripts.soldier_drow.insert
@@ -1545,7 +1545,7 @@ local function barrack_towers()
     tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
     tt.idle_flip.chance = 0.4
     tt.idle_flip.cooldown = 5
-    tt.info.portrait = "kr3_portraits_sc_0060"
+    tt.info.portrait = "kr3_info_portraits_soldiers_0006"
     tt.info.random_name_count = 6
     tt.info.random_name_format = "ELVES_SOLDIER_EWOK_%i_NAME"
     tt.main_script.insert = scripts.soldier_barrack.insert
@@ -2085,7 +2085,7 @@ local function barrack_towers()
     tt.sound_events.death_args = {
         delay = fts(12)
     }
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0071"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0031"
     tt.info.random_name_format = nil
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_FEMALE"
     tt.nav_rally.delay_min = 0
@@ -2125,7 +2125,7 @@ local function barrack_towers()
 
     tt = RT("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
     AC(tt, "attacks")
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0070"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0030"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
     tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
@@ -2169,7 +2169,7 @@ local function barrack_towers()
 
     tt = RT("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
     AC(tt, "attacks")
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0069"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0029"
     tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
     tt.unit.level = 4
     tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"
@@ -2399,7 +2399,7 @@ local function barrack_towers()
     tt = E:register_t("soldier_tower_rocket_gunners_lvl4", "soldier_militia")
     E:add_comps(tt, "nav_grid", "powers", "ranged", "tween")
     b = balance.towers.rocket_gunners
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0017"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0007"
     tt.info.random_name_format = "SOLDIER_TOWER_ROCKET_GUNNERS_%i_NAME"
     tt.info.random_name_count = 10
     tt.main_script.update = scripts.soldier_tower_rocket_gunners.update

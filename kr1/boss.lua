@@ -32,7 +32,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, ady(120))
     tt.info.i18n_key = "EB_JUGGERNAUT"
     tt.info.enc_icon = 32
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0027" or "info_portraits_sc_0027"
+    tt.info.portrait = "info_portraits_enemies_0017"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_juggernaut.update
     tt.motion.max_speed = 0.4 * FPS
@@ -128,7 +128,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, 23)
     tt.info.i18n_key = "ENEMY_GOLEM_HEAD"
     tt.info.enc_icon = 15
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0028" or "info_portraits_sc_0028"
+    tt.info.portrait = "info_portraits_enemies_0018"
     tt.melee.attacks[1].cooldown = 1 + fts(20)
     tt.melee.attacks[1].damage_max = 20
     tt.melee.attacks[1].damage_min = 10
@@ -189,7 +189,7 @@ local function boss()
     tt.info.fn = scripts.eb_jt.get_info
     tt.info.i18n_key = "EB_JT"
     tt.info.enc_icon = 33
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0047" or "info_portraits_sc_0047"
+    tt.info.portrait = "info_portraits_enemies_0026"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_jt.update
     tt.motion.max_speed = 0.3 * FPS
@@ -268,7 +268,7 @@ local function boss()
     tt.health.magic_armor = 0.4
     tt.info.i18n_key = "EB_VEZNAN"
     tt.info.enc_icon = 34
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0056" or "info_portraits_sc_0056"
+    tt.info.portrait = "info_portraits_enemies_0035"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_veznan.update
     tt.motion.max_speed = 0.35 * FPS
@@ -390,7 +390,7 @@ local function boss()
         unit_hit_offset = vec_2(0, 55),
         unit_mod_offset = vec_2(0, 45),
         unit_size = UNIT_SIZE_LARGE,
-        info_portrait = IS_PHONE_OR_TABLET and "portraits_sc_0056" or "info_portraits_sc_0093"
+        info_portrait = "info_portraits_enemies_0072"
     }
 
     -- 萨雷格兹
@@ -410,7 +410,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, 108)
     tt.info.i18n_key = "EB_SARELGAZ"
     tt.info.enc_icon = 35
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0057" or "info_portraits_sc_0057"
+    tt.info.portrait = "info_portraits_enemies_0036"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_spider_big.update
     tt.melee.attacks[1].cooldown = 1
@@ -486,7 +486,7 @@ local function boss()
     tt.health.magic_armor = 0.1
     tt.info.i18n_key = "EB_GOBLIN_CHIEFTAIN"
     tt.info.enc_icon = 40
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0063" or "info_portraits_sc_0063"
+    tt.info.portrait = "info_portraits_enemies_0042"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_shaman.update
     tt.melee.attacks[1].cooldown = 1 + fts(20)
@@ -546,7 +546,7 @@ local function boss()
     tt.info.fn = scripts.eb_greenmuck.get_info
     tt.info.i18n_key = "EB_GREENMUCK"
     tt.info.enc_icon = 45
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0069" or "info_portraits_sc_0069"
+    tt.info.portrait = "info_portraits_enemies_0048"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_greenmuck.update
     tt.motion.max_speed = 0.3 * FPS
@@ -608,7 +608,7 @@ local function boss()
     tt.info.fn = scripts.eb_kingpin.get_info
     tt.info.i18n_key = "EB_BANDIT"
     tt.info.enc_icon = 48
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0072" or "info_portraits_sc_0072"
+    tt.info.portrait = "info_portraits_enemies_0051"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_kingpin.update
     tt.motion.max_speed = 0.35 * FPS
@@ -678,7 +678,7 @@ local function boss()
     tt.info.fn = scripts.eb_ulgukhai.get_info
     tt.info.i18n_key = "EB_ULGUKHAI"
     tt.info.enc_icon = 52
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0075" or "info_portraits_sc_0075"
+    tt.info.portrait = "info_portraits_enemies_0054"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_ulgukhai.update
     tt.motion.max_speed = 0.3 * FPS
@@ -732,7 +732,7 @@ local function boss()
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.i18n_key = "EB_MOLOCH"
     tt.info.enc_icon = 57
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0080" or "info_portraits_sc_0080"
+    tt.info.portrait = "info_portraits_enemies_0059"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_moloch.update
     tt.motion.max_speed = 0.6 * FPS
@@ -803,7 +803,7 @@ local function boss()
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.i18n_key = "EB_MYCONID"
     tt.info.enc_icon = 59
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0082" or "info_portraits_sc_0082"
+    tt.info.portrait = "info_portraits_enemies_0061"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_myconid.update
     tt.motion.max_speed = 0.65 * FPS
@@ -865,7 +865,7 @@ local function boss()
     tt.info.fn = scripts.eb_blackburn.get_info
     tt.info.i18n_key = "EB_BLACKBURN"
     tt.info.enc_icon = 69
-    tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_sc_0093" or "info_portraits_sc_0092"
+    tt.info.portrait = "info_portraits_enemies_0071"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_blackburn.update
     tt.motion.max_speed = 0.5 * FPS
@@ -1878,7 +1878,7 @@ local function boss()
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.enc_icon = 26
     tt.info.i18n_key = "EB_GNOLL"
-    tt.info.portrait = "kr3_portraits_sc_0013"
+    tt.info.portrait = "kr3_info_portraits_enemies_0010"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_gnoll.update
     tt.motion.max_speed = 0.83 * FPS
@@ -1965,7 +1965,7 @@ local function boss()
     AC(tt, "melee", "taunts", "tween")
     tt.info.enc_icon = 27
     tt.info.i18n_key = "EB_DROW_QUEEN"
-    tt.info.portrait = "kr3_portraits_sc_0062"
+    tt.info.portrait = "kr3_info_portraits_enemies_39"
     tt.enemy.gold = 0
     tt.enemy.lives_cost = 20
     tt.enemy.melee_slot = vec_2(25, 0)
@@ -2182,7 +2182,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, 106)
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.enc_icon = 33
-    tt.info.portrait = "kr3_portraits_sc_0067"
+    tt.info.portrait = "kr3_info_portraits_enemies_0041"
     tt.info.i18n_key = "EB_SPIDER"
     tt.info.fn = scripts.eb_spider.get_info
     tt.main_script.update = scripts.eb_spider.update
@@ -2378,7 +2378,7 @@ local function boss()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
     tt.health_bar.hidden = true
     tt.info.enc_icon = 38
-    tt.info.portrait = "kr3_portraits_sc_0072"
+    tt.info.portrait = "kr3_info_portraits_enemies_0045"
     tt.info.i18n_key = "EB_BRAM"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_bram.update
@@ -2480,7 +2480,7 @@ local function boss()
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.enc_icon = 42
     tt.info.i18n_key = "EB_BAJNIMEN"
-    tt.info.portrait = "kr3_portraits_sc_0076"
+    tt.info.portrait = "kr3_info_portraits_enemies_0049"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_bajnimen.update
     tt.motion.max_speed = 0.996 * FPS
@@ -2581,7 +2581,7 @@ local function boss()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
     tt.info.enc_icon = 48
     tt.info.i18n_key = "EB_BALROG"
-    tt.info.portrait = "kr3_portraits_sc_0083"
+    tt.info.portrait = "kr3_info_portraits_enemies_0056"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_balrog.update
     tt.motion.max_speed = 0.664 * FPS

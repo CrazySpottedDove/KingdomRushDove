@@ -2980,7 +2980,7 @@ function InfoBar:initialize()
 
     self:add_child(v_portrait)
 
-    local portrait_bo = KView:new(V.v(68, 68), "info_portraits_hero_0000")
+    local portrait_bo = KView:new(V.v(68, 68), "info_portraits_0000")
     portrait_bo.anchor = v(34, 34)
     portrait_bo.pos = v(61, 32)
     portrait_bo.propagate_on_down = true

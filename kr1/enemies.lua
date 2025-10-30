@@ -29,7 +29,7 @@ local function enemies()
     tt.health.hp_max = 80
     tt.health_bar.offset = vec_2(0, ady(32))
     tt.info.i18n_key = "ENEMY_SHEEP"
-    tt.info.portrait = "info_portraits_sc_0013"
+    tt.info.portrait = "info_portraits_enemies_0008"
     tt.info.enc_icon = nil
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_sheep.update
@@ -80,7 +80,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 25)
     tt.info.i18n_key = "ENEMY_GOBLIN"
     tt.info.enc_icon = 1
-    tt.info.portrait = "info_portraits_sc_0006"
+    tt.info.portrait = "info_portraits_enemies_0001"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 4
     tt.melee.attacks[1].damage_min = 1
@@ -105,7 +105,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.i18n_key = "ENEMY_FAT_ORC"
     tt.info.enc_icon = 2
-    tt.info.portrait = "info_portraits_sc_0007"
+    tt.info.portrait = "info_portraits_enemies_0002"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 8
     tt.melee.attacks[1].damage_min = 4
@@ -132,7 +132,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 25)
     tt.info.i18n_key = "ENEMY_WULF"
     tt.info.enc_icon = 13
-    tt.info.portrait = "info_portraits_sc_0012"
+    tt.info.portrait = "info_portraits_enemies_0007"
     tt.melee.attacks[1].cooldown = 1 + fts(14)
     tt.melee.attacks[1].damage_max = 3
     tt.melee.attacks[1].damage_min = 1
@@ -165,7 +165,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 35)
     tt.info.i18n_key = "ENEMY_WORG"
     tt.info.enc_icon = 14
-    tt.info.portrait = "info_portraits_sc_0020"
+    tt.info.portrait = "info_portraits_enemies_0011"
     tt.melee.attacks[1].cooldown = 1 + fts(14)
     tt.melee.attacks[1].damage_max = 18
     tt.melee.attacks[1].damage_min = 12
@@ -197,7 +197,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 31)
     tt.info.i18n_key = "ENEMY_SHADOW_ARCHER"
     tt.info.enc_icon = 11
-    tt.info.portrait = "info_portraits_sc_0025"
+    tt.info.portrait = "info_portraits_enemies_0016"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 20
     tt.melee.attacks[1].damage_min = 10
@@ -231,7 +231,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 33)
     tt.info.i18n_key = "ENEMY_SHAMAN"
     tt.info.enc_icon = 3
-    tt.info.portrait = "info_portraits_sc_0009"
+    tt.info.portrait = "info_portraits_enemies_0004"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_shaman.update
     tt.melee.attacks[1].cooldown = 1 + fts(18)
@@ -264,7 +264,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(adx(29), ady(69))
     tt.info.i18n_key = "ENEMY_GARGOYLE"
     tt.info.enc_icon = 10
-    tt.info.portrait = "info_portraits_sc_0010"
+    tt.info.portrait = "info_portraits_enemies_0005"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_passive.update
     tt.motion.max_speed = 1.2 * FPS
@@ -300,7 +300,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_OGRE"
     tt.info.enc_icon = 4
-    tt.info.portrait = "info_portraits_sc_0011"
+    tt.info.portrait = "info_portraits_enemies_0006"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 60
     tt.melee.attacks[1].damage_min = 40
@@ -328,7 +328,7 @@ local function enemies()
     tt.health.magic_armor = 0.5
     tt.health_bar.offset = vec_2(0, 16)
     tt.info.i18n_key = "ENEMY_SPIDERTINY"
-    tt.info.portrait = "info_portraits_sc_0023"
+    tt.info.portrait = "info_portraits_enemies_0014"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 5
     tt.melee.attacks[1].damage_min = 1
@@ -358,7 +358,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 22)
     tt.info.i18n_key = "ENEMY_SPIDERSMALL"
     tt.info.enc_icon = 8
-    tt.info.portrait = "info_portraits_sc_0022"
+    tt.info.portrait = "info_portraits_enemies_0013"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 18
     tt.melee.attacks[1].damage_min = 10
@@ -392,7 +392,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 22 * 2)
     tt.info.i18n_key = "ENEMY_SPIDER_SMALL_BIG"
     tt.info.enc_icon = 8
-    tt.info.portrait = "info_portraits_sc_0022"
+    tt.info.portrait = "info_portraits_enemies_0013"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 18
     tt.melee.attacks[1].damage_min = 10
@@ -450,7 +450,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_SPIDER"
     tt.info.enc_icon = 9
-    tt.info.portrait = "info_portraits_sc_0021"
+    tt.info.portrait = "info_portraits_enemies_0012"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_spider_big.update
     tt.melee.attacks[1].cooldown = 1
@@ -507,7 +507,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 31)
     tt.info.i18n_key = "ENEMY_BRIGAND"
     tt.info.enc_icon = 6
-    tt.info.portrait = "info_portraits_sc_0018"
+    tt.info.portrait = "info_portraits_enemies_0009"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 10
     tt.melee.attacks[1].damage_min = 6
@@ -533,7 +533,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 35)
     tt.info.i18n_key = "ENEMY_DARK_KNIGHT"
     tt.info.enc_icon = 12
-    tt.info.portrait = "info_portraits_sc_0024"
+    tt.info.portrait = "info_portraits_enemies_0015"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 25
     tt.melee.attacks[1].damage_min = 15
@@ -562,7 +562,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_MARAUDER"
     tt.info.enc_icon = 7
-    tt.info.portrait = "info_portraits_sc_0019"
+    tt.info.portrait = "info_portraits_enemies_0010"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 24
     tt.melee.attacks[1].damage_min = 16
@@ -591,7 +591,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.i18n_key = "ENEMY_BANDIT"
     tt.info.enc_icon = 5
-    tt.info.portrait = "info_portraits_sc_0008"
+    tt.info.portrait = "info_portraits_enemies_0003"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 30
     tt.melee.attacks[1].damage_min = 20
@@ -619,7 +619,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_SLAYER"
     tt.info.enc_icon = 22
-    tt.info.portrait = "info_portraits_sc_0046"
+    tt.info.portrait = "info_portraits_enemies_0025"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 76
     tt.melee.attacks[1].damage_min = 24
@@ -653,7 +653,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 78)
     tt.info.i18n_key = "ENEMY_ROCKETEER"
     tt.info.enc_icon = 21
-    tt.info.portrait = "info_portraits_sc_0045"
+    tt.info.portrait = "info_portraits_enemies_0024"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_passive.update
     tt.motion.max_speed = 1.2 * FPS
@@ -690,7 +690,7 @@ local function enemies()
     tt.health.hp_max = 280
     tt.info.i18n_key = "ENEMY_TROLL"
     tt.info.enc_icon = 17
-    tt.info.portrait = "info_portraits_sc_0029"
+    tt.info.portrait = "info_portraits_enemies_0019"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 40
     tt.melee.attacks[1].damage_min = 20
@@ -717,7 +717,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 39)
     tt.info.i18n_key = "ENEMY_WHITE_WOLF"
     tt.info.enc_icon = 16
-    tt.info.portrait = "info_portraits_sc_0032"
+    tt.info.portrait = "info_portraits_enemies_0022"
     tt.melee.attacks[1].cooldown = 1 + fts(14)
     tt.melee.attacks[1].damage_max = 40
     tt.melee.attacks[1].damage_min = 20
@@ -751,7 +751,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_YETI"
     tt.info.enc_icon = 20
-    tt.info.portrait = "info_portraits_sc_0033"
+    tt.info.portrait = "info_portraits_enemies_0023"
     tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 2.5
     tt.melee.attacks[1].count = 10
@@ -795,7 +795,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_FOREST_TROLL"
     tt.info.enc_icon = 39
-    tt.info.portrait = "info_portraits_sc_0060"
+    tt.info.portrait = "info_portraits_enemies_0039"
     tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 2.5
     tt.melee.attacks[1].count = 10
@@ -837,7 +837,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 36)
     tt.info.i18n_key = "ENEMY_ORC_ARMORED"
     tt.info.enc_icon = 36
-    tt.info.portrait = "info_portraits_sc_0059"
+    tt.info.portrait = "info_portraits_enemies_0038"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 40
     tt.melee.attacks[1].damage_min = 20
@@ -895,7 +895,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 48)
     tt.info.i18n_key = "ENEMY_ORC_RIDER"
     tt.info.enc_icon = 37
-    tt.info.portrait = "info_portraits_sc_0059"
+    tt.info.portrait = "info_portraits_enemies_0038"
     tt.melee.attacks[1].cooldown = 1 + fts(14)
     tt.melee.attacks[1].damage_max = 40
     tt.melee.attacks[1].damage_min = 20
@@ -931,7 +931,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 43)
     tt.info.i18n_key = "ENEMY_TROLL_AXE_THROWER"
     tt.info.enc_icon = 18
-    tt.info.portrait = "info_portraits_sc_0030"
+    tt.info.portrait = "info_portraits_enemies_0020"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 50
     tt.melee.attacks[1].damage_min = 30
@@ -970,7 +970,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_RAIDER"
     tt.info.enc_icon = 46
-    tt.info.portrait = "info_portraits_sc_0070"
+    tt.info.portrait = "info_portraits_enemies_0049"
     tt.melee.attacks[1].cooldown = 3
     tt.melee.attacks[1].damage_max = 80
     tt.melee.attacks[1].damage_min = 40
@@ -1011,7 +1011,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 61)
     tt.info.i18n_key = "ENEMY_PILLAGER"
     tt.info.enc_icon = 47
-    tt.info.portrait = "info_portraits_sc_0071"
+    tt.info.portrait = "info_portraits_enemies_0050"
     tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].count = 10
@@ -1051,7 +1051,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 54)
     tt.info.i18n_key = "ENEMY_TROLL_BRUTE"
     tt.info.enc_icon = 51
-    tt.info.portrait = "info_portraits_sc_0074"
+    tt.info.portrait = "info_portraits_enemies_0053"
     tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 2
     tt.melee.attacks[1].count = 3
@@ -1093,7 +1093,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_TROLL_CHIEFTAIN"
     tt.info.enc_icon = 19
-    tt.info.portrait = "info_portraits_sc_0031"
+    tt.info.portrait = "info_portraits_enemies_0021"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_troll_chieftain.update
     tt.melee.attacks[1].cooldown = 1
@@ -1140,7 +1140,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 34)
     tt.info.i18n_key = "ENEMY_GOBLIN_ZAPPER"
     tt.info.enc_icon = 38
-    tt.info.portrait = "info_portraits_sc_0061"
+    tt.info.portrait = "info_portraits_enemies_0040"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 20
     tt.melee.attacks[1].damage_min = 10
@@ -1180,7 +1180,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 29)
     tt.info.i18n_key = "ENEMY_DEMON"
     tt.info.enc_icon = 23
-    tt.info.portrait = "info_portraits_sc_0048"
+    tt.info.portrait = "info_portraits_enemies_0027"
     tt.main_script.insert = scripts.enemy_base_portal.insert
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 30
@@ -1217,7 +1217,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_DEMON_MAGE"
     tt.info.enc_icon = 24
-    tt.info.portrait = "info_portraits_sc_0049"
+    tt.info.portrait = "info_portraits_enemies_0028"
     tt.main_script.insert = scripts.enemy_base_portal.insert
     tt.main_script.update = scripts.enemy_demon_mage.update
     tt.melee.attacks[1].cooldown = 1 + fts(20)
@@ -1268,7 +1268,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 31)
     tt.info.i18n_key = "ENEMY_DEMON_WOLF"
     tt.info.enc_icon = 25
-    tt.info.portrait = "info_portraits_sc_0050"
+    tt.info.portrait = "info_portraits_enemies_0029"
     tt.main_script.insert = scripts.enemy_base_portal.insert
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 40
@@ -1300,7 +1300,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 72)
     tt.info.i18n_key = "ENEMY_DEMON_IMP"
     tt.info.enc_icon = 26
-    tt.info.portrait = "info_portraits_sc_0051"
+    tt.info.portrait = "info_portraits_enemies_0030"
     tt.main_script.insert = scripts.enemy_base_portal.insert
     tt.main_script.update = scripts.enemy_passive.update
     tt.motion.max_speed = 1 * FPS
@@ -1338,7 +1338,7 @@ local function enemies()
     tt.health.damage_factor_electrical = 0.6
     tt.health_bar.offset = vec_2(0, 62)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.info.portrait = "info_portraits_sc_0055"
+    tt.info.portrait = "info_portraits_enemies_0034"
     tt.info.i18n_key = "ENEMY_LAVA_ELEMENTAL"
     tt.info.enc_icon = 30
     tt.melee.attacks[1] = CC("area_attack")
@@ -1379,7 +1379,7 @@ local function enemies()
     tt.health.magic_armor = 0.65
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health_bar.offset = vec_2(0, 51)
-    tt.info.portrait = "info_portraits_sc_0058"
+    tt.info.portrait = "info_portraits_enemies_0037"
     tt.info.i18n_key = "ENEMY_SARELGAZ_SMALL"
     tt.info.enc_icon = 31
     tt.melee.attacks[1].cooldown = 1
@@ -1416,7 +1416,7 @@ local function enemies()
     tt.health.hp_max = 500
     tt.info.i18n_key = "ENEMY_ROTTEN_LESSER"
     tt.info.enc_icon = 58
-    tt.info.portrait = "info_portraits_sc_0081"
+    tt.info.portrait = "info_portraits_enemies_0060"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 18
     tt.melee.attacks[1].damage_min = 12
@@ -1451,7 +1451,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 69)
     tt.info.i18n_key = "ENEMY_SWAMP_THING"
     tt.info.enc_icon = 44
-    tt.info.portrait = "info_portraits_sc_0068"
+    tt.info.portrait = "info_portraits_enemies_0047"
     tt.melee.attacks[1] = CC("area_attack")
     tt.melee.attacks[1].cooldown = 2.5
     tt.melee.attacks[1].count = 10
@@ -1496,7 +1496,7 @@ local function enemies()
     tt.health.magic_armor = 0.6
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health_bar.offset = vec_2(0, 47)
-    tt.info.portrait = "info_portraits_sc_0065"
+    tt.info.portrait = "info_portraits_enemies_0044"
     tt.info.i18n_key = "ENEMY_SPIDER_ROTTEN"
     tt.info.enc_icon = 42
     tt.main_script.insert = scripts.enemy_basic.insert
@@ -1540,7 +1540,7 @@ local function enemies()
     tt.health.hp_max = 100
     tt.health.magic_armor = 0.25
     tt.health_bar.offset = vec_2(0, 20)
-    tt.info.portrait = "info_portraits_sc_0066"
+    tt.info.portrait = "info_portraits_enemies_0045"
     tt.info.i18n_key = "ENEMY_SPIDERTINY_ROTTEN"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 20
@@ -1577,7 +1577,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_ROTTEN_TREE"
     tt.info.enc_icon = 43
-    tt.info.portrait = "info_portraits_sc_0067"
+    tt.info.portrait = "info_portraits_enemies_0046"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 40
     tt.melee.attacks[1].damage_min = 20
@@ -1608,7 +1608,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 26)
     tt.info.i18n_key = "ENEMY_GIANT_RAT"
     tt.info.enc_icon = 61
-    tt.info.portrait = "info_portraits_sc_0084"
+    tt.info.portrait = "info_portraits_enemies_0063"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 12
     tt.melee.attacks[1].damage_min = 8
@@ -1642,7 +1642,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 47)
     tt.info.i18n_key = "ENEMY_WERERAT"
     tt.info.enc_icon = 62
-    tt.info.portrait = "info_portraits_sc_0085"
+    tt.info.portrait = "info_portraits_enemies_0064"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 35
     tt.melee.attacks[1].damage_min = 25
@@ -1671,7 +1671,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.i18n_key = "ENEMY_SKELETON"
     tt.info.enc_icon = 27
-    tt.info.portrait = "info_portraits_sc_0052"
+    tt.info.portrait = "info_portraits_enemies_0031"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 20
     tt.melee.attacks[1].damage_min = 10
@@ -1701,7 +1701,7 @@ local function enemies()
     tt.health.armor = 0.3
     tt.health.hp_max = 400
     tt.health_bar.offset = vec_2(0, 39)
-    tt.info.portrait = "info_portraits_sc_0053"
+    tt.info.portrait = "info_portraits_enemies_0032"
     tt.info.i18n_key = "ENEMY_SKELETON_BIG"
     tt.info.enc_icon = 28
     tt.melee.attacks[1].cooldown = 1
@@ -1780,7 +1780,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 35)
     tt.info.i18n_key = "ENEMY_ZOMBIE"
     tt.info.enc_icon = 41
-    tt.info.portrait = "info_portraits_sc_0064"
+    tt.info.portrait = "info_portraits_enemies_0043"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 15
     tt.melee.attacks[1].damage_min = 5
@@ -1811,7 +1811,7 @@ local function enemies()
     tt.health_bar.offset.y = 34
     tt.info.i18n_key = "ENEMY_DEMON_FLAREON"
     tt.info.enc_icon = 54
-    tt.info.portrait = "info_portraits_sc_0076"
+    tt.info.portrait = "info_portraits_enemies_0055"
     tt.main_script.insert = scripts.enemy_base_portal.insert
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 25
@@ -1855,7 +1855,7 @@ local function enemies()
     tt.health_bar.offset.y = 42
     tt.info.i18n_key = "ENEMY_DEMON_LEGION"
     tt.info.enc_icon = 56
-    tt.info.portrait = "info_portraits_sc_0077"
+    tt.info.portrait = "info_portraits_enemies_0056"
     tt.main_script.insert = scripts.enemy_base_portal.insert
     tt.main_script.update = scripts.enemy_demon_legion.update
     tt.melee.attacks[1].cooldown = 1
@@ -1906,7 +1906,7 @@ local function enemies()
     tt.health_bar.offset.y = 68
     tt.info.i18n_key = "ENEMY_DEMON_GULAEMON"
     tt.info.enc_icon = 53
-    tt.info.portrait = "info_portraits_sc_0078"
+    tt.info.portrait = "info_portraits_enemies_0057"
     tt.main_script.insert = scripts.enemy_base_portal.insert
     tt.main_script.update = scripts.enemy_demon_gulaemon.update
     tt.melee.attacks[1].cooldown = 2
@@ -1962,7 +1962,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.i18n_key = "ENEMY_NECROMANCER"
     tt.info.enc_icon = 29
-    tt.info.portrait = "info_portraits_sc_0054"
+    tt.info.portrait = "info_portraits_enemies_0033"
     tt.main_script.update = scripts.enemy_necromancer.update
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 40
@@ -2014,7 +2014,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.i18n_key = "ENEMY_ZOMBIEMANCER"
     tt.info.enc_icon = 29
-    tt.info.portrait = "info_portraits_sc_0054"
+    tt.info.portrait = "info_portraits_enemies_0033"
     tt.main_script.update = scripts.enemy_zombiemancer.update
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 35
@@ -2070,7 +2070,7 @@ local function enemies()
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, 32)
     tt.info.i18n_key = "ENEMY_HALLOWEEN_ZOMBIE"
-    tt.info.portrait = "info_portraits_sc_0083"
+    tt.info.portrait = "info_portraits_enemies_0062"
     tt.info.enc_icon = 60
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
@@ -2114,7 +2114,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 57)
     tt.info.i18n_key = "ENEMY_DEMON_CERBERUS"
     tt.info.enc_icon = 55
-    tt.info.portrait = "info_portraits_sc_0079"
+    tt.info.portrait = "info_portraits_enemies_0058"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_demon_cerberus.update
     tt.melee.attacks[1] = CC("area_attack")
@@ -2159,7 +2159,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 72)
     tt.info.i18n_key = "ENEMY_WITCH"
     tt.info.enc_icon = 66
-    tt.info.portrait = "info_portraits_sc_0090"
+    tt.info.portrait = "info_portraits_enemies_0069"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.motion.max_speed = 1.4960106382978726 * FPS
@@ -2205,7 +2205,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_SPECTRAL_KNIGHT"
     tt.info.enc_icon = 64
-    tt.info.portrait = "info_portraits_sc_0088"
+    tt.info.portrait = "info_portraits_enemies_0067"
     tt.main_script.insert = scripts.enemy_spectral_knight.insert
     tt.main_script.update = scripts.enemy_spectral_knight.update
     tt.melee.attacks[1].cooldown = 1
@@ -2305,7 +2305,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_FALLEN_KNIGHT"
     tt.info.enc_icon = 63
-    tt.info.portrait = "info_portraits_sc_0087"
+    tt.info.portrait = "info_portraits_enemies_0066"
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 76
     tt.melee.attacks[1].damage_min = 24
@@ -2339,7 +2339,7 @@ local function enemies()
     tt.health.armor = 0.15
     tt.info.i18n_key = "ENEMY_TROLL_SKATER"
     tt.info.enc_icon = 50
-    tt.info.portrait = "info_portraits_sc_0073"
+    tt.info.portrait = "info_portraits_enemies_0052"
     tt.main_script.update = scripts.enemy_troll_skater.update
     tt.melee.attacks[1].cooldown = 1
     tt.melee.attacks[1].damage_max = 70
@@ -2407,7 +2407,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 66)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
     tt.info.i18n_key = "ENEMY_ABOMINATION"
-    tt.info.portrait = "info_portraits_sc_0086"
+    tt.info.portrait = "info_portraits_enemies_0065"
     tt.info.enc_icon = 65
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
@@ -2486,7 +2486,7 @@ local function enemies()
     tt.health.magic_armor = 0.3
     tt.health_bar.offset = vec_2(0, 38)
     tt.info.i18n_key = "ENEMY_WEREWOLF"
-    tt.info.portrait = "info_portraits_sc_0089"
+    tt.info.portrait = "info_portraits_enemies_0068"
     tt.info.enc_icon = 67
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
@@ -2520,7 +2520,7 @@ local function enemies()
     tt.health.on_damage = scripts.enemy_lycan.on_damage
     tt.health_bar.offset = vec_2(0, 37)
     tt.info.i18n_key = "ENEMY_LYCAN"
-    tt.info.portrait = "info_portraits_sc_0091"
+    tt.info.portrait = "info_portraits_enemies_0070"
     tt.info.enc_icon = 68
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
@@ -2557,7 +2557,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 47)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_LYCAN"
-    tt.info.portrait = "info_portraits_sc_0091"
+    tt.info.portrait = "info_portraits_enemies_0070"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1].cooldown = 1
@@ -5264,7 +5264,7 @@ local function enemies()
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, ady(38))
     tt.info.enc_icon = 1
-    tt.info.portrait = "kr3_portraits_sc_0004"
+    tt.info.portrait = "kr3_info_portraits_enemies_0001"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1].cooldown = 1
@@ -5281,7 +5281,7 @@ local function enemies()
     tt = RT("enemy_gnoll_burner", "enemy")
     AC(tt, "melee", "ranged")
     tt.info.enc_icon = 2
-    tt.info.portrait = "kr3_portraits_sc_0006"
+    tt.info.portrait = "kr3_info_portraits_enemies_0003"
     tt.enemy.gold = 5
     tt.enemy.melee_slot = vec_2(27, 0)
     tt.health.hp_max = 50
@@ -5312,7 +5312,7 @@ local function enemies()
     tt = RT("enemy_gnoll_gnawer", "enemy")
     AC(tt, "melee", "auras")
     tt.info.enc_icon = 3
-    tt.info.portrait = "kr3_portraits_sc_0005"
+    tt.info.portrait = "kr3_info_portraits_enemies_0002"
     tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "aura_gnoll_gnawer"
     tt.auras.list[1].cooldown = 0
@@ -5340,7 +5340,7 @@ local function enemies()
 
     tt = RT("enemy_gnoll_blighter", "enemy")
     AC(tt, "melee", "ranged", "timed_attacks")
-    tt.info.portrait = "kr3_portraits_sc_0019"
+    tt.info.portrait = "kr3_info_portraits_enemies_0016"
     tt.info.enc_icon = 4
     tt.enemy.gold = 50
     tt.enemy.melee_slot = vec_2(30, 0)
@@ -5382,7 +5382,7 @@ local function enemies()
     tt = RT("enemy_hyena", "enemy")
     AC(tt, "melee")
     tt.info.enc_icon = 7
-    tt.info.portrait = "kr3_portraits_sc_0008"
+    tt.info.portrait = "kr3_info_portraits_enemies_0005"
     tt.enemy.gold = 10
     tt.enemy.melee_slot = vec_2(10, 0)
     tt.health.hp_max = 40
@@ -5409,7 +5409,7 @@ local function enemies()
 
     tt = RT("enemy_ettin", "enemy")
     AC(tt, "melee", "auras", "endless")
-    tt.info.portrait = "kr3_portraits_sc_0014"
+    tt.info.portrait = "kr3_info_portraits_enemies_0011"
     tt.info.enc_icon = 5
     tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "aura_ettin_regen"
@@ -5448,7 +5448,7 @@ local function enemies()
 
     tt = RT("enemy_perython", "enemy")
     tt.info.enc_icon = 6
-    tt.info.portrait = "kr3_portraits_sc_0009"
+    tt.info.portrait = "kr3_info_portraits_enemies_0006"
     tt.enemy.gold = 18
     tt.health.hp_max = {90, 120, 120, 140}
     tt.health_bar.offset = vec_2(0, 90)
@@ -5488,7 +5488,7 @@ local function enemies()
     tt = RT("enemy_twilight_elf_harasser", "enemy")
     AC(tt, "melee", "ranged", "dodge")
     tt.info.enc_icon = 8
-    tt.info.portrait = "kr3_portraits_sc_0021"
+    tt.info.portrait = "kr3_info_portraits_enemies_0018"
     tt.dodge.ranged = false
     tt.dodge.cooldown = 7
     tt.dodge.chance = 1
@@ -5545,7 +5545,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 60)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.i18n_key = "ENEMY_GNOLL_CATAPULT"
-    tt.info.portrait = "kr3_portraits_sc_0051"
+    tt.info.portrait = "kr3_info_portraits_enemies_0033"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_catapult.update
     tt.motion.max_speed = 37.35
@@ -5589,7 +5589,7 @@ local function enemies()
     tt = RT("enemy_bandersnatch", "enemy")
     AC(tt, "melee", "timed_attacks")
     tt.info.enc_icon = 16
-    tt.info.portrait = "kr3_portraits_sc_0012"
+    tt.info.portrait = "kr3_info_portraits_enemies_0009"
     tt.enemy.gold = 300
     tt.enemy.lives_cost = 2
     tt.enemy.melee_slot = vec_2(42, 0)
@@ -5631,7 +5631,7 @@ local function enemies()
     tt = RT("enemy_boomshrooms", "enemy")
     AC(tt, "death_spawns")
     tt.info.enc_icon = 32
-    tt.info.portrait = "kr3_portraits_sc_0017"
+    tt.info.portrait = "kr3_info_portraits_enemies_0014"
     tt.death_spawns.concurrent_with_death = true
     tt.death_spawns.name = "aura_boomshrooms_death"
     tt.unit.explode_when_silenced_death = true
@@ -5657,7 +5657,7 @@ local function enemies()
     tt = RT("enemy_munchshrooms", "enemy")
     AC(tt, "melee", "death_spawns")
     tt.info.enc_icon = 31
-    tt.info.portrait = "kr3_portraits_sc_0016"
+    tt.info.portrait = "kr3_info_portraits_enemies_0013"
     tt.death_spawns.name = "enemy_boomshrooms"
     tt.death_spawns.delay = 0.93
     tt.death_spawns.quantity = {2, 2, 3}
@@ -5689,7 +5689,7 @@ local function enemies()
     tt = RT("enemy_shroom_breeder", "enemy")
     AC(tt, "melee", "death_spawns", "timed_attacks")
     tt.info.enc_icon = 15
-    tt.info.portrait = "kr3_portraits_sc_0015"
+    tt.info.portrait = "kr3_info_portraits_enemies_0012"
     tt.death_spawns.name = "enemy_munchshrooms"
     tt.death_spawns.delay = 0.5
     tt.death_spawns.quantity = {2, 2, 3}
@@ -5732,7 +5732,7 @@ local function enemies()
     tt = RT("enemy_gloomy", "enemy")
     AC(tt, "melee", "timed_attacks", "count_group")
     tt.info.enc_icon = 17
-    tt.info.portrait = "kr3_portraits_sc_0018"
+    tt.info.portrait = "kr3_info_portraits_enemies_0015"
     tt.count_group.name = "enemy_gloomy"
     tt.count_group.type = COUNT_GROUP_CONCURRENT
     tt.enemy.gold = 5
@@ -5775,7 +5775,7 @@ local function enemies()
     tt = RT("enemy_redcap", "enemy")
     AC(tt, "melee")
     tt.info.enc_icon = 14
-    tt.info.portrait = "kr3_portraits_sc_0024"
+    tt.info.portrait = "kr3_info_portraits_enemies_0021"
     tt.enemy.gold = 12
     tt.enemy.melee_slot = vec_2(27, 0)
     tt.health.hp_max = 120
@@ -5817,7 +5817,7 @@ local function enemies()
     tt = RT("enemy_satyr_cutthroat", "enemy")
     AC(tt, "melee", "ranged")
     tt.info.enc_icon = 12
-    tt.info.portrait = "kr3_portraits_sc_0025"
+    tt.info.portrait = "kr3_info_portraits_enemies_0022"
     tt.enemy.gold = 15
     tt.enemy.melee_slot = vec_2(25, 0)
     tt.health.hp_max = 150
@@ -5847,7 +5847,7 @@ local function enemies()
     tt = RT("enemy_satyr_hoplite", "enemy")
     AC(tt, "melee", "timed_attacks")
     tt.info.enc_icon = 13
-    tt.info.portrait = "kr3_portraits_sc_0026"
+    tt.info.portrait = "kr3_info_portraits_enemies_0023"
     tt.enemy.gold = 60
     tt.enemy.melee_slot = vec_2(32, 0)
     tt.health.armor = {0.5, 0.5, 0.75}
@@ -5896,7 +5896,7 @@ local function enemies()
     tt = RT("enemy_twilight_avenger", "enemy")
     AC(tt, "melee", "timed_attacks")
     tt.info.enc_icon = 9
-    tt.info.portrait = "kr3_portraits_sc_0032"
+    tt.info.portrait = "kr3_info_portraits_enemies_0029"
     tt.enemy.gold = 30
     tt.enemy.melee_slot = vec_2(30, 0)
     tt.health.armor = 0.5
@@ -5954,7 +5954,7 @@ local function enemies()
     tt = RT("enemy_twilight_scourger", "enemy")
     AC(tt, "melee", "death_spawns", "timed_attacks")
     tt.info.enc_icon = 11
-    tt.info.portrait = "kr3_portraits_sc_0027"
+    tt.info.portrait = "kr3_info_portraits_enemies_0024"
     tt.death_spawns.name = "enemy_twilight_scourger_banshee"
     tt.death_spawns.delay = fts(5)
     tt.death_spawns.quantity = 1
@@ -5998,7 +5998,7 @@ local function enemies()
 
     tt = RT("enemy_twilight_scourger_banshee", "enemy")
     AC(tt, "mod_attack", "tween")
-    tt.info.portrait = "kr3_portraits_sc_0028"
+    tt.info.portrait = "kr3_info_portraits_enemies_0025"
     tt.mod_attack.cooldown = 1
     tt.mod_attack.mod = "mod_twilight_scourger_banshee"
     tt.mod_attack.max_range = 180
@@ -6038,7 +6038,7 @@ local function enemies()
     tt = RT("enemy_webspitting_spider", "enemy")
     AC(tt, "melee", "timed_attacks")
     tt.info.enc_icon = 18
-    tt.info.portrait = "kr3_portraits_sc_0035"
+    tt.info.portrait = "kr3_info_portraits_enemies_0032"
     tt.enemy.gold = 60
     tt.enemy.melee_slot = vec_2(36, 0)
     tt.health.hp_max = 550
@@ -6073,7 +6073,7 @@ local function enemies()
     tt = RT("enemy_sword_spider", "enemy")
     AC(tt, "melee")
     tt.info.enc_icon = 10
-    tt.info.portrait = "kr3_portraits_sc_0007"
+    tt.info.portrait = "kr3_info_portraits_enemies_0004"
     tt.enemy.gold = 16
     tt.enemy.melee_slot = vec_2(20, 0)
     tt.health.hp_max = 135
@@ -6097,7 +6097,7 @@ local function enemies()
     tt.vis.bans = bor(F_SKELETON)
 
     tt = RT("enemy_rabbit", "enemy")
-    tt.info.portrait = "kr3_portraits_sc_0023"
+    tt.info.portrait = "kr3_info_portraits_enemies_0020"
     tt.enemy.gold = 7
     tt.health.hp_max = 80
     tt.health_bar.offset = vec_2(0, 20)
@@ -6122,7 +6122,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(25, 0)
     tt.health.hp_max = 0
     tt.health_bar.offset = vec_2(0, 36)
-    tt.info.portrait = "kr3_portraits_sc_0063"
+    tt.info.portrait = "kr3_info_portraits_enemies_0040"
     tt.info.i18n_key = "ENEMY_BOSS_DROW_QUEEN_ZEALOT"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_zealot.update
@@ -6161,7 +6161,7 @@ local function enemies()
     tt.enemy.melee_slot = vec_2(15, 0)
     tt.info.i18n_key = "ENEMY_TWILIGHT_EVOKER"
     tt.info.enc_icon = 21
-    tt.info.portrait = "kr3_portraits_sc_0033"
+    tt.info.portrait = "kr3_info_portraits_enemies_0030"
     tt.health.hp_max = 600
     tt.health.magic_armor = {0.75, 0.75, 0.9}
     tt.health.armor_resilience = 0.6
@@ -6214,7 +6214,7 @@ local function enemies()
     tt.enemy.gold = 125
     tt.enemy.lives_cost = 3
     tt.enemy.melee_slot = vec_2(20, 0)
-    tt.info.portrait = "kr3_portraits_sc_0055"
+    tt.info.portrait = "kr3_info_portraits_enemies_0037"
     tt.info.enc_icon = 25
     tt.health.armor = 0.9
     tt.health.hp_max = 4000
@@ -6252,7 +6252,7 @@ local function enemies()
 
     tt = RT("enemy_twilight_heretic", "enemy")
     AC(tt, "melee", "ranged", "timed_attacks")
-    tt.info.portrait = "kr3_portraits_sc_0034"
+    tt.info.portrait = "kr3_info_portraits_enemies_0031"
     tt.info.enc_icon = 24
     tt.enemy.gold = 150
     tt.enemy.lives_cost = 2
@@ -6310,7 +6310,7 @@ local function enemies()
 
     tt = RT("enemy_drider", "enemy")
     AC(tt, "melee")
-    tt.info.portrait = "kr3_portraits_sc_0053"
+    tt.info.portrait = "kr3_info_portraits_enemies_0035"
     tt.info.enc_icon = 20
     tt.enemy.gold = 50
     tt.enemy.melee_slot = vec_2(28, 0)
@@ -6345,7 +6345,7 @@ local function enemies()
     tt = RT("enemy_mantaray", "enemy")
     AC(tt, "tween", "track_kills")
     tt.info.enc_icon = 28
-    tt.info.portrait = "kr3_portraits_sc_0056"
+    tt.info.portrait = "kr3_info_portraits_enemies_0038"
     tt.enemy.gold = 15
     tt.enemy.max_blockers = 1
     tt.enemy.melee_slot = vec_2(17, 0)
@@ -6416,7 +6416,7 @@ local function enemies()
     tt = RT("enemy_razorboar", "enemy")
     AC(tt, "melee", "timed_attacks", "auras")
     tt.info.enc_icon = 23
-    tt.info.portrait = "kr3_portraits_sc_0052"
+    tt.info.portrait = "kr3_info_portraits_enemies_0034"
     tt.auras.list[1] = CC("aura_attack")
     tt.auras.list[1].name = "aura_razorboar_rage"
     tt.auras.list[1].cooldown = 0
@@ -6463,7 +6463,7 @@ local function enemies()
 
     tt = RT("enemy_arachnomancer", "enemy")
     AC(tt, "melee", "timed_attacks", "death_spawns")
-    tt.info.portrait = "kr3_portraits_sc_0010"
+    tt.info.portrait = "kr3_info_portraits_enemies_0007"
     tt.info.enc_icon = 22
     tt.death_spawns.name = "bullet_arachnomancer_spawn"
     tt.death_spawns.delay = fts(26)
@@ -6521,7 +6521,7 @@ local function enemies()
     tt.health.hp_max = 80
     tt.health.magic_armor = 0.5
     tt.health_bar.offset = vec_2(0, 21)
-    tt.info.portrait = "kr3_portraits_sc_0054"
+    tt.info.portrait = "kr3_info_portraits_enemies_0036"
     tt.info.i18n_key = "ENEMY_ARACHNOMANCER_SPIDER"
     tt.info.enc_icon = 30
     tt.motion.max_speed = 1.992 * FPS
@@ -6561,7 +6561,7 @@ local function enemies()
 
     tt = RT("enemy_spider_son_of_mactans", "enemy")
     AC(tt, "melee")
-    tt.info.portrait = "kr3_portraits_sc_0031"
+    tt.info.portrait = "kr3_info_portraits_enemies_0028"
     tt.info.enc_icon = 29
     tt.enemy.gold = 35
     tt.enemy.melee_slot = vec_2(32, 0)
@@ -6639,7 +6639,7 @@ local function enemies()
 
     tt = RT("enemy_gnoll_bloodsydian", "enemy")
     AC(tt, "melee")
-    tt.info.portrait = "kr3_portraits_sc_0070"
+    tt.info.portrait = "kr3_info_portraits_enemies_0043"
     tt.info.enc_icon = 35
     tt.enemy.gold = 20
     tt.enemy.melee_slot = vec_2(32, 0)
@@ -6663,7 +6663,7 @@ local function enemies()
     tt = RT("enemy_bloodsydian_warlock", "enemy")
     AC(tt, "melee", "timed_attacks")
     tt.info.enc_icon = 37
-    tt.info.portrait = "kr3_portraits_sc_0071"
+    tt.info.portrait = "kr3_info_portraits_enemies_0044"
     tt.enemy.gold = 50
     tt.enemy.melee_slot = vec_2(37, 0)
     tt.health.hp_max = 1200
@@ -6723,7 +6723,7 @@ local function enemies()
     tt.auras.list[2].name = "aura_ogre_magi_regen"
     tt.auras.list[2].cooldown = 0
     tt.info.enc_icon = 36
-    tt.info.portrait = "kr3_portraits_sc_0050"
+    tt.info.portrait = "kr3_info_portraits_enemies_0032"
     tt.enemy.gold = 100
     tt.enemy.lives_cost = {2, 2, 2, 3}
     tt.enemy.melee_slot = vec_2(38, 0)
@@ -6770,7 +6770,7 @@ local function enemies()
     tt.health.hp_max = 200
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.enc_icon = 39
-    tt.info.portrait = "kr3_portraits_sc_0073"
+    tt.info.portrait = "kr3_info_portraits_enemies_0046"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1].cooldown = 1
@@ -6799,7 +6799,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health_bar.offset = vec_2(0, 65)
     tt.info.enc_icon = 40
-    tt.info.portrait = "kr3_portraits_sc_0074"
+    tt.info.portrait = "kr3_info_portraits_enemies_0047"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1].cooldown = 1
@@ -6828,7 +6828,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 90)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.enc_icon = 41
-    tt.info.portrait = "kr3_portraits_sc_0075"
+    tt.info.portrait = "kr3_info_portraits_enemies_0048"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_screecher_bat.update
     tt.motion.max_speed = {1.9 * FPS, 1.9 * FPS, 2 * FPS}
@@ -6865,7 +6865,7 @@ local function enemies()
     tt.health.hp_max = 800
     tt.health_bar.offset = vec_2(0, 53)
     tt.info.enc_icon = 45
-    tt.info.portrait = "kr3_portraits_sc_0080"
+    tt.info.portrait = "kr3_info_portraits_enemies_0053"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1].cooldown = 1
@@ -6897,7 +6897,7 @@ local function enemies()
     tt.health.hp_max = 350
     tt.health_bar.offset = vec_2(0, 34)
     tt.info.enc_icon = 44
-    tt.info.portrait = "kr3_portraits_sc_0079"
+    tt.info.portrait = "kr3_info_portraits_enemies_0052"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1].cooldown = 1
@@ -6929,7 +6929,7 @@ local function enemies()
     tt.health.hp_max = 500
     tt.health_bar.offset = vec_2(0, 42)
     tt.info.enc_icon = 46
-    tt.info.portrait = "kr3_portraits_sc_0081"
+    tt.info.portrait = "kr3_info_portraits_enemies_0054"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_grim_devourers.update
     tt.melee.attacks[1].cooldown = 1
@@ -6959,7 +6959,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 55)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.enc_icon = 47
-    tt.info.portrait = "kr3_portraits_sc_0082"
+    tt.info.portrait = "kr3_info_portraits_enemies_0055"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1] = CC("area_attack")
@@ -6997,7 +6997,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.enc_icon = 34
     tt.info.i18n_key = "ENEMY_ENDLESS_MINIBOSS_GNOLL"
-    tt.info.portrait = "kr3_portraits_sc_0069"
+    tt.info.portrait = "kr3_info_portraits_enemies_0042"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1] = CC("area_attack")
@@ -7036,7 +7036,7 @@ local function enemies()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.enc_icon = 43
     tt.info.i18n_key = "ENEMY_ENDLESS_MINIBOSS_TWILIGHT"
-    tt.info.portrait = "kr3_portraits_sc_0077"
+    tt.info.portrait = "kr3_info_portraits_enemies_0050"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
     tt.melee.attacks[1] = CC("area_attack")
@@ -7077,7 +7077,7 @@ local function enemies()
     tt.health_bar.offset = vec_2(0, 82)
     tt.info.i18n_key = "ENEMY_SARELGAS_BIG"
     tt.info.enc_icon = 35
-    tt.info.portrait = "info_portraits_sc_0057"
+    tt.info.portrait = "info_portraits_enemies_0036"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_spider_big.update
     tt.melee.attacks[1].cooldown = 1

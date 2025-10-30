@@ -693,7 +693,7 @@ local function engineer_towers()
     tt.health_bar.offset = vec_2(0, 48)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = IS_PHONE and "portraits_sc_0093" or "kr2_info_portraits_soldiers_0030"
+    tt.info.portrait = "kr2_info_portraits_soldiers_0014"
     tt.main_script.insert = scripts.soldier_barrack.insert
     tt.main_script.update = scripts.soldier_barrack.update
     tt.melee.attacks[1].cooldown_lvls = {2, 1, 1}
@@ -884,7 +884,7 @@ local function engineer_towers()
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     tt.health.dead_lifetime = 14
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "kr3_portraits_sc_0065"
+    tt.info.portrait = "kr3_info_portraits_soldiers_0008"
     tt.info.random_name_format = "ELVES_SOLDIER_BEAR_%i_NAME"
     tt.info.random_name_count = 2
     tt.main_script.insert = scripts.soldier_barrack.insert
@@ -1428,7 +1428,7 @@ local function engineer_towers()
     tt.health_bar.offset = vec_2(0, 27)
     tt.health.dead_lifetime = 5
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0007"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0004"
     tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER"
     tt.info.random_name_format = false
     tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -1489,7 +1489,7 @@ local function engineer_towers()
     tt.explosion_damage_type = b.big_guy.explosion_damage_type
     tt.explosion_sound = "TowerDemonPitDemonExplosion"
     tt.info.fn = scripts.soldier_reinforcement.get_info
-    tt.info.portrait = "kr5_gui_bottom_info_image_soldiers_0006"
+    tt.info.portrait = "kr5_info_portraits_soldiers_0003"
     tt.info.i18n_key = "TOWER_DEMON_PIT_SOLDIER_BIG_GUY"
     tt.info.random_name_format = false
     tt.main_script.insert = scripts.soldier_reinforcement.insert
