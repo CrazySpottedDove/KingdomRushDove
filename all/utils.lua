@@ -1788,89 +1788,84 @@ function U.cleanup_blockers(store, blocked)
     end
 end
 
+local function calc_explosion_protection(armor)
+    return armor * (0.2 * armor + 0.4)
+end
+
+local function calc_stab_protection(armor)
+    return armor * (2 - armor)
+end
+
+local function calc_mixed_protection(armor, magic_armor)
+    if magic_armor > armor then
+        return armor
+    else
+        return (magic_armor + armor) * 0.5
+    end
+end
+
 ---预测伤害
 ---@param entity table 实体
 ---@param damage table 伤害属性
 ---@return number 实际伤害值
 function U.predict_damage(entity, damage)
-    local e = entity
-    local d = damage
-
-    if band(d.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 then
-        if e.health.damage_factor > 1 then
-            return e.health.hp_max * (1 - e.health.instakill_resistance) * e.health.damage_factor
+    if band(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 then
+        if entity.health.damage_factor > 1 then
+            return entity.health.hp_max * (1 - entity.health.instakill_resistance) * entity.health.damage_factor
         else
-            return e.health.hp_max * (1 - e.health.instakill_resistance)
+            return entity.health.hp_max * (1 - entity.health.instakill_resistance)
         end
     end
 
     local protection = 0
 
-    local function calc_explosion_protection(armor)
-        return armor * (0.2 * armor + 0.4)
-    end
-
-    local function calc_stab_protection(armor)
-        return armor * (2 - armor)
-    end
-
-    local function calc_mixed_protection(armor, magic_armor)
-        if magic_armor > armor then
-            return armor
-        else
-            return (magic_armor + armor) * 0.5
-        end
-    end
-
-    if band(d.damage_type, DAMAGE_POISON) ~= 0 then
-        protection = e.health.poison_armor
-    elseif band(d.damage_type, DAMAGE_TRUE) ~= 0 then
+    if band(damage.damage_type, DAMAGE_POISON) ~= 0 then
+        protection = entity.health.poison_armor
+    elseif band(damage.damage_type, DAMAGE_TRUE) ~= 0 then
         protection = 0
-    elseif band(d.damage_type, DAMAGE_PHYSICAL) ~= 0 then
-        protection = e.health.armor - d.reduce_armor
-    elseif band(d.damage_type, DAMAGE_MAGICAL) ~= 0 then
-        protection = e.health.magic_armor - d.reduce_magic_armor
-    elseif band(d.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
-        protection = calc_explosion_protection(e.health.magic_armor - d.reduce_magic_armor)
-    elseif band(d.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
+    elseif band(damage.damage_type, DAMAGE_PHYSICAL) ~= 0 then
+        protection = entity.health.armor - damage.reduce_armor
+    elseif band(damage.damage_type, DAMAGE_MAGICAL) ~= 0 then
+        protection = entity.health.magic_armor - damage.reduce_magic_armor
+    elseif band(damage.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
+        protection = calc_explosion_protection(entity.health.magic_armor - damage.reduce_magic_armor)
+    elseif band(damage.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
         protection = 0
-    elseif band(d.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_RUDE)) ~= 0 then
-        protection = calc_explosion_protection(e.health.armor - d.reduce_armor)
-    elseif band(d.damage_type, DAMAGE_SHOT) ~= 0 then
-        protection = (e.health.armor - d.reduce_armor) * 0.7
-    elseif band(d.damage_type, DAMAGE_STAB) ~= 0 then
-        protection = calc_stab_protection(e.health.armor - d.reduce_armor)
-    elseif band(d.damage_type, DAMAGE_MIXED) ~= 0 then
-        protection = calc_mixed_protection(e.health.armor - d.reduce_armor, e.health.magic_armor - d.reduce_magic_armor)
-    elseif d.damage_type == DAMAGE_NONE then
+    elseif band(damage.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_RUDE)) ~= 0 then
+        protection = calc_explosion_protection(entity.health.armor - damage.reduce_armor)
+    elseif band(damage.damage_type, DAMAGE_SHOT) ~= 0 then
+        protection = (entity.health.armor - damage.reduce_armor) * 0.7
+    elseif band(damage.damage_type, DAMAGE_STAB) ~= 0 then
+        protection = calc_stab_protection(entity.health.armor - damage.reduce_armor)
+    elseif band(damage.damage_type, DAMAGE_MIXED) ~= 0 then
+        protection = calc_mixed_protection(entity.health.armor - damage.reduce_armor, entity.health.magic_armor - damage.reduce_magic_armor)
+    elseif damage.damage_type == DAMAGE_NONE then
         protection = 1
     end
 
     protection = km.clamp(0, 1, protection)
 
-    local rounded_damage = d.value
-    if band(d.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
-        rounded_damage = km.round(rounded_damage * e.health.damage_factor_magical)
+    local rounded_damage = damage.value
+    if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
+        rounded_damage = km.round(rounded_damage * entity.health.damage_factor_magical)
     end
 
-    if band(d.damage_type, DAMAGE_ELECTRICAL) ~= 0 and e.health.damage_factor_electrical then
-        rounded_damage = km.round(rounded_damage * e.health.damage_factor_electrical)
+    if band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 and entity.health.damage_factor_electrical then
+        rounded_damage = km.round(rounded_damage * entity.health.damage_factor_electrical)
     end
 
     -- 该类攻击对护甲高的敌人伤害更高
-    if band(d.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
+    if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
         rounded_damage = rounded_damage + rounded_damage * protection * protection * 2 / (1 - protection)
     end
 
-    rounded_damage = km.round(rounded_damage * e.health.damage_factor)
+    rounded_damage = km.round(rounded_damage * entity.health.damage_factor * (1-protection))
 
-    local actual_damage = math.ceil(rounded_damage * (1 - protection))
-
-    if band(d.damage_type, DAMAGE_NO_KILL) ~= 0 and e.health and actual_damage >= e.health.hp then
-        actual_damage = e.health.hp - 1
+    if band(damage.damage_type, DAMAGE_NO_KILL) ~= 0 and entity.health and rounded_damage >= entity.health.hp then
+        rounded_damage = entity.health.hp - 1
     end
 
-    return actual_damage
+    return rounded_damage
 end
 
 ---检查是否已见过
