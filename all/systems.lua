@@ -2750,7 +2750,7 @@ function sys.endless_patch:on_insert(entity, store)
                     entity.unit.damage_factor = entity.unit.damage_factor * store.endless.enemy_damage_factor
                 end
                 if entity.motion.max_speed then
-                    entity.motion.max_speed = entity.motion.max_speed * store.endless.enemy_speed_factor
+                    U.speed_mul_self(entity, endless.enemy_speed_factor)
                 end
                 entity.enemy.gold = ceil(entity.enemy.gold * store.endless.enemy_gold_factor)
             elseif entity.soldier then
@@ -2772,7 +2772,7 @@ function sys.endless_patch:on_insert(entity, store)
                     entity.health.hp = entity.health.hp_max
                 end
             elseif entity.tower then
-                entity.tower.damage_factor = entity.tower.damage_factor * store.endless.tower_damage_factor
+                SU.insert_tower_damage_factor_buff(entity, endless.tower_damage_factor)
                 SU.insert_tower_cooldown_buff(store.tick_ts, entity, endless.tower_cooldown_factor)
             end
         end
