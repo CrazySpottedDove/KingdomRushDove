@@ -34,9 +34,9 @@ end
 -- 获取远程旧索引
 local git_show_cmd
 if is_windows then
-    git_show_cmd = 'git show origin/master:_assets/assets_index.lua > _assets/assets_index.remote.lua || exit /b 0'
+    git_show_cmd = 'git show origin/dev:_assets/assets_index.lua > _assets/assets_index.remote.lua || exit /b 0'
 else
-    git_show_cmd = 'git show origin/master:_assets/assets_index.lua > _assets/assets_index.remote.lua || true'
+    git_show_cmd = 'git show origin/dev:_assets/assets_index.lua > _assets/assets_index.remote.lua || true'
 end
 os.execute(git_show_cmd)
 local old_index = {}
@@ -139,6 +139,30 @@ else
             table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
         end
     end
+end
+
+-- 让用户确认是否上传。如果是，用户按回车，否则，可以按 q 退出
+if next(upload_batches) == nil then
+    print(COLOR.green.."没有需要上传的资源，退出。"..COLOR.reset)
+    os.exit(0)
+end
+print(COLOR.yellow.."准备上传以下资源到 GitHub Release："..COLOR.reset)
+for release, files in pairs(upload_batches) do
+    print(COLOR.blue.."[tag]: ", release, "batch_size: ", #files)
+    for _, file in ipairs(files) do
+        print("  " .. file)
+    end
+end
+print(COLOR.yellow.."按回车继续上传，或按 q 退出..."..COLOR.reset)
+local answer = io.read()
+if answer:lower() == "q" then
+    print(COLOR.red.."上传已取消，退出。"..COLOR.reset)
+    os.exit(0)
+end
+-- 也检测是否是回车，避免误触
+if answer ~= "" then
+    print(COLOR.red.."误触，退出。"..COLOR.reset)
+    os.exit(0)
 end
 
 -- 执行上传
