@@ -31,6 +31,11 @@ package:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	git add .
 	git commit -m "LAST VERSION: $(CURRENT_ID)"
+	git checkout master
+	git merge dev
+	git push origin master
+	git push gitee master
+	git checkout dev
 
 branch:
 	@bash $(MAKE_FILE_DIR)/branch.sh

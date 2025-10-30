@@ -88,7 +88,7 @@ local function engineer_focus_bomb_update(this, store, script)
     end
     local enemies = U.find_enemies_in_range(store, b.to, 0, dradius, b.damage_flags, b.damage_bans)
     if enemies then
-        for i=1,#enemies do
+        for i = 1, #enemies do
             local enemy = enemies[i]
             local d = E:create_entity("damage")
 
@@ -254,7 +254,9 @@ function EU.init_endless(level_name, groups)
             table.insert(endless.available_paths, i)
         end
         endless.only_fly_paths = table.deepclone(endless.available_paths)
+        endless.only_water_paths = table.deepclone(endless.available_paths)
         endless.special_paths = table.deepclone(endless.available_paths)
+        local fixed_special_paths = {}
         for _, group in pairs(groups) do
             for _, wave in pairs(group.waves) do
                 for _, spawn in pairs(wave.spawns) do
@@ -263,6 +265,10 @@ function EU.init_endless(level_name, groups)
                         if endless.only_fly_paths[wave.path_index] and band(tpl.vis.flags, F_FLYING) == 0 then
                             endless.only_fly_paths[wave.path_index] = false
                         end
+                        if endless.only_water_paths[wave.path_index] and (not tpl.water) and
+                            band(tpl.vis.flags, F_FLYING) == 0 and band(tpl.vis.flags, F_FLYING_FAKE) == 0 then
+                            endless.only_water_paths[wave.path_index] = false
+                        end
                         endless.extra_cash = endless.extra_cash + (tpl.enemy.gold or 0) * spawn.max
                         if not endless.enemy_weight_map[spawn.creep] then
                             endless.enemy_weight_map[spawn.creep] = get_enemy_weight(spawn.creep)
@@ -270,13 +276,19 @@ function EU.init_endless(level_name, groups)
                         if endless.special_paths[wave.path_index] then
                             endless.special_paths[wave.path_index] = nil
                         end
+                    else
+                        fixed_special_paths[wave.path_index] = true
                     end
                 end
             end
         end
+        for k, v in pairs(fixed_special_paths) do
+            endless.special_paths[k] = true
+        end
         for k, v in pairs(endless.special_paths) do
             endless.available_paths[k] = nil
             endless.only_fly_paths[k] = nil
+            endless.only_water_paths[k] = nil
         end
         endless.enemy_list = table.keys(endless.enemy_weight_map)
         endless.spawn_count_per_wave = math.ceil(total_spawns / #endless.available_paths)
@@ -342,6 +354,14 @@ function EU.generate_group(endless)
                     table.insert(wave_enemy_list, name)
                 end
             end
+        elseif endless.only_water_paths[wave.path_index] then
+            wave_enemy_list = {}
+            for _, name in pairs(endless.enemy_list) do
+                local tpl = E:get_template(name)
+                if tpl.water or band(tpl.vis.flags, F_FLYING) ~= 0 or band(tpl.vis.flags, F_FLYING_FAKE) ~= 0 then
+                    table.insert(wave_enemy_list, name)
+                end
+            end
         end
         for j = 1, endless.spawn_count_per_wave do
             local this_spawn_weight = math.ceil(endless.enemy_weight_per_wave / endless.spawn_count_per_wave *
@@ -375,6 +395,7 @@ function EU.generate_group(endless)
     end
     return group
 end
+
 function EU.patch_enemy_growth(endless)
     local imax = 2
     if math.random() < 0.1 then
@@ -418,12 +439,18 @@ function EU.patch_enemy_growth(endless)
         end
     end
 end
+-- 对于友方buff，只需在这两个表里加上两个同名函数
+-- 考虑一次性的 patch，一般用于初始化
+local patch_upgrade_map = {}
+-- 考虑游戏内的 patch，还需要考虑游戏内实体，且每次升级都会调用
+local patch_upgrade_in_game_map = {}
 
-function EU.patch_archer_bleed(level)
+function patch_upgrade_map.archer_bleed(level, endless)
     local mod = E:get_template("mod_blood_elves")
     mod.damage_factor = 0.1 + friend_buff.archer_bleed * level
 end
-function EU.patch_archer_insight(level)
+
+function patch_upgrade_map.archer_insight(level, endless)
     for _, name in pairs(UP:arrows()) do
         local arrow = E:get_template(name)
         if not arrow._endless_archer_insight then
@@ -433,8 +460,8 @@ function EU.patch_archer_insight(level)
         mod.modifier.health_damage_factor_inc = level * friend_buff.archer_insight
     end
 end
-function EU.patch_archer_multishot(level)
-    for _, name in pairs(table.append(UP:arrows(),{"arrow_arcane_burst"},true)) do
+function patch_upgrade_map.archer_multishot(level, endless)
+    for _, name in pairs(table.append(UP:arrows(), {"arrow_arcane_burst"}, true)) do
         local arrow = E:get_template(name)
         if not arrow._endless_multishot then
             arrow.main_script.insert = U.function_append(arrow.main_script.insert,
@@ -443,8 +470,8 @@ function EU.patch_archer_multishot(level)
         arrow._endless_multishot = level
     end
 end
-function EU.patch_archer_critical(level)
-    for _, name in pairs(table.append(UP:arrows(),{"arrow_arcane_burst"},true)) do
+function patch_upgrade_map.archer_critical(level, endless)
+    for _, name in pairs(table.append(UP:arrows(), {"arrow_arcane_burst"}, true)) do
         local arrow = E:get_template(name)
         if not arrow._endless_archer_critical then
             arrow.main_script.insert = U.function_append(function(this, store, script)
@@ -466,13 +493,13 @@ function EU.patch_archer_critical(level)
     end
 end
 
-function EU.patch_rain_count_inc(level)
+function patch_upgrade_map.rain_count_inc(level, endless)
     local controller = E:get_template("power_fireball_control")
     controller.cataclysm_count = controller.cataclysm_count + level * friend_buff.rain_count_inc
     controller.fireball_count = controller.fireball_count + level * friend_buff.rain_count_inc
 end
 
-function EU.patch_rain_damage_inc(level)
+function patch_upgrade_map.rain_damage_inc(level, endless)
     local fireball = E:get_template("power_fireball")
     fireball.bullet.damage_min = fireball.bullet.damage_min + level * friend_buff.rain_damage_inc
     fireball.bullet.damage_max = fireball.bullet.damage_max + level * friend_buff.rain_damage_inc
@@ -494,7 +521,7 @@ function EU.patch_rain_damage_inc(level)
     thunder.thunders[2].damage_max = thunder.thunders[2].damage_max + level * friend_buff.rain_damage_inc * 0.5
 end
 
-function EU.patch_rain_radius_mul(level)
+function patch_upgrade_map.rain_radius_mul(level, endless)
     local fireball = E:get_template("power_fireball")
     fireball.bullet.damage_radius = fireball.bullet.damage_radius * friend_buff.rain_radius_mul ^ level
     fireball.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
@@ -506,12 +533,12 @@ function EU.patch_rain_radius_mul(level)
     scorched_earth.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
 end
 
-function EU.patch_rain_cooldown_dec(level)
+function patch_upgrade_map.rain_cooldown_dec(level, endless)
     local controller = E:get_template("power_fireball_control")
     controller.cooldown = controller.cooldown - level * friend_buff.rain_cooldown_dec
 end
 
-function EU.patch_rain_scorch_damage_true(level)
+function patch_upgrade_map.rain_scorch_damage_true(level, endless)
     local scorched_earth = E:get_template("power_scorched_earth")
     scorched_earth.aura.damage_type = DAMAGE_TRUE
     scorched_earth.aura.damage_min = scorched_earth.aura.damage_min + level * friend_buff.rain_scorch_damage_true
@@ -522,7 +549,7 @@ function EU.patch_rain_scorch_damage_true(level)
     scorched_water.aura.damage_max = scorched_water.aura.damage_max + level * friend_buff.rain_scorch_damage_true
 end
 
-function EU.patch_rain_thunder(level)
+function patch_upgrade_map.rain_thunder(level, endless)
     local controller = E:get_template("power_fireball_control")
     if not controller._endless_rain_thunder then
         controller.main_script.insert = U.function_append(controller.main_script.insert, function(this, store)
@@ -538,7 +565,7 @@ function EU.patch_rain_thunder(level)
     end
 end
 
-function EU.patch_barrack_luck(level)
+function patch_upgrade_map.barrack_luck(level, endless)
     for _, name in pairs(UP:barrack_soldiers()) do
         local s = E:get_template(name)
         if not s._endless_barrack_luck then
@@ -550,7 +577,7 @@ function EU.patch_barrack_luck(level)
     end
 end
 
-function EU.patch_barrack_unity(level)
+function patch_upgrade_map.barrack_unity(level, endless)
     for _, name in pairs(UP:towers_with_barrack()) do
         if name ~= "tower_pandas_lvl4" then
             local t = E:get_template(name)
@@ -563,7 +590,7 @@ function EU.patch_barrack_unity(level)
     end
 end
 
-function EU.patch_barrack_synergy(level)
+function patch_upgrade_map.barrack_synergy(level, endless)
     for _, name in pairs(UP:barrack_soldiers()) do
         local s = E:get_template(name)
         if not s._barrack_synergy then
@@ -589,7 +616,7 @@ function EU.patch_barrack_synergy(level)
     m.extra_damage = level * friend_buff.barrack_synergy
 end
 
-function EU.patch_barrack_rally(level)
+function patch_upgrade_map.barrack_rally(level, endless)
     for _, name in pairs(UP:towers_with_barrack()) do
         local t = E:get_template(name)
         t.barrack.rally_range = math.huge
@@ -600,9 +627,9 @@ end
 local bombs = {"bomb", "bomb_dynamite", "bomb_black", "bomb_musketeer", "dwarf_barrel", "pirate_watchtower_bomb",
                "bomb_molotov", "bomb_molotov_big", "bomb_bfg", "bomb_bfg_fragment", "bomb_mecha",
                "tower_tricannon_bomb", "tower_tricannon_bomb_bombardment_bomb", "rock_druid", "rock_entwood",
-               "rock_druid"}
+               "rock_druid", "bullet_tower_demon_pit_basic_attack_lvl4", "bullet_tower_flamespitter_skill_bomb"}
 
-function EU.patch_engineer_focus(level)
+function patch_upgrade_map.engineer_focus(level, endless)
     for _, name in pairs(bombs) do
         local b = E:get_template(name)
         if not b._endless_engineer_focus then
@@ -655,20 +682,26 @@ function EU.patch_engineer_focus(level)
     tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
     tower = E:get_template("tower_frankenstein")
     tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
+    tower = E:get_template("tower_flamespitter_lvl4")
+    tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
     local missile = E:get_template("missile_bfg")
     if not missile.bullet._engineer_focus_damage_min then
         missile.bullet._engineer_focus_damage_min = missile.bullet.damage_min
         missile.bullet._engineer_focus_damage_max = missile.bullet.damage_max
     end
-    missile.bullet.damage_min = missile.bullet._engineer_focus_damage_min * (1 + 0.8 * friend_buff.engineer_focus * level)
-    missile.bullet.damage_max = missile.bullet._engineer_focus_damage_max * (1 + 0.8 * friend_buff.engineer_focus * level)
+    missile.bullet.damage_min = missile.bullet._engineer_focus_damage_min *
+                                    (1 + 0.8 * friend_buff.engineer_focus * level)
+    missile.bullet.damage_max = missile.bullet._engineer_focus_damage_max *
+                                    (1 + 0.8 * friend_buff.engineer_focus * level)
     missile = E:get_template("missile_mecha")
     if not missile.bullet._engineer_focus_damage_min then
         missile.bullet._engineer_focus_damage_min = missile.bullet.damage_min
         missile.bullet._engineer_focus_damage_max = missile.bullet.damage_max
     end
-    missile.bullet.damage_min = missile.bullet._engineer_focus_damage_min * (1 + 0.8 * friend_buff.engineer_focus * level)
-    missile.bullet.damage_max = missile.bullet._engineer_focus_damage_max * (1 + 0.8 * friend_buff.engineer_focus * level)
+    missile.bullet.damage_min = missile.bullet._engineer_focus_damage_min *
+                                    (1 + 0.8 * friend_buff.engineer_focus * level)
+    missile.bullet.damage_max = missile.bullet._engineer_focus_damage_max *
+                                    (1 + 0.8 * friend_buff.engineer_focus * level)
 end
 
 local function endless_engineer_aftermath_ray_remove(this, store)
@@ -681,7 +714,7 @@ local function endless_engineer_aftermath_ray_remove(this, store)
     return true
 end
 
-function EU.patch_engineer_aftermath(level)
+function patch_upgrade_map.engineer_aftermath(level, endless)
     for _, name in pairs(table.append(bombs, {"missile_mecha"}, true)) do
         local b = E:get_template(name)
         if not b._endless_engineer_aftermath then
@@ -706,9 +739,18 @@ function EU.patch_engineer_aftermath(level)
         ray.main_script.remove = U.function_append(ray.main_script.remove, endless_engineer_aftermath_ray_remove)
         ray._endless_engineer_aftermath = true
     end
+    local tower = E:get_template("tower_flamespitter_lvl4")
+    if not tower._endless_engineer_aftermath then
+        tower.attacks.range = tower.attacks.range * (1 + friend_buff.engineer_seek)
+        tower._endless_engineer_aftermath = true
+        tower._endless_engineer_aftermath_last_level = 0
+    end
+    tower.tower.damage_factor = tower.tower.damage_factor + (level - tower._endless_engineer_aftermath_last_level) *
+                                    friend_buff.engineer_aftermath * 0.8
+    tower._endless_engineer_aftermath_last_level = level
 end
 
-function EU.patch_engineer_seek(level)
+function patch_upgrade_map.engineer_seek(level, endless)
     local t = E:get_template("tower_engineer_1")
     local function clear_flying_bans(attack)
         attack.vis_bans = U.flag_clear(attack.vis_bans, F_FLYING)
@@ -739,6 +781,8 @@ function EU.patch_engineer_seek(level)
     t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
     t = E:get_template("tower_dwaarp")
     t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
+    t = E:get_template("tower_flamespitter_lvl4")
+    t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
 end
 
 local function fireball_quick_up(this, store)
@@ -747,7 +791,7 @@ local function fireball_quick_up(this, store)
     return true
 end
 
-function EU.patch_engineer_fireball(level)
+function patch_upgrade_map.engineer_fireball(level, endless)
     for _, name in pairs(bombs) do
         local b = E:get_template(name)
         if not b._endless_engineer_fireball then
@@ -765,10 +809,16 @@ function EU.patch_engineer_fireball(level)
         ray.main_script.remove = U.function_append(ray.main_script.remove, fireball_quick_up)
         ray._endless_engineer_fireball = true
     end
+    local flame = E:get_template("fx_tower_flamespitter_flame")
+    if not flame._endless_engineer_fireball then
+        E:add_comps(flame, "main_script")
+        flame._endless_engineer_fireball = true
+        flame.main_script.remove = U.function_append(flame.main_script.remove, fireball_quick_up)
+    end
 end
 
-function EU.patch_mage_thunder(level)
-    for _, name in pairs(table.append(UP:bolts(), {"ray_arcane_disintegrate"}, true)) do
+function patch_upgrade_map.mage_thunder(level, endless)
+    for _, name in pairs(table.append(UP:bolts(), {"ray_arcane_disintegrate", "bullet_tower_ray_lvl4"}, true)) do
         local bolt = E:get_template(name)
         if not bolt._endless_mage_thunder then
             bolt._endless_mage_thunder = true
@@ -821,7 +871,7 @@ function EU.patch_mage_thunder(level)
     end
 end
 
-function EU.patch_mage_shatter(level)
+function patch_upgrade_map.mage_shatter(level, endless)
     for _, name in pairs(table.append(UP:bolts(), {"bullet_pixie_poison"}, true)) do
         local bolt = E:get_template(name)
         if not bolt._endless_mage_shatter then
@@ -843,7 +893,7 @@ function EU.patch_mage_shatter(level)
     end
 end
 
-function EU.patch_mage_chain(level)
+function patch_upgrade_map.mage_chain(level, endless)
     for _, name in pairs(table.append(UP:bolts(),
         {"bullet_pixie_poison", "bullet_pixie_instakill", "ray_arcane_disintegrate"})) do
         local bolt = E:get_template(name)
@@ -860,7 +910,7 @@ function EU.patch_mage_chain(level)
                             return e.id ~= target.id
                         end)
                     if enemies then
-                        for i=1, #enemies do
+                        for i = 1, #enemies do
                             local enemy = enemies[i]
                             local bolt = E:create_entity(this.template_name)
                             bolt.bullet.target_id = enemy.id
@@ -899,10 +949,301 @@ function EU.patch_mage_chain(level)
     end
 end
 
-function EU.patch_mage_curse(level)
+function patch_upgrade_map.mage_curse(level, endless)
     local curse = E:get_template("mod_slow_curse")
     curse.slow.factor = friend_buff.mage_curse_factor
     curse.slow.duration = friend_buff.mage_curse_duration
+end
+
+function patch_upgrade_map.ban_rain(level, endless)
+    for _, name in pairs(EL.rain) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_map.ban_archer(level, endless)
+    for _, name in pairs(EL.archer) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_map.ban_barrack(level, endless)
+    for _, name in pairs(EL.barrack) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_map.ban_engineer(level, endless)
+    for _, name in pairs(EL.engineer) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_map.ban_mage(level, endless)
+    for _, name in pairs(EL.mage) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_in_game_map.ban_rain(level, store, endless)
+    for _, name in pairs(EL.rain) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+function patch_upgrade_in_game_map.ban_archer(level, store, endless)
+    for _, name in pairs(EL.archer) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_in_game_map.ban_barrack(level, store, endless)
+    for _, name in pairs(EL.barrack) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_in_game_map.ban_engineer(level, store, endless)
+    for _, name in pairs(EL.engineer) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_in_game_map.ban_mage(level, store, endless)
+    for _, name in pairs(EL.mage) do
+        table.removeobject(endless.upgrade_options, name)
+        table.removeobject(endless.gold_extra_upgrade_options, name)
+    end
+end
+
+function patch_upgrade_in_game_map.health(level, store, endless)
+    for _, s in pairs(store.soldiers) do
+        if s.health then
+            s.health.hp_max = s.health.hp_max * friend_buff.health_factor
+            s.health.hp = s.health.hp_max
+        end
+    end
+    endless.soldier_health_factor = endless.soldier_health_factor * friend_buff.health_factor
+end
+
+function patch_upgrade_in_game_map.soldier_damage(level, store, endless)
+    for _, s in pairs(store.soldiers) do
+        if s.unit then
+            s.unit.damage_factor = s.unit.damage_factor * friend_buff.soldier_damage_factor
+        end
+    end
+    endless.soldier_damage_factor = endless.soldier_damage_factor * friend_buff.soldier_damage_factor
+end
+
+function patch_upgrade_in_game_map.soldier_cooldown(level, store, endless)
+    for _, s in pairs(store.soldiers) do
+        if s.cooldown_factor then
+            s.cooldown_factor = s.cooldown_factor * friend_buff.soldier_cooldown_factor
+        end
+    end
+    endless.soldier_cooldown_factor = endless.soldier_cooldown_factor * friend_buff.soldier_cooldown_factor
+end
+
+function patch_upgrade_in_game_map.tower_damage(level, store, endless)
+    for _, t in pairs(store.towers) do
+        SU.insert_tower_damage_factor_buff(t, friend_buff.tower_damage_factor)
+    end
+    endless.tower_damage_factor = endless.tower_damage_factor + friend_buff.tower_damage_factor
+end
+
+function patch_upgrade_in_game_map.tower_cooldown(level, store, endless)
+    for _, t in pairs(store.towers) do
+        SU.insert_tower_cooldown_buff(store.tick_ts, t, friend_buff.tower_cooldown_factor)
+    end
+    endless.tower_cooldown_factor = endless.tower_cooldown_factor * friend_buff.tower_cooldown_factor
+end
+
+function patch_upgrade_in_game_map.hero_damage(level, store, endless)
+    for _, h in pairs(store.soldiers) do
+        if h.hero then
+            h.unit.damage_factor = h.unit.damage_factor * friend_buff.hero_damage_factor
+            h.health.hp_max = h.health.hp_max * friend_buff.hero_health_factor
+            h.health.hp = h.health.hp_max
+        end
+    end
+    endless.hero_damage_factor = endless.hero_damage_factor * friend_buff.hero_damage_factor
+    endless.hero_health_factor = endless.hero_health_factor * friend_buff.hero_health_factor
+end
+
+function patch_upgrade_in_game_map.hero_cooldown(level, store, endless)
+    for _, h in pairs(store.soldiers) do
+        if h.hero then
+            SU.insert_unit_cooldown_buff(store.tick_ts, h, friend_buff.hero_cooldown_factor)
+        end
+    end
+    endless.hero_cooldown_factor = endless.hero_cooldown_factor * friend_buff.hero_cooldown_factor
+end
+
+function patch_upgrade_in_game_map.archer_bleed(level, store, endless)
+    patch_upgrade_map.archer_bleed(level)
+end
+
+function patch_upgrade_in_game_map.archer_multishot(level, store, endless)
+    patch_upgrade_map.archer_multishot(level)
+end
+
+function patch_upgrade_in_game_map.archer_insight(level, store, endless)
+    patch_upgrade_map.archer_insight(level)
+end
+
+function patch_upgrade_in_game_map.archer_critical(level, store, endless)
+    patch_upgrade_map.archer_critical(level)
+end
+
+function patch_upgrade_in_game_map.rain_count_inc(level, store, endless)
+    patch_upgrade_map.rain_count_inc(1)
+end
+
+function patch_upgrade_in_game_map.rain_damage_inc(level, store, endless)
+    patch_upgrade_map.rain_damage_inc(1)
+end
+
+function patch_upgrade_in_game_map.rain_radius_mul(level, store, endless)
+    patch_upgrade_map.rain_radius_mul(1)
+end
+
+function patch_upgrade_in_game_map.rain_cooldown_dec(level, store, endless)
+    patch_upgrade_map.rain_cooldown_dec(1)
+    store.game_gui.power_1:set_cooldown_time(E:get_template("power_fireball_control").cooldown)
+end
+
+function patch_upgrade_in_game_map.rain_scorch_damage_true(level, store, endless)
+    patch_upgrade_map.rain_scorch_damage_true(1)
+end
+
+function patch_upgrade_in_game_map.rain_thunder(level, store, endless)
+    patch_upgrade_map.rain_thunder(1)
+end
+
+function patch_upgrade_in_game_map.more_gold(level, store, endless)
+    endless.enemy_gold_factor = endless.enemy_gold_factor + friend_buff.more_gold
+end
+
+function patch_upgrade_in_game_map.barrack_rally(level, store, endless)
+    for _, t in pairs(store.towers) do
+        if t.barrack then
+            t.barrack.rally_range = math.huge
+        end
+    end
+    patch_upgrade_map.barrack_rally(level)
+end
+
+function patch_upgrade_in_game_map.barrack_unity(level, store, endless)
+    for _, t in pairs(store.towers) do
+        if t.barrack then
+            t.barrack.max_soldiers = t.barrack.max_soldiers + friend_buff.barrack_unity_count
+        elseif t.template_name == "tower_pixie" then
+            t.attacks.range = math.huge
+        end
+    end
+    patch_upgrade_map.barrack_unity(level)
+end
+
+function patch_upgrade_in_game_map.barrack_luck(level, store, endless)
+    patch_upgrade_map.barrack_luck(level)
+    for _, s in pairs(store.soldiers) do
+        if s.health then
+            if not s._endless_barrack_luck then
+                s.health.on_damage = U.function_append(s.health.on_damage, function(this, store, damage)
+                    return math.random() > this._endless_barrack_luck
+                end)
+            end
+            s._endless_barrack_luck = level * friend_buff.barrack_luck
+        end
+    end
+end
+
+function patch_upgrade_in_game_map.barrack_synergy(level, store, endless)
+    for _, s in pairs(store.soldiers) do
+        if not s._barrack_synergy_aura then
+            local a = E:create_entity("endless_barrack_synergy_aura")
+            a.aura.source_id = s.id
+            queue_insert(store, a)
+            s._barrack_synergy_aura = a
+            if s.main_script then
+                s.main_script.remove = U.function_append(s.main_script.remove, function(this, store)
+                    if this._barrack_synergy_aura then
+                        queue_remove(this._barrack_synergy_aura)
+                    end
+                    return true
+                end)
+            end
+        end
+    end
+    patch_upgrade_map.barrack_synergy(level)
+end
+
+function patch_upgrade_in_game_map.engineer_focus(level, store, endless)
+    for _, t in pairs(store.towers) do
+        if t.template_name == "tower_tesla" or t.template_name == "tower_dwaarp" or t.template_name ==
+            "tower_frankenstein" or t.template_name == "tower_flamespitter_lvl4" then
+            SU.insert_tower_damage_factor_buff(t, friend_buff.engineer_focus * 0.8)
+        end
+    end
+    patch_upgrade_map.engineer_focus(1)
+end
+
+function patch_upgrade_in_game_map.engineer_aftermath(level, store, endless)
+    patch_upgrade_map.engineer_aftermath(level)
+end
+
+function patch_upgrade_in_game_map.engineer_seek(level, store, endless)
+    patch_upgrade_map.engineer_seek(level)
+    for _, t in pairs(store.towers) do
+        if table.contains({"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_druid",
+                           "tower_entwood", "tower_tricannon_lvl4"}, t.template_name) then
+            t.attacks.list[1].vis_bans = U.flag_clear(t.attacks.list[1].vis_bans, F_FLYING)
+        end
+        if t.template_name == "tower_entwood" or t.template_name == "tower_tricannon_lvl4" then
+            t.attacks.list[2].vis_bans = U.flag_clear(t.attacks.list[2].vis_bans, F_FLYING)
+        elseif t.template_name == "tower_tesla" then
+            t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
+            t.attacks.list[1].range = t.attacks.list[1].range * (1 + friend_buff.engineer_seek)
+        elseif t.template_name == "tower_frankenstein" then
+            t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
+        elseif t.template_name == "tower_dwaarp" then
+            t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
+        elseif t.template_name == "tower_mech" then
+            for _, s in pairs(t.barrack.soldiers) do
+                s.attacks.list[1].vis_bans = U.flag_clear(s.attacks.list[1].vis_bans, F_FLYING)
+            end
+        elseif t.template_name == "tower_flamespitter_lvl4" then
+            t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
+        end
+    end
+end
+
+function patch_upgrade_in_game_map.engineer_fireball(level, store, endless)
+    patch_upgrade_map.engineer_fireball(1)
+end
+
+function patch_upgrade_in_game_map.mage_thunder(level, store, endless)
+    patch_upgrade_map.mage_thunder(level)
+end
+
+function patch_upgrade_in_game_map.mage_shatter(level, store, endless)
+    patch_upgrade_map.mage_shatter(level)
+end
+
+function patch_upgrade_in_game_map.mage_chain(level, store, endless)
+    patch_upgrade_map.mage_chain(level)
+end
+
+function patch_upgrade_in_game_map.mage_curse(level, store, endless)
+    patch_upgrade_map.mage_curse(level)
 end
 
 function EU.patch_upgrade_in_game(key, store, endless)
@@ -916,290 +1257,17 @@ function EU.patch_upgrade_in_game(key, store, endless)
     if EL.force_upgrade_max_levels[key] and endless.upgrade_levels[key] >= EL.force_upgrade_max_levels[key] then
         table.removeobject(endless.gold_extra_upgrade_options, key)
     end
-    if key == "ban_rain" then
-        for _, name in pairs(EL.rain) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    elseif key == "ban_archer" then
-        for _, name in pairs(EL.archer) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-
-        end
-    elseif key == "ban_barrack" then
-        for _, name in pairs(EL.barrack) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    elseif key == "ban_engineer" then
-        for _, name in pairs(EL.engineer) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    elseif key == "ban_mage" then
-        for _, name in pairs(EL.mage) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    elseif key == "health" then
-        for _, s in pairs(store.soldiers) do
-            if s.health then
-                s.health.hp_max = s.health.hp_max * friend_buff.health_factor
-                s.health.hp = s.health.hp_max
-            end
-        end
-        endless.soldier_health_factor = endless.soldier_health_factor * friend_buff.health_factor
-    elseif key == "soldier_damage" then
-        for _, s in pairs(store.soldiers) do
-            if s.unit then
-                s.unit.damage_factor = s.unit.damage_factor * friend_buff.soldier_damage_factor
-            end
-        end
-        endless.soldier_damage_factor = endless.soldier_damage_factor * friend_buff.soldier_damage_factor
-    elseif key == "soldier_cooldown" then
-        for _, s in pairs(store.soldiers) do
-            if s.cooldown_factor then
-                s.cooldown_factor = s.cooldown_factor * friend_buff.soldier_cooldown_factor
-            end
-        end
-        endless.soldier_cooldown_factor = endless.soldier_cooldown_factor * friend_buff.soldier_cooldown_factor
-    elseif key == "tower_damage" then
-        for _, t in pairs(store.towers) do
-            SU.insert_tower_damage_factor_buff(t, friend_buff.tower_damage_factor)
-        end
-        endless.tower_damage_factor = endless.tower_damage_factor + friend_buff.tower_damage_factor
-    elseif key == "tower_cooldown" then
-        for _, t in pairs(store.towers) do
-            SU.insert_tower_cooldown_buff(store.tick_ts, t, friend_buff.tower_cooldown_factor)
-        end
-        endless.tower_cooldown_factor = endless.tower_cooldown_factor * friend_buff.tower_cooldown_factor
-    elseif key == "hero_damage" then
-        for _, h in pairs(store.soldiers) do
-            if h.hero then
-                h.unit.damage_factor = h.unit.damage_factor * friend_buff.hero_damage_factor
-                h.health.hp_max = h.health.hp_max * friend_buff.hero_health_factor
-                h.health.hp = h.health.hp_max
-            end
-        end
-        endless.hero_damage_factor = endless.hero_damage_factor * friend_buff.hero_damage_factor
-        endless.hero_health_factor = endless.hero_health_factor * friend_buff.hero_health_factor
-    elseif key == "hero_cooldown" then
-        for _, h in pairs(store.soldiers) do
-            if h.hero then
-                h.cooldown_factor = h.cooldown_factor * friend_buff.hero_cooldown_factor
-            end
-        end
-        endless.hero_cooldown_factor = endless.hero_cooldown_factor * friend_buff.hero_cooldown_factor
-    elseif key == "archer_bleed" then
-        EU.patch_archer_bleed(endless.upgrade_levels[key])
-    elseif key == "archer_multishot" then
-        EU.patch_archer_multishot(endless.upgrade_levels[key])
-    elseif key == "archer_insight" then
-        EU.patch_archer_insight(endless.upgrade_levels[key])
-    elseif key == "archer_critical" then
-        EU.patch_archer_critical(endless.upgrade_levels[key])
-    elseif key == "rain_count_inc" then
-        EU.patch_rain_count_inc(1)
-    elseif key == "rain_damage_inc" then
-        EU.patch_rain_damage_inc(1)
-    elseif key == "rain_radius_mul" then
-        EU.patch_rain_radius_mul(1)
-    elseif key == "rain_cooldown_dec" then
-        EU.patch_rain_cooldown_dec(1)
-        store.game_gui.power_1:set_cooldown_time(E:get_template("power_fireball_control").cooldown)
-    elseif key == "rain_scorch_damage_true" then
-        EU.patch_rain_scorch_damage_true(1)
-    elseif key == "rain_thunder" then
-        EU.patch_rain_thunder(1)
-    elseif key == "more_gold" then
-        endless.enemy_gold_factor = endless.enemy_gold_factor + friend_buff.more_gold
-    elseif key == "barrack_rally" then
-        for _, t in pairs(store.towers) do
-            if t.barrack then
-                t.barrack.rally_range = math.huge
-            end
-        end
-        EU.patch_barrack_rally(endless.upgrade_levels[key])
-    elseif key == "barrack_unity" then
-        for _, t in pairs(store.towers) do
-            if t.barrack then
-                t.barrack.max_soldiers = t.barrack.max_soldiers + friend_buff.barrack_unity_count
-            elseif t.template_name == "tower_pixie" then
-                t.attacks.range = math.huge
-            end
-        end
-        EU.patch_barrack_unity(endless.upgrade_levels[key])
-    elseif key == "barrack_luck" then
-        EU.patch_barrack_luck(endless.upgrade_levels[key])
-        for _, s in pairs(store.soldiers) do
-            if s.health then
-                if not s._endless_barrack_luck then
-                    s.health.on_damage = U.function_append(s.health.on_damage, function(this, store, damage)
-                        return math.random() > this._endless_barrack_luck
-                    end)
-                end
-                s._endless_barrack_luck = endless.upgrade_levels[key] * friend_buff.barrack_luck
-            end
-        end
-    elseif key == "barrack_synergy" then
-        for _, s in pairs(store.soldiers) do
-            if not s._barrack_synergy_aura then
-                local a = E:create_entity("endless_barrack_synergy_aura")
-                a.aura.source_id = s.id
-                queue_insert(store, a)
-                s._barrack_synergy_aura = a
-                if s.main_script then
-                    s.main_script.remove = U.function_append(s.main_script.remove, function(this, store)
-                        if this._barrack_synergy_aura then
-                            queue_remove(this._barrack_synergy_aura)
-                        end
-                        return true
-                    end)
-                end
-            end
-        end
-        EU.patch_barrack_synergy(endless.upgrade_levels[key])
-    elseif key == "engineer_focus" then
-        for _, t in pairs(store.towers) do
-            if t.template_name == "tower_tesla" or t.template_name == "tower_dwaarp" or t.template_name ==
-                "tower_frankenstein" then
-                t.tower.damage_factor = t.tower.damage_factor + friend_buff.engineer_focus * 0.8
-            end
-        end
-        EU.patch_engineer_focus(1)
-    elseif key == "engineer_aftermath" then
-        EU.patch_engineer_aftermath(endless.upgrade_levels[key])
-    elseif key == "engineer_seek" then
-        EU.patch_engineer_seek(endless.upgrade_levels[key])
-        for _, t in pairs(store.towers) do
-            if table.contains({"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_druid",
-                               "tower_entwood", "tower_tricannon_lvl4"}, t.template_name) then
-                t.attacks.list[1].vis_bans = U.flag_clear(t.attacks.list[1].vis_bans, F_FLYING)
-            end
-            if t.template_name == "tower_entwood" or t.template_name == "tower_tricannon_lvl4" then
-                t.attacks.list[2].vis_bans = U.flag_clear(t.attacks.list[2].vis_bans, F_FLYING)
-            elseif t.template_name == "tower_tesla" then
-                t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-                t.attacks.list[1].range = t.attacks.list[1].range * (1 + friend_buff.engineer_seek)
-            elseif t.template_name == "tower_frankenstein" then
-                t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-            elseif t.template_name == "tower_dwaarp" then
-                t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-            elseif t.template_name == "tower_mech" then
-                for _, s in pairs(t.barrack.soldiers) do
-                    s.attacks.list[1].vis_bans = U.flag_clear(s.attacks.list[1].vis_bans, F_FLYING)
-                end
-            end
-        end
-    elseif key == "engineer_fireball" then
-        EU.patch_engineer_fireball(1)
-    elseif key == "mage_thunder" then
-        EU.patch_mage_thunder(endless.upgrade_levels[key])
-    elseif key == "mage_shatter" then
-        EU.patch_mage_shatter(endless.upgrade_levels[key])
-    elseif key == "mage_chain" then
-        EU.patch_mage_chain(endless.upgrade_levels[key])
-    elseif key == "mage_curse" then
-        EU.patch_mage_curse(endless.upgrade_levels[key])
+    local level = endless.upgrade_levels[key]
+    local patch_func = patch_upgrade_in_game_map[key]
+    if patch_func then
+        patch_func(level, store, endless)
     end
 end
 
 function EU.patch_upgrades(endless)
-    if endless.upgrade_levels.archer_bleed > 0 then
-        EU.patch_archer_bleed(endless.upgrade_levels.archer_bleed)
-    end
-    if endless.upgrade_levels.archer_multishot > 0 then
-        EU.patch_archer_multishot(endless.upgrade_levels.archer_multishot)
-    end
-    if endless.upgrade_levels.archer_insight > 0 then
-        EU.patch_archer_insight(endless.upgrade_levels.archer_insight)
-    end
-    if endless.upgrade_levels.archer_critical > 0 then
-        EU.patch_archer_critical(endless.upgrade_levels.archer_critical)
-    end
-    if endless.upgrade_levels.rain_count_inc > 0 then
-        EU.patch_rain_count_inc(endless.upgrade_levels.rain_count_inc)
-    end
-    if endless.upgrade_levels.rain_damage_inc > 0 then
-        EU.patch_rain_damage_inc(endless.upgrade_levels.rain_damage_inc)
-    end
-    if endless.upgrade_levels.rain_radius_mul > 0 then
-        EU.patch_rain_radius_mul(endless.upgrade_levels.rain_radius_mul)
-    end
-    if endless.upgrade_levels.rain_cooldown_dec > 0 then
-        EU.patch_rain_cooldown_dec(endless.upgrade_levels.rain_cooldown_dec)
-    end
-    if endless.upgrade_levels.rain_scorch_damage_true > 0 then
-        EU.patch_rain_scorch_damage_true(endless.upgrade_levels.rain_scorch_damage_true)
-    end
-    if endless.upgrade_levels.rain_thunder > 0 then
-        EU.patch_rain_thunder(endless.upgrade_levels.rain_thunder)
-    end
-    if endless.upgrade_levels.barrack_rally > 0 then
-        EU.patch_barrack_rally(endless.upgrade_levels.barrack_rally)
-    end
-    if endless.upgrade_levels.barrack_luck > 0 then
-        EU.patch_barrack_luck(endless.upgrade_levels.barrack_luck)
-    end
-    if endless.upgrade_levels.barrack_unity > 0 then
-        EU.patch_barrack_unity(endless.upgrade_levels.barrack_unity)
-    end
-    if endless.upgrade_levels.barrack_synergy > 0 then
-        EU.patch_barrack_synergy(endless.upgrade_levels.barrack_synergy)
-    end
-    if endless.upgrade_levels.engineer_focus > 0 then
-        EU.patch_engineer_focus(endless.upgrade_levels.engineer_focus)
-    end
-    if endless.upgrade_levels.engineer_aftermath > 0 then
-        EU.patch_engineer_aftermath(endless.upgrade_levels.engineer_aftermath)
-    end
-    if endless.upgrade_levels.engineer_seek > 0 then
-        EU.patch_engineer_seek(endless.upgrade_levels.engineer_seek)
-    end
-    if endless.upgrade_levels.engineer_fireball > 0 then
-        EU.patch_engineer_fireball(endless.upgrade_levels.engineer_fireball)
-    end
-    if endless.upgrade_levels.mage_thunder > 0 then
-        EU.patch_mage_thunder(endless.upgrade_levels.mage_thunder)
-    end
-    if endless.upgrade_levels.mage_shatter > 0 then
-        EU.patch_mage_shatter(endless.upgrade_levels.mage_shatter)
-    end
-    if endless.upgrade_levels.mage_chain > 0 then
-        EU.patch_mage_chain(endless.upgrade_levels.mage_chain)
-    end
-    if endless.upgrade_levels.mage_curse > 0 then
-        EU.patch_mage_curse(endless.upgrade_levels.mage_curse)
-    end
-    if endless.upgrade_levels.ban_rain > 0 then
-        for _, name in pairs(EL.rain) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    end
-    if endless.upgrade_levels.ban_archer > 0 then
-        for _, name in pairs(EL.archer) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    end
-    if endless.upgrade_levels.ban_barrack > 0 then
-        for _, name in pairs(EL.barrack) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    end
-    if endless.upgrade_levels.ban_engineer > 0 then
-        for _, name in pairs(EL.engineer) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
-        end
-    end
-    if endless.upgrade_levels.ban_mage > 0 then
-        for _, name in pairs(EL.mage) do
-            table.removeobject(endless.upgrade_options, name)
-            table.removeobject(endless.gold_extra_upgrade_options, name)
+    for k, v in pairs(endless.upgrade_levels) do
+        if v > 0 and patch_upgrade_map[k] then
+            patch_upgrade_map[k](v, endless)
         end
     end
 end

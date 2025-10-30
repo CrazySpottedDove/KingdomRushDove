@@ -103,7 +103,7 @@ end
 ---@param easing string? 缓动函数（可选）
 ---@param fn function? 每帧回调函数（可选）
 function U.y_ease_key(store, key_table, key_name, from, to, duration, easing, fn)
-    U.y_ease_keys(store, { key_table }, { key_name }, { from }, { to }, duration, { easing }, fn)
+    U.y_ease_keys(store, {key_table}, {key_name}, {from}, {to}, duration, {easing}, fn)
 end
 
 ---计算缓动值
@@ -116,51 +116,55 @@ function U.ease_value(from, to, phase, easing)
     return from + (to - from) * U.ease_phase(phase, easing)
 end
 
+local function foremost_enemy_cmp(e1, e2)
+    local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
+    local e2_mocking = band(e2.vis.flags, F_MOCKING) ~= 0
+    local e1_flying = band(e1.vis.flags, F_FLYING) ~= 0
+    local e2_flying = band(e2.vis.flags, F_FLYING) ~= 0
+    -- 优先处理嘲讽标志，且嘲讽对空中单位无保护效果
+    if e1_mocking and not (e2_mocking or e2_flying) then
+        return true
+    elseif not (e1_mocking or e1_flying) and e2_mocking then
+        return false
+    end
+
+    local p1 = e1.nav_path
+    local p2 = e2.nav_path
+
+    return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
+end
+
 ---根据距离终点位置排序敌人
 ---@param enemies table 敌人数组
 ---@return nil
 ---@desc 优先处理嘲讽标志（F_MOCKING），飞行单位不受嘲讽影响
-function U.sort_foremost_enemies(enemies)
-    table.sort(enemies, function(e1, e2)
-        local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
-        local e2_mocking = band(e2.vis.flags, F_MOCKING) ~= 0
-        local e1_flying = band(e1.vis.flags, F_FLYING) ~= 0
-        local e2_flying = band(e2.vis.flags, F_FLYING) ~= 0
-        -- 优先处理嘲讽标志，且嘲讽对空中单位无保护效果
-        if e1_mocking and not (e2_mocking or e2_flying) then
-            return true
-        elseif not (e1_mocking or e1_flying) and e2_mocking then
-            return false
-        end
+local function sort_foremost_enemies(enemies)
+    table.sort(enemies, foremost_enemy_cmp)
+end
 
-        local p1 = e1.nav_path
-        local p2 = e2.nav_path
-
-        return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
-    end)
+local function foremost_enemy_with_flying_preference_cmp(e1, e2)
+    local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
+    local e2_mocking = band(e2.vis.flags, F_MOCKING) ~= 0
+    local e1_flying = band(e1.vis.flags, F_FLYING) ~= 0
+    local e2_flying = band(e2.vis.flags, F_FLYING) ~= 0
+    if e1_flying and not e2_flying then
+        return true
+    elseif e2_flying and not e1_flying then
+        return false
+    elseif e1_mocking and not (e2_mocking or e2_flying) then
+        return true
+    elseif e2_mocking and not (e1_mocking or e1_flying) then
+        return false
+    end
+    local p1 = e1.nav_path
+    local p2 = e2.nav_path
+    return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
 ---根据距离终点位置排序敌人，优先处理飞行单位
 ---@param enemies table 敌人数组
-function U.sort_foremost_enemies_with_flying_preference(enemies)
-    table.sort(enemies, function(e1, e2)
-        local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
-        local e2_mocking = band(e2.vis.flags, F_MOCKING) ~= 0
-        local e1_flying = band(e1.vis.flags, F_FLYING) ~= 0
-        local e2_flying = band(e2.vis.flags, F_FLYING) ~= 0
-        if e1_flying and not e2_flying then
-            return true
-        elseif e2_flying and not e1_flying then
-            return false
-        elseif e1_mocking and not (e2_mocking or e2_flying) then
-            return true
-        elseif e2_mocking and not (e1_mocking or e1_flying) then
-            return false
-        end
-        local p1 = e1.nav_path
-        local p2 = e2.nav_path
-        return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
-    end)
+local function sort_foremost_enemies_with_flying_preference(enemies)
+    table.sort(enemies, foremost_enemy_with_flying_preference_cmp)
 end
 
 ---计算缓动进度
@@ -835,9 +839,9 @@ end
 function U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
     local soldiers = table.filter(entities, function(k, v)
         return not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and
-            band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
-            (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-            (not filter_func or filter_func(v, origin))
+                   band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
+                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
+                   (not filter_func or filter_func(v, origin))
     end)
 
     if not soldiers or #soldiers == 0 then
@@ -905,11 +909,11 @@ end
 function U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
     local targets = table.filter(entities, function(k, v)
         return not v.pending_removal and v.vis and (v.enemy or v.soldier) and v.health and not v.health.dead and
-            band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and
-            U.is_inside_ellipse(v.pos, origin, max_range) and
-            (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and
-            (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-            (not filter_func or filter_func(v, origin))
+                   band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and
+                   U.is_inside_ellipse(v.pos, origin, max_range) and
+                   (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and
+                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
+                   (not filter_func or filter_func(v, origin))
     end)
 
     if not targets or #targets == 0 then
@@ -933,16 +937,17 @@ function U.find_first_enemy(store, origin, min_range, max_range, flags, bans, fi
     bans = bans or 0
     if max_range == math.huge then
         for _, e in pairs(store.enemies) do
-            if not e.pending_removal and not e.health.dead and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) == 0 and
-                (not filter_func or filter_func(e, origin)) then
+            if not e.pending_removal and not e.health.dead and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) ==
+                0 and (not filter_func or filter_func(e, origin)) then
                 return e
             end
         end
         return nil
     end
     return store.enemy_spatial_index:query_first_entity_in_ellipse(origin.x, origin.y, max_range, min_range, function(v)
-        return not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and
-        band(v.vis.bans, flags) == 0 and (not filter_func or filter_func(v, origin))
+        return
+            not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) ==
+                0 and (not filter_func or filter_func(v, origin))
     end)
 end
 
@@ -961,9 +966,9 @@ function U.find_random_target(entities, origin, min_range, max_range, flags, ban
 
     local targets = table.filter(entities, function(k, v)
         return not v.pending_removal and v.health and not v.health.dead and v.vis and band(v.vis.flags, bans) == 0 and
-            band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
-            (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-            (not filter_func or filter_func(v, origin))
+                   band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
+                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
+                   (not filter_func or filter_func(v, origin))
     end)
 
     if not targets or #targets == 0 then
@@ -991,8 +996,8 @@ function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, f
     return store.enemy_spatial_index:query_random_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
             return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-                (not filter_func or filter_func(v, origin))
+                       band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
+                       (not filter_func or filter_func(v, origin))
         end)
 
 end
@@ -1011,9 +1016,10 @@ function U.find_random_enemy_with_pos(store, origin, min_range, max_range, predi
     flags = flags or 0
     bans = bans or 0
 
-    local random_enemy = store.enemy_spatial_index:query_random_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
-        function(e)
-            if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or filter_func and not filter_func(e, origin) then
+    local random_enemy = store.enemy_spatial_index:query_random_entity_in_ellipse(origin.x, origin.y, max_range,
+        min_range, function(e)
+            if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
+                filter_func and not filter_func(e, origin) then
                 return false
             end
 
@@ -1053,8 +1059,8 @@ function U.find_enemies_in_range(store, origin, min_range, max_range, flags, ban
     local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
             return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-                (not filter_func or filter_func(v, origin))
+                       band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
+                       (not filter_func or filter_func(v, origin))
         end)
     if #enemies == 0 then
         return nil
@@ -1075,8 +1081,9 @@ end
 function U.has_enemy_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
     local found = store.enemy_spatial_index:query_first_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
-            return not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                band(v.vis.bans, flags) == 0 and (not filter_func or filter_func(v, origin))
+            return
+                not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) ==
+                    0 and (not filter_func or filter_func(v, origin))
         end)
     return found ~= nil
 end
@@ -1093,9 +1100,17 @@ end
 function U.has_enough_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func, count)
     return store.enemy_spatial_index:query_enough_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
         function(v)
-            return not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                band(v.vis.bans, flags) == 0 and (not filter_func or filter_func(v, origin))
+            return
+                not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) ==
+                    0 and (not filter_func or filter_func(v, origin))
         end, count)
+end
+
+local function nearest_to_goal_cmp(e1, e2)
+    local p1 = e1.enemy.nav_path
+    local p2 = e2.enemy.nav_path
+
+    return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
 ---搜索路径上的敌人
@@ -1110,7 +1125,7 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 路径上的敌人列表
 function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_range, max_path_dist, flags, bans,
-                                 only_upstream, filter_func)
+    only_upstream, filter_func)
     max_path_dist = max_path_dist or 30
     flags = flags or 0
     bans = bans or 0
@@ -1125,11 +1140,11 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
             -- block empty
         else
             for _, e in pairs(entities) do
-                if not e.pending_removal and e.nav_path and e.health and not e.health.dead and e.nav_path.pi == opi and
+                if not e.pending_removal and not e.health.dead and e.nav_path.pi == opi and
                     (only_upstream == true and oni > e.nav_path.ni or only_upstream == false and oni < e.nav_path.ni or
                         only_upstream == nil) and e.vis and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) ==
-                    0 and min_node_range <= abs(e.nav_path.ni - oni) and max_node_range >=
-                    abs(e.nav_path.ni - oni) and (not filter_func or filter_func(e, origin)) then
+                    0 and min_node_range <= abs(e.nav_path.ni - oni) and max_node_range >= abs(e.nav_path.ni - oni) and
+                    (not filter_func or filter_func(e, origin)) then
                     table.insert(result, {
                         enemy = e,
                         origin = n
@@ -1142,16 +1157,11 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
     if not result or #result == 0 then
         return nil
     else
-        table.sort(result, function(e1, e2)
-            local p1 = e1.enemy.nav_path
-            local p2 = e2.enemy.nav_path
-
-            return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
-        end)
-
+        table.sort(result, nearest_to_goal_cmp)
         return result
     end
 end
+
 local function sort_max_hp(a, b)
     return a.health.hp > b.health.hp
 end
@@ -1167,12 +1177,12 @@ end
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table? 血量最高的敌人, table? 敌人预测位置
 function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
-                              min_override_flags)
+    min_override_flags)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
-    local biggest_enemy = store.enemy_spatial_index:query_best_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
-        function(e)
+    local biggest_enemy = store.enemy_spatial_index:query_best_entity_in_ellipse(origin.x, origin.y, max_range,
+        min_range, function(e)
             if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
                 not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
                     not U.is_inside_ellipse(e.pos, origin, min_range)) or filter_func and not filter_func(e, origin) then
@@ -1234,7 +1244,7 @@ end
 ---@param cover_range number 覆盖范围
 ---@return table? 最前面的敌人, table? 所有范围内的敌人, table? 最前面敌人的预测位置
 function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_range, prediction_time, flags, bans,
-                                                 filter_func, min_override_flags, cover_range)
+    filter_func, min_override_flags, cover_range)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
@@ -1267,7 +1277,7 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
     if #enemies == 0 then
         return nil, nil
     else
-        U.sort_foremost_enemies(enemies)
+        sort_foremost_enemies(enemies)
         local foremost_enemy = enemies[1]
         local max_cover_enemy_idx = 1
         for i = 2, #enemies do
@@ -1297,7 +1307,7 @@ end
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table? 最前面的敌人, table? 所有范围内的敌人, table? 最前面敌人的预测位置
 function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, max_range, prediction_time, flags, bans,
-                                                      filter_func, min_override_flags)
+    filter_func, min_override_flags)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
@@ -1330,7 +1340,7 @@ function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, 
     if not enemies or #enemies == 0 then
         return nil, nil
     else
-        U.sort_foremost_enemies_with_flying_preference(enemies)
+        sort_foremost_enemies_with_flying_preference(enemies)
 
         return enemies[1], enemies, enemies[1].__ffe_pos
     end
@@ -1348,7 +1358,7 @@ end
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table? 最前面的敌人, table? 所有范围内的敌人 , table? 最前面敌人的预测位置
 function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
-                               min_override_flags)
+    min_override_flags)
     flags = flags or 0
     bans = bans or 0
     min_override_flags = min_override_flags or 0
@@ -1380,7 +1390,7 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
     if not enemies or #enemies == 0 then
         return nil, nil, nil
     else
-        U.sort_foremost_enemies(enemies)
+        sort_foremost_enemies(enemies)
 
         return enemies[1], enemies, enemies[1].__ffe_pos
     end
@@ -1395,10 +1405,10 @@ end
 function U.find_towers_in_range(entities, origin, attack, filter_func)
     local towers = table.filter(entities, function(k, v)
         return not v.pending_removal and not v.tower.blocked and
-            (not attack.excluded_templates or not table.contains(attack.excluded_templates, v.template_name)) and
-            U.is_inside_ellipse(v.pos, origin, attack.max_range) and
-            (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, origin, attack.min_range)) and
-            (not filter_func or filter_func(v, origin, attack))
+                   (not attack.excluded_templates or not table.contains(attack.excluded_templates, v.template_name)) and
+                   U.is_inside_ellipse(v.pos, origin, attack.max_range) and
+                   (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, origin, attack.min_range)) and
+                   (not filter_func or filter_func(v, origin, attack))
     end)
 
     if not towers or #towers == 0 then
@@ -1569,7 +1579,7 @@ function U.melee_slot_position(soldier, enemy, rank, back)
     end
 
     local soldier_pos = V.v(enemy.pos.x + (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x) *
-        (soldier_on_the_right and 1 or -1),
+                                (soldier_on_the_right and 1 or -1),
         enemy.pos.y + enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
 
     return soldier_pos, soldier_on_the_right
@@ -1613,7 +1623,6 @@ function U.melee_slot_enemy_position(enemy, soldier, rank, back)
 
     return enemy_pos, enemy_on_the_right
 end
-
 
 ---获取集结队形位置
 ---@param idx number 索引
@@ -1788,89 +1797,85 @@ function U.cleanup_blockers(store, blocked)
     end
 end
 
+local function calc_explosion_protection(armor)
+    return armor * (0.2 * armor + 0.4)
+end
+
+local function calc_stab_protection(armor)
+    return armor * (2 - armor)
+end
+
+local function calc_mixed_protection(armor, magic_armor)
+    if magic_armor > armor then
+        return armor
+    else
+        return (magic_armor + armor) * 0.5
+    end
+end
+
 ---预测伤害
 ---@param entity table 实体
 ---@param damage table 伤害属性
 ---@return number 实际伤害值
 function U.predict_damage(entity, damage)
-    local e = entity
-    local d = damage
-
-    if band(d.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 then
-        if e.health.damage_factor > 1 then
-            return e.health.hp_max * (1 - e.health.instakill_resistance) * e.health.damage_factor
+    if band(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 then
+        if entity.health.damage_factor > 1 then
+            return entity.health.hp_max * (1 - entity.health.instakill_resistance) * entity.health.damage_factor
         else
-            return e.health.hp_max * (1 - e.health.instakill_resistance)
+            return entity.health.hp_max * (1 - entity.health.instakill_resistance)
         end
     end
 
     local protection = 0
 
-    local function calc_explosion_protection(armor)
-        return armor * (0.2 * armor + 0.4)
-    end
-
-    local function calc_stab_protection(armor)
-        return armor * (2 - armor)
-    end
-
-    local function calc_mixed_protection(armor, magic_armor)
-        if magic_armor > armor then
-            return armor
-        else
-            return (magic_armor + armor) * 0.5
-        end
-    end
-
-    if band(d.damage_type, DAMAGE_POISON) ~= 0 then
-        protection = e.health.poison_armor
-    elseif band(d.damage_type, DAMAGE_TRUE) ~= 0 then
+    if band(damage.damage_type, DAMAGE_POISON) ~= 0 then
+        protection = entity.health.poison_armor
+    elseif band(damage.damage_type, DAMAGE_TRUE) ~= 0 then
         protection = 0
-    elseif band(d.damage_type, DAMAGE_PHYSICAL) ~= 0 then
-        protection = e.health.armor - d.reduce_armor
-    elseif band(d.damage_type, DAMAGE_MAGICAL) ~= 0 then
-        protection = e.health.magic_armor - d.reduce_magic_armor
-    elseif band(d.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
-        protection = calc_explosion_protection(e.health.magic_armor - d.reduce_magic_armor)
-    elseif band(d.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
+    elseif band(damage.damage_type, DAMAGE_PHYSICAL) ~= 0 then
+        protection = entity.health.armor - damage.reduce_armor
+    elseif band(damage.damage_type, DAMAGE_MAGICAL) ~= 0 then
+        protection = entity.health.magic_armor - damage.reduce_magic_armor
+    elseif band(damage.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
+        protection = calc_explosion_protection(entity.health.magic_armor - damage.reduce_magic_armor)
+    elseif band(damage.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
         protection = 0
-    elseif band(d.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_RUDE)) ~= 0 then
-        protection = calc_explosion_protection(e.health.armor - d.reduce_armor)
-    elseif band(d.damage_type, DAMAGE_SHOT) ~= 0 then
-        protection = (e.health.armor - d.reduce_armor) * 0.7
-    elseif band(d.damage_type, DAMAGE_STAB) ~= 0 then
-        protection = calc_stab_protection(e.health.armor - d.reduce_armor)
-    elseif band(d.damage_type, DAMAGE_MIXED) ~= 0 then
-        protection = calc_mixed_protection(e.health.armor - d.reduce_armor, e.health.magic_armor - d.reduce_magic_armor)
-    elseif d.damage_type == DAMAGE_NONE then
+    elseif band(damage.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_RUDE)) ~= 0 then
+        protection = calc_explosion_protection(entity.health.armor - damage.reduce_armor)
+    elseif band(damage.damage_type, DAMAGE_SHOT) ~= 0 then
+        protection = (entity.health.armor - damage.reduce_armor) * 0.7
+    elseif band(damage.damage_type, DAMAGE_STAB) ~= 0 then
+        protection = calc_stab_protection(entity.health.armor - damage.reduce_armor)
+    elseif band(damage.damage_type, DAMAGE_MIXED) ~= 0 then
+        protection = calc_mixed_protection(entity.health.armor - damage.reduce_armor,
+            entity.health.magic_armor - damage.reduce_magic_armor)
+    elseif damage.damage_type == DAMAGE_NONE then
         protection = 1
     end
 
     protection = km.clamp(0, 1, protection)
 
-    local rounded_damage = d.value
-    if band(d.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
-        rounded_damage = km.round(rounded_damage * e.health.damage_factor_magical)
+    local rounded_damage = damage.value
+    if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
+        rounded_damage = km.round(rounded_damage * entity.health.damage_factor_magical)
     end
 
-    if band(d.damage_type, DAMAGE_ELECTRICAL) ~= 0 and e.health.damage_factor_electrical then
-        rounded_damage = km.round(rounded_damage * e.health.damage_factor_electrical)
+    if band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 and entity.health.damage_factor_electrical then
+        rounded_damage = km.round(rounded_damage * entity.health.damage_factor_electrical)
     end
 
     -- 该类攻击对护甲高的敌人伤害更高
-    if band(d.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
+    if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
         rounded_damage = rounded_damage + rounded_damage * protection * protection * 2 / (1 - protection)
     end
 
-    rounded_damage = km.round(rounded_damage * e.health.damage_factor)
+    rounded_damage = km.round(rounded_damage * entity.health.damage_factor * (1 - protection))
 
-    local actual_damage = math.ceil(rounded_damage * (1 - protection))
-
-    if band(d.damage_type, DAMAGE_NO_KILL) ~= 0 and e.health and actual_damage >= e.health.hp then
-        actual_damage = e.health.hp - 1
+    if band(damage.damage_type, DAMAGE_NO_KILL) ~= 0 and entity.health and rounded_damage >= entity.health.hp then
+        rounded_damage = entity.health.hp - 1
     end
 
-    return actual_damage
+    return rounded_damage
 end
 
 ---检查是否已见过
@@ -2058,10 +2063,7 @@ function U.push_bans(t, value, op)
 
     if not t._bans_stack then
         rawset(t, "_bans_stack", {})
-        table.insert(t._bans_stack, {
-            "set",
-            t.bans
-        })
+        table.insert(t._bans_stack, {"set", t.bans})
         rawset(t, "bans", nil)
     end
 
@@ -2075,10 +2077,7 @@ function U.push_bans(t, value, op)
         end
     end
 
-    local row = {
-        op,
-        value
-    }
+    local row = {op, value}
 
     table.insert(t._bans_stack, row)
     rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
@@ -2227,7 +2226,7 @@ function U.has_modifier_types(store, entity, ...)
         return false, {}
     end
     local result = {}
-    local types = { ... }
+    local types = {...}
     for i = 1, #mods do
         local mod = mods[i]
         if table.contains(types, mod.modifier.type) then
@@ -2375,7 +2374,7 @@ function U.append_mod(entity, mod_name)
             table.insert(entity.mods, mod_name)
             entity.mod = nil
         else
-            entity.mods = { entity.mod, mod_name }
+            entity.mods = {entity.mod, mod_name}
             entity.mod = nil
         end
     else
@@ -2639,4 +2638,28 @@ end
 function U.safe_float_string(value)
     return value and string.format("%.2f", value) or "-"
 end
+
+--- 是否在矩形区域内
+--- @param o table 矩形中心
+--- @param half_x number 矩形半宽
+--- @param half_y number 矩形半高
+--- @param r number 矩形旋转角度（弧度）
+--- @param p table 待判断点
+--- @return is_inside boolean 是否在矩形区域内
+function U.is_inside_square(o, half_x, half_y, r, p)
+    local cos_r = math.cos(r)
+    local sin_r = math.sin(r)
+
+    local dx = p.x - o.x
+    local dy = p.y - o.y
+
+    local local_x = dx * cos_r + dy * sin_r
+    local local_y = -dx * sin_r + dy * cos_r
+
+    if math.abs(local_x) <= half_x and math.abs(local_y) <= half_y then
+        return true
+    end
+    return false
+end
+
 return U

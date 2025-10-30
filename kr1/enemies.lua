@@ -4966,6 +4966,7 @@ local function enemies()
     tt.unit.mod_offset = vec_2(0, 19)
     tt.sound_events.death = nil
     tt.sound_events.insert = "HWGhosts"
+    tt.vis.flags = bor(tt.vis.flags, F_FLYING_FAKE)
     tt.vis.bans = bor(F_SKELETON, F_BLOOD, F_DRILL, F_POISON, F_STUN, F_BLOCK, F_POLYMORPH)
 
     tt = RT("ghost_sound_aura", "aura")
@@ -5045,7 +5046,7 @@ local function enemies()
     tt.unit.marker_offset = vec_2(0, 0)
     tt.unit.mod_offset = vec_2(0, 21)
     tt.unit.size = UNIT_SIZE_MEDIUM
-    tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+    tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER, F_FLYING_FAKE)
     tt.vis.bans = bor(F_SKELETON, F_BLOOD, F_DRILL, F_POISON)
 
     tt = RT("phantom_warrior_aura", "aura")

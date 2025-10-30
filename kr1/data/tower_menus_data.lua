@@ -210,7 +210,13 @@ return {
         image = "kr5_main_icons_0007",
         tt_title = _("TOWER_DEMON_PIT_NAME"),
         tt_desc = _("TOWER_DEMON_PIT_1_DESCRIPTION"),
-        place = 16
+        place = 15
+    }), merge(templates.upgrade,{
+        action_arg = "tower_flamespitter_lvl4",
+        image = "kr5_main_icons_0012",
+        place = 16,
+        tt_title = _("TOWER_FLAMESPITTER_NAME"),
+        tt_desc = _("TOWER_FLAMESPITTER_1_DESCRIPTION"),
     }), templates.sell}},
 
     -- 箭塔
@@ -300,7 +306,7 @@ return {
         tt_title = _("TOWER_BARRACK_2_NAME"),
         tt_desc = _("TOWER_BARRACK_2_DESCRIPTION")
     }), templates.rally, templates.sell}, -- 三级兵营
-    {table.merge(templates.common_upgrade, {
+    {merge(templates.common_upgrade, {
         action_arg = "tower_barrack_3",
         tt_title = _("TOWER_BARRACK_3_NAME"),
         tt_desc = _("TOWER_BARRACK_3_DESCRIPTION")
@@ -1821,7 +1827,7 @@ return {
 
     baby_black_dragon = {{merge(templates.buy_attack, {
         action_arg = 1,
-        image = "kr3_main_icons_0114",
+        image = "kr3_main_icons_0011",
         tt_title = _("ELVES_BABY_BERESAD_SPECIAL_NAME_1"),
         tt_desc = _("ELVES_BABY_BERESAD_SPECIAL_SMALL_DESCRIPTION_1")
     })}},
@@ -1988,7 +1994,7 @@ return {
         tt_phrase_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NOTE"),
         tt_title_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NAME"),
         tt_desc_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_DESCRIPTION"),
-        tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
+        tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE")
     }, merge(templates.upgrade_power, {
         action_arg = "skill_soldiers",
         image = "kr5_special_icons_0032",
@@ -2360,5 +2366,38 @@ return {
         tt_desc_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_DESCRIPTION"),
         tt_phrase_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_NOTE"),
         sounds = {"TowerRocketGunnersLiftoffTaunt", "TowerRocketGunnersTouchdownTaunt"}
-    }}}
+    }}},
+    flamespitter = {{merge(templates.upgrade_power, {
+        action_arg = "skill_bomb",
+        image = "kr5_special_icons_0022",
+        place = 7,
+        sounds = {"TowerFlamespitterSkillATaunt"},
+        tt_phrase = _("TOWER_FLAMESPITTER_4_SKILL_BOMB_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_FLAMESPITTER_4_SKILL_BOMB_1_NAME"),
+            tt_desc = _("TOWER_FLAMESPITTER_4_SKILL_BOMB_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_FLAMESPITTER_4_SKILL_BOMB_2_NAME"),
+            tt_desc = _("TOWER_FLAMESPITTER_4_SKILL_BOMB_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_FLAMESPITTER_4_SKILL_BOMB_3_NAME"),
+            tt_desc = _("TOWER_FLAMESPITTER_4_SKILL_BOMB_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "skill_columns",
+        image = "kr5_special_icons_0023",
+        place = 6,
+        sounds = {"TowerFlamespitterSkillBTaunt"},
+        tt_phrase = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_1_NAME"),
+            tt_desc = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_2_NAME"),
+            tt_desc = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_3_NAME"),
+            tt_desc = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_3_DESCRIPTION")
+        }}
+    }), templates.sell}}
 }

@@ -77,6 +77,7 @@ local endless = {
         interval = 300,
         available_paths = {},
         only_fly_paths = {},
+        only_water_paths = {},
         special_paths = {},
         avg_interval = 0,
         avg_interval_next = 0,
@@ -87,6 +88,7 @@ local endless = {
         upgrade_levels = {},
         enemy_upgrade_levels = {}
     },
+    -- 无商店情况下，科技的最高等级
     upgrade_max_levels = {
         health = 25,
         soldier_damage = 25,
@@ -124,6 +126,7 @@ local endless = {
         mage_chain = 5,
         mage_curse = 1
     },
+    -- 在考虑商店情况下，科技的最高等级
     force_upgrade_max_levels = {
         archer_critical = 10,
         rain_radius_mul = 1,
@@ -134,7 +137,7 @@ local endless = {
         barrack_unity = 1,
         barrack_luck = 3,
         engineer_seek = 1,
-        engineer_fireball = 2,
+        engineer_fireball = 3,
         ban_rain = 1,
         ban_archer = 1,
         ban_engineer = 1,
@@ -142,7 +145,8 @@ local endless = {
         ban_mage = 1,
         mage_shatter = 1,
         mage_curse = 1,
-        mage_thunder = 10
+        mage_thunder = 10,
+        more_gold = 10,
     },
     enemy_upgrade_max_levels = {
         health = 62,
