@@ -455,7 +455,7 @@ return {
 		},
 		alias = {},
 	},
-	["kr3_special_icons_0001"] = {
+	["kr3_special_icons_0002"] = {
 		a_name = "gui_ico-1.png",
 		size = {
 			82,
@@ -479,7 +479,7 @@ return {
 		},
 		alias = {},
 	},
-	["kr3_special_icons_0002"] = {
+	["kr3_special_icons_0001"] = {
 		a_name = "gui_ico-1.png",
 		size = {
 			82,
