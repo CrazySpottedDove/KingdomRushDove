@@ -19,6 +19,12 @@ if "%1"=="index" (
     call :download
 ) else if "%1"=="help" (
     call :show_help
+) else if "%1"=="idx" (
+    call :index
+) else if "%1"=="up" (
+    call :upload
+) else if "%1"=="down" (
+    call :download
 ) else (
     echo 错误: 未知命令 '%1'
     call :show_help
@@ -60,9 +66,9 @@ exit /b 0
 :show_help
 echo.
 echo 可用命令:
-echo   run index      - 生成资源索引
-echo   run upload     - 上传资源
-echo   run download   - 下载资源
+echo   run index    -idx     - 生成资源索引
+echo   run upload   -up      - 上传资源
+echo   run download -down   - 下载资源
 echo   run help       - 显示此帮助
 echo.
 exit /b 0
