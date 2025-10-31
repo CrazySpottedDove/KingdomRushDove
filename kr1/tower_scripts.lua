@@ -903,7 +903,7 @@ scripts.tower_totem = {
                     if ready_to_use_power(pow, ta, store, this.tower.cooldown_factor) then
                         local enemy
                         if name == "silence" then
-                            enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ta.vis_flags,
+                            enemy = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false, ta.vis_flags,
                                 ta.vis_bans, enemy_is_silent_target)
                         else
                             enemy = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range, false,
@@ -1503,7 +1503,7 @@ scripts.tower_wild_magus = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if ready_to_use_power(pow_e, ea, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ea.vis_flags, ea.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ea.vis_flags, ea.vis_bans)
 
                     if not enemy then
                         -- block empty
@@ -1517,9 +1517,8 @@ scripts.tower_wild_magus = {
                         S:queue(ea.sound)
                         U.y_wait(store, ea.shoot_time)
 
-                        if enemy.health.dead or not U.flags_pass(enemy.vis, ea) or
-                            not U.is_inside_ellipse(tpos(this), enemy.pos, a.range * 1.1) then
-                            enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ea.vis_flags,
+                        if enemy.health.dead or not U.flags_pass(enemy.vis, ea) then
+                            enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ea.vis_flags,
                                 ea.vis_bans)
                         end
 
@@ -1544,7 +1543,7 @@ scripts.tower_wild_magus = {
                 end
 
                 if ready_to_use_power(pow_w, wa, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, wa.vis_flags,
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false, wa.vis_flags,
                         wa.vis_bans, enemy_is_silent_target)
 
                     if enemy then
@@ -1585,7 +1584,7 @@ scripts.tower_wild_magus = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ba.vis_flags, ba.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ba.vis_flags, ba.vis_bans)
 
                     if enemy then
                         ba.ts = store.tick_ts
@@ -1806,7 +1805,7 @@ scripts.tower_high_elven = {
                 end
 
                 if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ta.vis_flags,
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ta.vis_flags,
                         ta.vis_bans)
 
                     if enemy then
@@ -1850,7 +1849,7 @@ scripts.tower_high_elven = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ba.vis_flags,
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ba.vis_flags,
                         ba.vis_bans)
 
                     if enemy then
@@ -1865,7 +1864,7 @@ scripts.tower_high_elven = {
 
                         U.y_wait(store, ba.shoot_time)
 
-                        enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ba.vis_flags,
+                        enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ba.vis_flags,
                             ba.vis_bans)
 
                         if enemy then
@@ -1958,7 +1957,7 @@ scripts.tower_arcane_wizard = {
         local aura = E:get_template(at.aura)
         local max_times_applied = E:get_template(aura.aura.mod).max_times_applied
         local function find_target(aa)
-            local target, __, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, aa.node_prediction,
+            local target, __, pred_pos = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, aa.node_prediction,
                 aa.vis_flags, aa.vis_bans, function(e)
                     if aa == at then
                         return e.nav_path.ni >= aa.min_nodes and
@@ -2230,7 +2229,7 @@ scripts.tower_sorcerer = {
                     if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or
                         (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) and store.tick_ts - last_ts >
                         a.min_cooldown * this.tower.cooldown_factor then
-                        local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
+                        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, aa.vis_flags,
                             aa.vis_bans)
 
                         if not enemy then
@@ -2269,7 +2268,7 @@ scripts.tower_sorcerer = {
                             U.y_wait(store, aa.shoot_time)
 
                             if aa == ap and not store.entities[enemy.id] or enemy.health.dead then
-                                enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false,
+                                enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
                                     aa.vis_flags, aa.vis_bans)
 
                                 if not enemy or enemy.health.dead then
@@ -2378,7 +2377,7 @@ scripts.tower_archmage = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-                    local target = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ta.vis_flags,
+                    local target = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false, ta.vis_flags,
                         ta.vis_bans, function(e)
                             return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni >
                                        P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni <
@@ -2656,7 +2655,7 @@ scripts.tower_necromancer = {
 
                 SU.tower_update_silenced_powers(store, this)
                 if ready_to_use_power(pow_p, pa, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, pa.vis_flags, pa.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, pa.vis_flags, pa.vis_bans)
 
                     if enemy then
                         pa.ts = store.tick_ts
