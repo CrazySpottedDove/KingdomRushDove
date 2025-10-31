@@ -1,5 +1,5 @@
 return {
-	kr2_map_background_0001 = {
+	["kr2_map_background_0001"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			172,
@@ -16,21 +16,21 @@ return {
 			3871
 		},
 		f_quad = {
-			1326,
+			1327,
 			1,
 			172,
 			215
 		},
 		alias = {},
 	},
-	kr2_map_background_0002 = {
+	["kr2_map_background_0002"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			216,
 			206
 		},
 		trim = {
-			7,
+			6,
             0,
             0,
             0
@@ -42,12 +42,12 @@ return {
 		f_quad = {
 			861,
 			1,
-			209,
+			210,
 			206
 		},
 		alias = {},
 	},
-	kr3_map_background_0002 = {
+	["kr3_map_background_0002"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -64,14 +64,14 @@ return {
 			3871
 		},
 		f_quad = {
-			1072,
+			1073,
 			1,
 			252,
 			206
 		},
 		alias = {},
 	},
-	kr3_map_background_0003 = {
+	["kr3_map_background_0003"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -95,7 +95,7 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0004 = {
+	["kr3_map_background_0004"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -119,7 +119,7 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0005 = {
+	["kr3_map_background_0005"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -143,17 +143,17 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0006 = {
+	["kr3_map_background_0006"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
 			1080
 		},
 		trim = {
-			1487,
-            729,
-            390,
-            296
+			1486,
+            728,
+            391,
+            297
 		},
 		a_size = {
 			1922,
@@ -167,7 +167,7 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0007 = {
+	["kr3_map_background_0007"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -191,17 +191,17 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0008 = {
+	["kr3_map_background_0008"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
 			1080
 		},
 		trim = {
-			1593,
-            554,
-            236,
-            393
+			1592,
+            553,
+            237,
+            394
 		},
 		a_size = {
 			1922,
@@ -215,17 +215,17 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0009 = {
+	["kr3_map_background_0009"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
 			1080
 		},
 		trim = {
-			1681,
-            549,
-            202,
-            488
+			1680,
+            548,
+            203,
+            489
 		},
 		a_size = {
 			1922,
@@ -239,17 +239,17 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0010 = {
+	["kr3_map_background_0010"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
 			1080
 		},
 		trim = {
-			1514,
-            735,
-            301,
-            244
+			1513,
+            734,
+            302,
+            245
 		},
 		a_size = {
 			1922,
@@ -263,7 +263,7 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0011 = {
+	["kr3_map_background_0011"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -287,17 +287,17 @@ return {
 		},
 		alias = {},
 	},
-	kr3_map_background_0012 = {
+	["kr3_map_background_0012"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
 			1080
 		},
 		trim = {
-			1449,
-            569,
-            100,
-            238
+			1448,
+            568,
+            101,
+            239
 		},
 		a_size = {
 			1922,
@@ -311,7 +311,7 @@ return {
 		},
 		alias = {},
 	},
-	map_background = {
+	["map_background"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -335,7 +335,7 @@ return {
 		},
 		alias = {},
 	},
-	map_background_kr2 = {
+	["map_background_kr2"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -359,7 +359,7 @@ return {
 		},
 		alias = {},
 	},
-	map_background_kr3 = {
+	["map_background_kr3"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			1920,
@@ -383,7 +383,7 @@ return {
 		},
 		alias = {},
 	},
-	map_vignette_small = {
+	["map_vignette_small"] = {
 		a_name = "screen_map_backgrond-1.png",
 		size = {
 			400,
@@ -400,7 +400,7 @@ return {
 			3871
 		},
 		f_quad = {
-			1500,
+			1501,
 			1,
 			400,
 			225
