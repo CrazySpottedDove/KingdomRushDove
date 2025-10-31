@@ -11576,7 +11576,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
     while true do
         if not target or target.health.dead then
             if target and chance > math.random() then
-                local targets = U.find_enemies_between_range_filter_off(target.pos, radius, F_ENEMY, F_NONE)
+                local targets = U.find_enemies_in_range_filter_off(target.pos, radius, F_ENEMY, F_NONE)
 
                 if targets then
                     for i = 1, total_stars do
