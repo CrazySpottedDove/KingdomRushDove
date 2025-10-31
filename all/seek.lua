@@ -228,8 +228,8 @@ function seek.find_foremost_enemy_in_range_filter_off(store, origin, range, pred
                 local entity = array[i]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
-                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and
-                    enemy_calculate_ffe_pos(entity, prediction_time) then
+                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) then
+                    enemy_calculate_ffe_pos(entity, prediction_time)
                     count = count + 1
                     result[count] = entity
                 end
@@ -267,7 +267,8 @@ function seek.find_foremost_enemy_in_range_filter_on(store, origin, range, predi
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
                 if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and
-                    filter_fn(entity, origin) and enemy_calculate_ffe_pos(entity, prediction_time) then
+                    filter_fn(entity, origin) then
+                    enemy_calculate_ffe_pos(entity, prediction_time)
                     count = count + 1
                     result[count] = entity
                 end
@@ -308,7 +309,8 @@ function seek.find_foremost_enemy_between_range_filter_off(store, origin, min_ra
                 local dy = (entity.pos.y - y) * _aspect_inv
                 local dist2 = dx * dx + dy * dy
                 if (dist2 <= r_outer_sq) and (band(entity.vis.flags, F_FLYING) ~= 0 or dist2 >= r_inner_sq) and
-                    enemy_filter_simple(entity, flags, bans) and enemy_calculate_ffe_pos(entity, prediction_time) then
+                    enemy_filter_simple(entity, flags, bans) then
+                    enemy_calculate_ffe_pos(entity, prediction_time)
                     count = count + 1
                     result[count] = entity
                 end
@@ -323,8 +325,8 @@ function seek.find_foremost_enemy_between_range_filter_off(store, origin, min_ra
     return result[1], result, result[1].__ffe_pos
 end
 
-function seek.find_foremost_enemy_between_range_filter_on(store, origin, min_range, max_range, prediction_time,
-    flags, bans, filter_fn)
+function seek.find_foremost_enemy_between_range_filter_on(store, origin, min_range, max_range, prediction_time, flags,
+    bans, filter_fn)
     local spatial_hash = store.enemy_spatial_index
     local x = origin.x
     local y = origin.y
@@ -349,8 +351,8 @@ function seek.find_foremost_enemy_between_range_filter_on(store, origin, min_ran
                 local dy = (entity.pos.y - y) * _aspect_inv
                 local dist2 = dx * dx + dy * dy
                 if (dist2 <= r_outer_sq) and (band(entity.vis.flags, F_FLYING) ~= 0 or dist2 >= r_inner_sq) and
-                    enemy_filter_simple(entity, flags, bans) and filter_fn(entity, origin) and
-                    enemy_calculate_ffe_pos(entity, prediction_time) then
+                    enemy_filter_simple(entity, flags, bans) and filter_fn(entity, origin) then
+                    enemy_calculate_ffe_pos(entity, prediction_time)
                     count = count + 1
                     result[count] = entity
                 end
@@ -364,7 +366,5 @@ function seek.find_foremost_enemy_between_range_filter_on(store, origin, min_ran
     table.sort(result, foremost_enemy_cmp)
     return result[1], result, result[1].__ffe_pos
 end
-
-
 
 return seek

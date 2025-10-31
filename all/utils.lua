@@ -1367,6 +1367,41 @@ end
 ---@return table? 最前面的敌人, table? 所有范围内的敌人 , table? 最前面敌人的预测位置
 function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
     min_override_flags)
+    flags = flags or 0
+    bans = bans or 0
+    min_override_flags = min_override_flags or 0
+
+    -- local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, 0, function(e)
+    --     if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
+    --         (not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
+    --             not U.is_inside_ellipse(e.pos, origin, min_range))) or (filter_func and not filter_func(e, origin)) then
+    --         return false
+    --     end
+
+    --     if prediction_time and e.motion.speed then
+    --         if e.motion.forced_waypoint then
+    --             local dt = prediction_time == true and 1 or prediction_time
+
+    --             e.__ffe_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
+    --         else
+    --             local node_offset = P:predict_enemy_node_advance(e, prediction_time)
+
+    --             local e_ni = e.nav_path.ni + node_offset
+    --             e.__ffe_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+    --         end
+    --     else
+    --         e.__ffe_pos = V.vclone(e.pos)
+    --     end
+
+    --     return true, nil, nil
+    -- end)
+    -- if not enemies or #enemies == 0 then
+    --     return nil, nil, nil
+    -- else
+    --     sort_foremost_enemies(enemies)
+
+    --     return enemies[1], enemies, enemies[1].__ffe_pos
+    -- end
     if min_range == 0 then
         if filter_func then
             return seek.find_foremost_enemy_in_range_filter_on(store, origin, max_range, prediction_time, flags, bans,
@@ -1384,6 +1419,7 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
         end
     end
 end
+
 U.find_foremost_enemy_in_range_filter_on = seek.find_foremost_enemy_in_range_filter_on
 U.find_foremost_enemy_in_range_filter_off = seek.find_foremost_enemy_in_range_filter_off
 U.find_foremost_enemy_between_range_filter_on = seek.find_foremost_enemy_between_range_filter_on
