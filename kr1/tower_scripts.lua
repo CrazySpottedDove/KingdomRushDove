@@ -88,6 +88,11 @@ local function apply_precision(b)
     end
 end
 
+local function valid_rally_node_nearby(pos)
+    return GR:cell_is_only(pos.x, pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and
+               P:valid_node_nearby(pos.x, pos.y, nil, NF_RALLY)
+end
+
 -- 矮人射手
 scripts.tower_archer_dwarf = {
     get_info = function(this)
@@ -6697,7 +6702,9 @@ function scripts.tower_demon_pit.update(this, store, script)
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range * 1.2, aa.vis_flags, aa.vis_bans)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_on(tpos(this), a.range * 1.2, aa.vis_flags, aa.vis_bans, function(e, o)
+                            return valid_rally_node_nearby(e.pos)
+                        end)
 
                         local enemy_pos = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or nil
 
@@ -6728,7 +6735,9 @@ function scripts.tower_demon_pit.update(this, store, script)
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range * 1.2, aa.vis_flags, aa.vis_bans)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_on(tpos(this), a.range * 1.2, aa.vis_flags, aa.vis_bans, function(e, o)
+                            return valid_rally_node_nearby(e.pos)
+                        end)
 
                         local enemy_pos = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or nil
 
