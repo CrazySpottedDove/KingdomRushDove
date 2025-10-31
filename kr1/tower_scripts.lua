@@ -2878,12 +2878,12 @@ scripts.tower_faerie_dragon = {
                         if dragon.custom_attack.target_id then
                             -- block empty
                         else
-                            local targets = U.find_enemies_in_range(store, this.pos, 0, this.attacks.range, a.vis_flags,
-                                a.vis_bans, function(e)
+                            local targets = U.find_enemies_in_range_filter_on(this.pos, a.range, a.vis_flags, a.vis_bans,
+                                function(e)
                                     return not table.contains(assigned_target_ids, e.id)
                                 end)
                             if not targets then
-                                U.y_wait(store, this.tower.guard_time)
+                                a.ts = a.ts + fts(5)
                                 goto label_539_0
                             end
                             local origin = dragon.pos
@@ -3046,7 +3046,7 @@ scripts.tower_sunray = {
                 a.ts = store.tick_ts
                 U.animation_start_group(this, "shoot", nil, store.tick_ts, false, group_tower)
                 U.y_wait(store, a.shoot_time)
-                local enemies = U.find_enemies_in_range(store, target.pos, 0, splash_radius, a.vis_flags, a.vis_bans)
+                local enemies = U.find_enemies_in_range_filter_off(target.pos, splash_radius, a.vis_flags, a.vis_bans)
                 if not enemies then
                     U.y_wait(store, this.tower.guard_time)
                     goto continue
@@ -9979,7 +9979,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
             end
 
             if can_thunder() then
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans)
+                local enemies = U.find_enemies_in_range_filter_off(this.pos, a_i.max_range, a_i.vis_flags, a_i.vis_bans)
 
                 if not enemies then
                     a_i.ts = a_i.ts + a_i.cooldown * 0.2
@@ -10023,7 +10023,7 @@ function scripts.soldier_tower_pandas.update(this, store, script)
                             queue_insert(store, fx)
 
                             if shoot_index == 2 then
-                                local affected = U.find_enemies_in_range(store, crowded_pos, 0, a_i.damage_area,
+                                local affected = U.find_enemies_in_range_filter_off(crowded_pos, a_i.damage_area,
                                     a_i.vis_flags, a_i.vis_bans)
 
                                 if affected then
@@ -10827,8 +10827,7 @@ function scripts.bullet_tower_ray.update(this, store)
                 }
                 explosion_fx.render.sprites[1].ts = store.tick_ts
                 queue_insert(store, explosion_fx)
-                local explosion_targets = U.find_enemies_in_range(store, explosion_fx.pos, 0, this.explosion_radius,
-                    F_AREA, F_NONE)
+                local explosion_targets = U.find_enemies_between_range_filter_off(explosion_fx.pos, this.explosion_radius, F_AREA, F_NONE)
                 if explosion_targets then
                     for i = 1, #explosion_targets do
                         local explosion_target = explosion_targets[i]
@@ -11130,7 +11129,8 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
             x = enemy.pos.x + enemy.unit.hit_offset.x,
             y = enemy.pos.y + enemy.unit.hit_offset.y
         }
-        local targets = U.find_enemies_in_range(store, e_pos, 0, mod_star_m.stars_death_max_range, F_ENEMY, F_NONE)
+        local targets = U.find_enemies_in_range_filter_off(e_pos, mod_star_m.stars_death_max_range, F_ENEMY, F_NONE)
+
         if targets then
             local targets_count = #targets
             for i = 1, mod_star_m.stars_death_stars[pow_s.level] do
@@ -11576,7 +11576,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
     while true do
         if not target or target.health.dead then
             if target and chance > math.random() then
-                local targets = U.find_enemies_in_range(store, target.pos, 0, radius, F_ENEMY, F_NONE)
+                local targets = U.find_enemies_between_range_filter_off(target.pos, radius, F_ENEMY, F_NONE)
 
                 if targets then
                     for i = 1, total_stars do
@@ -11866,12 +11866,11 @@ function scripts.bullet_tower_sand.update(this, store)
     end
 
     S:queue(this.sound)
-
+    local function filter_fn(v)
+        return not table.contains(already_hit, v.id)
+    end
     if this.bounces < this.max_bounces then
-        local targets = U.find_enemies_in_range(store, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans,
-            function(v)
-                return not table.contains(already_hit, v.id)
-            end)
+        local targets = U.find_enemies_in_range_filter_on(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, filter_fn)
 
         if not targets then
             if target and not target.health.dead then
@@ -11880,10 +11879,7 @@ function scripts.bullet_tower_sand.update(this, store)
                 already_hit = {}
             end
 
-            targets = U.find_enemies_in_range(store, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans,
-                function(v)
-                    return not table.contains(already_hit, v.id)
-                end)
+            targets = U.find_enemies_in_range_filter_on(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, filter_fn)
         end
 
         if targets then
@@ -12014,9 +12010,8 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store, script)
             last_hit_ts = store.tick_ts
             cycles_count = cycles_count + 1
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags,
+            local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags,
                 this.aura.vis_bans)
-
             if targets then
                 for i, target in ipairs(targets) do
                     local d = E:create_entity("damage")
@@ -13360,7 +13355,7 @@ local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, targe
     local attack = soldier.melee.attacks[2]
     local dradius = attack.damage_radius
 
-    local enemies = U.find_enemies_in_range(store, target.pos, 0, dradius, attack.vis_flags, attack.vis_bans)
+    local enemies = U.find_enemies_in_range_filter_off(target.pos, dradius, attack.vis_flags, attack.vis_bans)
     if not enemies then
         return
     end
@@ -14904,11 +14899,10 @@ function scripts.tower_flamespitter.update(this, store)
                             x = this.pos.x + this.tower_top_offset.x - math.cos(r) * this.attacks.range * 0.6,
                             y = this.pos.y + this.tower_top_offset.y + math.sin(r) * this.attacks.range * 0.6
                         }
-                        local aura_targets = U.find_enemies_in_range(store, tpos, 0, this.attacks.range,
-                            attack_basic.vis_flags, attack_basic.vis_bans, function(v)
-                                return U.is_inside_square(aura_center, this.attacks.range * 0.6,
-                                    attack_basic.square_half_x * scale_factor, r, v.pos)
-                            end)
+                        local aura_targets = U.find_enemies_in_range_filter_on(tpos, this.attacks.range, attack_basic.vis_flags, attack_basic.vis_bans, function(v)
+                            return U.is_inside_square(aura_center, this.attacks.range * 0.6,
+                                attack_basic.square_half_x * scale_factor, r, v.pos)
+                        end)
 
                         if aura_targets then
                             for _, aura_target in ipairs(aura_targets) do
@@ -14980,8 +14974,7 @@ function scripts.bullet_tower_flamespitter_skill_bomb_payload.update(this, store
 
         queue_insert(store, s)
 
-        local enemies = U.find_enemies_in_range(store, pos, 0, this.burn_radius, this.vis_flags, this.vis_bans)
-
+        local enemies = U.find_enemies_in_range_filter_off(pos, this.burn_radius, this.vis_flags, this.vis_bans)
         if enemies and #enemies > 0 then
             for i = 1, #enemies do
                 local mod = E:create_entity(this.mod_burn)
@@ -15073,7 +15066,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store, script
     U.y_wait(store, fts(12))
     S:queue(this.sound)
 
-    local enemies = U.find_enemies_in_range(store, this.dest, 0, this.radius_in, this.vis_flags, this.vis_bans)
+    local enemies = U.find_enemies_in_range_filter_off(this.dest, this.radius_in, this.vis_flags, this.vis_bans)
 
     if enemies and #enemies > 0 then
         for _, enemy in pairs(enemies) do
@@ -15088,8 +15081,8 @@ function scripts.controller_tower_flamespitter_column.update(this, store, script
         end
     end
 
-    local enemies = U.find_enemies_in_range(store, this.dest, this.radius_in, this.radius_out, this.vis_flags,
-        this.vis_bans)
+    local enemies = U.find_enemies_between_range_filter_off(this.dest, this.radius_in, this.radius_out,
+        this.vis_flags, this.vis_bans)
 
     if enemies and #enemies > 0 then
         for _, enemy in pairs(enemies) do
