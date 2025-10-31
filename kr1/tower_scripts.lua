@@ -11217,7 +11217,7 @@ function scripts.tower_stargazers.update(this, store, script)
                 U.animation_start(this, "start", nil, store.tick_ts, false, moon_sid)
                 U.y_wait(store, 0.25 * tw.cooldown_factor)
                 U.animation_start(this, "loop", nil, store.tick_ts, true, moon_sid)
-                local enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags,
+                local _, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags,
                     aa.vis_bans)
 
                 if enemies then
