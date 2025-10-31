@@ -425,7 +425,7 @@ return {
     ["kr1-desktop/images/fullhd/screen_map_animations-7.png"] = { size = 2806287},
     ["kr1-desktop/images/fullhd/screen_map_animations-8.png"] = { size = 2882516},
     ["kr1-desktop/images/fullhd/screen_map_animations-9.png"] = { size = 503617},
-    ["kr1-desktop/images/fullhd/screen_map_backgrond-1.png"] = { size = 10266877},
+    ["kr1-desktop/images/fullhd/screen_map_backgrond-1.png"] = { size = 13932868},
     ["kr1-desktop/images/fullhd/screen_map_buttons-1.png"] = { size = 288608},
     ["kr1-desktop/images/fullhd/screen_map_flags-1.png"] = { size = 442031},
     ["kr1-desktop/images/fullhd/screen_settings-1.png"] = { size = 198661},
