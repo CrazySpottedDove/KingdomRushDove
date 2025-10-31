@@ -23352,8 +23352,7 @@ function scripts.hero_dragon_bone.update(this, store)
         a = this.ultimate
 
         if ready_to_use_skill(a, store) then
-            local target = U.find_foremost_enemy(store, this.pos, basic_ranged.min_range, basic_ranged.max_range, nil,
-                0, a.vis_bans)
+            local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_BLOCK, F_NONE)
             if target and valid_rally_node_nearby(target.pos) then
                 apply_ultimate(this, store, target, "levelup")
             else

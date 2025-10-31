@@ -12243,7 +12243,7 @@ function scripts.tower_royal_archers.update(this, store)
             check_upgrades_purchase()
             SU.towers_swaped(store, this, this.attacks.list)
 
-            if this.powers and this.powers.armor_piercer then
+            if this.powers.armor_piercer then
                 if ready_to_use_power(pow_a, ap, store, tw.cooldown_factor) then
                     local enemy, enemies = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0,
                         ap.range_trigger, false, ap.vis_flags, ap.vis_bans)
