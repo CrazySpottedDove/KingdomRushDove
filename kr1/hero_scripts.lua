@@ -23692,7 +23692,6 @@ function scripts.hero_dragon_bone.update(this, store)
                 function(e)
                     return V.dist2(pos_offset.x, pos_offset.y, e.pos.x, e.pos.y) > a.radius * a.radius
                 end)
-
             if targets then
                 local target = targets[1]
                 local start_ts = store.tick_ts

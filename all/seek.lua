@@ -104,7 +104,7 @@ function seek.find_enemies_in_range_filter_off(store, origin, range, flags, bans
         end
         row_mul_col = row_mul_col + _cols
     end
-    return count == 0 and nil or result
+    return count ~= 0 and result or nil
 end
 
 function seek.find_enemies_in_range_filter_on(store, origin, range, flags, bans, filter_fn)
@@ -138,7 +138,8 @@ function seek.find_enemies_in_range_filter_on(store, origin, range, flags, bans,
         end
         row_mul_col = row_mul_col + _cols
     end
-    return count == 0 and nil or result
+
+    return count ~= 0 and result or nil
 end
 
 function seek.find_enemies_between_range_filter_off(store, origin, min_range, max_range, flags, bans)
@@ -173,7 +174,7 @@ function seek.find_enemies_between_range_filter_off(store, origin, min_range, ma
         end
         row_mul_col = row_mul_col + _cols
     end
-    return count == 0 and nil or result
+    return count ~= 0 and result or nil
 end
 
 function seek.find_enemies_between_range_filter_on(store, origin, min_range, max_range, flags, bans, filter_fn)
@@ -209,7 +210,7 @@ function seek.find_enemies_between_range_filter_on(store, origin, min_range, max
         end
         row_mul_col = row_mul_col + _cols
     end
-    return count == 0 and nil or result
+    return count ~= 0 and result or nil
 end
 
 function seek.find_foremost_enemy_in_range_filter_off(store, origin, range, prediction_time, flags, bans)
