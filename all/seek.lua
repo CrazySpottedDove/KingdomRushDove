@@ -391,7 +391,7 @@ function seek.detect_foremost_enemy_in_range_filter_on(store, origin, range, fla
 
     local e_mocking = false
     local e_flying = false
-    local e_nodes_to_goal = math.maxinteger
+    local e_nodes_to_goal = 1000000
     local e = nil
 
     for _ = min_row, max_row do
@@ -446,7 +446,7 @@ function seek.detect_foremost_enemy_in_range_filter_off(store, origin, range, fl
 
     local e_mocking = false
     local e_flying = false
-    local e_nodes_to_goal = math.maxinteger
+    local e_nodes_to_goal = 1000000
     local e = nil
 
     for _ = min_row, max_row do
@@ -464,6 +464,7 @@ function seek.detect_foremost_enemy_in_range_filter_off(store, origin, range, fl
                     local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
                     local p = entity.nav_path
                     local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
+
                     if (not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal then
                         e_mocking = e_next_mocking
                         e_flying = e_next_flying
