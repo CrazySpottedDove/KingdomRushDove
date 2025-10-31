@@ -1060,16 +1060,15 @@ end
 function U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
     if min_range == 0 then
         if filter_func then
-            return seek.find_enemies_in_range_filter_on(store, origin, max_range, flags, bans, filter_func)
+            return seek.find_enemies_in_range_filter_on(origin, max_range, flags, bans, filter_func)
         else
-            return seek.find_enemies_in_range_filter_off(store, origin, max_range, flags, bans)
+            return seek.find_enemies_in_range_filter_off(origin, max_range, flags, bans)
         end
     else
         if filter_func then
-            return seek.find_enemies_between_range_filter_on(store, origin, min_range, max_range, flags, bans,
-                filter_func)
+            return seek.find_enemies_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_func)
         else
-            return seek.find_enemies_between_range_filter_off(store, origin, min_range, max_range, flags, bans)
+            return seek.find_enemies_between_range_filter_off(origin, min_range, max_range, flags, bans)
         end
     end
 end
@@ -1232,7 +1231,7 @@ end
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table 最前面的敌人
 function U.refind_foremost_enemy(last_enemy, store, flags, bans)
-    local new_enemy = U.find_foremost_enemy_in_range_filter_off(store, last_enemy.pos, 50, nil, flags, bans)
+    local new_enemy = U.find_foremost_enemy_in_range_filter_off(last_enemy.pos, 50, nil, flags, bans)
     if new_enemy then
         return new_enemy
     else
@@ -1256,19 +1255,19 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
     filter_func, min_override_flags, cover_range)
     if min_range == 0 then
         if filter_func then
-            return seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(store, origin, max_range,
-                prediction_time, flags, bans, cover_range, filter_func)
+            return seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(origin, max_range, prediction_time,
+                flags, bans, cover_range, filter_func)
         else
-            return seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(store, origin, max_range,
-                prediction_time, flags, bans, cover_range)
+            return seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(origin, max_range, prediction_time,
+                flags, bans, cover_range)
         end
     else
         if filter_func then
-            return seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(store, origin, min_range,
-                max_range, prediction_time, flags, bans, cover_range, filter_func)
+            return seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(origin, min_range, max_range,
+                prediction_time, flags, bans, cover_range, filter_func)
         else
-            return seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(store, origin, min_range,
-                max_range, prediction_time, flags, bans, cover_range)
+            return seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(origin, min_range, max_range,
+                prediction_time, flags, bans, cover_range)
         end
     end
 end
@@ -1348,18 +1347,18 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
     min_override_flags)
     if min_range == 0 then
         if filter_func then
-            return seek.find_foremost_enemy_in_range_filter_on(store, origin, max_range, prediction_time, flags, bans,
+            return seek.find_foremost_enemy_in_range_filter_on(origin, max_range, prediction_time, flags, bans,
                 filter_func)
         else
-            return seek.find_foremost_enemy_in_range_filter_off(store, origin, max_range, prediction_time, flags, bans)
+            return seek.find_foremost_enemy_in_range_filter_off(origin, max_range, prediction_time, flags, bans)
         end
     else
         if filter_func then
-            return seek.find_foremost_enemy_between_range_filter_on(store, origin, min_range, max_range,
-                prediction_time, flags, bans, filter_func)
+            return seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max_range, prediction_time,
+                flags, bans, filter_func)
         else
-            return seek.find_foremost_enemy_between_range_filter_off(store, origin, min_range, max_range,
-                prediction_time, flags, bans)
+            return seek.find_foremost_enemy_between_range_filter_off(origin, min_range, max_range, prediction_time,
+                flags, bans)
         end
     end
 end

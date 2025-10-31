@@ -903,8 +903,8 @@ scripts.tower_totem = {
                     if ready_to_use_power(pow, ta, store, this.tower.cooldown_factor) then
                         local enemy
                         if name == "silence" then
-                            enemy = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false,
-                                ta.vis_flags, ta.vis_bans, enemy_is_silent_target)
+                            enemy = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, false, ta.vis_flags,
+                                ta.vis_bans, enemy_is_silent_target)
                         else
                             enemy = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range, false,
                                 ta.vis_flags, ta.vis_bans, nil, nil, 80)
@@ -1503,8 +1503,8 @@ scripts.tower_wild_magus = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if ready_to_use_power(pow_e, ea, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
-                        ea.vis_flags, ea.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, ea.vis_flags,
+                        ea.vis_bans)
 
                     if not enemy then
                         -- block empty
@@ -1519,8 +1519,8 @@ scripts.tower_wild_magus = {
                         U.y_wait(store, ea.shoot_time)
 
                         if enemy.health.dead or not U.flags_pass(enemy.vis, ea) then
-                            enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
-                                ea.vis_flags, ea.vis_bans)
+                            enemy = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, ea.vis_flags,
+                                ea.vis_bans)
                         end
 
                         if enemy then
@@ -1544,7 +1544,7 @@ scripts.tower_wild_magus = {
                 end
 
                 if ready_to_use_power(pow_w, wa, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false,
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, false,
                         wa.vis_flags, wa.vis_bans, enemy_is_silent_target)
 
                     if enemy then
@@ -1585,8 +1585,8 @@ scripts.tower_wild_magus = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
-                        ba.vis_flags, ba.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, ba.vis_flags,
+                        ba.vis_bans)
 
                     if enemy then
                         ba.ts = store.tick_ts
@@ -1807,7 +1807,7 @@ scripts.tower_high_elven = {
                 end
 
                 if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false,
                         ta.vis_flags, ta.vis_bans)
 
                     if enemy then
@@ -1851,7 +1851,7 @@ scripts.tower_high_elven = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false,
                         ba.vis_flags, ba.vis_bans)
 
                     if enemy then
@@ -1866,7 +1866,7 @@ scripts.tower_high_elven = {
 
                         U.y_wait(store, ba.shoot_time)
 
-                        enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                        enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false,
                             ba.vis_flags, ba.vis_bans)
 
                         if enemy then
@@ -1959,7 +1959,7 @@ scripts.tower_arcane_wizard = {
         local aura = E:get_template(at.aura)
         local max_times_applied = E:get_template(aura.aura.mod).max_times_applied
         local function find_target(aa)
-            local target, __, pred_pos = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range,
+            local target, __, pred_pos = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range,
                 aa.node_prediction, aa.vis_flags, aa.vis_bans, function(e)
                     if aa == at then
                         return e.nav_path.ni >= aa.min_nodes and
@@ -2231,8 +2231,8 @@ scripts.tower_sorcerer = {
                     if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or
                         (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) and store.tick_ts - last_ts >
                         a.min_cooldown * this.tower.cooldown_factor then
-                        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
-                            false, aa.vis_flags, aa.vis_bans)
+                        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false,
+                            aa.vis_flags, aa.vis_bans)
 
                         if not enemy then
                             -- block empty
@@ -2270,8 +2270,8 @@ scripts.tower_sorcerer = {
                             U.y_wait(store, aa.shoot_time)
 
                             if aa == ap and not store.entities[enemy.id] or enemy.health.dead then
-                                enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
-                                    false, aa.vis_flags, aa.vis_bans)
+                                enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false,
+                                    aa.vis_flags, aa.vis_bans)
 
                                 if not enemy or enemy.health.dead then
                                     goto label_18_0
@@ -2379,8 +2379,8 @@ scripts.tower_archmage = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-                    local target = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false,
-                        ta.vis_flags, ta.vis_bans, function(e)
+                    local target = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, false, ta.vis_flags,
+                        ta.vis_bans, function(e)
                             return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni >
                                        P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni <
                                        P:get_end_node(e.nav_path.pi) - ta.nodes_limit and
@@ -2657,8 +2657,8 @@ scripts.tower_necromancer = {
 
                 SU.tower_update_silenced_powers(store, this)
                 if ready_to_use_power(pow_p, pa, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
-                        pa.vis_flags, pa.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, pa.vis_flags,
+                        pa.vis_bans)
 
                     if enemy then
                         pa.ts = store.tick_ts
@@ -2698,7 +2698,7 @@ scripts.tower_necromancer = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, ba.vis_flags,
+                    local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, ba.vis_flags,
                         ba.vis_bans)
 
                     if enemy then
@@ -3365,8 +3365,8 @@ scripts.tower_bfg = {
                         local trigger_pos = V.vclone(trigger.pos)
                         U.animation_start(this, am.animation, nil, store.tick_ts, false, tower_sid)
                         U.y_wait(store, am.shoot_time)
-                        local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), am.range,
-                            am.vis_flags, am.vis_bans)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), am.range, am.vis_flags,
+                            am.vis_bans)
 
                         local dest = enemy and U.calculate_enemy_ffe_pos(enemy, am.node_prediction) or trigger_pos
 
@@ -3411,8 +3411,8 @@ scripts.tower_bfg = {
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
-                            aa.vis_flags, aa.vis_bans)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags,
+                            aa.vis_bans)
 
                         local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
 
@@ -3456,8 +3456,8 @@ scripts.tower_bfg = {
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
-                            aa.vis_flags, aa.vis_bans)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags,
+                            aa.vis_bans)
 
                         local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
 
@@ -3522,8 +3522,8 @@ scripts.lava_dwaarp = {
                 last_hit_ts = store.tick_ts
                 cycles_count = cycles_count + 1
 
-                local targets = U.find_enemies_in_range_filter_on(store, this.pos, this.aura.radius,
-                    this.aura.vis_flags, this.aura.vis_bans, function(e)
+                local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags,
+                    this.aura.vis_bans, function(e)
                         return (not this.aura.allowed_templates or
                                    table.contains(this.aura.allowed_templates, e.template_name)) and
                                    (not this.aura.excluded_templates or
@@ -3638,7 +3638,7 @@ scripts.tower_dwaarp = {
                 else
                     if drill_ready then
                         -- local trigger_enemy = U.find_first_enemy()
-                        local trigger_enemy = U.detect_foremost_enemy_in_range_filter_on(store, tpos(this), a.range,
+                        local trigger_enemy = U.detect_foremost_enemy_in_range_filter_on(tpos(this), a.range,
                             da.vis_flags, da.vis_bans, function(e, origin)
                                 return e.health and e.health.hp > 1000
                             end)
@@ -3660,8 +3660,8 @@ scripts.tower_dwaarp = {
                             if trigger_enemy and trigger_enemy.health.hp > 0 then
                                 enemy = trigger_enemy
                             else
-                                enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
-                                    da.vis_flags, da.vis_bans)
+                                enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, da.vis_flags,
+                                    da.vis_bans)
                             end
 
                             if enemy then
@@ -3682,7 +3682,7 @@ scripts.tower_dwaarp = {
                     end
 
                     local trigger_range = (lava_ready and 0.8 or 1) * a.range
-                    local trigger_enemy = U.find_first_enemy_in_range_filter_off(store, tpos(this), trigger_range,
+                    local trigger_enemy = U.find_first_enemy_in_range_filter_off(tpos(this), trigger_range,
                         aa.vis_flags, aa.vis_bans)
 
                     if trigger_enemy then
@@ -3697,7 +3697,7 @@ scripts.tower_dwaarp = {
                         while store.tick_ts - aa.ts < aa.hit_time * tw.cooldown_factor do
                             coroutine.yield()
                         end
-                        local enemies = U.find_enemies_in_range_filter_off(store, tpos(this), a.range, aa.damage_flags,
+                        local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, aa.damage_flags,
                             aa.damage_bans)
 
                         if enemies then
@@ -3926,8 +3926,8 @@ scripts.tower_entwood = {
 
                 local bo = at.bullet_start_offset
                 local b = E:create_entity(at.bullet)
-                local nt, _, nt_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(store, tpos(this),
-                    a.range, at.node_prediction, at.vis_flags, at.vis_bans, b.bullet.damage_radius, filter_faerie)
+                local nt, _, nt_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(tpos(this), a.range,
+                    at.node_prediction, at.vis_flags, at.vis_bans, b.bullet.damage_radius, filter_faerie)
 
                 if nt then
                     target = nt
@@ -4036,8 +4036,8 @@ scripts.tower_entwood = {
                         fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 
                         queue_insert(store, fx)
-                        local targets = U.find_enemies_in_range_filter_off(store, tpos(this), ca.damage_radius,
-                            ca.vis_flags, ca.vis_bans)
+                        local targets = U.find_enemies_in_range_filter_off(tpos(this), ca.damage_radius, ca.vis_flags,
+                            ca.vis_bans)
 
                         if targets then
                             for i, target in ipairs(targets) do
@@ -4160,7 +4160,7 @@ scripts.tower_tesla = {
                 return nil
             end
             if thor.health.hp == thor.health.hp_max then
-                local bounce_target = U.find_enemies_in_range_filter_off(store, thor.pos,
+                local bounce_target = U.find_enemies_in_range_filter_off(thor.pos,
                     E:get_template(ar.bullet).bounce_range * 2, ar.vis_flags, ar.vis_bans)
                 if bounce_target then
                     return thor
@@ -4188,8 +4188,8 @@ scripts.tower_tesla = {
                 end
 
                 if ready_to_attack(ar, store, this.tower.cooldown_factor) then
-                    local target = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), ar.range,
-                        ar.vis_flags, ar.vis_bans)
+                    local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), ar.range, ar.vis_flags,
+                        ar.vis_bans)
 
                     if not target then
                         target = target_after_check_thor()
@@ -4206,8 +4206,8 @@ scripts.tower_tesla = {
                         if target.health.dead or not store.entities[target.id] or
                             not U.is_inside_ellipse(tpos(this), target.pos, ar.range * a.range_check_factor) then
 
-                            target = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), ar.range,
-                                ar.vis_flags, ar.vis_bans)
+                            target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), ar.range, ar.vis_flags,
+                                ar.vis_bans)
                         end
 
                         if target then
@@ -4466,7 +4466,7 @@ function scripts.soldier_mecha.update(this, store, script)
             end
 
             if store.tick_ts - am.ts > am.cooldown * this.cooldown_factor then
-                local target = U.detect_foremost_enemy_in_range_filter_off(store, this.pos, am.max_range, am.vis_flags,
+                local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, am.max_range, am.vis_flags,
                     am.vis_bans)
 
                 if not target then
@@ -4512,8 +4512,8 @@ function scripts.soldier_mecha.update(this, store, script)
 
                             queue_insert(store, b)
 
-                            target = U.detect_foremost_enemy_in_range_filter_off(store, this.pos, am.max_range,
-                                am.vis_flags, am.vis_bans)
+                            target = U.detect_foremost_enemy_in_range_filter_off(this.pos, am.max_range, am.vis_flags,
+                                am.vis_bans)
 
                             if not target then
                                 goto label_67_1
@@ -4664,7 +4664,7 @@ scripts.tower_frankenstein = {
                 return nil
             end
             if thor.health.hp == thor.health.hp_max then
-                local bounce_target = U.find_first_enemy_in_range_filter_off(store, thor.pos, rb.bounce_range * 2,
+                local bounce_target = U.find_first_enemy_in_range_filter_off(thor.pos, rb.bounce_range * 2,
                     ra.vis_flags, ra.vis_bans)
                 if bounce_target then
                     return thor
@@ -4815,14 +4815,14 @@ scripts.tower_frankenstein = {
                 end
 
                 if ready_to_attack(ra, store, this.tower.cooldown_factor) then
-                    local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), at.range, ra.vis_flags,
+                    local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), at.range, ra.vis_flags,
                         ra.vis_bans)
                     if not enemy or enemy.health.dead then
                         enemy = target_after_check_thor()
                         if not enemy then
                             local frankie = b.soldiers[1]
                             if frankie and not frankie.health.dead then
-                                enemy = U.detect_foremost_enemy_in_range_filter_off(store, frankie.pos, rb.bounce_range,
+                                enemy = U.detect_foremost_enemy_in_range_filter_off(frankie.pos, rb.bounce_range,
                                     ra.vis_flags, ra.vis_bans)
                                 enemy = enemy and frankie
                             end
@@ -4848,8 +4848,8 @@ scripts.tower_frankenstein = {
                         end
                         if not enemy or store.entities[enemy.id] == nil or enemy.health.dead or
                             not U.is_inside_ellipse(tpos(this), enemy.pos, at.range) then
-                            enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), at.range,
-                                ra.vis_flags, ra.vis_bans)
+                            enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), at.range, ra.vis_flags,
+                                ra.vis_bans)
                         end
 
                         if not enemy or enemy.health.dead then
@@ -4923,7 +4923,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
         if this.owner.tower.blocked or not this.owner.tower.can_do_magic then
             -- block empty
         elseif store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
-            local target, enemies = U.find_foremost_enemy_in_range_filter_on(store, tpos(this.owner), a.range, nil,
+            local target, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this.owner), a.range, nil,
                 a.vis_flags, a.vis_bans, function(v)
                     return not table.contains(a.excluded_templates, v.template_name) and
                                not U.has_modifier(store, v, "mod_druid_sylvan")
@@ -4961,8 +4961,8 @@ function scripts.mod_druid_sylvan.update(this, store)
 
     if not target or not target.health or target.health.dead then
         if target then
-            local new_target = U.find_first_enemy_in_range_filter_on(store, target.pos, a.max_range, a.vis_flags,
-                a.vis_bans, function(v)
+            local new_target = U.find_first_enemy_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans,
+                function(v)
                     return not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
             if new_target then
@@ -5008,8 +5008,8 @@ function scripts.mod_druid_sylvan.update(this, store)
             if dhp > 0 then
                 last_hp = target.health.hp
 
-                local targets = U.find_enemies_in_range_filter_on(store, target.pos, a.max_range, a.vis_flags,
-                    a.vis_bans, function(v)
+                local targets = U.find_enemies_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans,
+                    function(v)
                         return not U.has_modifier(store, v, "mod_druid_sylvan")
                     end)
 
@@ -5033,8 +5033,8 @@ function scripts.mod_druid_sylvan.update(this, store)
             ray_ts = store.tick_ts
         end
         if target.health.dead then
-            local new_target = U.find_first_enemy_in_range_filter_on(store, target.pos, a.max_range, a.vis_flags,
-                a.vis_bans, function(v)
+            local new_target = U.find_first_enemy_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans,
+                function(v)
                     return not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
             if new_target then
@@ -5134,8 +5134,8 @@ function scripts.tower_druid.update(this, store)
                     return not GR:cell_is(ppos.x, ppos.y, TERRAIN_FAERIE)
                 end
 
-                target = U.detect_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, ba.vis_flags,
-                    ba.vis_bans, filter_faerie)
+                target = U.detect_foremost_enemy_in_range_filter_on(tpos(this), a.range, ba.vis_flags, ba.vis_bans,
+                    filter_faerie)
 
                 if target then
                     pred_pos = U.calculate_enemy_ffe_pos(target, ba.node_prediction)
@@ -5153,7 +5153,7 @@ function scripts.tower_druid.update(this, store)
                     U.y_wait(store, ba.shoot_time)
 
                     local trigger_target, trigger_pos = target, pred_pos
-                    target, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(store, tpos(this),
+                    target, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(tpos(this),
                         a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans, 50, filter_faerie)
 
                     if not target then
@@ -5394,7 +5394,7 @@ function scripts.tower_tricannon.update(this, store, script)
                 if aa and (not pow or pow.level > 0) and aa.cooldown and
                     ready_to_attack(aa, store, this.tower.cooldown_factor) and
                     (not a.min_cooldown or store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor) then
-                    local trigger, enemies, trigger_pos = U.find_foremost_enemy_in_range_filter_off(store, tpos(this),
+                    local trigger, enemies, trigger_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this),
                         aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
                     if not trigger then
                         aa.ts = aa.ts + fts(5)
@@ -6782,7 +6782,7 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
     end
 
     local function explosion(r, damage_min, damage_max, dty)
-        local targets = U.find_enemies_in_range_filter_off(store, this.pos, r, F_AREA, F_NONE)
+        local targets = U.find_enemies_in_range_filter_off(this.pos, r, F_AREA, F_NONE)
         local factor = damage_factor * this.unit.damage_factor
         if targets then
             for _, target in pairs(targets) do
@@ -7027,7 +7027,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store, script)
     end
 
     local function explosion(r, damage, dty)
-        local targets = U.find_enemies_in_range_filter_off(store, this.pos, r, F_AREA, F_NONE)
+        local targets = U.find_enemies_in_range_filter_off(this.pos, r, F_AREA, F_NONE)
         if targets then
             for _, target in pairs(targets) do
                 local d = E:create_entity("damage")
@@ -8183,7 +8183,8 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store, script)
             last_hit_ts = store.tick_ts
             cycles_count = cycles_count + 1
 
-            local targets = U.find_enemies_in_range_filter_off(store, this.pos, this.aura.radius, this.aura.enemy_vis_flags, this.aura.enemy_vis_bans)
+            local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.enemy_vis_flags,
+                this.aura.enemy_vis_bans)
             if targets then
                 for i, target in ipairs(targets) do
                     if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
@@ -8303,7 +8304,8 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store, script)
     end
 
     local function hit_enemies()
-        local targets = U.find_enemies_in_range_filter_off(store, this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+        local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags,
+            this.aura.vis_bans)
         if not targets then
             return
         end
@@ -9703,7 +9705,7 @@ function scripts.bullet_tower_pandas_air.update(this, store, script)
     end
 
     if this.bounces < this.max_bounces[b.level] then
-        local targets = U.find_enemies_in_range_filter_on(store, this.pos, this.bounce_range, b.vis_flags, b.vis_bans,
+        local targets = U.find_enemies_in_range_filter_on(this.pos, this.bounce_range, b.vis_flags, b.vis_bans,
             function(v)
                 return not table.contains(already_hit, v.id)
             end)
@@ -10166,23 +10168,7 @@ function scripts.tower_ray.update(this, store)
     ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
 
     local idle_ts = store.tick_ts
-    local attacks = {}
-    local pows = {}
-
-    if as then
-        table.insert(attacks, as)
-        table.insert(pows, pow_s)
-    end
-
-    if ac then
-        table.insert(attacks, ac)
-        table.insert(pows, pow_c)
-    end
-
-    if ab then
-        table.insert(attacks, ab)
-        table.insert(pows, nil)
-    end
+    local attacks = {as, ac, ab}
 
     for i = 1, #this.crystals_ids do
         this.tween.props[i].ts = store.tick_ts
@@ -10199,12 +10185,8 @@ function scripts.tower_ray.update(this, store)
     this.tween.props[prop_id].ts = this.tween.props[prop_id - 1].ts
 
     local function find_target(aa)
-        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, aa.node_prediction,
-            aa.vis_flags, aa.vis_bans, function(e, o)
-                return not aa.excluded_templates or not table.contains(aa.excluded_templates, e.template_name)
-            end)
-
-        return target, pred_pos
+        local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
+        return target, target and U.calculate_enemy_ffe_pos(target, aa.node_prediction) or nil
     end
 
     do
@@ -11181,7 +11163,7 @@ function scripts.tower_stargazers.update(this, store, script)
 
     local tw = this.tower
     while true do
-        local enemy, enemies
+        -- local enemy, enemies
 
         if pow_t.changed then
             pow_t.changed = nil
@@ -11198,40 +11180,40 @@ function scripts.tower_stargazers.update(this, store, script)
 
         SU.towers_swaped(store, this, this.attacks.list)
 
-        if this.tower.blocked then
-            -- block empty
-        else
-            if ready_to_attack(aa, store, tw.cooldown_factor) then
-                local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
+        while this.tower.blocked do
+            coroutine.yield()
+        end
+
+        if ready_to_attack(aa, store, tw.cooldown_factor) then
+            local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
+            -- local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags, aa.vis_bans)
+            if not enemy then
+                aa.ts = aa.ts + fts(10)
+            else
+                local shooter_offset_y = aa.bullet_start_offset[1].y
+                local tx, ty = V.sub(enemy.pos.x, enemy.pos.y, this.pos.x, this.pos.y + shooter_offset_y)
+                local t_angle = km.unroll(V.angleTo(tx, ty))
+
+                last_target_pos = V.vclone(enemy.pos)
+
+                local start_ts = store.tick_ts
+
+                U.animation_start(this, "attack_in", nil, store.tick_ts, false, elf_sid)
+                U.y_wait(store, 0.5 * tw.cooldown_factor)
+                U.animation_start(this, "attack_loop", nil, store.tick_ts, true, elf_sid)
+                U.animation_start_group(this, "attack_in", nil, store.tick_ts, 1, "layers")
+                U.y_wait(store, 0.25 * tw.cooldown_factor)
+                U.animation_start_group(this, "atack_loop", nil, store.tick_ts, true, "layers")
+
+                this.render.sprites[moon_sid].hidden = false
+
+                U.animation_start(this, "start", nil, store.tick_ts, false, moon_sid)
+                U.y_wait(store, 0.25 * tw.cooldown_factor)
+                U.animation_start(this, "loop", nil, store.tick_ts, true, moon_sid)
+                local enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags,
                     aa.vis_bans)
-                if not enemy then
-                    aa.ts = aa.ts + fts(10)
-                else
-                    local shooter_offset_y = aa.bullet_start_offset[1].y
-                    local tx, ty = V.sub(enemy.pos.x, enemy.pos.y, this.pos.x, this.pos.y + shooter_offset_y)
-                    local t_angle = km.unroll(V.angleTo(tx, ty))
 
-                    last_target_pos = V.vclone(enemy.pos)
-
-                    local start_ts = store.tick_ts
-
-                    U.animation_start(this, "attack_in", nil, store.tick_ts, false, elf_sid)
-                    U.y_wait(store, 0.5 * tw.cooldown_factor)
-                    U.animation_start(this, "attack_loop", nil, store.tick_ts, true, elf_sid)
-                    U.animation_start_group(this, "attack_in", nil, store.tick_ts, 1, "layers")
-                    U.y_wait(store, 0.25 * tw.cooldown_factor)
-                    U.animation_start_group(this, "atack_loop", nil, store.tick_ts, true, "layers")
-
-                    this.render.sprites[moon_sid].hidden = false
-
-                    U.animation_start(this, "start", nil, store.tick_ts, false, moon_sid)
-                    U.y_wait(store, 0.25 * tw.cooldown_factor)
-                    U.animation_start(this, "loop", nil, store.tick_ts, true, moon_sid)
-                    local _, new_enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags,
-                        aa.vis_bans)
-                    if new_enemies then
-                        enemies = new_enemies
-                    end
+                if enemies then
                     for i = 1, shots do
                         enemy = enemies[km.zmod(i, #enemies)]
 
@@ -11271,12 +11253,6 @@ function scripts.tower_stargazers.update(this, store, script)
 
                         queue_insert(store, bullet)
                         U.y_wait(store, ray_timing * tw.cooldown_factor)
-
-                        enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
-
-                        if not enemy then
-                            break
-                        end
                     end
 
                     U.animation_start(this, "attack_out", nil, store.tick_ts, false, elf_sid)
@@ -11285,185 +11261,172 @@ function scripts.tower_stargazers.update(this, store, script)
                     U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
                     U.animation_start(this, "end", nil, store.tick_ts, false, moon_sid)
                     U.y_wait(store, 0.25 * tw.cooldown_factor)
-
-                    this.render.sprites[moon_sid].hidden = true
-
-                    U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
-
                     aa.ts = start_ts
                 end
+
+                this.render.sprites[moon_sid].hidden = true
+
+                U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
             end
-            if ready_to_use_power(pow_t, at, store, tw.cooldown_factor) then
-                if not U.has_enemy_in_range(store, tpos(this), 0, a.range, at.vis_flags, at.vis_bans) then
-                    at.ts = at.ts + fts(10)
-                else
-                    local start_ts = store.tick_ts
+        end
+        if ready_to_use_power(pow_t, at, store, tw.cooldown_factor) then
+            if not U.has_enemy_in_range(store, tpos(this), 0, a.range, at.vis_flags, at.vis_bans) then
+                at.ts = at.ts + fts(10)
+            else
+                local start_ts = store.tick_ts
 
-                    S:queue(aa.sound_cast)
-                    U.y_animation_play(this, "attack_in_event_horizon", nil, store.tick_ts, false, elf_sid)
+                S:queue(aa.sound_cast)
+                U.y_animation_play(this, "attack_in_event_horizon", nil, store.tick_ts, false, elf_sid)
 
-                    this.render.sprites[teleport_sid].hidden = false
+                this.render.sprites[teleport_sid].hidden = false
 
-                    U.animation_start(this, "idle", nil, store.tick_ts, false, teleport_sid)
-                    U.animation_start(this, "attack_loop_event_horizon", nil, store.tick_ts, true, elf_sid)
-                    S:queue(aa.sound_teleport_out)
-                    U.y_animation_play_group(this, "attack_in", nil, store.tick_ts, 1, "layers")
-                    U.animation_start_group(this, "atack_loop", nil, store.tick_ts, true, "layers")
+                U.animation_start(this, "idle", nil, store.tick_ts, false, teleport_sid)
+                U.animation_start(this, "attack_loop_event_horizon", nil, store.tick_ts, true, elf_sid)
+                S:queue(aa.sound_teleport_out)
+                U.y_animation_play_group(this, "attack_in", nil, store.tick_ts, 1, "layers")
+                U.animation_start_group(this, "atack_loop", nil, store.tick_ts, true, "layers")
 
-                    local enemy, _ = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range, false,
-                        at.vis_flags, at.vis_bans, nil, 0, 100)
-                    if enemy then
-                        enemies = U.find_enemies_in_range(store, enemy.pos, 0, 100, at.vis_flags, at.vis_bans)
+                local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos(this), a.range, false,
+                    at.vis_flags, at.vis_bans, 100)
+                if enemy then
+                    local enemies = U.find_enemies_in_range_filter_off(enemy.pos, 100, at.vis_flags, at.vis_bans)
 
-                        local place_pi = enemy.nav_path.pi
-                        local middle = V.v(enemy.pos.x, enemy.pos.y)
+                    local place_pi = enemy.nav_path.pi
+                    local middle = V.v(enemy.pos.x, enemy.pos.y)
 
-                        local count = at.max_targets[pow_t.level]
+                    local count = at.max_targets[pow_t.level]
 
-                        if enemies then
-                            if count > #enemies then
-                                count = #enemies
-                            end
+                    if count > #enemies then
+                        count = #enemies
+                    end
 
-                            for i = 1, count do
-                                local enemy = enemies[i]
-                                local m = E:create_entity(at.mod)
+                    for i = 1, count do
+                        local enemy = enemies[i]
+                        local m = E:create_entity(at.mod)
 
-                                m.modifier.target_id = enemy.id
-                                m.modifier.source_id = this.id
+                        m.modifier.target_id = enemy.id
+                        m.modifier.source_id = this.id
 
-                                queue_insert(store, m)
+                        queue_insert(store, m)
 
-                                local fx_size
+                        local fx_size
 
-                                if enemy.unit.size == UNIT_SIZE_LARGE then
-                                    fx_size = at.enemy_fx_big
-                                else
-                                    fx_size = at.enemy_fx_small
+                        if enemy.unit.size == UNIT_SIZE_LARGE then
+                            fx_size = at.enemy_fx_big
+                        else
+                            fx_size = at.enemy_fx_small
+                        end
+
+                        local fx = E:create_entity(fx_size)
+
+                        fx.pos.x = enemy.pos.x + enemy.unit.mod_offset.x
+                        fx.pos.y = enemy.pos.y + enemy.unit.mod_offset.y
+                        fx.render.sprites[1].ts = store.tick_ts
+
+                        queue_insert(store, fx)
+                        scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
+                    end
+
+                    local fx = E:create_entity(at.fx)
+
+                    fx.pos.x = middle.x
+                    fx.pos.y = middle.y
+                    fx.render.sprites[1].ts = store.tick_ts
+
+                    queue_insert(store, fx)
+                    U.y_wait(store, 0.2 * tw.cooldown_factor)
+
+                    for i = 1, count do
+                        local enemy = enemies[i]
+                        if enemy then
+                            local tni = enemy.nav_path.ni - at.teleport_nodes_back - 5
+
+                            if band(enemy.vis.flags, at.vis_bans) == 0 and band(enemy.vis.bans, at.vis_flags) == 0 then
+                                local place_ni = tni + math.random(0, 5)
+
+                                if place_ni < 0 then
+                                    place_ni = 1
                                 end
+                                enemy.vis.bans = bor(enemy.vis.bans, F_TELEPORT)
 
-                                local fx = E:create_entity(fx_size)
-
-                                fx.pos.x = enemy.pos.x + enemy.unit.mod_offset.x
-                                fx.pos.y = enemy.pos.y + enemy.unit.mod_offset.y
-                                fx.render.sprites[1].ts = store.tick_ts
-
-                                queue_insert(store, fx)
-                                scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
-                            end
-
-                            local fx = E:create_entity(at.fx)
-
-                            fx.pos.x = middle.x
-                            fx.pos.y = middle.y
-                            fx.render.sprites[1].ts = store.tick_ts
-
-                            queue_insert(store, fx)
-                            U.y_wait(store, 0.2 * tw.cooldown_factor)
-
-                            for i = 1, count do
-                                local enemy = enemies[i]
-                                if enemy then
-                                    local tni = enemy.nav_path.ni - at.teleport_nodes_back - 5
-
-                                    if band(enemy.vis.flags, at.vis_bans) == 0 and band(enemy.vis.bans, at.vis_flags) ==
-                                        0 then
-                                        local place_ni = tni + math.random(0, 5)
-
-                                        if place_ni < 0 then
-                                            place_ni = 1
-                                        end
-                                        enemy.vis.bans = bor(enemy.vis.bans, F_TELEPORT)
-                                        -- enemy._stargazer_bans = U.push_bans(enemy.vis, teleport_bans)
-
-                                        table.insert(this.teleport_targets, {
-                                            ni = place_ni,
-                                            entity = enemy
-                                        })
-                                        SU.remove_modifiers(store, enemy)
-                                        SU.remove_auras(store, enemy)
-                                        U.unblock_all(store, enemy)
-
-                                        if enemy.ui then
-                                            enemy.ui.can_click = false
-                                        end
-
-                                        if enemy.health_bar then
-                                            enemy.health_bar._hidden = enemy.health_bar.hidden
-                                            enemy.health_bar.hidden = true
-                                        end
-
-                                        U.sprites_hide(enemy, nil, nil, true)
-                                    end
-                                end
-                            end
-
-                            U.y_wait(store, 0.5 * tw.cooldown_factor)
-                            queue_insert(store, fx)
-                            S:queue(at.sound_teleport_in)
-                            U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
-                            U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
-                            U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
-
-                            for i = #this.teleport_targets, 1, -1 do
-                                local p = this.teleport_targets[i]
-                                local enemy = p.entity
-
-                                enemy.nav_path.ni = p.ni
-                                enemy.pos = P:node_pos(enemy.nav_path)
+                                table.insert(this.teleport_targets, {
+                                    ni = place_ni,
+                                    entity = enemy
+                                })
+                                SU.remove_modifiers(store, enemy)
+                                SU.remove_auras(store, enemy)
+                                U.unblock_all(store, enemy)
 
                                 if enemy.ui then
-                                    enemy.ui.can_click = true
+                                    enemy.ui.can_click = false
                                 end
 
                                 if enemy.health_bar then
-                                    enemy.health_bar.hidden = enemy.health_bar._hidden
+                                    enemy.health_bar._hidden = enemy.health_bar.hidden
+                                    enemy.health_bar.hidden = true
                                 end
 
-                                U.sprites_show(enemy, nil, nil, true)
-                                -- U.pop_bans(enemy.vis, enemy._stargazer_bans)
-                                enemy.vis.bans = U.flag_clear(enemy.vis.bans, F_TELEPORT)
-                                -- enemy._stargazer_bans = nil
-
-                                table.remove(this.teleport_targets, i)
-
-                                local fx_size
-
-                                if enemy.unit.size == UNIT_SIZE_LARGE then
-                                    fx_size = at.enemy_fx_big
-                                else
-                                    fx_size = at.enemy_fx_small
-                                end
-
-                                local fx = E:create_entity(fx_size)
-
-                                fx.pos.x = enemy.pos.x + enemy.unit.mod_offset.x
-                                fx.pos.y = enemy.pos.y + enemy.unit.mod_offset.y
-                                fx.render.sprites[1].ts = store.tick_ts
-
-                                queue_insert(store, fx)
-                                scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
+                                U.sprites_hide(enemy, nil, nil, true)
                             end
-
-                            this.render.sprites[teleport_sid].hidden = true
-
-                            U.y_animation_wait_group(this, "layers")
-
-                            at.ts = start_ts
-                        else
-                            U.y_wait(store, 0.5 * tw.cooldown_factor)
-                            U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
-                            U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
-                            U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
-                            U.y_animation_wait_group(this, "layers")
                         end
-                    else
-                        U.y_wait(store, 0.5 * tw.cooldown_factor)
-                        U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
-                        U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
-                        U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
-                        U.y_animation_wait_group(this, "layers")
                     end
+
+                    U.y_wait(store, 0.5 * tw.cooldown_factor)
+                    queue_insert(store, fx)
+                    S:queue(at.sound_teleport_in)
+                    U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
+                    U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
+                    U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
+
+                    for i = #this.teleport_targets, 1, -1 do
+                        local p = this.teleport_targets[i]
+                        local enemy = p.entity
+
+                        enemy.nav_path.ni = p.ni
+                        enemy.pos = P:node_pos(enemy.nav_path)
+
+                        if enemy.ui then
+                            enemy.ui.can_click = true
+                        end
+
+                        if enemy.health_bar then
+                            enemy.health_bar.hidden = enemy.health_bar._hidden
+                        end
+
+                        U.sprites_show(enemy, nil, nil, true)
+                        enemy.vis.bans = U.flag_clear(enemy.vis.bans, F_TELEPORT)
+
+                        table.remove(this.teleport_targets, i)
+
+                        local fx_size
+
+                        if enemy.unit.size == UNIT_SIZE_LARGE then
+                            fx_size = at.enemy_fx_big
+                        else
+                            fx_size = at.enemy_fx_small
+                        end
+
+                        local fx = E:create_entity(fx_size)
+
+                        fx.pos.x = enemy.pos.x + enemy.unit.mod_offset.x
+                        fx.pos.y = enemy.pos.y + enemy.unit.mod_offset.y
+                        fx.render.sprites[1].ts = store.tick_ts
+
+                        queue_insert(store, fx)
+                        scripts.tower_stargazers.create_star_death(this, store, enemy, 0.25)
+                    end
+
+                    this.render.sprites[teleport_sid].hidden = true
+
+                    U.y_animation_wait_group(this, "layers")
+
+                    at.ts = start_ts
+                else
+                    U.y_wait(store, 0.5 * tw.cooldown_factor)
+                    U.y_animation_play(this, "attack_out", nil, store.tick_ts, false, elf_sid)
+                    U.animation_start(this, "idle", nil, store.tick_ts, true, elf_sid)
+                    U.animation_start_group(this, "attack_out", nil, store.tick_ts, 1, "layers")
+                    U.y_animation_wait_group(this, "layers")
                 end
             end
         end

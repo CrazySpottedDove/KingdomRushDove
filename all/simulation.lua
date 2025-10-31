@@ -87,6 +87,8 @@ function simulation:init(store, system_names)
             s:init(self.store)
         end
     end
+    local seek = require("seek")
+    seek.init(store.enemy_spatial_index)
 end
 
 function simulation:update(dt)

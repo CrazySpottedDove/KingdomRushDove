@@ -5,6 +5,11 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 require("constants")
+local spatial_hash
+
+function seek.init(prop_spatial_hash)
+    spatial_hash = prop_spatial_hash
+end
 
 local _aspect = ASPECT
 local _aspect_inv = 1.0 / _aspect
@@ -74,8 +79,8 @@ local function foremost_enemy_cmp(e1, e2)
     return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
-function seek.find_enemies_in_range_filter_off(store, origin, range, flags, bans)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_enemies_in_range_filter_off(origin, range, flags, bans)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -107,8 +112,8 @@ function seek.find_enemies_in_range_filter_off(store, origin, range, flags, bans
     return count ~= 0 and result or nil
 end
 
-function seek.find_enemies_in_range_filter_on(store, origin, range, flags, bans, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_enemies_in_range_filter_on(origin, range, flags, bans, filter_fn)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -142,8 +147,8 @@ function seek.find_enemies_in_range_filter_on(store, origin, range, flags, bans,
     return count ~= 0 and result or nil
 end
 
-function seek.find_enemies_between_range_filter_off(store, origin, min_range, max_range, flags, bans)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_enemies_between_range_filter_off(origin, min_range, max_range, flags, bans)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - max_range))
@@ -177,8 +182,8 @@ function seek.find_enemies_between_range_filter_off(store, origin, min_range, ma
     return count ~= 0 and result or nil
 end
 
-function seek.find_enemies_between_range_filter_on(store, origin, min_range, max_range, flags, bans, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_enemies_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_fn)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - max_range))
@@ -213,8 +218,8 @@ function seek.find_enemies_between_range_filter_on(store, origin, min_range, max
     return count ~= 0 and result or nil
 end
 
-function seek.find_foremost_enemy_in_range_filter_off(store, origin, range, prediction_time, flags, bans)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_foremost_enemy_in_range_filter_off(origin, range, prediction_time, flags, bans)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -250,8 +255,8 @@ function seek.find_foremost_enemy_in_range_filter_off(store, origin, range, pred
     return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
-function seek.find_foremost_enemy_in_range_filter_on(store, origin, range, prediction_time, flags, bans, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_foremost_enemy_in_range_filter_on(origin, range, prediction_time, flags, bans, filter_fn)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -288,9 +293,8 @@ function seek.find_foremost_enemy_in_range_filter_on(store, origin, range, predi
     return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
-function seek.find_foremost_enemy_between_range_filter_off(store, origin, min_range, max_range, prediction_time, flags,
-    bans)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_foremost_enemy_between_range_filter_off(origin, min_range, max_range, prediction_time, flags, bans)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - max_range))
@@ -329,9 +333,9 @@ function seek.find_foremost_enemy_between_range_filter_off(store, origin, min_ra
     return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
-function seek.find_foremost_enemy_between_range_filter_on(store, origin, min_range, max_range, prediction_time, flags,
-    bans, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max_range, prediction_time, flags, bans,
+    filter_fn)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - max_range))
@@ -377,8 +381,8 @@ end
 ---@param flags any
 ---@param bans any
 ---@param filter_fn function(e, origin)
-function seek.detect_foremost_enemy_in_range_filter_on(store, origin, range, flags, bans, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+function seek.detect_foremost_enemy_in_range_filter_on(origin, range, flags, bans, filter_fn)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -432,8 +436,8 @@ end
 ---@param flags any
 ---@param bans any
 ---@param filter_fn function(e, origin)
-function seek.detect_foremost_enemy_in_range_filter_off(store, origin, range, flags, bans)
-    local spatial_hash = store.enemy_spatial_index
+function seek.detect_foremost_enemy_in_range_filter_off(origin, range, flags, bans)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -488,8 +492,8 @@ end
 ---@param flags any
 ---@param bans any
 ---@param filter_fn any
-function seek.find_first_enemy_in_range_filter_on(store, origin, range, flags, bans, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_first_enemy_in_range_filter_on(origin, range, flags, bans, filter_fn)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -527,8 +531,8 @@ end
 ---@param range any
 ---@param flags any
 ---@param bans any
-function seek.find_first_enemy_in_range_filter_off(store, origin, range, flags, bans)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_first_enemy_in_range_filter_off(origin, range, flags, bans)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -569,9 +573,9 @@ end
 ---@param bans any
 ---@param cover_range number
 ---@return table?, table?, table?
-function seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(store, origin, range, prediction_time, flags,
-    bans, cover_range)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(origin, range, prediction_time, flags, bans,
+    cover_range)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -623,9 +627,9 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(store, o
     return foremost_enemy, result, best_ffe_pos
 end
 
-function seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(store, origin, range, prediction_time, flags,
-    bans, cover_range, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+function seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(origin, range, prediction_time, flags, bans,
+    cover_range, filter_fn)
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -680,9 +684,9 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(store, or
 
 end
 
-function seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(store, origin, min_range, max_range,
+function seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(origin, min_range, max_range,
     prediction_time, flags, bans, cover_range)
-    local spatial_hash = store.enemy_spatial_index
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - max_range))
@@ -739,9 +743,9 @@ function seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(sto
 
 end
 
-function seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(store, origin, min_range, max_range,
+function seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(origin, min_range, max_range,
     prediction_time, flags, bans, cover_range, filter_fn)
-    local spatial_hash = store.enemy_spatial_index
+
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - max_range))
