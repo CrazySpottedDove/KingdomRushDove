@@ -1345,7 +1345,6 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
     end
     if attack.check_target_before_shot then
         if (not target) or target.health.dead or (not store.entities[target.id]) then
-            local trash
             local node_prediction
             if attack.node_prediction == true then
                 node_prediction = 1 - attack.shoot_time
@@ -1354,11 +1353,13 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
             else
                 node_prediction = nil
             end
-
-            target, trash, pred_pos = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range,
-                node_prediction, attack.vis_flags, attack.vis_bans, attack.filter_fn, F_FLYING)
+            if attack.filter_fn then
+                target = U.detect_foremost_enemy_between_range_filter_on(this.pos, attack.min_range, attack.max_range, attack.vis_flags, attack.vis_bans, attack.filter_fn)
+            else
+                target = U.detect_foremost_enemy_between_range_filter_off(this.pos, attack.min_range, attack.max_range,attack.vis_flags, attack.vis_bans)
+            end
             if target and not target.health.dead then
-                bullet_to = pred_pos or target.pos
+                bullet_to = U.calculate_enemy_ffe_pos(target, node_prediction)
                 bullet_to_start = V.vclone(bullet_to)
             else
                 goto label_60_0
@@ -1419,6 +1420,7 @@ end
 local function soldier_pick_ranged_target_and_attack(store, this)
     local in_range = false
     local awaiting_target
+    local target
     for _, i in pairs(this.ranged.order) do
         local a = this.ranged.attacks[i]
         if a.disabled then
@@ -1428,12 +1430,12 @@ local function soldier_pick_ranged_target_and_attack(store, this)
         elseif a.chance and math.random() > a.chance then
             -- block empty
         else
-            local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-                a.node_prediction, a.vis_flags, a.vis_bans, a.filter_fn, F_FLYING)
+            if a.filter_fn then
+                target = U.detect_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, a.filter_fn)
+            else
+                target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+            end
             if target then
-                if pred_pos then
-                    log.paranoid(" target.pos:%s,%s  pred_pos:%s,%s", target.pos.x, target.pos.y, pred_pos.x, pred_pos.y)
-                end
                 local ready = store.tick_ts - a.ts >= a.cooldown * this.cooldown_factor
                 if this.ranged.forced_cooldown then
                     ready = ready and store.tick_ts - this.ranged.forced_ts >= this.ranged.forced_cooldown *
@@ -1442,7 +1444,7 @@ local function soldier_pick_ranged_target_and_attack(store, this)
                 if not ready then
                     awaiting_target = target
                 elseif math.random() <= a.chance then
-                    return target, a, pred_pos
+                    return target, a, U.calculate_enemy_ffe_pos(target, a.node_prediction)
                 else
                     a.ts = store.tick_ts
                 end
@@ -1605,8 +1607,7 @@ local function y_soldier_timed_attacks(store, this)
         if a.disabled or store.tick_ts - a.ts < a.cooldown then
             -- block empty
         else
-            local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false, a.vis_flags,
-                a.vis_bans)
+            local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
             if not target then
                 return false, A_NO_TARGET
             elseif math.random() < a.chance then
@@ -2166,7 +2167,7 @@ local function soldier_pick_melee_target(store, this)
     if not target then
         -- 如果当前还没有 target_id，就索一下敌
         if this.hero then
-            target = U.find_nearest_enemy(store, center, 0, this.melee.range, F_BLOCK, bit.bor(F_CLIFF), function(e)
+            target = U.find_nearest_enemy(store, center, 0, this.melee.range, F_BLOCK, bor(F_CLIFF, F_FLYING), function(e)
                 return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and
                            band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and
                            (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))

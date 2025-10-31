@@ -1370,6 +1370,8 @@ U.find_foremost_enemy_between_range_filter_on = seek.find_foremost_enemy_between
 U.find_foremost_enemy_between_range_filter_off = seek.find_foremost_enemy_between_range_filter_off
 U.detect_foremost_enemy_in_range_filter_on = seek.detect_foremost_enemy_in_range_filter_on
 U.detect_foremost_enemy_in_range_filter_off = seek.detect_foremost_enemy_in_range_filter_off
+U.detect_foremost_enemy_between_range_filter_off = seek.detect_foremost_enemy_between_range_filter_off
+U.detect_foremost_enemy_between_range_filter_on = seek.detect_foremost_enemy_between_range_filter_on
 
 ---搜索范围内的塔
 ---@param entities table 实体列表
