@@ -531,7 +531,9 @@ function path_db:next_entity_node(e, dt)
 
 	return next_node, new
 end
-
+--- func desc
+---@param e table entity with nav_path component
+---@param flight_time number?
 function path_db:predict_enemy_node_advance(e, flight_time)
 	local average_node_dist = self.average_node_dist
 

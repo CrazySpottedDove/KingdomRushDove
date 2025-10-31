@@ -3075,7 +3075,7 @@ if PERFORMANCE_MONITOR_ENABLED then
         -- 定期输出报告
         if current_time - self.last_report_time > perf.report_interval then
             perf.save_report(store)
-            perf.save_store_entities(store)
+            -- perf.save_store_entities(store)
             self.last_report_time = current_time
         end
 

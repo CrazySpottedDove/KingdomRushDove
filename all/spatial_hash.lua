@@ -11,13 +11,13 @@ local ceil = math.ceil
 local floor = math.floor
 local max = math.max
 local min = math.min
-local _cell_size = 50
-local _cell_size_factor = 1.0 / _cell_size
+local _cell_size = SPATIAL_HASH_CELL_SIZE
+local _cell_size_factor = SPATIAL_HASH_CELL_SIZE_FACTOR
 local _x_min = IN_GAME_X_MIN
 local _y_min = IN_GAME_Y_MIN
-local _cols = ceil((IN_GAME_X_MAX - IN_GAME_X_MIN) / _cell_size)
-local _rows = ceil((IN_GAME_Y_MAX - IN_GAME_Y_MIN) / _cell_size)
-local _max_index = _rows * _cols
+local _cols = SPATIAL_HASH_COLS
+local _rows = SPATIAL_HASH_ROWS
+local _max_index = SPATIAL_HASH_MAX_INDEX
 function spatial_hash:new()
     local hash = {}
 

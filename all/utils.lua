@@ -2,7 +2,7 @@
 local log = require("klua.log"):new("utils")
 
 require("klua.table")
-
+local seek = require("seek")
 local km = require("klua.macros")
 local bit = require("bit")
 local bor = bit.bor
@@ -1056,18 +1056,26 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 范围内的敌人列表
 function U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
-    local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
-        function(v)
-            return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                       band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-                       (not filter_func or filter_func(v, origin))
-        end)
-    if #enemies == 0 then
-        return nil
+    if min_range == 0 then
+        if filter_func then
+            return seek.find_enemies_in_range_filter_on(store, origin, max_range, flags, bans, filter_func)
+        else
+            return seek.find_enemies_in_range_filter_off(store, origin, max_range, flags, bans)
+        end
     else
-        return enemies
+        if filter_func then
+            return seek.find_enemies_between_range_filter_on(store, origin, min_range, max_range, flags, bans,
+                filter_func)
+        else
+            return seek.find_enemies_between_range_filter_off(store, origin, min_range, max_range, flags, bans)
+        end
     end
 end
+
+U.find_enemies_in_range_filter_on = seek.find_enemies_in_range_filter_on
+U.find_enemies_in_range_filter_off = seek.find_enemies_in_range_filter_off
+U.find_enemies_between_range_filter_on = seek.find_enemies_between_range_filter_on
+U.find_enemies_between_range_filter_off = seek.find_enemies_between_range_filter_off
 
 ---检查范围内是否有敌人（开销更小）
 ---@param store table game.store
@@ -1359,42 +1367,27 @@ end
 ---@return table? 最前面的敌人, table? 所有范围内的敌人 , table? 最前面敌人的预测位置
 function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
     min_override_flags)
-    flags = flags or 0
-    bans = bans or 0
-    min_override_flags = min_override_flags or 0
-
-    local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, 0, function(e)
-        if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-            (not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-                not U.is_inside_ellipse(e.pos, origin, min_range))) or (filter_func and not filter_func(e, origin)) then
-            return false
-        end
-
-        if prediction_time and e.motion.speed then
-            if e.motion.forced_waypoint then
-                local dt = prediction_time == true and 1 or prediction_time
-
-                e.__ffe_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-            else
-                local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-                local e_ni = e.nav_path.ni + node_offset
-                e.__ffe_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-            end
+    if min_range == 0 then
+        if filter_func then
+            return seek.find_foremost_enemy_in_range_filter_on(store, origin, max_range, prediction_time, flags, bans,
+                filter_func)
         else
-            e.__ffe_pos = V.vclone(e.pos)
+            return seek.find_foremost_enemy_in_range_filter_off(store, origin, max_range, prediction_time, flags, bans)
         end
-
-        return true, nil, nil
-    end)
-    if not enemies or #enemies == 0 then
-        return nil, nil, nil
     else
-        sort_foremost_enemies(enemies)
-
-        return enemies[1], enemies, enemies[1].__ffe_pos
+        if filter_func then
+            return seek.find_foremost_enemy_between_range_filter_on(store, origin, min_range, max_range,
+                prediction_time, flags, bans, filter_func)
+        else
+            return seek.find_foremost_enemy_between_range_filter_off(store, origin, min_range, max_range,
+                prediction_time, flags, bans)
+        end
     end
 end
+U.find_foremost_enemy_in_range_filter_on = seek.find_foremost_enemy_in_range_filter_on
+U.find_foremost_enemy_in_range_filter_off = seek.find_foremost_enemy_in_range_filter_off
+U.find_foremost_enemy_between_range_filter_on = seek.find_foremost_enemy_between_range_filter_on
+U.find_foremost_enemy_between_range_filter_off = seek.find_foremost_enemy_between_range_filter_off
 
 ---搜索范围内的塔
 ---@param entities table 实体列表
