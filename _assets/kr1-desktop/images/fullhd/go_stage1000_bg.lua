@@ -1,6 +1,6 @@
 return {
     stage1000 = {
-        a_name = "go_stage1000_bg-1.dds",
+        a_name = "go_stage1000_bg-1.png",
         size = {
             1920,
             1080
