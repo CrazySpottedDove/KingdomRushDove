@@ -219,7 +219,6 @@ function seek.find_enemies_between_range_filter_on(origin, min_range, max_range,
 end
 
 function seek.find_foremost_enemy_in_range_filter_off(origin, range, prediction_time, flags, bans)
-
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))
@@ -437,7 +436,6 @@ end
 ---@param bans any
 ---@param filter_fn function(e, origin)
 function seek.detect_foremost_enemy_in_range_filter_off(origin, range, flags, bans)
-
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - range))

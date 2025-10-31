@@ -1354,6 +1354,7 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
             else
                 node_prediction = nil
             end
+
             target, trash, pred_pos = U.find_foremost_enemy(store, this.pos, attack.min_range, attack.max_range,
                 node_prediction, attack.vis_flags, attack.vis_bans, attack.filter_fn, F_FLYING)
             if target and not target.health.dead then
@@ -2171,7 +2172,7 @@ local function soldier_pick_melee_target(store, this)
                            (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
             end)
         else
-            target = U.find_foremost_enemy(store, center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF),
+            target = U.detect_foremost_enemy_in_range_filter_on(center, this.melee.range, F_BLOCK, bor(F_CLIFF, F_FLYING),
                 function(e)
                     return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and
                                band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and
@@ -2180,10 +2181,9 @@ local function soldier_pick_melee_target(store, this)
         end
     elseif U.blocker_rank(store, this) ~= 1 then
         -- 如果当前拦截的敌人被多个士兵拦截，就尝试寻找别的尚未被拦截的敌人作为目标
-        local alt_target = U.find_foremost_enemy(store, center, 0, this.melee.range, false, F_BLOCK,
-            bit.bor(F_FLYING, F_CLIFF), function(e)
-                return #e.enemy.blockers == 0 and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0
-            end)
+        local alt_target = U.detect_foremost_enemy_in_range_filter_on(center, this.melee.range, F_BLOCK, bor(F_CLIFF, F_FLYING), function(e)
+            return #e.enemy.blockers == 0 and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0
+        end)
 
         if alt_target then
             target = alt_target
