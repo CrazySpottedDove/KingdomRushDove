@@ -903,8 +903,8 @@ scripts.tower_totem = {
                     if ready_to_use_power(pow, ta, store, this.tower.cooldown_factor) then
                         local enemy
                         if name == "silence" then
-                            enemy = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false, ta.vis_flags,
-                                ta.vis_bans, enemy_is_silent_target)
+                            enemy = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false,
+                                ta.vis_flags, ta.vis_bans, enemy_is_silent_target)
                         else
                             enemy = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range, false,
                                 ta.vis_flags, ta.vis_bans, nil, nil, 80)
@@ -1503,7 +1503,8 @@ scripts.tower_wild_magus = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if ready_to_use_power(pow_e, ea, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ea.vis_flags, ea.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                        ea.vis_flags, ea.vis_bans)
 
                     if not enemy then
                         -- block empty
@@ -1518,8 +1519,8 @@ scripts.tower_wild_magus = {
                         U.y_wait(store, ea.shoot_time)
 
                         if enemy.health.dead or not U.flags_pass(enemy.vis, ea) then
-                            enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ea.vis_flags,
-                                ea.vis_bans)
+                            enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                                ea.vis_flags, ea.vis_bans)
                         end
 
                         if enemy then
@@ -1543,8 +1544,8 @@ scripts.tower_wild_magus = {
                 end
 
                 if ready_to_use_power(pow_w, wa, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false, wa.vis_flags,
-                        wa.vis_bans, enemy_is_silent_target)
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false,
+                        wa.vis_flags, wa.vis_bans, enemy_is_silent_target)
 
                     if enemy then
                         wa.ts = store.tick_ts
@@ -1584,7 +1585,8 @@ scripts.tower_wild_magus = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ba.vis_flags, ba.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                        ba.vis_flags, ba.vis_bans)
 
                     if enemy then
                         ba.ts = store.tick_ts
@@ -1805,8 +1807,8 @@ scripts.tower_high_elven = {
                 end
 
                 if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ta.vis_flags,
-                        ta.vis_bans)
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                        ta.vis_flags, ta.vis_bans)
 
                     if enemy then
                         if #enemies >= 3 or enemy.health.hp > 750 then
@@ -1849,8 +1851,8 @@ scripts.tower_high_elven = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ba.vis_flags,
-                        ba.vis_bans)
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                        ba.vis_flags, ba.vis_bans)
 
                     if enemy then
                         ba.ts = store.tick_ts
@@ -1864,8 +1866,8 @@ scripts.tower_high_elven = {
 
                         U.y_wait(store, ba.shoot_time)
 
-                        enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, ba.vis_flags,
-                            ba.vis_bans)
+                        enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                            ba.vis_flags, ba.vis_bans)
 
                         if enemy then
                             local eidx = 1
@@ -1957,8 +1959,8 @@ scripts.tower_arcane_wizard = {
         local aura = E:get_template(at.aura)
         local max_times_applied = E:get_template(aura.aura.mod).max_times_applied
         local function find_target(aa)
-            local target, __, pred_pos = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, aa.node_prediction,
-                aa.vis_flags, aa.vis_bans, function(e)
+            local target, __, pred_pos = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range,
+                aa.node_prediction, aa.vis_flags, aa.vis_bans, function(e)
                     if aa == at then
                         return e.nav_path.ni >= aa.min_nodes and
                                    (not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport < max_times_applied)
@@ -2229,8 +2231,8 @@ scripts.tower_sorcerer = {
                     if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or
                         (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) and store.tick_ts - last_ts >
                         a.min_cooldown * this.tower.cooldown_factor then
-                        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, aa.vis_flags,
-                            aa.vis_bans)
+                        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
+                            false, aa.vis_flags, aa.vis_bans)
 
                         if not enemy then
                             -- block empty
@@ -2268,8 +2270,8 @@ scripts.tower_sorcerer = {
                             U.y_wait(store, aa.shoot_time)
 
                             if aa == ap and not store.entities[enemy.id] or enemy.health.dead then
-                                enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
-                                    aa.vis_flags, aa.vis_bans)
+                                enemy, enemies = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
+                                    false, aa.vis_flags, aa.vis_bans)
 
                                 if not enemy or enemy.health.dead then
                                     goto label_18_0
@@ -2377,8 +2379,8 @@ scripts.tower_archmage = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-                    local target = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false, ta.vis_flags,
-                        ta.vis_bans, function(e)
+                    local target = U.find_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, false,
+                        ta.vis_flags, ta.vis_bans, function(e)
                             return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni >
                                        P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni <
                                        P:get_end_node(e.nav_path.pi) - ta.nodes_limit and
@@ -2655,7 +2657,8 @@ scripts.tower_necromancer = {
 
                 SU.tower_update_silenced_powers(store, this)
                 if ready_to_use_power(pow_p, pa, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false, pa.vis_flags, pa.vis_bans)
+                    local enemy = U.find_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, false,
+                        pa.vis_flags, pa.vis_bans)
 
                     if enemy then
                         pa.ts = store.tick_ts
@@ -2695,7 +2698,8 @@ scripts.tower_necromancer = {
                 end
 
                 if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, ba.vis_flags, ba.vis_bans)
+                    local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range, ba.vis_flags,
+                        ba.vis_bans)
 
                     if enemy then
                         local shooter_offset_y = ba.bullet_start_offset[1].y
@@ -3354,17 +3358,17 @@ scripts.tower_bfg = {
                 if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
                     local trigger = U.find_first_enemy(store, tpos(this), 0, am.range, am.vis_flags, am.vis_bans)
                     if not trigger then
-                        U.y_wait(store, this.tower.guard_time)
+                        am.ts = am.ts + fts(5)
                         -- block empty
                     else
                         am.ts = store.tick_ts
                         local trigger_pos = V.vclone(trigger.pos)
                         U.animation_start(this, am.animation, nil, store.tick_ts, false, tower_sid)
                         U.y_wait(store, am.shoot_time)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), am.range,
+                            am.vis_flags, am.vis_bans)
 
-                        local enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, am.range,
-                            am.node_prediction, am.vis_flags, am.vis_bans)
-                        local dest = enemy and pred_pos or trigger_pos
+                        local dest = enemy and U.calculate_enemy_ffe_pos(enemy, am.node_prediction) or trigger_pos
 
                         local b = E:create_entity(am.bullet)
 
@@ -3397,7 +3401,7 @@ scripts.tower_bfg = {
                     end
 
                     if not trigger then
-                        U.y_wait(store, this.tower.guard_time)
+                        aa.ts = aa.ts + fts(5)
                         -- block empty
                     else
                         aa.ts = store.tick_ts
@@ -3407,9 +3411,10 @@ scripts.tower_bfg = {
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local enemy, __, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range,
-                            aa.node_prediction, aa.vis_flags, aa.vis_bans)
-                        local dest = enemy and pred_pos or trigger_pos
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
+                            aa.vis_flags, aa.vis_bans)
+
+                        local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
 
                         local b = E:create_entity(aa.bullet)
 
@@ -3429,9 +3434,8 @@ scripts.tower_bfg = {
                         U.y_animation_wait(this, tower_sid)
                     end
                 end
+
                 aa = ab
-                -- if ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown *
-                --     this.tower.cooldown_factor then
                 if ready_to_attack(aa, store, this.tower.cooldown_factor) then
                     local trigger = U.find_first_enemy(store, tpos(this), 0, a.range, aa.vis_flags, aa.vis_bans)
 
@@ -3442,7 +3446,7 @@ scripts.tower_bfg = {
                     end
 
                     if not trigger then
-                        U.y_wait(store, this.tower.guard_time)
+                        aa.ts = aa.ts + fts(5)
                         -- block empty
                     else
                         aa.ts = store.tick_ts
@@ -3452,9 +3456,10 @@ scripts.tower_bfg = {
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local enemy, __, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range,
-                            aa.node_prediction, aa.vis_flags, aa.vis_bans)
-                        local dest = enemy and pred_pos or trigger_pos
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
+                            aa.vis_flags, aa.vis_bans)
+
+                        local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
 
                         local b = E:create_entity(aa.bullet)
 
@@ -3517,8 +3522,8 @@ scripts.lava_dwaarp = {
                 last_hit_ts = store.tick_ts
                 cycles_count = cycles_count + 1
 
-                local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags,
-                    this.aura.vis_bans, function(e)
+                local targets = U.find_enemies_in_range_filter_on(store, this.pos, this.aura.radius,
+                    this.aura.vis_flags, this.aura.vis_bans, function(e)
                         return (not this.aura.allowed_templates or
                                    table.contains(this.aura.allowed_templates, e.template_name)) and
                                    (not this.aura.excluded_templates or
@@ -3588,7 +3593,7 @@ scripts.tower_dwaarp = {
         local drill_ready = false
         local std_ready = false
         local anim_id = 3
-
+        local tw = this.tower
         aa.ts = store.tick_ts
 
         ::label_89_0::
@@ -3632,8 +3637,9 @@ scripts.tower_dwaarp = {
                     coroutine.yield()
                 else
                     if drill_ready then
-                        local trigger_enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, true, da.vis_flags,
-                            da.vis_bans, function(e, origin)
+                        -- local trigger_enemy = U.find_first_enemy()
+                        local trigger_enemy = U.detect_foremost_enemy_in_range_filter_on(store, tpos(this), a.range,
+                            da.vis_flags, da.vis_bans, function(e, origin)
                                 return e.health and e.health.hp > 1000
                             end)
 
@@ -3654,8 +3660,8 @@ scripts.tower_dwaarp = {
                             if trigger_enemy and trigger_enemy.health.hp > 0 then
                                 enemy = trigger_enemy
                             else
-                                enemy = U.find_foremost_enemy(store, tpos(this), 0, a.range, true, da.vis_flags,
-                                    da.vis_bans)
+                                enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), a.range,
+                                    da.vis_flags, da.vis_bans)
                             end
 
                             if enemy then
@@ -3676,7 +3682,7 @@ scripts.tower_dwaarp = {
                     end
 
                     local trigger_range = (lava_ready and 0.8 or 1) * a.range
-                    local trigger_enemy = U.find_foremost_enemy(store, tpos(this), 0, trigger_range, false,
+                    local trigger_enemy = U.find_first_enemy_in_range_filter_off(store, tpos(this), trigger_range,
                         aa.vis_flags, aa.vis_bans)
 
                     if trigger_enemy then
@@ -3688,11 +3694,12 @@ scripts.tower_dwaarp = {
 
                         U.animation_start(this, "shoot", nil, store.tick_ts, 1, anim_id)
 
-                        while store.tick_ts - aa.ts < aa.hit_time do
+                        while store.tick_ts - aa.ts < aa.hit_time * tw.cooldown_factor do
                             coroutine.yield()
                         end
-                        local enemies = U.find_enemies_in_range(store, tpos(this), 0, a.range, aa.damage_flags,
+                        local enemies = U.find_enemies_in_range_filter_off(store, tpos(this), a.range, aa.damage_flags,
                             aa.damage_bans)
+
                         if enemies then
                             for _, enemy in pairs(enemies) do
                                 local d = E:create_entity("damage")
@@ -3701,11 +3708,6 @@ scripts.tower_dwaarp = {
                                 d.target_id = enemy.id
                                 d.damage_type = aa.damage_type
 
-                                -- if alchemical_powder_on then
-                                -- 	d.value = aa.damage_max
-                                -- else
-                                -- 	d.value = math.random(aa.damage_min, aa.damage_max)
-                                -- end
                                 if UP:get_upgrade("engineer_efficiency") then
                                     d.value = aa.damage_max
                                 else
@@ -3742,9 +3744,6 @@ scripts.tower_dwaarp = {
                                 -- end
                             end
                         end
-                        -- local alchemical_powder = UP:get_upgrade("engineer_alchemical_powder")
-                        -- local alchemical_powder_on = alchemical_powder and math.random() < alchemical_powder.chance
-                        -- local shock_and_awe = UP:get_upgrade("engineer_shock_and_awe")
 
                         local fx_points = this.fx_points(this)
                         local radius_factor = a.range / this.origin_range
@@ -3927,9 +3926,9 @@ scripts.tower_entwood = {
 
                 local bo = at.bullet_start_offset
                 local b = E:create_entity(at.bullet)
+                local nt, _, nt_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(store, tpos(this),
+                    a.range, at.node_prediction, at.vis_flags, at.vis_bans, b.bullet.damage_radius, filter_faerie)
 
-                local nt, _, nt_pos = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range,
-                    at.node_prediction, at.vis_flags, at.vis_bans, filter_faerie, nil, b.bullet.damage_radius)
                 if nt then
                     target = nt
                     pred_pos = nt_pos
@@ -4005,8 +4004,6 @@ scripts.tower_entwood = {
                 if loaded == "clobber" then
                     loaded = nil
 
-                    SU.delay_attack(store, ca, 1)
-
                     if U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil,
                         ca.min_count) then
                         ca.ts = store.tick_ts
@@ -4039,9 +4036,8 @@ scripts.tower_entwood = {
                         fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 
                         queue_insert(store, fx)
-
-                        local targets = U.find_enemies_in_range(store, tpos(this), 0, ca.damage_radius, ca.vis_flags,
-                            ca.vis_bans)
+                        local targets = U.find_enemies_in_range_filter_off(store, tpos(this), ca.damage_radius,
+                            ca.vis_flags, ca.vis_bans)
 
                         if targets then
                             for i, target in ipairs(targets) do
@@ -4085,6 +4081,8 @@ scripts.tower_entwood = {
                         U.y_animation_wait_group(this, "layers")
 
                         goto label_43_0
+                    else
+                        ca.ts = ca.ts + 1
                     end
                 end
 
@@ -4151,6 +4149,27 @@ scripts.tower_tesla = {
         ar.ts = store.tick_ts
 
         local aa, pow
+        local function target_after_check_thor()
+            if not thor then
+                return nil
+            end
+            if not U.is_inside_ellipse(thor.pos, tpos(this), ar.range * a.range_check_factor) then
+                return nil
+            end
+            if thor.health.dead then
+                return nil
+            end
+            if thor.health.hp == thor.health.hp_max then
+                local bounce_target = U.find_enemies_in_range_filter_off(store, thor.pos,
+                    E:get_template(ar.bullet).bounce_range * 2, ar.vis_flags, ar.vis_bans)
+                if bounce_target then
+                    return thor
+                else
+                    return nil
+                end
+            end
+            return thor
+        end
 
         while true do
             if this.tower.blocked then
@@ -4169,35 +4188,15 @@ scripts.tower_tesla = {
                 end
 
                 if ready_to_attack(ar, store, this.tower.cooldown_factor) then
-                    local target = U.find_foremost_enemy(store, tpos(this), 0, ar.range, ar.node_prediction,
+                    local target = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), ar.range,
                         ar.vis_flags, ar.vis_bans)
-                    local function target_after_check_thor()
-                        if not thor then
-                            return nil
-                        end
-                        if not U.is_inside_ellipse(thor.pos, tpos(this), ar.range * a.range_check_factor) then
-                            return nil
-                        end
-                        if thor.health.dead then
-                            return nil
-                        end
-                        if thor.health.hp == thor.health.hp_max then
-                            local bounce_target = U.find_enemies_in_range(store, thor.pos, 0,
-                                E:get_template(ar.bullet).bounce_range * 2, ar.vis_flags, ar.vis_bans)
-                            if bounce_target then
-                                return thor
-                            else
-                                return nil
-                            end
-                        end
-                        return thor
-                    end
+
                     if not target then
                         target = target_after_check_thor()
                     end
                     if not target then
                         -- block empty
-                        U.y_wait(store, this.tower.guard_time)
+                        ar.ts = ar.ts + fts(5)
                     else
                         ar.ts = store.tick_ts
 
@@ -4206,8 +4205,9 @@ scripts.tower_tesla = {
 
                         if target.health.dead or not store.entities[target.id] or
                             not U.is_inside_ellipse(tpos(this), target.pos, ar.range * a.range_check_factor) then
-                            target = U.find_foremost_enemy(store, tpos(this), 0, ar.range, false, ar.vis_flags,
-                                ar.vis_bans)
+
+                            target = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), ar.range,
+                                ar.vis_flags, ar.vis_bans)
                         end
 
                         if target then
@@ -4466,14 +4466,12 @@ function scripts.soldier_mecha.update(this, store, script)
             end
 
             if store.tick_ts - am.ts > am.cooldown * this.cooldown_factor then
-                local target, targets = U.find_foremost_enemy(store, this.pos, am.min_range, am.max_range, false,
-                    am.vis_flags, am.vis_bans)
+                local target = U.detect_foremost_enemy_in_range_filter_off(store, this.pos, am.max_range, am.vis_flags,
+                    am.vis_bans)
 
-                if not targets then
+                if not target then
                     -- block empty
                 else
-                    -- local target = table.random(targets)
-
                     am.ts = store.tick_ts
 
                     local an, af = U.animation_name_facing_point(this, am.animation_pre, target.pos)
@@ -4514,14 +4512,12 @@ function scripts.soldier_mecha.update(this, store, script)
 
                             queue_insert(store, b)
 
-                            target, targets = U.find_foremost_enemy(store, this.pos, am.min_range, am.max_range, false,
+                            target = U.detect_foremost_enemy_in_range_filter_off(store, this.pos, am.max_range,
                                 am.vis_flags, am.vis_bans)
 
-                            if not targets then
+                            if not target then
                                 goto label_67_1
                             end
-
-                            -- target = table.random(targets)
                         end
 
                         while not U.animation_finished(this) do
@@ -4550,7 +4546,7 @@ function scripts.soldier_mecha.update(this, store, script)
 
             if not targets then
                 -- block empty
-                U.y_wait(store, this.owner.tower.guard_time)
+                ab.ts = ab.ts + fts(5)
             else
                 local target = table.random(targets)
                 local pred_pos = P:predict_enemy_pos(target, ab.node_prediction)
@@ -4650,6 +4646,7 @@ scripts.tower_frankenstein = {
         local pow_f = this.powers.frankie
         local a, pow, bu
         local thor = nil
+        local tw = this.tower
         for _, soldier in pairs(store.soldiers) do
             if soldier.template_name == "hero_thor" then
                 thor = soldier
@@ -4667,8 +4664,8 @@ scripts.tower_frankenstein = {
                 return nil
             end
             if thor.health.hp == thor.health.hp_max then
-                local bounce_target = U.find_enemies_in_range(store, thor.pos, 0, rb.bounce_range * 2, ra.vis_flags,
-                    ra.vis_bans)
+                local bounce_target = U.find_first_enemy_in_range_filter_off(store, thor.pos, rb.bounce_range * 2,
+                    ra.vis_flags, ra.vis_bans)
                 if bounce_target then
                     return thor
                 else
@@ -4818,15 +4815,14 @@ scripts.tower_frankenstein = {
                 end
 
                 if ready_to_attack(ra, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range, ra.node_prediction,
-                        ra.vis_flags, ra.vis_bans)
-
+                    local enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), at.range, ra.vis_flags,
+                        ra.vis_bans)
                     if not enemy or enemy.health.dead then
                         enemy = target_after_check_thor()
                         if not enemy then
                             local frankie = b.soldiers[1]
                             if frankie and not frankie.health.dead then
-                                enemy = U.find_foremost_enemy(store, frankie.pos, 0, rb.bounce_range, false,
+                                enemy = U.detect_foremost_enemy_in_range_filter_off(store, frankie.pos, rb.bounce_range,
                                     ra.vis_flags, ra.vis_bans)
                                 enemy = enemy and frankie
                             end
@@ -4835,12 +4831,12 @@ scripts.tower_frankenstein = {
 
                     if not enemy then
                         -- block empty
-                        U.y_wait(store, this.tower.guard_time)
+                        ra.ts = ra.ts + fts(5)
                     else
                         ra.ts = store.tick_ts
 
                         S:queue("HWFrankensteinChargeLightning", {
-                            delay = fts(16)
+                            delay = fts(16) * tw.cooldown_factor
                         })
 
                         for i = 3, 6 do
@@ -4852,7 +4848,7 @@ scripts.tower_frankenstein = {
                         end
                         if not enemy or store.entities[enemy.id] == nil or enemy.health.dead or
                             not U.is_inside_ellipse(tpos(this), enemy.pos, at.range) then
-                            enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range, ra.node_prediction,
+                            enemy = U.detect_foremost_enemy_in_range_filter_off(store, tpos(this), at.range,
                                 ra.vis_flags, ra.vis_bans)
                         end
 
@@ -4927,8 +4923,8 @@ function scripts.druid_shooter_sylvan.update(this, store)
         if this.owner.tower.blocked or not this.owner.tower.can_do_magic then
             -- block empty
         elseif store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
-            local target, enemies = U.find_foremost_enemy(store, this.owner.pos, 0, a.range, nil, a.vis_flags,
-                a.vis_bans, function(v)
+            local target, enemies = U.find_foremost_enemy_in_range_filter_on(store, tpos(this.owner), a.range, nil,
+                a.vis_flags, a.vis_bans, function(v)
                     return not table.contains(a.excluded_templates, v.template_name) and
                                not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
@@ -4947,7 +4943,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
                 mod.modifier.damage_factor = this.owner.tower.damage_factor
                 queue_insert(store, mod)
             else
-                SU.delay_attack(store, a, 1)
+                a.ts = a.ts + 1
             end
         end
 
@@ -4965,8 +4961,8 @@ function scripts.mod_druid_sylvan.update(this, store)
 
     if not target or not target.health or target.health.dead then
         if target then
-            local new_target = U.find_first_enemy(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
-                function(v)
+            local new_target = U.find_first_enemy_in_range_filter_on(store, target.pos, a.max_range, a.vis_flags,
+                a.vis_bans, function(v)
                     return not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
             if new_target then
@@ -5012,8 +5008,8 @@ function scripts.mod_druid_sylvan.update(this, store)
             if dhp > 0 then
                 last_hp = target.health.hp
 
-                local targets = U.find_enemies_in_range(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
-                    function(v)
+                local targets = U.find_enemies_in_range_filter_on(store, target.pos, a.max_range, a.vis_flags,
+                    a.vis_bans, function(v)
                         return not U.has_modifier(store, v, "mod_druid_sylvan")
                     end)
 
@@ -5037,8 +5033,8 @@ function scripts.mod_druid_sylvan.update(this, store)
             ray_ts = store.tick_ts
         end
         if target.health.dead then
-            local new_target = U.find_first_enemy(store, target.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
-                function(v)
+            local new_target = U.find_first_enemy_in_range_filter_on(store, target.pos, a.max_range, a.vis_flags,
+                a.vis_bans, function(v)
                     return not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
             if new_target then
@@ -5070,7 +5066,7 @@ function scripts.tower_druid.update(this, store)
     local pow_n = this.powers.nature
     local pow_s = this.powers.sylvan
     local target, _, pred_pos
-
+    local tw = this.tower
     this.loaded_bullets = {}
     this.shooters = {}
     ba.ts = store.tick_ts
@@ -5080,7 +5076,7 @@ function scripts.tower_druid.update(this, store)
         local an, af = U.animation_name_facing_point(this, "load", look_pos, shooter_sid)
 
         U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
-        U.y_wait(store, fts(16))
+        U.y_wait(store, fts(16) * tw.cooldown_factor)
         local current_bullets = #this.loaded_bullets
         local tries = ba.max_loaded_bullets - current_bullets
         for i = 1, tries do
@@ -5138,10 +5134,11 @@ function scripts.tower_druid.update(this, store)
                     return not GR:cell_is(ppos.x, ppos.y, TERRAIN_FAERIE)
                 end
 
-                target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, ba.node_prediction,
-                    ba.vis_flags, ba.vis_bans, filter_faerie)
+                target = U.detect_foremost_enemy_in_range_filter_on(store, tpos(this), a.range, ba.vis_flags,
+                    ba.vis_bans, filter_faerie)
 
                 if target then
+                    pred_pos = U.calculate_enemy_ffe_pos(target, ba.node_prediction)
                     ba.ts = store.tick_ts
 
                     if #this.loaded_bullets == 0 then
@@ -5156,9 +5153,8 @@ function scripts.tower_druid.update(this, store)
                     U.y_wait(store, ba.shoot_time)
 
                     local trigger_target, trigger_pos = target, pred_pos
-
-                    target, _, pred_pos = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range,
-                        ba.node_prediction, ba.vis_flags, ba.vis_bans, filter_faerie, nil, 50)
+                    target, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(store, tpos(this),
+                        a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans, 50, filter_faerie)
 
                     if not target then
                         target = trigger_target
@@ -5333,7 +5329,7 @@ function scripts.tower_tricannon.update(this, store, script)
 
     local pows = {pow_o, pow_m}
     local overheateble_attacks = {am, ab}
-
+    local tw = this.tower
     local function shoot_bullet(attack, enemy, dest, bullet_idx)
         local b = E:create_entity(attack.bullet)
         local bullet_start_offset = bullet_idx and attack.bullet_start_offset[bullet_idx] or attack.bullet_start_offset
@@ -5353,7 +5349,6 @@ function scripts.tower_tricannon.update(this, store, script)
             b.bullet.damage_max = b.bullet.damage_max_config[pow_m.level]
             b.bullet.damage_min = b.bullet.damage_min_config[pow_m.level]
         end
-        -- b.bullet.level = pow and pow.level or 1
         b.bullet.target_id = enemy and enemy.id
         b.bullet.source_id = this.id
 
@@ -5366,24 +5361,22 @@ function scripts.tower_tricannon.update(this, store, script)
         if this.tower.blocked then
             coroutine.yield()
         else
-            if this.powers then
-                for k, pow in pairs(this.powers) do
-                    if pow.changed then
-                        pow.changed = nil
+            for k, pow in pairs(this.powers) do
+                if pow.changed then
+                    pow.changed = nil
 
-                        if pow == pow_m then
-                            am.cooldown = pow_m.cooldown[pow_m.level]
+                    if pow == pow_m then
+                        am.cooldown = pow_m.cooldown[pow_m.level]
 
-                            if pow.level == 1 then
-                                am.ts = store.tick_ts - am.cooldown
-                            end
-                        elseif pow == pow_o then
-                            ao.cooldown = pow_o.cooldown[pow_o.level]
-                            ao.duration = pow_o.duration[pow_o.level]
+                        if pow.level == 1 then
+                            am.ts = store.tick_ts - am.cooldown
+                        end
+                    elseif pow == pow_o then
+                        ao.cooldown = pow_o.cooldown[pow_o.level]
+                        ao.duration = pow_o.duration[pow_o.level]
 
-                            if pow.level == 1 then
-                                ao.ts = store.tick_ts - ao.cooldown
-                            end
+                        if pow.level == 1 then
+                            ao.ts = store.tick_ts - ao.cooldown
                         end
                     end
                 end
@@ -5391,17 +5384,6 @@ function scripts.tower_tricannon.update(this, store, script)
 
             if ao and ao.active and store.tick_ts - ao.ts > ao.duration then
                 ao.active = nil
-
-                -- for _, attack in ipairs(overheateble_attacks) do
-                -- attack.bullet = attack._default_bullet
-                -- end
-
-                -- U.y_animation_play_group(this, ao.animation_end, nil, store.tick_ts, false, "layers")
-
-                -- if am and am.cooldown and store.tick_ts - am.ts > am.cooldown then
-                --     am.ts = store.tick_ts - (am.cooldown - a.min_cooldown)
-                -- end
-
                 queue_remove(store, this.decal_mod)
                 this.decal_mod = nil
             end
@@ -5412,11 +5394,10 @@ function scripts.tower_tricannon.update(this, store, script)
                 if aa and (not pow or pow.level > 0) and aa.cooldown and
                     ready_to_attack(aa, store, this.tower.cooldown_factor) and
                     (not a.min_cooldown or store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor) then
-                    local trigger, enemies, trigger_pos = U.find_foremost_enemy(store, tpos(this), 0, aa.range,
-                        aa.node_prediction, aa.vis_flags, aa.vis_bans)
-
+                    local trigger, enemies, trigger_pos = U.find_foremost_enemy_in_range_filter_off(store, tpos(this),
+                        aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
                     if not trigger then
-                        SU.delay_attack(store, aa, fts(10))
+                        aa.ts = aa.ts + fts(5)
                     else
                         local trigger_path = trigger.nav_path.pi
 
@@ -5436,10 +5417,6 @@ function scripts.tower_tricannon.update(this, store, script)
                             end
 
                             local shoot_animation = aa.animation
-
-                            -- if ao and ao.active then
-                            --     shoot_animation = ao.animation_shoot
-                            -- end
 
                             U.animation_start_group(this, shoot_animation, nil, store.tick_ts, false, "layers")
                             U.y_wait(store, aa.shoot_time)
@@ -5506,7 +5483,7 @@ function scripts.tower_tricannon.update(this, store, script)
                                 end
 
                                 shoot_bullet(aa, nil, pred, bullet_idx)
-                                U.y_wait(store, aa.time_between_bombs)
+                                U.y_wait(store, aa.time_between_bombs * tw.cooldown_factor)
                             end
 
                             U.y_animation_wait_group(this, "layers")
@@ -5548,23 +5525,14 @@ function scripts.tower_tricannon.update(this, store, script)
                                 local min_time = aa.time_between_bombs_min
                                 local max_time = aa.time_between_bombs_max
 
-                                U.y_wait(store, fts(math.random(min_time, max_time)))
+                                U.y_wait(store, fts(math.random(min_time, max_time)) * tw.cooldown_factor)
                             end
 
                             U.y_animation_wait_group(this, "layers")
                             U.animation_start_group(this, aa.animation_end, nil, store.tick_ts, false, "layers")
                             U.y_animation_wait_group(this, "layers")
-
-                            -- if ao and ao.cooldown and store.tick_ts - ao.ts > ao.cooldown then
-                            --     ao.ts = store.tick_ts - (ao.cooldown - a.min_cooldown)
-                            -- end
                         elseif aa == ao then
                             aa.active = true
-
-                            -- for _, attack in ipairs(overheateble_attacks) do
-                            --     attack._default_bullet = attack.bullet
-                            --     attack.bullet = attack.bullet_overheated
-                            -- end
 
                             S:queue(aa.sound)
                             U.y_animation_play_group(this, aa.animation_charge, nil, store.tick_ts, false, "layers")
@@ -5580,13 +5548,7 @@ function scripts.tower_tricannon.update(this, store, script)
                 end
             end
 
-            local idle_animation = "idle"
-
-            -- if ao and ao.active then
-            --     idle_animation = ao.animation_idle
-            -- end
-
-            U.y_animation_play_group(this, idle_animation, nil, store.tick_ts, false, "layers")
+            U.y_animation_play_group(this, "idle", nil, store.tick_ts, false, "layers")
             coroutine.yield()
         end
     end
@@ -5738,7 +5700,7 @@ function scripts.tower_dark_elf.update(this, store)
                             target_to_kill = t
                             target_to_kill_hp = t.health.hp
                             target_to_kill_flying = flying
-                            pred_pos = t.__ffe_pos
+                            pred_pos = U.calculate_enemy_ffe_pos(t, node_prediction)
                         end
                     end
                 end
@@ -6820,7 +6782,7 @@ function scripts.soldier_tower_demon_pit.update(this, store, script)
     end
 
     local function explosion(r, damage_min, damage_max, dty)
-        local targets = U.find_enemies_in_range(store, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
+        local targets = U.find_enemies_in_range_filter_off(store, this.pos, r, F_AREA, F_NONE)
         local factor = damage_factor * this.unit.damage_factor
         if targets then
             for _, target in pairs(targets) do
@@ -7065,8 +7027,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store, script)
     end
 
     local function explosion(r, damage, dty)
-        local targets = U.find_enemies_in_range(store, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
-
+        local targets = U.find_enemies_in_range_filter_off(store, this.pos, r, F_AREA, F_NONE)
         if targets then
             for _, target in pairs(targets) do
                 local d = E:create_entity("damage")
@@ -8222,28 +8183,28 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store, script)
             last_hit_ts = store.tick_ts
             cycles_count = cycles_count + 1
 
-            local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.enemy_vis_flags,
-                this.aura.enemy_vis_bans) or {}
-
-            for i, target in ipairs(targets) do
-                if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
-                    break
-                end
-
-                for _, mod_name in pairs(this.aura.enemy_mods) do
-                    local new_mod = E:create_entity(mod_name)
-
-                    new_mod.modifier.level = this.aura.level
-                    new_mod.modifier.target_id = target.id
-                    new_mod.modifier.source_id = this.aura.source_id
-                    new_mod.modifier.duration = this.modifier_duration_config[this.aura.level]
-                    new_mod.inflicted_damage_factor = this.modifier_inflicted_damage_factor[this.aura.level]
-
-                    if this.aura.hide_source_fx and target.id == this.aura.source_id then
-                        new_mod.render = nil
+            local targets = U.find_enemies_in_range_filter_off(store, this.pos, this.aura.radius, this.aura.enemy_vis_flags, this.aura.enemy_vis_bans)
+            if targets then
+                for i, target in ipairs(targets) do
+                    if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
+                        break
                     end
 
-                    queue_insert(store, new_mod)
+                    for _, mod_name in pairs(this.aura.enemy_mods) do
+                        local new_mod = E:create_entity(mod_name)
+
+                        new_mod.modifier.level = this.aura.level
+                        new_mod.modifier.target_id = target.id
+                        new_mod.modifier.source_id = this.aura.source_id
+                        new_mod.modifier.duration = this.modifier_duration_config[this.aura.level]
+                        new_mod.inflicted_damage_factor = this.modifier_inflicted_damage_factor[this.aura.level]
+
+                        if this.aura.hide_source_fx and target.id == this.aura.source_id then
+                            new_mod.render = nil
+                        end
+
+                        queue_insert(store, new_mod)
+                    end
                 end
             end
 
@@ -8342,8 +8303,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store, script)
     end
 
     local function hit_enemies()
-        local targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags,
-            this.aura.vis_bans)
+        local targets = U.find_enemies_in_range_filter_off(store, this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
         if not targets then
             return
         end
@@ -9743,7 +9703,7 @@ function scripts.bullet_tower_pandas_air.update(this, store, script)
     end
 
     if this.bounces < this.max_bounces[b.level] then
-        local targets = U.find_enemies_in_range(store, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans,
+        local targets = U.find_enemies_in_range_filter_on(store, this.pos, this.bounce_range, b.vis_flags, b.vis_bans,
             function(v)
                 return not table.contains(already_hit, v.id)
             end)
@@ -14576,7 +14536,7 @@ function scripts.tower_flamespitter.update(this, store)
     local function find_target(attack)
         -- local target, _, pred_pos = U.find_foremost_enemy(store, tpos, 0, this.attacks.range,
         --     attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
-        local target , pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, this.attacks.range,
+        local target, pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, this.attacks.range,
             attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
         return target, pred_pos
     end
@@ -14825,7 +14785,7 @@ function scripts.tower_flamespitter.update(this, store)
     local up = UP:get_upgrade("engineer_efficiency")
     local scale_factor = this.attacks.range / attack_basic.square_y
 
-    local co_powers = coroutine.create(function ()
+    local co_powers = coroutine.create(function()
         while true do
             check_skill_bomb()
             check_skill_columns()
