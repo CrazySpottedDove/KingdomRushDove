@@ -5422,8 +5422,8 @@ function scripts.tower_tricannon.update(this, store, script)
                             U.y_wait(store, aa.shoot_time)
                             S:queue(aa.sound)
 
-                            local _, enemies, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, aa.range,
-                                aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                            local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
+
                             local target_positions = {}
 
                             if enemies and #enemies > 0 then
@@ -5496,9 +5496,9 @@ function scripts.tower_tricannon.update(this, store, script)
                             U.animation_start_group(this, aa.animation_start, nil, store.tick_ts, false, "layers")
                             U.y_wait(store, aa.shoot_time)
 
-                            local enemy, __, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, aa.range,
-                                aa.node_prediction, aa.vis_flags, aa.vis_bans)
-                            local dest = enemy and pred_pos or trigger_pos
+                            local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), aa.range, aa.vis_flags, aa.vis_bans)
+
+                            local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
                             local dest_path = enemy and enemy.nav_path.pi or trigger_path
                             local nearest_nodes = P:nearest_nodes(dest.x, dest.y, {dest_path})
                             local pi, spi, ni = unpack(nearest_nodes[1])
@@ -6697,8 +6697,9 @@ function scripts.tower_demon_pit.update(this, store, script)
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local _, _, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range * 1.2,
-                            aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range * 1.2, aa.vis_flags, aa.vis_bans)
+
+                        local enemy_pos = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or nil
 
                         if not enemy_pos then
                             local idx = math.random(1, nodes_limit)
@@ -6727,8 +6728,9 @@ function scripts.tower_demon_pit.update(this, store, script)
                         U.animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
                         U.y_wait(store, aa.shoot_time)
 
-                        local _, _, enemy_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range * 1.2,
-                            aa.node_prediction, aa.vis_flags, aa.vis_bans)
+                        local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range * 1.2, aa.vis_flags, aa.vis_bans)
+
+                        local enemy_pos = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or nil
 
                         if not enemy_pos then
                             local idx = math.random(1, nodes_limit)
@@ -7176,10 +7178,9 @@ function scripts.tower_necromancer_lvl4.update(this, store)
     end
 
     local function find_target(attack)
-        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, this.attacks.range,
-            attack.node_prediction, attack.vis_flags, attack.vis_bans)
-
-        return target, pred_pos
+        local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, attack.vis_flags,
+            attack.vis_bans)
+        return target, target and U.calculate_enemy_ffe_pos(target, attack.node_prediction) or nil
     end
 
     local function is_pos_below(pos)
@@ -7192,14 +7193,13 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 
         if power.level > 0 and ready_to_attack(attack, store, this.tower.cooldown_factor) and
             (store.tick_ts - last_ts_shared > attack.min_cooldown * this.tower.cooldown_factor) then
-            local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, attack.max_range,
-                attack.node_prediction + attack.cast_time, attack.vis_flags, attack.vis_bans, function(e, o)
-                    local node_offset = P:predict_enemy_node_advance(e, attack.node_prediction + attack.cast_time)
-                    local e_ni = e.nav_path.ni + node_offset
-                    local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+            local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this), attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans, function(e, o)
+                local node_offset = P:predict_enemy_node_advance(e, attack.node_prediction + attack.cast_time)
+                local e_ni = e.nav_path.ni + node_offset
+                local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
 
-                    return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
-                end)
+                return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
+            end)
 
             if not enemy or #enemies < attack.min_targets then
                 attack.ts = attack.ts + fts(10)
@@ -7240,8 +7240,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
             return
         end
 
-        local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, attack.max_range, attack.node_prediction,
-            attack.vis_flags, attack.vis_bans)
+        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans)
 
         if not enemy or #enemies < attack.min_targets then
             attack.ts = attack.ts + fts(10)
@@ -7468,10 +7467,10 @@ function scripts.bullet_tower_necromancer.update(this, store)
 
     local function find_target()
         local attack = this.source.attacks.list[1]
-        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this.source), 0, this.source.attacks.range,
-            attack.node_prediction, attack.vis_flags, attack.vis_bans)
+        local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this.source), this.source.attacks.range, attack.vis_flags,
+            attack.vis_bans)
 
-        return target, pred_pos
+        return target, target and U.calculate_enemy_ffe_pos(target, attack.node_prediction) or nil
     end
 
     local function move_step(dest)
@@ -9096,7 +9095,7 @@ function scripts.tower_pandas.update(this, store, script)
             local cfg = panda.shoot_cfg
 
             if cfg and store.tick_ts >= cfg.shoot_ts then
-                enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range + 15, false, a.vis_flags, a.vis_bans)
+                enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), at.range + 15, a.vis_flags, a.vis_bans)
 
                 if enemy then
                     last_target_pos = enemy.pos
@@ -9218,8 +9217,7 @@ function scripts.tower_pandas.update(this, store, script)
                 if store.tick_ts - a.ts < a.cooldown * this.tower.cooldown_factor then
                     -- block empty
                 else
-                    enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range, fts(17), a.vis_flags, a.vis_bans)
-
+                    enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), at.range, a.vis_flags, a.vis_bans)
                     if enemy then
                         a.ts = store.tick_ts
                         a.count = a.count + 1
@@ -11685,7 +11683,7 @@ function scripts.tower_sand.update(this, store, script)
             SU.towers_swaped(store, this, this.attacks.list)
 
             if bba.cooldown and ready_to_attack(bba, store, tw.cooldown_factor) then
-                local _, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, 0, bba.range,
+                local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, bba.range,
                     bba.shoot_time[1] + fts(20), bba.vis_flags, bba.vis_bans)
 
                 if not enemies or #enemies < bba.min_targets then
@@ -12371,7 +12369,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, sto
         end
 
         if not this.entity_spawned then
-            local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, ab.range, false, ab.vis_flags,
+            local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), ab.range, false, ab.vis_flags,
                 ab.vis_bans)
 
             if enemy then
@@ -12505,8 +12503,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
         if not store.entities[target.id] or target.health.dead or far_from_tower or not target_still_valid or
             not enemy_is_silent_target(target) then
             far_from_tower = false
-
-            local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, tamer_attack.range, false,
+            local _, targets = U.find_foremost_enemy_in_range_filter_off(tpos(this.owner), tamer_attack.range, false,
                 tamer_attack.vis_flags, tamer_attack.vis_bans)
 
             if targets then
@@ -12763,12 +12760,12 @@ function scripts.tower_arcane_wizard5.update(this, store)
     local first_time_empower = true
 
     local function find_target(aa)
-        local target, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, aa.node_prediction,
-            aa.vis_flags, aa.vis_bans, function(e)
+        local target = U.detect_foremost_enemy_in_range_filter_on(tpos(this), a.range, aa.vis_flags, aa.vis_bans,
+            function(e)
                 return not aa.excluded_templates or not table.contains(aa.excluded_templates, e.template_name)
             end)
 
-        return target, pred_pos
+        return target, target and U.calculate_enemy_ffe_pos(target, aa.node_prediction) or nil
     end
 
     do
@@ -12943,8 +12940,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
                     this.ray_fx_start = fx
 
                     U.y_wait(store, ad.shoot_time - ad.load_time)
-
-                    local _, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, ad.node_prediction,
+                    local _, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, ad.node_prediction,
                         ad.vis_flags, ad.vis_bans, function(e)
                             return not ad.excluded_templates or
                                        not table.contains(ad.excluded_templates, e.template_name)
@@ -14237,18 +14233,6 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 
     fly_to_pos(target_pos)
 
-    -- target_pos = v(soldier_pos.x + 35 * side_flip, soldier_pos.y + 100)
-
-    -- fly_to_pos(target_pos)
-
-    -- target_pos = v(soldier_pos.x, soldier_pos.y + 130)
-
-    -- fly_to_pos(target_pos)
-
-    -- target_pos = v(soldier_pos.x, soldier_pos.y + 180)
-
-    -- fly_to_pos(target_pos)
-
     if target then
         target_pos = v(target.pos.x, soldier_pos.y + 180)
 
@@ -14261,9 +14245,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
     ps.particle_system.emission_rate = 90
 
     if not target or target.health.dead then
-        local new_target, targets = U.find_foremost_enemy(store, soldier_floor_pos, 0, attack.max_range, false,
-            attack.vis_flags, attack.vis_bans, attack.filter_fn)
-
+        local new_target = U.detect_foremost_enemy_in_range_filter_on(soldier_floor_pos, attack.max_range, attack.vis_flags, attack.vis_bans, attack.filter_fn)
         if new_target then
             b.target_id = new_target.id
 
@@ -14286,8 +14268,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
     while true do
         target = store.entities[b.target_id]
         if not target or target.health.dead then
-            target = U.find_foremost_enemy(store, soldier_floor_pos, 0, attack.max_range, false, attack.vis_flags,
-                attack.vis_bans, attack.filter_fn)
+            target = U.detect_foremost_enemy_in_range_filter_on(soldier_floor_pos, attack.max_range, attack.vis_flags, attack.vis_bans, attack.filter_fn)
         end
         if target and not target.health.dead and band(target.vis.bans, bor(F_RANGED, F_INSTAKILL)) == 0 then
             b.target_id = target.id
@@ -14497,8 +14478,6 @@ function scripts.tower_flamespitter.update(this, store)
     local tpos = tpos(this)
 
     local function find_target(attack)
-        -- local target, _, pred_pos = U.find_foremost_enemy(store, tpos, 0, this.attacks.range,
-        --     attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
         local target, pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, this.attacks.range,
             attack.node_prediction * tw.cooldown_factor, attack.vis_flags, attack.vis_bans)
         return target, pred_pos
@@ -14621,13 +14600,9 @@ function scripts.tower_flamespitter.update(this, store)
             return
         end
 
-        -- local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-        --     a.node_prediction, a.vis_flags, a.vis_bans)
         local enemy, pred_pos = U.find_random_enemy_with_pos(store, this.pos, a.min_range, a.max_range,
             a.node_prediction * tw.cooldown_factor, a.vis_flags, a.vis_bans)
-        -- if not enemy or not pred_pos or a.min_targets and #enemies < a.min_targets then
-        --     return
-        -- end
+
         if not enemy then
             a.ts = a.ts + fts(5)
             return
@@ -14668,17 +14643,14 @@ function scripts.tower_flamespitter.update(this, store)
             return
         end
 
-        local enemy, enemies, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-            a.node_prediction * tw.cooldown_factor, a.vis_flags, a.vis_bans)
-
-        -- if not enemy or not pred_pos or a.min_targets and #enemies < a.min_targets then
-        --     return
-        -- end
+        local enemy = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
         if not enemy then
             a.ts = a.ts + fts(5)
             return
         end
+
+        local pred_pos = U.calculate_enemy_ffe_pos(enemy, a.node_prediction * tw.cooldown_factor)
 
         local start_ts = store.tick_ts
         local path = enemy.nav_path.pi
@@ -14887,11 +14859,6 @@ function scripts.tower_flamespitter.update(this, store)
                         if tried_seek_last_time then
                             tried_seek_last_time = false
                         else
-                            -- target = U.find_foremost_enemy(store, tpos, 0, this.attacks.range, 0,
-                            --     attack_basic.vis_flags, attack_basic.vis_bans, function(v)
-                            --         return math.abs(V.angleTo(tpos.x - v.pos.x, tpos.y - v.pos.y, tpos.x - pred_pos.x,
-                            --             tpos.y - pred_pos.y)) < attack_basic.max_retarget_angle
-                            --     end)
                             target = U.find_random_enemy(store, tpos, 0, this.attacks.range, attack_basic.vis_flags,
                                 attack_basic.vis_bans, function(v)
                                     return math.abs(V.angleTo(tpos.x - v.pos.x, tpos.y - v.pos.y, tpos.x - pred_pos.x,
