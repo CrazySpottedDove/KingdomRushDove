@@ -19,6 +19,7 @@ local _cols = SPATIAL_HASH_COLS
 local _rows = SPATIAL_HASH_ROWS
 local _max_size = SPATIAL_HASH_MAX_INDEX
 local _id_array_capacity = ID_ARRAY_CAPACITY
+local _check_interval = SPATIAL_INDEX_CHECK_INTERVAL
 -- array: 存储实体 id 的数组
 -- size: 当前 array 中有的 id 个数
 -- capacity: array 的最大容量
@@ -26,7 +27,7 @@ local _id_array_capacity = ID_ARRAY_CAPACITY
 ffi.cdef [[
 typedef struct{
     uint32_t size;
-    uint32_t array[512];
+    uint32_t array[256];
 } id_array;
 ]]
 
@@ -38,6 +39,8 @@ for i = 0, _max_size - 1 do
 end
 
 local entities = nil
+-- 用于定时 update id_arrays
+local t = 0
 --- 模块数据区 END
 
 -- 对外暴露方法集
@@ -83,7 +86,12 @@ function spatial_index.remove_entity(entity)
     -- 老的 id 就留在那里，反正 size 已经减少了，不会访问到的
 end
 
-function spatial_index.on_update()
+function spatial_index.on_update(dt)
+    t = t + dt
+    if t < _check_interval then
+        return
+    end
+    t = t - _check_interval
     for _, e in pairs(entities) do
         local new_id_array_index = floor((e.pos.y - _y_min) * _cell_size_factor) * _cols + floor((e.pos.x - _x_min) * _cell_size_factor)
         if new_id_array_index >= _max_size then

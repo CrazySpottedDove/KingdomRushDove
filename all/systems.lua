@@ -2814,7 +2814,7 @@ function sys.spatial_index:on_update(dt, ts, store)
     --     store.enemy_spatial_index:update_entity(e)
     -- end
     -- store.enemy_spatial_index:print_debug_info()
-    store.enemy_spatial_index.on_update()
+    store.enemy_spatial_index.on_update(dt)
 end
 
 sys.last_hook = {}

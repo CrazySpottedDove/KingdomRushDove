@@ -36,6 +36,7 @@ local min = math.min
 local V = require("klua.vector")
 local v = V.v
 local vclone = V.vclone
+
 local function _x_to_col(x)
     return floor((x - _x_min) * _cell_size_factor) + 1
 end
@@ -122,9 +123,9 @@ function seek.find_enemies_in_range_filter_off(origin, range, flags, bans)
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -154,9 +155,9 @@ function seek.find_enemies_in_range_filter_on(origin, range, flags, bans, filter
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local id = array[i]
                 local entity = entities[id]
                 local dx = entity.pos.x - x
@@ -190,9 +191,9 @@ function seek.find_enemies_between_range_filter_off(origin, min_range, max_range
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -225,9 +226,9 @@ function seek.find_enemies_between_range_filter_on(origin, min_range, max_range,
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -259,9 +260,9 @@ function seek.find_foremost_enemy_in_range_filter_off(origin, range, prediction_
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -296,9 +297,9 @@ function seek.find_foremost_enemy_in_range_filter_on(origin, range, prediction_t
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -335,9 +336,9 @@ function seek.find_foremost_enemy_between_range_filter_off(origin, min_range, ma
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -376,9 +377,9 @@ function seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -399,8 +400,7 @@ function seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max
     return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
---- 返回范围内符合条件、离家最近的敌人与其 _ffe_pos
----@param store any
+--- 返回范围内符合条件、离家最近的敌人
 ---@param origin any
 ---@param range any
 ---@param flags any
@@ -427,9 +427,9 @@ function seek.detect_foremost_enemy_in_range_filter_on(origin, range, flags, ban
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -454,8 +454,7 @@ function seek.detect_foremost_enemy_in_range_filter_on(origin, range, flags, ban
     return e
 end
 
---- 返回范围内符合条件、离家最近的敌人与其 _ffe_pos，在不需要 enemies 时调用，性能更优
----@param store any
+--- 返回范围内符合条件、离家最近的敌人，在不需要 enemies 时调用，性能更优
 ---@param origin any
 ---@param range any
 ---@param flags any
@@ -481,9 +480,9 @@ function seek.detect_foremost_enemy_in_range_filter_off(origin, range, flags, ba
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -509,7 +508,7 @@ function seek.detect_foremost_enemy_in_range_filter_off(origin, range, flags, ba
     return e
 end
 
---- 返回范围内符合条件、离家最近的敌人与其 _ffe_pos
+--- 返回范围内符合条件、离家最近的敌人
 ---@param store any
 ---@param origin any
 ---@param range any
@@ -538,9 +537,9 @@ function seek.detect_foremost_enemy_between_range_filter_on(origin, min_range, m
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -566,7 +565,7 @@ function seek.detect_foremost_enemy_between_range_filter_on(origin, min_range, m
     return e
 end
 
---- 返回范围内符合条件、离家最近的敌人与其 _ffe_pos，在不需要 enemies 时调用，性能更优
+--- 返回范围内符合条件、离家最近的敌人，在不需要 enemies 时调用，性能更优
 ---@param store any
 ---@param origin any
 ---@param range any
@@ -593,9 +592,9 @@ function seek.detect_foremost_enemy_between_range_filter_off(origin, min_range, 
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -644,9 +643,9 @@ function seek.find_first_enemy_in_range_filter_on(origin, range, flags, bans, fi
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -683,9 +682,9 @@ function seek.find_first_enemy_in_range_filter_off(origin, range, flags, bans)
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -724,9 +723,9 @@ function seek.find_first_enemy_between_range_filter_on(origin, min_range, max_ra
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -765,9 +764,8 @@ function seek.find_first_enemy_between_range_filter_off(origin, min_range, max_r
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -808,9 +806,8 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(origin, 
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -862,9 +859,9 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(origin, r
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -920,9 +917,9 @@ function seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(ori
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -979,9 +976,9 @@ function seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(orig
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -1036,13 +1033,14 @@ function seek.find_biggest_enemy_in_range_filter_off(origin, range, flags, bans)
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
-                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and entity.health.hp > max_hp then
+                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and entity.health.hp >
+                    max_hp then
                     max_hp = entity.health.hp
                     biggest_enemy = entity
                 end
@@ -1070,9 +1068,9 @@ function seek.find_biggest_enemy_in_range_filter_on(origin, range, flags, bans, 
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -1104,9 +1102,9 @@ function seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(orig
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
+
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
@@ -1141,9 +1139,8 @@ function seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(ori
     for _ = min_row, max_row do
         for col = min_col, max_col do
             local cell = id_arrays[index_base + col]
-            local max_index = cell.size - 1
             local array = cell.array
-            for i = 0, max_index do
+            for i = 0, cell.size - 1 do
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
