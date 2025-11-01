@@ -1,6822 +1,6074 @@
--- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_towers_sand.lua
-
 return {
-	tower_sand_basic_hit_0001 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_basic_hit_0001"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			112,
-			116
+			79,
+			82
 		},
 		trim = {
-			35,
-			29,
-			35,
-			39
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1897,
-			803,
-			42,
-			48
-		},
-		alias = {
-			"tower_sand_basic_hit_0002"
-		}
-	},
-	tower_sand_basic_hit_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			112,
-			116
-		},
-		trim = {
-			31,
-			20,
-			22,
-			31
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1585,
-			551,
-			59,
-			65
-		},
-		alias = {
-			"tower_sand_basic_hit_0004"
-		}
-	},
-	tower_sand_basic_hit_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			112,
-			116
-		},
-		trim = {
-			26,
-			20,
-			19,
-			25
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			551,
-			67,
-			71
-		},
-		alias = {
-			"tower_sand_basic_hit_0006"
-		}
-	},
-	tower_sand_build = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			188,
-			168
-		},
-		trim = {
-			19,
 			21,
-			22,
-			61
+            18,
+            21,
+            24
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			788,
-			952,
-			147,
-			86
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_particle_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			28,
-			29,
-			29,
-			28
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1425,
-			370,
-			35,
-			35
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_particle_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			29,
-			28,
-			30,
-			27
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1119,
-			1259,
-			33,
-			37
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_particle_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			28,
-			28,
-			28,
-			28
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1336,
-			370,
-			36,
-			36
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_particle_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			36,
-			36,
-			35,
-			35
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			425,
-			972,
-			21,
-			21
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_particle_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			38,
-			38,
+			467,
+			50,
 			37,
-			38
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			221,
-			1133,
-			17,
-			16
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_particle_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			40,
-			40,
-			39,
 			40
 		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			221,
-			1216,
-			13,
-			12
-		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl1_particle_0007 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_basic_hit_0002"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			92,
-			92
+			79,
+			82
 		},
 		trim = {
-			43,
-			43,
-			42,
-			42
+			21,
+            18,
+            21,
+            24
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			230,
-			825,
-			7,
-			7
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_projectile_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			28,
-			29,
-			29,
-			28
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1466,
-			370,
-			35,
-			35
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_projectile_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			29,
-			28,
-			30,
-			27
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1735,
-			367,
-			33,
-			37
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_projectile_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			28,
-			28,
-			28,
-			28
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1378,
-			370,
-			36,
-			36
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_sentinel_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			45,
-			22,
+			467,
 			50,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1497,
-			1098,
-			45,
-			53
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0002",
-			"tower_sand_lvl1_sentinel_0003",
-			"tower_sand_lvl1_sentinel_0024",
-			"tower_sand_lvl1_sentinel_0025"
-		}
-	},
-	tower_sand_lvl1_sentinel_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			36,
-			21,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1853,
-			687,
-			51,
-			54
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0005"
-		}
-	},
-	tower_sand_lvl1_sentinel_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			30,
-			21,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			943,
-			57,
-			54
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0007"
-		}
-	},
-	tower_sand_lvl1_sentinel_0008 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			29,
-			20,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			707,
-			58,
-			55
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0009"
-		}
-	},
-	tower_sand_lvl1_sentinel_0010 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			29,
-			20,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			768,
-			58,
-			55
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0011"
-		}
-	},
-	tower_sand_lvl1_sentinel_0012 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			42,
-			30,
-			40,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1584,
-			496,
-			58,
-			45
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0013"
-		}
-	},
-	tower_sand_lvl1_sentinel_0014 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			28,
-			38,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1955,
-			628,
-			49,
-			47
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0015"
-		}
-	},
-	tower_sand_lvl1_sentinel_0016 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			27,
 			37,
-			65
+			40
 		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1622,
-			628,
-			50,
-			48
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0017"
-		}
+		alias = {},
 	},
-	tower_sand_lvl1_sentinel_0018 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_basic_hit_0003"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			79,
+			82
 		},
 		trim = {
-			53,
-			28,
-			39,
-			65
+			18,
+            13,
+            14,
+            18
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1442,
-			1149,
-			48,
-			47
+			686,
+			214,
+			47,
+			51
 		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0019"
-		}
+		alias = {},
 	},
-	tower_sand_lvl1_sentinel_0020 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_basic_hit_0004"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			79,
+			82
 		},
 		trim = {
-			53,
-			28,
-			44,
-			65
+			18,
+            13,
+            14,
+            18
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1750,
-			803,
-			43,
-			47
+			686,
+			214,
+			47,
+			51
 		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0021"
-		}
+		alias = {},
 	},
-	tower_sand_lvl1_sentinel_0022 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_basic_hit_0005"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			79,
+			82
 		},
 		trim = {
-			45,
-			21,
-			50,
-			65
+			14,
+            11,
+            11,
+            14
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1497,
-			858,
-			45,
-			54
+			87,
+			339,
+			54,
+			57
 		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0023"
-		}
+		alias = {},
 	},
-	tower_sand_lvl1_sentinel_0026 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_basic_hit_0006"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			79,
+			82
 		},
 		trim = {
-			51,
-			22,
-			44,
-			65
+			14,
+            11,
+            11,
+            14
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1497,
-			1157,
-			45,
-			53
+			87,
+			339,
+			54,
+			57
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl1_sentinel_0027 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_build"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			133,
+			119
 		},
 		trim = {
-			52,
-			22,
-			44,
-			65
+			10,
+            11,
+            12,
+            41
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1549,
-			1161,
-			44,
-			53
+			784,
+			339,
+			111,
+			67
 		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0028",
-			"tower_sand_lvl1_sentinel_0049",
-			"tower_sand_lvl1_sentinel_0050"
-		}
+		alias = {},
 	},
-	tower_sand_lvl1_sentinel_0029 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_particle_0001"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			65,
+			68
 		},
 		trim = {
-			53,
-			21,
-			35,
-			65
+			16,
+            17,
+            16,
+            18
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1622,
-			687,
-			52,
-			54
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0030"
-		}
-	},
-	tower_sand_lvl1_sentinel_0031 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			21,
-			29,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			1073,
-			58,
-			54
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0032"
-		}
-	},
-	tower_sand_lvl1_sentinel_0033 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			20,
-			28,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1650,
-			551,
-			59,
-			55
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0034"
-		}
-	},
-	tower_sand_lvl1_sentinel_0035 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			20,
-			28,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1715,
-			551,
-			59,
-			55
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0036"
-		}
-	},
-	tower_sand_lvl1_sentinel_0037 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			41,
-			30,
-			41,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1648,
-			496,
-			58,
-			45
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0038"
-		}
-	},
-	tower_sand_lvl1_sentinel_0039 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			39,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			1202,
-			48,
-			47
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0040"
-		}
-	},
-	tower_sand_lvl1_sentinel_0041 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			38,
-			27,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1790,
-			628,
-			49,
-			48
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0042"
-		}
-	},
-	tower_sand_lvl1_sentinel_0043 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			42,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1765,
-			750,
-			45,
-			47
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0044"
-		}
-	},
-	tower_sand_lvl1_sentinel_0045 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			46,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1945,
-			803,
-			41,
-			47
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0046"
-		}
-	},
-	tower_sand_lvl1_sentinel_0047 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			52,
-			21,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1549,
-			1041,
-			44,
-			54
-		},
-		alias = {
-			"tower_sand_lvl1_sentinel_0048"
-		}
-	},
-	tower_sand_lvl1_tower = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			184,
-			220
-		},
-		trim = {
-			20,
-			19,
-			26,
-			89
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			788,
-			1179,
-			138,
-			112
-		},
-		alias = {}
-	},
-	tower_sand_lvl1_tower_front = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			124,
-			160
-		},
-		trim = {
+			448,
+			4,
 			33,
-			21,
-			33,
-			87
+			33
 		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1443,
-			628,
-			58,
-			52
-		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl2_sentinel_0001 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_particle_0002"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			65,
+			68
 		},
 		trim = {
-			45,
-			22,
-			50,
-			65
+			15,
+            19,
+            18,
+            19
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1497,
-			1216,
-			45,
-			53
+			328,
+			4,
+			32,
+			30
 		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0002",
-			"tower_sand_lvl2_sentinel_0003",
-			"tower_sand_lvl2_sentinel_0024",
-			"tower_sand_lvl2_sentinel_0025"
-		}
+		alias = {},
 	},
-	tower_sand_lvl2_sentinel_0004 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_particle_0003"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			65,
+			68
 		},
 		trim = {
-			36,
-			21,
-			53,
-			65
+			17,
+            19,
+            18,
+            19
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1910,
-			687,
-			51,
-			54
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0005"
-		}
-	},
-	tower_sand_lvl2_sentinel_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
+			368,
+			4,
 			30,
-			21,
-			53,
-			65
+			30
 		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			1003,
-			57,
-			54
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0007"
-		}
+		alias = {},
 	},
-	tower_sand_lvl2_sentinel_0008 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_particle_0004"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			140
+			65,
+			68
 		},
 		trim = {
-			29,
-			20,
-			53,
-			65
+			24,
+            27,
+            25,
+            25
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1311,
-			829,
-			58,
-			55
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0009"
-		}
-	},
-	tower_sand_lvl2_sentinel_0010 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			29,
-			20,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			890,
-			58,
-			55
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0011"
-		}
-	},
-	tower_sand_lvl2_sentinel_0012 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			42,
-			30,
-			40,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1712,
-			496,
-			58,
-			45
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0013"
-		}
-	},
-	tower_sand_lvl2_sentinel_0014 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			28,
-			38,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			1251,
-			49,
-			47
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0015"
-		}
-	},
-	tower_sand_lvl2_sentinel_0016 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			27,
-			37,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1678,
-			628,
-			50,
-			48
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0017"
-		}
-	},
-	tower_sand_lvl2_sentinel_0018 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			28,
-			39,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1497,
-			750,
-			48,
-			47
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0019"
-		}
-	},
-	tower_sand_lvl2_sentinel_0020 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			28,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1799,
-			803,
-			43,
-			47
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0021"
-		}
-	},
-	tower_sand_lvl2_sentinel_0022 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			45,
-			21,
-			50,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1497,
-			918,
-			45,
-			54
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0023"
-		}
-	},
-	tower_sand_lvl2_sentinel_0026 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			51,
-			22,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1549,
-			803,
-			45,
-			53
-		},
-		alias = {}
-	},
-	tower_sand_lvl2_sentinel_0027 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			52,
-			22,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1549,
-			1220,
-			44,
-			53
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0028",
-			"tower_sand_lvl2_sentinel_0049",
-			"tower_sand_lvl2_sentinel_0050"
-		}
-	},
-	tower_sand_lvl2_sentinel_0029 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			21,
-			35,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1680,
-			687,
-			52,
-			54
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0030"
-		}
-	},
-	tower_sand_lvl2_sentinel_0031 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			21,
-			29,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			1133,
-			58,
-			54
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0032"
-		}
-	},
-	tower_sand_lvl2_sentinel_0033 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			20,
-			28,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1780,
-			551,
-			59,
-			55
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0034"
-		}
-	},
-	tower_sand_lvl2_sentinel_0035 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			20,
-			28,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1845,
-			551,
-			59,
-			55
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0036"
-		}
-	},
-	tower_sand_lvl2_sentinel_0037 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			41,
-			30,
-			41,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1776,
-			496,
-			58,
-			45
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0038"
-		}
-	},
-	tower_sand_lvl2_sentinel_0039 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			39,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1551,
-			750,
-			48,
-			47
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0040"
-		}
-	},
-	tower_sand_lvl2_sentinel_0041 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			38,
-			27,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1845,
-			628,
-			49,
-			48
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0042"
-		}
-	},
-	tower_sand_lvl2_sentinel_0043 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			42,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1816,
-			750,
-			45,
-			47
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0044"
-		}
-	},
-	tower_sand_lvl2_sentinel_0045 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			46,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1992,
-			803,
-			41,
-			47
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0046"
-		}
-	},
-	tower_sand_lvl2_sentinel_0047 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			52,
-			21,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1549,
-			1101,
-			44,
-			54
-		},
-		alias = {
-			"tower_sand_lvl2_sentinel_0048"
-		}
-	},
-	tower_sand_lvl2_tower = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			192,
-			256
-		},
-		trim = {
-			19,
-			20,
-			28,
-			107
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			788,
-			1044,
-			145,
-			129
-		},
-		alias = {}
-	},
-	tower_sand_lvl3_sentinel_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			45,
-			22,
-			50,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1549,
-			862,
-			45,
-			53
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0002",
-			"tower_sand_lvl3_sentinel_0003",
-			"tower_sand_lvl3_sentinel_0024",
-			"tower_sand_lvl3_sentinel_0025"
-		}
-	},
-	tower_sand_lvl3_sentinel_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			36,
-			21,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1967,
-			687,
-			51,
-			54
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0005"
-		}
-	},
-	tower_sand_lvl3_sentinel_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			30,
-			21,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			1063,
-			57,
-			54
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0007"
-		}
-	},
-	tower_sand_lvl3_sentinel_0008 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			29,
-			20,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			951,
-			58,
-			55
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0009"
-		}
-	},
-	tower_sand_lvl3_sentinel_0010 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			29,
-			20,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			1012,
-			58,
-			55
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0011"
-		}
-	},
-	tower_sand_lvl3_sentinel_0012 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			42,
-			30,
-			40,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1840,
-			496,
-			58,
-			45
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0013"
-		}
-	},
-	tower_sand_lvl3_sentinel_0014 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			28,
-			38,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			876,
-			49,
-			47
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0015"
-		}
-	},
-	tower_sand_lvl3_sentinel_0016 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			27,
-			37,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1734,
-			628,
-			50,
-			48
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0017"
-		}
-	},
-	tower_sand_lvl3_sentinel_0018 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			28,
-			39,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1605,
-			750,
-			48,
-			47
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0019"
-		}
-	},
-	tower_sand_lvl3_sentinel_0020 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			28,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1848,
-			803,
-			43,
-			47
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0021"
-		}
-	},
-	tower_sand_lvl3_sentinel_0022 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			45,
-			21,
-			50,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1497,
-			978,
-			45,
-			54
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0023"
-		}
-	},
-	tower_sand_lvl3_sentinel_0026 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			51,
-			22,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1549,
-			921,
-			45,
-			53
-		},
-		alias = {}
-	},
-	tower_sand_lvl3_sentinel_0027 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			52,
-			22,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1600,
-			803,
-			44,
-			53
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0028",
-			"tower_sand_lvl3_sentinel_0049",
-			"tower_sand_lvl3_sentinel_0050"
-		}
-	},
-	tower_sand_lvl3_sentinel_0029 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			21,
-			35,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1738,
-			687,
-			52,
-			54
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0030"
-		}
-	},
-	tower_sand_lvl3_sentinel_0031 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			21,
-			29,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			1193,
-			58,
-			54
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0032"
-		}
-	},
-	tower_sand_lvl3_sentinel_0033 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			20,
-			28,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1910,
-			551,
-			59,
-			55
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0034"
-		}
-	},
-	tower_sand_lvl3_sentinel_0035 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			53,
-			20,
-			28,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1975,
-			551,
-			59,
-			55
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0036"
-		}
-	},
-	tower_sand_lvl3_sentinel_0037 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			41,
-			30,
-			41,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1904,
-			496,
-			58,
-			45
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0038"
-		}
-	},
-	tower_sand_lvl3_sentinel_0039 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			39,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1659,
-			750,
-			48,
-			47
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0040"
-		}
-	},
-	tower_sand_lvl3_sentinel_0041 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			38,
-			27,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1900,
-			628,
-			49,
-			48
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0042"
-		}
-	},
-	tower_sand_lvl3_sentinel_0043 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			41,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1713,
-			750,
-			46,
-			47
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0044"
-		}
-	},
-	tower_sand_lvl3_sentinel_0045 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			46,
-			28,
-			53,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1600,
-			862,
-			41,
-			47
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0046"
-		}
-	},
-	tower_sand_lvl3_sentinel_0047 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			140
-		},
-		trim = {
-			51,
-			21,
-			44,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1497,
-			1038,
-			45,
-			54
-		},
-		alias = {
-			"tower_sand_lvl3_sentinel_0048"
-		}
-	},
-	tower_sand_lvl3_tower = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			204,
-			268
-		},
-		trim = {
-			19,
-			19,
-			31,
-			114
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			788,
-			811,
-			154,
-			135
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_particle_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			96
-		},
-		trim = {
-			27,
-			29,
-			27,
-			29
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			2010,
-			628,
-			38,
-			38
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_particle_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			96
-		},
-		trim = {
-			26,
-			29,
-			27,
-			29
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1600,
-			965,
-			39,
-			38
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_particle_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			96
-		},
-		trim = {
-			26,
-			29,
-			27,
-			28
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1690,
-			367,
-			39,
-			39
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_particle_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			96
-		},
-		trim = {
-			36,
-			39,
-			35,
-			37
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			425,
-			999,
-			21,
-			20
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_particle_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			96
-		},
-		trim = {
-			38,
-			41,
-			38,
-			39
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			221,
-			1155,
+			148,
+			4,
 			16,
 			16
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_particle_0006 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_particle_0005"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			92,
-			96
-		},
-		trim = {
-			40,
-			43,
-			40,
-			41
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			226,
-			972,
-			12,
-			12
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_particle_0007 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			96
-		},
-		trim = {
-			42,
-			45,
-			42,
-			43
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			230,
-			811,
-			8,
-			8
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_projectile_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			27,
-			27,
-			27,
-			27
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1600,
-			1053,
-			38,
-			38
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_projectile_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			26,
-			27,
-			27,
-			27
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1600,
-			1009,
-			39,
-			38
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_projectile_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			92,
-			92
-		},
-		trim = {
-			26,
-			27,
-			27,
-			26
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1778,
-			367,
-			39,
-			39
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			42,
-			41,
-			57,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			817,
-			57,
-			57
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0002",
-			"tower_sand_lvl4_sentinel_0003",
-			"tower_sand_lvl4_sentinel_0024",
-			"tower_sand_lvl4_sentinel_0025"
-		}
-	},
-	tower_sand_lvl4_sentinel_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			33,
-			40,
-			61,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1449,
-			551,
-			62,
-			58
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0005"
-		}
-	},
-	tower_sand_lvl4_sentinel_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			28,
-			40,
-			61,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			769,
-			67,
-			58
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0007"
-		}
-	},
-	tower_sand_lvl4_sentinel_0008 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			27,
-			39,
-			61,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1980,
-			167,
-			68,
-			59
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0009"
-		}
-	},
-	tower_sand_lvl4_sentinel_0010 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			26,
-			38,
-			61,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			1104,
-			69,
-			60
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0011"
-		}
-	},
-	tower_sand_lvl4_sentinel_0012 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			44,
-			48,
-			47,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			1149,
 			65,
-			50
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0013"
-		}
-	},
-	tower_sand_lvl4_sentinel_0014 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			52,
-			45,
-			51,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1507,
-			628,
-			53,
-			53
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0015"
-		}
-	},
-	tower_sand_lvl4_sentinel_0016 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			58,
-			43,
-			47,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1796,
-			687,
-			51,
-			55
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0017"
-		}
-	},
-	tower_sand_lvl4_sentinel_0018 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			58,
-			45,
-			40,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			628,
-			58,
-			53
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0019"
-		}
-	},
-	tower_sand_lvl4_sentinel_0020 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			58,
-			45,
-			54,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1650,
-			803,
-			44,
-			53
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0021"
-		}
-	},
-	tower_sand_lvl4_sentinel_0022 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			42,
-			39,
-			57,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			687,
-			57,
-			59
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0023"
-		}
-	},
-	tower_sand_lvl4_sentinel_0026 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			55,
-			41,
-			46,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			1188,
-			55,
-			57
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0027 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			55,
-			41,
-			46,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			687,
-			55,
-			57
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0028",
-			"tower_sand_lvl4_sentinel_0049",
-			"tower_sand_lvl4_sentinel_0050"
-		}
-	},
-	tower_sand_lvl4_sentinel_0029 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			56,
-			39,
-			37,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1380,
-			551,
-			63,
-			59
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0030"
-		}
-	},
-	tower_sand_lvl4_sentinel_0031 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			57,
-			38,
-			34,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			1024,
-			65,
-			60
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0032"
-		}
-	},
-	tower_sand_lvl4_sentinel_0033 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			58,
-			37,
-			33,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			890,
-			65,
-			61
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0034"
-		}
-	},
-	tower_sand_lvl4_sentinel_0035 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			58,
-			37,
-			33,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			957,
-			65,
-			61
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0036"
-		}
-	},
-	tower_sand_lvl4_sentinel_0037 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			49,
-			47,
-			32,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1736,
-			413,
-			75,
-			51
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0038"
-		}
-	},
-	tower_sand_lvl4_sentinel_0039 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			48,
-			44,
-			54,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1503,
-			687,
-			54,
-			54
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0040"
-		}
-	},
-	tower_sand_lvl4_sentinel_0041 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			46,
-			44,
-			57,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1563,
-			687,
-			53,
-			54
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0042"
-		}
-	},
-	tower_sand_lvl4_sentinel_0043 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			49,
-			45,
-			59,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			1031,
-			48,
-			53
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0044"
-		}
-	},
-	tower_sand_lvl4_sentinel_0045 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			55,
-			42,
-			52,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			814,
-			49,
-			56
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0046"
-		}
-	},
-	tower_sand_lvl4_sentinel_0047 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			55,
-			39,
-			46,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			1123,
-			55,
-			59
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0048"
-		}
-	},
-	tower_sand_lvl4_sentinel_0051 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			42,
-			41,
-			57,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			880,
-			57,
-			57
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0052"
-		}
-	},
-	tower_sand_lvl4_sentinel_0053 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			58,
-			43,
-			54,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1549,
-			980,
-			44,
-			55
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0054"
-		}
-	},
-	tower_sand_lvl4_sentinel_0055 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			52,
-			50,
-			47,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1968,
-			496,
-			57,
-			48
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0056"
-		}
-	},
-	tower_sand_lvl4_sentinel_0057 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			58,
-			52,
-			40,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1520,
-			496,
-			58,
-			46
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0058"
-		}
-	},
-	tower_sand_lvl4_sentinel_0059 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			56,
-			46,
-			51,
-			76
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			750,
-			49,
-			58
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0060"
-		}
-	},
-	tower_sand_lvl4_sentinel_0061 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			35,
-			26,
-			58,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			1205,
-			63,
-			72
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0062"
-		}
-	},
-	tower_sand_lvl4_sentinel_0063 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			35,
-			21,
-			46,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1331,
-			413,
-			75,
-			77
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0064"
-		}
-	},
-	tower_sand_lvl4_sentinel_0065 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			49,
-			26,
-			38,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			1026,
-			69,
-			72
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0066"
-		}
-	},
-	tower_sand_lvl4_sentinel_0067 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			54,
-			41,
-			35,
-			77
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			701,
-			67,
-			62
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0068 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			54,
-			41,
-			35,
-			72
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			628,
-			67,
-			67
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0069 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			46,
-			48,
-			39,
-			67
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1977,
-			413,
-			71,
-			65
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0070 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			46,
-			46,
-			38,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			755,
-			72,
-			69
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0071 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			46,
-			46,
-			37,
-			69
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			550,
-			73,
-			65
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0072 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			46,
-			44,
-			35,
-			69
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1574,
-			413,
-			75,
-			67
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0073 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			47,
-			43,
-			34,
 			68
 		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1493,
-			413,
-			75,
-			69
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0074 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
 		trim = {
-			47,
-			53,
-			60,
-			82
+			26,
+            28,
+            26,
+            27
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			1442,
-			929,
-			49,
-			45
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_sentinel_0075 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			47,
-			53,
-			60,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			980,
-			49,
-			45
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0076"
-		}
-	},
-	tower_sand_lvl4_sentinel_0077 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			50,
-			55,
-			60,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			1255,
-			46,
-			43
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0078"
-		}
-	},
-	tower_sand_lvl4_sentinel_0079 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			46,
-			45,
-			60,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1566,
-			628,
-			50,
-			53
-		},
-		alias = {
-			"tower_sand_lvl4_sentinel_0080"
-		}
-	},
-	tower_sand_lvl4_sentinel_0081 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			156,
-			180
-		},
-		trim = {
-			42,
-			39,
-			57,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1379,
-			752,
-			57,
-			59
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			55,
-			54,
-			55,
-			74
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			830,
-			70,
-			72
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			47,
-			46,
-			48,
-			65
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			963,
 			85,
-			89
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			41,
-			31,
-			44,
-			57
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			308,
-			95,
-			112
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			39,
-			31,
-			40,
-			53
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1766,
-			167,
-			101,
-			116
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			41,
-			24,
-			42,
-			63
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			824,
-			97,
-			113
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			39,
-			24,
-			40,
-			62
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1873,
-			167,
-			101,
-			114
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0007 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			38,
-			23,
-			38,
-			61
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1547,
-			167,
-			104,
-			116
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0008 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			58,
-			23,
-			56,
-			126
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			833,
-			66,
-			51
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0009 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			57,
-			28,
-			54,
-			121
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			1170,
-			69,
-			51
-		},
-		alias = {
-			"tower_sand_lvl4_skill_1_coins_hit_0010"
-		}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0011 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			60,
-			53,
-			57,
-			103
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1384,
-			496,
-			63,
-			44
-		},
-		alias = {
-			"tower_sand_lvl4_skill_1_coins_hit_0012"
-		}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0013 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			60,
-			74,
-			59,
-			84
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1453,
-			496,
-			61,
-			42
-		},
-		alias = {
-			"tower_sand_lvl4_skill_1_coins_hit_0014"
-		}
-	},
-	tower_sand_lvl4_skill_1_coins_hit_0015 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			180,
-			200
-		},
-		trim = {
-			63,
-			104,
-			61,
-			68
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			1259,
-			56,
-			28
-		},
-		alias = {
-			"tower_sand_lvl4_skill_1_coins_hit_0016"
-		}
-	},
-	tower_sand_lvl4_skill_1_hit_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			136,
-			132
-		},
-		trim = {
-			46,
-			38,
-			42,
-			41
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1442,
-			1090,
-			48,
-			53
-		},
-		alias = {
-			"tower_sand_lvl4_skill_1_hit_0002"
-		}
-	},
-	tower_sand_lvl4_skill_1_hit_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			136,
-			132
-		},
-		trim = {
-			43,
-			29,
-			30,
-			32
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			551,
-			63,
-			71
-		},
-		alias = {
-			"tower_sand_lvl4_skill_1_hit_0004"
-		}
-	},
-	tower_sand_lvl4_skill_1_hit_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			136,
-			132
-		},
-		trim = {
-			38,
-			29,
-			26,
-			27
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			673,
-			72,
-			76
-		},
-		alias = {
-			"tower_sand_lvl4_skill_1_hit_0006"
-		}
-	},
-	tower_sand_lvl4_skill_1_particle_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			36,
-			37,
-			35,
-			36
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1867,
-			750,
-			45,
-			47
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_particle_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			36,
-			40,
-			36,
-			38
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1700,
-			803,
-			44,
-			42
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_particle_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			38,
-			39,
-			37,
-			37
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1600,
-			915,
-			41,
-			44
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_particle_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			47,
-			49,
-			46,
-			48
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			419,
-			1165,
-			23,
-			23
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_particle_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			49,
-			51,
-			49,
-			51
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			425,
-			1051,
-			18,
-			18
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_particle_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			51,
-			53,
-			50,
-			53
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			221,
-			1177,
-			15,
-			14
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_particle_0007 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			53,
-			56,
-			53,
-			55
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			226,
-			990,
-			10,
-			9
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_projectile_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			35,
-			36,
-			35,
-			35
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1497,
-			803,
-			46,
-			49
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_projectile_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			36,
-			39,
-			36,
-			37
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1968,
-			750,
-			44,
-			44
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_1_projectile_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			116,
-			120
-		},
-		trim = {
-			37,
-			38,
-			35,
-			36
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1918,
-			750,
-			44,
-			46
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			70,
-			95,
-			79,
-			93
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1336,
-			308,
-			83,
-			56
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			70,
-			96,
-			79,
-			92
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1425,
-			308,
-			83,
-			56
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			61,
-			92,
-			70,
-			93
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1657,
-			243,
-			101,
-			59
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			61,
-			92,
-			70,
-			93
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			383,
-			101,
-			59
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			59,
-			91,
-			68,
-			92
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1436,
-			167,
-			105,
-			61
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			59,
-			91,
-			68,
-			93
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1436,
-			234,
-			105,
-			60
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0007 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			58,
-			92,
-			67,
-			92
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1323,
-			167,
-			107,
-			60
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0008 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			58,
-			92,
-			67,
-			92
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1323,
-			233,
-			107,
-			60
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0009 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			58,
-			97,
-			66,
-			92
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1209,
-			230,
-			108,
-			55
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0010 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			58,
-			95,
-			66,
-			92
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1209,
-			167,
-			108,
-			57
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0011 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			64,
-			94,
-			65,
-			80
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1657,
-			167,
-			103,
-			70
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0012 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			62,
-			93,
-			79,
-			81
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			812,
-			91,
-			70
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0013 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			60,
-			93,
-			75,
-			81
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			943,
-			97,
-			70
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0014 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			59,
-			93,
-			77,
-			89
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			1166,
-			96,
-			62
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0015 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			69,
-			93,
-			75,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			888,
-			88,
-			69
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0016 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			68,
-			93,
-			72,
-			83
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			738,
-			92,
-			68
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0017 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			67,
-			92,
-			71,
-			84
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			426,
-			94,
-			68
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0018 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			65,
-			92,
-			69,
-			84
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			750,
-			98,
-			68
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0019 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			64,
-			92,
-			67,
-			83
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			308,
-			101,
-			69
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0020 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			62,
-			95,
-			73,
-			82
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			1019,
-			97,
-			67
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0021 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			61,
-			96,
-			72,
-			81
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			677,
-			99,
-			67
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0022 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			69,
-			97,
-			71,
-			81
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			1234,
-			92,
-			66
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0023 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			67,
-			95,
-			69,
-			81
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			1092,
-			96,
-			68
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0024 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			65,
-			96,
-			68,
-			80
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			603,
-			99,
-			68
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0025 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			66,
-			95,
-			66,
-			80
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			528,
-			100,
-			69
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0026 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			70,
-			97,
-			80,
-			94
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1690,
-			308,
-			82,
-			53
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0027 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			70,
-			97,
-			80,
-			94
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1778,
-			308,
-			82,
-			53
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0028 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			70,
-			97,
-			77,
-			94
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			1141,
-			85,
-			53
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0029 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			70,
-			97,
-			77,
-			94
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			1200,
-			85,
-			53
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0030 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			70,
-			79,
-			77,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			1058,
-			85,
-			77
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0031 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			74,
-			79,
-			77,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			413,
-			81,
-			77
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0032 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			74,
-			63,
-			77,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1866,
-			308,
-			81,
-			93
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0033 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			74,
-			63,
-			77,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1953,
-			308,
-			81,
-			93
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0034 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			75,
-			43,
-			65,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			500,
-			92,
-			113
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0035 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			75,
-			43,
-			65,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1057,
-			619,
-			92,
-			113
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0036 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			67,
-			22,
-			56,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1922,
-			6,
-			109,
-			134
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0037 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			67,
-			22,
-			56,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1094,
-			167,
-			109,
-			134
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0038 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			76,
-			59,
-			74,
-			88
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1514,
-			308,
-			82,
-			97
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0039 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			76,
-			56,
-			73,
-			89
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			308,
-			83,
-			99
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0040 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			76,
-			56,
-			73,
-			110
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1247,
-			308,
-			83,
-			78
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_decal_0041 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			77,
-			55,
-			73,
-			116
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1602,
-			308,
-			82,
-			73
-		},
-		alias = {
-			"tower_sand_lvl4_skill_2_decal_0042"
-		}
-	},
-	tower_sand_lvl4_skill_2_decal_0043 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			78,
-			53,
-			74,
-			138
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1245,
-			413,
-			80,
-			53
-		},
-		alias = {
-			"tower_sand_lvl4_skill_2_decal_0044"
-		}
-	},
-	tower_sand_lvl4_skill_2_decal_0045 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			232,
-			244
-		},
-		trim = {
-			89,
-			58,
-			92,
-			143
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			1253,
-			51,
-			43
-		},
-		alias = {
-			"tower_sand_lvl4_skill_2_decal_0046"
-		}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			38,
-			31,
-			25,
-			32
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			1090,
-			65,
-			53
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			38,
-			31,
-			20,
-			31
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			908,
-			70,
-			54
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			33,
-			23,
-			20,
-			31
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1655,
-			413,
-			75,
-			62
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			33,
-			23,
-			33,
-			20
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1311,
-			628,
-			62,
-			73
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			20,
-			20,
-			33,
-			20
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1412,
-			413,
-			75,
-			76
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			25,
-			20,
-			29,
-			29
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1817,
-			413,
-			74,
-			67
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0007 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			25,
-			31,
-			29,
-			33
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1897,
-			413,
-			74,
-			52
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0008 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			37,
-			28,
-			29,
-			31
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1517,
-			551,
-			62,
-			57
-		},
-		alias = {
-			"tower_sand_lvl4_skill_2_hit_FX_0009"
-		}
-	},
-	tower_sand_lvl4_skill_2_hit_FX_0010 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			128,
-			116
-		},
-		trim = {
-			66,
-			72,
-			49,
-			32
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			221,
-			1234,
-			13,
-			12
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_particle_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			124
-		},
-		trim = {
-			33,
-			39,
-			37,
-			33
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			968,
-			70,
-			52
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_particle_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			124
-		},
-		trim = {
-			34,
-			41,
-			38,
-			33
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1980,
-			232,
-			68,
-			50
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_particle_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			124
-		},
-		trim = {
-			32,
-			42,
-			34,
-			34
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			496,
-			74,
-			48
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_particle_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			124
-		},
-		trim = {
-			34,
-			41,
-			38,
-			34
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			1227,
-			68,
-			49
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_particle_0005 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			124
-		},
-		trim = {
-			55,
-			51,
-			59,
-			47
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			419,
-			1133,
-			26,
-			26
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_particle_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			124
-		},
-		trim = {
-			58,
-			54,
-			61,
-			50
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			425,
-			1025,
-			21,
-			20
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_particle_0007 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			140,
-			124
-		},
-		trim = {
-			62,
-			58,
-			65,
-			53
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			221,
-			1197,
+			4,
 			13,
 			13
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_skill_2_particle_0008 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_particle_0006"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			140,
-			124
-		},
-		trim = {
-			0,
-			0,
-			138,
-			122
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			234,
-			650,
-			2,
-			2
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_projectile_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			124,
-			112
-		},
-		trim = {
-			26,
-			35,
-			30,
-			28
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1238,
-			496,
-			68,
-			49
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_projectile_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			124,
-			112
-		},
-		trim = {
-			27,
-			36,
-			31,
-			28
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1312,
-			496,
-			66,
-			48
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_skill_2_projectile_0003 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			124,
-			112
-		},
-		trim = {
-			24,
-			37,
-			27,
-			29
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1158,
-			621,
-			73,
-			46
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0001 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			811,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0054"
-		}
-	},
-	tower_sand_lvl4_tower_0002 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			972,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0003"
-		}
-	},
-	tower_sand_lvl4_tower_0004 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			1133,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0005"
-		}
-	},
-	tower_sand_lvl4_tower_0006 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			788,
-			6,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0007"
-		}
-	},
-	tower_sand_lvl4_tower_0008 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			950,
-			6,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0009"
-		}
-	},
-	tower_sand_lvl4_tower_0010 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1112,
-			6,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0011"
-		}
-	},
-	tower_sand_lvl4_tower_0012 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1274,
-			6,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0013",
-			"tower_sand_lvl4_tower_0014",
-			"tower_sand_lvl4_tower_0015"
-		}
-	},
-	tower_sand_lvl4_tower_0016 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1436,
-			6,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0017"
-		}
-	},
-	tower_sand_lvl4_tower_0018 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1598,
-			6,
-			156,
-			155
-		},
-		alias = {
-			"tower_sand_lvl4_tower_0019"
-		}
-	},
-	tower_sand_lvl4_tower_0020 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			1760,
-			6,
-			156,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0021 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			788,
-			167,
-			156,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0022 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			67,
-			21,
-			74,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			972,
-			159,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0023 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			67,
-			21,
-			73,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			650,
-			160,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0024 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			66,
-			21,
-			70,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			328,
-			164,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0025 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			64,
-			21,
-			70,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			6,
-			166,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0026 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			68,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			489,
-			164,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0027 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			67,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			167,
-			165,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0028 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			75,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			1133,
-			157,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0029 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			75,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			6,
-			157,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0030 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			75,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			167,
-			157,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0031 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			75,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			328,
-			157,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0032 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			75,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			489,
-			157,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0033 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			75,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			625,
-			650,
-			157,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0034 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			68,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			788,
-			328,
-			156,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0035 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			64,
-			21,
-			76,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			453,
-			811,
-			160,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0036 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			59,
-			21,
-			72,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			244,
-			1133,
-			169,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0037 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			56,
-			21,
-			69,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			244,
-			972,
-			175,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0038 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			52,
-			21,
 			65,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			244,
-			811,
-			183,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0039 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
+			68
 		},
 		trim = {
-			48,
-			21,
-			61,
-			128
+			27,
+            29,
+            27,
+            28
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			244,
-			650,
-			191,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0040 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			45,
-			21,
-			58,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			244,
-			167,
-			197,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0041 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			42,
-			21,
-			55,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			244,
-			6,
-			203,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0042 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			39,
-			21,
-			52,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			6,
-			1133,
-			209,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0043 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			37,
-			21,
-			49,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			6,
-			972,
-			214,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0044 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			35,
-			21,
 			47,
-			128
+			4,
+			11,
+			11
 		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			6,
-			811,
-			218,
-			155
-		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_tower_0045 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_particle_0007"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			300,
-			304
-		},
-		trim = {
-			33,
-			21,
-			45,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			6,
-			650,
-			222,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0046 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			31,
-			21,
-			43,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			6,
-			489,
-			226,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0047 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
-		},
-		trim = {
-			30,
-			21,
-			41,
-			128
-		},
-		a_size = {
-			2048,
-			1300
-		},
-		f_quad = {
-			6,
-			328,
-			229,
-			155
-		},
-		alias = {}
-	},
-	tower_sand_lvl4_tower_0048 = {
-		a_name = "go_towers_sand-1.dds",
-		size = {
-			300,
-			304
+			65,
+			68
 		},
 		trim = {
 			29,
-			21,
-			40,
-			128
+            31,
+            29,
+            30
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			6,
-			167,
-			231,
-			155
+			15,
+			4,
+			7,
+			7
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_tower_0049 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_projectile_0001"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			300,
-			304
+			65,
+			65
+		},
+		trim = {
+			16,
+            16,
+            16,
+            16
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			489,
+			4,
+			33,
+			33
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_projectile_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			15,
+            16,
+            16,
+            16
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			530,
+			4,
+			34,
+			33
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_projectile_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			65,
+			65
+		},
+		trim = {
+			16,
+            15,
+            16,
+            16
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			720,
+			4,
+			33,
+			34
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            25,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1077,
+			102,
+			47,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            25,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1077,
+			102,
+			47,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            25,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1077,
+			102,
+			47,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			20,
+            25,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			157,
+			50,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			20,
+            25,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			157,
+			50,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			16,
+            25,
+            41,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			62,
+			157,
+			53,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0007"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			16,
+            25,
+            41,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			62,
+			157,
+			53,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0008"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			16,
+            24,
+            41,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			474,
+			157,
+			53,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0009"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			16,
+            24,
+            41,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			474,
+			157,
+			53,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0010"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			15,
+            23,
+            41,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1050,
+			157,
+			54,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0011"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			15,
+            23,
+            41,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1050,
+			157,
+			54,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0012"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			28,
+            30,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			691,
+			50,
+			52,
+			42
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0013"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			28,
+            30,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			691,
+			50,
+			52,
+			42
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0014"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			33,
+            28,
+            33,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1002,
+			50,
+			44,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0015"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			33,
+            28,
+            33,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1002,
+			50,
+			44,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0016"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			37,
+            27,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			587,
+			102,
+			43,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0017"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			37,
+            27,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			587,
+			102,
+			43,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0018"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            28,
+            25,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1054,
+			50,
+			47,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0019"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            28,
+            25,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1054,
+			50,
+			47,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0020"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            28,
+            35,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			638,
+			102,
+			37,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0021"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            28,
+            35,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			638,
+			102,
+			37,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0022"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            24,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			535,
+			157,
+			47,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0023"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            24,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			535,
+			157,
+			47,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0024"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            25,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1077,
+			102,
+			47,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0025"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            25,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1077,
+			102,
+			47,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0026"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            25,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			123,
+			157,
+			45,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0027"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            25,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			176,
+			157,
+			45,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0028"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            25,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			176,
+			157,
+			45,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0029"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            24,
+            23,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			590,
+			157,
+			52,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0030"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            24,
+            23,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			590,
+			157,
+			52,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0031"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			36,
+            23,
+            21,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1112,
+			157,
+			53,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0032"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			36,
+            23,
+            21,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1112,
+			157,
+			53,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0033"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			37,
+            23,
+            21,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			214,
+			52,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0034"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			37,
+            23,
+            21,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			214,
+			52,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0035"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			37,
+            23,
+            20,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			64,
+			214,
+			53,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0036"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			37,
+            23,
+            20,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			64,
+			214,
+			53,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0037"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			31,
+            30,
+            21,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			751,
+			50,
+			58,
+			42
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0038"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			31,
+            30,
+            21,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			751,
+			50,
+			58,
+			42
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0039"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
 		},
 		trim = {
 			30,
-			21,
-			38,
-			128
+            28,
+            35,
+            55
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			6,
-			6,
-			232,
-			155
+			1109,
+			50,
+			45,
+			44
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_tower_0050 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_sentinel_0040"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			300,
-			304
+			110,
+			127
 		},
 		trim = {
-			68,
-			21,
-			38,
-			128
+			30,
+            28,
+            35,
+            55
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			244,
-			328,
-			194,
-			155
+			1109,
+			50,
+			45,
+			44
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_tower_0051 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_sentinel_0041"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			300,
-			304
+			110,
+			127
 		},
 		trim = {
-			68,
-			21,
-			39,
-			128
+			30,
+            28,
+            37,
+            55
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			244,
-			489,
-			193,
-			155
+			4,
+			102,
+			43,
+			44
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_tower_0052 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_sentinel_0042"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			300,
-			304
+			110,
+			127
 		},
 		trim = {
-			68,
-			21,
-			76,
-			128
+			30,
+            28,
+            37,
+            55
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			788,
-			489,
-			156,
-			155
+			4,
+			102,
+			43,
+			44
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_tower_0053 = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_sentinel_0043"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			300,
-			304
+			110,
+			127
 		},
 		trim = {
-			68,
-			21,
-			76,
-			128
+			31,
+            28,
+            38,
+            55
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			788,
+			55,
+			102,
+			41,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0044"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			31,
+            28,
+            38,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			55,
+			102,
+			41,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0045"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            26,
+            34,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			983,
+			102,
+			41,
+			46
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0046"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            26,
+            34,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			983,
+			102,
+			41,
+			46
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0047"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            24,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
 			650,
-			156,
-			155
+			157,
+			45,
+			48
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_lvl4_tower_front = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_sentinel_0048"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			160,
-			248
+			110,
+			127
 		},
 		trim = {
-			20,
-			20,
-			40,
-			154
+			35,
+            24,
+            30,
+            55
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			950,
-			448,
-			100,
+			650,
+			157,
+			45,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0049"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            25,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			176,
+			157,
+			45,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0050"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			35,
+            25,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			176,
+			157,
+			45,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0051"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            25,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			229,
+			157,
+			47,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0052"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            25,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			229,
+			157,
+			47,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0053"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            27,
+            35,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1032,
+			102,
+			37,
+			46
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0054"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            27,
+            35,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1032,
+			102,
+			37,
+			46
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0055"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			33,
+            32,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			512,
+			50,
+			47,
+			40
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0056"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			33,
+            32,
+            30,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			512,
+			50,
+			47,
+			40
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0057"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            33,
+            25,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			125,
+			50,
+			47,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0058"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			38,
+            33,
+            25,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			125,
+			50,
+			47,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0059"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			36,
+            29,
+            36,
+            53
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			683,
+			102,
+			38,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0060"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			36,
+            29,
+            36,
+            53
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			683,
+			102,
+			38,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0061"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			23,
+            17,
+            38,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			806,
+			275,
+			49,
+			55
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0062"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			23,
+            17,
+            38,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			806,
+			275,
+			49,
+			55
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0063"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			23,
+            12,
+            31,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			573,
+			339,
+			56,
+			60
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0064"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			23,
+            12,
+            31,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			573,
+			339,
+			56,
+			60
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0065"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			33,
+            15,
+            26,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			149,
+			339,
+			51,
+			57
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0066"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			33,
+            15,
+            26,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			149,
+			339,
+			51,
+			57
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0067"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			36,
+            27,
+            24,
+            53
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			284,
+			157,
+			50,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0068"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			36,
+            27,
+            24,
+            50
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			563,
+			214,
+			50,
+			50
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0069"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			28,
+            33,
+            27,
+            46
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			703,
+			157,
+			55,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0070"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			29,
+            31,
+            25,
+            44
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			806,
+			214,
+			56,
+			52
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0071"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			28,
+            32,
+            26,
+            48
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			342,
+			157,
+			56,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0072"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			28,
+            30,
+            25,
+            47
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			621,
+			214,
+			57,
+			50
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0073"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			29,
+            29,
+            24,
+            47
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			741,
+			214,
+			57,
+			51
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0074"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			30,
+            34,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1085,
+			4,
+			40,
+			38
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0075"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			30,
+            34,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1133,
+			4,
+			40,
+			38
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0076"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			30,
+            34,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1133,
+			4,
+			40,
+			38
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0077"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			32,
+            35,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			888,
+			4,
+			38,
+			37
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0078"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			32,
+            35,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			888,
+			4,
+			38,
+			37
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0079"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			29,
+            28,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			104,
+			102,
+			41,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0080"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			29,
+            28,
+            40,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			104,
+			102,
+			41,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_sentinel_0081"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			110,
+			127
+		},
+		trim = {
+			26,
+            24,
+            37,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			766,
+			157,
+			47,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			35,
+            37,
+            37,
+            49
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			997,
+			275,
+			55,
+			56
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			30,
+            32,
+            31,
+            45
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			710,
+			339,
+			66,
+			65
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			26,
+            21,
+            28,
+            39
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			422,
+			73,
+			82
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			24,
+            21,
+            25,
+            37
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			244,
+			422,
+			78,
+			84
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			28,
+            16,
+            29,
+            44
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			85,
+			422,
+			70,
+			82
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			27,
+            16,
+            27,
+            43
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			163,
+			422,
+			73,
+			83
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0007"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			26,
+            15,
+            26,
+            42
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			330,
+			422,
+			75,
+			85
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0008"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			40,
+            15,
+            38,
+            88
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			180,
+			50,
+			49,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0009"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			38,
+            19,
+            38,
+            85
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			50,
+			51,
+			38
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0010"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			38,
+            19,
+            38,
+            85
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			50,
+			51,
+			38
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0011"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			40,
+            37,
+            40,
+            72
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			572,
+			4,
+			47,
+			33
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0012"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			40,
+            37,
+            40,
+            72
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			572,
+			4,
+			47,
+			33
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0013"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			40,
+            51,
+            41,
+            58
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			627,
+			4,
+			46,
+			33
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0014"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			40,
+            51,
+            41,
+            58
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			627,
+			4,
+			46,
+			33
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0015"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			41,
+            71,
+            40,
+            47
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			274,
+			4,
+			46,
+			24
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_coins_hit_0016"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			127,
+			142
+		},
+		trim = {
+			41,
+            71,
+            40,
+            47
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			274,
+			4,
+			46,
+			24
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_hit_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			96,
+			93
+		},
+		trim = {
+			31,
+            26,
+            28,
+            28
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			237,
+			50,
+			37,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_hit_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			96,
+			93
+		},
+		trim = {
+			31,
+            26,
+            28,
+            28
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			237,
+			50,
+			37,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_hit_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			96,
+			93
+		},
+		trim = {
+			28,
+            19,
+            20,
+            21
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			933,
+			214,
+			48,
+			53
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_hit_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			96,
+			93
+		},
+		trim = {
+			28,
+            19,
+            20,
+            21
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			933,
+			214,
+			48,
+			53
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_hit_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			96,
+			93
+		},
+		trim = {
+			25,
+            19,
+            17,
+            18
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1060,
+			275,
+			54,
+			56
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_hit_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			96,
+			93
+		},
+		trim = {
+			25,
+            19,
+            17,
+            18
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1060,
+			275,
+			54,
+			56
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_particle_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			23,
+            24,
+            24,
+            25
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			845,
+			4,
+			35,
+			36
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_particle_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			24,
+            27,
+            24,
+            26
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			406,
+			4,
+			34,
+			32
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_particle_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			25,
+            27,
+            26,
+            25
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			681,
+			4,
+			31,
+			33
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_particle_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			32,
+            33,
+            32,
+            34
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			220,
+			4,
+			18,
+			18
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_particle_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			33,
+            34,
+            33,
+            35
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			172,
+			4,
+			16,
+			16
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_particle_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			35,
+            36,
+            35,
+            36
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			106,
+			4,
+			12,
+			13
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_particle_0007"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			37,
+            38,
+            36,
+            38
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			30,
+			4,
+			9,
+			9
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_projectile_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			24,
+            24,
+            23,
+            24
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			934,
+			4,
+			35,
+			37
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_projectile_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			24,
+            26,
+            24,
+            25
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			761,
+			4,
+			34,
+			34
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_1_projectile_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			82,
+			85
+		},
+		trim = {
+			24,
+            26,
+            24,
+            24
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			803,
+			4,
+			34,
+			35
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            66,
+            53,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			153,
+			102,
+			65,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            65,
+            52,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			729,
+			102,
+			66,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			40,
+            62,
+            46,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			821,
+			157,
+			78,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			40,
+            62,
+            46,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			907,
+			157,
+			78,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			39,
+            61,
+            45,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			125,
+			214,
+			80,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			38,
+            61,
+            45,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			213,
+			214,
+			81,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0007"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			38,
+            62,
+            44,
+            62
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			302,
+			214,
+			82,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0008"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			38,
+            62,
+            44,
+            62
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			392,
+			214,
+			82,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0009"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			38,
+            65,
+            44,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			803,
+			102,
+			82,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0010"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			38,
+            65,
+            44,
+            63
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			893,
+			102,
+			82,
+			45
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0011"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			44,
+            63,
+            45,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			339,
+			75,
+			56
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0012"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			41,
+            63,
+            52,
+            56
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			85,
+			275,
+			71,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0013"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			41,
+            63,
+            52,
+            56
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			164,
+			275,
+			71,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0014"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			40,
+            63,
+            51,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			482,
+			214,
+			73,
+			49
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0015"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            62,
+            50,
+            56
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			863,
+			275,
+			68,
+			55
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0016"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			45,
+            64,
+            48,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			243,
+			275,
+			71,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0017"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			44,
+            64,
+            49,
+            56
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			989,
+			214,
+			71,
+			53
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0018"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			43,
+            64,
+            47,
+            56
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1068,
+			214,
+			74,
+			53
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0019"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			44,
+            63,
+            47,
+            56
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			322,
+			275,
+			73,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0020"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			42,
+            65,
+            49,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			275,
+			73,
+			53
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0021"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			42,
+            64,
+            48,
+            55
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			403,
+			275,
+			74,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0022"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            65,
+            47,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			485,
+			275,
+			71,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0023"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            65,
+            47,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			564,
+			275,
+			71,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0024"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			45,
+            65,
+            47,
+            54
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			643,
+			275,
+			72,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0025"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			44,
+            63,
+            45,
+            56
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			723,
+			275,
+			75,
+			54
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0026"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            65,
+            53,
+            64
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			226,
+			102,
+			65,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0027"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            65,
+            53,
+            64
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			299,
+			102,
+			65,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0028"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			46,
+            65,
+            53,
+            64
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			372,
+			102,
+			65,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0029"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			48,
+            65,
+            53,
+            64
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			445,
+			102,
+			63,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0030"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			48,
+            55,
+            53,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			208,
+			339,
+			63,
+			57
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0031"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			50,
+            55,
+            53,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			279,
+			339,
+			61,
+			57
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0032"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			51,
+            41,
+            53,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			903,
+			339,
+			60,
+			71
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0033"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			51,
+            41,
+            53,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			971,
+			339,
+			60,
+			71
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0034"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			50,
+            27,
+            43,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			413,
+			422,
+			71,
+			85
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0035"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			50,
+            27,
+            43,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			492,
+			422,
+			71,
+			85
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0036"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			43,
+            14,
+            37,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			571,
+			422,
+			84,
+			98
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0037"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			43,
+            14,
+            37,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			663,
+			422,
+			84,
+			98
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0038"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			50,
+            38,
+            49,
+            61
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1039,
+			339,
+			65,
 			74
 		},
-		alias = {}
+		alias = {},
 	},
-	tower_sand_preview = {
-		a_name = "go_towers_sand-1.dds",
+	["tower_sand_lvl4_skill_2_decal_0039"] = {
+		a_name = "go_towers_sand-1.png",
 		size = {
-			184,
-			268
+			164,
+			173
+		},
+		trim = {
+			50,
+            36,
+            49,
+            62
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1112,
+			339,
+			65,
+			75
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0040"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			50,
+            36,
+            49,
+            75
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			637,
+			339,
+			65,
+			62
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0041"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			51,
+            36,
+            48,
+            79
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			348,
+			339,
+			65,
+			58
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0042"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			51,
+            36,
+            48,
+            79
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			348,
+			339,
+			65,
+			58
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0043"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			52,
+            34,
+            49,
+            95
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			516,
+			102,
+			63,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0044"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			52,
+            34,
+            49,
+            95
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			516,
+			102,
+			63,
+			44
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0045"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			60,
+            38,
+            62,
+            98
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			977,
+			4,
+			42,
+			37
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_decal_0046"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			164,
+			173
+		},
+		trim = {
+			60,
+            38,
+            62,
+            98
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			977,
+			4,
+			42,
+			37
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			23,
+            20,
+            15,
+            19
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			879,
+			50,
+			52,
+			43
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			24,
+            19,
+            12,
+            21
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			817,
+			50,
+			54,
+			42
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			19,
+            14,
+            11,
+            21
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			406,
+			157,
+			60,
+			47
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
 		},
 		trim = {
 			20,
-			20,
-			26,
-			113
+            14,
+            20,
+            13
 		},
 		a_size = {
-			2048,
-			1300
+			1181,
+			1181
 		},
 		f_quad = {
-			950,
-			167,
-			138,
-			135
+			939,
+			275,
+			50,
+			55
 		},
-		alias = {}
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			11,
+            11,
+            20,
+            13
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			421,
+			339,
+			59,
+			58
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			16,
+            11,
+            19,
+            19
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			870,
+			214,
+			55,
+			52
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0007"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			16,
+            19,
+            19,
+            20
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			939,
+			50,
+			55,
+			43
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0008"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			23,
+            16,
+            18,
+            18
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			993,
+			157,
+			49,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0009"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			23,
+            16,
+            18,
+            18
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			993,
+			157,
+			49,
+			48
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_hit_FX_0010"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			90,
+			82
+		},
+		trim = {
+			44,
+            49,
+            32,
+            19
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			126,
+			4,
+			14,
+			14
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			21,
+            26,
+            24,
+            22
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			567,
+			50,
+			54,
+			40
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			21,
+            26,
+            24,
+            21
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			629,
+			50,
+			54,
+			41
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			21,
+            27,
+            23,
+            22
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			282,
+			50,
+			55,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			23,
+            27,
+            26,
+            24
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1027,
+			4,
+			50,
+			37
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			38,
+            35,
+            41,
+            32
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			246,
+			4,
+			20,
+			21
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			40,
+            37,
+            43,
+            35
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			196,
+			4,
+			16,
+			16
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0007"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			43,
+            39,
+            45,
+            37
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			66,
+			4,
+			11,
+			12
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_particle_0008"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			0,
+            0,
+            96,
+            85
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			4,
+			3,
+			3
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_projectile_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			88,
+			79
+		},
+		trim = {
+			16,
+            21,
+            19,
+            19
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			345,
+			50,
+			53,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_projectile_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			88,
+			79
+		},
+		trim = {
+			16,
+            23,
+            19,
+            17
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			406,
+			50,
+			53,
+			39
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_skill_2_projectile_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			88,
+			79
+		},
+		trim = {
+			16,
+            23,
+            18,
+            18
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			63,
+			50,
+			54,
+			38
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0001"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			867,
+			422,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0002"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			992,
+			422,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0003"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			992,
+			422,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0004"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0005"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0006"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			129,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0007"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			129,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0008"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			254,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0009"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			254,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0010"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			379,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0011"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			379,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0012"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			504,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0013"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			504,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0014"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			504,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0015"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			504,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0016"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			629,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0017"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			629,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0018"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			754,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0019"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			754,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0020"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			879,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0021"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1004,
+			545,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0022"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            50,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			668,
+			118,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0023"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            49,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			130,
+			668,
+			119,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0024"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            47,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			257,
+			668,
+			121,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0025"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            47,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			386,
+			668,
+			121,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0026"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            47,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			515,
+			668,
+			121,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0027"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			44,
+            11,
+            47,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			644,
+			668,
+			122,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0028"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			774,
+			668,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0029"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			899,
+			668,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0030"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1024,
+			668,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0031"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			791,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0032"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			129,
+			791,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0033"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			254,
+			791,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0034"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			379,
+			791,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0035"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			44,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			504,
+			791,
+			118,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0036"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			41,
+            11,
+            48,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			630,
+			791,
+			124,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0037"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			38,
+            11,
+            48,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			762,
+			791,
+			127,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0038"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			35,
+            11,
+            44,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			897,
+			791,
+			134,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0039"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			33,
+            11,
+            42,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			1039,
+			791,
+			138,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0040"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			31,
+            11,
+            40,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			914,
+			142,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0041"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			29,
+            11,
+            38,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			154,
+			914,
+			146,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0042"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			27,
+            11,
+            36,
+            87
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			729,
+			1037,
+			150,
+			117
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0043"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			25,
+            11,
+            34,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			308,
+			914,
+			154,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0044"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			24,
+            11,
+            32,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			470,
+			914,
+			157,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0045"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			22,
+            11,
+            31,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			635,
+			914,
+			160,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0046"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			21,
+            11,
+            30,
+            87
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			887,
+			1037,
+			162,
+			117
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0047"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			20,
+            11,
+            28,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			803,
+			914,
+			165,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0048"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			20,
+            11,
+            27,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			976,
+			914,
+			166,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0049"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			20,
+            11,
+            26,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			4,
+			1037,
+			167,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0050"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            26,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			179,
+			1037,
+			142,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0051"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			44,
+            11,
+            27,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			329,
+			1037,
+			142,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0052"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			479,
+			1037,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0053"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			604,
+			1037,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_0054"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			213,
+			215
+		},
+		trim = {
+			45,
+            11,
+            51,
+            89
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			867,
+			422,
+			117,
+			115
+		},
+		alias = {},
+	},
+	["tower_sand_lvl4_tower_front"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			113,
+			176
+		},
+		trim = {
+			11,
+            11,
+            25,
+            106
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			488,
+			339,
+			77,
+			59
+		},
+		alias = {},
+	},
+	["tower_sand_preview"] = {
+		a_name = "go_towers_sand-1.png",
+		size = {
+			130,
+			190
+		},
+		trim = {
+			11,
+            11,
+            15,
+            77
+		},
+		a_size = {
+			1181,
+			1181
+		},
+		f_quad = {
+			755,
+			422,
+			104,
+			102
+		},
+		alias = {},
 	}
 }

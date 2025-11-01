@@ -1927,7 +1927,7 @@ local function barrack_towers()
     tt.render.sprites[1].scale = vv(2)
     tt.render.sprites[1].z = Z_DECALS
 
-    tt = RT("tower_pandas_lvl4", "tower5")
+    tt = RT("tower_pandas_lvl4", "tower")
     AC(tt, "attacks", "barrack", "user_selection", "powers")
     tt.tower.type = "pandas"
     tt.tower.level = 1
@@ -2052,8 +2052,7 @@ local function barrack_towers()
     }
 
     tt = RT("soldier_tower_pandas_green_lvl4", "soldier_militia")
-    AC(tt, "nav_grid", "powers", "ranged")
-    tt.is_kr5 = true
+    AC(tt, "nav_grid", "powers", "ranged") 
     tt.powers.hat = CC("power")
     tt.powers.hat.cooldown = b.soldier.hat.cooldown
     tt.powers.hat.range = b.soldier.hat.range

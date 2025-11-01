@@ -83,17 +83,17 @@ local a = {
 	},
 	tower_pandas_projectile_air_hit_run = {
 		prefix = "tower_pandas_projectile_air_hit",
-		to = 5,
+		to = 4,
 		from = 1
 	},
 	tower_pandas_projectile_ray_hit_run = {
 		prefix = "tower_pandas_projectile_ray_hit",
-		to = 5,
+		to = 4,
 		from = 1
 	},
 	tower_pandas_projectile_fire_hit_run = {
 		prefix = "tower_pandas_projectile_fire_hit",
-		to = 5,
+		to = 4,
 		from = 1
 	},
 	tower_pandas_projectile_air_Run = {

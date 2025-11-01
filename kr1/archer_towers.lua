@@ -1055,7 +1055,7 @@ local b
 
 b = balance.towers.dark_elf
 
-tt = RT("tower_dark_elf_lvl4", "tower5")
+tt = RT("tower_dark_elf_lvl4", "tower")
 AC(tt, "powers", "barrack", "attacks")
 tt.tower.level = 1
 tt.tower.type = "dark_elf"

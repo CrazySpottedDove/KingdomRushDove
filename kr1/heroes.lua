@@ -10154,8 +10154,7 @@ local function heroes()
     tt = RT("soldier_hero_hunter_ultimate", "soldier_militia")
     AC(tt, "nav_grid", "ranged", "reinforcement", "tween")
     tt.controable = true
-    tt.controable_other = true
-    tt.is_kr5 = true
+    tt.controable_other = true 
     b = balance.heroes.hero_hunter
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_HUNTER_ULTIMATE_ENTITY"
@@ -10207,11 +10206,10 @@ local function heroes()
     tt.ui.click_rect = r(-20, -5, 40, 50)
     tt.distance_to_revive = b.ultimate.distance_to_revive
 
-    tt = RT("hero5", "hero")
-    tt.is_kr5 = true
+    tt = RT("hero", "hero") 
 
     -- 安雅
-    tt = RT("hero_hunter", "hero5")
+    tt = RT("hero_hunter", "hero")
     b = balance.heroes.hero_hunter
     AC(tt, "melee", "ranged", "timed_attacks")
     tt.hero.level_stats.armor = b.armor
@@ -10534,7 +10532,7 @@ local function heroes()
     tt.main_script.update = scripts.hero_hunter_ultimate.update
     tt.sound = "HeroHunterUltimateCast"
 
-    tt = RT("hero_space_elf", "hero5")
+    tt = RT("hero_space_elf", "hero")
     b = balance.heroes.hero_space_elf
     AC(tt, "melee", "ranged", "teleport", "transfer", "timed_attacks")
     tt.hero.level_stats.armor = b.armor
@@ -10717,8 +10715,7 @@ local function heroes()
 
     tt = RT("soldier_hero_space_elf_astral_reflection", "soldier_militia")
     AC(tt, "melee", "ranged", "reinforcement", "tween", "transfer", "timed_attacks")
-    b = balance.heroes.hero_space_elf
-    tt.is_kr5 = true
+    b = balance.heroes.hero_space_elf 
     tt.info.i18n_key = "HERO_SPACE_ELF_ASTRAL_REFLECTION_ENTITY"
     tt.info.enc_icon = 12
     tt.info.portrait = "kr5_info_portraits_soldiers_0037"
@@ -10975,7 +10972,7 @@ local function heroes()
     tt.decal = "decal_hero_space_elf_ultimate"
     tt.main_script.update = scripts.hero_space_elf_ultimate.update
 
-    tt = RT("hero_raelyn", "hero5")
+    tt = RT("hero_raelyn", "hero")
     b = balance.heroes.hero_raelyn
     AC(tt, "melee", "timed_attacks")
     tt.hero.level_stats.armor = b.armor
@@ -11256,8 +11253,7 @@ local function heroes()
 
     tt = RT("hero_raelyn_ultimate_entity", "soldier_militia")
     AC(tt, "melee", "nav_grid", "reinforcement", "tween")
-    b = balance.heroes.hero_raelyn
-    tt.is_kr5 = true
+    b = balance.heroes.hero_raelyn 
     tt.controable = true
     tt.controable_other = true
     tt.health_bar.offset = vec_2(0, 50)
@@ -11359,7 +11355,7 @@ local function heroes()
     tt.vis_flags = bor(F_AREA)
     tt.vis_bans = bor(F_FLYING)
 
-    tt = RT("hero_venom", "hero5")
+    tt = RT("hero_venom", "hero")
     b = balance.heroes.hero_venom
     AC(tt, "melee", "timed_attacks")
     tt.hero.level_stats.armor = b.armor
@@ -11654,10 +11650,79 @@ local function heroes()
     tt.main_script.update = scripts.hero_venom_ultimate.update
     tt.sound = "HeroVenomRenewCreepingDeathCast"
 
+    -- 晶龙
+    tt = E:register_t("ps_bolt_hero_dragon_gem_attack")
+    E:add_comps(tt, "pos", "particle_system")
+    tt.particle_system.name = "hero_evil_dragon_attack_projectile_trail_idle"
+    tt.particle_system.animated = true
+    tt.particle_system.loop = false
+    tt.particle_system.particle_lifetime = {fts(14), fts(14)}
+    tt.particle_system.emission_rate = 20
+    tt.particle_system.emit_rotation_spread = math.pi * 0.5
+    tt.particle_system.z = Z_FLYING_HEROES
+
+    tt = E:register_t("fx_hero_dragon_gem_bolt_hit", "fx5")
+    tt.render.sprites[1].name = "hero_evil_dragon_attack_fx_idle"
+    tt.render.sprites[1].z = Z_OBJECTS
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+
+    tt = E:register_t("fx_hero_dragon_gem_bolt_hit_flying", "fx5")
+    tt.render.sprites[1].name = "hero_evil_dragon_attack_fx_air_idle"
+    tt.render.sprites[1].z = Z_EFFECTS
+    tt.render.sprites[1].draw_order = DO_MOD_FX
+
+    tt = E:register_t("fx_hero_dragon_gem_skill_stun", "fx5")
+    tt.render.sprites[1].name = "hero_evil_dragon_breath_cloud_idle"
+    tt.render.sprites[1].loop = true
+
+    tt = E:register_t("fx_hero_dragon_gem_ultimate_shard_arrival_1", "fx5")
+    tt.render.sprites[1].name = "hero_evil_dragon_ultimate_fx_a_idle"
+    tt.render.sprites[1].loop = false
+
+    tt = E:register_t("fx_hero_dragon_gem_ultimate_shard_arrival_2", "fx5")
+    tt.render.sprites[1].name = "hero_evil_dragon_ultimate_fx_b_idle"
+    tt.render.sprites[1].loop = false
+
+    tt = E:register_t("decal_hero_dragon_gem_crystal_tomb", "decal_scripted")
+    tt.render.sprites[1].prefix = "hero_evil_dragon"
+    tt.render.sprites[1].name = "death_crystals"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].loop = false
+    tt.main_script.update = scripts.decal_hero_dragon_gem_crystal_tomb.update
+
+    tt = E:register_t("decal_bullet_hero_dragon_gem_ultimate_shard", "decal_tween")
+    tt.render.sprites[1].name = "hero_evil_dragon_ultimate_crystal_a_idle"
+    tt.render.sprites[1].animated = true
+    tt.render.sprites[1].loop = false
+    tt.tween.props[1].keys = {{0, 255}, {3, 0}}
+
+    tt = E:register_t("decal_hero_dragon_gem_floor_decal", "decal_tween")
+    tt.render.sprites[1].name = "hero_evil_dragon_decal"
+    tt.render.sprites[1].animated = false
+    tt.render.sprites[1].loop = false
+    tt.render.sprites[1].z = Z_DECALS
+    tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2, 0}}
+
+    tt = E:register_t("decal_hero_dragon_gem_floor_circle", "decal")
+    E:add_comps(tt, "tween")
+    tt.render.sprites[1].name = "hero_evil_dragon_area_damage_fx"
+    tt.render.sprites[1].animated = false
+    tt.tween.props[1].name = "alpha"
+    tt.tween.props[1].keys = {{0, 255}, {fts(6), 255}, {fts(13), 0}}
+    tt.tween.props[1].sprite_id = 1
+    tt.tween.props[2] = E:clone_c("tween_prop")
+    tt.tween.props[2].name = "scale"
+    tt.tween.props[2].keys = {{0, vec_2(0.245, 0.245)}, {fts(6), vec_2(0.385, 0.385)}, {fts(13), vec_2(0.42, 0.42)}}
+    tt.tween.props[2].sprite_id = 1
+    tt.tween.remove = true
+
+    tt = E:register_t("decal_hero_dragon_gem_floor_circle_totem", "decal_hero_dragon_gem_floor_circle")
+    tt.tween.props[2].keys = {{0, vec_2(0.175, 0.175)}, {fts(6), vec_2(0.315, 0.315)}, {fts(13), vec_2(0.35, 0.35)}}
+
     tt = RT("decal_hero_dragon_gem_floor_impact_shard", "decal_scripted")
     AC(tt, "sound_events")
     b = balance.heroes.hero_dragon_gem.floor_impact
-    tt.render.sprites[1].prefix = "hero_dragon_gem_shards"
+    tt.render.sprites[1].prefix = "hero_evil_dragon_shards"
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = false
     tt.damage_min = nil
@@ -11672,7 +11737,7 @@ local function heroes()
     tt = RT("decal_hero_dragon_gem_ultimate_shard", "decal_scripted")
     AC(tt, "tween", "sound_events")
     b = balance.heroes.hero_dragon_gem.ultimate
-    tt.render.sprites[1].name = "hero_dragon_gem_ultimate_crystal_b"
+    tt.render.sprites[1].name = "hero_evil_dragon_ultimate_crystal_b"
     tt.render.sprites[1].animated = false
     tt.render.sprites[1].loop = false
     tt.damage_min = nil
@@ -11689,7 +11754,7 @@ local function heroes()
     tt.tween_remove = false
     tt.sound_events.insert = "HeroDragonGemUltimateCast"
 
-    tt = RT("hero_dragon_gem", "hero5")
+    tt = RT("hero_dragon_gem", "hero")
     AC(tt, "ranged", "timed_attacks", "tween")
     b = balance.heroes.hero_dragon_gem
     tt.hero.level_stats.armor = b.armor
@@ -11777,13 +11842,13 @@ local function heroes()
     -- tt.drag_line_origin_offset = vec_2(0, tt.flight_height)
     tt.render.sprites[1].offset.y = tt.flight_height
     tt.render.sprites[1].animated = true
-    tt.render.sprites[1].prefix = "hero_dragon_gem"
+    tt.render.sprites[1].prefix = "hero_evil_dragon_hero"
     tt.render.sprites[1].name = "respawn"
     tt.render.sprites[1].angles.walk = {"walk"}
     tt.render.sprites[1].z = Z_FLYING_HEROES
     tt.render.sprites[2] = CC("sprite")
     tt.render.sprites[2].animated = false
-    tt.render.sprites[2].name = "hero_dragon_gem_shadow"
+    tt.render.sprites[2].name = "hero_lumenir_hero_shadow"
     tt.render.sprites[2].offset = vec_2(0, 0)
     tt.render.sprites[2].z = Z_DECALS + 1
     tt.soldier.melee_slot_offset = vec_2(0, 0)
@@ -11935,7 +12000,7 @@ local function heroes()
     tt.force_motion.a_step = 5
     tt.force_motion.max_a = 3000
     tt.force_motion.max_v = 600
-    tt.render.sprites[1].prefix = "hero_dragon_gem_attack_projectile"
+    tt.render.sprites[1].prefix = "hero_evil_dragon_attack_projectile"
     tt.render.sprites[1].z = Z_FLYING_HEROES
     tt.main_script.update = scripts.bolt_hero_dragon_gem_attack.update
     tt.damage_range = b.damage_range
@@ -11953,7 +12018,7 @@ local function heroes()
     tt.image_width = 165.5
     tt.main_script.update = scripts.ray5_simple.update
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
-    tt.render.sprites[1].name = "hero_dragon_gem_breath_idle"
+    tt.render.sprites[1].name = "hero_evil_dragon_breath_idle"
     tt.render.sprites[1].loop = false
     tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
     tt.track_target = false
@@ -11969,7 +12034,7 @@ local function heroes()
     tt.sound_events.hit = nil
     tt.sound_events.insert = nil
     tt.render.sprites[1].animated = true
-    tt.render.sprites[1].name = "hero_dragon_gem_conduit_projectile_idle"
+    tt.render.sprites[1].name = "hero_evil_dragon_conduit_projectile_idle"
     tt.bullet.hit_decal = nil
     tt.bullet.hit_fx = nil
     tt.bullet.damage_type = DAMAGE_EXPLOSION
@@ -11981,7 +12046,7 @@ local function heroes()
     tt.main_script.update = scripts.bullet_hero_dragon_gem_ultimate_shard.update
     tt.bullet.arrive_decal = "decal_bullet_hero_dragon_gem_ultimate_shard"
     tt.bullet.max_speed = 900
-    tt.render.sprites[1].name = "hero_dragon_gem_ultimate_projectile"
+    tt.render.sprites[1].name = "hero_evil_dragon_ultimate_projectile"
     tt.render.sprites[1].animated = false
 
     tt = RT("aura_hero_dragon_gem_skill_stun", "aura")
@@ -12004,7 +12069,7 @@ local function heroes()
     tt.aura.vis_flags = F_RANGED
     tt.aura.cycle_time = b.trigger_every
     tt.aura.duration = nil
-    tt.render.sprites[1].prefix = "hero_dragon_gem_conduit"
+    tt.render.sprites[1].prefix = "hero_evil_dragon_conduit"
     tt.render.sprites[1].animated = true
     tt.render.sprites[1].loop = true
     tt.main_script.insert = scripts.aura_apply_mod.insert
@@ -12022,7 +12087,7 @@ local function heroes()
     tt = RT("mod_hero_dragon_gem_skill_stun", "mod_stun")
     AC(tt, "render")
     tt.modifier.duration = nil
-    tt.render.sprites[1].prefix = "hero_dragon_gem_breath_crystal"
+    tt.render.sprites[1].prefix = "hero_evil_dragon_breath_crystal"
     tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
     tt.render.sprites[1].size_names = {"small", "medium", "big"}
     tt.render.sprites[1].draw_order = DO_MOD_FX
@@ -12038,7 +12103,7 @@ local function heroes()
     tt.main_script.remove = scripts.mod_stun.remove
     tt.explode_fx = "decal_hero_dragon_gem_floor_circle"
     tt.explode_sound = "HeroDragonGemRedDeathExplosion"
-    tt.render.sprites[1].prefix = "hero_dragon_gem_red_death_crystal"
+    tt.render.sprites[1].prefix = "hero_evil_dragon_red_death_crystal"
     tt.render.sprites[1].name = "start"
     tt.render.sprites[1].z = Z_OBJECTS
     tt.render.sprites[1].draw_order = DO_MOD_FX
@@ -12064,7 +12129,7 @@ local function heroes()
     tt.inflicted_damage_factor = b.damage_factor
     tt.modifier.duration = 1e+99
     tt.modifier.use_mod_offset = true
-    tt.render.sprites[1].prefix = "hero_dragon_gem_passive"
+    tt.render.sprites[1].prefix = "hero_evil_dragon_passive"
     tt.render.sprites[1].name = "loop"
     tt.render.sprites[1].z = Z_FLYING_HEROES + 1
 
@@ -12075,8 +12140,7 @@ local function heroes()
     tt = RT("soldier_hero_witch_cat", "soldier_militia")
     b = balance.heroes.hero_witch
     AC(tt, "reinforcement", "tween")
-    tt.health.armor = b.skill_soldiers.soldier.armor
-    tt.is_kr5 = true
+    tt.health.armor = b.skill_soldiers.soldier.armor 
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
@@ -12113,8 +12177,7 @@ local function heroes()
 
     tt = RT("soldier_hero_witch_decoy", "soldier_militia")
     b = balance.heroes.hero_witch
-    AC(tt, "reinforcement", "tween", "death_spawns")
-    tt.is_kr5 = true
+    AC(tt, "reinforcement", "tween", "death_spawns") 
     tt.health.armor = b.disengage.decoy.armor
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
@@ -12154,7 +12217,7 @@ local function heroes()
     tt.death_spawns.delay = fts(19)
     tt.sound_death = "HeroWitchDazzlingDecoyExplosion"
 
-    tt = RT("hero_witch", "hero5")
+    tt = RT("hero_witch", "hero")
     b = balance.heroes.hero_witch
     AC(tt, "melee", "ranged", "dodge", "timed_attacks")
     tt.hero.level_stats.armor = b.armor
@@ -12245,7 +12308,6 @@ local function heroes()
         tt.render.sprites[i].prefix = "hero_witch_hero_layer" .. i
         tt.render.sprites[i].name = "idle"
         tt.render.sprites[i].group = "layers"
-        tt.render.sprites[i].scale = vec_1(1.25 / 768 * 1080)
     end
     tt.particles_name_1 = "ps_hero_witch_spark_1"
     tt.soldier.melee_slot_offset = vec_2(10, 0)
@@ -12672,7 +12734,7 @@ local function heroes()
     tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
     tt.timed.duration = fts(27)
 
-    tt = RT("hero_dragon_bone", "hero5")
+    tt = RT("hero_dragon_bone", "hero")
     AC(tt, "ranged", "timed_attacks", "tween")
     b = balance.heroes.hero_dragon_bone
     tt.hero.level_stats.armor = b.armor
@@ -12902,7 +12964,6 @@ local function heroes()
     tt = RT("soldier_dragon_bone_ultimate_dog", "soldier_militia")
     b = balance.heroes.hero_dragon_bone.ultimate.dog
     AC(tt, "reinforcement", "nav_grid", "tween")
-    tt.is_kr5 = true
     tt.health.armor = b.armor
     tt.health.hp_max = b.hp
     tt.health_bar.offset = vec_2(0, 30)
@@ -13263,7 +13324,7 @@ local function heroes()
     tt.render.sprites[1].z = Z_DECALS
     tt.tween.remove = false
 
-    tt = RT("hero_lumenir", "hero5")
+    tt = RT("hero_lumenir", "hero")
     AC(tt, "ranged", "timed_attacks", "tween")
     b = balance.heroes.hero_lumenir
     tt.hero.level_stats.armor = b.armor
@@ -14085,7 +14146,7 @@ local function heroes()
     tt.render.sprites[1].sort_y_offset = -10
     tt.render.sprites[1].hidden = true
 
-    tt = E:register_t("hero_wukong", "hero5")
+    tt = E:register_t("hero_wukong", "hero")
     b = balance.heroes.hero_wukong
     E:add_comps(tt, "melee", "timed_attacks")
     tt.hero.level_stats.armor = b.armor

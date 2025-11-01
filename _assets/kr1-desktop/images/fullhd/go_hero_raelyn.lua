@@ -1,12636 +1,16826 @@
-﻿-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_hero_raelyn.lua
-
 return {
-	hero_raelyn_brutal_slash_decal = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_brutal_slash_decal"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			168,
-			96
+			119,
+			68
 		},
 		trim = {
-			20,
-			24,
-			20,
-			22
+			13,
+            16,
+            13,
+            14
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1621,
-			1991,
-			128,
-			50
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			91,
-			99,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2702,
-			6,
-			125,
-			104
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0002"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			91,
-			99,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2833,
-			6,
-			125,
-			104
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0004"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			91,
-			99,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2964,
-			6,
-			125,
-			104
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0006"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			91,
-			99,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3095,
-			6,
-			125,
-			104
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0008"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			87,
+			961,
+			4,
 			93,
-			94,
-			173
+			38
 		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			460,
-			135,
-			102
-		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_command_orders_dark_knight_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			316,
-			368
-		},
-		trim = {
-			89,
-			92,
-			96,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			1365,
-			131,
-			103
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			89,
-			92,
-			96,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			1474,
-			131,
-			103
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			90,
-			91,
-			97,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2169,
-			6,
-			129,
-			104
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			88,
-			98,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2570,
-			6,
-			126,
-			107
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0014"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			93,
-			86,
-			100,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			1243,
-			123,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			95,
-			85,
-			101,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			233,
-			120,
-			110
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			95,
-			85,
-			101,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2425,
-			233,
-			120,
-			110
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0018 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			95,
-			84,
-			102,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1504,
-			119,
-			111
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0019 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			96,
-			86,
-			103,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2548,
-			349,
-			117,
-			109
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0020"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0021 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			98,
-			90,
-			105,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3739,
-			464,
-			113,
-			105
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0022 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			97,
-			96,
-			104,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3561,
-			119,
-			115,
-			99
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0023 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			97,
-			96,
-			104,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3682,
-			119,
-			115,
-			99
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0024 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			98,
-			97,
-			106,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			805,
-			112,
-			98
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0025 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			99,
-			94,
-			108,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			579,
-			109,
-			101
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0026"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0027 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			97,
-			90,
-			107,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			694,
-			112,
-			105
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0028 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			95,
-			88,
-			105,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3195,
-			119,
-			116,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0029 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			95,
-			88,
-			105,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3317,
-			119,
-			116,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0030 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			86,
-			102,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			1766,
-			122,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0031 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			91,
-			85,
-			100,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			498,
-			125,
-			110
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0032"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0033 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			90,
-			84,
-			97,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			1176,
-			129,
-			111
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0034 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			90,
-			86,
-			95,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
 			224,
-			131,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0035 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
+			261
 		},
 		trim = {
-			90,
-			86,
-			95,
-			173
+			62,
+            61,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1760,
-			339,
-			131,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0036 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			89,
-			89,
-			95,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			1879,
-			132,
-			106
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0037 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			87,
-			95,
-			93,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			1660,
-			136,
-			100
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0038"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0039 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			91,
-			99,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3226,
-			6,
-			125,
-			104
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0040",
-			"hero_raelyn_command_orders_dark_knight_0087",
-			"hero_raelyn_command_orders_dark_knight_0088"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0041 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			91,
-			92,
-			98,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2304,
-			6,
-			127,
-			103
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0042"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0043 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			86,
-			93,
-			98,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			116,
-			132,
-			102
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0044"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0045 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			81,
-			35,
-			96,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			6,
-			139,
-			160
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0046"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0047 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			84,
-			26,
-			96,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			916,
-			136,
-			169
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0048"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0049 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			86,
-			23,
-			97,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			6,
-			133,
-			172
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0050"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0051 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			85,
-			20,
-			97,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			706,
-			134,
-			175
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0052"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0053 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			73,
-			35,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1484,
-			165,
-			122
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0054"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0055 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			61,
-			20,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1477,
-			180,
-			134
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0056"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0057 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			61,
-			20,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1617,
-			180,
-			134
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0058"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0059 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			60,
-			24,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			500,
-			176,
-			135
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0060"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0061 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			59,
-			24,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			216,
-			176,
-			136
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0062"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0063 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			68,
-			22,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1852,
-			178,
-			127
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0064"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0065 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			39,
-			66,
-			24,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			6,
-			253,
-			129
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0066"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0067 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			45,
-			67,
-			31,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			247,
-			240,
-			128
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0068"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0069 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			51,
-			71,
-			44,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1485,
-			221,
-			124
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0070"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0071 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			52,
-			78,
-			51,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			99,
-			213,
-			117
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0072"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0073 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			49,
-			93,
-			86,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1270,
-			181,
-			102
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0074"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0075 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			85,
-			92,
-			94,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			737,
-			137,
-			103
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0076"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0077 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			91,
-			99,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3357,
-			6,
-			125,
-			104
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0078"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0079 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			59,
-			24,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			358,
-			176,
-			136
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0080"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0081 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			116,
-			68,
-			22,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			6,
-			178,
-			127
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0082"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0083 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			106,
-			75,
-			24,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			785,
-			186,
-			120
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0084"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0085 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			93,
-			88,
-			100,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3880,
-			6,
-			123,
-			107
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0086"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0089 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			94,
-			100,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3750,
-			6,
-			124,
-			101
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0090"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0091 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			89,
-			95,
-			96,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			1692,
-			131,
-			100
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0092"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0093 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			94,
-			91,
-			97,
-			169
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2300,
-			119,
-			125,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0094 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			94,
-			91,
-			97,
-			169
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2431,
-			119,
-			125,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0095 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			96,
-			89,
-			96,
-			169
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			868,
-			124,
-			110
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0096 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			96,
-			89,
-			96,
-			168
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			751,
-			124,
-			111
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0097 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			99,
-			84,
-			94,
-			168
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			1121,
-			123,
-			116
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0098 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			96,
-			84,
-			94,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2034,
-			1785,
-			126,
-			111
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0099 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			96,
-			83,
-			93,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2034,
-			927,
-			127,
-			112
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0100 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			94,
-			83,
-			93,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			1058,
-			129,
-			112
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0101 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			94,
-			91,
-			90,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			6,
-			132,
-			104
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0102 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			93,
-			91,
-			90,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			751,
-			133,
-			104
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0103 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			86,
-			96,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			950,
-			148,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0104 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			86,
-			96,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			1063,
-			148,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0105 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			82,
-			96,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			75,
-			152,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0106 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			82,
-			96,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			188,
-			152,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0107 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			100,
-			98,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			1913,
-			134,
-			105
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0108 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			101,
-			98,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			640,
-			133,
-			105
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0109 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			101,
-			103,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			861,
-			133,
-			100
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0110 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			103,
-			100,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			1583,
-			131,
-			103
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_dark_knight_0111 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			114,
-			110,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2818,
-			119,
-			120,
-			93
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0112"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0113 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			114,
-			110,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2944,
-			119,
-			120,
-			93
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0114"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0115 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			119,
-			109,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3803,
-			119,
-			115,
-			94
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0116"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0117 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			119,
-			111,
-			82,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3924,
-			119,
-			115,
-			92
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0118"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0119 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			119,
-			113,
-			81,
-			165
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3439,
-			119,
-			116,
-			90
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0120"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0121 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			112,
-			134,
-			61,
-			154
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			1593,
-			143,
-			80
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0122"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0123 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			95,
-			129,
-			46,
-			146
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1070,
-			175,
-			93
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0124"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0125 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			92,
-			131,
-			43,
-			144
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1378,
-			181,
-			93
-		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0126"
-		}
-	},
-	hero_raelyn_command_orders_dark_knight_0127 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			316,
-			368
-		},
-		trim = {
-			91,
-			131,
-			41,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
 			1091,
-			184,
-			94
+			892,
+			95,
+			81
 		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0128"
-		}
+		alias = {},
 	},
-	hero_raelyn_command_orders_dark_knight_0129 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			316,
-			368
+			224,
+			261
 		},
 		trim = {
-			90,
-			131,
-			41,
-			143
+			62,
+            61,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			265,
-			911,
-			185,
-			94
+			1091,
+			892,
+			95,
+			81
 		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0130"
-		}
+		alias = {},
 	},
-	hero_raelyn_command_orders_dark_knight_0131 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			316,
-			368
+			224,
+			261
 		},
 		trim = {
-			119,
-			131,
-			70,
-			163
+			62,
+            61,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2437,
-			6,
-			127,
-			74
+			1194,
+			892,
+			95,
+			81
 		},
-		alias = {
-			"hero_raelyn_command_orders_dark_knight_0132"
-		}
+		alias = {},
 	},
-	hero_raelyn_command_orders_hit_fx_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			212,
-			200
+			224,
+			261
 		},
 		trim = {
-			73,
-			66,
-			60,
-			72
+			62,
+            61,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3087,
-			1353,
-			79,
-			62
+			1194,
+			892,
+			95,
+			81
 		},
-		alias = {
-			"hero_raelyn_command_orders_hit_fx_0002"
-		}
+		alias = {},
 	},
-	hero_raelyn_command_orders_hit_fx_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			212,
-			200
+			224,
+			261
 		},
 		trim = {
-			61,
-			48,
-			48,
-			51
+			62,
+            61,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2780,
-			579,
+			1297,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1297,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1400,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1400,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			58,
+            63,
+            63,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			717,
 			103,
-			101
-		},
-		alias = {
-			"hero_raelyn_command_orders_hit_fx_0004"
-		}
-	},
-	hero_raelyn_command_orders_hit_fx_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			212,
-			200
-		},
-		trim = {
-			47,
-			41,
-			40,
-			42
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			375,
-			125,
-			117
-		},
-		alias = {
-			"hero_raelyn_command_orders_hit_fx_0006"
-		}
-	},
-	hero_raelyn_command_orders_spawn_fx_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			37,
-			75,
-			39,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1770,
-			160,
-			153
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			38,
-			56,
-			39,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			6,
-			159,
-			172
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			38,
-			55,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			1125,
-			158,
-			173
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			38,
-			50,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			941,
-			158,
-			178
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			38,
-			46,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			568,
-			158,
-			182
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			38,
-			43,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			377,
-			158,
-			185
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			38,
-			41,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			184,
-			158,
-			187
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			38,
-			49,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			756,
-			158,
-			179
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			39,
-			45,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			1658,
-			157,
-			183
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			39,
-			45,
-			40,
-			172
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			1847,
-			157,
-			183
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			39,
-			49,
-			41,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			704,
-			156,
-			178
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			39,
-			45,
-			40,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			6,
-			157,
-			182
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			40,
-			42,
-			40,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			322,
-			156,
-			185
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0014 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			40,
-			42,
-			40,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			513,
-			156,
-			185
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			40,
-			49,
-			40,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			888,
-			156,
-			178
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			41,
-			45,
-			41,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1444,
-			154,
-			182
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			41,
-			68,
-			41,
-			173
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1632,
-			154,
-			159
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0018 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			42,
-			61,
-			44,
-			174
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			543,
-			150,
-			165
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0019 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			44,
-			55,
-			45,
-			175
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			1176,
-			147,
-			170
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0020 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			47,
-			63,
-			46,
-			176
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			1426,
-			143,
-			161
-		},
-		alias = {}
-	},
-	hero_raelyn_command_orders_spawn_fx_0021 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			236,
-			400
-		},
-		trim = {
-			48,
-			64,
-			46,
-			184
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			1679,
-			142,
-			152
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			158,
-			86,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3852,
-			1035,
-			79,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			158,
-			86,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3937,
-			1035,
-			79,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			158,
-			86,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1121,
-			79,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			86,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3340,
-			1121,
-			78,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			85,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3682,
-			1035,
-			79,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			85,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1121,
-			78,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			84,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3512,
-			1035,
-			79,
-			77
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			84,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3597,
-			1035,
-			79,
-			77
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			160,
-			83,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1764,
-			78,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			160,
-			83,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1848,
-			78,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			160,
-			82,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1679,
-			78,
 			79
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_hero_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			160,
-			81,
-			146,
-			151
+			60,
+            62,
+            65,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3087,
-			1421,
-			78,
-			80
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			160,
-			81,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1507,
-			78,
-			80
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0014 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			160,
-			81,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1593,
-			78,
-			80
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			81,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1902,
-			79,
-			80
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			81,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1035,
-			79,
-			80
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			82,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1035,
-			79,
-			79
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0018 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			82,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3257,
-			1035,
-			79,
-			79
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0019 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			83,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3342,
-			1035,
-			79,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0020 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			83,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3427,
-			1035,
-			79,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0021 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			84,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1932,
-			78,
-			77
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0022 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			85,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3256,
-			1121,
-			78,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0023 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			158,
-			85,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3767,
-			1035,
-			79,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0024 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			158,
-			88,
-			142,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3737,
-			799,
-			84,
-			74
-		},
-		alias = {
-			"hero_raelyn_hero_0236"
-		}
-	},
-	hero_raelyn_hero_0025 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			86,
-			147,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3647,
-			799,
-			84,
-			75
-		},
-		alias = {
-			"hero_raelyn_hero_0026"
-		}
-	},
-	hero_raelyn_hero_0027 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			95,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3556,
-			799,
-			85,
-			66
-		},
-		alias = {
-			"hero_raelyn_hero_0028"
-		}
-	},
-	hero_raelyn_hero_0029 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			87,
-			148,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3467,
-			914,
-			83,
-			74
-		},
-		alias = {
-			"hero_raelyn_hero_0030"
-		}
-	},
-	hero_raelyn_hero_0031 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			154,
-			83,
-			149,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1464,
-			81,
-			78
-		},
-		alias = {
-			"hero_raelyn_hero_0032"
-		}
-	},
-	hero_raelyn_hero_0033 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			80,
-			151,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1384,
-			74,
-			81
-		},
-		alias = {
-			"hero_raelyn_hero_0034"
-		}
-	},
-	hero_raelyn_hero_0035 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			161,
-			79,
-			152,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1655,
-			71,
-			82
-		},
-		alias = {
-			"hero_raelyn_hero_0036"
-		}
-	},
-	hero_raelyn_hero_0037 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			84,
-			154,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1830,
-			68,
-			77
-		},
-		alias = {
-			"hero_raelyn_hero_0038"
-		}
-	},
-	hero_raelyn_hero_0039 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			91,
-			154,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3572,
-			1121,
-			68,
-			70
-		},
-		alias = {
-			"hero_raelyn_hero_0040"
-		}
-	},
-	hero_raelyn_hero_0041 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			88,
-			154,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3498,
-			1121,
-			68,
-			73
-		},
-		alias = {
-			"hero_raelyn_hero_0042"
-		}
-	},
-	hero_raelyn_hero_0043 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			85,
-			154,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3424,
-			1121,
-			68,
-			76
-		},
-		alias = {
-			"hero_raelyn_hero_0044"
-		}
-	},
-	hero_raelyn_hero_0045 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			79,
-			150,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			4021,
-			349,
-			75,
-			82
-		},
-		alias = {
-			"hero_raelyn_hero_0046"
-		}
-	},
-	hero_raelyn_hero_0047 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			156,
-			80,
-			148,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1548,
-			80,
-			81
-		},
-		alias = {
-			"hero_raelyn_hero_0048"
-		}
-	},
-	hero_raelyn_hero_0049 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			151,
-			76,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1564,
-			71,
-			85
-		},
-		alias = {
-			"hero_raelyn_hero_0050",
-			"hero_raelyn_hero_0138",
-			"hero_raelyn_hero_0139"
-		}
-	},
-	hero_raelyn_hero_0051 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			130,
-			85,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3105,
-			686,
-			92,
-			76
-		},
-		alias = {
-			"hero_raelyn_hero_0052",
-			"hero_raelyn_hero_0282",
-			"hero_raelyn_hero_0283"
-		}
-	},
-	hero_raelyn_hero_0053 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			121,
-			83,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2889,
-			579,
-			101,
-			78
-		},
-		alias = {
-			"hero_raelyn_hero_0054",
-			"hero_raelyn_hero_0284",
-			"hero_raelyn_hero_0285"
-		}
-	},
-	hero_raelyn_hero_0055 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			111,
-			83,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1207,
-			111,
-			78
-		},
-		alias = {
-			"hero_raelyn_hero_0056",
-			"hero_raelyn_hero_0286",
-			"hero_raelyn_hero_0287"
-		}
-	},
-	hero_raelyn_hero_0057 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			110,
-			79,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1000,
-			112,
-			82
-		},
-		alias = {
-			"hero_raelyn_hero_0058",
-			"hero_raelyn_hero_0288",
-			"hero_raelyn_hero_0289"
-		}
-	},
-	hero_raelyn_hero_0059 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			56,
-			71,
-			141
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			301,
-			151,
-			115
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0060 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			56,
-			72,
-			144
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			714,
-			150,
-			112
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0061 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			57,
-			64,
-			144
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			1424,
-			158,
-			111
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0062 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			57,
-			64,
-			141
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1929,
-			158,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0063 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			92,
-			48,
-			141
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1691,
-			174,
-			79
-		},
-		alias = {
-			"hero_raelyn_hero_0294"
-		}
-	},
-	hero_raelyn_hero_0064 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			92,
-			48,
-			144
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1776,
-			174,
-			76
-		},
-		alias = {
-			"hero_raelyn_hero_0295"
-		}
-	},
-	hero_raelyn_hero_0065 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			46,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1985,
-			176,
-			63
-		},
-		alias = {
-			"hero_raelyn_hero_0296"
-		}
-	},
-	hero_raelyn_hero_0066 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			46,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1001,
-			176,
-			63
-		},
-		alias = {
-			"hero_raelyn_hero_0297"
-		}
-	},
-	hero_raelyn_hero_0067 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			87,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			568,
-			135,
-			63
-		},
-		alias = {
-			"hero_raelyn_hero_0298"
-		}
-	},
-	hero_raelyn_hero_0068 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			87,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			637,
-			135,
-			63
-		},
-		alias = {
-			"hero_raelyn_hero_0299"
-		}
-	},
-	hero_raelyn_hero_0069 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			84,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			416,
-			138,
-			63
-		},
-		alias = {
-			"hero_raelyn_hero_0300"
-		}
-	},
-	hero_raelyn_hero_0070 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			84,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			485,
-			138,
-			63
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0071 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			80,
-			146
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			1837,
-			142,
-			65
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0072 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			80,
-			146
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			1908,
-			142,
-			65
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0073 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			104,
-			97,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3619,
-			6,
-			125,
-			60
-		},
-		alias = {
-			"hero_raelyn_hero_0074"
-		}
-	},
-	hero_raelyn_hero_0075 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			161,
-			88,
-			127,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3311,
-			579,
-			96,
-			74
-		},
-		alias = {
-			"hero_raelyn_hero_0076",
-			"hero_raelyn_hero_0123",
-			"hero_raelyn_hero_0124"
-		}
-	},
-	hero_raelyn_hero_0077 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			148,
-			88,
-			142,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3917,
-			579,
-			94,
-			84
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0078 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			88,
-			158,
-			142
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3908,
-			914,
-			82,
-			82
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0079 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			129,
-			85,
-			161,
-			142
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3817,
-			579,
-			94,
-			85
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0080 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			130,
-			85,
-			155,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3101,
-			579,
+			1514,
+			804,
 			99,
-			87
+			80
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_hero_0081 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			146,
-			80,
-			159,
-			140
+			60,
+            62,
+            65,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			4017,
-			579,
-			79,
-			92
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0082 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			148,
-			80,
-			162,
-			142
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1288,
-			74,
-			90
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0083 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			150,
-			74,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1471,
-			72,
-			87
-		},
-		alias = {
-			"hero_raelyn_hero_0084",
-			"hero_raelyn_hero_0085",
-			"hero_raelyn_hero_0086",
-			"hero_raelyn_hero_0087",
-			"hero_raelyn_hero_0088",
-			"hero_raelyn_hero_0135",
-			"hero_raelyn_hero_0136",
-			"hero_raelyn_hero_0137",
-			"hero_raelyn_hero_0174",
-			"hero_raelyn_hero_0175"
-		}
-	},
-	hero_raelyn_hero_0089 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			75,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			4006,
-			799,
-			83,
-			86
-		},
-		alias = {
-			"hero_raelyn_hero_0090"
-		}
-	},
-	hero_raelyn_hero_0091 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			49,
-			133,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3183,
-			914,
-			89,
-			112
-		},
-		alias = {
-			"hero_raelyn_hero_0092"
-		}
-	},
-	hero_raelyn_hero_0093 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			93,
-			112,
-			145
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1756,
-			110,
-			74
-		},
-		alias = {
-			"hero_raelyn_hero_0094"
-		}
-	},
-	hero_raelyn_hero_0095 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			94,
-			162,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1711,
-			79,
-			90
-		},
-		alias = {
-			"hero_raelyn_hero_0096"
-		}
-	},
-	hero_raelyn_hero_0097 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			122,
-			90,
-			150,
-			137
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			909,
-			112,
-			85
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0098 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			122,
-			90,
-			149,
-			137
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3858,
-			464,
-			113,
-			85
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0099 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			111,
-			57,
-			142,
-			147
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			454,
-			131,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0100 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			111,
-			57,
-			142,
-			147
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			568,
-			131,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0101 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			102,
-			47,
-			126,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1072,
-			156,
-			122
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0102 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			101,
-			47,
-			126,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			194,
-			157,
-			122
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0103 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			104,
-			47,
-			124,
-			147
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1200,
-			156,
-			118
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0104 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			104,
-			47,
-			124,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1324,
-			156,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0105 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			109,
-			30,
-			50,
-			111
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1027,
-			225,
-			171
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0106 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			109,
-			30,
-			50,
-			111
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1204,
-			225,
-			171
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0107 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			48,
-			50,
-			111
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			387,
-			172,
-			153
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0108 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			48,
-			50,
-			111
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			546,
-			172,
-			153
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0109 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			85,
-			48,
-			137
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1499,
-			174,
-			90
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0110 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			85,
-			48,
-			137
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1595,
-			174,
-			90
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0111 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			84,
-			46,
-			136
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			641,
-			176,
-			92
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0112 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			84,
-			46,
-			136
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			739,
-			176,
-			92
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0113 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			102,
-			48,
-			137
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1858,
-			174,
-			73
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0114 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			102,
-			48,
-			137
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1937,
-			174,
-			73
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0115 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			49,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			249,
-			173,
-			63
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0116 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			49,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			318,
-			173,
-			63
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0117 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			51,
-			146
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			705,
-			171,
-			65
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0118 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			51,
-			146
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			776,
-			171,
-			65
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0119 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			97,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3488,
-			6,
-			125,
-			63
-		},
-		alias = {
-			"hero_raelyn_hero_0120"
-		}
-	},
-	hero_raelyn_hero_0121 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			104,
-			101,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2691,
-			119,
-			121,
-			60
-		},
-		alias = {
-			"hero_raelyn_hero_0122"
-		}
-	},
-	hero_raelyn_hero_0125 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			148,
-			88,
-			161,
-			145
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1203,
-			75,
-			79
-		},
-		alias = {
-			"hero_raelyn_hero_0126"
-		}
-	},
-	hero_raelyn_hero_0127 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			130,
-			85,
-			75,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1757,
-			179,
-			89
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0128 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			129,
-			85,
-			48,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			417,
-			207,
-			87
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0129 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			125,
-			80,
-			45,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1926,
-			214,
-			92
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0130 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			110,
-			80,
-			40,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			819,
-			234,
-			94
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0131 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			95,
-			74,
-			40,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			141,
-			249,
-			100
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0132 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			127,
-			74,
-			23,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			715,
-			234,
-			98
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0133 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			150,
-			74,
-			23,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			222,
-			211,
-			87
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0134 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			150,
-			74,
-			20,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			6,
-			214,
-			87
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0140 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			136,
-			30,
-			127,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			1881,
-			121,
-			131
-		},
-		alias = {
-			"hero_raelyn_hero_0141"
-		}
-	},
-	hero_raelyn_hero_0142 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			141,
-			30,
-			127,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			737,
-			116,
-			131
-		},
-		alias = {
-			"hero_raelyn_hero_0143"
-		}
-	},
-	hero_raelyn_hero_0144 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			30,
-			127,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
 			1621,
-			118,
-			131
+			804,
+			99,
+			80
 		},
-		alias = {
-			"hero_raelyn_hero_0145"
-		}
+		alias = {},
 	},
-	hero_raelyn_hero_0146 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			137,
-			30,
-			123,
-			151
+			60,
+            61,
+            65,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2168,
-			614,
-			124,
-			131
-		},
-		alias = {
-			"hero_raelyn_hero_0147"
-		}
-	},
-	hero_raelyn_hero_0148 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			140,
-			25,
-			119,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			233,
-			125,
-			136
-		},
-		alias = {
-			"hero_raelyn_hero_0149"
-		}
-	},
-	hero_raelyn_hero_0150 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			138,
-			30,
-			123,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			984,
-			123,
-			131
-		},
-		alias = {
-			"hero_raelyn_hero_0151"
-		}
-	},
-	hero_raelyn_hero_0152 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			136,
-			25,
-			119,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			916,
-			129,
-			136
-		},
-		alias = {
-			"hero_raelyn_hero_0153"
-		}
-	},
-	hero_raelyn_hero_0154 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			141,
-			30,
-			127,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			874,
-			116,
-			131
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0155 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			141,
-			30,
-			127,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			1011,
-			116,
-			131
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0156 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			30,
-			128,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			464,
-			117,
-			131
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0157 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			31,
-			128,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			601,
-			117,
-			130
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0158 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			31,
-			123,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			1358,
-			122,
-			130
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0159 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			31,
-			123,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			1494,
-			122,
-			130
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0160 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			25,
-			119,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2034,
-			1501,
-			126,
-			136
-		},
-		alias = {
-			"hero_raelyn_hero_0161"
-		}
-	},
-	hero_raelyn_hero_0162 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			31,
-			123,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2168,
-			1630,
-			122,
-			130
-		},
-		alias = {
-			"hero_raelyn_hero_0163"
-		}
-	},
-	hero_raelyn_hero_0164 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			25,
-			119,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2034,
-			1643,
-			126,
-			136
-		},
-		alias = {
-			"hero_raelyn_hero_0165"
-		}
-	},
-	hero_raelyn_hero_0166 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			139,
-			46,
-			154,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			914,
-			91,
-			115
-		},
-		alias = {
-			"hero_raelyn_hero_0167",
-			"hero_raelyn_hero_0168",
-			"hero_raelyn_hero_0169",
-			"hero_raelyn_hero_0170",
-			"hero_raelyn_hero_0171"
-		}
-	},
-	hero_raelyn_hero_0172 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			151,
-			80,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1743,
-			71,
+			1503,
+			892,
+			99,
 			81
 		},
-		alias = {
-			"hero_raelyn_hero_0173"
-		}
+		alias = {},
 	},
-	hero_raelyn_hero_0176 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			158,
-			88,
-			142,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3827,
-			799,
-			84,
-			74
-		},
-		alias = {
-			"hero_raelyn_hero_0177",
-			"hero_raelyn_hero_0212"
-		}
-	},
-	hero_raelyn_hero_0178 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			157,
-			75,
-			141,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3373,
-			799,
-			86,
-			86
-		},
-		alias = {
-			"hero_raelyn_hero_0179"
-		}
-	},
-	hero_raelyn_hero_0180 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			155,
-			58,
-			148,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1168,
-			81,
-			103
-		},
-		alias = {
-			"hero_raelyn_hero_0181"
-		}
-	},
-	hero_raelyn_hero_0182 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			155,
-			44,
-			162,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3172,
-			1913,
-			67,
-			117
-		},
-		alias = {
-			"hero_raelyn_hero_0183"
-		}
-	},
-	hero_raelyn_hero_0184 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
 			62,
-			140,
-			131
+            59,
+            66,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2779,
-			1420,
-			100,
-			119
+			1528,
+			981,
+			96,
+			83
 		},
-		alias = {
-			"hero_raelyn_hero_0185"
-		}
+		alias = {},
 	},
-	hero_raelyn_hero_0186 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			130,
-			63,
-			127,
-			131
+			62,
+            59,
+            66,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			803,
-			127,
-			118
+			1528,
+			981,
+			96,
+			83
 		},
-		alias = {
-			"hero_raelyn_hero_0187"
-		}
+		alias = {},
 	},
-	hero_raelyn_hero_0188 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			125,
-			65,
-			121,
-			131
+			62,
+            58,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			172,
-			138,
-			116
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0189 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			125,
-			65,
-			121,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			294,
-			138,
-			116
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0190 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			137,
-			67,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			1615,
-			114,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0191 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			137,
-			67,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			1735,
-			114,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0192 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			686,
-			108,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0193 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			806,
-			108,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0194 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			926,
-			108,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0195 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1046,
-			108,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0196 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1166,
-			108,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0197 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			141,
-			66,
-			133,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1291,
-			110,
-			115
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0198 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			132
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1286,
-			108,
-			113
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0199 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			132
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1405,
-			108,
-			113
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0200 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			66,
-			133,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1524,
-			108,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0201 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			66,
-			133,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1638,
-			108,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0202 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1866,
-			108,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0203 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			686,
-			108,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0204 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			143,
-			67,
-			133,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2893,
-			686,
-			108,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0205 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			97,
-			155,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			4022,
-			1035,
-			70,
-			72
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0206 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			159,
-			91,
-			145,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1635,
-			80,
-			70
-		},
-		alias = {
-			"hero_raelyn_hero_0207"
-		}
-	},
-	hero_raelyn_hero_0208 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			158,
-			77,
-			141,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3465,
-			799,
-			85,
+			321,
+			1254,
+			95,
 			84
 		},
-		alias = {
-			"hero_raelyn_hero_0209"
-		}
+		alias = {},
 	},
-	hero_raelyn_hero_0210 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			156,
-			91,
-			139,
-			151
+			64,
+            57,
+            68,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3684,
-			686,
-			89,
-			70
-		},
-		alias = {
-			"hero_raelyn_hero_0211"
-		}
-	},
-	hero_raelyn_hero_0213 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			157,
-			76,
-			146,
-			151
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1373,
-			81,
+			493,
+			1438,
+			92,
 			85
 		},
-		alias = {
-			"hero_raelyn_hero_0214"
-		}
+		alias = {},
 	},
-	hero_raelyn_hero_0215 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			159,
-			71,
-			144,
-			151
+			64,
+            57,
+            68,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2991,
-			1277,
-			81,
-			90
-		},
-		alias = {
-			"hero_raelyn_hero_0216"
-		}
-	},
-	hero_raelyn_hero_0217 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			150,
-			94,
-			135,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3206,
-			579,
-			99,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0218 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			150,
-			42,
-			135,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			1545,
-			99,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0219 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			152,
-			42,
-			141,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			1426,
-			91,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0220 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			152,
-			42,
-			141,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			1559,
-			91,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0221 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			152,
-			42,
-			141,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			1692,
-			91,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0222 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			152,
-			42,
-			141,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			1825,
-			91,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0223 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			42,
-			141,
-			143
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1035,
-			90,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0224 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			152,
-			42,
-			141,
-			142
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			1292,
-			91,
-			128
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0225 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			151,
-			42,
-			140,
-			141
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			914,
-			93,
-			129
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0226 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			150,
-			42,
-			139,
-			141
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			1814,
-			95,
-			129
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0227 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			148,
-			42,
-			138,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			1678,
-			98,
-			130
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0228 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			147,
-			43,
-			137,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			1285,
-			100,
-			129
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0229 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			147,
-			46,
-			136,
-			139
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			919,
-			101,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0230 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			154,
-			53,
-			142,
-			149
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3373,
-			914,
-			88,
-			110
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0231 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			152,
-			50,
-			140,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			1172,
+			593,
+			1438,
 			92,
-			114
+			85
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_hero_0232 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			152,
-			47,
-			140,
-			148
+			64,
+            56,
+            69,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2892,
-			1049,
-			92,
-			117
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0233 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			48,
-			142,
-			149
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3088,
-			914,
-			89,
-			115
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0234 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			51,
-			142,
-			149
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3278,
-			914,
-			89,
-			112
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0235 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			152,
-			55,
-			142,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3397,
-			686,
-			90,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0237 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			157,
-			90,
-			138,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3589,
-			686,
-			89,
-			72
-		},
-		alias = {
-			"hero_raelyn_hero_0238"
-		}
-	},
-	hero_raelyn_hero_0239 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			157,
+			1831,
+			1438,
 			91,
-			139,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3779,
-			686,
-			88,
-			71
-		},
-		alias = {
-			"hero_raelyn_hero_0240"
-		}
-	},
-	hero_raelyn_hero_0241 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			157,
-			91,
-			139,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3873,
-			686,
-			88,
-			71
-		},
-		alias = {
-			"hero_raelyn_hero_0242"
-		}
-	},
-	hero_raelyn_hero_0243 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			157,
-			91,
-			139,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3967,
-			686,
-			88,
-			71
-		},
-		alias = {
-			"hero_raelyn_hero_0244"
-		}
-	},
-	hero_raelyn_hero_0245 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			160,
-			90,
-			142,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3996,
-			914,
-			82,
-			72
-		},
-		alias = {
-			"hero_raelyn_hero_0246"
-		}
-	},
-	hero_raelyn_hero_0247 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			91,
-			143,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1202,
-			79,
-			71
-		},
-		alias = {
-			"hero_raelyn_hero_0248"
-		}
-	},
-	hero_raelyn_hero_0249 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			94,
-			143,
-			150
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3087,
-			1279,
-			79,
-			68
-		},
-		alias = {
-			"hero_raelyn_hero_0250"
-		}
-	},
-	hero_raelyn_hero_0251 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			78,
-			139,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			1958,
-			83,
 			86
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_hero_0252 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			162,
-			75,
-			139,
-			148
+			65,
+            58,
+            70,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3917,
-			799,
-			83,
-			89
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0253 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			72,
-			140,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3820,
-			914,
-			82,
-			92
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0254 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			156,
-			70,
-			133,
-			134
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2993,
-			799,
-			95,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0255 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			68,
-			130,
-			132
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			1052,
-			101,
-			112
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0256 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			150,
-			67,
-			127,
-			131
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			799,
-			107,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0257 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			148,
-			69,
-			125,
-			130
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1088,
-			111,
-			113
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0258 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			146,
-			67,
-			123,
-			129
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			1148,
-			115,
-			116
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0259 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			63,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			755,
-			119,
-			121
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0260 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			63,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			882,
-			119,
-			121
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0261 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			57,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			622,
-			119,
-			127
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0262 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			54,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			486,
-			119,
-			130
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0263 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			53,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			349,
-			119,
-			131
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0264 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			63,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1009,
-			119,
-			121
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0265 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			69,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1383,
-			119,
-			115
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0266 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			67,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1260,
-			119,
-			117
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0267 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			66,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1136,
-			119,
-			118
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0268 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			144,
-			75,
-			121,
-			128
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2551,
-			233,
-			119,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0269 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			148,
-			72,
-			126,
-			130
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1412,
-			110,
-			110
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0270 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			153,
-			70,
-			130,
-			133
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			1170,
-			101,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0271 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			158,
-			68,
-			131,
-			135
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2892,
-			799,
-			95,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0272 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			163,
-			67,
-			131,
-			138
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3493,
-			686,
-			90,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0273 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			200,
-			69,
-			131,
-			139
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3253,
-			1203,
-			53,
-			104
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0274 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			200,
-			67,
-			131,
-			139
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			4042,
-			233,
-			53,
-			106
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0275 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			201,
-			67,
-			131,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3253,
-			1313,
-			52,
-			105
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0276 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			201,
-			70,
-			131,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3253,
-			1643,
-			52,
-			102
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0277 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			201,
-			69,
-			131,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3253,
-			1534,
-			52,
-			103
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0278 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			201,
-			68,
-			131,
-			140
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3253,
-			1424,
-			52,
-			104
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0279 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			201,
-			69,
-			132,
-			141
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			4045,
-			119,
-			51,
-			102
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0280 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			201,
+			424,
+			1254,
 			89,
-			132,
-			141
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			65,
+            58,
+            70,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3253,
-			1751,
-			51,
+			424,
+			1254,
+			89,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			66,
+            60,
+            71,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			374,
+			981,
+			87,
 			82
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_hero_0281 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0022"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			211,
-			99,
-			142,
-			143
+			65,
+            65,
+            70,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			227,
-			1721,
-			31,
-			70
+			550,
+			631,
+			89,
+			77
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_hero_0290 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0023"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			162,
-			56,
-			71,
-			141
+			65,
+            65,
+            70,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1176,
-			422,
-			151,
-			115
+			647,
+			631,
+			89,
+			77
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_hero_0291 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0024"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			384,
-			312
+			224,
+			261
 		},
 		trim = {
-			162,
-			56,
-			72,
-			144
+			66,
+            65,
+            72,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1176,
-			832,
-			150,
-			112
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0292 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			57,
-			64,
-			144
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			1541,
-			158,
-			111
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0293 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			57,
-			64,
-			141
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			848,
-			1304,
-			158,
-			114
-		},
-		alias = {}
-	},
-	hero_raelyn_hero_0301 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			384,
-			312
-		},
-		trim = {
-			162,
-			101,
-			84,
-			148
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			554,
-			138,
-			63
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_decal_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			26,
-			49,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3644,
-			914,
-			82,
-			95
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0002"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			28,
-			49,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3732,
-			914,
-			82,
-			93
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0004"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			40,
-			31,
-			49,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3187,
-			799,
-			87,
-			90
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0006"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			40,
-			34,
-			49,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3280,
-			799,
-			87,
-			87
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0008"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			38,
-			34,
-			43,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3514,
-			579,
-			95,
-			87
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0010"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			39,
-			29,
-			42,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3413,
-			579,
-			95,
-			92
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0012"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			26,
-			44,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			4009,
-			6,
-			87,
-			95
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0014"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			26,
-			44,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2779,
-			1949,
-			87,
-			95
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0016"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			26,
-			49,
-			114
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3556,
-			914,
-			82,
-			96
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0018"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0019 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			28,
-			39,
-			113
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3007,
-			686,
-			92,
-			95
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0020"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0021 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			31,
-			40,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3300,
-			686,
-			91,
-			90
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0022"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0023 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			40,
-			34,
-			41,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3615,
-			579,
-			95,
-			87
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0024"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0025 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			38,
-			34,
-			43,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3716,
-			579,
-			95,
-			87
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0026"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0027 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			39,
-			29,
-			35,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1950,
-			102,
-			92
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0028"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0029 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			26,
-			32,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2996,
-			579,
-			99,
-			95
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0030"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_0031 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			176,
-			236
-		},
-		trim = {
-			45,
-			26,
-			44,
-			115
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3094,
-			799,
-			87,
-			95
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_0032"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_head_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			156,
-			168
-		},
-		trim = {
-			31,
-			25,
-			31,
-			103
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3619,
-			72,
-			94,
-			40
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_head_0002",
-			"hero_raelyn_inspire_fear_decal_head_0003",
-			"hero_raelyn_inspire_fear_decal_head_0004"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_head_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			156,
-			168
-		},
-		trim = {
-			31,
-			25,
-			31,
-			99
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2665,
-			1979,
-			94,
-			44
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_head_0006",
-			"hero_raelyn_inspire_fear_decal_head_0007",
-			"hero_raelyn_inspire_fear_decal_head_0008"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_head_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			156,
-			168
-		},
-		trim = {
-			36,
-			33,
-			37,
-			98
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3556,
-			871,
-			83,
-			37
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_head_0010",
-			"hero_raelyn_inspire_fear_decal_head_0011",
-			"hero_raelyn_inspire_fear_decal_head_0012"
-		}
-	},
-	hero_raelyn_inspire_fear_decal_head_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			156,
-			168
-		},
-		trim = {
-			30,
-			22,
-			30,
-			101
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2667,
-			516,
-			96,
-			45
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_decal_head_0014",
-			"hero_raelyn_inspire_fear_decal_head_0015",
-			"hero_raelyn_inspire_fear_decal_head_0016"
-		}
-	},
-	hero_raelyn_inspire_fear_fx_area_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
+			744,
+			631,
 			86,
-			64,
-			91,
-			63
+			77
 		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3488,
-			75,
-			91,
-			37
-		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_inspire_fear_fx_area_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0025"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			268,
-			164
+			224,
+			261
 		},
 		trim = {
-			81,
-			61,
-			85,
-			61
+			67,
+            63,
+            73,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2691,
-			185,
-			102,
-			42
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			75,
-			59,
-			79,
-			59
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2667,
-			464,
-			114,
-			46
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			75,
-			57,
-			79,
-			57
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			1970,
-			114,
-			50
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_fx_area_0018"
-		}
-	},
-	hero_raelyn_inspire_fear_fx_area_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			74,
-			55,
-			79,
-			54
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1988,
 			115,
-			55
+			717,
+			84,
+			79
 		},
-		alias = {
-			"hero_raelyn_inspire_fear_fx_area_0019"
-		}
+		alias = {},
 	},
-	hero_raelyn_inspire_fear_fx_area_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0026"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			268,
-			164
+			224,
+			261
 		},
 		trim = {
-			68,
-			52,
-			74,
-			52
+			67,
+            63,
+            73,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1898,
-			1976,
-			126,
-			60
+			115,
+			717,
+			84,
+			79
 		},
-		alias = {
-			"hero_raelyn_inspire_fear_fx_area_0020"
-		}
+		alias = {},
 	},
-	hero_raelyn_inspire_fear_fx_area_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0027"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			268,
-			164
+			224,
+			261
 		},
 		trim = {
-			63,
-			50,
-			68,
-			50
+			65,
+            60,
+            72,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			846,
-			137,
-			64
+			469,
+			981,
+			87,
+			82
 		},
-		alias = {
-			"hero_raelyn_inspire_fear_fx_area_0021"
-		}
+		alias = {},
 	},
-	hero_raelyn_inspire_fear_fx_area_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0028"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			268,
-			164
+			224,
+			261
 		},
 		trim = {
-			58,
-			48,
 			64,
-			48
+            59,
+            71,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1176,
-			1352,
-			146,
-			68
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_fx_area_0022"
-		}
-	},
-	hero_raelyn_inspire_fear_fx_area_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			54,
-			47,
-			60,
-			46
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1797,
-			154,
-			71
-		},
-		alias = {
-			"hero_raelyn_inspire_fear_fx_area_0023"
-		}
-	},
-	hero_raelyn_inspire_fear_fx_area_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			51,
-			46,
-			56,
-			45
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1612,
-			161,
-			73
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			48,
-			45,
-			54,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1322,
-			166,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			47,
-			44,
-			52,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			929,
-			169,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			45,
-			43,
-			50,
-			43
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			6,
-			173,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0014 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			44,
-			43,
-			49,
-			43
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1169,
-			175,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			43,
-			44,
-			49,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			837,
-			176,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			44,
-			45,
-			49,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1337,
-			175,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			47,
-			49,
-			52,
-			48
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1093,
-			169,
-			67
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0024 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			51,
-			46,
-			56,
-			45
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1691,
-			161,
-			73
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0025 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			48,
-			45,
-			54,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1403,
-			166,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0026 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			47,
-			44,
-			52,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1011,
-			169,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0027 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			45,
-			43,
-			50,
-			43
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			90,
-			173,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0028 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			44,
-			43,
-			49,
-			43
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1253,
-			175,
-			78
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0029 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			43,
-			44,
-			49,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			919,
-			176,
-			76
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0030 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			44,
-			45,
-			49,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			1418,
-			175,
-			75
-		},
-		alias = {}
-	},
-	hero_raelyn_inspire_fear_fx_area_0031 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			268,
-			164
-		},
-		trim = {
-			47,
-			49,
-			52,
-			48
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			669,
-			1166,
-			169,
-			67
-		},
-		alias = {}
-	},
-	hero_raelyn_melee_attack_hit_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			156,
-			148
-		},
-		trim = {
-			48,
-			34,
-			48,
-			47
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3646,
-			1121,
-			60,
-			67
-		},
-		alias = {
-			"hero_raelyn_melee_attack_hit_0002"
-		}
-	},
-	hero_raelyn_melee_attack_hit_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			156,
-			148
-		},
-		trim = {
-			44,
-			23,
-			33,
-			36
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2991,
-			1807,
-			79,
-			89
-		},
-		alias = {
-			"hero_raelyn_melee_attack_hit_0004"
-		}
-	},
-	hero_raelyn_melee_attack_hit_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			156,
-			148
-		},
-		trim = {
-			37,
-			22,
-			28,
-			29
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3203,
-			686,
-			91,
-			97
-		},
-		alias = {
-			"hero_raelyn_melee_attack_hit_0006"
-		}
-	},
-	hero_raelyn_onslaught_fx_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			88,
-			64,
+			1632,
+			981,
 			89,
-			62
+			83
 		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3070,
-			119,
-			119,
-			58
-		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_onslaught_fx_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0029"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			296,
-			184
+			224,
+			261
 		},
 		trim = {
 			64,
-			55,
-			66,
-			52
+            59,
+            71,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			669,
-			1239,
-			166,
-			77
+			1729,
+			981,
+			89,
+			83
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_onslaught_fx_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0030"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			296,
-			184
+			224,
+			261
 		},
 		trim = {
-			46,
-			47,
-			48,
-			44
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			510,
-			202,
-			93
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			43,
-			46,
-			44,
-			42
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			315,
-			209,
-			96
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			40,
-			45,
-			41,
-			41
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1721,
-			215,
-			98
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			38,
-			44,
-			39,
-			40
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1615,
-			219,
-			100
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			61,
-			58,
 			62,
-			57
+            58,
+            69,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			669,
-			174,
-			173,
-			69
+			521,
+			1254,
+			93,
+			84
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_onslaught_fx_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0031"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			296,
-			184
+			224,
+			261
 		},
 		trim = {
-			59,
-			57,
-			59,
-			56
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			139,
-			178,
-			71
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			56,
-			56,
-			57,
-			55
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1191,
-			183,
-			73
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			55,
-			55,
-			56,
-			55
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			1011,
-			185,
-			74
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			54,
-			55,
-			55,
-			55
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			705,
-			187,
-			74
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			109,
-			76,
-			105,
-			75
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			2013,
-			82,
-			33
-		},
-		alias = {}
-	},
-	hero_raelyn_onslaught_fx_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			296,
-			184
-		},
-		trim = {
-			113,
-			78,
-			110,
-			77
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			485,
-			2016,
-			73,
-			29
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			80,
-			65,
-			85,
-			70
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2562,
-			119,
-			123,
-			49
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			22,
-			40,
-			26,
-			39
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			381,
-			240,
-			105
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			23,
-			39,
-			27,
-			39
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			492,
-			238,
-			106
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			24,
-			40,
-			29,
-			39
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			604,
-			235,
-			105
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			27,
-			41,
-			31,
-			41
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			919,
-			230,
-			102
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			31,
-			43,
-			35,
-			43
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1381,
-			222,
-			98
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			35,
-			44,
-			39,
-			45
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			6,
-			1825,
-			214,
-			95
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			41,
-			47,
-			45,
-			47
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			265,
-			609,
-			202,
-			90
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			57,
-			53,
 			61,
-			55
+            57,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			669,
-			847,
-			170,
-			76
+			693,
+			1438,
+			96,
+			85
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_fx_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0032"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			288,
-			184
+			224,
+			261
 		},
 		trim = {
-			64,
-			58,
-			70,
-			62
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1874,
-			154,
-			64
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			64,
-			58,
-			70,
-			63
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1013,
-			1944,
-			154,
-			63
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			65,
-			58,
-			70,
-			63
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1176,
-			6,
-			153,
-			63
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_fx_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			288,
-			184
-		},
-		trim = {
-			70,
 			61,
-			76,
-			66
+            57,
+            67,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1176,
-			1979,
-			142,
-			57
+			693,
+			1438,
+			96,
+			85
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_fx_0014 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0033"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			288,
-			184
+			224,
+			261
 		},
 		trim = {
-			76,
-			63,
-			82,
-			68
+			60,
+            56,
+            65,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			1994,
-			130,
-			53
+			1930,
+			1438,
+			99,
+			86
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_fx_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0034"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			288,
-			184
+			224,
+			261
 		},
 		trim = {
-			82,
-			66,
-			88,
-			71
+			60,
+            58,
+            64,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2562,
-			174,
-			118,
-			47
+			622,
+			1254,
+			100,
+			84
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_fx_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0035"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			288,
-			184
+			224,
+			261
 		},
 		trim = {
-			89,
-			68,
-			95,
-			73
+			60,
+            58,
+            64,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3070,
-			183,
-			104,
-			43
+			730,
+			1254,
+			100,
+			84
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_floor_glow = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0036"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			116,
-			76
+			224,
+			261
 		},
 		trim = {
-			23,
-			23,
-			23,
-			22
+			60,
+            60,
+            64,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
 			564,
-			2016,
-			70,
-			31
+			981,
+			100,
+			82
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0037"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			224,
+			261
 		},
 		trim = {
-			0,
-			0,
+			58,
+            64,
+            62,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1482,
+			631,
+			104,
+			78
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0038"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			58,
+            64,
+            62,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1482,
+			631,
+			104,
+			78
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0039"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1610,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0040"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1610,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0041"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			61,
+            62,
+            66,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1728,
+			804,
+			97,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0042"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			61,
+            62,
+            66,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1728,
+			804,
+			97,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0043"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			57,
+            63,
+            66,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			207,
+			717,
+			101,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0044"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			57,
+            63,
+            66,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			207,
+			717,
+			101,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0045"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			54,
+            22,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1153,
+			1843,
+			105,
+			120
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0046"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			54,
+            22,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1153,
+			1843,
+			105,
+			120
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0047"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			56,
+            15,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2085,
+			1843,
+			103,
+			127
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0048"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			56,
+            15,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2085,
+			1843,
+			103,
+			127
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0049"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			58,
+            13,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			125,
+			1978,
+			101,
+			129
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0050"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			58,
+            13,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			125,
+			1978,
+			101,
+			129
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0051"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			57,
+            11,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			598,
+			1978,
+			102,
+			131
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0052"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			57,
+            11,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			598,
+			1978,
+			102,
+			131
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0053"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			78,
+            48,
+            22,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			640,
+			1629,
+			124,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0054"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			78,
+            48,
+            22,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			640,
+			1629,
+			124,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0055"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            40,
+            11,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1947,
+			1733,
+			134,
+			102
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0056"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            40,
+            11,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1947,
+			1733,
+			134,
+			102
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0057"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            40,
+            11,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2089,
+			1733,
+			134,
+			102
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0058"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            40,
+            11,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2089,
+			1733,
+			134,
+			102
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0059"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            39,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1843,
+			131,
+			103
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0060"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            39,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1843,
+			131,
+			103
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0061"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            39,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			143,
+			1843,
+			131,
+			103
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0062"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            39,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			143,
+			1843,
+			131,
+			103
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0063"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            45,
+            12,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			103,
+			1733,
+			133,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0064"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            45,
+            12,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			103,
+			1733,
+			133,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0065"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			24,
+            43,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1344,
+			1733,
 			186,
-			230
+			99
 		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			252,
-			247,
-			2,
-			2
-		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0066"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			224,
+			261
 		},
 		trim = {
-			26,
-			23,
-			27,
-			102
+			24,
+            43,
+            14,
+            119
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			234,
+			1344,
+			1733,
+			186,
+			99
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0067"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			28,
+            44,
+            19,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1159,
+			1733,
+			177,
+			98
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0068"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			28,
+            44,
+            19,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1159,
+			1733,
+			177,
+			98
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0069"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			32,
+            47,
+            29,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1244,
+			1629,
+			163,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0070"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			32,
+            47,
+            29,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1244,
+			1629,
+			163,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0071"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			33,
+            52,
+            33,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			66,
+			1629,
+			158,
+			90
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0072"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			33,
+            52,
+            33,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			66,
+			1629,
+			158,
+			90
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0073"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			32,
+            63,
+            59,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			316,
+			717,
+			133,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0074"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			32,
+            63,
+            59,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			316,
+			717,
+			133,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0075"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			57,
+            62,
+            63,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1833,
+			804,
+			104,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0076"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			57,
+            62,
+            63,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1833,
+			804,
+			104,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0077"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1713,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0078"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1713,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0079"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            39,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			282,
+			1843,
+			131,
+			103
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0080"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            39,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			282,
+			1843,
+			131,
+			103
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0081"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            45,
+            12,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			244,
+			1733,
+			133,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0082"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			79,
+            45,
+            12,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			244,
+			1733,
+			133,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0083"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			72,
+            50,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			232,
+			1629,
+			138,
+			92
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0084"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			72,
+            50,
+            14,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			232,
+			1629,
+			138,
+			92
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0085"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            59,
+            68,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1826,
+			981,
+			94,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0086"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            59,
+            68,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1826,
+			981,
+			94,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0087"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1610,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0088"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            67,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1610,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0089"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            63,
+            68,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			457,
+			717,
+			94,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0090"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            63,
+            68,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			457,
+			717,
+			94,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0091"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			60,
+            64,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1594,
+			631,
+			99,
+			78
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0092"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			60,
+            64,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1594,
+			631,
+			99,
+			78
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0093"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			63,
+            61,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1816,
+			892,
+			96,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0094"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			63,
+            61,
+            66,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1920,
+			892,
+			95,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0095"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			65,
+            60,
+            65,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			672,
+			981,
+			94,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0096"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			65,
+            60,
+            65,
+            118
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1928,
+			981,
+			94,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0097"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			66,
+            56,
+            64,
+            118
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			932,
+			1532,
+			94,
+			87
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0098"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			65,
+            56,
+            63,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2037,
+			1438,
+			96,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0099"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			64,
+            55,
+            63,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1034,
+			1532,
+			97,
+			87
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0100"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			63,
+            55,
+            63,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1139,
+			1532,
+			98,
+			87
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0101"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			63,
+            61,
+            61,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2023,
+			892,
+			100,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0102"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			62,
+            61,
+            62,
+            119
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2131,
+			892,
+			100,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0103"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			58,
+            65,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			774,
+			981,
+			111,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0104"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			58,
+            65,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			893,
+			981,
+			111,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0105"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			55,
+            65,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1012,
+			981,
+			114,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0106"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			55,
+            65,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1134,
+			981,
+			114,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0107"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			67,
+            68,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			559,
+			717,
+			102,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0108"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			67,
+            68,
+            56,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			669,
+			717,
+			101,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0109"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			67,
+            70,
+            56,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			838,
+			631,
+			101,
+			77
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0110"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			71,
+            68,
+            56,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			778,
+			717,
+			97,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0111"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			77,
+            75,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1781,
+			468,
+			92,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0112"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			77,
+            75,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1781,
+			468,
+			92,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0113"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			77,
+            75,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1881,
+			468,
+			92,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0114"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			77,
+            75,
+            55,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1881,
+			468,
+			92,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0115"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			80,
+            74,
+            56,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			426,
+			548,
+			88,
+			73
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0116"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			80,
+            74,
+            56,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			426,
+			548,
+			88,
+			73
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0117"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			80,
+            75,
+            56,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1981,
+			468,
+			88,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0118"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			80,
+            75,
+            56,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1981,
+			468,
+			88,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0119"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			81,
+            77,
+            54,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			730,
+			468,
+			89,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0120"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			81,
+            77,
+            54,
+            114
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			730,
+			468,
+			89,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0121"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			75,
+            92,
+            40,
+            106
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			863,
+			319,
+			109,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0122"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			75,
+            92,
+            40,
+            106
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			863,
+			319,
+			109,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0123"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			63,
+            88,
+            30,
+            100
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			522,
+			548,
+			131,
+			73
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0124"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			63,
+            88,
+            30,
+            100
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			522,
+			548,
+			131,
+			73
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0125"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			61,
+            89,
+            28,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			661,
+			548,
 			135,
-			107
+			73
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0126"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			224,
+			261
 		},
 		trim = {
-			26,
-			23,
-			27,
-			102
+			61,
+            89,
+            28,
+            99
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			347,
+			661,
+			548,
 			135,
-			107
+			73
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0127"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			224,
+			261
 		},
 		trim = {
-			26,
-			23,
-			26,
-			102
+			61,
+            89,
+            26,
+            98
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			1547,
-			136,
-			107
+			1127,
+			548,
+			137,
+			74
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0128"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			224,
+			261
 		},
 		trim = {
-			26,
-			22,
-			26,
-			102
+			61,
+            89,
+            26,
+            98
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			1091,
-			136,
-			108
+			1127,
+			548,
+			137,
+			74
 		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0029"
-		}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_dark_knight_0129"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			224,
+			261
+		},
+		trim = {
+			60,
+            89,
+            26,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1272,
+			548,
+			138,
+			74
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0130"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			60,
+            89,
+            26,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1272,
+			548,
+			138,
+			74
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0131"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			80,
+            89,
+            47,
+            112
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			880,
+			249,
+			97,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_dark_knight_0132"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			224,
+			261
+		},
+		trim = {
+			80,
+            89,
+            47,
+            112
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			880,
+			249,
+			97,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_hit_fx_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			150,
+			142
+		},
+		trim = {
+			50,
+            46,
+            42,
+            50
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1638,
+			4,
+			58,
+			46
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_hit_fx_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			150,
+			142
+		},
+		trim = {
+			50,
+            46,
+            42,
+            50
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1638,
+			4,
+			58,
+			46
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_hit_fx_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			150,
+			142
+		},
+		trim = {
+			42,
+            33,
+            34,
+            35
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1418,
+			548,
+			74,
+			74
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_hit_fx_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			150,
+			142
+		},
+		trim = {
+			42,
+            33,
+            34,
+            35
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1418,
+			548,
+			74,
+			74
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_hit_fx_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			150,
+			142
+		},
+		trim = {
+			31,
+            28,
+            28,
+            29
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			797,
+			1438,
+			91,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_hit_fx_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			150,
+			142
+		},
+		trim = {
+			31,
+            28,
+            28,
+            29
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			797,
+			1438,
+			91,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
 		},
 		trim = {
 			25,
-			22,
-			26,
-			102
+            52,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			623,
-			137,
-			108
+			532,
+			1843,
+			115,
+			111
 		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0030"
-		}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
 			26,
-			22,
-			26,
-			102
+            39,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			1205,
-			136,
-			108
+			1497,
+			1843,
+			114,
+			124
 		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0031"
-		}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
 			26,
-			22,
-			26,
-			102
+            38,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			1319,
-			136,
-			108
+			1619,
+			1843,
+			114,
+			125
 		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0032"
-		}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
 			26,
-			22,
-			27,
-			102
+            34,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
-			1766,
-			135,
-			108
-		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0033"
-		}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			26,
-			22,
-			27,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1335,
-			1880,
-			135,
-			108
-		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0034"
-		}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			27,
-			22,
-			27,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			887,
-			134,
-			108
-		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0035"
-		}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			27,
-			22,
-			28,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			184,
-			133,
-			108
-		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0036"
-		}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			28,
-			22,
-			28,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			967,
-			132,
-			108
-		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl1_0037"
-		}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0014 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			28,
-			22,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			682,
-			131,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			1798,
-			130,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			1912,
-			130,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			30,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			1293,
-			129,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0018 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			30,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			1407,
-			129,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0019 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			6,
-			130,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0020 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			30,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			1521,
-			129,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0021 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			120,
-			130,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0022 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			22,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
 			234,
-			130,
-			108
+			1978,
+			114,
+			129
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0023 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
-			28,
-			22,
-			29,
-			102
+			26,
+            31,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1760,
-			796,
-			131,
-			108
+			948,
+			1978,
+			114,
+			132
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0024 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
-			28,
-			22,
-			28,
-			102
+			26,
+            29,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1621,
-			1081,
-			132,
-			108
+			1554,
+			1978,
+			114,
+			134
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0025 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
+		},
+		trim = {
+			26,
+            28,
+            27,
+            121
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1676,
+			1978,
+			114,
+			135
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			26,
+            33,
+            27,
+            121
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			476,
+			1978,
+			114,
+			130
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
 		},
 		trim = {
 			27,
-			22,
-			28,
-			102
+            31,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1621,
-			298,
-			133,
-			108
+			1070,
+			1978,
+			113,
+			132
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0026 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
-			26,
-			22,
 			27,
-			102
+            31,
+            27,
+            121
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			6,
-			135,
-			108
+			1191,
+			1978,
+			113,
+			132
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0027 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
-			26,
-			22,
 			27,
-			102
+            33,
+            28,
+            122
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			120,
-			135,
-			108
+			356,
+			1978,
+			112,
+			129
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0028 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
 		},
 		trim = {
-			26,
-			22,
-			26,
-			102
+			27,
+            31,
+            27,
+            122
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1335,
+			708,
+			1978,
+			113,
+			131
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			27,
+            29,
+            27,
+            122
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1312,
+			1978,
+			113,
+			133
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			27,
+            29,
+            27,
+            122
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
 			1433,
-			136,
-			108
+			1978,
+			113,
+			133
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0038 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_command_orders_spawn_fx_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			167,
+			284
+		},
+		trim = {
+			27,
+            34,
+            27,
+            122
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1978,
+			113,
+			128
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
 		},
 		trim = {
 			28,
-			23,
-			29,
-			102
+            31,
+            28,
+            122
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1760,
-			1252,
+			829,
+			1978,
+			111,
+			131
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			28,
+            47,
+            28,
+            122
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			923,
+			1843,
+			111,
+			115
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			29,
+            42,
+            30,
+            122
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1266,
+			1843,
+			108,
+			120
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			30,
+            38,
+            30,
+            123
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1382,
+			1843,
+			107,
+			123
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			32,
+            44,
+            32,
+            124
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1042,
+			1843,
+			103,
+			116
+		},
+		alias = {},
+	},
+	["hero_raelyn_command_orders_spawn_fx_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			167,
+			284
+		},
+		trim = {
+			33,
+            44,
+            31,
+            130
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			421,
+			1843,
+			103,
+			110
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            57,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			985,
+			249,
+			63,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            58,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			138,
+			249,
+			63,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            58,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			209,
+			249,
+			63,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            57,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1056,
+			249,
+			62,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            57,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1126,
+			249,
+			63,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            57,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1197,
+			249,
+			62,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            56,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1550,
+			249,
+			63,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            56,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1621,
+			249,
+			62,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            55,
+            100,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2138,
+			249,
+			62,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            55,
+            100,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			319,
+			62,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            55,
+            100,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			74,
+			319,
+			62,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            54,
+            100,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			980,
+			319,
+			62,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            54,
+            100,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1050,
+			319,
+			62,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            54,
+            100,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1120,
+			319,
+			62,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            54,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1190,
+			319,
+			62,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            54,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1260,
+			319,
+			62,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            55,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			144,
+			319,
+			63,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            55,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			215,
+			319,
+			63,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            55,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			286,
+			319,
+			63,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            55,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			357,
+			319,
+			63,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            56,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1691,
+			249,
+			62,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0022"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            57,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1267,
+			249,
+			62,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0023"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            57,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1337,
+			249,
+			63,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0024"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            59,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			280,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0025"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            58,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			354,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0026"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            58,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			354,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0027"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            64,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			217,
+			119,
+			67,
+			53
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0028"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            64,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			217,
+			119,
+			67,
+			53
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0029"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            58,
+            102,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			428,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0030"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            58,
+            102,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			428,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0031"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            55,
+            103,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			428,
+			319,
+			64,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0032"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            55,
+            103,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			428,
+			319,
+			64,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0033"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            53,
+            103,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1700,
+			319,
+			60,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0034"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            53,
+            103,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1700,
+			319,
+			60,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0035"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            52,
+            105,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2044,
+			319,
+			57,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0036"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            52,
+            105,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2044,
+			319,
+			57,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0037"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            56,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1761,
+			249,
+			54,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0038"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            56,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1761,
+			249,
+			54,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0039"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            61,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1533,
+			119,
+			55,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0040"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            61,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1533,
+			119,
+			55,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0041"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            59,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1416,
+			183,
+			54,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0042"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            59,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1416,
+			183,
+			54,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0043"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            57,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1408,
+			249,
+			55,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0044"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            57,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1408,
+			249,
+			55,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0045"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            53,
+            104,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1768,
+			319,
+			60,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0046"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            53,
+            104,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1768,
+			319,
+			60,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0047"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            53,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1836,
+			319,
+			64,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0048"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            53,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1836,
+			319,
+			64,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0049"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            51,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			230,
+			392,
+			57,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0050"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            51,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			230,
+			392,
+			57,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0051"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			89,
+            57,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1471,
+			249,
+			71,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0052"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			89,
+            57,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1471,
+			249,
+			71,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0053"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			82,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			500,
+			319,
+			78,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0054"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			82,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			500,
+			319,
+			78,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0055"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			75,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			586,
+			319,
+			85,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0056"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			75,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			586,
+			319,
+			85,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0057"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			74,
+            52,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2109,
+			319,
+			86,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0058"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			74,
+            52,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2109,
+			319,
+			86,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0059"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            36,
+            48,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1345,
+			1532,
+			113,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0060"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            36,
+            48,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1532,
+			112,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0061"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            39,
+            42,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2030,
+			981,
+			118,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0062"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            39,
+            42,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			838,
+			1254,
+			118,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0063"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            62,
+            31,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1823,
+			249,
+			129,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0064"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            62,
+            31,
+            100
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			502,
+			249,
+			129,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0065"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            68,
+            29,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			739,
+			59,
 			131,
-			107
+			52
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl1_0039 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0066"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			188,
-			232
+			272,
+			221
 		},
 		trim = {
-			29,
-			23,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			690,
-			130,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0040 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			23,
-			29,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			803,
-			130,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0041 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			23,
-			30,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			1863,
-			129,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl1_0042 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			188,
-			232
-		},
-		trim = {
-			29,
-			23,
-			30,
-			102
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2034,
-			6,
-			129,
-			107
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			0,
-			0,
-			170,
-			214
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			252,
-			255,
-			2,
-			2
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			31,
-			19,
-			29,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3977,
-			464,
 			112,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			30,
-			19,
-			29,
-			88
+            68,
+            29,
+            101
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2787,
-			464,
-			113,
-			109
+			878,
+			59,
+			131,
+			52
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0067"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			30,
-			19,
-			29,
-			88
+			111,
+            68,
+            59,
+            101
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2906,
-			464,
-			113,
-			109
+			1017,
+			59,
+			102,
+			52
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0068"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			30,
-			19,
-			29,
-			88
+			111,
+            68,
+            59,
+            101
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3025,
-			464,
-			113,
-			109
+			1127,
+			59,
+			102,
+			52
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0069"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			28,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2671,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2926,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3050,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			27,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2676,
-			233,
-			119,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			27,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2801,
-			233,
-			119,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3174,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3298,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3422,
-			233,
-			118,
-			109
-		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl2_0037"
-		}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0014 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2794,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2917,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3040,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			29,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3655,
-			349,
-			116,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0018 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			29,
-			19,
-			28,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			1270,
-			115,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0019 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			30,
-			19,
-			28,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			1855,
-			114,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0020 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			30,
-			19,
-			29,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3144,
-			464,
-			113,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0021 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			30,
-			19,
-			29,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3263,
-			464,
-			113,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0022 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			30,
-			19,
-			29,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3382,
-			464,
-			113,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0023 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			30,
-			19,
-			29,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3501,
-			464,
-			113,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0024 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			31,
-			19,
-			29,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			579,
 			112,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0025 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			30,
-			19,
-			29,
-			88
+            68,
+            56,
+            101
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3620,
-			464,
-			113,
-			109
+			1237,
+			59,
+			104,
+			52
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0026 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0070"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			30,
-			19,
-			28,
-			88
+			112,
+            68,
+            56,
+            101
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2547,
-			464,
-			114,
-			109
+			1349,
+			59,
+			104,
+			52
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0027 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0071"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			29,
-			19,
-			28,
-			88
+			112,
+            68,
+            56,
+            101
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2424,
-			1385,
+			1461,
+			59,
+			104,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0072"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            68,
+            56,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1573,
+			59,
+			104,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0073"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            70,
+            68,
+            102
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			111,
+			59,
+			93,
+			49
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0074"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            70,
+            68,
+            102
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			111,
+			59,
+			93,
+			49
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0075"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            59,
+            87,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			639,
+			249,
+			74,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0076"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            59,
+            87,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			639,
+			249,
+			74,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0077"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			101,
+            59,
+            99,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			392,
+			72,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0078"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			99,
+            59,
+            110,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1908,
+			319,
+			63,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0079"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			89,
+            57,
+            112,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			295,
+			392,
+			71,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0080"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			89,
+            57,
+            107,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			374,
+			392,
+			76,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0081"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            53,
+            111,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			827,
+			468,
+			58,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0082"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            53,
+            112,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			158,
+			468,
+			57,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0083"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0084"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0085"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0086"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0087"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0088"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0089"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            50,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			755,
+			392,
+			65,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0090"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            50,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			755,
+			392,
+			65,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0091"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            34,
+            94,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2156,
+			981,
+			67,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0092"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            34,
+            94,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2156,
+			981,
+			67,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0093"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            62,
+            78,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1478,
+			183,
+			82,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0094"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            62,
+            78,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1478,
+			183,
+			82,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0095"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            63,
+            112,
+            90
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1347,
+			392,
+			60,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0096"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            63,
+            112,
+            90
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1347,
+			392,
+			60,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0097"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			85,
+            63,
+            103,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			679,
+			319,
+			84,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0098"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			85,
+            63,
+            103,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			771,
+			319,
+			84,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0099"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			77,
+            39,
+            97,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			981,
+			98,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0100"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			77,
+            39,
+            97,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			110,
+			981,
+			98,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0101"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			71,
+            32,
+            86,
+            100
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1951,
+			1532,
 			115,
-			109
+			89
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0028 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0102"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			29,
-			19,
-			27,
-			88
+			70,
+            32,
+            86,
+            100
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3777,
-			349,
+			2074,
+			1532,
 			116,
-			109
+			89
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0029 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0103"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			28,
-			19,
-			27,
-			88
+			72,
+            32,
+            84,
+            103
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			3163,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0030 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3546,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0031 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3670,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0032 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3794,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0033 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3918,
-			233,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0034 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1758,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0035 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2299,
-			1873,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0036 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			26,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2424,
-			349,
-			118,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0038 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3286,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0039 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3409,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0040 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			28,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3532,
-			349,
-			117,
-			109
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl2_0041 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			172,
-			216
-		},
-		trim = {
-			29,
-			19,
-			27,
-			88
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			3899,
-			349,
+			124,
+			1532,
 			116,
-			109
+			86
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl2_0042 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0104"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			172,
-			216
+			272,
+			221
 		},
 		trim = {
-			29,
-			19,
-			28,
-			88
+			72,
+            32,
+            84,
+            104
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2424,
+			896,
+			1438,
+			116,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0105"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			73,
+            18,
+            35,
+            78
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1741,
+			1843,
+			164,
+			125
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0106"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			73,
+            18,
+            35,
+            78
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1913,
+			1843,
+			164,
+			125
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0107"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            31,
+            34,
+            78
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			655,
+			1843,
+			126,
+			112
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0108"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            31,
+            34,
+            78
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			789,
+			1843,
+			126,
+			112
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0109"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            57,
+            31,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1415,
+			392,
+			129,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0110"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            57,
+            31,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1552,
+			392,
+			129,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0111"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            56,
+            29,
+            95
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			893,
+			468,
+			131,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0112"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            56,
+            29,
+            95
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1032,
+			468,
+			131,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0113"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            69,
+            31,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1596,
+			119,
+			129,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0114"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            69,
+            31,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1733,
+			119,
+			129,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0115"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            32,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1685,
+			59,
+			129,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0116"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            32,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1822,
+			59,
+			129,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0117"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            33,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1959,
+			59,
+			128,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0118"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            33,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2095,
+			59,
+			128,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0119"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            68,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			119,
+			93,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0120"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            68,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			119,
+			93,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0121"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            70,
+            69,
+            102
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			212,
+			59,
+			92,
+			49
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0122"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            70,
+            69,
+            102
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			212,
+			59,
+			92,
+			49
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0123"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            59,
+            87,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			639,
+			249,
+			74,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0124"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            59,
+            87,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			639,
+			249,
+			74,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0125"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			101,
+            59,
+            111,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1330,
+			319,
+			60,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0126"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			101,
+            59,
+            111,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1330,
+			319,
+			60,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0127"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			88,
+            57,
+            50,
+            95
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			223,
+			468,
+			134,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0128"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			88,
+            57,
+            31,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			828,
+			392,
+			153,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0129"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			85,
+            53,
+            30,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1386,
+			468,
+			157,
+			71
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0130"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			76,
+            53,
+            25,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			548,
+			171,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0131"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			65,
+            49,
+            26,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			631,
+			181,
+			76
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0132"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			89,
+            49,
+            13,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
 			1500,
-			115,
-			109
+			548,
+			170,
+			74
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0001 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0133"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			272,
+			221
 		},
 		trim = {
-			0,
-			0,
-			182,
-			222
+			102,
+            49,
+            14,
+            104
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			252,
-			263,
-			2,
-			2
+			1689,
+			392,
+			156,
+			68
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0002 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_hero_0134"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            11,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1853,
+			392,
+			158,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0135"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0136"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0137"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0138"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            51,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			230,
+			392,
+			57,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0139"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            51,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			230,
+			392,
+			57,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0140"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			92,
+            20,
+            90,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			385,
+			1733,
+			90,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0141"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			92,
+            20,
+            90,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			385,
+			1733,
+			90,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0142"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			96,
+            20,
+            89,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			483,
+			1733,
+			87,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0143"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			96,
+            20,
+            89,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			483,
+			1733,
+			87,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0144"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            20,
+            89,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			578,
+			1733,
+			88,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0145"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            20,
+            89,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			578,
+			1733,
+			88,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0146"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			94,
+            20,
+            86,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			674,
+			1733,
+			92,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0147"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			94,
+            20,
+            86,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			674,
+			1733,
+			92,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0148"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            17,
+            84,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1538,
+			1733,
+			93,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0149"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            17,
+            84,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1538,
+			1733,
+			93,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0150"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			94,
+            20,
+            87,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			774,
+			1733,
+			91,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0151"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			94,
+            20,
+            87,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			774,
+			1733,
+			91,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0152"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			92,
+            17,
+            84,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1639,
+			1733,
+			96,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0153"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			92,
+            17,
+            84,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1639,
+			1733,
+			96,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0154"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			96,
+            20,
+            89,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			873,
+			1733,
+			87,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0155"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			96,
+            20,
+            89,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			968,
+			1733,
+			87,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0156"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			94,
+            20,
+            90,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1063,
+			1733,
+			88,
+			97
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0157"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			94,
+            21,
+            90,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1919,
+			1629,
+			88,
+			96
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0158"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            21,
+            86,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2015,
+			1629,
+			91,
+			96
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0159"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            21,
+            86,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2114,
+			1629,
+			91,
+			96
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0160"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            17,
+            83,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1743,
+			1733,
+			94,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0161"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            17,
+            83,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1743,
+			1733,
+			94,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0162"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            21,
+            86,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1733,
+			91,
+			96
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0163"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            21,
+            86,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1733,
+			91,
+			96
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0164"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            17,
+            83,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1845,
+			1733,
+			94,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0165"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            17,
+            83,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1845,
+			1733,
+			94,
+			100
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0166"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            29,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1466,
+			1532,
+			71,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0167"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            29,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1466,
+			1532,
+			71,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0168"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            29,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1466,
+			1532,
+			71,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0169"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            29,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1466,
+			1532,
+			71,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0170"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            29,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1466,
+			1532,
+			71,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0171"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			95,
+            29,
+            106,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1466,
+			1532,
+			71,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0172"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            53,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1979,
+			319,
+			57,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0173"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            53,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1979,
+			319,
+			57,
+			64
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0174"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0175"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            49,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1282,
+			392,
+			57,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0176"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            59,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			721,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0177"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            59,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			721,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0178"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            50,
+            97,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			989,
+			392,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0179"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            50,
+            97,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			989,
+			392,
+			67,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0180"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            38,
+            102,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			883,
+			717,
+			64,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0181"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            38,
+            102,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			883,
+			717,
+			64,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0182"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            28,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1629,
+			54,
+			89
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0183"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            28,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1629,
+			54,
+			89
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0184"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			101,
+            43,
+            98,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			248,
+			1532,
+			73,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0185"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			101,
+            43,
+            98,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			248,
+			1532,
+			73,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0186"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			90,
+            42,
+            90,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1245,
+			1532,
+			92,
+			87
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0187"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			90,
+            42,
+            90,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1245,
+			1532,
+			92,
+			87
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0188"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			87,
+            43,
+            85,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			329,
+			1532,
+			100,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0189"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			87,
+            43,
+            85,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			437,
+			1532,
+			100,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0190"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			96,
+            44,
+            92,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1020,
+			1438,
+			84,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0191"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			96,
+            44,
+            91,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1112,
+			1438,
+			85,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0192"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1205,
+			1438,
+			83,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0193"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1296,
+			1438,
+			83,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0194"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1387,
+			1438,
+			83,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0195"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1478,
+			1438,
+			83,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0196"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1569,
+			1438,
+			83,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0197"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			97,
+            43,
+            91,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			545,
+			1532,
+			84,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0198"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            93
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			964,
+			1254,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0199"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            93
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1055,
+			1254,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0200"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            94
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1072,
+			83,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0201"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            91,
+            94
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			95,
+			1072,
+			83,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0202"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			98,
+            44,
+            92,
+            94
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			186,
+			1072,
+			82,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0203"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            44,
+            92,
+            95
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1256,
+			981,
+			80,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0204"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            46,
+            93,
+            96
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			955,
+			717,
+			79,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0205"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            65,
+            106,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1568,
+			183,
+			57,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0206"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            61,
+            99,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1870,
+			119,
+			64,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0207"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            61,
+            99,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1870,
+			119,
+			64,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0208"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            51,
+            97,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			458,
+			392,
+			67,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0209"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            51,
+            97,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			458,
+			392,
+			67,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0210"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            61,
+            96,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			684,
+			183,
+			70,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0211"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            61,
+            96,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			684,
+			183,
+			70,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0212"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            59,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			721,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0213"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            50,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1064,
+			392,
+			64,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0214"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            50,
+            101,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1064,
+			392,
+			64,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0215"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            47,
+            99,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1171,
+			468,
+			65,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0216"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            47,
+            99,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1171,
+			468,
+			65,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0217"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			102,
+            63,
+            93,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			795,
+			249,
+			77,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0218"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			102,
+            29,
+            93,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			460,
+			1629,
+			77,
+			93
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0219"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            29,
+            98,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			772,
+			1629,
+			69,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0220"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            29,
+            98,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			849,
+			1629,
+			70,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0221"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            28,
+            98,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1415,
+			1629,
+			69,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0222"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            29,
+            98,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			927,
+			1629,
+			69,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0223"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            29,
+            97,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1004,
+			1629,
+			70,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0224"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            29,
+            97,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1492,
+			1629,
+			71,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0225"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            29,
+            97,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1571,
+			1629,
+			71,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0226"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            29,
+            97,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1650,
+			1629,
+			71,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0227"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            29,
+            96,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1082,
+			1629,
+			73,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0228"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            29,
+            96,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1163,
+			1629,
+			73,
+			94
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0229"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			102,
+            32,
+            96,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			378,
+			1629,
+			74,
+			92
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0230"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            37,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			216,
+			981,
+			69,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0231"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            34,
+            96,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1146,
+			1254,
+			72,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0232"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            32,
+            96,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			637,
+			1532,
+			72,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0233"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            33,
+            98,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1660,
+			1438,
+			68,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0234"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			106,
+            35,
+            98,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			276,
+			1072,
+			68,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0235"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            38,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1945,
+			804,
+			68,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0236"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            59,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			280,
+			249,
+			66,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0237"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			762,
+			183,
+			70,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0238"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			762,
+			183,
+			70,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0239"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			840,
+			183,
+			69,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0240"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			840,
+			183,
+			69,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0241"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			917,
+			183,
+			69,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0242"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			917,
+			183,
+			69,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0243"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			994,
+			183,
+			69,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0244"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			108,
+            61,
+            95,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			994,
+			183,
+			69,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0245"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            60,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1633,
+			183,
+			65,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0246"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            60,
+            97,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1633,
+			183,
+			65,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0247"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            61,
+            99,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1071,
+			183,
+			62,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0248"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            61,
+            99,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1071,
+			183,
+			62,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0249"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            63,
+            99,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			803,
+			119,
+			62,
+			55
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0250"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            63,
+            99,
+            103
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			803,
+			119,
+			62,
+			55
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0251"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            54,
+            96,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			533,
+			392,
+			65,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0252"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            52,
+            96,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2019,
+			392,
+			65,
+			68
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0253"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            50,
+            97,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1244,
+			468,
+			63,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0254"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			109,
+            48,
+            94,
+            94
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1042,
+			717,
+			69,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0255"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            47,
+            92,
+            93
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			293,
+			981,
+			73,
+			81
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0256"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			105,
+            46,
+            90,
+            92
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			352,
+			1072,
+			77,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0257"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			103,
+            48,
+            88,
+            91
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1344,
+			981,
+			81,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0258"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			102,
+            47,
+            87,
+            90
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1226,
+			1254,
+			83,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0259"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            44,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1545,
+			1532,
+			87,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0260"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            44,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1640,
+			1532,
+			87,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0261"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            39,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			545,
+			1629,
+			87,
+			93
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0262"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            37,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1729,
+			1629,
+			87,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0263"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            37,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1824,
+			1629,
+			87,
+			95
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0264"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            44,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1735,
+			1532,
+			87,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0265"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            48,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1317,
+			1254,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0266"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            47,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1736,
+			1438,
+			87,
+			85
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0267"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            46,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			717,
+			1532,
+			87,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0268"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			100,
+            52,
+            85,
+            89
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2021,
+			804,
+			87,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0269"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			104,
+            50,
+            88,
+            91
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2116,
+			804,
+			80,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0270"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			107,
+            48,
+            92,
+            93
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			892,
+			73,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0271"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			110,
+            47,
+            92,
+            95
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1119,
+			717,
+			70,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0272"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			114,
+            46,
+            92,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1701,
+			631,
+			66,
+			78
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0273"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			140,
+            48,
+            92,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			193,
+			631,
+			40,
+			76
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0274"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			140,
+            47,
+            92,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			241,
+			631,
+			40,
+			76
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0275"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			141,
+            47,
+            92,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			289,
+			631,
+			39,
+			76
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0276"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			141,
+            48,
+            92,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1851,
+			548,
+			39,
+			75
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0277"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			141,
+            48,
+            92,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1898,
+			548,
+			39,
+			75
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0278"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			141,
+            47,
+            92,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			336,
+			631,
+			39,
+			76
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0279"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			141,
+            48,
+            93,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1945,
+			548,
+			38,
+			75
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0280"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			141,
+            62,
+            93,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1960,
+			249,
+			38,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0281"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			145,
+            67,
+            98,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1942,
+			119,
+			29,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0282"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			89,
+            57,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1471,
+			249,
+			71,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0283"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			89,
+            57,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1471,
+			249,
+			71,
+			60
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0284"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			82,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			500,
+			319,
+			78,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0285"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			82,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			500,
+			319,
+			78,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0286"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			75,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			586,
+			319,
+			85,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0287"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			75,
+            55,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			586,
+			319,
+			85,
+			62
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0288"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			74,
+            52,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2109,
+			319,
+			86,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0289"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			74,
+            52,
+            112,
+            104
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2109,
+			319,
+			86,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0290"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            36,
+            48,
+            97
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1830,
+			1532,
+			113,
+			88
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0291"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            36,
+            48,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			812,
+			1532,
+			112,
+			86
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0292"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            39,
+            42,
+            99
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			437,
+			1072,
+			118,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0293"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            39,
+            42,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1412,
+			1254,
+			118,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0294"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            62,
+            31,
+            98
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1823,
+			249,
+			129,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0295"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            62,
+            31,
+            100
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			502,
+			249,
+			129,
+			59
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0296"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            68,
+            29,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			739,
+			59,
+			131,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0297"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            68,
+            29,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			878,
+			59,
+			131,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0298"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            59,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1017,
+			59,
+			102,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0299"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			111,
+            68,
+            59,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1127,
+			59,
+			102,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0300"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            68,
+            56,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1237,
+			59,
+			104,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_hero_0301"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			272,
+			221
+		},
+		trim = {
+			112,
+            68,
+            56,
+            101
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			105,
+			119,
+			104,
+			52
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            17,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			365,
+			468,
+			60,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            17,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			365,
+			468,
+			60,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            19,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1136,
+			392,
+			60,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            19,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1136,
+			392,
+			60,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			27,
+            21,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			84,
+			392,
+			64,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			27,
+            21,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			84,
+			392,
+			64,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			27,
+            23,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1398,
+			319,
+			64,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			27,
+            23,
+            33,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1398,
+			319,
+			64,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            23,
+            30,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1470,
+			319,
+			68,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            23,
+            30,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1470,
+			319,
+			68,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            20,
+            28,
+            80
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1204,
+			392,
+			70,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            20,
+            28,
+            80
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1204,
+			392,
+			70,
+			67
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            30,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			433,
+			468,
+			64,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            30,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			433,
+			468,
+			64,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            31,
+            80
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1315,
+			468,
+			63,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            31,
+            80
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1315,
+			468,
+			63,
+			70
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            17,
+            33,
+            79
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1551,
+			468,
+			60,
+			71
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            17,
+            33,
+            79
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1551,
+			468,
+			60,
+			71
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            19,
+            27,
+            79
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			505,
+			468,
+			66,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			31,
+            19,
+            27,
+            79
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			505,
+			468,
+			66,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            21,
+            28,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			156,
+			392,
+			66,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0022"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            21,
+            28,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			156,
+			392,
+			66,
+			65
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0023"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			27,
+            23,
+            28,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1546,
+			319,
+			69,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0024"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			27,
+            23,
+            28,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1546,
+			319,
+			69,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0025"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            23,
+            29,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1623,
+			319,
+			69,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0026"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            23,
+            29,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1623,
+			319,
+			69,
+			63
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0027"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            20,
+            24,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			606,
+			392,
+			74,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0028"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			26,
+            20,
+            24,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			606,
+			392,
+			74,
+			66
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0029"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            22,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			579,
+			468,
+			72,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0030"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            22,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			579,
+			468,
+			72,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0031"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            31,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			659,
+			468,
+			63,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_0032"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			124,
+			167
+		},
+		trim = {
+			30,
+            17,
+            31,
+            81
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			659,
+			468,
+			63,
+			69
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            14,
+            19,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			519,
+			4,
+			72,
+			35
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            14,
+            19,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			519,
+			4,
+			72,
+			35
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            14,
+            19,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			519,
+			4,
+			72,
+			35
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            14,
+            19,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			519,
+			4,
+			72,
+			35
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            15,
+            19,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			784,
+			4,
+			72,
+			37
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            15,
+            19,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			784,
+			4,
+			72,
+			37
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            15,
+            19,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			784,
+			4,
+			72,
+			37
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			19,
+            15,
+            19,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			784,
+			4,
+			72,
+			37
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			23,
+            21,
+            23,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			280,
+			4,
+			64,
+			31
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			23,
+            21,
+            23,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			280,
+			4,
+			64,
+			31
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			23,
+            21,
+            23,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			280,
+			4,
+			64,
+			31
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			23,
+            21,
+            23,
+            67
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			280,
+			4,
+			64,
+			31
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			18,
+            13,
+            19,
+            68
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1062,
+			4,
+			73,
+			38
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			18,
+            13,
+            19,
+            68
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1062,
+			4,
+			73,
+			38
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			18,
+            13,
+            19,
+            68
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1062,
+			4,
+			73,
+			38
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_decal_head_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			119
+		},
+		trim = {
+			18,
+            13,
+            19,
+            68
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1062,
+			4,
+			73,
+			38
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			60,
+            43,
+            63,
+            44
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			205,
+			4,
+			67,
+			29
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			56,
+            42,
+            59,
+            42
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			352,
+			4,
+			75,
+			32
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			52,
+            41,
+            55,
+            40
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			599,
+			4,
+			83,
+			35
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			52,
+            39,
+            55,
+            39
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1143,
+			4,
+			83,
+			38
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			51,
+            37,
+            55,
+            38
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1336,
+			4,
+			84,
+			41
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			47,
+            36,
+            51,
+            36
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1538,
+			4,
+			92,
+			44
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			43,
+            34,
+            48,
+            34
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			59,
+			99,
+			48
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
 		},
 		trim = {
 			40,
-			21,
-			36,
-			95
+            33,
+            44,
+            33
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2665,
-			1752,
-			108,
-			108
+			572,
+			59,
+			106,
+			50
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0003 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			39,
-			21,
-			36,
-			95
+			37,
+            31,
+            41,
+            32
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2547,
-			1836,
-			109,
-			108
+			292,
+			119,
+			112,
+			53
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0004 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			39,
-			21,
 			35,
-			95
+            31,
+            39,
+            32
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2547,
-			1528,
-			110,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0005 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			39,
-			21,
-			35,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2547,
-			1642,
-			110,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0006 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			26,
-			21,
-			26,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			1195,
-			132,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0007 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			25,
-			21,
-			25,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			1001,
-			134,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0008 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			25,
-			21,
-			25,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			1115,
-			134,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0009 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			25,
-			21,
-			25,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			1229,
-			134,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0010 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			25,
-			21,
-			26,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
 			412,
-			133,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0011 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			25,
-			21,
-			25,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1480,
-			1343,
-			134,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0012 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			26,
-			21,
-			26,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			1309,
-			132,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0013 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			26,
-			21,
-			26,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1621,
-			1423,
-			132,
-			108
-		},
-		alias = {
-			"hero_raelyn_unbreakable_shield_lvl3_0037"
-		}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0014 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			26,
-			21,
-			27,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1760,
-			910,
-			131,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0015 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			27,
-			21,
-			27,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			348,
-			130,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0016 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			27,
-			21,
-			28,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			1898,
-			1635,
-			129,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0017 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
-		},
-		trim = {
-			28,
-			21,
-			28,
-			95
-		},
-		a_size = {
-			4096,
-			2048
-		},
-		f_quad = {
-			2034,
 			119,
-			128,
-			108
+			116,
+			53
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0018 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			28,
-			21,
-			28,
-			95
+			33,
+            30,
+            37,
+            31
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			233,
-			128,
-			108
+			873,
+			119,
+			120,
+			55
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0019 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			28,
-			21,
-			29,
-			95
+			32,
+            30,
+            36,
+            30
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			1045,
-			127,
-			108
+			1979,
+			119,
+			122,
+			56
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0020 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			28,
-			21,
-			29,
-			95
+			31,
+            29,
+            34,
+            29
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			1159,
-			127,
-			108
+			1706,
+			183,
+			125,
+			58
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0021 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			29,
-			21,
-			29,
-			95
+			30,
+            29,
+            34,
+            29
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			1902,
+			1839,
+			183,
 			126,
-			108
+			58
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0022 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			29,
-			21,
-			29,
-			95
+			30,
+            30,
+            34,
+            30
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2168,
+			4,
+			183,
+			126,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			30,
+            30,
+            34,
+            31
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1001,
 			119,
 			126,
-			108
+			55
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0023 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_inspire_fear_fx_area_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			190,
+			116
 		},
 		trim = {
-			28,
-			21,
+			32,
+            33,
+            36,
+            34
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			312,
+			59,
+			122,
+			49
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			52,
+            39,
+            55,
+            39
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1143,
+			4,
+			83,
+			38
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			51,
+            37,
+            55,
+            38
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1336,
+			4,
+			84,
+			41
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			47,
+            36,
+            51,
+            36
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1538,
+			4,
+			92,
+			44
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			43,
+            34,
+            48,
+            34
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			59,
+			99,
+			48
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0022"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			40,
+            33,
+            44,
+            33
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			572,
+			59,
+			106,
+			50
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0023"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			37,
+            31,
+            41,
+            32
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			292,
+			119,
+			112,
+			53
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0024"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			35,
+            31,
+            39,
+            32
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			536,
+			119,
+			116,
+			53
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0025"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			33,
+            30,
+            37,
+            31
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1135,
+			119,
+			120,
+			55
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0026"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			32,
+            30,
+            36,
+            30
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			138,
+			183,
+			122,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0027"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			31,
+            29,
+            34,
+            29
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1973,
+			183,
+			125,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0028"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			30,
+            29,
+            34,
+            29
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			249,
+			126,
+			58
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0029"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			30,
+            30,
+            34,
+            30
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			268,
+			183,
+			126,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0030"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			30,
+            30,
+            34,
+            31
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1263,
+			119,
+			126,
+			55
+		},
+		alias = {},
+	},
+	["hero_raelyn_inspire_fear_fx_area_0031"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			190,
+			116
+		},
+		trim = {
+			32,
+            33,
+            36,
+            34
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			442,
+			59,
+			122,
+			49
+		},
+		alias = {},
+	},
+	["hero_raelyn_melee_attack_hit_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			105
+		},
+		trim = {
+			33,
+            23,
+            32,
+            32
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			686,
+			59,
+			45,
+			50
+		},
+		alias = {},
+	},
+	["hero_raelyn_melee_attack_hit_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			105
+		},
+		trim = {
+			33,
+            23,
+            32,
+            32
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			686,
+			59,
+			45,
+			50
+		},
+		alias = {},
+	},
+	["hero_raelyn_melee_attack_hit_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			105
+		},
+		trim = {
 			29,
-			95
+            15,
+            22,
+            24
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			1273,
-			127,
-			108
+			688,
+			392,
+			59,
+			66
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0024 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_melee_attack_hit_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			110,
+			105
 		},
 		trim = {
-			28,
-			21,
 			29,
-			95
+            15,
+            22,
+            24
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			1387,
-			127,
-			108
+			688,
+			392,
+			59,
+			66
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0025 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_melee_attack_hit_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			110,
+			105
 		},
 		trim = {
-			28,
-			21,
-			28,
-			95
+			24,
+            14,
+            19,
+            19
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			347,
+			183,
+			548,
+			67,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_melee_attack_hit_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			110,
+			105
+		},
+		trim = {
+			24,
+            14,
+            19,
+            19
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			183,
+			548,
+			67,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			60,
+            42,
+            60,
+            41
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1942,
+			4,
+			90,
+			47
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			43,
+            35,
+            43,
+            34
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2006,
+			249,
+			124,
+			61
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			29,
+            29,
+            31,
+            28
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			804,
+			548,
+			150,
+			73
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			27,
+            29,
+            28,
+            26
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1991,
+			548,
+			155,
+			75
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			25,
+            28,
+            26,
+            26
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			383,
+			631,
+			159,
+			76
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			26,
+            30,
+            27,
+            27
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			962,
+			548,
+			157,
+			73
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			41,
+            37,
+            41,
+            38
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1397,
+			119,
 			128,
-			108
+			55
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0026 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_onslaught_fx_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			210,
+			130
+		},
+		trim = {
+			39,
+            36,
+            39,
+            38
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			402,
+			183,
+			132,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			37,
+            36,
+            39,
+            37
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1141,
+			183,
+			134,
+			57
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			38,
+            37,
+            38,
+            37
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			542,
+			183,
+			134,
+			56
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			37,
+            38,
+            38,
+            38
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			660,
+			119,
+			135,
+			54
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			76,
+            52,
+            74,
+            53
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			137,
+			4,
+			60,
+			25
+		},
+		alias = {},
+	},
+	["hero_raelyn_onslaught_fx_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			210,
+			130
+		},
+		trim = {
+			78,
+            53,
+            78,
+            54
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			15,
+			4,
+			54,
+			23
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
+		},
+		trim = {
+			56,
+            45,
+            59,
+            48
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			864,
+			4,
+			89,
+			37
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
+		},
+		trim = {
+			16,
+            26,
+            17,
+            27
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			947,
+			631,
+			171,
+			77
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
+		},
+		trim = {
+			15,
+            27,
+            18,
+            26
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1126,
+			631,
+			171,
+			77
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
+		},
+		trim = {
+			16,
+            26,
+            19,
+            27
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1305,
+			631,
+			169,
+			77
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
+		},
+		trim = {
+			18,
+            28,
+            21,
+            28
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1678,
+			548,
+			165,
+			74
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
+		},
+		trim = {
+			21,
+            29,
+            23,
+            29
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			258,
+			548,
+			160,
+			72
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
+		},
+		trim = {
+			24,
+            29,
+            26,
+            30
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1619,
+			468,
+			154,
+			71
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_fx_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			204,
+			130
 		},
 		trim = {
 			28,
-			21,
-			28,
-			95
+            30,
+            30,
+            32
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			461,
-			128,
-			108
+			4,
+			468,
+			146,
+			68
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0027 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			27,
-			21,
-			27,
-			95
+			39,
+            35,
+            40,
+            38
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1898,
-			462,
-			130,
-			108
+			1283,
+			183,
+			125,
+			57
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0028 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			26,
-			21,
-			27,
-			95
+			44,
+            40,
+            48,
+            43
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1760,
-			1024,
-			131,
-			108
+			2040,
+			4,
+			112,
+			47
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0029 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			26,
-			21,
-			26,
-			95
+			44,
+            40,
+            48,
+            44
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1621,
-			1537,
-			132,
-			108
+			1704,
+			4,
+			112,
+			46
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0030 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			26,
-			21,
-			26,
-			95
+			45,
+            40,
+            49,
+            44
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1621,
-			1651,
-			132,
-			108
+			1824,
+			4,
+			110,
+			46
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0031 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			25,
-			21,
-			25,
-			95
+			49,
+            42,
+            53,
+            45
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			1457,
-			134,
-			108
+			1428,
+			4,
+			102,
+			43
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0032 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			25,
-			21,
-			25,
-			95
+			53,
+            44,
+            57,
+            47
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			1571,
-			134,
-			108
+			1234,
+			4,
+			94,
+			39
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0033 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			25,
-			21,
-			25,
-			95
+			57,
+            45,
+            61,
+            49
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			1685,
-			134,
-			108
+			690,
+			4,
+			86,
+			36
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0034 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_fx_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			204,
+			130
 		},
 		trim = {
-			25,
-			21,
-			26,
-			95
+			62,
+            47,
+            66,
+            51
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1621,
-			526,
+			435,
+			4,
+			76,
+			32
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_floor_glow"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			82,
+			53
+		},
+		trim = {
+			15,
+            14,
+            15,
+            15
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			77,
+			4,
+			52,
+			24
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
 			133,
-			108
-		},
-		alias = {}
-	},
-	hero_raelyn_unbreakable_shield_lvl3_0035 = {
-		a_name = "go_hero_raelyn-1.dds",
-		size = {
-			184,
-			224
+			164
 		},
 		trim = {
-			25,
-			21,
-			25,
-			95
+			0,
+            0,
+            130,
+            161
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1480,
-			1799,
-			134,
-			108
+			4,
+			4,
+			3,
+			3
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0036 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_shield_lvl1_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			133,
+			164
 		},
 		trim = {
-			26,
-			21,
-			26,
-			95
+			17,
+            15,
+            17,
+            71
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1621,
-			1765,
-			132,
-			108
+			1775,
+			631,
+			99,
+			78
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0038 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_shield_lvl1_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			133,
+			164
 		},
 		trim = {
-			26,
-			21,
-			27,
-			95
+			15,
+            15,
+            16,
+            71
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1760,
-			1138,
-			131,
-			108
+			1882,
+			631,
+			102,
+			78
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0039 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_shield_lvl1_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			133,
+			164
 		},
 		trim = {
-			27,
-			21,
-			27,
-			95
+			15,
+            15,
+            15,
+            70
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1898,
-			576,
+			1197,
+			717,
+			103,
+			79
+		},
+		alias = {"hero_raelyn_unbreakable_shield_lvl1_0005"},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			14,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1308,
+			717,
+			104,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1420,
+			717,
+			103,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1531,
+			717,
+			103,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1642,
+			717,
+			102,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            14,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			85,
+			892,
+			102,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            15,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1752,
+			717,
+			101,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            14,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			195,
+			892,
+			101,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1861,
+			717,
+			100,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1969,
+			717,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2076,
+			717,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			804,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            18,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			111,
+			804,
+			98,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            18,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			217,
+			804,
+			98,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			323,
+			804,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            18,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			430,
+			804,
+			98,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            14,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			304,
+			892,
+			99,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0022"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			536,
+			804,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0023"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            14,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			411,
+			892,
+			100,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0024"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            15,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			643,
+			804,
+			101,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0025"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            15,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			752,
+			804,
+			101,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0026"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			861,
+			804,
+			102,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0027"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            14,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			519,
+			892,
+			102,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0028"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			971,
+			804,
+			103,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0029"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1082,
+			804,
+			103,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0030"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			14,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1308,
+			717,
+			104,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0031"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1420,
+			717,
+			103,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0032"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            15,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1531,
+			717,
+			103,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0033"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            15,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1642,
+			717,
+			102,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0034"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			15,
+            14,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			85,
+			892,
+			102,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0035"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            15,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1752,
+			717,
+			101,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0036"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            14,
+            16,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			195,
+			892,
+			101,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0037"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			16,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1861,
+			717,
+			100,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0038"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1193,
+			804,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0039"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1300,
+			804,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0040"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            17,
+            70
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1407,
+			804,
+			99,
+			79
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0041"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            18,
+            71
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1992,
+			631,
+			98,
+			78
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl1_0042"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			133,
+			164
+		},
+		trim = {
+			17,
+            15,
+            18,
+            71
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2098,
+			631,
+			98,
+			78
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			0,
+            0,
+            119,
+            150
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			4,
+			3,
+			3
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			21,
+            12,
+            20,
+            61
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			629,
+			892,
+			81,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			19,
+            12,
+            20,
+            61
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			718,
+			892,
+			83,
+			80
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			18,
+            10,
+            18,
+            60
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			563,
+			1072,
+			86,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            18,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1538,
+			1254,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1633,
+			1254,
+			88,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1729,
+			1254,
+			90,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1827,
+			1254,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			15,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1926,
+			1254,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			15,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2025,
+			1254,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2124,
+			1254,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1346,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			103,
+			1346,
+			90,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			201,
+			1346,
+			90,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			299,
+			1346,
+			90,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			397,
+			1346,
+			89,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			494,
+			1346,
+			89,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			591,
+			1346,
+			88,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			18,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			687,
+			1346,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            18,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			782,
+			1346,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            18,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			877,
+			1346,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0022"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            18,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			972,
+			1346,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0023"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            18,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1067,
+			1346,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0024"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			19,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1162,
+			1346,
+			86,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0025"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            18,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1256,
+			1346,
+			87,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0026"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			18,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1351,
+			1346,
+			88,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0027"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1447,
+			1346,
+			88,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0028"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1543,
+			1346,
+			89,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0029"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1640,
+			1346,
+			90,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0030"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1738,
+			1346,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0031"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1837,
+			1346,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0032"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1936,
+			1346,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0033"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2035,
+			1346,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0034"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2134,
+			1346,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0035"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1438,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0036"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			103,
+			1438,
+			91,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0037"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            15,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			103,
+			1346,
+			90,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0038"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            16,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			202,
+			1438,
+			90,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0039"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			16,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			300,
+			1438,
+			89,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0040"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            17,
+            59
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			397,
+			1438,
+			88,
+			84
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0041"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            17,
+            60
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			657,
+			1072,
+			88,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl2_0042"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			122,
+			153
+		},
+		trim = {
+			17,
+            10,
+            18,
+            61
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1433,
+			981,
+			87,
+			82
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0001"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
 			130,
-			108
+			159
 		},
-		alias = {}
+		trim = {
+			0,
+            0,
+            127,
+            156
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			4,
+			3,
+			3
+		},
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0040 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_shield_lvl3_0002"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			130,
+			159
 		},
 		trim = {
 			27,
-			21,
-			28,
-			95
+            13,
+            24,
+            66
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			1898,
-			1749,
-			129,
-			108
+			809,
+			892,
+			79,
+			80
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0041 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_shield_lvl3_0003"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			130,
+			159
 		},
 		trim = {
-			28,
-			21,
-			28,
-			95
+			24,
+            13,
+            23,
+            66
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			575,
-			128,
-			108
+			896,
+			892,
+			83,
+			80
 		},
-		alias = {}
+		alias = {},
 	},
-	hero_raelyn_unbreakable_shield_lvl3_0042 = {
-		a_name = "go_hero_raelyn-1.dds",
+	["hero_raelyn_unbreakable_shield_lvl3_0004"] = {
+		a_name = "go_hero_raelyn-1.png",
 		size = {
-			184,
-			224
+			130,
+			159
 		},
 		trim = {
-			28,
-			21,
-			28,
-			95
+			24,
+            12,
+            22,
+            64
 		},
 		a_size = {
-			4096,
-			2048
+			2235,
+			2235
 		},
 		f_quad = {
-			2034,
-			689,
-			128,
-			108
+			753,
+			1072,
+			84,
+			83
 		},
-		alias = {}
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0005"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			24,
+            12,
+            21,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			845,
+			1072,
+			85,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0006"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			938,
+			1072,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0007"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1046,
+			1072,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0008"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1154,
+			1072,
+			101,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0009"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            14,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1263,
+			1072,
+			102,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0010"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1373,
+			1072,
+			101,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0011"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            14,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1482,
+			1072,
+			102,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0012"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1592,
+			1072,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0013"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1700,
+			1072,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0014"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1808,
+			1072,
+			99,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0015"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1915,
+			1072,
+			98,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0016"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2021,
+			1072,
+			98,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0017"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2127,
+			1072,
+			97,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0018"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1163,
+			97,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0019"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			109,
+			1163,
+			97,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0020"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			214,
+			1163,
+			97,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0021"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			17,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			319,
+			1163,
+			96,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0022"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			17,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			423,
+			1163,
+			96,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0023"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			17,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			527,
+			1163,
+			96,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0024"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			17,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			631,
+			1163,
+			96,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0025"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			735,
+			1163,
+			98,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0026"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			841,
+			1163,
+			98,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0027"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			947,
+			1163,
+			98,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0028"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1053,
+			1163,
+			99,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0029"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1160,
+			1163,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0030"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1268,
+			1163,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0031"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            14,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1376,
+			1163,
+			102,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0032"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            14,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1486,
+			1163,
+			102,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0033"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            14,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1596,
+			1163,
+			102,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0034"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1706,
+			1163,
+			101,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0035"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			14,
+            12,
+            14,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1815,
+			1163,
+			102,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0036"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1925,
+			1163,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0037"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            15,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			1700,
+			1072,
+			100,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0038"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			15,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			2033,
+			1163,
+			99,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0039"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			4,
+			1254,
+			98,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0040"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            16,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			110,
+			1254,
+			98,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0041"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			16,
+            12,
+            17,
+            64
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			216,
+			1254,
+			97,
+			83
+		},
+		alias = {},
+	},
+	["hero_raelyn_unbreakable_shield_lvl3_0042"] = {
+		a_name = "go_hero_raelyn-1.png",
+		size = {
+			130,
+			159
+		},
+		trim = {
+			17,
+            13,
+            17,
+            66
+		},
+		a_size = {
+			2235,
+			2235
+		},
+		f_quad = {
+			987,
+			892,
+			96,
+			80
+		},
+		alias = {},
 	}
 }
