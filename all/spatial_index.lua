@@ -26,7 +26,7 @@ local _id_array_capacity = ID_ARRAY_CAPACITY
 ffi.cdef [[
 typedef struct{
     uint32_t size;
-    uint32_t array[256];
+    uint32_t array[512];
 } id_array;
 ]]
 
@@ -34,9 +34,7 @@ typedef struct{
 -- id_array 数组，共 SPATIAL_HASH_MAX_INDEX 个元素
 local id_arrays = ffi.new("id_array[?]", _max_size)
 for i = 0, _max_size - 1 do
-    local arr = ffi.new("id_array")
-    arr.size = 0
-    id_arrays[i] = arr
+    id_arrays[i].size = 0
 end
 
 local entities = nil
