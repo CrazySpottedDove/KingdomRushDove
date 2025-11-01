@@ -2780,33 +2780,39 @@ function sys.endless_patch:on_insert(entity, store)
     return true
 end
 
-local SpatialHash = require("spatial_hash")
+-- local SpatialHash = require("spatial_hash")
 sys.spatial_index = {}
 sys.spatial_index.name = "spatial_index"
 
 function sys.spatial_index:init(store)
-    store.enemy_spatial_index = SpatialHash:new(50)
+    -- store.enemy_spatial_index = SpatialHash:new(50)
+    package.loaded["spatial_index"] = nil
+    store.enemy_spatial_index = require("spatial_index")
+    store.enemy_spatial_index.set_entities(store.enemies)
+    local seek = require("seek")
+    seek.set_id_arrays(store.enemy_spatial_index.get_id_arrays())
 end
 
 function sys.spatial_index:on_insert(entity, store)
     if entity.enemy then
-        store.enemy_spatial_index:insert_entity(entity)
+        store.enemy_spatial_index.insert_entity(entity)
     end
     return true
 end
 
 function sys.spatial_index:on_remove(entity, store)
     if entity.enemy then
-        store.enemy_spatial_index:remove_entity(entity)
+        store.enemy_spatial_index.remove_entity(entity)
     end
     return true
 end
 
 function sys.spatial_index:on_update(dt, ts, store)
-    for _, e in pairs(store.enemies) do
-        store.enemy_spatial_index:update_entity(e)
-    end
+    -- for _, e in pairs(store.enemies) do
+    --     store.enemy_spatial_index:update_entity(e)
+    -- end
     -- store.enemy_spatial_index:print_debug_info()
+    store.enemy_spatial_index.on_update()
 end
 
 sys.last_hook = {}

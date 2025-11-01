@@ -5,10 +5,10 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 require("constants")
-local spatial_hash
+local id_arrays
 
-function seek.init(prop_spatial_hash)
-    spatial_hash = prop_spatial_hash
+function seek.set_id_arrays(id_arrays_given)
+    id_arrays = id_arrays_given
 end
 
 local _aspect = ASPECT
@@ -94,7 +94,7 @@ function seek.find_enemies_in_range_filter_off(origin, range, flags, bans)
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -127,7 +127,7 @@ function seek.find_enemies_in_range_filter_on(origin, range, flags, bans, filter
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -163,7 +163,7 @@ function seek.find_enemies_between_range_filter_off(origin, min_range, max_range
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -198,7 +198,7 @@ function seek.find_enemies_between_range_filter_on(origin, min_range, max_range,
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -232,7 +232,7 @@ function seek.find_foremost_enemy_in_range_filter_off(origin, range, prediction_
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -269,7 +269,7 @@ function seek.find_foremost_enemy_in_range_filter_on(origin, range, prediction_t
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -308,7 +308,7 @@ function seek.find_foremost_enemy_between_range_filter_off(origin, min_range, ma
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -349,7 +349,7 @@ function seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -400,7 +400,7 @@ function seek.detect_foremost_enemy_in_range_filter_on(origin, range, flags, ban
 
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -454,7 +454,7 @@ function seek.detect_foremost_enemy_in_range_filter_off(origin, range, flags, ba
 
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -511,7 +511,7 @@ function seek.detect_foremost_enemy_between_range_filter_on(origin, min_range, m
 
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -565,7 +565,7 @@ function seek.detect_foremost_enemy_between_range_filter_off(origin, min_range, 
 
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -617,7 +617,7 @@ function seek.find_first_enemy_in_range_filter_on(origin, range, flags, bans, fi
 
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -656,7 +656,7 @@ function seek.find_first_enemy_in_range_filter_off(origin, range, flags, bans)
 
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -699,7 +699,7 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(origin, 
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -753,7 +753,7 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(origin, r
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -811,7 +811,7 @@ function seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(ori
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
@@ -870,7 +870,7 @@ function seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(orig
     local result = {}
     for _ = min_row, max_row do
         for col = min_col, max_col do
-            local cell = spatial_hash[row_mul_col + col]
+            local cell = id_arrays[row_mul_col + col]
             local size = cell.size
             local array = cell.array
             for i = 1, size do
