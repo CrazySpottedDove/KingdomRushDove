@@ -44,6 +44,12 @@ U.find_first_enemy_between_range_filter_off = seek.find_first_enemy_between_rang
 U.find_first_enemy_between_range_filter_on = seek.find_first_enemy_between_range_filter_on
 U.find_biggest_enemy_in_range_filter_off = seek.find_biggest_enemy_in_range_filter_off
 U.find_biggest_enemy_in_range_filter_on = seek.find_biggest_enemy_in_range_filter_on
+U.find_foremost_enemy_with_max_coverage_in_range_filter_off = seek.find_foremost_enemy_with_max_coverage_in_range_filter_off
+U.find_foremost_enemy_with_max_coverage_in_range_filter_on = seek.find_foremost_enemy_with_max_coverage_in_range_filter_on
+U.find_foremost_enemy_with_max_coverage_between_range_filter_off = seek.find_foremost_enemy_with_max_coverage_between_range_filter_off
+U.find_foremost_enemy_with_max_coverage_between_range_filter_on = seek.find_foremost_enemy_with_max_coverage_between_range_filter_on
+U.find_foremost_enemy_with_flying_preference_in_range_filter_off = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off
+U.find_foremost_enemy_with_flying_preference_in_range_filter_on = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on
 ---
 
 ---返回从 from 到 to 的随机数
@@ -137,57 +143,6 @@ end
 ---@return number 缓动后的值
 function U.ease_value(from, to, phase, easing)
     return from + (to - from) * U.ease_phase(phase, easing)
-end
-
-local function foremost_enemy_cmp(e1, e2)
-    local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
-    local e2_mocking = band(e2.vis.flags, F_MOCKING) ~= 0
-    local e1_flying = band(e1.vis.flags, F_FLYING) ~= 0
-    local e2_flying = band(e2.vis.flags, F_FLYING) ~= 0
-    -- 优先处理嘲讽标志，且嘲讽对空中单位无保护效果
-    if e1_mocking and not (e2_mocking or e2_flying) then
-        return true
-    elseif not (e1_mocking or e1_flying) and e2_mocking then
-        return false
-    end
-
-    local p1 = e1.nav_path
-    local p2 = e2.nav_path
-
-    return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
-end
-
----根据距离终点位置排序敌人
----@param enemies table 敌人数组
----@return nil
----@desc 优先处理嘲讽标志（F_MOCKING），飞行单位不受嘲讽影响
-local function sort_foremost_enemies(enemies)
-    table.sort(enemies, foremost_enemy_cmp)
-end
-
-local function foremost_enemy_with_flying_preference_cmp(e1, e2)
-    local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
-    local e2_mocking = band(e2.vis.flags, F_MOCKING) ~= 0
-    local e1_flying = band(e1.vis.flags, F_FLYING) ~= 0
-    local e2_flying = band(e2.vis.flags, F_FLYING) ~= 0
-    if e1_flying and not e2_flying then
-        return true
-    elseif e2_flying and not e1_flying then
-        return false
-    elseif e1_mocking and not (e2_mocking or e2_flying) then
-        return true
-    elseif e2_mocking and not (e1_mocking or e1_flying) then
-        return false
-    end
-    local p1 = e1.nav_path
-    local p2 = e2.nav_path
-    return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
-end
-
----根据距离终点位置排序敌人，优先处理飞行单位
----@param enemies table 敌人数组
-local function sort_foremost_enemies_with_flying_preference(enemies)
-    table.sort(enemies, foremost_enemy_with_flying_preference_cmp)
 end
 
 ---计算缓动进度
@@ -967,20 +922,18 @@ function U.find_first_enemy(store, origin, min_range, max_range, flags, bans, fi
     end
     if min_range == 0 then
         if filter_func then
-            return seek.find_enemies_in_range_filter_on(origin, max_range, flags, bans, filter_func)
+            return seek.find_first_enemy_in_range_filter_on(origin, max_range, flags, bans, filter_func)
         else
-            return seek.find_enemies_in_range_filter_off(origin, max_range, flags, bans)
+            return seek.find_first_enemy_in_range_filter_off(origin, max_range, flags, bans)
         end
     else
         if filter_func then
-            return seek.find_first_enemy_between_range_filter_on(origin, min_range, max_range, flags, bans,
-                filter_func)
+            return seek.find_first_enemy_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_func)
         else
             return seek.find_first_enemy_between_range_filter_off(origin, min_range, max_range, flags, bans)
         end
     end
 end
-
 
 ---随机选择一个目标
 ---@param entities table 实体列表
@@ -1067,8 +1020,6 @@ function U.find_enemies_in_range(store, origin, min_range, max_range, flags, ban
         end
     end
 end
-
-
 
 ---检查范围内是否有敌人（开销更小）
 ---@param store table game.store
@@ -1203,15 +1154,6 @@ function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_r
     end
 end
 
-U.find_foremost_enemy_with_max_coverage_in_range_filter_off =
-    seek.find_foremost_enemy_with_max_coverage_in_range_filter_off
-U.find_foremost_enemy_with_max_coverage_in_range_filter_on =
-    seek.find_foremost_enemy_with_max_coverage_in_range_filter_on
-U.find_foremost_enemy_with_max_coverage_between_range_filter_off =
-    seek.find_foremost_enemy_with_max_coverage_between_range_filter_off
-U.find_foremost_enemy_with_max_coverage_between_range_filter_on =
-    seek.find_foremost_enemy_with_max_coverage_between_range_filter_on
-
 ---搜索优先飞行单位的最前面敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}
@@ -1225,42 +1167,19 @@ U.find_foremost_enemy_with_max_coverage_between_range_filter_on =
 ---@return table? 最前面的敌人, table? 所有范围内的敌人, table? 最前面敌人的预测位置
 function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, max_range, prediction_time, flags, bans,
     filter_func, min_override_flags)
-    flags = flags or 0
-    bans = bans or 0
-    min_override_flags = min_override_flags or 0
-
-    local enemies = store.enemy_spatial_index:query_entities_in_ellipse(origin.x, origin.y, max_range, 0, function(e)
-        if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-            not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-                not U.is_inside_ellipse(e.pos, origin, min_range)) or filter_func and not filter_func(e, origin) then
-            return false
-        end
-
-        if prediction_time and e.motion.speed then
-            if e.motion.forced_waypoint then
-                local dt = prediction_time == true and 1 or prediction_time
-
-                e.__ffe_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-            else
-                local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-                local e_ni = e.nav_path.ni + node_offset
-                e.__ffe_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-            end
-        else
-            e.__ffe_pos = V.vclone(e.pos)
-        end
-
-        return true
-    end)
-
-    if not enemies or #enemies == 0 then
-        return nil, nil
+    local enemy, enemies
+    if filter_func then
+        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(origin,
+            max_range, flags, bans, filter_func)
     else
-        sort_foremost_enemies_with_flying_preference(enemies)
-
-        return enemies[1], enemies, enemies[1].__ffe_pos
+        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(origin,
+            max_range, flags, bans)
     end
+
+    if not enemy then
+        return nil, nil, nil
+    end
+    return enemy, enemies, U.calculate_enemy_ffe_pos(enemy, prediction_time)
 end
 
 ---搜索最前面的敌人
@@ -1293,8 +1212,6 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
         end
     end
 end
-
-
 
 ---搜索范围内的塔
 ---@param entities table 实体列表

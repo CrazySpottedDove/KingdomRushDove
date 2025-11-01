@@ -2912,7 +2912,7 @@ function sys.last_hook:on_remove(e, d)
     if e.enemy then
         d.enemies[e.id] = nil -- 优化分类索引
         d.enemy_count = d.enemy_count - 1
-
+        print(e.id .. "removed from enemies")
     elseif e.soldier then
         d.soldiers[e.id] = nil
         d.dead_soldier_count = d.dead_soldier_count + 1

@@ -2292,20 +2292,6 @@ local function soldier_pick_melee_attack(store, this, target)
     return nil
 end
 
----敌人吸引源更新
----@param store table game.store
----@param this table 敌人实体
----@return nil
-local function y_enemy_update_attract_source(store, this)
-    if this.enemy.attract_source_id then
-        local attract_source = store.entities[this.enemy.attract_source_id]
-        if not attract_source or attract_source.health.dead or
-            not U.is_inside_ellipse(this.pos, attract_source.pos, attract_source.melee.range) then
-            this.enemy.attract_source_id = nil
-        end
-    end
-end
-
 ---士兵近战拦截与攻击
 ---@param store table game.store
 ---@param this table 士兵实体

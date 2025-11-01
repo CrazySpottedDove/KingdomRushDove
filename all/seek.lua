@@ -88,6 +88,25 @@ local function foremost_enemy_cmp(e1, e2)
     return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
+local function foremost_enemy_flying_preference_cmp(e1, e2)
+    local e1_mocking = band(e1.vis.flags, F_MOCKING) ~= 0
+    local e2_mocking = band(e2.vis.flags, F_MOCKING) ~= 0
+    local e1_flying = band(e1.vis.flags, F_FLYING) ~= 0
+    local e2_flying = band(e2.vis.flags, F_FLYING) ~= 0
+    if e1_flying and not e2_flying then
+        return true
+    elseif e2_flying and not e1_flying then
+        return false
+    elseif e1_mocking and not (e2_mocking or e2_flying) then
+        return true
+    elseif e2_mocking and not (e1_mocking or e1_flying) then
+        return false
+    end
+    local p1 = e1.nav_path
+    local p2 = e2.nav_path
+    return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
+end
+
 function seek.find_enemies_in_range_filter_off(origin, range, flags, bans)
     local x = origin.x
     local y = origin.y
@@ -1067,6 +1086,80 @@ function seek.find_biggest_enemy_in_range_filter_on(origin, range, flags, bans, 
         index_base = index_base + _cols
     end
     return biggest_enemy
+end
+
+function seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(origin, range, flags, bans, filter_fn)
+
+    local x = origin.x
+    local y = origin.y
+    local min_col = max(1, _x_to_col(x - range))
+    local max_col = min(_cols, _x_to_col(x + range))
+    local b = range * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+    local count = 0
+    local index_base = (min_row - 1) * _cols - 1
+    local r_outer_sq = range * range
+    local result = {}
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = id_arrays[index_base + col]
+            local max_index = cell.size - 1
+            local array = cell.array
+            for i = 0, max_index do
+                local entity = entities[array[i]]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and
+                    filter_fn(entity, origin) then
+                    count = count + 1
+                    result[count] = entity
+                end
+            end
+        end
+        index_base = index_base + _cols
+    end
+    if count == 0 then
+        return nil, nil, nil
+    end
+    table.sort(result, foremost_enemy_flying_preference_cmp)
+    return result[1], result
+end
+
+function seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(origin, range, flags, bans)
+    local x = origin.x
+    local y = origin.y
+    local min_col = max(1, _x_to_col(x - range))
+    local max_col = min(_cols, _x_to_col(x + range))
+    local b = range * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+    local count = 0
+    local index_base = (min_row - 1) * _cols - 1
+    local r_outer_sq = range * range
+    local result = {}
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = id_arrays[index_base + col]
+            local max_index = cell.size - 1
+            local array = cell.array
+            for i = 0, max_index do
+                local entity = entities[array[i]]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) then
+                    count = count + 1
+                    result[count] = entity
+                end
+            end
+        end
+        index_base = index_base + _cols
+    end
+    if count == 0 then
+        return nil, nil, nil
+    end
+    table.sort(result, foremost_enemy_flying_preference_cmp)
+    return result[1], result
 end
 
 return seek
