@@ -482,40 +482,40 @@ function scripts.necromancer_aura.update(this, store, script)
             if max_spawns < 1 then
                 -- block empty
             else
-                local dead_enemies = store.enemy_spatial_index:query_entities_in_ellipse(this.pos.x, this.pos.y,
-                    source.attacks.range, 0, function(v)
+                local dead_enemies = U.find_enemies_in_range_filter_on(this.pos, source.attacks.range, F_SKELETON,
+                    F_NONE, function(v)
                         return v.health.dead and band(v.health.last_damage_types, bor(DAMAGE_EAT)) == 0 and
-                                   band(v.vis.bans, F_SKELETON) == 0 and store.tick_ts - v.health.death_ts >=
-                                   v.health.dead_lifetime - this.aura.cycle_time
+                                   store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time
                     end)
+                if dead_enemies then
+                    dead_enemies = table.slice(dead_enemies, 1, max_spawns)
 
-                dead_enemies = table.slice(dead_enemies, 1, max_spawns)
+                    for _, dead in pairs(dead_enemies) do
+                        dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
+                        dead.health.delete_after = 0
 
-                for _, dead in pairs(dead_enemies) do
-                    dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
-                    dead.health.delete_after = 0
+                        local e
 
-                    local e
+                        if dead.health.hp_max > this.min_health_for_knight then
+                            e = E:create_entity("soldier_skeleton_knight")
+                        else
+                            e = E:create_entity("soldier_skeleton")
+                        end
 
-                    if dead.health.hp_max > this.min_health_for_knight then
-                        e = E:create_entity("soldier_skeleton_knight")
-                    else
-                        e = E:create_entity("soldier_skeleton")
+                        e.pos = V.vclone(dead.pos)
+
+                        if dead.enemy.necromancer_offset then
+                            e.pos.x = e.pos.x + dead.enemy.necromancer_offset.x *
+                                          (dead.render.sprites[1].flip_x and -1 or 1)
+                            e.pos.y = e.pos.y + dead.enemy.necromancer_offset.y
+                        end
+
+                        e.nav_rally.center = V.vclone(e.pos)
+                        e.nav_rally.pos = V.vclone(e.pos)
+                        e.soldier.tower_id = source.id
+                        skeletons[#skeletons + 1] = e
+                        queue_insert(store, e)
                     end
-
-                    e.pos = V.vclone(dead.pos)
-
-                    if dead.enemy.necromancer_offset then
-                        e.pos.x = e.pos.x + dead.enemy.necromancer_offset.x *
-                                      (dead.render.sprites[1].flip_x and -1 or 1)
-                        e.pos.y = e.pos.y + dead.enemy.necromancer_offset.y
-                    end
-
-                    e.nav_rally.center = V.vclone(e.pos)
-                    e.nav_rally.pos = V.vclone(e.pos)
-                    e.soldier.tower_id = source.id
-                    skeletons[#skeletons + 1] = e
-                    queue_insert(store, e)
                 end
             end
         end
@@ -8115,18 +8115,16 @@ function scripts.enemy_shaman_necro.update(this, store, script)
         else
             if ready_to_cast() then
                 na.ts = store.tick_ts
-                local dead_enemies = store.enemy_spatial_index:query_entities_in_ellipse(this.pos.x, this.pos.y,
-                    na.max_range, 0, function(e)
-                        return e.health.dead and e.unit and not e.unit.hide_after_death and
-                                   band(e.health.last_damage_types,
-                                bor(DAMAGE_EAT, DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EXPLOSION,
-                                    DAMAGE_FX_EXPLODE)) == 0 and band(e.vis.bans, F_UNDEAD) == 0 and
-                                   table.contains(na.allowed_templates, e.template_name)
+                local dead_enemies = U.find_enemies_in_range_filter_on(this.pos, na.max_range, F_UNDEAD, F_NONE,
+                    function(e)
+                        return
+                            e.health.dead and e.unit and not e.unit.hide_after_death and
+                                band(e.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE,
+                                    DAMAGE_EXPLOSION, DAMAGE_FX_EXPLODE)) == 0 and
+                                table.contains(na.allowed_templates, e.template_name)
                     end)
 
-                if #dead_enemies == 0 then
-                    -- block empty
-                else
+                if dead_enemies then
                     for _, dead in pairs(dead_enemies) do
                         dead.vis.bans = bor(dead.vis.bans, F_UNDEAD)
                     end
@@ -16956,7 +16954,7 @@ function scripts.high_elven_sentinel_extra.update(this, store)
     this.tween.reverse = true
 
     U.y_wait(store, this.tween.props[1].keys[2][1])
-    queue_remove(store , this)
+    queue_remove(store, this)
 end
 
 scripts.high_elven_sentinel = {}

@@ -2791,6 +2791,7 @@ function sys.spatial_index:init(store)
     store.enemy_spatial_index.set_entities(store.enemies)
     local seek = require("seek")
     seek.set_id_arrays(store.enemy_spatial_index.get_id_arrays())
+    seek.set_entities(store.enemies)
 end
 
 function sys.spatial_index:on_insert(entity, store)

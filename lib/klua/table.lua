@@ -203,6 +203,10 @@ function table.minv(t)
 	return min_k, min
 end
 
+--- 返回 t 在 i1 到 i2 范围的子表（新建立）
+---@param t any
+---@param i1 any
+---@param i2 any
 function table.slice(t, i1, i2)
 	local out = {}
 	local n = #t

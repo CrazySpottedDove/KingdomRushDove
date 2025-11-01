@@ -9148,8 +9148,8 @@ function scripts.hero_lynn.update(this, store)
             end
 
             if ready_to_use_skill(this.ultimate, store) then
-                local enemy = U.find_biggest_enemy(store, this.pos, 0, this.timed_attacks.list[1].range, 0, F_RANGED, 0,
-                    function(e, origin)
+                local enemy = U.find_biggest_enemy_in_range_filter_on(this.pos, this.timed_attacks.list[1].range,
+                    F_RANGED, F_NONE, function(e, origin)
                         return e.health.hp <= this.ultimate.curse_damage_all * this.unit.damage_factor *
                                    e.health.damage_factor
                     end)
@@ -23352,7 +23352,8 @@ function scripts.hero_dragon_bone.update(this, store)
         a = this.ultimate
 
         if ready_to_use_skill(a, store) then
-            local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_BLOCK, F_NONE)
+            local target =
+                U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_BLOCK, F_NONE)
             if target and valid_rally_node_nearby(target.pos) then
                 apply_ultimate(this, store, target, "levelup")
             else
@@ -24649,7 +24650,8 @@ function scripts.hero_lumenir.update(this, store)
         a = this.ultimate
 
         if ready_to_use_skill(a, store) then
-            local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_RANGED, F_NONE)
+            local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_RANGED,
+                F_NONE)
             if target and valid_rally_node_nearby(target.pos) then
                 apply_ultimate(this, store, target, "levelup")
             else
@@ -24710,7 +24712,8 @@ function scripts.hero_lumenir.update(this, store)
         a = celestial_judgement_attack
 
         if ready_to_use_skill(a, store) then
-            local target = U.find_biggest_enemy(store, this.pos, 0, a.range, nil, a.vis_flags, a.vis_bans)
+            local target = U.find_biggest_enemy_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
+
             if target then
                 local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
 

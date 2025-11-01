@@ -2,7 +2,7 @@
 local log = require("klua.log"):new("utils")
 
 require("klua.table")
-local seek = require("seek")
+
 local km = require("klua.macros")
 local bit = require("bit")
 local bor = bit.bor
@@ -22,6 +22,29 @@ local abs = math.abs
 local PI = math.pi
 
 local U = {}
+
+--- Import Functions From Seek
+local seek = require("seek")
+U.calculate_enemy_ffe_pos = seek.calculate_enemy_ffe_pos
+U.find_foremost_enemy_in_range_filter_on = seek.find_foremost_enemy_in_range_filter_on
+U.find_foremost_enemy_in_range_filter_off = seek.find_foremost_enemy_in_range_filter_off
+U.find_foremost_enemy_between_range_filter_on = seek.find_foremost_enemy_between_range_filter_on
+U.find_foremost_enemy_between_range_filter_off = seek.find_foremost_enemy_between_range_filter_off
+U.detect_foremost_enemy_in_range_filter_on = seek.detect_foremost_enemy_in_range_filter_on
+U.detect_foremost_enemy_in_range_filter_off = seek.detect_foremost_enemy_in_range_filter_off
+U.detect_foremost_enemy_between_range_filter_off = seek.detect_foremost_enemy_between_range_filter_off
+U.detect_foremost_enemy_between_range_filter_on = seek.detect_foremost_enemy_between_range_filter_on
+U.find_enemies_in_range_filter_on = seek.find_enemies_in_range_filter_on
+U.find_enemies_in_range_filter_off = seek.find_enemies_in_range_filter_off
+U.find_enemies_between_range_filter_on = seek.find_enemies_between_range_filter_on
+U.find_enemies_between_range_filter_off = seek.find_enemies_between_range_filter_off
+U.find_first_enemy_in_range_filter_off = seek.find_first_enemy_in_range_filter_off
+U.find_first_enemy_in_range_filter_on = seek.find_first_enemy_in_range_filter_on
+U.find_first_enemy_between_range_filter_off = seek.find_first_enemy_between_range_filter_off
+U.find_first_enemy_between_range_filter_on = seek.find_first_enemy_between_range_filter_on
+U.find_biggest_enemy_in_range_filter_off = seek.find_biggest_enemy_in_range_filter_off
+U.find_biggest_enemy_in_range_filter_on = seek.find_biggest_enemy_in_range_filter_on
+---
 
 ---返回从 from 到 to 的随机数
 ---@param from number 起始值
@@ -933,8 +956,6 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 第一个敌人
 function U.find_first_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
-    flags = flags or 0
-    bans = bans or 0
     if max_range == math.huge then
         for _, e in pairs(store.enemies) do
             if not e.pending_removal and not e.health.dead and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) ==
@@ -944,14 +965,22 @@ function U.find_first_enemy(store, origin, min_range, max_range, flags, bans, fi
         end
         return nil
     end
-    return store.enemy_spatial_index:query_first_entity_in_ellipse(origin.x, origin.y, max_range, min_range, function(v)
-        return
-            not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) ==
-                0 and (not filter_func or filter_func(v, origin))
-    end)
+    if min_range == 0 then
+        if filter_func then
+            return seek.find_enemies_in_range_filter_on(origin, max_range, flags, bans, filter_func)
+        else
+            return seek.find_enemies_in_range_filter_off(origin, max_range, flags, bans)
+        end
+    else
+        if filter_func then
+            return seek.find_first_enemy_between_range_filter_on(origin, min_range, max_range, flags, bans,
+                filter_func)
+        else
+            return seek.find_first_enemy_between_range_filter_off(origin, min_range, max_range, flags, bans)
+        end
+    end
 end
-U.find_first_enemy_in_range_filter_off = seek.find_first_enemy_in_range_filter_off
-U.find_first_enemy_in_range_filter_on = seek.find_first_enemy_in_range_filter_on
+
 
 ---随机选择一个目标
 ---@param entities table 实体列表
@@ -992,16 +1021,8 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 随机敌人
 function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
-    flags = flags or 0
-    bans = bans or 0
-
-    return store.enemy_spatial_index:query_random_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
-        function(v)
-            return not v.pending_removal and v.nav_path and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                       band(v.vis.bans, flags) == 0 and P:is_node_valid(v.nav_path.pi, v.nav_path.ni) and
-                       (not filter_func or filter_func(v, origin))
-        end)
-
+    local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+    return enemies and enemies[random(1, #enemies)] or nil
 end
 
 ---搜索随机敌人及其预测位置
@@ -1015,37 +1036,11 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 随机敌人, table? 敌人预测位置
 function U.find_random_enemy_with_pos(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func)
-    flags = flags or 0
-    bans = bans or 0
-
-    local random_enemy = store.enemy_spatial_index:query_random_entity_in_ellipse(origin.x, origin.y, max_range,
-        min_range, function(e)
-            if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-                filter_func and not filter_func(e, origin) then
-                return false
-            end
-
-            if prediction_time and e.motion.speed then
-                if e.motion.forced_waypoint then
-                    local dt = prediction_time == true and 1 or prediction_time
-
-                    e.__ffe_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-                else
-                    local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-                    local e_ni = e.nav_path.ni + node_offset
-                    e.__ffe_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-                end
-            else
-                e.__ffe_pos = V.vclone(e.pos)
-            end
-
-            return true
-        end)
+    local random_enemy = U.find_random_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
     if not random_enemy then
         return nil, nil
     end
-    return random_enemy, random_enemy.__ffe_pos
+    return random_enemy, U.calculate_enemy_ffe_pos(random_enemy, prediction_time)
 end
 
 ---搜索范围内的敌人
@@ -1073,10 +1068,7 @@ function U.find_enemies_in_range(store, origin, min_range, max_range, flags, ban
     end
 end
 
-U.find_enemies_in_range_filter_on = seek.find_enemies_in_range_filter_on
-U.find_enemies_in_range_filter_off = seek.find_enemies_in_range_filter_off
-U.find_enemies_between_range_filter_on = seek.find_enemies_between_range_filter_on
-U.find_enemies_between_range_filter_off = seek.find_enemies_between_range_filter_off
+
 
 ---检查范围内是否有敌人（开销更小）
 ---@param store table game.store
@@ -1088,13 +1080,7 @@ U.find_enemies_between_range_filter_off = seek.find_enemies_between_range_filter
 ---@param filter_func function? 过滤函数（可选）
 ---@return boolean 是否有敌人
 function U.has_enemy_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
-    local found = store.enemy_spatial_index:query_first_entity_in_ellipse(origin.x, origin.y, max_range, min_range,
-        function(v)
-            return
-                not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) ==
-                    0 and (not filter_func or filter_func(v, origin))
-        end)
-    return found ~= nil
+    return U.find_first_enemy(store, origin, min_range, max_range, flags, bans, filter_func) ~= nil
 end
 
 ---检查范围内是否有足够数量的敌人（开销更小）
@@ -1107,12 +1093,8 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@param count number 需要的敌人数量
 function U.has_enough_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func, count)
-    return store.enemy_spatial_index:query_enough_entities_in_ellipse(origin.x, origin.y, max_range, min_range,
-        function(v)
-            return
-                not v.pending_removal and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) ==
-                    0 and (not filter_func or filter_func(v, origin))
-        end, count)
+    local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+    return enemies and #enemies >= count
 end
 
 local function nearest_to_goal_cmp(e1, e2)
@@ -1169,57 +1151,6 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
         table.sort(result, nearest_to_goal_cmp)
         return result
     end
-end
-
-local function sort_max_hp(a, b)
-    return a.health.hp > b.health.hp
-end
----搜索血量最高的敌人
----@param store table game.store
----@param origin table 原点 {x, y}
----@param min_range number 最小范围
----@param max_range number 最大范围
----@param prediction_time number|boolean 预测时间
----@param flags number 标志位
----@param bans number 禁止标志位
----@param filter_func function? 过滤函数（可选）
----@param min_override_flags number? 最小覆盖标志（可选）
----@return table? 血量最高的敌人, table? 敌人预测位置
-function U.find_biggest_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
-    min_override_flags)
-    flags = flags or 0
-    bans = bans or 0
-    min_override_flags = min_override_flags or 0
-    local biggest_enemy = store.enemy_spatial_index:query_best_entity_in_ellipse(origin.x, origin.y, max_range,
-        min_range, function(e)
-            if e.pending_removal or e.health.dead or band(e.vis.flags, bans) ~= 0 or band(e.vis.bans, flags) ~= 0 or
-                not (min_range == 0 or band(e.vis.flags, min_override_flags) ~= 0 or
-                    not U.is_inside_ellipse(e.pos, origin, min_range)) or filter_func and not filter_func(e, origin) then
-                return false
-            end
-
-            if prediction_time and e.motion.speed then
-                if e.motion.forced_waypoint then
-                    local dt = prediction_time == true and 1 or prediction_time
-
-                    e.__ffe_pos = V.v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
-                else
-                    local node_offset = P:predict_enemy_node_advance(e, prediction_time)
-
-                    local e_ni = e.nav_path.ni + node_offset
-                    e.__ffe_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
-                end
-            else
-                e.__ffe_pos = V.vclone(e.pos)
-            end
-
-            return true
-        end, sort_max_hp)
-
-    if not biggest_enemy then
-        return nil, nil
-    end
-    return biggest_enemy, biggest_enemy.__ffe_pos
 end
 
 ---重新搜索最前面的敌人
@@ -1363,15 +1294,7 @@ function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_t
     end
 end
 
-U.calculate_enemy_ffe_pos = seek.calculate_enemy_ffe_pos
-U.find_foremost_enemy_in_range_filter_on = seek.find_foremost_enemy_in_range_filter_on
-U.find_foremost_enemy_in_range_filter_off = seek.find_foremost_enemy_in_range_filter_off
-U.find_foremost_enemy_between_range_filter_on = seek.find_foremost_enemy_between_range_filter_on
-U.find_foremost_enemy_between_range_filter_off = seek.find_foremost_enemy_between_range_filter_off
-U.detect_foremost_enemy_in_range_filter_on = seek.detect_foremost_enemy_in_range_filter_on
-U.detect_foremost_enemy_in_range_filter_off = seek.detect_foremost_enemy_in_range_filter_off
-U.detect_foremost_enemy_between_range_filter_off = seek.detect_foremost_enemy_between_range_filter_off
-U.detect_foremost_enemy_between_range_filter_on = seek.detect_foremost_enemy_between_range_filter_on
+
 
 ---搜索范围内的塔
 ---@param entities table 实体列表

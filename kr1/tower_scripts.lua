@@ -414,8 +414,7 @@ scripts.tower_musketeer = {
                     for _, ax in pairs({asi, asn}) do
                         if (ax.chance == 1 or math.random() < ax.chance) and
                             ready_to_use_power(pow_sn, ax, store, this.tower.cooldown_factor) then
-                            local enemy = U.find_biggest_enemy(store, tpos(this), 0, ax.range, false, ax.vis_flags,
-                                ax.vis_bans)
+                            local enemy = U.find_biggest_enemy_in_range_filter_off(tpos(this), ax.range, ax.vis_flags, ax.vis_bans)
 
                             if not enemy then
                                 break
@@ -1412,10 +1411,11 @@ scripts.tower_silver = {
                 end
                 SU.tower_update_silenced_powers(store, this)
                 if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_biggest_enemy(store, tpos(this), 0, a.range, false, am.vis_flags, am.vis_bans,
+                    local enemy = U.find_biggest_enemy_in_range_filter_on(tpos(this), a.range, am.vis_flags, am.vis_bans,
                         function(e)
                             return not U.has_modifiers(store, e, "mod_arrow_silver_mark")
                         end)
+
                     if enemy then
                         am.ts = store.tick_ts
 
@@ -5719,14 +5719,12 @@ function scripts.tower_dark_elf.update(this, store)
         if current_mode == MODE_FIND_FOREMOST then
             return find_target_to_kill(node_prediction)
         elseif current_mode == MODE_FIND_MAXHP then
-            local target, pred_pos = U.find_biggest_enemy(store, tpos(this), 0, this.attacks.range, node_prediction,
-                attack.vis_flags, attack.vis_bans)
-
+            local target = U.find_biggest_enemy_in_range_filter_off(tpos(this), this.attacks.range, attack.vis_flags, attack.vis_bans)
             if target then
                 create_mod(target, true)
+                return target, U.calculate_enemy_ffe_pos(target, node_prediction)
             end
-
-            return target, pred_pos
+            return nil, nil
         end
     end
 
