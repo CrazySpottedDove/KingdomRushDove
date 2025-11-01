@@ -2780,12 +2780,10 @@ function sys.endless_patch:on_insert(entity, store)
     return true
 end
 
--- local SpatialHash = require("spatial_hash")
 sys.spatial_index = {}
 sys.spatial_index.name = "spatial_index"
 
 function sys.spatial_index:init(store)
-    -- store.enemy_spatial_index = SpatialHash:new(50)
     package.loaded["spatial_index"] = nil
     store.enemy_spatial_index = require("spatial_index")
     store.enemy_spatial_index.set_entities(store.enemies)
@@ -2810,10 +2808,6 @@ function sys.spatial_index:on_remove(entity, store)
 end
 
 function sys.spatial_index:on_update(dt, ts, store)
-    -- for _, e in pairs(store.enemies) do
-    --     store.enemy_spatial_index:update_entity(e)
-    -- end
-    -- store.enemy_spatial_index:print_debug_info()
     store.enemy_spatial_index.on_update(dt)
 end
 
