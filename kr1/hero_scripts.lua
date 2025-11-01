@@ -23550,7 +23550,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
         if ready_to_use_skill(a, store) then
             local target, targets, pred_pos = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-                a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans_target, function(v, o)
+                a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans, function(v, o)
                     return GR:cell_is(v.pos.x, v.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
                 end)
 
