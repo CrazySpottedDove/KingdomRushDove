@@ -24,23 +24,24 @@ local bit = require("bit")
 require("constants")
 
 game = {}
-game.required_textures = {"go_decals", "go_enemies_common", "go_towers"}
-game.scale_required_textures = {"go_towers_tricannon", "go_towers_dark_elf", "go_towers_demon_pit",
-                                "go_towers_necromancer", "go_towers_pandas", "go_towers_ray",
-                                "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
-                                "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter"}
+game.required_textures = { "go_decals", "go_enemies_common", "go_towers", "go_towers_pandas", "go_towers_dark_elf",
+    "go_towers_tricannon", "go_towers_demon_pit",
+    "go_towers_necromancer", "go_towers_ray",
+    "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
+    "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter" }
+game.scale_required_textures = {}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
-game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
-                        "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
-                        "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners", "tower_flamespitter"}
+game.required_sounds = { "common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
+    "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
+    "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners", "tower_flamespitter" }
 
-game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
-                           "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
-                           "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
-                           "performance_monitor", "spatial_index", "last_hook", "lights"}
+game.simulation_systems = { "level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
+    "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
+    "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
+    "performance_monitor", "spatial_index", "last_hook", "lights" }
 
 function game:init(screen_w, screen_h, done_callback)
     self.dash_start_offset = 0
@@ -92,7 +93,7 @@ function game:init(screen_w, screen_h, done_callback)
         self.camera.wb = (visible_h - v_bottom) * self.game_scale
         self.camera.zoom = 1
         self.camera.min_zoom = aspect > 1.7777777777777777 and math.min(screen_w, MAX_SCREEN_ASPECT * screen_h) /
-                                   (visible_w * self.game_scale) or 1
+            (visible_w * self.game_scale) or 1
         self.camera.max_zoom = KR_TARGET == "tablet" and 1.5 or 2
 
         function self.camera:clamp()
@@ -239,9 +240,9 @@ function game:init_debug()
     local data = require("data.game_debug_data")
 
     self.current_enemy_page = data.default_page_for_level and data.default_page_for_level[self.store.level_idx] or
-                                  data.default_page_for_terrain[self.store.level_terrain_type] or 1
+        data.default_page_for_terrain[self.store.level_terrain_type] or 1
     self.enemy_pages = data.enemy_pages
-    self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
+    self.enemy_keys = { "q", "w", "e", "r", "t", "y", "u", "i", "o", "p" }
     self.dbg_active_pi = 1
 
     if localuser_game_init then
@@ -390,7 +391,7 @@ end
 
 function game:draw_enemy_pages()
     local function print_sh(str, x, y, color)
-        color = color and color or {255, 255, 255}
+        color = color and color or { 255, 255, 255 }
 
         G.setColor(0, 0, 0)
         G.print(str, x + 1, y + 1)
@@ -412,7 +413,7 @@ function game:draw_enemy_pages()
     for i, n in ipairs(names) do
         local key = self.enemy_keys[i]
 
-        print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and {255, 100, 100} or {255, 255, 255})
+        print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and { 255, 100, 100 } or { 255, 255, 255 })
 
         y = y + 12
     end
@@ -891,7 +892,7 @@ function game:front_draw_debug(rox, roy, gs)
             for j = 1, #GR.grid[i] do
                 local t = GR.grid[i][j]
 
-                G.setColor(GR.grid_colors[t] or {100, 100, 100})
+                G.setColor(GR.grid_colors[t] or { 100, 100, 100 })
                 G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
             end
         end
@@ -1302,8 +1303,8 @@ end
 function game:draw_path(rox, roy, gs)
     if self.shown_path then
         local dash_length = 25 -- 虚线段长度
-        local gap_length = 15 -- 虚线间隔
-        local speed = 60 -- 虚线移动速度（像素/秒）
+        local gap_length = 15  -- 虚线间隔
+        local speed = 60       -- 虚线移动速度（像素/秒）
 
         -- 初始化路径数据
         local path_data = {}

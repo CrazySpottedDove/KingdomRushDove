@@ -9321,68 +9321,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {1, 255}}
 tt.tween.remove = false
 
-tt = E:register_t("ps_bolt_hero_dragon_gem_attack")
-E:add_comps(tt, "pos", "particle_system")
-tt.particle_system.name = "hero_dragon_gem_attack_projectile_trail_idle"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(14), fts(14)}
-tt.particle_system.emission_rate = 20
-tt.particle_system.emit_rotation_spread = math.pi * 0.5
-tt.particle_system.z = Z_FLYING_HEROES
-
-tt = E:register_t("fx_hero_dragon_gem_bolt_hit", "fx5")
-tt.render.sprites[1].name = "hero_dragon_gem_attack_fx_idle"
-tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].draw_order = DO_MOD_FX
-tt = E:register_t("fx_hero_dragon_gem_bolt_hit_flying", "fx5")
-tt.render.sprites[1].name = "hero_dragon_gem_attack_fx_air_idle"
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].draw_order = DO_MOD_FX
-tt = E:register_t("fx_hero_dragon_gem_skill_stun", "fx5")
-tt.render.sprites[1].name = "hero_dragon_gem_breath_cloud_idle"
-tt.render.sprites[1].loop = true
-tt = E:register_t("fx_hero_dragon_gem_ultimate_shard_arrival_1", "fx5")
-tt.render.sprites[1].name = "hero_dragon_gem_ultimate_fx_a_idle"
-tt.render.sprites[1].loop = false
-tt = E:register_t("fx_hero_dragon_gem_ultimate_shard_arrival_2", "fx5")
-tt.render.sprites[1].name = "hero_dragon_gem_ultimate_fx_b_idle"
-tt.render.sprites[1].loop = false
-
-tt = E:register_t("decal_hero_dragon_gem_crystal_tomb", "decal_scripted")
-tt.render.sprites[1].prefix = "hero_dragon_gem"
-tt.render.sprites[1].name = "death_crystals"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].loop = false
-tt.main_script.update = scripts.decal_hero_dragon_gem_crystal_tomb.update
-
-tt = E:register_t("decal_bullet_hero_dragon_gem_ultimate_shard", "decal_tween")
-tt.render.sprites[1].name = "hero_dragon_gem_ultimate_crystal_a_idle"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].loop = false
-tt.tween.props[1].keys = {{0, 255}, {3, 0}}
-tt = E:register_t("decal_hero_dragon_gem_floor_decal", "decal_tween")
-tt.render.sprites[1].name = "hero_dragon_gem_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_DECALS
-tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2, 0}}
-
-tt = E:register_t("decal_hero_dragon_gem_floor_circle", "decal")
-E:add_comps(tt, "tween")
-tt.render.sprites[1].name = "hero_dragon_gem_area_damage_fx"
-tt.render.sprites[1].animated = false
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 255}, {fts(6), 255}, {fts(13), 0}}
-tt.tween.props[1].sprite_id = 1
-tt.tween.props[2] = E:clone_c("tween_prop")
-tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_2(0.245, 0.245)}, {fts(6), vec_2(0.385, 0.385)}, {fts(13), vec_2(0.42, 0.42)}}
-tt.tween.props[2].sprite_id = 1
-tt.tween.remove = true
-tt = E:register_t("decal_hero_dragon_gem_floor_circle_totem", "decal_hero_dragon_gem_floor_circle")
-tt.tween.props[2].keys = {{0, vec_2(0.175, 0.175)}, {fts(6), vec_2(0.315, 0.315)}, {fts(13), vec_2(0.35, 0.35)}}
-
 tt = E:register_t("ps_hero_witch_ranged_basic_trail")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "hero_witch_ranged_attack_particle"

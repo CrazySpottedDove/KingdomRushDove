@@ -53,7 +53,7 @@ local a = {
 	},
 	elven_stargazers_tower_ray_start_lvl4_end = {
 		prefix = "elven_stargazers_tower_ray_start_lvl4",
-		to = 34,
+		to = 33,
 		from = 22
 	},
 	elven_stargazers_tower_rising_star_explosion_idle = {

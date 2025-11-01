@@ -1100,7 +1100,7 @@ local b
 
 b = balance.towers.tricannon
 
-tt = RT("tower_tricannon_lvl4", "tower5")
+tt = RT("tower_tricannon_lvl4", "tower")
 AC(tt, "attacks", "powers")
 image_y = 120
 tt.tower.type = "tricannon"
@@ -1133,7 +1133,7 @@ tt.attacks.min_cooldown = b.shared_min_cooldown
 tt.attacks.range = b.basic_attack.range[4]
 tt.attacks.attack_delay_on_spawn = fts(5)
 tt.attacks.list[1] = CC("bullet_attack")
-tt.attacks.list[1].bullet = "tower_tricannon_bomb_4"
+tt.attacks.list[1].bullet = "tower_tricannon_bomb"
 tt.attacks.list[1].bomb_amount = b.basic_attack.bomb_amount[4]
 tt.attacks.list[1].bullet_start_offset = {vec_2(14, 71), vec_2(-14, 71), vec_2(0, 62)}
 tt.attacks.list[1].cooldown = b.basic_attack.cooldown
@@ -1179,7 +1179,6 @@ for i = 2, 11 do
     tt.render.sprites[i].prefix = "tricannon_tower_lvl4_tower_layer" .. i - 1
     tt.render.sprites[i].name = "idle"
     tt.render.sprites[i].group = "layers"
-    tt.render.sprites[i].scale = vec_1(1.3 / 768 * 1024)
 end
 tt.ui.click_rect = r(-45, -3, 90, 78)
 
@@ -1250,25 +1249,20 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 
 tt = RT("tower_tricannon_bomb", "bomb")
-tt.bullet.damage_max = nil
-tt.bullet.damage_min = nil
+tt.bullet.damage_max = b.basic_attack.damage_max[4]
+tt.bullet.damage_min = b.basic_attack.damage_min[4]
 tt.bullet.damage_radius = b.basic_attack.damage_radius
+tt.bullet.align_with_trajectory = true
+tt.bullet.particles_name = "tower_tricannon_bomb_4_trail"
 tt.bullet.flight_time = fts(31)
 tt.bullet.hit_fx = "fx_explosion_small"
 tt.bullet.pop_chance = 0.2
+tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
+tt.render.sprites[1].animated = false
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 
-tt = RT("tower_tricannon_bomb_4", "tower_tricannon_bomb")
-tt.bullet.damage_max = b.basic_attack.damage_max[4]
-tt.bullet.damage_min = b.basic_attack.damage_min[4]
-tt.bullet.align_with_trajectory = true
-tt.bullet.particles_name = "tower_tricannon_bomb_4_trail"
-tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
-
-tt = RT("tower_tricannon_bomb_overheated", "tower_tricannon_bomb_4")
+tt = RT("tower_tricannon_bomb_overheated", "tower_tricannon_bomb")
 tt.bullet.hit_payload = "tower_tricannon_overheat_scorch_aura"
 tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb_overheat"
 tt.bullet.particles_name = "tower_tricannon_bomb_4_overheated_trail"
@@ -1288,7 +1282,6 @@ tt.bullet.pop = nil
 tt.bullet.align_with_trajectory = true
 tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
 tt.bullet.particles_name = "tower_tricannon_bomb_4_bombardment_trail"
 
@@ -1337,7 +1330,7 @@ tt.tween.props[1].keys = {
 }
 tt.tween.remove = true
 
-tt = RT("tower_demon_pit_lvl4", "tower5")
+tt = RT("tower_demon_pit_lvl4", "tower")
 AC(tt, "attacks", "powers")
 tt.tower.type = "demon_pit"
 tt.tower.level = 1

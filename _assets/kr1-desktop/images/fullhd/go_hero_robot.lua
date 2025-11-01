@@ -1,10380 +1,16322 @@
-﻿-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_hero_robot.lua
-
 return {
-	Blaze_humitodeatras_0001 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_humitodeatras_0001"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			80,
-			132
-		},
-		trim = {
-			20,
-			25,
-			24,
-			59
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			283,
-			1533,
-			36,
-			48
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0002 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			20,
-			25,
-			24,
-			59
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			283,
-			1593,
-			36,
-			48
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0003 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			23,
-			22,
-			59
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			267,
-			2741,
-			39,
-			50
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0004 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			23,
-			22,
-			59
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			2747,
-			39,
-			50
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0005 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			21,
-			22,
-			59
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			222,
-			2741,
-			39,
-			52
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0006 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			21,
-			22,
-			58
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			177,
-			2741,
-			39,
-			53
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			19,
-			22,
-			58
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			280,
-			2495,
-			39,
-			55
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0008 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			19,
-			22,
-			58
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			280,
-			2556,
-			39,
-			55
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0009 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			19,
-			22,
-			58
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			280,
-			2617,
-			39,
-			55
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0010 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			19,
-			19,
-			22,
-			58
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			280,
-			2678,
-			39,
-			55
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0011 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			20,
-			20,
-			23,
-			57
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			283,
-			1350,
-			37,
-			55
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0012 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			20,
-			20,
-			23,
-			57
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			283,
-			1411,
-			37,
-			55
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0013 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			20,
-			20,
-			24,
-			57
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			283,
-			1472,
-			36,
-			55
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0014 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			22,
-			20,
-			24,
-			58
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			283,
-			1647,
-			34,
-			54
-		},
-		alias = {}
-	},
-	Blaze_humitodeatras_0015 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			80,
-			132
-		},
-		trim = {
-			22,
-			20,
-			25,
-			88
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			283,
-			1707,
-			33,
-			24
-		},
-		alias = {}
-	},
-	Blaze_pibe_0001 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			198,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			2519,
-			136,
-			123
-		},
-		alias = {
-			"Blaze_pibe_0002"
-		}
-	},
-	Blaze_pibe_0003 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			195,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			2387,
-			136,
-			126
-		},
-		alias = {
-			"Blaze_pibe_0004"
-		}
-	},
-	Blaze_pibe_0005 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			166,
-			193,
-			167,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2864,
-			1113,
-			139,
-			128
-		},
-		alias = {
-			"Blaze_pibe_0006"
-		}
-	},
-	Blaze_pibe_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			192,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			2119,
-			136,
-			129
-		},
-		alias = {
-			"Blaze_pibe_0008"
-		}
-	},
-	Blaze_pibe_0009 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			191,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			1983,
-			136,
-			130
-		},
-		alias = {
-			"Blaze_pibe_0010"
-		}
-	},
-	Blaze_pibe_0011 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			166,
-			191,
-			167,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2719,
-			1113,
-			139,
-			130
-		},
-		alias = {
-			"Blaze_pibe_0012"
-		}
-	},
-	Blaze_pibe_0013 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			198,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			2648,
-			136,
-			123
-		},
-		alias = {
-			"Blaze_pibe_0014"
-		}
-	},
-	Blaze_pibe_0015 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			158,
-			209,
-			167,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2750,
-			971,
-			147,
-			112
-		},
-		alias = {
-			"Blaze_pibe_0016"
-		}
-	},
-	Blaze_pibe_0017 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			192,
-			175,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3731,
-			1113,
-			137,
-			129
-		},
-		alias = {
-			"Blaze_pibe_0018"
-		}
-	},
-	Blaze_pibe_0019 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			135,
-			197,
-			171,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1644,
-			166,
-			124
-		},
-		alias = {
-			"Blaze_pibe_0020"
-		}
-	},
-	Blaze_pibe_0021 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			132,
-			202,
-			170,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3345,
-			540,
-			170,
-			119
-		},
-		alias = {
-			"Blaze_pibe_0022"
-		}
-	},
-	Blaze_pibe_0023 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			135,
-			208,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3871,
-			540,
-			168,
-			113
-		},
-		alias = {
-			"Blaze_pibe_0024"
-		}
-	},
-	Blaze_pibe_0025 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			138,
-			214,
-			168,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1774,
-			166,
-			107
-		},
-		alias = {
-			"Blaze_pibe_0026",
-			"Blaze_pibe_0027"
-		}
-	},
-	Blaze_pibe_0028 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			147,
-			194,
-			83,
-			273
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			2432,
-			242,
-			165
-		},
-		alias = {
-			"Blaze_pibe_0029"
-		}
-	},
-	Blaze_pibe_0030 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			192,
-			165,
-			81,
-			272
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			1402,
-			199,
-			195
-		},
-		alias = {
-			"Blaze_pibe_0031"
-		}
-	},
-	Blaze_pibe_0032 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			193,
-			159,
-			80,
-			272
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			1195,
-			199,
-			201
-		},
-		alias = {
-			"Blaze_pibe_0033"
-		}
-	},
-	Blaze_pibe_0034 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			191,
-			157,
-			80,
-			272
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			986,
-			201,
-			203
-		},
-		alias = {
-			"Blaze_pibe_0035"
-		}
-	},
-	Blaze_pibe_0036 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			192,
-			155,
-			78,
-			272
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			775,
-			202,
-			205
-		},
-		alias = {
-			"Blaze_pibe_0037"
-		}
-	},
-	Blaze_pibe_0038 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			198,
-			194,
-			88,
-			272
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			2157,
-			186,
-			166
-		},
-		alias = {
-			"Blaze_pibe_0039"
-		}
-	},
-	Blaze_pibe_0040 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			193,
-			206,
-			87,
-			274
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1946,
-			190,
-			192,
-			152
-		},
-		alias = {
-			"Blaze_pibe_0041"
-		}
-	},
-	Blaze_pibe_0042 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			173,
-			187,
-			87,
-			278
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			1639,
-			212,
-			167
-		},
-		alias = {}
-	},
-	Blaze_pibe_0043 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			173,
-			187,
-			166,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			2060,
-			133,
-			134
-		},
-		alias = {}
-	},
-	Blaze_pibe_0044 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			169,
-			192,
-			165,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3299,
-			1113,
-			138,
-			129
-		},
-		alias = {
-			"Blaze_pibe_0045"
-		}
-	},
-	Blaze_pibe_0046 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			171,
-			191,
-			168,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			2200,
-			133,
-			130
-		},
-		alias = {
-			"Blaze_pibe_0047"
-		}
-	},
-	Blaze_pibe_0048 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			194,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			1389,
-			129,
-			127
-		},
-		alias = {
-			"Blaze_pibe_0049"
-		}
-	},
-	Blaze_pibe_0050 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			175,
-			194,
-			170,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2979,
-			1389,
-			127,
-			127
-		},
-		alias = {
-			"Blaze_pibe_0051"
-		}
-	},
-	Blaze_pibe_0052 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			171,
-			192,
-			166,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			1773,
-			135,
-			129
-		},
-		alias = {
-			"Blaze_pibe_0053"
-		}
-	},
-	Blaze_pibe_0054 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			169,
-			191,
-			163,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3801,
-			971,
-			140,
-			130
-		},
-		alias = {
-			"Blaze_pibe_0055"
-		}
-	},
-	Blaze_pibe_0056 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			166,
-			188,
-			159,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2597,
-			971,
-			147,
-			133
-		},
-		alias = {
-			"Blaze_pibe_0057"
-		}
-	},
-	Blaze_pibe_0058 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			163,
-			189,
-			157,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3405,
-			833,
-			152,
-			132
-		},
-		alias = {
-			"Blaze_pibe_0059"
-		}
-	},
-	Blaze_pibe_0060 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			161,
-			194,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2762,
-			833,
-			156,
-			127
-		},
-		alias = {
-			"Blaze_pibe_0061"
-		}
-	},
-	Blaze_pibe_0062 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			161,
-			195,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2924,
-			833,
-			156,
-			126
-		},
-		alias = {
-			"Blaze_pibe_0063"
-		}
-	},
-	Blaze_pibe_0064 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			162,
-			193,
-			159,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3720,
-			833,
-			151,
-			128
-		},
-		alias = {
-			"Blaze_pibe_0065"
-		}
-	},
-	Blaze_pibe_0066 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			189,
-			162,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2903,
-			971,
-			145,
-			132
-		},
-		alias = {
-			"Blaze_pibe_0067"
-		}
-	},
-	Blaze_pibe_0068 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			169,
-			204,
-			167,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2711,
-			1261,
-			136,
-			117
-		},
-		alias = {
-			"Blaze_pibe_0069"
-		}
-	},
-	Blaze_pibe_0070 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			177,
-			203,
-			175,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			2030,
-			120,
-			118
-		},
-		alias = {
-			"Blaze_pibe_0071"
-		}
-	},
-	Blaze_pibe_0072 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			168,
-			202,
-			166,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3443,
-			1113,
-			138,
-			119
-		},
-		alias = {
-			"Blaze_pibe_0073"
-		}
-	},
-	Blaze_pibe_0074 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			168,
-			203,
-			166,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3587,
-			1113,
-			138,
-			118
-		},
-		alias = {}
-	},
-	Blaze_pibe_0075 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			170,
-			135,
-			162,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			2470,
-			140,
-			186
-		},
-		alias = {
-			"Blaze_pibe_0076"
-		}
-	},
-	Blaze_pibe_0077 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			154,
-			92,
-			157,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			988,
-			161,
-			228
-		},
-		alias = {
-			"Blaze_pibe_0078"
-		}
-	},
-	Blaze_pibe_0079 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			170,
-			51,
-			175,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			1671,
-			127,
-			269
-		},
-		alias = {
-			"Blaze_pibe_0080"
-		}
-	},
-	Blaze_pibe_0081 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			185,
-			34,
-			172,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3098,
-			1850,
-			115,
-			285
-		},
-		alias = {
-			"Blaze_pibe_0082"
-		}
-	},
-	Blaze_pibe_0083 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			183,
-			30,
-			159,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			2468,
-			130,
-			289
-		},
-		alias = {
-			"Blaze_pibe_0084"
-		}
-	},
-	Blaze_pibe_0085 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			25,
-			162,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			1261,
-			136,
-			295
-		},
-		alias = {
-			"Blaze_pibe_0086"
-		}
-	},
-	Blaze_pibe_0087 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			158,
-			24,
-			172,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			2168,
-			142,
-			296
-		},
-		alias = {
-			"Blaze_pibe_0088"
-		}
-	},
-	Blaze_pibe_0089 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			163,
-			45,
-			173,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			1562,
-			136,
-			276
-		},
-		alias = {
-			"Blaze_pibe_0090"
-		}
-	},
-	Blaze_pibe_0091 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			172,
-			59,
-			177,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			2095,
-			123,
-			262
-		},
-		alias = {
-			"Blaze_pibe_0092"
-		}
-	},
-	Blaze_pibe_0093 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			175,
-			57,
-			183,
-			310
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3098,
-			2141,
-			114,
-			265
-		},
-		alias = {}
-	},
-	Blaze_pibe_0094 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			176,
-			88,
-			161,
-			309
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			1389,
-			135,
-			235
-		},
-		alias = {}
-	},
-	Blaze_pibe_0095 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			128,
-			139,
-			123,
-			309
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			6,
-			221,
-			184
-		},
-		alias = {
-			"Blaze_pibe_0096"
-		}
-	},
-	Blaze_pibe_0097 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			128,
-			139,
-			122,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			2217,
-			222,
-			182
-		},
-		alias = {
-			"Blaze_pibe_0098"
-		}
-	},
-	Blaze_pibe_0099 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			127,
-			139,
-			122,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			1831,
-			223,
-			187
-		},
-		alias = {
-			"Blaze_pibe_0100"
-		}
-	},
-	Blaze_pibe_0101 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			127,
-			138,
-			122,
-			307
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			2024,
-			223,
-			187
-		},
-		alias = {
-			"Blaze_pibe_0102"
-		}
-	},
-	Blaze_pibe_0103 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			127,
-			139,
-			122,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			1637,
-			223,
-			188
-		},
-		alias = {}
-	},
-	Blaze_pibe_0104 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			127,
-			138,
-			121,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			1442,
-			224,
-			189
-		},
-		alias = {
-			"Blaze_pibe_0105"
-		}
-	},
-	Blaze_pibe_0106 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			128,
-			139,
-			123,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			2585,
-			221,
-			191
-		},
-		alias = {
-			"Blaze_pibe_0107"
-		}
-	},
-	Blaze_pibe_0108 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			131,
-			141,
-			126,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			1284,
-			215,
-			180
-		},
-		alias = {
-			"Blaze_pibe_0109"
-		}
-	},
-	Blaze_pibe_0110 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			173,
-			198,
-			171,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2845,
-			1389,
-			128,
-			123
-		},
-		alias = {
-			"Blaze_pibe_0111"
-		}
-	},
-	Blaze_pibe_0112 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			172,
-			195,
-			168,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			2336,
-			132,
-			126
-		},
-		alias = {
-			"Blaze_pibe_0113"
-		}
-	},
-	Blaze_pibe_0114 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			166,
-			193,
-			165,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3654,
-			971,
-			141,
-			128
-		},
-		alias = {
-			"Blaze_pibe_0115"
-		}
-	},
-	Blaze_pibe_0116 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			201,
-			153,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			1651,
-			160,
-			120
-		},
-		alias = {
-			"Blaze_pibe_0117"
-		}
-	},
-	Blaze_pibe_0118 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			201,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2599,
-			833,
-			157,
-			120
-		},
-		alias = {
-			"Blaze_pibe_0119"
-		}
-	},
-	Blaze_pibe_0120 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			183,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			2316,
-			157,
-			138
-		},
-		alias = {
-			"Blaze_pibe_0121"
-		}
-	},
-	Blaze_pibe_0122 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			173,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			2162,
-			157,
-			148
-		},
-		alias = {
-			"Blaze_pibe_0123"
-		}
-	},
-	Blaze_pibe_0124 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			175,
-			153,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			1499,
-			160,
-			146
-		},
-		alias = {
-			"Blaze_pibe_0125"
-		}
-	},
-	Blaze_pibe_0126 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			161,
-			191,
-			154,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2436,
-			833,
-			157,
-			130
-		},
-		alias = {
-			"Blaze_pibe_0127"
-		}
-	},
-	Blaze_pibe_0128 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			161,
-			188,
-			154,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			2460,
-			157,
-			133
-		},
-		alias = {
-			"Blaze_pibe_0129"
-		}
-	},
-	Blaze_pibe_0130 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			189,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			2599,
-			157,
-			132
-		},
-		alias = {
-			"Blaze_pibe_0131"
-		}
-	},
-	Blaze_pibe_0132 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			189,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			833,
-			157,
-			132
-		},
-		alias = {
-			"Blaze_pibe_0133"
-		}
-	},
-	Blaze_pibe_0134 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			192,
-			154,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			1777,
-			159,
-			129
-		},
-		alias = {}
-	},
-	Blaze_pibe_0135 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			158,
-			202,
-			155,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			1912,
-			159,
-			119
-		},
-		alias = {}
-	},
-	Blaze_pibe_0136 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			156,
-			202,
-			157,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			2037,
-			159,
-			119
-		},
-		alias = {
-			"Blaze_pibe_0137"
-		}
-	},
-	Blaze_pibe_0138 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			132,
-			114,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			1603,
-			199,
-			189
-		},
-		alias = {
-			"Blaze_pibe_0139"
-		}
-	},
-	Blaze_pibe_0140 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			128,
-			109,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			377,
-			204,
-			193
-		},
-		alias = {
-			"Blaze_pibe_0141"
-		}
-	},
-	Blaze_pibe_0142 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			128,
-			109,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			576,
-			204,
-			193
-		},
-		alias = {
-			"Blaze_pibe_0143"
-		}
-	},
-	Blaze_pibe_0144 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			128,
-			107,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			2147,
-			206,
-			193
-		},
-		alias = {
-			"Blaze_pibe_0145"
-		}
-	},
-	Blaze_pibe_0146 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			159,
-			140,
-			108,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			190,
-			205,
-			181
-		},
-		alias = {
-			"Blaze_pibe_0147"
-		}
-	},
-	Blaze_pibe_0148 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			140,
-			106,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			2346,
-			206,
-			181
-		},
-		alias = {
-			"Blaze_pibe_0149"
-		}
-	},
-	Blaze_pibe_0150 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			148,
-			148,
-			106,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			535,
-			218,
-			173
-		},
-		alias = {
-			"Blaze_pibe_0151"
-		}
-	},
-	Blaze_pibe_0152 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			143,
-			147,
-			107,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			2405,
-			222,
-			174
-		},
-		alias = {
-			"Blaze_pibe_0153"
-		}
-	},
-	Blaze_pibe_0154 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			146,
-			233,
-			145,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			2669,
-			181,
-			88
-		},
-		alias = {
-			"Blaze_pibe_0155"
-		}
-	},
-	Blaze_pibe_0156 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			221,
-			178,
-			310
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			2699,
-			120,
-			101
-		},
-		alias = {
-			"Blaze_pibe_0157"
-		}
-	},
-	Blaze_pibe_0158 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			179,
-			167,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			1113,
-			140,
-			142
-		},
-		alias = {
-			"Blaze_pibe_0159"
-		}
-	},
-	Blaze_pibe_0160 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			168,
-			184,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			1630,
-			135,
-			137
-		},
-		alias = {
-			"Blaze_pibe_0161"
-		}
-	},
-	Blaze_pibe_0162 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			178,
-			207,
-			168,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3804,
-			1261,
-			126,
-			112
-		},
-		alias = {
-			"Blaze_pibe_0163"
-		}
-	},
-	Blaze_pibe_0164 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			153,
-			191,
-			165,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3086,
-			833,
-			154,
-			128
-		},
-		alias = {
-			"Blaze_pibe_0165"
-		}
-	},
-	Blaze_pibe_0166 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			136,
-			192,
-			166,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3169,
-			540,
-			170,
-			128
-		},
-		alias = {
-			"Blaze_pibe_0167"
-		}
-	},
-	Blaze_pibe_0168 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			131,
-			193,
-			167,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			2029,
-			174,
-			126
-		},
-		alias = {
-			"Blaze_pibe_0169"
-		}
-	},
-	Blaze_pibe_0170 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			130,
-			197,
-			167,
-			300
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1000,
-			175,
-			135
-		},
-		alias = {
-			"Blaze_pibe_0171"
-		}
-	},
-	Blaze_pibe_0172 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			113,
-			210,
-			162,
-			291
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3634,
-			6,
-			197,
-			131
-		},
-		alias = {
-			"Blaze_pibe_0173"
-		}
-	},
-	Blaze_pibe_0174 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			111,
-			213,
-			169,
-			291
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2144,
-			190,
-			192,
-			128
-		},
-		alias = {
-			"Blaze_pibe_0175"
-		}
-	},
-	Blaze_pibe_0176 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			106,
-			214,
-			168,
-			293
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3430,
-			6,
-			198,
-			125
-		},
-		alias = {
-			"Blaze_pibe_0177"
-		}
-	},
-	Blaze_pibe_0178 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			103,
-			211,
-			165,
-			293
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2398,
-			6,
-			204,
-			128
-		},
-		alias = {
-			"Blaze_pibe_0179"
-		}
-	},
-	Blaze_pibe_0180 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			104,
-			209,
-			168,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2816,
-			6,
-			200,
-			118
-		},
-		alias = {
-			"Blaze_pibe_0181"
-		}
-	},
-	Blaze_pibe_0182 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			103,
-			214,
-			164,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2187,
-			6,
-			205,
-			113
-		},
-		alias = {
-			"Blaze_pibe_0183"
-		}
-	},
-	Blaze_pibe_0184 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			122,
-			219,
-			171,
-			297
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3643,
-			382,
-			179,
-			116
-		},
-		alias = {
-			"Blaze_pibe_0185",
-			"Blaze_pibe_0186"
-		}
-	},
-	Blaze_pibe_0187 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			120,
-			145,
-			61,
-			291
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			689,
-			291,
-			196
-		},
-		alias = {
-			"Blaze_pibe_0188"
-		}
-	},
-	Blaze_pibe_0189 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			120,
-			128,
-			41,
-			289
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			237,
-			311,
-			215
-		},
-		alias = {
-			"Blaze_pibe_0190"
-		}
-	},
-	Blaze_pibe_0191 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			121,
-			117,
-			37,
-			290
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			6,
-			314,
-			225
-		},
-		alias = {
-			"Blaze_pibe_0192"
-		}
-	},
-	Blaze_pibe_0193 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			143,
-			130,
-			39,
-			288
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			891,
-			290,
-			214
-		},
-		alias = {
-			"Blaze_pibe_0194"
-		}
-	},
-	Blaze_pibe_0195 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			146,
-			119,
-			28,
-			288
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			458,
-			298,
-			225
-		},
-		alias = {
-			"Blaze_pibe_0196"
-		}
-	},
-	Blaze_pibe_0197 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			109,
-			20,
-			290
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			1111,
-			278,
-			233
-		},
-		alias = {
-			"Blaze_pibe_0198"
-		}
-	},
-	Blaze_pibe_0199 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			172,
-			65,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			587,
-			233,
-			147
-		},
-		alias = {
-			"Blaze_pibe_0200"
-		}
-	},
-	Blaze_pibe_0201 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			162,
-			223,
-			118,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3728,
-			190,
-			192,
-			96
-		},
-		alias = {
-			"Blaze_pibe_0202"
-		}
-	},
-	Blaze_pibe_0203 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			175,
-			181,
-			177,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			1743,
-			120,
-			138
-		},
-		alias = {
-			"Blaze_pibe_0204"
-		}
-	},
-	Blaze_pibe_0205 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			194,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			2254,
-			136,
-			127
-		},
-		alias = {
-			"Blaze_pibe_0206"
-		}
-	},
-	Blaze_pibe_0207 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			200,
-			167,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2573,
-			1113,
-			140,
-			121
-		},
-		alias = {
-			"Blaze_pibe_0208"
-		}
-	},
-	Blaze_pibe_0209 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			141,
-			210,
-			144,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			2040,
-			187,
-			111
-		},
-		alias = {
-			"Blaze_pibe_0210"
-		}
-	},
-	Blaze_pibe_0211 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			147,
-			216,
-			150,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1784,
-			175,
-			105
-		},
-		alias = {
-			"Blaze_pibe_0212"
-		}
-	},
-	Blaze_pibe_0213 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			152,
-			226,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3419,
-			721,
-			151,
-			95
-		},
-		alias = {
-			"Blaze_pibe_0214"
-		}
-	},
-	Blaze_pibe_0215 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			143,
-			229,
-			164,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2275,
-			721,
-			165,
-			92
-		},
-		alias = {
-			"Blaze_pibe_0216"
-		}
-	},
-	Blaze_pibe_0217 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			161,
-			226,
-			157,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2942,
-			721,
-			154,
-			95
-		},
-		alias = {
-			"Blaze_pibe_0218"
-		}
-	},
-	Blaze_pibe_0219 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			226,
-			157,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3730,
-			721,
-			141,
-			95
-		},
-		alias = {
-			"Blaze_pibe_0220"
-		}
-	},
-	Blaze_pibe_0221 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			175,
-			226,
-			158,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3009,
-			1113,
-			139,
-			95
-		},
-		alias = {
-			"Blaze_pibe_0222"
-		}
-	},
-	Blaze_pibe_0223 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			172,
-			241,
-			173,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3671,
-			1261,
-			127,
-			80
-		},
-		alias = {
-			"Blaze_pibe_0224"
-		}
-	},
-	Blaze_pibe_0225 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			185,
-			247,
-			183,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3457,
-			1743,
-			104,
-			74
-		},
-		alias = {
-			"Blaze_pibe_0226",
-			"Blaze_pibe_0227"
-		}
-	},
-	Blaze_pibe_0228 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			128,
-			181,
-			123,
-			293
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			196,
-			221,
-			158
-		},
-		alias = {
-			"Blaze_pibe_0229"
-		}
-	},
-	Blaze_pibe_0230 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			118,
-			135,
-			116,
-			293
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			6,
-			238,
-			204
-		},
-		alias = {
-			"Blaze_pibe_0231"
-		}
-	},
-	Blaze_pibe_0232 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			115,
-			113,
-			113,
-			293
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			2200,
-			244,
-			226
-		},
-		alias = {
-			"Blaze_pibe_0233"
-		}
-	},
-	Blaze_pibe_0234 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			107,
-			106,
-			105,
-			292
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			326,
-			260,
-			234
-		},
-		alias = {
-			"Blaze_pibe_0235"
-		}
-	},
-	Blaze_pibe_0236 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			103,
-			104,
-			101,
-			290
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			252,
-			268,
-			238
-		},
-		alias = {
-			"Blaze_pibe_0237"
-		}
-	},
-	Blaze_pibe_0238 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			103,
-			105,
-			101,
-			290
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			496,
-			268,
-			237
-		},
-		alias = {
-			"Blaze_pibe_0239"
-		}
-	},
-	Blaze_pibe_0240 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			101,
-			107,
-			100,
-			288
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			1350,
-			271,
-			237
-		},
-		alias = {
-			"Blaze_pibe_0241"
-		}
-	},
-	Blaze_pibe_0242 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			109,
-			143,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			2382,
-			192,
-			212
-		},
-		alias = {
-			"Blaze_pibe_0243"
-		}
-	},
-	Blaze_pibe_0244 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			128,
-			143,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			2600,
-			192,
-			193
-		},
-		alias = {
-			"Blaze_pibe_0245"
-		}
-	},
-	Blaze_pibe_0246 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			135,
-			143,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			190,
-			192,
-			186
-		},
-		alias = {
-			"Blaze_pibe_0247"
-		}
-	},
-	Blaze_pibe_0248 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			147,
-			143,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1748,
-			190,
-			192,
-			174
-		},
-		alias = {
-			"Blaze_pibe_0249"
-		}
-	},
-	Blaze_pibe_0250 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			211,
-			143,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3530,
-			190,
-			192,
-			110
-		},
-		alias = {
-			"Blaze_pibe_0251"
-		}
-	},
-	Blaze_pibe_0252 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			208,
-			143,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3332,
-			190,
-			192,
-			113
-		},
-		alias = {
-			"Blaze_pibe_0253"
-		}
-	},
-	Blaze_pibe_0254 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			207,
-			143,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3134,
-			190,
-			192,
-			114
-		},
-		alias = {
-			"Blaze_pibe_0255"
-		}
-	},
-	Blaze_pibe_0256 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			137,
-			211,
-			144,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			814,
-			191,
-			110
-		},
-		alias = {
-			"Blaze_pibe_0257"
-		}
-	},
-	Blaze_pibe_0258 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			194,
-			175,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3768,
-			1389,
-			123,
-			127
-		},
-		alias = {}
-	},
-	Blaze_pibe_0259 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			198,
-			169,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			1261,
-			136,
-			122
-		},
-		alias = {
-			"Blaze_pibe_0260"
-		}
-	},
-	Blaze_pibe_0261 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			192,
-			151,
-			304
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			971,
-			156,
-			136
-		},
-		alias = {}
-	},
-	Blaze_pibe_0262 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			192,
-			151,
-			304
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2435,
-			971,
-			156,
-			136
-		},
-		alias = {}
-	},
-	Blaze_pibe_0263 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			160,
-			121,
-			308
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			2329,
-			186,
-			164
-		},
-		alias = {}
-	},
-	Blaze_pibe_0264 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			160,
-			121,
-			308
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			2499,
-			186,
-			164
-		},
-		alias = {}
-	},
-	Blaze_pibe_0265 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			157,
-			154,
-			117,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3022,
-			6,
-			198,
-			173
-		},
-		alias = {}
-	},
-	Blaze_pibe_0266 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			157,
-			154,
-			117,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3226,
-			6,
-			198,
-			173
-		},
-		alias = {}
-	},
-	Blaze_pibe_0267 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			141,
-			143,
-			115,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			714,
-			216,
-			187
-		},
-		alias = {}
-	},
-	Blaze_pibe_0268 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			141,
-			143,
-			115,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			907,
-			216,
-			187
-		},
-		alias = {}
-	},
-	Blaze_pibe_0269 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			113,
-			115,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			1217,
-			267,
-			217
-		},
-		alias = {}
-	},
-	Blaze_pibe_0270 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			113,
-			115,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			1440,
-			267,
-			217
-		},
-		alias = {}
-	},
-	Blaze_pibe_0271 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			101,
-			117,
-			303
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			2122,
-			265,
-			228
-		},
-		alias = {}
-	},
-	Blaze_pibe_0272 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			101,
-			117,
-			303
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			2356,
-			265,
-			228
-		},
-		alias = {}
-	},
-	Blaze_pibe_0273 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			97,
-			115,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			739,
-			267,
-			233
-		},
-		alias = {}
-	},
-	Blaze_pibe_0274 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			97,
-			115,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			978,
-			267,
-			233
-		},
-		alias = {}
-	},
-	Blaze_pibe_0275 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			97,
-			114,
-			295
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			2495,
-			268,
-			240
-		},
-		alias = {}
-	},
-	Blaze_pibe_0276 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			97,
-			114,
-			295
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			6,
-			268,
-			240
-		},
-		alias = {}
-	},
-	Blaze_pibe_0277 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			105,
-			111,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			1593,
-			271,
-			231
-		},
-		alias = {}
-	},
-	Blaze_pibe_0278 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			105,
-			111,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			1830,
-			271,
-			231
-		},
-		alias = {}
-	},
-	Blaze_pibe_0279 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			128,
-			112,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			2067,
-			270,
-			208
-		},
-		alias = {}
-	},
-	Blaze_pibe_0280 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			128,
-			112,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			6,
-			2281,
-			270,
-			208
-		},
-		alias = {}
-	},
-	Blaze_pibe_0281 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			164,
-			124,
-			295
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			723,
-			258,
-			173
-		},
-		alias = {}
-	},
-	Blaze_pibe_0282 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			164,
-			124,
-			295
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			902,
-			258,
-			173
-		},
-		alias = {}
-	},
-	Blaze_pibe_0283 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			90,
-			186,
-			122,
-			295
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			566,
-			260,
-			151
-		},
-		alias = {
-			"Blaze_pibe_0284"
-		}
-	},
-	Blaze_pibe_0285 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			91,
-			186,
-			119,
-			295
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			169,
-			262,
-			151
-		},
-		alias = {
-			"Blaze_pibe_0286"
-		}
-	},
-	Blaze_pibe_0287 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			92,
-			186,
-			117,
-			295
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			2590,
-			263,
-			151
-		},
-		alias = {
-			"Blaze_pibe_0288"
-		}
-	},
-	Blaze_pibe_0289 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			100,
-			187,
-			114,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			1081,
-			258,
-			149
-		},
-		alias = {
-			"Blaze_pibe_0290"
-		}
-	},
-	Blaze_pibe_0291 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			105,
-			188,
-			112,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			1714,
-			255,
-			148
-		},
-		alias = {
-			"Blaze_pibe_0292"
-		}
-	},
-	Blaze_pibe_0293 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			96,
-			189,
-			109,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			1663,
-			267,
-			141
-		},
-		alias = {}
-	},
-	Blaze_pibe_0294 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			96,
-			189,
-			109,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			1810,
-			267,
-			141
-		},
-		alias = {}
-	},
-	Blaze_pibe_0295 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			108,
-			190,
-			107,
-			302
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			1236,
-			257,
-			140
-		},
-		alias = {}
-	},
-	Blaze_pibe_0296 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			99,
-			190,
-			107,
-			283
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			326,
-			1957,
-			266,
-			159
-		},
-		alias = {}
-	},
-	Blaze_pibe_0297 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			99,
-			189,
-			117,
-			283
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			1382,
-			256,
-			160
-		},
-		alias = {}
-	},
-	Blaze_pibe_0298 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			94,
-			189,
-			116,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			6,
-			262,
-			157
-		},
-		alias = {}
-	},
-	Blaze_pibe_0299 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			94,
-			185,
-			172,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1975,
-			6,
-			206,
-			161
-		},
-		alias = {}
-	},
-	Blaze_pibe_0300 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			93,
-			185,
-			172,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			1980,
-			207,
-			161
-		},
-		alias = {}
-	},
-	Blaze_pibe_0301 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			93,
-			184,
-			172,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			1812,
-			207,
-			162
-		},
-		alias = {}
-	},
-	Blaze_pibe_0302 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			94,
-			172,
-			172,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1551,
-			6,
-			206,
-			174
-		},
-		alias = {}
-	},
-	Blaze_pibe_0303 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			94,
-			172,
-			172,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1763,
-			6,
-			206,
-			174
-		},
-		alias = {}
-	},
-	Blaze_pibe_0304 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			94,
-			168,
-			172,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			2533,
-			206,
-			178
-		},
-		alias = {}
-	},
-	Blaze_pibe_0305 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			94,
-			168,
-			172,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			6,
-			206,
-			178
-		},
-		alias = {}
-	},
-	Blaze_pibe_0306 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			97,
-			171,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			540,
-			171,
-			175
-		},
-		alias = {}
-	},
-	Blaze_pibe_0307 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			97,
-			171,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2108,
-			540,
-			171,
-			175
-		},
-		alias = {}
-	},
-	Blaze_pibe_0308 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			99,
-			172,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3521,
-			540,
-			169,
-			174
-		},
-		alias = {}
-	},
-	Blaze_pibe_0309 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			99,
-			172,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3696,
-			540,
-			169,
-			174
-		},
-		alias = {}
-	},
-	Blaze_pibe_0310 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			177,
-			203,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			721,
-			167,
-			169
-		},
-		alias = {}
-	},
-	Blaze_pibe_0311 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			177,
-			203,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			896,
-			167,
-			169
-		},
-		alias = {}
-	},
-	Blaze_pibe_0312 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			190,
-			198,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			2382,
-			172,
-			156
-		},
-		alias = {}
-	},
-	Blaze_pibe_0313 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			190,
-			198,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			2544,
-			172,
-			156
-		},
-		alias = {}
-	},
-	Blaze_pibe_0314 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			204,
-			199,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2285,
-			540,
-			171,
-			142
-		},
-		alias = {}
-	},
-	Blaze_pibe_0315 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			204,
-			199,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2462,
-			540,
-			171,
-			142
-		},
-		alias = {}
-	},
-	Blaze_pibe_0316 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			231,
-			197,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			2261,
-			173,
-			115
-		},
-		alias = {
-			"Blaze_pibe_0317"
-		}
-	},
-	Blaze_pibe_0318 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			266,
-			199,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			2717,
-			171,
-			80
-		},
-		alias = {
-			"Blaze_pibe_0319"
-		}
-	},
-	Blaze_pibe_0320 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			254,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1887,
-			166,
-			92
-		},
-		alias = {
-			"Blaze_pibe_0321"
-		}
-	},
-	Blaze_pibe_0322 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			253,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			2706,
-			166,
+			56,
 			93
 		},
-		alias = {
-			"Blaze_pibe_0323"
-		}
-	},
-	Blaze_pibe_0324 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
 		trim = {
-			102,
-			262,
-			204,
-			286
+			11,
+            14,
+            13,
+            38
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3728,
-			292,
-			166,
+			120,
+			4,
+			32,
+			41
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			11,
+            14,
+            13,
+            38
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			160,
+			4,
+			32,
+			41
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            13,
+            12,
+            39
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			200,
+			4,
+			34,
+			41
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            13,
+            12,
+            39
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			242,
+			4,
+			34,
+			41
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            11,
+            12,
+            40
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			323,
+			4,
+			34,
+			42
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            11,
+            12,
+            40
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			365,
+			4,
+			34,
+			42
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            10,
+            12,
+            40
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			407,
+			4,
+			34,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            10,
+            12,
+            40
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			449,
+			4,
+			34,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            10,
+            12,
+            40
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			491,
+			4,
+			34,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			10,
+            10,
+            12,
+            40
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			533,
+			4,
+			34,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0011"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			11,
+            11,
+            13,
+            39
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			575,
+			4,
+			32,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0012"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			11,
+            11,
+            13,
+            39
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			615,
+			4,
+			32,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0013"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			12,
+            11,
+            13,
+            39
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			655,
+			4,
+			31,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0014"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			12,
+            12,
+            13,
+            40
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			284,
+			4,
+			31,
+			41
+		},
+		alias = {},
+	},
+	["Blaze_humitodeatras_0015"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			56,
+			93
+		},
+		trim = {
+			12,
+            12,
+            14,
+            59
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			36,
+			4,
+			30,
+			22
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            139,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			135,
+			594,
+			104,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            139,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			135,
+			594,
+			104,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            137,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1613,
+			594,
+			104,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            137,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1613,
+			594,
+			104,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            136,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			232,
+			696,
+			106,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            136,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			232,
+			696,
+			106,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            135,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1288,
+			696,
+			104,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            135,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1288,
+			696,
+			104,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            134,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2087,
+			696,
+			104,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            134,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2087,
+			696,
+			104,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0011"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            134,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2199,
+			696,
+			106,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0012"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            134,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2199,
+			696,
+			106,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0013"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            139,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			247,
+			594,
+			104,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0014"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            139,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			247,
+			594,
+			104,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0015"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            147,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			357,
+			399,
+			111,
 			84
 		},
-		alias = {
-			"Blaze_pibe_0325"
-		}
+		alias = {},
 	},
-	Blaze_pibe_0326 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0016"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			472,
-			632
+			335,
+			448
 		},
 		trim = {
-			102,
-			266,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1985,
-			166,
-			80
-		},
-		alias = {
-			"Blaze_pibe_0327"
-		}
-	},
-	Blaze_pibe_0328 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			266,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			2071,
-			166,
-			80
-		},
-		alias = {
-			"Blaze_pibe_0329"
-		}
-	},
-	Blaze_pibe_0330 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			266,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			2157,
-			166,
-			80
-		},
-		alias = {
-			"Blaze_pibe_0331"
-		}
-	},
-	Blaze_pibe_0332 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			266,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			2243,
-			166,
-			80
-		},
-		alias = {
-			"Blaze_pibe_0333"
-		}
-	},
-	Blaze_pibe_0334 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			102,
-			266,
-			204,
-			286
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			2329,
-			166,
-			80
-		},
-		alias = {}
-	},
-	Blaze_pibe_0335 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			194,
-			169,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3874,
-			1113,
-			136,
-			133
-		},
-		alias = {}
-	},
-	Blaze_pibe_0336 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			194,
-			169,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2427,
-			1844,
-			136,
-			133
-		},
-		alias = {}
-	},
-	Blaze_pibe_0337 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			200,
-			167,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3947,
-			971,
-			140,
-			127
-		},
-		alias = {}
-	},
-	Blaze_pibe_0338 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			165,
-			200,
-			167,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			2662,
-			140,
-			127
-		},
-		alias = {}
-	},
-	Blaze_pibe_0339 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			141,
-			210,
-			144,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			1794,
-			187,
-			117
-		},
-		alias = {}
-	},
-	Blaze_pibe_0340 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			141,
-			210,
-			144,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			1917,
-			187,
-			117
-		},
-		alias = {}
-	},
-	Blaze_pibe_0341 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			147,
-			216,
-			150,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1550,
-			175,
-			111
-		},
-		alias = {}
-	},
-	Blaze_pibe_0342 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			147,
-			216,
-			150,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1667,
-			175,
-			111
-		},
-		alias = {}
-	},
-	Blaze_pibe_0343 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			152,
-			219,
-			169,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3877,
-			833,
-			151,
-			107
-		},
-		alias = {}
-	},
-	Blaze_pibe_0344 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			152,
-			220,
-			169,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3262,
-			721,
-			151,
-			106
-		},
-		alias = {}
-	},
-	Blaze_pibe_0345 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			143,
-			220,
-			164,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			2683,
-			165,
-			107
-		},
-		alias = {}
-	},
-	Blaze_pibe_0346 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			143,
-			222,
-			164,
-			304
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			721,
-			165,
-			106
-		},
-		alias = {}
-	},
-	Blaze_pibe_0347 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			161,
-			226,
-			157,
-			304
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2782,
-			721,
-			154,
-			102
-		},
-		alias = {}
-	},
-	Blaze_pibe_0348 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			161,
-			226,
-			157,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3102,
-			721,
-			154,
-			94
-		},
-		alias = {}
-	},
-	Blaze_pibe_0349 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			174,
-			226,
-			157,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3877,
-			721,
-			141,
-			94
-		},
-		alias = {
-			"Blaze_pibe_0350"
-		}
-	},
-	Blaze_pibe_0351 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			175,
-			226,
-			158,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3154,
-			1113,
-			139,
-			94
-		},
-		alias = {
-			"Blaze_pibe_0352"
-		}
-	},
-	Blaze_pibe_0353 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			166,
-			229,
-			158,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3576,
-			721,
-			148,
-			91
-		},
-		alias = {
-			"Blaze_pibe_0354"
-		}
-	},
-	Blaze_pibe_0355 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			154,
-			214,
-			154,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2446,
-			721,
-			164,
-			106
-		},
-		alias = {
-			"Blaze_pibe_0356"
-		}
-	},
-	Blaze_pibe_0357 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			175,
-			183,
-			177,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			1887,
-			120,
-			137
-		},
-		alias = {}
-	},
-	Blaze_pibe_0358 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			167,
-			206,
-			169,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2853,
-			1261,
-			136,
-			115
-		},
-		alias = {
-			"Blaze_pibe_0359"
-		}
-	},
-	Blaze_pibe_0360 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			170,
-			228,
-			173,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3268,
-			1261,
-			129,
-			93
-		},
-		alias = {
-			"Blaze_pibe_0361"
-		}
-	},
-	Blaze_pibe_0362 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			173,
-			153,
-			180,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			2154,
-			119,
-			167
-		},
-		alias = {
-			"Blaze_pibe_0363"
-		}
-	},
-	Blaze_pibe_0364 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			147,
-			157,
-			148,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			691,
-			177,
-			162
-		},
-		alias = {
-			"Blaze_pibe_0365"
-		}
-	},
-	Blaze_pibe_0366 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			152,
-			170,
-			157,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			833,
-			163,
-			149
-		},
-		alias = {
-			"Blaze_pibe_0367"
-		}
-	},
-	Blaze_pibe_0368 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			157,
-			172,
-			154,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			1222,
-			161,
-			147
-		},
-		alias = {
-			"Blaze_pibe_0369"
-		}
-	},
-	Blaze_pibe_0370 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			154,
-			172,
-			153,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			2415,
-			165,
-			147
-		},
-		alias = {
-			"Blaze_pibe_0371"
-		}
-	},
-	Blaze_pibe_0372 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			150,
-			188,
-			152,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2993,
-			540,
-			170,
-			132
-		},
-		alias = {
-			"Blaze_pibe_0373"
-		}
-	},
-	Blaze_pibe_0374 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			110,
-			197,
-			110,
-			275
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			1868,
-			252,
-			160
-		},
-		alias = {}
-	},
-	Blaze_pibe_0375 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			110,
-			197,
-			110,
-			275
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			2034,
-			252,
-			160
-		},
-		alias = {}
-	},
-	Blaze_pibe_0376 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			110,
-			198,
-			106,
-			274
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			1548,
-			256,
-			160
-		},
-		alias = {
-			"Blaze_pibe_0377"
-		}
-	},
-	Blaze_pibe_0378 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			124,
-			191,
-			120,
-			272
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			916,
-			228,
-			169
-		},
-		alias = {
-			"Blaze_pibe_0379"
-		}
-	},
-	Blaze_pibe_0380 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			119,
-			180,
-			115,
-			268
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			868,
-			216,
-			238,
-			184
-		},
-		alias = {
-			"Blaze_pibe_0381"
-		}
-	},
-	Blaze_pibe_0382 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			152,
-			176,
-			153,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1071,
-			167,
-			143
-		},
-		alias = {
-			"Blaze_pibe_0383"
-		}
-	},
-	Blaze_pibe_0384 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			151,
-			177,
-			151,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3926,
-			190,
-			170,
-			142
-		},
-		alias = {
-			"Blaze_pibe_0385"
-		}
-	},
-	Blaze_pibe_0386 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			153,
-			178,
-			152,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1220,
-			167,
-			143
-		},
-		alias = {
-			"Blaze_pibe_0387"
-		}
-	},
-	Blaze_pibe_0388 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			154,
-			177,
-			151,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1369,
-			167,
-			142
-		},
-		alias = {
-			"Blaze_pibe_0389"
-		}
-	},
-	Blaze_pibe_0390 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			151,
-			178,
-			150,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2639,
-			540,
-			171,
-			141
-		},
-		alias = {
-			"Blaze_pibe_0391"
-		}
-	},
-	Blaze_pibe_0392 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			149,
-			184,
-			147,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			859,
-			176,
-			135
-		},
-		alias = {
-			"Blaze_pibe_0393"
-		}
-	},
-	Blaze_pibe_0394 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			150,
-			194,
-			147,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1418,
-			175,
-			126
-		},
-		alias = {
-			"Blaze_pibe_0395"
-		}
-	},
-	Blaze_pibe_0396 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			155,
-			211,
-			152,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			2568,
-			165,
-			109
-		},
-		alias = {
-			"Blaze_pibe_0397"
-		}
-	},
-	Blaze_pibe_0398 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			160,
-			191,
-			161,
-			312
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3563,
-			833,
-			151,
-			129
-		},
-		alias = {
-			"Blaze_pibe_0399"
-		}
-	},
-	Blaze_pibe_0400 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			472,
-			632
-		},
-		trim = {
-			171,
-			178,
-			173,
-			311
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			1522,
-			128,
-			143
-		},
-		alias = {
-			"Blaze_pibe_0401"
-		}
-	},
-	Blaze_skill1humito_0001 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			47,
-			50,
-			50,
-			154
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2995,
-			1261,
-			131,
-			108
-		},
-		alias = {}
-	},
-	Blaze_skill1humito_0002 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			56,
-			50,
-			42,
-			154
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3132,
-			1261,
-			130,
-			108
-		},
-		alias = {}
-	},
-	Blaze_skill1humito_0003 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			43,
-			47,
-			41,
-			153
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3205,
-			971,
-			144,
-			112
-		},
-		alias = {}
-	},
-	Blaze_skill1humito_0004 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			49,
-			47,
-			35,
-			153
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3355,
-			971,
-			144,
-			112
-		},
-		alias = {}
-	},
-	Blaze_skill1humito_0005 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			38,
-			44,
-			37,
-			153
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3246,
-			833,
-			153,
-			115
-		},
-		alias = {
-			"Blaze_skill1humito_0006"
-		}
-	},
-	Blaze_skill1humito_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			38,
-			41,
-			29,
-			153
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			1375,
-			161,
-			118
-		},
-		alias = {
-			"Blaze_skill1humito_0008"
-		}
-	},
-	Blaze_skill1humito_0009 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			36,
-			38,
-			25,
-			153
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1931,
-			1517,
-			167,
-			121
-		},
-		alias = {
-			"Blaze_skill1humito_0010"
-		}
-	},
-	Blaze_skill1humito_0011 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			35,
-			35,
-			22,
-			152
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2816,
-			540,
-			171,
-			125
-		},
-		alias = {
-			"Blaze_skill1humito_0012"
-		}
-	},
-	Blaze_skill1humito_0013 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			34,
-			32,
-			20,
-			152
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1895,
-			174,
-			128
-		},
-		alias = {
-			"Blaze_skill1humito_0014"
-		}
-	},
-	Blaze_skill1humito_0015 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			33,
-			29,
-			20,
-			152
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1281,
-			175,
-			131
-		},
-		alias = {
-			"Blaze_skill1humito_0016"
-		}
-	},
-	Blaze_skill1humito_0017 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			33,
-			26,
-			20,
-			152
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			1141,
-			175,
-			134
-		},
-		alias = {
-			"Blaze_skill1humito_0018"
-		}
-	},
-	Blaze_skill1humito_0019 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			46,
-			22,
-			39,
-			168
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3505,
-			971,
-			143,
-			122
-		},
-		alias = {
-			"Blaze_skill1humito_0020"
-		}
-	},
-	Blaze_skill1humito_0021 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			228,
-			312
-		},
-		trim = {
-			45,
-			20,
-			38,
-			169
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3054,
-			971,
-			145,
-			123
-		},
-		alias = {
-			"Blaze_skill1humito_0022"
-		}
-	},
-	Blaze_skill1y3decal_0001 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			260,
-			188
-		},
-		trim = {
-			41,
-			40,
-			27,
-			24
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2342,
-			190,
-			192,
-			124
-		},
-		alias = {
-			"Blaze_skill1y3decal_0003"
-		}
-	},
-	Blaze_skill1y3decal_0002 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			260,
-			188
-		},
-		trim = {
-			33,
-			40,
-			35,
-			24
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2540,
-			190,
-			192,
-			124
-		},
-		alias = {}
-	},
-	Blaze_skill1y3decal_0004 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			260,
-			188
-		},
-		trim = {
-			36,
-			40,
-			32,
-			24
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2738,
-			190,
-			192,
-			124
-		},
-		alias = {}
-	},
-	Blaze_skill1y3decal_0005 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			260,
-			188
-		},
-		trim = {
-			39,
-			40,
-			29,
-			24
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2936,
-			190,
-			192,
-			124
-		},
-		alias = {
-			"Blaze_skill1y3decal_0006"
-		}
-	},
-	Blaze_skill1y3decal_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			260,
-			188
-		},
-		trim = {
-			38,
-			40,
-			31,
-			24
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			684,
-			191,
-			124
-		},
-		alias = {
-			"Blaze_skill1y3decal_0008"
-		}
-	},
-	Blaze_skill2explosion_0001 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			48,
-			44,
-			42,
-			113
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3456,
-			1850,
-			110,
-			127
-		},
-		alias = {
-			"Blaze_skill2explosion_0002"
-		}
-	},
-	Blaze_skill2explosion_0003 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			48,
-			44,
-			40,
-			112
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3338,
-			1850,
-			112,
-			128
-		},
-		alias = {
-			"Blaze_skill2explosion_0004"
-		}
-	},
-	Blaze_skill2explosion_0005 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			48,
-			44,
-			39,
-			112
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3219,
-			1850,
-			113,
-			128
-		},
-		alias = {
-			"Blaze_skill2explosion_0006"
-		}
-	},
-	Blaze_skill2explosion_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			48,
-			40,
-			39,
-			112
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3098,
-			2555,
-			113,
-			132
-		},
-		alias = {
-			"Blaze_skill2explosion_0008"
-		}
-	},
-	Blaze_skill2explosion_0009 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			48,
-			35,
-			38,
-			112
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3098,
-			2412,
-			114,
-			137
-		},
-		alias = {
-			"Blaze_skill2explosion_0010"
-		}
-	},
-	Blaze_skill2explosion_0011 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			48,
-			41,
-			47,
-			112
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3219,
-			2121,
-			105,
-			131
-		},
-		alias = {
-			"Blaze_skill2explosion_0012"
-		}
-	},
-	Blaze_skill2explosion_0013 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			48,
-			40,
-			45,
-			113
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3219,
-			1984,
-			107,
-			131
-		},
-		alias = {
-			"Blaze_skill2explosion_0014"
-		}
-	},
-	Blaze_skill2explosion_0015 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			49,
-			44,
-			44,
-			113
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3802,
-			1850,
-			107,
-			127
-		},
-		alias = {
-			"Blaze_skill2explosion_0016"
-		}
-	},
-	Blaze_skill2explosion_0017 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			49,
-			45,
-			42,
-			112
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3572,
-			1850,
 			109,
-			127
-		},
-		alias = {
-			"Blaze_skill2explosion_0018"
-		}
-	},
-	Blaze_skill2explosion_0019 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			50,
-			46,
-			41,
-			114
+            147,
+            115,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3687,
-			1850,
-			109,
-			124
-		},
-		alias = {}
-	},
-	Blaze_skill2explosion_0020 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			284
-		},
-		trim = {
-			61,
-			52,
-			41,
-			114
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3975,
-			1984,
-			98,
-			118
-		},
-		alias = {}
-	},
-	Blaze_skill2humo_0001 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			44,
-			32,
-			45,
-			108
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3340,
-			1743,
+			357,
+			399,
 			111,
+			84
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0017"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			110,
+            135,
+            121,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1400,
+			696,
+			104,
 			96
 		},
-		alias = {
-			"Blaze_skill2humo_0002"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0003 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0018"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			42,
-			31,
-			44,
-			107
+			110,
+            135,
+            121,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3220,
-			1743,
-			114,
-			98
+			1400,
+			696,
+			104,
+			96
 		},
-		alias = {
-			"Blaze_skill2humo_0004"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0005 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0019"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			41,
-			31,
-			44,
-			105
+			92,
+            139,
+            118,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3981,
-			1635,
-			115,
-			100
-		},
-		alias = {
-			"Blaze_skill2humo_0006"
-		}
-	},
-	Blaze_skill2humo_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			41,
-			30,
-			43,
-			105
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3098,
-			1743,
-			116,
-			101
-		},
-		alias = {
-			"Blaze_skill2humo_0008"
-		}
-	},
-	Blaze_skill2humo_0009 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			41,
-			31,
-			42,
-			104
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			2693,
-			117,
-			101
-		},
-		alias = {
-			"Blaze_skill2humo_0010"
-		}
-	},
-	Blaze_skill2humo_0011 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			41,
-			30,
-			41,
-			104
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			2585,
-			118,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0012"
-		}
-	},
-	Blaze_skill2humo_0013 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			31,
-			40,
-			103
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3353,
-			1635,
-			120,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0014"
-		}
-	},
-	Blaze_skill2humo_0015 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			31,
-			40,
-			103
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3479,
-			1635,
-			120,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0016"
-		}
-	},
-	Blaze_skill2humo_0017 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			31,
-			40,
-			103
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3605,
-			1635,
-			120,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0018"
-		}
-	},
-	Blaze_skill2humo_0019 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			31,
-			39,
-			103
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			2624,
-			121,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0020"
-		}
-	},
-	Blaze_skill2humo_0021 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			31,
-			39,
-			103
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			1635,
-			121,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0022"
-		}
-	},
-	Blaze_skill2humo_0023 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			41,
-			31,
-			38,
-			103
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3099,
-			1635,
-			121,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0024"
-		}
-	},
-	Blaze_skill2humo_0025 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			41,
-			31,
-			38,
-			103
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3226,
-			1635,
-			121,
-			102
-		},
-		alias = {
-			"Blaze_skill2humo_0026"
-		}
-	},
-	Blaze_skill2humo_0027 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			31,
-			38,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			2185,
-			122,
-			103
-		},
-		alias = {
-			"Blaze_skill2humo_0028"
-		}
-	},
-	Blaze_skill2humo_0029 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			30,
-			39,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			2294,
-			121,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0030"
-		}
-	},
-	Blaze_skill2humo_0031 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			39,
-			30,
-			39,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3484,
-			1522,
-			122,
-			104
-		},
-		alias = {}
-	},
-	Blaze_skill2humo_0032 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			39,
-			30,
-			39,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3612,
-			1522,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0033"
-		}
-	},
-	Blaze_skill2humo_0034 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			39,
-			30,
-			39,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3740,
-			1522,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0035"
-		}
-	},
-	Blaze_skill2humo_0036 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			39,
-			30,
-			40,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			2404,
-			121,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0037"
-		}
-	},
-	Blaze_skill2humo_0038 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			38,
-			30,
-			40,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3868,
-			1522,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0039"
-		}
-	},
-	Blaze_skill2humo_0040 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			38,
-			30,
-			41,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			2514,
-			121,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0041"
-		}
-	},
-	Blaze_skill2humo_0042 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			37,
-			29,
-			41,
-			101
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2972,
-			1522,
-			122,
-			106
-		},
-		alias = {
-			"Blaze_skill2humo_0043"
-		}
-	},
-	Blaze_skill2humo_0044 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			37,
-			29,
-			41,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3356,
-			1522,
-			122,
-			105
-		},
-		alias = {
-			"Blaze_skill2humo_0045"
-		}
-	},
-	Blaze_skill2humo_0046 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			37,
-			28,
-			41,
-			101
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			2473,
-			122,
-			107
-		},
-		alias = {
-			"Blaze_skill2humo_0047"
-		}
-	},
-	Blaze_skill2humo_0048 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			37,
-			27,
-			41,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			2586,
-			122,
-			107
-		},
-		alias = {
-			"Blaze_skill2humo_0049"
-		}
-	},
-	Blaze_skill2humo_0050 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			36,
-			27,
-			39,
-			101
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3637,
-			1389,
+			359,
+			594,
 			125,
-			108
+			92
 		},
-		alias = {
-			"Blaze_skill2humo_0051"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0052 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0020"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			36,
-			26,
-			39,
-			101
+			92,
+            139,
+            118,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3244,
-			1389,
+			359,
+			594,
 			125,
-			109
+			92
 		},
-		alias = {
-			"Blaze_skill2humo_0053"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0054 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0021"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			36,
-			26,
-			38,
-			101
+			90,
+            142,
+            117,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3936,
-			1261,
-			126,
-			109
-		},
-		alias = {
-			"Blaze_skill2humo_0055"
-		}
-	},
-	Blaze_skill2humo_0056 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			36,
-			25,
-			36,
-			101
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3403,
-			1261,
+			238,
+			495,
 			128,
+			89
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0022"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			90,
+            142,
+            117,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			238,
+			495,
+			128,
+			89
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0023"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			92,
+            146,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			759,
+			399,
+			127,
+			85
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0024"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			92,
+            146,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			759,
+			399,
+			127,
+			85
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0025"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			95,
+            149,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1537,
+			308,
+			124,
+			82
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0026"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			95,
+            149,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1537,
+			308,
+			124,
+			82
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0027"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			95,
+            149,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1537,
+			308,
+			124,
+			82
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0028"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			101,
+            134,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1411,
+			1383,
+			177,
+			122
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0029"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			101,
+            134,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1411,
+			1383,
+			177,
+			122
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0030"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			134,
+            116,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1775,
+			1795,
+			144,
+			140
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0031"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			134,
+            116,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1775,
+			1795,
+			144,
+			140
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0032"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			135,
+            112,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			310,
+			1944,
+			143,
+			144
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0033"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			135,
+            112,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			310,
+			1944,
+			143,
+			144
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0034"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			134,
+            110,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			461,
+			1944,
+			144,
+			146
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0035"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			134,
+            110,
+            57,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			461,
+			1944,
+			144,
+			146
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0036"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			135,
+            109,
+            54,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			792,
+			1944,
+			146,
+			147
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0037"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			135,
+            109,
+            54,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			792,
+			1944,
+			146,
+			147
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0038"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			139,
+            137,
+            61,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1383,
+			135,
+			119
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0039"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			139,
+            137,
+            61,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1383,
+			135,
+			119
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0040"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			136,
+            145,
+            61,
+            193
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2045,
+			1138,
+			138,
 			110
 		},
-		alias = {
-			"Blaze_skill2humo_0057"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0058 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0041"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			36,
-			26,
-			36,
-			101
+			136,
+            145,
+            61,
+            193
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3537,
-			1261,
-			128,
-			109
+			2045,
+			1138,
+			138,
+			110
 		},
-		alias = {
-			"Blaze_skill2humo_0059"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0060 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0042"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			37,
-			26,
-			37,
-			101
+			119,
+            131,
+            61,
+            196
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3112,
-			1389,
-			126,
-			109
+			960,
+			1383,
+			155,
+			121
 		},
-		alias = {
-			"Blaze_skill2humo_0061"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0062 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0043"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			37,
-			26,
-			38,
-			101
+			119,
+            131,
+            115,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3375,
-			1389,
-			125,
-			109
+			1889,
+			801,
+			101,
+			100
 		},
-		alias = {
-			"Blaze_skill2humo_0063"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0064 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0044"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			37,
-			26,
-			38,
-			101
+			117,
+            135,
+            114,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3506,
-			1389,
-			125,
-			109
+			1512,
+			696,
+			104,
+			96
 		},
-		alias = {
-			"Blaze_skill2humo_0065"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0066 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0045"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			37,
-			27,
-			40,
-			101
+			117,
+            135,
+            114,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3897,
-			1389,
-			123,
-			108
+			1512,
+			696,
+			104,
+			96
 		},
-		alias = {
-			"Blaze_skill2humo_0067"
-		}
+		alias = {},
 	},
-	Blaze_skill2humo_0068 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0046"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			200,
-			236
+			335,
+			448
 		},
 		trim = {
-			38,
-			28,
-			40,
-			101
+			117,
+            134,
+            116,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			2844,
-			1522,
+			2313,
+			696,
+			102,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0047"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            134,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2313,
+			696,
+			102,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0048"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            137,
+            117,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1725,
+			594,
+			99,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0049"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            137,
+            117,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1725,
+			594,
+			99,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0050"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            137,
+            118,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1832,
+			594,
+			97,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0051"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            137,
+            118,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1832,
+			594,
+			97,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0052"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            135,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1624,
+			696,
+			103,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0053"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            135,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1624,
+			696,
+			103,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0054"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			116,
+            134,
+            112,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2423,
+			696,
+			107,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0055"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			116,
+            134,
+            112,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2423,
+			696,
+			107,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0056"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            132,
+            110,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1397,
+			801,
+			111,
+			99
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0057"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            132,
+            110,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1397,
+			801,
+			111,
+			99
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0058"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            133,
+            108,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			671,
+			801,
+			115,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0059"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            133,
+            108,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			671,
+			801,
+			115,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0060"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            136,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			346,
+			696,
+			117,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0061"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            136,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			346,
+			696,
+			117,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0062"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            137,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1937,
+			594,
+			117,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0063"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            137,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1937,
+			594,
+			117,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0064"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            136,
+            110,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			471,
+			696,
+			114,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0065"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            136,
+            110,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			471,
+			696,
+			114,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0066"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			113,
+            133,
+            112,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			794,
+			801,
+			110,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0067"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			113,
+            133,
+            112,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			794,
+			801,
+			110,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0068"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			116,
+            143,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2192,
+			399,
+			104,
+			88
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0069"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			116,
+            143,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2192,
+			399,
+			104,
+			88
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0070"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
 			122,
-			107
-		},
-		alias = {
-			"Blaze_skill2humo_0069"
-		}
-	},
-	Blaze_skill2humo_0070 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			38,
-			28,
-			40,
-			102
+            143,
+            121,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3100,
-			1522,
-			122,
-			106
-		},
-		alias = {
-			"Blaze_skill2humo_0071"
-		}
-	},
-	Blaze_skill2humo_0072 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			39,
-			29,
-			39,
-			101
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3228,
-			1522,
-			122,
-			106
-		},
-		alias = {
-			"Blaze_skill2humo_0073"
-		}
-	},
-	Blaze_skill2humo_0074 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			39,
-			30,
-			39,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			1635,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0075"
-		}
-	},
-	Blaze_skill2humo_0076 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			39,
-			30,
-			38,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			2363,
-			123,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0077"
-		}
-	},
-	Blaze_skill2humo_0078 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			30,
-			38,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			1745,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0079"
-		}
-	},
-	Blaze_skill2humo_0080 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			30,
-			38,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			1855,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0081"
-		}
-	},
-	Blaze_skill2humo_0082 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			30,
-			38,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			1965,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0083"
-		}
-	},
-	Blaze_skill2humo_0084 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			200,
-			236
-		},
-		trim = {
-			40,
-			30,
-			38,
-			102
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			2075,
-			122,
-			104
-		},
-		alias = {
-			"Blaze_skill2humo_0085"
-		}
-	},
-	Blaze_skill2humostatus_0001 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3134,
-			310,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0002"
-		}
-	},
-	Blaze_skill2humostatus_0003 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3332,
-			309,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0004"
-		}
-	},
-	Blaze_skill2humostatus_0005 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2104,
-			2737,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0006"
-		}
-	},
-	Blaze_skill2humostatus_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3996,
-			1522,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0008"
-		}
-	},
-	Blaze_skill2humostatus_0009 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2844,
-			2732,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0010"
-		}
-	},
-	Blaze_skill2humostatus_0011 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3567,
-			1743,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0012"
-		}
-	},
-	Blaze_skill2humostatus_0013 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3672,
-			1743,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0014"
-		}
-	},
-	Blaze_skill2humostatus_0015 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3777,
-			1743,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0016"
-		}
-	},
-	Blaze_skill2humostatus_0017 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3882,
-			1743,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0018"
-		}
-	},
-	Blaze_skill2humostatus_0019 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3987,
-			1743,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0020"
-		}
-	},
-	Blaze_skill2humostatus_0021 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3098,
-			2693,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0022"
-		}
-	},
-	Blaze_skill2humostatus_0023 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3915,
-			1850,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0024"
-		}
-	},
-	Blaze_skill2humostatus_0025 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3219,
-			2632,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0026"
-		}
-	},
-	Blaze_skill2humostatus_0027 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3219,
-			2700,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0028"
-		}
-	},
-	Blaze_skill2humostatus_0029 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3332,
-			2726,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0030"
-		}
-	},
-	Blaze_skill2humostatus_0031 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3660,
-			1984,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0032"
-		}
-	},
-	Blaze_skill2humostatus_0033 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3660,
-			2052,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0034"
-		}
-	},
-	Blaze_skill2humostatus_0035 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3765,
-			1984,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0036"
-		}
-	},
-	Blaze_skill2humostatus_0037 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3765,
-			2052,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0038"
-		}
-	},
-	Blaze_skill2humostatus_0039 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			152,
-			116
-		},
-		trim = {
-			26,
-			22,
-			27,
-			32
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3870,
-			1984,
-			99,
-			62
-		},
-		alias = {
-			"Blaze_skill2humostatus_0040"
-		}
-	},
-	Blaze_skill2proyectil = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
+			2304,
+			399,
 			92,
 			88
 		},
+		alias = {},
+	},
+	["Blaze_pibe_0071"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
 		trim = {
-			32,
-			32,
-			34,
-			31
+			122,
+            143,
+            121,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			290,
-			1111,
-			26,
-			25
+			2304,
+			399,
+			92,
+			88
 		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_skill3decal = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0072"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			220,
+			335,
+			448
+		},
+		trim = {
+			116,
+            142,
+            114,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			374,
+			495,
+			105,
+			89
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0073"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			116,
+            142,
+            114,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			374,
+			495,
+			105,
+			89
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0074"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			116,
+            143,
+            114,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2404,
+			399,
+			105,
+			88
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0075"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            92,
+            111,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1009,
+			1795,
+			107,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0076"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            92,
+            111,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1009,
+			1795,
+			107,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0077"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			106,
+            62,
+            108,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1256,
+			2112,
+			121,
+			168
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0078"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			106,
+            62,
+            108,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1256,
+			2112,
+			121,
+			168
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0079"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            33,
+            121,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1201,
+			2291,
+			97,
+			197
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0080"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            33,
+            121,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1201,
+			2291,
+			97,
+			197
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0081"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			129,
+            21,
+            122,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1496,
+			2291,
+			84,
+			209
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0082"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			129,
+            21,
+            122,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1496,
+			2291,
+			84,
+			209
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0083"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			127,
+            18,
+            109,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1588,
+			2291,
+			99,
+			212
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0084"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			127,
+            18,
+            109,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1588,
+			2291,
+			99,
+			212
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0085"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            17,
+            112,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1695,
+			2291,
+			103,
+			213
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0086"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            17,
+            112,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1695,
+			2291,
+			103,
+			213
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0087"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            16,
+            119,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1806,
+			2291,
+			107,
+			214
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0088"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            16,
+            119,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1806,
+			2291,
+			107,
+			214
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0089"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            31,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1384,
+			2291,
+			104,
+			200
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0090"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            31,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1384,
+			2291,
+			104,
+			200
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0091"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            41,
+            122,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1004,
+			2291,
+			94,
+			190
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0092"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            41,
+            122,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1004,
+			2291,
+			94,
+			190
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0093"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			121,
+            40,
+            127,
+            216
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1106,
+			2291,
+			87,
+			192
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0094"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			121,
+            61,
+            112,
+            216
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2377,
+			2112,
+			102,
+			171
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0095"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            98,
+            87,
+            216
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2198,
+			1653,
+			159,
+			134
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0096"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            98,
+            87,
+            216
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2198,
+			1653,
+			159,
+			134
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0097"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			90,
+            98,
+            86,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1448,
+			1653,
+			159,
+			133
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0098"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			90,
+            98,
+            86,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1448,
+			1653,
+			159,
+			133
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0099"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			88,
+            98,
+            86,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			333,
+			1795,
+			161,
+			137
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0100"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			88,
+            98,
+            86,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			333,
+			1795,
+			161,
+			137
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0101"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			88,
+            97,
+            86,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			502,
+			1795,
+			161,
+			137
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0102"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			88,
+            97,
+            86,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			502,
+			1795,
+			161,
+			137
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0103"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			88,
+            98,
+            86,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			671,
+			1795,
+			161,
+			137
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0104"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            97,
+            85,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			840,
+			1795,
+			161,
+			138
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0105"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            97,
+            85,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			840,
+			1795,
+			161,
+			138
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0106"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            98,
+            87,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1124,
+			1795,
+			159,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0107"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            98,
+            87,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1124,
+			1795,
+			159,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0108"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			91,
+            99,
+            89,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1285,
+			1653,
+			155,
 			132
 		},
+		alias = {},
+	},
+	["Blaze_pibe_0109"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
 		trim = {
-			33,
-			31,
-			36,
-			31
+			91,
+            99,
+            89,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3530,
-			306,
+			1285,
+			1653,
+			155,
+			132
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0110"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            139,
+            118,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			492,
+			594,
+			98,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0111"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            139,
+            118,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			492,
+			594,
+			98,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0112"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            137,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2062,
+			594,
+			100,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0113"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            137,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2062,
+			594,
+			100,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0114"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            136,
+            114,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			593,
+			696,
+			107,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0115"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            136,
+            114,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			593,
+			696,
+			107,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0116"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            141,
+            105,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			686,
+			495,
+			121,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0117"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            141,
+            105,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			686,
+			495,
+			121,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0118"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            141,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			815,
+			495,
+			119,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0119"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            141,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			815,
+			495,
+			119,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0120"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            128,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			454,
+			910,
+			119,
+			103
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0121"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            128,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			454,
+			910,
+			119,
+			103
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0122"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            121,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2191,
+			1138,
+			119,
+			110
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0123"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            121,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2191,
+			1138,
+			119,
+			110
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0124"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            123,
+            106,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			109,
+			1138,
+			120,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0125"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            123,
+            106,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			109,
+			1138,
+			120,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0126"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			110,
+            134,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			801,
+			118,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0127"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			110,
+            134,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			801,
+			118,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0128"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			110,
+            130,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2261,
+			801,
+			118,
+			101
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0129"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			110,
+            130,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2261,
+			801,
+			118,
+			101
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0130"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            130,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2387,
+			801,
+			119,
+			101
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0131"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            130,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2387,
+			801,
+			119,
+			101
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0132"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            131,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1998,
+			801,
+			119,
+			100
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0133"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            131,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1998,
+			801,
+			119,
+			100
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0134"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			109,
+            133,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			912,
+			801,
+			119,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0135"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			108,
+            140,
+            107,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1912,
+			495,
+			120,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0136"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			107,
+            140,
+            108,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2040,
+			495,
+			120,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0137"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			107,
+            140,
+            108,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2040,
+			495,
+			120,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0138"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            92,
+            80,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1291,
+			1795,
+			144,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0139"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            92,
+            80,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1291,
+			1795,
+			144,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0140"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            89,
+            76,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			155,
+			1944,
+			147,
+			142
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0141"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            89,
+            76,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			155,
+			1944,
+			147,
+			142
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0142"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            90,
+            75,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1927,
+			1795,
+			148,
+			141
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0143"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            90,
+            75,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1927,
+			1795,
+			148,
+			141
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0144"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            90,
+            72,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2083,
+			1795,
 			151,
-			70
+			141
 		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_skill3status_0001 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0145"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			140,
-			200
+			335,
+			448
 		},
 		trim = {
-			46,
-			41,
-			43,
-			102
+			112,
+            90,
+            72,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			63,
-			2741,
-			51,
-			57
+			2083,
+			1795,
+			151,
+			141
 		},
-		alias = {
-			"Blaze_skill3status_0002"
-		}
+		alias = {},
 	},
-	Blaze_skill3status_0003 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0146"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			140,
-			200
+			335,
+			448
 		},
 		trim = {
-			49,
-			39,
-			40,
-			101
+			111,
+            98,
+            74,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			4038,
-			74,
-			51,
-			60
+			1615,
+			1653,
+			150,
+			133
 		},
-		alias = {
-			"Blaze_skill3status_0004"
-		}
+		alias = {},
 	},
-	Blaze_skill3status_0005 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0147"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			140,
-			200
+			335,
+			448
 		},
 		trim = {
-			48,
-			37,
-			40,
-			101
+			111,
+            98,
+            74,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			4038,
-			6,
-			52,
-			62
+			1615,
+			1653,
+			150,
+			133
 		},
-		alias = {
-			"Blaze_skill3status_0006"
-		}
+		alias = {},
 	},
-	Blaze_skill3status_0007 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0148"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			140,
-			200
+			335,
+			448
 		},
 		trim = {
-			49,
-			39,
-			40,
-			102
+			110,
+            98,
+            72,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			6,
-			2741,
-			51,
-			59
+			1773,
+			1653,
+			153,
+			133
 		},
-		alias = {
-			"Blaze_skill3status_0008"
-		}
+		alias = {},
 	},
-	Blaze_skill3status_0009 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0149"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			140,
-			200
+			335,
+			448
 		},
 		trim = {
-			48,
-			45,
-			41,
-			102
+			110,
+            98,
+            72,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
+		},
+		f_quad = {
+			1773,
+			1653,
+			153,
+			133
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0150"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			102,
+            104,
+            72,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			715,
+			1516,
+			161,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0151"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			102,
+            104,
+            72,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			715,
+			1516,
+			161,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0152"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			98,
+            103,
+            73,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1535,
+			1516,
+			164,
+			128
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0153"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			98,
+            103,
+            73,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1535,
+			1516,
+			164,
+			128
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0154"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			99,
+            162,
+            100,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1686,
+			59,
+			136,
+			69
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0155"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			99,
+            162,
+            100,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1686,
+			59,
+			136,
+			69
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0156"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            153,
+            123,
+            216
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2339,
+			221,
+			92,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0157"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            153,
+            123,
+            216
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2339,
+			221,
+			92,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0158"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            125,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
 		},
 		f_quad = {
 			120,
-			2741,
-			51,
-			53
+			1023,
+			106,
+			106
 		},
-		alias = {
-			"Blaze_skill3status_0010"
-		}
+		alias = {},
 	},
-	Blaze_tren_0001 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0159"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			101,
-			208,
-			103,
-			303
+			114,
+            125,
+            115,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3332,
-			1984,
-			104,
-			177
+			120,
+			1023,
+			106,
+			106
 		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_tren_0002 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0160"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			101,
-			208,
-			103,
-			303
+			116,
+            130,
+            117,
+            217
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3332,
-			2167,
-			104,
-			177
-		},
-		alias = {}
-	},
-	Blaze_tren_0003 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
+			4,
+			910,
 			102,
-			202,
-			103,
-			304
+			101
 		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3332,
-			2350,
-			103,
-			182
-		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_tren_0004 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0161"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
+			116,
+            130,
+            117,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			910,
 			102,
-			202,
-			103,
-			304
+			101
 		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3332,
-			2538,
-			103,
-			182
-		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_tren_0005 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0162"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			101,
-			201,
-			103,
-			306
+			123,
+            146,
+            116,
+            219
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3219,
-			2258,
-			104,
-			181
-		},
-		alias = {}
-	},
-	Blaze_tren_0006 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
+			1669,
 			308,
-			688
+			96,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0163"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
 		},
 		trim = {
-			101,
-			201,
-			103,
-			306
+			123,
+            146,
+            116,
+            219
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3219,
-			2445,
-			104,
-			181
-		},
-		alias = {}
-	},
-	Blaze_tren_0007 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
+			1669,
 			308,
-			688
+			96,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0164"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
 		},
 		trim = {
-			102,
-			201,
-			103,
-			307
+			105,
+            135,
+            114,
+            218
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3442,
-			1984,
-			103,
-			180
+			708,
+			696,
+			116,
+			95
 		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_tren_0008 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0165"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			102,
-			210,
-			103,
-			307
+			105,
+            135,
+            114,
+            218
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3551,
-			1984,
-			103,
-			171
+			708,
+			696,
+			116,
+			95
 		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_tren_0009 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0166"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			42,
-			230,
-			86,
-			306
+			93,
+            135,
+            115,
+            219
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3271,
-			382,
-			180,
-			152
-		},
-		alias = {}
-	},
-	Blaze_tren_0010 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			42,
-			230,
-			86,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3457,
-			382,
-			180,
-			152
-		},
-		alias = {}
-	},
-	Blaze_tren_0011 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			38,
-			230,
-			85,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2323,
-			382,
-			185,
-			152
-		},
-		alias = {}
-	},
-	Blaze_tren_0012 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			38,
-			241,
-			85,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2514,
-			382,
-			185,
-			141
-		},
-		alias = {}
-	},
-	Blaze_tren_0013 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			37,
-			234,
-			85,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1939,
-			382,
-			186,
-			148
-		},
-		alias = {}
-	},
-	Blaze_tren_0014 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			37,
-			234,
-			85,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2131,
-			382,
-			186,
-			148
-		},
-		alias = {}
-	},
-	Blaze_tren_0015 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			37,
-			230,
-			85,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			382,
-			186,
-			152
-		},
-		alias = {}
-	},
-	Blaze_tren_0016 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			45,
-			230,
-			85,
-			306
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3828,
-			382,
-			178,
-			152
-		},
-		alias = {}
-	},
-	Blaze_tren_0017 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			37,
-			230,
-			80,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			382,
-			191,
-			145
-		},
-		alias = {}
-	},
-	Blaze_tren_0018 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			37,
-			230,
-			80,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			533,
-			191,
-			145
-		},
-		alias = {}
-	},
-	Blaze_tren_0019 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			33,
-			230,
-			81,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			2092,
-			194,
-			145
-		},
-		alias = {}
-	},
-	Blaze_tren_0020 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			33,
-			242,
-			81,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			2243,
-			194,
-			133
-		},
-		alias = {}
-	},
-	Blaze_tren_0021 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			32,
-			234,
-			81,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			1798,
-			195,
-			141
-		},
-		alias = {}
-	},
-	Blaze_tren_0022 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			32,
-			234,
-			81,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1339,
-			1945,
-			195,
-			141
-		},
-		alias = {}
-	},
-	Blaze_tren_0023 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			32,
-			230,
-			81,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3837,
-			6,
-			195,
-			145
-		},
-		alias = {}
-	},
-	Blaze_tren_0024 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			49,
-			230,
-			81,
-			313
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1747,
-			540,
-			178,
-			145
-		},
-		alias = {}
-	},
-	Blaze_tren_0025 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			33,
-			241,
-			92,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2705,
-			382,
-			183,
-			151
-		},
-		alias = {}
-	},
-	Blaze_tren_0026 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			33,
-			241,
-			92,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2894,
-			382,
-			183,
-			151
-		},
-		alias = {}
-	},
-	Blaze_tren_0027 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			29,
-			241,
-			91,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			1535,
-			188,
-			151
-		},
-		alias = {}
-	},
-	Blaze_tren_0028 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			29,
-			241,
-			91,
-			294
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			1376,
-			188,
-			153
-		},
-		alias = {}
-	},
-	Blaze_tren_0029 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			29,
-			240,
-			90,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			930,
-			189,
-			143
-		},
-		alias = {}
-	},
-	Blaze_tren_0030 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			29,
-			240,
-			90,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			1079,
-			189,
-			143
-		},
-		alias = {}
-	},
-	Blaze_tren_0031 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			29,
-			241,
-			90,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1550,
-			1228,
-			189,
-			142
-		},
-		alias = {}
-	},
-	Blaze_tren_0032 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			36,
-			241,
-			90,
-			305
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3083,
-			382,
-			182,
-			142
-		},
-		alias = {}
-	},
-	Blaze_tren_0033 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			80,
-			244,
-			84,
-			297
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			1564,
-			144,
-			147
-		},
-		alias = {}
-	},
-	Blaze_tren_0034 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			80,
-			244,
-			84,
-			297
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			1717,
-			144,
-			147
-		},
-		alias = {}
-	},
-	Blaze_tren_0035 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			80,
-			246,
-			82,
-			297
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			1413,
-			146,
-			145
-		},
-		alias = {}
-	},
-	Blaze_tren_0036 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			92,
-			246,
-			82,
-			296
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2569,
-			1908,
-			134,
-			146
-		},
-		alias = {}
-	},
-	Blaze_tren_0037 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			83,
-			247,
-			81,
-			298
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			1870,
-			144,
-			143
-		},
-		alias = {}
-	},
-	Blaze_tren_0038 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			83,
-			247,
-			81,
-			298
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			2019,
-			144,
-			143
-		},
-		alias = {}
-	},
-	Blaze_tren_0039 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			80,
-			246,
-			81,
-			298
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			1263,
-			147,
-			144
-		},
-		alias = {}
-	},
-	Blaze_tren_0040 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			80,
-			246,
-			80,
-			298
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2273,
-			1113,
-			148,
-			144
-		},
-		alias = {}
-	},
-	Blaze_tren_0041 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			110,
-			20,
-			113,
-			318
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3442,
-			2446,
-			85,
-			350
-		},
-		alias = {}
-	},
-	Blaze_tren_0042 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			110,
-			100,
-			108,
-			318
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3442,
 			2170,
-			90,
-			270
-		},
-		alias = {}
-	},
-	Blaze_tren_0043 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			110,
-			168,
-			113,
-			318
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3538,
-			2170,
-			85,
-			202
-		},
-		alias = {}
-	},
-	Blaze_tren_0044 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			308,
-			688
-		},
-		trim = {
-			84,
-			235,
-			97,
-			310
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			2710,
-			1946,
+			594,
 			127,
-			143
+			94
 		},
-		alias = {
-			"Blaze_tren_0045"
-		}
+		alias = {},
 	},
-	Blaze_tren_0046 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0167"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
+		},
+		trim = {
+			93,
+            135,
+            115,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2170,
+			594,
+			127,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0168"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			92,
+            136,
+            115,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			859,
+			594,
+			128,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0169"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			92,
+            136,
+            115,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			859,
+			594,
+			128,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0170"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			91,
+            139,
+            115,
+            212
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			130,
+			801,
+			129,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0171"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			91,
+            139,
+            115,
+            212
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			130,
+			801,
+			129,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0172"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			79,
+            148,
+            111,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			832,
+			696,
+			145,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0173"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			79,
+            148,
+            111,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			832,
+			696,
+			145,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0174"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			77,
+            150,
+            117,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			995,
+			594,
+			141,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0175"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			77,
+            150,
+            117,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			995,
+			594,
+			141,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0176"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			74,
+            151,
+            116,
+            206
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2168,
+			495,
+			145,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0177"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			74,
+            151,
+            116,
+            206
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2168,
+			495,
+			145,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0178"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
 		},
 		trim = {
 			72,
-			285,
-			76,
-			306
+            149,
+            114,
+            206
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			2616,
-			721,
-			160,
-			97
+			1144,
+			594,
+			149,
+			93
 		},
-		alias = {
-			"Blaze_tren_0047"
-		}
+		alias = {},
 	},
-	Blaze_tren_0048 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0179"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
+			335,
+			448
+		},
+		trim = {
+			72,
+            149,
+            114,
+            206
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1144,
+			594,
+			149,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0180"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			73,
+            147,
+            116,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1114,
+			399,
+			146,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0181"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			73,
+            147,
+            116,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1114,
+			399,
+			146,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0182"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			72,
+            150,
+            113,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1773,
 			308,
-			688
+			150,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0183"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			72,
+            150,
+            113,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1773,
+			308,
+			150,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0184"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			85,
+            154,
+            118,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			894,
+			399,
+			132,
+			85
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0185"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			85,
+            154,
+            118,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			894,
+			399,
+			132,
+			85
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0186"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			85,
+            154,
+            118,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			894,
+			399,
+			132,
+			85
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0187"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			84,
+            102,
+            43,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2242,
+			1795,
+			208,
+			141
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0188"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			84,
+            102,
+            43,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2242,
+			1795,
+			208,
+			141
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0189"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			83,
+            88,
+            27,
+            204
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1792,
+			1944,
+			225,
+			156
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0190"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			83,
+            88,
+            27,
+            204
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1792,
+			1944,
+			225,
+			156
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0191"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			85,
+            82,
+            25,
+            204
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			2112,
+			225,
+			162
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0192"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			85,
+            82,
+            25,
+            204
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			2112,
+			225,
+			162
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0193"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			100,
+            90,
+            24,
+            203
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1422,
+			1944,
+			211,
+			155
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0194"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			100,
+            90,
+            24,
+            203
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1422,
+			1944,
+			211,
+			155
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0195"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            81,
+            18,
+            203
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			420,
+			2112,
+			214,
+			164
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0196"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            81,
+            18,
+            203
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			420,
+			2112,
+			214,
+			164
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0197"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            76,
+            13,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			642,
+			2112,
+			202,
+			167
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0198"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            76,
+            13,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			642,
+			2112,
+			202,
+			167
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0199"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			121,
+            121,
+            46,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			237,
+			1138,
+			168,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0200"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			121,
+            121,
+            46,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			237,
+			1138,
+			168,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0201"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            157,
+            81,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			138,
+			142,
+			72
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0202"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			112,
+            157,
+            81,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			138,
+			142,
+			72
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0203"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			121,
+            127,
+            122,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			214,
+			910,
+			92,
+			102
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0204"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			121,
+            127,
+            122,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			214,
+			910,
+			92,
+			102
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0205"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            137,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2305,
+			594,
+			104,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0206"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            137,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2305,
+			594,
+			104,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0207"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            141,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			942,
+			495,
+			106,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0208"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            141,
+            115,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			942,
+			495,
+			106,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0209"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			97,
+            148,
+            99,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1931,
+			308,
+			139,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0210"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			97,
+            148,
+            99,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1931,
+			308,
+			139,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0211"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			101,
+            152,
+            103,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			308,
+			131,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0212"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			101,
+            152,
+            103,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			308,
+			131,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0213"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			105,
+            157,
+            117,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			961,
+			138,
+			113,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0214"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			105,
+            157,
+            117,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			961,
+			138,
+			113,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0215"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			99,
+            159,
+            113,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			154,
+			138,
+			123,
+			72
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0216"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			99,
+            159,
+            113,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			154,
+			138,
+			123,
+			72
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0217"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            157,
+            108,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1082,
+			138,
+			116,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0218"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			111,
+            157,
+            108,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1082,
+			138,
+			116,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0219"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            157,
+            109,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1206,
+			138,
+			107,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0220"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            157,
+            109,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1206,
+			138,
+			107,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0221"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            157,
+            109,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1321,
+			138,
+			106,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0222"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            157,
+            109,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1321,
+			138,
+			106,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0223"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            167,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1453,
+			59,
+			97,
+			64
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0224"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			119,
+            167,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1453,
+			59,
+			97,
+			64
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0225"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			128,
+            172,
+            127,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			121,
+			59,
+			80,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0226"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			128,
+            172,
+            127,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			121,
+			59,
+			80,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0227"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			128,
+            172,
+            127,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			121,
+			59,
+			80,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0228"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            125,
+            87,
+            207
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1116,
+			1257,
+			159,
+			116
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0229"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			89,
+            125,
+            87,
+            207
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1116,
+			1257,
+			159,
+			116
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0230"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			83,
+            95,
+            81,
+            207
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			613,
+			1944,
+			171,
+			146
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0231"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			83,
+            95,
+            81,
+            207
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			613,
+			1944,
+			171,
+			146
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0232"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			81,
+            79,
+            79,
+            207
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			237,
+			2112,
+			175,
+			162
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0233"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			81,
+            79,
+            79,
+            207
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			237,
+			2112,
+			175,
+			162
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0234"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			75,
+            74,
+            74,
+            206
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1385,
+			2112,
+			186,
+			168
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0235"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			75,
+            74,
+            74,
+            206
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1385,
+			2112,
+			186,
+			168
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0236"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			72,
+            72,
+            71,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			2291,
+			192,
+			171
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0237"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			72,
+            72,
+            71,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			2291,
+			192,
+			171
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0238"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			72,
+            73,
+            71,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1975,
+			2112,
+			192,
+			170
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0239"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			72,
+            73,
+            71,
+            205
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1975,
+			2112,
+			192,
+			170
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0240"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			70,
+            75,
+            71,
+            203
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2175,
+			2112,
+			194,
+			170
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0241"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			70,
+            75,
+            71,
+            203
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2175,
+			2112,
+			194,
+			170
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0242"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            76,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1641,
+			1944,
+			143,
+			155
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0243"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            76,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1641,
+			1944,
+			143,
+			155
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0244"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            90,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1944,
+			143,
+			141
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0245"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            90,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1944,
+			143,
+			141
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0246"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            95,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			182,
+			1795,
+			143,
+			136
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0247"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            95,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			182,
+			1795,
+			143,
+			136
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0248"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            103,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1707,
+			1516,
+			143,
+			128
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0249"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            103,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1707,
+			1516,
+			143,
+			128
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0250"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            148,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2078,
+			308,
+			143,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0251"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            148,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2078,
+			308,
+			143,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0252"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            147,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			476,
+			399,
+			143,
+			84
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0253"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            147,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			476,
+			399,
+			143,
+			84
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0254"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            145,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1268,
+			399,
+			143,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0255"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            145,
+            98,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1268,
+			399,
+			143,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0256"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            148,
+            99,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2229,
+			308,
+			142,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0257"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			94,
+            148,
+            99,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2229,
+			308,
+			142,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0258"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            137,
+            121,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2417,
+			594,
+			94,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0259"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            139,
+            116,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2321,
+			495,
+			104,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0260"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            139,
+            116,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2321,
+			495,
+			104,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0261"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            135,
+            106,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1039,
+			801,
+			115,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0262"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            135,
+            106,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1162,
+			801,
+			115,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0263"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            112,
+            85,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1123,
+			1383,
+			136,
+			121
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0264"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            112,
+            85,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1267,
+			1383,
+			136,
+			121
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0265"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			108,
+            108,
+            82,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			884,
+			1516,
+			145,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0266"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			108,
+            108,
+            82,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1037,
+			1516,
+			145,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0267"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			97,
+            98,
+            80,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1443,
+			1795,
+			158,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0268"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			97,
+            98,
+            80,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1609,
+			1795,
+			158,
+			139
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0269"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            77,
+            80,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2025,
+			1944,
+			192,
+			160
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0270"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            77,
+            80,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2225,
+			1944,
+			192,
+			160
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0271"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            68,
+            82,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1579,
+			2112,
+			190,
+			169
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0272"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            68,
+            82,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1777,
+			2112,
+			190,
+			169
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0273"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            66,
+            80,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			204,
+			2291,
+			192,
+			171
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0274"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            66,
+            80,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			404,
+			2291,
+			192,
+			171
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0275"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            65,
+            80,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			604,
+			2291,
+			192,
+			175
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0276"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            65,
+            80,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			804,
+			2291,
+			192,
+			175
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0277"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            73,
+            78,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			852,
+			2112,
+			194,
+			167
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0278"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            73,
+            78,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1054,
+			2112,
+			194,
+			167
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0279"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            89,
+            79,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1020,
+			1944,
+			193,
+			151
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0280"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            89,
+            79,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1221,
+			1944,
+			193,
+			151
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0281"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            115,
+            87,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2199,
+			1383,
+			185,
+			125
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0282"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            115,
+            87,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1516,
+			185,
+			125
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0283"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            131,
+            86,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			741,
+			1138,
+			186,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0284"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            131,
+            86,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			741,
+			1138,
+			186,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0285"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            131,
+            83,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			935,
+			1138,
+			189,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0286"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            131,
+            83,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			935,
+			1138,
+			189,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0287"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			64,
+            131,
+            82,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1132,
+			1138,
+			189,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0288"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			64,
+            131,
+            82,
+            208
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1132,
+			1138,
+			189,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0289"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			68,
+            131,
+            80,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			413,
+			1138,
+			187,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0290"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			68,
+            131,
+            80,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			413,
+			1138,
+			187,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0291"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            132,
+            78,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1097,
+			1023,
+			186,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0292"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            132,
+            78,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1097,
+			1023,
+			186,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0293"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
 		},
 		trim = {
 			65,
-			288,
-			69,
-			306
+            133,
+            76,
+            211
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			1747,
-			2161,
-			174,
-			94
+			1065,
+			910,
+			194,
+			104
 		},
-		alias = {
-			"Blaze_tren_0049"
-		}
+		alias = {},
 	},
-	Blaze_tren_0050 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0294"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			58,
-			288,
-			62,
-			304
+			65,
+            133,
+            76,
+            211
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			1550,
-			1692,
-			188,
-			96
+			1267,
+			910,
+			194,
+			104
 		},
-		alias = {
-			"Blaze_tren_0051"
-		}
+		alias = {},
 	},
-	Blaze_tren_0052 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0295"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			51,
-			258,
-			55,
-			302
+			72,
+            134,
+            76,
+            211
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			2608,
-			6,
-			202,
+			581,
+			910,
+			187,
+			103
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0296"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			67,
+            134,
+            75,
+            197
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1752,
+			1257,
+			193,
+			117
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0297"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			67,
+            131,
+            82,
+            197
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			469,
+			1383,
+			186,
+			120
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0298"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            131,
+            81,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1283,
+			1257,
+			191,
+			116
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0299"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            128,
+            119,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			147,
+			1383,
+			153,
+			119
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0300"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            128,
+            119,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			308,
+			1383,
+			153,
+			119
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0301"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            127,
+            119,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			663,
+			1383,
+			153,
+			120
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0302"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            119,
+            119,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1858,
+			1516,
+			153,
 			128
 		},
-		alias = {
-			"Blaze_tren_0053",
-			"Blaze_tren_0054"
-		}
+		alias = {},
 	},
-	Blaze_tren_0055 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0303"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            119,
+            119,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2019,
+			1516,
+			153,
+			128
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0304"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            116,
+            121,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			625,
+			1653,
+			151,
+			131
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0305"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			63,
+            116,
+            121,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			784,
+			1653,
+			151,
+			131
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0306"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			65,
+            118,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2180,
+			1516,
+			126,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0307"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			65,
+            118,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2314,
+			1516,
+			126,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0308"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			67,
+            118,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1653,
+			124,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0309"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			67,
+            118,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			136,
+			1653,
+			124,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0310"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            122,
+            141,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			197,
+			1516,
+			123,
+			125
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0311"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            122,
+            141,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			328,
+			1516,
+			123,
+			125
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0312"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            131,
+            137,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1482,
+			1257,
+			127,
+			116
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0313"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            131,
+            137,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1617,
+			1257,
+			127,
+			116
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0314"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            141,
+            138,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			234,
+			1023,
+			126,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0315"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            141,
+            138,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			368,
+			1023,
+			126,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0316"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            160,
+            137,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1763,
+			399,
+			127,
+			87
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0317"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            160,
+            137,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1763,
+			399,
+			127,
+			87
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0318"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            138,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			679,
+			59,
+			126,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0319"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            138,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			679,
+			59,
+			126,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0320"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            177,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1830,
+			59,
+			120,
+			70
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0321"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            177,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1830,
+			59,
+			120,
+			70
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0322"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            176,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2154,
+			59,
+			120,
+			71
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0323"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            176,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2154,
+			59,
+			120,
+			71
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0324"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            182,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1558,
+			59,
+			120,
+			65
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0325"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            182,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1558,
+			59,
+			120,
+			65
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0326"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			813,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0327"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			813,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0328"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			941,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0329"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			941,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0330"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1069,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0331"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1069,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0332"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1197,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0333"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1197,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0334"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			71,
+            185,
+            144,
+            201
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1325,
+			59,
+			120,
+			62
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0335"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            137,
+            116,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			267,
+			801,
+			104,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0336"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            137,
+            116,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1285,
+			801,
+			104,
+			98
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0337"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            141,
+            115,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			696,
+			106,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0338"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			114,
+            141,
+            115,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			118,
+			696,
+			106,
+			94
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0339"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			97,
+            148,
+            99,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1898,
+			399,
+			139,
+			87
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0340"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			97,
+            148,
+            99,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2045,
+			399,
+			139,
+			87
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0341"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			101,
+            152,
+            103,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2379,
 			308,
-			688
+			131,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0342"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
 		},
 		trim = {
-			46,
-			224,
-			49,
-			301
+			101,
+            152,
+            103,
+            213
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			1112,
-			1470,
-			213,
-			163
+			4,
+			399,
+			131,
+			83
 		},
-		alias = {
-			"Blaze_tren_0056"
-		}
+		alias = {},
 	},
-	Blaze_tren_0057 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0343"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
+			335,
+			448
+		},
+		trim = {
+			105,
+            154,
+            117,
+            213
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1416,
 			308,
-			688
+			113,
+			81
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0344"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
 		},
 		trim = {
-			42,
-			220,
-			46,
-			299
+			105,
+            155,
+            117,
+            214
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			1112,
-			360,
-			220,
-			169
-		},
-		alias = {
-			"Blaze_tren_0058"
-		}
-	},
-	Blaze_tren_0059 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
+			143,
 			308,
-			688
+			113,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0345"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
 		},
 		trim = {
-			39,
-			216,
-			43,
-			299
+			99,
+            155,
+            113,
+            214
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			868,
-			1091,
-			226,
-			173
-		},
-		alias = {
-			"Blaze_tren_0060"
-		}
-	},
-	Blaze_tren_0061 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
+			264,
 			308,
-			688
+			123,
+			79
 		},
-		trim = {
-			47,
-			212,
-			45,
-			298
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			1112,
-			1100,
-			216,
-			178
-		},
-		alias = {
-			"Blaze_tren_0062"
-		}
+		alias = {},
 	},
-	Blaze_tren_0063 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0346"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			43,
-			208,
-			40,
-			314
+			99,
+            156,
+            113,
+            215
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			868,
-			1270,
-			225,
-			166
+			1503,
+			221,
+			123,
+			77
 		},
-		alias = {
-			"Blaze_tren_0064"
-		}
+		alias = {},
 	},
-	Blaze_tren_0065 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0347"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			39,
-			204,
-			37,
-			314
+			111,
+            157,
+            108,
+            214
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			868,
-			740,
-			232,
-			170
+			1634,
+			221,
+			116,
+			77
 		},
-		alias = {
-			"Blaze_tren_0066"
-		}
+		alias = {},
 	},
-	Blaze_tren_0067 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0348"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			37,
-			199,
-			35,
-			314
+			111,
+            157,
+            108,
+            218
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			868,
-			406,
-			236,
-			175
+			285,
+			138,
+			116,
+			73
 		},
-		alias = {
-			"Blaze_tren_0068"
-		}
+		alias = {},
 	},
-	Blaze_tren_0069 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0349"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			308,
-			688
+			335,
+			448
 		},
 		trim = {
-			35,
-			195,
-			34,
-			314
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			600,
-			2603,
-			239,
-			179
-		},
-		alias = {
-			"Blaze_tren_0070"
-		}
-	},
-	Blaze_trendecal_0001 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			176,
-			132
-		},
-		trim = {
-			31,
-			22,
-			26,
-			30
-		},
-		a_size = {
-			4096,
-			2800
-		},
-		f_quad = {
-			3731,
-			1635,
 			119,
-			80
-		},
-		alias = {
-			"Blaze_trendecal_0003"
-		}
-	},
-	Blaze_trendecal_0002 = {
-		a_name = "go_hero_robot-1.dds",
-		size = {
-			176,
-			132
-		},
-		trim = {
-			23,
-			22,
-			34,
-			30
+            157,
+            109,
+            218
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			3856,
-			1635,
-			119,
-			80
+			409,
+			138,
+			107,
+			73
 		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_trendecal_0004 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0350"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			176,
-			132
+			335,
+			448
 		},
 		trim = {
-			26,
-			22,
-			31,
-			30
+			119,
+            157,
+            109,
+            218
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			2972,
-			2327,
-			119,
-			80
+			409,
+			138,
+			107,
+			73
 		},
-		alias = {}
+		alias = {},
 	},
-	Blaze_trendecal_0005 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_pibe_0351"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			176,
-			132
+			335,
+			448
+		},
+		trim = {
+			120,
+            157,
+            109,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			524,
+			138,
+			106,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0352"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			120,
+            157,
+            109,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			524,
+			138,
+			106,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0353"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            159,
+            109,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2282,
+			59,
+			111,
+			71
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0354"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            159,
+            109,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2282,
+			59,
+			111,
+			71
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0355"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			106,
+            151,
+            107,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			395,
+			308,
+			122,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0356"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			106,
+            151,
+            107,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			395,
+			308,
+			122,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0357"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			121,
+            129,
+            122,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			114,
+			910,
+			92,
+			101
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0358"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            145,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1419,
+			399,
+			104,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0359"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			115,
+            145,
+            116,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1419,
+			399,
+			104,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0360"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            161,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1958,
+			59,
+			99,
+			70
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0361"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			117,
+            161,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1958,
+			59,
+			99,
+			70
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0362"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			122,
+            107,
+            126,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1761,
+			1383,
+			87,
+			123
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0363"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			122,
+            107,
+            126,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1761,
+			1383,
+			87,
+			123
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0364"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            110,
+            104,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			824,
+			1383,
+			128,
+			120
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0365"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            110,
+            104,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			824,
+			1383,
+			128,
+			120
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0366"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			107,
+            117,
+            108,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			282,
+			1257,
+			120,
+			112
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0367"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			107,
+            117,
+            108,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			282,
+			1257,
+			120,
+			112
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0368"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			107,
+            118,
+            107,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2318,
+			1138,
+			121,
+			111
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0369"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			107,
+            118,
+            107,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2318,
+			1138,
+			121,
+			111
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0370"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			105,
+            118,
+            106,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1257,
+			124,
+			111
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0371"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			105,
+            118,
+            106,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1257,
+			124,
+			111
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0372"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            130,
+            104,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2125,
+			801,
+			128,
+			100
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0373"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            130,
+            104,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2125,
+			801,
+			128,
+			100
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0374"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			77,
+            136,
+            77,
+            194
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1953,
+			1257,
+			181,
+			118
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0375"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			77,
+            136,
+            77,
+            194
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2142,
+			1257,
+			181,
+			118
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0376"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			77,
+            137,
+            74,
+            193
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2331,
+			1257,
+			184,
+			118
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0377"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			77,
+            137,
+            74,
+            193
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2331,
+			1257,
+			184,
+			118
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0378"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			87,
+            132,
+            84,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1856,
+			1383,
+			164,
+			124
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0379"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			87,
+            132,
+            84,
+            192
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1856,
+			1383,
+			164,
+			124
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0380"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			84,
+            124,
+            81,
+            189
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1795,
+			170,
+			135
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0381"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			84,
+            124,
+            81,
+            189
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1795,
+			170,
+			135
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0382"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			104,
+            121,
+            106,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			608,
+			1138,
+			125,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0383"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			104,
+            121,
+            106,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			608,
+			1138,
+			125,
+			108
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0384"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			104,
+            122,
+            104,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1291,
+			1023,
+			127,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0385"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			104,
+            122,
+            104,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1291,
+			1023,
+			127,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0386"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			104,
+            123,
+            105,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			502,
+			1023,
+			126,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0387"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			104,
+            123,
+            105,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			502,
+			1023,
+			126,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0388"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			105,
+            122,
+            105,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1426,
+			1023,
+			125,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0389"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			105,
+            122,
+            105,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1426,
+			1023,
+			125,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0390"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            123,
+            104,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			636,
+			1023,
+			128,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0391"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			103,
+            123,
+            104,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			636,
+			1023,
+			128,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0392"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			102,
+            127,
+            101,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			314,
+			910,
+			132,
+			102
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0393"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			102,
+            127,
+            101,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			314,
+			910,
+			132,
+			102
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0394"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			102,
+            134,
+            102,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1735,
+			696,
+			131,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0395"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			102,
+            134,
+            102,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1735,
+			696,
+			131,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0396"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			106,
+            146,
+            105,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			627,
+			399,
+			124,
+			84
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0397"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			106,
+            146,
+            105,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			627,
+			399,
+			124,
+			84
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0398"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			110,
+            134,
+            111,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1874,
+			696,
+			114,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0399"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			110,
+            134,
+            111,
+            218
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1874,
+			696,
+			114,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0400"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			118,
+            125,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			772,
+			1023,
+			98,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_pibe_0401"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			335,
+			448
+		},
+		trim = {
+			118,
+            125,
+            119,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			772,
+			1023,
+			98,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
 		},
 		trim = {
 			30,
-			22,
-			27,
-			30
+            32,
+            32,
+            106
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			2972,
-			2413,
-			119,
-			80
+			143,
+			399,
+			99,
+			83
 		},
-		alias = {
-			"Blaze_trendecal_0006"
-		}
+		alias = {},
 	},
-	Blaze_trendecal_0007 = {
-		a_name = "go_hero_robot-1.dds",
+	["Blaze_skill1humito_0002"] = {
+		a_name = "go_hero_robot-1.png",
 		size = {
-			176,
-			132
+			161,
+			221
+		},
+		trim = {
+			36,
+            32,
+            26,
+            106
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			250,
+			399,
+			99,
+			83
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			27,
+            30,
+            26,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1531,
+			399,
+			108,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			31,
+            30,
+            22,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1647,
+			399,
+			108,
+			86
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            28,
+            23,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			495,
+			115,
+			88
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            28,
+            23,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			495,
+			115,
+			88
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            26,
+            18,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1056,
+			495,
+			120,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            26,
+            18,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1056,
+			495,
+			120,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            25,
+            15,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			594,
+			123,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            25,
+            15,
+            105
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			594,
+			123,
+			91
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0011"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            21,
+            15,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1301,
+			594,
+			123,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0012"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            21,
+            15,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1301,
+			594,
+			123,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0013"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            19,
+            13,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			985,
+			696,
+			125,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0014"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			23,
+            19,
+            13,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			985,
+			696,
+			125,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0015"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			21,
+            17,
+            13,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			379,
+			801,
+			127,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0016"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			21,
+            17,
+            13,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			379,
+			801,
+			127,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0017"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			21,
+            15,
+            14,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1516,
+			801,
+			126,
+			99
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0018"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			21,
+            15,
+            14,
+            107
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1516,
+			801,
+			126,
+			99
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0019"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			31,
+            15,
+            27,
+            118
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			127,
+			495,
+			103,
+			88
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0020"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			31,
+            15,
+            27,
+            118
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			127,
+			495,
+			103,
+			88
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0021"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			30,
+            13,
+            27,
+            119
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			487,
+			495,
+			104,
+			89
+		},
+		alias = {},
+	},
+	["Blaze_skill1humito_0022"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			161,
+			221
+		},
+		trim = {
+			30,
+            13,
+            27,
+            119
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			487,
+			495,
+			104,
+			89
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
 		},
 		trim = {
 			28,
-			22,
-			29,
-			30
+            27,
+            18,
+            16
 		},
 		a_size = {
-			4096,
-			2800
+			2550,
+			2550
 		},
 		f_quad = {
-			2972,
-			2499,
-			119,
+			1184,
+			495,
+			138,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
+		},
+		trim = {
+			22,
+            27,
+            24,
+            16
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1330,
+			495,
+			138,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
+		},
+		trim = {
+			28,
+            27,
+            18,
+            16
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1184,
+			495,
+			138,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
+		},
+		trim = {
+			24,
+            27,
+            22,
+            16
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1476,
+			495,
+			138,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
+		},
+		trim = {
+			27,
+            27,
+            20,
+            16
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1622,
+			495,
+			137,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
+		},
+		trim = {
+			27,
+            27,
+            20,
+            16
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1622,
+			495,
+			137,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
+		},
+		trim = {
+			25,
+            27,
+            22,
+            16
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1767,
+			495,
+			137,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill1y3decal_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			184,
+			133
+		},
+		trim = {
+			25,
+            27,
+            22,
+            16
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1767,
+			495,
+			137,
+			90
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            30,
+            29,
+            79
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			598,
+			594,
+			80,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            30,
+            29,
+            79
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			598,
+			594,
+			80,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            30,
+            27,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1432,
+			594,
+			82,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            30,
+            27,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1432,
+			594,
+			82,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			32,
+            30,
+            27,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1522,
+			594,
+			83,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			32,
+            30,
+            27,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1522,
+			594,
+			83,
+			93
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			32,
+            27,
+            27,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1996,
+			696,
+			83,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			32,
+            27,
+            27,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1996,
+			696,
+			83,
+			96
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            24,
+            26,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1650,
+			801,
+			83,
+			99
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            24,
+            26,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1650,
+			801,
+			83,
+			99
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0011"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            28,
+            33,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1118,
+			696,
+			76,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0012"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            28,
+            33,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1118,
+			696,
+			76,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0013"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			32,
+            27,
+            32,
+            79
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1202,
+			696,
+			78,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0014"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			32,
+            27,
+            32,
+            79
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1202,
+			696,
+			78,
+			95
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0015"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            30,
+            31,
+            79
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			686,
+			594,
+			78,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0016"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            30,
+            31,
+            79
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			686,
+			594,
+			78,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0017"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            31,
+            30,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			772,
+			594,
+			79,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0018"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			33,
+            31,
+            30,
+            78
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			772,
+			594,
+			79,
+			92
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0019"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			34,
+            32,
+            29,
+            80
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			599,
+			495,
+			79,
+			89
+		},
+		alias = {},
+	},
+	["Blaze_skill2explosion_0020"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			201
+		},
+		trim = {
+			42,
+            36,
+            28,
+            80
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1034,
+			399,
+			72,
+			85
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			30,
+            22,
+            31,
+            75
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2065,
+			59,
+			81,
+			70
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			30,
+            22,
+            31,
+            75
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2065,
+			59,
+			81,
+			70
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			29,
+            21,
+            30,
+            75
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2401,
+			59,
+			83,
+			71
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			29,
+            21,
+            30,
+            75
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2401,
+			59,
+			83,
+			71
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            21,
+            30,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			638,
+			138,
+			84,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            21,
+            30,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			638,
+			138,
+			84,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            20,
+            30,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1435,
+			138,
+			84,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            20,
+            30,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1435,
+			138,
+			84,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            21,
+            29,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			730,
+			138,
+			85,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            21,
+            29,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			730,
+			138,
+			85,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0011"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            20,
+            28,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1527,
+			138,
+			86,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0012"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			28,
+            20,
+            28,
+            73
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1527,
+			138,
+			86,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0013"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1621,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0014"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1621,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0015"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1717,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0016"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1717,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0017"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1813,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0018"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1813,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0019"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1909,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0020"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1909,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0021"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2005,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0022"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2005,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0023"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2101,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0024"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2101,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0025"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2197,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0026"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            27,
+            72
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2197,
+			138,
+			88,
+			74
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0027"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2293,
+			138,
+			89,
+			75
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0028"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            21,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2293,
+			138,
+			89,
+			75
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0029"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			152,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0030"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			152,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0031"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			248,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0032"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			344,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0033"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			344,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0034"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			440,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0035"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			440,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0036"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			536,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0037"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			536,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0038"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			632,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0039"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			632,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0040"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            20,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			729,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0041"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            20,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			729,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0042"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            20,
+            28,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1758,
+			221,
+			89,
+			77
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0043"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            20,
+            28,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1758,
+			221,
+			89,
+			77
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0044"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            20,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			825,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0045"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            20,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			825,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0046"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            19,
+            28,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2048,
+			221,
+			89,
+			78
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0047"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            19,
+            28,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2048,
+			221,
+			89,
+			78
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0048"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            18,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2145,
+			221,
+			89,
+			78
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0049"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            18,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2145,
+			221,
+			89,
+			78
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0050"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            18,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			525,
+			308,
+			90,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0051"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            18,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			525,
+			308,
+			90,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0052"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			721,
+			308,
+			90,
 			80
 		},
-		alias = {}
+		alias = {},
+	},
+	["Blaze_skill2humo_0053"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			721,
+			308,
+			90,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0054"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            26,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			819,
+			308,
+			91,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0055"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            26,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			819,
+			308,
+			91,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0056"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            25,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			918,
+			308,
+			92,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0057"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            25,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			918,
+			308,
+			92,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0058"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            25,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1018,
+			308,
+			92,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0059"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            25,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1018,
+			308,
+			92,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0060"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            25,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1118,
+			308,
+			92,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0061"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            25,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1118,
+			308,
+			92,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0062"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            26,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1218,
+			308,
+			91,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0063"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            26,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1218,
+			308,
+			91,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0064"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            26,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1317,
+			308,
+			91,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0065"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            17,
+            26,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1317,
+			308,
+			91,
+			80
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0066"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            18,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			623,
+			308,
+			90,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0067"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			25,
+            18,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			623,
+			308,
+			90,
+			79
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0068"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            19,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2242,
+			221,
+			89,
+			78
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0069"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            19,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2242,
+			221,
+			89,
+			78
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0070"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            19,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1855,
+			221,
+			89,
+			77
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0071"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            19,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1855,
+			221,
+			89,
+			77
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0072"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1952,
+			221,
+			88,
+			77
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0073"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1952,
+			221,
+			88,
+			77
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0074"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			922,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0075"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			922,
+			221,
+			88,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0076"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1018,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0077"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			26,
+            20,
+            27,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1018,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0078"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1115,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0079"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1115,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0080"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1212,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0081"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1212,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0082"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1309,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0083"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1309,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0084"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1406,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humo_0085"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			142,
+			167
+		},
+		trim = {
+			27,
+            20,
+            26,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1406,
+			221,
+			89,
+			76
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			786,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			786,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			866,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			866,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			946,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			946,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1026,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1026,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1106,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1106,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0011"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1186,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0012"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1186,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0013"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1266,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0014"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1266,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0015"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1346,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0016"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1346,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0017"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1426,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0018"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1426,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0019"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1506,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0020"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1506,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0021"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1586,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0022"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1586,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0023"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1666,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0024"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1666,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0025"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1746,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0026"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1746,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0027"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1826,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0028"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1826,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0029"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1906,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0030"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1906,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0031"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1986,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0032"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1986,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0033"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2066,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0034"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2066,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0035"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2146,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0036"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2146,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0037"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2226,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0038"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2226,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0039"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2306,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2humostatus_0040"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			107,
+			82
+		},
+		trim = {
+			17,
+            15,
+            18,
+            22
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2306,
+			4,
+			72,
+			45
+		},
+		alias = {},
+	},
+	["Blaze_skill2proyectil"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			65,
+			62
+		},
+		trim = {
+			20,
+            21,
+            21,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			4,
+			24,
+			21
+		},
+		alias = {},
+	},
+	["Blaze_skill3decal"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			156,
+			93
+		},
+		trim = {
+			22,
+            21,
+            25,
+            21
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			59,
+			109,
+			51
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			31,
+            28,
+            30,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			694,
+			4,
+			38,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			31,
+            28,
+            30,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			694,
+			4,
+			38,
+			43
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			33,
+            26,
+            28,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2386,
+			4,
+			38,
+			46
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			33,
+            26,
+            28,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2386,
+			4,
+			38,
+			46
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			33,
+            25,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2432,
+			4,
+			39,
+			47
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			33,
+            25,
+            27,
+            70
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2432,
+			4,
+			39,
+			47
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			33,
+            27,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			740,
+			4,
+			38,
+			44
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			33,
+            27,
+            28,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			740,
+			4,
+			38,
+			44
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			32,
+            31,
+            29,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			74,
+			4,
+			38,
+			40
+		},
+		alias = {},
+	},
+	["Blaze_skill3status_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			99,
+			142
+		},
+		trim = {
+			32,
+            31,
+            29,
+            71
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			74,
+			4,
+			38,
+			40
+		},
+		alias = {},
+	},
+	["Blaze_tren_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			68,
+            146,
+            70,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			943,
+			1653,
+			80,
+			131
+		},
+		alias = {},
+	},
+	["Blaze_tren_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			68,
+            146,
+            70,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1031,
+			1653,
+			80,
+			131
+		},
+		alias = {},
+	},
+	["Blaze_tren_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			69,
+            142,
+            70,
+            212
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2365,
+			1653,
+			79,
+			134
+		},
+		alias = {},
+	},
+	["Blaze_tren_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			69,
+            142,
+            70,
+            212
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2452,
+			1653,
+			79,
+			134
+		},
+		alias = {},
+	},
+	["Blaze_tren_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			68,
+            141,
+            69,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1934,
+			1653,
+			81,
+			133
+		},
+		alias = {},
+	},
+	["Blaze_tren_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			68,
+            141,
+            70,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2023,
+			1653,
+			80,
+			133
+		},
+		alias = {},
+	},
+	["Blaze_tren_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			69,
+            141,
+            70,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2111,
+			1653,
+			79,
+			133
+		},
+		alias = {},
+	},
+	["Blaze_tren_0008"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			69,
+            148,
+            70,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			628,
+			1516,
+			79,
+			126
+		},
+		alias = {},
+	},
+	["Blaze_tren_0009"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			28,
+            162,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			410,
+			1257,
+			133,
+			112
+		},
+		alias = {},
+	},
+	["Blaze_tren_0010"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			28,
+            162,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			551,
+			1257,
+			133,
+			112
+		},
+		alias = {},
+	},
+	["Blaze_tren_0011"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			26,
+            162,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			692,
+			1257,
+			135,
+			112
+		},
+		alias = {},
+	},
+	["Blaze_tren_0012"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			26,
+            170,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1469,
+			910,
+			135,
+			104
+		},
+		alias = {},
+	},
+	["Blaze_tren_0013"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			26,
+            165,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1329,
+			1138,
+			135,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_tren_0014"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			26,
+            165,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1472,
+			1138,
+			135,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_tren_0015"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			26,
+            162,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			835,
+			1257,
+			135,
+			112
+		},
+		alias = {},
+	},
+	["Blaze_tren_0016"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			31,
+            162,
+            57,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			978,
+			1257,
+			130,
+			112
+		},
+		alias = {},
+	},
+	["Blaze_tren_0017"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			25,
+            162,
+            55,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1559,
+			1023,
+			138,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0018"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			25,
+            162,
+            55,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1705,
+			1023,
+			138,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0019"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			22,
+            162,
+            56,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1851,
+			1023,
+			140,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0020"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			22,
+            170,
+            56,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1741,
+			801,
+			140,
+			99
+		},
+		alias = {},
+	},
+	["Blaze_tren_0021"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			21,
+            165,
+            56,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1612,
+			910,
+			141,
+			104
+		},
+		alias = {},
+	},
+	["Blaze_tren_0022"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			21,
+            165,
+            57,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1761,
+			910,
+			140,
+			104
+		},
+		alias = {},
+	},
+	["Blaze_tren_0023"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			21,
+            162,
+            56,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1999,
+			1023,
+			141,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0024"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			34,
+            162,
+            56,
+            219
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2148,
+			1023,
+			128,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0025"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			22,
+            170,
+            62,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1615,
+			1138,
+			134,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_tren_0026"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			22,
+            170,
+            62,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1757,
+			1138,
+			134,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_tren_0027"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			19,
+            170,
+            61,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1899,
+			1138,
+			138,
+			109
+		},
+		alias = {},
+	},
+	["Blaze_tren_0028"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			19,
+            170,
+            61,
+            207
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			136,
+			1257,
+			138,
+			111
+		},
+		alias = {},
+	},
+	["Blaze_tren_0029"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			19,
+            169,
+            60,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1909,
+			910,
+			139,
+			104
+		},
+		alias = {},
+	},
+	["Blaze_tren_0030"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			19,
+            169,
+            60,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2056,
+			910,
+			139,
+			104
+		},
+		alias = {},
+	},
+	["Blaze_tren_0031"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			19,
+            170,
+            60,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			776,
+			910,
+			139,
+			103
+		},
+		alias = {},
+	},
+	["Blaze_tren_0032"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			24,
+            170,
+            60,
+            215
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			923,
+			910,
+			134,
+			103
+		},
+		alias = {},
+	},
+	["Blaze_tren_0033"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			55,
+            172,
+            58,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2284,
+			1023,
+			105,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0034"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			55,
+            172,
+            58,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2397,
+			1023,
+			105,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0035"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			55,
+            173,
+            57,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			878,
+			1023,
+			106,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_tren_0036"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			64,
+            173,
+            57,
+            209
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			992,
+			1023,
+			97,
+			106
+		},
+		alias = {},
+	},
+	["Blaze_tren_0037"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			58,
+            174,
+            56,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2203,
+			910,
+			104,
+			104
+		},
+		alias = {},
+	},
+	["Blaze_tren_0038"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			58,
+            174,
+            56,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2315,
+			910,
+			104,
+			104
+		},
+		alias = {},
+	},
+	["Blaze_tren_0039"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			55,
+            173,
+            56,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2427,
+			910,
+			107,
+			105
+		},
+		alias = {},
+	},
+	["Blaze_tren_0040"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			55,
+            173,
+            55,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1023,
+			108,
+			105
+		},
+		alias = {},
+	},
+	["Blaze_tren_0041"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			75,
+            11,
+            77,
+            222
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1921,
+			2291,
+			66,
+			255
+		},
+		alias = {},
+	},
+	["Blaze_tren_0042"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			75,
+            68,
+            73,
+            222
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1306,
+			2291,
+			70,
+			198
+		},
+		alias = {},
+	},
+	["Blaze_tren_0043"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			75,
+            116,
+            77,
+            222
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			946,
+			1944,
+			66,
+			150
+		},
+		alias = {},
+	},
+	["Blaze_tren_0044"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			56,
+            164,
+            65,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1138,
+			97,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0045"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			56,
+            164,
+            65,
+            217
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			1138,
+			97,
+			107
+		},
+		alias = {},
+	},
+	["Blaze_tren_0046"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			48,
+            199,
+            50,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2390,
+			138,
+			120,
+			75
+		},
+		alias = {},
+	},
+	["Blaze_tren_0047"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			48,
+            199,
+            50,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2390,
+			138,
+			120,
+			75
+		},
+		alias = {},
+	},
+	["Blaze_tren_0048"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			43,
+            201,
+            45,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			823,
+			138,
+			130,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_tren_0049"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			43,
+            201,
+            45,
+            214
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			823,
+			138,
+			130,
+			73
+		},
+		alias = {},
+	},
+	["Blaze_tren_0050"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			38,
+            201,
+            40,
+            212
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			221,
+			140,
+			75
+		},
+		alias = {},
+	},
+	["Blaze_tren_0051"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			38,
+            201,
+            40,
+            212
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			4,
+			221,
+			140,
+			75
+		},
+		alias = {},
+	},
+	["Blaze_tren_0052"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			33,
+            180,
+            36,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			514,
+			801,
+			149,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_tren_0053"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			33,
+            180,
+            36,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			514,
+			801,
+			149,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_tren_0054"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			33,
+            180,
+            36,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			514,
+			801,
+			149,
+			97
+		},
+		alias = {},
+	},
+	["Blaze_tren_0055"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			29,
+            156,
+            32,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1596,
+			1383,
+			157,
+			122
+		},
+		alias = {},
+	},
+	["Blaze_tren_0056"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			29,
+            156,
+            32,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1596,
+			1383,
+			157,
+			122
+		},
+		alias = {},
+	},
+	["Blaze_tren_0057"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			27,
+            153,
+            30,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			459,
+			1516,
+			161,
+			125
+		},
+		alias = {},
+	},
+	["Blaze_tren_0058"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			27,
+            153,
+            30,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			459,
+			1516,
+			161,
+			125
+		},
+		alias = {},
+	},
+	["Blaze_tren_0059"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			27,
+            150,
+            29,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1190,
+			1516,
+			162,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_tren_0060"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			27,
+            150,
+            29,
+            211
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1190,
+			1516,
+			162,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_tren_0061"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			30,
+            147,
+            30,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1119,
+			1653,
+			158,
+			131
+		},
+		alias = {},
+	},
+	["Blaze_tren_0062"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			30,
+            147,
+            30,
+            210
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1119,
+			1653,
+			158,
+			131
+		},
+		alias = {},
+	},
+	["Blaze_tren_0063"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			28,
+            144,
+            27,
+            220
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2028,
+			1383,
+			163,
+			124
+		},
+		alias = {},
+	},
+	["Blaze_tren_0064"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			28,
+            144,
+            27,
+            220
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			2028,
+			1383,
+			163,
+			124
+		},
+		alias = {},
+	},
+	["Blaze_tren_0065"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			26,
+            141,
+            25,
+            220
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1360,
+			1516,
+			167,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_tren_0066"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			26,
+            141,
+            25,
+            220
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			1360,
+			1516,
+			167,
+			127
+		},
+		alias = {},
+	},
+	["Blaze_tren_0067"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			25,
+            138,
+            23,
+            221
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			268,
+			1653,
+			170,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_tren_0068"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			25,
+            138,
+            23,
+            221
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			268,
+			1653,
+			170,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_tren_0069"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			23,
+            137,
+            24,
+            222
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			446,
+			1653,
+			171,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_tren_0070"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			218,
+			488
+		},
+		trim = {
+			23,
+            137,
+            24,
+            222
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			446,
+			1653,
+			171,
+			129
+		},
+		alias = {},
+	},
+	["Blaze_trendecal_0001"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			124,
+			93
+		},
+		trim = {
+			20,
+            14,
+            18,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			209,
+			59,
+			86,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_trendecal_0002"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			124,
+			93
+		},
+		trim = {
+			15,
+            14,
+            23,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			303,
+			59,
+			86,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_trendecal_0003"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			124,
+			93
+		},
+		trim = {
+			20,
+            14,
+            18,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			209,
+			59,
+			86,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_trendecal_0004"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			124,
+			93
+		},
+		trim = {
+			17,
+            14,
+            21,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			397,
+			59,
+			86,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_trendecal_0005"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			124,
+			93
+		},
+		trim = {
+			19,
+            14,
+            19,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			491,
+			59,
+			86,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_trendecal_0006"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			124,
+			93
+		},
+		trim = {
+			19,
+            14,
+            19,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			491,
+			59,
+			86,
+			59
+		},
+		alias = {},
+	},
+	["Blaze_trendecal_0007"] = {
+		a_name = "go_hero_robot-1.png",
+		size = {
+			124,
+			93
+		},
+		trim = {
+			19,
+            14,
+            19,
+            20
+		},
+		a_size = {
+			2550,
+			2550
+		},
+		f_quad = {
+			585,
+			59,
+			86,
+			59
+		},
+		alias = {},
 	}
 }

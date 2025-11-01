@@ -1537,7 +1537,7 @@ tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_front_i
 tt = RT("fx_tower_necromancer_rider_spawn_back", "fx")
 tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_back_idle"
 
-tt = RT("tower_necromancer_lvl4", "tower5")
+tt = RT("tower_necromancer_lvl4", "tower")
 AC(tt, "attacks", "tower_upgrade_persistent_data", "tween", "powers")
 tt.tower.type = "necromancer_lvl4"
 tt.tower.level = 1
@@ -1697,7 +1697,6 @@ tt.is_golem = false
 tt.patrol_pos_offset = vec_2(15, 10)
 tt.patrol_min_cd = 5
 tt.patrol_max_cd = 10
-tt.is_kr5 = true
 
 tt = RT("soldier_tower_necromancer_skeleton_golem_lvl4", "soldier_tower_necromancer_skeleton_lvl4")
 tt.health.armor = b.skeleton_golem.armor[4]
@@ -1877,7 +1876,6 @@ tt.main_script.remove = scripts.mod_track_target.remove
 tt = E:register_t("tower_ray_lvl4", "tower")
 local b = balance.towers.ray
 E:add_comps(tt, "attacks", "vis", "tween", "powers")
-tt.is_kr5 = true
 tt.tower.type = "ray"
 tt.info.enc_icon = 15
 tt.info.i18n_key = "TOWER_RAY_4"
@@ -2133,7 +2131,6 @@ tt.tween.props[prop_id].interp = "sine"
 
 tt = E:register_t("enemy_tower_ray_sheep", "enemy")
 local b = balance.towers.ray.skill_sheep.sheep
-tt.is_kr5 = true
 tt.enemy.gold = b.gold
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
@@ -2408,7 +2405,7 @@ for i = 2, 9 do
 end
 
 tt.render.sprites[10] = E:clone_c("sprite")
-tt.render.sprites[10].prefix = "elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1"
+tt.render.sprites[10].prefix = "elven_stargazers_tower_ray_start_lvl4"
 tt.render.sprites[10].name = "start"
 tt.render.sprites[10].hidden = true
 tt.render.sprites[10].z = Z_BULLETS + 1
