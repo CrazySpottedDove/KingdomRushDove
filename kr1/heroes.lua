@@ -7433,7 +7433,7 @@ local function heroes()
     tt.sound_events.insert = "ElvesHeroVeznanDarkPact"
     tt.vis_bans = bor(F_BOSS)
     tt.vis_flags = bor(F_MOD, F_STUN)
-        
+
     tt = RT("soldier_veznan_demon", "soldier_militia")
     AC(tt, "reinforcement", "ranged", "nav_grid")
     tt.controable = true
@@ -10154,7 +10154,7 @@ local function heroes()
     tt = RT("soldier_hero_hunter_ultimate", "soldier_militia")
     AC(tt, "nav_grid", "ranged", "reinforcement", "tween")
     tt.controable = true
-    tt.controable_other = true 
+    tt.controable_other = true
     b = balance.heroes.hero_hunter
     tt.health_bar.offset = vec_2(0, 50)
     tt.info.i18n_key = "HERO_HUNTER_ULTIMATE_ENTITY"
@@ -10205,8 +10205,6 @@ local function heroes()
     tt.reinforcement.fade_out = nil
     tt.ui.click_rect = r(-20, -5, 40, 50)
     tt.distance_to_revive = b.ultimate.distance_to_revive
-
-    tt = RT("hero", "hero") 
 
     -- 安雅
     tt = RT("hero_hunter", "hero")
@@ -10715,7 +10713,7 @@ local function heroes()
 
     tt = RT("soldier_hero_space_elf_astral_reflection", "soldier_militia")
     AC(tt, "melee", "ranged", "reinforcement", "tween", "transfer", "timed_attacks")
-    b = balance.heroes.hero_space_elf 
+    b = balance.heroes.hero_space_elf
     tt.info.i18n_key = "HERO_SPACE_ELF_ASTRAL_REFLECTION_ENTITY"
     tt.info.enc_icon = 12
     tt.info.portrait = "kr5_info_portraits_soldiers_0037"
@@ -11253,7 +11251,7 @@ local function heroes()
 
     tt = RT("hero_raelyn_ultimate_entity", "soldier_militia")
     AC(tt, "melee", "nav_grid", "reinforcement", "tween")
-    b = balance.heroes.hero_raelyn 
+    b = balance.heroes.hero_raelyn
     tt.controable = true
     tt.controable_other = true
     tt.health_bar.offset = vec_2(0, 50)
@@ -12140,7 +12138,7 @@ local function heroes()
     tt = RT("soldier_hero_witch_cat", "soldier_militia")
     b = balance.heroes.hero_witch
     AC(tt, "reinforcement", "tween")
-    tt.health.armor = b.skill_soldiers.soldier.armor 
+    tt.health.armor = b.skill_soldiers.soldier.armor
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
     tt.info.fn = scripts.soldier_barrack.get_info
@@ -12177,7 +12175,7 @@ local function heroes()
 
     tt = RT("soldier_hero_witch_decoy", "soldier_militia")
     b = balance.heroes.hero_witch
-    AC(tt, "reinforcement", "tween", "death_spawns") 
+    AC(tt, "reinforcement", "tween", "death_spawns")
     tt.health.armor = b.disengage.decoy.armor
     tt.health.hp_max = nil
     tt.health_bar.offset = vec_2(0, 30)
