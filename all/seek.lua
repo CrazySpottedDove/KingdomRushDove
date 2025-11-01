@@ -1042,8 +1042,8 @@ function seek.find_biggest_enemy_in_range_filter_off(origin, range, flags, bans)
                 local entity = entities[array[i]]
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
-                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and entity.hp > max_hp then
-                    max_hp = entity.hp
+                if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and entity.health.hp > max_hp then
+                    max_hp = entity.health.hp
                     biggest_enemy = entity
                 end
             end
@@ -1077,8 +1077,8 @@ function seek.find_biggest_enemy_in_range_filter_on(origin, range, flags, bans, 
                 local dx = entity.pos.x - x
                 local dy = (entity.pos.y - y) * _aspect_inv
                 if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and
-                    filter_fn(entity, origin) and entity.hp > max_hp then
-                    max_hp = entity.hp
+                    filter_fn(entity, origin) and entity.health.hp > max_hp then
+                    max_hp = entity.health.hp
                     biggest_enemy = entity
                 end
             end

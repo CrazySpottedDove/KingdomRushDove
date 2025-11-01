@@ -2789,6 +2789,7 @@ function sys.spatial_index:init(store)
     package.loaded["spatial_index"] = nil
     store.enemy_spatial_index = require("spatial_index")
     store.enemy_spatial_index.set_entities(store.enemies)
+    store.enemy_spatial_index.gc_locked(store)
     local seek = require("seek")
     seek.set_id_arrays(store.enemy_spatial_index.get_id_arrays())
     seek.set_entities(store.enemies)
@@ -2912,7 +2913,6 @@ function sys.last_hook:on_remove(e, d)
     if e.enemy then
         d.enemies[e.id] = nil -- 优化分类索引
         d.enemy_count = d.enemy_count - 1
-        print(e.id .. "removed from enemies")
     elseif e.soldier then
         d.soldiers[e.id] = nil
         d.dead_soldier_count = d.dead_soldier_count + 1

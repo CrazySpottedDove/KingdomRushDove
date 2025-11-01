@@ -3028,7 +3028,7 @@ function scripts.missile.update(this, store, script)
         local ref_pos = target and target.pos or this.pos
 
         -- target = U.find_foremost_enemy(store, ref_pos, 0, b.retarget_range, false, b.vis_flags)
-        target = U.find_first_enemy(store, ref_pos, 0, b.retarget_range, b.vis_flags)
+        target = U.find_first_enemy(store, ref_pos, 0, b.retarget_range, b.vis_flags, F_NONE)
     end
 
     -- 找到了目标。就更新目标位置
