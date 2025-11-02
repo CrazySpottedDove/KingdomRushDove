@@ -2256,6 +2256,39 @@ local function get_value(obj, path)
     return val
 end
 
+function U.dynamic_format(tbl, s)
+    local i, f
+
+    if not s then
+        return s
+    end
+
+    repeat
+        i = string.find(s, "%$")
+
+        if i then
+            f = string.find(s, "%$", i + 1)
+
+            if f then
+                log.paranoid("index i " .. i .. " end " .. f)
+
+                local p = string.sub(s, i + 1, f - 2)
+                local v = get_value(tbl, p)
+
+                if not v then
+                    v = ""
+                elseif string.sub(s, f + 1, f + 1) == "%" then
+                    v = v * 100
+                end
+
+                s = string.sub(s, 1, i - 2) .. v .. string.sub(s, f + 1)
+            end
+        end
+    until not i or not f
+
+    return s
+end
+
 local b = require("kr1.data.balance")
 function U.balance_format(s)
     local i, f

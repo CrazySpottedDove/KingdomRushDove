@@ -7,12 +7,11 @@ local BC = {
 	0
 }
 local W, H = 920, 752
--- local W, H = 1420, 1128
-local scale = 1.4
-local function vscale(x, y)
+
+local function v(x, y)
 	return {
-		x = x * scale,
-		y = y * scale
+		x = x,
+		y = y
 	}
 end
 
@@ -41,7 +40,7 @@ local hero_room_view = {
 			size = v(W, H),
 			anchor = v(W * 0.5, H * 0.5),
 			pos = v(960, 540),
-			scale = vscale(1, 1),
+			scale = v(1, 1),
 			children = {
 				{
 					text_key = "HERO ROOM",
@@ -1073,6 +1072,7 @@ local hero_room_view = {
 				{
 					class = "KImageView",
 					image_name = "heroroom_descriptionBox",
+                    id = "hero_room_description_box",
 					pos = v(89, 432),
 					size = v(705, 240),
 					children = {
@@ -1106,8 +1106,6 @@ local hero_room_view = {
 							id = "skills_bio_desc",
 							fit_size = true,
 							font_name = "body",
-							-- font_name = "NotoSansCJKkr-Regular",
-							-- font_name = "taunts",
 							pos = v(47, 36),
 							size = v(330, 78),
 							line_height = ctx.cjk(0.85, 0.85, 1.2, 0.85),
@@ -1252,6 +1250,13 @@ local hero_room_view = {
 					pos = v(737, 698),
 					anchor = v(71.5, 35.5)
 				},
+                {
+					class = "GGDoneButton",
+					label_text_key = "切换",
+					id = "special_description_toggle_button",
+					pos = v(960-737, 698),
+					anchor = v(71.5, 35.5)
+				},
 				{
 					hover_image_name = "levelSelect_closeBtn_0002",
 					class = "KImageButton",
@@ -1265,19 +1270,5 @@ local hero_room_view = {
 		}
 	}
 }
-
--- local function recursively_scale(table, scale)
---     for _, child in pairs(table) do
---         if child.x then
---             child.x = child.x * scale
---             child.y = child.y * scale
---         end
---         if type(child) == "table" then
---             recursively_scale(child, scale)
---         end
---     end
--- end
-
--- recursively_scale(hero_room_view, 1.5)
 
 return hero_room_view
