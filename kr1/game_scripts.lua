@@ -458,7 +458,10 @@ function scripts.necromancer_aura.update(this, store, script)
     local last_ts = store.tick_ts
     local tower_skeletons_count = 0
     local skeletons = {}
-
+    local function filter_fn(v)
+        return v.health.dead and band(v.vis.bans, F_SKELETON) == 0 and band(v.health.last_damage_types, DAMAGE_EAT) == 0 and
+                                   store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time
+    end
     while true do
         local source = store.entities[this.aura.source_id]
 
@@ -482,11 +485,9 @@ function scripts.necromancer_aura.update(this, store, script)
             if max_spawns < 1 then
                 -- block empty
             else
-                local dead_enemies = U.find_enemies_in_range_filter_on(this.pos, source.attacks.range, F_SKELETON,
-                    F_NONE, function(v)
-                        return v.health.dead and band(v.health.last_damage_types, bor(DAMAGE_EAT)) == 0 and
-                                   store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time
-                    end)
+
+                local dead_enemies = U.find_enemies_in_range_filter_override(this.pos, source.attacks.range, filter_fn)
+
                 if dead_enemies then
                     dead_enemies = table.slice(dead_enemies, 1, max_spawns)
 

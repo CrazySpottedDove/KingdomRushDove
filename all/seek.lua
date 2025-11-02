@@ -1158,4 +1158,35 @@ function seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(ori
     return result[1], result
 end
 
+function seek.find_enemies_in_range_filter_override(origin, range, override_fn)
+    local x = origin.x
+    local y = origin.y
+    local min_col = max(1, _x_to_col(x - range))
+    local max_col = min(_cols, _x_to_col(x + range))
+    local b = range * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+    local count = 0
+    local index_base = (min_row - 1) * _cols - 1
+    local r_outer_sq = range * range
+    local result = {}
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = id_arrays[index_base + col]
+            local array = cell.array
+            for i = 0, cell.size - 1 do
+                local entity = entities[array[i]]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                if (dx * dx + dy * dy <= r_outer_sq) and override_fn(entity) then
+                    count = count + 1
+                    result[count] = entity
+                end
+            end
+        end
+        index_base = index_base + _cols
+    end
+    return result
+end
+
 return seek
