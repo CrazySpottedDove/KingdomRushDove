@@ -477,7 +477,7 @@ local function foundamental_towers()
     tt.idle_flip.chance = 0.4
     tt.idle_flip.cooldown = 5
     tt.info.fn = scripts.soldier_barrack.get_info
-    tt.info.portrait = "portraits_sc_0001"
+    tt.info.portrait = "info_portraits_soldiers_0001"
     tt.info.random_name_count = 25
     tt.info.random_name_format = "ELVES_SOLDIER_BARRACKS_%i_NAME"
     tt.main_script.insert = scripts.soldier_barrack.insert
@@ -517,7 +517,7 @@ local function foundamental_towers()
     tt.health.armor = 0.4
     tt.health.hp_max = 90
     tt.health_bar.offset = vec_2(0, 27)
-    tt.info.portrait = "portraits_sc_0002"
+    tt.info.portrait = "info_portraits_soldiers_0002"
     tt.melee.attacks[1].damage_max = 7
     tt.melee.attacks[1].damage_min = 3
     tt.ranged.attacks[1].animation = "ranged_attack"
@@ -534,7 +534,7 @@ local function foundamental_towers()
     tt.health.armor = 0.5
     tt.health.hp_max = 140
     tt.health_bar.offset = vec_2(0, 32)
-    tt.info.portrait = "portraits_sc_0003"
+    tt.info.portrait = "info_portraits_soldiers_0003"
     tt.melee.attacks[1].damage_max = 12
     tt.melee.attacks[1].damage_min = 8
     tt.ranged.attacks[1].bullet = "arrow_soldier_barrack_3"

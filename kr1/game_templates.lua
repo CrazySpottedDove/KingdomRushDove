@@ -2291,7 +2291,7 @@ tt = E:register_t("enemy_cannibal_volcano", "enemy")
 E:add_comps(tt, "melee", "tween")
 anchor_y = 0.15
 image_y = 100
-tt.info.portrait = IS_PHONE and "portraits_sc_0044" or "kr2_info_portraits_enemies_0027"
+tt.info.portrait = "kr2_info_portraits_enemies_0027"
 tt.enemy.gold = 10
 tt.enemy.lives_cost = 0
 tt.enemy.melee_slot = vec_2(24, 0)
