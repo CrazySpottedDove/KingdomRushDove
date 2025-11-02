@@ -5354,7 +5354,7 @@ function HeroRoomViewKR1:select_hero(name, silent)
     end
     storage:save_slot(screen_map.user_data)
 end
-local hero_room_special = require("strings.hero_room_special")
+
 function HeroRoomViewKR1:toggle_special_description()
     if self.special_list then
         self.back:remove_child(self.special_list)
@@ -5373,16 +5373,16 @@ function HeroRoomViewKR1:toggle_special_description()
         self.special_list = special_list
         self.back:add_child(special_list)
         -- 首先，做一个 special 列表，每一个项的字符串取 skills_spec_desc 的内容按，拆分
-
+        local hero_room_special = require("strings.hero_room_special")
         local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
 
         -- 添加一个用于显示描述的区域
-        local desc_area = GGLabel:new(V.v(500, 150))
-        desc_area.pos = v(370, 140)
+        local desc_area = GGLabel:new(V.v(700, 180))
+        desc_area.pos = v(500, 170)
         desc_area.anchor = v(desc_area.size.x / 2, desc_area.size.y / 2)
         desc_area.font_name = "body"
-        desc_area.font_size = 15
-        desc_area.line_height = CJK(0.85, 0.85, 1.2, 0.85)
+        desc_area.font_size = 17
+        desc_area.line_height = CJK(1, 1, 1.5, 1)
         desc_area.colors.text = {231, 225, 181, 255}
         desc_area.colors.background = {255, 255, 255, 0}
         desc_area.text_align = "left"
@@ -5418,10 +5418,11 @@ function HeroRoomViewKR1:toggle_special_description()
 end
 
 function HeroRoomViewKR1:show_special_description(special_name)
+    local hero_room_special = require("strings.hero_room_special")
     local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
 
     local special_text = special_map[special_name]
-    self.special_description_area.text = U.dynamic_format(E:get_template(self.hero_shown), special_text)
+    self.special_description_area.text = special_text
 end
 
 OptionsView = class("OptionsView", PopUpView)
