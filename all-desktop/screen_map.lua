@@ -5398,6 +5398,7 @@ function HeroRoomViewKR1:toggle_special_description()
         for _name, _ in pairs(special_map) do
             count = count + 1
         end
+        special_list.buttons = {}
         for name, text in pairs(special_map) do
             local spec_button = GGOptionsButton:new(name)
             spec_button.pos = v(-20, y_end - i * y_offset)
@@ -5407,10 +5408,33 @@ function HeroRoomViewKR1:toggle_special_description()
             function spec_button.on_click()
                 S:queue("GUIButtonCommon")
                 self:show_special_description(name)
+                spec_button.selected = true
+                spec_button:set_image(spec_button.click_image_name)
+                for _, b in pairs(special_list.buttons) do
+                    if b ~= spec_button and b.selected then
+                        b.selected = false
+                        b:set_image(b.default_image_name)
+                    end
+                end
             end
+            function spec_button.on_enter()
+                if not spec_button.selected then
+                    spec_button:set_image(spec_button.hover_image_name)
+                end
+            end
+            function spec_button.on_exit()
+                if not spec_button.selected then
+                    spec_button:set_image(spec_button.default_image_name)
+                end
+            end
+
             special_list:add_child(spec_button)
+            special_list.buttons[#special_list.buttons + 1] = spec_button
+
             if i == count then
                 self:show_special_description(name)
+                spec_button.selected = true
+                spec_button:set_image(spec_button.click_image_name)
             end
         end
     end

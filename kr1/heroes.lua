@@ -342,8 +342,8 @@ local function heroes()
     tt.bullet.particles_name = "ps_arrow_hero_alleria_missile"
     tt.render.sprites[1].name = "hero_archer_arrow"
     tt.bullet.flight_time = fts(10)
-    tt.bullet.damage_min = 75
-    tt.bullet.damage_max = 30
+    tt.bullet.damage_min = 30
+    tt.bullet.damage_max = 75
     tt.bullet.damage_type = DAMAGE_TRUE
     tt.bullet.target_num = 5
     tt.bullet.max_seek_angle = math.pi / 3
