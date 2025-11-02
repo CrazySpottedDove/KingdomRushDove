@@ -4492,9 +4492,10 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
         -- 技能描述
         local desc_label = GGLabel:new(V.v(400, 140))
         if from_kr == 5 then
-            desc_label.text = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION" )))
+            desc_label.text = U.balance_format(
+                _(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION")))
         else
-        desc_label.text = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
+            desc_label.text = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
 
         end
         desc_label.font_size = 16
@@ -4582,8 +4583,8 @@ function EncyclopediaView:load_creeps(index)
 
             local enemy_thumb_fmt = U.splicing_from_kr(from_kr, f)
 
-            self:create_creep(enemy_thumb_fmt, v(math.fmod(d - 1, 8) * 47.25 + 35, math.floor((d - 1) / 8) * 47.25 + 140),
-            i, true)
+            self:create_creep(enemy_thumb_fmt,
+                v(math.fmod(d - 1, 8) * 47.25 + 35, math.floor((d - 1) / 8) * 47.25 + 140), i, true)
         end
     end
 
@@ -5149,6 +5150,16 @@ function HeroRoomViewKR1:initialize(size)
         S:queue("GUIButtonCommon")
         self:hide()
     end
+
+    local special_description_toggle_button = self:get_child_by_id("special_description_toggle_button")
+    self.showing_special_description = false
+
+    function special_description_toggle_button.on_click()
+        S:queue("GUIButtonCommon")
+        self:toggle_special_description()
+    end
+    self.back = self:get_child_by_id("back")
+
     self:get_child_by_id("done_button").on_click = self:get_child_by_id("close_button").on_click
     if type(screen_map.user_data.heroes.selected) ~= "table" then
         screen_map.user_data.heroes.selected = {screen_map.user_data.heroes.selected}
@@ -5233,6 +5244,9 @@ function HeroRoomViewKR1:show_hero(name)
     for i, c in pairs(self:get_child_by_id("hero_room_stats").children) do
         c:set(hd.stats[i], true)
     end
+
+    self.showing_special_description = not self.showing_special_description
+    self:toggle_special_description()
 end
 
 function HeroRoomViewKR1:deselect_hero(name)
@@ -5295,8 +5309,6 @@ function HeroRoomViewKR1:select_hero(name, silent)
 
     screen_map.hero_icon_portrait:set_image(img_name)
 
-    -- screen_map.hero_icon_portrait:set_image(string.format("mapButtons_portrait_hero_%04i", hd.icon))
-
     screen_map.hero_icon_portrait.hidden = false
 
     if not screen_map.user_data.heroes.selected then
@@ -5341,6 +5353,75 @@ function HeroRoomViewKR1:select_hero(name, silent)
         table.insert(screen_map.user_data.heroes.selected, name)
     end
     storage:save_slot(screen_map.user_data)
+end
+local hero_room_special = require("strings.hero_room_special")
+function HeroRoomViewKR1:toggle_special_description()
+    if self.special_list then
+        self.back:remove_child(self.special_list)
+        self.special_list = nil
+    end
+
+    if self.showing_special_description then
+        self:get_child_by_id("hero_room_stats").hidden = false
+        self:get_child_by_id("hero_room_description_box").hidden = false
+    else
+        self:get_child_by_id("hero_room_stats").hidden = true
+        self:get_child_by_id("hero_room_description_box").hidden = true
+        local special_list = KView:new(V.v(600, 400))
+        special_list.propagate_on_click = true
+        special_list.pos = v(-50, 420)
+        self.special_list = special_list
+        self.back:add_child(special_list)
+        -- 首先，做一个 special 列表，每一个项的字符串取 skills_spec_desc 的内容按，拆分
+
+        local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
+
+        -- 添加一个用于显示描述的区域
+        local desc_area = GGLabel:new(V.v(500, 150))
+        desc_area.pos = v(370, 140)
+        desc_area.anchor = v(desc_area.size.x / 2, desc_area.size.y / 2)
+        desc_area.font_name = "body"
+        desc_area.font_size = 15
+        desc_area.line_height = CJK(0.85, 0.85, 1.2, 0.85)
+        desc_area.colors.text = {231, 225, 181, 255}
+        desc_area.colors.background = {255, 255, 255, 0}
+        desc_area.text_align = "left"
+        desc_area.fit_size = true
+        special_list:add_child(desc_area)
+        self.special_description_area = desc_area
+
+        -- 对于每一项竖向显示，做成按钮
+        local y_end = 260
+        local y_offset = 80
+        local i = 0
+        local count = 0
+        for _name, _ in pairs(special_map) do
+            count = count + 1
+        end
+        for name, text in pairs(special_map) do
+            local spec_button = GGOptionsButton:new(name)
+            spec_button.pos = v(-20, y_end - i * y_offset)
+            spec_button.anchor.x = spec_button.size.x / 2
+            spec_button.fit_size = true
+            i = i + 1
+            function spec_button.on_click()
+                S:queue("GUIButtonCommon")
+                self:show_special_description(name)
+            end
+            special_list:add_child(spec_button)
+            if i == count then
+                self:show_special_description(name)
+            end
+        end
+    end
+    self.showing_special_description = not self.showing_special_description
+end
+
+function HeroRoomViewKR1:show_special_description(special_name)
+    local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
+
+    local special_text = special_map[special_name]
+    self.special_description_area.text = U.dynamic_format(E:get_template(self.hero_shown), special_text)
 end
 
 OptionsView = class("OptionsView", PopUpView)
