@@ -544,7 +544,7 @@ tt.melee.attacks[1].damage_min = 3
 tt.melee.attacks[1].damage_max = 6
 tt.motion.max_speed = 75
 tt = RT("re_legionnaire", "re_farmer")
-tt.info.portrait_idxs = {15, 16, 17}
+tt.info.portrait_idxs = {18, 19, 20}
 tt.unit.level = 4
 tt.health.hp_max = 110
 tt.health.armor = 0.3
@@ -554,7 +554,6 @@ tt.melee.attacks[1].damage_max = 10
 tt.motion.max_speed = 80
 tt = RT("re_legionnaire_ranged", "re_legionnaire")
 AC(tt, "ranged")
-tt.info.portrait_idxs = { 18, 19, 20 }
 tt.unit.level = 5
 tt.motion.max_speed = 85
 tt.ranged.attacks[1].bullet = "spear_legionnaire"
