@@ -1,5 +1,5 @@
 require("constants")
-require("entity_db")
+local E = require("entity_db")
 local damage_type_map = {
     [DAMAGE_TRUE] = "真实伤害",
     [DAMAGE_PHYSICAL] = "物理伤害",
@@ -15,11 +15,14 @@ local function str(...)
     for i = 1, select("#", ...) do
         local v = select(i, ...)
         if type(v) == "number" then
-            -- 判断是否为整数，若不是则保留两位小数
+            -- 判断是否为整数或小数部分为0
             if math.type and math.type(v) == "integer" or v == math.floor(v) then
                 t[#t + 1] = tostring(v)
             else
-                t[#t + 1] = string.format("%.2f", v)
+                local s = string.format("%.2f", v)
+                -- 去掉末尾的.00或.0
+                s = s:gsub("%.0+$", ""):gsub("(%.%d-)0+$", "%1")
+                t[#t + 1] = s
             end
         else
             t[#t + 1] = tostring(v)
@@ -27,6 +30,7 @@ local function str(...)
     end
     return table.concat(t)
 end
+
 local function _max_level(skill)
     local i = 0
     for _, _ in pairs(skill.xp_level_steps) do
@@ -61,6 +65,8 @@ end
 local function set_bullet(bullet_name)
     b = E:get_template(bullet_name)
 end
+
+--- 当前技能拥有 .cooldown(table) 字段时，获取该字段的最大等级冷却时间，存入 cooldown 变量
 local function get_cooldown()
     cooldown = s.cooldown[max_lvl]
 end
@@ -76,6 +82,46 @@ local function get_damage(t, i)
     d[i].damage_min = t.damage_min
     d[i].damage_max = t.damage_max
     d[i].damage_type = damage_type_map[t.damage_type]
+end
+
+local function damage_str(i)
+    if not i then
+        i = 1
+    end
+    return str(d[i].damage_min, "-", d[i].damage_max, "点", d[i].damage_type)
+end
+
+local function hp_str(i)
+    if not i then
+        i = 1
+    end
+    return str(health[i].hp_max, "点生命值")
+end
+
+local function armor_str(i)
+    if not i then
+        i = 1
+    end
+    return str(health[i].armor * 100, "点护甲")
+end
+
+local function magic_armor_str(i)
+    if not i then
+        i = 1
+    end
+    return str(health[i].magic_armor * 100, "点魔法抗性")
+end
+
+local function get_health(t, i)
+    if not i then
+        i = 1
+    end
+    if not health[i] then
+        health[i] = {}
+    end
+    health[i].hp_max = t.health.hp_max
+    health[i].armor = t.health.armor
+    health[i].magic_armor = t.health.magic_armor
 end
 
 set_hero("hero_alleria")
@@ -114,5 +160,44 @@ map["追猎箭矢"] = str("每隔", cooldown, "秒，小公主射出一发追猎
     "个目标，对每个目标造成", d[1].damage_min, "-", d[1].damage_max, "点", d[1].damage_type, "。")
 
 set_hero("hero_gerald")
+set_skill(h.hero.skills.block_counter)
+get_damage(h.dodge.counter_attack)
+local factor = h.dodge.counter_attack.reflected_damage_factor + h.dodge.counter_attack.reflected_damage_factor_inc *
+                   max_lvl
+local chance = h.dodge.chance_base + h.dodge.chance_inc * max_lvl
+local low_change_factor = h.dodge.low_chance_factor
 
+map["惩戒之盾"] = str("杰拉尔德每次受到近战攻击时，有", chance * 100,
+    "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的范围", d[1].damage_type,
+    "。面对BOSS单位时，盾反概率×", low_change_factor * 100,
+    "%；受到范围攻击时，盾反概率×60%。")
+
+set_skill(h.hero.skills.courage)
+cooldown = h.timed_attacks.list[1].cooldown
+local min_count = h.timed_attacks.list[1].min_count
+
+e = E:get_template("mod_gerald_courage")
+local heal_factor = e.courage.heal_once_factor + e.courage.heal_inc * max_lvl
+local damage_buff = e.courage.damage_inc * max_lvl + e.courage.damage_inc_base
+local armor_buff = e.courage.armor_inc * max_lvl
+local magic_armor_buff = e.courage.magic_armor_inc * max_lvl
+local duration = e.modifier.duration
+map["鼓舞"] = str("每隔", cooldown, "秒，在身边至少有", min_count,
+    "名友军时，杰拉尔德会敲盾鼓舞他们，立刻恢复友军", heal_factor * 100,
+    "%最大生命值，并在接下来的", duration, "秒内提升友军", damage_buff, "点伤害，",
+    armor_buff * 100, "点护甲和", magic_armor_buff * 100,
+    "点魔法抗性。抗性提升与恢复效果对英雄减半。")
+
+set_skill(h.hero.skills.paladin)
+e = E:get_template("soldier_gerald_paladin")
+get_damage(e.melee.attacks[1])
+d[1].damage_min = s.melee_damage_min[max_lvl]
+d[1].damage_max = s.melee_damage_max[max_lvl]
+get_health(e)
+health[1].hp_max = s.hp_max[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+local duration = e.reinforcement.duration
+map["神圣支援"] = str("每隔", cooldown,
+    "秒，爵士召唤一名可调集的皇家近卫协助战斗。皇家近卫拥有", hp_str(), "，", armor_str(),
+    "，", "每次攻击造成", damage_str(), "，驻场", duration, "秒。")
 return H

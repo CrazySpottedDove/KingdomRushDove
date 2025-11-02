@@ -210,7 +210,6 @@ function seek.find_enemies_between_range_filter_off(origin, min_range, max_range
 end
 
 function seek.find_enemies_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_fn)
-
     local x = origin.x
     local y = origin.y
     local min_col = max(1, _x_to_col(x - max_range))
