@@ -2841,7 +2841,7 @@ local function heroes()
     tt.regen.cooldown = 1
     tt.info.i18n_key = "ENEMY_WORG"
     tt.info.enc_icon = 14
-    tt.info.portrait = "info_portraits_sc_0020"
+    tt.info.portrait = "info_portraits_enemies_0011"
     tt.info.fn = scripts.beastmaster_pet.get_info
     tt.main_script.insert = scripts.beastmaster_pet.insert
     tt.main_script.update = scripts.beastmaster_pet.update

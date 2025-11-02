@@ -74,7 +74,7 @@ local function barrack_towers()
     tt.health.armor_power_name = "shield"
     tt.health.armor_inc = 0.15
     tt.health_bar.offset = vec_2(0, ady(40))
-    tt.info.portrait = "info_portraits_sc_0004"
+    tt.info.portrait = "info_portraits_soldiers_0004"
     tt.info.random_name_count = 20
     tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
     tt.melee.attacks[1].damage_max = 18

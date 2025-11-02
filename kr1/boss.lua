@@ -1054,7 +1054,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, ady(195))
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.fn = scripts.eb_efreeti.get_info
-    tt.info.portrait = IS_PHONE and "portraits_sc_0040" or "kr2_info_portraits_enemies_0015"
+    tt.info.portrait = "kr2_info_portraits_enemies_0015"
     tt.info.enc_icon = 14
     tt.main_script.insert = scripts.eb_efreeti.insert
     tt.main_script.update = scripts.eb_efreeti.update
@@ -1154,7 +1154,7 @@ local function boss()
     tt.idle_flip.chance = 1
     tt.idle_flip.cooldown = 5
     tt.info.fn = scripts.eb_gorilla.get_info
-    tt.info.portrait = IS_PHONE and "portraits_sc_0068" or "kr2_info_portraits_enemies_0039"
+    tt.info.portrait = "kr2_info_portraits_enemies_0039"
     tt.info.enc_icon = 38
     tt.main_script.insert = scripts.eb_gorilla.insert
     tt.main_script.update = scripts.eb_gorilla.update
@@ -1224,7 +1224,7 @@ local function boss()
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, ady(64))
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.info.portrait = IS_PHONE and "portraits_sc_0067" or "kr2_info_portraits_enemies_0038"
+    tt.info.portrait = "kr2_info_portraits_enemies_0038"
     tt.info.enc_icon = 39
     tt.main_script.insert = scripts.enemy_gorilla_small.insert
     tt.main_script.update = scripts.enemy_mixed.update
@@ -1329,7 +1329,7 @@ local function boss()
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.health_bar.hidden = true
     tt.info.fn = scripts.eb_umbra.get_info
-    tt.info.portrait = IS_PHONE and "portraits_sc_0070" or "kr2_info_portraits_enemies_0040"
+    tt.info.portrait = "kr2_info_portraits_enemies_0040"
     tt.info.enc_icon = 40
     tt.main_script.insert = scripts.eb_umbra.insert
     tt.main_script.update = scripts.eb_umbra.update
@@ -1457,7 +1457,7 @@ local function boss()
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, ady(62))
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.info.portrait = IS_PHONE and "portraits_sc_0069" or "kr2_info_portraits_enemies_0055"
+    tt.info.portrait = "kr2_info_portraits_enemies_0055"
     tt.info.enc_icon = 41
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_mixed.update
@@ -1491,7 +1491,7 @@ local function boss()
     tt.health.magic_armor = 0
     tt.health_bar.offset = vec_2(0, ady(59))
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-    tt.info.portrait = IS_PHONE and "portraits_sc_0069" or "kr2_info_portraits_enemies_0056"
+    tt.info.portrait = "kr2_info_portraits_enemies_0056"
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.enemy_umbra_piece.update
     tt.melee.attacks[1].cooldown = 2
@@ -1661,7 +1661,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, ady(120))
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.fn = scripts.eb_leviathan.get_info
-    tt.info.portrait = IS_PHONE and "portraits_sc_0077" or "kr2_info_portraits_enemies_0060"
+    tt.info.portrait = "kr2_info_portraits_enemies_0060"
     tt.info.enc_icon = 48
     tt.main_script.insert = scripts.eb_leviathan.insert
     tt.main_script.update = scripts.eb_leviathan.update
@@ -1732,7 +1732,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, 60)
     tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
     -- tt.info.fn = scripts.eb_dracula.get_info
-    tt.info.portrait = IS_PHONE and "portraits_sc_0090" or "kr2_info_portraits_enemies_0067"
+    tt.info.portrait = "kr2_info_portraits_enemies_0067"
     tt.info.enc_icon = 57
     tt.main_script.insert = scripts.eb_dracula.insert
     tt.main_script.update = scripts.eb_dracula.update
@@ -1805,7 +1805,7 @@ local function boss()
     tt.health_bar.offset = vec_2(0, 103)
     tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
     tt.info.fn = scripts.eb_saurian_king.get_info
-    tt.info.portrait = IS_PHONE and "portraits_sc_0096" or "kr2_info_portraits_enemies_0042"
+    tt.info.portrait = "kr2_info_portraits_enemies_0042"
     tt.info.enc_icon = 60
     tt.main_script.insert = scripts.enemy_basic.insert
     tt.main_script.update = scripts.eb_saurian_king.update
