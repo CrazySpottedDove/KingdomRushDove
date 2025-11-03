@@ -2247,7 +2247,7 @@ scripts.hero_denas = {
         this.health_bar.hidden = false
 
         for _, t in pairs(E:filter_templates("tower")) do
-            t.tower.price = math.floor(t.tower.price * 0.96)
+            t.tower.price = math.floor(t.tower.price * this.tower_price_factor)
         end
 
         local function do_denas_attack(target, attack, pred_pos)

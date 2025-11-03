@@ -31,6 +31,10 @@ local function str(...)
     return table.concat(t)
 end
 
+local function rate_str(rate)
+    return str(rate * 100, "%概率")
+end
+
 local function _max_level(skill)
     local i = 0
     for _, _ in pairs(skill.xp_level_steps) do
@@ -174,8 +178,8 @@ local chance = h.dodge.chance_base + h.dodge.chance_inc * max_lvl
 local low_change_factor = h.dodge.low_chance_factor
 
 map["惩戒之盾"] = str("杰拉尔德每次受到近战攻击时，有", chance * 100,
-    "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的范围", damage_type_map[d[1].damage_type],
-    "。面对BOSS单位时，盾反概率×", low_change_factor * 100,
+    "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的范围",
+    damage_type_map[d[1].damage_type], "。面对BOSS单位时，盾反概率×", low_change_factor * 100,
     "%；受到范围攻击时，盾反概率×60%。")
 
 set_skill(h.hero.skills.courage)
@@ -300,5 +304,56 @@ duration = b.modifier.duration
 map["烈火附身"] = str("伊格努斯所有攻击有60%的概率点燃敌人，使其在接下来的", duration,
     "秒内每", cycle_time, "秒受到", damage_str(),
     "。永恒燃烧的身躯使伊格努斯免疫火焰与剧毒。")
+
+set_hero("hero_malik")
+set_bullet("mod_malik_stun")
+duration = b.modifier.duration
+chance = h.melee.attacks[2].chance
+map["震慑"] = str("马利克每次普攻有", rate_str(chance), "震慑敌人，使敌人眩晕", duration, "秒。")
+set_skill(h.hero.skills.smash)
+cooldown = h.melee.attacks[3].cooldown
+get_damage(h.melee.attacks[3])
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+chance = s.stun_chance[max_lvl]
+radius = h.melee.attacks[3].damage_radius
+map["粉碎重锤"] = str(cooldown_str(), "马利克调动重锤之力，对面前", radius, "范围内敌人造成",
+    damage_str(), "，并有", rate_str(chance), "使其眩晕", duration,
+    "秒。该技能获取经验量和造成总伤相关。")
+set_skill(h.hero.skills.fissure)
+set_bullet("aura_malik_fissure")
+get_damage(b.aura)
+radius = b.aura.damage_radius
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+cooldown = h.melee.attacks[4].cooldown
+map["地震"] = str(cooldown_str(), "马利克高高跃起，锤击地面，引起数片地震，每片地震对",
+    radius, "范围内敌人造成", damage_str(), "，并使其眩晕", duration,
+    "秒。在道路的交汇处，地震将额外向多条道路蔓延。")
+
+set_hero("hero_denas")
+set_skill(h.hero.skills.tower_buff)
+duration = s.duration[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+set_bullet("mod_denas_tower")
+local s_range_factor = b.range_factor - 1
+local s_cooldown_factor = 1 - b.cooldown_factor
+local range = h.timed_attacks.list[2].max_range
+map["皇家号令"] = str(cooldown_str(), "迪纳斯发出皇家号令，使", range,
+    "范围内友军防御塔攻击范围提升", s_range_factor * 100, "%，冷却下降", s_cooldown_factor * 100,
+    "%，持续", duration, "秒。")
+set_skill(h.hero.skills.catapult)
+cooldown = h.timed_attacks.list[3].cooldown
+set_bullet("denas_catapult_rock")
+get_damage(b.bullet)
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+count = s.count[max_lvl]
+radius = b.bullet.damage_radius
+map["投石弹幕"] = str(cooldown_str(), "迪纳斯命令投石机向目标区域发射", count,
+    "块巨石，每块巨石对", radius, "范围内敌人造成", damage_str(), "。")
+local s_price_factor = 1 - h.tower_price_factor
+map["资源调配"] = str("迪纳斯国王优秀的资源调配能力使所有防御塔的造价降低",
+    s_price_factor * 100, "%。赞美国王！")
 
 return H
