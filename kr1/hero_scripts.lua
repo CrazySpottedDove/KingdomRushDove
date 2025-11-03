@@ -5403,6 +5403,201 @@ scripts.hero_elora = {
         this.health.hp = this.health.hp_max
     end
 }
+
+function scripts.hero_elora.update(this, store)
+    local h = this.health
+    local he = this.hero
+    local a, skill, brk, sta
+    local fe = this.render.sprites[2]
+    local ps = E:create_entity(this.run_particles_name)
+
+    ps.particle_system.track_id = this.id
+    ps.particle_system.emit = false
+
+    queue_insert(store, ps)
+    U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
+
+    this.health_bar.hidden = false
+    fe.hidden = true
+
+    while true do
+        ps.particle_system.emit = false
+
+        if h.dead then
+            fe.hidden = true
+
+            SU.y_hero_death_and_respawn(store, this)
+        end
+
+        fe.hidden = false
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            while this.nav_rally.new do
+                ps.particle_system.emit = true
+
+                if SU.y_hero_new_rally(store, this) then
+                    goto label_61_0
+                end
+            end
+
+            if SU.hero_level_up(store, this) then
+                U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
+            end
+
+            a = this.timed_attacks.list[1]
+            skill = this.hero.skills.ice_storm
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags,
+                    a.vis_bans)
+
+                if not target then
+                    SU.delay_attack(store, a, 0.13333333333333333)
+                else
+                    local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
+                    local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
+
+                    if #nodes < 1 then
+                        SU.delay_attack(store, a, 0.4)
+                    else
+                        local s_pi, s_spi, s_ni = unpack(nodes[1])
+                        local flip = target.pos.x < this.pos.x
+                        local start_ts = store.tick_ts
+
+                        U.animation_start(this, "iceStorm", flip, store.tick_ts)
+                        S:queue(a.sound)
+
+                        if SU.y_hero_wait(store, this, a.cast_time) then
+                            goto label_61_0
+                        end
+
+                        a.ts = start_ts
+
+                        SU.hero_gain_xp_from_skill(this, skill)
+
+                        local delay = 0
+                        local n_step = ni < s_ni and -2 or 2
+
+                        ni = km.clamp(1, #P:path(s_pi), ni < s_ni and ni + a.nodes_offset or ni)
+
+                        for i = 1, skill.count[skill.level] do
+                            local b = E:create_entity(a.bullet)
+
+                            b.pos = P:node_pos(pi, spi, ni)
+                            b.spike_idx = math.random(1, 2)
+                            b.render.sprites[1].prefix = b.render.sprites[1].prefix .. b.spike_idx
+                            b.render.sprites[1].flip_x = not flip
+                            b.render.sprites[2].name = b.render.sprites[2].name .. b.spike_idx
+                            b.delay = delay
+                            b.bullet.source_id = this.id
+                            b.bullet.damage_factor = this.unit.damage_factor
+                            queue_insert(store, b)
+
+                            delay = delay + U.frandom(0.05, 0.1)
+                            ni = ni + n_step
+                            spi = km.zmod(spi + 1, 3)
+                        end
+
+                        SU.y_hero_animation_wait(this)
+
+                        goto label_61_0
+                    end
+                end
+            end
+
+            a = this.timed_attacks.list[2]
+            skill = this.hero.skills.chill
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, nil, a.vis_flags,
+                    a.vis_bans)
+
+                if not target then
+                    SU.delay_attack(store, a, 0.13333333333333333)
+                else
+                    local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
+                    local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
+
+                    if #nodes < 1 then
+                        SU.delay_attack(store, a, 0.4)
+                    else
+                        local s_pi, s_spi, s_ni = unpack(nodes[1])
+                        local flip = target.pos.x < this.pos.x
+                        local start_ts = store.tick_ts
+
+                        U.animation_start(this, "chill", flip, store.tick_ts)
+                        S:queue(a.sound)
+
+                        if SU.y_hero_wait(store, this, a.cast_time) then
+                            goto label_61_0
+                        end
+
+                        a.ts = start_ts
+
+                        SU.hero_gain_xp_from_skill(this, skill)
+
+                        local delay = 0
+                        local n_step = ni < s_ni and -a.step or a.step
+
+                        ni = km.clamp(1, #P:path(s_pi), ni < s_ni and ni + a.nodes_offset or ni)
+
+                        for i = 1, skill.count[skill.level] do
+                            local b = E:create_entity(a.bullet)
+
+                            b.pos = P:node_pos(pi, spi, ni)
+                            b.render.sprites[1].prefix = b.render.sprites[1].prefix .. math.random(1, 3)
+                            b.render.sprites[1].flip_x = not flip
+                            b.delay = delay
+
+                            queue_insert(store, b)
+
+                            delay = delay + 0.05
+                            ni = ni + n_step
+                            spi = km.zmod(spi + 1, 3)
+                        end
+
+                        SU.y_hero_animation_wait(this)
+
+                        goto label_61_0
+                    end
+                end
+            end
+
+            if this.soldier.target_id then
+                brk, sta = SU.y_soldier_ranged_attacks(store, this)
+                if brk then
+                    goto label_61_0
+                end
+            end
+
+            brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+            if brk or sta ~= A_NO_TARGET then
+                goto label_61_0
+            end
+
+            brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+            if brk then
+                goto label_61_0
+            end
+
+            if SU.soldier_go_back_step(store, this) then
+                goto label_61_0
+            end
+
+            SU.soldier_idle(store, this)
+            SU.soldier_regen(store, this)
+        end
+
+        ::label_61_0::
+
+        coroutine.yield()
+    end
+end
+
 -- 钢锯
 scripts.hero_hacksaw = {
     level_up = function(this, store)
@@ -5443,8 +5638,8 @@ scripts.hero_ingvar = {
 
         this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
         this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
-        this.melee.attacks[2].damage_min = ls.melee_damage_min[hl] * 1.2
-        this.melee.attacks[2].damage_max = ls.melee_damage_max[hl] * 1.2
+        this.melee.attacks[2].damage_min = ls.melee_damage_min[hl] * this.melee.attacks[2].damage_factor
+        this.melee.attacks[2].damage_max = ls.melee_damage_max[hl] * this.melee.attacks[2].damage_factor
 
         upgrade_skill(this, "ancestors_call", function(this, s)
             local a = this.timed_attacks.list[1]

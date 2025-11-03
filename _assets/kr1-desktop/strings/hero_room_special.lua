@@ -356,12 +356,54 @@ map["资源调配"] = str("迪纳斯国王优秀的资源调配能力使所有�
     s_price_factor * 100, "%。赞美国王！")
 
 set_hero("hero_elora")
-map["永恒冻土"] = str()
-map["寒冰风暴"] = str()
+set_skill(h.hero.skills.chill)
+factor = 1 - s.slow_factor[max_lvl]
+count = s.count[max_lvl]
+e = E:get_template("aura_chill_elora")
+radius = e.aura.radius
+cooldown = h.timed_attacks.list[2].cooldown
+duration = e.aura.duration
+map["永恒冻土"] = str(cooldown_str(), "伊洛拉制造", count, "片冻土覆盖地面，持续", duration,
+    "秒，每一片冻土使", radius, "范围内敌人受到", factor * 100, "%减速效果。")
+set_skill(h.hero.skills.ice_storm)
+count = s.count[max_lvl]
+set_bullet("elora_ice_spike")
+get_damage(b.bullet)
+d[1].damage_max = s.damage_max[max_lvl]
+d[1].damage_min = s.damage_min[max_lvl]
+radius = b.bullet.damage_radius
+cooldown = h.timed_attacks.list[1].cooldown
+map["寒冰风暴"] = str(cooldown_str(), "伊洛拉召唤", count, "枚冰锥打击敌人，每一枚冰锥对",
+    radius, "范围内敌人造成", damage_str(), "。")
+e = E:get_template("mod_elora_bolt_slow")
+duration = e.modifier.duration
+factor = 1 - e.slow.factor
+chance = h.ranged.attacks[1].chance
+e = E:get_template("mod_elora_bolt_freeze")
+local duration_2 = e.modifier.duration
+map["冰霜气息"] = str("伊洛拉的法球可对敌人造成", factor * 100, "%的减速效果，持续", duration,
+    "秒。法球有", rate_str(chance), "冰冻敌人，持续", duration_2, "秒。")
 
 set_hero("hero_ingvar")
-map["旋风斩"] = str()
-map["先祖召唤"] = str()
+chance = h.melee.attacks[2].chance
+get_damage(h.melee.attacks[2])
+radius = h.melee.attacks[2].damage_radius
+factor = h.melee.attacks[2].damage_factor
+map["旋风斩"] = str("英格瓦每次攻击有", rate_str(chance), "的概率发动旋风斩，对周围", radius,
+    "范围内敌人造成普攻", factor * 100, "%的",
+    damage_type_map[d[1].damage_type] "。该技能获取经验数与造成总伤相关。")
+set_skill(h.hero.skills.ancestors_call)
+count = s.count[max_lvl]
+health[1].hp_max = s.hp_max[max_lvl]
+e = E:get_template("soldier_ingvar_ancestor")
+get_damage(e.melee.attacks[1])
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+duration = e.reinforcement.duration
+map["先祖召唤"] = str(cooldown_str(), "英格瓦召唤", count, "名可调集的先祖加入战斗。先祖拥有",
+    hp_str(1), "，每次攻击造成", damage_str(), "驻场", duration,
+    "秒。若该技能已冷却好，且英格瓦仍处于巨熊形态，英格瓦将自行退出巨熊形态并释放本技能，并返还对应冷却时间。")
 map["巨熊形态"] = str()
 
 set_hero("hero_hacksaw")
@@ -451,38 +493,38 @@ map["浓烟"] = str()
 map["火焰弹幕"] = str()
 
 set_hero("hero_priest")
-map["圣光术"]=str()
-map["神圣祝颂"]=str()
-map["光翼庇护"]=str()
+map["圣光术"] = str()
+map["神圣祝颂"] = str()
+map["光翼庇护"] = str()
 
 set_hero("hero_dwarf")
-map["重锤"]=str()
-map["大地之力"]=str()
+map["重锤"] = str()
+map["大地之力"] = str()
 
 set_hero("hero_minotaur")
-map["蛮牛冲撞"]=str()
-map["英勇打击"]=str()
-map["代达罗斯的迷宫"]=str()
-map["野牛怒吼"]=str()
-map["巨斧风暴"]=str()
+map["蛮牛冲撞"] = str()
+map["英勇打击"] = str()
+map["代达罗斯的迷宫"] = str()
+map["野牛怒吼"] = str()
+map["巨斧风暴"] = str()
 
 set_hero("hero_crab")
-map["战争强硬"]=str()
-map["折叠蟹钳"]=str()
-map["水炮"]=str()
-map["裂地攻势"]=str()
+map["战争强硬"] = str()
+map["折叠蟹钳"] = str()
+map["水炮"] = str()
+map["裂地攻势"] = str()
 
 set_hero("hero_van_helsing")
-map["纯银子弹"]=str()
-map["致命连射"]=str()
-map["遗迹之力"]=str()
-map["圣水炸弹"]=str()
-map["光明信标"]=str()
+map["纯银子弹"] = str()
+map["致命连射"] = str()
+map["遗迹之力"] = str()
+map["圣水炸弹"] = str()
+map["光明信标"] = str()
 
 set_hero("hero_dracolich")
-map["脊雨"]=str()
-map["疾病新星"]=str()
-map["死亡之触"]=str()
-map["亡灵眷属"]=str()
+map["脊雨"] = str()
+map["疾病新星"] = str()
+map["死亡之触"] = str()
+map["亡灵眷属"] = str()
 
 return H

@@ -1360,6 +1360,7 @@ tt.melee.attacks[2].shared_cooldown = true
 tt.melee.attacks[2].animation = "attack2"
 tt.melee.attacks[2].chance = 0.4
 tt.melee.attacks[2].xp_gain_factor = 1.6
+tt.melee.attacks[2].damage_factor = 1.2
 tt.melee.attacks[2].hit_time = fts(15)
 tt.melee.attacks[2].hit_offset = vec_2(0, 2)
 tt.melee.attacks[2].damage_radius = 70
@@ -1504,8 +1505,7 @@ tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].cooldown = fts(40)
 tt.ranged.attacks[1].bullet = "bolt_elora_freeze"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(18, 36)}
-tt.ranged.attacks[1].chance = 0.2
-tt.ranged.attacks[1].filter_fn = scripts.hero_elora.freeze_filter_fn
+tt.ranged.attacks[1].chance = 0.25
 tt.ranged.attacks[1].min_range = 23.04
 tt.ranged.attacks[1].max_range = 166.4
 tt.ranged.attacks[1].shoot_time = fts(19)
@@ -1545,6 +1545,85 @@ tt.timed_attacks.list[2].nodes_offset = 6
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_FRIEND)
 tt.timed_attacks.list[2].vis_flags = F_RANGED
 tt.timed_attacks.list[2].xp_from_skill = "chill"
+
+tt = RT("bolt_elora_freeze", "bolt")
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.render.sprites[1].prefix = "bolt_elora"
+tt.bullet.hit_fx = "fx_bolt_elora_hit"
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.mod = "mod_elora_bolt_freeze"
+tt.bullet.damage_min = 14
+tt.bullet.damage_max = 41
+tt.bullet.xp_gain_factor = 2
+
+tt = RT("bolt_elora_slow", "bolt_elora_freeze")
+tt.bullet.mod = "mod_elora_bolt_slow"
+
+tt = RT("mod_elora_bolt_freeze", "mod_freeze")
+AC(tt, "render")
+tt.modifier.duration = 2
+tt.render.sprites[1].prefix = "freeze_creep"
+tt.render.sprites[1].sort_y_offset = -2
+tt.render.sprites[1].loop = false
+tt.custom_offsets = {
+    flying = vec_2(-5, 32)
+}
+tt.custom_suffixes = {
+    flying = "_air"
+}
+tt.custom_animations = {"start", "end"}
+
+tt = RT("mod_elora_bolt_slow", "mod_slow")
+tt.modifier.duration = 2
+tt.slow.factor = 0.5
+
+tt = RT("aura_chill_elora", "aura")
+AC(tt, "render", "tween")
+tt.aura.cycle_time = fts(10)
+tt.aura.duration = 3
+tt.aura.mod = "mod_elora_chill"
+tt.aura.radius = 44.800000000000004
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_chill_elora.update
+tt.render.sprites[1].prefix = "decal_elora_chill_"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.remove = true
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
+
+tt = RT("mod_elora_chill", "mod_slow")
+tt.modifier.duration = fts(11)
+tt.slow.factor = 0.8
+
+tt = RT("elora_ice_spike", "bullet")
+tt.main_script.update = scripts.elora_ice_spike.update
+tt.bullet.damage_max = nil
+tt.bullet.damage_min = nil
+tt.bullet.damage_radius = 51.2
+tt.bullet.damage_type = DAMAGE_MAGICAL_EXPLOSION
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = F_FRIEND
+tt.bullet.mod = nil
+tt.bullet.hit_time = 0.1
+tt.bullet.duration = 2
+tt.spike_1_anchor_y = 0.16
+tt.render.sprites[1].prefix = "elora_ice_spike_"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].anchor.y = 0.2
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].anchor.y = 0.2
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_frost_spikes_decal"
+tt.render.sprites[2].z = Z_DECALS
+tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
+tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 
 tt = RT("hero_oni", "hero")
 AC(tt, "melee", "timed_attacks")
