@@ -1557,9 +1557,7 @@ function scripts.tower_archer.update(this, store, script)
                     coroutine.yield()
                 end
 
-                enemy = U.find_foremost_enemy_with_flying_preference(store, tpos(this), 0, at.range, false, a.vis_flags,
-                    a.vis_bans)
-
+                enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), at.range, a.vis_flags, a.vis_bans)
                 if enemy then
                     last_target_pos = enemy.pos
 

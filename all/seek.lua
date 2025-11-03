@@ -619,6 +619,316 @@ function seek.detect_foremost_enemy_between_range_filter_off(origin, min_range, 
     return e
 end
 
+--- 返回范围内符合条件、离家最近的敌人
+---@param origin any
+---@param range any
+---@param flags any
+---@param bans any
+---@param filter_fn function(e, origin)
+function seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on(origin, range, flags, bans, filter_fn)
+
+    local x = origin.x
+    local y = origin.y
+    local min_col = max(1, _x_to_col(x - range))
+    local max_col = min(_cols, _x_to_col(x + range))
+    local b = range * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+
+    local index_base = (min_row - 1) * _cols - 1
+    local r_outer_sq = range * range
+
+    local e_mocking = false
+    local e_flying = false
+    local e_nodes_to_goal = 1000000
+    local e = nil
+
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = id_arrays[index_base + col]
+
+            local array = cell.array
+            for i = 0, cell.size - 1 do
+                local entity = entities[array[i]]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and filter_fn(entity, origin) then
+                    local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
+                    if e_flying and not e_next_flying then
+                        goto not_accept
+                    end
+
+                    local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
+                    if e_mocking and not (e_next_mocking or e_next_flying) then
+                        goto not_accept
+                    end
+
+                    local p = entity.nav_path
+                    local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
+
+                    if e_next_flying and not e_flying then
+                        goto accept
+                    end
+
+                    if e_next_mocking and not (e_mocking or e_flying) then
+                        goto accept
+                    end
+
+                    if e_nodes_to_goal < e_next_nodes_to_goal then
+                        goto not_accept
+                    end
+
+                    ::accept::
+                    e_mocking = e_next_mocking
+                    e_flying = e_next_flying
+                    e_nodes_to_goal = e_next_nodes_to_goal
+                    e = entity
+
+                    ::not_accept::
+                end
+            end
+        end
+        index_base = index_base + _cols
+    end
+
+    return e
+end
+
+--- 返回范围内符合条件、离家最近的敌人，在不需要 enemies 时调用，性能更优
+---@param origin any
+---@param range any
+---@param flags any
+---@param bans any
+---@param filter_fn function(e, origin)
+function seek.detect_foremost_enemy_with_flying_preference_in_range_filter_off(origin, range, flags, bans)
+    local x = origin.x
+    local y = origin.y
+    local min_col = max(1, _x_to_col(x - range))
+    local max_col = min(_cols, _x_to_col(x + range))
+    local b = range * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+
+    local index_base = (min_row - 1) * _cols - 1
+    local r_outer_sq = range * range
+
+    local e_mocking = false
+    local e_flying = false
+    local e_nodes_to_goal = 1000000
+    local e = nil
+
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = id_arrays[index_base + col]
+
+            local array = cell.array
+            for i = 0, cell.size - 1 do
+                local entity = entities[array[i]]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) then
+
+                    local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
+                    if e_flying and not e_next_flying then
+                        goto not_accept
+                    end
+
+                    local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
+                    if e_mocking and not (e_next_mocking or e_next_flying) then
+                        goto not_accept
+                    end
+
+                    local p = entity.nav_path
+                    local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
+
+                    if e_next_flying and not e_flying then
+                        goto accept
+                    end
+
+                    if e_next_mocking and not (e_mocking or e_flying) then
+                        goto accept
+                    end
+
+                    if e_nodes_to_goal < e_next_nodes_to_goal then
+                        goto not_accept
+                    end
+
+                    ::accept::
+                    e_mocking = e_next_mocking
+                    e_flying = e_next_flying
+                    e_nodes_to_goal = e_next_nodes_to_goal
+                    e = entity
+
+                    ::not_accept::
+                end
+
+            end
+        end
+        index_base = index_base + _cols
+    end
+
+    return e
+end
+
+--- 返回范围内符合条件、离家最近的敌人
+---@param store any
+---@param origin any
+---@param range any
+---@param flags any
+---@param bans any
+---@param filter_fn function(e, origin)
+function seek.detect_foremost_enemy_with_flying_preference_between_range_filter_on(origin, min_range, max_range, flags,
+    bans, filter_fn)
+
+    local x = origin.x
+    local y = origin.y
+    local min_col = max(1, _x_to_col(x - max_range))
+    local max_col = min(_cols, _x_to_col(x + max_range))
+    local b = max_range * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+
+    local index_base = (min_row - 1) * _cols - 1
+    local r_outer_sq = max_range * max_range
+    local r_inner_sq = min_range * min_range
+
+    local e_mocking = false
+    local e_flying = false
+    local e_nodes_to_goal = 1000000
+    local e = nil
+
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = id_arrays[index_base + col]
+
+            local array = cell.array
+            for i = 0, cell.size - 1 do
+                local entity = entities[array[i]]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and (dist2 >= r_inner_sq) and enemy_filter_simple(entity, flags, bans) and
+                    filter_fn(entity, origin) then
+                    local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
+                    if e_flying and not e_next_flying then
+                        goto not_accept
+                    end
+
+                    local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
+                    if e_mocking and not (e_next_mocking or e_next_flying) then
+                        goto not_accept
+                    end
+
+                    local p = entity.nav_path
+                    local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
+
+                    if e_next_flying and not e_flying then
+                        goto accept
+                    end
+
+                    if e_next_mocking and not (e_mocking or e_flying) then
+                        goto accept
+                    end
+
+                    if e_nodes_to_goal < e_next_nodes_to_goal then
+                        goto not_accept
+                    end
+
+                    ::accept::
+                    e_mocking = e_next_mocking
+                    e_flying = e_next_flying
+                    e_nodes_to_goal = e_next_nodes_to_goal
+                    e = entity
+
+                    ::not_accept::
+                end
+            end
+        end
+        index_base = index_base + _cols
+    end
+
+    return e
+end
+
+--- 返回范围内符合条件、离家最近的敌人，在不需要 enemies 时调用，性能更优
+---@param store any
+---@param origin any
+---@param range any
+---@param flags any
+---@param bans any
+---@param filter_fn function(e, origin)
+function seek.detect_foremost_enemy_with_flying_preference_between_range_filter_off(origin, min_range, max_range, flags,
+    bans)
+    local x = origin.x
+    local y = origin.y
+    local min_col = max(1, _x_to_col(x - max_range))
+    local max_col = min(_cols, _x_to_col(x + max_range))
+    local b = max_range * _aspect
+    local min_row = max(1, _y_to_row(y - b))
+    local max_row = min(_rows, _y_to_row(y + b))
+
+    local index_base = (min_row - 1) * _cols - 1
+    local r_outer_sq = max_range * max_range
+    local r_inner_sq = min_range * min_range
+    local e_mocking = false
+    local e_flying = false
+    local e_nodes_to_goal = 1000000
+    local e = nil
+
+    for _ = min_row, max_row do
+        for col = min_col, max_col do
+            local cell = id_arrays[index_base + col]
+
+            local array = cell.array
+            for i = 0, cell.size - 1 do
+                local entity = entities[array[i]]
+                local dx = entity.pos.x - x
+                local dy = (entity.pos.y - y) * _aspect_inv
+                local dist2 = dx * dx + dy * dy
+                if (dist2 <= r_outer_sq) and (dist2 >= r_inner_sq) and enemy_filter_simple(entity, flags, bans) then
+
+                    local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
+                    if e_flying and not e_next_flying then
+                        goto not_accept
+                    end
+
+                    local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
+                    if e_mocking and not (e_next_mocking or e_next_flying) then
+                        goto not_accept
+                    end
+
+                    local p = entity.nav_path
+                    local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
+
+                    if e_next_flying and not e_flying then
+                        goto accept
+                    end
+                    if e_next_mocking and not (e_mocking or e_flying) then
+                        goto accept
+                    end
+
+                    if e_nodes_to_goal < e_next_nodes_to_goal then
+                        goto not_accept
+                    end
+
+                    ::accept::
+                    e_mocking = e_next_mocking
+                    e_flying = e_next_flying
+                    e_nodes_to_goal = e_next_nodes_to_goal
+                    e = entity
+
+                    ::not_accept::
+                end
+            end
+        end
+        index_base = index_base + _cols
+    end
+
+    return e
+end
+
 --- 在不需要区别敌人时使用，以最快的速度找到范围内的一个敌人，性能最佳
 ---@param store any
 ---@param origin any
