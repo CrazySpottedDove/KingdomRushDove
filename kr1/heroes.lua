@@ -597,7 +597,7 @@ AC(tt, "render", "tween")
 tt.aura.cycle_time = fts(10)
 tt.aura.duration = 6
 tt.aura.mod = "mod_bolin_slow"
-tt.aura.radius = 65
+tt.aura.radius = 75
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_MOD)
 tt.main_script.insert = scripts.aura_apply_mod.insert

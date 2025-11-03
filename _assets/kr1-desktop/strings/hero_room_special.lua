@@ -157,8 +157,7 @@ d[1].damage_max = s.damage_max_base + s.damage_inc * max_lvl
 
 map["野性呼唤"] = str("每隔", cooldown,
     "秒，小公主召唤一只野猫，跟随小公主战斗，召唤期间保持无敌。野猫拥有",
-    health[1].hp_max, "点生命值，每次攻击造成", d[1].damage_min, "-", d[1].damage_max, "点",
-    d[1].damage_type, "。")
+    health[1].hp_max, "点生命值，每次攻击造成", damage_str(), "。")
 
 set_skill(h.hero.skills.missileshot)
 cooldown = h.ranged.attacks[3].cooldown
@@ -412,7 +411,7 @@ map["犀牛朋友"] = str()
 map["愤怒鞭笞"] = str()
 map["狂野体质"] = str()
 
-set_hero("hero_vodoo_witch")
+set_hero("hero_voodoo_witch")
 map["冷笑骷髅"] = str()
 map["亡骨献祭"] = str()
 map["骨骸舞蹈"] = str()
