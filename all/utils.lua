@@ -19,6 +19,7 @@ local sqrt = math.sqrt
 local sin = math.sin
 local cos = math.cos
 local abs = math.abs
+local atan2 = math.atan2
 local PI = math.pi
 
 local U = {}
@@ -44,17 +45,27 @@ U.find_first_enemy_between_range_filter_off = seek.find_first_enemy_between_rang
 U.find_first_enemy_between_range_filter_on = seek.find_first_enemy_between_range_filter_on
 U.find_biggest_enemy_in_range_filter_off = seek.find_biggest_enemy_in_range_filter_off
 U.find_biggest_enemy_in_range_filter_on = seek.find_biggest_enemy_in_range_filter_on
-U.find_foremost_enemy_with_max_coverage_in_range_filter_off = seek.find_foremost_enemy_with_max_coverage_in_range_filter_off
-U.find_foremost_enemy_with_max_coverage_in_range_filter_on = seek.find_foremost_enemy_with_max_coverage_in_range_filter_on
-U.find_foremost_enemy_with_max_coverage_between_range_filter_off = seek.find_foremost_enemy_with_max_coverage_between_range_filter_off
-U.find_foremost_enemy_with_max_coverage_between_range_filter_on = seek.find_foremost_enemy_with_max_coverage_between_range_filter_on
-U.find_foremost_enemy_with_flying_preference_in_range_filter_off = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off
-U.find_foremost_enemy_with_flying_preference_in_range_filter_on = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on
+U.find_foremost_enemy_with_max_coverage_in_range_filter_off =
+    seek.find_foremost_enemy_with_max_coverage_in_range_filter_off
+U.find_foremost_enemy_with_max_coverage_in_range_filter_on =
+    seek.find_foremost_enemy_with_max_coverage_in_range_filter_on
+U.find_foremost_enemy_with_max_coverage_between_range_filter_off =
+    seek.find_foremost_enemy_with_max_coverage_between_range_filter_off
+U.find_foremost_enemy_with_max_coverage_between_range_filter_on =
+    seek.find_foremost_enemy_with_max_coverage_between_range_filter_on
+U.find_foremost_enemy_with_flying_preference_in_range_filter_off =
+    seek.find_foremost_enemy_with_flying_preference_in_range_filter_off
+U.find_foremost_enemy_with_flying_preference_in_range_filter_on =
+    seek.find_foremost_enemy_with_flying_preference_in_range_filter_on
 U.find_enemies_in_range_filter_override = seek.find_enemies_in_range_filter_override
-U.detect_foremost_enemy_with_flying_preference_between_range_filter_off = seek.detect_foremost_enemy_with_flying_preference_between_range_filter_off
-U.detect_foremost_enemy_with_flying_preference_between_range_filter_on = seek.detect_foremost_enemy_with_flying_preference_between_range_filter_on
-U.detect_foremost_enemy_with_flying_preference_in_range_filter_off = seek.detect_foremost_enemy_with_flying_preference_in_range_filter_off
-U.detect_foremost_enemy_with_flying_preference_in_range_filter_on = seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on
+U.detect_foremost_enemy_with_flying_preference_between_range_filter_off =
+    seek.detect_foremost_enemy_with_flying_preference_between_range_filter_off
+U.detect_foremost_enemy_with_flying_preference_between_range_filter_on =
+    seek.detect_foremost_enemy_with_flying_preference_between_range_filter_on
+U.detect_foremost_enemy_with_flying_preference_in_range_filter_off =
+    seek.detect_foremost_enemy_with_flying_preference_in_range_filter_off
+U.detect_foremost_enemy_with_flying_preference_in_range_filter_on =
+    seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on
 ---
 
 ---返回从 from 到 to 的随机数
@@ -137,7 +148,22 @@ end
 ---@param easing string? 缓动函数（可选）
 ---@param fn function? 每帧回调函数（可选）
 function U.y_ease_key(store, key_table, key_name, from, to, duration, easing, fn)
-    U.y_ease_keys(store, {key_table}, {key_name}, {from}, {to}, duration, {easing}, fn)
+    local start_ts = store.tick_ts
+    local phase
+
+    repeat
+        local dt = store.tick_ts - start_ts
+
+        phase = km.clamp(0, 1, dt / duration)
+
+        key_table[key_name] = U.ease_value(from, to, phase, easing)
+
+        if fn then
+            fn(dt, phase)
+        end
+
+        coroutine.yield()
+    until phase >= 1
 end
 
 ---计算缓动值
@@ -150,6 +176,39 @@ function U.ease_value(from, to, phase, easing)
     return from + (to - from) * U.ease_phase(phase, easing)
 end
 
+local function rotate_fn(f)
+    return function(s, ...)
+        return 1 - f(1 - s, ...)
+    end
+end
+
+local easing_functions = {
+    linear = function(s)
+        return s
+    end,
+    quad = function(s)
+        return s * s
+    end,
+    cubic = function(s)
+        return s * s * s
+    end,
+    quart = function(s)
+        return s * s * s * s
+    end,
+    quint = function(s)
+        return s * s * s * s * s
+    end,
+    sine = function(s)
+        return 1 - cos(s * PI * 0.5)
+    end,
+    expo = function(s)
+        return 2 ^ (10 * (s - 1))
+    end,
+    circ = function(s)
+        return 1 - sqrt(1 - s * s)
+    end
+}
+
 ---计算缓动进度
 ---@param phase number 原始进度（0-1）
 ---@param easing string? 缓动函数名（可选）
@@ -158,38 +217,6 @@ function U.ease_phase(phase, easing)
     phase = km.clamp(0, 1, phase)
     easing = easing or ""
 
-    local function rotate_fn(f)
-        return function(s, ...)
-            return 1 - f(1 - s, ...)
-        end
-    end
-
-    local easing_functions = {
-        linear = function(s)
-            return s
-        end,
-        quad = function(s)
-            return s * s
-        end,
-        cubic = function(s)
-            return s * s * s
-        end,
-        quart = function(s)
-            return s * s * s * s
-        end,
-        quint = function(s)
-            return s * s * s * s * s
-        end,
-        sine = function(s)
-            return 1 - cos(s * PI * 0.5)
-        end,
-        expo = function(s)
-            return 2 ^ (10 * (s - 1))
-        end,
-        circ = function(s)
-            return 1 - sqrt(1 - s * s)
-        end
-    }
     local fn_name, first_ease = string.match(easing, "([^-]+)%-([^-]+)")
     local fn = easing_functions[fn_name]
 
@@ -323,13 +350,9 @@ function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
         local a = entity.render.sprites[i]
 
         if not a.ignore_start then
-            local flip_x_i = flip_x
-
-            if flip_x_i == nil then
-                flip_x_i = a.flip_x
+            if flip_x ~= nil then
+                a.flip_x = flip_x
             end
-
-            a.flip_x = flip_x_i
             if a.animated then
                 a.loop = loop or a.loop_forced == true
 
@@ -338,7 +361,7 @@ function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
                     a.runs = 0
                 end
 
-                if name and a.name ~= name then
+                if name then
                     a.name = name
                 end
             end
@@ -358,9 +381,9 @@ function U.animation_finished(entity, idx, times)
     local a = entity.render.sprites[idx]
 
     if a.loop then
-        if times == 1 then
-            log.debug("waiting for looping animation for entity %s - ", entity.id, entity.template_name)
-        end
+        -- if times == 1 then
+        --     log.debug("waiting for looping animation for entity %s - ", entity.id, entity.template_name)
+        -- end
 
         return times <= a.runs
     else
@@ -481,9 +504,7 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
         fx, fy = fx + offset.x, fy + offset.y
     end
 
-    local vx, vy = V.sub(point.x, point.y, fx, fy)
-    local v_angle = V.angleTo(vx, vy)
-    local angle = km.unroll(v_angle)
+    local angle = km.unroll(atan2(point.y - fy, point.x - fx))
 
     return U.animation_name_for_angle(e, group, angle, idx)
 end
@@ -496,9 +517,8 @@ end
 ---@param times number? 播放次数（可选）
 ---@param idx number? 精灵索引（可选）
 function U.y_animation_play(entity, name, flip_x, ts, times, idx)
-    local loop = times and times > 1
-
-    U.animation_start(entity, name, flip_x, ts, loop, idx, true)
+    -- local loop = times and times > 1
+    U.animation_start(entity, name, flip_x, ts, times and times > 1, idx, true)
 
     while not U.animation_finished(entity, idx, times) do
         coroutine.yield()
@@ -518,9 +538,9 @@ function U.animation_start_group(entity, name, flip_x, ts, loop, group)
 
         return
     end
-
-    for i = 1, #entity.render.sprites do
-        local s = entity.render.sprites[i]
+    local sprites = entity.render.sprites
+    for i = 1, #sprites do
+        local s = sprites[i]
 
         if s.group == group then
             U.animation_start(entity, name, flip_x, ts, loop, i)
@@ -537,9 +557,9 @@ function U.animation_finished_group(entity, group, times)
     if not group then
         return U.animation_finished(entity, nil, times)
     end
-
-    for i = 1, #entity.render.sprites do
-        local s = entity.render.sprites[i]
+    local sprites = entity.render.sprites
+    for i = 1, #sprites do
+        local s = sprites[i]
 
         if s.group == group and U.animation_finished(entity, i, times) then
             return true
@@ -561,16 +581,14 @@ function U.y_animation_play_group(entity, name, flip_x, ts, times, group)
         return
     end
 
-    local loop = times and times > 1
+    -- local loop = times and times > 1
 
-    U.animation_start_group(entity, name, flip_x, ts, loop, group)
+    U.animation_start_group(entity, name, flip_x, ts, times and times > 1, group)
 
     local idx
-
-    for i = 1, #entity.render.sprites do
-        local s = entity.render.sprites[i]
-
-        if s.group == group then
+    local sprites = entity.render.sprites
+    for i = 1, #sprites do
+        if sprites[i].group == group then
             idx = i
 
             break
@@ -614,8 +632,9 @@ function U.get_animation_ts(entity, group)
     if not group then
         return entity.render.sprites[1].ts
     else
-        for i = 1, #entity.render.sprites do
-            local s = entity.render.sprites[i]
+        local sprites = entity.render.sprites
+        for i = 1, #sprites do
+            local s = sprites[i]
 
             if s.group == group then
                 return s.ts
@@ -635,10 +654,11 @@ function U.sprites_hide(entity, from, to, keep)
     end
 
     from = from or 1
-    to = to or #entity.render.sprites
+    local sprites = entity.render.sprites
+    to = to or #sprites
 
     for i = from, to do
-        local s = entity.render.sprites[i]
+        local s = sprites[i]
 
         if keep then
             if s.hidden and s.hidden_count == 0 then
@@ -691,15 +711,10 @@ function U.set_destination(e, pos)
 end
 
 ---设置实体朝向
----@param e table 实体
+---@param e table 实体，必须有.heading 属性
 ---@param dest table 目标位置 {x, y}
 function U.set_heading(e, dest)
-    if e.heading then
-        local vx, vy = V.sub(dest.x, dest.y, e.pos.x, e.pos.y)
-        local v_angle = V.angleTo(vx, vy)
-
-        e.heading.angle = v_angle
-    end
+    e.heading.angle = atan2(dest.y - e.pos.y, dest.x - e.pos.x)
 end
 
 ---移动实体到目标位置
@@ -716,7 +731,7 @@ function U.walk(e, dt, accel, unsnapped)
     local m = e.motion
     local pos = e.pos
     local vx, vy = m.dest.x - pos.x, m.dest.y - pos.y
-    local v_angle = math.atan2(vy, vx)
+    local v_angle = atan2(vy, vx)
     local v_len = V.len(vx, vy)
 
     if accel then
@@ -1118,7 +1133,7 @@ end
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table 最前面的敌人
 function U.refind_foremost_enemy(last_enemy, store, flags, bans)
-    local new_enemy = U.find_foremost_enemy_in_range_filter_off(last_enemy.pos, 50, nil, flags, bans)
+    local new_enemy = U.detect_foremost_enemy_in_range_filter_off(last_enemy.pos, 50, flags, bans)
     if new_enemy then
         return new_enemy
     else
@@ -1174,11 +1189,11 @@ function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, 
     filter_func, min_override_flags)
     local enemy, enemies
     if filter_func then
-        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(origin,
-            max_range, flags, bans, filter_func)
+        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(origin, max_range, flags,
+            bans, filter_func)
     else
-        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(origin,
-            max_range, flags, bans)
+        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(origin, max_range, flags,
+            bans)
     end
 
     if not enemy then

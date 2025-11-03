@@ -128,7 +128,8 @@ scripts.tower_archer_dwarf = {
         local shots_count = 1
         local last_target_pos = V.v(0, 0)
         local a, pow, enemy, _, pred_pos
-
+        local tpos = tpos(this)
+        local tw = this.tower
         while true do
             if this.tower.blocked then
                 -- block empty
@@ -146,21 +147,25 @@ scripts.tower_archer_dwarf = {
                 SU.tower_update_silenced_powers(store, this)
 
                 if ready_to_use_power(pow_b, ab, store, this.tower.cooldown_factor) then
-                    enemy, pred_pos = U.find_random_enemy_with_pos(store, tpos(this), 0, at.range, ab.node_prediction,
+                    enemy, pred_pos = U.find_random_enemy_with_pos(store, tpos, 0, at.range, ab.node_prediction,
                         ab.vis_flags, ab.vis_bans)
                     if enemy then
                         a = ab
                         pow = pow_b
+                    else
+                        ab.ts = ab.ts + fts(5)
                     end
                 end
 
                 if not a and ready_to_attack(as, store, this.tower.cooldown_factor) then
-                    enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), at.range, as.vis_flags, as.vis_bans)
+                    enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, at.range, as.vis_flags, as.vis_bans)
 
                     if enemy then
                         a = as
                         pow = pow_e
                         pred_pos = U.calculate_enemy_ffe_pos(enemy, as.node_prediction)
+                    else
+                        as.ts = as.ts + fts(5)
                     end
                 end
 
@@ -184,7 +189,7 @@ scripts.tower_archer_dwarf = {
                     local b1 = E:create_entity(a.bullet)
 
                     b1.pos.x, b1.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
-                    b1.bullet.damage_factor = this.tower.damage_factor
+                    b1.bullet.damage_factor = tw.damage_factor
                     b1.bullet.from = V.vclone(b1.pos)
                     b1.bullet.to = pred_pos
                     b1.bullet.target_id = enemy.id
@@ -203,8 +208,6 @@ scripts.tower_archer_dwarf = {
                     an, af = U.animation_name_facing_point(this, "idle", last_target_pos, shooter_sid, start_offset)
 
                     U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
-                else
-                    U.y_wait(store, this.tower.guard_time)
                 end
             end
 
@@ -224,11 +227,13 @@ scripts.tower_ranger = {
         local pow_t = this.powers.thorn
         this.bullet = E:create_entity(this.attacks.list[1].bullet)
         aa.ts = store.tick_ts
-
+        local tpos = tpos(this)
+        local tw = this.tower
+        local sprites = this.render.sprites
         local function shot_animation(attack, shooter_idx, enemy)
             local ssid = shooter_sids[shooter_idx]
-            local soffset = this.render.sprites[ssid].offset
-            local s = this.render.sprites[ssid]
+            local soffset = sprites[ssid].offset
+            local s = sprites[ssid]
             local an, af = U.animation_name_facing_point(this, attack.animation, enemy.pos, ssid, soffset)
 
             U.animation_start(this, an, af, store.tick_ts, 1, ssid)
@@ -238,9 +243,9 @@ scripts.tower_ranger = {
 
         local function shot_bullet(attack, shooter_idx, enemy, level)
             local ssid = shooter_sids[shooter_idx]
-            local shooting_up = tpos(this).y < enemy.pos.y
-            local shooting_right = tpos(this).x < enemy.pos.x
-            local soffset = this.render.sprites[ssid].offset
+            local shooting_up = tpos.y < enemy.pos.y
+            local shooting_right = tpos.x < enemy.pos.x
+            local soffset = sprites[ssid].offset
             local boffset = attack.bullet_start_offset[shooting_up and 1 or 2]
             local b = E:clone_entity(this.bullet)
             b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
@@ -249,7 +254,7 @@ scripts.tower_ranger = {
             b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
             b.bullet.target_id = enemy.id
             b.bullet.level = level
-            b.bullet.damage_factor = this.tower.damage_factor
+            b.bullet.damage_factor = tw.damage_factor
 
             apply_precision(b)
 
@@ -268,21 +273,21 @@ scripts.tower_ranger = {
                             for i = 1, #pow_p.mods do
                                 U.append_mod(this.bullet.bullet, pow_p.mods[i])
                             end
-                        elseif pow == pow_t and this.render.sprites[druid_sid].hidden then
-                            this.render.sprites[druid_sid].hidden = false
+                        elseif pow == pow_t and sprites[druid_sid].hidden then
+                            sprites[druid_sid].hidden = false
 
                             local ta = E:create_entity(pow_t.aura)
                             ta.aura.source_id = this.id
-                            ta.pos = tpos(this)
+                            ta.pos = tpos
                             queue_insert(store, ta)
                         end
                     end
                 end
                 if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this),
+                    local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos,
                         a.range, aa.vis_flags, aa.vis_bans)
                     if not enemy then
-                        U.y_wait(store, this.tower.guard_time)
+                        aa.ts = aa.ts + fts(5)
                         -- block empty
                     else
                         if pow_p.level > 0 then
@@ -290,9 +295,11 @@ scripts.tower_ranger = {
                                 return not U.flag_has(e.vis.bans, F_POISON) and
                                            not U.has_modifiers(store, e, pow_p.mods[1])
                             end)
-
-                            if #poisonable > 0 then
-                                enemy = poisonable[1]
+                            for _, e in pairs(enemies) do
+                                if not U.flag_has(e.vis.bans, F_POISON) and not U.has_modifiers(store, e, pow_p.mods[1]) then
+                                    enemy = e
+                                    break
+                                end
                             end
                         end
 
@@ -313,9 +320,9 @@ scripts.tower_ranger = {
                     end
                 end
 
-                if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
+                if store.tick_ts - aa.ts > tw.long_idle_cooldown then
                     for _, sid in pairs(shooter_sids) do
-                        local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
+                        local an, af = U.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
                         U.animation_start(this, an, af, store.tick_ts, -1, sid)
                     end
