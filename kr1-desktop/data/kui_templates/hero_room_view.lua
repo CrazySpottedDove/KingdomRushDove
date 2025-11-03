@@ -40,7 +40,7 @@ local hero_room_view = {
 			size = v(W, H),
 			anchor = v(W * 0.5, H * 0.5),
 			pos = v(960, 540),
-			scale = v(1, 1),
+			scale = v(1.35, 1.35),
 			children = {
 				{
 					text_key = "HERO ROOM",

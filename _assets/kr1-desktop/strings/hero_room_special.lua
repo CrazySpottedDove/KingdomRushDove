@@ -200,4 +200,40 @@ local duration = e.reinforcement.duration
 map["神圣支援"] = str("每隔", cooldown,
     "秒，爵士召唤一名可调集的皇家近卫协助战斗。皇家近卫拥有", hp_str(), "，", armor_str(),
     "，", "每次攻击造成", damage_str(), "，驻场", duration, "秒。")
+
+set_hero("hero_bolin")
+set_skill(h.hero.skills.mines)
+set_bullet("decal_bolin_mine")
+get_damage(b)
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+local radius = b.radius
+cooldown = h.timed_attacks.list[3].cooldown
+count = h.timed_attacks.list[3].count
+duration = b.duration
+map["布雷专家"] = str("每隔", cooldown, "秒，博林投掷一枚警戒范围为", radius,
+    "的地雷，持续时间", duration, "秒，最多同时存在", count, "枚。地雷爆炸时，对", radius * 2,
+    "范围内敌人造成", damage_str(), "。若视野内有敌人，博林将尝试直接向敌人投掷地雷。")
+set_skill(h.hero.skills.tar)
+duration = s.duration[max_lvl]
+set_bullet("aura_bolin_tar")
+radius = b.aura.radius
+set_bullet("mod_bolin_slow")
+factor = 1 - b.slow.factor
+cooldown = h.timed_attacks.list[2].cooldown
+map["焦油炸弹"] = str("每隔", cooldown,
+    "秒，博林投掷一枚焦油炸弹，炸弹在命中地面后形成一片半径为", radius,
+    "的焦油区域，使进入焦油区域的敌人移动速度降低", factor * 100, "%，持续", duration, "秒。")
+chance = h.timed_attacks.list[4].chance
+count = #h.timed_attacks.list[4].shoot_times
+map["狂热连射"] = str("博林有", chance * 100, "%的概率连射", count,
+    "次，每发子弹造成最大伤害。")
+cooldown = h.timed_attacks.list[5].cooldown
+count = h.timed_attacks.list[5].count
+set_bullet("bomb_shrapnel_bolin")
+get_damage(b.bullet)
+radius = b.bullet.damage_radius
+map["霰弹射击"] = str("每隔", cooldown, "秒，博林发射", count,
+    "发霰弹，每发霰弹在命中目标后对半径", radius, "范围内的敌人造成", damage_str(), "。")
+
 return H

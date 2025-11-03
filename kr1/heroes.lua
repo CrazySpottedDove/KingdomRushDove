@@ -601,7 +601,7 @@ local function heroes()
     tt.aura.mod = "mod_bolin_slow"
     tt.aura.radius = 65
     tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
-    tt.aura.vis_flags = bor(F_ENEMY)
+    tt.aura.vis_flags = bor(F_MOD)
     tt.main_script.insert = scripts.aura_apply_mod.insert
     tt.main_script.update = scripts.aura_slow_bolin.update
     tt.render.sprites[1].prefix = "decal_bolin_tar"
