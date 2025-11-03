@@ -390,8 +390,8 @@ get_damage(h.melee.attacks[2])
 radius = h.melee.attacks[2].damage_radius
 factor = h.melee.attacks[2].damage_factor
 map["旋风斩"] = str("英格瓦每次攻击有", rate_str(chance), "的概率发动旋风斩，对周围", radius,
-    "范围内敌人造成普攻", factor * 100, "%的",
-    damage_type_map[d[1].damage_type], "。该技能获取经验数与造成总伤相关。")
+    "范围内敌人造成普攻", factor * 100, "%的", damage_type_map[d[1].damage_type],
+    "。该技能获取经验数与造成总伤相关。")
 set_skill(h.hero.skills.ancestors_call)
 count = s.count[max_lvl]
 health[1].hp_max = s.hp_max[max_lvl]
@@ -414,7 +414,11 @@ factor = h.timed_attacks.list[2].transform_health_factor
 e = E:get_template("aura_ingvar_bear_regenerate")
 cycle_time = e.regen.cooldown
 local heal = e.regen.health
-map["巨熊形态"] = str(cooldown_str(),"若英格瓦生命值低于",factor*100,"%，英格瓦将变身巨熊，持续",duration,"秒。变身后，英格瓦免疫基础伤害类型，攻击替换为三连击，每次攻击造成",damage_str(),"。变身期间，英格瓦还会获得每",cycle_time,"秒恢复",heal,"点生命值的再生效果。该技能在巨熊状态下不进入冷却。")
+map["巨熊形态"] = str(cooldown_str(), "若英格瓦生命值低于", factor * 100,
+    "%，英格瓦将变身巨熊，持续", duration,
+    "秒。变身后，英格瓦免疫基础伤害类型，攻击替换为三连击，每次攻击造成", damage_str(),
+    "。变身期间，英格瓦还会获得每", cycle_time, "秒恢复", heal,
+    "点生命值的再生效果。该技能在巨熊状态下不进入冷却。")
 
 set_hero("hero_hacksaw")
 map["摧甲钢锯"] = str()
