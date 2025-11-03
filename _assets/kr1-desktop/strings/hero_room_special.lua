@@ -356,4 +356,134 @@ local s_price_factor = 1 - h.tower_price_factor
 map["资源调配"] = str("迪纳斯国王优秀的资源调配能力使所有防御塔的造价降低",
     s_price_factor * 100, "%。赞美国王！")
 
+set_hero("hero_elora")
+map["永恒冻土"] = str()
+map["寒冰风暴"] = str()
+
+set_hero("hero_ingvar")
+map["旋风斩"] = str()
+map["先祖召唤"] = str()
+map["巨熊形态"] = str()
+
+set_hero("hero_hacksaw")
+map["摧甲钢锯"] = str()
+map["弹射锯片"] = str()
+map["伐伐伐木"] = str()
+
+set_hero("hero_oni")
+map["灭魂斩"] = str()
+map["千本刃"] = str()
+map["复仇怒火"] = str()
+
+set_hero("hero_thor")
+map["雷神之锤"] = str()
+map["雷霆一击"] = str()
+map["雷电中继"] = str()
+
+set_hero("hero_10yr")
+map["钢铁时间"] = str()
+map["火焰冲刺"] = str()
+
+set_hero("hero_alric")
+map["血色连斩"] = str()
+map["沙漠勇士"] = str()
+map["反伤刺甲"] = str()
+
+set_hero("hero_mirage")
+map["移形换影"] = str()
+map["影舞"] = str()
+map["背刺"] = str()
+
+set_hero("hero_pirate")
+map["火药子母"] = str()
+map["克拉肯之触"] = str()
+map["寻宝"] = str()
+
+set_hero("hero_wizard")
+map["魔法飞弹"] = str()
+map["连锁反应"] = str()
+map["分解"] = str()
+map["法术洪流"] = str()
+
+set_hero("hero_beastmaster")
+map["野猪朋友"] = str()
+map["猎鹰朋友"] = str()
+map["犀牛朋友"] = str()
+map["愤怒鞭笞"] = str()
+map["狂野体质"] = str()
+
+set_hero("hero_vodoo_witch")
+map["冷笑骷髅"] = str()
+map["亡骨献祭"] = str()
+map["骨骸舞蹈"] = str()
+map["恐惧光环"] = str()
+map["巫毒魔法"] = str()
+
+set_hero("hero_alien")
+map["能量飞镖"] = str()
+map["净化协议"] = str()
+map["母舰劫持"] = str()
+map["最终手段"] = str()
+
+set_hero("hero_monk")
+map["虎型拳"] = str()
+map["蛇型拳"] = str()
+map["豹形拳"] = str()
+map["龙形拳"] = str()
+map["鹤形拳"] = str()
+
+set_hero("hero_monkey_god")
+map["狼牙风暴"] = str()
+map["旋风棍法"] = str()
+map["猴掌"] = str()
+map["神怒"] = str()
+map["神性"] = str()
+
+set_hero("hero_giant")
+map["巨石投掷"] = str()
+map["岩晶肘击"] = str()
+map["大地震颤"] = str()
+map["堡垒之势"] = str()
+
+set_hero("hero_dragon")
+map["龙息"] = str()
+map["猎宴"] = str()
+map["浓烟"] = str()
+map["火焰弹幕"] = str()
+
+set_hero("hero_priest")
+map["圣光术"]=str()
+map["神圣祝颂"]=str()
+map["光翼庇护"]=str()
+
+set_hero("hero_dwarf")
+map["重锤"]=str()
+map["大地之力"]=str()
+
+set_hero("hero_minotaur")
+map["蛮牛冲撞"]=str()
+map["英勇打击"]=str()
+map["代达罗斯的迷宫"]=str()
+map["野牛怒吼"]=str()
+map["巨斧风暴"]=str()
+
+set_hero("hero_crab")
+map["战争强硬"]=str()
+map["折叠蟹钳"]=str()
+map["水炮"]=str()
+map["裂地攻势"]=str()
+
+set_hero("hero_van_helsing")
+map["纯银子弹"]=str()
+map["致命连射"]=str()
+map["遗迹之力"]=str()
+map["圣水炸弹"]=str()
+map["光明信标"]=str()
+
+set_hero("hero_dracolich")
+map["脊雨"]=str()
+map["疾病新星"]=str()
+map["死亡之触"]=str()
+map["亡灵眷属"]=str()
+
 return H
