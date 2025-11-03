@@ -21,13 +21,14 @@ require("foundamental_towers")()
 package.loaded.mage_towers = nil
 package.loaded.archer_towers = nil
 package.loaded.engineer_towers = nil
+package.loaded.heroes = nil
 require("mage_towers")
 require("archer_towers")
 require("engineer_towers")
+require("heroes")
 
 require("barrack_towers")()
 require("enemies")()
-require("heroes")()
 require("boss")()
 package.loaded.hero_boss = nil
 require("hero_boss")
@@ -914,17 +915,6 @@ tt.emit_states = {"idle", "attack"}
 tt.main_script.update = scripts.aura_ignus_particles.update
 tt.particle_offsets = {vec_2(-17, 16), vec_2(-12, 27), vec_2(4, 37), vec_2(2, 35), vec_2(12, 22), vec_2(14, 13)}
 tt.flip_offset = vec_2(3, 0)
-tt = RT("aura_ignus_surge_of_flame", "aura")
-tt.aura.cycle_time = fts(1)
-tt.aura.duration = 0
-tt.aura.damage_min = nil
-tt.aura.damage_max = nil
-tt.aura.damage_type = DAMAGE_TRUE
-tt.aura.damage_radius = 25
-tt.aura.hit_fx = "fx_ignus_burn"
-tt.damage_state = "surgeOfFlame"
-tt.main_script.update = scripts.aura_ignus_surge_of_flame.update
-tt.particles_name = "ps_hero_ignus_smoke"
 
 tt = RT("aura_ingvar_bear_regenerate", "aura")
 AC(tt, "regen")
@@ -1394,39 +1384,7 @@ tt.dps.damage_every = fts(11)
 tt.dps.damage_type = DAMAGE_POISON
 tt.modifier.duration = 3
 tt.modifier.vis_flags = bor(F_MOD, F_BURN)
-tt = RT("mod_ignus_burn_1", "mod_lava")
-tt.dps.damage_min = 5
-tt.dps.damage_max = 5
-tt.dps.damage_inc = 0
-tt.dps.damage_every = fts(11)
-tt.dps.damage_type = DAMAGE_TRUE
-tt.modifier.duration = 4
-tt.modifier.vis_flags = bor(F_MOD, F_BURN)
-tt.render.sprites[1].prefix = "fx_burn"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt = RT("mod_ignus_burn_2", "mod_lava")
-tt.dps.damage_min = 8
-tt.dps.damage_max = 8
-tt.dps.damage_inc = 0
-tt.dps.damage_every = fts(11)
-tt.dps.damage_type = DAMAGE_TRUE
-tt.modifier.duration = 5
-tt.modifier.vis_flags = bor(F_MOD, F_BURN)
-tt.render.sprites[1].prefix = "fx_burn"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt = RT("mod_ignus_burn_3", "mod_lava")
-tt.dps.damage_min = 10
-tt.dps.damage_max = 10
-tt.dps.damage_inc = 0
-tt.dps.damage_every = fts(11)
-tt.dps.damage_type = DAMAGE_TRUE
-tt.modifier.duration = 6
-tt.modifier.vis_flags = bor(F_MOD, F_BURN)
-tt.render.sprites[1].prefix = "fx_burn"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
+
 tt = RT("mod_gulaemon_fly", "modifier")
 -- tt.main_script.queue = scripts.mod_gulaemon_fly.queue
 -- tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue

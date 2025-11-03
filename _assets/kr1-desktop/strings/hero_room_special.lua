@@ -81,14 +81,17 @@ local function get_damage(t, i)
     end
     d[i].damage_min = t.damage_min
     d[i].damage_max = t.damage_max
-    d[i].damage_type = damage_type_map[t.damage_type]
+    d[i].damage_type = t.damage_type
 end
 
 local function damage_str(i)
     if not i then
         i = 1
     end
-    return str(d[i].damage_min, "-", d[i].damage_max, "点", d[i].damage_type)
+    if d[i].damage_min == d[i].damage_max then
+        return str(d[i].damage_min, "点", damage_type_map[d[i].damage_type])
+    end
+    return str(d[i].damage_min, "-", d[i].damage_max, "点", damage_type_map[d[i].damage_type])
 end
 
 local function hp_str(i)
@@ -124,18 +127,21 @@ local function get_health(t, i)
     health[i].magic_armor = t.health.magic_armor
 end
 
+local function cooldown_str()
+    return str("每隔", cooldown, "秒，")
+end
+
 set_hero("hero_alleria")
 set_skill(h.hero.skills.multishot)
 get_cooldown()
 local count = s.count_base + s.count_inc * max_lvl
 set_bullet("arrow_multishot_hero_alleria")
 get_damage(b.bullet)
-
+get_damage(d[1], 2)
+d[2].damage_max = d[2].damage_max - 20
 map["多重射击"] = str("每隔", cooldown,
     "秒，小公主瞄准一小片敌人，合理分配箭矢目标，射出共", count, "发精灵箭矢，造成",
-    d[1].damage_min, "-", d[1].damage_max, "点", d[1].damage_type,
-    "。当额外的箭矢命中同一敌人时，改为造成", d[1].damage_min, "-", d[1].damage_max - 20, "点",
-    d[1].damage_type, "。")
+    damage_str(), "。当额外的箭矢命中同一敌人时，改为造成", damage_str(2), "。")
 
 set_skill(h.hero.skills.callofwild)
 cooldown = h.timed_attacks.list[1].cooldown
@@ -157,7 +163,7 @@ set_bullet("arrow_hero_alleria_missile")
 get_damage(b.bullet)
 
 map["追猎箭矢"] = str("每隔", cooldown, "秒，小公主射出一发追猎箭矢，追踪并穿刺最多", count,
-    "个目标，对每个目标造成", d[1].damage_min, "-", d[1].damage_max, "点", d[1].damage_type, "。")
+    "个目标，对每个目标造成", damage_str(), "。")
 
 set_hero("hero_gerald")
 set_skill(h.hero.skills.block_counter)
@@ -168,7 +174,7 @@ local chance = h.dodge.chance_base + h.dodge.chance_inc * max_lvl
 local low_change_factor = h.dodge.low_chance_factor
 
 map["惩戒之盾"] = str("杰拉尔德每次受到近战攻击时，有", chance * 100,
-    "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的范围", d[1].damage_type,
+    "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的范围", damage_type_map[d[1].damage_type],
     "。面对BOSS单位时，盾反概率×", low_change_factor * 100,
     "%；受到范围攻击时，盾反概率×60%。")
 
@@ -235,5 +241,64 @@ get_damage(b.bullet)
 radius = b.bullet.damage_radius
 map["霰弹射击"] = str("每隔", cooldown, "秒，博林发射", count,
     "发霰弹，每发霰弹在命中目标后对半径", radius, "范围内的敌人造成", damage_str(), "。")
+
+set_hero("hero_magnus")
+set_skill(h.hero.skills.mirage)
+count = s.count[max_lvl]
+local health_factor = s.health_factor
+local damage_factor = s.damage_factor
+e = E:get_template("soldier_magnus_illusion")
+local rain_radius_factor = e.skill_radius_factor
+local rain_damage_factor = e.skill_damage_factor
+duration = e.reinforcement.duration
+cooldown = h.timed_attacks.list[1].cooldown
+map["幻影"] = str(cooldown_str(), "马格努斯创造", count, "个幻影分身，分身拥有主英雄",
+    health_factor * 100, "%的生命值，", damage_factor * 100, "%的普攻伤害，持续", duration, "秒。")
+map["幻影·奥术风暴"] = str(
+    "马格努斯的幻影分身会释放弱化的奥术风暴，每个幻影分身释放的奥术风暴拥有主英雄奥术风暴",
+    rain_radius_factor * 100, "%的作用范围，造成", rain_damage_factor * 100, "%的魔法伤害。")
+set_skill(h.hero.skills.arcane_rain)
+cooldown = h.timed_attacks.list[2].cooldown
+set_bullet("magnus_arcane_rain")
+get_damage(b)
+radius = b.damage_radius
+count = s.count[max_lvl]
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+map["奥术风暴"] = str(cooldown_str(), "马格努斯召唤奥术风暴，在目标区域内降下", count,
+    "枚奥术雨滴，每枚雨滴对", radius, "范围内敌人造成", damage_str(), "。")
+
+set_hero("hero_ignus")
+set_skill(h.hero.skills.flaming_frenzy)
+d[1].damage_type = h.timed_attacks.list[1].damage_type
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+local heal_factor = h.timed_attacks.list[1].heal_factor
+radius = h.timed_attacks.list[1].max_range
+cooldown = h.timed_attacks.list[1].cooldown
+
+map["暴怒狂焰"] = str(cooldown_str(), "伊格努斯释放暴怒狂焰，对周围", radius,
+    "范围内的敌人造成", damage_str(), "，并恢复", heal_factor * 100, "%最大生命值。")
+set_skill(h.hero.skills.surge_of_flame)
+set_bullet("aura_ignus_surge_of_flame")
+get_damage(b.aura)
+radius = b.aura.damage_radius
+local cycle_time = b.aura.cycle_time
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+
+map["烈焰喷涌"] = str(cooldown_str(),
+    "伊格努斯化为火球，快速穿梭至另一名敌人面前，再穿梭回来，期间保持无敌，并对身边",
+    radius, "范围内敌人每", cycle_time, "秒造成", damage_str(),
+    "。若穿梭导致了目标死亡，伊格努斯将额外寻找目标穿梭。")
+set_bullet("mod_ignus_burn_3")
+get_damage(b.dps)
+cycle_time = b.dps.damage_every
+duration = b.modifier.duration
+
+map["烈火附身"] = str("伊格努斯所有攻击有60%的概率点燃敌人，使其在接下来的", duration,
+    "秒内每", cycle_time, "秒受到", damage_str(),
+    "。永恒燃烧的身躯使伊格努斯免疫火焰与剧毒。")
 
 return H

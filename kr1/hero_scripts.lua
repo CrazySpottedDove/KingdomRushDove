@@ -4151,8 +4151,6 @@ scripts.magnus_arcane_rain_controller = {
 
             e.pos = V.vclone(pos)
             if this.is_illusion then
-                e.damage_min = e.damage_min * 0.35
-                e.damage_max = e.damage_max * 0.35
                 e.damage_type = DAMAGE_MAGICAL
                 e.damage_radius = e.damage_radius * range_factor
                 e.render.sprites[1].scale = V.vv(range_factor)
@@ -4269,8 +4267,8 @@ scripts.soldier_magnus_illusion = {
                         local e = E:create_entity(arcane_rain.entity)
                         e.is_illusion = true
                         e.pos = pos
-                        e.damage_factor = this.unit.damage_factor
-                        e.render.sprites[1].scale = V.v(0.8, 0.8)
+                        e.damage_factor = this.unit.damage_factor * this.skill_damage_factor
+                        e.render.sprites[1].scale = V.v(this.skill_radius_factor, this.skill_radius_factor)
                         queue_insert(store, e)
 
                         if not U.y_animation_wait(this) then
@@ -4418,7 +4416,7 @@ scripts.hero_magnus = {
                         e.tween.props[1].keys[1][2].y = -o.y
                         e.render.sprites[1].flip_x = this.render.sprites[1].flip_x
                         e.owner = this
-
+                        e.unit.damage_factor = this.unit.damage_factor
                         queue_insert(store, e)
                     end
 
@@ -5780,7 +5778,9 @@ scripts.hero_ignus = {
                                     U.walk(this, store.tick_length, nil, true)
                                     coroutine.yield()
                                 end
-                                apply_fire(target)
+                                if math.random() < this.melee.attacks[2].chance then
+                                    apply_fire(target)
+                                end
                                 this.nav_rally.center = V.vclone(this.pos)
                                 this.nav_rally.pos = V.vclone(this.pos)
                                 U.speed_div(this, a.speed_factor)
@@ -5872,7 +5872,7 @@ scripts.hero_ignus = {
 
                                     queue_damage(store, d)
 
-                                    if math.random() < this.melee.attacks[2].chance * 0.5 then
+                                    if math.random() < this.melee.attacks[2].chance then
                                         apply_fire(t)
                                     end
                                 end
