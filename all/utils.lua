@@ -2517,8 +2517,8 @@ end
 --- @param p table 待判断点
 --- @return is_inside boolean 是否在矩形区域内
 function U.is_inside_square(o, half_x, half_y, r, p)
-    local cos_r = math.cos(r)
-    local sin_r = math.sin(r)
+    local cos_r = cos(r)
+    local sin_r = sin(r)
 
     local dx = p.x - o.x
     local dy = p.y - o.y
@@ -2526,7 +2526,7 @@ function U.is_inside_square(o, half_x, half_y, r, p)
     local local_x = dx * cos_r + dy * sin_r
     local local_y = -dx * sin_r + dy * cos_r
 
-    if math.abs(local_x) <= half_x and math.abs(local_y) <= half_y then
+    if abs(local_x) <= half_x and abs(local_y) <= half_y then
         return true
     end
     return false

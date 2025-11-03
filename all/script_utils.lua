@@ -333,7 +333,8 @@ local function spiked_armor_inc(this, value)
         this.health.raw_spiked_armor = this.health.spiked_armor
     end
     this.health.raw_spiked_armor = this.health.raw_spiked_armor + value
-    this.health.spiked_armor = km.clamp(0, 1, this.health.raw_spiked_armor)
+    -- this.health.spiked_armor = km.clamp(0, 1, this.health.raw_spiked_armor)
+    this.health.spiked_armor = math.max(0, this.health.raw_spiked_armor)
 end
 
 ---减少反伤甲
