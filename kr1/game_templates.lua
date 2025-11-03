@@ -863,12 +863,6 @@ tt.main_script.update = scripts.aura_ignus_particles.update
 tt.particle_offsets = {vec_2(-17, 16), vec_2(-12, 27), vec_2(4, 37), vec_2(2, 35), vec_2(12, 22), vec_2(14, 13)}
 tt.flip_offset = vec_2(3, 0)
 
-tt = RT("aura_ingvar_bear_regenerate", "aura")
-AC(tt, "regen")
-tt.aura.duration = 0
-tt.main_script.update = scripts.aura_ingvar_bear_regenerate.update
-tt.regen.cooldown = 1
-tt.regen.health = 5
 
 tt = RT("aura_10yr_idle", "aura")
 tt.aura.duration = 0

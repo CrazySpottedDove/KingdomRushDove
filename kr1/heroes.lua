@@ -1431,6 +1431,13 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.price = 0
 tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
 
+tt = RT("aura_ingvar_bear_regenerate", "aura")
+AC(tt, "regen")
+tt.aura.duration = 0
+tt.main_script.update = scripts.aura_ingvar_bear_regenerate.update
+tt.regen.cooldown = 1
+tt.regen.health = 5
+
 tt = RT("hero_elora", "hero")
 AC(tt, "melee", "ranged", "timed_attacks")
 anchor_y = 0.17

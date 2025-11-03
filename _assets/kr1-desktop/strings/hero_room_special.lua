@@ -403,8 +403,18 @@ cooldown = h.timed_attacks.list[1].cooldown
 duration = e.reinforcement.duration
 map["先祖召唤"] = str(cooldown_str(), "英格瓦召唤", count, "名可调集的先祖加入战斗。先祖拥有",
     hp_str(1), "，每次攻击造成", damage_str(), "驻场", duration,
-    "秒。若该技能已冷却好，且英格瓦仍处于巨熊形态，英格瓦将自行退出巨熊形态并释放本技能，并返还对应冷却时间。")
-map["巨熊形态"] = str()
+    "秒，且不会被转化为狼人或骷髅。若该技能已冷却好，且英格瓦仍处于巨熊形态，英格瓦将自行退出巨熊形态并释放本技能，并返还对应冷却时间。")
+set_skill(h.hero.skills.bear)
+get_damage(h.melee.attacks[3])
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+duration = s.duration[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+factor = h.timed_attacks.list[2].transform_health_factor
+e = E:get_template("aura_ingvar_bear_regenerate")
+cycle_time = e.regen.cooldown
+local heal = e.regen.health
+map["巨熊形态"] = str(cooldown_str(),"若英格瓦生命值低于",factor*100,"%，英格瓦将变身巨熊，持续",duration,"秒。变身后，英格瓦免疫基础伤害类型，攻击替换为三连击，每次攻击造成",damage_str(),"。变身期间，英格瓦还会获得每",cycle_time,"秒恢复",heal,"点生命值的再生效果。")
 
 set_hero("hero_hacksaw")
 map["摧甲钢锯"] = str()
