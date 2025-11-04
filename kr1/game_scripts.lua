@@ -5621,7 +5621,7 @@ function scripts.aura_10yr_fireball.update(this, store)
             local b = E:create_entity(a.entity)
 
             if target then
-                local pred_pos = U.predict_enemy_position(target, bdt)
+                local pred_pos = U.calculate_enemy_ffe_pos(target, bdt)
                 local dh = start_y - pred_pos.y
                 local dx = dh * 0.4
 
