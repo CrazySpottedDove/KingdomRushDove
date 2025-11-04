@@ -9,7 +9,7 @@ local entity_db = {}
 
 entity_db.last_id = 1
 
-function entity_db:_load()
+function entity_db:load()
 	self.last_id = 1
 	self.components = {}
 	self.entities = {}
@@ -26,13 +26,13 @@ function entity_db:_load()
 end
 
 -- 性能与内存测试函数
-function entity_db:load()
+function entity_db:test()
     -- 记录初始内存
     collectgarbage("collect")
     local mem_before = collectgarbage("count") -- 单位：KB
 
     local t0 = os.clock()
-    self:_load()
+    self:load()
     local t1 = os.clock()
 
     -- 统计模板数量
