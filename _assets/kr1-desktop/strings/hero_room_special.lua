@@ -10,8 +10,7 @@ local damage_type_map = {
     [DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害",
     [DAMAGE_ELECTRICAL] = "雷电伤害"
 }
-local bit
-require("bit")
+local bit = require("bit")
 local band = bit.band
 local function str(...)
     local t = {}
