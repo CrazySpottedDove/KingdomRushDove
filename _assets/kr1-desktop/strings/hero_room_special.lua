@@ -488,8 +488,8 @@ d[1].damage_type = b.thunderclap.damage_type
 d[2].damage_type = b.thunderclap.secondary_damage_type
 local duration_min = b.thunderclap.stun_duration_min
 cooldown = h.ranged.attacks[1].cooldown
-map["雷神之锤"] = str(cooldown_str(), "索尔掷出雷神之锤，对目标造成", damage_str(1), "并对", radius,
-    "范围内敌人造成", damage_str(2), "与", duration_min, "到", duration, "秒眩晕效果。")
+map["雷神之锤"] = str(cooldown_str(), "索尔掷出雷神之锤，对目标造成", damage_str(1), "，并对", radius,
+    "范围内敌人造成", damage_str(2), "与", duration_min, "-", duration, "秒眩晕效果。")
 set_skill(h.hero.skills.chainlightning)
 factor = 1 - h.hero.level_stats.melee_cooldown[10] / h.hero.level_stats.melee_cooldown[1]
 chance = s.chance[max_lvl]
@@ -498,9 +498,14 @@ set_bullet("mod_ray_hero_thor")
 get_damage(b.dps)
 cycle_time = b.dps.damage_every
 duration = b.modifier.duration
-map["雷霆一击"] = str("索尔每次攻击，有", rate_str(chance), "触发电流，对最多", count,
-    "名敌人每", cycle_time, "秒造成", damage_str(), "，持续", duration,
-    "秒，并加快雷神之锤的冷却1秒。雷神的普攻攻速提升", factor * 100, "%。")
+
+set_bullet("mod_hero_thor_chainlightning")
+d[2].damage_type = b.chainlightning.damage_type
+d[2].damage_min = b.chainlightning.damage
+d[2].damage_max = b.chainlightning.damage
+
+map["雷霆一击"] = str("索尔每次攻击，有", rate_str(chance), "触发",count,"条电流分配给随机敌人，造成",damage_str(2),"并施加可叠加的电击效果，每", cycle_time, "秒造成", damage_str(), "，持续", duration,
+    "秒。触发雷霆一击时，雷神之锤的冷却加快1秒。雷神的普攻攻速提升", factor * 100, "%。")
 heal = h.hero.level_stats.lightning_heal[10]
 map["雷电中继"] = str(
     "索尔的身躯可以充当电流的中继站，刷新电流的传导次数并使电流的传导范围翻倍。每当雷电中继触发，索尔都会恢复",
@@ -519,7 +524,7 @@ duration = s.duration[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
 local cooldown_2 = h.timed_attacks.list[3].cooldown
 local cooldown_3 = h.melee.attacks[3].cooldown
-local loop = h.melee.attacks[3].loop
+local loop = h.melee.attacks[3].loops
 d[3].damage_type = h.melee.attacks[3].damage_type
 radius = h.melee.attacks[3].damage_radius
 local count_2 = h.timed_attacks.list[2].min_count
@@ -533,7 +538,7 @@ chance = b.aura.stun_chance
 e = E:get_template("mod_10yr_stun")
 duration_2 = e.modifier.duration
 map["钢铁时间"] = str("每隔", cooldown, "秒，若周围敌人数量不少于", count_2,
-    "天十进入钢铁状态，移速提升至", speed, "并免疫基础伤害类型，持续", duration,
+    "，天十进入钢铁状态，移速提升至", speed, "。并免疫基础伤害类型，持续", duration,
     "秒。在钢铁状态下，天十每隔", cooldown_3, "秒高速旋转，对", radius, "范围内敌人进行",
     loop, "连击，每次攻击造成", damage_str(3),
     "。在调集距离较远时，天十将主动退出钢铁状态，返还对应冷却，并传送至调集位置。该技能在钢铁状态下不进入冷却。")
