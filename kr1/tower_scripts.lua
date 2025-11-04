@@ -24,7 +24,7 @@ local bnot = bit.bnot
 local IS_PHONE = KR_TARGET == "phone"
 local IS_CONSOLE = KR_TARGET == "console"
 local v = V.v
-local vclone = V.clone
+local vclone = V.vclone
 local random = math.random
 local animation_start = U.animation_start
 local animation_name_facing_point = U.animation_name_facing_point
