@@ -1968,6 +1968,74 @@ tt.ranged.attacks[1].sound_shoot = "HeroThorHammer"
 tt.ranged.attacks[1].xp_from_skill = "thunderclap"
 tt.lightning_heal = 20
 
+tt = E:register_t("hammer_hero_thor", "bolt")
+tt.bullet.acceleration_factor = 0.05
+tt.bullet.min_speed = 300
+tt.bullet.max_speed = 900
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.hit_blood_fx = nil
+tt.bullet.hit_fx = nil
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.mod = "mod_hero_thor_thunderclap"
+tt.bullet.pop = nil
+tt.render.sprites[1].prefix = "hammer_hero_thor"
+tt.sound_events.insert = nil
+
+tt = E:register_t("mod_ray_hero_thor", "mod_ray_tesla")
+tt.modifier.duration = fts(16)
+tt.dps.damage_every = fts(2)
+tt.dps.damage_min = 5
+tt.dps.damage_max = 5
+tt.dps.damage_type = DAMAGE_ELECTRICAL
+tt.modifier.allows_duplicates = true
+
+tt = RT("mod_hero_thor_chainlightning", "modifier")
+tt.chainlightning = {
+    bullet = "ray_hero_thor",
+    count = 2,
+    damage = 40,
+    offset = vec_2(25, -1),
+    damage_type = DAMAGE_ELECTRICAL,
+    chain_delay = fts(2),
+    max_range = 110,
+    min_range = 40,
+    mod = "mod_tesla_overcharge"
+}
+tt.main_script.update = scripts.mod_hero_thor_chainlightning.update
+
+tt = RT("mod_hero_thor_thunderclap", "modifier")
+AC(tt, "render")
+tt.thunderclap = {
+    damage = 60,
+    offset = vec_2(0, 10),
+    damage_type = DAMAGE_ELECTRICAL,
+    explosion_delay = fts(3),
+    secondary_damage = 50,
+    secondary_damage_type = DAMAGE_ELECTRICAL,
+    radius = 70,
+    stun_duration_max = 3,
+    stun_duration_min = 2,
+    mod_stun = "mod_hero_thor_stun",
+    mod_fx = "mod_tesla_overcharge",
+    fx = "fx_hero_thor_thunderclap_disipate",
+    sound = "HeroThorThunder"
+}
+tt.main_script.update = scripts.mod_hero_thor_thunderclap.update
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.render.sprites[1].anchor = vec_2(0.5, 0.15)
+tt.render.sprites[1].name = "mod_hero_thor_thunderclap"
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].loop = false
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].name = "mod_hero_thor_thunderclap_explosion"
+
+tt = RT("mod_hero_thor_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_BOSS)
+
 tt = RT("hero_10yr", "hero")
 AC(tt, "melee", "timed_attacks", "teleport")
 anchor_y = 0.20161290322580644
@@ -1986,7 +2054,11 @@ tt.hero.skills.rain = CC("hero_skill")
 tt.hero.skills.rain.loops = {3, 4, 5}
 tt.hero.skills.rain.damage_min = {30, 35, 40}
 tt.hero.skills.rain.damage_max = {60, 65, 70}
-tt.hero.skills.rain.xp_level_steps = {nil, 1, nil, nil, 2, nil, nil, 3}
+tt.hero.skills.rain.xp_level_steps = {
+    [2] = 1,
+    [5] = 2,
+    [8] = 3
+}
 tt.hero.skills.rain.xp_gain = {100, 200, 300}
 tt.hero.skills.buffed = CC("hero_skill")
 tt.hero.skills.buffed.bomb_steps = {3, 4, 6}
@@ -2087,7 +2159,7 @@ tt.timed_attacks.list[2].min_count = 3
 tt.timed_attacks.list[2].range = 100
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].duration = nil
-tt.timed_attacks.list[2].transform_health_factor = 0.6
+-- tt.timed_attacks.list[2].transform_health_factor = 0.6
 tt.timed_attacks.list[2].immune_to = DAMAGE_BASE_TYPES
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[2].sounds_buffed = {"TenShiTransformToBuffed", "TenShiTransformToBuffedSfx"}

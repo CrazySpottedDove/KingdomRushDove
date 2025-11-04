@@ -1677,76 +1677,8 @@ function scripts.decal_oni_torment_sword.update(this, store)
     queue_remove(store, this)
 end
 
-function scripts.hero_thor.update(this, store)
-    local h = this.health
-    local he = this.hero
-    local a, skill, brk, sta
 
-    U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
-    this.health_bar.hidden = false
-
-    while true do
-        if h.dead then
-            SU.y_hero_death_and_respawn(store, this)
-        end
-
-        if this.unit.is_stunned then
-            SU.soldier_idle(store, this)
-        else
-            while this.nav_rally.new do
-                if SU.y_hero_new_rally(store, this) then
-                    goto label_87_0
-                end
-            end
-
-            if SU.hero_level_up(store, this) then
-                U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
-            end
-
-            brk, sta = SU.y_soldier_ranged_attacks(store, this)
-
-            if brk then
-                -- block empty
-            else
-                brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
-
-                if brk or sta ~= A_NO_TARGET then
-                    -- block empty
-                elseif SU.soldier_go_back_step(store, this) then
-                    -- block empty
-                else
-                    SU.soldier_idle(store, this)
-                    SU.soldier_regen(store, this)
-                end
-            end
-        end
-
-        ::label_87_0::
-
-        coroutine.yield()
-    end
-end
-
-function scripts.hero_10yr.get_info(this)
-    local a = this.is_buffed and this.melee.attacks[3] or this.melee.attacks[1]
-    local min, max = a.damage_min + this.damage_buff, a.damage_max + this.damage_buff
-
-    min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-
-    return {
-        type = STATS_TYPE_SOLDIER,
-        hp = this.health.hp,
-        hp_max = this.health.hp_max,
-        damage_min = min,
-        damage_max = max,
-        damage_type = a.damage_type,
-        -- damage_icon = this.info.damage_icon,
-        armor = this.health.armor,
-        magic_armor = this.health.magic_armor,
-        respawn = this.health.dead_lifetime
-    }
-end
 
 scripts.enemy_sheep = {
     update = function(this, store)

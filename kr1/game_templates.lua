@@ -30,8 +30,8 @@ require("foundamental_towers")
 require("mage_towers")
 require("archer_towers")
 require("engineer_towers")
-require("heroes")
 require("barrack_towers")
+require("heroes")
 require("enemies")
 require("boss")
 require("hero_boss")
@@ -652,21 +652,7 @@ tt.bullet.mod = "mod_witch_frog"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].prefix = "bolt_witch"
 tt.sound_events.insert = "kr4_tower_wickedsisters_attack_v1"
-tt = E:register_t("hammer_hero_thor", "bolt")
-tt.bullet.acceleration_factor = 0.05
-tt.bullet.min_speed = 300
-tt.bullet.max_speed = 900
-tt.bullet.vis_flags = F_RANGED
-tt.bullet.vis_bans = 0
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
-tt.bullet.hit_blood_fx = nil
-tt.bullet.hit_fx = nil
-tt.bullet.damage_type = DAMAGE_NONE
-tt.bullet.mod = "mod_hero_thor_thunderclap"
-tt.bullet.pop = nil
-tt.render.sprites[1].prefix = "hammer_hero_thor"
-tt.sound_events.insert = nil
+
 
 tt = RT("bolt_magnus", "bolt")
 tt.bullet.vis_flags = F_RANGED
@@ -1172,56 +1158,6 @@ tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
 
-tt = E:register_t("mod_ray_hero_thor", "mod_ray_tesla")
-tt.modifier.duration = fts(16)
-tt.dps.damage_every = fts(2)
-tt.dps.damage_min = 5
-tt.dps.damage_max = 5
-tt.dps.damage_type = DAMAGE_ELECTRICAL
-tt.modifier.allows_duplicates = true
-
-tt = RT("mod_hero_thor_chainlightning", "modifier")
-tt.chainlightning = {
-    bullet = "ray_hero_thor",
-    count = 2,
-    damage = 40,
-    offset = vec_2(25, -1),
-    damage_type = DAMAGE_ELECTRICAL,
-    chain_delay = fts(2),
-    max_range = 110,
-    min_range = 40,
-    mod = "mod_tesla_overcharge"
-}
-tt.main_script.update = scripts.mod_hero_thor_chainlightning.update
-
-tt = RT("mod_hero_thor_thunderclap", "modifier")
-AC(tt, "render")
-tt.thunderclap = {
-    damage = 60,
-    offset = vec_2(0, 10),
-    damage_type = DAMAGE_ELECTRICAL,
-    explosion_delay = fts(3),
-    secondary_damage = 50,
-    secondary_damage_type = DAMAGE_ELECTRICAL,
-    radius = 70,
-    stun_duration_max = 3,
-    stun_duration_min = 2,
-    mod_stun = "mod_hero_thor_stun",
-    mod_fx = "mod_tesla_overcharge",
-    fx = "fx_hero_thor_thunderclap_disipate",
-    sound = "HeroThorThunder"
-}
-tt.main_script.update = scripts.mod_hero_thor_thunderclap.update
-tt.main_script.insert = scripts.mod_track_target.insert
-tt.render.sprites[1].anchor = vec_2(0.5, 0.15)
-tt.render.sprites[1].name = "mod_hero_thor_thunderclap"
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].loop = false
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].name = "mod_hero_thor_thunderclap_explosion"
-tt = RT("mod_hero_thor_stun", "mod_stun")
-tt.modifier.vis_flags = bor(F_MOD, F_STUN)
-tt.modifier.vis_bans = bor(F_BOSS)
 
 
 

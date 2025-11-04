@@ -7,7 +7,8 @@ local damage_type_map = {
     [DAMAGE_EXPLOSION] = "爆炸伤害",
     [DAMAGE_RUDE] = "残暴伤害",
     [DAMAGE_STAB] = "穿刺伤害",
-    [DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害"
+    [DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害",
+    [DAMAGE_ELECTRICAL] = "雷电伤害"
 }
 local bit
 require("bit")
@@ -49,7 +50,7 @@ local s -- 技能
 local max_lvl -- 技能最大等级
 local cooldown -- 技能冷却时间
 local b -- 子弹
-local d = {} -- 伤害列表
+local d = {{}, {}, {}} -- 伤害列表
 local e -- 其它实体
 local map
 -- 写生命信息时，无甲默认不写。
@@ -476,14 +477,87 @@ map["复仇怒火"] = str(
     damage_buff, "点伤害与", factor * 100, "%伤害减免。")
 
 set_hero("hero_thor")
-
-map["雷神之锤"] = str()
-map["雷霆一击"] = str()
-map["雷电中继"] = str()
+set_skill(h.hero.skills.thunderclap)
+duration = s.stun_duration[max_lvl]
+radius = s.max_range[max_lvl]
+d[1].damage_min = s.damage_max[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+d[2].damage_min = s.secondary_damage_max[max_lvl]
+d[2].damage_max = s.secondary_damage_max[max_lvl]
+set_bullet("mod_hero_thor_thunderclap")
+d[1].damage_type = b.thunderclap.damage_type
+d[2].damage_type = b.thunderclap.secondary_damage_type
+local duration_min = b.thunderclap.stun_duration_min
+cooldown = h.ranged.attacks[1].cooldown
+map["雷神之锤"] = str(cooldown_str(), "索尔掷出雷神之锤，对目标造成", damage_str(1), "并对", radius,
+    "范围内敌人造成", damage_str(2), "与", duration_min, "到", duration, "秒眩晕效果。")
+set_skill(h.hero.skills.chainlightning)
+factor = 1 - h.hero.level_stats.melee_cooldown[10] / h.hero.level_stats.melee_cooldown[1]
+chance = s.chance[max_lvl]
+count = s.count[max_lvl]
+set_bullet("mod_ray_hero_thor")
+get_damage(b.dps)
+cycle_time = b.dps.damage_every
+duration = b.modifier.duration
+map["雷霆一击"] = str("索尔每次攻击，有", rate_str(chance), "触发电流，对最多", count,
+    "名敌人每", cycle_time, "秒造成", damage_str(), "，持续", duration,
+    "秒，并加快雷神之锤的冷却1秒。雷神的普攻攻速提升", factor * 100, "%。")
+heal = h.hero.level_stats.lightning_heal[10]
+map["雷电中继"] = str(
+    "索尔的身躯可以充当电流的中继站，刷新电流的传导次数并使电流的传导范围翻倍。每当雷电中继触发，索尔都会恢复",
+    heal, "点生命值。")
 
 set_hero("hero_10yr")
-map["钢铁时间"] = str()
-map["火焰冲刺"] = str()
+set_skill(h.hero.skills.buffed)
+count = s.bomb_steps[max_lvl]
+d[1].damage_min = s.bomb_damage_min[max_lvl]
+d[1].damage_max = s.bomb_damage_max[max_lvl]
+d[2].damage_min = s.bomb_step_damage_min[max_lvl]
+d[2].damage_max = s.bomb_step_damage_max[max_lvl]
+d[3].damage_min = s.spin_damage_min[max_lvl]
+d[3].damage_max = s.spin_damage_max[max_lvl]
+duration = s.duration[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+local cooldown_2 = h.timed_attacks.list[3].cooldown
+local cooldown_3 = h.melee.attacks[3].cooldown
+local loop = h.melee.attacks[3].loop
+d[3].damage_type = h.melee.attacks[3].damage_type
+radius = h.melee.attacks[3].damage_radius
+local count_2 = h.timed_attacks.list[2].min_count
+local speed = h.motion.max_speed_buffed
+set_bullet("aura_10yr_bomb")
+local radius_2 = b.aura.damage_radius
+local radius_3 = h.timed_attacks.list[3].damage_radius
+d[1].damage_type = h.timed_attacks.list[3].damage_type
+d[2].damage_type = b.aura.damage_type
+chance = b.aura.stun_chance
+e = E:get_template("mod_10yr_stun")
+duration_2 = e.modifier.duration
+map["钢铁时间"] = str("每隔", cooldown, "秒，若周围敌人数量不少于", count_2,
+    "天十进入钢铁状态，移速提升至", speed, "并免疫基础伤害类型，持续", duration,
+    "秒。在钢铁状态下，天十每隔", cooldown_3, "秒高速旋转，对", radius, "范围内敌人进行",
+    loop, "连击，每次攻击造成", damage_str(3),
+    "。在调集距离较远时，天十将主动退出钢铁状态，返还对应冷却，并传送至调集位置。该技能在钢铁状态下不进入冷却。")
+map["巨叟撼地"] = str("在钢铁状态下，天十每隔", cooldown_2, "秒高高跃起，对", radius_3,
+    "范围内敌人造成", damage_str(1), "，同时震碎地面，激起", count, "片裂片，每片裂片对",
+    radius_2, "范围内敌人造成", damage_str(2), "，并有", rate_str(chance), "使其眩晕", duration_2,
+    "秒。")
+set_skill(h.hero.skills.rain)
+set_bullet("fireball_10yr")
+get_damage(b.bullet)
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+loop = s.loops[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+radius = b.bullet.damage_radius
+set_bullet("power_scorched_water")
+radius_2 = b.aura.radius
+duration = b.aura.duration
+cycle_time = b.aura.cycle_time
+get_damage(b.aura, 2)
+map["火焰冲刺"] = str(cooldown_str(), "天十感召天地，召唤", loop, "枚火球，每枚火球对", radius,
+    "范围内敌人造成", damage_str(1), "。火球落地后产生焦土，每隔", cycle_time, "秒对", radius_2,
+    "范围内敌人造成", damage_str(2), "，持续", duration, "秒。")
 
 set_hero("hero_alric")
 map["血色连斩"] = str()
