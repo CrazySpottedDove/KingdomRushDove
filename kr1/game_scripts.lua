@@ -5617,11 +5617,11 @@ function scripts.aura_10yr_fireball.update(this, store)
         end
 
         for i = 1, a.loops do
-            local target, __, pred_pos = U.find_foremost_enemy(store, owner.pos, a.min_range, a.max_range, bdt,
-                a.vis_flags, a.vis_ban)
+            local target = U.detect_foremost_enemy_in_range_filter_off(owner.pos, a.max_range, a.vis_flags, a.vis_bans)
             local b = E:create_entity(a.entity)
 
             if target then
+                local pred_pos = U.predict_enemy_position(target, bdt)
                 local dh = start_y - pred_pos.y
                 local dx = dh * 0.4
 
