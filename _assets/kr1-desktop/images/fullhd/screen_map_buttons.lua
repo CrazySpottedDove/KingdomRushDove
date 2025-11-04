@@ -191,7 +191,7 @@ return {
 		},
 		alias = {},
 	},
-	mapButtons_notxt_0006 = {
+	mapButtones_notxt_0006 = {
 		a_name = "screen_map_buttons-1.png",
 		size = {
 			226,

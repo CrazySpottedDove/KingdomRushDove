@@ -441,7 +441,7 @@ function screen_map:init(w, h, done_callback)
     change_button.label.text_size = change_button.label.size
     change_button.label.font_size = 18
     change_button.label.vertical_align = CJK("middle", "top", nil, "top")
-    change_button.label.text = _("Rush")
+    change_button.label.text = "切换地图"
     change_button.label.fit_lines = 1
 
     self.window:add_child(change_button)

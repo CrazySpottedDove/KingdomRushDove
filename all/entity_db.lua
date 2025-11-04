@@ -25,6 +25,61 @@ function entity_db:load()
 	require("game_templates")
 end
 
+-- 性能与内存测试函数
+function entity_db:test()
+    -- 记录初始内存
+    collectgarbage("collect")
+    local mem_before = collectgarbage("count") -- 单位：KB
+
+    local t0 = os.clock()
+    self:load()
+    local t1 = os.clock()
+
+    -- 统计模板数量
+    local template_count = 0
+    if self.entities then
+        for _ in pairs(self.entities) do
+            template_count = template_count + 1
+        end
+    end
+
+    -- 统计组件数量
+    local component_count = 0
+    if self.components then
+        for _ in pairs(self.components) do
+            component_count = component_count + 1
+        end
+    end
+
+    -- 记录load后内存
+    collectgarbage("collect")
+    local mem_after = collectgarbage("count") -- 单位：KB
+
+    print("entity_db:load() 用时: " .. string.format("%.4f", t1 - t0) .. " 秒")
+    print("entity_db:load() 前内存: " .. string.format("%.2f", mem_before) .. " KB")
+    print("entity_db:load() 后内存: " .. string.format("%.2f", mem_after) .. " KB")
+    print("entity_db:load() 增加内存: " .. string.format("%.2f", mem_after - mem_before) .. " KB")
+    print("模板数量: " .. template_count)
+    print("组件数量: " .. component_count)
+
+    -- 可选：测试批量创建实体的性能和内存
+    local create_count = 1000
+    local t2 = os.clock()
+    local tmp_entities = {}
+    for k in pairs(self.entities) do
+        for i = 1, create_count do
+            tmp_entities[#tmp_entities + 1] = self:create_entity(k)
+        end
+        break -- 只测一个模板
+    end
+    local t3 = os.clock()
+    collectgarbage("collect")
+    local mem_entities = collectgarbage("count")
+    print("批量创建 " .. create_count .. " 个实体用时: " .. string.format("%.4f", t3 - t2) .. " 秒")
+    print("批量创建后内存: " .. string.format("%.2f", mem_entities) .. " KB")
+    print("批量创建增加内存: " .. string.format("%.2f", mem_entities - mem_after) .. " KB")
+end
+
 function entity_db:register_t(name, base)
 	if self.entities[name] then
 		log.error("template %s already exists", name)
