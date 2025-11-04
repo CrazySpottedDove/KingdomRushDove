@@ -345,15 +345,15 @@ scripts.tower_musketeer = {
         local ash = this.attacks.list[4]
         local pow_sn = this.powers.sniper
         local pow_sh = this.powers.shrapnel
-
+        local tpos = tpos(this)
+        local tw = this.tower
+        local sprites = this.render.sprites
         aa.ts = store.tick_ts
 
         local function shot_animation(attack, shooter_idx, enemy, animation)
             local ssid = shooter_sids[shooter_idx]
-            local soffset = this.render.sprites[ssid].offset
-            local s = this.render.sprites[ssid]
             local an, af, ai = U.animation_name_facing_point(this, animation or attack.animation, enemy.pos, ssid,
-                soffset)
+                sprites[ssid].offset)
 
             U.animation_start(this, an, af, store.tick_ts, 1, ssid)
 
@@ -362,28 +362,29 @@ scripts.tower_musketeer = {
 
         local function shot_bullet(attack, shooter_idx, ani_idx, enemy, level)
             local ssid = shooter_sids[shooter_idx]
-            local shooting_right = tpos(this).x < enemy.pos.x
+            local shooting_right = tpos.x < enemy.pos.x
             local soffset = this.render.sprites[ssid].offset
             local boffset = attack.bullet_start_offset[ani_idx]
             local b = E:create_entity(attack.bullet)
 
             b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
             b.pos.y = this.pos.y + soffset.y + boffset.y
-            b.bullet.from = V.vclone(b.pos)
-            b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
-            b.bullet.target_id = enemy.id
-            b.bullet.level = level
-            b.bullet.damage_factor = this.tower.damage_factor
+            local bl = b.bullet
+            bl.from = V.vclone(b.pos)
+            bl.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+            bl.target_id = enemy.id
+            bl.level = level
+            bl.damage_factor = tw.damage_factor
 
             if attack == asn then
-                b.bullet.damage_type = DAMAGE_SHOT
+                bl.damage_type = DAMAGE_SHOT
                 if band(enemy.vis.flags, F_BOSS) ~= 0 then
-                    b.bullet.damage_max = b.bullet.damage_max * (6 + 2 * pow_sn.level)
-                    b.bullet.damage_min = b.bullet.damage_min * (6 + 2 * pow_sn.level)
+                    bl.damage_max = bl.damage_max * (6 + 2 * pow_sn.level)
+                    bl.damage_min = bl.damage_min * (6 + 2 * pow_sn.level)
                 else
                     local extra_damage = pow_sn.damage_factor_inc * pow_sn.level * enemy.health.hp_max
-                    b.bullet.damage_max = b.bullet.damage_max + extra_damage
-                    b.bullet.damage_min = b.bullet.damage_min + extra_damage
+                    bl.damage_max = bl.damage_max + extra_damage
+                    bl.damage_min = bl.damage_min + extra_damage
                 end
             end
 
@@ -395,10 +396,10 @@ scripts.tower_musketeer = {
         end
 
         while true do
-            if this.tower.blocked then
+            if tw.blocked then
                 coroutine.yield()
             else
-                for k, pow in pairs(this.powers) do
+                for _, pow in pairs(this.powers) do
                     if pow.changed then
                         pow.changed = nil
 
@@ -419,11 +420,12 @@ scripts.tower_musketeer = {
                 if pow_sn.level > 0 then
                     for _, ax in pairs({asi, asn}) do
                         if (ax.chance == 1 or math.random() < ax.chance) and
-                            ready_to_use_power(pow_sn, ax, store, this.tower.cooldown_factor) then
-                            local enemy = U.find_biggest_enemy_in_range_filter_off(tpos(this), ax.range, ax.vis_flags,
+                            ready_to_use_power(pow_sn, ax, store, tw.cooldown_factor) then
+                            local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, ax.range, ax.vis_flags,
                                 ax.vis_bans)
 
                             if not enemy then
+                                ax.ts = ax.ts + fts(5)
                                 break
                             end
 
@@ -463,13 +465,12 @@ scripts.tower_musketeer = {
                     end
                 end
 
-                if ready_to_use_power(pow_sh, ash, store, this.tower.cooldown_factor) then
-                    local enemy = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, ash.range * 1.5, false,
-                        ash.vis_flags, ash.vis_bans, nil, nil, ash.min_spread + 48)
+                if ready_to_use_power(pow_sh, ash, store, tw.cooldown_factor) then
+                    local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ash.range * 1.5, nil, ash.vis_flags, ash.vis_bans, ash.min_spread + 48)
                     if not enemy then
-                        -- block empty
+                        ash.ts = ash.ts + fts(5)
                     else
-                        local distance = V.dist(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y)
+                        local distance = V.dist(tpos.x, tpos.y, enemy.pos.x, enemy.pos.y)
 
                         ash.ts = store.tick_ts
                         aa.ts = store.tick_ts
@@ -491,13 +492,13 @@ scripts.tower_musketeer = {
 
                         shot_animation(ash, fuse_idx, enemy, ash.animation_seeker)
 
-                        this.render.sprites[fsid].flip_x = fuse_idx < shooter_idx
-                        this.render.sprites[ssid].draw_order = 5
+                        sprites[fsid].flip_x = fuse_idx < shooter_idx
+                        sprites[ssid].draw_order = 5
 
                         U.y_wait(store, ash.shoot_time)
 
-                        local shooting_right = tpos(this).x < enemy.pos.x
-                        local soffset = this.render.sprites[ssid].offset
+                        local shooting_right = tpos.x < enemy.pos.x
+                        local soffset = sprites[ssid].offset
                         local boffset = ash.bullet_start_offset[ai]
                         local dest_pos = P:predict_enemy_pos(enemy, ash.node_prediction)
                         local src_pos = V.v(this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1),
@@ -508,25 +509,25 @@ scripts.tower_musketeer = {
 
                         for i = 1, ash.loops do
                             local b = E:create_entity(ash.bullet)
-
-                            b.bullet.flight_time = U.frandom(b.bullet.flight_time_min, b.bullet.flight_time_max)
+                            local bl = b.bullet
+                            bl.flight_time = U.frandom(bl.flight_time_min, bl.flight_time_max)
                             b.pos = V.vclone(src_pos)
-                            b.bullet.from = V.vclone(src_pos)
-                            b.bullet.to = U.point_on_ellipse(dest_pos, U.frandom(ash.min_spread * spread_factor,
+                            bl.from = V.vclone(src_pos)
+                            bl.to = U.point_on_ellipse(dest_pos, U.frandom(ash.min_spread * spread_factor,
                                 ash.max_spread * spread_factor), (i - 1) * 2 * math.pi / ash.loops)
-                            b.bullet.level = pow_sh.level
-                            b.bullet.damage_factor = this.tower.damage_factor * distance_factor
+                            bl.level = pow_sh.level
+                            bl.damage_factor = tw.damage_factor * distance_factor
                             queue_insert(store, b)
                         end
 
                         U.y_animation_wait(this, shooter_sids[shooter_idx])
 
-                        this.render.sprites[ssid].draw_order = nil
+                        sprites[ssid].draw_order = nil
                     end
                 end
 
                 if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-                    local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this),
+                    local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos,
                         a.range, aa.vis_flags, aa.vis_bans)
                     if not enemy then
                         -- block empty
@@ -545,9 +546,9 @@ scripts.tower_musketeer = {
                     end
                 end
 
-                if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
+                if store.tick_ts - aa.ts > tw.long_idle_cooldown then
                     for _, sid in pairs(shooter_sids) do
-                        local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
+                        local an, af = U.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
                         U.animation_start(this, an, af, store.tick_ts, -1, sid)
                     end
@@ -590,7 +591,9 @@ scripts.tower_crossbow = {
         local pow_e = this.powers.eagle
         local eagle_ts = 0
         local eagle_sid = 5
-
+        local tw = this.tower
+        local sprites = this.render.sprites
+        local tpos = tpos(this)
         this.eagle_previews = nil
 
         local eagle_previews_level
@@ -598,7 +601,7 @@ scripts.tower_crossbow = {
         aa.ts = store.tick_ts
 
         while true do
-            if this.tower.blocked then
+            if tw.blocked then
                 if this.eagle_previews then
                     for _, decal in pairs(this.eagle_previews) do
                         queue_remove(store, decal)
@@ -701,8 +704,8 @@ scripts.tower_crossbow = {
                     end
                 end
 
-                if ready_to_use_power(pow_m, ma, store, this.tower.cooldown_factor) then
-                    local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this),
+                if ready_to_use_power(pow_m, ma, store, tw.cooldown_factor) then
+                    local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos,
                         a.range, ma.vis_flags, ma.vis_bans)
 
                     if not enemy then
@@ -735,7 +738,7 @@ scripts.tower_crossbow = {
 
                         local last_enemy = enemy
                         local loop_ts = store.tick_ts
-                        local torigin = tpos(this)
+                        local torigin = tpos
                         local range = ma.near_range
                         for i = 1, ma.shots + pow_m.level * ma.shots_inc do
                             local origin = last_enemy.pos
@@ -762,20 +765,21 @@ scripts.tower_crossbow = {
                             end
 
                             local b = E:create_entity(ma.bullet)
-                            b.bullet.damage_factor = this.tower.damage_factor
+                            local bl = b.bullet
+                            bl.damage_factor = tw.damage_factor
                             if pow_e.level > 0 then
                                 local crit_chance = aa.critical_chance + pow_e.level * aa.critical_chance_inc
 
                                 if crit_chance > math.random() then
-                                    b.bullet.damage_factor = b.bullet.damage_factor * 2
-                                    b.bullet.pop = {"pop_crit"}
-                                    b.bullet.pop_conds = DR_DAMAGE
+                                    bl.damage_factor = bl.damage_factor * 2
+                                    bl.pop = {"pop_crit"}
+                                    bl.pop_conds = DR_DAMAGE
                                 end
                             end
-                            b.bullet.target_id = enemy_id
-                            b.bullet.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
-                            b.bullet.to = shoot_pos
-                            b.pos = V.vclone(b.bullet.from)
+                            bl.target_id = enemy_id
+                            bl.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
+                            bl.to = shoot_pos
+                            b.pos = V.vclone(bl.from)
                             apply_precision(b)
                             queue_insert(store, b)
                             -- AC:inc_check("BOLTOFTHESUN", 1)
@@ -792,7 +796,7 @@ scripts.tower_crossbow = {
 
                         U.animation_start(this, an, af, store.tick_ts, 1, shooter_sid)
 
-                        this.render.sprites[shooter_sid].draw_order = nil
+                        sprites[shooter_sid].draw_order = nil
 
                         while not U.animation_finished(this, shooter_sid) do
                             coroutine.yield()
@@ -800,8 +804,8 @@ scripts.tower_crossbow = {
                     end
                 end
 
-                if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-                    local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this),
+                if ready_to_attack(aa, store, tw.cooldown_factor) then
+                    local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos,
                         a.range, aa.vis_flags, aa.vis_bans)
                     if not enemy then
                         -- block empty
@@ -815,7 +819,7 @@ scripts.tower_crossbow = {
                         local shooter_sid = shooter_sprite_ids[shooter_idx]
                         local start_offset = aa.bullet_start_offset[shooter_idx]
 
-                        this.render.sprites[shooter_sid].draw_order = 5
+                        sprites[shooter_sid].draw_order = 5
 
                         local an, af =
                             U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
@@ -826,24 +830,25 @@ scripts.tower_crossbow = {
                             coroutine.yield()
                         end
 
-                        local torigin = tpos(this)
+                        local torigin = tpos
 
                         if enemy.health.dead then
                             enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
                         end
                         local b1 = E:create_entity(aa.bullet)
                         b1.pos.x, b1.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
-                        b1.bullet.from = V.vclone(b1.pos)
-                        b1.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
-                        b1.bullet.target_id = enemy.id
-                        b1.bullet.damage_factor = this.tower.damage_factor
+                        local bl = b1.bullet
+                        bl.from = V.vclone(b1.pos)
+                        bl.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+                        bl.target_id = enemy.id
+                        bl.damage_factor = tw.damage_factor
 
                         if pow_e.level > 0 then
                             local crit_chance = aa.critical_chance + pow_e.level * aa.critical_chance_inc
                             if crit_chance > math.random() then
-                                b1.bullet.damage_factor = b1.bullet.damage_factor * 2
-                                b1.bullet.pop = {"pop_crit"}
-                                b1.bullet.pop_conds = DR_DAMAGE
+                                bl.damage_factor = bl.damage_factor * 2
+                                bl.pop = {"pop_crit"}
+                                bl.pop_conds = DR_DAMAGE
                             end
                         end
 
@@ -858,13 +863,13 @@ scripts.tower_crossbow = {
 
                         U.animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
 
-                        this.render.sprites[shooter_sid].draw_order = nil
+                        sprites[shooter_sid].draw_order = nil
                     end
                 end
 
-                if store.tick_ts - math.max(aa.ts, ma.ts) > this.tower.long_idle_cooldown then
+                if store.tick_ts - math.max(aa.ts, ma.ts) > tw.long_idle_cooldown then
                     for _, sid in pairs(shooter_sprite_ids) do
-                        local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
+                        local an, af = U.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
                         U.animation_start(this, an, af, store.tick_ts, -1, sid)
                     end

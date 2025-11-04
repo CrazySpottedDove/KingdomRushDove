@@ -43,7 +43,6 @@ function entity_db:test()
         end
     end
 
-    -- 统计组件数量
     local component_count = 0
     if self.components then
         for _ in pairs(self.components) do
