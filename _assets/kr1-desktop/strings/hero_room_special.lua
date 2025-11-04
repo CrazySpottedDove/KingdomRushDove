@@ -9,7 +9,9 @@ local damage_type_map = {
     [DAMAGE_STAB] = "穿刺伤害",
     [DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害"
 }
-
+local bit
+require("bit")
+local band = bit.band
 local function str(...)
     local t = {}
     for i = 1, select("#", ...) do
@@ -88,14 +90,25 @@ local function get_damage(t, i)
     d[i].damage_type = t.damage_type
 end
 
+local function damage_type_str(type)
+    if damage_type_map[type] then
+        return damage_type_map[type]
+    end
+    for t, str in pairs(damage_type_map) do
+        if band(type, t) ~= 0 then
+            return str
+        end
+    end
+end
+
 local function damage_str(i)
     if not i then
         i = 1
     end
     if d[i].damage_min == d[i].damage_max then
-        return str(d[i].damage_min, "点", damage_type_map[d[i].damage_type])
+        return str(d[i].damage_min, "点", damage_type_str(d[i].damage_type))
     end
-    return str(d[i].damage_min, "-", d[i].damage_max, "点", damage_type_map[d[i].damage_type])
+    return str(d[i].damage_min, "-", d[i].damage_max, "点", damage_type_str(d[i].damage_type))
 end
 
 local function hp_str(i)
@@ -421,16 +434,49 @@ map["巨熊形态"] = str(cooldown_str(), "若英格瓦生命值低于", factor 
     "点生命值的再生效果。该技能在巨熊状态下不进入冷却。")
 
 set_hero("hero_hacksaw")
-map["摧甲钢锯"] = str()
-map["弹射锯片"] = str()
-map["伐伐伐木"] = str()
+map["摧甲钢锯"] = str(
+    "钢锯每次攻击敌人，都能削减敌人5点护甲，并加快弹射锯片等同于敌人护甲一半的冷却。")
+set_skill(h.hero.skills.sawblade)
+count = s.bounces[max_lvl]
+set_bullet("hacksaw_sawblade")
+get_damage(b.bullet)
+range = b.bounce_range
+cooldown = h.ranged.attacks[1].cooldown
+map["弹射锯片"] = str(cooldown_str(), "钢锯发射一枚高速飞行的锯片，造成", damage_str(),
+    "，并在击中目标后弹射至最多", count, "个附近敌人，弹射范围为", range, "。")
+set_skill(h.hero.skills.timber)
+get_cooldown()
+map["伐伐伐木"] = str(cooldown_str(),
+    "钢锯祭出巨型电钻，强行秒杀面前的敌人，并获得双倍的金币。")
 
 set_hero("hero_oni")
-map["灭魂斩"] = str()
-map["千本刃"] = str()
-map["复仇怒火"] = str()
+set_skill(h.hero.skills.death_strike)
+get_damage(h.melee.attacks[3])
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+chance = s.chance[max_lvl]
+cooldown = h.melee.attacks[3].cooldown
+map["灭魂斩"] = str(cooldown_str(), "鬼侍聚力怒击，对敌人造成无法闪避的", damage_str(), "并有",
+    rate_str(chance), "斩杀敌人。")
+set_skill(h.hero.skills.torment)
+get_damage(h.timed_attacks.list[1])
+d[1].damage_min = s.min_damage[max_lvl]
+d[1].damage_max = s.max_damage[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+min_count = h.timed_attacks.list[1].min_count
+radius = h.timed_attacks.list[1].damage_radius
+map["千本刃"] = str(cooldown_str(), "若身边有不少于", min_count,
+    "名敌人，鬼侍插刀入地，生出千刃莲台，对", radius, "范围内敌人造成无法闪避的",
+    damage_str(), "。若目标为恶魔，则额外造成60%伤害。")
+set_skill(h.hero.skills.rage)
+damage_buff = s.rage_max[max_lvl]
+factor = s.unyield_max[max_lvl]
+map["复仇怒火"] = str(
+    "鬼侍的复仇之火永恒燃烧，无视恶魔的爆炸，并在受伤时提升伤害与免伤，最多提高",
+    damage_buff, "点伤害与", factor * 100, "%伤害减免。")
 
 set_hero("hero_thor")
+
 map["雷神之锤"] = str()
 map["雷霆一击"] = str()
 map["雷电中继"] = str()
