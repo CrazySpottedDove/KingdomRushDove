@@ -16,23 +16,25 @@ end
 require("game_templates_utils")
 
 ----------
-require("foundamental_towers")()
-
+package.loaded.foundamental_towers = nil
 package.loaded.mage_towers = nil
 package.loaded.archer_towers = nil
 package.loaded.engineer_towers = nil
 package.loaded.heroes = nil
+package.loaded.barrack_towers = nil
+package.loaded.enemies = nil
+package.loaded.boss = nil
+package.loaded.hero_boss = nil
+
+require("foundamental_towers")
 require("mage_towers")
 require("archer_towers")
 require("engineer_towers")
 require("heroes")
-
-require("barrack_towers")()
-require("enemies")()
-require("boss")()
-package.loaded.hero_boss = nil
+require("barrack_towers")
+require("enemies")
+require("boss")
 require("hero_boss")
--- require("game_templates_5")()
 ----------
 
 tt = E:register_t("pop_crit", "pop")
@@ -569,8 +571,8 @@ for i = 1, 3 do
     for j, name in ipairs({"re_farmer", "re_farmer_well_fed", "re_conscript", "re_warrior", "re_legionnaire",
                            "re_legionnaire_ranged"}) do
         local fn = name .. "_" .. i
-        local base_t = E:get_template(name)
-        local t = RT(fn, base_t)
+        -- local base_t = E:get_template(name)
+        local t = RT(fn, name)
         t.render.sprites[1].prefix = fn
         t.info.portrait = string.format("info_portraits_soldiers_%04d", t.info.portrait_idxs[i])
     end
@@ -3715,6 +3717,9 @@ tt.tween.props[2].keys = {{0, vec_2(0, 0)}, {0.35, vec_2(0, 0)}}
 tt.tween.props[3] = E:clone_c("tween_prop")
 tt.tween.props[3].name = "r"
 tt.tween.props[3].keys = {{0, 0}, {0.35, 0}}
+
+tt = RT("decal_bram_enemy_clone", "decal_bravebark_branchball_enemy_clone")
+
 tt = E:register_t("decal_bravebark_ultimate", "decal_sequence")
 tt.render.sprites[1].prefix = "bravebark_spikedRoots"
 tt.render.sprites[1].name = "in"

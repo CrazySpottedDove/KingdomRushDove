@@ -9,7 +9,7 @@ local entity_db = {}
 
 entity_db.last_id = 1
 
-function entity_db:load()
+function entity_db:_load()
 	self.last_id = 1
 	self.components = {}
 	self.entities = {}
@@ -26,13 +26,13 @@ function entity_db:load()
 end
 
 -- 性能与内存测试函数
-function entity_db:test()
+function entity_db:load()
     -- 记录初始内存
     collectgarbage("collect")
     local mem_before = collectgarbage("count") -- 单位：KB
 
     local t0 = os.clock()
-    self:load()
+    self:_load()
     local t1 = os.clock()
 
     -- 统计模板数量
@@ -94,10 +94,15 @@ function entity_db:register_t(name, base)
 		-- 	base = self.entities[base]
 		-- end
 
-		if base == nil then
-			log.error("template base for %s does not exist", name)
-			return
-		end
+        -- if type(base) ~= "string" then
+        --     log.error("template base for %s must be a string", name)
+        --     return
+        -- end
+
+        -- if self.entities[base] == nil then
+        --     log.error("template base %s for %s does not exist", base, name)
+        --     return
+        -- end
 
 		-- t = copy(base)
         t = copy(self.entities[base])
@@ -124,10 +129,6 @@ function entity_db:register_c(name, base)
 		-- if type(base) == "string" then
 		-- 	base = self.components[base]
 		-- end
-
-		if base == nil then
-			log.error("component base for %s does not exist", name)
-		end
 
 		-- c = copy(base)
         c = copy(self.components[base])

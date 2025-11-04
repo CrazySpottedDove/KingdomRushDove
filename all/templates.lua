@@ -59,7 +59,24 @@ local function np(pi, spi, ni)
     }
 end
 
-local damage = E:register_t("damage", E:get_component("damage"))
+local damage = E:register_t("damage")
+damage.damage_type = DAMAGE_TRUE
+damage.value = 0
+damage.reduce_armor = 0
+damage.reduce_magic_armor = 0
+damage.sfx = nil
+damage.pop = nil
+damage.pop_chance = nil
+damage.pop_conds = nil
+damage.track_kills = nil
+damage.track_damage = nil
+damage.target_id = nil
+damage.source_id = nil
+damage.damage_applied = nil
+damage.damage_result = 0
+damage.xp_dest_id = nil
+damage.xp_gain_factor = nil
+
 local decal = E:register_t("decal")
 
 E:add_comps(decal, "pos", "render")
