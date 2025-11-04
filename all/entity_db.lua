@@ -90,17 +90,17 @@ function entity_db:register_t(name, base)
 	local t
 
 	if base then
-		if type(base) == "string" then
-			base = self.entities[base]
-		end
+		-- if type(base) == "string" then
+		-- 	base = self.entities[base]
+		-- end
 
 		if base == nil then
-			-- log.error("template base %s does not exist", base)
-
+			log.error("template base for %s does not exist", name)
 			return
 		end
 
-		t = copy(base)
+		-- t = copy(base)
+        t = copy(self.entities[base])
 	else
 		t = {}
 	end
@@ -121,15 +121,16 @@ function entity_db:register_c(name, base)
 	local c = {}
 
 	if base then
-		if type(base) == "string" then
-			base = self.components[base]
-		end
+		-- if type(base) == "string" then
+		-- 	base = self.components[base]
+		-- end
 
 		if base == nil then
-			log.error("component base %s does not exist", base)
+			log.error("component base for %s does not exist", name)
 		end
 
-		c = copy(base)
+		-- c = copy(base)
+        c = copy(self.components[base])
 	end
 
 	self.components[name] = c
@@ -167,14 +168,16 @@ function entity_db:add_comps(entity, ...)
 	end
 end
 
+--- 只接收字符串模板名，创建对应实体
+---@param t string 模板名
 function entity_db:create_entity(t)
-	local tpl
+	local tpl = self.entities[t]
 
-	if type(t) == "string" then
-		tpl = self.entities[t]
-	else
-		tpl = t
-	end
+	-- if type(t) == "string" then
+	-- 	tpl = self.entities[t]
+	-- else
+	-- 	tpl = t
+	-- end
 
 	if not tpl then
 		log.error("template %s not found", t)
@@ -241,14 +244,16 @@ function entity_db:get_component(c)
 	return cmp
 end
 
+--- 获取对应实体模板
+---@param t string 模板名
 function entity_db:get_template(t)
-	local tpl
+	local tpl = self.entities[t]
 
-	if type(t) == "string" then
-		tpl = self.entities[t]
-	else
-		tpl = t
-	end
+	-- if type(t) == "string" then
+	-- 	tpl = self.entities[t]
+	-- else
+	-- 	tpl = t
+	-- end
 
 	if not tpl then
 		log.error("template %s not found", t)
