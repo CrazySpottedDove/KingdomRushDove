@@ -6852,15 +6852,17 @@ function TowerMenu:show()
 
     local ro = entity.tower.range_offset
     local mo = entity.tower.menu_offset
-    local visible_coords = game_gui.game.store.visible_coords
     local ewx_g, ewy_g = entity.pos.x + ro.x + mo.x, entity.pos.y + ro.y + mo.y
-    if ewy_g + data.tower_menu_button_height > visible_coords.top then
-        ewy_g = visible_coords.top - data.tower_menu_button_height
-    end
-    if ewx_g + data.tower_menu_button_width > visible_coords.right then
-        ewx_g = visible_coords.right - data.tower_menu_button_width
-    elseif ewx_g - data.tower_menu_button_width < visible_coords.left then
-        ewx_g = visible_coords.left + data.tower_menu_button_width
+    if entity.tower.level == 3 then
+        local visible_coords = game_gui.game.store.visible_coords
+        if ewy_g + data.tower_menu_button_height > visible_coords.top then
+            ewy_g = visible_coords.top - data.tower_menu_button_height
+        end
+        if ewx_g + data.tower_menu_button_width > visible_coords.right then
+            ewx_g = visible_coords.right - data.tower_menu_button_width
+        elseif ewx_g - data.tower_menu_button_width < visible_coords.left then
+            ewx_g = visible_coords.left + data.tower_menu_button_width
+        end
     end
 
     local ewx, ewy = game_gui:g2u(V.v(ewx_g, ewy_g), true)
@@ -7465,7 +7467,7 @@ function TowerMenuTooltip:show(entity, item)
         self.desc.text = U.balance_format(texts.tt_desc)
 
         -- if power.level == power.max_level then
-            -- self.hidden = true
+        -- self.hidden = true
         -- end
     elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or
         item.action == "tw_free_action" then

@@ -835,7 +835,6 @@ return {
         "go_enemies_sarelgaz",
         "go_stage90_bg",
         "go_enemies_jungle",
-        "go_stages_flag",
         "go_enemies_rotten",
         "go_enemies_underground",
         "go_enemies_ancient_metropolis",
