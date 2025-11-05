@@ -167,7 +167,8 @@ scripts.tower_archer_dwarf = {
                 end
 
                 if not a and ready_to_attack(as, store, this.tower.cooldown_factor) then
-                    enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, at.range, as.vis_flags, as.vis_bans)
+                    enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, at.range,
+                        as.vis_flags, as.vis_bans)
 
                     if enemy then
                         a = as
@@ -11216,7 +11217,6 @@ function scripts.tower_stargazers.update(this, store, script)
 
         if ready_to_attack(aa, store, tw.cooldown_factor) then
             local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
-            -- local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags, aa.vis_bans)
             if not enemy then
                 aa.ts = aa.ts + fts(10)
             else
