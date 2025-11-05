@@ -1953,9 +1953,10 @@ scripts.tower_arcane_wizard = {
         ar.ts = store.tick_ts
         local aura = E:get_template(at.aura)
         local max_times_applied = E:get_template(aura.aura.mod).max_times_applied
+        local tpos = tpos(this)
+        local tw = this.tower
         local function find_target(aa)
-            local target, __, pred_pos = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range,
-                aa.node_prediction, aa.vis_flags, aa.vis_bans, function(e)
+            local target = U.detect_foremost_enemy_in_range_filter_on(tpos, a.range, aa.vis_flags, aa.vis_bans,function(e)
                     if aa == at then
                         return e.nav_path.ni >= aa.min_nodes and
                                    (not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport < max_times_applied)
@@ -1963,7 +1964,7 @@ scripts.tower_arcane_wizard = {
                         return true
                     end
                 end)
-            return target, pred_pos
+            return target, target and U.calculate_enemy_ffe_pos(target, aa.node_prediction) or nil
         end
         local base_damage
         local upper_damage
@@ -1980,7 +1981,7 @@ scripts.tower_arcane_wizard = {
             y_wait(store, attack.shoot_time)
         end
         local function wizard_ready()
-            return store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor
+            return store.tick_ts - last_ts > a.min_cooldown * tw.cooldown_factor
         end
         local function update_base_damage()
             ray_damage_min = ray_mod.dps.damage_min
@@ -2007,8 +2008,8 @@ scripts.tower_arcane_wizard = {
             else
                 if attack == ad then
                     update_base_damage()
-                    local exact_upper_damage = upper_damage * this.tower.damage_factor
-                    local exact_base_damage = base_damage * this.tower.damage_factor
+                    local exact_upper_damage = upper_damage * tw.damage_factor
+                    local exact_base_damage = base_damage * tw.damage_factor
                     local base_time = a.min_cooldown + 2.25 - pow_d.level * 0.75
                     if enemy.health.hp < exact_upper_damage then
                         if enemy.health.hp < exact_base_damage then
@@ -2023,7 +2024,7 @@ scripts.tower_arcane_wizard = {
                 b.pos.x, b.pos.y = this.pos.x + attack.bullet_start_offset.x, this.pos.y + attack.bullet_start_offset.y
                 b.bullet.from = vclone(b.pos)
                 b.bullet.to = vclone(enemy.pos)
-                b.bullet.damage_factor = this.tower.damage_factor
+                b.bullet.damage_factor = tw.damage_factor
                 b.bullet.target_id = enemy.id
                 b.bullet.source_id = this.id
             end
@@ -2036,11 +2037,6 @@ scripts.tower_arcane_wizard = {
                     pow_d.changed = nil
                     if pow_d.level == 1 then
                         ad.ts = store.tick_ts
-                        --     base_damage = ray_damage_min
-                        -- elseif pow_d.level == 2 then
-                        --     base_damage = (ray_damage_min + ray_damage_max) * 0.5
-                        -- else
-                        --     base_damage = ray_damage_max
                     end
                     upper_damage = pow_d.upper_damage[pow_d.level]
                     ad.cooldown = pow_d.cooldown_base + pow_d.cooldown_inc * pow_d.level
@@ -2055,10 +2051,10 @@ scripts.tower_arcane_wizard = {
                     goto continue
                 end
                 SU.tower_update_silenced_powers(store, this)
-                if ready_to_use_power(pow_d, ad, store, this.tower.cooldown_factor) and wizard_ready() then
+                if ready_to_use_power(pow_d, ad, store, tw.cooldown_factor) and wizard_ready() then
                     local enemy, _ = find_target(ad)
                     if not enemy then
-                        y_wait(store, this.tower.guard_time)
+                        ad.ts = ad.ts + fts(5)
                         goto continue_attack
                     end
                     start_animations(ad, enemy)
@@ -2072,7 +2068,7 @@ scripts.tower_arcane_wizard = {
                 if ready_to_attack(ar, store, this.tower.cooldown_factor) and wizard_ready() then
                     local enemy, _ = find_target(ar)
                     if not enemy then
-                        y_wait(store, this.tower.guard_time)
+                        ar.ts = ar.ts + fts(5)
                         goto continue
                     end
                     start_animations(ar, enemy)
@@ -2085,6 +2081,7 @@ scripts.tower_arcane_wizard = {
                 if ready_to_use_power(pow_t, at, store, this.tower.cooldown_factor) and wizard_ready() then
                     local enemy, pred_pos = find_target(at)
                     if not enemy then
+                        at.ts = at.ts + fts(5)
                         goto continue
                     end
                     start_animations(at, enemy)
@@ -2096,8 +2093,8 @@ scripts.tower_arcane_wizard = {
                 end
             end
             ::continue::
-            if ((ad.ts <= last_ts - (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor) or
-                (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * this.tower.cooldown_factor)) and pow_d.level >
+            if ((ad.ts <= last_ts - (ad.cooldown - a.min_cooldown) * tw.cooldown_factor) or
+                (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * tw.cooldown_factor)) and pow_d.level >
                 0 then
                 if not this.decalmod_disintegrate then
                     local mod = E:create_entity("decalmod_arcane_wizard_disintegrate_ready")
@@ -2111,8 +2108,8 @@ scripts.tower_arcane_wizard = {
                 queue_remove(store, this.decalmod_disintegrate)
                 this.decalmod_disintegrate = nil
             end
-            if store.tick_ts - ar.ts > this.tower.long_idle_cooldown then
-                local an, af = animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
+            if store.tick_ts - ar.ts > tw.long_idle_cooldown then
+                local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, shooter_sid)
                 animation_start(this, an, af, store.tick_ts, true, shooter_sid)
             end
             coroutine.yield()
