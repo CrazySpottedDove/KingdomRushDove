@@ -1,10 +1,7 @@
 return {
     entities_list = {
         {
-            template = "background_sounds",
-            sounds = {
-                "FrontiersJungleAmbienceSounds"
-            }
+            template = "background_sounds_jungle"
         },
         {
             template = "decal_background",
