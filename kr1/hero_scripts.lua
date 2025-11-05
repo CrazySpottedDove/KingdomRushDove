@@ -701,7 +701,7 @@ scripts.soldier_mirage_illusion = {
 
                 queue_insert(store, smoke)
 
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, 20, F_AREA, 0)
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, this.melee.attacks[1].damage_radius, F_AREA, 0)
                 if enemies then
                     for _, e in pairs(enemies) do
                         if e.health and not e.health.dead then

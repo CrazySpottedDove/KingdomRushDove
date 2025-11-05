@@ -2463,6 +2463,7 @@ tt.melee.range = 64
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = 10
 tt.melee.attacks[1].damage_min = 10
+tt.melee.attacks[1].damage_radius = 30
 tt.melee.attacks[1].damage_type = DAMAGE_TRUE
 tt.melee.attacks[1].hit_time = fts(10)
 tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)

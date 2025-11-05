@@ -488,8 +488,8 @@ d[1].damage_type = b.thunderclap.damage_type
 d[2].damage_type = b.thunderclap.secondary_damage_type
 local duration_min = b.thunderclap.stun_duration_min
 cooldown = h.ranged.attacks[1].cooldown
-map["雷神之锤"] = str(cooldown_str(), "索尔掷出雷神之锤，对目标造成", damage_str(1), "，并对", radius,
-    "范围内敌人造成", damage_str(2), "与", duration_min, "-", duration, "秒眩晕效果。")
+map["雷神之锤"] = str(cooldown_str(), "索尔掷出雷神之锤，对目标造成", damage_str(1), "，并对",
+    radius, "范围内敌人造成", damage_str(2), "与", duration_min, "-", duration, "秒眩晕效果。")
 set_skill(h.hero.skills.chainlightning)
 factor = 1 - h.hero.level_stats.melee_cooldown[10] / h.hero.level_stats.melee_cooldown[1]
 chance = s.chance[max_lvl]
@@ -504,7 +504,9 @@ d[2].damage_type = b.chainlightning.damage_type
 d[2].damage_min = b.chainlightning.damage
 d[2].damage_max = b.chainlightning.damage
 
-map["雷霆一击"] = str("索尔每次攻击，有", rate_str(chance), "触发",count,"条电流分配给随机敌人，造成",damage_str(2),"并施加可叠加的电击效果，每", cycle_time, "秒造成", damage_str(), "，持续", duration,
+map["雷霆一击"] = str("索尔每次攻击，有", rate_str(chance), "触发", count,
+    "条电流分配给随机敌人，造成", damage_str(2), "并施加可叠加的电击效果，每", cycle_time,
+    "秒造成", damage_str(), "，持续", duration,
     "秒。触发雷霆一击时，雷神之锤的冷却加快1秒。雷神的普攻攻速提升", factor * 100, "%。")
 heal = h.hero.level_stats.lightning_heal[10]
 map["雷电中继"] = str(
@@ -568,7 +570,9 @@ set_skill(h.hero.skills.flurry)
 loop = s.loops[max_lvl]
 get_cooldown()
 get_damage(h.melee.attacks[3])
-map["血色连斩"] = str(cooldown_str(),"沙王对面前敌人发动",loop,"连斩，每次斩击造成普攻等额的",damage_type_str(d[1].damage_type),"。该技能获取经验量与总伤相关。")
+map["血色连斩"] = str(cooldown_str(), "沙王对面前敌人发动", loop,
+    "连斩，每次斩击造成普攻等额的", damage_type_str(d[1].damage_type),
+    "。该技能获取经验量与总伤相关。")
 set_skill(h.hero.skills.sandwarriors)
 count = s.count[max_lvl]
 duration = s.lifespan[max_lvl]
@@ -580,18 +584,52 @@ health[1].hp_max = e.health.hp_max + max_lvl * e.health.hp_inc
 set_bullet("decal_alric_soul_ball")
 factor = b.hp_factor
 cooldown = h.timed_attacks.list[1].cooldown
-map["沙漠勇士"] = str(cooldown_str(),"沙王唤醒",count,"名沙漠勇士，一同作战。沙漠勇士拥有",health[1].hp_max,"点生命值，每次攻击造成",damage_str(),"，驻场", duration, "秒，且无惧剧毒，不会狼人化、尸骸化。")
-map["沙漠之心"] = str("阿尔里奇的心与沙漠和族人们紧密连结。远距离调遣时，阿尔里奇会化身沙卷风，提升自身",speed,"点移速。在沙漠勇士的躯体消散时，他们的灵魂会飘向阿尔里奇，使阿尔里奇恢复沙漠勇士最大生命值",factor*100,"%的生命，并减少血色连斩10%的剩余冷却时间。")
+map["沙漠勇士"] = str(cooldown_str(), "沙王唤醒", count, "名沙漠勇士，一同作战。沙漠勇士拥有",
+    health[1].hp_max, "点生命值，每次攻击造成", damage_str(), "，驻场", duration,
+    "秒，且无惧剧毒，不会狼人化、尸骸化。")
+map["沙漠之心"] = str(
+    "阿尔里奇的心与沙漠和族人们紧密连结。远距离调遣时，阿尔里奇会化身沙卷风，提升自身",
+    speed,
+    "点移速。在沙漠勇士的躯体消散时，他们的灵魂会飘向阿尔里奇，使阿尔里奇恢复沙漠勇士最大生命值",
+    factor * 100, "%的生命，并减少血色连斩10%的剩余冷却时间。")
 set_skill(h.hero.skills.spikedarmor)
 local spiked_armor = 0
 for _, value in pairs(s.values) do
     spiked_armor = spiked_armor + value
 end
-map["反伤刺甲"] = str("沙王额外获得",spiked_armor*100,"点反甲。")
+map["反伤刺甲"] = str("沙王额外获得", spiked_armor * 100, "点反甲。")
 set_hero("hero_mirage")
-map["移形换影"] = str()
-map["影舞"] = str()
-map["背刺"] = str()
+set_skill(h.hero.skills.shadowdodge)
+chance = s.dodge_chance[max_lvl]
+local reward_shadowdance = s.reward_shadowdance[max_lvl]
+local reward_lethalstrike = s.reward_lethalstrike[max_lvl]
+duration = s.lifespan[max_lvl]
+e = E:get_template("soldier_mirage_illusion")
+get_damage(e.melee.attacks[1])
+radius = e.melee.attacks[1].damage_radius
+map["移形换影"] = str("幻影每次遭遇近战攻击时，有", rate_str(chance),
+    "恢复10%最大生命值，进入无敌状态并闪离，在原地留下一个持续时间", duration,
+    "的影子。影子消失时，对", radius, "范围内敌人造成", damage_str(),
+    "。若幻影成功闪避近战攻击，将立刻缩减影舞", reward_shadowdance * 100, "%冷却与背刺",
+    reward_lethalstrike * 100, "%冷却。面对范围攻击或远程攻击时，移形换影触发概率×60%。")
+set_skill(h.hero.skills.shadowdance)
+count = s.copies[max_lvl]
+set_bullet("mirage_shadow")
+get_damage(b.bullet)
+d[1].damage_min = b.bullet.damage_min + b.bullet.damage_inc * max_lvl
+d[1].damage_max = b.bullet.damage_max + b.bullet.damage_inc * max_lvl
+cooldown = h.timed_attacks.list[1].cooldown
+map["影舞"] = str(cooldown_str(), "幻影进入无敌状态，幻化", count,
+    "个分身，每个分身对敌人造成", damage_str(), "。")
+set_skill(h.hero.skills.lethalstrike)
+chance = s.instakill_chance[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+get_damage(h.timed_attacks.list[2])
+d[1].damage_min = d[1].damage_min * max_lvl
+d[1].damage_max = d[1].damage_max * max_lvl
+map["背刺"] = str(cooldown_str(), "幻影进入无敌状态，潜行到敌人背后，发动致命一击，造成",
+    damage_str(), "，并有", rate_str(chance),
+    "概率斩杀敌人。对于BOSS单位，斩杀效果替换为双倍伤害。")
 
 set_hero("hero_pirate")
 map["火药子母"] = str()
