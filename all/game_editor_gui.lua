@@ -258,7 +258,10 @@ function gui:init(w, h, editor)
 		end,
 		right = function()
 			self:move_entity("right")
-		end
+		end,
+        escape = function()
+            self:select_entity(nil)
+        end
 	}
 	wid("path_create").on_click = function(this)
 		gui:create_path()
@@ -657,7 +660,7 @@ function gui:toggle_grid_paint_flag(flag)
 		[TERRAIN_NOWALK] = "nowalk",
 		[TERRAIN_FAERIE] = "faerie",
 		[TERRAIN_ICE] = "ice",
-		[TERRAIN_FLYING_NOWALK] = "flying_nw"
+		-- [TERRAIN_FLYING_NOWALK] = "flying_nw"
 	}
 
 	for k, n in pairs(buttons) do
