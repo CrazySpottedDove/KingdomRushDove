@@ -8,6 +8,13 @@ return {
         ["render.sprites[1].name"] = "stage72",
         ["render.sprites[1].z"] = 1000
     }, {
+        template = "decal_defend_point",
+        ["editor.exit_id"] = 1,
+        pos = {
+            x = 487,
+            y = 48
+        }
+    }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
         pos = {
@@ -19,7 +26,8 @@ return {
             y = 130
         },
         ["tower.holder_id"] = "18",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "18"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -32,7 +40,8 @@ return {
             y = 189
         },
         ["tower.holder_id"] = "26",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "26"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -45,7 +54,8 @@ return {
             y = 186
         },
         ["tower.holder_id"] = "8",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "8"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -58,7 +68,8 @@ return {
             y = 308
         },
         ["tower.holder_id"] = "22",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "22"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -71,7 +82,8 @@ return {
             y = 210
         },
         ["tower.holder_id"] = "12",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "12"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -84,7 +96,8 @@ return {
             y = 305
         },
         ["tower.holder_id"] = "4",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "4"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -97,7 +110,8 @@ return {
             y = 210
         },
         ["tower.holder_id"] = "6",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "6"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -110,7 +124,8 @@ return {
             y = 333
         },
         ["tower.holder_id"] = "16",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "16"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -123,7 +138,8 @@ return {
             y = 371
         },
         ["tower.holder_id"] = "14",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "14"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -150,7 +166,8 @@ return {
             y = 354
         },
         ["tower.holder_id"] = "10",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "10"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -163,7 +180,8 @@ return {
             y = 529
         },
         ["tower.holder_id"] = "20",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "20"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -176,7 +194,8 @@ return {
             y = 585
         },
         ["tower.holder_id"] = "28",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "28"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -189,7 +208,8 @@ return {
             y = 508
         },
         ["tower.holder_id"] = "30",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "30"
     }, {
         template = "tower_holder",
         ["editor.game_mode"] = 0,
@@ -202,7 +222,8 @@ return {
             y = 508
         },
         ["tower.holder_id"] = "24",
-        ["tower.terrain_style"] = 8
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "24"
     }},
     invalid_path_ranges = {},
     level_mode_overrides = {{
@@ -218,7 +239,8 @@ return {
     level_terrain_type = 1,
     locked_hero = false,
     max_upgrade_level = 6,
-    nav_mesh = {nil, {}},
+    nav_mesh = {nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil,
+                {}, nil, {}, nil, {}, nil, {}},
     required_sounds = {"music_stage26", "BlackburnSounds"},
     required_textures = {"go_enemies_blackburn", "go_stages_blackburn", "go_stage72_bg"}
 }
