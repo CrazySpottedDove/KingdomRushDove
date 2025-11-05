@@ -2842,9 +2842,10 @@ scripts.tower_faerie_dragon = {
         local pow_m = this.powers.more_dragons
         local pow_i = this.powers.improve_shot
         local egg_sids = {3, 4}
-
+        local attacks = this.attacks
+        local tw = this.tower
         while true do
-            if this.tower.blocked then
+            if tw.blocked then
                 -- block empty
             else
                 if pow_m.changed then
@@ -2880,7 +2881,7 @@ scripts.tower_faerie_dragon = {
                     this.aura_rate = this.aura_rate + this.aura_rate_inc
                 end
 
-                if #this.dragons > 0 and ready_to_attack(a, store, this.tower.cooldown_factor) then
+                if #this.dragons > 0 and ready_to_attack(a, store, tw.cooldown_factor) then
                     a.ts = store.tick_ts
 
                     local assigned_target_ids = {}
@@ -2895,7 +2896,7 @@ scripts.tower_faerie_dragon = {
                         if dragon.custom_attack.target_id then
                             -- block empty
                         else
-                            local targets = U.find_enemies_in_range_filter_on(this.pos, a.range, a.vis_flags,
+                            local targets = U.find_enemies_in_range_filter_on(this.pos, attacks.range, a.vis_flags,
                                 a.vis_bans, function(e)
                                     return not table.contains(assigned_target_ids, e.id)
                                 end)
