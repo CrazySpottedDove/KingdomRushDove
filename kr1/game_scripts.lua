@@ -14094,7 +14094,7 @@ function scripts.ray_neptune.update(this, store, script)
             end
 
             if v.unit.hit_offset and
-                U.is_inside_ellipse(v(v.pos.x, v.pos.y + v.unit.hit_offset.y), b.to, b.damage_radius) then
+                U.is_inside_ellipse(V.v(v.pos.x, v.pos.y + v.unit.hit_offset.y), b.to, b.damage_radius) then
                 return true
             end
 
