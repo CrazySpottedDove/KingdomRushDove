@@ -29,18 +29,6 @@ image_db.use_canvas = true
 -- by dove
 image_db.supportedformats = love.graphics.getCompressedImageFormats()
 
--- local upscaled_assets = {
---     ["screen_map-1.png"] = true,
--- }
-
--- local function dynamic_upscale(v)
-    -- if upscaled_assets[v.a_name] and not v._dynamic_upscaled then
-    --     v.a_size[1] = v.a_size[1] * 2
-    --     v.a_size[2] = v.a_size[2] * 2
-    --     v._dynamic_upscaled = true
-    -- end
--- end
-
 -- 简化版本，只基于CPU核心数
 local function calculate_thread_count()
     local cpu_count = love.system.getProcessorCount() or 4
@@ -64,9 +52,6 @@ local function calculate_thread_count()
 end
 
 local _MAX_THREADS = calculate_thread_count()
-
--- local _MAX_THREADS = 8
--- local _LOAD_IMAGE_THREAD_CODE = "local cin,cout,th_i = ...\nrequire 'love.filesystem'\nrequire 'love.image'\nrequire 'love.timer'\nlocal file_count = 0\nwhile true do\n    -- get params\n    local fn = cin:demand()\n    if fn == 'QUIT' then goto quit end\n    local path = cin:demand()\n    local f = path .. '/' .. fn\n\n    --print('TH  ' ..th_i.. ' ARGS ' .. fn .. ' ' .. path .. '\\n')\n    \n    if not love.filesystem.isFile(f) then\n        cout:push({'ERROR','Not a file',f})\n    else\n        local data\n        --local t_start = love.timer.getTime()\n        if string.match(fn, '.pkm$') or string.match(fn, '.astc$') or string.match(fn, '.dds$') then\n            data = love.image.newCompressedData(f)\n        else\n            data = love.image.newImageData(f)\n        end\n        --print('TH  ' ..th_i.. ' newXData time: ' .. (love.timer.getTime()-t_start) .. '\\n')\n        if not data then\n            cout:push({'ERROR','Image could not be loaded',f})\n        else\n            file_count = file_count + 1\n            local w,h = data:getDimensions()\n            local key = string.gsub(fn, '.png$', '')\n            key = string.gsub(key, '.jpg$', '')\n            key = string.gsub(key, '.pkm$', '')\n            key = string.gsub(key, '.astc$', '')\n            key = string.gsub(key, '.dds$', '')\n            cout:push({'OK',key,data,w,h})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
 
 local _LOAD_IMAGE_THREAD_CODE = [[
 local cin,cout,th_i = ...
@@ -467,7 +452,6 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 	for k, v in pairs(frames) do
 		log.paranoid("loading atlas-frame: %s - %s", v.a_name, k)
-        -- dynamic_upscale(v)
 		v.group = name_scale
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 
@@ -477,10 +461,6 @@ function image_db:preload_atlas(ref_scale, path, name)
 			image_names[v.a_name] = true
 		end
 
-		-- v.atlas = string.gsub(v.a_name, ".png$", "")
-		-- v.atlas = string.gsub(v.atlas, ".pkm$", "")
-		-- v.atlas = string.gsub(v.atlas, ".astc$", "")
-        -- v.atlas = string.gsub(v.atlas, ".dds$", "")
         v.atlas = remove_extension_fast(v.a_name)
 		for _, a in ipairs(v.alias) do
 			unique_frames[a] = v
@@ -496,12 +476,6 @@ function image_db:preload_atlas(ref_scale, path, name)
 	self.db_atlas = table.merge(self.db_atlas, frames)
 
 	for fn in pairs(deferred_image_names) do
-		-- local key = string.gsub(fn, ".png$", "")
-
-		-- key = string.gsub(key, ".jpg$", "")
-		-- key = string.gsub(key, ".pkm$", "")
-		-- key = string.gsub(key, ".astc$", "")
-        -- key = string.gsub(key, ".dds$", "")
         local key = remove_extension_fast(fn)
 		self.db_images[key] = {
 			[4] = fn,

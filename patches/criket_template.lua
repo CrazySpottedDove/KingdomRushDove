@@ -37,7 +37,7 @@ return {
     required_textures = { -- 启用的贴图列表
     "go_enemies_acaroth", "go_enemies_ancient_metropolis", "go_enemies_bandits", "go_enemies_bittering_rancor",
     "go_enemies_blackburn", "go_enemies_desert", "go_enemies_elven_woods", "go_enemies_faerie_grove",
-    "go_enemies_forgotten_treasures", "go_enemies_grass", "go_enemies_halloween", "go_enemies_hulking_rage",
+    "go_enemies_forgotten_treasures", "go_enemies_grass","go_enemies_halloween", "go_enemies_hulking_rage",
     "go_enemies_ice", "go_enemies_jungle", "go_enemies_mactans_malicia", "go_enemies_rising_tides", "go_enemies_rotten",
     "go_enemies_sarelgaz", "go_enemies_storm", "go_enemies_torment", "go_enemies_underground", "go_enemies_wastelands"},
     required_sounds = { -- 启用的音效列表

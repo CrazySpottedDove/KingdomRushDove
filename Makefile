@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check
 
 all: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -23,7 +23,8 @@ sync:
 	@bash $(MAKE_FILE_DIR)/sync.sh "$(WINDOWS_DIR)"
 debug: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" debug
-
+assets_check: _examine_dir_map sync
+	$(LOVE) "$(WINDOWS_DIR_WIN)" assets
 monitor: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" monitor
 

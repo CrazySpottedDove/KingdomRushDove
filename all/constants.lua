@@ -1,5 +1,6 @@
 ﻿-- chunkname: @./all/constants.lua
 PERFORMANCE_MONITOR_ENABLED = false
+ASSETS_CHECK_ENABLED = false
 NULL = "__NULL__"
 FPS = 30
 ASPECT = 0.7

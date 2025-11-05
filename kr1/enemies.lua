@@ -2580,51 +2580,51 @@ tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.sound_events.insert = "HWAlphaWolf"
 
--- unknown
-tt = RT("enemy_hobgoblin", "enemy")
-AC(tt, "melee", "death_spawns")
-anchor_y = 0.17532467532467533
-anchor_x = 0.5
-image_y = 154
-image_x = 224
-tt.death_spawns.concurrent_with_death = true
-tt.death_spawns.name = "fx_coin_shower"
-tt.death_spawns.offset = vec_2(0, 60)
-tt.enemy.gold = 250
-tt.enemy.lives_cost = 20
-tt.enemy.melee_slot = vec_2(40, 0)
-tt.health.hp_max = 2000
-tt.health_bar.offset = vec_2(0, 82)
-tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
-tt.info.i18n_key = "ENEMY_ENDLESS_MINIBOSS_ORC"
-tt.info.portrait = "info_portraits_sc_0094"
-tt.melee.attacks[1] = CC("area_attack")
-tt.melee.attacks[1].cooldown = 2
-tt.melee.attacks[1].count = 10
-tt.melee.attacks[1].damage_max = 90
-tt.melee.attacks[1].damage_min = 40
-tt.melee.attacks[1].damage_radius = 45
-tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
-tt.melee.attacks[1].hit_decal = "decal_hobgoblin_ground_hit"
-tt.melee.attacks[1].hit_fx = "fx_hobgoblin_ground_hit"
-tt.melee.attacks[1].hit_offset = vec_2(72, -9)
-tt.melee.attacks[1].hit_time = fts(24)
-tt.melee.attacks[1].sound = "AreaAttack"
-tt.melee.attacks[1].sound_args = {
-    delay = fts(24)
-}
-tt.motion.max_speed = 0.7 * FPS
-tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
-tt.render.sprites[1].prefix = "enemy_hobgoblin"
-tt.sound_events.death = "DeathJuggernaut"
-tt.ui.click_rect = r(-30, 0, 60, 70)
-tt.unit.can_explode = false
-tt.unit.hit_offset = vec_2(0, 34)
-tt.unit.mod_offset = vec_2(0, 34)
-tt.unit.show_blood_pool = false
-tt.unit.size = UNIT_SIZE_LARGE
-tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
-tt.vis.flags = bor(F_ENEMY, F_BOSS)
+-- -- unknown
+-- tt = RT("enemy_hobgoblin", "enemy")
+-- AC(tt, "melee", "death_spawns")
+-- anchor_y = 0.17532467532467533
+-- anchor_x = 0.5
+-- image_y = 154
+-- image_x = 224
+-- tt.death_spawns.concurrent_with_death = true
+-- tt.death_spawns.name = "fx_coin_shower"
+-- tt.death_spawns.offset = vec_2(0, 60)
+-- tt.enemy.gold = 250
+-- tt.enemy.lives_cost = 20
+-- tt.enemy.melee_slot = vec_2(40, 0)
+-- tt.health.hp_max = 2000
+-- tt.health_bar.offset = vec_2(0, 82)
+-- tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+-- tt.info.i18n_key = "ENEMY_ENDLESS_MINIBOSS_ORC"
+-- tt.info.portrait = "info_portraits_sc_0094"
+-- tt.melee.attacks[1] = CC("area_attack")
+-- tt.melee.attacks[1].cooldown = 2
+-- tt.melee.attacks[1].count = 10
+-- tt.melee.attacks[1].damage_max = 90
+-- tt.melee.attacks[1].damage_min = 40
+-- tt.melee.attacks[1].damage_radius = 45
+-- tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+-- tt.melee.attacks[1].hit_decal = "decal_hobgoblin_ground_hit"
+-- tt.melee.attacks[1].hit_fx = "fx_hobgoblin_ground_hit"
+-- tt.melee.attacks[1].hit_offset = vec_2(72, -9)
+-- tt.melee.attacks[1].hit_time = fts(24)
+-- tt.melee.attacks[1].sound = "AreaAttack"
+-- tt.melee.attacks[1].sound_args = {
+--     delay = fts(24)
+-- }
+-- tt.motion.max_speed = 0.7 * FPS
+-- tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
+-- tt.render.sprites[1].prefix = "enemy_hobgoblin"
+-- tt.sound_events.death = "DeathJuggernaut"
+-- tt.ui.click_rect = r(-30, 0, 60, 70)
+-- tt.unit.can_explode = false
+-- tt.unit.hit_offset = vec_2(0, 34)
+-- tt.unit.mod_offset = vec_2(0, 34)
+-- tt.unit.show_blood_pool = false
+-- tt.unit.size = UNIT_SIZE_LARGE
+-- tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
+-- tt.vis.flags = bor(F_ENEMY, F_BOSS)
 
 -- kr2
 

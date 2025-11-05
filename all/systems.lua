@@ -47,139 +47,6 @@ local function fts(v)
     return v / FPS
 end
 
--- 在文件开头添加性能监控模块
-local perf = {}
-perf.timers = {}
-perf.frame_times = {}
-perf.system_times = {}
-perf.report_interval = 5 -- 每5秒输出一次报告
-perf.max_samples = perf.report_interval / TICK_LENGTH -- 保存最近5秒数据
-
--- 性能计时器函数
-function perf.start_timer(name)
-    perf.timers[name] = love.timer.getTime()
-end
-
-function perf.end_timer(name)
-    if perf.timers[name] then
-        local elapsed = love.timer.getTime() - perf.timers[name]
-        perf.system_times[name] = perf.system_times[name] or {}
-        table.insert(perf.system_times[name], elapsed)
-
-        -- 保持样本数量在限制内
-        if #perf.system_times[name] > perf.max_samples then
-            table.remove(perf.system_times[name], 1)
-        end
-
-        perf.timers[name] = nil
-        return elapsed
-    end
-    return 0
-end
-
--- 生成性能报告
-function perf.generate_report(store)
-    local report = {"=== 性能报告 ==="}
-
-    -- 整体帧率信息
-    if #perf.frame_times > 0 then
-        local total_time = 0
-        for _, time in ipairs(perf.frame_times) do
-            total_time = total_time + time
-        end
-        local fps = #perf.frame_times / total_time
-        table.insert(report, string.format("平均FPS: %.1f", fps))
-    end
-
-    -- 计算各系统在这段时间内的总开销
-    local system_costs = {}
-    for name, times in pairs(perf.system_times) do
-        if #times > 0 then
-            local total_cost = 0
-            for _, time in ipairs(times) do
-                total_cost = total_cost + time
-            end
-            if total_cost > 0 then
-                system_costs[name] = {
-                    total = total_cost * 1000, -- 转换为毫秒
-                    calls = #times
-                }
-            end
-        end
-    end
-
-    -- 按总开销排序
-    local sorted_costs = {}
-    for name, data in pairs(system_costs) do
-        table.insert(sorted_costs, {
-            name = name,
-            total = data.total,
-            calls = data.calls
-        })
-    end
-
-    table.sort(sorted_costs, function(a, b)
-        return a.total > b.total
-    end)
-
-    -- 输出排序后的结果
-    table.insert(report, "\n系统开销排行 (总耗时ms/调用次数):")
-
-    -- 先打印开销总和
-    local grand_total = 0
-    for _, item in ipairs(sorted_costs) do
-        grand_total = grand_total + item.total
-    end
-    table.insert(report, string.format("总系统开销: %.4fms", grand_total))
-
-    -- 然后打印各个分项
-    for i, item in ipairs(sorted_costs) do
-        table.insert(report, string.format("%4d. %s: %.4fms (%d次)", i, item.name, item.total, item.calls))
-
-        -- 只显示前15个最耗时的
-        if i >= 15 then
-            table.insert(report, "    ...")
-            break
-        end
-    end
-
-    -- 简单的实体统计
-    if store then
-        table.insert(report, string.format("\n实体数: %d | 渲染帧: %d", store.entity_count, #store.render_frames))
-    end
-
-    return table.concat(report, "\n")
-end
-
-function perf.save_store_entities(store)
-    local entities = {}
-    for _, e in pairs(store.entities) do
-        if not entities[e.template_name] then
-            entities[e.template_name] = 1
-        else
-            entities[e.template_name] = entities[e.template_name] + 1
-        end
-    end
-    local filename = string.format("perf_entities_%d.txt", os.time())
-    local file = love.filesystem.newFile(filename, "w")
-    file:open("w")
-    file:write("=== 当前实体统计 ===\n")
-    local total_count = 0
-    for name, count in pairs(entities) do
-        file:write(string.format("%s: %d\n", name, count))
-        total_count = total_count + count
-    end
-    file:write(string.format("总实体数: %d\n", total_count))
-    file:write(string.format("store 记录总实体数: %d\n", store.entity_count))
-
-    file:close()
-end
-
-function perf.save_report(store)
-    local report = perf.generate_report(store)
-    print(report)
-end
-
 local sys = {}
 
 sys.level = {}
@@ -3025,9 +2892,143 @@ function sys.lights:on_update(dt, ts, store)
     end
 end
 
+-- 性能检测模块，在加 monitor 参数时启动
 if PERFORMANCE_MONITOR_ENABLED then
+    local perf = {}
+    perf.timers = {}
+    perf.frame_times = {}
+    perf.system_times = {}
+    perf.report_interval = 5 -- 每5秒输出一次报告
+    perf.max_samples = perf.report_interval / TICK_LENGTH -- 保存最近5秒数据
+
+    -- 性能计时器函数
+    function perf.start_timer(name)
+        perf.timers[name] = love.timer.getTime()
+    end
+
+    function perf.end_timer(name)
+        if perf.timers[name] then
+            local elapsed = love.timer.getTime() - perf.timers[name]
+            perf.system_times[name] = perf.system_times[name] or {}
+            table.insert(perf.system_times[name], elapsed)
+
+            -- 保持样本数量在限制内
+            if #perf.system_times[name] > perf.max_samples then
+                table.remove(perf.system_times[name], 1)
+            end
+
+            perf.timers[name] = nil
+            return elapsed
+        end
+        return 0
+    end
+
+    -- 生成性能报告
+    function perf.generate_report(store)
+        local report = {"=== 性能报告 ==="}
+
+        -- 整体帧率信息
+        if #perf.frame_times > 0 then
+            local total_time = 0
+            for _, time in ipairs(perf.frame_times) do
+                total_time = total_time + time
+            end
+            local fps = #perf.frame_times / total_time
+            table.insert(report, string.format("平均FPS: %.1f", fps))
+        end
+
+        -- 计算各系统在这段时间内的总开销
+        local system_costs = {}
+        for name, times in pairs(perf.system_times) do
+            if #times > 0 then
+                local total_cost = 0
+                for _, time in ipairs(times) do
+                    total_cost = total_cost + time
+                end
+                if total_cost > 0 then
+                    system_costs[name] = {
+                        total = total_cost * 1000, -- 转换为毫秒
+                        calls = #times
+                    }
+                end
+            end
+        end
+
+        -- 按总开销排序
+        local sorted_costs = {}
+        for name, data in pairs(system_costs) do
+            table.insert(sorted_costs, {
+                name = name,
+                total = data.total,
+                calls = data.calls
+            })
+        end
+
+        table.sort(sorted_costs, function(a, b)
+            return a.total > b.total
+        end)
+
+        -- 输出排序后的结果
+        table.insert(report, "\n系统开销排行 (总耗时ms/调用次数):")
+
+        -- 先打印开销总和
+        local grand_total = 0
+        for _, item in ipairs(sorted_costs) do
+            grand_total = grand_total + item.total
+        end
+        table.insert(report, string.format("总系统开销: %.4fms", grand_total))
+
+        -- 然后打印各个分项
+        for i, item in ipairs(sorted_costs) do
+            table.insert(report, string.format("%4d. %s: %.4fms (%d次)", i, item.name, item.total, item.calls))
+
+            -- 只显示前15个最耗时的
+            if i >= 15 then
+                table.insert(report, "    ...")
+                break
+            end
+        end
+
+        -- 简单的实体统计
+        if store then
+            table.insert(report,
+                string.format("\n实体数: %d | 渲染帧: %d", store.entity_count, #store.render_frames))
+        end
+
+        return table.concat(report, "\n")
+    end
+
+    function perf.save_store_entities(store)
+        local entities = {}
+        for _, e in pairs(store.entities) do
+            if not entities[e.template_name] then
+                entities[e.template_name] = 1
+            else
+                entities[e.template_name] = entities[e.template_name] + 1
+            end
+        end
+        local filename = string.format("perf_entities_%d.txt", os.time())
+        local file = love.filesystem.newFile(filename, "w")
+        file:open("w")
+        file:write("=== 当前实体统计 ===\n")
+        local total_count = 0
+        for name, count in pairs(entities) do
+            file:write(string.format("%s: %d\n", name, count))
+            total_count = total_count + count
+        end
+        file:write(string.format("总实体数: %d\n", total_count))
+        file:write(string.format("store 记录总实体数: %d\n", store.entity_count))
+
+        file:close()
+    end
+
+    function perf.save_report(store)
+        local report = perf.generate_report(store)
+        print(report)
+    end
+
     -- 需要监控的系统方法列表
-    local MONITORED_METHODS = { "on_update", "on_insert", "on_remove", "on_queue", "on_dequeue" }
+    local MONITORED_METHODS = {"on_update", "on_insert", "on_remove", "on_queue", "on_dequeue"}
 
     -- 包装系统方法以添加性能监控
     local function create_monitored_system(original_sys)
@@ -3098,5 +3099,53 @@ if PERFORMANCE_MONITOR_ENABLED then
     end
 end
 
-return sys
+-- 美术资源检查模块，在加 assets 参数时启动
+if ASSETS_CHECK_ENABLED then
+    sys.assets_checker = {}
+    sys.assets_checker.name = "assets_checker"
+    function sys.assets_checker:init(store)
+        local info_portraits_check_result = {}
+        for _, e in pairs(E.entities) do
+            if e.info and e.info.portrait then
+                local s = I:s(e.info.portrait)
+                if s == nil then
+                    info_portraits_check_result[e.template_name] = e.info.portrait
+                end
+            end
+        end
+        local tower_menu_images_check_result = {}
+        local tower_menus_data = require("kr1.data.tower_menus_data")
+        for tower_name, tower_menus in pairs(tower_menus_data) do
+            for _, tower_menus_item in pairs(tower_menus) do
+                for _, tower_menus_sub_item in pairs(tower_menus_item) do
+                    if tower_menus_sub_item.image then
+                        local s = I:s(tower_menus_sub_item.image)
+                        if s == nil then
+                            if not tower_menu_images_check_result[tower_name] then
+                                tower_menu_images_check_result[tower_name] = {}
+                            end
+                            tower_menu_images_check_result[tower_name][#tower_menu_images_check_result[tower_name] + 1] =
+                                tower_menus_sub_item.image
+                        end
+                    end
+                end
+            end
+        end
+        if next(info_portraits_check_result) ~= nil then
+            log.error("=== info.portrait 资源缺失检查 ===")
+            for ename, img in pairs(info_portraits_check_result) do
+                log.error("实体 %s 缺失资源 %s", ename, img)
+            end
+        end
+        if next(tower_menu_images_check_result) ~= nil then
+            log.error("=== tower_menus_data 资源缺失检查 ===")
+            for tname, imgs in pairs(tower_menu_images_check_result) do
+                for _, img in pairs(imgs) do
+                    log.error("实体 %s 缺失资源 %s", tname, img)
+                end
+            end
+        end
+    end
+end
 
+return sys
