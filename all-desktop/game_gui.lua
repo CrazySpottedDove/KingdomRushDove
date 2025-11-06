@@ -1140,6 +1140,8 @@ function game_gui:keypressed(key, isrepeat)
         --     end
     elseif table.contains(ks.wealthy, key) then
         game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
+    elseif table.contains(ks.healthy, key) then
+        game_gui.game.store.lives = game_gui.game.store.lives + 100
     end
 end
 

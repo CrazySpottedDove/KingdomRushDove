@@ -41,4 +41,6 @@ return {
     force_next_wave = {"f5"},
     -- 加钱开关，立刻获得 99999 金币，默认为 "f6"
     wealthy = {"f6"},
+    -- 立刻获得 100 生命，默认为 "f7"
+    healthy = {"f7"}
 }
