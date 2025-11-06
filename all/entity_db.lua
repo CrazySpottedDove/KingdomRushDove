@@ -447,11 +447,10 @@ function entity_db:gen_wave(level_idx, game_mode)
                         goto continue_enemy
                     end
 
-                    if cfg.enemy_comeout_wave_map[enemy] and cfg.enemy_comeout_wave_map[enemy] <= wave_i then
-                        table.insert(enemy_pool, enemy)
-                    end
                     if cfg.enemy_comeout_wave_map[enemy] and cfg.enemy_comeout_wave_map[enemy] == wave_i then
                         table.insert(guaranteed_enemies, enemy)
+                    elseif cfg.enemy_comeout_wave_map[enemy] and cfg.enemy_comeout_wave_map[enemy] <= wave_i then
+                        table.insert(enemy_pool, enemy)
                     end
 
                     ::continue_enemy::
@@ -459,7 +458,8 @@ function entity_db:gen_wave(level_idx, game_mode)
 
                 local remain_weight = path_weights[path]
                 shuffle(enemy_pool)
-                enemy_pool = table.slice(enemy_pool, 1, math.min(#enemy_pool, cfg.wave_max_types))
+                local remain_count = math.max(#enemy_pool - #guaranteed_enemies, 1)
+                enemy_pool = table.slice(enemy_pool, 1, math.min(remain_count , cfg.wave_max_types))
 
                 -- 先处理 guaranteed_enemies，确保它们一定会出现在当前波次
                 for _, enemy in pairs(guaranteed_enemies) do
@@ -471,7 +471,7 @@ function entity_db:gen_wave(level_idx, game_mode)
                     local interval = cfg.interval_function(weight, self.entities[enemy], wave_i)
                     local spawn = {
                         interval = interval * (1 + (math.random() - 0.5) * 0.2), -- ±10%
-                        interval_next = interval * 0.5,
+                        interval_next = interval * 0.2,
                         creep = enemy,
                         path = 1,
                         fixed_sub_path = 0,
@@ -497,7 +497,7 @@ function entity_db:gen_wave(level_idx, game_mode)
                     local interval = cfg.interval_function(weight, self.entities[enemy], wave_i)
                     local spawn = {
                         interval = interval * (1 + (math.random() - 0.5) * 0.2), -- ±10%
-                        interval_next = interval * 0.5,
+                        interval_next = interval * 0.2,
                         creep = enemy,
                         path = 1,
                         fixed_sub_path = 0,
@@ -507,14 +507,6 @@ function entity_db:gen_wave(level_idx, game_mode)
 
                     remain_weight = remain_weight - count * weight
                     table.insert(subwave.spawns, spawn)
-
-                    -- 如果 enemy_pool 中类型过多，可能希望限制重复选择，简单做法是移除已选或降低权重 —— 这里移除以鼓励多样性
-                    for i = #enemy_pool, 1, -1 do
-                        if enemy_pool[i] == enemy then
-                            table.remove(enemy_pool, i)
-                            break
-                        end
-                    end
                 end
 
                 table.insert(group.waves, subwave)
@@ -524,16 +516,13 @@ function entity_db:gen_wave(level_idx, game_mode)
 
             -- ===== 按 spawn.interval*max + interval_next 估算每个 subwave 时长，并参考权重大的子波做平衡调整 =====
             do
-                -- 计算每个 subwave 的估算时长（取 spawn 中最大的 estimate）
+                -- 计算每个 subwave 的估算时长
                 local est_list = {}
                 local max_est = 0
                 for i, sw in pairs(group.waves) do
                     local est = 0
                     for _, spawn in pairs(sw.spawns) do
-                        local s_est = (spawn.interval or 0) * (spawn.max or 1) + (spawn.interval_next or 0)
-                        if s_est > est then
-                            est = s_est
-                        end
+                        est = (spawn.interval or 0) * (spawn.max or 1) + (spawn.interval_next or 0) + est
                     end
                     est_list[i] = est
                     if est > max_est then
@@ -542,7 +531,7 @@ function entity_db:gen_wave(level_idx, game_mode)
                 end
 
                 -- 参考值：取组内最长的子波时长与 group.interval 的较大者（保证不会比最长子波更短）
-                local reference = math.max(max_est, group.interval or 0)
+                local reference = math.min(max_est, group.interval or 0)
 
                 -- 对每个子波做缩放，避免权重小的子波瞬间刷完
                 for i, sw in pairs(group.waves) do
@@ -552,17 +541,17 @@ function entity_db:gen_wave(level_idx, game_mode)
                         local min_ratio = 0.85
                         local min_target = reference * min_ratio
 
-                        if est < min_target then
+                        if est < min_target or est > reference then
                             local scale = min_target / est
+                            if est > reference then
+                                scale = reference / est
+                            end
                             -- 限制缩放幅度，避免过度拉伸或压缩
-                            scale = math.max(0.6, math.min(scale, 3))
 
                             for _, spawn in pairs(sw.spawns) do
                                 -- 按比例调整 interval 与 interval_next（保持二者相对关系）
                                 spawn.interval = (spawn.interval or 1) * scale
-                                spawn.interval_next = (spawn.interval_next or (spawn.interval * 0.5)) * scale
-                                -- 保持原有 ±10% 抖动
-                                spawn.interval = spawn.interval * (1 + (math.random() - 0.5) * 0.2)
+                                spawn.interval_next = (spawn.interval_next or (spawn.interval * 0.2)) * scale
                             end
                         end
                     end

@@ -1,46 +1,28 @@
 local obj1 = {
-	["cash"] = 800;
+	["cash"] = 900;
 	["groups"] = {
 		[1] = {
-			["interval"] = 700;
+			["interval"] = 800;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_skeleton";
-							["fixed_sub_path"] = 0;
-							["interval"] = 41.909910184678;
-							["interval_next"] = 20.526433816061;
-							["max"] = 8;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
 							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 168.26311842712;
-							["interval_next"] = 77.437792722272;
+							["interval"] = 104.31992197891;
+							["interval_next"] = 22.638423980627;
 							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[3] = {
+						[2] = {
 							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 44.670742889651;
-							["interval_next"] = 20.526433816061;
-							["max"] = 13;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_skeleton_big";
-							["fixed_sub_path"] = 0;
-							["interval"] = 129.40778356436;
-							["interval_next"] = 77.437792722272;
-							["max"] = 6;
+							["interval"] = 29.26014020186;
+							["interval_next"] = 6.0007664888491;
+							["max"] = 8;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -53,35 +35,17 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 88.784112783422;
-							["interval_next"] = 41.949766918923;
-							["max"] = 10;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_zombie";
-							["fixed_sub_path"] = 0;
-							["interval"] = 85.44969720918;
-							["interval_next"] = 41.949766918923;
+							["interval"] = 77.158969992849;
+							["interval_next"] = 15.827105419349;
 							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[3] = {
+						[2] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 82.130350366877;
-							["interval_next"] = 37.534223143758;
-							["max"] = 13;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_halloween_zombie";
-							["fixed_sub_path"] = 0;
-							["interval"] = 68.504936967799;
-							["interval_next"] = 37.534223143758;
+							["interval"] = 76.843373370327;
+							["interval_next"] = 14.161177764772;
 							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -91,7 +55,7 @@ local obj1 = {
 			};
 		};
 		[2] = {
-			["interval"] = 764.28571428571;
+			["interval"] = 857.14285714286;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
@@ -99,38 +63,38 @@ local obj1 = {
 					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_gargoyle";
+							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 52.689180946759;
-							["interval_next"] = 30.462266195768;
-							["max"] = 4;
+							["interval"] = 18.956535638006;
+							["interval_next"] = 3.501562496697;
+							["max"] = 16;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
 							["creep"] = "enemy_giant_rat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 37.409246473254;
-							["interval_next"] = 20.003070533823;
+							["interval"] = 19.638998137117;
+							["interval_next"] = 4.3371636177883;
 							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_gargoyle";
+							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 64.199979919811;
-							["interval_next"] = 30.462266195768;
-							["max"] = 4;
+							["interval"] = 18.312257432151;
+							["interval_next"] = 3.501562496697;
+							["max"] = 17;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_giant_rat";
+							["creep"] = "enemy_gargoyle";
 							["fixed_sub_path"] = 0;
-							["interval"] = 39.923228456236;
-							["interval_next"] = 20.003070533823;
-							["max"] = 15;
+							["interval"] = 31.597413424698;
+							["interval_next"] = 6.6049775926285;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -142,47 +106,29 @@ local obj1 = {
 					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_gargoyle";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 38.892169722799;
-							["interval_next"] = 19.282120135892;
-							["max"] = 10;
+							["interval"] = 46.617882866039;
+							["interval_next"] = 8.5339400892762;
+							["max"] = 13;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_halloween_zombie";
+							["creep"] = "enemy_gargoyle";
 							["fixed_sub_path"] = 0;
-							["interval"] = 66.617152965094;
-							["interval_next"] = 35.970297179434;
-							["max"] = 11;
+							["interval"] = 20.271155321085;
+							["interval_next"] = 4.0931553460815;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
 							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 262.66914491425;
-							["interval_next"] = 133.41905843848;
+							["interval"] = 129.07683296819;
+							["interval_next"] = 28.321830196467;
 							["max"] = 1;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_abomination";
-							["fixed_sub_path"] = 0;
-							["interval"] = 258.71682635069;
-							["interval_next"] = 133.41905843848;
-							["max"] = 1;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_gargoyle";
-							["fixed_sub_path"] = 0;
-							["interval"] = 38.687232843503;
-							["interval_next"] = 19.282120135892;
-							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -191,46 +137,45 @@ local obj1 = {
 			};
 		};
 		[3] = {
-			["interval"] = 828.57142857143;
+			["interval"] = 914.28571428571;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
-					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
 							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 83.727287702344;
-							["interval_next"] = 37.789852715086;
-							["max"] = 4;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_wererat";
-							["fixed_sub_path"] = 0;
-							["interval"] = 64.901241949701;
-							["interval_next"] = 37.789852715086;
+							["interval"] = 18.692412199795;
+							["interval_next"] = 3.9430996292231;
 							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[3] = {
+						[2] = {
 							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 115.75420209747;
-							["interval_next"] = 56.177267287556;
+							["interval"] = 31.725932913053;
+							["interval_next"] = 5.8616942352861;
 							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[4] = {
-							["creep"] = "enemy_gargoyle";
+						[3] = {
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 66.572871182488;
-							["interval_next"] = 36.608209129892;
-							["max"] = 21;
+							["interval"] = 38.918985621198;
+							["interval_next"] = 7.6396072212779;
+							["max"] = 18;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_giant_rat";
+							["fixed_sub_path"] = 0;
+							["interval"] = 12.245734379979;
+							["interval_next"] = 2.5082769797205;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -241,38 +186,38 @@ local obj1 = {
 					["path_index"] = 2;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_abomination";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 273.47117747569;
-							["interval_next"] = 127.61822981072;
-							["max"] = 1;
+							["interval"] = 30.899179129801;
+							["interval_next"] = 6.8349552643852;
+							["max"] = 11;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_halloween_zombie";
+							["creep"] = "enemy_ghoul";
 							["fixed_sub_path"] = 0;
-							["interval"] = 68.223455245937;
-							["interval_next"] = 34.406371215111;
-							["max"] = 25;
+							["interval"] = 14.002184010378;
+							["interval_next"] = 2.9297595160618;
+							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_zombie";
+							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 77.800194186939;
-							["interval_next"] = 38.453953009012;
-							["max"] = 14;
+							["interval"] = 31.369413191034;
+							["interval_next"] = 6.1155223238037;
+							["max"] = 12;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 33.846835615549;
-							["interval_next"] = 16.483039083721;
-							["max"] = 2;
+							["interval"] = 29.592331623336;
+							["interval_next"] = 6.1155223238037;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -281,55 +226,27 @@ local obj1 = {
 			};
 		};
 		[4] = {
-			["interval"] = 892.85714285714;
+			["interval"] = 971.42857142857;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
-					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
 							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 33.627084077851;
-							["interval_next"] = 18.173683424125;
-							["max"] = 3;
+							["interval"] = 35.27483787236;
+							["interval_next"] = 7.6998951102996;
+							["max"] = 15;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_ghost";
+							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 52.926663655261;
-							["interval_next"] = 27.016455422938;
-							["max"] = 5;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_skeleton_big";
-							["fixed_sub_path"] = 0;
-							["interval"] = 66.169133989369;
-							["interval_next"] = 35.210828074238;
-							["max"] = 16;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_gargoyle";
-							["fixed_sub_path"] = 0;
-							["interval"] = 36.28535361258;
-							["interval_next"] = 17.605414037119;
-							["max"] = 6;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_giant_rat";
-							["fixed_sub_path"] = 0;
-							["interval"] = 23.839499389745;
-							["interval_next"] = 11.560608672331;
-							["max"] = 16;
+							["interval"] = 40.170275344042;
+							["interval_next"] = 7.6998951102996;
+							["max"] = 7;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -340,38 +257,29 @@ local obj1 = {
 					["path_index"] = 2;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_rotten_tree";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 159.97307720221;
-							["interval_next"] = 84.556379433578;
-							["max"] = 2;
+							["interval"] = 38.540434723644;
+							["interval_next"] = 7.8674942505933;
+							["max"] = 19;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_ghoul";
-							["fixed_sub_path"] = 0;
-							["interval"] = 34.129979769123;
-							["interval_next"] = 15.733810034461;
-							["max"] = 13;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
 							["creep"] = "enemy_rotten_tree";
 							["fixed_sub_path"] = 0;
-							["interval"] = 163.646213223;
-							["interval_next"] = 84.556379433578;
+							["interval"] = 99.593605326784;
+							["interval_next"] = 18.123630860838;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[4] = {
-							["creep"] = "enemy_halloween_zombie";
+						[3] = {
+							["creep"] = "enemy_ghoul";
 							["fixed_sub_path"] = 0;
-							["interval"] = 71.645787243662;
-							["interval_next"] = 32.842445250788;
-							["max"] = 16;
+							["interval"] = 15.743318649194;
+							["interval_next"] = 3.3723506967695;
+							["max"] = 7;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -380,7 +288,7 @@ local obj1 = {
 			};
 		};
 		[5] = {
-			["interval"] = 957.14285714286;
+			["interval"] = 1028.5714285714;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
@@ -388,47 +296,20 @@ local obj1 = {
 					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_skeleton_big";
+							["creep"] = "enemy_giant_rat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 147.44502045886;
-							["interval_next"] = 72.966524533157;
-							["max"] = 7;
+							["interval"] = 21.519553759304;
+							["interval_next"] = 4.4040413989832;
+							["max"] = 29;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
 							["creep"] = "enemy_gargoyle";
 							["fixed_sub_path"] = 0;
-							["interval"] = 70.450230727969;
-							["interval_next"] = 36.483262266578;
-							["max"] = 4;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_wererat";
-							["fixed_sub_path"] = 0;
-							["interval"] = 73.693315718354;
-							["interval_next"] = 37.660872803911;
-							["max"] = 16;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_giant_rat";
-							["fixed_sub_path"] = 0;
-							["interval"] = 50.807171891442;
-							["interval_next"] = 23.956762236019;
-							["max"] = 16;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_ghost";
-							["fixed_sub_path"] = 0;
-							["interval"] = 108.19612727797;
-							["interval_next"] = 55.985529600738;
-							["max"] = 18;
+							["interval"] = 36.874285143732;
+							["interval_next"] = 6.7068243950929;
+							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -437,41 +318,40 @@ local obj1 = {
 				[2] = {
 					["delay"] = 0;
 					["path_index"] = 2;
-					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_halloween_zombie";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 67.737513298155;
-							["interval_next"] = 31.278519286465;
-							["max"] = 33;
+							["interval"] = 22.064557419769;
+							["interval_next"] = 4.0608038457132;
+							["max"] = 28;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_gargoyle";
+							["creep"] = "enemy_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 30.888666250342;
-							["interval_next"] = 16.767060987732;
-							["max"] = 6;
+							["interval"] = 19.519036333265;
+							["interval_next"] = 3.8920969609565;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 31.416315738622;
-							["interval_next"] = 14.984580985201;
-							["max"] = 11;
+							["interval"] = 18.543453297245;
+							["interval_next"] = 4.0608038457132;
+							["max"] = 8;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_werewolf";
+							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 65.985574090271;
-							["interval_next"] = 33.505796418101;
-							["max"] = 1;
+							["interval"] = 72.46891599876;
+							["interval_next"] = 13.476705458006;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -480,7 +360,7 @@ local obj1 = {
 			};
 		};
 		[6] = {
-			["interval"] = 1021.4285714286;
+			["interval"] = 1085.7142857143;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
@@ -488,65 +368,47 @@ local obj1 = {
 					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_spectral_knight";
+							["creep"] = "enemy_necromancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 271.17770054469;
-							["interval_next"] = 142.55983465451;
+							["interval"] = 108.54677001268;
+							["interval_next"] = 23.879105109951;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_wererat";
+							["creep"] = "enemy_spectral_knight";
 							["fixed_sub_path"] = 0;
-							["interval"] = 75.384301416047;
-							["interval_next"] = 40.857944173411;
-							["max"] = 12;
+							["interval"] = 62.666162130942;
+							["interval_next"] = 12.358368958032;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_giant_rat";
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 51.493891160172;
-							["interval_next"] = 25.990477148827;
-							["max"] = 10;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_necromancer";
-							["fixed_sub_path"] = 0;
-							["interval"] = 602.57861603749;
-							["interval_next"] = 275.45716491655;
-							["max"] = 1;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_gargoyle";
-							["fixed_sub_path"] = 0;
-							["interval"] = 85.938855917603;
-							["interval_next"] = 39.580365030652;
+							["interval"] = 32.82895674727;
+							["interval_next"] = 6.862364223806;
 							["max"] = 13;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[6] = {
-							["creep"] = "enemy_necromancer";
+						[4] = {
+							["creep"] = "enemy_gargoyle";
 							["fixed_sub_path"] = 0;
-							["interval"] = 570.72375497658;
-							["interval_next"] = 275.45716491655;
-							["max"] = 1;
+							["interval"] = 17.226583967042;
+							["interval_next"] = 3.431182111903;
+							["max"] = 12;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[7] = {
-							["creep"] = "enemy_spectral_knight";
+						[5] = {
+							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 259.27176084799;
-							["interval_next"] = 142.55983465451;
-							["max"] = 6;
+							["interval"] = 25.467728246601;
+							["interval_next"] = 5.2653336285512;
+							["max"] = 9;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -557,47 +419,56 @@ local obj1 = {
 					["path_index"] = 2;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_halloween_zombie";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 64.242547188512;
-							["interval_next"] = 29.714593322141;
-							["max"] = 31;
+							["interval"] = 20.455137123117;
+							["interval_next"] = 4.27018804696;
+							["max"] = 16;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_lycan_werewolf";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 50.256957790579;
-							["interval_next"] = 24.798542383674;
-							["max"] = 1;
+							["interval"] = 22.772009984432;
+							["interval_next"] = 4.27018804696;
+							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 30.16013470762;
-							["interval_next"] = 14.235351935941;
-							["max"] = 12;
+							["interval"] = 77.896456572631;
+							["interval_next"] = 14.171594774254;
+							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_zombie";
+							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 67.324301414934;
-							["interval_next"] = 33.210232144147;
-							["max"] = 11;
+							["interval"] = 20.626873931995;
+							["interval_next"] = 3.8207170812219;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
-							["creep"] = "enemy_rotten_tree";
+							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 142.40987718576;
-							["interval_next"] = 76.503390916094;
-							["max"] = 2;
+							["interval"] = 70.135057907932;
+							["interval_next"] = 14.171594774254;
+							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_lycan_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 17.486643823202;
+							["interval_next"] = 3.1886088242071;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -606,81 +477,64 @@ local obj1 = {
 			};
 		};
 		[7] = {
-			["interval"] = 1085.7142857143;
+			["interval"] = 1142.8571428571;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
+					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_ghost";
+							["creep"] = "enemy_elvira";
 							["fixed_sub_path"] = 0;
-							["interval"] = 93.268065434013;
-							["interval_next"] = 43.882607338562;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_skeleton_big";
-							["fixed_sub_path"] = 0;
-							["interval"] = 102.49209059574;
-							["interval_next"] = 57.192659742311;
-							["max"] = 8;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_giant_rat";
-							["fixed_sub_path"] = 0;
-							["interval"] = 36.519072829781;
-							["interval_next"] = 18.777802010694;
-							["max"] = 19;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_fallen_knight";
-							["fixed_sub_path"] = 0;
-							["interval"] = 420.35952666054;
-							["interval_next"] = 200.87458583821;
+							["interval"] = 53.789441673054;
+							["interval_next"] = 10.995040855045;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[5] = {
-							["creep"] = "enemy_elvira";
+						[2] = {
+							["creep"] = "enemy_fallen_knight";
 							["fixed_sub_path"] = 0;
-							["interval"] = 197.26846718358;
-							["interval_next"] = 103.19289410039;
+							["interval"] = 98.234303074076;
+							["interval_next"] = 21.402871750867;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_gargoyle";
+							["fixed_sub_path"] = 0;
+							["interval"] = 13.760823996933;
+							["interval_next"] = 3.0468940519474;
+							["max"] = 9;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_skeleton_big";
+							["fixed_sub_path"] = 0;
+							["interval"] = 27.753568011882;
+							["interval_next"] = 6.0937881038947;
+							["max"] = 19;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[5] = {
+							["creep"] = "enemy_phantom_death_rider";
+							["fixed_sub_path"] = 0;
+							["interval"] = 25.89053461572;
+							["interval_next"] = 5.4182893627615;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[6] = {
-							["creep"] = "enemy_fallen_knight";
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 449.56577797409;
-							["interval_next"] = 200.87458583821;
-							["max"] = 1;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[7] = {
-							["creep"] = "enemy_spectral_knight";
-							["fixed_sub_path"] = 0;
-							["interval"] = 203.77801908118;
-							["interval_next"] = 102.99773776721;
-							["max"] = 4;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[8] = {
-							["creep"] = "enemy_phantom_death_rider";
-							["fixed_sub_path"] = 0;
-							["interval"] = 115.84142816895;
-							["interval_next"] = 50.852831543608;
-							["max"] = 1;
+							["interval"] = 28.969664785303;
+							["interval_next"] = 6.0937881038947;
+							["max"] = 9;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -691,56 +545,56 @@ local obj1 = {
 					["path_index"] = 2;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_lycan";
+							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 93.757555444697;
-							["interval_next"] = 46.986711884855;
-							["max"] = 1;
+							["interval"] = 33.229835565531;
+							["interval_next"] = 6.4024297156806;
+							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_lycan_werewolf";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 45.149936194032;
-							["interval_next"] = 23.493355942428;
-							["max"] = 2;
+							["interval"] = 37.453101827542;
+							["interval_next"] = 7.1556145776325;
+							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_halloween_zombie";
+							["creep"] = "enemy_lycan_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 60.835935906253;
-							["interval_next"] = 28.150667357818;
-							["max"] = 7;
+							["interval"] = 27.192856487384;
+							["interval_next"] = 5.3431969585291;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 28.612382317168;
-							["interval_next"] = 13.486122886681;
-							["max"] = 2;
+							["interval"] = 31.423534306141;
+							["interval_next"] = 6.8583331797176;
+							["max"] = 6;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
-							["creep"] = "enemy_abomination";
+							["creep"] = "enemy_lycan_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 221.92877102739;
-							["interval_next"] = 104.41491529968;
-							["max"] = 4;
+							["interval"] = 25.188533336253;
+							["interval_next"] = 5.3431969585291;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[6] = {
-							["creep"] = "enemy_werewolf";
+							["creep"] = "enemy_lycan";
 							["fixed_sub_path"] = 0;
-							["interval"] = 56.884001090789;
-							["interval_next"] = 30.155216776291;
-							["max"] = 2;
+							["interval"] = 52.561874613768;
+							["interval_next"] = 10.686393917058;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -749,54 +603,45 @@ local obj1 = {
 			};
 		};
 		[8] = {
-			["interval"] = 1150;
+			["interval"] = 1200;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_necromancer";
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 265.94020397689;
-							["interval_next"] = 121.06881999258;
-							["max"] = 1;
+							["interval"] = 34.60042795087;
+							["interval_next"] = 6.3351662964563;
+							["max"] = 20;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_fallen_knight";
+							["creep"] = "enemy_phantom_death_rider";
 							["fixed_sub_path"] = 0;
-							["interval"] = 217.27629864527;
-							["interval_next"] = 122.20042816296;
-							["max"] = 5;
+							["interval"] = 30.976851637338;
+							["interval_next"] = 5.6329106903923;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_spectral_knight";
+							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 126.20872944494;
-							["interval_next"] = 62.657839977361;
-							["max"] = 2;
+							["interval"] = 24.480546970059;
+							["interval_next"] = 4.8608268310036;
+							["max"] = 8;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_phantom_death_rider";
+							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 58.479334296868;
-							["interval_next"] = 30.935908402732;
-							["max"] = 2;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_elvira";
-							["fixed_sub_path"] = 0;
-							["interval"] = 136.17255450372;
-							["interval_next"] = 62.776561752808;
-							["max"] = 4;
+							["interval"] = 23.79284686056;
+							["interval_next"] = 4.8608268310036;
+							["max"] = 7;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -807,47 +652,65 @@ local obj1 = {
 					["path_index"] = 2;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_rotten_tree";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 136.23322446159;
-							["interval_next"] = 68.450402398611;
-							["max"] = 5;
+							["interval"] = 13.695352306851;
+							["interval_next"] = 2.8433837635263;
+							["max"] = 12;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_halloween_zombie";
+							["creep"] = "enemy_lycan";
 							["fixed_sub_path"] = 0;
-							["interval"] = 52.307736252594;
-							["interval_next"] = 26.586741393495;
-							["max"] = 29;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_abomination";
-							["fixed_sub_path"] = 0;
-							["interval"] = 211.35425186637;
-							["interval_next"] = 98.614086671919;
+							["interval"] = 22.50295914209;
+							["interval_next"] = 4.2463884303371;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[4] = {
-							["creep"] = "enemy_lycan_werewolf";
+						[3] = {
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 40.21269919958;
-							["interval_next"] = 22.188169501182;
-							["max"] = 5;
+							["interval"] = 12.824275226678;
+							["interval_next"] = 2.8433837635263;
+							["max"] = 22;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 13.377678189808;
+							["interval_next"] = 2.8433837635263;
+							["max"] = 24;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
 							["creep"] = "enemy_lycan";
 							["fixed_sub_path"] = 0;
-							["interval"] = 95.999272874827;
-							["interval_next"] = 44.376339002363;
-							["max"] = 1;
+							["interval"] = 19.861075160173;
+							["interval_next"] = 4.2463884303371;
+							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 13.735370784901;
+							["interval_next"] = 2.8433837635263;
+							["max"] = 9;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 13.602881560697;
+							["interval_next"] = 2.8433837635263;
+							["max"] = 15;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -856,7 +719,7 @@ local obj1 = {
 			};
 		};
 		[9] = {
-			["interval"] = 1214.2857142857;
+			["interval"] = 1257.1428571429;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
@@ -865,45 +728,72 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 176.48255204012;
-							["interval_next"] = 80.481892741115;
-							["max"] = 7;
+							["interval"] = 24.050746676832;
+							["interval_next"] = 4.9401615402114;
+							["max"] = 16;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_wererat";
+							["creep"] = "enemy_spectral_knight";
 							["fixed_sub_path"] = 0;
-							["interval"] = 79.751134174852;
-							["interval_next"] = 41.539847826572;
-							["max"] = 13;
+							["interval"] = 47.037978096479;
+							["interval_next"] = 8.8966917282557;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_necromancer";
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 539.06987441465;
-							["interval_next"] = 280.05444093829;
-							["max"] = 1;
+							["interval"] = 23.15203420537;
+							["interval_next"] = 4.9401615402114;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
 							["creep"] = "enemy_phantom_death_rider";
 							["fixed_sub_path"] = 0;
-							["interval"] = 144.38868211851;
-							["interval_next"] = 71.560444160405;
-							["max"] = 1;
+							["interval"] = 21.198683647849;
+							["interval_next"] = 4.3925427447244;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
-							["creep"] = "enemy_spectral_knight";
+							["creep"] = "enemy_elvira";
 							["fixed_sub_path"] = 0;
-							["interval"] = 309.2592494626;
-							["interval_next"] = 144.93910443941;
-							["max"] = 3;
+							["interval"] = 42.348009062841;
+							["interval_next"] = 8.9135488532055;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_phantom_death_rider";
+							["fixed_sub_path"] = 0;
+							["interval"] = 20.049869571537;
+							["interval_next"] = 4.3925427447244;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_phantom_death_rider";
+							["fixed_sub_path"] = 0;
+							["interval"] = 23.882177028311;
+							["interval_next"] = 4.3925427447244;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_skeleton_big";
+							["fixed_sub_path"] = 0;
+							["interval"] = 23.931741081324;
+							["interval_next"] = 4.9401615402114;
+							["max"] = 11;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -914,47 +804,56 @@ local obj1 = {
 					["path_index"] = 2;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 26.076174145973;
-							["interval_next"] = 11.987664788161;
-							["max"] = 10;
+							["interval"] = 11.989232520637;
+							["interval_next"] = 2.2180622648089;
+							["max"] = 32;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
 							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 54.914347476926;
-							["interval_next"] = 27.966511279282;
-							["max"] = 13;
+							["interval"] = 12.394313107912;
+							["interval_next"] = 2.4789961594254;
+							["max"] = 22;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 51.036698447143;
-							["interval_next"] = 25.022815429172;
-							["max"] = 32;
+							["interval"] = 10.572490866647;
+							["interval_next"] = 2.2180622648089;
+							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_lycan";
+							["creep"] = "enemy_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 75.512084975063;
-							["interval_next"] = 41.765966119871;
-							["max"] = 3;
+							["interval"] = 11.522749327658;
+							["interval_next"] = 2.37600578233;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
-							["creep"] = "enemy_abomination";
+							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 182.42170670139;
-							["interval_next"] = 92.813258044159;
-							["max"] = 4;
+							["interval"] = 10.148851216127;
+							["interval_next"] = 2.2180622648089;
+							["max"] = 15;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 12.853439499718;
+							["interval_next"] = 2.4789961594254;
+							["max"] = 22;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -964,77 +863,59 @@ local obj1 = {
 					["delay"] = 0;
 					["path_index"] = 9;
 					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_skeleton";
-							["fixed_sub_path"] = 0;
-							["interval"] = 20.147305189869;
-							["interval_next"] = 8.8333243555323;
-							["max"] = 11;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_skeleton_big";
-							["fixed_sub_path"] = 0;
-							["interval"] = 74.090875330943;
-							["interval_next"] = 33.324499843567;
-							["max"] = 20;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
 					};
 				};
 			};
 		};
 		[10] = {
-			["interval"] = 1278.5714285714;
+			["interval"] = 1314.2857142857;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_skeleton_big";
+							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 83.05279087892;
-							["interval_next"] = 39.722839179662;
-							["max"] = 10;
+							["interval"] = 14.361906844281;
+							["interval_next"] = 2.9514429925896;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_phantom_death_rider";
+							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 79.608562472091;
-							["interval_next"] = 35.319547269503;
-							["max"] = 1;
+							["interval"] = 23.035050693015;
+							["interval_next"] = 4.3875270731739;
+							["max"] = 15;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_elvira";
+							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 128.70892983475;
-							["interval_next"] = 71.6720424492;
-							["max"] = 2;
+							["interval"] = 22.512680392459;
+							["interval_next"] = 4.3875270731739;
+							["max"] = 17;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_ghost";
+							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 71.619495210833;
-							["interval_next"] = 30.47841736943;
-							["max"] = 16;
+							["interval"] = 14.564394360642;
+							["interval_next"] = 2.9514429925896;
+							["max"] = 13;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
-							["creep"] = "enemy_wererat";
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 35.741377514119;
-							["interval_next"] = 20.502508558917;
-							["max"] = 7;
+							["interval"] = 28.987580294097;
+							["interval_next"] = 5.7183097866133;
+							["max"] = 11;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1045,65 +926,74 @@ local obj1 = {
 					["path_index"] = 2;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_lycan_werewolf_phantom";
+							["creep"] = "enemy_lycan";
 							["fixed_sub_path"] = 0;
-							["interval"] = 46.905923223639;
-							["interval_next"] = 24.180709777918;
-							["max"] = 1;
+							["interval"] = 42.513013615061;
+							["interval_next"] = 9.3071569997065;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_zombiemancer";
+							["creep"] = "enemy_rotten_tree";
 							["fixed_sub_path"] = 0;
-							["interval"] = 191.49512747603;
-							["interval_next"] = 103.86343275373;
-							["max"] = 1;
+							["interval"] = 64.809474410151;
+							["interval_next"] = 14.35626859131;
+							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_lycan_werewolf_phantom";
+							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 51.090247873359;
-							["interval_next"] = 24.180709777918;
+							["interval"] = 99.87831092207;
+							["interval_next"] = 20.682571110459;
 							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_zombie";
+							["creep"] = "enemy_lycan_werewolf_phantom";
 							["fixed_sub_path"] = 0;
-							["interval"] = 52.387940242632;
-							["interval_next"] = 26.218604324327;
-							["max"] = 21;
+							["interval"] = 30.568753755415;
+							["interval_next"] = 5.7476759681061;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
-							["creep"] = "enemy_rotten_tree";
+							["creep"] = "enemy_zombiemancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 131.40492615769;
-							["interval_next"] = 60.397413881127;
-							["max"] = 4;
+							["interval"] = 122.60781701628;
+							["interval_next"] = 24.687999727318;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[6] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_rotten_tree";
 							["fixed_sub_path"] = 0;
-							["interval"] = 22.803517088518;
-							["interval_next"] = 11.238435738901;
-							["max"] = 11;
+							["interval"] = 65.008494405564;
+							["interval_next"] = 14.35626859131;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[7] = {
-							["creep"] = "enemy_zombiemancer";
+							["creep"] = "enemy_lycan";
 							["fixed_sub_path"] = 0;
-							["interval"] = 228.46923023305;
-							["interval_next"] = 103.86343275373;
+							["interval"] = 42.920122465061;
+							["interval_next"] = 9.3071569997065;
 							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_rotten_tree";
+							["fixed_sub_path"] = 0;
+							["interval"] = 77.733636532087;
+							["interval_next"] = 14.35626859131;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1114,20 +1004,20 @@ local obj1 = {
 					["path_index"] = 9;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_skeleton";
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 26.6213776953;
-							["interval_next"] = 13.408193962995;
-							["max"] = 41;
+							["interval"] = 97.795674609356;
+							["interval_next"] = 18.144305924028;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_skeleton_big";
+							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 100.03538223745;
-							["interval_next"] = 50.5836013304;
-							["max"] = 6;
+							["interval"] = 24.208426697846;
+							["interval_next"] = 4.8095107259016;
+							["max"] = 25;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1140,9 +1030,9 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 60.332279356207;
-							["interval_next"] = 28.222668921816;
-							["max"] = 19;
+							["interval"] = 109.60003769764;
+							["interval_next"] = 21.142480166466;
+							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1151,54 +1041,72 @@ local obj1 = {
 			};
 		};
 		[11] = {
-			["interval"] = 1342.8571428571;
+			["interval"] = 1371.4285714286;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_skeleton_big";
+							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 61.16896156275;
-							["interval_next"] = 29.760927293144;
-							["max"] = 17;
+							["interval"] = 15.233813441976;
+							["interval_next"] = 3.3645408096468;
+							["max"] = 7;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
 							["creep"] = "enemy_phantom_death_rider";
 							["fixed_sub_path"] = 0;
-							["interval"] = 43.770014298286;
-							["interval_next"] = 26.461917124308;
-							["max"] = 4;
+							["interval"] = 28.584995343775;
+							["interval_next"] = 5.7960740669859;
+							["max"] = 6;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_elvira";
+							["creep"] = "enemy_necromancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 108.90222490126;
-							["interval_next"] = 53.697733805842;
+							["interval"] = 115.30313630862;
+							["interval_next"] = 22.683149909302;
 							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_wererat";
+							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 29.84430689127;
-							["interval_next"] = 15.360776801206;
-							["max"] = 7;
+							["interval"] = 23.639163498411;
+							["interval_next"] = 5.0016259599754;
+							["max"] = 17;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
+							["creep"] = "enemy_necromancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 114.62150377504;
+							["interval_next"] = 22.683149909302;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
 							["creep"] = "enemy_ghost";
 							["fixed_sub_path"] = 0;
-							["interval"] = 42.25747913883;
-							["interval_next"] = 22.834872382589;
-							["max"] = 14;
+							["interval"] = 23.377391668228;
+							["interval_next"] = 5.0016259599754;
+							["max"] = 4;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_ghost";
+							["fixed_sub_path"] = 0;
+							["interval"] = 22.841828794568;
+							["interval_next"] = 5.0016259599754;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1210,55 +1118,297 @@ local obj1 = {
 					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_witch";
+							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 161.41561941424;
-							["interval_next"] = 70.739495446851;
-							["max"] = 1;
+							["interval"] = 70.508548996527;
+							["interval_next"] = 14.878932807883;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 57.657903224992;
-							["interval_next"] = 29.120732505209;
-							["max"] = 9;
+							["interval"] = 22.353451345214;
+							["interval_next"] = 4.4833232984599;
+							["max"] = 31;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
 							["creep"] = "enemy_witch";
 							["fixed_sub_path"] = 0;
-							["interval"] = 138.30314624209;
-							["interval_next"] = 70.739495446851;
+							["interval"] = 25.294418937883;
+							["interval_next"] = 4.6682705481906;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
+							["creep"] = "enemy_ghoul";
+							["fixed_sub_path"] = 0;
+							["interval"] = 9.0664664414789;
+							["interval_next"] = 1.9217476324515;
+							["max"] = 15;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[5] = {
 							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 499.84719410167;
-							["interval_next"] = 225.46426749521;
+							["interval"] = 78.733180695823;
+							["interval_next"] = 14.878932807883;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_ghoul";
+							["fixed_sub_path"] = 0;
+							["interval"] = 10.332712068874;
+							["interval_next"] = 1.9217476324515;
+							["max"] = 11;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[3] = {
+					["delay"] = 0;
+					["path_index"] = 9;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 30.32740485338;
+							["interval_next"] = 6.0720585858242;
+							["max"] = 20;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 28.790635340792;
+							["interval_next"] = 6.0720585858242;
+							["max"] = 19;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[4] = {
+					["delay"] = 0;
+					["path_index"] = 10;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 45.433098285744;
+							["interval_next"] = 9.3889632188012;
+							["max"] = 9;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 49.202564980333;
+							["interval_next"] = 9.3889632188012;
+							["max"] = 15;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[5] = {
+					["delay"] = 0;
+					["path_index"] = 11;
+					["spawns"] = {
+					};
+				};
+			};
+		};
+		[12] = {
+			["interval"] = 1428.5714285714;
+			["waves"] = {
+				[1] = {
+					["delay"] = 0;
+					["path_index"] = 1;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_fallen_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 111.55625423426;
+							["interval_next"] = 20.651622934487;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_fallen_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 100.57194221895;
+							["interval_next"] = 20.651622934487;
+							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_wererat";
+							["fixed_sub_path"] = 0;
+							["interval"] = 16.137015857037;
+							["interval_next"] = 3.0348428423303;
 							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_fallen_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 93.827874071006;
+							["interval_next"] = 20.651622934487;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[5] = {
+							["creep"] = "enemy_spectral_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 56.830854177729;
+							["interval_next"] = 10.589047064355;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_phantom_death_rider";
+							["fixed_sub_path"] = 0;
+							["interval"] = 24.891978347664;
+							["interval_next"] = 5.2281053763337;
+							["max"] = 4;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_elvira";
+							["fixed_sub_path"] = 0;
+							["interval"] = 56.100871869155;
+							["interval_next"] = 10.609110802081;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_spectral_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 48.874095693465;
+							["interval_next"] = 10.589047064355;
+							["max"] = 6;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[9] = {
+							["creep"] = "enemy_phantom_death_rider";
+							["fixed_sub_path"] = 0;
+							["interval"] = 23.847815851781;
+							["interval_next"] = 5.2281053763337;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[10] = {
+							["creep"] = "enemy_fallen_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 94.941120282739;
+							["interval_next"] = 20.651622934487;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[2] = {
+					["delay"] = 0;
+					["path_index"] = 2;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_lycan_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 31.196783627743;
+							["interval_next"] = 5.83979181624;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_abomination";
+							["fixed_sub_path"] = 0;
+							["interval"] = 117.38935510118;
+							["interval_next"] = 25.9546302944;
+							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_zombiemancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 149.54569908536;
+							["interval_next"] = 30.981056572157;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 34.032224680549;
+							["interval_next"] = 7.4957442682381;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
 							["creep"] = "enemy_lycan_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 109.45679290518;
-							["interval_next"] = 50.729460186422;
-							["max"] = 1;
+							["interval"] = 28.124214925189;
+							["interval_next"] = 5.83979181624;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[6] = {
-							["creep"] = "enemy_rotten_tree";
+							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 297.79771206182;
-							["interval_next"] = 156.50015487037;
+							["interval"] = 140.87922624019;
+							["interval_next"] = 25.9546302944;
+							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 34.167034695246;
+							["interval_next"] = 7.4957442682381;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_lycan_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 29.407539977946;
+							["interval_next"] = 5.83979181624;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[9] = {
+							["creep"] = "enemy_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 34.718564606438;
+							["interval_next"] = 7.4957442682381;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -1270,10 +1420,249 @@ local obj1 = {
 					["path_index"] = 9;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_skeleton_big";
+							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 51.14389853805;
-							["interval_next"] = 26.305456719543;
+							["interval"] = 46.324272651082;
+							["interval_next"] = 9.8546253575851;
+							["max"] = 26;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[4] = {
+					["delay"] = 0;
+					["path_index"] = 10;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 54.674999629735;
+							["interval_next"] = 11.435722431553;
+							["max"] = 22;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[5] = {
+					["delay"] = 0;
+					["path_index"] = 11;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 58.032611093819;
+							["interval_next"] = 12.496339260281;
+							["max"] = 9;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 66.699953592079;
+							["interval_next"] = 12.496339260281;
+							["max"] = 10;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[6] = {
+					["delay"] = 0;
+					["path_index"] = 12;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 18.91955068164;
+							["interval_next"] = 3.6198002745539;
+							["max"] = 36;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 17.843426149726;
+							["interval_next"] = 3.6198002745539;
+							["max"] = 14;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 18.167634855124;
+							["interval_next"] = 3.6198002745539;
+							["max"] = 15;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+			};
+		};
+		[13] = {
+			["interval"] = 1485.7142857143;
+			["waves"] = {
+				[1] = {
+					["delay"] = 0;
+					["path_index"] = 1;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_fallen_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 96.37786466908;
+							["interval_next"] = 20.934105917519;
+							["max"] = 4;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_necromancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 108.27937696895;
+							["interval_next"] = 20.740250579597;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_spectral_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 52.789799748025;
+							["interval_next"] = 10.733889220911;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_elvira";
+							["fixed_sub_path"] = 0;
+							["interval"] = 57.29717281843;
+							["interval_next"] = 10.754227400239;
+							["max"] = 4;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[5] = {
+							["creep"] = "enemy_elvira";
+							["fixed_sub_path"] = 0;
+							["interval"] = 52.435023060142;
+							["interval_next"] = 10.754227400239;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_fallen_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 96.566222065777;
+							["interval_next"] = 20.934105917519;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_spectral_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 57.846606882578;
+							["interval_next"] = 10.733889220911;
+							["max"] = 6;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[2] = {
+					["delay"] = 0;
+					["path_index"] = 2;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_zombiemancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 129.58967976406;
+							["interval_next"] = 24.188391776844;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_zombiemancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 112.04022082354;
+							["interval_next"] = 24.188391776844;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_zombiemancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 121.08298012022;
+							["interval_next"] = 24.188391776844;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_abomination";
+							["fixed_sub_path"] = 0;
+							["interval"] = 109.57312767173;
+							["interval_next"] = 20.264020515953;
+							["max"] = 4;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[5] = {
+							["creep"] = "enemy_zombiemancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 115.14333198606;
+							["interval_next"] = 24.188391776844;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_abomination";
+							["fixed_sub_path"] = 0;
+							["interval"] = 97.416874684179;
+							["interval_next"] = 20.264020515953;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 28.489301985026;
+							["interval_next"] = 5.8522858507711;
+							["max"] = 7;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+					};
+				};
+				[3] = {
+					["delay"] = 0;
+					["path_index"] = 9;
+					["spawns"] = {
+						[1] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 31.152188488289;
+							["interval_next"] = 5.8963886992213;
+							["max"] = 20;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 29.905742652044;
+							["interval_next"] = 5.8963886992213;
 							["max"] = 21;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -1287,9 +1676,9 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 133.04060947893;
-							["interval_next"] = 65.684890501576;
-							["max"] = 5;
+							["interval"] = 52.213914783107;
+							["interval_next"] = 9.723188062586;
+							["max"] = 24;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1302,171 +1691,18 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 166.46997348429;
-							["interval_next"] = 73.412092108114;
-							["max"] = 5;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-			};
-		};
-		[12] = {
-			["interval"] = 1407.1428571429;
-			["waves"] = {
-				[1] = {
-					["delay"] = 0;
-					["path_index"] = 1;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_spectral_knight";
-							["fixed_sub_path"] = 0;
-							["interval"] = 125.72615513255;
-							["interval_next"] = 60.370481517579;
-							["max"] = 5;
+							["interval"] = 53.11258408126;
+							["interval_next"] = 10.175858522218;
+							["max"] = 18;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_elvira";
-							["fixed_sub_path"] = 0;
-							["interval"] = 127.40168372037;
-							["interval_next"] = 60.48486929017;
-							["max"] = 1;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_wererat";
-							["fixed_sub_path"] = 0;
-							["interval"] = 33.782583721338;
-							["interval_next"] = 17.302305165722;
-							["max"] = 10;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_fallen_knight";
-							["fixed_sub_path"] = 0;
-							["interval"] = 236.28684037959;
-							["interval_next"] = 117.73943520105;
-							["max"] = 5;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_necromancer";
-							["fixed_sub_path"] = 0;
-							["interval"] = 260.42065304815;
-							["interval_next"] = 116.64913700118;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[2] = {
-					["delay"] = 0;
-					["path_index"] = 2;
-					["some_flying"] = true;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_zombiemancer";
-							["fixed_sub_path"] = 0;
-							["interval"] = 348.73529720982;
-							["interval_next"] = 196.00603116732;
-							["max"] = 2;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_witch";
-							["fixed_sub_path"] = 0;
-							["interval"] = 106.02969520595;
-							["interval_next"] = 51.519577423513;
-							["max"] = 2;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_lycan";
-							["fixed_sub_path"] = 0;
-							["interval"] = 136.86308962988;
-							["interval_next"] = 73.892535851943;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_abomination";
-							["fixed_sub_path"] = 0;
-							["interval"] = 309.97981928009;
-							["interval_next"] = 164.20563522654;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_ghoul";
-							["fixed_sub_path"] = 0;
-							["interval"] = 39.179198448017;
-							["interval_next"] = 21.208630673069;
-							["max"] = 14;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[3] = {
-					["delay"] = 0;
-					["path_index"] = 9;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_skeleton_big";
-							["fixed_sub_path"] = 0;
-							["interval"] = 60.150128692603;
-							["interval_next"] = 27.312002517325;
-							["max"] = 20;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_skeleton";
-							["fixed_sub_path"] = 0;
-							["interval"] = 14.202898418604;
-							["interval_next"] = 7.2395918368515;
-							["max"] = 10;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[4] = {
-					["delay"] = 0;
-					["path_index"] = 10;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_halloween_zombie";
-							["fixed_sub_path"] = 0;
-							["interval"] = 90.792554508462;
-							["interval_next"] = 40.181226918804;
-							["max"] = 14;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[5] = {
-					["delay"] = 0;
-					["path_index"] = 11;
-					["spawns"] = {
-						[1] = {
 							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 105.61647817481;
-							["interval_next"] = 53.008552392982;
-							["max"] = 11;
+							["interval"] = 47.74648539167;
+							["interval_next"] = 10.175858522218;
+							["max"] = 6;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1479,186 +1715,9 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 33.322216112401;
-							["interval_next"] = 17.333333333333;
-							["max"] = 11;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-			};
-		};
-		[13] = {
-			["interval"] = 1471.4285714286;
-			["waves"] = {
-				[1] = {
-					["delay"] = 0;
-					["path_index"] = 1;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_phantom_death_rider";
-							["fixed_sub_path"] = 0;
-							["interval"] = 84.400835299952;
-							["interval_next"] = 43.189794878593;
-							["max"] = 5;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_fallen_knight";
-							["fixed_sub_path"] = 0;
-							["interval"] = 329.76544024255;
-							["interval_next"] = 170.60470175068;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_elvira";
-							["fixed_sub_path"] = 0;
-							["interval"] = 176.44071724215;
-							["interval_next"] = 87.642709242302;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_necromancer";
-							["fixed_sub_path"] = 0;
-							["interval"] = 293.10641050346;
-							["interval_next"] = 169.02485725007;
-							["max"] = 1;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_wererat";
-							["fixed_sub_path"] = 0;
-							["interval"] = 50.873359994482;
-							["interval_next"] = 25.07107841444;
-							["max"] = 14;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[2] = {
-					["delay"] = 0;
-					["path_index"] = 2;
-					["some_flying"] = true;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_zombiemancer";
-							["fixed_sub_path"] = 0;
-							["interval"] = 464.19718867919;
-							["interval_next"] = 249.27223860895;
-							["max"] = 1;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_ghoul";
-							["fixed_sub_path"] = 0;
-							["interval"] = 56.43497821734;
-							["interval_next"] = 26.972245773362;
-							["max"] = 15;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
-							["creep"] = "enemy_witch";
-							["fixed_sub_path"] = 0;
-							["interval"] = 128.80636864041;
-							["interval_next"] = 65.520434856329;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[4] = {
-							["creep"] = "enemy_lycan_werewolf";
-							["fixed_sub_path"] = 0;
-							["interval"] = 85.835443296943;
-							["interval_next"] = 46.986711884855;
-							["max"] = 4;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[5] = {
-							["creep"] = "enemy_lycan";
-							["fixed_sub_path"] = 0;
-							["interval"] = 169.55549780893;
-							["interval_next"] = 93.973423769711;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[3] = {
-					["delay"] = 0;
-					["path_index"] = 9;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_skeleton_big";
-							["fixed_sub_path"] = 0;
-							["interval"] = 65.193030122274;
-							["interval_next"] = 28.06065544852;
-							["max"] = 20;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_skeleton";
-							["fixed_sub_path"] = 0;
-							["interval"] = 15.192238205731;
-							["interval_next"] = 7.4380372509465;
-							["max"] = 11;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[4] = {
-					["delay"] = 0;
-					["path_index"] = 10;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_halloween_zombie";
-							["fixed_sub_path"] = 0;
-							["interval"] = 56.867530286725;
-							["interval_next"] = 26.524925621155;
-							["max"] = 23;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[5] = {
-					["delay"] = 0;
-					["path_index"] = 11;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_zombie";
-							["fixed_sub_path"] = 0;
-							["interval"] = 121.96851939135;
-							["interval_next"] = 62.924650378384;
-							["max"] = 8;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-					};
-				};
-				[6] = {
-					["delay"] = 0;
-					["path_index"] = 12;
-					["spawns"] = {
-						[1] = {
-							["creep"] = "enemy_skeleton";
-							["fixed_sub_path"] = 0;
-							["interval"] = 32.032232333876;
-							["interval_next"] = 16;
-							["max"] = 36;
+							["interval"] = 33.94906213342;
+							["interval_next"] = 6.741843920588;
+							["max"] = 37;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1671,9 +1730,27 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 38.010594611954;
-							["interval_next"] = 19.943624894957;
-							["max"] = 32;
+							["interval"] = 28.845139748803;
+							["interval_next"] = 6.0235277737067;
+							["max"] = 21;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 32.014214209436;
+							["interval_next"] = 6.0235277737067;
+							["max"] = 8;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 30.289102699641;
+							["interval_next"] = 6.0235277737067;
+							["max"] = 20;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1682,53 +1759,80 @@ local obj1 = {
 			};
 		};
 		[14] = {
-			["interval"] = 1535.7142857143;
+			["interval"] = 1542.8571428571;
 			["waves"] = {
 				[1] = {
 					["delay"] = 0;
 					["path_index"] = 1;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_spectral_knight";
+							["creep"] = "enemy_necromancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 186.52695431699;
-							["interval_next"] = 92.183489106148;
-							["max"] = 2;
+							["interval"] = 122.26877590933;
+							["interval_next"] = 22.647239750198;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_phantom_death_rider";
+							["creep"] = "enemy_elvira";
 							["fixed_sub_path"] = 0;
-							["interval"] = 102.65396357462;
-							["interval_next"] = 45.513537911017;
-							["max"] = 5;
+							["interval"] = 62.073995916423;
+							["interval_next"] = 11.743038750985;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_necromancer";
+							["creep"] = "enemy_fallen_knight";
 							["fixed_sub_path"] = 0;
-							["interval"] = 381.96985768867;
-							["interval_next"] = 178.11891142294;
-							["max"] = 3;
+							["interval"] = 114.62722664712;
+							["interval_next"] = 22.858919367951;
+							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_fallen_knight";
+							["creep"] = "enemy_phantom_death_rider";
 							["fixed_sub_path"] = 0;
-							["interval"] = 353.87635934025;
-							["interval_next"] = 179.78375638862;
-							["max"] = 3;
+							["interval"] = 26.290848243199;
+							["interval_next"] = 5.7868981834445;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
+							["creep"] = "enemy_wererat";
+							["fixed_sub_path"] = 0;
+							["interval"] = 18.399503758003;
+							["interval_next"] = 3.3592143361955;
+							["max"] = 16;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
 							["creep"] = "enemy_elvira";
 							["fixed_sub_path"] = 0;
-							["interval"] = 182.77697096386;
-							["interval_next"] = 92.358154997879;
+							["interval"] = 58.811234491413;
+							["interval_next"] = 11.743038750985;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_wererat";
+							["fixed_sub_path"] = 0;
+							["interval"] = 16.86773202957;
+							["interval_next"] = 3.3592143361955;
+							["max"] = 15;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_fallen_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 104.27069228998;
+							["interval_next"] = 22.858919367951;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -1741,47 +1845,83 @@ local obj1 = {
 					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_abomination";
+							["creep"] = "enemy_zombiemancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 393.63049415434;
-							["interval_next"] = 180.73761171064;
-							["max"] = 3;
+							["interval"] = 161.8886002379;
+							["interval_next"] = 30.466606941093;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
 							["creep"] = "enemy_witch";
 							["fixed_sub_path"] = 0;
-							["interval"] = 119.9148150703;
-							["interval_next"] = 56.7064910228;
-							["max"] = 3;
+							["interval"] = 39.378496038206;
+							["interval_next"] = 8.0080531491069;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_rotten_tree";
+							["creep"] = "enemy_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 292.03777321198;
-							["interval_next"] = 125.4543105116;
-							["max"] = 3;
+							["interval"] = 34.578759334791;
+							["interval_next"] = 7.3712752119823;
+							["max"] = 5;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_werewolf";
+							["creep"] = "enemy_zombiemancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 101.02603608712;
-							["interval_next"] = 52.197349824218;
-							["max"] = 3;
+							["interval"] = 156.90593889828;
+							["interval_next"] = 30.466606941093;
+							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
-							["creep"] = "enemy_lycan";
+							["creep"] = "enemy_zombiemancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 169.11422524694;
-							["interval_next"] = 81.331925269787;
+							["interval"] = 147.10749592839;
+							["interval_next"] = 30.466606941093;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_zombiemancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 145.96805157999;
+							["interval_next"] = 30.466606941093;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_witch";
+							["fixed_sub_path"] = 0;
+							["interval"] = 40.995123695078;
+							["interval_next"] = 8.0080531491069;
 							["max"] = 4;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_witch";
+							["fixed_sub_path"] = 0;
+							["interval"] = 41.806094681816;
+							["interval_next"] = 8.0080531491069;
+							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[9] = {
+							["creep"] = "enemy_witch";
+							["fixed_sub_path"] = 0;
+							["interval"] = 36.638576453714;
+							["interval_next"] = 8.0080531491069;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1794,18 +1934,9 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 24.005117442817;
-							["interval_next"] = 12.361860517119;
-							["max"] = 34;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[2] = {
-							["creep"] = "enemy_skeleton_big";
-							["fixed_sub_path"] = 0;
-							["interval"] = 83.521349757653;
-							["interval_next"] = 46.636215572784;
-							["max"] = 14;
+							["interval"] = 36.223469970563;
+							["interval_next"] = 7.3836524883015;
+							["max"] = 36;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1818,9 +1949,18 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 93.186480700422;
-							["interval_next"] = 51.609556822667;
-							["max"] = 11;
+							["interval"] = 38.242888746001;
+							["interval_next"] = 7.9295418155516;
+							["max"] = 10;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 36.525624013498;
+							["interval_next"] = 7.9295418155516;
+							["max"] = 25;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1833,9 +1973,9 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 67.006927311287;
-							["interval_next"] = 36.311129266998;
-							["max"] = 19;
+							["interval"] = 50.048530634997;
+							["interval_next"] = 10.166774918647;
+							["max"] = 26;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1848,9 +1988,18 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 32.203685389495;
-							["interval_next"] = 14.666666666667;
-							["max"] = 25;
+							["interval"] = 26.964530359445;
+							["interval_next"] = 5.2572935695532;
+							["max"] = 16;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 27.171296829323;
+							["interval_next"] = 5.2572935695532;
+							["max"] = 32;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1863,9 +2012,18 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 56.408040645623;
-							["interval_next"] = 27.840271387343;
-							["max"] = 24;
+							["interval"] = 61.347700100826;
+							["interval_next"] = 11.50734599129;
+							["max"] = 7;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 57.265331916014;
+							["interval_next"] = 11.50734599129;
+							["max"] = 15;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1881,107 +2039,243 @@ local obj1 = {
 					["path_index"] = 1;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_necromancer";
+							["creep"] = "enemy_elvira";
 							["fixed_sub_path"] = 0;
-							["interval"] = 198.49838057291;
-							["interval_next"] = 113.46318158993;
+							["interval"] = 55.802651433161;
+							["interval_next"] = 11.699280211181;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_spectral_knight";
+							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 120.05086386765;
-							["interval_next"] = 58.721625236124;
-							["max"] = 2;
+							["interval"] = 17.323533615694;
+							["interval_next"] = 3.3466967657983;
+							["max"] = 9;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_phantom_death_rider";
+							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
-							["interval"] = 63.638266030261;
-							["interval_next"] = 28.992490328755;
-							["max"] = 5;
+							["interval"] = 15.209781088343;
+							["interval_next"] = 3.3466967657983;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-                        [4] = {
-                            ["creep"] = "eb_jack";
-                            ["fixed_sub_path"] = 1;
-                            ["interval"] = 0;
-                            ["interval_next"] = 50;
-                            ["max"] = 1;
-                            ["max_same"] = 0;
-                            ["path"] = 1;
-                        };
+						[4] = {
+							["creep"] = "enemy_wererat";
+							["fixed_sub_path"] = 0;
+							["interval"] = 15.449482931387;
+							["interval_next"] = 3.3466967657983;
+							["max"] = 8;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
 						[5] = {
 							["creep"] = "enemy_elvira";
 							["fixed_sub_path"] = 0;
-							["interval"] = 125.40221216776;
-							["interval_next"] = 58.832888816351;
-							["max"] = 3;
+							["interval"] = 52.746955069409;
+							["interval_next"] = 11.699280211181;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[6] = {
-							["creep"] = "enemy_fallen_knight";
+							["creep"] = "enemy_spectral_knight";
 							["fixed_sub_path"] = 0;
-							["interval"] = 248.24177168926;
-							["interval_next"] = 114.52370124588;
-							["max"] = 5;
+							["interval"] = 53.203491531468;
+							["interval_next"] = 11.677154766917;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
+						[7] = {
+							["creep"] = "enemy_necromancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 120.5858513672;
+							["interval_next"] = 22.56284846417;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_spectral_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 63.511621938454;
+							["interval_next"] = 11.677154766917;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[9] = {
+							["creep"] = "enemy_spectral_knight";
+							["fixed_sub_path"] = 0;
+							["interval"] = 62.337392208849;
+							["interval_next"] = 11.677154766917;
+							["max"] = 6;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+                        [10] = {
+                            ["creep"] = "eb_jack";
+                            ["fixed_sub_path"] = 1;
+                            ["interval"] = 0;
+                            ["interval_next"] = 0;
+                            ["max"] = 1;
+                            ["max_same"] = 0;
+                            ["path"] = 1;
+                        }
 					};
 				};
 				[2] = {
 					["delay"] = 0;
 					["path_index"] = 2;
+					["some_flying"] = true;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_rotten_tree";
+							["creep"] = "enemy_lycan_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 271.19750663726;
-							["interval_next"] = 118.64094440015;
-							["max"] = 5;
+							["interval"] = 25.215872996165;
+							["interval_next"] = 4.7262513840626;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_lycan_werewolf_phantom";
+							["creep"] = "enemy_witch";
 							["fixed_sub_path"] = 0;
-							["interval"] = 92.035562911493;
-							["interval_next"] = 47.499090771742;
+							["interval"] = 35.385154404043;
+							["interval_next"] = 6.5905025804523;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[3] = {
-							["creep"] = "enemy_werewolf";
+							["creep"] = "enemy_lycan";
 							["fixed_sub_path"] = 0;
-							["interval"] = 91.849081928604;
-							["interval_next"] = 49.362535675945;
-							["max"] = 7;
+							["interval"] = 49.41325605283;
+							["interval_next"] = 9.4525027681252;
+							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[4] = {
-							["creep"] = "enemy_ghoul";
+							["creep"] = "enemy_witch";
 							["fixed_sub_path"] = 0;
-							["interval"] = 40.061492226335;
-							["interval_next"] = 22.07608809655;
-							["max"] = 7;
+							["interval"] = 35.095795800167;
+							["interval_next"] = 6.5905025804523;
+							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[5] = {
+							["creep"] = "enemy_lycan";
+							["fixed_sub_path"] = 0;
+							["interval"] = 50.793054013404;
+							["interval_next"] = 9.4525027681252;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[6] = {
+							["creep"] = "enemy_witch";
+							["fixed_sub_path"] = 0;
+							["interval"] = 34.807308202296;
+							["interval_next"] = 6.5905025804523;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[7] = {
+							["creep"] = "enemy_lycan";
+							["fixed_sub_path"] = 0;
+							["interval"] = 50.440743328265;
+							["interval_next"] = 9.4525027681252;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[8] = {
+							["creep"] = "enemy_lycan";
+							["fixed_sub_path"] = 0;
+							["interval"] = 50.589541582293;
+							["interval_next"] = 9.4525027681252;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[9] = {
+							["creep"] = "enemy_witch";
+							["fixed_sub_path"] = 0;
+							["interval"] = 35.311913052103;
+							["interval_next"] = 6.5905025804523;
+							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[10] = {
+							["creep"] = "enemy_lycan_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 25.616172830745;
+							["interval_next"] = 4.7262513840626;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[11] = {
+							["creep"] = "enemy_lycan";
+							["fixed_sub_path"] = 0;
+							["interval"] = 45.383966076704;
+							["interval_next"] = 9.4525027681252;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[12] = {
+							["creep"] = "enemy_witch";
+							["fixed_sub_path"] = 0;
+							["interval"] = 31.095776115971;
+							["interval_next"] = 6.5905025804523;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[13] = {
 							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
-							["interval"] = 320.40793051744;
-							["interval_next"] = 170.92183484595;
+							["interval"] = 110.8980621861;
+							["interval_next"] = 21.005561706945;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[14] = {
+							["creep"] = "enemy_witch";
+							["fixed_sub_path"] = 0;
+							["interval"] = 34.61298057503;
+							["interval_next"] = 6.5905025804523;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[15] = {
+							["creep"] = "enemy_lycan_werewolf";
+							["fixed_sub_path"] = 0;
+							["interval"] = 25.710430547149;
+							["interval_next"] = 4.7262513840626;
 							["max"] = 3;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[16] = {
+							["creep"] = "enemy_abomination";
+							["fixed_sub_path"] = 0;
+							["interval"] = 109.63616870377;
+							["interval_next"] = 21.005561706945;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -1992,20 +2286,20 @@ local obj1 = {
 					["path_index"] = 9;
 					["spawns"] = {
 						[1] = {
-							["creep"] = "enemy_skeleton";
+							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
-							["interval"] = 25.840085186733;
-							["interval_next"] = 12.240296992373;
-							["max"] = 8;
+							["interval"] = 76.183019297251;
+							["interval_next"] = 15.616604955009;
+							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_skeleton_big";
+							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 85.335759377026;
-							["interval_next"] = 46.177606390292;
-							["max"] = 14;
+							["interval"] = 18.658506741303;
+							["interval_next"] = 4.1394930920902;
+							["max"] = 31;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -2018,9 +2312,18 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 41.623479183092;
-							["interval_next"] = 23.698052917697;
-							["max"] = 31;
+							["interval"] = 40.649464052327;
+							["interval_next"] = 8.2386363873819;
+							["max"] = 24;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 40.88173221882;
+							["interval_next"] = 8.2386363873819;
+							["max"] = 9;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -2033,9 +2336,9 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 95.530836510096;
-							["interval_next"] = 52.437208648653;
-							["max"] = 9;
+							["interval"] = 49.996081990627;
+							["interval_next"] = 10.105786253076;
+							["max"] = 27;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -2048,9 +2351,18 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_skeleton";
 							["fixed_sub_path"] = 0;
-							["interval"] = 29.170809456121;
-							["interval_next"] = 13.333333333333;
-							["max"] = 14;
+							["interval"] = 21.667668875888;
+							["interval_next"] = 4.6744856690937;
+							["max"] = 34;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 24.558011475265;
+							["interval_next"] = 4.6744856690937;
+							["max"] = 25;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -2063,9 +2375,36 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
-							["interval"] = 51.376865250424;
-							["interval_next"] = 27.861665143438;
-							["max"] = 24;
+							["interval"] = 37.742143167072;
+							["interval_next"] = 6.9222338907343;
+							["max"] = 12;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[2] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 31.306076094145;
+							["interval_next"] = 6.9222338907343;
+							["max"] = 6;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[3] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 31.176349348166;
+							["interval_next"] = 6.9222338907343;
+							["max"] = 14;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+						[4] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 31.887499874126;
+							["interval_next"] = 6.9222338907343;
+							["max"] = 8;
 							["max_same"] = 0;
 							["path"] = 1;
 						};

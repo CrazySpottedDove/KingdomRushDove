@@ -4,7 +4,7 @@ local data = {
     ,
     initial_cash = 800 -- 初始资金
     ,
-    initial_inverval = 700 -- 初始每大波持续时间
+    initial_inverval = 800 -- 初始每大波持续时间
     ,
     final_interval = 1600 -- 最终每大波持续时间
     ,
@@ -104,13 +104,13 @@ local data = {
         }
     }, -- 每一条路径在哪些波次删除哪些敌人
     wave_weight_function = function(wave_number, total_gold)
-        return 50 + total_gold / 20
+        return 50 + (total_gold ^ 0.95) / 18
     end,
     min_spawn_weight = 8, --每个 spawn 的出怪最少总权重,
     max_spawn_weight = 48, --每个 spawn 的出怪最大总权重,
     interval_function = function(weight, e, wave_number)
         return (25 + 100 * math.log(weight)) * 20 / e.motion.max_speed * (1 - wave_number / 15 * 0.6)
-    end, -- 某权重怪物对应的 spawn 内 interval，允许上下 10% 浮动。interval_next 统一等于 interval * 0.5
+    end, -- 某权重怪物对应的 spawn 内 interval，允许上下 10% 浮动。interval_next 统一等于 interval * 0.2
     -- fixed_sub_path 始终赋 0
     -- delay 始终赋 0
     -- 如果怪物的 vis.flags 中含有 F_FLYING，就要为 wave 添加 some_flying = true
