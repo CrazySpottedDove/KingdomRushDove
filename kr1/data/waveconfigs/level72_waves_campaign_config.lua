@@ -31,10 +31,10 @@ local data = {
     path_enemy_map = {
         [1] = {"enemy_skeleton", "enemy_skeleton_big", "enemy_necromancer", "enemy_gargoyle",
                "enemy_fallen_knight", "enemy_spectral_knight", "enemy_ghost", "enemy_elvira", "enemy_giant_rat",
-               "enemy_wererat"},
+               "enemy_wererat", "enemy_phantom_death_rider"},
         [2] = {"enemy_gargoyle", "enemy_abomination", "enemy_zombiemancer", "enemy_halloween_zombie", "enemy_ghoul",
                "enemy_werewolf", "enemy_lycan", "enemy_lycan_werewolf", "enemy_zombie", "enemy_rotten_tree",
-               "enemy_lycan_werewolf_phantom"},
+               "enemy_lycan_werewolf_phantom", "enemy_witch"},
         [9] = {"enemy_skeleton", "enemy_skeleton_big"},
         [10] = {"enemy_halloween_zombie"},
         [11] = {"enemy_zombie"},
@@ -58,11 +58,13 @@ local data = {
         ["enemy_zombiemancer"] = 20,
         ["enemy_ghoul"] = 3,
         ["enemy_werewolf"] = 6,
-        ["enemy_lycan"] = 10,
-        ["enemy_lycan_werewolf"] = 10,
+        ["enemy_lycan"] = 9,
+        ["enemy_lycan_werewolf"] = 9,
         ["enemy_zombie"] = 1.5,
         ["enemy_rotten_tree"] = 7.5,
-        ["enemy_lycan_werewolf_phantom"] = 16
+        ["enemy_lycan_werewolf_phantom"] = 16,
+        ["enemy_phantom_death_rider"] = 8,
+        ["enemy_witch"] = 10,
     } -- 敌人的权重
     ,
     enemy_comeout_wave_map = {
@@ -75,6 +77,7 @@ local data = {
         ["enemy_spectral_knight"] = 6,
         ["enemy_ghost"] = 3,
         ["enemy_elvira"] = 7,
+        ["enemy_phantom_death_rider"] = 7,
         ["enemy_giant_rat"] = 2,
         ["enemy_wererat"] = 3,
         ["enemy_abomination"] = 2,
@@ -85,7 +88,8 @@ local data = {
         ["enemy_lycan_werewolf"] = 6,
         ["enemy_zombie"] = 1,
         ["enemy_rotten_tree"] = 4,
-        ["enemy_lycan_werewolf_phantom"] = 10
+        ["enemy_lycan_werewolf_phantom"] = 10,
+        ["enemy_witch"] = 11,
     }, -- 敌人首次出现的波次
     enemy_delete_wave_map = {
         [1] = {

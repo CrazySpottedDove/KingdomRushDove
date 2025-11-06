@@ -282,7 +282,7 @@ return {
     max_upgrade_level = 6,
     nav_mesh = {nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil,
                 {}, nil, {}, nil, {}, nil, {}},
-    required_sounds = {"music_stage26", "BlackburnSounds", "HalloweenSounds","music_halloween_moon"},
+    required_sounds = {"music_stage26", "BlackburnSounds", "HalloweenSounds","music_halloween_moon", "HWHeadlessHorseman"},
     required_textures = {"go_enemies_blackburn", "go_stages_blackburn", "go_stage72_bg", "go_enemies_rotten",
-                         "go_enemies_halloween","go_stages_halloween"}
+                         "go_enemies_halloween","go_stages_halloween","go_stage46"}
 }

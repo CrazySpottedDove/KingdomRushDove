@@ -31911,14 +31911,16 @@ function scripts.moon_controller_s72.insert_hook(this, store)
                 s.alpha = 255
             end
             s.color[1] = s.color[1] * 50 / 255
-            s.color[3] = s.color[3] * 200 / 255
+            s.color[2] = s.color[2] * 200 / 255
             s.alpha = s.alpha * 150 / 255
         end
         SU.armor_inc(this, E:get_template("moon_controller_s72").enemy_armor_buff)
         SU.magic_armor_inc(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
         U.speed_inc(this, E:get_template("moon_controller_s72").enemy_speed_buff)
         if this.health.hp then
-            this.health.hp = this.health.hp * (1 + E:get_template("moon_controller_s72").enemy_hp_buff * (1 + store.wave_group_number / 15))
+            this.health.hp = this.health.hp *
+                                 (1 + E:get_template("moon_controller_s72").enemy_hp_buff *
+                                     (1 + store.wave_group_number / 15))
         end
     end
     if this.soldier then
@@ -31930,14 +31932,16 @@ function scripts.moon_controller_s72.insert_hook(this, store)
                 s.alpha = 255
             end
             s.color[1] = s.color[1] * 50 / 255
-            s.color[3] = s.color[3] * 200 / 255
+            s.color[2] = s.color[2] * 200 / 255
             s.alpha = s.alpha * 150 / 255
         end
         SU.armor_dec(this, E:get_template("moon_controller_s72").enemy_armor_buff)
         SU.magic_armor_dec(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
         U.speed_inc(this, E:get_template("moon_controller_s72").enemy_speed_buff)
         if this.health.hp then
-            this.health.hp = this.health.hp * (1 - E:get_template("moon_controller_s72").enemy_hp_buff * (1 + store.wave_group_number / 15))
+            this.health.hp = this.health.hp *
+                                 (1 - E:get_template("moon_controller_s72").enemy_hp_buff *
+                                     (1 + store.wave_group_number / 15))
         end
     end
 end
@@ -31951,7 +31955,7 @@ function scripts.moon_controller_s72.insert_hook_remove(this, store)
                 s.alpha = 255
             end
             s.color[1] = s.color[1] * 255 / 50
-            s.color[3] = s.color[3] * 255 / 200
+            s.color[2] = s.color[2] * 255 / 200
             s.alpha = s.alpha * 255 / 150
         end
         SU.armor_dec(this, E:get_template("moon_controller_s72").enemy_armor_buff)
@@ -31967,7 +31971,7 @@ function scripts.moon_controller_s72.insert_hook_remove(this, store)
                 s.alpha = 255
             end
             s.color[1] = s.color[1] * 255 / 50
-            s.color[3] = s.color[3] * 255 / 200
+            s.color[2] = s.color[2] * 255 / 200
             s.alpha = s.alpha * 255 / 150
         end
         SU.armor_inc(this, E:get_template("moon_controller_s72").enemy_armor_buff)
@@ -32119,6 +32123,118 @@ function scripts.s72_init.insert(this, store)
     e.moon_overlay = moon_overlay
     queue_insert(store, e)
     return false
+end
+
+scripts.eb_jack = {}
+function scripts.eb_jack.update(this, store)
+    local ra = this.ranged.attacks[1]
+    local last_quit_hp = this.health.hp
+    local quit_threshold = this.health.hp_max * 0.2
+    local function quit()
+        return last_quit_hp - this.health.hp >= quit_threshold
+    end
+    ::label_25_0::
+    while true do
+        if this.health.dead then
+            SU.y_enemy_death(store, this)
+            return
+        end
+        if last_quit_hp - this.health.hp >= quit_threshold then
+            U.unblock_all(store, this)
+            this.vis.flags = bor(this.vis.flags, F_BLOCK)
+            SU.remove_modifiers(store, this)
+            U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+            S:queue("HWHeadlessHorsemanLaugh")
+            this.health.immune_to = F_ALL
+            U.y_animation_wait(this)
+            local ni = km.clamp(P:get_start_node(this.nav_path.pi), P:get_end_node(this.nav_path.pi),
+                this.nav_path.ni + 10)
+            local dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, ni)
+            this.pos.x, this.pos.y = dest.x, dest.y
+            U.y_animation_play(this, "rise", nil, store.tick_ts, 1)
+            this.health.immune_to = F_NONE
+            this.vis.flags = U.flag_clear(this.vis.flags, F_BLOCK)
+            last_quit_hp = this.health.hp
+            this.nav_path.ni = ni
+        end
+        if this.unit.is_stunned then
+            U.animation_start(this, "idle", nil, store.tick_ts, -1)
+            coroutine.yield()
+        else
+            local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, quit)
+
+            if not cont then
+                -- block empty
+            else
+                if blocker then
+                    if not SU.y_wait_for_blocker(store, this, blocker) then
+                        goto label_25_0
+                    end
+
+                    while SU.can_melee_blocker(store, this, blocker) and not quit() do
+                        if ranged then
+                            SU.y_enemy_range_attacks(store, this, ranged)
+                        end
+                        if not SU.y_enemy_melee_attacks(store, this, blocker) then
+                            goto label_25_0
+                        end
+
+                        coroutine.yield()
+                    end
+                elseif ranged then
+                    while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 and not quit() do
+                        if not SU.y_enemy_range_attacks(store, this, ranged) then
+                            goto label_25_0
+                        end
+
+                        coroutine.yield()
+                    end
+                end
+                coroutine.yield()
+            end
+
+        end
+    end
+end
+
+scripts.eb_jack_spawner_aura = {}
+function scripts.eb_jack_spawner_aura.update(this, store)
+    local source = store.entities[this.aura.source_id]
+    if not source or source.health.dead then
+        queue_remove(store, this)
+        return
+    end
+    local a = this.aura
+    while true do
+        if store.tick_ts - a.ts < a.cycle_time then
+            goto continue
+        end
+
+        if not source or source.health.dead then
+            queue_remove(store, this)
+            return
+        end
+        do
+            local pi = source.nav_path.pi
+            local ni = source.nav_path.ni
+
+            local spawn_count = math.random(this.min_spawn_count, this.max_spawn_count)
+
+            for i = 1, spawn_count do
+                local e = E:create_entity(this.creeps[math.random(1, #this.creeps)])
+                e.nav_path.pi = pi
+                e.nav_path.spi = math.random(1, 3)
+                e.nav_path.ni = km.clamp(P:get_start_node(pi), P:get_end_node(pi), ni + math.random(-10, 10))
+                e.enemy.gold = 0
+                queue_insert(store, e)
+            end
+            a.ts = store.tick_ts
+        end
+
+        ::continue::
+        coroutine.yield()
+    end
+    queue_remove(store, this)
 end
 
 return scripts
