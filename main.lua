@@ -108,6 +108,9 @@ end
 if arg[2] == "assets" then
     ASSETS_CHECK_ENABLED = true
 end
+if arg[2] == "waves" then
+    GEN_WAVES_ENABLED = true
+end
 if version.build == "RELEASE" then
     DEBUG = nil
     log.level = log.ERROR_LEVEL

@@ -27,9 +27,8 @@ local IS_CONSOLE = KR_TARGET == "console"
 local simulation = require("simulation")
 local v = V.v
 local function tpos(e)
-    return
-        e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or
-            e.pos
+    return e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or
+               e.pos
 end
 
 local function enemy_ready_to_magic_attack(this, store, attack)
@@ -460,8 +459,9 @@ function scripts.necromancer_aura.update(this, store, script)
     local tower_skeletons_count = 0
     local skeletons = {}
     local function filter_fn(v)
-        return v.health.dead and band(v.vis.bans, F_SKELETON) == 0 and band(v.health.last_damage_types, DAMAGE_EAT) == 0 and
-                                   store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time
+        return
+            v.health.dead and band(v.vis.bans, F_SKELETON) == 0 and band(v.health.last_damage_types, DAMAGE_EAT) == 0 and
+                store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time
     end
     while true do
         local source = store.entities[this.aura.source_id]
@@ -1677,9 +1677,6 @@ function scripts.decal_oni_torment_sword.update(this, store)
     queue_remove(store, this)
 end
 
-
-
-
 scripts.enemy_sheep = {
     update = function(this, store)
         local clicks = 0
@@ -2356,6 +2353,8 @@ scripts.enemy_zombiemancer = {
 
                         SU.stun_inc(abomination)
                         if SU.y_enemy_wait(store, this, a.spawn_time) then
+                            abomination.render.sprites[1].alpha = 255
+                            SU.stun_dec(abomination)
                             goto label_117_0
                         end
 
@@ -8551,8 +8550,8 @@ function scripts.enemy_sniper.update(this, store)
                         b.pos.x = this.pos.x + (af and -1 or 1) * ra.bullet_start_offset[aidx].x
                         b.pos.y = this.pos.y + ra.bullet_start_offset[aidx].y
                         b.bullet.from = V.vclone(b.pos)
-                        b.bullet.to = v(ranged.pos.x + ranged.unit.hit_offset.x,
-                            ranged.pos.y + ranged.unit.hit_offset.y)
+                        b.bullet.to =
+                            v(ranged.pos.x + ranged.unit.hit_offset.x, ranged.pos.y + ranged.unit.hit_offset.y)
                         b.bullet.source_id = this.id
                         b.bullet.target_id = ranged.id
 
@@ -10355,9 +10354,9 @@ function scripts.eb_efreeti.update(this, store, script)
 
         local image_x, image_y = 206, 198
         local anchor_x, anchor_y = 0.5, 0.1
-        local fx_offsets_and_delays = {{v(127, 74), 1.1}, {v(78, 93), 1.2}, {v(108, 133), 1.3},
-                                       {v(96, 47), 1.4}, {v(76, 106), 1.5}, {v(129, 101), 1.6},
-                                       {v(136, 82), 1.7}, {v(101, 140), 1.8}, {v(79, 64), 1.9}}
+        local fx_offsets_and_delays = {{v(127, 74), 1.1}, {v(78, 93), 1.2}, {v(108, 133), 1.3}, {v(96, 47), 1.4},
+                                       {v(76, 106), 1.5}, {v(129, 101), 1.6}, {v(136, 82), 1.7}, {v(101, 140), 1.8},
+                                       {v(79, 64), 1.9}}
 
         for _, p in pairs(fx_offsets_and_delays) do
             local pos, delay = unpack(p)
@@ -11244,16 +11243,14 @@ function scripts.eb_umbra.update(this, store, script)
                     S:stop_all()
                     S:queue("FrontiersFinalBossDeath")
 
-                    local fx_explosions = {{v(99, 103), 0}, {v(99, 103), 0.9}, {v(99, 103), 1.8},
-                                           {v(99, 103), 2.7}, {v(134, 54), 0.13}, {v(134, 54), 1.03},
-                                           {v(134, 54), 1.93}, {v(134, 54), 2.83}, {v(147, 104), 0.26},
-                                           {v(147, 104), 1.16}, {v(147, 104), 2.06}, {v(147, 104), 2.96},
-                                           {v(68, 78), 0.4}, {v(68, 78), 1.3}, {v(68, 78), 2.2},
-                                           {v(68, 78), 3.1}, {v(169, 76), 0.56}, {v(169, 76), 1.46},
-                                           {v(169, 76), 2.33}, {v(118, 89), 0.73}, {v(118, 89), 1.63},
-                                           {v(118, 89), 2.5}}
-                    local fx_rays = {{v(119, 88), 0.96}, {v(119, 88), 1.2}, {v(119, 88), 1.43},
-                                     {v(119, 88), 1.63}, {v(119, 88), 1.86}}
+                    local fx_explosions = {{v(99, 103), 0}, {v(99, 103), 0.9}, {v(99, 103), 1.8}, {v(99, 103), 2.7},
+                                           {v(134, 54), 0.13}, {v(134, 54), 1.03}, {v(134, 54), 1.93},
+                                           {v(134, 54), 2.83}, {v(147, 104), 0.26}, {v(147, 104), 1.16},
+                                           {v(147, 104), 2.06}, {v(147, 104), 2.96}, {v(68, 78), 0.4}, {v(68, 78), 1.3},
+                                           {v(68, 78), 2.2}, {v(68, 78), 3.1}, {v(169, 76), 0.56}, {v(169, 76), 1.46},
+                                           {v(169, 76), 2.33}, {v(118, 89), 0.73}, {v(118, 89), 1.63}, {v(118, 89), 2.5}}
+                    local fx_rays = {{v(119, 88), 0.96}, {v(119, 88), 1.2}, {v(119, 88), 1.43}, {v(119, 88), 1.63},
+                                     {v(119, 88), 1.86}}
 
                     U.animation_start(this, "death", nil, store.tick_ts, true)
                     U.y_wait(store, 3)
@@ -28147,8 +28144,8 @@ function scripts.decal_gryphon.update(this, store)
 
                         b.pos.x, b.pos.y = this.pos.x + bso.x, this.pos.y + bso.y
                         b.bullet.from = v(b.pos.x, b.pos.y)
-                        b.bullet.to = v(this.pos.x + beo.x + U.frandom(-20, 20),
-                            this.pos.y + beo.y + U.frandom(-30, 30))
+                        b.bullet.to =
+                            v(this.pos.x + beo.x + U.frandom(-20, 20), this.pos.y + beo.y + U.frandom(-30, 30))
                         b.initial_impulse = U.frandom(0, 1000) * 30
 
                         queue_insert(store, b)
@@ -30771,8 +30768,7 @@ function scripts.lava_fireball_controller.update(this, store)
 
                 U.y_wait(store, cooldown)
 
-                local target = U.find_random_target(store.entities, v(0, 0), 0, 1e+99, F_RANGED,
-                    bor(F_ENEMY, F_FLYING))
+                local target = U.find_random_target(store.entities, v(0, 0), 0, 1e+99, F_RANGED, bor(F_ENEMY, F_FLYING))
 
                 if target then
                     local launch_pos = table.random(this.launch_points)
@@ -31902,6 +31898,227 @@ function scripts.decal_soldier_shadow.update(this, store, script)
 
         coroutine.yield()
     end
+end
+
+scripts.moon_controller_s72 = {}
+function scripts.moon_controller_s72.insert_hook(this, store)
+    if this.enemy then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = {255, 255, 255}
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 50 / 255
+            s.color[3] = s.color[3] * 200 / 255
+            s.alpha = s.alpha * 150 / 255
+        end
+        SU.armor_inc(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_inc(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_inc(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+        if this.health.hp then
+            this.health.hp = this.health.hp * (1 + E:get_template("moon_controller_s72").enemy_hp_buff * (1 + store.wave_group_number / 15))
+        end
+    end
+    if this.soldier then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = {255, 255, 255}
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 50 / 255
+            s.color[3] = s.color[3] * 200 / 255
+            s.alpha = s.alpha * 150 / 255
+        end
+        SU.armor_dec(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_dec(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_inc(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+        if this.health.hp then
+            this.health.hp = this.health.hp * (1 - E:get_template("moon_controller_s72").enemy_hp_buff * (1 + store.wave_group_number / 15))
+        end
+    end
+end
+function scripts.moon_controller_s72.insert_hook_remove(this, store)
+    if this.enemy then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = {255, 255, 255}
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 255 / 50
+            s.color[3] = s.color[3] * 255 / 200
+            s.alpha = s.alpha * 255 / 150
+        end
+        SU.armor_dec(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_dec(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_dec(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+    end
+    if this.soldier then
+        for _, s in pairs(this.render.sprites) do
+            if not s.color then
+                s.color = {255, 255, 255}
+            end
+            if not s.alpha then
+                s.alpha = 255
+            end
+            s.color[1] = s.color[1] * 255 / 50
+            s.color[3] = s.color[3] * 255 / 200
+            s.alpha = s.alpha * 255 / 150
+        end
+        SU.armor_inc(this, E:get_template("moon_controller_s72").enemy_armor_buff)
+        SU.magic_armor_inc(this, E:get_template("moon_controller_s72").enemy_magic_armor_buff)
+        U.speed_dec(this, E:get_template("moon_controller_s72").enemy_speed_buff)
+    end
+end
+function scripts.moon_controller_s72.update(this, store)
+    local glow_sid, eyes_sid = 1, 4
+    local glow_s = this.render.sprites[glow_sid]
+    local eyes_s = this.render.sprites[eyes_sid]
+    local moon = this.decal_moon_dark
+    local moon_s = moon.render.sprites[1]
+    local moon_light = this.decal_moon_light
+    local overlay = this.moon_overlay
+
+    local fade_time = overlay.tween.props[1].keys[2][1]
+    local transit_time = this.transit_time
+    local hold_time = this.hold_time
+    local hold_time_base = this.hold_time
+    local inactive_time = this.inactive_time
+    while not store.enemy_count or store.enemy_count == 0 do
+        coroutine.yield()
+    end
+    local time = store.tick_ts
+    local spawn_point_count = 0
+    for _, _ in pairs(this.spawn) do
+        spawn_point_count = spawn_point_count + 1
+    end
+    while true do
+        while store.tick_ts - time < inactive_time do
+            coroutine.yield()
+        end
+        moon.tween.props[1].keys = {{0, math.pi / 5}, {transit_time, math.pi * 0.5}}
+        moon.tween.disabled = nil
+        moon.tween.ts = store.tick_ts
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+        -- moon.tween.props[1].keys = {{0, math.pi / 5}, {transit_time, math.pi * 0.5}}
+        -- moon.tween.disabled = nil
+        -- moon.tween.ts = store.tick_ts
+        moon_light.tween.ts = store.tick_ts
+        moon_light.tween.reverse = false
+        this.tween.ts = store.tick_ts
+        this.tween.reverse = false
+        overlay.tween.ts = store.tick_ts
+        overlay.tween.reverse = false
+
+        S:queue("MusicHalloweenMoon")
+
+        signal.emit("moon-changed", true, store)
+        time = store.tick_ts
+        this.moon_active = true
+        local spawn_count = math.ceil(this.spawn_count_function(store) / this.spawn_gaps)
+
+        local spawn_gap = hold_time / this.spawn_gaps
+        for _, e in pairs(store.enemies) do
+            this.insert_hook(e, store)
+        end
+        for _, s in pairs(store.soldiers) do
+            this.insert_hook(s, store)
+        end
+        U.insert_insert_hook(store, this.id, this.insert_hook)
+        local spawn_ts = time - spawn_gap
+        hold_time = hold_time_base + store.wave_group_number
+        while store.tick_ts - time < hold_time do
+            if store.tick_ts - spawn_ts > spawn_gap then
+                local i = 1
+                local remain_spawn_count = spawn_count
+                for path_id, creeps in pairs(this.spawn) do
+                    if spawn_count > 0 then
+                        local this_spawn_count = math.ceil(((math.random() - 0.5) * 0.4 + 1) * spawn_count /
+                                                               spawn_point_count)
+                        remain_spawn_count = remain_spawn_count - this_spawn_count
+                        if i == spawn_point_count then
+                            this_spawn_count = this_spawn_count + remain_spawn_count
+                        end
+                        for j = 1, this_spawn_count do
+                            local e = E:create_entity(creeps[math.random(1, #creeps)])
+                            e.nav_path.pi = path_id
+                            e.nav_path.spi = 1
+                            e.nav_path.ni = P:get_start_node(e.nav_path.pi)
+                            e.enemy.gold = 0
+                            queue_insert(store, e)
+                        end
+                    end
+                end
+
+                spawn_ts = store.tick_ts
+            end
+            coroutine.yield()
+        end
+        for _, e in pairs(store.enemies) do
+            this.insert_hook_remove(e, store)
+        end
+        for _, s in pairs(store.soldiers) do
+            this.insert_hook_remove(s, store)
+        end
+        U.remove_insert_hook(store, this.id)
+
+        signal.emit("moon-changed", false, store)
+
+        this.moon_active = false
+
+        if not this.tween.reverse then
+            this.tween.ts = store.tick_ts
+            this.tween.reverse = true
+        end
+
+        if not overlay.tween.reverse then
+            overlay.tween.ts = store.tick_ts
+            overlay.tween.reverse = true
+        end
+
+        if not moon_light.tween.reverse then
+            moon_light.tween.ts = store.tick_ts
+            moon_light.tween.reverse = true
+
+            U.y_wait(store, fade_time)
+        end
+
+        S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+            seek = 19.774
+        })
+
+        moon.tween.props[1].keys = {{0, moon_s.r}, {transit_time, 4 * math.pi / 5}}
+        moon.tween.ts = store.tick_ts
+
+        time = store.tick_ts
+        while store.tick_ts - time < transit_time do
+            coroutine.yield()
+        end
+    end
+end
+
+scripts.s72_init = {}
+function scripts.s72_init.insert(this, store)
+    local moon_overlay = E:create_entity("decal_moon_overlay")
+    queue_insert(store, moon_overlay)
+    local decal_moon_dark = E:create_entity("decal_moon_dark")
+    queue_insert(store, decal_moon_dark)
+    local decal_moon_light = E:create_entity("decal_moon_light")
+    queue_insert(store, decal_moon_light)
+    local e = E:create_entity("moon_controller_s72")
+    e.decal_moon_dark = decal_moon_dark
+    e.decal_moon_light = decal_moon_light
+    e.moon_overlay = moon_overlay
+    queue_insert(store, e)
+    return false
 end
 
 return scripts

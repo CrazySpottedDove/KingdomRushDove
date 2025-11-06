@@ -2580,6 +2580,53 @@ tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.sound_events.insert = "HWAlphaWolf"
 
+tt = RT("enemy_lycan_werewolf_phantom", "enemy")
+AC(tt, "melee", "moon", "auras", "regen")
+anchor_y = 0.18181818181818182
+image_y = 66
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "werewolf_regen_aura"
+tt.auras.list[1].cooldown = 0
+tt.auras.list[2] = CC("aura_attack")
+tt.auras.list[2].name = "moon_enemy_aura"
+tt.auras.list[2].cooldown = 0
+tt.auras.list[3] = CC("aura_attack")
+tt.auras.list[3].name = "phantom_warrior_aura"
+tt.auras.list[3].cooldown = 0
+tt.enemy.gold = 120
+tt.enemy.melee_slot = vec_2(24, 0)
+tt.health.armor = 0
+tt.health.hp_max = 1250
+tt.health.immune_to = DAMAGE_PHYSICAL_GROUP
+tt.health.magic_armor = 0.6
+tt.health_bar.offset = vec_2(0, 47)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "info_portraits_enemies_0070"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 75
+tt.melee.attacks[1].damage_min = 50
+tt.melee.attacks[1].hit_time = fts(12)
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].mod = "mod_lycanthropy"
+tt.melee.attacks[2].chance = 0.2
+tt.moon.regen_hp = 12
+tt.motion.max_speed = 2 * FPS
+tt.render.sprites[1].prefix = "enemy_lycan_werewolf"
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].color = {50, 255, 200}
+tt.render.sprites[1].alpha = 150
+tt.regen.cooldown = 0.25
+tt.regen.health = 6
+tt.ui.click_rect = r(-20, -10, 40, 50)
+tt.unit.blood_color = BLOOD_RED
+tt.unit.hit_offset = vec_2(0, 22)
+tt.unit.marker_offset = vec_2(0, 0)
+tt.unit.mod_offset = vec_2(0, 22)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.sound_events.insert = "HWAlphaWolf"
+
 -- -- unknown
 -- tt = RT("enemy_hobgoblin", "enemy")
 -- AC(tt, "melee", "death_spawns")

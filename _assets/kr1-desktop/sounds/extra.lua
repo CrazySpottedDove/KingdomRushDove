@@ -1297,6 +1297,13 @@ return {
             source_group = "MUSIC",
             stream = true
         },
+        MusicBattlePrep_72 = {
+            files = {"CB_PreBattle.ogg"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
         MusicBattlePrep_90 = {
             files = {"savage_music_jungle_preparation.mp3"},
             gain = 0.7,
@@ -1818,6 +1825,13 @@ return {
         MusicBattle_71 = {
             files = {"MusicBattleUnderAttackMountain.ogg"},
             gain = 0.8,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+        MusicBattle_72 = {
+            files = {"CB_Battle.ogg"},
+            gain = 0.5,
             loop = true,
             source_group = "MUSIC",
             stream = true

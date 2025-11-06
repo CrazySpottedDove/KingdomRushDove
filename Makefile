@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check gen_waves
 
 all: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -27,7 +27,8 @@ assets_check: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" assets
 monitor: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" monitor
-
+gen_waves: _examine_dir_map sync
+	$(LOVE) "$(WINDOWS_DIR_WIN)" waves
 package:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	git add .
@@ -51,8 +52,7 @@ upload:
 	@lua scripts/upload_assets.lua
 
 download:
-	@lua scripts/download_assets.lua
-
+	@lua scripts/download_assets.
 main_version_jump: sync
 	git rev-parse HEAD > $(MAIN_VERSION_COMMIT_HASH_FILE)
 

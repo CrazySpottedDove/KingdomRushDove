@@ -9718,3 +9718,45 @@ tt.render.sprites[1].prefix = "dwarven_flamespitter_tower_scorching_torches_part
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.timed.duration = fts(10)
+
+tt = RT("s72_rotten_spawner", "s15_rotten_spawner")
+AC(tt, "main_script", "editor")
+tt.main_script.update = scripts.s15_rotten_spawner.update
+tt.entity = "enemy_rotten_tree"
+tt.spawn_margin = {30, 60}
+tt.spawn_timers = {
+    {9, 0},
+    [10] = {15, 1},
+    [11] = {13.5, 1},
+    [12] = {10, 1},
+    [13] = {15, 2},
+    [14] = {15, 3},
+    [15] = {15, 4}
+}
+
+tt = E:register_t("moon_controller_s72", "moon_controller")
+tt.main_script.update = scripts.moon_controller_s72.update
+tt.transit_time = 5
+tt.hold_time = 20
+tt.inactive_time = 40
+tt.enemy_armor_buff = 0.2
+tt.enemy_magic_armor_buff = 0.2
+tt.enemy_speed_buff = 12
+tt.enemy_hp_buff = 0.1
+tt.insert_hook = scripts.moon_controller_s72.insert_hook
+tt.insert_hook_remove = scripts.moon_controller_s72.insert_hook_remove
+tt.spawn = {
+    [7] = {"enemy_zombie"},
+    [4] = {"enemy_zombie"},
+    [6] = {"enemy_skeleton"},
+    [5] = {"enemy_ghoul"},
+    [8] = {"enemy_halloween_zombie"}
+}
+tt.spawn_count_function = function(store)
+    return 2 + (store.wave_group_number or 0) * 3
+end
+tt.spawn_gaps = 3
+
+tt = E:register_t("s72_init")
+AC(tt, "main_script")
+tt.main_script.insert = scripts.s72_init.insert
