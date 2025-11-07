@@ -2710,7 +2710,7 @@ tt.attacks.list[3].vis_flags = bor(F_RANGED)
 tt.attacks.list[3].sound = "EndlessAinylShield"
 
 tt = RT("eb_jack", "boss")
-AC(tt, "melee", "ranged", "auras")
+AC(tt, "melee", "ranged", "auras", "regen")
 image_y = 104
 anchor_y = 12 / image_y
 tt.auras.list[1] = CC("aura_attack")
