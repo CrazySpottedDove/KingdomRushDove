@@ -1,5 +1,5 @@
 local obj1 = {
-	["cash"] = 900;
+	["cash"] = 1000;
 	["groups"] = {
 		[1] = {
 			["interval"] = 800;
