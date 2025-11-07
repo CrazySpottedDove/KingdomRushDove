@@ -153,15 +153,6 @@ local obj1 = {
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_ghost";
-							["fixed_sub_path"] = 0;
-							["interval"] = 31.725932913053;
-							["interval_next"] = 5.8616942352861;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
 							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
 							["interval"] = 38.918985621198;
@@ -170,7 +161,7 @@ local obj1 = {
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[4] = {
+						[3] = {
 							["creep"] = "enemy_giant_rat";
 							["fixed_sub_path"] = 0;
 							["interval"] = 12.245734379979;
