@@ -3532,7 +3532,7 @@ scripts.lava_dwaarp = {
                         new_mod.modifier.target_id = target.id
                         new_mod.modifier.source_id = this.id
                         new_mod.modifier.damage_factor = this.aura.damage_factor
-                        new_mod.template_name = new_mod.template_name .. this.id
+                        new_mod.template_name = new_mod.template_name .. this.aura.source_id
                         queue_insert(store, new_mod)
                     end
                 end
