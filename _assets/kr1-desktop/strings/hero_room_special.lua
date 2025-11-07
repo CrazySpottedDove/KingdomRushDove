@@ -750,4 +750,9 @@ map["疾病新星"] = str()
 map["死亡之触"] = str()
 map["亡灵眷属"] = str()
 
+set_hero("hero_vampiress")
+map["生命汲取"] = str()
+map["绛红之舞"] = str()
+map["杀戮生长"] = str()
+
 return H
