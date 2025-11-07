@@ -638,10 +638,23 @@ get_damage(E:get_template("barrel_fragment").bullet)
 d[1].damage_max = s.fragment_damage[max_lvl]
 d[1].damage_min = s.fragment_damage[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
-map["火药子母"] = str(cooldown_str(),"黑棘船长投出一桶炸药，在空中爆炸产生",count,"枚破片，每枚破片造成",damage_str(),"。")
-
-map["克拉肯之触"] = str()
-map["寻宝"] = str()
+map["火药子母"] = str(cooldown_str(), "黑棘船长投出一桶炸药，在空中爆炸产生", count,
+    "枚破片，每枚破片造成", damage_str(), "。")
+set_skill(h.hero.skills.kraken)
+factor = 1 - s.slow_factor[max_lvl]
+count = s.max_enemies[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+e = E:get_template("mod_dps_kraken")
+get_damage(e.dps)
+cycle_time = e.dps.damage_every
+duration = e.modifier.duration
+map["克拉肯之触"] = str(cooldown_str(), "黑棘船长召唤克拉肯的触手攻击敌人，持续", duration,
+    "秒。在持续区间，触手可困住最多", count, "名敌人，并使范围内敌人受到", factor * 100,
+    "%的减速效果，且每", cycle_time, "秒受到", damage_str(), "。")
+set_skill(h.hero.skills.looting)
+factor = s.percent[max_lvl]
+map["寻宝"] = str("黑棘船长高超的职业素养让他能在摸尸体的时候找到额外", factor * 100,
+    "%的金币。")
 
 set_hero("hero_wizard")
 map["魔法飞弹"] = str()
