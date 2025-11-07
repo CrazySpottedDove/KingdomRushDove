@@ -657,7 +657,14 @@ map["寻宝"] = str("黑棘船长高超的职业素养让他能在摸尸体的�
     "%的金币。")
 
 set_hero("hero_wizard")
-map["魔法飞弹"] = str()
+set_skill(h.hero.skills.magicmissile)
+count = s.count[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+set_bullet("missile_wizard")
+get_damage(b.bullet)
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+map["魔法飞弹"] = str(cooldown_str(),"纽维斯发射",count,"枚魔法飞弹，全图范围内追踪敌人，每枚飞弹造成",damage_str(),"。")
 map["连锁反应"] = str()
 map["分解"] = str()
 map["法术洪流"] = str()
@@ -742,5 +749,10 @@ map["脊雨"] = str()
 map["疾病新星"] = str()
 map["死亡之触"] = str()
 map["亡灵眷属"] = str()
+
+set_hero("hero_vampiress")
+map["生命汲取"] = str()
+map["绛红之舞"] = str()
+map["杀戮生长"] = str()
 
 return H
