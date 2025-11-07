@@ -657,7 +657,7 @@ map["寻宝"] = str("黑棘船长高超的职业素养让他能在摸尸体的�
     "%的金币。")
 
 set_hero("hero_wizard")
-set_skill("magicmissile")
+set_skill(h.hero.skills.magicmissile)
 count = s.count[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
 set_bullet("missile_wizard")
