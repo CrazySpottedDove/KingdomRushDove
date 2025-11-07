@@ -632,7 +632,14 @@ map["背刺"] = str(cooldown_str(), "幻影进入无敌状态，潜行到敌人�
     "概率斩杀敌人。对于BOSS单位，斩杀效果替换为双倍伤害。")
 
 set_hero("hero_pirate")
-map["火药子母"] = str()
+set_skill(h.hero.skills.scattershot)
+count = s.fragments[max_lvl]
+get_damage(E:get_template("barrel_fragment").bullet)
+d[1].damage_max = s.fragment_damage[max_lvl]
+d[1].damage_min = s.fragment_damage[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+map["火药子母"] = str(cooldown_str(),"黑棘船长投出一桶炸药，在空中爆炸产生",count,"枚破片，每枚破片造成",damage_str(),"。")
+
 map["克拉肯之触"] = str()
 map["寻宝"] = str()
 

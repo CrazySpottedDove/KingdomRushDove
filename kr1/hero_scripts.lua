@@ -5365,6 +5365,223 @@ scripts.hero_pirate = {
         this.health.hp = this.health.hp_max
     end
 }
+function scripts.hero_pirate.insert(this, store, script)
+    this.hero.fn_level_up(this, store)
+
+    this.melee.order = U.attack_order(this.melee.attacks)
+    this.ranged.order = U.attack_order(this.ranged.attacks)
+
+    if this.hero.skills.looting.level > 0 then
+        local a = E:create_entity("pirate_loot_aura")
+
+        a.aura.source_id = this.id
+
+        queue_insert(store, a)
+    end
+
+    return true
+end
+
+function scripts.hero_pirate.update(this, store, script)
+    local h = this.health
+    local he = this.hero
+    local a, skill, brk, sta
+
+    U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
+    this.health_bar.hidden = false
+
+    while true do
+        if h.dead then
+            SU.y_hero_death_and_respawn(store, this)
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            while this.nav_rally.new do
+                if SU.y_hero_new_rally(store, this) then
+                    goto label_317_0
+                end
+            end
+
+            if SU.hero_level_up(store, this) then
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+            end
+
+            a = this.timed_attacks.list[1]
+            skill = he.skills.kraken
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                    a.vis_bans)
+
+                targets = targets and table.filter(targets, function(_, e)
+                    local neighbors = U.find_enemies_in_range(store, e.pos, 0, a.nearby_range, a.vis_flags, a.vis_bans,
+                        function(oe)
+                            return e.id ~= oe.id
+                        end)
+
+                    return neighbors and #neighbors >= a.min_enemies_nearby
+                end)
+
+                if targets and targets[1] then
+                    local target = targets[1]
+                    local start_ts = store.tick_ts
+                    local flip = target.pos.x < this.pos.x
+
+                    U.animation_start(this, a.animation, flip, store.tick_ts)
+                    S:queue(a.sound)
+
+                    while store.tick_ts - start_ts < a.shoot_time do
+                        if this.nav_rally.new then
+                            goto label_317_0
+                        end
+
+                        if this.health.dead then
+                            goto label_317_0
+                        end
+
+                        if this.unit.is_stunned then
+                            goto label_317_0
+                        end
+
+                        coroutine.yield()
+                    end
+
+                    a.ts = store.tick_ts
+
+                    SU.hero_gain_xp_from_skill(this, skill)
+
+                    local k_aura = E:create_entity(a.bullet)
+
+                    k_aura.aura.source_id = this.id
+                    k_aura.aura.ts = store.tick_ts
+
+                    local ni = target.nav_path.ni + P:predict_enemy_node_advance(target, fts(8))
+
+                    k_aura.pos = P:node_pos(target.nav_path.pi, 1, ni)
+
+                    queue_insert(store, k_aura)
+
+                    local ks_aura = E:create_entity("kraken_aura_slow")
+
+                    ks_aura.aura.source_id = this.id
+                    ks_aura.aura.ts = store.tick_ts
+                    ks_aura.pos = k_aura.pos
+
+                    queue_insert(store, ks_aura)
+
+                    while not U.animation_finished(this) do
+                        if this.nav_rally.new then
+                            goto label_317_0
+                        end
+
+                        if this.health.dead then
+                            goto label_317_0
+                        end
+
+                        if this.unit.is_stunned then
+                            goto label_317_0
+                        end
+
+                        coroutine.yield()
+                    end
+
+                    a.ts = store.tick_ts
+                end
+            end
+
+            a = this.timed_attacks.list[2]
+            skill = he.skills.scattershot
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                    a.vis_bans)
+
+                if targets then
+                    a.ts = store.tick_ts
+
+                    local target = targets[1]
+                    local pi = target.nav_path.pi
+                    local spi = target.nav_path.spi
+                    local ni = target.nav_path.ni +
+                                   P:predict_enemy_node_advance(target, a.shoot_time + fts(20) + fts(18))
+                    local npos = P:node_pos(pi, spi, ni)
+
+                    npos.y = npos.y + 80
+
+                    local an, af, ai = U.animation_name_facing_point(this, a.animation, npos)
+
+                    U.animation_start(this, an, af, store.tick_ts, false)
+
+                    while store.tick_ts - a.ts < a.shoot_time do
+                        if this.health.dead then
+                            goto label_317_0
+                        end
+
+                        coroutine.yield()
+                    end
+
+                    SU.hero_gain_xp_from_skill(this, skill)
+
+                    local bullet = E:create_entity(a.bullet)
+
+                    bullet.pos = V.vclone(this.pos)
+
+                    if a.bullet_start_offset then
+                        local offset = a.bullet_start_offset[ai]
+
+                        bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
+                    end
+
+                    bullet.bullet.from = V.vclone(bullet.pos)
+                    bullet.bullet.to = npos
+
+                    queue_insert(store, bullet)
+
+                    while not U.animation_finished(this) do
+                        if this.nav_rally.new then
+                            goto label_317_0
+                        end
+
+                        if this.health.dead then
+                            goto label_317_0
+                        end
+
+                        if this.unit.is_stunned then
+                            goto label_317_0
+                        end
+
+                        coroutine.yield()
+                    end
+                end
+            end
+
+            brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+            if brk then
+                -- block empty
+            else
+                brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+                if brk or sta ~= A_NO_TARGET then
+                    -- block empty
+                elseif SU.soldier_go_back_step(store, this) then
+                    -- block empty
+                else
+                    SU.soldier_idle(store, this)
+                    SU.soldier_regen(store, this)
+                end
+            end
+        end
+
+        ::label_317_0::
+
+        coroutine.yield()
+    end
+end
+
 -- 冰女
 scripts.hero_elora = {
     level_up = function(this, store)

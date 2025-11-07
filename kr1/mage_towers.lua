@@ -2527,7 +2527,6 @@ tt.render.sprites[1] = nil
 
 -- 五代奥术 BEGIN
 tt = E:register_t("tower_arcane_wizard_lvl4", "tower")
-
 E:add_comps(tt, "attacks", "powers", "vis")
 b = balance.towers.arcane_wizard
 image_y = 90
@@ -2540,8 +2539,8 @@ tt.tower.size = TOWER_SIZE_LARGE
 tt.tower.menu_offset = vec_2(0, 25)
 tt.info.enc_icon = 15
 tt.info.i18n_key = "TOWER_ARCANE_WIZARD_4"
--- tt.info.fn = scripts.tower_arcane_wizard5.get_info
-tt.info.fn = scripts.tower_mage.get_info
+tt.info.fn = scripts.tower_arcane_wizard5.get_info
+-- tt.info.fn = scripts.tower_mage.get_info
 tt.info.portrait = "kr5_portraits_towers" .. "_0003"
 tt.info.room_portrait = "quickmenu_main_icons_main_icons_0003_0001"
 tt.info.tower_portrait = "towerselect_portraits_big_" .. "0003"

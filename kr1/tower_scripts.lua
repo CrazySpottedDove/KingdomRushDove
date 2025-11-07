@@ -1802,8 +1802,8 @@ scripts.tower_high_elven = {
                 end
 
                 if ready_to_use_power(pow_t, ta, store, tw.cooldown_factor) then
-                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil,
-                        ta.vis_flags, ta.vis_bans)
+                    local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ta.vis_flags,
+                        ta.vis_bans)
 
                     if enemy then
                         if #enemies >= 3 or enemy.health.hp > 750 then
@@ -1956,7 +1956,8 @@ scripts.tower_arcane_wizard = {
         local tpos = tpos(this)
         local tw = this.tower
         local function find_target(aa)
-            local target = U.detect_foremost_enemy_in_range_filter_on(tpos, a.range, aa.vis_flags, aa.vis_bans,function(e)
+            local target = U.detect_foremost_enemy_in_range_filter_on(tpos, a.range, aa.vis_flags, aa.vis_bans,
+                function(e)
                     if aa == at then
                         return e.nav_path.ni >= aa.min_nodes and
                                    (not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport < max_times_applied)
@@ -2094,8 +2095,7 @@ scripts.tower_arcane_wizard = {
             end
             ::continue::
             if ((ad.ts <= last_ts - (ad.cooldown - a.min_cooldown) * tw.cooldown_factor) or
-                (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * tw.cooldown_factor)) and pow_d.level >
-                0 then
+                (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * tw.cooldown_factor)) and pow_d.level > 0 then
                 if not this.decalmod_disintegrate then
                     local mod = E:create_entity("decalmod_arcane_wizard_disintegrate_ready")
                     mod.modifier.target_id = this.id
@@ -12712,19 +12712,19 @@ end
 scripts.tower_arcane_wizard5 = {}
 
 function scripts.tower_arcane_wizard5.get_info(this)
-    local b = E:get_template(this.attacks.list[1].bullet)
-
     local o = scripts.tower_common.get_info(this)
 
     o.type = STATS_TYPE_TOWER_MAGE
 
-    local min = math.ceil(b.bullet.damage_min * this.tower.damage_factor)
-    local max = math.ceil(b.bullet.damage_max * this.tower.damage_factor)
+    if this.attacks and this.attacks.list[1].loops then
+        local loops = this.attacks.list[1].loops
 
-    o.damage_min = min
-    o.damage_max = max
-
+        o.damage_min = o.damage_min * loops
+        o.damage_max = o.damage_max * loops
+    end
+    o.damage_type = DAMAGE_MAGICAL
     return o
+
 end
 
 function scripts.tower_arcane_wizard5.update(this, store)
