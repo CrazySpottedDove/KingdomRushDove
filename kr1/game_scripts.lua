@@ -3664,14 +3664,14 @@ function scripts.eb_moloch.update(this, store)
 
     while true do
         if this.health.dead then
-            game.store.force_next_wave = true
+            -- store.force_next_wave = true
             this.phase = "dead"
 
-            LU.kill_all_enemies(store, true)
+            -- LU.kill_all_enemies(store, true)
             S:queue(this.sound_events.death)
             U.y_animation_play(this, "death", nil, store.tick_ts)
             signal.emit("boss-killed", this)
-            LU.kill_all_enemies(store, true)
+            -- LU.kill_all_enemies(store, true)
 
             this.phase = "death-complete"
 
@@ -31933,7 +31933,7 @@ function scripts.eb_jack.update(this, store)
             this.health.immune_to = F_ALL
             U.y_animation_wait(this)
             local ni = km.clamp(P:get_start_node(this.nav_path.pi), P:get_end_node(this.nav_path.pi),
-                this.nav_path.ni + 10)
+                this.nav_path.ni + 11)
             local dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, ni)
             this.pos.x, this.pos.y = dest.x, dest.y
             U.y_animation_play(this, "rise", nil, store.tick_ts, 1)
@@ -31977,7 +31977,6 @@ function scripts.eb_jack.update(this, store)
                 end
                 coroutine.yield()
             end
-
         end
     end
 end
@@ -32023,4 +32022,3 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 end
 
 return scripts
-
