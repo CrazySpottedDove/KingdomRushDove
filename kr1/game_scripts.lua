@@ -4642,17 +4642,11 @@ function scripts.ray_tesla.update(this, store)
                                    (v.enemy or v.template_name == "hero_thor")
                     end)
                 if bounce_targets then
-                    if this.bounces + 1 >= this.max_bounces then
-                        for _, t in pairs(bounce_targets) do
-                            if t.template_name == "hero_thor" then
-                                bounce_target = t
-                                break
-                            end
+                    for _, t in pairs(bounce_targets) do
+                        if t.template_name == "hero_thor" then
+                            bounce_target = t
+                            break
                         end
-                    elseif bounce_targets[#bounce_targets].template_name == "hero_thor" then
-                        bounce_target = bounce_targets[#bounce_targets]
-                    elseif #bounce_targets > 1 and bounce_targets[#bounce_targets - 1].template_name == "hero_thor" then
-                        bounce_target = bounce_targets[#bounce_targets - 1]
                     end
                 end
 
@@ -4676,7 +4670,7 @@ function scripts.ray_tesla.update(this, store)
                         this.bounce_damage_factor_min)
                     if bounce_target.template_name == "hero_thor" then
                         r.bounces = 0
-                        r.max_bounces = r.max_bounces * 2
+                        r.max_bounces = r.max_bounces * 5
                     else
                         r.bounces = this.bounces + 1
                     end
@@ -14205,7 +14199,7 @@ function scripts.ray_frankenstein.update(this, store)
                 r.bullet.source_id = target.id
                 r.bullet.damage_factor = b.damage_factor
                 if bounce_target.template_name == "hero_thor" then
-                    r.bounces = (this.bounces + 1) * 2
+                    r.bounces = (this.bounces + 1) * 5
                     r.bounce_range = this.bounce_range * 1.5
                 else
                     r.bounces = this.bounces - 1
