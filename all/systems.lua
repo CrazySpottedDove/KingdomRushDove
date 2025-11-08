@@ -2098,7 +2098,71 @@ typedef struct {
 } RenderFrameFFI;
 void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
-local lib_render_sort = ffi.load("all/librender_sort.dll")
+
+local lib_render_sort
+local ok, lib = pcall(ffi.load, "all/librender_sort.dll")
+if ok and lib then
+    lib_render_sort = lib
+else
+    -- fallback: 归并排序，直接用 FFI 数组和 tmp
+    local function cmp(a, b)
+        if a.z ~= b.z then
+            return a.z < b.z
+        end
+        if a.sort_y ~= b.sort_y then
+            return a.sort_y > b.sort_y
+        end
+        if a.draw_order ~= b.draw_order then
+            return a.draw_order < b.draw_order
+        end
+        if a.pos_x ~= b.pos_x then
+            return a.pos_x < b.pos_x
+        end
+        return false
+    end
+
+    local function merge(arr, tmp, left, mid, right)
+        for i = left, right do
+            tmp[i] = arr[i]
+        end
+        local i, j, k = left, mid + 1, left
+        while i <= mid and j <= right do
+            if not cmp(tmp[j], tmp[i]) then
+                arr[k] = tmp[i]
+                i = i + 1
+            else
+                arr[k] = tmp[j]
+                j = j + 1
+            end
+            k = k + 1
+        end
+        while i <= mid do
+            arr[k] = tmp[i]
+            i = i + 1
+            k = k + 1
+        end
+        while j <= right do
+            arr[k] = tmp[j]
+            j = j + 1
+            k = k + 1
+        end
+    end
+
+    local function merge_sort(arr, tmp, left, right)
+        if left < right then
+            local mid = math.floor((left + right) / 2)
+            merge_sort(arr, tmp, left, mid)
+            merge_sort(arr, tmp, mid + 1, right)
+            merge(arr, tmp, left, mid, right)
+        end
+    end
+
+    lib_render_sort = {
+        ffi_sort = function(arr, tmp, n)
+            merge_sort(arr, tmp, 0, n - 1)
+        end
+    }
+end
 
 function sys.render:init(store)
     store.render_frames = {}
