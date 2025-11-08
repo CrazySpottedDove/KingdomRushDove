@@ -4243,6 +4243,26 @@ scripts.tower_tesla = {
         end
     end
 }
+scripts.mod_tesla_overcharge = {
+    insert = function(this, store)
+        if scripts.mod_track_target.insert(this, store) then
+            local target = store.entities[this.modifier.target_id]
+            if math.random() < 0.12 then
+                SU.stun_inc(target)
+                this._stun = true
+            end
+            return true
+        end
+        return false
+    end,
+    remove = function(this, store)
+        local target = store.entities[this.modifier.target_id]
+        if target and this._stun then
+            SU.stun_dec(target)
+        end
+        return true
+    end
+}
 -- 高达
 scripts.tower_mech = {
     get_info = function(this)
