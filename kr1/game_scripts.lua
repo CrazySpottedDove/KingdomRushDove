@@ -31704,7 +31704,7 @@ function scripts.moon_controller_s72.insert_hook(this, store)
         if this.health.hp then
             this.health.hp = this.health.hp *
                                  (1 + E:get_template("moon_controller_s72").enemy_hp_buff *
-                                     (1 + store.wave_group_number / 15))
+                                     (0.9 + store.wave_group_number / 12))
         end
     end
     if this.soldier then
@@ -31725,7 +31725,7 @@ function scripts.moon_controller_s72.insert_hook(this, store)
         if this.health.hp then
             this.health.hp = this.health.hp *
                                  (1 - E:get_template("moon_controller_s72").enemy_hp_buff *
-                                     (1 + store.wave_group_number / 15))
+                                     (0.9 + store.wave_group_number / 12))
         end
     end
 end
@@ -31921,6 +31921,7 @@ function scripts.eb_jack.update(this, store)
     while true do
         if this.health.dead then
             SU.y_enemy_death(store, this)
+            LU.kill_all_enemies(store, true)
             return
         end
         if last_quit_hp - this.health.hp >= quit_threshold then

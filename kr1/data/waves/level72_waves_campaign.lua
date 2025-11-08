@@ -227,8 +227,8 @@ local obj1 = {
 							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
 							["interval"] = 35.27483787236;
-							["interval_next"] = 7.6998951102996;
-							["max"] = 15;
+							["interval_next"] = 12;
+							["max"] = 14;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -237,7 +237,7 @@ local obj1 = {
 							["fixed_sub_path"] = 0;
 							["interval"] = 40.170275344042;
 							["interval_next"] = 7.6998951102996;
-							["max"] = 7;
+							["max"] = 6;
 							["max_same"] = 0;
 							["path"] = 1;
 						};

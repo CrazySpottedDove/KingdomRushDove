@@ -265,7 +265,25 @@ return {
             x = 0,
             y = 0
         }
-    }},
+    },{
+        template = "soldier_paladin",
+        ["editor_game_mode"] = 1,
+        pos = {
+            x = 644,
+            y = 200
+        },
+        ["nav_rally.pos"] = {
+            x = 644,
+            y = 200
+        },
+        ["nav_rally.center"] = {
+            x = 644,
+            y = 200
+        },
+        ["powers.healing.level"] = 3,
+        ["powers.shield.level"] = 1,
+        ["powers.holystrike.level"] = 3
+    },},
     invalid_path_ranges = {},
     level_mode_overrides = {{
         locked_towers = {},
