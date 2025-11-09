@@ -190,7 +190,7 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 	G.setCanvas(c)
 
 	if debug_bg then
-		G.setColor(200, 200, 200, 100)
+		G.setColor(0.784, 0.784, 0.784, 0.392)
 		G.rectangle("fill", 0, 0, w + padding, h + padding)
 	end
 
@@ -198,7 +198,7 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 	local vadj = fadj["middle-caps"] or 0
 
 	G.setFont(font)
-	G.setColor(color)
+	G.setColor_old(color)
 	G.printf(text, padding * 0.5, vadj + padding * 0.5, w, alignment)
 	G.setCanvas()
 

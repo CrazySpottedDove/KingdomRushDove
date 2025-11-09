@@ -79,7 +79,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 		batch:setTexture(last_texture)
 	end
 
-	G.setColor(255, 255, 255, 255)
+	G.setColor(1, 1, 1, 1)
 
 	for i = start_idx, #frames do
 		local f = frames[i]
@@ -167,7 +167,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 		batches_count = batches_count + 1
 	end
 
-	G.setColor(255, 255, 255, 255)
+	G.setColor(1, 1, 1, 1)
 
 	if current_shader then
 		G.setShader()

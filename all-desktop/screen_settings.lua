@@ -611,7 +611,7 @@ end
 function CheckBox:draw_focus()
     local l = self._l
 
-    G.setColor(l.colors.focused_outline)
+    G.setColor_old(l.colors.focused_outline)
 
     local tw = l.font:getWidth(self._l.text)
 
@@ -642,10 +642,10 @@ function SelectList:draw()
     G.rotate(-self.r)
 
     if not self.scroller_hidden and self._bottom_y > self.size.y then
-        G.setColor(self.colors.scroller_background)
+        G.setColor_old(self.colors.scroller_background)
         G.rectangle("fill", self.scroller_rect.pos.x, self.scroller_rect.pos.y, self.scroller_rect.size.x,
             self.scroller_rect.size.y)
-        G.setColor(self.colors.scroller_foreground)
+        G.setColor_old(self.colors.scroller_foreground)
 
         local scroller_height = self.size.y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)
         local scroller_offset = -self.scroll_origin_y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)

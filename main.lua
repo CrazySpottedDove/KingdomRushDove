@@ -1,7 +1,6 @@
 ﻿-- chunkname: @./main.lua
 do
-    local old_setColor = love.graphics.setColor
-    love.graphics.setColor = function(r, g, b, a)
+    love.graphics.setColor_old = function(r, g, b, a)
         if type(r) == "table" then
             -- 支持 table 形式
             if r[1] and r[1] > 1 then
@@ -16,7 +15,7 @@ do
             if r[4] and r[4] > 1 then
                 r[4] = r[4] / 255
             end
-            return old_setColor(r)
+            return love.graphics.setColor(r)
         else
             if r and r > 1 then
                 r = r / 255
@@ -30,25 +29,8 @@ do
             if a and a > 1 then
                 a = a / 255
             end
-            return old_setColor(r, g, b, a)
+            return love.graphics.setColor(r, g, b, a)
         end
-    end
-
-    local old_setBackgroundColor = love.graphics.setBackgroundColor
-    love.graphics.setBackgroundColor = function(r, g, b, a)
-        if r and r > 1 then
-            r = r / 255
-        end
-        if g and g > 1 then
-            g = g / 255
-        end
-        if b and b > 1 then
-            b = b / 255
-        end
-        if a and a > 1 then
-            a = a / 255
-        end
-        return old_setBackgroundColor(r, g, b, a)
     end
 end
 
@@ -944,8 +926,8 @@ function love.errhandler(msg)
     local font = G.setNewFont(math.floor(love.window.toPixels(15)))
     local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(love.window.toPixels(16)))
 
-    G.setBackgroundColor(89, 157, 220)
-    G.setColor(255, 255, 255, 255)
+    G.setBackgrounColor(0.349, 0.616, 0.863)
+    G.setColor(1, 1, 1, 1)
 
     local trace = debug.traceback()
 
