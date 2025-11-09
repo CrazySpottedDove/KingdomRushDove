@@ -837,7 +837,7 @@ function sound_db:_play(request, source_pool)
 	end
 
 	source:setVolume(vol)
-	source:setLooping(opts.loop)
+	source:setLooping(opts.loop or false)
 
 	local success = source:play()
 
