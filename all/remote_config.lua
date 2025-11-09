@@ -38,7 +38,7 @@ end
 function rc:reload()
 	local filename = KR_PATH_GAME_TARGET .. "/data/remote_config_defaults.lua"
 
-	if not love.filesystem.exists(filename) then
+	if not love.filesystem.getInfo(filename) then
 		log.info("error loading %s. File not found", filename)
 
 		return

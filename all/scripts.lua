@@ -20,6 +20,10 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 require("i18n")
 
@@ -7174,7 +7178,7 @@ function scripts.mega_spawner.insert(this, store)
     if this.load_file then
         local fn = KR_PATH_GAME .. "/data/levels/" .. this.load_file .. ".lua"
 
-        if not love.filesystem.isFile(fn) then
+        if not is_file(fn) then
             log.error("mega_spawner load_file does not exist: %s", this.load_file)
 
             return false

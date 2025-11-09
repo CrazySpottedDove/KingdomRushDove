@@ -1,4 +1,57 @@
 ﻿-- chunkname: @./main.lua
+do
+    local old_setColor = love.graphics.setColor
+    love.graphics.setColor = function(r, g, b, a)
+        if type(r) == "table" then
+            -- 支持 table 形式
+            if r[1] and r[1] > 1 then
+                r[1] = r[1] / 255
+            end
+            if r[2] and r[2] > 1 then
+                r[2] = r[2] / 255
+            end
+            if r[3] and r[3] > 1 then
+                r[3] = r[3] / 255
+            end
+            if r[4] and r[4] > 1 then
+                r[4] = r[4] / 255
+            end
+            return old_setColor(r)
+        else
+            if r and r > 1 then
+                r = r / 255
+            end
+            if g and g > 1 then
+                g = g / 255
+            end
+            if b and b > 1 then
+                b = b / 255
+            end
+            if a and a > 1 then
+                a = a / 255
+            end
+            return old_setColor(r, g, b, a)
+        end
+    end
+
+    local old_setBackgroundColor = love.graphics.setBackgroundColor
+    love.graphics.setBackgroundColor = function(r, g, b, a)
+        if r and r > 1 then
+            r = r / 255
+        end
+        if g and g > 1 then
+            g = g / 255
+        end
+        if b and b > 1 then
+            b = b / 255
+        end
+        if a and a > 1 then
+            a = a / 255
+        end
+        return old_setBackgroundColor(r, g, b, a)
+    end
+end
+
 if arg[2] == "debug" then
     LLDEBUGGER = require("lldebugger")
     LLDEBUGGER.start()
@@ -6,7 +59,14 @@ end
 local G = love.graphics
 
 require("main_globals")
-
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
+local function is_directory(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "directory"
+end
 if KR_TARGET == "universal" then
     if KR_PLATFORM == "ios" then
         local ffi = require("ffi")
@@ -14,7 +74,7 @@ if KR_TARGET == "universal" then
         ffi.cdef(" const char* kr_get_device_model(); ")
 
         local device_model = ffi.string(ffi.C.kr_get_device_model())
-        local m = { string.match(device_model, "(%a+)(%d+),") }
+        local m = {string.match(device_model, "(%a+)(%d+),")}
 
         if m[1] == "iPad" then
             KR_TARGET = "tablet"
@@ -30,24 +90,45 @@ if KR_TARGET == "universal" then
     end
 end
 
+-- local base_dir = love.filesystem.getSourceBaseDirectory()
+-- ...existing code...
+-- local base_dir = love.filesystem.getSourceBaseDirectory()
+-- local work_dir = love.filesystem.getWorkingDirectory()
 local base_dir = love.filesystem.getSourceBaseDirectory()
 local work_dir = love.filesystem.getWorkingDirectory()
+
+-- 规范化路径：把所有反斜杠替换为正斜杠，并可选保证目录以 / 结尾
+local function norm_path(p, ensure_trail)
+    if not p then
+        return p
+    end
+    p = p:gsub("\\", "/")
+    if ensure_trail and p:sub(-1) ~= "/" then
+        p = p .. "/"
+    end
+    return p
+end
+
+base_dir = norm_path(base_dir, true)
+work_dir = norm_path(work_dir, true)
+
 local ppref
 
 if love.filesystem.isFused() then
     ppref = ""
 elseif KR_PLATFORM == "android" then
-    ppref = base_dir .. "/lovegame/"
+    ppref = base_dir .. "lovegame/"
 else
     ppref = base_dir ~= work_dir and "" or "src/"
 end
 
-local apref = ppref .. "_assets/"
+ppref = norm_path(ppref, true)
+local apref = norm_path(ppref .. "_assets/", true)
 local rel_ppref = ""
 local rel_apref = "_assets/"
 local jpref = "joint_apk"
 
-if love.filesystem.isFused() and KR_PLATFORM == "android" and love.filesystem.isDirectory(jpref) then
+if love.filesystem.isFused() and KR_PLATFORM == "android" and is_directory(jpref) then
     local ffi = require("ffi")
     local arch = ffi.abi("gc64") and "64" or "32"
 
@@ -59,41 +140,116 @@ if love.filesystem.isFused() and KR_PLATFORM == "android" and love.filesystem.is
     print(string.format("main.lua - joint_apk found: configuring ppref:%s apref:%s", ppref, apref))
 end
 
-local additional_paths = { string.format("%s?.lua", ppref), string.format("%s%s-%s/?.lua", ppref, KR_GAME, KR_TARGET),
-    string.format("%s%s/?.lua", ppref, KR_GAME),
-    string.format("%sall-%s/?.lua", ppref, KR_TARGET), string.format("%sall/?.lua", ppref),
-    string.format("%slib/?.lua", ppref), string.format("%slib/?/init.lua", ppref),
-    string.format("%s%s-%s/?.lua", apref, KR_GAME, KR_TARGET),
-    string.format("%sall-%s/?.lua", apref, KR_TARGET) }
+-- 统一构造 additional_paths 并全部规范化为 "/"
+local additional_paths = {string.format("%s?.lua", ppref), string.format("%s%s-%s/?.lua", ppref, KR_GAME, KR_TARGET),
+                          string.format("%s%s/?.lua", ppref, KR_GAME),
+                          string.format("%sall-%s/?.lua", ppref, KR_TARGET), string.format("%sall/?.lua", ppref),
+                          string.format("%slib/?.lua", ppref), string.format("%slib/?/init.lua", ppref),
+                          string.format("%s%s-%s/?.lua", apref, KR_GAME, KR_TARGET),
+                          string.format("%sall-%s/?.lua", apref, KR_TARGET)}
+for i, p in ipairs(additional_paths) do
+    additional_paths[i] = norm_path(p)
+end
 
-package.path = package.path .. ";" .. table.concat(additional_paths, ";")
+local require_paths = "?.lua;?/init.lua;" .. table.concat(additional_paths, ";")
+require_paths = norm_path(require_paths)
 
-love.filesystem.setRequirePath("?.lua;?/init.lua" .. ";" .. table.concat(additional_paths, ";"))
+-- 在 ppref/apref 准备好后，注册基于 love.filesystem 的优先 searcher（保证使用 "/"）
+do
+    if love and love.filesystem then
+        local lfs = love.filesystem
+        local searchers = package.searchers or package.loaders
 
-KR_FULLPATH_BASE = base_dir .. "/src"
-KR_PATH_ROOT = string.format("%s", rel_ppref)
-KR_PATH_ALL = string.format("%s%s", rel_ppref, "all")
-KR_PATH_ALL_TARGET = string.format("%s%s-%s", rel_ppref, "all", KR_TARGET)
-KR_PATH_GAME = string.format("%s%s", rel_ppref, KR_GAME)
-KR_PATH_GAME_TARGET = string.format("%s%s-%s", rel_ppref, KR_GAME, KR_TARGET)
-KR_PATH_ASSETS_ROOT = string.format("%s", rel_apref)
-KR_PATH_ASSETS_ALL_TARGET = string.format("%s%s-%s", rel_apref, "all", KR_TARGET)
-KR_PATH_ASSETS_GAME_TARGET = string.format("%s%s-%s", rel_apref, KR_GAME, KR_TARGET)
+        local function lnorm(p)
+            return p and p:gsub("\\", "/") or p
+        end
+
+        -- 构造要尝试的根（优先包含 ppref/apref 相关）
+        local roots = {"", -- module itself
+        ppref:gsub("/$", ""), -- ppref
+        apref:gsub("/$", ""), -- apref
+        "src", "lib", "all", "_assets", "kr1", "kr1-desktop", "_assets/kr1-desktop", "all-desktop", "mods", "mods/all"}
+        -- 去重并规范
+        local seen = {}
+        local real_roots = {}
+        for _, r in ipairs(roots) do
+            r = lnorm(r or "")
+            r = (r:sub(-1) == "/") and r:sub(1, -2) or r
+            if not seen[r] then
+                seen[r] = true;
+                table.insert(real_roots, r)
+            end
+        end
+
+        table.insert(searchers, 1, function(module_name)
+            local name = lnorm((module_name or ""):gsub("%.", "/"))
+            -- 尝试候选路径（均用 "/"）
+            local candidates = {}
+            for _, root in ipairs(real_roots) do
+                local base = (root == "" and "" or (root .. "/"))
+                table.insert(candidates, base .. name .. ".lua")
+                table.insert(candidates, base .. name .. "/init.lua")
+            end
+            -- 也尝试 KR_PATH_* 运行时可能包含的目标目录
+            if KR_PATH_ALL_TARGET then
+                table.insert(candidates, lnorm(KR_PATH_ALL_TARGET .. "/" .. name .. ".lua"))
+                table.insert(candidates, lnorm(KR_PATH_ALL_TARGET .. "/" .. name .. "/init.lua"))
+            end
+            if KR_PATH_GAME_TARGET then
+                table.insert(candidates, lnorm(KR_PATH_GAME_TARGET .. "/" .. name .. ".lua"))
+                table.insert(candidates, lnorm(KR_PATH_GAME_TARGET .. "/" .. name .. "/init.lua"))
+            end
+
+            for _, p in ipairs(candidates) do
+                p = lnorm(p)
+                local info = lfs.getInfo and lfs.getInfo(p)
+                if info and info.type == "file" then
+                    local chunk, err = lfs.load(p)
+                    if chunk then
+                        return chunk
+                    end
+                    return nil, err
+                end
+            end
+
+            return nil
+        end)
+
+        if lfs.setRequirePath then
+            lfs.setRequirePath(require_paths)
+        end
+    end
+end
+
+-- ...existing code...
+
+-- ...existing code...
+KR_FULLPATH_BASE = norm_path(base_dir .. "/src", true)
+KR_PATH_ROOT = norm_path(tostring(rel_ppref))
+KR_PATH_ALL = norm_path(string.format("%s%s", rel_ppref, "all"))
+KR_PATH_ALL_TARGET = norm_path(string.format("%s%s-%s", rel_ppref, "all", KR_TARGET))
+KR_PATH_GAME = norm_path(string.format("%s%s", rel_ppref, KR_GAME))
+KR_PATH_GAME_TARGET = norm_path(string.format("%s%s-%s", rel_ppref, KR_GAME, KR_TARGET))
+KR_PATH_ASSETS_ROOT = norm_path(string.format("%s", rel_apref))
+KR_PATH_ASSETS_ALL_TARGET = norm_path(string.format("%s%s-%s", rel_apref, "all", KR_TARGET))
+KR_PATH_ASSETS_GAME_TARGET = norm_path(string.format("%s%s-%s", rel_apref, KR_GAME, KR_TARGET))
 
 if KR_TARGET == "tablet" then
-    KR_PATH_ASSETS_ALL_FALLBACK = { {
-        path = string.format("%s%s-%s", rel_apref, "all", "tablet")
+    KR_PATH_ASSETS_ALL_FALLBACK = {{
+        path = norm_path(string.format("%s%s-%s", rel_apref, "all", "tablet"))
     }, {
-        path = string.format("%s%s-%s", rel_apref, "all", "phone")
-    } }
-    KR_PATH_ASSETS_GAME_FALLBACK = { {
+        path = norm_path(string.format("%s%s-%s", rel_apref, "all", "phone"))
+    }}
+    KR_PATH_ASSETS_GAME_FALLBACK = {{
         texture_size = "ipadhd",
-        path = string.format("%s%s-%s", rel_apref, KR_GAME, "tablet")
+        path = norm_path(string.format("%s%s-%s", rel_apref, KR_GAME, "tablet"))
     }, {
         texture_size = "iphonehd",
-        path = string.format("%s%s-%s", rel_apref, KR_GAME, "phone")
-    } }
+        path = norm_path(string.format("%s%s-%s", rel_apref, KR_GAME, "phone"))
+    }}
 end
+-- ...existing code...
+
 
 local log = require("klua.log")
 
@@ -187,7 +343,7 @@ local function load_director()
 
     if aw and ah and (aw ~= main.params.width or ah ~= main.params.height) then
         log.debug("patching width/height from %s,%s, to %s,%s dpi scale:%s", main.params.width, main.params.height, aw,
-            ah, love.window.getPixelScale())
+            ah, love.window.getDPIScale())
 
         main.params.width, main.params.height = aw, ah
     end
@@ -238,7 +394,7 @@ end
 function love.load(arg)
     love.filesystem.setIdentity(version.identity)
 
-    if love.filesystem.isFused() and not love.filesystem.exists(KR_PATH_ALL_TARGET) then
+    if love.filesystem.isFused() and not love.filesystem.getInfo(KR_PATH_ALL_TARGET) then
         log.info("")
         log.info("mounting asset files...")
         log.debug("mounting base_dir")
@@ -249,7 +405,7 @@ function love.load(arg)
             return
         end
 
-        for _, n in pairs({ KR_PATH_ALL_TARGET, KR_PATH_GAME_TARGET }) do
+        for _, n in pairs({KR_PATH_ALL_TARGET, KR_PATH_GAME_TARGET}) do
             local fn = string.format("%s.dat", n)
             local dn = string.format("%s", n)
 
@@ -267,7 +423,7 @@ function love.load(arg)
 
     MU.basic_init()
 
-    if DEBUG and love.filesystem.isFile(KR_PATH_ROOT .. "args.lua") then
+    if DEBUG and is_file(KR_PATH_ROOT .. "args.lua") then
         if KR_TARGET == "desktop" then
             print("WARNING: Appending parameters from args.lua with command line args.")
 
@@ -300,14 +456,14 @@ function love.load(arg)
         log.info(MU.get_debug_info(main.params))
     end
 
-    local font_paths = KR_PATH_ASSETS_ALL_FALLBACK or { {
+    local font_paths = KR_PATH_ASSETS_ALL_FALLBACK or {{
         path = KR_PATH_ASSETS_ALL_TARGET
-    } }
+    }}
 
     for _, v in pairs(font_paths) do
         local p = v.path .. "/fonts"
 
-        if love.filesystem.exists(p .. "/ObelixPro.ttf") then
+        if love.filesystem.getInfo(p .. "/ObelixPro.ttf") then
             F:init(p)
             F:load()
         end
@@ -319,7 +475,7 @@ function love.load(arg)
     -- icon switched
     local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"
 
-    if love.filesystem.isFile(icon) then
+    if is_file(icon) then
         love.window.setIcon(love.image.newImageData(icon))
     end
 
@@ -582,7 +738,7 @@ function love.run()
 
                 main.draw_stats:update_lap(dt, updatei, updatef)
             end
-            if love.window and G and love.window.isCreated() and G.isActive() then
+            if love.window and G and love.window.isOpen() and G.isActive() then
                 nx.profilerEnterCodeBlock("clear")
 
                 G.clear()
@@ -665,7 +821,7 @@ function love.run()
                 updatef = love.timer.getTime()
                 main.draw_stats:update_lap(dt, updatei, updatef)
             end
-            if love.window and G and love.window.isCreated() and G.isActive() then
+            if love.window and G and love.window.isOpen() and G.isActive() then
                 G.clear()
                 G.origin()
 
@@ -733,7 +889,7 @@ local function crash_report(str)
     end
 end
 
-function love.errhand(msg)
+function love.errhandler(msg)
     local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
     local last_canvas = G.getCanvas()
     G.setCanvas(error_canvas)
@@ -768,7 +924,7 @@ function love.errhand(msg)
         love.mouse.setGrabbed(false)
         love.mouse.setRelativeMode(false)
 
-        if love.mouse.hasCursor() then
+        if love.mouse.isCursorSupported() then
             love.mouse.setCursor()
         end
     end
@@ -786,15 +942,14 @@ function love.errhand(msg)
     G.reset()
 
     local font = G.setNewFont(math.floor(love.window.toPixels(15)))
-    local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc",
-        math.floor(love.window.toPixels(16)))
+    local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(love.window.toPixels(16)))
 
     G.setBackgroundColor(89, 157, 220)
     G.setColor(255, 255, 255, 255)
 
     local trace = debug.traceback()
 
-    --G.clear(G.getBackgroundColor())
+    -- G.clear(G.getBackgroundColor())
     G.origin()
 
     local err = {}
@@ -851,9 +1006,11 @@ function love.errhand(msg)
     -- if error_type == "coro" then
     -- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
     if has_tip then
-        table.insert(tip, "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。按 “z” 显示此前界面以截图。\n")
+        table.insert(tip,
+            "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。按 “z” 显示此前界面以截图。\n")
     elseif not has_tip then
-        table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，并按 “z” 显示崩溃前界面，一并截图展示，并用语言简要说明发生了什么。\n")
+        table.insert(tip,
+            "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，并按 “z” 显示崩溃前界面，一并截图展示，并用语言简要说明发生了什么。\n")
     end
 
     if love.nx then
@@ -919,7 +1076,7 @@ function love.errhand(msg)
                     name = "Game"
                 end
 
-                local buttons = { "OK", "Cancel" }
+                local buttons = {"OK", "Cancel"}
                 local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
 
                 if pressed == 1 then

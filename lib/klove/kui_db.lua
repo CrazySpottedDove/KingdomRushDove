@@ -21,7 +21,7 @@ if DEBUG then
 		for _, path in pairs(self.paths) do
 			local filename = path .. "/" .. name .. ".lua"
 
-			if love.filesystem.exists(filename) then
+			if love.filesystem.getInfo(filename) then
 				usepath = path
 
 				break
@@ -56,7 +56,7 @@ function kui_db:read(name)
 	for _, path in pairs(self.paths) do
 		local filename = path .. "/" .. name .. ".lua"
 
-		if love.filesystem.exists(filename) then
+		if love.filesystem.getInfo(filename) then
 			log.debug("loading template:%s from file %s", name, filename)
 
 			local str = love.filesystem.read(filename)

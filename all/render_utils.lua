@@ -9,6 +9,18 @@ RU.BATCHES_COUNT = 30
 RU.BATCH_SIZE = 30
 RU.batches = {}
 RU.bi = 1
+local function norm_component(c)
+    if not c then
+        return 1
+    end
+    if c > 1 then
+        return c / 255
+    end
+    return c
+end
+local function norm_color(r, g, b, a)
+    return norm_component(r), norm_component(g), norm_component(b), norm_component(a)
+end
 
 function RU.init()
 	local temp_canvas = G.newCanvas(2, 2)
@@ -136,7 +148,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 			a = f.alpha
 
 			if a ~= la or r ~= lr or g ~= lg or b ~= lb then
-				batch:setColor(r, g, b, a)
+				batch:setColor(norm_color(r, g, b, a))
 
 				lr, lg, lb, la = r, g, b, a
 			end

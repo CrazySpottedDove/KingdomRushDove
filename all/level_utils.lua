@@ -16,6 +16,10 @@ local serpent = require("serpent")
 local bit = require("bit")
 local bor = bit.bor
 local LU = {}
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 function LU.queue_insert(store, e)
 	simulation:queue_insert_entity(e)
@@ -60,7 +64,7 @@ function LU.load_level(store, name)
 	local level
 	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. ".lua"
 
-	if not love.filesystem.isFile(fn) then
+	if not is_file(fn) then
 		log.debug("Level file does not exist for %s", fn)
 
 		level = {}

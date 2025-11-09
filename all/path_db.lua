@@ -11,6 +11,10 @@ local V = require("klua.vector")
 local GR = require("grid_db")
 local serpent = require("serpent")
 local path_db = {}
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 path_db.path_end_margin = 10
 path_db.path_valid_margin = 1
@@ -35,7 +39,7 @@ function path_db:load(name, visible_coords)
 	local path_list
 	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
 
-	if not love.filesystem.isFile(fn) then
+	if not is_file(fn) then
 		log.debug("Level paths file does not exist for %s", fn)
 
 		path_list = {
@@ -691,7 +695,7 @@ function path_db:load_curves(name)
 	local data
 	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
 
-	if not love.filesystem.isFile(fn) then
+	if not is_file(fn) then
 		log.debug("Level paths file does not exist for %s", fn)
 
 		data = {
