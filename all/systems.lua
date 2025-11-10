@@ -36,6 +36,7 @@ local floor = math.floor
 local sin = math.sin
 local cos = math.cos
 require("constants")
+local ffi = require("ffi")
 
 local function queue_insert(store, e)
     simulation:queue_insert_entity(e)
@@ -2049,7 +2050,7 @@ end
 sys.render = {}
 sys.render.name = "render"
 
-local ffi = require("ffi")
+
 ffi.cdef [[
 typedef struct {
     double sort_y;
