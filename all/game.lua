@@ -24,24 +24,25 @@ local bit = require("bit")
 require("constants")
 
 game = {}
-game.required_textures = { "go_decals", "go_enemies_common", "go_towers", "go_towers_pandas", "go_towers_dark_elf",
-    "go_towers_tricannon", "go_towers_demon_pit",
-    "go_towers_necromancer", "go_towers_ray",
-    "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
-    "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter" }
+game.required_textures = {"go_decals", "go_enemies_common", "go_towers", "go_towers_pandas", "go_towers_dark_elf",
+                          "go_towers_tricannon", "go_towers_demon_pit", "go_towers_necromancer", "go_towers_ray",
+                          "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
+                          "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter"}
 game.scale_required_textures = {}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
-game.required_sounds = { "common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
-    "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
-    "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners", "tower_flamespitter"}
+game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
+                        "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
+                        "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners",
+                        "tower_flamespitter"}
 
-game.simulation_systems = { "level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
-    "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
-    "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
-    "performance_monitor", "spatial_index", "last_hook", "lights" ,"assets_checker", "wave_generator"}
+game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
+                           "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
+                           "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
+                           "performance_monitor", "spatial_index", "last_hook", "lights", "assets_checker",
+                           "wave_generator"}
 
 function game:init(screen_w, screen_h, done_callback)
     self.dash_start_offset = 0
@@ -93,7 +94,7 @@ function game:init(screen_w, screen_h, done_callback)
         self.camera.wb = (visible_h - v_bottom) * self.game_scale
         self.camera.zoom = 1
         self.camera.min_zoom = aspect > 1.7777777777777777 and math.min(screen_w, MAX_SCREEN_ASPECT * screen_h) /
-            (visible_w * self.game_scale) or 1
+                                   (visible_w * self.game_scale) or 1
         self.camera.max_zoom = KR_TARGET == "tablet" and 1.5 or 2
 
         function self.camera:clamp()
@@ -240,9 +241,9 @@ function game:init_debug()
     local data = require("data.game_debug_data")
 
     self.current_enemy_page = data.default_page_for_level and data.default_page_for_level[self.store.level_idx] or
-        data.default_page_for_terrain[self.store.level_terrain_type] or 1
+                                  data.default_page_for_terrain[self.store.level_terrain_type] or 1
     self.enemy_pages = data.enemy_pages
-    self.enemy_keys = { "q", "w", "e", "r", "t", "y", "u", "i", "o", "p" }
+    self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
     self.dbg_active_pi = 1
 
     if localuser_game_init then
@@ -391,7 +392,7 @@ end
 
 function game:draw_enemy_pages()
     local function print_sh(str, x, y, color)
-        color = color and color or { 255, 255, 255 }
+        color = color and color or {255, 255, 255}
 
         G.setColor(0, 0, 0)
         G.print(str, x + 1, y + 1)
@@ -413,7 +414,7 @@ function game:draw_enemy_pages()
     for i, n in ipairs(names) do
         local key = self.enemy_keys[i]
 
-        print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and { 255, 100, 100 } or { 255, 255, 255 })
+        print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and {255, 100, 100} or {255, 255, 255})
 
         y = y + 12
     end
@@ -784,7 +785,7 @@ function game:front_draw_debug(rox, roy, gs)
             for j = 1, #GR.grid[i] do
                 local t = GR.grid[i][j]
 
-                G.setColor_old(GR.grid_colors[t] or { 100, 100, 100 })
+                G.setColor_old(GR.grid_colors[t] or {100, 100, 100})
                 G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
             end
         end
@@ -1145,26 +1146,67 @@ function game:after_draw_debug(rox, roy, gs)
     end
 end
 
--- 绘制黑夜模式前景色
+-- -- 绘制黑夜模式前景色
+-- function game:draw_dark_foreground(rox, roy, gs)
+--     G.push()
+--     G.translate(rox, roy)
+--     G.scale(gs, gs)
+
+--     if not self.dark_canvas then
+--         self.dark_canvas = G.newCanvas(self.screen_w, self.screen_h, {
+--             stencil = true
+--         })
+
+--         G.setCanvas(self.dark_canvas)
+--     else
+--         G.setCanvas(self.dark_canvas)
+--         G.clear(0, 0, 0, 0)
+--     end
+
+--     love.graphics.stencil(function()
+--         -- 绘制圆形遮罩
+--         if self.store and self.store.lights then
+--             for _, l in pairs(self.store.lights) do
+--                 local _, uy = game_gui:g2u(l.pos)
+
+--                 love.graphics.circle("fill", l.pos.x, uy, l.radius)
+--             end
+--         end
+
+--         local x, y = game_gui.window:get_mouse_position()
+--         local ux, uy = game_gui.window:screen_to_view(x, y)
+--         local gx = game_gui:u2g(vec_2(ux, uy))
+
+--         love.graphics.circle("fill", gx, uy, 50)
+--     end, "replace", 1)
+
+--     -- 启用模板测试，只绘制模板值为0的区域
+--     love.graphics.setStencilTest("equal", 0)
+
+--     -- 绘制黑暗覆盖层
+--     -- 51 / 255 = 0.2
+--     -- 30 / 255 = 0.1176
+--     G.setColor(0, 0, 0.2, 0.1176)
+--     G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
+
+--     -- 恢复默认
+--     love.graphics.setStencilTest()
+--     G.setColor(1, 1, 1, 1)
+--     G.setCanvas()
+--     G.pop()
+-- end
+
 function game:draw_dark_foreground(rox, roy, gs)
     G.push()
     G.translate(rox, roy)
     G.scale(gs, gs)
 
-    if not self.dark_canvas then
-        self.dark_canvas = G.newCanvas()
-        G.setCanvas(self.dark_canvas)
-    else
-        G.setCanvas(self.dark_canvas)
-        G.clear(0, 0, 0, 0)
-    end
-
+    -- 直接在当前渲染目标（通常是屏幕）上使用 stencil，避免在 Canvas 上做 stencil 的兼容问题
     love.graphics.stencil(function()
-        -- 绘制圆形遮罩
+        -- 绘制圆形遮罩（将这些区域从遮罩中抠出）
         if self.store and self.store.lights then
             for _, l in pairs(self.store.lights) do
                 local _, uy = game_gui:g2u(l.pos)
-
                 love.graphics.circle("fill", l.pos.x, uy, l.radius)
             end
         end
@@ -1176,19 +1218,16 @@ function game:draw_dark_foreground(rox, roy, gs)
         love.graphics.circle("fill", gx, uy, 50)
     end, "replace", 1)
 
-    -- 启用模板测试，只绘制模板值为0的区域
+    -- 仅在 stencil 值为 0 的区域绘制暗色覆盖层（被抠出的圆形保持亮）
     love.graphics.setStencilTest("equal", 0)
 
-    -- 绘制黑暗覆盖层
-    -- 51 / 255 = 0.2
-    -- 30 / 255 = 0.1176
     G.setColor(0, 0, 0.2, 0.1176)
+    -- 覆盖一个足够大的矩形，注意使用相对于 push() 的坐标
     G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
 
     -- 恢复默认
     love.graphics.setStencilTest()
     G.setColor(1, 1, 1, 1)
-    G.setCanvas()
     G.pop()
 end
 
@@ -1196,8 +1235,8 @@ end
 function game:draw_path(rox, roy, gs)
     if self.shown_path then
         local dash_length = 25 -- 虚线段长度
-        local gap_length = 15  -- 虚线间隔
-        local speed = 60       -- 虚线移动速度（像素/秒）
+        local gap_length = 15 -- 虚线间隔
+        local speed = 60 -- 虚线移动速度（像素/秒）
 
         -- 初始化路径数据
         local path_data = {}
@@ -1323,9 +1362,9 @@ function game:draw_speed_state(rox, roy, gs)
         G.clear(0, 0, 0, 0)
     end
 
-    local r =  (math.sin(d.ts) + 1)
-    local g =  (math.sin(d.ts + 2) + 1)
-    local b =  (math.sin(d.ts + 4) + 1)
+    local r = (math.sin(d.ts) + 1)
+    local g = (math.sin(d.ts + 2) + 1)
+    local b = (math.sin(d.ts + 4) + 1)
 
     -- 180 / 255 = 0.7058823529411765
     G.setColor(r, g, b, 0.7058823529411765)
@@ -1467,7 +1506,7 @@ function game:draw_game()
 
     if d.night_mode then
         self:draw_dark_foreground(rox, roy, gs)
-        G.draw(self.dark_canvas)
+        -- G.draw(self.dark_canvas)
     end
 
     G.push()
