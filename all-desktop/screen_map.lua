@@ -171,6 +171,10 @@ screen_map.signal_handlers = {
     end
 }
 
+function screen_map:textinput(t)
+    self.window:textinput(t)
+end
+
 function screen_map:init(w, h, done_callback)
     self.done_callback = done_callback
 
@@ -1034,6 +1038,10 @@ function screen_map:keypressed(key, isrepeat)
                 self.map_view:show_flags()
             end
         end
+    end
+
+    if self.window.responder then
+        self.window.responder:on_keypressed(key, isrepeat)
     end
 end
 
@@ -6131,6 +6139,7 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
     self.value_label.colors.text_no = {255, 100, 100, 255}
     self.value_label.colors.text_yes_hover = {150, 255, 150, 255}
     self.value_label.colors.text_no_hover = {255, 150, 150, 255}
+    self.value_label.colors.text_default = {200, 200, 200, 255}
     self.value_label.propagate_on_click = true
 
     self:add_child(self.value_label)
@@ -6140,12 +6149,18 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
 end
 
 function BooleanToggleItem:update_display()
-    if self.value then
-        self.value_label.text = _("是")
-        self.value_label.colors.text = {100, 255, 100, 255}
-    else
-        self.value_label.text = _("否")
-        self.value_label.colors.text = {255, 100, 100, 255}
+    local type = type(self.value)
+    if type == "boolean" then
+        if self.value then
+            self.value_label.text = _("是")
+            self.value_label.colors.text = self.value_label.colors.text_yes
+        else
+            self.value_label.text = _("否")
+            self.value_label.colors.text = self.value_label.colors.text_no
+        end
+    elseif type == "number" then
+        self.value_label.text = tostring(self.value)
+        self.value_label.colors.text = self.value_label.colors.text_default
     end
 
     -- 强制重绘
@@ -6159,10 +6174,13 @@ function BooleanToggleItem:on_enter()
     self.colors.background = {50, 50, 50, 100}
     self.key_label.colors.text = self.key_label.colors.text_hover
 
-    if self.value then
-        self.value_label.colors.text = {150, 255, 150, 255}
-    else
-        self.value_label.colors.text = {255, 150, 150, 255}
+    local type = type(self.value)
+    if type == "boolean" then
+        if self.value then
+            self.value_label.colors.text = self.value_label.colors.text_yes_hover
+        else
+            self.value_label.colors.text = self.value_label.colors.text_no_hover
+        end
     end
 
     if self.value_label.redraw then
@@ -6183,11 +6201,56 @@ function BooleanToggleItem:on_click()
 end
 
 function BooleanToggleItem:toggle()
-    self.value = not self.value
+    local type = type(self.value)
+    if type == "boolean" then
+        self.value = not self.value
+    elseif type == "number" then
+        screen_map.window:set_responder(self)
+    end
     self:update_display()
 
     if self.on_change_callback then
         self.on_change_callback(self.key, self.value)
+    end
+end
+
+function BooleanToggleItem:on_textinput(t)
+    local type = type(self.value)
+    if type == "number" then
+        local num = tonumber(self.value_label.text .. t)
+        if num then
+            self.value = num
+            self.value_label.text = tostring(self.value)
+            self:update_display()
+            if self.on_change_callback then
+                self.on_change_callback(self.key, self.value)
+            end
+        end
+    end
+    return true
+end
+
+function BooleanToggleItem:on_keypressed(key)
+    local type = type(self.value)
+    if type == "number" then
+        if key == "backspace" then
+            local text = self.value_label.text
+            local byteoffset = utf8.offset(text, -1)
+            if byteoffset then
+                self.value_label.text = string.sub(text, 1, byteoffset - 1)
+            end
+            local num = tonumber(self.value_label.text)
+            if num then
+                self.value = num
+            else
+                self.value = 0
+            end
+            self.value_label.text = tostring(self.value)
+            self:update_display()
+            if self.on_change_callback then
+                self.on_change_callback(self.key, self.value)
+            end
+        end
     end
 end
 
@@ -6208,27 +6271,39 @@ function BooleanToggleGroup:set_key_label_map(map)
     self.key_label_map = map
 end
 
-function BooleanToggleGroup:add_item(key, initial_value)
-    local item_count = 0
-    for _ in pairs(self.items) do
-        item_count = item_count + 1
+function BooleanToggleGroup:add_items(data)
+    local total_items = 0
+    for key, value in pairs(data) do
+        if type(value) == "boolean" or type(value) == "number" then
+            total_items = total_items + 1
+        end
     end
+    -- 重新调整所有 item 的位置
+    local max_rows = 7 -- 每列最多 6 个 item
+    local row_height = self.item_height
 
-    local item_y = self.padding.y + item_count * self.item_height
-
-    local item = BooleanToggleItem:new(self.key_label_map[key] or key, initial_value,
-        V.v(self.size.x - 2 * self.padding.x, 40))
-    item.pos = V.v(self.padding.x, item_y)
-    item.on_change_callback = function(label, value)
-        self.data[table.keyforobject(self.key_label_map, label) or label] = value
+    local actual_columns = math.ceil(total_items / max_rows - 0.0001) -- 实际列数
+    local column_width = 1.45 * (self.size.x - (1 + actual_columns) * self.padding.x) / actual_columns -- 动态计算列宽
+    local actual_rows = math.min(total_items, max_rows) -- 实际行数
+    local actual_height = actual_rows * row_height -- 实际高度
+    local start_x = (self.size.x - actual_columns * column_width / 1.45) / 2 * 1.45-- 水平居中起始位置
+    local start_y = (self.size.y - actual_height) / 2 -- 垂直居中起始位置
+    local index = 0
+    for key, value in pairs(data) do
+        if type(value) == "boolean" or type(value) == "number" then
+            -- 添加新 item
+            local item = BooleanToggleItem:new(self.key_label_map[key] or key, value, V.v(column_width, 40))
+            item.pos = V.v(start_x + math.floor(index / max_rows) * (column_width + self.padding.x),
+                start_y + (index % max_rows) * row_height)
+            item.on_change_callback = function(label, value)
+                self.data[table.keyforobject(self.key_label_map, label) or label] = value
+            end
+            self.items[key] = item
+            self.data[key] = value
+            index = index + 1
+            self:add_child(item)
+        end
     end
-
-    self:add_child(item)
-
-    self.items[key] = item
-    self.data[key] = initial_value
-
-    return item
 end
 
 -- function BooleanToggleGroup:set_value(key, value)
@@ -6252,11 +6327,7 @@ function BooleanToggleGroup:set_all_data(data)
         self:remove_child(item)
     end
     self.items = {}
-    for key, value in pairs(data) do
-        if type(value) == "boolean" then
-            self:add_item(key, value)
-        end
-    end
+    self:add_items(data)
 end
 
 function BooleanToggleGroup:set_on_data_change_callback(callback)
@@ -6271,6 +6342,7 @@ function BooleanPanelView:initialize(sw, sh, title)
     self.pos = v(0, 0)
     self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
     self.back.pos = v(sw / 2, sh / 2 - 50)
+    self.back.scale = v(1.45, 1.45)
     self.header = title
     self:add_child(self.back)
 
@@ -6283,7 +6355,7 @@ function BooleanPanelView:initialize(sw, sh, title)
     -- 创建配置组
     self.data_group = BooleanToggleGroup:new(V.v(400, 300))
     self.data_group.pos = V.v(self.back.size.x / 2 - 200, 120)
-
+    self.data_group.scale = v(1/1.45,1/1.45)
     -- 设置数据改变回调
     self.data_group:set_on_data_change_callback(function(key, value, all_data)
     end)
@@ -6302,6 +6374,7 @@ function BooleanPanelView:initialize(sw, sh, title)
         S:queue("GUIButtonCommon")
         self:save()
         self:hide()
+        screen_map.window:set_responder()
     end
 
     self.done_button = b
@@ -6338,7 +6411,13 @@ function ConfigPanelView:initialize(sw, sh)
         show_health_bar = "显示血条",
         custom_config_enabled = "启用自定义配置",
         endless = "开启无尽模式",
-        enable_hero_menu = "启用局内英雄菜单"
+        enable_hero_menu = "启用局内英雄菜单",
+        enemy_count_multiplier = "敌人数量倍率",
+        enemy_gold_multiplier = "敌人金币倍率",
+        enemy_health_multiplier = "敌人生命倍率",
+        gold_multiplier = "开局金币倍率",
+        hero_damage_multiplier = "英雄伤害倍率",
+        hero_xp_gain_multiplier = "英雄经验倍率",
     })
 end
 
@@ -6361,7 +6440,9 @@ function CriketPanelView:initialize(sw, sh)
     self:set_key_label_map({
         on = "启用斗蛐蛐",
         fps_transformed = "请勿修改本条",
-        gold_judge = "启用金币裁判"
+        gold_judge = "启用金币裁判",
+        cash = "初始资金",
+        gold_base = "金币基准值",
     })
 end
 

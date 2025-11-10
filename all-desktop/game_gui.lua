@@ -755,7 +755,6 @@ function game_gui:init(w, h, game)
     layer_gui:add_child(layer_gui_top)
     window:add_child(pickview)
     window:add_child(layer_gui)
-    self:add_mobile_shortcut_buttons()
 
     self.endless_select_reward_view = endless_select_reward_view
     self.pickview = pickview
@@ -817,6 +816,7 @@ function game_gui:init(w, h, game)
     signal.register("hand-midas-ends", hand_midas_ends_handler)
     signal.register("debug-ready-user-powers", debug_ready_user_powers_handler)
     signal.register("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
+    self:add_mobile_shortcut_buttons()
 end
 
 function game_gui:destroy()
@@ -890,9 +890,9 @@ function game_gui:mousereleased(x, y, button)
 end
 
 function game_gui:add_mobile_shortcut_buttons()
-    -- if not IS_MOBILE then
-        -- return
-    -- end
+    if not IS_MOBILE then
+        return
+    end
 
     local ks = self.key_shortcuts
     local y = self.sh - 60
@@ -906,10 +906,9 @@ function game_gui:add_mobile_shortcut_buttons()
         function btn:on_click()
             game_gui:keypressed(key)
         end
-        self.window:add_child(btn)
+        self.layer_gui_top:add_child(btn)
     end
 end
-
 
 function game_gui:keypressed(key, isrepeat)
     if isrepeat then
