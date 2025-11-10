@@ -644,14 +644,16 @@ function sound_db:update(dt)
 		table.remove(sound_db.stop_queue, i)
 	end
 
-	for gid, group_active_sources in pairs(self.active_sources) do
-		for i = #group_active_sources, 1, -1 do
-			if not group_active_sources[i].source:isPlaying() then
-				log.paranoid("Reclaiming source %s", group_active_sources[i].source)
-				table.remove(group_active_sources, i)
-			end
-		end
-	end
+    if not self.paused then
+        for gid, group_active_sources in pairs(self.active_sources) do
+            for i = #group_active_sources, 1, -1 do
+                if not group_active_sources[i].source:isPlaying() then
+                    log.paranoid("Reclaiming source %s", group_active_sources[i].source)
+                    table.remove(group_active_sources, i)
+                end
+            end
+        end
+    end
 
 	local queue = sound_db.request_queue
 	local reqs_due = {}
