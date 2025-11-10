@@ -32,7 +32,7 @@ image_db.use_canvas = true
 
 -- by dove
 image_db.supportedformats = love.graphics.getImageFormats()
-local is_android = love.system.getOS() == "Android"
+-- local is_android = love.system.getOS() == "Android"
 
 -- 简化版本，只基于CPU核心数
 local function calculate_thread_count()
@@ -460,9 +460,9 @@ function image_db:preload_atlas(ref_scale, path, name)
 		v.group = name_scale
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 
-        if is_android then
-            v.a_name = v.a_name:gsub(".dds$", ".png")
-        end
+        -- if is_android then
+        --     v.a_name = v.a_name:gsub(".dds$", ".png")
+        -- end
 
 		if v.defer then
 			deferred_image_names[v.a_name] = true
@@ -618,9 +618,9 @@ function image_db:load_image_file(fn, path)
 		if string.match(f, ".dds$") then
 			compressed = true
 
-            if is_android then
-                return self:load_image_file(fn:gsub("%.dds$", ".png"), path)
-            end
+            -- if is_android then
+            --     return self:load_image_file(fn:gsub("%.dds$", ".png"), path)
+            -- end
 
 			-- 检查 DXT3 和 BC7 是否都不支持
             if not self.supportedformats.DXT3 then
