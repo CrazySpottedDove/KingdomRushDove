@@ -2,7 +2,7 @@
 
 return {
 	CB_Abomination_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	CB_Abomination_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	CB_Abomination_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	CB_Abomination_0007 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	CB_Abomination_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	CB_Abomination_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	CB_Abomination_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	CB_Abomination_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	CB_Abomination_0017 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	CB_Abomination_0019 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	CB_Abomination_0021 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	CB_Abomination_0023 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	CB_Abomination_0025 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	CB_Abomination_0027 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	CB_Abomination_0029 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	CB_Abomination_0031 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	CB_Abomination_0033 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	CB_Abomination_0035 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	CB_Abomination_0037 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	CB_Abomination_0039 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	CB_Abomination_0041 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	CB_Abomination_0043 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	CB_Abomination_0045 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -600,7 +600,7 @@ return {
 		}
 	},
 	CB_Abomination_0047 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -626,7 +626,7 @@ return {
 		}
 	},
 	CB_Abomination_0049 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -652,7 +652,7 @@ return {
 		}
 	},
 	CB_Abomination_0051 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -678,7 +678,7 @@ return {
 		}
 	},
 	CB_Abomination_0053 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -704,7 +704,7 @@ return {
 		}
 	},
 	CB_Abomination_0055 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -730,7 +730,7 @@ return {
 		}
 	},
 	CB_Abomination_0057 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -756,7 +756,7 @@ return {
 		}
 	},
 	CB_Abomination_0059 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -782,7 +782,7 @@ return {
 		}
 	},
 	CB_Abomination_0061 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -808,7 +808,7 @@ return {
 		}
 	},
 	CB_Abomination_0063 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -834,7 +834,7 @@ return {
 		}
 	},
 	CB_Abomination_0065 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -860,7 +860,7 @@ return {
 		}
 	},
 	CB_Abomination_0067 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -886,7 +886,7 @@ return {
 		}
 	},
 	CB_Abomination_0069 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -912,7 +912,7 @@ return {
 		}
 	},
 	CB_Abomination_0071 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -938,7 +938,7 @@ return {
 		}
 	},
 	CB_Abomination_0073 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -964,7 +964,7 @@ return {
 		}
 	},
 	CB_Abomination_0075 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -990,7 +990,7 @@ return {
 		}
 	},
 	CB_Abomination_0077 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1016,7 +1016,7 @@ return {
 		}
 	},
 	CB_Abomination_0079 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1042,7 +1042,7 @@ return {
 		}
 	},
 	CB_Abomination_0081 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1068,7 +1068,7 @@ return {
 		}
 	},
 	CB_Abomination_0083 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1094,7 +1094,7 @@ return {
 		}
 	},
 	CB_Abomination_0085 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1121,7 +1121,7 @@ return {
 		}
 	},
 	CB_Abomination_0087 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1147,7 +1147,7 @@ return {
 		}
 	},
 	CB_Abomination_0089 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1173,7 +1173,7 @@ return {
 		}
 	},
 	CB_Abomination_0091 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1199,7 +1199,7 @@ return {
 		}
 	},
 	CB_Abomination_0093 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1225,7 +1225,7 @@ return {
 		}
 	},
 	CB_Abomination_0095 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1251,7 +1251,7 @@ return {
 		}
 	},
 	CB_Abomination_0097 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1277,7 +1277,7 @@ return {
 		}
 	},
 	CB_Abomination_0099 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1303,7 +1303,7 @@ return {
 		}
 	},
 	CB_Abomination_0101 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1329,7 +1329,7 @@ return {
 		}
 	},
 	CB_Abomination_0103 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1355,7 +1355,7 @@ return {
 		}
 	},
 	CB_Abomination_0105 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1386,7 +1386,7 @@ return {
 		}
 	},
 	CB_Abomination_0112 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1412,7 +1412,7 @@ return {
 		}
 	},
 	CB_Abomination_0114 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1438,7 +1438,7 @@ return {
 		}
 	},
 	CB_Abomination_0117 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1464,7 +1464,7 @@ return {
 		}
 	},
 	CB_Abomination_0119 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1490,7 +1490,7 @@ return {
 		}
 	},
 	CB_Abomination_0121 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1516,7 +1516,7 @@ return {
 		}
 	},
 	CB_Abomination_0123 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1542,7 +1542,7 @@ return {
 		}
 	},
 	CB_Abomination_0125 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1568,7 +1568,7 @@ return {
 		}
 	},
 	CB_Abomination_0127 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1594,7 +1594,7 @@ return {
 		}
 	},
 	CB_Abomination_0129 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1620,7 +1620,7 @@ return {
 		}
 	},
 	CB_Abomination_0131 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1646,7 +1646,7 @@ return {
 		}
 	},
 	CB_Abomination_0133 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1672,7 +1672,7 @@ return {
 		}
 	},
 	CB_Abomination_0135 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1698,7 +1698,7 @@ return {
 		}
 	},
 	CB_Abomination_0137 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1724,7 +1724,7 @@ return {
 		}
 	},
 	CB_Abomination_0139 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1750,7 +1750,7 @@ return {
 		}
 	},
 	CB_Abomination_0141 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1776,7 +1776,7 @@ return {
 		}
 	},
 	CB_Abomination_0143 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1802,7 +1802,7 @@ return {
 		}
 	},
 	CB_Abomination_0145 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1826,7 +1826,7 @@ return {
 		alias = {}
 	},
 	CB_Abomination_0146 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1850,7 +1850,7 @@ return {
 		alias = {}
 	},
 	CB_Abomination_0147 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1876,7 +1876,7 @@ return {
 		}
 	},
 	CB_Abomination_0149 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1902,7 +1902,7 @@ return {
 		}
 	},
 	CB_Abomination_0151 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1926,7 +1926,7 @@ return {
 		alias = {}
 	},
 	CB_Abomination_0152 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1950,7 +1950,7 @@ return {
 		alias = {}
 	},
 	CB_Abomination_0153 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1974,7 +1974,7 @@ return {
 		alias = {}
 	},
 	CB_Abomination_0154 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -1998,7 +1998,7 @@ return {
 		alias = {}
 	},
 	CB_Abomination_0155 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -2031,7 +2031,7 @@ return {
 		}
 	},
 	CB_Abomination_0164 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -2057,7 +2057,7 @@ return {
 		}
 	},
 	CB_Abomination_0166 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -2081,7 +2081,7 @@ return {
 		alias = {}
 	},
 	CB_Abomination_0167 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			182,
 			162
@@ -2105,7 +2105,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2129,7 +2129,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0002 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2153,7 +2153,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2179,7 +2179,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2205,7 +2205,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0007 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2231,7 +2231,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2257,7 +2257,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2283,7 +2283,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2309,7 +2309,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2335,7 +2335,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0017 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2361,7 +2361,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0019 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2385,7 +2385,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0020 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2409,7 +2409,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0021 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2435,7 +2435,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0023 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2461,7 +2461,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0025 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2487,7 +2487,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0027 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2513,7 +2513,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0029 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2537,7 +2537,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0030 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2563,7 +2563,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0032 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2589,7 +2589,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0034 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2615,7 +2615,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0036 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2639,7 +2639,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0037 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2665,7 +2665,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0039 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2691,7 +2691,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0041 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2715,7 +2715,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0042 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2741,7 +2741,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0044 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2767,7 +2767,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0046 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2791,7 +2791,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0047 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2817,7 +2817,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0049 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2843,7 +2843,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0051 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2867,7 +2867,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0052 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2893,7 +2893,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0054 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2919,7 +2919,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0056 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2945,7 +2945,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0058 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2969,7 +2969,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0059 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -2995,7 +2995,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0061 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3021,7 +3021,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0063 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3045,7 +3045,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0064 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3071,7 +3071,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0066 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3097,7 +3097,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0068 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3121,7 +3121,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0069 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3147,7 +3147,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0071 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3173,7 +3173,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0073 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3197,7 +3197,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0074 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3223,7 +3223,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0076 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3249,7 +3249,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0078 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3275,7 +3275,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0080 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3299,7 +3299,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0081 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3325,7 +3325,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0083 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3351,7 +3351,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0085 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3375,7 +3375,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0086 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3401,7 +3401,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0088 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3427,7 +3427,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0090 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3451,7 +3451,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0091 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3477,7 +3477,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0093 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3503,7 +3503,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0095 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3527,7 +3527,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0096 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3551,7 +3551,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0097 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3575,7 +3575,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0098 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3601,7 +3601,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0100 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3627,7 +3627,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0102 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3651,7 +3651,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0103 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3675,7 +3675,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0104 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3713,7 +3713,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0118 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3740,7 +3740,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0121 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3767,7 +3767,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0124 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3794,7 +3794,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0127 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3821,7 +3821,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0130 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3848,7 +3848,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0133 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3874,7 +3874,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0135 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3900,7 +3900,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0137 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3926,7 +3926,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0139 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3952,7 +3952,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0141 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -3978,7 +3978,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0143 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4004,7 +4004,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0145 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4028,7 +4028,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0146 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4052,7 +4052,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0147 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4076,7 +4076,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0148 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4100,7 +4100,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0149 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4124,7 +4124,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0150 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4148,7 +4148,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0151 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4172,7 +4172,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0152 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4196,7 +4196,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0153 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4220,7 +4220,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0154 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4244,7 +4244,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0155 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4268,7 +4268,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0156 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4292,7 +4292,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0157 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4316,7 +4316,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0158 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4340,7 +4340,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0159 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4364,7 +4364,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0160 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4388,7 +4388,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0161 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4412,7 +4412,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0162 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4436,7 +4436,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0163 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4460,7 +4460,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0164 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4484,7 +4484,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0165 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4508,7 +4508,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0166 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4532,7 +4532,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0167 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4556,7 +4556,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0168 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4580,7 +4580,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0169 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4604,7 +4604,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0170 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4628,7 +4628,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0171 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4652,7 +4652,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0172 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4676,7 +4676,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0173 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4700,7 +4700,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0174 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4724,7 +4724,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0175 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4748,7 +4748,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0176 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4772,7 +4772,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0177 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4796,7 +4796,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0178 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4820,7 +4820,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0179 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4844,7 +4844,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0180 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4868,7 +4868,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0181 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4892,7 +4892,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0182 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4916,7 +4916,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0183 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4940,7 +4940,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0184 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4964,7 +4964,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0185 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -4988,7 +4988,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0186 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5012,7 +5012,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0187 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5036,7 +5036,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0188 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5060,7 +5060,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0189 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5084,7 +5084,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0190 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5108,7 +5108,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0191 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5132,7 +5132,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0192 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5156,7 +5156,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0193 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5180,7 +5180,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0194 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5204,7 +5204,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0195 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5228,7 +5228,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0196 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5252,7 +5252,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0197 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5276,7 +5276,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0198 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5300,7 +5300,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0199 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5324,7 +5324,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0200 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5350,7 +5350,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0202 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5374,7 +5374,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0203 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5398,7 +5398,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0204 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5422,7 +5422,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0205 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5446,7 +5446,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0206 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5470,7 +5470,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0207 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5494,7 +5494,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0208 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5518,7 +5518,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0209 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5542,7 +5542,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0210 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5566,7 +5566,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0211 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5590,7 +5590,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0212 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5614,7 +5614,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0213 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5638,7 +5638,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0214 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5662,7 +5662,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0215 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5686,7 +5686,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0216 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5710,7 +5710,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0217 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5734,7 +5734,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0218 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5758,7 +5758,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0219 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5782,7 +5782,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0220 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5806,7 +5806,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0221 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5830,7 +5830,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0222 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5854,7 +5854,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0223 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5880,7 +5880,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0225 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5906,7 +5906,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0227 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5930,7 +5930,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0228 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5954,7 +5954,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0229 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -5978,7 +5978,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0230 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6002,7 +6002,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0231 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6028,7 +6028,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0233 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6054,7 +6054,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0235 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6080,7 +6080,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0237 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6106,7 +6106,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0239 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6132,7 +6132,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0241 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6158,7 +6158,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0243 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6184,7 +6184,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0245 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6210,7 +6210,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0247 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6234,7 +6234,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0248 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6258,7 +6258,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0249 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6284,7 +6284,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0251 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6310,7 +6310,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0253 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6334,7 +6334,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0254 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6358,7 +6358,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0255 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6382,7 +6382,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0256 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6406,7 +6406,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0257 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6439,7 +6439,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0266 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6465,7 +6465,7 @@ return {
 		}
 	},
 	CB_DeathKnight_0268 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6489,7 +6489,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_0269 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -6513,7 +6513,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6537,7 +6537,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0002 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6561,7 +6561,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6585,7 +6585,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0004 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6609,7 +6609,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6633,7 +6633,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0006 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6657,7 +6657,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0007 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6681,7 +6681,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0008 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6705,7 +6705,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6729,7 +6729,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0010 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6753,7 +6753,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6777,7 +6777,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0012 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6801,7 +6801,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6825,7 +6825,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0014 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6849,7 +6849,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6873,7 +6873,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0016 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6897,7 +6897,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0017 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6921,7 +6921,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0018 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6945,7 +6945,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0019 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6969,7 +6969,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0020 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -6993,7 +6993,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0021 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7017,7 +7017,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0022 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7041,7 +7041,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0023 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7065,7 +7065,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0024 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7089,7 +7089,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0025 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7113,7 +7113,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0026 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7137,7 +7137,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0027 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7161,7 +7161,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0028 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7185,7 +7185,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0029 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7209,7 +7209,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_aura_0030 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			240,
 			90
@@ -7233,7 +7233,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_buffed = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			22
@@ -7257,7 +7257,7 @@ return {
 		alias = {}
 	},
 	CB_DeathKnight_buffedFx_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7283,7 +7283,7 @@ return {
 		}
 	},
 	CB_DeathKnight_buffedFx_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7309,7 +7309,7 @@ return {
 		}
 	},
 	CB_DeathKnight_buffedFx_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7335,7 +7335,7 @@ return {
 		}
 	},
 	CB_DeathKnight_buffedFx_0007 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7361,7 +7361,7 @@ return {
 		}
 	},
 	CB_DeathKnight_buffedFx_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7387,7 +7387,7 @@ return {
 		}
 	},
 	CB_DeathKnight_buffedFx_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7413,7 +7413,7 @@ return {
 		}
 	},
 	CB_DeathKnight_buffedFx_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7439,7 +7439,7 @@ return {
 		}
 	},
 	CB_DeathKnight_buffedFx_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			178,
 			130
@@ -7465,7 +7465,7 @@ return {
 		}
 	},
 	CB_Lycan_0001 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7491,7 +7491,7 @@ return {
 		}
 	},
 	CB_Lycan_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -7517,7 +7517,7 @@ return {
 		}
 	},
 	CB_Lycan_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -7543,7 +7543,7 @@ return {
 		}
 	},
 	CB_Lycan_0007 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7567,7 +7567,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0008 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7593,7 +7593,7 @@ return {
 		}
 	},
 	CB_Lycan_0010 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7619,7 +7619,7 @@ return {
 		}
 	},
 	CB_Lycan_0012 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7645,7 +7645,7 @@ return {
 		}
 	},
 	CB_Lycan_0014 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7671,7 +7671,7 @@ return {
 		}
 	},
 	CB_Lycan_0016 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -7697,7 +7697,7 @@ return {
 		}
 	},
 	CB_Lycan_0018 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7721,7 +7721,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0019 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7747,7 +7747,7 @@ return {
 		}
 	},
 	CB_Lycan_0021 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7773,7 +7773,7 @@ return {
 		}
 	},
 	CB_Lycan_0023 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7799,7 +7799,7 @@ return {
 		}
 	},
 	CB_Lycan_0025 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7825,7 +7825,7 @@ return {
 		}
 	},
 	CB_Lycan_0027 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7851,7 +7851,7 @@ return {
 		}
 	},
 	CB_Lycan_0029 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7875,7 +7875,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0030 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7901,7 +7901,7 @@ return {
 		}
 	},
 	CB_Lycan_0032 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -7927,7 +7927,7 @@ return {
 		}
 	},
 	CB_Lycan_0034 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7953,7 +7953,7 @@ return {
 		}
 	},
 	CB_Lycan_0036 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -7979,7 +7979,7 @@ return {
 		}
 	},
 	CB_Lycan_0038 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8005,7 +8005,7 @@ return {
 		}
 	},
 	CB_Lycan_0040 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8029,7 +8029,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0041 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8055,7 +8055,7 @@ return {
 		}
 	},
 	CB_Lycan_0043 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8081,7 +8081,7 @@ return {
 		}
 	},
 	CB_Lycan_0045 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8107,7 +8107,7 @@ return {
 		}
 	},
 	CB_Lycan_0047 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8133,7 +8133,7 @@ return {
 		}
 	},
 	CB_Lycan_0049 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8157,7 +8157,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0050 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8183,7 +8183,7 @@ return {
 		}
 	},
 	CB_Lycan_0052 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8209,7 +8209,7 @@ return {
 		}
 	},
 	CB_Lycan_0054 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8235,7 +8235,7 @@ return {
 		}
 	},
 	CB_Lycan_0056 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8261,7 +8261,7 @@ return {
 		}
 	},
 	CB_Lycan_0058 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8287,7 +8287,7 @@ return {
 		}
 	},
 	CB_Lycan_0060 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8311,7 +8311,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0061 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8337,7 +8337,7 @@ return {
 		}
 	},
 	CB_Lycan_0063 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8363,7 +8363,7 @@ return {
 		}
 	},
 	CB_Lycan_0065 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8389,7 +8389,7 @@ return {
 		}
 	},
 	CB_Lycan_0067 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8416,7 +8416,7 @@ return {
 		}
 	},
 	CB_Lycan_0069 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8442,7 +8442,7 @@ return {
 		}
 	},
 	CB_Lycan_0071 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8468,7 +8468,7 @@ return {
 		}
 	},
 	CB_Lycan_0073 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8494,7 +8494,7 @@ return {
 		}
 	},
 	CB_Lycan_0075 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8518,7 +8518,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0076 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8544,7 +8544,7 @@ return {
 		}
 	},
 	CB_Lycan_0078 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8571,7 +8571,7 @@ return {
 		}
 	},
 	CB_Lycan_0081 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8595,7 +8595,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0082 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8621,7 +8621,7 @@ return {
 		}
 	},
 	CB_Lycan_0084 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8647,7 +8647,7 @@ return {
 		}
 	},
 	CB_Lycan_0087 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8671,7 +8671,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0088 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8698,7 +8698,7 @@ return {
 		}
 	},
 	CB_Lycan_0091 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8724,7 +8724,7 @@ return {
 		}
 	},
 	CB_Lycan_0093 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8750,7 +8750,7 @@ return {
 		}
 	},
 	CB_Lycan_0095 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8779,7 +8779,7 @@ return {
 		}
 	},
 	CB_Lycan_0100 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -8805,7 +8805,7 @@ return {
 		}
 	},
 	CB_Lycan_0102 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8831,7 +8831,7 @@ return {
 		}
 	},
 	CB_Lycan_0104 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8858,7 +8858,7 @@ return {
 		}
 	},
 	CB_Lycan_0107 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8884,7 +8884,7 @@ return {
 		}
 	},
 	CB_Lycan_0109 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8910,7 +8910,7 @@ return {
 		}
 	},
 	CB_Lycan_0111 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8936,7 +8936,7 @@ return {
 		}
 	},
 	CB_Lycan_0113 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8962,7 +8962,7 @@ return {
 		}
 	},
 	CB_Lycan_0115 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -8988,7 +8988,7 @@ return {
 		}
 	},
 	CB_Lycan_0117 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9014,7 +9014,7 @@ return {
 		}
 	},
 	CB_Lycan_0119 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9040,7 +9040,7 @@ return {
 		}
 	},
 	CB_Lycan_0121 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9066,7 +9066,7 @@ return {
 		}
 	},
 	CB_Lycan_0123 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9092,7 +9092,7 @@ return {
 		}
 	},
 	CB_Lycan_0125 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9118,7 +9118,7 @@ return {
 		}
 	},
 	CB_Lycan_0127 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9144,7 +9144,7 @@ return {
 		}
 	},
 	CB_Lycan_0129 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9170,7 +9170,7 @@ return {
 		}
 	},
 	CB_Lycan_0131 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9196,7 +9196,7 @@ return {
 		}
 	},
 	CB_Lycan_0133 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9222,7 +9222,7 @@ return {
 		}
 	},
 	CB_Lycan_0135 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9248,7 +9248,7 @@ return {
 		}
 	},
 	CB_Lycan_0137 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9274,7 +9274,7 @@ return {
 		}
 	},
 	CB_Lycan_0139 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9300,7 +9300,7 @@ return {
 		}
 	},
 	CB_Lycan_0141 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9326,7 +9326,7 @@ return {
 		}
 	},
 	CB_Lycan_0143 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9352,7 +9352,7 @@ return {
 		}
 	},
 	CB_Lycan_0145 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9378,7 +9378,7 @@ return {
 		}
 	},
 	CB_Lycan_0147 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9404,7 +9404,7 @@ return {
 		}
 	},
 	CB_Lycan_0149 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9430,7 +9430,7 @@ return {
 		}
 	},
 	CB_Lycan_0151 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9456,7 +9456,7 @@ return {
 		}
 	},
 	CB_Lycan_0153 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9482,7 +9482,7 @@ return {
 		}
 	},
 	CB_Lycan_0155 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9508,7 +9508,7 @@ return {
 		}
 	},
 	CB_Lycan_0157 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9535,7 +9535,7 @@ return {
 		}
 	},
 	CB_Lycan_0159 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9561,7 +9561,7 @@ return {
 		}
 	},
 	CB_Lycan_0161 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9587,7 +9587,7 @@ return {
 		}
 	},
 	CB_Lycan_0163 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9611,7 +9611,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0164 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9637,7 +9637,7 @@ return {
 		}
 	},
 	CB_Lycan_0166 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9661,7 +9661,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0167 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9687,7 +9687,7 @@ return {
 		}
 	},
 	CB_Lycan_0169 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9713,7 +9713,7 @@ return {
 		}
 	},
 	CB_Lycan_0171 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9737,7 +9737,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0172 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9761,7 +9761,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0173 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9787,7 +9787,7 @@ return {
 		}
 	},
 	CB_Lycan_0175 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9811,7 +9811,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0176 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9837,7 +9837,7 @@ return {
 		}
 	},
 	CB_Lycan_0178 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9863,7 +9863,7 @@ return {
 		}
 	},
 	CB_Lycan_0181 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9893,7 +9893,7 @@ return {
 		}
 	},
 	CB_Lycan_0187 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9919,7 +9919,7 @@ return {
 		}
 	},
 	CB_Lycan_0189 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9946,7 +9946,7 @@ return {
 		}
 	},
 	CB_Lycan_0192 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -9973,7 +9973,7 @@ return {
 		}
 	},
 	CB_Lycan_0195 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10000,7 +10000,7 @@ return {
 		}
 	},
 	CB_Lycan_0198 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10027,7 +10027,7 @@ return {
 		}
 	},
 	CB_Lycan_0201 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10054,7 +10054,7 @@ return {
 		}
 	},
 	CB_Lycan_0204 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10080,7 +10080,7 @@ return {
 		}
 	},
 	CB_Lycan_0206 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10106,7 +10106,7 @@ return {
 		}
 	},
 	CB_Lycan_0208 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10132,7 +10132,7 @@ return {
 		}
 	},
 	CB_Lycan_0210 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10156,7 +10156,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0211 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10182,7 +10182,7 @@ return {
 		}
 	},
 	CB_Lycan_0213 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10208,7 +10208,7 @@ return {
 		}
 	},
 	CB_Lycan_0215 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10232,7 +10232,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0216 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10256,7 +10256,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0217 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10280,7 +10280,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0218 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10306,7 +10306,7 @@ return {
 		}
 	},
 	CB_Lycan_0220 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10332,7 +10332,7 @@ return {
 		}
 	},
 	CB_Lycan_0222 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10356,7 +10356,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0223 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10380,7 +10380,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0224 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10404,7 +10404,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0225 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10428,7 +10428,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0226 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10461,7 +10461,7 @@ return {
 		}
 	},
 	CB_Lycan_0235 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10487,7 +10487,7 @@ return {
 		}
 	},
 	CB_Lycan_0237 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10511,7 +10511,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0238 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10535,7 +10535,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0239 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10559,7 +10559,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0240 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10583,7 +10583,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0241 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10609,7 +10609,7 @@ return {
 		}
 	},
 	CB_Lycan_0243 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10635,7 +10635,7 @@ return {
 		}
 	},
 	CB_Lycan_0245 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10659,7 +10659,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0246 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10683,7 +10683,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0247 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			88
@@ -10707,7 +10707,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0248 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10731,7 +10731,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0249 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10764,7 +10764,7 @@ return {
 		}
 	},
 	CB_Lycan_0258 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10790,7 +10790,7 @@ return {
 		}
 	},
 	CB_Lycan_0260 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			126,
 			88
@@ -10814,7 +10814,7 @@ return {
 		alias = {}
 	},
 	CB_Lycan_0261 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			126,
 			89
@@ -10838,7 +10838,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -10862,7 +10862,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0002 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -10886,7 +10886,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -10910,7 +10910,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0004 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -10934,7 +10934,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -10958,7 +10958,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0006 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -10986,7 +10986,7 @@ return {
 		}
 	},
 	CB_Rat_0008 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11010,7 +11010,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0009 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11034,7 +11034,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0010 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11060,7 +11060,7 @@ return {
 		}
 	},
 	CB_Rat_0012 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11084,7 +11084,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0013 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11108,7 +11108,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0014 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11132,7 +11132,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0015 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11156,7 +11156,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0016 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11180,7 +11180,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0017 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11204,7 +11204,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0018 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11230,7 +11230,7 @@ return {
 		}
 	},
 	CB_Rat_0020 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11254,7 +11254,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0021 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11278,7 +11278,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0022 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11302,7 +11302,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0023 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11326,7 +11326,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0024 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			90,
 			56
@@ -11350,7 +11350,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0025 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11377,7 +11377,7 @@ return {
 		}
 	},
 	CB_Rat_0027 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11403,7 +11403,7 @@ return {
 		}
 	},
 	CB_Rat_0029 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11427,7 +11427,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0030 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11451,7 +11451,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0031 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11475,7 +11475,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0032 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11499,7 +11499,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0033 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11525,7 +11525,7 @@ return {
 		}
 	},
 	CB_Rat_0035 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11551,7 +11551,7 @@ return {
 		}
 	},
 	CB_Rat_0037 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11577,7 +11577,7 @@ return {
 		}
 	},
 	CB_Rat_0039 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11603,7 +11603,7 @@ return {
 		}
 	},
 	CB_Rat_0041 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11629,7 +11629,7 @@ return {
 		}
 	},
 	CB_Rat_0043 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11657,7 +11657,7 @@ return {
 		}
 	},
 	CB_Rat_0048 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11683,7 +11683,7 @@ return {
 		}
 	},
 	CB_Rat_0050 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11709,7 +11709,7 @@ return {
 		}
 	},
 	CB_Rat_0052 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11735,7 +11735,7 @@ return {
 		}
 	},
 	CB_Rat_0054 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11765,7 +11765,7 @@ return {
 		}
 	},
 	CB_Rat_0060 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11791,7 +11791,7 @@ return {
 		}
 	},
 	CB_Rat_0062 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11817,7 +11817,7 @@ return {
 		}
 	},
 	CB_Rat_0064 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11841,7 +11841,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0065 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11867,7 +11867,7 @@ return {
 		}
 	},
 	CB_Rat_0067 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11891,7 +11891,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0068 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11915,7 +11915,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0069 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11941,7 +11941,7 @@ return {
 		}
 	},
 	CB_Rat_0071 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11967,7 +11967,7 @@ return {
 		}
 	},
 	CB_Rat_0073 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -11991,7 +11991,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0074 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12015,7 +12015,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0075 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12039,7 +12039,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0076 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12063,7 +12063,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0077 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12096,7 +12096,7 @@ return {
 		}
 	},
 	CB_Rat_0086 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12122,7 +12122,7 @@ return {
 		}
 	},
 	CB_Rat_0088 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12146,7 +12146,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0089 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12170,7 +12170,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0090 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12196,7 +12196,7 @@ return {
 		}
 	},
 	CB_Rat_0092 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12222,7 +12222,7 @@ return {
 		}
 	},
 	CB_Rat_0094 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12248,7 +12248,7 @@ return {
 		}
 	},
 	CB_Rat_0096 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12274,7 +12274,7 @@ return {
 		}
 	},
 	CB_Rat_0098 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12300,7 +12300,7 @@ return {
 		}
 	},
 	CB_Rat_0100 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12326,7 +12326,7 @@ return {
 		}
 	},
 	CB_Rat_0102 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12350,7 +12350,7 @@ return {
 		alias = {}
 	},
 	CB_Rat_0105 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			90,
 			56
@@ -12374,7 +12374,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12400,7 +12400,7 @@ return {
 		}
 	},
 	CB_Ratman_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12424,7 +12424,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0004 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12450,7 +12450,7 @@ return {
 		}
 	},
 	CB_Ratman_0006 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12476,7 +12476,7 @@ return {
 		}
 	},
 	CB_Ratman_0008 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12502,7 +12502,7 @@ return {
 		}
 	},
 	CB_Ratman_0010 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12526,7 +12526,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12550,7 +12550,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0012 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12574,7 +12574,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12600,7 +12600,7 @@ return {
 		}
 	},
 	CB_Ratman_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12626,7 +12626,7 @@ return {
 		}
 	},
 	CB_Ratman_0017 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12650,7 +12650,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0018 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12676,7 +12676,7 @@ return {
 		}
 	},
 	CB_Ratman_0020 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12702,7 +12702,7 @@ return {
 		}
 	},
 	CB_Ratman_0022 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12728,7 +12728,7 @@ return {
 		}
 	},
 	CB_Ratman_0024 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12752,7 +12752,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0025 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12778,7 +12778,7 @@ return {
 		}
 	},
 	CB_Ratman_0027 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12804,7 +12804,7 @@ return {
 		}
 	},
 	CB_Ratman_0029 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12830,7 +12830,7 @@ return {
 		}
 	},
 	CB_Ratman_0031 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12854,7 +12854,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0032 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12880,7 +12880,7 @@ return {
 		}
 	},
 	CB_Ratman_0034 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12906,7 +12906,7 @@ return {
 		}
 	},
 	CB_Ratman_0036 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12932,7 +12932,7 @@ return {
 		}
 	},
 	CB_Ratman_0038 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12956,7 +12956,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0039 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -12982,7 +12982,7 @@ return {
 		}
 	},
 	CB_Ratman_0041 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13008,7 +13008,7 @@ return {
 		}
 	},
 	CB_Ratman_0043 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13035,7 +13035,7 @@ return {
 		}
 	},
 	CB_Ratman_0045 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13061,7 +13061,7 @@ return {
 		}
 	},
 	CB_Ratman_0047 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13087,7 +13087,7 @@ return {
 		}
 	},
 	CB_Ratman_0049 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13113,7 +13113,7 @@ return {
 		}
 	},
 	CB_Ratman_0051 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13137,7 +13137,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0052 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13163,7 +13163,7 @@ return {
 		}
 	},
 	CB_Ratman_0054 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13189,7 +13189,7 @@ return {
 		}
 	},
 	CB_Ratman_0056 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13215,7 +13215,7 @@ return {
 		}
 	},
 	CB_Ratman_0058 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13241,7 +13241,7 @@ return {
 		}
 	},
 	CB_Ratman_0060 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13267,7 +13267,7 @@ return {
 		}
 	},
 	CB_Ratman_0063 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13293,7 +13293,7 @@ return {
 		}
 	},
 	CB_Ratman_0065 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13319,7 +13319,7 @@ return {
 		}
 	},
 	CB_Ratman_0067 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13345,7 +13345,7 @@ return {
 		}
 	},
 	CB_Ratman_0069 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13371,7 +13371,7 @@ return {
 		}
 	},
 	CB_Ratman_0071 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13395,7 +13395,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0072 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13421,7 +13421,7 @@ return {
 		}
 	},
 	CB_Ratman_0074 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13447,7 +13447,7 @@ return {
 		}
 	},
 	CB_Ratman_0076 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13473,7 +13473,7 @@ return {
 		}
 	},
 	CB_Ratman_0078 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13499,7 +13499,7 @@ return {
 		}
 	},
 	CB_Ratman_0080 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13525,7 +13525,7 @@ return {
 		}
 	},
 	CB_Ratman_0082 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13551,7 +13551,7 @@ return {
 		}
 	},
 	CB_Ratman_0084 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13575,7 +13575,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0085 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13599,7 +13599,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0086 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13625,7 +13625,7 @@ return {
 		}
 	},
 	CB_Ratman_0088 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13651,7 +13651,7 @@ return {
 		}
 	},
 	CB_Ratman_0090 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13675,7 +13675,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0091 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13699,7 +13699,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0092 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13723,7 +13723,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0093 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13747,7 +13747,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0094 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13780,7 +13780,7 @@ return {
 		}
 	},
 	CB_Ratman_0103 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13806,7 +13806,7 @@ return {
 		}
 	},
 	CB_Ratman_0105 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13830,7 +13830,7 @@ return {
 		alias = {}
 	},
 	CB_Ratman_0106 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			130,
 			94
@@ -13854,7 +13854,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -13880,7 +13880,7 @@ return {
 		}
 	},
 	CB_Werewolf_0003 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -13906,7 +13906,7 @@ return {
 		}
 	},
 	CB_Werewolf_0005 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -13932,7 +13932,7 @@ return {
 		}
 	},
 	CB_Werewolf_0007 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -13958,7 +13958,7 @@ return {
 		}
 	},
 	CB_Werewolf_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -13984,7 +13984,7 @@ return {
 		}
 	},
 	CB_Werewolf_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14010,7 +14010,7 @@ return {
 		}
 	},
 	CB_Werewolf_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14036,7 +14036,7 @@ return {
 		}
 	},
 	CB_Werewolf_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14062,7 +14062,7 @@ return {
 		}
 	},
 	CB_Werewolf_0017 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14088,7 +14088,7 @@ return {
 		}
 	},
 	CB_Werewolf_0019 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14112,7 +14112,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0020 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14136,7 +14136,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0021 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14162,7 +14162,7 @@ return {
 		}
 	},
 	CB_Werewolf_0023 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14188,7 +14188,7 @@ return {
 		}
 	},
 	CB_Werewolf_0025 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14214,7 +14214,7 @@ return {
 		}
 	},
 	CB_Werewolf_0027 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14240,7 +14240,7 @@ return {
 		}
 	},
 	CB_Werewolf_0029 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14266,7 +14266,7 @@ return {
 		}
 	},
 	CB_Werewolf_0031 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14292,7 +14292,7 @@ return {
 		}
 	},
 	CB_Werewolf_0033 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14318,7 +14318,7 @@ return {
 		}
 	},
 	CB_Werewolf_0035 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14344,7 +14344,7 @@ return {
 		}
 	},
 	CB_Werewolf_0037 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14370,7 +14370,7 @@ return {
 		}
 	},
 	CB_Werewolf_0039 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14396,7 +14396,7 @@ return {
 		}
 	},
 	CB_Werewolf_0041 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14422,7 +14422,7 @@ return {
 		}
 	},
 	CB_Werewolf_0043 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14448,7 +14448,7 @@ return {
 		}
 	},
 	CB_Werewolf_0045 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14474,7 +14474,7 @@ return {
 		}
 	},
 	CB_Werewolf_0047 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14500,7 +14500,7 @@ return {
 		}
 	},
 	CB_Werewolf_0049 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14526,7 +14526,7 @@ return {
 		}
 	},
 	CB_Werewolf_0051 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14552,7 +14552,7 @@ return {
 		}
 	},
 	CB_Werewolf_0053 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14578,7 +14578,7 @@ return {
 		}
 	},
 	CB_Werewolf_0055 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14604,7 +14604,7 @@ return {
 		}
 	},
 	CB_Werewolf_0057 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14630,7 +14630,7 @@ return {
 		}
 	},
 	CB_Werewolf_0059 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14656,7 +14656,7 @@ return {
 		}
 	},
 	CB_Werewolf_0061 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14682,7 +14682,7 @@ return {
 		}
 	},
 	CB_Werewolf_0063 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14708,7 +14708,7 @@ return {
 		}
 	},
 	CB_Werewolf_0065 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14734,7 +14734,7 @@ return {
 		}
 	},
 	CB_Werewolf_0067 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14760,7 +14760,7 @@ return {
 		}
 	},
 	CB_Werewolf_0069 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14786,7 +14786,7 @@ return {
 		}
 	},
 	CB_Werewolf_0071 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14812,7 +14812,7 @@ return {
 		}
 	},
 	CB_Werewolf_0073 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14836,7 +14836,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0074 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14860,7 +14860,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0075 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14886,7 +14886,7 @@ return {
 		}
 	},
 	CB_Werewolf_0077 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14912,7 +14912,7 @@ return {
 		}
 	},
 	CB_Werewolf_0079 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -14949,7 +14949,7 @@ return {
 		}
 	},
 	CB_Werewolf_0092 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -14975,7 +14975,7 @@ return {
 		}
 	},
 	CB_Werewolf_0094 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15001,7 +15001,7 @@ return {
 		}
 	},
 	CB_Werewolf_0096 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15027,7 +15027,7 @@ return {
 		}
 	},
 	CB_Werewolf_0098 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15053,7 +15053,7 @@ return {
 		}
 	},
 	CB_Werewolf_0100 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15079,7 +15079,7 @@ return {
 		}
 	},
 	CB_Werewolf_0102 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15105,7 +15105,7 @@ return {
 		}
 	},
 	CB_Werewolf_0104 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15131,7 +15131,7 @@ return {
 		}
 	},
 	CB_Werewolf_0106 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15157,7 +15157,7 @@ return {
 		}
 	},
 	CB_Werewolf_0108 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15183,7 +15183,7 @@ return {
 		}
 	},
 	CB_Werewolf_0110 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15209,7 +15209,7 @@ return {
 		}
 	},
 	CB_Werewolf_0112 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15235,7 +15235,7 @@ return {
 		}
 	},
 	CB_Werewolf_0114 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15261,7 +15261,7 @@ return {
 		}
 	},
 	CB_Werewolf_0116 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15287,7 +15287,7 @@ return {
 		}
 	},
 	CB_Werewolf_0118 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15313,7 +15313,7 @@ return {
 		}
 	},
 	CB_Werewolf_0120 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15339,7 +15339,7 @@ return {
 		}
 	},
 	CB_Werewolf_0122 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -15365,7 +15365,7 @@ return {
 		}
 	},
 	CB_Werewolf_0124 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			128,
 			94
@@ -15391,7 +15391,7 @@ return {
 		}
 	},
 	CB_Werewolf_0126 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15417,7 +15417,7 @@ return {
 		}
 	},
 	CB_Werewolf_0128 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15441,7 +15441,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0129 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15465,7 +15465,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0130 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15491,7 +15491,7 @@ return {
 		}
 	},
 	CB_Werewolf_0132 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15517,7 +15517,7 @@ return {
 		}
 	},
 	CB_Werewolf_0134 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15541,7 +15541,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0135 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15565,7 +15565,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0136 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15589,7 +15589,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0137 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15613,7 +15613,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0138 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15646,7 +15646,7 @@ return {
 		}
 	},
 	CB_Werewolf_0147 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15672,7 +15672,7 @@ return {
 		}
 	},
 	CB_Werewolf_0149 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15696,7 +15696,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0150 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15720,7 +15720,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0151 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15744,7 +15744,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0152 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15770,7 +15770,7 @@ return {
 		}
 	},
 	CB_Werewolf_0154 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15794,7 +15794,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0155 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15818,7 +15818,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0156 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15842,7 +15842,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0157 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15866,7 +15866,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0158 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15899,7 +15899,7 @@ return {
 		}
 	},
 	CB_Werewolf_0167 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15925,7 +15925,7 @@ return {
 		}
 	},
 	CB_Werewolf_0169 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15949,7 +15949,7 @@ return {
 		alias = {}
 	},
 	CB_Werewolf_0170 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			128,
 			94
@@ -15973,7 +15973,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -15999,7 +15999,7 @@ return {
 		}
 	},
 	CB_Witch_0003 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16025,7 +16025,7 @@ return {
 		}
 	},
 	CB_Witch_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16051,7 +16051,7 @@ return {
 		}
 	},
 	CB_Witch_0007 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16077,7 +16077,7 @@ return {
 		}
 	},
 	CB_Witch_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16103,7 +16103,7 @@ return {
 		}
 	},
 	CB_Witch_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16129,7 +16129,7 @@ return {
 		}
 	},
 	CB_Witch_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16155,7 +16155,7 @@ return {
 		}
 	},
 	CB_Witch_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16181,7 +16181,7 @@ return {
 		}
 	},
 	CB_Witch_0017 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16207,7 +16207,7 @@ return {
 		}
 	},
 	CB_Witch_0019 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16233,7 +16233,7 @@ return {
 		}
 	},
 	CB_Witch_0021 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16259,7 +16259,7 @@ return {
 		}
 	},
 	CB_Witch_0023 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16285,7 +16285,7 @@ return {
 		}
 	},
 	CB_Witch_0025 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16311,7 +16311,7 @@ return {
 		}
 	},
 	CB_Witch_0027 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16337,7 +16337,7 @@ return {
 		}
 	},
 	CB_Witch_0029 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16363,7 +16363,7 @@ return {
 		}
 	},
 	CB_Witch_0031 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16389,7 +16389,7 @@ return {
 		}
 	},
 	CB_Witch_0033 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16415,7 +16415,7 @@ return {
 		}
 	},
 	CB_Witch_0035 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16441,7 +16441,7 @@ return {
 		}
 	},
 	CB_Witch_0037 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16467,7 +16467,7 @@ return {
 		}
 	},
 	CB_Witch_0039 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16493,7 +16493,7 @@ return {
 		}
 	},
 	CB_Witch_0041 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16519,7 +16519,7 @@ return {
 		}
 	},
 	CB_Witch_0043 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16545,7 +16545,7 @@ return {
 		}
 	},
 	CB_Witch_0045 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16571,7 +16571,7 @@ return {
 		}
 	},
 	CB_Witch_0047 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16597,7 +16597,7 @@ return {
 		}
 	},
 	CB_Witch_0049 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16623,7 +16623,7 @@ return {
 		}
 	},
 	CB_Witch_0051 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16649,7 +16649,7 @@ return {
 		}
 	},
 	CB_Witch_0053 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -16675,7 +16675,7 @@ return {
 		}
 	},
 	CB_Witch_0055 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16701,7 +16701,7 @@ return {
 		}
 	},
 	CB_Witch_0057 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16727,7 +16727,7 @@ return {
 		}
 	},
 	CB_Witch_0059 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16753,7 +16753,7 @@ return {
 		}
 	},
 	CB_Witch_0061 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16779,7 +16779,7 @@ return {
 		}
 	},
 	CB_Witch_0063 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16805,7 +16805,7 @@ return {
 		}
 	},
 	CB_Witch_0065 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16831,7 +16831,7 @@ return {
 		}
 	},
 	CB_Witch_0067 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16857,7 +16857,7 @@ return {
 		}
 	},
 	CB_Witch_0069 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16883,7 +16883,7 @@ return {
 		}
 	},
 	CB_Witch_0071 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16909,7 +16909,7 @@ return {
 		}
 	},
 	CB_Witch_0073 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16935,7 +16935,7 @@ return {
 		}
 	},
 	CB_Witch_0075 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16961,7 +16961,7 @@ return {
 		}
 	},
 	CB_Witch_0077 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -16987,7 +16987,7 @@ return {
 		}
 	},
 	CB_Witch_0079 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17013,7 +17013,7 @@ return {
 		}
 	},
 	CB_Witch_0081 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17039,7 +17039,7 @@ return {
 		}
 	},
 	CB_Witch_0083 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17065,7 +17065,7 @@ return {
 		}
 	},
 	CB_Witch_0085 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17091,7 +17091,7 @@ return {
 		}
 	},
 	CB_Witch_0087 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17117,7 +17117,7 @@ return {
 		}
 	},
 	CB_Witch_0089 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17143,7 +17143,7 @@ return {
 		}
 	},
 	CB_Witch_0091 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17167,7 +17167,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0092 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17191,7 +17191,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0093 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17217,7 +17217,7 @@ return {
 		}
 	},
 	CB_Witch_0095 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17241,7 +17241,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0096 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17265,7 +17265,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0097 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17289,7 +17289,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0098 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17313,7 +17313,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0099 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17339,7 +17339,7 @@ return {
 		}
 	},
 	CB_Witch_0101 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			122,
 			130
@@ -17365,7 +17365,7 @@ return {
 		}
 	},
 	CB_Witch_0103 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -17389,7 +17389,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_0104 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			122,
 			130
@@ -17413,7 +17413,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0001 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			70,
 			64
@@ -17437,7 +17437,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0002 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			70,
 			64
@@ -17461,7 +17461,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0003 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			70,
 			64
@@ -17487,7 +17487,7 @@ return {
 		}
 	},
 	CB_Witch_explosion_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17511,7 +17511,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0006 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17535,7 +17535,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0007 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17559,7 +17559,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0008 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17583,7 +17583,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17607,7 +17607,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0010 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17631,7 +17631,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17655,7 +17655,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0012 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17679,7 +17679,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_explosion_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17705,7 +17705,7 @@ return {
 		}
 	},
 	CB_Witch_explosion_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17731,7 +17731,7 @@ return {
 		}
 	},
 	CB_Witch_explosion_0017 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			70,
 			64
@@ -17757,7 +17757,7 @@ return {
 		}
 	},
 	CB_Witch_explosion_0019 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			70,
 			64
@@ -17781,7 +17781,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0001 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -17805,7 +17805,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0002 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -17829,7 +17829,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0003 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -17855,7 +17855,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0005 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -17879,7 +17879,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0006 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -17903,7 +17903,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0007 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -17927,7 +17927,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0008 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -17951,7 +17951,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0009 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -17975,7 +17975,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0010 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -17999,7 +17999,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0011 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18023,7 +18023,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0012 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18047,7 +18047,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0013 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18073,7 +18073,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0015 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18099,7 +18099,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0017 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18125,7 +18125,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0019 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18151,7 +18151,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0021 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18179,7 +18179,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0023 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18205,7 +18205,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0024 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18231,7 +18231,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0026 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18257,7 +18257,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0028 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18283,7 +18283,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0030 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18307,7 +18307,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0034 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18333,7 +18333,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0036 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18359,7 +18359,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0038 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18385,7 +18385,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0040 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18411,7 +18411,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0042 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18437,7 +18437,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0044 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			66,
 			78
@@ -18463,7 +18463,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0046 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18489,7 +18489,7 @@ return {
 		}
 	},
 	CB_Witch_frog_0048 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18513,7 +18513,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0049 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18537,7 +18537,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_frog_0050 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			66,
 			78
@@ -18561,7 +18561,7 @@ return {
 		alias = {}
 	},
 	CB_Witch_proy_0001 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			26,
 			26
@@ -18585,7 +18585,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0001 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18611,7 +18611,7 @@ return {
 		}
 	},
 	CB_Zombie_0003 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18637,7 +18637,7 @@ return {
 		}
 	},
 	CB_Zombie_0005 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18663,7 +18663,7 @@ return {
 		}
 	},
 	CB_Zombie_0007 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18689,7 +18689,7 @@ return {
 		}
 	},
 	CB_Zombie_0009 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18715,7 +18715,7 @@ return {
 		}
 	},
 	CB_Zombie_0011 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18741,7 +18741,7 @@ return {
 		}
 	},
 	CB_Zombie_0013 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18767,7 +18767,7 @@ return {
 		}
 	},
 	CB_Zombie_0015 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18793,7 +18793,7 @@ return {
 		}
 	},
 	CB_Zombie_0017 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18819,7 +18819,7 @@ return {
 		}
 	},
 	CB_Zombie_0019 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18845,7 +18845,7 @@ return {
 		}
 	},
 	CB_Zombie_0021 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18871,7 +18871,7 @@ return {
 		}
 	},
 	CB_Zombie_0023 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18895,7 +18895,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0024 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18921,7 +18921,7 @@ return {
 		}
 	},
 	CB_Zombie_0026 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -18947,7 +18947,7 @@ return {
 		}
 	},
 	CB_Zombie_0028 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -18973,7 +18973,7 @@ return {
 		}
 	},
 	CB_Zombie_0030 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -18999,7 +18999,7 @@ return {
 		}
 	},
 	CB_Zombie_0032 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19025,7 +19025,7 @@ return {
 		}
 	},
 	CB_Zombie_0034 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19051,7 +19051,7 @@ return {
 		}
 	},
 	CB_Zombie_0036 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19077,7 +19077,7 @@ return {
 		}
 	},
 	CB_Zombie_0038 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19103,7 +19103,7 @@ return {
 		}
 	},
 	CB_Zombie_0040 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19129,7 +19129,7 @@ return {
 		}
 	},
 	CB_Zombie_0042 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19155,7 +19155,7 @@ return {
 		}
 	},
 	CB_Zombie_0044 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19181,7 +19181,7 @@ return {
 		}
 	},
 	CB_Zombie_0046 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19207,7 +19207,7 @@ return {
 		}
 	},
 	CB_Zombie_0048 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19233,7 +19233,7 @@ return {
 		}
 	},
 	CB_Zombie_0050 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19259,7 +19259,7 @@ return {
 		}
 	},
 	CB_Zombie_0052 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19285,7 +19285,7 @@ return {
 		}
 	},
 	CB_Zombie_0054 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19311,7 +19311,7 @@ return {
 		}
 	},
 	CB_Zombie_0056 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19337,7 +19337,7 @@ return {
 		}
 	},
 	CB_Zombie_0058 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19363,7 +19363,7 @@ return {
 		}
 	},
 	CB_Zombie_0060 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19389,7 +19389,7 @@ return {
 		}
 	},
 	CB_Zombie_0062 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19415,7 +19415,7 @@ return {
 		}
 	},
 	CB_Zombie_0064 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19441,7 +19441,7 @@ return {
 		}
 	},
 	CB_Zombie_0066 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19467,7 +19467,7 @@ return {
 		}
 	},
 	CB_Zombie_0068 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19493,7 +19493,7 @@ return {
 		}
 	},
 	CB_Zombie_0070 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19519,7 +19519,7 @@ return {
 		}
 	},
 	CB_Zombie_0072 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19546,7 +19546,7 @@ return {
 		}
 	},
 	CB_Zombie_0074 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19570,7 +19570,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0075 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19596,7 +19596,7 @@ return {
 		}
 	},
 	CB_Zombie_0077 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19622,7 +19622,7 @@ return {
 		}
 	},
 	CB_Zombie_0079 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19650,7 +19650,7 @@ return {
 		}
 	},
 	CB_Zombie_0083 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19676,7 +19676,7 @@ return {
 		}
 	},
 	CB_Zombie_0085 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19700,7 +19700,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0086 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19724,7 +19724,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0087 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19748,7 +19748,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0088 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19775,7 +19775,7 @@ return {
 		}
 	},
 	CB_Zombie_0091 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19801,7 +19801,7 @@ return {
 		}
 	},
 	CB_Zombie_0093 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19825,7 +19825,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0094 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19851,7 +19851,7 @@ return {
 		}
 	},
 	CB_Zombie_0096 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19877,7 +19877,7 @@ return {
 		}
 	},
 	CB_Zombie_0098 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19903,7 +19903,7 @@ return {
 		}
 	},
 	CB_Zombie_0100 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -19927,7 +19927,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0101 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19953,7 +19953,7 @@ return {
 		}
 	},
 	CB_Zombie_0103 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -19979,7 +19979,7 @@ return {
 		}
 	},
 	CB_Zombie_0105 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20005,7 +20005,7 @@ return {
 		}
 	},
 	CB_Zombie_0107 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20031,7 +20031,7 @@ return {
 		}
 	},
 	CB_Zombie_0109 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20057,7 +20057,7 @@ return {
 		}
 	},
 	CB_Zombie_0111 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20085,7 +20085,7 @@ return {
 		}
 	},
 	CB_Zombie_0115 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20111,7 +20111,7 @@ return {
 		}
 	},
 	CB_Zombie_0117 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20137,7 +20137,7 @@ return {
 		}
 	},
 	CB_Zombie_0119 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20163,7 +20163,7 @@ return {
 		}
 	},
 	CB_Zombie_0121 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20189,7 +20189,7 @@ return {
 		}
 	},
 	CB_Zombie_0123 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20215,7 +20215,7 @@ return {
 		}
 	},
 	CB_Zombie_0125 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20241,7 +20241,7 @@ return {
 		}
 	},
 	CB_Zombie_0127 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20267,7 +20267,7 @@ return {
 		}
 	},
 	CB_Zombie_0129 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20293,7 +20293,7 @@ return {
 		}
 	},
 	CB_Zombie_0131 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20319,7 +20319,7 @@ return {
 		}
 	},
 	CB_Zombie_0133 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20345,7 +20345,7 @@ return {
 		}
 	},
 	CB_Zombie_0135 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20371,7 +20371,7 @@ return {
 		}
 	},
 	CB_Zombie_0137 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20397,7 +20397,7 @@ return {
 		}
 	},
 	CB_Zombie_0139 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20423,7 +20423,7 @@ return {
 		}
 	},
 	CB_Zombie_0141 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20449,7 +20449,7 @@ return {
 		}
 	},
 	CB_Zombie_0143 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20475,7 +20475,7 @@ return {
 		}
 	},
 	CB_Zombie_0145 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20501,7 +20501,7 @@ return {
 		}
 	},
 	CB_Zombie_0147 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20525,7 +20525,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0148 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20549,7 +20549,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0149 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20573,7 +20573,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0150 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20597,7 +20597,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0151 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20623,7 +20623,7 @@ return {
 		}
 	},
 	CB_Zombie_0153 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20649,7 +20649,7 @@ return {
 		}
 	},
 	CB_Zombie_0155 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20673,7 +20673,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0156 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20697,7 +20697,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0157 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20721,7 +20721,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0158 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20745,7 +20745,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0159 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20778,7 +20778,7 @@ return {
 		}
 	},
 	CB_Zombie_0168 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20804,7 +20804,7 @@ return {
 		}
 	},
 	CB_Zombie_0170 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20828,7 +20828,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0171 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -20852,7 +20852,7 @@ return {
 		alias = {}
 	},
 	CB_Zombie_0172 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20878,7 +20878,7 @@ return {
 		}
 	},
 	CB_Zombie_0174 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20904,7 +20904,7 @@ return {
 		}
 	},
 	CB_Zombie_0176 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20930,7 +20930,7 @@ return {
 		}
 	},
 	CB_Zombie_0178 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20956,7 +20956,7 @@ return {
 		}
 	},
 	CB_Zombie_0180 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -20982,7 +20982,7 @@ return {
 		}
 	},
 	CB_Zombie_0182 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -21008,7 +21008,7 @@ return {
 		}
 	},
 	CB_Zombie_0184 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -21034,7 +21034,7 @@ return {
 		}
 	},
 	CB_Zombie_0186 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -21060,7 +21060,7 @@ return {
 		}
 	},
 	CB_Zombie_0188 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -21086,7 +21086,7 @@ return {
 		}
 	},
 	CB_Zombie_0190 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -21112,7 +21112,7 @@ return {
 		}
 	},
 	CB_Zombie_0192 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -21138,7 +21138,7 @@ return {
 		}
 	},
 	CB_Zombie_0194 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -21164,7 +21164,7 @@ return {
 		}
 	},
 	CB_Zombie_0196 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -21190,7 +21190,7 @@ return {
 		}
 	},
 	CB_Zombie_0198 = {
-		a_name = "go_enemies_blackburn-2.dds",
+		a_name = "go_enemies_blackburn-2.png",
 		size = {
 			68,
 			72
@@ -21216,7 +21216,7 @@ return {
 		}
 	},
 	CB_Zombie_0200 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72
@@ -21242,7 +21242,7 @@ return {
 		}
 	},
 	CB_Zombie_0202 = {
-		a_name = "go_enemies_blackburn-1.dds",
+		a_name = "go_enemies_blackburn-1.png",
 		size = {
 			68,
 			72

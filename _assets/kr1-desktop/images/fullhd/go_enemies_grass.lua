@@ -2,7 +2,7 @@
 
 return {
 	goblin_0001 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	goblin_0003 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	goblin_0005 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	goblin_0007 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -104,7 +104,7 @@ return {
 		alias = {}
 	},
 	goblin_0008 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	goblin_0010 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	goblin_0012 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	goblin_0014 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	goblin_0016 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	goblin_0018 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -258,7 +258,7 @@ return {
 		alias = {}
 	},
 	goblin_0019 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	goblin_0021 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	goblin_0023 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	goblin_0025 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	goblin_0027 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -388,7 +388,7 @@ return {
 		}
 	},
 	goblin_0029 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -412,7 +412,7 @@ return {
 		alias = {}
 	},
 	goblin_0030 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -438,7 +438,7 @@ return {
 		}
 	},
 	goblin_0032 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -464,7 +464,7 @@ return {
 		}
 	},
 	goblin_0034 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -490,7 +490,7 @@ return {
 		}
 	},
 	goblin_0036 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -516,7 +516,7 @@ return {
 		}
 	},
 	goblin_0038 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -542,7 +542,7 @@ return {
 		}
 	},
 	goblin_0040 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -566,7 +566,7 @@ return {
 		alias = {}
 	},
 	goblin_0041 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -592,7 +592,7 @@ return {
 		}
 	},
 	goblin_0043 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -618,7 +618,7 @@ return {
 		}
 	},
 	goblin_0045 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -644,7 +644,7 @@ return {
 		}
 	},
 	goblin_0047 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -670,7 +670,7 @@ return {
 		}
 	},
 	goblin_0049 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -696,7 +696,7 @@ return {
 		}
 	},
 	goblin_0051 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	goblin_0052 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -746,7 +746,7 @@ return {
 		}
 	},
 	goblin_0054 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -772,7 +772,7 @@ return {
 		}
 	},
 	goblin_0056 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -798,7 +798,7 @@ return {
 		}
 	},
 	goblin_0058 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -824,7 +824,7 @@ return {
 		}
 	},
 	goblin_0060 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -850,7 +850,7 @@ return {
 		}
 	},
 	goblin_0062 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -874,7 +874,7 @@ return {
 		alias = {}
 	},
 	goblin_0063 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -900,7 +900,7 @@ return {
 		}
 	},
 	goblin_0065 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -926,7 +926,7 @@ return {
 		}
 	},
 	goblin_0067 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -953,7 +953,7 @@ return {
 		}
 	},
 	goblin_0070 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -979,7 +979,7 @@ return {
 		}
 	},
 	goblin_0072 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1005,7 +1005,7 @@ return {
 		}
 	},
 	goblin_0074 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1032,7 +1032,7 @@ return {
 		}
 	},
 	goblin_0077 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1058,7 +1058,7 @@ return {
 		}
 	},
 	goblin_0079 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1082,7 +1082,7 @@ return {
 		alias = {}
 	},
 	goblin_0080 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	goblin_0081 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	goblin_0082 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1154,7 +1154,7 @@ return {
 		alias = {}
 	},
 	goblin_0083 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1178,7 +1178,7 @@ return {
 		alias = {}
 	},
 	goblin_0084 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1202,7 +1202,7 @@ return {
 		alias = {}
 	},
 	goblin_0085 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1228,7 +1228,7 @@ return {
 		}
 	},
 	goblin_0087 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1254,7 +1254,7 @@ return {
 		}
 	},
 	goblin_0089 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1278,7 +1278,7 @@ return {
 		alias = {}
 	},
 	goblin_0090 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1302,7 +1302,7 @@ return {
 		alias = {}
 	},
 	goblin_0091 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1326,7 +1326,7 @@ return {
 		alias = {}
 	},
 	goblin_0092 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1350,7 +1350,7 @@ return {
 		alias = {}
 	},
 	goblin_0093 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1383,7 +1383,7 @@ return {
 		}
 	},
 	goblin_0102 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1409,7 +1409,7 @@ return {
 		}
 	},
 	goblin_0104 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1433,7 +1433,7 @@ return {
 		alias = {}
 	},
 	goblin_0105 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1457,7 +1457,7 @@ return {
 		alias = {}
 	},
 	goblin_0106 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1481,7 +1481,7 @@ return {
 		alias = {}
 	},
 	goblin_0107 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1505,7 +1505,7 @@ return {
 		alias = {}
 	},
 	goblin_0108 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1529,7 +1529,7 @@ return {
 		alias = {}
 	},
 	goblin_0109 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1553,7 +1553,7 @@ return {
 		alias = {}
 	},
 	goblin_0110 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1577,7 +1577,7 @@ return {
 		alias = {}
 	},
 	goblin_0111 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1603,7 +1603,7 @@ return {
 		}
 	},
 	goblin_0113 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1634,7 +1634,7 @@ return {
 		}
 	},
 	goblin_0120 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			68,
 			48
@@ -1658,7 +1658,7 @@ return {
 		alias = {}
 	},
 	ogre_0001 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1684,7 +1684,7 @@ return {
 		}
 	},
 	ogre_0003 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1710,7 +1710,7 @@ return {
 		}
 	},
 	ogre_0005 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1736,7 +1736,7 @@ return {
 		}
 	},
 	ogre_0007 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1762,7 +1762,7 @@ return {
 		}
 	},
 	ogre_0009 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1788,7 +1788,7 @@ return {
 		}
 	},
 	ogre_0011 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1814,7 +1814,7 @@ return {
 		}
 	},
 	ogre_0013 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1840,7 +1840,7 @@ return {
 		}
 	},
 	ogre_0015 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1866,7 +1866,7 @@ return {
 		}
 	},
 	ogre_0017 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1892,7 +1892,7 @@ return {
 		}
 	},
 	ogre_0019 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1918,7 +1918,7 @@ return {
 		}
 	},
 	ogre_0021 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1944,7 +1944,7 @@ return {
 		}
 	},
 	ogre_0023 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1970,7 +1970,7 @@ return {
 		}
 	},
 	ogre_0025 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -1996,7 +1996,7 @@ return {
 		}
 	},
 	ogre_0027 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2022,7 +2022,7 @@ return {
 		}
 	},
 	ogre_0029 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2048,7 +2048,7 @@ return {
 		}
 	},
 	ogre_0031 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2074,7 +2074,7 @@ return {
 		}
 	},
 	ogre_0033 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2100,7 +2100,7 @@ return {
 		}
 	},
 	ogre_0035 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2126,7 +2126,7 @@ return {
 		}
 	},
 	ogre_0037 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2152,7 +2152,7 @@ return {
 		}
 	},
 	ogre_0039 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2178,7 +2178,7 @@ return {
 		}
 	},
 	ogre_0041 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2204,7 +2204,7 @@ return {
 		}
 	},
 	ogre_0043 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2230,7 +2230,7 @@ return {
 		}
 	},
 	ogre_0045 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2256,7 +2256,7 @@ return {
 		}
 	},
 	ogre_0047 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2282,7 +2282,7 @@ return {
 		}
 	},
 	ogre_0049 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2308,7 +2308,7 @@ return {
 		}
 	},
 	ogre_0051 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2334,7 +2334,7 @@ return {
 		}
 	},
 	ogre_0053 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2360,7 +2360,7 @@ return {
 		}
 	},
 	ogre_0055 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2386,7 +2386,7 @@ return {
 		}
 	},
 	ogre_0057 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2412,7 +2412,7 @@ return {
 		}
 	},
 	ogre_0059 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2438,7 +2438,7 @@ return {
 		}
 	},
 	ogre_0061 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2464,7 +2464,7 @@ return {
 		}
 	},
 	ogre_0063 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2490,7 +2490,7 @@ return {
 		}
 	},
 	ogre_0065 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2516,7 +2516,7 @@ return {
 		}
 	},
 	ogre_0067 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2542,7 +2542,7 @@ return {
 		}
 	},
 	ogre_0069 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2568,7 +2568,7 @@ return {
 		}
 	},
 	ogre_0071 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2594,7 +2594,7 @@ return {
 		}
 	},
 	ogre_0073 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2620,7 +2620,7 @@ return {
 		}
 	},
 	ogre_0075 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2646,7 +2646,7 @@ return {
 		}
 	},
 	ogre_0077 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2672,7 +2672,7 @@ return {
 		}
 	},
 	ogre_0079 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2696,7 +2696,7 @@ return {
 		alias = {}
 	},
 	ogre_0080 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2723,7 +2723,7 @@ return {
 		}
 	},
 	ogre_0082 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2749,7 +2749,7 @@ return {
 		}
 	},
 	ogre_0084 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2775,7 +2775,7 @@ return {
 		}
 	},
 	ogre_0086 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2801,7 +2801,7 @@ return {
 		}
 	},
 	ogre_0088 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2827,7 +2827,7 @@ return {
 		}
 	},
 	ogre_0090 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2853,7 +2853,7 @@ return {
 		}
 	},
 	ogre_0092 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2880,7 +2880,7 @@ return {
 		}
 	},
 	ogre_0095 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2906,7 +2906,7 @@ return {
 		}
 	},
 	ogre_0097 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2932,7 +2932,7 @@ return {
 		}
 	},
 	ogre_0099 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2958,7 +2958,7 @@ return {
 		}
 	},
 	ogre_0101 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -2985,7 +2985,7 @@ return {
 		}
 	},
 	ogre_0104 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3011,7 +3011,7 @@ return {
 		}
 	},
 	ogre_0107 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3035,7 +3035,7 @@ return {
 		alias = {}
 	},
 	ogre_0108 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3059,7 +3059,7 @@ return {
 		alias = {}
 	},
 	ogre_0109 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3085,7 +3085,7 @@ return {
 		}
 	},
 	ogre_0111 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3111,7 +3111,7 @@ return {
 		}
 	},
 	ogre_0113 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3135,7 +3135,7 @@ return {
 		alias = {}
 	},
 	ogre_0114 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3159,7 +3159,7 @@ return {
 		alias = {}
 	},
 	ogre_0115 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3183,7 +3183,7 @@ return {
 		alias = {}
 	},
 	ogre_0116 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3207,7 +3207,7 @@ return {
 		alias = {}
 	},
 	ogre_0117 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3240,7 +3240,7 @@ return {
 		}
 	},
 	ogre_0126 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3266,7 +3266,7 @@ return {
 		}
 	},
 	ogre_0128 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3290,7 +3290,7 @@ return {
 		alias = {}
 	},
 	ogre_0129 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3314,7 +3314,7 @@ return {
 		alias = {}
 	},
 	ogre_0130 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3340,7 +3340,7 @@ return {
 		}
 	},
 	ogre_0132 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3366,7 +3366,7 @@ return {
 		}
 	},
 	ogre_0134 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3392,7 +3392,7 @@ return {
 		}
 	},
 	ogre_0136 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3418,7 +3418,7 @@ return {
 		}
 	},
 	ogre_0138 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3444,7 +3444,7 @@ return {
 		}
 	},
 	ogre_0140 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3468,7 +3468,7 @@ return {
 		alias = {}
 	},
 	ogre_0141 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3494,7 +3494,7 @@ return {
 		}
 	},
 	ogre_0143 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3520,7 +3520,7 @@ return {
 		}
 	},
 	ogre_0145 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			122,
 			116
@@ -3544,7 +3544,7 @@ return {
 		alias = {}
 	},
 	orc_0001 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3570,7 +3570,7 @@ return {
 		}
 	},
 	orc_0003 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3596,7 +3596,7 @@ return {
 		}
 	},
 	orc_0005 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3622,7 +3622,7 @@ return {
 		}
 	},
 	orc_0007 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3646,7 +3646,7 @@ return {
 		alias = {}
 	},
 	orc_0008 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3672,7 +3672,7 @@ return {
 		}
 	},
 	orc_0010 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3698,7 +3698,7 @@ return {
 		}
 	},
 	orc_0012 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3724,7 +3724,7 @@ return {
 		}
 	},
 	orc_0014 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3750,7 +3750,7 @@ return {
 		}
 	},
 	orc_0016 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3776,7 +3776,7 @@ return {
 		}
 	},
 	orc_0018 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3800,7 +3800,7 @@ return {
 		alias = {}
 	},
 	orc_0019 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3826,7 +3826,7 @@ return {
 		}
 	},
 	orc_0021 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3852,7 +3852,7 @@ return {
 		}
 	},
 	orc_0023 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3878,7 +3878,7 @@ return {
 		}
 	},
 	orc_0025 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3904,7 +3904,7 @@ return {
 		}
 	},
 	orc_0027 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3930,7 +3930,7 @@ return {
 		}
 	},
 	orc_0029 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3954,7 +3954,7 @@ return {
 		alias = {}
 	},
 	orc_0030 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -3980,7 +3980,7 @@ return {
 		}
 	},
 	orc_0032 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4006,7 +4006,7 @@ return {
 		}
 	},
 	orc_0034 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4032,7 +4032,7 @@ return {
 		}
 	},
 	orc_0036 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4058,7 +4058,7 @@ return {
 		}
 	},
 	orc_0038 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4084,7 +4084,7 @@ return {
 		}
 	},
 	orc_0040 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4108,7 +4108,7 @@ return {
 		alias = {}
 	},
 	orc_0041 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4134,7 +4134,7 @@ return {
 		}
 	},
 	orc_0043 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4160,7 +4160,7 @@ return {
 		}
 	},
 	orc_0045 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4186,7 +4186,7 @@ return {
 		}
 	},
 	orc_0047 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4212,7 +4212,7 @@ return {
 		}
 	},
 	orc_0049 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4238,7 +4238,7 @@ return {
 		}
 	},
 	orc_0051 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4262,7 +4262,7 @@ return {
 		alias = {}
 	},
 	orc_0052 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4288,7 +4288,7 @@ return {
 		}
 	},
 	orc_0054 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4314,7 +4314,7 @@ return {
 		}
 	},
 	orc_0056 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4340,7 +4340,7 @@ return {
 		}
 	},
 	orc_0058 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4366,7 +4366,7 @@ return {
 		}
 	},
 	orc_0060 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4392,7 +4392,7 @@ return {
 		}
 	},
 	orc_0062 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4416,7 +4416,7 @@ return {
 		alias = {}
 	},
 	orc_0063 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4442,7 +4442,7 @@ return {
 		}
 	},
 	orc_0065 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4468,7 +4468,7 @@ return {
 		}
 	},
 	orc_0067 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4492,7 +4492,7 @@ return {
 		alias = {}
 	},
 	orc_0068 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4518,7 +4518,7 @@ return {
 		}
 	},
 	orc_0070 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4544,7 +4544,7 @@ return {
 		}
 	},
 	orc_0072 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4570,7 +4570,7 @@ return {
 		}
 	},
 	orc_0074 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4596,7 +4596,7 @@ return {
 		}
 	},
 	orc_0076 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4622,7 +4622,7 @@ return {
 		}
 	},
 	orc_0078 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4646,7 +4646,7 @@ return {
 		alias = {}
 	},
 	orc_0079 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4670,7 +4670,7 @@ return {
 		alias = {}
 	},
 	orc_0080 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4696,7 +4696,7 @@ return {
 		}
 	},
 	orc_0082 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4722,7 +4722,7 @@ return {
 		}
 	},
 	orc_0084 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4746,7 +4746,7 @@ return {
 		alias = {}
 	},
 	orc_0085 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4770,7 +4770,7 @@ return {
 		alias = {}
 	},
 	orc_0086 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4794,7 +4794,7 @@ return {
 		alias = {}
 	},
 	orc_0087 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4818,7 +4818,7 @@ return {
 		alias = {}
 	},
 	orc_0088 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4851,7 +4851,7 @@ return {
 		}
 	},
 	orc_0097 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4877,7 +4877,7 @@ return {
 		}
 	},
 	orc_0099 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4901,7 +4901,7 @@ return {
 		alias = {}
 	},
 	orc_0100 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4925,7 +4925,7 @@ return {
 		alias = {}
 	},
 	orc_0101 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4949,7 +4949,7 @@ return {
 		alias = {}
 	},
 	orc_0102 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4973,7 +4973,7 @@ return {
 		alias = {}
 	},
 	orc_0103 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -4997,7 +4997,7 @@ return {
 		alias = {}
 	},
 	orc_0104 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -5021,7 +5021,7 @@ return {
 		alias = {}
 	},
 	orc_0105 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -5045,7 +5045,7 @@ return {
 		alias = {}
 	},
 	orc_0106 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -5071,7 +5071,7 @@ return {
 		}
 	},
 	orc_0108 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			84,
 			64
@@ -5103,7 +5103,7 @@ return {
 		}
 	},
 	shaman_0001 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5129,7 +5129,7 @@ return {
 		}
 	},
 	shaman_0003 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5155,7 +5155,7 @@ return {
 		}
 	},
 	shaman_0005 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5181,7 +5181,7 @@ return {
 		}
 	},
 	shaman_0007 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5205,7 +5205,7 @@ return {
 		alias = {}
 	},
 	shaman_0008 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5231,7 +5231,7 @@ return {
 		}
 	},
 	shaman_0010 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5257,7 +5257,7 @@ return {
 		}
 	},
 	shaman_0012 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5283,7 +5283,7 @@ return {
 		}
 	},
 	shaman_0014 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5309,7 +5309,7 @@ return {
 		}
 	},
 	shaman_0016 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5335,7 +5335,7 @@ return {
 		}
 	},
 	shaman_0018 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5359,7 +5359,7 @@ return {
 		alias = {}
 	},
 	shaman_0019 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5385,7 +5385,7 @@ return {
 		}
 	},
 	shaman_0021 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5411,7 +5411,7 @@ return {
 		}
 	},
 	shaman_0023 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5437,7 +5437,7 @@ return {
 		}
 	},
 	shaman_0025 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5463,7 +5463,7 @@ return {
 		}
 	},
 	shaman_0027 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5489,7 +5489,7 @@ return {
 		}
 	},
 	shaman_0029 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5513,7 +5513,7 @@ return {
 		alias = {}
 	},
 	shaman_0030 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5539,7 +5539,7 @@ return {
 		}
 	},
 	shaman_0032 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5565,7 +5565,7 @@ return {
 		}
 	},
 	shaman_0034 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5591,7 +5591,7 @@ return {
 		}
 	},
 	shaman_0036 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5617,7 +5617,7 @@ return {
 		}
 	},
 	shaman_0038 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5643,7 +5643,7 @@ return {
 		}
 	},
 	shaman_0040 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5667,7 +5667,7 @@ return {
 		alias = {}
 	},
 	shaman_0041 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5693,7 +5693,7 @@ return {
 		}
 	},
 	shaman_0043 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5719,7 +5719,7 @@ return {
 		}
 	},
 	shaman_0045 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5745,7 +5745,7 @@ return {
 		}
 	},
 	shaman_0047 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5771,7 +5771,7 @@ return {
 		}
 	},
 	shaman_0049 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5797,7 +5797,7 @@ return {
 		}
 	},
 	shaman_0051 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5821,7 +5821,7 @@ return {
 		alias = {}
 	},
 	shaman_0052 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5847,7 +5847,7 @@ return {
 		}
 	},
 	shaman_0054 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5873,7 +5873,7 @@ return {
 		}
 	},
 	shaman_0056 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5899,7 +5899,7 @@ return {
 		}
 	},
 	shaman_0058 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5925,7 +5925,7 @@ return {
 		}
 	},
 	shaman_0060 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5951,7 +5951,7 @@ return {
 		}
 	},
 	shaman_0062 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -5975,7 +5975,7 @@ return {
 		alias = {}
 	},
 	shaman_0063 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6001,7 +6001,7 @@ return {
 		}
 	},
 	shaman_0065 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6027,7 +6027,7 @@ return {
 		}
 	},
 	shaman_0067 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6054,7 +6054,7 @@ return {
 		}
 	},
 	shaman_0068 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6080,7 +6080,7 @@ return {
 		}
 	},
 	shaman_0070 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6106,7 +6106,7 @@ return {
 		}
 	},
 	shaman_0072 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6132,7 +6132,7 @@ return {
 		}
 	},
 	shaman_0074 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6158,7 +6158,7 @@ return {
 		}
 	},
 	shaman_0076 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6184,7 +6184,7 @@ return {
 		}
 	},
 	shaman_0078 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6210,7 +6210,7 @@ return {
 		}
 	},
 	shaman_0080 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6238,7 +6238,7 @@ return {
 		}
 	},
 	shaman_0086 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6264,7 +6264,7 @@ return {
 		}
 	},
 	shaman_0088 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6290,7 +6290,7 @@ return {
 		}
 	},
 	shaman_0090 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6317,7 +6317,7 @@ return {
 		}
 	},
 	shaman_0093 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6341,7 +6341,7 @@ return {
 		alias = {}
 	},
 	shaman_0094 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6365,7 +6365,7 @@ return {
 		alias = {}
 	},
 	shaman_0095 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6389,7 +6389,7 @@ return {
 		alias = {}
 	},
 	shaman_0096 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6413,7 +6413,7 @@ return {
 		alias = {}
 	},
 	shaman_0097 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6437,7 +6437,7 @@ return {
 		alias = {}
 	},
 	shaman_0098 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6461,7 +6461,7 @@ return {
 		alias = {}
 	},
 	shaman_0099 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6485,7 +6485,7 @@ return {
 		alias = {}
 	},
 	shaman_0100 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6509,7 +6509,7 @@ return {
 		alias = {}
 	},
 	shaman_0101 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6533,7 +6533,7 @@ return {
 		alias = {}
 	},
 	shaman_0102 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6557,7 +6557,7 @@ return {
 		alias = {}
 	},
 	shaman_0103 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6581,7 +6581,7 @@ return {
 		alias = {}
 	},
 	shaman_0104 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6605,7 +6605,7 @@ return {
 		alias = {}
 	},
 	shaman_0105 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6629,7 +6629,7 @@ return {
 		alias = {}
 	},
 	shaman_0106 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6653,7 +6653,7 @@ return {
 		alias = {}
 	},
 	shaman_0107 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6677,7 +6677,7 @@ return {
 		alias = {}
 	},
 	shaman_0108 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6701,7 +6701,7 @@ return {
 		alias = {}
 	},
 	shaman_0109 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6725,7 +6725,7 @@ return {
 		alias = {}
 	},
 	shaman_0110 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6749,7 +6749,7 @@ return {
 		alias = {}
 	},
 	shaman_0111 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6773,7 +6773,7 @@ return {
 		alias = {}
 	},
 	shaman_0112 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6797,7 +6797,7 @@ return {
 		alias = {}
 	},
 	shaman_0113 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6821,7 +6821,7 @@ return {
 		alias = {}
 	},
 	shaman_0114 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6847,7 +6847,7 @@ return {
 		}
 	},
 	shaman_0116 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6873,7 +6873,7 @@ return {
 		}
 	},
 	shaman_0118 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6897,7 +6897,7 @@ return {
 		alias = {}
 	},
 	shaman_0119 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6921,7 +6921,7 @@ return {
 		alias = {}
 	},
 	shaman_0120 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6945,7 +6945,7 @@ return {
 		alias = {}
 	},
 	shaman_0121 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -6969,7 +6969,7 @@ return {
 		alias = {}
 	},
 	shaman_0122 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7002,7 +7002,7 @@ return {
 		}
 	},
 	shaman_0131 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7028,7 +7028,7 @@ return {
 		}
 	},
 	shaman_0133 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7052,7 +7052,7 @@ return {
 		alias = {}
 	},
 	shaman_0134 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7076,7 +7076,7 @@ return {
 		alias = {}
 	},
 	shaman_0135 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7100,7 +7100,7 @@ return {
 		alias = {}
 	},
 	shaman_0136 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7124,7 +7124,7 @@ return {
 		alias = {}
 	},
 	shaman_0137 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7148,7 +7148,7 @@ return {
 		alias = {}
 	},
 	shaman_0138 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7172,7 +7172,7 @@ return {
 		alias = {}
 	},
 	shaman_0139 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7196,7 +7196,7 @@ return {
 		alias = {}
 	},
 	shaman_0140 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88
@@ -7222,7 +7222,7 @@ return {
 		}
 	},
 	shaman_0142 = {
-		a_name = "go_enemies_grass-1.dds",
+		a_name = "go_enemies_grass-1.png",
 		size = {
 			88,
 			88

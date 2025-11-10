@@ -2,7 +2,7 @@
 
 return {
 	arachnomancer_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	arachnomancer_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	arachnomancer_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	arachnomancer_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	arachnomancer_0010 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	arachnomancer_0012 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	arachnomancer_0014 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	arachnomancer_0016 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	arachnomancer_0018 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -260,7 +260,7 @@ return {
 		}
 	},
 	arachnomancer_0020 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -286,7 +286,7 @@ return {
 		}
 	},
 	arachnomancer_0022 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -312,7 +312,7 @@ return {
 		}
 	},
 	arachnomancer_0024 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -338,7 +338,7 @@ return {
 		}
 	},
 	arachnomancer_0026 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -364,7 +364,7 @@ return {
 		}
 	},
 	arachnomancer_0028 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -390,7 +390,7 @@ return {
 		}
 	},
 	arachnomancer_0030 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -416,7 +416,7 @@ return {
 		}
 	},
 	arachnomancer_0032 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -442,7 +442,7 @@ return {
 		}
 	},
 	arachnomancer_0034 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -468,7 +468,7 @@ return {
 		}
 	},
 	arachnomancer_0036 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -494,7 +494,7 @@ return {
 		}
 	},
 	arachnomancer_0038 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -520,7 +520,7 @@ return {
 		}
 	},
 	arachnomancer_0040 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -546,7 +546,7 @@ return {
 		}
 	},
 	arachnomancer_0042 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -572,7 +572,7 @@ return {
 		}
 	},
 	arachnomancer_0044 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -598,7 +598,7 @@ return {
 		}
 	},
 	arachnomancer_0046 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -624,7 +624,7 @@ return {
 		}
 	},
 	arachnomancer_0048 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -650,7 +650,7 @@ return {
 		}
 	},
 	arachnomancer_0050 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -676,7 +676,7 @@ return {
 		}
 	},
 	arachnomancer_0052 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	arachnomancer_0054 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -728,7 +728,7 @@ return {
 		}
 	},
 	arachnomancer_0056 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -754,7 +754,7 @@ return {
 		}
 	},
 	arachnomancer_0058 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -780,7 +780,7 @@ return {
 		}
 	},
 	arachnomancer_0060 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -806,7 +806,7 @@ return {
 		}
 	},
 	arachnomancer_0062 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -832,7 +832,7 @@ return {
 		}
 	},
 	arachnomancer_0064 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -858,7 +858,7 @@ return {
 		}
 	},
 	arachnomancer_0066 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -884,7 +884,7 @@ return {
 		}
 	},
 	arachnomancer_0068 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -910,7 +910,7 @@ return {
 		}
 	},
 	arachnomancer_0070 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -936,7 +936,7 @@ return {
 		}
 	},
 	arachnomancer_0072 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -962,7 +962,7 @@ return {
 		}
 	},
 	arachnomancer_0074 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -988,7 +988,7 @@ return {
 		}
 	},
 	arachnomancer_0076 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1016,7 +1016,7 @@ return {
 		}
 	},
 	arachnomancer_0080 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1042,7 +1042,7 @@ return {
 		}
 	},
 	arachnomancer_0082 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1068,7 +1068,7 @@ return {
 		}
 	},
 	arachnomancer_0084 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1094,7 +1094,7 @@ return {
 		}
 	},
 	arachnomancer_0086 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1120,7 +1120,7 @@ return {
 		}
 	},
 	arachnomancer_0088 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1146,7 +1146,7 @@ return {
 		}
 	},
 	arachnomancer_0090 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1172,7 +1172,7 @@ return {
 		}
 	},
 	arachnomancer_0092 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1198,7 +1198,7 @@ return {
 		}
 	},
 	arachnomancer_0094 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1224,7 +1224,7 @@ return {
 		}
 	},
 	arachnomancer_0096 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1250,7 +1250,7 @@ return {
 		}
 	},
 	arachnomancer_0098 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1276,7 +1276,7 @@ return {
 		}
 	},
 	arachnomancer_0100 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1302,7 +1302,7 @@ return {
 		}
 	},
 	arachnomancer_0102 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1328,7 +1328,7 @@ return {
 		}
 	},
 	arachnomancer_0104 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1354,7 +1354,7 @@ return {
 		}
 	},
 	arachnomancer_0106 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1382,7 +1382,7 @@ return {
 		}
 	},
 	arachnomancer_0110 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1412,7 +1412,7 @@ return {
 		}
 	},
 	arachnomancer_0112 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1440,7 +1440,7 @@ return {
 		}
 	},
 	arachnomancer_0120 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1466,7 +1466,7 @@ return {
 		}
 	},
 	arachnomancer_0122 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1492,7 +1492,7 @@ return {
 		}
 	},
 	arachnomancer_0124 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1518,7 +1518,7 @@ return {
 		}
 	},
 	arachnomancer_0126 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1544,7 +1544,7 @@ return {
 		}
 	},
 	arachnomancer_0128 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1570,7 +1570,7 @@ return {
 		}
 	},
 	arachnomancer_0130 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1596,7 +1596,7 @@ return {
 		}
 	},
 	arachnomancer_0132 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1622,7 +1622,7 @@ return {
 		}
 	},
 	arachnomancer_0134 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1648,7 +1648,7 @@ return {
 		}
 	},
 	arachnomancer_0136 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1674,7 +1674,7 @@ return {
 		}
 	},
 	arachnomancer_0138 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1700,7 +1700,7 @@ return {
 		}
 	},
 	arachnomancer_0140 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1724,7 +1724,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_0141 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1748,7 +1748,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_0142 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1774,7 +1774,7 @@ return {
 		}
 	},
 	arachnomancer_0144 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1800,7 +1800,7 @@ return {
 		}
 	},
 	arachnomancer_0146 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			101,
 			62
@@ -1826,7 +1826,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -1850,7 +1850,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_miniSpider_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -1880,7 +1880,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -1910,7 +1910,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -1940,7 +1940,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -1970,7 +1970,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0010 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -2000,7 +2000,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0032 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -2026,7 +2026,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0034 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -2052,7 +2052,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0036 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -2078,7 +2078,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0038 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -2104,7 +2104,7 @@ return {
 		}
 	},
 	arachnomancer_miniSpider_0040 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			17
@@ -2130,7 +2130,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2158,7 +2158,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2182,7 +2182,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2206,7 +2206,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2230,7 +2230,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2254,7 +2254,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2278,7 +2278,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2302,7 +2302,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2326,7 +2326,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2350,7 +2350,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0010 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2374,7 +2374,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2398,7 +2398,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0012 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2422,7 +2422,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2446,7 +2446,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0014 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2470,7 +2470,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2494,7 +2494,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0016 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2518,7 +2518,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2542,7 +2542,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0018 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2566,7 +2566,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2590,7 +2590,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0020 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2614,7 +2614,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2638,7 +2638,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0022 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2662,7 +2662,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2686,7 +2686,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0024 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2710,7 +2710,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2734,7 +2734,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0026 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2758,7 +2758,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0027 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2782,7 +2782,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0028 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2806,7 +2806,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0029 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2832,7 +2832,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2858,7 +2858,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2885,7 +2885,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0036 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2911,7 +2911,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0038 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2935,7 +2935,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0039 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2959,7 +2959,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0040 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -2985,7 +2985,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0044 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3011,7 +3011,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0046 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3037,7 +3037,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0048 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3063,7 +3063,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0050 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3089,7 +3089,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0052 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3115,7 +3115,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0054 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3139,7 +3139,7 @@ return {
 		alias = {}
 	},
 	arachnomancer_spider_0055 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3165,7 +3165,7 @@ return {
 		}
 	},
 	arachnomancer_spider_0057 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			37
@@ -3191,7 +3191,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3217,7 +3217,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3243,7 +3243,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3269,7 +3269,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3295,7 +3295,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3321,7 +3321,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3347,7 +3347,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3373,7 +3373,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_big_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			87,
 			51
@@ -3399,7 +3399,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3425,7 +3425,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3451,7 +3451,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3477,7 +3477,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3503,7 +3503,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3529,7 +3529,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3555,7 +3555,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3581,7 +3581,7 @@ return {
 		}
 	},
 	arachnomancer_webSpawn_small_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			76,
 			45
@@ -3607,7 +3607,7 @@ return {
 		}
 	},
 	drider_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3637,7 +3637,7 @@ return {
 		}
 	},
 	drider_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3661,7 +3661,7 @@ return {
 		alias = {}
 	},
 	drider_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3685,7 +3685,7 @@ return {
 		alias = {}
 	},
 	drider_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3709,7 +3709,7 @@ return {
 		alias = {}
 	},
 	drider_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3733,7 +3733,7 @@ return {
 		alias = {}
 	},
 	drider_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3757,7 +3757,7 @@ return {
 		alias = {}
 	},
 	drider_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3781,7 +3781,7 @@ return {
 		alias = {}
 	},
 	drider_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3805,7 +3805,7 @@ return {
 		alias = {}
 	},
 	drider_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3829,7 +3829,7 @@ return {
 		alias = {}
 	},
 	drider_0010 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3853,7 +3853,7 @@ return {
 		alias = {}
 	},
 	drider_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3877,7 +3877,7 @@ return {
 		alias = {}
 	},
 	drider_0012 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3901,7 +3901,7 @@ return {
 		alias = {}
 	},
 	drider_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3925,7 +3925,7 @@ return {
 		alias = {}
 	},
 	drider_0014 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3949,7 +3949,7 @@ return {
 		alias = {}
 	},
 	drider_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3973,7 +3973,7 @@ return {
 		alias = {}
 	},
 	drider_0016 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -3997,7 +3997,7 @@ return {
 		alias = {}
 	},
 	drider_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4021,7 +4021,7 @@ return {
 		alias = {}
 	},
 	drider_0018 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4045,7 +4045,7 @@ return {
 		alias = {}
 	},
 	drider_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4069,7 +4069,7 @@ return {
 		alias = {}
 	},
 	drider_0020 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4093,7 +4093,7 @@ return {
 		alias = {}
 	},
 	drider_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4117,7 +4117,7 @@ return {
 		alias = {}
 	},
 	drider_0022 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4141,7 +4141,7 @@ return {
 		alias = {}
 	},
 	drider_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4165,7 +4165,7 @@ return {
 		alias = {}
 	},
 	drider_0024 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4189,7 +4189,7 @@ return {
 		alias = {}
 	},
 	drider_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4213,7 +4213,7 @@ return {
 		alias = {}
 	},
 	drider_0026 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4237,7 +4237,7 @@ return {
 		alias = {}
 	},
 	drider_0027 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4261,7 +4261,7 @@ return {
 		alias = {}
 	},
 	drider_0028 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4285,7 +4285,7 @@ return {
 		alias = {}
 	},
 	drider_0029 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4311,7 +4311,7 @@ return {
 		}
 	},
 	drider_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4337,7 +4337,7 @@ return {
 		}
 	},
 	drider_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4363,7 +4363,7 @@ return {
 		}
 	},
 	drider_0035 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4389,7 +4389,7 @@ return {
 		}
 	},
 	drider_0037 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4415,7 +4415,7 @@ return {
 		}
 	},
 	drider_0039 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4441,7 +4441,7 @@ return {
 		}
 	},
 	drider_0041 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4467,7 +4467,7 @@ return {
 		}
 	},
 	drider_0043 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4493,7 +4493,7 @@ return {
 		}
 	},
 	drider_0045 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4517,7 +4517,7 @@ return {
 		alias = {}
 	},
 	drider_0048 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4541,7 +4541,7 @@ return {
 		alias = {}
 	},
 	drider_0049 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4567,7 +4567,7 @@ return {
 		}
 	},
 	drider_0051 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4593,7 +4593,7 @@ return {
 		}
 	},
 	drider_0053 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4619,7 +4619,7 @@ return {
 		}
 	},
 	drider_0055 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4645,7 +4645,7 @@ return {
 		}
 	},
 	drider_0057 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4671,7 +4671,7 @@ return {
 		}
 	},
 	drider_0059 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4702,7 +4702,7 @@ return {
 		}
 	},
 	drider_0066 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4728,7 +4728,7 @@ return {
 		}
 	},
 	drider_0068 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4754,7 +4754,7 @@ return {
 		}
 	},
 	drider_0070 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4780,7 +4780,7 @@ return {
 		}
 	},
 	drider_0072 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4806,7 +4806,7 @@ return {
 		}
 	},
 	drider_0074 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4832,7 +4832,7 @@ return {
 		}
 	},
 	drider_0076 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4858,7 +4858,7 @@ return {
 		}
 	},
 	drider_0078 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4884,7 +4884,7 @@ return {
 		}
 	},
 	drider_0082 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4910,7 +4910,7 @@ return {
 		}
 	},
 	drider_0084 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4936,7 +4936,7 @@ return {
 		}
 	},
 	drider_0086 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4962,7 +4962,7 @@ return {
 		}
 	},
 	drider_0088 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -4988,7 +4988,7 @@ return {
 		}
 	},
 	drider_0090 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -5016,7 +5016,7 @@ return {
 		}
 	},
 	drider_0094 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -5042,7 +5042,7 @@ return {
 		}
 	},
 	drider_0096 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -5068,7 +5068,7 @@ return {
 		}
 	},
 	drider_0098 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -5094,7 +5094,7 @@ return {
 		}
 	},
 	drider_0100 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -5120,7 +5120,7 @@ return {
 		}
 	},
 	drider_0102 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -5146,7 +5146,7 @@ return {
 		}
 	},
 	drider_0104 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			118,
 			82
@@ -5172,7 +5172,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5198,7 +5198,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5224,7 +5224,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5250,7 +5250,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5292,7 +5292,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5318,7 +5318,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5344,7 +5344,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5370,7 +5370,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5396,7 +5396,7 @@ return {
 		}
 	},
 	drider_cocoon_big_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			62,
 			70
@@ -5422,7 +5422,7 @@ return {
 		}
 	},
 	drider_creepFx_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			39,
 			59
@@ -5448,7 +5448,7 @@ return {
 		}
 	},
 	drider_creepFx_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			39,
 			59
@@ -5474,7 +5474,7 @@ return {
 		}
 	},
 	drider_creepFx_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			39,
 			59
@@ -5500,7 +5500,7 @@ return {
 		}
 	},
 	drider_creepFx_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			39,
 			59
@@ -5526,7 +5526,7 @@ return {
 		}
 	},
 	drider_creepFx_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			39,
 			59
@@ -5552,7 +5552,7 @@ return {
 		}
 	},
 	drider_creepFx_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			39,
 			59
@@ -5578,7 +5578,7 @@ return {
 		}
 	},
 	drider_poisonSmoke = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			56
@@ -5602,7 +5602,7 @@ return {
 		alias = {}
 	},
 	gollem_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5628,7 +5628,7 @@ return {
 		}
 	},
 	gollem_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5654,7 +5654,7 @@ return {
 		}
 	},
 	gollem_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5680,7 +5680,7 @@ return {
 		}
 	},
 	gollem_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5706,7 +5706,7 @@ return {
 		}
 	},
 	gollem_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5732,7 +5732,7 @@ return {
 		}
 	},
 	gollem_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5758,7 +5758,7 @@ return {
 		}
 	},
 	gollem_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5784,7 +5784,7 @@ return {
 		}
 	},
 	gollem_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5810,7 +5810,7 @@ return {
 		}
 	},
 	gollem_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5836,7 +5836,7 @@ return {
 		}
 	},
 	gollem_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5862,7 +5862,7 @@ return {
 		}
 	},
 	gollem_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5888,7 +5888,7 @@ return {
 		}
 	},
 	gollem_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5914,7 +5914,7 @@ return {
 		}
 	},
 	gollem_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5940,7 +5940,7 @@ return {
 		}
 	},
 	gollem_0027 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5966,7 +5966,7 @@ return {
 		}
 	},
 	gollem_0029 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -5992,7 +5992,7 @@ return {
 		}
 	},
 	gollem_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6018,7 +6018,7 @@ return {
 		}
 	},
 	gollem_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6044,7 +6044,7 @@ return {
 		}
 	},
 	gollem_0035 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6070,7 +6070,7 @@ return {
 		}
 	},
 	gollem_0037 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6096,7 +6096,7 @@ return {
 		}
 	},
 	gollem_0039 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6122,7 +6122,7 @@ return {
 		}
 	},
 	gollem_0041 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6148,7 +6148,7 @@ return {
 		}
 	},
 	gollem_0043 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6174,7 +6174,7 @@ return {
 		}
 	},
 	gollem_0045 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6200,7 +6200,7 @@ return {
 		}
 	},
 	gollem_0047 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6226,7 +6226,7 @@ return {
 		}
 	},
 	gollem_0049 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6252,7 +6252,7 @@ return {
 		}
 	},
 	gollem_0051 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6278,7 +6278,7 @@ return {
 		}
 	},
 	gollem_0053 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6304,7 +6304,7 @@ return {
 		}
 	},
 	gollem_0055 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6330,7 +6330,7 @@ return {
 		}
 	},
 	gollem_0057 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6356,7 +6356,7 @@ return {
 		}
 	},
 	gollem_0059 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6382,7 +6382,7 @@ return {
 		}
 	},
 	gollem_0061 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6408,7 +6408,7 @@ return {
 		}
 	},
 	gollem_0063 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6434,7 +6434,7 @@ return {
 		}
 	},
 	gollem_0065 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6460,7 +6460,7 @@ return {
 		}
 	},
 	gollem_0067 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6486,7 +6486,7 @@ return {
 		}
 	},
 	gollem_0069 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6512,7 +6512,7 @@ return {
 		}
 	},
 	gollem_0071 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6538,7 +6538,7 @@ return {
 		}
 	},
 	gollem_0073 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6564,7 +6564,7 @@ return {
 		}
 	},
 	gollem_0075 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6590,7 +6590,7 @@ return {
 		}
 	},
 	gollem_0077 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6616,7 +6616,7 @@ return {
 		}
 	},
 	gollem_0079 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6642,7 +6642,7 @@ return {
 		}
 	},
 	gollem_0081 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6668,7 +6668,7 @@ return {
 		}
 	},
 	gollem_0083 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6694,7 +6694,7 @@ return {
 		}
 	},
 	gollem_0085 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6720,7 +6720,7 @@ return {
 		}
 	},
 	gollem_0087 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6746,7 +6746,7 @@ return {
 		}
 	},
 	gollem_0089 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6772,7 +6772,7 @@ return {
 		}
 	},
 	gollem_0091 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6798,7 +6798,7 @@ return {
 		}
 	},
 	gollem_0093 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6824,7 +6824,7 @@ return {
 		}
 	},
 	gollem_0095 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6850,7 +6850,7 @@ return {
 		}
 	},
 	gollem_0097 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6876,7 +6876,7 @@ return {
 		}
 	},
 	gollem_0099 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6902,7 +6902,7 @@ return {
 		}
 	},
 	gollem_0101 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6928,7 +6928,7 @@ return {
 		}
 	},
 	gollem_0103 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6954,7 +6954,7 @@ return {
 		}
 	},
 	gollem_0105 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -6980,7 +6980,7 @@ return {
 		}
 	},
 	gollem_0107 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7006,7 +7006,7 @@ return {
 		}
 	},
 	gollem_0109 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7032,7 +7032,7 @@ return {
 		}
 	},
 	gollem_0111 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7058,7 +7058,7 @@ return {
 		}
 	},
 	gollem_0113 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7084,7 +7084,7 @@ return {
 		}
 	},
 	gollem_0115 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7110,7 +7110,7 @@ return {
 		}
 	},
 	gollem_0117 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7136,7 +7136,7 @@ return {
 		}
 	},
 	gollem_0119 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7162,7 +7162,7 @@ return {
 		}
 	},
 	gollem_0121 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7188,7 +7188,7 @@ return {
 		}
 	},
 	gollem_0123 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7214,7 +7214,7 @@ return {
 		}
 	},
 	gollem_0125 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7240,7 +7240,7 @@ return {
 		}
 	},
 	gollem_0127 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7266,7 +7266,7 @@ return {
 		}
 	},
 	gollem_0129 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7292,7 +7292,7 @@ return {
 		}
 	},
 	gollem_0131 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7316,7 +7316,7 @@ return {
 		alias = {}
 	},
 	gollem_0132 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7340,7 +7340,7 @@ return {
 		alias = {}
 	},
 	gollem_0133 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7364,7 +7364,7 @@ return {
 		alias = {}
 	},
 	gollem_0134 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7388,7 +7388,7 @@ return {
 		alias = {}
 	},
 	gollem_0135 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7412,7 +7412,7 @@ return {
 		alias = {}
 	},
 	gollem_0136 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7436,7 +7436,7 @@ return {
 		alias = {}
 	},
 	gollem_0137 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7460,7 +7460,7 @@ return {
 		alias = {}
 	},
 	gollem_0138 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7484,7 +7484,7 @@ return {
 		alias = {}
 	},
 	gollem_0139 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7508,7 +7508,7 @@ return {
 		alias = {}
 	},
 	gollem_0140 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7532,7 +7532,7 @@ return {
 		alias = {}
 	},
 	gollem_0141 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7556,7 +7556,7 @@ return {
 		alias = {}
 	},
 	gollem_0142 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7580,7 +7580,7 @@ return {
 		alias = {}
 	},
 	gollem_0143 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7604,7 +7604,7 @@ return {
 		alias = {}
 	},
 	gollem_0144 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7628,7 +7628,7 @@ return {
 		alias = {}
 	},
 	gollem_0145 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7652,7 +7652,7 @@ return {
 		alias = {}
 	},
 	gollem_0146 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			225,
 			163
@@ -7676,7 +7676,7 @@ return {
 		alias = {}
 	},
 	mantaray_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7702,7 +7702,7 @@ return {
 		}
 	},
 	mantaray_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7728,7 +7728,7 @@ return {
 		}
 	},
 	mantaray_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7754,7 +7754,7 @@ return {
 		}
 	},
 	mantaray_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7780,7 +7780,7 @@ return {
 		}
 	},
 	mantaray_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7806,7 +7806,7 @@ return {
 		}
 	},
 	mantaray_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7832,7 +7832,7 @@ return {
 		}
 	},
 	mantaray_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7858,7 +7858,7 @@ return {
 		}
 	},
 	mantaray_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7884,7 +7884,7 @@ return {
 		}
 	},
 	mantaray_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7910,7 +7910,7 @@ return {
 		}
 	},
 	mantaray_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7936,7 +7936,7 @@ return {
 		}
 	},
 	mantaray_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7962,7 +7962,7 @@ return {
 		}
 	},
 	mantaray_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -7988,7 +7988,7 @@ return {
 		}
 	},
 	mantaray_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8014,7 +8014,7 @@ return {
 		}
 	},
 	mantaray_0027 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8040,7 +8040,7 @@ return {
 		}
 	},
 	mantaray_0029 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8066,7 +8066,7 @@ return {
 		}
 	},
 	mantaray_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8092,7 +8092,7 @@ return {
 		}
 	},
 	mantaray_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8118,7 +8118,7 @@ return {
 		}
 	},
 	mantaray_0035 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8144,7 +8144,7 @@ return {
 		}
 	},
 	mantaray_0037 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8170,7 +8170,7 @@ return {
 		}
 	},
 	mantaray_0039 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8196,7 +8196,7 @@ return {
 		}
 	},
 	mantaray_0041 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8222,7 +8222,7 @@ return {
 		}
 	},
 	mantaray_0043 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8248,7 +8248,7 @@ return {
 		}
 	},
 	mantaray_0045 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8274,7 +8274,7 @@ return {
 		}
 	},
 	mantaray_0047 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8300,7 +8300,7 @@ return {
 		}
 	},
 	mantaray_0049 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8326,7 +8326,7 @@ return {
 		}
 	},
 	mantaray_0051 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8352,7 +8352,7 @@ return {
 		}
 	},
 	mantaray_0053 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8378,7 +8378,7 @@ return {
 		}
 	},
 	mantaray_0055 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8404,7 +8404,7 @@ return {
 		}
 	},
 	mantaray_0057 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8430,7 +8430,7 @@ return {
 		}
 	},
 	mantaray_0059 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8456,7 +8456,7 @@ return {
 		}
 	},
 	mantaray_0061 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8482,7 +8482,7 @@ return {
 		}
 	},
 	mantaray_0063 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8508,7 +8508,7 @@ return {
 		}
 	},
 	mantaray_0065 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8534,7 +8534,7 @@ return {
 		}
 	},
 	mantaray_0067 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8560,7 +8560,7 @@ return {
 		}
 	},
 	mantaray_0069 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8586,7 +8586,7 @@ return {
 		}
 	},
 	mantaray_0071 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8612,7 +8612,7 @@ return {
 		}
 	},
 	mantaray_0073 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8638,7 +8638,7 @@ return {
 		}
 	},
 	mantaray_0075 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8664,7 +8664,7 @@ return {
 		}
 	},
 	mantaray_0077 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8690,7 +8690,7 @@ return {
 		}
 	},
 	mantaray_0079 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8716,7 +8716,7 @@ return {
 		}
 	},
 	mantaray_0081 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8742,7 +8742,7 @@ return {
 		}
 	},
 	mantaray_0083 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8768,7 +8768,7 @@ return {
 		}
 	},
 	mantaray_0085 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8794,7 +8794,7 @@ return {
 		}
 	},
 	mantaray_0087 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8820,7 +8820,7 @@ return {
 		}
 	},
 	mantaray_0089 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8846,7 +8846,7 @@ return {
 		}
 	},
 	mantaray_0091 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8872,7 +8872,7 @@ return {
 		}
 	},
 	mantaray_0093 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8898,7 +8898,7 @@ return {
 		}
 	},
 	mantaray_0095 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8924,7 +8924,7 @@ return {
 		}
 	},
 	mantaray_0097 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8950,7 +8950,7 @@ return {
 		}
 	},
 	mantaray_0099 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -8976,7 +8976,7 @@ return {
 		}
 	},
 	mantaray_0101 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9002,7 +9002,7 @@ return {
 		}
 	},
 	mantaray_0103 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9028,7 +9028,7 @@ return {
 		}
 	},
 	mantaray_0105 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9054,7 +9054,7 @@ return {
 		}
 	},
 	mantaray_0107 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9080,7 +9080,7 @@ return {
 		}
 	},
 	mantaray_0109 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9106,7 +9106,7 @@ return {
 		}
 	},
 	mantaray_0111 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9132,7 +9132,7 @@ return {
 		}
 	},
 	mantaray_0113 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9158,7 +9158,7 @@ return {
 		}
 	},
 	mantaray_0115 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9184,7 +9184,7 @@ return {
 		}
 	},
 	mantaray_0117 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9210,7 +9210,7 @@ return {
 		}
 	},
 	mantaray_0119 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9236,7 +9236,7 @@ return {
 		}
 	},
 	mantaray_0121 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9262,7 +9262,7 @@ return {
 		}
 	},
 	mantaray_0123 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9288,7 +9288,7 @@ return {
 		}
 	},
 	mantaray_0125 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9314,7 +9314,7 @@ return {
 		}
 	},
 	mantaray_0127 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9340,7 +9340,7 @@ return {
 		}
 	},
 	mantaray_0129 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9366,7 +9366,7 @@ return {
 		}
 	},
 	mantaray_0131 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9392,7 +9392,7 @@ return {
 		}
 	},
 	mantaray_0133 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9418,7 +9418,7 @@ return {
 		}
 	},
 	mantaray_0135 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9444,7 +9444,7 @@ return {
 		}
 	},
 	mantaray_0137 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9470,7 +9470,7 @@ return {
 		}
 	},
 	mantaray_0139 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9496,7 +9496,7 @@ return {
 		}
 	},
 	mantaray_0141 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9522,7 +9522,7 @@ return {
 		}
 	},
 	mantaray_0143 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9548,7 +9548,7 @@ return {
 		}
 	},
 	mantaray_0145 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9574,7 +9574,7 @@ return {
 		}
 	},
 	mantaray_0147 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9600,7 +9600,7 @@ return {
 		}
 	},
 	mantaray_0149 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9626,7 +9626,7 @@ return {
 		}
 	},
 	mantaray_0151 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9652,7 +9652,7 @@ return {
 		}
 	},
 	mantaray_0153 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9678,7 +9678,7 @@ return {
 		}
 	},
 	mantaray_0155 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9704,7 +9704,7 @@ return {
 		}
 	},
 	mantaray_0157 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9730,7 +9730,7 @@ return {
 		}
 	},
 	mantaray_0159 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9756,7 +9756,7 @@ return {
 		}
 	},
 	mantaray_0161 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9782,7 +9782,7 @@ return {
 		}
 	},
 	mantaray_0163 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9808,7 +9808,7 @@ return {
 		}
 	},
 	mantaray_0165 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9834,7 +9834,7 @@ return {
 		}
 	},
 	mantaray_0167 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9860,7 +9860,7 @@ return {
 		}
 	},
 	mantaray_0169 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9886,7 +9886,7 @@ return {
 		}
 	},
 	mantaray_0171 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9912,7 +9912,7 @@ return {
 		}
 	},
 	mantaray_0173 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9938,7 +9938,7 @@ return {
 		}
 	},
 	mantaray_0175 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9964,7 +9964,7 @@ return {
 		}
 	},
 	mantaray_0177 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -9990,7 +9990,7 @@ return {
 		}
 	},
 	mantaray_0179 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10016,7 +10016,7 @@ return {
 		}
 	},
 	mantaray_0181 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10042,7 +10042,7 @@ return {
 		}
 	},
 	mantaray_0183 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10068,7 +10068,7 @@ return {
 		}
 	},
 	mantaray_0185 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10094,7 +10094,7 @@ return {
 		}
 	},
 	mantaray_0187 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10120,7 +10120,7 @@ return {
 		}
 	},
 	mantaray_0189 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10146,7 +10146,7 @@ return {
 		}
 	},
 	mantaray_0191 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10172,7 +10172,7 @@ return {
 		}
 	},
 	mantaray_0193 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10198,7 +10198,7 @@ return {
 		}
 	},
 	mantaray_0195 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10224,7 +10224,7 @@ return {
 		}
 	},
 	mantaray_0197 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10250,7 +10250,7 @@ return {
 		}
 	},
 	mantaray_0199 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10276,7 +10276,7 @@ return {
 		}
 	},
 	mantaray_0201 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10302,7 +10302,7 @@ return {
 		}
 	},
 	mantaray_0203 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10328,7 +10328,7 @@ return {
 		}
 	},
 	mantaray_0205 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10354,7 +10354,7 @@ return {
 		}
 	},
 	mantaray_0207 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10380,7 +10380,7 @@ return {
 		}
 	},
 	mantaray_0209 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10406,7 +10406,7 @@ return {
 		}
 	},
 	mantaray_0211 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10432,7 +10432,7 @@ return {
 		}
 	},
 	mantaray_0213 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10458,7 +10458,7 @@ return {
 		}
 	},
 	mantaray_0215 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10484,7 +10484,7 @@ return {
 		}
 	},
 	mantaray_0217 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10510,7 +10510,7 @@ return {
 		}
 	},
 	mantaray_0219 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10536,7 +10536,7 @@ return {
 		}
 	},
 	mantaray_0221 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10562,7 +10562,7 @@ return {
 		}
 	},
 	mantaray_0223 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			82,
 			79
@@ -10588,7 +10588,7 @@ return {
 		}
 	},
 	razorboar_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10616,7 +10616,7 @@ return {
 		}
 	},
 	razorboar_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10642,7 +10642,7 @@ return {
 		}
 	},
 	razorboar_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10668,7 +10668,7 @@ return {
 		}
 	},
 	razorboar_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10694,7 +10694,7 @@ return {
 		}
 	},
 	razorboar_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10720,7 +10720,7 @@ return {
 		}
 	},
 	razorboar_0010 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10746,7 +10746,7 @@ return {
 		}
 	},
 	razorboar_0012 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10772,7 +10772,7 @@ return {
 		}
 	},
 	razorboar_0014 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10798,7 +10798,7 @@ return {
 		}
 	},
 	razorboar_0016 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10824,7 +10824,7 @@ return {
 		}
 	},
 	razorboar_0018 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10850,7 +10850,7 @@ return {
 		}
 	},
 	razorboar_0020 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10876,7 +10876,7 @@ return {
 		}
 	},
 	razorboar_0022 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10902,7 +10902,7 @@ return {
 		}
 	},
 	razorboar_0024 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10928,7 +10928,7 @@ return {
 		}
 	},
 	razorboar_0026 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10954,7 +10954,7 @@ return {
 		}
 	},
 	razorboar_0028 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -10980,7 +10980,7 @@ return {
 		}
 	},
 	razorboar_0030 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11006,7 +11006,7 @@ return {
 		}
 	},
 	razorboar_0032 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11032,7 +11032,7 @@ return {
 		}
 	},
 	razorboar_0034 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11058,7 +11058,7 @@ return {
 		}
 	},
 	razorboar_0036 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11084,7 +11084,7 @@ return {
 		}
 	},
 	razorboar_0038 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11110,7 +11110,7 @@ return {
 		}
 	},
 	razorboar_0040 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11136,7 +11136,7 @@ return {
 		}
 	},
 	razorboar_0042 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11162,7 +11162,7 @@ return {
 		}
 	},
 	razorboar_0044 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11188,7 +11188,7 @@ return {
 		}
 	},
 	razorboar_0046 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11214,7 +11214,7 @@ return {
 		}
 	},
 	razorboar_0048 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11240,7 +11240,7 @@ return {
 		}
 	},
 	razorboar_0050 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11267,7 +11267,7 @@ return {
 		}
 	},
 	razorboar_0053 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11294,7 +11294,7 @@ return {
 		}
 	},
 	razorboar_0056 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11320,7 +11320,7 @@ return {
 		}
 	},
 	razorboar_0058 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11346,7 +11346,7 @@ return {
 		}
 	},
 	razorboar_0060 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11373,7 +11373,7 @@ return {
 		}
 	},
 	razorboar_0063 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11399,7 +11399,7 @@ return {
 		}
 	},
 	razorboar_0068 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11425,7 +11425,7 @@ return {
 		}
 	},
 	razorboar_0070 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11451,7 +11451,7 @@ return {
 		}
 	},
 	razorboar_0072 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11477,7 +11477,7 @@ return {
 		}
 	},
 	razorboar_0074 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11503,7 +11503,7 @@ return {
 		}
 	},
 	razorboar_0076 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11529,7 +11529,7 @@ return {
 		}
 	},
 	razorboar_0078 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11555,7 +11555,7 @@ return {
 		}
 	},
 	razorboar_0080 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11581,7 +11581,7 @@ return {
 		}
 	},
 	razorboar_0082 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11605,7 +11605,7 @@ return {
 		alias = {}
 	},
 	razorboar_0083 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11631,7 +11631,7 @@ return {
 		}
 	},
 	razorboar_0085 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11657,7 +11657,7 @@ return {
 		}
 	},
 	razorboar_0087 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11683,7 +11683,7 @@ return {
 		}
 	},
 	razorboar_0089 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11709,7 +11709,7 @@ return {
 		}
 	},
 	razorboar_0091 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11735,7 +11735,7 @@ return {
 		}
 	},
 	razorboar_0093 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11761,7 +11761,7 @@ return {
 		}
 	},
 	razorboar_0095 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11787,7 +11787,7 @@ return {
 		}
 	},
 	razorboar_0097 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11813,7 +11813,7 @@ return {
 		}
 	},
 	razorboar_0099 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11839,7 +11839,7 @@ return {
 		}
 	},
 	razorboar_0101 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11865,7 +11865,7 @@ return {
 		}
 	},
 	razorboar_0103 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11891,7 +11891,7 @@ return {
 		}
 	},
 	razorboar_0105 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			143,
 			90
@@ -11917,7 +11917,7 @@ return {
 		}
 	},
 	razorboar_fire_particle_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			39
@@ -11943,7 +11943,7 @@ return {
 		}
 	},
 	razorboar_fire_particle_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			39
@@ -11969,7 +11969,7 @@ return {
 		}
 	},
 	razorboar_fire_particle_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			39
@@ -11995,7 +11995,7 @@ return {
 		}
 	},
 	razorboar_fire_particle_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			39
@@ -12021,7 +12021,7 @@ return {
 		}
 	},
 	razorboar_fire_particle_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			31,
 			39
@@ -12047,7 +12047,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12073,7 +12073,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12099,7 +12099,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12125,7 +12125,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12151,7 +12151,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12177,7 +12177,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12203,7 +12203,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12229,7 +12229,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12255,7 +12255,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12281,7 +12281,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12307,7 +12307,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12333,7 +12333,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12359,7 +12359,7 @@ return {
 		}
 	},
 	razorboar_hitFx_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			70
@@ -12383,7 +12383,7 @@ return {
 		alias = {}
 	},
 	razorboar_particle1 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			45,
 			48
@@ -12407,7 +12407,7 @@ return {
 		alias = {}
 	},
 	razorboar_particle2 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			45,
 			48
@@ -12431,7 +12431,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12458,7 +12458,7 @@ return {
 		}
 	},
 	son_of_mactans_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12482,7 +12482,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12506,7 +12506,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12530,7 +12530,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12554,7 +12554,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12578,7 +12578,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12602,7 +12602,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12626,7 +12626,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12650,7 +12650,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0010 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12674,7 +12674,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12698,7 +12698,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0012 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12722,7 +12722,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12746,7 +12746,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0014 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12770,7 +12770,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12794,7 +12794,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0016 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12818,7 +12818,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12842,7 +12842,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0018 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12866,7 +12866,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12890,7 +12890,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0020 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12914,7 +12914,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12938,7 +12938,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0022 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12962,7 +12962,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -12986,7 +12986,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0024 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13010,7 +13010,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13034,7 +13034,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0026 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13058,7 +13058,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0027 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13082,7 +13082,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0028 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13106,7 +13106,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0029 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13132,7 +13132,7 @@ return {
 		}
 	},
 	son_of_mactans_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13158,7 +13158,7 @@ return {
 		}
 	},
 	son_of_mactans_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13184,7 +13184,7 @@ return {
 		}
 	},
 	son_of_mactans_0035 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13211,7 +13211,7 @@ return {
 		}
 	},
 	son_of_mactans_0038 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13235,7 +13235,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0039 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13261,7 +13261,7 @@ return {
 		}
 	},
 	son_of_mactans_0041 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13285,7 +13285,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0042 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13309,7 +13309,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0043 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13333,7 +13333,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0044 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13359,7 +13359,7 @@ return {
 		}
 	},
 	son_of_mactans_0046 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13385,7 +13385,7 @@ return {
 		}
 	},
 	son_of_mactans_0050 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13409,7 +13409,7 @@ return {
 		alias = {}
 	},
 	son_of_mactans_0051 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13435,7 +13435,7 @@ return {
 		}
 	},
 	son_of_mactans_0053 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13461,7 +13461,7 @@ return {
 		}
 	},
 	son_of_mactans_0055 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13487,7 +13487,7 @@ return {
 		}
 	},
 	son_of_mactans_0057 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13513,7 +13513,7 @@ return {
 		}
 	},
 	son_of_mactans_0059 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13539,7 +13539,7 @@ return {
 		}
 	},
 	son_of_mactans_0061 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13565,7 +13565,7 @@ return {
 		}
 	},
 	son_of_mactans_0063 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13591,7 +13591,7 @@ return {
 		}
 	},
 	son_of_mactans_0065 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13617,7 +13617,7 @@ return {
 		}
 	},
 	son_of_mactans_0067 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13643,7 +13643,7 @@ return {
 		}
 	},
 	son_of_mactans_0069 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13669,7 +13669,7 @@ return {
 		}
 	},
 	son_of_mactans_0071 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13695,7 +13695,7 @@ return {
 		}
 	},
 	son_of_mactans_0073 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13721,7 +13721,7 @@ return {
 		}
 	},
 	son_of_mactans_0075 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13747,7 +13747,7 @@ return {
 		}
 	},
 	son_of_mactans_0077 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13773,7 +13773,7 @@ return {
 		}
 	},
 	son_of_mactans_0079 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13799,7 +13799,7 @@ return {
 		}
 	},
 	son_of_mactans_0081 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13825,7 +13825,7 @@ return {
 		}
 	},
 	son_of_mactans_0083 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13851,7 +13851,7 @@ return {
 		}
 	},
 	son_of_mactans_0085 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13877,7 +13877,7 @@ return {
 		}
 	},
 	son_of_mactans_0087 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13905,7 +13905,7 @@ return {
 		}
 	},
 	son_of_mactans_0089 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			84,
 			98
@@ -13931,7 +13931,7 @@ return {
 		}
 	},
 	son_of_mactans_particles_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			17,
 			28
@@ -13957,7 +13957,7 @@ return {
 		}
 	},
 	son_of_mactans_particles_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			17,
 			28
@@ -13985,7 +13985,7 @@ return {
 		}
 	},
 	son_of_mactans_particles_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			17,
 			28
@@ -14013,7 +14013,7 @@ return {
 		}
 	},
 	son_of_mactans_particles_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			17,
 			28
@@ -14041,7 +14041,7 @@ return {
 		}
 	},
 	son_of_mactans_particles_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			17,
 			28
@@ -14069,7 +14069,7 @@ return {
 		}
 	},
 	son_of_mactans_shadow = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			56,
 			14
@@ -14093,7 +14093,7 @@ return {
 		alias = {}
 	},
 	twilight_evoker_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14119,7 +14119,7 @@ return {
 		}
 	},
 	twilight_evoker_0002 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14145,7 +14145,7 @@ return {
 		}
 	},
 	twilight_evoker_0004 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14171,7 +14171,7 @@ return {
 		}
 	},
 	twilight_evoker_0006 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14197,7 +14197,7 @@ return {
 		}
 	},
 	twilight_evoker_0008 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14223,7 +14223,7 @@ return {
 		}
 	},
 	twilight_evoker_0010 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14249,7 +14249,7 @@ return {
 		}
 	},
 	twilight_evoker_0012 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14275,7 +14275,7 @@ return {
 		}
 	},
 	twilight_evoker_0014 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14301,7 +14301,7 @@ return {
 		}
 	},
 	twilight_evoker_0016 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14327,7 +14327,7 @@ return {
 		}
 	},
 	twilight_evoker_0018 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14353,7 +14353,7 @@ return {
 		}
 	},
 	twilight_evoker_0020 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14379,7 +14379,7 @@ return {
 		}
 	},
 	twilight_evoker_0022 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14405,7 +14405,7 @@ return {
 		}
 	},
 	twilight_evoker_0024 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14431,7 +14431,7 @@ return {
 		}
 	},
 	twilight_evoker_0026 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14457,7 +14457,7 @@ return {
 		}
 	},
 	twilight_evoker_0028 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14483,7 +14483,7 @@ return {
 		}
 	},
 	twilight_evoker_0030 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14509,7 +14509,7 @@ return {
 		}
 	},
 	twilight_evoker_0032 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14535,7 +14535,7 @@ return {
 		}
 	},
 	twilight_evoker_0034 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14561,7 +14561,7 @@ return {
 		}
 	},
 	twilight_evoker_0036 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14587,7 +14587,7 @@ return {
 		}
 	},
 	twilight_evoker_0038 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14613,7 +14613,7 @@ return {
 		}
 	},
 	twilight_evoker_0040 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14639,7 +14639,7 @@ return {
 		}
 	},
 	twilight_evoker_0042 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14665,7 +14665,7 @@ return {
 		}
 	},
 	twilight_evoker_0044 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14691,7 +14691,7 @@ return {
 		}
 	},
 	twilight_evoker_0046 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14717,7 +14717,7 @@ return {
 		}
 	},
 	twilight_evoker_0048 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14743,7 +14743,7 @@ return {
 		}
 	},
 	twilight_evoker_0050 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14777,7 +14777,7 @@ return {
 		}
 	},
 	twilight_evoker_0052 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14803,7 +14803,7 @@ return {
 		}
 	},
 	twilight_evoker_0054 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14829,7 +14829,7 @@ return {
 		}
 	},
 	twilight_evoker_0056 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14855,7 +14855,7 @@ return {
 		}
 	},
 	twilight_evoker_0058 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14881,7 +14881,7 @@ return {
 		}
 	},
 	twilight_evoker_0060 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14907,7 +14907,7 @@ return {
 		}
 	},
 	twilight_evoker_0062 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14933,7 +14933,7 @@ return {
 		}
 	},
 	twilight_evoker_0064 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14959,7 +14959,7 @@ return {
 		}
 	},
 	twilight_evoker_0066 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -14985,7 +14985,7 @@ return {
 		}
 	},
 	twilight_evoker_0068 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15011,7 +15011,7 @@ return {
 		}
 	},
 	twilight_evoker_0070 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15037,7 +15037,7 @@ return {
 		}
 	},
 	twilight_evoker_0072 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15065,7 +15065,7 @@ return {
 		}
 	},
 	twilight_evoker_0078 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15091,7 +15091,7 @@ return {
 		}
 	},
 	twilight_evoker_0080 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15117,7 +15117,7 @@ return {
 		}
 	},
 	twilight_evoker_0082 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15143,7 +15143,7 @@ return {
 		}
 	},
 	twilight_evoker_0084 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15169,7 +15169,7 @@ return {
 		}
 	},
 	twilight_evoker_0086 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15195,7 +15195,7 @@ return {
 		}
 	},
 	twilight_evoker_0088 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15221,7 +15221,7 @@ return {
 		}
 	},
 	twilight_evoker_0090 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15247,7 +15247,7 @@ return {
 		}
 	},
 	twilight_evoker_0092 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15273,7 +15273,7 @@ return {
 		}
 	},
 	twilight_evoker_0097 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15299,7 +15299,7 @@ return {
 		}
 	},
 	twilight_evoker_0099 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15325,7 +15325,7 @@ return {
 		}
 	},
 	twilight_evoker_0101 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15351,7 +15351,7 @@ return {
 		}
 	},
 	twilight_evoker_0103 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15377,7 +15377,7 @@ return {
 		}
 	},
 	twilight_evoker_0105 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15403,7 +15403,7 @@ return {
 		}
 	},
 	twilight_evoker_0107 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15429,7 +15429,7 @@ return {
 		}
 	},
 	twilight_evoker_0109 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15455,7 +15455,7 @@ return {
 		}
 	},
 	twilight_evoker_0111 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15481,7 +15481,7 @@ return {
 		}
 	},
 	twilight_evoker_0113 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15507,7 +15507,7 @@ return {
 		}
 	},
 	twilight_evoker_0118 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15535,7 +15535,7 @@ return {
 		}
 	},
 	twilight_evoker_0120 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15561,7 +15561,7 @@ return {
 		}
 	},
 	twilight_evoker_0122 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15587,7 +15587,7 @@ return {
 		}
 	},
 	twilight_evoker_0124 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15613,7 +15613,7 @@ return {
 		}
 	},
 	twilight_evoker_0126 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15639,7 +15639,7 @@ return {
 		}
 	},
 	twilight_evoker_0128 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15665,7 +15665,7 @@ return {
 		}
 	},
 	twilight_evoker_0130 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15691,7 +15691,7 @@ return {
 		}
 	},
 	twilight_evoker_0132 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15717,7 +15717,7 @@ return {
 		}
 	},
 	twilight_evoker_0134 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15743,7 +15743,7 @@ return {
 		}
 	},
 	twilight_evoker_0136 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15769,7 +15769,7 @@ return {
 		}
 	},
 	twilight_evoker_0138 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15795,7 +15795,7 @@ return {
 		}
 	},
 	twilight_evoker_0140 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15821,7 +15821,7 @@ return {
 		}
 	},
 	twilight_evoker_0145 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15848,7 +15848,7 @@ return {
 		}
 	},
 	twilight_evoker_0147 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15874,7 +15874,7 @@ return {
 		}
 	},
 	twilight_evoker_0149 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15900,7 +15900,7 @@ return {
 		}
 	},
 	twilight_evoker_0151 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15926,7 +15926,7 @@ return {
 		}
 	},
 	twilight_evoker_0153 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15952,7 +15952,7 @@ return {
 		}
 	},
 	twilight_evoker_0155 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -15978,7 +15978,7 @@ return {
 		}
 	},
 	twilight_evoker_0157 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16004,7 +16004,7 @@ return {
 		}
 	},
 	twilight_evoker_0159 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16030,7 +16030,7 @@ return {
 		}
 	},
 	twilight_evoker_0161 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16056,7 +16056,7 @@ return {
 		}
 	},
 	twilight_evoker_0163 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16082,7 +16082,7 @@ return {
 		}
 	},
 	twilight_evoker_0165 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16108,7 +16108,7 @@ return {
 		}
 	},
 	twilight_evoker_0167 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16134,7 +16134,7 @@ return {
 		}
 	},
 	twilight_evoker_0169 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16160,7 +16160,7 @@ return {
 		}
 	},
 	twilight_evoker_0171 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16186,7 +16186,7 @@ return {
 		}
 	},
 	twilight_evoker_0173 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16212,7 +16212,7 @@ return {
 		}
 	},
 	twilight_evoker_0175 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16238,7 +16238,7 @@ return {
 		}
 	},
 	twilight_evoker_0177 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16264,7 +16264,7 @@ return {
 		}
 	},
 	twilight_evoker_0179 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			132,
 			113
@@ -16290,7 +16290,7 @@ return {
 		}
 	},
 	twilight_heretic_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16316,7 +16316,7 @@ return {
 		}
 	},
 	twilight_heretic_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16342,7 +16342,7 @@ return {
 		}
 	},
 	twilight_heretic_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16368,7 +16368,7 @@ return {
 		}
 	},
 	twilight_heretic_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16394,7 +16394,7 @@ return {
 		}
 	},
 	twilight_heretic_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16420,7 +16420,7 @@ return {
 		}
 	},
 	twilight_heretic_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16446,7 +16446,7 @@ return {
 		}
 	},
 	twilight_heretic_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16472,7 +16472,7 @@ return {
 		}
 	},
 	twilight_heretic_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16498,7 +16498,7 @@ return {
 		}
 	},
 	twilight_heretic_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16524,7 +16524,7 @@ return {
 		}
 	},
 	twilight_heretic_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16550,7 +16550,7 @@ return {
 		}
 	},
 	twilight_heretic_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16576,7 +16576,7 @@ return {
 		}
 	},
 	twilight_heretic_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16602,7 +16602,7 @@ return {
 		}
 	},
 	twilight_heretic_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16628,7 +16628,7 @@ return {
 		}
 	},
 	twilight_heretic_0027 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16654,7 +16654,7 @@ return {
 		}
 	},
 	twilight_heretic_0029 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16680,7 +16680,7 @@ return {
 		}
 	},
 	twilight_heretic_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16706,7 +16706,7 @@ return {
 		}
 	},
 	twilight_heretic_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16732,7 +16732,7 @@ return {
 		}
 	},
 	twilight_heretic_0035 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16758,7 +16758,7 @@ return {
 		}
 	},
 	twilight_heretic_0037 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16784,7 +16784,7 @@ return {
 		}
 	},
 	twilight_heretic_0039 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16810,7 +16810,7 @@ return {
 		}
 	},
 	twilight_heretic_0041 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16836,7 +16836,7 @@ return {
 		}
 	},
 	twilight_heretic_0043 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16862,7 +16862,7 @@ return {
 		}
 	},
 	twilight_heretic_0045 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16888,7 +16888,7 @@ return {
 		}
 	},
 	twilight_heretic_0047 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16914,7 +16914,7 @@ return {
 		}
 	},
 	twilight_heretic_0049 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16940,7 +16940,7 @@ return {
 		}
 	},
 	twilight_heretic_0051 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16966,7 +16966,7 @@ return {
 		}
 	},
 	twilight_heretic_0053 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -16992,7 +16992,7 @@ return {
 		}
 	},
 	twilight_heretic_0055 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17018,7 +17018,7 @@ return {
 		}
 	},
 	twilight_heretic_0057 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17044,7 +17044,7 @@ return {
 		}
 	},
 	twilight_heretic_0059 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17070,7 +17070,7 @@ return {
 		}
 	},
 	twilight_heretic_0061 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17096,7 +17096,7 @@ return {
 		}
 	},
 	twilight_heretic_0063 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17122,7 +17122,7 @@ return {
 		}
 	},
 	twilight_heretic_0065 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17148,7 +17148,7 @@ return {
 		}
 	},
 	twilight_heretic_0067 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17174,7 +17174,7 @@ return {
 		}
 	},
 	twilight_heretic_0069 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17200,7 +17200,7 @@ return {
 		}
 	},
 	twilight_heretic_0071 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17226,7 +17226,7 @@ return {
 		}
 	},
 	twilight_heretic_0073 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17252,7 +17252,7 @@ return {
 		}
 	},
 	twilight_heretic_0075 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17278,7 +17278,7 @@ return {
 		}
 	},
 	twilight_heretic_0077 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17304,7 +17304,7 @@ return {
 		}
 	},
 	twilight_heretic_0079 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17330,7 +17330,7 @@ return {
 		}
 	},
 	twilight_heretic_0081 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17356,7 +17356,7 @@ return {
 		}
 	},
 	twilight_heretic_0083 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17382,7 +17382,7 @@ return {
 		}
 	},
 	twilight_heretic_0085 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17408,7 +17408,7 @@ return {
 		}
 	},
 	twilight_heretic_0087 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17434,7 +17434,7 @@ return {
 		}
 	},
 	twilight_heretic_0089 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17460,7 +17460,7 @@ return {
 		}
 	},
 	twilight_heretic_0091 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17486,7 +17486,7 @@ return {
 		}
 	},
 	twilight_heretic_0093 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17512,7 +17512,7 @@ return {
 		}
 	},
 	twilight_heretic_0095 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17538,7 +17538,7 @@ return {
 		}
 	},
 	twilight_heretic_0097 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17564,7 +17564,7 @@ return {
 		}
 	},
 	twilight_heretic_0099 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17590,7 +17590,7 @@ return {
 		}
 	},
 	twilight_heretic_0101 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17616,7 +17616,7 @@ return {
 		}
 	},
 	twilight_heretic_0103 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17642,7 +17642,7 @@ return {
 		}
 	},
 	twilight_heretic_0105 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17668,7 +17668,7 @@ return {
 		}
 	},
 	twilight_heretic_0107 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17694,7 +17694,7 @@ return {
 		}
 	},
 	twilight_heretic_0109 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17720,7 +17720,7 @@ return {
 		}
 	},
 	twilight_heretic_0111 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17746,7 +17746,7 @@ return {
 		}
 	},
 	twilight_heretic_0113 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17770,7 +17770,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0114 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17796,7 +17796,7 @@ return {
 		}
 	},
 	twilight_heretic_0116 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17823,7 +17823,7 @@ return {
 		}
 	},
 	twilight_heretic_0119 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17849,7 +17849,7 @@ return {
 		}
 	},
 	twilight_heretic_0121 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17875,7 +17875,7 @@ return {
 		}
 	},
 	twilight_heretic_0123 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17901,7 +17901,7 @@ return {
 		}
 	},
 	twilight_heretic_0125 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17927,7 +17927,7 @@ return {
 		}
 	},
 	twilight_heretic_0127 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17953,7 +17953,7 @@ return {
 		}
 	},
 	twilight_heretic_0129 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -17979,7 +17979,7 @@ return {
 		}
 	},
 	twilight_heretic_0131 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18005,7 +18005,7 @@ return {
 		}
 	},
 	twilight_heretic_0133 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18031,7 +18031,7 @@ return {
 		}
 	},
 	twilight_heretic_0135 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18057,7 +18057,7 @@ return {
 		}
 	},
 	twilight_heretic_0137 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18083,7 +18083,7 @@ return {
 		}
 	},
 	twilight_heretic_0139 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18109,7 +18109,7 @@ return {
 		}
 	},
 	twilight_heretic_0141 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18135,7 +18135,7 @@ return {
 		}
 	},
 	twilight_heretic_0143 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18161,7 +18161,7 @@ return {
 		}
 	},
 	twilight_heretic_0145 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18187,7 +18187,7 @@ return {
 		}
 	},
 	twilight_heretic_0147 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18213,7 +18213,7 @@ return {
 		}
 	},
 	twilight_heretic_0149 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18239,7 +18239,7 @@ return {
 		}
 	},
 	twilight_heretic_0151 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18265,7 +18265,7 @@ return {
 		}
 	},
 	twilight_heretic_0153 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18291,7 +18291,7 @@ return {
 		}
 	},
 	twilight_heretic_0155 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18317,7 +18317,7 @@ return {
 		}
 	},
 	twilight_heretic_0157 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18343,7 +18343,7 @@ return {
 		}
 	},
 	twilight_heretic_0159 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18369,7 +18369,7 @@ return {
 		}
 	},
 	twilight_heretic_0161 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18395,7 +18395,7 @@ return {
 		}
 	},
 	twilight_heretic_0163 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18421,7 +18421,7 @@ return {
 		}
 	},
 	twilight_heretic_0165 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18445,7 +18445,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0166 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18469,7 +18469,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0167 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18493,7 +18493,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0168 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18517,7 +18517,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0169 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18541,7 +18541,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0170 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18565,7 +18565,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0171 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18589,7 +18589,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0172 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18613,7 +18613,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0173 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18637,7 +18637,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0174 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18661,7 +18661,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0175 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18685,7 +18685,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0176 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18709,7 +18709,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0177 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18733,7 +18733,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0178 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18757,7 +18757,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0179 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18783,7 +18783,7 @@ return {
 		}
 	},
 	twilight_heretic_0181 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18809,7 +18809,7 @@ return {
 		}
 	},
 	twilight_heretic_0183 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18835,7 +18835,7 @@ return {
 		}
 	},
 	twilight_heretic_0185 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18861,7 +18861,7 @@ return {
 		}
 	},
 	twilight_heretic_0187 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18887,7 +18887,7 @@ return {
 		}
 	},
 	twilight_heretic_0189 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18913,7 +18913,7 @@ return {
 		}
 	},
 	twilight_heretic_0191 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18939,7 +18939,7 @@ return {
 		}
 	},
 	twilight_heretic_0193 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18965,7 +18965,7 @@ return {
 		}
 	},
 	twilight_heretic_0195 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -18991,7 +18991,7 @@ return {
 		}
 	},
 	twilight_heretic_0197 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19015,7 +19015,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0198 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19041,7 +19041,7 @@ return {
 		}
 	},
 	twilight_heretic_0200 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19067,7 +19067,7 @@ return {
 		}
 	},
 	twilight_heretic_0202 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19094,7 +19094,7 @@ return {
 		}
 	},
 	twilight_heretic_0205 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19120,7 +19120,7 @@ return {
 		}
 	},
 	twilight_heretic_0207 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19146,7 +19146,7 @@ return {
 		}
 	},
 	twilight_heretic_0209 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19172,7 +19172,7 @@ return {
 		}
 	},
 	twilight_heretic_0211 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19198,7 +19198,7 @@ return {
 		}
 	},
 	twilight_heretic_0213 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19224,7 +19224,7 @@ return {
 		}
 	},
 	twilight_heretic_0215 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19250,7 +19250,7 @@ return {
 		}
 	},
 	twilight_heretic_0217 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19276,7 +19276,7 @@ return {
 		}
 	},
 	twilight_heretic_0219 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19302,7 +19302,7 @@ return {
 		}
 	},
 	twilight_heretic_0221 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19328,7 +19328,7 @@ return {
 		}
 	},
 	twilight_heretic_0223 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19354,7 +19354,7 @@ return {
 		}
 	},
 	twilight_heretic_0225 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19380,7 +19380,7 @@ return {
 		}
 	},
 	twilight_heretic_0227 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19406,7 +19406,7 @@ return {
 		}
 	},
 	twilight_heretic_0229 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19432,7 +19432,7 @@ return {
 		}
 	},
 	twilight_heretic_0231 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19458,7 +19458,7 @@ return {
 		}
 	},
 	twilight_heretic_0233 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19484,7 +19484,7 @@ return {
 		}
 	},
 	twilight_heretic_0235 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19510,7 +19510,7 @@ return {
 		}
 	},
 	twilight_heretic_0237 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19536,7 +19536,7 @@ return {
 		}
 	},
 	twilight_heretic_0239 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19562,7 +19562,7 @@ return {
 		}
 	},
 	twilight_heretic_0241 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19588,7 +19588,7 @@ return {
 		}
 	},
 	twilight_heretic_0243 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19614,7 +19614,7 @@ return {
 		}
 	},
 	twilight_heretic_0245 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19640,7 +19640,7 @@ return {
 		}
 	},
 	twilight_heretic_0247 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19666,7 +19666,7 @@ return {
 		}
 	},
 	twilight_heretic_0249 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19692,7 +19692,7 @@ return {
 		}
 	},
 	twilight_heretic_0251 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19718,7 +19718,7 @@ return {
 		}
 	},
 	twilight_heretic_0253 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19744,7 +19744,7 @@ return {
 		}
 	},
 	twilight_heretic_0255 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19770,7 +19770,7 @@ return {
 		}
 	},
 	twilight_heretic_0257 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19796,7 +19796,7 @@ return {
 		}
 	},
 	twilight_heretic_0259 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19822,7 +19822,7 @@ return {
 		}
 	},
 	twilight_heretic_0261 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19848,7 +19848,7 @@ return {
 		}
 	},
 	twilight_heretic_0263 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19874,7 +19874,7 @@ return {
 		}
 	},
 	twilight_heretic_0265 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19900,7 +19900,7 @@ return {
 		}
 	},
 	twilight_heretic_0267 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19926,7 +19926,7 @@ return {
 		}
 	},
 	twilight_heretic_0269 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19952,7 +19952,7 @@ return {
 		}
 	},
 	twilight_heretic_0271 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -19978,7 +19978,7 @@ return {
 		}
 	},
 	twilight_heretic_0273 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20004,7 +20004,7 @@ return {
 		}
 	},
 	twilight_heretic_0275 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20030,7 +20030,7 @@ return {
 		}
 	},
 	twilight_heretic_0277 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20056,7 +20056,7 @@ return {
 		}
 	},
 	twilight_heretic_0279 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20082,7 +20082,7 @@ return {
 		}
 	},
 	twilight_heretic_0281 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20108,7 +20108,7 @@ return {
 		}
 	},
 	twilight_heretic_0283 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20134,7 +20134,7 @@ return {
 		}
 	},
 	twilight_heretic_0285 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20160,7 +20160,7 @@ return {
 		}
 	},
 	twilight_heretic_0287 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20186,7 +20186,7 @@ return {
 		}
 	},
 	twilight_heretic_0289 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20212,7 +20212,7 @@ return {
 		}
 	},
 	twilight_heretic_0291 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20238,7 +20238,7 @@ return {
 		}
 	},
 	twilight_heretic_0293 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20264,7 +20264,7 @@ return {
 		}
 	},
 	twilight_heretic_0295 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20290,7 +20290,7 @@ return {
 		}
 	},
 	twilight_heretic_0297 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20316,7 +20316,7 @@ return {
 		}
 	},
 	twilight_heretic_0299 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			115,
 			104
@@ -20342,7 +20342,7 @@ return {
 		}
 	},
 	twilight_heretic_0301 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			127,
 			115
@@ -20366,7 +20366,7 @@ return {
 		alias = {}
 	},
 	twilight_heretic_0302 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			127,
 			115
@@ -20392,7 +20392,7 @@ return {
 		}
 	},
 	twilight_heretic_0304 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			127,
 			115
@@ -20418,7 +20418,7 @@ return {
 		}
 	},
 	twilight_heretic_0306 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			127,
 			115
@@ -20444,7 +20444,7 @@ return {
 		}
 	},
 	twilight_heretic_0308 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			127,
 			115
@@ -20470,7 +20470,7 @@ return {
 		}
 	},
 	twilight_heretic_0310 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			127,
 			115
@@ -20496,7 +20496,7 @@ return {
 		}
 	},
 	twilight_heretic_0312 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			127,
 			115
@@ -20522,7 +20522,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0001 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20548,7 +20548,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0003 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20574,7 +20574,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0005 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20600,7 +20600,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0007 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20626,7 +20626,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0009 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20652,7 +20652,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0011 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20678,7 +20678,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0013 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20704,7 +20704,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0015 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20730,7 +20730,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0017 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20756,7 +20756,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0019 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20782,7 +20782,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0021 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20808,7 +20808,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0023 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20834,7 +20834,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0025 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20860,7 +20860,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0027 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20886,7 +20886,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0029 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20912,7 +20912,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0031 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59
@@ -20938,7 +20938,7 @@ return {
 		}
 	},
 	twilight_heretic_shadow_0033 = {
-		a_name = "go_enemies_ancient_metropolis-1.dds",
+		a_name = "go_enemies_ancient_metropolis-1.png",
 		size = {
 			113,
 			59

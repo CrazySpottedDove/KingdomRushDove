@@ -2,7 +2,7 @@
 
 return {
 	durax_hero_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	durax_hero_0002 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -53,7 +53,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -77,7 +77,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0004 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -101,7 +101,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -125,7 +125,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0006 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -149,7 +149,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -173,7 +173,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0008 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -197,7 +197,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -221,7 +221,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0010 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -245,7 +245,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -269,7 +269,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0012 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -293,7 +293,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -317,7 +317,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0014 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -341,7 +341,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -365,7 +365,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0016 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -389,7 +389,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0017 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -413,7 +413,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0018 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -437,7 +437,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0019 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -461,7 +461,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0020 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -485,7 +485,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0021 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -509,7 +509,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0022 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -535,7 +535,7 @@ return {
 		}
 	},
 	durax_hero_0024 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -561,7 +561,7 @@ return {
 		}
 	},
 	durax_hero_0026 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -587,7 +587,7 @@ return {
 		}
 	},
 	durax_hero_0028 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -613,7 +613,7 @@ return {
 		}
 	},
 	durax_hero_0030 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -639,7 +639,7 @@ return {
 		}
 	},
 	durax_hero_0032 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -665,7 +665,7 @@ return {
 		}
 	},
 	durax_hero_0034 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -691,7 +691,7 @@ return {
 		}
 	},
 	durax_hero_0036 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -723,7 +723,7 @@ return {
 		}
 	},
 	durax_hero_0038 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -749,7 +749,7 @@ return {
 		}
 	},
 	durax_hero_0040 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -775,7 +775,7 @@ return {
 		}
 	},
 	durax_hero_0042 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -802,7 +802,7 @@ return {
 		}
 	},
 	durax_hero_0045 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -828,7 +828,7 @@ return {
 		}
 	},
 	durax_hero_0047 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -854,7 +854,7 @@ return {
 		}
 	},
 	durax_hero_0049 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -880,7 +880,7 @@ return {
 		}
 	},
 	durax_hero_0051 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -906,7 +906,7 @@ return {
 		}
 	},
 	durax_hero_0055 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -932,7 +932,7 @@ return {
 		}
 	},
 	durax_hero_0057 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -958,7 +958,7 @@ return {
 		}
 	},
 	durax_hero_0059 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -984,7 +984,7 @@ return {
 		}
 	},
 	durax_hero_0061 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1010,7 +1010,7 @@ return {
 		}
 	},
 	durax_hero_0063 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1034,7 +1034,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0064 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1060,7 +1060,7 @@ return {
 		}
 	},
 	durax_hero_0066 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1084,7 +1084,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0067 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1116,7 +1116,7 @@ return {
 		}
 	},
 	durax_hero_0075 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1142,7 +1142,7 @@ return {
 		}
 	},
 	durax_hero_0077 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1168,7 +1168,7 @@ return {
 		}
 	},
 	durax_hero_0079 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1194,7 +1194,7 @@ return {
 		}
 	},
 	durax_hero_0081 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1220,7 +1220,7 @@ return {
 		}
 	},
 	durax_hero_0083 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1244,7 +1244,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0084 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1268,7 +1268,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0085 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1294,7 +1294,7 @@ return {
 		}
 	},
 	durax_hero_0087 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1320,7 +1320,7 @@ return {
 		}
 	},
 	durax_hero_0089 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1346,7 +1346,7 @@ return {
 		}
 	},
 	durax_hero_0091 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1372,7 +1372,7 @@ return {
 		}
 	},
 	durax_hero_0093 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1398,7 +1398,7 @@ return {
 		}
 	},
 	durax_hero_0097 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1424,7 +1424,7 @@ return {
 		}
 	},
 	durax_hero_0099 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1450,7 +1450,7 @@ return {
 		}
 	},
 	durax_hero_0101 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1476,7 +1476,7 @@ return {
 		}
 	},
 	durax_hero_0103 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1502,7 +1502,7 @@ return {
 		}
 	},
 	durax_hero_0105 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1528,7 +1528,7 @@ return {
 		}
 	},
 	durax_hero_0107 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1554,7 +1554,7 @@ return {
 		}
 	},
 	durax_hero_0109 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1580,7 +1580,7 @@ return {
 		}
 	},
 	durax_hero_0111 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1604,7 +1604,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0112 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1628,7 +1628,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0113 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1652,7 +1652,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0114 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1676,7 +1676,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0115 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1702,7 +1702,7 @@ return {
 		}
 	},
 	durax_hero_0117 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1728,7 +1728,7 @@ return {
 		}
 	},
 	durax_hero_0121 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1754,7 +1754,7 @@ return {
 		}
 	},
 	durax_hero_0123 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1780,7 +1780,7 @@ return {
 		}
 	},
 	durax_hero_0125 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1806,7 +1806,7 @@ return {
 		}
 	},
 	durax_hero_0127 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1832,7 +1832,7 @@ return {
 		}
 	},
 	durax_hero_0129 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1858,7 +1858,7 @@ return {
 		}
 	},
 	durax_hero_0131 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1884,7 +1884,7 @@ return {
 		}
 	},
 	durax_hero_0133 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1910,7 +1910,7 @@ return {
 		}
 	},
 	durax_hero_0135 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1936,7 +1936,7 @@ return {
 		}
 	},
 	durax_hero_0137 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1962,7 +1962,7 @@ return {
 		}
 	},
 	durax_hero_0139 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -1988,7 +1988,7 @@ return {
 		}
 	},
 	durax_hero_0141 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2014,7 +2014,7 @@ return {
 		}
 	},
 	durax_hero_0143 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2040,7 +2040,7 @@ return {
 		}
 	},
 	durax_hero_0145 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2066,7 +2066,7 @@ return {
 		}
 	},
 	durax_hero_0147 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2092,7 +2092,7 @@ return {
 		}
 	},
 	durax_hero_0149 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2119,7 +2119,7 @@ return {
 		}
 	},
 	durax_hero_0151 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2145,7 +2145,7 @@ return {
 		}
 	},
 	durax_hero_0153 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2171,7 +2171,7 @@ return {
 		}
 	},
 	durax_hero_0155 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2197,7 +2197,7 @@ return {
 		}
 	},
 	durax_hero_0157 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2223,7 +2223,7 @@ return {
 		}
 	},
 	durax_hero_0159 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2249,7 +2249,7 @@ return {
 		}
 	},
 	durax_hero_0161 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2275,7 +2275,7 @@ return {
 		}
 	},
 	durax_hero_0163 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2301,7 +2301,7 @@ return {
 		}
 	},
 	durax_hero_0165 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2327,7 +2327,7 @@ return {
 		}
 	},
 	durax_hero_0167 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2353,7 +2353,7 @@ return {
 		}
 	},
 	durax_hero_0169 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2379,7 +2379,7 @@ return {
 		}
 	},
 	durax_hero_0171 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2405,7 +2405,7 @@ return {
 		}
 	},
 	durax_hero_0173 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2431,7 +2431,7 @@ return {
 		}
 	},
 	durax_hero_0175 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2457,7 +2457,7 @@ return {
 		}
 	},
 	durax_hero_0177 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2483,7 +2483,7 @@ return {
 		}
 	},
 	durax_hero_0180 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2509,7 +2509,7 @@ return {
 		}
 	},
 	durax_hero_0182 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2535,7 +2535,7 @@ return {
 		}
 	},
 	durax_hero_0184 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2561,7 +2561,7 @@ return {
 		}
 	},
 	durax_hero_0186 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2587,7 +2587,7 @@ return {
 		}
 	},
 	durax_hero_0188 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2613,7 +2613,7 @@ return {
 		}
 	},
 	durax_hero_0190 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2639,7 +2639,7 @@ return {
 		}
 	},
 	durax_hero_0192 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2663,7 +2663,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0193 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2687,7 +2687,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0194 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2711,7 +2711,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0195 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2735,7 +2735,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0196 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2759,7 +2759,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0197 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2783,7 +2783,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0198 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2807,7 +2807,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0199 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2831,7 +2831,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0200 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2857,7 +2857,7 @@ return {
 		}
 	},
 	durax_hero_0202 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2881,7 +2881,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0203 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2905,7 +2905,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0204 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2929,7 +2929,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0205 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2953,7 +2953,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0206 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -2977,7 +2977,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0207 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3001,7 +3001,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0208 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3025,7 +3025,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0209 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3052,7 +3052,7 @@ return {
 		}
 	},
 	durax_hero_0212 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3078,7 +3078,7 @@ return {
 		}
 	},
 	durax_hero_0216 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3102,7 +3102,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0217 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3126,7 +3126,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0218 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3150,7 +3150,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0219 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3174,7 +3174,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0220 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3198,7 +3198,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0221 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3222,7 +3222,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0222 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3246,7 +3246,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0223 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3270,7 +3270,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0224 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3296,7 +3296,7 @@ return {
 		}
 	},
 	durax_hero_0226 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3322,7 +3322,7 @@ return {
 		}
 	},
 	durax_hero_0228 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3348,7 +3348,7 @@ return {
 		}
 	},
 	durax_hero_0230 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3374,7 +3374,7 @@ return {
 		}
 	},
 	durax_hero_0232 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3398,7 +3398,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0233 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3422,7 +3422,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0234 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3448,7 +3448,7 @@ return {
 		}
 	},
 	durax_hero_0236 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3474,7 +3474,7 @@ return {
 		}
 	},
 	durax_hero_0238 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3500,7 +3500,7 @@ return {
 		}
 	},
 	durax_hero_0240 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3526,7 +3526,7 @@ return {
 		}
 	},
 	durax_hero_0242 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3550,7 +3550,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0243 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3574,7 +3574,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0244 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3598,7 +3598,7 @@ return {
 		alias = {}
 	},
 	durax_hero_0245 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3624,7 +3624,7 @@ return {
 		}
 	},
 	durax_hero_0247 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3650,7 +3650,7 @@ return {
 		}
 	},
 	durax_hero_0249 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3676,7 +3676,7 @@ return {
 		}
 	},
 	durax_hero_0251 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3702,7 +3702,7 @@ return {
 		}
 	},
 	durax_hero_0253 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3728,7 +3728,7 @@ return {
 		}
 	},
 	durax_hero_0255 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			183,
 			183
@@ -3754,7 +3754,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3780,7 +3780,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3806,7 +3806,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3832,7 +3832,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3858,7 +3858,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3884,7 +3884,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3910,7 +3910,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3936,7 +3936,7 @@ return {
 		}
 	},
 	durax_hero_aura_floor_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			84,
 			51
@@ -3962,7 +3962,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -3988,7 +3988,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4014,7 +4014,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4040,7 +4040,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4066,7 +4066,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4092,7 +4092,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4118,7 +4118,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4144,7 +4144,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4170,7 +4170,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0017 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4196,7 +4196,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0019 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4222,7 +4222,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0021 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			242,
 			42
@@ -4248,7 +4248,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0023 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			276,
 			79
@@ -4274,7 +4274,7 @@ return {
 		}
 	},
 	durax_hero_lethalprism_ray_0025 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			276,
 			79
@@ -4298,7 +4298,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4322,7 +4322,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0002 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4346,7 +4346,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4370,7 +4370,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0004 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4394,7 +4394,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4418,7 +4418,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0006 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4442,7 +4442,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4466,7 +4466,7 @@ return {
 		alias = {}
 	},
 	durax_hero_lethalprism_ray_hit_0008 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			76,
 			68
@@ -4490,7 +4490,7 @@ return {
 		alias = {}
 	},
 	durax_hero_particle_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			51,
 			34
@@ -4516,7 +4516,7 @@ return {
 		}
 	},
 	durax_hero_particle_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			51,
 			34
@@ -4542,7 +4542,7 @@ return {
 		}
 	},
 	durax_hero_particle_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			51,
 			34
@@ -4568,7 +4568,7 @@ return {
 		}
 	},
 	durax_hero_proy = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			31,
 			17
@@ -4592,7 +4592,7 @@ return {
 		alias = {}
 	},
 	["durax_hero_proy_0001-f"] = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			23
@@ -4616,7 +4616,7 @@ return {
 		alias = {}
 	},
 	["durax_hero_proy_0002-f"] = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			23
@@ -4640,7 +4640,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4664,7 +4664,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0002 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4688,7 +4688,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4712,7 +4712,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0004 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4736,7 +4736,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4760,7 +4760,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0006 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4784,7 +4784,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4808,7 +4808,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0008 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4832,7 +4832,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4856,7 +4856,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0010 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4880,7 +4880,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4904,7 +4904,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0012 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4928,7 +4928,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4952,7 +4952,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0014 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -4976,7 +4976,7 @@ return {
 		alias = {}
 	},
 	durax_hero_proy_explosion_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			79,
 			76
@@ -5000,7 +5000,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5024,7 +5024,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0002 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5048,7 +5048,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5072,7 +5072,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0004 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5096,7 +5096,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5120,7 +5120,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0006 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5144,7 +5144,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5168,7 +5168,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0008 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5192,7 +5192,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5216,7 +5216,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0010 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5240,7 +5240,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5264,7 +5264,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0012 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5288,7 +5288,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5312,7 +5312,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0014 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5336,7 +5336,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5360,7 +5360,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0016 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5384,7 +5384,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0017 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5408,7 +5408,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0018 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5432,7 +5432,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0019 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5456,7 +5456,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0020 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5480,7 +5480,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0021 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5504,7 +5504,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0022 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5528,7 +5528,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0023 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5552,7 +5552,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0024 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5576,7 +5576,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0025 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5600,7 +5600,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0026 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5624,7 +5624,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0027 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5648,7 +5648,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0028 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5672,7 +5672,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_1_0029 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5696,7 +5696,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5720,7 +5720,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0002 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5744,7 +5744,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5768,7 +5768,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0004 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5792,7 +5792,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5816,7 +5816,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0006 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5840,7 +5840,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5864,7 +5864,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0008 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5888,7 +5888,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5912,7 +5912,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0010 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5936,7 +5936,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5960,7 +5960,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0012 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -5984,7 +5984,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6008,7 +6008,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0014 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6032,7 +6032,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6056,7 +6056,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0016 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6080,7 +6080,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0017 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6104,7 +6104,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0018 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6128,7 +6128,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0019 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6152,7 +6152,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0020 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6176,7 +6176,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0021 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6200,7 +6200,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0022 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6224,7 +6224,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0023 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6248,7 +6248,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0024 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6272,7 +6272,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0025 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6296,7 +6296,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0026 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6320,7 +6320,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0027 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6344,7 +6344,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0028 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6368,7 +6368,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0029 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6392,7 +6392,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_complement_2_0030 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			42,
 			48
@@ -6416,7 +6416,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6440,7 +6440,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0002 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6464,7 +6464,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6488,7 +6488,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0004 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6512,7 +6512,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6536,7 +6536,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0006 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6560,7 +6560,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6584,7 +6584,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0008 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6608,7 +6608,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6632,7 +6632,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0010 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6656,7 +6656,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6680,7 +6680,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0012 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6704,7 +6704,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6728,7 +6728,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0014 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6752,7 +6752,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6776,7 +6776,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0016 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6800,7 +6800,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0017 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6824,7 +6824,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0018 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6848,7 +6848,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0019 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6872,7 +6872,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0020 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6896,7 +6896,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0021 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6920,7 +6920,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0022 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6944,7 +6944,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0023 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6968,7 +6968,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0024 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -6992,7 +6992,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0025 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -7016,7 +7016,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0026 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -7040,7 +7040,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0027 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -7064,7 +7064,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0028 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -7088,7 +7088,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_multiple_0029 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			101,
 			84
@@ -7112,7 +7112,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0001 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7136,7 +7136,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0002 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7160,7 +7160,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0003 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7184,7 +7184,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0004 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7208,7 +7208,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0005 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7232,7 +7232,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0006 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7256,7 +7256,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0007 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7280,7 +7280,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0008 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7304,7 +7304,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0009 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7328,7 +7328,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0010 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7352,7 +7352,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0011 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7376,7 +7376,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0012 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7400,7 +7400,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0013 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7424,7 +7424,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0014 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7448,7 +7448,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0015 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7472,7 +7472,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0016 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7496,7 +7496,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0017 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7520,7 +7520,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0018 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7544,7 +7544,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0019 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7568,7 +7568,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0020 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7592,7 +7592,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0021 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7616,7 +7616,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0022 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7640,7 +7640,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0023 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7664,7 +7664,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0024 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7688,7 +7688,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0025 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7712,7 +7712,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0026 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7736,7 +7736,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0027 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7760,7 +7760,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0028 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7784,7 +7784,7 @@ return {
 		alias = {}
 	},
 	durax_hero_saphirefangultimate_single_0029 = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			141,
 			121
@@ -7808,7 +7808,7 @@ return {
 		alias = {}
 	},
 	durax_hero_shardseed_decal = {
-		a_name = "go_hero_durax-1.dds",
+		a_name = "go_hero_durax-1.png",
 		size = {
 			90,
 			56

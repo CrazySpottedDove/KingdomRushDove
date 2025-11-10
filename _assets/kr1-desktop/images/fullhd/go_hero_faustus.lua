@@ -2,7 +2,7 @@
 
 return {
 	faustus_hero_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	faustus_hero_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	faustus_hero_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	faustus_hero_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	faustus_hero_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	faustus_hero_0011 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	faustus_hero_0013 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	faustus_hero_0015 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	faustus_hero_0017 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -238,7 +238,7 @@ return {
 		}
 	},
 	faustus_hero_0019 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -264,7 +264,7 @@ return {
 		}
 	},
 	faustus_hero_0021 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -290,7 +290,7 @@ return {
 		}
 	},
 	faustus_hero_0023 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -316,7 +316,7 @@ return {
 		}
 	},
 	faustus_hero_0025 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -342,7 +342,7 @@ return {
 		}
 	},
 	faustus_hero_0027 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -368,7 +368,7 @@ return {
 		}
 	},
 	faustus_hero_0029 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -394,7 +394,7 @@ return {
 		}
 	},
 	faustus_hero_0031 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -420,7 +420,7 @@ return {
 		}
 	},
 	faustus_hero_0033 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -446,7 +446,7 @@ return {
 		}
 	},
 	faustus_hero_0035 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -472,7 +472,7 @@ return {
 		}
 	},
 	faustus_hero_0037 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -498,7 +498,7 @@ return {
 		}
 	},
 	faustus_hero_0039 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -524,7 +524,7 @@ return {
 		}
 	},
 	faustus_hero_0041 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -550,7 +550,7 @@ return {
 		}
 	},
 	faustus_hero_0043 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -576,7 +576,7 @@ return {
 		}
 	},
 	faustus_hero_0045 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -602,7 +602,7 @@ return {
 		}
 	},
 	faustus_hero_0047 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -628,7 +628,7 @@ return {
 		}
 	},
 	faustus_hero_0049 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -654,7 +654,7 @@ return {
 		}
 	},
 	faustus_hero_0051 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -680,7 +680,7 @@ return {
 		}
 	},
 	faustus_hero_0053 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -706,7 +706,7 @@ return {
 		}
 	},
 	faustus_hero_0055 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -732,7 +732,7 @@ return {
 		}
 	},
 	faustus_hero_0057 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -758,7 +758,7 @@ return {
 		}
 	},
 	faustus_hero_0059 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -784,7 +784,7 @@ return {
 		}
 	},
 	faustus_hero_0061 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -810,7 +810,7 @@ return {
 		}
 	},
 	faustus_hero_0063 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -836,7 +836,7 @@ return {
 		}
 	},
 	faustus_hero_0065 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -862,7 +862,7 @@ return {
 		}
 	},
 	faustus_hero_0067 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -888,7 +888,7 @@ return {
 		}
 	},
 	faustus_hero_0069 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -914,7 +914,7 @@ return {
 		}
 	},
 	faustus_hero_0071 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -940,7 +940,7 @@ return {
 		}
 	},
 	faustus_hero_0073 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -966,7 +966,7 @@ return {
 		}
 	},
 	faustus_hero_0075 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -992,7 +992,7 @@ return {
 		}
 	},
 	faustus_hero_0077 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1018,7 +1018,7 @@ return {
 		}
 	},
 	faustus_hero_0079 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1044,7 +1044,7 @@ return {
 		}
 	},
 	faustus_hero_0081 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1070,7 +1070,7 @@ return {
 		}
 	},
 	faustus_hero_0083 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1096,7 +1096,7 @@ return {
 		}
 	},
 	faustus_hero_0085 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1122,7 +1122,7 @@ return {
 		}
 	},
 	faustus_hero_0087 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1148,7 +1148,7 @@ return {
 		}
 	},
 	faustus_hero_0089 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1174,7 +1174,7 @@ return {
 		}
 	},
 	faustus_hero_0091 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1200,7 +1200,7 @@ return {
 		}
 	},
 	faustus_hero_0093 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1226,7 +1226,7 @@ return {
 		}
 	},
 	faustus_hero_0095 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1252,7 +1252,7 @@ return {
 		}
 	},
 	faustus_hero_0097 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1278,7 +1278,7 @@ return {
 		}
 	},
 	faustus_hero_0099 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1304,7 +1304,7 @@ return {
 		}
 	},
 	faustus_hero_0101 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1330,7 +1330,7 @@ return {
 		}
 	},
 	faustus_hero_0103 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1442,7 +1442,7 @@ return {
 		}
 	},
 	faustus_hero_0111 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1468,7 +1468,7 @@ return {
 		}
 	},
 	faustus_hero_0113 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1494,7 +1494,7 @@ return {
 		}
 	},
 	faustus_hero_0115 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1520,7 +1520,7 @@ return {
 		}
 	},
 	faustus_hero_0117 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1546,7 +1546,7 @@ return {
 		}
 	},
 	faustus_hero_0119 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1572,7 +1572,7 @@ return {
 		}
 	},
 	faustus_hero_0121 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	faustus_hero_0123 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1624,7 +1624,7 @@ return {
 		}
 	},
 	faustus_hero_0125 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	faustus_hero_0127 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1676,7 +1676,7 @@ return {
 		}
 	},
 	faustus_hero_0147 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1702,7 +1702,7 @@ return {
 		}
 	},
 	faustus_hero_0149 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1728,7 +1728,7 @@ return {
 		}
 	},
 	faustus_hero_0151 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1754,7 +1754,7 @@ return {
 		}
 	},
 	faustus_hero_0153 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1780,7 +1780,7 @@ return {
 		}
 	},
 	faustus_hero_0155 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1806,7 +1806,7 @@ return {
 		}
 	},
 	faustus_hero_0157 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1832,7 +1832,7 @@ return {
 		}
 	},
 	faustus_hero_0159 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1858,7 +1858,7 @@ return {
 		}
 	},
 	faustus_hero_0161 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1884,7 +1884,7 @@ return {
 		}
 	},
 	faustus_hero_0163 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1910,7 +1910,7 @@ return {
 		}
 	},
 	faustus_hero_0165 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1936,7 +1936,7 @@ return {
 		}
 	},
 	faustus_hero_0175 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1962,7 +1962,7 @@ return {
 		}
 	},
 	faustus_hero_0177 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -1988,7 +1988,7 @@ return {
 		}
 	},
 	faustus_hero_0179 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2014,7 +2014,7 @@ return {
 		}
 	},
 	faustus_hero_0181 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2040,7 +2040,7 @@ return {
 		}
 	},
 	faustus_hero_0183 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2066,7 +2066,7 @@ return {
 		}
 	},
 	faustus_hero_0185 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2092,7 +2092,7 @@ return {
 		}
 	},
 	faustus_hero_0187 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2118,7 +2118,7 @@ return {
 		}
 	},
 	faustus_hero_0189 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2144,7 +2144,7 @@ return {
 		}
 	},
 	faustus_hero_0191 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2170,7 +2170,7 @@ return {
 		}
 	},
 	faustus_hero_0193 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2196,7 +2196,7 @@ return {
 		}
 	},
 	faustus_hero_0195 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2222,7 +2222,7 @@ return {
 		}
 	},
 	faustus_hero_0197 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2248,7 +2248,7 @@ return {
 		}
 	},
 	faustus_hero_0199 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2274,7 +2274,7 @@ return {
 		}
 	},
 	faustus_hero_0201 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2300,7 +2300,7 @@ return {
 		}
 	},
 	faustus_hero_0203 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2326,7 +2326,7 @@ return {
 		}
 	},
 	faustus_hero_0205 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2352,7 +2352,7 @@ return {
 		}
 	},
 	faustus_hero_0207 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2378,7 +2378,7 @@ return {
 		}
 	},
 	faustus_hero_0209 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2404,7 +2404,7 @@ return {
 		}
 	},
 	faustus_hero_0211 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2430,7 +2430,7 @@ return {
 		}
 	},
 	faustus_hero_0213 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2456,7 +2456,7 @@ return {
 		}
 	},
 	faustus_hero_0215 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2482,7 +2482,7 @@ return {
 		}
 	},
 	faustus_hero_0217 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2508,7 +2508,7 @@ return {
 		}
 	},
 	faustus_hero_0219 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2534,7 +2534,7 @@ return {
 		}
 	},
 	faustus_hero_0221 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2560,7 +2560,7 @@ return {
 		}
 	},
 	faustus_hero_0223 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2586,7 +2586,7 @@ return {
 		}
 	},
 	faustus_hero_0225 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2612,7 +2612,7 @@ return {
 		}
 	},
 	faustus_hero_0227 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2638,7 +2638,7 @@ return {
 		}
 	},
 	faustus_hero_0229 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2664,7 +2664,7 @@ return {
 		}
 	},
 	faustus_hero_0233 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2688,7 +2688,7 @@ return {
 		alias = {}
 	},
 	faustus_hero_attackFx_0013 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2714,7 +2714,7 @@ return {
 		}
 	},
 	faustus_hero_attackFx_0015 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2740,7 +2740,7 @@ return {
 		}
 	},
 	faustus_hero_attackFx_0017 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2766,7 +2766,7 @@ return {
 		}
 	},
 	faustus_hero_attackFx_0019 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2792,7 +2792,7 @@ return {
 		}
 	},
 	faustus_hero_attackFx_0021 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2818,7 +2818,7 @@ return {
 		}
 	},
 	faustus_hero_attackFx_0023 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2844,7 +2844,7 @@ return {
 		}
 	},
 	faustus_hero_attackGlow_0013 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2870,7 +2870,7 @@ return {
 		}
 	},
 	faustus_hero_attackGlow_0015 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2896,7 +2896,7 @@ return {
 		}
 	},
 	faustus_hero_attackGlow_0017 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2922,7 +2922,7 @@ return {
 		}
 	},
 	faustus_hero_attackGlow_0019 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2948,7 +2948,7 @@ return {
 		}
 	},
 	faustus_hero_attackGlow_0021 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -2974,7 +2974,7 @@ return {
 		}
 	},
 	faustus_hero_attackGlow_0023 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -3000,7 +3000,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_big_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			70,
 			56
@@ -3027,7 +3027,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_big_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			70,
 			56
@@ -3053,7 +3053,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_big_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			70,
 			56
@@ -3079,7 +3079,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_big_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			70,
 			56
@@ -3105,7 +3105,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_big_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			70,
 			56
@@ -3131,7 +3131,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_small_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			56,
 			45
@@ -3158,7 +3158,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_small_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			56,
 			45
@@ -3184,7 +3184,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_small_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			56,
 			45
@@ -3210,7 +3210,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_small_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			56,
 			45
@@ -3236,7 +3236,7 @@ return {
 		}
 	},
 	faustus_hero_creep_fire_effect_small_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			56,
 			45
@@ -3262,7 +3262,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_fire_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			104,
 			84
@@ -3288,7 +3288,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_fire_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			104,
 			84
@@ -3314,7 +3314,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_fire_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			104,
 			84
@@ -3340,7 +3340,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_fire_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			104,
 			84
@@ -3366,7 +3366,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_fire_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			104,
 			84
@@ -3392,7 +3392,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_fire_0011 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			104,
 			84
@@ -3418,7 +3418,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_fire_0013 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			104,
 			84
@@ -3444,7 +3444,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_glow_0013 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			233,
 			349
@@ -3480,7 +3480,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_hit_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			127,
 			98
@@ -3506,7 +3506,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_hit_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			127,
 			98
@@ -3532,7 +3532,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_hit_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			127,
 			98
@@ -3558,7 +3558,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_hit_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			127,
 			98
@@ -3584,7 +3584,7 @@ return {
 		}
 	},
 	faustus_hero_magicFire_hit_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			127,
 			98
@@ -3610,7 +3610,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3636,7 +3636,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3662,7 +3662,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3688,7 +3688,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3714,7 +3714,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3740,7 +3740,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0011 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3766,7 +3766,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0013 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3792,7 +3792,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0015 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3818,7 +3818,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0017 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3844,7 +3844,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0019 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3870,7 +3870,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0021 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3896,7 +3896,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0023 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3922,7 +3922,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0025 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3948,7 +3948,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0027 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -3974,7 +3974,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0029 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4000,7 +4000,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0031 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4026,7 +4026,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0033 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4052,7 +4052,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0035 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4078,7 +4078,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0037 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4104,7 +4104,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0039 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4130,7 +4130,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0041 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4156,7 +4156,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0043 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4182,7 +4182,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0045 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4208,7 +4208,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0047 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4234,7 +4234,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0049 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4260,7 +4260,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0051 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4286,7 +4286,7 @@ return {
 		}
 	},
 	faustus_hero_rage_0053 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			169
@@ -4312,7 +4312,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_big_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			104
@@ -4338,7 +4338,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_big_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			104
@@ -4364,7 +4364,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_big_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			104
@@ -4390,7 +4390,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_big_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			104
@@ -4416,7 +4416,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_big_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			113,
 			104
@@ -4442,7 +4442,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_small_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			90,
 			79
@@ -4468,7 +4468,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_small_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			90,
 			79
@@ -4494,7 +4494,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_small_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			90,
 			79
@@ -4520,7 +4520,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_small_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			90,
 			79
@@ -4546,7 +4546,7 @@ return {
 		}
 	},
 	faustus_hero_rayHit_small_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			90,
 			79
@@ -4572,7 +4572,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_big_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			84,
 			76
@@ -4598,7 +4598,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_big_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			84,
 			76
@@ -4624,7 +4624,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_big_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			84,
 			76
@@ -4650,7 +4650,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_big_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			84,
 			76
@@ -4676,7 +4676,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_big_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			84,
 			76
@@ -4702,7 +4702,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_small_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			65,
 			65
@@ -4728,7 +4728,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_small_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			65,
 			65
@@ -4754,7 +4754,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_small_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			65,
 			65
@@ -4780,7 +4780,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_small_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			65,
 			65
@@ -4806,7 +4806,7 @@ return {
 		}
 	},
 	faustus_hero_silenceFx_small_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			65,
 			65
@@ -4832,7 +4832,7 @@ return {
 		}
 	},
 	faustus_hero_teleport_big_0001 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			124,
 			98
@@ -4858,7 +4858,7 @@ return {
 		}
 	},
 	faustus_hero_teleport_big_0003 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			124,
 			98
@@ -4884,7 +4884,7 @@ return {
 		}
 	},
 	faustus_hero_teleport_big_0005 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			124,
 			98
@@ -4910,7 +4910,7 @@ return {
 		}
 	},
 	faustus_hero_teleport_big_0007 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			124,
 			98
@@ -4936,7 +4936,7 @@ return {
 		}
 	},
 	faustus_hero_teleport_big_0009 = {
-		a_name = "go_hero_faustus-1.dds",
+		a_name = "go_hero_faustus-1.png",
 		size = {
 			124,
 			98

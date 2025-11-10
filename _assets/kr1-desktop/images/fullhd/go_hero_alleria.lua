@@ -2,7 +2,7 @@
 
 return {
 	hero_archer_0001 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0002 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0003 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0004 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0005 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0006 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0007 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -172,7 +172,7 @@ return {
 		}
 	},
 	hero_archer_0009 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -196,7 +196,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0010 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -222,7 +222,7 @@ return {
 		}
 	},
 	hero_archer_0012 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -246,7 +246,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0013 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -270,7 +270,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0014 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -296,7 +296,7 @@ return {
 		}
 	},
 	hero_archer_0016 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -323,7 +323,7 @@ return {
 		}
 	},
 	hero_archer_0019 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -354,7 +354,7 @@ return {
 		}
 	},
 	hero_archer_0021 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -380,7 +380,7 @@ return {
 		}
 	},
 	hero_archer_0023 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -406,7 +406,7 @@ return {
 		}
 	},
 	hero_archer_0025 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -430,7 +430,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0026 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -456,7 +456,7 @@ return {
 		}
 	},
 	hero_archer_0028 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -482,7 +482,7 @@ return {
 		}
 	},
 	hero_archer_0030 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0031 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0032 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -556,7 +556,7 @@ return {
 		}
 	},
 	hero_archer_0036 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -582,7 +582,7 @@ return {
 		}
 	},
 	hero_archer_0038 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -606,7 +606,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0039 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -630,7 +630,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0040 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -654,7 +654,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0041 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -678,7 +678,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0042 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -702,7 +702,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0043 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -726,7 +726,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0044 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -750,7 +750,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0045 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -774,7 +774,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0046 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -798,7 +798,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0047 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -822,7 +822,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0048 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -846,7 +846,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0049 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -870,7 +870,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0050 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -894,7 +894,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0051 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -920,7 +920,7 @@ return {
 		}
 	},
 	hero_archer_0054 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -946,7 +946,7 @@ return {
 		}
 	},
 	hero_archer_0056 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -970,7 +970,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0057 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -996,7 +996,7 @@ return {
 		}
 	},
 	hero_archer_0059 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1020,7 +1020,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0060 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1044,7 +1044,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0061 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1068,7 +1068,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0062 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1092,7 +1092,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0063 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1116,7 +1116,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0064 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1140,7 +1140,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0065 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1164,7 +1164,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0066 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1188,7 +1188,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0067 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1212,7 +1212,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0068 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1236,7 +1236,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0069 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1260,7 +1260,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0070 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1284,7 +1284,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0071 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1308,7 +1308,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0072 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1339,7 +1339,7 @@ return {
 		}
 	},
 	hero_archer_0081 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1365,7 +1365,7 @@ return {
 		}
 	},
 	hero_archer_0083 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1391,7 +1391,7 @@ return {
 		}
 	},
 	hero_archer_0085 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1417,7 +1417,7 @@ return {
 		}
 	},
 	hero_archer_0087 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1445,7 +1445,7 @@ return {
 		}
 	},
 	hero_archer_0091 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1469,7 +1469,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0092 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1493,7 +1493,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0093 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1517,7 +1517,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0094 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1541,7 +1541,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0095 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1565,7 +1565,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0096 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1589,7 +1589,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0097 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1613,7 +1613,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0098 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1637,7 +1637,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0099 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1661,7 +1661,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0100 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1685,7 +1685,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0101 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1709,7 +1709,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0102 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1733,7 +1733,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0103 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1757,7 +1757,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0104 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1781,7 +1781,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0105 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1805,7 +1805,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0106 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1829,7 +1829,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0107 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1853,7 +1853,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0108 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1877,7 +1877,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0109 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1901,7 +1901,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0110 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1925,7 +1925,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0111 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1949,7 +1949,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0112 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1973,7 +1973,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0113 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -1997,7 +1997,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0114 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2021,7 +2021,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0115 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2048,7 +2048,7 @@ return {
 		}
 	},
 	hero_archer_0118 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2072,7 +2072,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0119 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2096,7 +2096,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0120 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2120,7 +2120,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0121 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2144,7 +2144,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0122 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2168,7 +2168,7 @@ return {
 		alias = {}
 	},
 	hero_archer_0123 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2194,7 +2194,7 @@ return {
 		}
 	},
 	hero_archer_0125 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			86,
 			108
@@ -2218,7 +2218,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0001 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2242,7 +2242,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0002 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2268,7 +2268,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0004 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2292,7 +2292,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0005 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2316,7 +2316,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0006 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2340,7 +2340,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0007 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2364,7 +2364,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0008 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2388,7 +2388,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0009 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2412,7 +2412,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0010 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2436,7 +2436,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0011 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2460,7 +2460,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0012 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2486,7 +2486,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0014 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2512,7 +2512,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0016 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2538,7 +2538,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0018 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2564,7 +2564,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0020 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2590,7 +2590,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0022 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2614,7 +2614,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0023 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2638,7 +2638,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0024 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2662,7 +2662,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0025 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2686,7 +2686,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0026 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2710,7 +2710,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0027 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2734,7 +2734,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0028 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2758,7 +2758,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0029 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2782,7 +2782,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0030 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2806,7 +2806,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0031 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2830,7 +2830,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0032 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2854,7 +2854,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0033 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2878,7 +2878,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0034 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2902,7 +2902,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0035 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2926,7 +2926,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0036 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2950,7 +2950,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0037 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2974,7 +2974,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0038 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -2998,7 +2998,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0039 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3022,7 +3022,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0040 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3046,7 +3046,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0041 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3070,7 +3070,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0042 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3094,7 +3094,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0043 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3118,7 +3118,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0044 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3144,7 +3144,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0046 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3168,7 +3168,7 @@ return {
 		alias = {}
 	},
 	hero_archer_wildcat_0047 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3194,7 +3194,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0049 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3220,7 +3220,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0051 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3246,7 +3246,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0053 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3272,7 +3272,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0055 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3298,7 +3298,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0057 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3324,7 +3324,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0059 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3350,7 +3350,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0061 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60
@@ -3376,7 +3376,7 @@ return {
 		}
 	},
 	hero_archer_wildcat_0063 = {
-		a_name = "go_hero_alleria-1.dds",
+		a_name = "go_hero_alleria-1.png",
 		size = {
 			82,
 			60

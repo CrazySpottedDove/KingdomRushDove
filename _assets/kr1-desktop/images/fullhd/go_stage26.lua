@@ -2,7 +2,7 @@
 
 return {
 	CB_Boss_0001 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -75,7 +75,7 @@ return {
 		}
 	},
 	CB_Boss_0004 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -101,7 +101,7 @@ return {
 		}
 	},
 	CB_Boss_0006 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -127,7 +127,7 @@ return {
 		}
 	},
 	CB_Boss_0008 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -153,7 +153,7 @@ return {
 		}
 	},
 	CB_Boss_0010 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -179,7 +179,7 @@ return {
 		}
 	},
 	CB_Boss_0012 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -206,7 +206,7 @@ return {
 		}
 	},
 	CB_Boss_0015 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -232,7 +232,7 @@ return {
 		}
 	},
 	CB_Boss_0017 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -258,7 +258,7 @@ return {
 		}
 	},
 	CB_Boss_0019 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	CB_Boss_0021 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	CB_Boss_0025 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -363,7 +363,7 @@ return {
 		}
 	},
 	CB_Boss_0030 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -389,7 +389,7 @@ return {
 		}
 	},
 	CB_Boss_0032 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -415,7 +415,7 @@ return {
 		}
 	},
 	CB_Boss_0034 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -441,7 +441,7 @@ return {
 		}
 	},
 	CB_Boss_0036 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -467,7 +467,7 @@ return {
 		}
 	},
 	CB_Boss_0038 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -493,7 +493,7 @@ return {
 		}
 	},
 	CB_Boss_0040 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -519,7 +519,7 @@ return {
 		}
 	},
 	CB_Boss_0042 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -545,7 +545,7 @@ return {
 		}
 	},
 	CB_Boss_0044 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -571,7 +571,7 @@ return {
 		}
 	},
 	CB_Boss_0046 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -595,7 +595,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0047 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -621,7 +621,7 @@ return {
 		}
 	},
 	CB_Boss_0049 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -647,7 +647,7 @@ return {
 		}
 	},
 	CB_Boss_0051 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	CB_Boss_0054 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	CB_Boss_0058 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -729,7 +729,7 @@ return {
 		}
 	},
 	CB_Boss_0061 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -755,7 +755,7 @@ return {
 		}
 	},
 	CB_Boss_0063 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -781,7 +781,7 @@ return {
 		}
 	},
 	CB_Boss_0065 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -807,7 +807,7 @@ return {
 		}
 	},
 	CB_Boss_0071 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -833,7 +833,7 @@ return {
 		}
 	},
 	CB_Boss_0073 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -859,7 +859,7 @@ return {
 		}
 	},
 	CB_Boss_0075 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -911,7 +911,7 @@ return {
 		}
 	},
 	CB_Boss_0079 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -937,7 +937,7 @@ return {
 		}
 	},
 	CB_Boss_0081 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -963,7 +963,7 @@ return {
 		}
 	},
 	CB_Boss_0083 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -989,7 +989,7 @@ return {
 		}
 	},
 	CB_Boss_0085 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1018,7 +1018,7 @@ return {
 		}
 	},
 	CB_Boss_0090 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1044,7 +1044,7 @@ return {
 		}
 	},
 	CB_Boss_0092 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1070,7 +1070,7 @@ return {
 		}
 	},
 	CB_Boss_0094 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1096,7 +1096,7 @@ return {
 		}
 	},
 	CB_Boss_0096 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1122,7 +1122,7 @@ return {
 		}
 	},
 	CB_Boss_0098 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1148,7 +1148,7 @@ return {
 		}
 	},
 	CB_Boss_0100 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1174,7 +1174,7 @@ return {
 		}
 	},
 	CB_Boss_0102 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1200,7 +1200,7 @@ return {
 		}
 	},
 	CB_Boss_0104 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1226,7 +1226,7 @@ return {
 		}
 	},
 	CB_Boss_0106 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1252,7 +1252,7 @@ return {
 		}
 	},
 	CB_Boss_0108 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1281,7 +1281,7 @@ return {
 		}
 	},
 	CB_Boss_0113 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1307,7 +1307,7 @@ return {
 		}
 	},
 	CB_Boss_0115 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1333,7 +1333,7 @@ return {
 		}
 	},
 	CB_Boss_0133 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			440,
 			432
@@ -1359,7 +1359,7 @@ return {
 		}
 	},
 	CB_Boss_0135 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1385,7 +1385,7 @@ return {
 		}
 	},
 	CB_Boss_0137 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1411,7 +1411,7 @@ return {
 		}
 	},
 	CB_Boss_0139 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1437,7 +1437,7 @@ return {
 		}
 	},
 	CB_Boss_0141 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1468,7 +1468,7 @@ return {
 		}
 	},
 	CB_Boss_0148 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1492,7 +1492,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0149 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1516,7 +1516,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0150 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1540,7 +1540,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0151 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1564,7 +1564,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0152 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1588,7 +1588,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0153 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1612,7 +1612,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0154 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1636,7 +1636,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0155 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1660,7 +1660,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0156 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1684,7 +1684,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0157 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1708,7 +1708,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0158 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1732,7 +1732,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0159 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1756,7 +1756,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0160 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1780,7 +1780,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0161 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1804,7 +1804,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0162 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1828,7 +1828,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0163 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1852,7 +1852,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0164 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1876,7 +1876,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0165 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1902,7 +1902,7 @@ return {
 		}
 	},
 	CB_Boss_0167 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1928,7 +1928,7 @@ return {
 		}
 	},
 	CB_Boss_0169 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1954,7 +1954,7 @@ return {
 		}
 	},
 	CB_Boss_0171 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -1980,7 +1980,7 @@ return {
 		}
 	},
 	CB_Boss_0173 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -2006,7 +2006,7 @@ return {
 		}
 	},
 	CB_Boss_0175 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -2030,7 +2030,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0176 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -2078,7 +2078,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_0178 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			440,
 			432
@@ -2654,7 +2654,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitDecal_0001 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			372,
 			120
@@ -2678,7 +2678,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitDecal_0002 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			372,
 			120
@@ -2702,7 +2702,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitDecal_0003 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			372,
 			120
@@ -2726,7 +2726,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitDecal_0004 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			372,
 			120
@@ -2750,7 +2750,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitDecal_0005 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			372,
 			120
@@ -2774,7 +2774,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitDecal_0006 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			372,
 			120
@@ -3086,7 +3086,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0001 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			342,
 			300
@@ -3110,7 +3110,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0002 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			342,
 			300
@@ -3134,7 +3134,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0003 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3158,7 +3158,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0004 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3182,7 +3182,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0005 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3206,7 +3206,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0006 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3230,7 +3230,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0007 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3254,7 +3254,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0008 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3278,7 +3278,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0009 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3302,7 +3302,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0010 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3326,7 +3326,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_groundHitFx_0011 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			342,
 			300
@@ -3470,7 +3470,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0001 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			158,
 			140
@@ -3494,7 +3494,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0002 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3518,7 +3518,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0003 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			158,
 			140
@@ -3542,7 +3542,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0004 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			158,
 			140
@@ -3566,7 +3566,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0005 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			158,
 			140
@@ -3590,7 +3590,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0006 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3614,7 +3614,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0007 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3638,7 +3638,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0008 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3662,7 +3662,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0009 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3686,7 +3686,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0010 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3710,7 +3710,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0011 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3734,7 +3734,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0012 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3758,7 +3758,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0013 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3782,7 +3782,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0014 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3806,7 +3806,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0015 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3830,7 +3830,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0016 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3854,7 +3854,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0017 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3878,7 +3878,7 @@ return {
 		alias = {}
 	},
 	CB_Boss_towerDebuff_0018 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			158,
 			140
@@ -3928,7 +3928,7 @@ return {
 		}
 	},
 	CB_Stg26_cage_0002 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			106,
 			92
@@ -3954,7 +3954,7 @@ return {
 		}
 	},
 	CB_Stg26_cage_0004 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			106,
 			92
@@ -3978,7 +3978,7 @@ return {
 		alias = {}
 	},
 	CB_Stg26_cage_0005 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			106,
 			92
@@ -4008,7 +4008,7 @@ return {
 		}
 	},
 	CB_Stg26_cage_0007 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			106,
 			92
@@ -4039,7 +4039,7 @@ return {
 		}
 	},
 	CB_Stg26_cage_0018 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			106,
 			92
@@ -4063,7 +4063,7 @@ return {
 		alias = {}
 	},
 	CB_Stg26_cage_0019 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			106,
 			92
@@ -4111,7 +4111,7 @@ return {
 		alias = {}
 	},
 	CB_Stg26_hanged_0001 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4140,7 +4140,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0003 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4166,7 +4166,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0005 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4192,7 +4192,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0007 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4220,7 +4220,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0009 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4248,7 +4248,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0011 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4276,7 +4276,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0015 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4302,7 +4302,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0017 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4332,7 +4332,7 @@ return {
 		}
 	},
 	CB_Stg26_hanged_0019 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			92,
 			108
@@ -4362,7 +4362,7 @@ return {
 		}
 	},
 	stage_26_0002 = {
-		a_name = "go_stage26-3.dds",
+		a_name = "go_stage26-3.png",
 		size = {
 			1920,
 			1080
@@ -4386,7 +4386,7 @@ return {
 		alias = {}
 	},
 	stage_26_0003 = {
-		a_name = "go_stage26-2.dds",
+		a_name = "go_stage26-2.png",
 		size = {
 			1920,
 			1080
