@@ -19114,7 +19114,7 @@ function scripts.hero_raelyn.level_up(this, store)
 
         hit_aura.aura.damage_max = a.damage_max * s.damage_factor[s.level]
         hit_aura.aura.damage_min = a.damage_min * s.damage_factor[s.level]
-        o.hit_aura = hit_aura
+
         o.melee_cooldown = s.melee_cooldown[s.level]
         o.duration = s.duration[s.level]
         o.cooldown = s.cooldown[s.level]

@@ -389,7 +389,8 @@ function LU.insert_hero(store, name, pos, force_full_level)
                 hero.hero.level = 10
             end
         end
-
+        hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
+        hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
         LU.queue_insert(store, hero)
         signal.emit("hero-added-no-panel", hero)
         return
@@ -435,6 +436,8 @@ function LU.insert_hero(store, name, pos, force_full_level)
             end
         end
         hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
+        hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
+        
         LU.queue_insert(store, hero)
         signal.emit("hero-added", hero)
     end

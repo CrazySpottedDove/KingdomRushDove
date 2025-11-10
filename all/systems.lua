@@ -68,6 +68,7 @@ function sys.level:init(store)
     E:load()
 
     DI:patch_templates()
+    E:patch_config(store.config)
 
     W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
     if store.criket and store.criket.on then
@@ -2703,10 +2704,10 @@ function sys.last_hook:on_insert(e, d)
                     e.health.hp_max = e.health.hp_max * 1.15
                 end
             end
-            e.health.hp_max = d.config.enemy_health_multiplier * e.health.hp_max
+            -- e.health.hp_max = d.config.enemy_health_multiplier * e.health.hp_max
             e.health.hp = e.health.hp_max
             e.health.patched = true
-            e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
+            -- e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
         end
         d.enemy_count = d.enemy_count + 1
 

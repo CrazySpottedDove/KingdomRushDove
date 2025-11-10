@@ -308,6 +308,7 @@ function entity_db:search_entity(p)
 
     return results
 end
+
 function entity_db:gen_wave(level_idx, game_mode)
     local game_mode_str_map = {
         [GAME_MODE_CAMPAIGN] = "campaign",
@@ -597,6 +598,29 @@ function entity_db:gen_wave(level_idx, game_mode)
 
     file:write(data_string)
     file:close()
+end
+
+-- 在 difficulty:patch_templates() 后调用！
+function entity_db:patch_config(config)
+    for _, t in pairs(self.entities) do
+        if t.enemy then
+            if t.health.hp_max then
+                t.health.hp_max = t.health.hp_max * config.enemy_health_multiplier
+            end
+            if t.enemy.gold then
+                t.enemy.gold = math.ceil(t.enemy.gold * config.enemy_gold_multiplier)
+            end
+            if t.unit.damage_factor then
+                t.unit.damage_factor = t.unit.damage_factor * config.enemy_damage_multiplier
+            end
+            if t.health.damage_factor then
+                t.health.damage_factor = t.health.damage_factor * config.enemy_health_damage_multiplier
+            end
+            if t.motion.max_speed then
+                t.motion.max_speed = t.motion.max_speed * config.enemy_speed_multiplier
+            end
+        end
+    end
 end
 
 return entity_db

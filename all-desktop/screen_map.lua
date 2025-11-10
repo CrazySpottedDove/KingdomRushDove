@@ -3871,6 +3871,7 @@ function EncyclopediaView:show()
     DI:set_level(screen_map.user_data.difficulty)
     UPGR:patch_templates(6)
     DI:patch_templates()
+    E:patch_config(storage:load_config())
     self:load_towers(1)
 
     self.enemies_button.hidden = false
@@ -6143,14 +6144,13 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
     self.value_label.propagate_on_click = true
 
     self:add_child(self.value_label)
-
+    self._type = type(initial_value)
     -- 设置初始状态
     self:update_display()
 end
 
 function BooleanToggleItem:update_display()
-    local type = type(self.value)
-    if type == "boolean" then
+    if self._type == "boolean" then
         if self.value then
             self.value_label.text = _("是")
             self.value_label.colors.text = self.value_label.colors.text_yes
@@ -6158,8 +6158,10 @@ function BooleanToggleItem:update_display()
             self.value_label.text = _("否")
             self.value_label.colors.text = self.value_label.colors.text_no
         end
-    elseif type == "number" then
-        self.value_label.text = tostring(self.value)
+    elseif self._type == "number" then
+        if not self.value_label.text or self.value_label.text == "" then
+            self.value_label.text = tostring(self.value)
+        end
         self.value_label.colors.text = self.value_label.colors.text_default
     end
 
@@ -6174,8 +6176,7 @@ function BooleanToggleItem:on_enter()
     self.colors.background = {50, 50, 50, 100}
     self.key_label.colors.text = self.key_label.colors.text_hover
 
-    local type = type(self.value)
-    if type == "boolean" then
+    if self._type == "boolean" then
         if self.value then
             self.value_label.colors.text = self.value_label.colors.text_yes_hover
         else
@@ -6201,10 +6202,9 @@ function BooleanToggleItem:on_click()
 end
 
 function BooleanToggleItem:toggle()
-    local type = type(self.value)
-    if type == "boolean" then
+    if self._type == "boolean" then
         self.value = not self.value
-    elseif type == "number" then
+    elseif self._type == "number" then
         screen_map.window:set_responder(self)
     end
     self:update_display()
@@ -6215,37 +6215,39 @@ function BooleanToggleItem:toggle()
 end
 
 function BooleanToggleItem:on_textinput(t)
-    local type = type(self.value)
-    if type == "number" then
-        local num = tonumber(self.value_label.text .. t)
+    if self._type == "number" then
+        self.value_label.text = tostring(self.value_label.text .. t)
+        local num = tonumber(self.value_label.text)
         if num then
             self.value = num
-            self.value_label.text = tostring(self.value)
-            self:update_display()
-            if self.on_change_callback then
-                self.on_change_callback(self.key, self.value)
-            end
+        end
+
+        self:update_display()
+        if self.on_change_callback then
+            self.on_change_callback(self.key, self.value)
         end
     end
     return true
 end
 
 function BooleanToggleItem:on_keypressed(key)
-    local type = type(self.value)
-    if type == "number" then
+    if self._type == "number" then
         if key == "backspace" then
             local text = self.value_label.text
             local byteoffset = utf8.offset(text, -1)
             if byteoffset then
-                self.value_label.text = string.sub(text, 1, byteoffset - 1)
+                if byteoffset > 1 then
+                    self.value_label.text = string.sub(text, 1, byteoffset - 1)
+                else
+                    self.value_label.text = "0"
+                end
+            else
+                self.value_label.text = "0"
             end
             local num = tonumber(self.value_label.text)
             if num then
                 self.value = num
-            else
-                self.value = 0
             end
-            self.value_label.text = tostring(self.value)
             self:update_display()
             if self.on_change_callback then
                 self.on_change_callback(self.key, self.value)
@@ -6283,17 +6285,17 @@ function BooleanToggleGroup:add_items(data)
     local row_height = self.item_height
 
     local actual_columns = math.ceil(total_items / max_rows - 0.0001) -- 实际列数
-    local column_width = 1.45 * (self.size.x - (1 + actual_columns) * self.padding.x) / actual_columns -- 动态计算列宽
+    local column_width = (self.size.x - (1 + actual_columns) * self.padding.x) / actual_columns -- 动态计算列宽
     local actual_rows = math.min(total_items, max_rows) -- 实际行数
     local actual_height = actual_rows * row_height -- 实际高度
-    local start_x = (self.size.x - actual_columns * column_width / 1.45) / 2 * 1.45-- 水平居中起始位置
-    local start_y = (self.size.y - actual_height) / 2 -- 垂直居中起始位置
+    local start_x = self.padding.x -- 水平居中起始位置
+    local start_y = self.padding.y -- 垂直居中起始位置
     local index = 0
     for key, value in pairs(data) do
         if type(value) == "boolean" or type(value) == "number" then
             -- 添加新 item
             local item = BooleanToggleItem:new(self.key_label_map[key] or key, value, V.v(column_width, 40))
-            item.pos = V.v(start_x + math.floor(index / max_rows) * (column_width + self.padding.x),
+            item.pos = V.v((start_x + math.floor(index / max_rows) * (column_width + self.padding.x)) ,
                 start_y + (index % max_rows) * row_height)
             item.on_change_callback = function(label, value)
                 self.data[table.keyforobject(self.key_label_map, label) or label] = value
@@ -6353,8 +6355,8 @@ function BooleanPanelView:initialize(sw, sh, title)
     self.back:add_child(header)
 
     -- 创建配置组
-    self.data_group = BooleanToggleGroup:new(V.v(400, 300))
-    self.data_group.pos = V.v(self.back.size.x / 2 - 200, 120)
+    self.data_group = BooleanToggleGroup:new(V.v(self.back.size.x, self.back.size.y))
+    self.data_group.pos = V.v(100,100)
     self.data_group.scale = v(1/1.45,1/1.45)
     -- 设置数据改变回调
     self.data_group:set_on_data_change_callback(function(key, value, all_data)
@@ -6415,9 +6417,13 @@ function ConfigPanelView:initialize(sw, sh)
         enemy_count_multiplier = "敌人数量倍率",
         enemy_gold_multiplier = "敌人金币倍率",
         enemy_health_multiplier = "敌人生命倍率",
+        enemy_damage_multiplier = "敌人伤害倍率",
+        enemy_health_damage_multiplier = "敌人受伤倍率",
+        enemy_speed_multiplier = "敌人移速倍率",
         gold_multiplier = "开局金币倍率",
         hero_damage_multiplier = "英雄伤害倍率",
         hero_xp_gain_multiplier = "英雄经验倍率",
+        hero_health_damage_multiplier = "英雄受伤倍率",
     })
 end
 
