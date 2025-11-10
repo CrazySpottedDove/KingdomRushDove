@@ -845,7 +845,7 @@ function sound_db:_play(request, source_pool)
 		if opts.seek and type(opts.seek) == "number" then
 			source:seek(opts.seek)
 
-			if source:isPaused() then
+			if not source:isPlaying() then
 				source:play()
 			end
 		end
