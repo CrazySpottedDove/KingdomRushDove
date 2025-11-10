@@ -1720,17 +1720,18 @@ sys.particle_system.name = "particle_system"
 
 ffi.cdef[[
     typedef struct {
-        double pos_x;
-        double pos_y;
-        double r;
-        double speed_x;
-        double speed_y;
-        double spin;
-        double scale_x;
-        double scale_y;
-        double ts;
-        double last_ts;
-        double lifetime;
+        float pos_x;
+        float pos_y;
+        float r;
+        float speed_x;
+        float speed_y;
+        float spin;
+        float scale_x;
+        float scale_y;
+        float ts;
+        float last_ts;
+        float lifetime;
+        int name_idx;
     } particle_t;
 ]]
 
@@ -1852,25 +1853,30 @@ function sys.particle_system:on_update(dt, ts, store)
                 ps.particle_count = ps.particle_count + 1
 
                 -- 发生粒子喷射。首先，我们生成粒子，并加入 .particles
-                local p = {
-                    pos = {
-                        x = 0,
-                        y = 0
-                    },
-                    r = 0,
-                    speed = {
-                        x = 0,
-                        y = 0
-                    },
-                    spin = ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0,
-                    scale_factor = {
-                        x = 1,
-                        y = 1
-                    },
-                    ts = pts,
-                    last_ts = pts,
-                    lifetime = random() * (ps.particle_lifetime[2] - ps.particle_lifetime[1]) + ps.particle_lifetime[1]
-                }
+                -- local p = {
+                --     pos = {
+                --         x = 0,
+                --         y = 0
+                --     },
+                --     r = 0,
+                --     speed = {
+                --         x = 0,
+                --         y = 0
+                --     },
+                --     spin = ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0,
+                --     scale_factor = {
+                --         x = 1,
+                --         y = 1
+                --     },
+                --     ts = pts,
+                --     last_ts = pts,
+                --     lifetime = random() * (ps.particle_lifetime[2] - ps.particle_lifetime[1]) + ps.particle_lifetime[1]
+                -- }
+
+                -- 改用 particle_t 结构体
+                local p = ffi.new("particle_t", 0, 0, 0, 0, 0, ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0,
+                    1, 1, pts, pts,
+                    random() * (ps.particle_lifetime[2] - ps.particle_lifetime[1]) + ps.particle_lifetime[1], 0)
 
                 ps.particles[ps.particle_count] = p
 
@@ -1909,32 +1915,41 @@ function sys.particle_system:on_update(dt, ts, store)
 
                 f.anchor.x, f.anchor.y = ps.anchor.x, ps.anchor.y
 
-                local p_pos = p.pos
+                -- local p_pos = p.pos
 
                 if ps.track_id then
                     local factor = (i - 1) / count
-                    p_pos.x, p_pos.y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor,
+                    -- p_pos.x, p_pos.y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor,
+                    --     ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
+                    p.pos_x, p.pos_y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor,
                         ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
                 else
-                    p_pos.x, p_pos.y = e_pos.x, e_pos.y
+                    -- p_pos.x, p_pos.y = e_pos.x, e_pos.y
+                    p.pos_x, p.pos_y = e_pos.x, e_pos.y
                 end
 
                 if ps.emit_area_spread then
                     local sp = ps.emit_area_spread
-                    p_pos.x = p_pos.x + (random() - 0.5) * sp.x * 0.5
-                    p_pos.y = p_pos.y + (random() - 0.5) * sp.y * 0.5
+                    -- p_pos.x = p_pos.x + (random() - 0.5) * sp.x * 0.5
+                    -- p_pos.y = p_pos.y + (random() - 0.5) * sp.y * 0.5
+                    p.pos_x = p.pos_x + (random() - 0.5) * sp.x * 0.5
+                    p.pos_y = p.pos_y + (random() - 0.5) * sp.y * 0.5
                 end
 
                 if ps.emit_offset then
-                    p_pos.x = p_pos.x + ps.emit_offset.x
-                    p_pos.y = p_pos.y + ps.emit_offset.y
+                    -- p_pos.x = p_pos.x + ps.emit_offset.x
+                    -- p_pos.y = p_pos.y + ps.emit_offset.y
+                    p.pos_x = p.pos_x + ps.emit_offset.x
+                    p.pos_y = p.pos_y + ps.emit_offset.y
                 end
 
                 if ps.emit_speed then
                     local angle = ps.emission_rate + (random() - 0.5) * ps.emit_spread
                     local len = random() * (ps.emit_speed[2] - ps.emit_speed[1]) + ps.emit_speed[1]
-                    p.speed.x = cos(angle) * len
-                    p.speed.y = sin(angle) * len
+                    -- p.speed.x = cos(angle) * len
+                    -- p.speed.y = sin(angle) * len
+                    p.speed_x = cos(angle) * len
+                    p.speed_y = sin(angle) * len
                 end
 
                 if ps.emit_rotation then
@@ -1947,10 +1962,12 @@ function sys.particle_system:on_update(dt, ts, store)
 
                 if ps.scale_var then
                     local factor = random() * (ps.scale_var[2] - ps.scale_var[1]) + ps.scale_var[1]
-                    p.scale_factor = {
-                        x = factor,
-                        y = ps.scale_same_aspect and factor or random() * factor * 2
-                    }
+                    -- p.scale_factor = {
+                    --     x = factor,
+                    --     y = ps.scale_same_aspect and factor or random() * factor * 2
+                    -- }
+                    p.scale_x = factor
+                    p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
                 end
 
                 if ps.names then
@@ -1994,15 +2011,18 @@ function sys.particle_system:on_update(dt, ts, store)
 
                 local tp = ts - p.last_ts
                 p.last_ts = ts
-                p.pos.x, p.pos.y = p.pos.x + p.speed.x * tp, p.pos.y + p.speed.y * tp
-                f.pos.x, f.pos.y = p.pos.x, p.pos.y
+                -- p.pos.x, p.pos.y = p.pos.x + p.speed.x * tp, p.pos.y + p.speed.y * tp
+                p.pos_x, p.pos_y = p.pos_x + p.speed_x * tp, p.pos_y + p.speed_y * tp
+                -- f.pos.x, f.pos.y = p.pos.x, p.pos.y
+                f.pos.x, f.pos.y = p.pos_x, p.pos_y
                 p.r = p.r + p.spin * tp
                 f.r = p.r
 
                 local scale_x = phase_interp(ps.scales_x, phase, 1)
                 local scale_y = phase_interp(ps.scales_y, phase, 1)
 
-                f.scale.x, f.scale.y = scale_x * p.scale_factor.x, scale_y * p.scale_factor.y
+                -- f.scale.x, f.scale.y = scale_x * p.scale_factor.x, scale_y * p.scale_factor.y
+                f.scale.x, f.scale.y = scale_x * p.scale_x, scale_y * p.scale_y
                 f.alpha = phase_interp(ps.alphas, phase, 255)
 
                 if ps.sort_y_offsets then
@@ -2020,12 +2040,12 @@ function sys.particle_system:on_update(dt, ts, store)
                         to = to * ps.animation_fps / FPS
                     end
 
-                    if p.name_idx then
+                    if p.name_idx > 0 then
                         fn = A:fn(ps.names[p.name_idx], to, ps.loop)
                     else
                         fn = A:fn(ps.name, to, ps.loop)
                     end
-                elseif p.name_idx then
+                elseif p.name_idx > 0 then
                     fn = ps.names[p.name_idx]
                 else
                     fn = ps.name
