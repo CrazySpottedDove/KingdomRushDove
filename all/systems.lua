@@ -1717,7 +1717,21 @@ end
 sys.particle_system = {}
 sys.particle_system.name = "particle_system"
 
--- local Pool = require("pool")
+ffi.cdef[[
+    typedef struct {
+        double pos_x;
+        double pos_y;
+        double r;
+        double speed_x;
+        double speed_y;
+        double spin;
+        double scale_x;
+        double scale_y;
+        double ts;
+        double last_ts;
+        double lifetime;
+    } particle_t;
+]]
 
 function sys.particle_system:init(store)
     self.phase_interp = function(values, phase, default)
@@ -1847,13 +1861,14 @@ function sys.particle_system:on_update(dt, ts, store)
                         x = 0,
                         y = 0
                     },
-                    spin = 0,
+                    spin = ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0,
                     scale_factor = {
                         x = 1,
                         y = 1
                     },
                     ts = pts,
-                    last_ts = pts
+                    last_ts = pts,
+                    lifetime = random() * (ps.particle_lifetime[2] - ps.particle_lifetime[1]) + ps.particle_lifetime[1]
                 }
 
                 ps.particles[ps.particle_count] = p
@@ -1893,9 +1908,6 @@ function sys.particle_system:on_update(dt, ts, store)
 
                 f.anchor.x, f.anchor.y = ps.anchor.x, ps.anchor.y
 
-                ps.particles[#ps.particles + 1] = p
-
-                p.lifetime = random() * (ps.particle_lifetime[2] - ps.particle_lifetime[1]) + ps.particle_lifetime[1]
                 local p_pos = p.pos
 
                 if ps.track_id then
@@ -1930,10 +1942,6 @@ function sys.particle_system:on_update(dt, ts, store)
                     p.r = target_rot
                 else
                     p.r = ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread
-                end
-
-                if ps.spin then
-                    p.spin = random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1]
                 end
 
                 if ps.scale_var then
