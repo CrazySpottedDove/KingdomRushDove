@@ -1844,7 +1844,7 @@ function sys.particle_system:on_update(dt, ts, store)
             ps.emit_ts = ts + ps.ts_offset
         elseif ts - ps.emit_ts > 1 / ps.emission_rate then
             local count = floor((ts - ps.emit_ts) * ps.emission_rate)
-
+            local particle_lifetime = (ps.particle_lifetime[1] + ps.particle_lifetime[2]) * 0.5
             for i = 1, count do
                 local pts = ps.emit_ts + i / ps.emission_rate
 
@@ -1857,8 +1857,8 @@ function sys.particle_system:on_update(dt, ts, store)
                 local p = ffi.new("particle_t", 0, 0,
                     ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or
                         (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread), 0, 0,
-                    ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts, random() *
-                        (ps.particle_lifetime[2] - ps.particle_lifetime[1]) + ps.particle_lifetime[1], 0)
+                    ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts,
+                    particle_lifetime, 0)
 
                 particles[ps.particle_count] = p
 
@@ -1877,7 +1877,7 @@ function sys.particle_system:on_update(dt, ts, store)
                     },
                     anchor = {
                         x = ps.anchor.x,
-                        y = ps.anchor.y,
+                        y = ps.anchor.y
                     },
                     offset = {
                         x = 0,
@@ -1926,7 +1926,8 @@ function sys.particle_system:on_update(dt, ts, store)
                     local factor = random() * (ps.scale_var[2] - ps.scale_var[1]) + ps.scale_var[1]
 
                     p.scale_x = factor
-                    p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
+                    p.scale_y = factor
+                    -- p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
                 end
 
                 if ps.names then
@@ -1976,10 +1977,8 @@ function sys.particle_system:on_update(dt, ts, store)
                 p.r = p.r + p.spin * tp
                 f.r = p.r
 
-                local scale_x = phase_interp(ps.scales_x, phase, 1)
-                local scale_y = phase_interp(ps.scales_y, phase, 1)
-
-                f.scale.x, f.scale.y = scale_x * p.scale_x, scale_y * p.scale_y
+                f.scale.x, f.scale.y = phase_interp(ps.scales_x, phase, 1) * p.scale_x,
+                    phase_interp(ps.scales_y, phase, 1) * p.scale_y
                 f.alpha = phase_interp(ps.alphas, phase, 255)
 
                 if ps.sort_y_offsets then

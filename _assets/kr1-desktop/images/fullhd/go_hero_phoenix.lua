@@ -2,7 +2,7 @@
 
 return {
 	phoenix_hero_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -32,7 +32,7 @@ return {
 		}
 	},
 	phoenix_hero_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -62,7 +62,7 @@ return {
 		}
 	},
 	phoenix_hero_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -92,7 +92,7 @@ return {
 		}
 	},
 	phoenix_hero_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -122,7 +122,7 @@ return {
 		}
 	},
 	phoenix_hero_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -154,7 +154,7 @@ return {
 		}
 	},
 	phoenix_hero_0011 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -186,7 +186,7 @@ return {
 		}
 	},
 	phoenix_hero_0013 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -216,7 +216,7 @@ return {
 		}
 	},
 	phoenix_hero_0015 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -244,7 +244,7 @@ return {
 		}
 	},
 	phoenix_hero_0017 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -274,7 +274,7 @@ return {
 		}
 	},
 	phoenix_hero_0031 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -300,7 +300,7 @@ return {
 		}
 	},
 	phoenix_hero_0033 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -326,7 +326,7 @@ return {
 		}
 	},
 	phoenix_hero_0035 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -352,7 +352,7 @@ return {
 		}
 	},
 	phoenix_hero_0037 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -378,7 +378,7 @@ return {
 		}
 	},
 	phoenix_hero_0039 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -404,7 +404,7 @@ return {
 		}
 	},
 	phoenix_hero_0041 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -430,7 +430,7 @@ return {
 		}
 	},
 	phoenix_hero_0055 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -456,7 +456,7 @@ return {
 		}
 	},
 	phoenix_hero_0057 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -482,7 +482,7 @@ return {
 		}
 	},
 	phoenix_hero_0059 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -508,7 +508,7 @@ return {
 		}
 	},
 	phoenix_hero_0061 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -534,7 +534,7 @@ return {
 		}
 	},
 	phoenix_hero_0063 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -560,7 +560,7 @@ return {
 		}
 	},
 	phoenix_hero_0065 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -586,7 +586,7 @@ return {
 		}
 	},
 	phoenix_hero_0067 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -612,7 +612,7 @@ return {
 		}
 	},
 	phoenix_hero_0069 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -638,7 +638,7 @@ return {
 		}
 	},
 	phoenix_hero_0071 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -664,7 +664,7 @@ return {
 		}
 	},
 	phoenix_hero_0073 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -690,7 +690,7 @@ return {
 		}
 	},
 	phoenix_hero_0075 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -716,7 +716,7 @@ return {
 		}
 	},
 	phoenix_hero_0077 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -742,7 +742,7 @@ return {
 		}
 	},
 	phoenix_hero_0085 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -768,7 +768,7 @@ return {
 		}
 	},
 	phoenix_hero_0087 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -794,7 +794,7 @@ return {
 		}
 	},
 	phoenix_hero_0089 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -820,7 +820,7 @@ return {
 		}
 	},
 	phoenix_hero_0091 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -846,7 +846,7 @@ return {
 		}
 	},
 	phoenix_hero_0093 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -872,7 +872,7 @@ return {
 		}
 	},
 	phoenix_hero_0095 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -898,7 +898,7 @@ return {
 		}
 	},
 	phoenix_hero_0097 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -924,7 +924,7 @@ return {
 		}
 	},
 	phoenix_hero_0099 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -950,7 +950,7 @@ return {
 		}
 	},
 	phoenix_hero_0101 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -976,7 +976,7 @@ return {
 		}
 	},
 	phoenix_hero_0103 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1002,7 +1002,7 @@ return {
 		}
 	},
 	phoenix_hero_0105 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1028,7 +1028,7 @@ return {
 		}
 	},
 	phoenix_hero_0107 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1054,7 +1054,7 @@ return {
 		}
 	},
 	phoenix_hero_0109 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1080,7 +1080,7 @@ return {
 		}
 	},
 	phoenix_hero_0111 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1106,7 +1106,7 @@ return {
 		}
 	},
 	phoenix_hero_0113 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1132,7 +1132,7 @@ return {
 		}
 	},
 	phoenix_hero_0115 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1158,7 +1158,7 @@ return {
 		}
 	},
 	phoenix_hero_0117 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1184,7 +1184,7 @@ return {
 		}
 	},
 	phoenix_hero_0119 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1210,7 +1210,7 @@ return {
 		}
 	},
 	phoenix_hero_0121 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1236,7 +1236,7 @@ return {
 		}
 	},
 	phoenix_hero_0123 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1260,7 +1260,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0124 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1284,7 +1284,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0125 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1308,7 +1308,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0126 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1332,7 +1332,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0127 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1356,7 +1356,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0128 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1380,7 +1380,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0129 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1406,7 +1406,7 @@ return {
 		}
 	},
 	phoenix_hero_0131 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1432,7 +1432,7 @@ return {
 		}
 	},
 	phoenix_hero_0133 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1458,7 +1458,7 @@ return {
 		}
 	},
 	phoenix_hero_0135 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1484,7 +1484,7 @@ return {
 		}
 	},
 	phoenix_hero_0137 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1510,7 +1510,7 @@ return {
 		}
 	},
 	phoenix_hero_0139 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1536,7 +1536,7 @@ return {
 		}
 	},
 	phoenix_hero_0141 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1562,7 +1562,7 @@ return {
 		}
 	},
 	phoenix_hero_0143 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1588,7 +1588,7 @@ return {
 		}
 	},
 	phoenix_hero_0145 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1612,7 +1612,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0146 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1636,7 +1636,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0147 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1660,7 +1660,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0148 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1684,7 +1684,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0149 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1708,7 +1708,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0150 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1732,7 +1732,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0151 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1756,7 +1756,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0152 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1780,7 +1780,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0153 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1804,7 +1804,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0154 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1828,7 +1828,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0155 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1855,7 +1855,7 @@ return {
 		}
 	},
 	phoenix_hero_0156 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1881,7 +1881,7 @@ return {
 		}
 	},
 	phoenix_hero_0158 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1907,7 +1907,7 @@ return {
 		}
 	},
 	phoenix_hero_0160 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1933,7 +1933,7 @@ return {
 		}
 	},
 	phoenix_hero_0162 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1960,7 +1960,7 @@ return {
 		}
 	},
 	phoenix_hero_0164 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -1987,7 +1987,7 @@ return {
 		}
 	},
 	phoenix_hero_0166 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2013,7 +2013,7 @@ return {
 		}
 	},
 	phoenix_hero_0172 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2039,7 +2039,7 @@ return {
 		}
 	},
 	phoenix_hero_0174 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2065,7 +2065,7 @@ return {
 		}
 	},
 	phoenix_hero_0176 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2091,7 +2091,7 @@ return {
 		}
 	},
 	phoenix_hero_0178 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2117,7 +2117,7 @@ return {
 		}
 	},
 	phoenix_hero_0180 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2143,7 +2143,7 @@ return {
 		}
 	},
 	phoenix_hero_0188 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2169,7 +2169,7 @@ return {
 		}
 	},
 	phoenix_hero_0192 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2193,7 +2193,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_0193 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2219,7 +2219,7 @@ return {
 		}
 	},
 	phoenix_hero_0195 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2245,7 +2245,7 @@ return {
 		}
 	},
 	phoenix_hero_0197 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2271,7 +2271,7 @@ return {
 		}
 	},
 	phoenix_hero_0199 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2297,7 +2297,7 @@ return {
 		}
 	},
 	phoenix_hero_0201 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2323,7 +2323,7 @@ return {
 		}
 	},
 	phoenix_hero_0203 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2349,7 +2349,7 @@ return {
 		}
 	},
 	phoenix_hero_0205 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2375,7 +2375,7 @@ return {
 		}
 	},
 	phoenix_hero_0207 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2401,7 +2401,7 @@ return {
 		}
 	},
 	phoenix_hero_0209 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			281,
 			478
@@ -2427,7 +2427,7 @@ return {
 		}
 	},
 	phoenix_hero_bird = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			42,
 			28
@@ -2451,7 +2451,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_bird_particle_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			42,
 			28
@@ -2477,7 +2477,7 @@ return {
 		}
 	},
 	phoenix_hero_bird_particle_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			42,
 			28
@@ -2503,7 +2503,7 @@ return {
 		}
 	},
 	phoenix_hero_bird_particle_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			42,
 			28
@@ -2529,7 +2529,7 @@ return {
 		}
 	},
 	phoenix_hero_bird_particle_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			42,
 			28
@@ -2555,7 +2555,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2581,7 +2581,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2607,7 +2607,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2633,7 +2633,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2659,7 +2659,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2685,7 +2685,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0011 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2711,7 +2711,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0013 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2737,7 +2737,7 @@ return {
 		}
 	},
 	phoenix_hero_egg_0015 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2761,7 +2761,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_egg_0016 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			56
@@ -2785,7 +2785,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_egg_decal = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			113,
 			56
@@ -2809,7 +2809,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_proy_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			169,
 			84
@@ -2835,7 +2835,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			169,
 			84
@@ -2861,7 +2861,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			169,
 			84
@@ -2887,7 +2887,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			169,
 			84
@@ -2913,7 +2913,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			169,
 			84
@@ -2939,7 +2939,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_0011 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			169,
 			84
@@ -2965,7 +2965,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_hit_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -2991,7 +2991,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_hit_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3017,7 +3017,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_hit_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3043,7 +3043,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_hit_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3067,7 +3067,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_proy_hit_0008 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3091,7 +3091,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_proy_hit_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3115,7 +3115,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_proy_hit_0010 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3139,7 +3139,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_proy_hit_0011 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3163,7 +3163,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_proy_hit_0012 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3187,7 +3187,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_proy_hit_0013 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3213,7 +3213,7 @@ return {
 		}
 	},
 	phoenix_hero_proy_hit_0015 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			101,
 			84
@@ -3239,7 +3239,7 @@ return {
 		}
 	},
 	phoenix_hero_suicide_decals_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			183,
 			141
@@ -3263,7 +3263,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_suicide_decals_0002 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			183,
 			141
@@ -3287,7 +3287,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_towerBurn_Circle = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			177,
 			127
@@ -3311,7 +3311,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_towerBurn_fire_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3337,7 +3337,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3363,7 +3363,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3389,7 +3389,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3415,7 +3415,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3441,7 +3441,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0011 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3467,7 +3467,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0013 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3493,7 +3493,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0015 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3519,7 +3519,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0017 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3545,7 +3545,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0019 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3571,7 +3571,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_0021 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3597,7 +3597,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_decal = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			84,
 			48
@@ -3621,7 +3621,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_towerBurn_fire_in_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3647,7 +3647,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_in_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3673,7 +3673,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_in_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3699,7 +3699,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_in_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3725,7 +3725,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_in_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3751,7 +3751,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_out_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3777,7 +3777,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_out_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3803,7 +3803,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_out_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3829,7 +3829,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_fire_out_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			98,
 			84
@@ -3855,7 +3855,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -3881,7 +3881,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -3907,7 +3907,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -3933,7 +3933,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -3959,7 +3959,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -3985,7 +3985,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0011 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4011,7 +4011,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0013 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4037,7 +4037,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0015 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4063,7 +4063,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0017 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4089,7 +4089,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerBubbles_0019 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4113,7 +4113,7 @@ return {
 		alias = {}
 	},
 	phoenix_hero_towerBurn_towerFire_0001 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4139,7 +4139,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerFire_0003 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4165,7 +4165,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerFire_0005 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4191,7 +4191,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerFire_0007 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4217,7 +4217,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerFire_0009 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4243,7 +4243,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerFire_0011 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4269,7 +4269,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerFire_0013 = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127
@@ -4295,7 +4295,7 @@ return {
 		}
 	},
 	phoenix_hero_towerBurn_towerFx = {
-		a_name = "go_hero_phoenix-1.dds",
+		a_name = "go_hero_phoenix-1.png",
 		size = {
 			155,
 			127

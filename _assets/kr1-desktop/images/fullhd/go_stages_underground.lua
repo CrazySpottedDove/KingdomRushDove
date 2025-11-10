@@ -2,7 +2,7 @@
 
 return {
 	Bat_0001 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			34,
 			23
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	Bat_0003 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			34,
 			23
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	Bat_0005 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			34,
 			23
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Bat_0007 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			34,
 			23
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	Cave_0001 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			98,
 			73
@@ -130,7 +130,7 @@ return {
 		alias = {}
 	},
 	Cave_0002 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			98,
 			73
@@ -154,7 +154,7 @@ return {
 		alias = {}
 	},
 	Cave_0003 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			98,
 			73
@@ -178,7 +178,7 @@ return {
 		alias = {}
 	},
 	Cave_0004 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			98,
 			73
@@ -202,7 +202,7 @@ return {
 		alias = {}
 	},
 	DwarfHall_0001 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			160,
 			107
@@ -228,7 +228,7 @@ return {
 		}
 	},
 	DwarfHall_0002 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			160,
 			107
@@ -254,7 +254,7 @@ return {
 		}
 	},
 	DwarfHall_0003 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			160,
 			107
@@ -280,7 +280,7 @@ return {
 		}
 	},
 	DwarfHall_0004 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			160,
 			107
@@ -304,7 +304,7 @@ return {
 		alias = {}
 	},
 	DwarfRiflemen = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			152,
 			115
@@ -328,7 +328,7 @@ return {
 		alias = {}
 	},
 	DwarfRiflemenTop = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			152,
 			115
@@ -352,7 +352,7 @@ return {
 		alias = {}
 	},
 	DwarfShooter_0001 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -378,7 +378,7 @@ return {
 		}
 	},
 	DwarfShooter_0003 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -404,7 +404,7 @@ return {
 		}
 	},
 	DwarfShooter_0005 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -430,7 +430,7 @@ return {
 		}
 	},
 	DwarfShooter_0007 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -461,7 +461,7 @@ return {
 		}
 	},
 	DwarfShooter_0014 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -487,7 +487,7 @@ return {
 		}
 	},
 	DwarfShooter_0016 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -513,7 +513,7 @@ return {
 		}
 	},
 	DwarfShooter_0018 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -539,7 +539,7 @@ return {
 		}
 	},
 	DwarfShooter_0020 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -565,7 +565,7 @@ return {
 		}
 	},
 	DwarfShooter_0022 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -591,7 +591,7 @@ return {
 		}
 	},
 	DwarfShooter_0024 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -617,7 +617,7 @@ return {
 		}
 	},
 	DwarfShooter_0026 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -643,7 +643,7 @@ return {
 		}
 	},
 	DwarfShooter_0028 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -669,7 +669,7 @@ return {
 		}
 	},
 	DwarfShooter_0030 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -695,7 +695,7 @@ return {
 		}
 	},
 	DwarfShooter_0032 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -721,7 +721,7 @@ return {
 		}
 	},
 	DwarfShooter_0034 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -752,7 +752,7 @@ return {
 		}
 	},
 	DwarfShooter_0041 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -778,7 +778,7 @@ return {
 		}
 	},
 	DwarfShooter_0043 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -804,7 +804,7 @@ return {
 		}
 	},
 	DwarfShooter_0045 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -830,7 +830,7 @@ return {
 		}
 	},
 	DwarfShooter_0047 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -856,7 +856,7 @@ return {
 		}
 	},
 	DwarfShooter_0049 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -882,7 +882,7 @@ return {
 		}
 	},
 	DwarfShooter_0051 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -906,7 +906,7 @@ return {
 		alias = {}
 	},
 	DwarfShooter_0052 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -930,7 +930,7 @@ return {
 		alias = {}
 	},
 	DwarfShooter_0053 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -959,7 +959,7 @@ return {
 		}
 	},
 	DwarfShooter_0058 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -985,7 +985,7 @@ return {
 		}
 	},
 	DwarfShooter_0060 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1011,7 +1011,7 @@ return {
 		}
 	},
 	DwarfShooter_0062 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1037,7 +1037,7 @@ return {
 		}
 	},
 	DwarfShooter_0064 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1063,7 +1063,7 @@ return {
 		}
 	},
 	DwarfShooter_0066 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1089,7 +1089,7 @@ return {
 		}
 	},
 	DwarfShooter_0068 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1115,7 +1115,7 @@ return {
 		}
 	},
 	DwarfShooter_0070 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1145,7 +1145,7 @@ return {
 		}
 	},
 	DwarfShooter_0076 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1171,7 +1171,7 @@ return {
 		}
 	},
 	DwarfShooter_0078 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1197,7 +1197,7 @@ return {
 		}
 	},
 	DwarfShooter_0080 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1223,7 +1223,7 @@ return {
 		}
 	},
 	DwarfShooter_0082 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1251,7 +1251,7 @@ return {
 		}
 	},
 	DwarfShooter_0086 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1275,7 +1275,7 @@ return {
 		alias = {}
 	},
 	DwarfShooter_0087 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1305,7 +1305,7 @@ return {
 		}
 	},
 	DwarfShooter_0092 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1331,7 +1331,7 @@ return {
 		}
 	},
 	DwarfShooter_0094 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1357,7 +1357,7 @@ return {
 		}
 	},
 	DwarfShooter_0096 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1383,7 +1383,7 @@ return {
 		}
 	},
 	DwarfShooter_0098 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1409,7 +1409,7 @@ return {
 		}
 	},
 	DwarfShooter_0100 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1435,7 +1435,7 @@ return {
 		}
 	},
 	DwarfShooter_0102 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1461,7 +1461,7 @@ return {
 		}
 	},
 	DwarfShooter_0104 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1491,7 +1491,7 @@ return {
 		}
 	},
 	DwarfShooter_0110 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1517,7 +1517,7 @@ return {
 		}
 	},
 	DwarfShooter_0112 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1543,7 +1543,7 @@ return {
 		}
 	},
 	DwarfShooter_0114 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1569,7 +1569,7 @@ return {
 		}
 	},
 	DwarfShooter_0116 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			53,
 			48
@@ -1597,7 +1597,7 @@ return {
 		}
 	},
 	DwarfWarrior_0001 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1621,7 +1621,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0002 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1645,7 +1645,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0003 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1669,7 +1669,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0004 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1693,7 +1693,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0005 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1717,7 +1717,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0006 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1741,7 +1741,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0007 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1767,7 +1767,7 @@ return {
 		}
 	},
 	DwarfWarrior_0009 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1793,7 +1793,7 @@ return {
 		}
 	},
 	DwarfWarrior_0011 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1819,7 +1819,7 @@ return {
 		}
 	},
 	DwarfWarrior_0013 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1845,7 +1845,7 @@ return {
 		}
 	},
 	DwarfWarrior_0015 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1871,7 +1871,7 @@ return {
 		}
 	},
 	DwarfWarrior_0017 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1895,7 +1895,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0018 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1919,7 +1919,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0019 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1945,7 +1945,7 @@ return {
 		}
 	},
 	DwarfWarrior_0021 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1972,7 +1972,7 @@ return {
 		}
 	},
 	DwarfWarrior_0023 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -1998,7 +1998,7 @@ return {
 		}
 	},
 	DwarfWarrior_0025 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2024,7 +2024,7 @@ return {
 		}
 	},
 	DwarfWarrior_0027 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2050,7 +2050,7 @@ return {
 		}
 	},
 	DwarfWarrior_0029 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2076,7 +2076,7 @@ return {
 		}
 	},
 	DwarfWarrior_0031 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2102,7 +2102,7 @@ return {
 		}
 	},
 	DwarfWarrior_0033 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2128,7 +2128,7 @@ return {
 		}
 	},
 	DwarfWarrior_0035 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2154,7 +2154,7 @@ return {
 		}
 	},
 	DwarfWarrior_0037 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2180,7 +2180,7 @@ return {
 		}
 	},
 	DwarfWarrior_0039 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2206,7 +2206,7 @@ return {
 		}
 	},
 	DwarfWarrior_0041 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2232,7 +2232,7 @@ return {
 		}
 	},
 	DwarfWarrior_0043 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2258,7 +2258,7 @@ return {
 		}
 	},
 	DwarfWarrior_0045 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2284,7 +2284,7 @@ return {
 		}
 	},
 	DwarfWarrior_0047 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2310,7 +2310,7 @@ return {
 		}
 	},
 	DwarfWarrior_0049 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2336,7 +2336,7 @@ return {
 		}
 	},
 	DwarfWarrior_0051 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2362,7 +2362,7 @@ return {
 		}
 	},
 	DwarfWarrior_0053 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2388,7 +2388,7 @@ return {
 		}
 	},
 	DwarfWarrior_0056 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2412,7 +2412,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0057 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2436,7 +2436,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0058 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2460,7 +2460,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0059 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2484,7 +2484,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0060 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2508,7 +2508,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_0061 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2534,7 +2534,7 @@ return {
 		}
 	},
 	DwarfWarrior_0063 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -2560,7 +2560,7 @@ return {
 		}
 	},
 	DwarfWarrior_Aura_0001 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2586,7 +2586,7 @@ return {
 		}
 	},
 	DwarfWarrior_Aura_0002 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2610,7 +2610,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0003 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2634,7 +2634,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0004 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2658,7 +2658,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0005 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2682,7 +2682,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0006 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2706,7 +2706,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0007 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2730,7 +2730,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0008 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2754,7 +2754,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0009 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2780,7 +2780,7 @@ return {
 		}
 	},
 	DwarfWarrior_Aura_0010 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2804,7 +2804,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0011 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2828,7 +2828,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0012 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2852,7 +2852,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0013 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2878,7 +2878,7 @@ return {
 		}
 	},
 	DwarfWarrior_Aura_0014 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2902,7 +2902,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0015 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2926,7 +2926,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0017 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2950,7 +2950,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0018 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2974,7 +2974,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0019 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -2998,7 +2998,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0020 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3022,7 +3022,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0021 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3046,7 +3046,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0022 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3070,7 +3070,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0023 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3094,7 +3094,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0025 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3118,7 +3118,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0026 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3142,7 +3142,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0027 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3166,7 +3166,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0029 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3190,7 +3190,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Aura_0030 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			124,
 			45
@@ -3214,7 +3214,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0001 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3238,7 +3238,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0002 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3262,7 +3262,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0003 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3286,7 +3286,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0004 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3310,7 +3310,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0005 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3334,7 +3334,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0006 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3358,7 +3358,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0007 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3382,7 +3382,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0008 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3406,7 +3406,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0009 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3430,7 +3430,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0010 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3454,7 +3454,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0011 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3478,7 +3478,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0012 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3502,7 +3502,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0013 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3526,7 +3526,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0014 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3550,7 +3550,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0015 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3574,7 +3574,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0016 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3598,7 +3598,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0017 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3622,7 +3622,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0018 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3646,7 +3646,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0019 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3670,7 +3670,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0020 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3694,7 +3694,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0021 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59
@@ -3718,7 +3718,7 @@ return {
 		alias = {}
 	},
 	DwarfWarrior_Bubbles_0022 = {
-		a_name = "go_stages_underground-1.dds",
+		a_name = "go_stages_underground-1.png",
 		size = {
 			90,
 			59

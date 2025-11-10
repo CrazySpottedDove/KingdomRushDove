@@ -2,7 +2,7 @@
 
 return {
 	HalloweenTesla_DrCrazy_layer1_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0002 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0004 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -82,7 +82,7 @@ return {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0006 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -116,7 +116,7 @@ return {
 		}
 	},
 	HalloweenTesla_DrCrazy_layer1_0008 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -148,7 +148,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0001 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -174,7 +174,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0002 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -200,7 +200,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0004 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -227,7 +227,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0007 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -253,7 +253,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0009 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -279,7 +279,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0011 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -307,7 +307,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0013 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -333,7 +333,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0015 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -359,7 +359,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0017 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -448,7 +448,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0084 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -474,7 +474,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0086 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -500,7 +500,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer1_0088 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -526,7 +526,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -570,7 +570,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0012 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -596,7 +596,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0014 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -622,7 +622,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0016 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -648,7 +648,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0018 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0020 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -700,7 +700,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0022 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -726,7 +726,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0024 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -752,7 +752,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0026 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -780,7 +780,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0028 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -808,7 +808,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0030 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -836,7 +836,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0032 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -864,7 +864,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0034 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -892,7 +892,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0036 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -920,7 +920,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0038 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -948,7 +948,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0054 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -974,7 +974,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0056 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1000,7 +1000,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0058 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1026,7 +1026,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0060 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1052,7 +1052,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0062 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1078,7 +1078,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0064 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1104,7 +1104,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0066 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1130,7 +1130,7 @@ return {
 		}
 	},
 	HalloweenTesla_Frankie_layer2_0077 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1168,7 +1168,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1204,7 +1204,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0002 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1230,7 +1230,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0004 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1256,7 +1256,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0006 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1282,7 +1282,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0008 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1308,7 +1308,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0010 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1334,7 +1334,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0012 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1360,7 +1360,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0020 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1386,7 +1386,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0022 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1412,7 +1412,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0024 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1438,7 +1438,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0026 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1464,7 +1464,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0028 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1490,7 +1490,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0030 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1516,7 +1516,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0032 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1542,7 +1542,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0034 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1568,7 +1568,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer1_0036 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1594,7 +1594,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1618,7 +1618,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_chargeLoop_layer2_0002 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1644,7 +1644,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0004 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1670,7 +1670,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0006 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1696,7 +1696,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0008 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1722,7 +1722,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0010 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1748,7 +1748,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0012 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1774,7 +1774,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0014 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1800,7 +1800,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0016 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1826,7 +1826,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0018 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1852,7 +1852,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0020 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1882,7 +1882,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0026 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1908,7 +1908,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0028 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -1934,7 +1934,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0030 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1960,7 +1960,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0032 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -1986,7 +1986,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0034 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2012,7 +2012,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0036 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2038,7 +2038,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0038 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2064,7 +2064,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0040 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2090,7 +2090,7 @@ return {
 		}
 	},
 	HalloweenTesla_chargeLoop_layer2_0042 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2114,7 +2114,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer1_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2181,7 +2181,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2205,7 +2205,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer2_0002 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2231,7 +2231,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0004 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2257,7 +2257,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0006 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2283,7 +2283,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0008 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2309,7 +2309,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0010 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2335,7 +2335,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0012 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2361,7 +2361,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0014 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2387,7 +2387,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0016 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2419,7 +2419,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0024 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2445,7 +2445,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0026 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2471,7 +2471,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer2_0028 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2511,7 +2511,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer3_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2555,7 +2555,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer3_0010 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2579,7 +2579,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0011 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2603,7 +2603,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0012 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2627,7 +2627,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0013 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2651,7 +2651,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0014 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2675,7 +2675,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0015 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2699,7 +2699,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0016 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2726,7 +2726,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer3_0019 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2750,7 +2750,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0020 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2774,7 +2774,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0021 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2798,7 +2798,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0022 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2822,7 +2822,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0023 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2846,7 +2846,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0024 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2870,7 +2870,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0025 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2894,7 +2894,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0026 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -2918,7 +2918,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer3_0027 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2948,7 +2948,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer4_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -2992,7 +2992,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer4_0010 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3016,7 +3016,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0011 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3040,7 +3040,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0012 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3064,7 +3064,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0013 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3088,7 +3088,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0014 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3112,7 +3112,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0015 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3136,7 +3136,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0016 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3163,7 +3163,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer4_0019 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3187,7 +3187,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0020 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3211,7 +3211,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0021 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3235,7 +3235,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0022 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3259,7 +3259,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0023 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3283,7 +3283,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0024 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3307,7 +3307,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0025 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3331,7 +3331,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0026 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			163,
 			158
@@ -3355,7 +3355,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_layer4_0027 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3385,7 +3385,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3424,7 +3424,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0015 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3450,7 +3450,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0017 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3476,7 +3476,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0019 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3502,7 +3502,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0021 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3528,7 +3528,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0023 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3554,7 +3554,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0025 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3580,7 +3580,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0027 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3606,7 +3606,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0029 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3632,7 +3632,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0031 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3658,7 +3658,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0033 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3684,7 +3684,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0035 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3710,7 +3710,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0037 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3736,7 +3736,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0039 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3762,7 +3762,7 @@ return {
 		}
 	},
 	HalloweenTesla_layer5_0041 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			163,
 			158
@@ -3788,7 +3788,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3814,7 +3814,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0003 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3840,7 +3840,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0005 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3866,7 +3866,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0007 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3890,7 +3890,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_ray_0008 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3914,7 +3914,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_ray_0009 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3938,7 +3938,7 @@ return {
 		alias = {}
 	},
 	HalloweenTesla_ray_0010 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3964,7 +3964,7 @@ return {
 		}
 	},
 	HalloweenTesla_ray_0012 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			149,
 			48
@@ -3990,7 +3990,7 @@ return {
 		}
 	},
 	Halloween_Frankie_PunchDecal_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4014,7 +4014,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0002 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4038,7 +4038,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0003 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4062,7 +4062,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0004 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4086,7 +4086,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0005 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4110,7 +4110,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0006 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4134,7 +4134,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0007 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4158,7 +4158,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0008 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4182,7 +4182,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0009 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4206,7 +4206,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0010 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4230,7 +4230,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0011 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4254,7 +4254,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0012 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4278,7 +4278,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchDecal_0013 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -4302,7 +4302,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_PunchFx_0001 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			70,
 			37
@@ -4330,7 +4330,7 @@ return {
 		}
 	},
 	Halloween_Frankie_PunchFx_0003 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			70,
 			37
@@ -4358,7 +4358,7 @@ return {
 		}
 	},
 	Halloween_Frankie_PunchFx_0005 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			70,
 			37
@@ -4384,7 +4384,7 @@ return {
 		}
 	},
 	Halloween_Frankie_PunchFx_0007 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			70,
 			37
@@ -4412,7 +4412,7 @@ return {
 		}
 	},
 	Halloween_Frankie_PunchFx_0009 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			70,
 			37
@@ -4438,7 +4438,7 @@ return {
 		}
 	},
 	Halloween_Frankie_PunchFx_0015 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			70,
 			37
@@ -4464,7 +4464,7 @@ return {
 		}
 	},
 	Halloween_Frankie_PunchFx_0019 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			70,
 			37
@@ -4490,7 +4490,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0001 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4516,7 +4516,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0003 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4542,7 +4542,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0005 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4568,7 +4568,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0007 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4594,7 +4594,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0009 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4620,7 +4620,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0011 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4646,7 +4646,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0013 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4672,7 +4672,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0015 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4698,7 +4698,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0017 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4724,7 +4724,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0019 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4750,7 +4750,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0021 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4776,7 +4776,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0023 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4809,7 +4809,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0025 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4835,7 +4835,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0027 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4861,7 +4861,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0029 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4887,7 +4887,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0031 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4913,7 +4913,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0033 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4939,7 +4939,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0035 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4968,7 +4968,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0040 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -4994,7 +4994,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0042 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5020,7 +5020,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0044 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5046,7 +5046,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0052 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -5073,7 +5073,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0055 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5099,7 +5099,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0057 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5125,7 +5125,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0059 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5151,7 +5151,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0061 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5177,7 +5177,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0063 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5203,7 +5203,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0065 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5229,7 +5229,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0067 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5255,7 +5255,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0069 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5281,7 +5281,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0071 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5307,7 +5307,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0073 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5333,7 +5333,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0075 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5359,7 +5359,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0077 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5385,7 +5385,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0079 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5411,7 +5411,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0081 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5435,7 +5435,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl1_0082 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -5461,7 +5461,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0084 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5487,7 +5487,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0086 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5513,7 +5513,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0088 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5539,7 +5539,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0090 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5565,7 +5565,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0092 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5591,7 +5591,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0094 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5615,7 +5615,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl1_0095 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5639,7 +5639,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl1_0096 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5665,7 +5665,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0098 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5691,7 +5691,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0100 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5717,7 +5717,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0102 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5743,7 +5743,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0104 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5769,7 +5769,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0106 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5795,7 +5795,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0108 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5821,7 +5821,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0110 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5847,7 +5847,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl1_0112 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5873,7 +5873,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0001 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5899,7 +5899,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0003 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5925,7 +5925,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0005 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5951,7 +5951,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0007 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -5977,7 +5977,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0009 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6003,7 +6003,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0011 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6029,7 +6029,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0013 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6055,7 +6055,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0015 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6081,7 +6081,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0017 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6107,7 +6107,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0019 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6133,7 +6133,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0021 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6159,7 +6159,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0023 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6186,7 +6186,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0025 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6212,7 +6212,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0027 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6238,7 +6238,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0029 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6264,7 +6264,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0031 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6290,7 +6290,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0033 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6316,7 +6316,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0035 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6342,7 +6342,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0037 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6368,7 +6368,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0039 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6394,7 +6394,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0041 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6420,7 +6420,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0043 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6446,7 +6446,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0045 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6472,7 +6472,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0047 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6498,7 +6498,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0049 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6524,7 +6524,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0052 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6551,7 +6551,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0055 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6577,7 +6577,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0057 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6601,7 +6601,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0058 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6625,7 +6625,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0059 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6651,7 +6651,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0061 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6677,7 +6677,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0063 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -6703,7 +6703,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0065 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6729,7 +6729,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0067 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6755,7 +6755,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0069 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6781,7 +6781,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0071 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6807,7 +6807,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0073 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6833,7 +6833,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0075 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6859,7 +6859,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0077 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6885,7 +6885,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0079 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6911,7 +6911,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0081 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6935,7 +6935,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0082 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6961,7 +6961,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0084 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -6987,7 +6987,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0086 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -7013,7 +7013,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0088 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -7039,7 +7039,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0090 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7065,7 +7065,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0092 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7091,7 +7091,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0094 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7115,7 +7115,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0095 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7139,7 +7139,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0096 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7165,7 +7165,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0098 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7191,7 +7191,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0100 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7215,7 +7215,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0101 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7239,7 +7239,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl2_0102 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7265,7 +7265,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0104 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7291,7 +7291,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0106 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7317,7 +7317,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0108 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7343,7 +7343,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0110 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7369,7 +7369,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0112 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7395,7 +7395,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl2_0114 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7419,7 +7419,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0001 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7445,7 +7445,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0003 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7471,7 +7471,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0005 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7497,7 +7497,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0007 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7523,7 +7523,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0009 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7549,7 +7549,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0011 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7575,7 +7575,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0013 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7601,7 +7601,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0015 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7627,7 +7627,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0017 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -7653,7 +7653,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0019 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7679,7 +7679,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0021 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7705,7 +7705,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0023 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7732,7 +7732,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0025 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7758,7 +7758,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0027 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7784,7 +7784,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0029 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7810,7 +7810,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0031 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7836,7 +7836,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0033 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7862,7 +7862,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0035 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7888,7 +7888,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0037 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7914,7 +7914,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0039 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -7940,7 +7940,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0041 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -7966,7 +7966,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0043 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -7992,7 +7992,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0045 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8018,7 +8018,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0047 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8044,7 +8044,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0049 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8070,7 +8070,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0052 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8101,7 +8101,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0057 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8127,7 +8127,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0059 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8153,7 +8153,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0061 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8177,7 +8177,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0062 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8201,7 +8201,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0063 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8225,7 +8225,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0064 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8249,7 +8249,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0065 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8273,7 +8273,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0066 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8297,7 +8297,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0067 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8321,7 +8321,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0068 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8345,7 +8345,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0069 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8369,7 +8369,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0070 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8395,7 +8395,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0072 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8421,7 +8421,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0074 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8445,7 +8445,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0075 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8469,7 +8469,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0076 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8493,7 +8493,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0077 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8517,7 +8517,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0078 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8541,7 +8541,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0079 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8565,7 +8565,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0080 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8589,7 +8589,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0081 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8613,7 +8613,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0082 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8637,7 +8637,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0083 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8661,7 +8661,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0084 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8685,7 +8685,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0085 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8709,7 +8709,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0086 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8733,7 +8733,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0087 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8757,7 +8757,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0088 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8781,7 +8781,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0089 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8807,7 +8807,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0091 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8833,7 +8833,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0095 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8860,7 +8860,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0098 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8886,7 +8886,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0100 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8910,7 +8910,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0101 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8934,7 +8934,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0102 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -8960,7 +8960,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0104 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -8986,7 +8986,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0106 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9012,7 +9012,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0108 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9038,7 +9038,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0110 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9064,7 +9064,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0112 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9090,7 +9090,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0114 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9116,7 +9116,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0116 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9142,7 +9142,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0118 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9168,7 +9168,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0120 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9194,7 +9194,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0122 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9220,7 +9220,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0124 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9244,7 +9244,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0125 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9270,7 +9270,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0127 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9296,7 +9296,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0129 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9322,7 +9322,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0131 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9348,7 +9348,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0133 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			127,
 			127
@@ -9374,7 +9374,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0135 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9400,7 +9400,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0137 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9424,7 +9424,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0138 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9448,7 +9448,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0139 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9474,7 +9474,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0141 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9500,7 +9500,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0143 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9524,7 +9524,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0144 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9548,7 +9548,7 @@ return {
 		alias = {}
 	},
 	Halloween_Frankie_lvl3_0145 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9574,7 +9574,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0147 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9600,7 +9600,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0149 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9626,7 +9626,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0151 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9652,7 +9652,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0153 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9678,7 +9678,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0155 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9704,7 +9704,7 @@ return {
 		}
 	},
 	Halloween_Frankie_lvl3_0157 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			127,
 			127
@@ -9728,7 +9728,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stone_lights_0001 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			141,
 			113
@@ -9752,7 +9752,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stone_lights_0002 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			141,
 			113
@@ -9776,7 +9776,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stone_lights_0003 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			141,
 			113
@@ -9800,7 +9800,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stone_lights_0004 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			141,
 			113
@@ -9824,7 +9824,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stone_lights_0005 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			141,
 			113
@@ -9848,7 +9848,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stones_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			141,
 			113
@@ -9872,7 +9872,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stones_0002 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			141,
 			113
@@ -9896,7 +9896,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stones_0003 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			141,
 			113
@@ -9920,7 +9920,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stones_0004 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			141,
 			113
@@ -9944,7 +9944,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_stones_0005 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			141,
 			113
@@ -9968,7 +9968,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_tree = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			115,
 			110
@@ -9992,7 +9992,7 @@ return {
 		alias = {}
 	},
 	TowerHalloween_lightning_hit_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			56,
 			45
@@ -10018,7 +10018,7 @@ return {
 		}
 	},
 	TowerHalloween_lightning_hit_0003 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			56,
 			45
@@ -10044,7 +10044,7 @@ return {
 		}
 	},
 	TowerHalloween_lightning_hit_0005 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			56,
 			45
@@ -10074,7 +10074,7 @@ return {
 		}
 	},
 	TowerHalloween_lightning_hit_0007 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			56,
 			45
@@ -10102,7 +10102,7 @@ return {
 		}
 	},
 	TowerHalloween_lightning_hit_0009 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			56,
 			45
@@ -10130,7 +10130,7 @@ return {
 		}
 	},
 	moon_0001 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			42,
 			42
@@ -10154,7 +10154,7 @@ return {
 		alias = {}
 	},
 	moon_0002 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			42,
 			42
@@ -10178,7 +10178,7 @@ return {
 		alias = {}
 	},
 	moon_0003 = {
-		a_name = "go_stages_halloween-2.dds",
+		a_name = "go_stages_halloween-2.png",
 		size = {
 			42,
 			42
@@ -10202,7 +10202,7 @@ return {
 		alias = {}
 	},
 	moon_base_0001 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			321,
 			158
@@ -10226,7 +10226,7 @@ return {
 		alias = {}
 	},
 	moon_base_0002 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			321,
 			158
@@ -10250,7 +10250,7 @@ return {
 		alias = {}
 	},
 	moon_base_0003 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			321,
 			158
@@ -10274,7 +10274,7 @@ return {
 		alias = {}
 	},
 	moon_base_0004 = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			321,
 			158
@@ -10298,7 +10298,7 @@ return {
 		alias = {}
 	},
 	moon_overlay = {
-		a_name = "go_stages_halloween-1.dds",
+		a_name = "go_stages_halloween-1.png",
 		size = {
 			96,
 			96
