@@ -10,7 +10,7 @@ set "current_dir=%cd%"
 cd /d "%~dp0"
 if exist "%love_path%" (
     echo Running Love executable...
-    start "" "%love_path%" .
+    "%love_path%" .
 ) else (
     echo Love executable not found at %love_path%.
     exit /b 1
