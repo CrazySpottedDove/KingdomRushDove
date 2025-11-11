@@ -1563,100 +1563,80 @@ function sys.tween:on_update(dt, ts, store)
 
     local lerp = self.lerp
 
-    local tween = store.entities_with_tween
-    for _, e in pairs(tween) do
+    local entities = store.entities_with_tween
+    for _, e in pairs(entities) do
         if e.tween.disabled then
             -- block empty
         else
             local finished = true
-
+            local sprites = e.render.sprites
+            local tween = e.tween
             for _, t in pairs(e.tween.props) do
                 if t.disabled then
                     -- block empty
                 else
-                    local sids = type(t.sprite_id) == "table" and t.sprite_id or {t.sprite_id}
+                    local s = sprites[t.sprite_id]
+                    local keys = t.keys
+                    local ka = keys[1]
+                    local kb = keys[#keys]
+                    local start_time = ka[1]
+                    local end_time = kb[1]
+                    local duration = end_time - start_time
+                    local time = store.tick_ts - (t.ts or tween.ts or s.ts)
 
-                    for _, sid in pairs(sids) do
-                        local value
-                        local s = e.render.sprites[sid]
-                        local keys = t.keys
-                        local ka = keys[1]
-                        local kb = keys[#keys]
-                        local start_time = keys[1][1]
-                        local end_time = keys[#keys][1]
-                        local duration = end_time - start_time
-                        local time_ref = t.ts or e.tween.ts or s.ts
-                        local time = store.tick_ts - time_ref
+                    if t.time_offset then
+                        time = time + t.time_offset
+                    end
 
-                        if t.time_offset then
-                            time = time + t.time_offset
-                        end
+                    if t.loop then
+                        time = time % duration
+                    end
 
-                        if t.loop then
-                            time = time % duration
-                        end
+                    if tween.reverse and not t.ignore_reverse then
+                        time = duration - time
+                    end
 
-                        if e.tween.reverse and not t.ignore_reverse then
-                            time = duration - time
-                        end
+                    time = time < start_time and start_time or (time > end_time and end_time or time)
+                    for i = 2, #keys do
+                        local ki = keys[i]
 
-                        time = km.clamp(start_time, end_time, time)
-
-                        for i = 1, #keys do
-                            local ki = keys[i]
-
-                            if time >= ki[1] then
-                                ka = ki
-                            end
-
-                            if time <= ki[1] then
-                                kb = ki
-
-                                break
-                            end
-                        end
-
-                        if ka == kb then
-                            value = ka[2]
-                        else
-                            value = lerp(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]), ka[3] or t.interp)
-                        end
-
-                        if t.multiply then
-                            if type(value) == "boolean" then
-                                s[t.name] = value and s[t.name]
-                            elseif type(value) == "table" then
-                                s[t.name].x = value.x * s[t.name].x
-                                s[t.name].y = value.y * s[t.name].y
-                            else
-                                s[t.name] = value * s[t.name]
-                            end
-                        else
-                            s[t.name] = value
-                        end
-
-                        if t.loop then
-                            finished = finished and t.loop
-                        elseif e.tween.reverse then
-                            finished = finished and kb == keys[1]
-                        else
-                            finished = finished and ka == keys[#keys]
+                        if time <= ki[1] then
+                            kb = ki
+                            ka = time == ki[1] and ki or keys[i - 1]
+                            break
                         end
                     end
+
+                    local value = ka == kb and ka[2] or
+                                      lerp(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]), ka[3] or t.interp)
+
+                    if t.multiply then
+                        if type(value) == "boolean" then
+                            s[t.name] = value and s[t.name]
+                        elseif type(value) == "table" then
+                            s[t.name].x = value.x * s[t.name].x
+                            s[t.name].y = value.y * s[t.name].y
+                        else
+                            s[t.name] = value * s[t.name]
+                        end
+                    else
+                        s[t.name] = value
+                    end
+
+                    finished = finished and t.loop or ka == kb
                 end
             end
 
             if finished then
-                if e.tween.remove then
+                if tween.remove then
                     queue_remove(store, e)
                 end
 
-                if e.tween.run_once then
-                    e.tween.disabled = true
+                if tween.run_once then
+                    tween.disabled = true
                 end
             end
         end
-
     end
 end
 
@@ -2264,7 +2244,7 @@ function sys.render:on_remove(entity, store)
         for i = #entity.render.sprites, 1, -1 do
             local s = entity.render.sprites[i]
             s.marked_to_remove = true
-            -- entity.render.sprites[i] = nil
+            entity.render.sprites[i] = nil
         end
     end
 
@@ -2311,9 +2291,7 @@ function sys.render:on_update(dt, ts, store)
 
             s.sync_flag = last_runs ~= s.runs
 
-            local ss = I:s(fn)
-
-            s.ss = ss
+            s.ss = I:s(fn)
 
             if s._track_e then
                 s.pos.x, s.pos.y = e.pos.x, e.pos.y

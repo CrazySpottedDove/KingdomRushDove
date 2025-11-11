@@ -70,15 +70,6 @@ else
         mkdir -p "$(dirname "$dest")"
         # 使用 ImageMagick 缩小并 strip 元数据
         "$IM_CMD" "$src" -resize 50% -strip "$dest"
-        # 可选：使用 pngquant 进一步压缩（有损，保留 alpha）
-        if [ -n "$PNGQUANT_CMD" ]; then
-            tmp_q="$(mktemp --suffix=.png)"
-            if "$PNGQUANT_CMD" --force --output "$tmp_q" -- "$dest" >/dev/null 2>&1; then
-                mv "$tmp_q" "$dest"
-            else
-                rm -f "$tmp_q"
-            fi
-        fi
     '
 
     # 实时进度监控（直到临时目录的 png 数量达到总数或超时）
