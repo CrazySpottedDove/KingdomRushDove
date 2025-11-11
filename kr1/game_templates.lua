@@ -9470,7 +9470,7 @@ tt = E:register_t("ps_bullet_tower_sand")
 
 E:add_comps(tt, "pos", "particle_system")
 
-tt.particle_system.name = "tower_sand_lvl1_particle_idle"
+tt.particle_system.name = "tower_sand_lvl4_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.emission_rate = 150

@@ -11,7 +11,7 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_necromancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 322.86578273949;
+							["interval"] = 0;
 							["interval_next"] = 60.580868118573;
 							["max"] = 1;
 							["max_same"] = 0;
@@ -35,7 +35,7 @@ local obj1 = {
 						[1] = {
 							["creep"] = "enemy_necromancer";
 							["fixed_sub_path"] = 0;
-							["interval"] = 294.58131766024;
+							["interval"] = 0;
 							["interval_next"] = 60.580868118573;
 							["max"] = 1;
 							["max_same"] = 0;
@@ -66,7 +66,7 @@ local obj1 = {
 							["fixed_sub_path"] = 0;
 							["interval"] = 67.131655331379;
 							["interval_next"] = 13.752327135537;
-							["max"] = 1;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -81,7 +81,7 @@ local obj1 = {
 							["fixed_sub_path"] = 0;
 							["interval"] = 57.179219276148;
 							["interval_next"] = 11.906034546364;
-							["max"] = 1;
+							["max"] = 3;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -191,7 +191,7 @@ local obj1 = {
 							["fixed_sub_path"] = 0;
 							["interval"] = 139.04628485746;
 							["interval_next"] = 25.412402703585;
-							["max"] = 1;
+							["max"] = 2;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -297,7 +297,7 @@ local obj1 = {
 							["fixed_sub_path"] = 0;
 							["interval"] = 87.008145559612;
 							["interval_next"] = 16.479354211523;
-							["max"] = 3;
+							["max"] = 4;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -312,6 +312,15 @@ local obj1 = {
 					["delay"] = 0;
 					["path_index"] = 1;
 					["spawns"] = {
+                        [1] = {
+							["creep"] = "enemy_necromancer";
+							["fixed_sub_path"] = 0;
+							["interval"] = 0;
+							["interval_next"] = 60.580868118573;
+							["max"] = 2;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
 					};
 				};
 				[2] = {
@@ -354,6 +363,15 @@ local obj1 = {
 							["max_same"] = 0;
 							["path"] = 1;
 						};
+                        [5] = {
+                            ["creep"] = "enemy_lycan_werewolf_phantom";
+                            ["fixed_sub_path"] = 0;
+                            ["interval"] = 80.151726126012;
+                            ["interval_next"] = 15.156034815472;
+                            ["max"] = 1;
+                            ["max_same"] = 0;
+                            ["path"] = 1;
+                        }
 					};
 				};
 			};
