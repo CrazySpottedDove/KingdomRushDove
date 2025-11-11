@@ -316,6 +316,7 @@ function entity_db:gen_wave(level_idx, game_mode)
     }
     local file_name = string.format("data.waveconfigs.level%02d_waves_%s_config", level_idx,
         game_mode_str_map[game_mode])
+    package.loaded[file_name] = nil
     local cfg = require(file_name)
 
     -- 让小权重的敌人更容易得到机会
