@@ -6878,138 +6878,139 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor.y = 0.2076923076923077
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 255}, {fts(25) + 1, 255}, {fts(25) + 1.2, 0}}
-tt = RT("user_item_horn_heroism", "user_item")
+-- tt = RT("user_item_horn_heroism", "user_item")
 
-AC(tt, "aura", "mod_attack", "sound_events", "render", "tween")
+-- AC(tt, "aura", "mod_attack", "sound_events", "render", "tween")
 
-tt.main_script.update = scripts.user_item_horn_heroism.update
-tt.aura.mod = "mod_horn_heroism_soldier"
-tt.aura.radius = 250
-tt.aura.max_soldiers = 10
-tt.aura.vis_flags = bor(F_RANGED)
-tt.mod_attack.max_range = 250
-tt.mod_attack.min_range = 0
-tt.mod_attack.max_towers = 10
-tt.mod_attack.mod = "mod_horn_heroism_tower"
-tt.sound_events.insert = "ElvesInAppHornOfHeroism"
-tt.sound_events.insert_args = {
-    delay = fts(17)
-}
-tt.render.sprites[1].name = "hornOfHeroism_guy_decal"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].anchor.y = 0.1111111111111111
-tt.render.sprites[2].hide_after_runs = 1
-tt.render.sprites[2].loop = false
-tt.render.sprites[2].name = "decal_horn_heroism_guy_layer1"
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[3].name = "decal_horn_heroism_guy_layer2"
-tt.tween.remove = false
-tt.tween.props = {{
-    name = "alpha",
-    sprite_id = 1,
-    keys = {{fts(12), 0}, {fts(13), 255}, {fts(29), 0}}
-}, {
-    name = "scale",
-    sprite_id = 1,
-    keys = {{fts(13), vec_1(1)}, {fts(29), vec_1(2.7)}}
-}}
-tt = RT("mod_horn_heroism_soldier", "modifier")
+-- tt.main_script.update = scripts.user_item_horn_heroism.update
+-- tt.aura.mod = "mod_horn_heroism_soldier"
+-- tt.aura.radius = 250
+-- tt.aura.max_soldiers = 10
+-- tt.aura.vis_flags = bor(F_RANGED)
+-- tt.mod_attack.max_range = 250
+-- tt.mod_attack.min_range = 0
+-- tt.mod_attack.max_towers = 10
+-- tt.mod_attack.mod = "mod_horn_heroism_tower"
+-- tt.sound_events.insert = "ElvesInAppHornOfHeroism"
+-- tt.sound_events.insert_args = {
+--     delay = fts(17)
+-- }
+-- tt.render.sprites[1].name = "hornOfHeroism_guy_decal"
+-- tt.render.sprites[1].animated = false
+-- tt.render.sprites[1].z = Z_DECALS
+-- tt.render.sprites[2] = CC("sprite")
+-- tt.render.sprites[2].anchor.y = 0.1111111111111111
+-- tt.render.sprites[2].hide_after_runs = 1
+-- tt.render.sprites[2].loop = false
+-- tt.render.sprites[2].name = "decal_horn_heroism_guy_layer1"
+-- tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
+-- tt.render.sprites[3].name = "decal_horn_heroism_guy_layer2"
+-- tt.tween.remove = false
+-- tt.tween.props = {{
+--     name = "alpha",
+--     sprite_id = 1,
+--     keys = {{fts(12), 0}, {fts(13), 255}, {fts(29), 0}}
+-- }, {
+--     name = "scale",
+--     sprite_id = 1,
+--     keys = {{fts(13), vec_1(1)}, {fts(29), vec_1(2.7)}}
+-- }}
+-- tt = RT("mod_horn_heroism_soldier", "modifier")
 
-AC(tt, "render", "tween")
+-- AC(tt, "render", "tween")
 
-tt.modifier.duration = 10
-tt.modifier.use_mod_offset = false
-tt.modifier.resets_same_tween = true
-tt.immune_to = DAMAGE_BASE_TYPES
-tt.inflicted_damage_factor = 2
-tt.main_script.insert = scripts.mod_horn_heroism_soldier.insert
-tt.main_script.remove = scripts.mod_horn_heroism_soldier.remove
-tt.main_script.update = scripts.mod_track_target.update
-tt.render.sprites[1].name = "mod_horn_heroism_soldier"
-tt.render.sprites[1].anchor.y = 0.15384615384615385
-tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {10 - fts(10), 255}, {10, 0}}
-tt = RT("mod_horn_heroism_tower", "modifier")
+-- tt.modifier.duration = 10
+-- tt.modifier.use_mod_offset = false
+-- tt.modifier.resets_same_tween = true
+-- tt.immune_to = DAMAGE_BASE_TYPES
+-- tt.inflicted_damage_factor = 2
+-- tt.main_script.insert = scripts.mod_horn_heroism_soldier.insert
+-- tt.main_script.remove = scripts.mod_horn_heroism_soldier.remove
+-- tt.main_script.update = scripts.mod_track_target.update
+-- tt.render.sprites[1].name = "mod_horn_heroism_soldier"
+-- tt.render.sprites[1].anchor.y = 0.15384615384615385
+-- tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {10 - fts(10), 255}, {10, 0}}
+-- tt = RT("mod_horn_heroism_tower", "modifier")
 
-AC(tt, "render", "tween")
+-- AC(tt, "render", "tween")
 
-tt.modifier.duration = 15
-tt.modifier.resets_same_tween = true
-tt.main_script.insert = scripts.mod_tower_factors.insert
-tt.main_script.remove = scripts.mod_tower_factors.remove
-tt.main_script.update = scripts.mod_tower_factors.update
-tt.damage_factor = 2
-tt.render.sprites[1].name = "mod_horn_heroism_tower_left"
-tt.render.sprites[1].anchor.y = 0.14285714285714285
-tt.render.sprites[1].draw_order = 20
-tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
-tt.render.sprites[2].flip_x = true
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].name = "hornOfHeroism_towerBuff_topDeco"
-tt.render.sprites[3].animated = false
-tt.render.sprites[3].anchor.y = 0.14285714285714285
-tt.render.sprites[3].draw_order = 20
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].name = "mod_horn_heroism_tower_flame"
-tt.render.sprites[4].anchor.y = 0.14285714285714285
-tt.render.sprites[4].draw_order = 20
-tt.tween.props = {{
-    loop = true,
-    name = "alpha",
-    sprite_id = {1, 2, 3, 4},
-    keys = {{0, 255}, {fts(10), 200}, {fts(20), 255}}
-}, {
-    loop = true,
-    name = "scale",
-    sprite_id = {1, 2, 3, 4},
-    keys = {{0, vec_1(1)}, {fts(10), vec_1(1.05)}, {fts(20), vec_1(1)}}
-}, {
-    name = "alpha",
-    multiply = true,
-    sprite_id = {1, 2, 3, 4},
-    keys = {{0, 0}, {fts(10), 1}, {15 - fts(10), 1}, {15, 0}}
-}}
-tt = RT("user_item_rod_dragon_fire", "user_item")
+-- tt.modifier.duration = 15
+-- tt.modifier.resets_same_tween = true
+-- tt.main_script.insert = scripts.mod_tower_factors.insert
+-- tt.main_script.remove = scripts.mod_tower_factors.remove
+-- tt.main_script.update = scripts.mod_tower_factors.update
+-- tt.damage_factor = 2
+-- tt.render.sprites[1].name = "mod_horn_heroism_tower_left"
+-- tt.render.sprites[1].anchor.y = 0.14285714285714285
+-- tt.render.sprites[1].draw_order = 20
+-- tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+-- tt.render.sprites[2].flip_x = true
+-- tt.render.sprites[3] = CC("sprite")
+-- tt.render.sprites[3].name = "hornOfHeroism_towerBuff_topDeco"
+-- tt.render.sprites[3].animated = false
+-- tt.render.sprites[3].anchor.y = 0.14285714285714285
+-- tt.render.sprites[3].draw_order = 20
+-- tt.render.sprites[4] = CC("sprite")
+-- tt.render.sprites[4].name = "mod_horn_heroism_tower_flame"
+-- tt.render.sprites[4].anchor.y = 0.14285714285714285
+-- tt.render.sprites[4].draw_order = 20
+-- -- 若要启用这段代码，请注意，sprite_id 赋成表的形式已被废弃，dove 版内只允许它是一个 number 类型。
+-- tt.tween.props = {{
+--     loop = true,
+--     name = "alpha",
+--     sprite_id = {1, 2, 3, 4},
+--     keys = {{0, 255}, {fts(10), 200}, {fts(20), 255}}
+-- }, {
+--     loop = true,
+--     name = "scale",
+--     sprite_id = {1, 2, 3, 4},
+--     keys = {{0, vec_1(1)}, {fts(10), vec_1(1.05)}, {fts(20), vec_1(1)}}
+-- }, {
+--     name = "alpha",
+--     multiply = true,
+--     sprite_id = {1, 2, 3, 4},
+--     keys = {{0, 0}, {fts(10), 1}, {15 - fts(10), 1}, {15, 0}}
+-- }}
+-- tt = RT("user_item_rod_dragon_fire", "user_item")
 
-AC(tt, "aura", "render", "attacks")
+-- AC(tt, "aura", "render", "attacks")
 
-tt.aura.duration = 10
-tt.attacks.list[1] = CC("bullet_attack")
-tt.attacks.list[1].cooldown = 0.6
-tt.attacks.list[1].bullet = "bullet_rod_dragon_fire"
-tt.attacks.list[1].bullet_start_offset = vec_2(0, 63)
-tt.attacks.list[1].node_prediction = 0.5
-tt.attacks.list[1].range = 175
-tt.main_script.update = scripts.user_item_rod_dragon_fire.update
-tt.render.sprites[1].anchor.y = 0.058333333333333334
-tt.render.sprites[1].prefix = "rod_dragon_fire"
-tt.render.sprites[1].name = "start"
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].anchor.y = 0.058333333333333334
-tt.render.sprites[2].name = "rod_dragon_fire_flame"
-tt.render.sprites[2].hidden = true
-tt.user_selection.can_select_point_fn = scripts.user_item_rod_dragon_fire.can_select_point
-tt = E:register_t("bullet_rod_dragon_fire", "fireball_arivan")
-tt.bullet.damage_max = 320
-tt.bullet.damage_min = 100
-tt.bullet.damage_radius = 55
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.hit_fx = "fx_bullet_rod_dragon_fire_hit"
-tt.bullet.particles_name = "ps_bullet_rod_dragon_fire"
-tt.idle_time = 0
-tt.render.sprites[1].prefix = "bullet_rod_dragon_fire"
-tt.sound_events.hit = "ElvesInAppRodDragon"
-tt = RT("fx_bullet_rod_dragon_fire_hit", "fx")
-tt.render.sprites[1].name = "bullet_rod_dragon_fire_explosion"
-tt.render.sprites[1].anchor.y = 0.19791666666666666
-tt.render.sprites[1].sort_y_offset = -2
-tt.render.sprites[1].z = Z_OBJECTS
-tt = RT("user_item_hand_midas", "user_item")
-tt.gold_bonus_factor = 1
-tt.duration = 35
-tt.user_selection.can_select_point_fn = scripts.user_item_hand_midas.can_select_point
-tt.main_script.update = scripts.user_item_hand_midas.update
+-- tt.aura.duration = 10
+-- tt.attacks.list[1] = CC("bullet_attack")
+-- tt.attacks.list[1].cooldown = 0.6
+-- tt.attacks.list[1].bullet = "bullet_rod_dragon_fire"
+-- tt.attacks.list[1].bullet_start_offset = vec_2(0, 63)
+-- tt.attacks.list[1].node_prediction = 0.5
+-- tt.attacks.list[1].range = 175
+-- tt.main_script.update = scripts.user_item_rod_dragon_fire.update
+-- tt.render.sprites[1].anchor.y = 0.058333333333333334
+-- tt.render.sprites[1].prefix = "rod_dragon_fire"
+-- tt.render.sprites[1].name = "start"
+-- tt.render.sprites[2] = CC("sprite")
+-- tt.render.sprites[2].anchor.y = 0.058333333333333334
+-- tt.render.sprites[2].name = "rod_dragon_fire_flame"
+-- tt.render.sprites[2].hidden = true
+-- tt.user_selection.can_select_point_fn = scripts.user_item_rod_dragon_fire.can_select_point
+-- tt = E:register_t("bullet_rod_dragon_fire", "fireball_arivan")
+-- tt.bullet.damage_max = 320
+-- tt.bullet.damage_min = 100
+-- tt.bullet.damage_radius = 55
+-- tt.bullet.damage_type = DAMAGE_TRUE
+-- tt.bullet.hit_fx = "fx_bullet_rod_dragon_fire_hit"
+-- tt.bullet.particles_name = "ps_bullet_rod_dragon_fire"
+-- tt.idle_time = 0
+-- tt.render.sprites[1].prefix = "bullet_rod_dragon_fire"
+-- tt.sound_events.hit = "ElvesInAppRodDragon"
+-- tt = RT("fx_bullet_rod_dragon_fire_hit", "fx")
+-- tt.render.sprites[1].name = "bullet_rod_dragon_fire_explosion"
+-- tt.render.sprites[1].anchor.y = 0.19791666666666666
+-- tt.render.sprites[1].sort_y_offset = -2
+-- tt.render.sprites[1].z = Z_OBJECTS
+-- tt = RT("user_item_hand_midas", "user_item")
+-- tt.gold_bonus_factor = 1
+-- tt.duration = 35
+-- tt.user_selection.can_select_point_fn = scripts.user_item_hand_midas.can_select_point
+-- tt.main_script.update = scripts.user_item_hand_midas.update
 tt = E:register_t("decal_water_sparks", "decal_loop")
 tt.render.sprites[1].name = "decal_water_sparks_idle"
 tt = E:register_t("decal_water_sparks_small", "decal_loop")
